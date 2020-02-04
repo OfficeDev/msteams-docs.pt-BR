@@ -1,0 +1,3 @@
+## <a name="prepare-your-development-environment"></a>Preparar seu ambiente de desenvolvimento
+
+A primeira coisa que você precisará fazer é preparar seu ambiente de desenvolvimento. Você precisará certificar-se de que o carregamento de aplicativos personalizados está habilitado para a organização do Office 365 em que você deseja compilar seu aplicativo. Se você precisar de um locatário de desenvolvimento dedicado, você pode se inscrever no [programa para desenvolvedores do Office 365](https://developer.microsoft.com/office/dev-program). Para obter informações adicionais, consulte [configurar seu ambiente de desenvolvimento](~/concepts/build-and-test/prepare-your-o365-tenant.md).
