@@ -1,0 +1,661 @@
+---
+title: Pesquisar com extensões de mensagens
+description: Descreve como desenvolver extensões de mensagens baseadas na pesquisa
+keywords: pesquisa de extensões de mensagens de extensões de mensagens do teams
+ms.date: 05/20/2019
+ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41672739"
+---
+# <a name="search-with-messaging-extensions"></a><span data-ttu-id="95c28-104">Pesquisar com extensões de mensagens</span><span class="sxs-lookup"><span data-stu-id="95c28-104">Search with messaging extensions</span></span>
+
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
+
+<span data-ttu-id="95c28-105">As extensões de mensagens baseadas em pesquisa permitem consultar seu serviço e postar essas informações na forma de um cartão, diretamente na sua mensagem</span><span class="sxs-lookup"><span data-stu-id="95c28-105">Search based messaging extensions allow you to query your service and post that information in the form of a card, right into your message</span></span>
+
+![Exemplo de cartão de extensão de mensagens](~/assets/images/compose-extensions/ceexample.png)
+
+<span data-ttu-id="95c28-107">As seções a seguir descrevem como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="95c28-107">The following sections describe how to do this.</span></span>
+
+[!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
+
+### <a name="search-type-message-extensions"></a><span data-ttu-id="95c28-108">Extensões de mensagens de tipo de pesquisa</span><span class="sxs-lookup"><span data-stu-id="95c28-108">Search type message extensions</span></span>
+
+<span data-ttu-id="95c28-109">Para a extensão de mensagens com base `type` na pesquisa `query`, defina o parâmetro como.</span><span class="sxs-lookup"><span data-stu-id="95c28-109">For search based messaging extension set the `type` parameter to `query`.</span></span> <span data-ttu-id="95c28-110">Veja a seguir um exemplo de um manifesto com um único comando de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="95c28-110">Below is an example of a manifest with a single search command.</span></span> <span data-ttu-id="95c28-111">Uma única extensão de mensagens pode ter até 10 comandos diferentes associados a ela.</span><span class="sxs-lookup"><span data-stu-id="95c28-111">A single messaging extension can have up to 10 different commands associated with it.</span></span> <span data-ttu-id="95c28-112">Isso pode incluir vários comandos de pesquisa e múltiplos baseados em ação.</span><span class="sxs-lookup"><span data-stu-id="95c28-112">This can include both multiple search and multiple Action-based commands.</span></span>
+
+#### <a name="complete-app-manifest-example"></a><span data-ttu-id="95c28-113">Exemplo de manifesto de aplicativo completo</span><span class="sxs-lookup"><span data-stu-id="95c28-113">Complete app manifest example</span></span>
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+  "packageName": "com.microsoft.teams.samples.bing",
+  "developer": {
+    "name": "John Developer",
+    "websiteUrl": "http://bingbotservice.azurewebsites.net/",
+    "privacyUrl": "http://bingbotservice.azurewebsites.net/privacy",
+    "termsOfUseUrl": "http://bingbotservice.azurewebsites.net/termsofuse"
+  },
+  "name": {
+    "short": "Bing",
+    "full": "Bing"
+  },
+  "description": {
+    "short": "Find Bing search results",
+    "full": "Find Bing search results and share them with your team members."
+  },
+  "icons": {
+    "outline": "bing-outline.jpg",
+    "color": "bing-color.jpg"
+  },
+  "accentColor": "#ff6a00",
+  "composeExtensions": [
+    {
+      "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+      "canUpdateConfiguration": true,
+      "commands": [{
+          "id": "searchCmd",
+          "description": "Search Bing for information on the web",
+          "title": "Search",
+          "initialRun": true,
+          "parameters": [{
+            "name": "searchKeyword",
+            "description": "Enter your search keywords",
+            "title": "Keywords"
+          }]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "bingbotservice.azurewebsites.net",
+    "*.bingbotservice.azurewebsites.net"
+  ]
+}
+```
+
+### <a name="test-via-uploading"></a><span data-ttu-id="95c28-114">Testar via carregamento</span><span class="sxs-lookup"><span data-stu-id="95c28-114">Test via uploading</span></span>
+
+<span data-ttu-id="95c28-115">Você pode testar sua extensão de mensagens carregando seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="95c28-115">You can test your messaging extension by uploading your app.</span></span>
+
+<span data-ttu-id="95c28-116">Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais.</span><span class="sxs-lookup"><span data-stu-id="95c28-116">To open your messaging extension, navigate to any of your chats or channels.</span></span> <span data-ttu-id="95c28-117">Escolha o botão **mais opções** (**&#8943;**) na caixa redigir e escolha sua extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-117">Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.</span></span>
+
+## <a name="add-event-handlers"></a><span data-ttu-id="95c28-118">Adicionar manipuladores de eventos</span><span class="sxs-lookup"><span data-stu-id="95c28-118">Add event handlers</span></span>
+
+<span data-ttu-id="95c28-119">A maior parte do seu trabalho `onQuery` envolve o evento, que lida com todas as interações na janela de extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-119">Most of your work involves the `onQuery` event, which handles all interactions in the messaging extension window.</span></span>
+
+<span data-ttu-id="95c28-120">Se você definir `canUpdateConfiguration` `true` no manifesto, habilite o item de menu **configurações** para sua extensão de mensagens e também deve lidar `onQuerySettingsUrl` e `onSettingsUpdate`.</span><span class="sxs-lookup"><span data-stu-id="95c28-120">If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.</span></span>
+
+### <a name="handle-onquery-events"></a><span data-ttu-id="95c28-121">Manipular eventos onquery</span><span class="sxs-lookup"><span data-stu-id="95c28-121">Handle onQuery events</span></span>
+
+<span data-ttu-id="95c28-122">Uma extensão de mensagens recebe `onQuery` um evento quando algo acontece na janela de extensão de mensagens ou é enviado para a janela.</span><span class="sxs-lookup"><span data-stu-id="95c28-122">A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.</span></span>
+
+<span data-ttu-id="95c28-123">Se sua extensão de mensagens usa uma página de configuração, seu `onQuery` manipulador para deve primeiro verificar qualquer informação de configuração armazenada; se a extensão de mensagens não estiver configurada, retorne uma `config` resposta com um link para sua página de configuração.</span><span class="sxs-lookup"><span data-stu-id="95c28-123">If your messaging extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the messaging extension isn't configured, return a `config` response with a link to your configuration page.</span></span> <span data-ttu-id="95c28-124">Lembre-se de que a resposta da página de configuração também é `onQuery`manipulada pelo.</span><span class="sxs-lookup"><span data-stu-id="95c28-124">Be aware that the response from the configuration page is also handled by `onQuery`.</span></span> <span data-ttu-id="95c28-125">(A única exceção é quando a página de configuração é chamada pelo manipulador de `onQuerySettingsUrl`; consulte a seção a seguir.)</span><span class="sxs-lookup"><span data-stu-id="95c28-125">(The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section.)</span></span>
+
+<span data-ttu-id="95c28-126">Se sua extensão de mensagens requer autenticação, verifique as informações de estado do usuário; Se o usuário não estiver conectado, siga as instruções na seção [autenticação](#authentication) mais adiante neste tópico.</span><span class="sxs-lookup"><span data-stu-id="95c28-126">If your messaging extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.</span></span>
+
+<span data-ttu-id="95c28-127">Em seguida, verifique `initialRun` se o está definido; em caso afirmativo, execute a ação apropriada, como fornecer instruções ou uma lista de respostas.</span><span class="sxs-lookup"><span data-stu-id="95c28-127">Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.</span></span>
+
+<span data-ttu-id="95c28-128">O restante do manipulador para `onQuery` solicitar informações ao usuário, exibe uma lista de cartões de visualização e retorna o cartão selecionado pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-128">The remainder of your handler for `onQuery` prompts the user for information, displays a list of preview cards, and returns the card selected by the user.</span></span>
+
+### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a><span data-ttu-id="95c28-129">Manipular eventos onQuerySettingsUrl e onSettingsUpdate</span><span class="sxs-lookup"><span data-stu-id="95c28-129">Handle onQuerySettingsUrl and onSettingsUpdate events</span></span>
+
+<span data-ttu-id="95c28-130">O `onQuerySettingsUrl` e `onSettingsUpdate` os eventos trabalham em conjunto para habilitar o item de menu **configurações** .</span><span class="sxs-lookup"><span data-stu-id="95c28-130">The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.</span></span>
+
+![Capturas de tela de locais do item de menu configurações](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+
+<span data-ttu-id="95c28-132">O manipulador de `onQuerySettingsUrl` retorno da URL para a página de configuração; após o fechamento da página de configuração, o `onSettingsUpdate` manipulador para aceitar e salvar o estado retornado.</span><span class="sxs-lookup"><span data-stu-id="95c28-132">Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state.</span></span> <span data-ttu-id="95c28-133">(Este é o único caso no qual `onQuery` *não* recebe a resposta da página de configuração.)</span><span class="sxs-lookup"><span data-stu-id="95c28-133">(This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.)</span></span>
+
+## <a name="receive-and-respond-to-queries"></a><span data-ttu-id="95c28-134">Receber e responder a consultas</span><span class="sxs-lookup"><span data-stu-id="95c28-134">Receive and respond to queries</span></span>
+
+<span data-ttu-id="95c28-135">Cada solicitação para sua extensão de mensagens é feita por `Activity` meio de um objeto que é publicado na sua URL de retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="95c28-135">Every request to your messaging extension is done via an `Activity` object that is posted to your callback URL.</span></span> <span data-ttu-id="95c28-136">A solicitação contém informações sobre o comando de usuário, como valores de ID e de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="95c28-136">The request contains information about the user command, such as ID and parameter values.</span></span> <span data-ttu-id="95c28-137">A solicitação também fornece metadados sobre o contexto no qual sua extensão foi invocada, incluindo o ID de usuário e de locatário, junto com a ID de chat ou as identificações de canal e equipe.</span><span class="sxs-lookup"><span data-stu-id="95c28-137">The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.</span></span>
+
+### <a name="receive-user-requests"></a><span data-ttu-id="95c28-138">Receber solicitações de usuário</span><span class="sxs-lookup"><span data-stu-id="95c28-138">Receive user requests</span></span>
+
+<span data-ttu-id="95c28-139">Quando um usuário realiza uma consulta, o Microsoft Teams envia o serviço de um `Activity` objeto da estrutura de bot padrão.</span><span class="sxs-lookup"><span data-stu-id="95c28-139">When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object.</span></span> <span data-ttu-id="95c28-140">Seu serviço deve executar sua lógica para um `Activity` que tenha `type` definido como `invoke` e `name` definido como um tipo `composeExtension` com suporte, conforme mostrado na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="95c28-140">Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.</span></span>
+
+<span data-ttu-id="95c28-141">Além das propriedades de atividade de bot padrão, a carga contém os seguintes metadados de solicitação:</span><span class="sxs-lookup"><span data-stu-id="95c28-141">In addition to the standard bot activity properties, the payload contains the following request metadata:</span></span>
+
+|<span data-ttu-id="95c28-142">Nome da propriedade</span><span class="sxs-lookup"><span data-stu-id="95c28-142">Property name</span></span>|<span data-ttu-id="95c28-143">Finalidade</span><span class="sxs-lookup"><span data-stu-id="95c28-143">Purpose</span></span>|
+|---|---|
+|`type`| <span data-ttu-id="95c28-144">Tipo de solicitação; deve ser `invoke`.</span><span class="sxs-lookup"><span data-stu-id="95c28-144">Type of request; must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="95c28-145">Tipo de comando que é emitido para o serviço.</span><span class="sxs-lookup"><span data-stu-id="95c28-145">Type of command that is issued to your service.</span></span> <span data-ttu-id="95c28-146">Atualmente, há suporte para os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="95c28-146">Currently the following types are supported:</span></span> <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`from.id`| <span data-ttu-id="95c28-147">ID do usuário que enviou a solicitação.</span><span class="sxs-lookup"><span data-stu-id="95c28-147">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="95c28-148">Nome do usuário que enviou a solicitação.</span><span class="sxs-lookup"><span data-stu-id="95c28-148">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="95c28-149">ID de objeto do Azure Active Directory do usuário que enviou a solicitação.</span><span class="sxs-lookup"><span data-stu-id="95c28-149">Azure Active Directory object id of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="95c28-150">Locatário do Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="95c28-150">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="95c28-151">ID do canal (se a solicitação tiver sido feita em um canal).</span><span class="sxs-lookup"><span data-stu-id="95c28-151">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="95c28-152">ID da equipe (se a solicitação tiver sido feita em um canal).</span><span class="sxs-lookup"><span data-stu-id="95c28-152">Team ID (if the request was made in a channel).</span></span> |
+|<span data-ttu-id="95c28-153">`clientInfo`pessoa</span><span class="sxs-lookup"><span data-stu-id="95c28-153">`clientInfo` entity</span></span> | <span data-ttu-id="95c28-154">Metadados adicionais sobre o cliente, como localidade/idioma e tipo de cliente.</span><span class="sxs-lookup"><span data-stu-id="95c28-154">Additional metadata about the client, such as locale/language and type of client.</span></span> |
+
+<span data-ttu-id="95c28-155">Os próprios parâmetros de solicitação são encontrados no objeto value, que inclui as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="95c28-155">The request parameters itself are found in the value object, which includes the following properties:</span></span>
+
+| <span data-ttu-id="95c28-156">Nome da propriedade</span><span class="sxs-lookup"><span data-stu-id="95c28-156">Property name</span></span> | <span data-ttu-id="95c28-157">Finalidade</span><span class="sxs-lookup"><span data-stu-id="95c28-157">Purpose</span></span> |
+|---|---|
+| `commandId` | <span data-ttu-id="95c28-158">O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="95c28-158">The name of the command invoked by the user, matching one of the commands declared in the app manifest.</span></span> |
+| `parameters` | <span data-ttu-id="95c28-159">Matriz de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="95c28-159">Array of parameters.</span></span> <span data-ttu-id="95c28-160">Cada objeto Parameter contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-160">Each parameter object contains the parameter name, along with the parameter value provided by the user.</span></span> |
+| `queryOptions` | <span data-ttu-id="95c28-161">Parâmetros de paginação:</span><span class="sxs-lookup"><span data-stu-id="95c28-161">Pagination parameters:</span></span> <br><span data-ttu-id="95c28-162">`skip`: ignorar contagem para esta consulta</span><span class="sxs-lookup"><span data-stu-id="95c28-162">`skip`: skip count for this query</span></span> <br><span data-ttu-id="95c28-163">`count`: número de elementos a serem retornados</span><span class="sxs-lookup"><span data-stu-id="95c28-163">`count`: number of elements to return</span></span> |
+
+#### <a name="request-example"></a><span data-ttu-id="95c28-164">Exemplo de solicitação</span><span class="sxs-lookup"><span data-stu-id="95c28-164">Request example</span></span>
+
+```json
+{
+  "name": "composeExtension/query",
+  "value": {
+    "commandId": "searchCmd",
+    "parameters": [
+      {
+        "name": "searchKeywords",
+        "value": "Toronto"
+      }
+    ],
+    "queryOptions": {
+      "skip": 0,
+      "count": 25
+    }
+  },
+  "type": "invoke",
+  "timestamp": "2017-05-01T15:45:51.876Z",
+  "localTimestamp": "2017-05-01T08:45:51.876-07:00",
+  "id": "f:622749630322482883",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+  "from": {
+    "id": "29:1C7dbRrC_5yzN1RGtZIrcWT0xz88KPGP9sxdpVpV8sODlgPHeQE9RqQ02hnpuKzy6zZ-AaZx6swUOMj_Dsdse3TQ4sIaeebbFBF-VgjJy_nY",
+    "name": "Larry Jin",
+    "aadObjectId": "cd723fa0-0591-416a-9290-e93ecf3a9b92"
+  },
+  "conversation": {
+    "id": "19:skypespaces_8198cfe0dd2647ae91930f0974768a40@thread.skype"
+  },
+  "recipient": {
+    "id": "28:b4922ea1-5315-4fd0-9b21-d941ab06e39f",
+    "name": "TheComposeExtensionDev"
+  },
+  "entities": [
+    {
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Windows",
+      "timezone": "America/Los_Angeles",
+      "type": "clientInfo"
+    }
+  ]
+}
+```
+
+### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a><span data-ttu-id="95c28-165">Receber solicitações de links inseridos na caixa de mensagem de composição</span><span class="sxs-lookup"><span data-stu-id="95c28-165">Receive requests from links inserted into the compose message box</span></span>
+
+<span data-ttu-id="95c28-166">Como alternativa (ou adicional) para pesquisar seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de composição para consultar seu serviço e retornar um cartão.</span><span class="sxs-lookup"><span data-stu-id="95c28-166">As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card.</span></span> <span data-ttu-id="95c28-167">Na captura de tela abaixo de um usuário colou em uma URL para um item de trabalho no Azure DevOps que a extensão de mensagens foi resolvida em um cartão.</span><span class="sxs-lookup"><span data-stu-id="95c28-167">In the screenshot below a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.</span></span>
+
+![Exemplo de link Unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+
+<span data-ttu-id="95c28-169">Para habilitar sua extensão de mensagens para interagir com os links dessa forma, primeiro você precisará `messageHandlers` adicionar a matriz ao manifesto do aplicativo, como no exemplo abaixo:</span><span class="sxs-lookup"><span data-stu-id="95c28-169">To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below:</span></span>
+
+```json
+"composeExtensions": [
+  {
+    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
+    "messageHandlers": [
+      {
+        "type": "link",
+        "value": {
+          "domains": [
+            "*.trackeddomain.com"
+          ]
+        }
+      }
+    ]
+  }
+]
+```
+
+<span data-ttu-id="95c28-170">Após adicionar o domínio para ouvir o manifesto do aplicativo, você precisará alterar o código do bot para [responder](#respond-to-user-requests) à solicitação de invocação abaixo.</span><span class="sxs-lookup"><span data-stu-id="95c28-170">Once you've added the domain to listen on to the app manifest, you'll need to change your bot code to [respond](#respond-to-user-requests) to the below invoke request.</span></span>
+
+```json
+{
+  "type": "invoke",
+  "name": "composeExtension/queryLink",
+  "value": {
+    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
+  }
+}
+```
+
+<span data-ttu-id="95c28-171">Se seu aplicativo retornar vários itens, apenas o primeiro será usado.</span><span class="sxs-lookup"><span data-stu-id="95c28-171">If your app returns multiple items only the first will be used.</span></span>
+
+### <a name="respond-to-user-requests"></a><span data-ttu-id="95c28-172">Responder às solicitações do usuário</span><span class="sxs-lookup"><span data-stu-id="95c28-172">Respond to user requests</span></span>
+
+<span data-ttu-id="95c28-173">Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para o serviço.</span><span class="sxs-lookup"><span data-stu-id="95c28-173">When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service.</span></span> <span data-ttu-id="95c28-174">Nesse ponto, o código tem cinco segundos para fornecer uma resposta HTTP para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="95c28-174">At that point, your code has 5 seconds to provide an HTTP response to the request.</span></span> <span data-ttu-id="95c28-175">Durante esse tempo, o serviço pode executar pesquisa adicional ou qualquer outra lógica de negócios necessária para atender à solicitação.</span><span class="sxs-lookup"><span data-stu-id="95c28-175">During this time, your service can perform additional lookup, or any other business logic needed to serve the request.</span></span>
+
+<span data-ttu-id="95c28-176">Seu serviço deve responder com os resultados que correspondem à consulta do usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-176">Your service should respond with the results matching the user query.</span></span> <span data-ttu-id="95c28-177">A resposta deve indicar um código de `200 OK` status HTTP e um objeto Application/JSON válido com o seguinte corpo:</span><span class="sxs-lookup"><span data-stu-id="95c28-177">The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:</span></span>
+
+|<span data-ttu-id="95c28-178">Nome da propriedade</span><span class="sxs-lookup"><span data-stu-id="95c28-178">Property name</span></span>|<span data-ttu-id="95c28-179">Finalidade</span><span class="sxs-lookup"><span data-stu-id="95c28-179">Purpose</span></span>|
+|---|---|
+|`composeExtension`|<span data-ttu-id="95c28-180">Envelope de resposta de nível superior.</span><span class="sxs-lookup"><span data-stu-id="95c28-180">Top-level response envelope.</span></span>|
+|`composeExtension.type`|<span data-ttu-id="95c28-181">Tipo de resposta.</span><span class="sxs-lookup"><span data-stu-id="95c28-181">Type of response.</span></span> <span data-ttu-id="95c28-182">Há suporte para os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="95c28-182">The following types are supported:</span></span> <br><span data-ttu-id="95c28-183">`result`: exibe uma lista de resultados de pesquisa</span><span class="sxs-lookup"><span data-stu-id="95c28-183">`result`: displays a list of search results</span></span> <br><span data-ttu-id="95c28-184">`auth`: solicita que o usuário autentique</span><span class="sxs-lookup"><span data-stu-id="95c28-184">`auth`: asks the user to authenticate</span></span> <br><span data-ttu-id="95c28-185">`config`: solicita que o usuário configure a extensão de mensagens</span><span class="sxs-lookup"><span data-stu-id="95c28-185">`config`: asks the user to set up the messaging extension</span></span> <br><span data-ttu-id="95c28-186">`message`: exibe uma mensagem de texto sem formatação</span><span class="sxs-lookup"><span data-stu-id="95c28-186">`message`: displays a plain text message</span></span> |
+|`composeExtension.attachmentLayout`|<span data-ttu-id="95c28-187">Especifica o layout dos anexos.</span><span class="sxs-lookup"><span data-stu-id="95c28-187">Specifies the layout of the attachments.</span></span> <span data-ttu-id="95c28-188">Usado para respostas do tipo `result`.</span><span class="sxs-lookup"><span data-stu-id="95c28-188">Used for responses of type `result`.</span></span> <br><span data-ttu-id="95c28-189">Atualmente, há suporte para os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="95c28-189">Currently the following types are supported:</span></span> <br><span data-ttu-id="95c28-190">`list`: uma lista de objetos Card contendo campos de miniatura, título e texto</span><span class="sxs-lookup"><span data-stu-id="95c28-190">`list`: a list of card objects containing thumbnail, title, and text fields</span></span> <br><span data-ttu-id="95c28-191">`grid`: uma grade de imagens em miniatura</span><span class="sxs-lookup"><span data-stu-id="95c28-191">`grid`: a grid of thumbnail images</span></span> |
+|`composeExtension.attachments`|<span data-ttu-id="95c28-192">Matriz de objetos Attachment válidos.</span><span class="sxs-lookup"><span data-stu-id="95c28-192">Array of valid attachment objects.</span></span> <span data-ttu-id="95c28-193">Usado para respostas do tipo `result`.</span><span class="sxs-lookup"><span data-stu-id="95c28-193">Used for responses of type `result`.</span></span> <br><span data-ttu-id="95c28-194">Atualmente, há suporte para os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="95c28-194">Currently the following types are supported:</span></span> <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|<span data-ttu-id="95c28-195">Ações sugeridas.</span><span class="sxs-lookup"><span data-stu-id="95c28-195">Suggested actions.</span></span> <span data-ttu-id="95c28-196">Usado para respostas do tipo `auth` ou `config`.</span><span class="sxs-lookup"><span data-stu-id="95c28-196">Used for responses of type `auth` or `config`.</span></span> |
+|`composeExtension.text`|<span data-ttu-id="95c28-197">Mensagem a ser exibida.</span><span class="sxs-lookup"><span data-stu-id="95c28-197">Message to display.</span></span> <span data-ttu-id="95c28-198">Usado para respostas do tipo `message`.</span><span class="sxs-lookup"><span data-stu-id="95c28-198">Used for responses of type `message`.</span></span> |
+
+#### <a name="response-card-types-and-previews"></a><span data-ttu-id="95c28-199">Tipos e visualizações de cartões de resposta</span><span class="sxs-lookup"><span data-stu-id="95c28-199">Response card types and previews</span></span>
+
+<span data-ttu-id="95c28-200">Oferecemos suporte para os seguintes tipos de anexo:</span><span class="sxs-lookup"><span data-stu-id="95c28-200">We support the following attachment types:</span></span>
+
+* [<span data-ttu-id="95c28-201">Cartão de miniaturas</span><span class="sxs-lookup"><span data-stu-id="95c28-201">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="95c28-202">Cartão herói</span><span class="sxs-lookup"><span data-stu-id="95c28-202">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="95c28-203">Cartão de conexão do Office 365</span><span class="sxs-lookup"><span data-stu-id="95c28-203">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="95c28-204">Cartão adaptável</span><span class="sxs-lookup"><span data-stu-id="95c28-204">Adaptive card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+<span data-ttu-id="95c28-205">Consulte [cartões](~/task-modules-and-cards/what-are-cards.md) para obter uma visão geral.</span><span class="sxs-lookup"><span data-stu-id="95c28-205">See [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
+
+<span data-ttu-id="95c28-206">Para saber como usar os tipos de cartão de miniatura e herói, confira [Adicionar cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).</span><span class="sxs-lookup"><span data-stu-id="95c28-206">To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
+
+<span data-ttu-id="95c28-207">Para obter documentação adicional sobre a placa de conector do Office 365, consulte [usando cartões de conector do office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span><span class="sxs-lookup"><span data-stu-id="95c28-207">For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
+
+<span data-ttu-id="95c28-208">A lista de resultados é exibida na interface do usuário do Microsoft Teams com uma visualização de cada item.</span><span class="sxs-lookup"><span data-stu-id="95c28-208">The result list is displayed in the Microsoft Teams UI with a preview of each item.</span></span> <span data-ttu-id="95c28-209">A visualização é gerada de duas maneiras:</span><span class="sxs-lookup"><span data-stu-id="95c28-209">The preview is generated in one of two ways:</span></span>
+
+* <span data-ttu-id="95c28-210">Usando a `preview` Propriedade dentro do `attachment` objeto.</span><span class="sxs-lookup"><span data-stu-id="95c28-210">Using the `preview` property within the `attachment` object.</span></span> <span data-ttu-id="95c28-211">O `preview` anexo só pode ser um herói ou cartão de miniatura.</span><span class="sxs-lookup"><span data-stu-id="95c28-211">The `preview` attachment can only be a Hero or Thumbnail card.</span></span>
+* <span data-ttu-id="95c28-212">Extraído do básico `title`, `text`e `image` das propriedades do anexo.</span><span class="sxs-lookup"><span data-stu-id="95c28-212">Extracted from the basic `title`, `text`, and `image` properties of the attachment.</span></span> <span data-ttu-id="95c28-213">Eles são usados apenas se a `preview` propriedade não estiver definida e essas propriedades estiverem disponíveis.</span><span class="sxs-lookup"><span data-stu-id="95c28-213">These are used only if the `preview` property is not set and these properties are available.</span></span>
+
+<span data-ttu-id="95c28-214">Você pode exibir uma visualização de um cartão de conexão adaptável ou do Office 365 na lista de resultados, simplesmente definindo sua propriedade Preview; Isso não é necessário se os resultados já são herói ou cartões em miniatura.</span><span class="sxs-lookup"><span data-stu-id="95c28-214">You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards.</span></span> <span data-ttu-id="95c28-215">Se você usar o anexo de visualização, ele deve ser um herói ou cartão de miniatura.</span><span class="sxs-lookup"><span data-stu-id="95c28-215">If you use the preview attachment, it must be either a Hero or Thumbnail card.</span></span> <span data-ttu-id="95c28-216">Se nenhuma propriedade Preview for especificada, a visualização do cartão falhará e nada será exibido.</span><span class="sxs-lookup"><span data-stu-id="95c28-216">If no preview property is specified, the preview of the card will fail and nothing will be displayed.</span></span>
+
+#### <a name="response-example"></a><span data-ttu-id="95c28-217">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="95c28-217">Response example</span></span>
+
+<span data-ttu-id="95c28-218">Este exemplo mostra uma resposta com dois resultados, combinando formatos de cartão diferentes: conector e adaptável do Office 365.</span><span class="sxs-lookup"><span data-stu-id="95c28-218">This example shows a response with two results, mixing different card formats: Office 365 Connector and Adaptive.</span></span> <span data-ttu-id="95c28-219">Embora você provavelmente queira usar um formato de cartão em sua resposta, ele mostra como a `preview` propriedade de cada elemento da `attachments` coleção deve definir explicitamente uma visualização no formato herói ou miniatura, conforme descrito acima.</span><span class="sxs-lookup"><span data-stu-id="95c28-219">While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.</span></span>
+
+```json
+{
+  "composeExtension": {
+    "type": "result",
+    "attachmentLayout": "list",
+    "attachments": [
+      {
+        "contentType": "application/vnd.microsoft.teams.card.o365connector",
+        "content": {
+          "sections": [
+            {
+              "activityTitle": "[85069]: Create a cool app",
+              "activityImage": "https://placekitten.com/200/200"
+            },
+            {
+              "title": "Details",
+              "facts": [
+                {
+                  "name": "Assigned to:",
+                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                },
+                {
+                  "name": "State:",
+                  "value": "Active"
+                }
+              ]
+            }
+          ]
+        },
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "85069: Create a cool app",
+            "images": [
+              {
+                "url": "https://placekitten.com/200/200"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Microsoft Corp (NASDAQ: MSFT)",
+                  "size": "medium",
+                  "isSubtle": true
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "September 19, 4:00 PM EST",
+                  "isSubtle": true
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "spacing": "none",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "type": "Column",
+                      "width": "stretch",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "75.30",
+                          "size": "extraLarge"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "text": "▼ 0.20 (0.32%)",
+                          "size": "small",
+                          "color": "attention",
+                          "spacing": "none"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Column",
+                      "width": "auto",
+                      "items": [
+                        {
+                          "type": "FactSet",
+                          "facts": [
+                            {
+                              "title": "Open",
+                              "value": "62.24"
+                            },
+                            {
+                              "title": "High",
+                              "value": "62.98"
+                            },
+                            {
+                              "title": "Low",
+                              "value": "62.20"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "version": "1.0"
+        },
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "Microsoft Corp (NASDAQ: MSFT)",
+            "text": "75.30 ▼ 0.20 (0.32%)"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+### <a name="default-query"></a><span data-ttu-id="95c28-220">Consulta padrão</span><span class="sxs-lookup"><span data-stu-id="95c28-220">Default query</span></span>
+
+<span data-ttu-id="95c28-221">Se você definir `initialRun` para `true` no manifesto, o Microsoft Teams emitirá uma consulta "padrão" quando o usuário abrir pela primeira vez a extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-221">If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension.</span></span> <span data-ttu-id="95c28-222">O serviço pode responder a essa consulta com um conjunto de resultados previamente preenchidos.</span><span class="sxs-lookup"><span data-stu-id="95c28-222">Your service can respond to this query with a set of prepopulated results.</span></span> <span data-ttu-id="95c28-223">Isso pode ser útil para exibir, por exemplo, itens exibidos recentemente, favoritos ou qualquer outra informação que não seja dependente da entrada do usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-223">This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that is not dependent on user input.</span></span>
+
+<span data-ttu-id="95c28-224">A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, exceto com um `initialRun` parâmetro cujo valor de `true`cadeia de caracteres é.</span><span class="sxs-lookup"><span data-stu-id="95c28-224">The default query has the same structure as any regular user query, except with a parameter `initialRun` whose string value is `true`.</span></span>
+
+#### <a name="request-example-for-a-default-query"></a><span data-ttu-id="95c28-225">Exemplo de solicitação para uma consulta padrão</span><span class="sxs-lookup"><span data-stu-id="95c28-225">Request example for a default query</span></span>
+
+```json
+{
+  "type": "invoke",
+  "name": "composeExtension/query",
+  "value": {
+    "commandId": "searchCmd",
+    "parameters": [
+      {
+        "name": "initialRun",
+        "value": "true"
+      }
+    ],
+    "queryOptions": {
+      "skip": 0,
+      "count": 25
+    }
+  },
+  ⋮
+}
+```
+
+## <a name="identify-the-user"></a><span data-ttu-id="95c28-226">Identificar o usuário</span><span class="sxs-lookup"><span data-stu-id="95c28-226">Identify the user</span></span>
+
+<span data-ttu-id="95c28-227">Todas as solicitações para seus serviços incluem a ID ofuscada do usuário que realizou a solicitação, bem como o nome de exibição do usuário e a ID de objeto do Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="95c28-227">Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.</span></span>
+
+```json
+"from": {
+  "id": "29:1C7dbRrC_5yzN1RGtZIrcWT0xz88KPGP9sxdpVpV8sODlgPHeQE9RqQ02hnpuKzy6zZ-AaZx6swUOMj_Dsdse3TQ4sIaeebbFBF-VgjJy_nY",
+  "name": "Larry Jin",
+  "aadObjectId": "cd723fa0-0591-416a-9290-e93ecf3a9b92"
+},
+```
+
+<span data-ttu-id="95c28-228">Os `id` valores `aadObjectId` e são garantidos do usuário do Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="95c28-228">The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user.</span></span> <span data-ttu-id="95c28-229">Eles podem ser usados como chaves para procurar credenciais ou qualquer estado em cache em seu serviço.</span><span class="sxs-lookup"><span data-stu-id="95c28-229">They can be used as keys to look up credentials or any cached state in your service.</span></span> <span data-ttu-id="95c28-230">Além disso, cada solicitação contém a ID de locatário do Azure Active Directory do usuário, que pode ser usada para identificar a organização do usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-230">In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization.</span></span> <span data-ttu-id="95c28-231">Se aplicável, a solicitação também contém as IDs de canal e equipe das quais a solicitação foi originada.</span><span class="sxs-lookup"><span data-stu-id="95c28-231">If applicable, the request also contains the team and channel IDs from which the request originated.</span></span>
+
+## <a name="authentication"></a><span data-ttu-id="95c28-232">Autenticação</span><span class="sxs-lookup"><span data-stu-id="95c28-232">Authentication</span></span>
+
+<span data-ttu-id="95c28-233">Se o serviço exigir autenticação do usuário, você precisará entrar no usuário antes de poder usar a extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-233">If your service requires user authentication, you need to sign in the user before he or she can use the messaging extension.</span></span> <span data-ttu-id="95c28-234">Se você escreveu um bot ou uma guia que entra no usuário, esta seção deve ser familiar.</span><span class="sxs-lookup"><span data-stu-id="95c28-234">If you have written a bot or a tab that signs in the user, this section should be familiar.</span></span>
+
+<span data-ttu-id="95c28-235">A sequência é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="95c28-235">The sequence is as follows:</span></span>
+
+1. <span data-ttu-id="95c28-236">O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.</span><span class="sxs-lookup"><span data-stu-id="95c28-236">User issues a query, or the default query is automatically sent to your service.</span></span>
+2. <span data-ttu-id="95c28-237">Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando a ID de usuário do teams.</span><span class="sxs-lookup"><span data-stu-id="95c28-237">Your service checks whether the user has first authenticated by inspecting the Teams user ID.</span></span>
+3. <span data-ttu-id="95c28-238">Se o usuário não tiver sido autenticado, envie uma `auth` resposta com uma `openUrl` ação sugerida, incluindo a URL de autenticação.</span><span class="sxs-lookup"><span data-stu-id="95c28-238">If the user has not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.</span></span>
+4. <span data-ttu-id="95c28-239">O cliente do Microsoft Teams inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação determinada.</span><span class="sxs-lookup"><span data-stu-id="95c28-239">The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.</span></span>
+5. <span data-ttu-id="95c28-240">Após o usuário entrar, você deve fechar sua janela e enviar um "código de autenticação" para o cliente do teams.</span><span class="sxs-lookup"><span data-stu-id="95c28-240">After the user signs in, you should close your window and send an "authentication code" to the Teams client.</span></span>
+6. <span data-ttu-id="95c28-241">Em seguida, o cliente do teams emite novamente a consulta para o serviço, o que inclui o código de autenticação passado na etapa 5.</span><span class="sxs-lookup"><span data-stu-id="95c28-241">The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.</span></span>
+
+<span data-ttu-id="95c28-242">Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5.</span><span class="sxs-lookup"><span data-stu-id="95c28-242">Your service should verify that the authentication code received in step 6 matches the one from step 5.</span></span> <span data-ttu-id="95c28-243">Isso garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada.</span><span class="sxs-lookup"><span data-stu-id="95c28-243">This ensures that a malicious user does not try to spoof or compromise the sign-in flow.</span></span> <span data-ttu-id="95c28-244">Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.</span><span class="sxs-lookup"><span data-stu-id="95c28-244">This effectively "closes the loop" to finish the secure authentication sequence.</span></span>
+
+### <a name="respond-with-a-sign-in-action"></a><span data-ttu-id="95c28-245">Responder com uma ação de entrada</span><span class="sxs-lookup"><span data-stu-id="95c28-245">Respond with a sign-in action</span></span>
+
+<span data-ttu-id="95c28-246">Para solicitar que um usuário não autenticado entre, responda com uma ação sugerida do tipo `openUrl` que inclui a URL de autenticação.</span><span class="sxs-lookup"><span data-stu-id="95c28-246">To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.</span></span>
+
+#### <a name="response-example-for-a-sign-in-action"></a><span data-ttu-id="95c28-247">Exemplo de resposta para uma ação de logon</span><span class="sxs-lookup"><span data-stu-id="95c28-247">Response example for a sign-in action</span></span>
+
+```json
+{
+  "composeExtension":{
+    "type":"auth",
+    "suggestedActions":{
+      "actions":[
+        {
+          "type": "openUrl",
+          "value": "https://example.com/auth",
+          "title": "Sign in to this app"
+        }
+      ]
+    }
+  }
+}
+```
+
+> [!NOTE]
+> <span data-ttu-id="95c28-248">Para que a experiência de entrada seja hospedada em um pop-up de equipes, a parte de domínio da URL deve estar na lista de domínios válidos de seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="95c28-248">For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains.</span></span> <span data-ttu-id="95c28-249">(Consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.)</span><span class="sxs-lookup"><span data-stu-id="95c28-249">(See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.)</span></span>
+
+### <a name="start-the-sign-in-flow"></a><span data-ttu-id="95c28-250">Iniciar o fluxo de entrada</span><span class="sxs-lookup"><span data-stu-id="95c28-250">Start the sign-in flow</span></span>
+
+<span data-ttu-id="95c28-251">Sua experiência de entrada deve ser responsiva e ajustada em uma janela pop-up.</span><span class="sxs-lookup"><span data-stu-id="95c28-251">Your sign-in experience should be responsive and fit within a popup window.</span></span> <span data-ttu-id="95c28-252">Ele deve se integrar ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client), que usa a transmissão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-252">It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.</span></span>
+
+<span data-ttu-id="95c28-253">Assim como ocorre com outras experiências incorporadas no Microsoft Teams, seu código dentro da janela precisa `microsoftTeams.initialize()`primeiro chamar.</span><span class="sxs-lookup"><span data-stu-id="95c28-253">As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`.</span></span> <span data-ttu-id="95c28-254">Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do teams para sua janela, o que pode passá-la para a URL de entrada OAuth.</span><span class="sxs-lookup"><span data-stu-id="95c28-254">If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.</span></span>
+
+### <a name="complete-the-sign-in-flow"></a><span data-ttu-id="95c28-255">Concluir o fluxo de entrada</span><span class="sxs-lookup"><span data-stu-id="95c28-255">Complete the sign-in flow</span></span>
+
+<span data-ttu-id="95c28-256">Quando a solicitação de entrada é concluída e redireciona de volta para sua página, ela deve executar as seguintes etapas:</span><span class="sxs-lookup"><span data-stu-id="95c28-256">When the sign-in request completes and redirects back to your page, it should perform the following steps:</span></span>
+
+1. <span data-ttu-id="95c28-257">Gere um código de segurança.</span><span class="sxs-lookup"><span data-stu-id="95c28-257">Generate a security code.</span></span> <span data-ttu-id="95c28-258">(Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, junto com as credenciais obtidas por meio do fluxo de entrada (como tokens OAuth 2,0).</span><span class="sxs-lookup"><span data-stu-id="95c28-258">(This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow (such as OAuth 2.0 tokens).</span></span>
+2. <span data-ttu-id="95c28-259">Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.</span><span class="sxs-lookup"><span data-stu-id="95c28-259">Call `microsoftTeams.authentication.notifySuccess` and pass the security code.</span></span>
+
+<span data-ttu-id="95c28-260">Neste ponto, a janela é fechada e o controle é passado para o cliente Teams.</span><span class="sxs-lookup"><span data-stu-id="95c28-260">At this point, the window closes and control is passed to the Teams client.</span></span> <span data-ttu-id="95c28-261">Agora, o cliente pode reemitir a consulta de usuário original, juntamente com o código `state` de segurança na propriedade.</span><span class="sxs-lookup"><span data-stu-id="95c28-261">The client now can reissue the original user query, along with the security code in the `state` property.</span></span> <span data-ttu-id="95c28-262">Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.</span><span class="sxs-lookup"><span data-stu-id="95c28-262">Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.</span></span>
+
+#### <a name="reissued-request-example"></a><span data-ttu-id="95c28-263">Exemplo de solicitação reemitida</span><span class="sxs-lookup"><span data-stu-id="95c28-263">Reissued request example</span></span>
+
+```json
+{
+    "name": "composeExtension/query",
+    "value": {
+        "commandId": "insertWiki",
+        "parameters": [{
+            "name": "searchKeyword",
+            "value": "lakers"
+        }],
+        "state": "12345",
+        "queryOptions": {
+            "skip": 0,
+            "count": 25
+        }
+    },
+    "type": "invoke",
+    "timestamp": "2017-04-26T05:18:25.629Z",
+    "localTimestamp": "2017-04-25T22:18:25.629-07:00",
+    "entities": [{
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Web",
+        "type": "clientInfo"
+    }],
+    "text": "",
+    "attachments": [],
+    "address": {
+        "id": "f:7638210432489287768",
+        "channelId": "msteams",
+        "user": {
+            "id": "29:1A5TJWHkbOwSyu_L9Ktk9QFI1d_kBOEPeNEeO1INscpKHzHTvWfiau5AX_6y3SuiOby-r73dzHJ17HipUWqGPgw",
+            "aadObjectId": "fc8ca1c0-d043-4af6-b09f-141536207403"
+        },
+        "conversation": {
+            "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
+        },
+        "bot": {
+            "id": "28:c073afa8-7e77-4f92-b3e7-aa589e952a3e",
+            "name": "maotestbot2"
+        },
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "useAuth": true
+    },
+    "source": "msteams"
+}
+```
+
+## <a name="sdk-support"></a><span data-ttu-id="95c28-264">Suporte a SDK</span><span class="sxs-lookup"><span data-stu-id="95c28-264">SDK support</span></span>
+
+### <a name="net"></a><span data-ttu-id="95c28-265">.NET</span><span class="sxs-lookup"><span data-stu-id="95c28-265">.NET</span></span>
+
+<span data-ttu-id="95c28-266">Para receber e lidar com consultas com o SDK do bot Builder para .NET, você pode verificar `invoke` o tipo de ação na atividade de entrada e, em seguida, usar o método auxiliar no pacote NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) para determinar se é uma atividade de extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-266">To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a messaging extension activity.</span></span>
+
+#### <a name="example-code-in-net"></a><span data-ttu-id="95c28-267">Código de exemplo no .NET</span><span class="sxs-lookup"><span data-stu-id="95c28-267">Example code in .NET</span></span>
+
+```csharp
+public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+{
+    if (activity.Type == ActivityTypes.Invoke) // Received an invoke
+    {
+        if (activity.IsComposeExtensionQuery())
+        {
+            // This is the response object that will get sent back to the messaging extension request.
+            ComposeExtensionResponse invokeResponse = null;
+
+            // This helper method gets the query as an object.
+            var query = activity.GetComposeExtensionQueryData();
+
+            if (query.CommandId != null && query.Parameters != null && query.Parameters.Count > 0)
+            {
+                // query.Parameters has the parameters sent by client
+                var results = new ComposeExtensionResult()
+                {
+                    AttachmentLayout = "list",
+                    Type = "result",
+                    Attachments = new List<ComposeExtensionAttachment>(),
+                };
+                invokeResponse.ComposeExtension = results;
+            }
+
+            // Return the response
+            return Request.CreateResponse<ComposeExtensionResponse>(HttpStatusCode.OK, invokeResponse);
+        } else
+        {
+            // Handle other types of Invoke activities here.
+        }
+    } else {
+      // Failure case catch-all.
+      var response = Request.CreateResponse(HttpStatusCode.BadRequest);
+      response.Content = new StringContent("Invalid request! This API supports only messaging extension requests. Check your query and try again");
+      return response;
+    }
+}
+```
+
+### <a name="nodejs"></a><span data-ttu-id="95c28-268">Node.js</span><span class="sxs-lookup"><span data-stu-id="95c28-268">Node.js</span></span>
+
+<span data-ttu-id="95c28-269">As [extensões do teams](https://www.npmjs.com/package/botbuilder-teams) para o SDK do bot Builder para node. js fornecem objetos e métodos auxiliares para simplificar o recebimento, processamento e resposta a solicitações de extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="95c28-269">The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to messaging extension requests.</span></span>
+
+#### <a name="example-code-in-nodejs"></a><span data-ttu-id="95c28-270">Código de exemplo em node. js</span><span class="sxs-lookup"><span data-stu-id="95c28-270">Example code in Node.js</span></span>
+
+```javascript
+require('dotenv').config();
+
+import * as restify from 'restify';
+import * as builder from 'botbuilder';
+import * as teamBuilder from 'botbuilder-teams';
+
+class App {
+    run() {
+        const server = restify.createServer();
+        let teamChatConnector = new teamBuilder.TeamsChatConnector({
+            appId: process.env.MICROSOFT_APP_ID,
+            appPassword: process.env.MICROSOFT_APP_PASSWORD
+        });
+
+        // Command ID must match what's defined in manifest
+        teamChatConnector.onQuery('<%= commandId %>',
+            (event: builder.IEvent,
+            query: teamBuilder.ComposeExtensionQuery,
+            callback: (err: Error, result: teamBuilder.IComposeExtensionResponse, statusCode: number) => void) => {
+                // Check for initialRun; i.e., when you should return default results
+                // if (query.parameters[0].name === 'initialRun') {}
+
+                // Check query.queryOptions.count and query.queryOptions.skip for paging
+
+                // Return auth response
+                // let response = teamBuilder.ComposeExtensionResponse.auth().actions([
+                //     builder.CardAction.openUrl(null, 'https://authUrl', 'Please sign in')
+                // ]).toResponse();
+
+                // Return config response
+                // let response = teamBuilder.ComposeExtensionResponse.config().actions([
+                //     builder.CardAction.openUrl(null, 'https://configUrl', 'Please sign in')
+                // ]).toResponse();
+
+                // Return result response
+                let response = teamBuilder.ComposeExtensionResponse.result('list').attachments([
+                    new builder.ThumbnailCard()
+                        .title('Test thumbnail card')
+                        .text('This is a test thumbnail card')
+                        .images([new builder.CardImage().url('https://bot-framework.azureedge.net/bot-icons-v1/bot-framework-default-9.png')])
+                        .toAttachment()
+                ]).toResponse();
+                callback(null, response, 200);
+            });
+        server.post('/api/composeExtension', teamChatConnector.listen());
+        server.listen(process.env.PORT, () => console.log(`listening to port:` + process.env.PORT));
+    }
+}
+
+const app = new App();
+app.run();
+```
