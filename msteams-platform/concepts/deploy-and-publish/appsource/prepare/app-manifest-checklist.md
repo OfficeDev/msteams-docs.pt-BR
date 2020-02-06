@@ -2,14 +2,17 @@
 title: Lista de verificação de manifesto de aplicativo
 description: A lista de verificação para o manifesto do aplicativo para publicar seu aplicativo do Microsoft Teams no AppSource
 keywords: lista de verificação de publicação do repositório de publicação do teams
-ms.openlocfilehash: e684bb4f578944c6f37eeb43541a491d42ec3479
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6186daf264f04e04d6037ddfb7d9208994cc3c57
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672791"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783875"
 ---
 # <a name="app-manifest-checklist"></a>Lista de verificação de manifesto de aplicativo
+
+>[!IMPORTANT]
+>Estamos migrando o gerenciamento de soluções do Office do Painel do Vendedor para o Partner Center. Para obter detalhes, confira [Migrando do Painel do Vendedor para o Partner Center ](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) e ler as [Perguntas frequentes](https://docs.microsoft.com/office/dev/store/partner-center-faq).
 
 O manifesto do aplicativo precisa estar em conformidade com as diretrizes descritas abaixo.
 
@@ -19,13 +22,13 @@ O manifesto do aplicativo precisa estar em conformidade com as diretrizes descri
 ## <a name="tips"></a>Dicas 
 
 * Não use "Teams", "Microsoft" ou "app" em seu nome de aplicativo.
-* O desenvolvedorname no manifesto do aplicativo deve ser igual ao nome do provedor definido no painel do parceiro central ou do vendedor.
+* O desenvolvedorname em seu manifesto deve ser igual ao nome do provedor definido no Partner Center.
 * Certifique-se de que a descrição do aplicativo, capturas de tela, texto e imagens promocionais descrevem apenas o aplicativo e não contêm anúncios adicionais, promoções ou nomes de marca de direitos autorais.
 * Se o produto exigir uma conta no serviço ou em outro serviço, liste-a na descrição e assegure-se de que haja links para se inscrever, entrar e sair.
 * Se o produto exigir que as compras adicionais funcionem corretamente, liste na descrição.
-* Forneça os termos de requisitos e os links de política de privacidade no manifesto e no painel de parceria ou no painel do vendedor. Verifique se os links são resolvidos corretamente para a documentação correta e específico para o Microsoft Teams. Para bots, você deve fornecer as mesmas informações na seção envio da página de registro do bot Framework.
-* Certifique-se de que os metadados no manifesto correspondam exatamente aos metadados no painel do centro de parceria ou vendedor (e, para bots, no registro da estrutura do bot). Observe que a entrada de painel do vendedor deve conter uma descrição mais detalhada e formatada para uso na página de produto do AppSource.
-* Certifique-se de que o título do aplicativo usado no manifesto corresponde exatamente com o título do aplicativo inserido no centro de parceria ou no envio do painel do vendedor
+* Forneça os termos de requisitos e os links de política de privacidade no manifesto e no centro de parceria ou painel. Verifique se os links são resolvidos corretamente para a documentação correta e específico para o Microsoft Teams. Para bots, você deve fornecer as mesmas informações na seção envio da página de registro do bot Framework.
+* Verifique se os metadados no manifesto correspondem exatamente aos metadados no centro de parceria (e, para bots, no registro de estrutura do bot). Observe que a sua entrada do centro de parceria pode conter uma descrição mais detalhada e formatada para uso na página de produto do AppSource.
+* Verifique se o título do aplicativo usado no manifesto é uma **correspondência exata** com o título do aplicativo inserido no envio do Partner Center. *Consulte* [criar listagens eficazes no Microsoft AppSource e no Office — Use um nome de suplemento consistente ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## <a name="metadata-requirement"></a>Requisitos de metadados
 

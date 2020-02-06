@@ -1,16 +1,16 @@
 ---
-title: Somente bots de notificação
-description: Descreve o que são somente notificações de bots no Microsoft Teams
+title: Bots somente de notificação
+description: Descreve quais bots somente de notificação estão no Microsoft Teams
 keywords: notificação de bots do teams
-ms.date: 05/20/2019
-ms.openlocfilehash: 37652bc2d6171191c81be4e5a2875f47c79574f9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 01/29/2020
+ms.openlocfilehash: d312f9cd4558d35fc2492b5cf0b4f77b65660833
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672489"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783903"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Notificações somente bots no Microsoft Teams
+# <a name="notification-only-bots-in-microsoft-teams"></a>Bots somente de notificação no Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -45,5 +45,4 @@ Para habilitar isso, defina `isNotificationOnly` como `true`.
 
 ## <a name="best-practices-and-limitations"></a>Práticas recomendadas e limitações
 
-* Você não pode criar `personal` um bot de notificação somente com escopo, já que o usuário não pode Messager o bot de notificação somente em um chat pessoal. Isso significa que você não pode receber `conversationUpdate` um evento que fornecerá os detalhes necessários para enviar uma notificação. Seu bot de notificação somente funcionará corretamente se oferecer suporte ao `team` escopo e adicionado a uma equipe. Na configuração de equipe, seu bot terá acesso às informações necessárias para enviar uma notificação para um canal ou de forma privada para um usuário.
-* Notificações somente os bots usam mensagens pró-ativas para se comunicar com o usuário. Consulte [Proactive Messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) para obter mais detalhes.
+* Bots somente de notificação usam mensagens proativas para se comunicar com o usuário. Consulte [Proactive Messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) para obter mais detalhes.

@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672894"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783966"
 ---
 # <a name="card-formatting"></a>Formatação de cartão
 
@@ -105,14 +105,16 @@ No Android, a formatação de redução de cartão adaptável aparece da seguint
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>Mencione o suporte de cartões adaptáveis 
 
 > [!NOTE]
-> Mencione o suporte nos cartões atualmente é suportado apenas na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro) .
+> Mencione o suporte nos cartões atualmente é suportado apenas na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md) .
 
 Os bots e as extensões de mensagens agora podem incluir menção dentro do conteúdo do cartão nos elementos bloco de texto e FactSet. 
 
 ### <a name="constructing-mentions"></a>Como criar menção
+
 Para incluir uma menção em um cartão adaptável, seu aplicativo precisa incluir os seguintes elementos
 
 * `<at>username</at>`nos elementos de cartão adaptável com suporte
@@ -121,6 +123,7 @@ Para incluir uma menção em um cartão adaptável, seu aplicativo precisa inclu
 Observe que os cartões com menção não têm suporte em clientes móveis no momento.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Cartão adaptável de amostra com menção
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
