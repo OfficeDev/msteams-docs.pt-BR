@@ -3,12 +3,12 @@ title: Enviar mensagens a Conectores e WebHooks
 description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672885"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783910"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a Conectores e WebHooks
 
@@ -230,14 +230,15 @@ Para verificar se uma ação `HttpPOST` está funcionando corretamente, use o [W
 
 ## <a name="rate-limiting-for-connectors"></a>Limitação de taxa para Conectores
 
-Esse limite controla o tráfego que um conector ou um Webhook de entrada tem permissão para gerar em um canal.
+Esse limite controla o tráfego que um conector ou um Webhook de entrada tem permissão para gerar em um canal. As solicitações feitas pelo seu gancho ou conector serão limitadas quando o limite de taxa ThreshHold for ultrapassado. O período de tempo para o comportamento da limitação é diretamente correlacionado aos parâmetros de taxa de solicitação excedido. Por exemplo, se um conector ou um webhook exceder 100 solicitações de mensagem em 3600 segundos, o conector será limitado para os próximos 3600 segundos:
 
 | Período de tempo (s)  | Máximo de solicitações de mensagem permitidas  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 hora)  | 100  | 
 | 7200 | 150  | 
+| 86400 (1 dia) | 1800  | 
 
 Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Siga as [práticas recomendadas](../../bots/how-to/rate-limit.md#best-practices) para evitar atingir os limites de taxa.
 
