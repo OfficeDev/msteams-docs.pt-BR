@@ -2,12 +2,12 @@
 title: Referência de esquema de manifesto
 description: Descreve o esquema suportado pelo manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: d4a2864c18a5066673bafab42a46733a0ab5f116
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a1a690e6e382dcad3ceb200ec02286e8c9171f8
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672728"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953485"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -300,7 +300,7 @@ O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco só �
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será`true`|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será`true`|
 |`scopes`|Matriz de enumeração|1 |✔|No momento, as guias configuráveis `team` só `groupchat` dão suporte a e os escopos. |
 |`sharePointPreviewImage`|String|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeração|1 ||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e`sharePointWebPart` |
@@ -321,6 +321,9 @@ O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo 
 |`websiteUrl`|String|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
 |`scopes`|Matriz de enumeração|1 |✔|Atualmente, as guias estáticas oferecem `personal` suporte somente ao escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
 
+> [!NOTE]
+> Se suas guias exigirem informações dependentes de contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, *consulte* [obter contexto para a guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+
 ## <a name="bots"></a>robôs
 
 **Opcional**
@@ -331,11 +334,11 @@ O objeto é uma matriz (máximo de apenas 1 elemento&mdash;atualmente apenas um 
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|String|64 caracteres|✔|A ID exclusiva do aplicativo da Microsoft para o bot, conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
-|`needsChannelSelector`|Boolean|||Descreve se o bot utiliza ou não uma dica de usuário para adicionar o bot a um canal específico. Será`false`|
-|`isNotificationOnly`|Boolean|||Indica se um bot é um bot unidirecional somente de notificação, em vez de um bot de conversa. Será`false`|
-|`supportsFiles`|Boolean|||Indica se o bot dá suporte à capacidade de carregar/baixar arquivos no chat pessoal. Será`false`|
-|`scopes`|Matriz de enumeração|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência com escopo para um usuário individual sozinho (`personal`). Essas opções são não exclusivas.|
+|`botId`|String|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
+|`needsChannelSelector`|Booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será`false`|
+|`isNotificationOnly`|Booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será`false`|
+|`supportsFiles`|Boolean|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Será`false`|
+|`scopes`|Matriz de enumeração|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -343,8 +346,8 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeração|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opções `team`são `personal`, e `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos para a qual o bot oferece suporte:<br>`title`: o nome do comando do bot (cadeia de caracteres, 32)<br>`description`: uma simples descrição ou exemplo da sintaxe do comando e seu argumento (String, 128)|
+|`items.scopes`|matriz de enumeração|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ## <a name="connectors"></a>conectores
 
@@ -374,7 +377,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do `object
 |Nome| Tipo | Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|String|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que faz a extensão do sistema de mensagens, conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de aplicativo geral.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
 |`commands`|Matriz de objeto|10 |✔|Matriz de comandos que a extensão de mensagens oferece suporte|
 |`messageHandlers`|Matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no`validDomains`|
 |`messageHandlers.type`|String|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
@@ -392,9 +395,9 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|String|64 caracteres||Tipo do comando. Um `query` ou `action`. Será`query`|
 |`title`|String|32 caracteres|✔|O nome do comando amigável|
 |`description`|String|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando|
-|`initialRun`|Boolean|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Será`false`|
+|`initialRun`|Booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Será`false`|
 |`context`|Matriz de cadeias de caracteres|3 ||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose`, `commandBox`, `message`. O padrão é`["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Um valor Boolean que indica se deve buscar o módulo de tarefa dinamicamente|
+|`fetchTask`|Booliano|||Um valor Boolean que indica se deve buscar o módulo de tarefa dinamicamente|
 |`taskInfo`|Objeto|||Especificar o módulo de tarefa a ser pré-carregar ao usar um comando de extensão de mensagens|
 |`taskInfo.title`|String|64||Título inicial da caixa de diálogo|
 |`taskInfo.width`|String|||Largura da caixa de diálogo: um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '|

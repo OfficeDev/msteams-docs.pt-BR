@@ -2,12 +2,12 @@
 title: Criar uma ótima página de detalhes do aplicativo
 description: Descreve quais páginas de detalhes do aplicativo devem ter
 keywords: o Teams Publish Store Office Publishing Policy AppSource Content
-ms.openlocfilehash: 4a98cca7b1ddd87d79e38d863fd3868171b7749e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672548"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953513"
 ---
 # <a name="build-a-great-app-details-page"></a>Criar uma ótima página de detalhes do aplicativo
 
@@ -41,7 +41,7 @@ Este é um dos primeiros elementos que os usuários visualizam. Deve ser atraent
 
 ## <a name="outline-icon"></a>Ícone de estrutura de tópicos
 
-Isso é usado em extensões de mensagens marcadas como um favorito pelo usuário e o menu de navegação à esquerda. Certifique-se de que seja simples e reconhecível.
+Isso é usado em extensões de mensagens marcadas como um favorito pelo usuário e o menu de navegação à esquerda. Certifique-se de que seja simples e reconhecível. O ícone de estrutura de tópicos deve conter somente branco e transparência (sem outras cores). Para especificações obrigatórias, *consulte* [criar um pacote de aplicativos para seu aplicativo do Microsoft Teams-ícones](../../../build-and-test/apps-package.md#icons).
 
 ![Ícone de aplicativo estrutura de](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![tópicos da exibição do ícone do aplicativo exibir appstudio](~/assets/images/store-detail-page/AppIconOutline-01.png)
