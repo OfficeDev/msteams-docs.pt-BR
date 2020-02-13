@@ -3,20 +3,20 @@ title: Enviar mensagens a Conectores e WebHooks
 description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783910"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953464"
 ---
-# <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a Conectores e WebHooks
+# <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
 Para enviar uma mensagem por meio do Conector do Office 365 ou do Webhook de entrada, poste uma carga JSON na URL do Webhook. Geralmente, essa carga estará no formato de [Cartão do Conector do Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 Também é possível usar esse JSON para criar cartões contendo entradas avançadas, como entrada de texto, seleção múltipla ou escolha de data e hora. O código que gera o cartão e as postagens na URL do Webhook pode ser executado em qualquer serviço hospedado. Esses cartões são definidos como parte de mensagens acionáveis e também são compatíveis com [cartões](~/task-modules-and-cards/what-are-cards.md) usados nos bots do Teams e nas Extensões de mensagens.
 
-### <a name="example-connector-message"></a>Exemplo de mensagem do Conector
+### <a name="example-connector-message"></a>Exemplo de mensagem do conector
 
 ```json
 {
@@ -175,7 +175,7 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
 > [!NOTE]
 > Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do Conector.
 
-#### <a name="example-manifestjson-with-connector"></a>Exemplo de manifest.json com o Conector
+#### <a name="example-manifestjson-with-connector"></a>Exemplo de manifest.json com o conector
 
 ```json
 {
@@ -215,7 +215,7 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
 }
 ```
 
-## <a name="testing-your-connector"></a>Testar o Conector
+## <a name="testing-your-connector"></a>Testar o conector
 
 Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto do Painel do Desenvolvedor do Connectors (modificado conforme indicado na seção anterior) e os dois arquivos de ícone.
 
@@ -227,18 +227,21 @@ Agora você pode iniciar a experiência de configuração. Lembre-se de que esse
 
 Para verificar se uma ação `HttpPOST` está funcionando corretamente, use o [Webhook de entrada personalizado](#setting-up-a-custom-incoming-webhook).
 
+## <a name="rate-limiting-for-connectors"></a>Limitação de taxa para conectores
 
-## <a name="rate-limiting-for-connectors"></a>Limitação de taxa para Conectores
+Os limites de taxa de aplicativos controlam o tráfego que um conector ou um webhook de entrada tem permissão para gerar em um canal. O Teams acompanha as solicitações por meio de uma janela de taxa fixa e de um contador incremental medido em segundos.  Se houver muitas solicitações, a conexão do cliente será limitada até que a janela seja atualizada, isto é, pela duração da taxa fixa.
 
-Esse limite controla o tráfego que um conector ou um Webhook de entrada tem permissão para gerar em um canal. As solicitações feitas pelo seu gancho ou conector serão limitadas quando o limite de taxa ThreshHold for ultrapassado. O período de tempo para o comportamento da limitação é diretamente correlacionado aos parâmetros de taxa de solicitação excedido. Por exemplo, se um conector ou um webhook exceder 100 solicitações de mensagem em 3600 segundos, o conector será limitado para os próximos 3600 segundos:
+### <a name="transactions-per-second-thresholds"></a>**Limites de transações por segundo**
 
-| Período de tempo (s)  | Máximo de solicitações de mensagem permitidas  |
+| Tempo (segundos)  | Máximo de solicitações permitidas  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600 (1 hora)  | 100  | 
-| 7200 | 150  | 
-| 86400 (1 dia) | 1800  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
+
+*Confira também* [Conectores do Office 365 — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
 Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Siga as [práticas recomendadas](../../bots/how-to/rate-limit.md#best-practices) para evitar atingir os limites de taxa.
 
