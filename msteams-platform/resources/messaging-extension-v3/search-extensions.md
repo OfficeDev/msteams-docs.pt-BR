@@ -2,13 +2,13 @@
 title: Pesquisar com extensões de mensagens
 description: Descreve como desenvolver extensões de mensagens baseadas na pesquisa
 keywords: pesquisa de extensões de mensagens de extensões de mensagens do teams
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672739"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228042"
 ---
 # <a name="search-with-messaging-extensions"></a>Pesquisar com extensões de mensagens
 
@@ -135,7 +135,7 @@ Além das propriedades de atividade de bot padrão, a carga contém os seguintes
 |`channelData.tenant.id`| Locatário do Azure Active Directory. |
 |`channelData.channel.id`| ID do canal (se a solicitação tiver sido feita em um canal). |
 |`channelData.team.id`| ID da equipe (se a solicitação tiver sido feita em um canal). |
-|`clientInfo`pessoa | Metadados adicionais sobre o cliente, como localidade/idioma e tipo de cliente. |
+|`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado do usuário.<br>O `platform` campo descreve a plataforma do cliente de mensagens. <br>Para obter informações adicionais, *Confira* [tipos de entidade não IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 Os próprios parâmetros de solicitação são encontrados no objeto value, que inclui as seguintes propriedades:
 
@@ -183,11 +183,9 @@ Os próprios parâmetros de solicitação são encontrados no objeto value, que 
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -524,10 +522,10 @@ Neste ponto, a janela é fechada e o controle é passado para o cliente Teams. A
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-As [extensões do teams](https://www.npmjs.com/package/botbuilder-teams) para o SDK do bot Builder para node. js fornecem objetos e métodos auxiliares para simplificar o recebimento, processamento e resposta a solicitações de extensão de mensagens.
-
 #### <a name="example-code-in-nodejs"></a>Código de exemplo em node. js
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*Confira também* [exemplos da estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

@@ -3,12 +3,12 @@ title: Obter contexto para o bot
 description: Descreve como obter contexto para bots no Microsoft Teams
 keywords: contexto de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 2dea6fd51e7274fa899d9ae882441a21618d7e09
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672938"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227993"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obter contexto para o bot do Microsoft Teams
 
@@ -17,7 +17,7 @@ ms.locfileid: "41672938"
 Seu bot pode acessar contexto adicional sobre a equipe ou chat, como perfil de usuário. Essas informações podem ser usadas para enriquecer a funcionalidade do seu bot e fornecer uma experiência mais personalizada.
 
 > [!NOTE]
-> Essas APIs de&ndash;bot específicas do Microsoft Teams são mais bem acessadas por meio de nossas extensões para o SDK do bot Builder. Para o C#/.NET, baixe [o pacote NuGet Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Para o desenvolvimento de Node. js, você pode instalar o pacote [botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) NPM. O construtor de bot de destino do SDKs v3.
+> Essas APIs de&ndash;bot específicas do Microsoft Teams são mais bem acessadas por meio de nossas extensões para o SDK do bot Builder. Para o C#/.NET, baixe [o pacote NuGet Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Para o desenvolvimento de Node. js, a funcionalidade do BotBuilder para Microsoft Teams foi incorporada ao [SDK da estrutura de bot](https://github.com/microsoft/botframework-sdk) a partir da v 4.6.
 
 ## <a name="fetching-the-team-roster"></a>Buscando a lista de equipes
 
@@ -90,8 +90,6 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 
 ### <a name="nodejstypescript-example"></a>Exemplo de Node. js/TypeScript
 
-O exemplo a seguir usa as [extensões do Microsoft Teams para o SDK do bot Builder para node. js](https://www.npmjs.com/package/botbuilder-teams).
-
 ```typescript
 
 [...]
@@ -112,6 +110,8 @@ connector.fetchMembers(
   }
 );
 ```
+
+*Confira também* [exemplos da estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a>Buscando perfil de usuário ou lista no chat de grupo ou pessoal
 

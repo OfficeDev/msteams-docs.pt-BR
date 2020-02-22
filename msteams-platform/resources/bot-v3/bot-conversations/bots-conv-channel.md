@@ -3,12 +3,12 @@ title: Conversas de chat de grupo e canal com bots
 description: Descreve o cenário de ponta a ponta de ter uma conversa com um bot em um canal no Microsoft Teams
 keywords: bot de conversa de canais de cenários de equipe
 ms.date: 06/25/2019
-ms.openlocfilehash: 168abd1e3894b95983eec01541d470f1b5384a66
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672505"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227994"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversas de chat de grupo e canal com um bot do Microsoft Teams
 
@@ -136,8 +136,6 @@ await client.Conversations.ReplyToActivityAsync(replyActivity);
 
 #### <a name="nodejs-example"></a>Exemplo do node. js
 
-Este exemplo usa o pacote [botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) NPM.
-
 ```javascript
 // User to mention
 var toMention: builder.IIdentity = {
@@ -199,3 +197,5 @@ session.send(generalMessage);
 ## <a name="accessing-groupchat-or-channel-scope"></a>Acessando groupChat ou escopo de canal
 
 Seu bot pode fazer mais do que enviar e receber mensagens em grupos e equipes. Por exemplo, também pode buscar a lista de membros, incluindo suas informações de perfil, bem como a lista de canais. Consulte [obter contexto para o bot do Microsoft Teams](~/resources/bot-v3/bots-context.md) para saber mais.
+
+*Confira também* [exemplos da estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

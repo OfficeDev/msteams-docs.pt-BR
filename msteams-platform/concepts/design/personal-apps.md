@@ -2,12 +2,12 @@
 title: Referência de diretrizes de design
 description: Descreve as diretrizes para a criação de um aplicativo pessoal
 keywords: Diretrizes de design do Microsoft Teams aplicativos pessoais da estrutura de referência
-ms.openlocfilehash: 6a07b618d78a3ad79850713052c88ef178c1ecc1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672525"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228070"
 ---
 # <a name="personal-apps"></a>Aplicativos pessoais
 
@@ -34,7 +34,7 @@ Um aplicativo pessoal normalmente contém as seguintes guias:
 
 ### <a name="your-tab"></a>Sua guia
 
-Este é o local onde os usuários verão todas as suas coisas. É seu espaço pessoal. A guia pode ser organizada como uma lista, uma grade, colunas ou uma tela única... o que funcionar melhor para o seu aplicativo. Para obter informações adicionais sobre como criar guias eficazes, consulte: [Design de guias (~/Tabs/design/Tabs.MD).
+Este é o local onde os usuários verão todas as suas coisas. É seu espaço pessoal. A guia pode ser organizada como uma lista, uma grade, colunas ou uma tela única... o que funcionar melhor para o seu aplicativo. Para obter informações adicionais sobre como criar guias eficazes, consulte: [design de guias](../../tabs/design/tabs.md).
 
 Como essa guia pode mostrar itens de vários canais, cada item deve exibir sua própria equipe, canal e guia para que o usuário possa ver facilmente onde ele se originou.
 
@@ -54,7 +54,7 @@ Esta é uma lista de todas as suas guias na organização da pessoa (com as quai
 
 Um bot não é necessário, mas é uma ótima maneira de se comunicar de forma direta e privada com seus usuários. A notificação é uma das funções mais importantes de um aplicativo pessoal e qual é a melhor maneira de notificá-lo do que com comunicação direta?
 
-Os bots entregam mensagens na forma de cartões, que podem fornecer informações específicas (como um alerta que o novo conteúdo está disponível) ou atualizações amplas (como uma lista de tarefas diárias). Para obter informações adicionais sobre como projetar bots efetivos, consulte: [Design de bot (~/bots/design/bots.MD).
+Os bots entregam mensagens na forma de cartões, que podem fornecer informações específicas (como um alerta que o novo conteúdo está disponível) ou atualizações amplas (como uma lista de tarefas diárias). Para obter informações adicionais sobre como projetar bots efetivos, consulte: [design de bot](../../bots/design/bots.md).
 
 ![Saudação de bot](~/assets/images/Personal-apps-Bot.png)
 

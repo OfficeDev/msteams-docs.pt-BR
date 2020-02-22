@@ -2,12 +2,12 @@
 title: Introdução ao gerador Yeoman para o Microsoft Teams
 description: Introdução à criação de aplicativos ótimos com o gerador Yeoman para o Microsoft Teams
 keywords: Getting Started node. js NodeJS Yeoman
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672637"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228084"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Criar seu primeiro aplicativo do Microsoft Teams
 
@@ -118,7 +118,7 @@ Agora você poderá navegar até `http://localhost:3007/myFirstAppTab/` para gar
 
 O Microsoft Teams não permite que seu aplicativo hospedado no localhost, portanto, você precisa publicá-lo em uma URL pública ou usar um proxy, como ngrok.
 
-Boa notícia é que o projeto estruturado tem esse interno. Quando você executar `gulp ngrok-serve` o serviço ngrok será iniciado em segundo plano, com uma entrada DNS do unqiue e do Public, ele também empacotará o manifesto com essa URL exclusiva e, em seguida, fará exatamente `gulp serve`a mesma coisa que.
+Boa notícia é que o projeto estruturado tem esse interno. Quando você executar `gulp ngrok-serve` o serviço ngrok será iniciado em segundo plano, com uma entrada DNS exclusiva e pública e também empacotará o manifesto com essa URL exclusiva e, em seguida, fará exatamente a mesma coisa `gulp serve`que.
 
 Depois de `gulp ngrok-serve`executar o, criar uma nova equipe do Microsoft Teams e quando ela for criada clique no nome da equipe, vá para as configurações do Teams e selecione *aplicativos*. No canto inferior direito, você verá um link *carregar um aplicativo personalizado*, selecione-o e navegue até a pasta do projeto e a subpasta `package`chamada. Selecione o arquivo zip nessa pasta e escolha abrir. Seu aplicativo agora está suplementos foi feito no Microsoft Teams.
 

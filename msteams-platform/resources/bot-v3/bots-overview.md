@@ -3,12 +3,12 @@ title: Adicionar bots aos aplicativos do Microsoft Teams
 description: Descreve como começar a desenvolver bots no Microsoft Teams
 keywords: desenvolvimento de bots do teams
 ms.date: 05/20/2018
-ms.openlocfilehash: 0ecb268c34275e958103c9905b2ed1f0858cafda
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58221e94520ef6e748bbd6c17fa7933813874c56
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672487"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228049"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Adicionar bots aos aplicativos do Microsoft Teams
 
@@ -42,9 +42,9 @@ O Microsoft Teams é compatível com a maior parte do [Microsoft bot Framework](
 
 As extensões SDK instalam dependências, incluindo o SDK do bot Builder.
 
-* **.Net** Para usar o Microsoft Teams Extensions para o SDK do bot Builder para .NET, instale o pacote NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) no seu projeto do Visual Studio.
-* **Node. js** para usar as extensões do Microsoft Teams para o SDK do bot Builder para node. js, adicione o pacote [botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) NPM.
-* **Código-fonte** Você pode encontrar o código-fonte completo para as extensões no repositório [BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams) no github.
+* **.Net** Para usar o Microsoft Teams Extensions para o SDK do bot Builder para .NET, instale o pacote NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) no seu projeto do Visual Studio. Para o desenvolvimento de Node. js, a funcionalidade do BotBuilder para Microsoft Teams foi incorporada ao [SDK da estrutura de bot](https://github.com/microsoft/botframework-sdk) a partir da v 4.6.
+
+*Confira também* [exemplos da estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 > [!IMPORTANT]
 > Você pode desenvolver aplicativos do teams em qualquer outra tecnologia de programação da Web e chamar as [APIs REST da estrutura de bot](/bot-framework/rest-api/bot-framework-rest-overview) diretamente, mas você deve executar todo o tratamento de tokens por conta própria.
