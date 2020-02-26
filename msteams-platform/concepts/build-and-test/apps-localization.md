@@ -3,12 +3,12 @@ title: Localização para aplicativos da equipe
 description: Descreve problemas em relação à localização do aplicativo
 keywords: publicação do Microsoft Teams armazenar o idioma de localização do Office Publishing AppSource
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672570"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279757"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localização para aplicativos do Microsoft Teams
 
@@ -66,7 +66,7 @@ Em seguida, você poderá adicionar a propriedade ' localizationInfo ' com o idi
 }
 ```
 
-Você pode fornecer arquivos. JSON adicionais com traduções de todas as cadeias de caracteres voltadas para o usuário em seu manifesto. Esses arquivos devem aderir ao [esquema JSON do arquivo de localização](~/resources/schema/localization-schema.md) e devem ser adicionados à propriedade "localizationInfo" do manifesto. Cada arquivo se correlaciona com uma marca de idioma que o cliente do teams usa para escolher as cadeias de caracteres apropriadas. A marca de idioma tem a forma <language> - <region> de mas é recomendável omitir <region> a parte para direcionar todas as regiões que dão suporte ao idioma desejado.
+Você pode fornecer arquivos. JSON adicionais com traduções de todas as cadeias de caracteres voltadas para o usuário em seu manifesto. Esses arquivos devem aderir ao [esquema JSON do arquivo de localização](../../resources/schema/localization-schema.md) e devem ser adicionados à propriedade "localizationInfo" do manifesto. Cada arquivo se correlaciona com uma marca de idioma que o cliente do teams usa para escolher as cadeias de caracteres apropriadas. A marca de idioma tem a forma <language> - <region> de mas é recomendável omitir <region> a parte para direcionar todas as regiões que dão suporte ao idioma desejado.
 
 O cliente Teams aplicará as cadeias de caracteres nesta ordem: cadeias de caracteres de idioma padrão-> cadeias de caracteres de idiomas do usuário-> idioma do usuário + cadeia de caracteres de região do usuário.
 
