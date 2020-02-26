@@ -369,5 +369,7 @@
       href: resources/schema/manifest-schema.md
     - name: Esquema JSON do arquivo de localização
       href: resources/schema/localization-schema.md
+    - name: Guia de colaborador do teams
+      href: resources/teams-contributor-reference.md
 - name: Suporte e comentários
   href: feedback.md
