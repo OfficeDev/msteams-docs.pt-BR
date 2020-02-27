@@ -365,6 +365,8 @@
       href: resources/media-formats.md
     - name: Atributo de cookie SameSite (atualização 2020)
       href: resources/samesite-cookie-update.md
+    - name: Alterações de API de bot para membros de equipe/chat
+      href: resources/team-chat-member-api-changes.md
     - name: Esquema de manifesto
       href: resources/schema/manifest-schema.md
     - name: Esquema JSON do arquivo de localização
