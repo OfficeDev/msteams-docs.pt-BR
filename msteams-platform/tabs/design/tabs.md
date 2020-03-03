@@ -2,19 +2,19 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Diretrizes de design de equipes referência configuração de guias
-ms.openlocfilehash: adf86678a42e2267af00734e1ef85efced882488
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672431"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365259"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
 > [!Important]
 > **Guias em clientes móveis**
 >
-> Siga as [orientações para guias em celular](~/tabs/design/tabs-mobile.md) ao criar suas guias. Se sua guia usa autenticação, você deve atualizar o SDK do JavaScript do Microsoft Teams para a versão 1.4.1 ou posterior, ou a autenticação falhará.
+> Siga as [orientações para guias em celular](./tabs-mobile.md) ao criar suas guias. Se sua guia usa autenticação, você deve atualizar o SDK do JavaScript do Microsoft Teams para a versão 1.4.1 ou posterior, ou a autenticação falhará.
 >
 > **Guias pessoais (estáticos) no celular:**
 >
@@ -40,9 +40,6 @@ As guias funcionam melhor quando são criadas para atender a uma necessidade esp
 
 Evite criar vários painéis em uma guia, adicionar camadas de navegação ou exigir que os usuários rolem verticalmente e horizontalmente em uma guia. Em outras palavras, tente não ter tabulações na guia.
 
-> [!TIP]
-> Evite criar vários painéis em uma guia, adicionar camadas de navegação ou exigir que os usuários rolem verticalmente e horizontalmente em uma guia.
-
 ### <a name="integration"></a>Integração
 
 Encontre maneiras de notificar os usuários sobre a atividade da guia postando cartões em uma conversa, por exemplo.
@@ -55,35 +52,53 @@ Encontre uma maneira de facilitar a conversa em torno de uma guia. Isso garante 
 
 Certifique-se de que você está concedendo acesso às pessoas certas no momento certo. Manter o processo de entrada simples evitará a criação de barreiras para contribuição e colaboração.
 
+### <a name="responsiveness-to-window-sizing"></a>Capacidade de resposta para dimensionamento de janela
+
+As equipes podem ser usadas em tamanhos de janela tão pequenos quanto 720px, então garantir que uma guia possa ser usada em uma pequena janela seja tão importante quanto a usabilidade em resoluções muito altas.
+
+### <a name="flat-navigation"></a>Navegação simples
+
+Pedimos aos desenvolvedores não adicionar o portal inteiro a uma guia. manter a navegação relativamente simples ajuda a manter um modelo de conversa mais simples. Em outras palavras, a conversa é sobre uma lista de coisas, como itens de trabalho triantigos, ou uma única coisa, como uma espec.
+
+Há desafios de navegação inerentes com uma hierarquia de navegação profunda em conversas encadeadas. Para a melhor experiência do usuário, a navegação de guia deve ser mantida no mínimo e ser projetada da seguinte maneira:
+
+> [!div class="checklist"]
+>
+> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade**. Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
+>* **Abre uma pseudo caixa de diálogo em um iframe**. Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
+>* **Abre uma página do navegador**.
+
 ### <a name="personality"></a>Personalidade
 
-A tela da guia apresenta uma boa oportunidade para marcar sua experiência. Incorpore seus próprios logotipos, cores e layouts para comunicar personalidade.
+A tela da guia apresenta uma ótima oportunidade de marcar sua experiência. O logotipo é uma parte importante da sua identidade e conexão com os usuários. portanto, não se esqueça de incluí-lo:
 
-O logotipo é uma parte importante da sua identidade e uma conexão com os usuários. Portanto, certifique-se de incluí-lo.
+> [!div class="checklist"]
+>
+>* Coloque o logotipo no canto esquerdo ou direito ou ao longo da borda inferior
+> * Mantenha seu logotipo pequeno e discreto
 
-* Coloque o logotipo no canto esquerdo ou direito ou ao longo da borda inferior
-* Mantenha seu logotipo pequeno e discreto
+A incorporação de suas próprias cores e layouts twill também ajuda na comunicação de personalidade.
 
 > [!TIP]
-> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams.
+> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Consulte*, por exemplo [Teams Colors] (/Concepts/design/Components/Typography.MD
 
 ---
 
 ## <a name="tab-layouts"></a>Layouts de guia
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## <a name="types-of-tabs"></a>Tipos de guias
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
 ## <a name="configuration-page-height"></a>Altura da página de configuração
 
->[!NOTE]
+>[!IMPORTANT]
 >Em setembro de 2018, a altura da [página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) da guia foi aumentada enquanto a largura permanece inalterada. Se o seu aplicativo for projetado para o tamanho mais antigo, a página de configuração da guia terá uma grande quantidade de espaço em branco vertical. Aplicativos de repositório herdados isentos dessa alteração precisarão entrar em contato com a Microsoft após a atualização para acomodar as novas dimensões.
 
 As dimensões da página de configuração de guia:
@@ -116,4 +131,15 @@ Sempre que possível, cartões e bots devem se vincular detalhadamente a dados m
 
 ### <a name="naming"></a>Nomenclatura
 
-Em muitos casos, o nome do seu aplicativo pode criar um ótimo nome de guia. Mas considere nomear suas guias de acordo com a funcionalidade que elas fornecem.
+Em muitos casos, o nome do seu aplicativo criará um nome de guia ótimo. Mas, também considere nomear suas guias de acordo com a funcionalidade que elas fornecem.
+
+## <a name="notifications-for-tabs"></a>Notificações para guias
+
+Há dois modos de notificação para alterações de conteúdo de guia:
+
+> [!div class="checklist"]
+>
+> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+
+  Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention` especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.

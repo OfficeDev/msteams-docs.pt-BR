@@ -3,22 +3,35 @@ title: O que são guias personalizadas no Microsoft Teams?
 author: laujan
 description: Uma visão geral das guias personalizadas na plataforma do Microsoft Teams
 ms.topic: overview
-ms.author: v-laujan
-ms.openlocfilehash: 7560a9a7d19ca0182b2f5f45b304a96a0f2dddd4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672899"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365252"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>O que são guias personalizadas do Microsoft Teams?
 
-As guias são páginas da Web com reconhecimento de equipes incorporadas no Microsoft Teams. Eles podem ser adicionados como parte de um canal dentro de uma equipe, um chat de grupo ou um aplicativo pessoal para um usuário individual. Como parte do seu aplicativo, você pode adicionar guias personalizadas para incorporar seu próprio conteúdo da Web no Microsoft Teams e usar o [SDK de cliente do JavaScript do teams](/javascript/api/overview/msteams-client), adicionar a funcionalidade específica da equipe ao conteúdo da Web.
+As guias são páginas da Web com reconhecimento de equipes incorporadas no Microsoft Teams. São iframes simples que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionados como parte de um canal dentro de uma equipe, de um chat de grupo ou como um aplicativo pessoal para um usuário individual. Você pode incluir guias personalizadas com seu aplicativo para incorporar seu próprio conteúdo da Web no Microsoft Teams e adicionar funcionalidades específicas do teams ao seu conteúdo da Web. *Consulte* [SDK do cliente de JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > O Chrome 80, agendado para lançamento no início de 2020, apresenta novos valores de cookie e impõe políticas de cookies por padrão. É recomendável que você defina o uso pretendido para seus cookies, em vez de confiar no comportamento padrão do navegador. *Confira* o [atributo SameSite cookie (atualização 2020)](../resources/samesite-cookie-update.md).
 
 Há dois tipos de guias disponíveis em Teams-Channel/Group e pessoal. Uma guia de canal/grupo fornece conteúdo a canais e bate-papos de grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na Web. As guias pessoais, juntamente com bots de escopo pessoal, fazem parte de aplicativos pessoais e têm o escopo para um único usuário. Eles podem ser fixados na barra de navegação à esquerda para facilitar o acesso.
+
+## <a name="lesser-known-tab-features"></a>Recursos de guia menos conhecidos
+
+> [!div class="checklist"]
+>
+> * Reconhecimento da lista inteira de uma equipe.
+> * Se uma guia for adicionada a um aplicativo que também tenha um bot, o bot também será adicionado à equipe.
+> * Reconhecimento da ID do AAD do usuário atual.
+> * Reconhecimento de localidade para o usuário indicar idioma, ou seja, `en-us`. 
+> * Recurso SSO, se houver suporte.
+> * Capacidade de usar bots ou notificações de aplicativos para vincular detalhadamente à guia ou a uma subentidade no serviço, por exemplo, um item de trabalho individual.
+> * A capacidade de abrir um módulo de tarefa a partir de links dentro de uma guia.
+> * Reutilização de Web Parts do SharePoint dentro da guia.
 
 ## <a name="tabs-user-scenarios"></a>Guias de cenários do usuário
 
@@ -37,7 +50,7 @@ Uma guia personalizada é declarada no manifesto do aplicativo de seu pacote de 
 
 Se você optar por expor sua guia no canal/grupo ou escopo pessoal, precisará apresentar uma [página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) HTML com IFRAME na sua guia. Para guias pessoais, a URL do conteúdo é definida diretamente no manifesto pela `contentUrl` Propriedade na `staticTabs` matriz. O conteúdo da guia será o mesmo para todos os usuários.
 
-Para guias de canal/grupo, você também precisa criar uma página de configuração adicional que permite que os usuários configurem a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso ocorre porque a guia canal/grupo pode ser adicionada a várias equipes ou chats de grupo diferentes. Em cada instalação subsequente, os usuários poderão configurar a guia permitindo que você ajuste a experiência conforme necessário. Por exemplo, quando você adiciona a guia painel de DevOps do Microsoft Azure, a página de configuração permite que você escolha qual placa a guia carregará. A URL da página de configuração é especificada `configurationUrl` pela propriedade na `configurableTabs` matriz no manifesto do aplicativo.
+Para guias de canal/grupo, você também precisa criar uma página de configuração adicional que permite que os usuários configurem a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso ocorre porque a guia canal/grupo pode ser adicionada a várias equipes ou chats de grupo diferentes. Em cada instalação subsequente, os usuários poderão configurar a guia permitindo que você ajuste a experiência conforme necessário. Quando os usuários adicionam uma guia ou definem uma guia, uma URL é associada à guia apresentada na interface do usuário do Microsoft Teams. A configuração de uma guia é simplesmente adicionando parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia painel de DevOps do Microsoft Azure, a página de configuração permite que você escolha qual placa a guia carregará. A URL da página de configuração é especificada `configurationUrl` pela propriedade na `configurableTabs` matriz no manifesto do aplicativo.
 
 Você pode ter um máximo de uma (1) guia de canal/grupo e até dezesseis (16) Guias pessoais por aplicativo.
 

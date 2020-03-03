@@ -3,18 +3,18 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279778"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365245"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
 Você pode adicionar formatação de Rich Text aos seus cartões usando redução ou HTML, dependendo do tipo de cartão.
 
-Os cartões dão suporte à formatação somente na propriedade Text, e não nas propriedades Title ou subtítulo. A formatação pode ser especificada usando um subconjunto de formatação XML (HTML) ou redução, dependendo do tipo de cartão. Para obter cartões adaptáveis de desenvolvimento futuro AMD atuais usando a formatação de redução é recomendável.
+Os cartões dão suporte à formatação somente na propriedade Text, e não nas propriedades Title ou subtítulo. A formatação pode ser especificada usando um subconjunto de formatação XML (HTML) ou redução, dependendo do tipo de cartão. É recomendável usar os cartões adaptáveis de desenvolvimento atuais e futuros usando a formatação de redução.
 
 O suporte à formatação difere entre diferentes tipos de cartão, e a renderização do cartão pode diferir ligeiramente entre a área de trabalho e os clientes do Mobile Teams, bem como o Microsoft Teams no navegador da área de trabalho.
 
