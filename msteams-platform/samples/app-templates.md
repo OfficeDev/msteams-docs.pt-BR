@@ -2,12 +2,12 @@
 title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365266"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416849"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -38,7 +38,7 @@ Ele fornece uma base para criar recursos de comunicação direcionados personali
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![Perguntas frequentes mais sobre gif](~/assets/images/CompanyCommunicatorCompose.png)
+![Perguntas frequentes mais sobre gif](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>Perguntas Frequentes Plus
 
@@ -61,7 +61,7 @@ A conversa Q&um bots é uma maneira fácil de fornecer respostas para perguntas 
 >
 >
 
-![Perguntas frequentes mais sobre gif](~/assets/images/FAQPlusEndUser.gif)
+![Perguntas frequentes mais sobre gif](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>Suporte de RH
 
@@ -69,7 +69,7 @@ O bot de suporte de RH é um&amigável para um bot que oferece um profissional d
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![Suporte de RH](~/assets/images/expert-user.png)
+![Suporte de RH](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>Pesquisa de lista
 
@@ -79,7 +79,7 @@ Para ajudar a aliviar esse problema, estamos felizes em trazer para você o mode
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![Listar aplicativo de pesquisa](~/assets/images/list-search-template.png)
+![Listar aplicativo de pesquisa](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>Adesivos personalizados
 
@@ -89,7 +89,7 @@ Este aplicativo também permite o compartilhamento fácil de imagens/GIFs/adesiv
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Aplicativo adesivo](~/assets/images/stickers.png)
+![Aplicativo adesivo](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>Frases de apresentação
 
@@ -99,13 +99,13 @@ Além de encorajar as conexões pessoais em toda a sua equipe, o aplicativo do I
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Aplicativo Icebreaker](~/assets/images/icebreaker.png)
+![Aplicativo Icebreaker](../assets/images/icebreaker.png)
 
 ## <a name="scrum-status-bot"></a>Bot de status do Scrum
 
 O caminho de status do Scrum é um simples bot de assistente do Scrum que permitirá que os usuários executem reuniões de reserva assíncronas e forneçam e facilite que os usuários compartilhem suas atualizações diárias. Ele foi projetado para funcionar em bate-papos de grupo do Teams e todos os membros podem contribuir para o Scrum. Um pode iniciar e finalizar um Scrum e pode exibir as atualizações feitas por outras pessoas em um Scrum em execução.
 
-[Git It no GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git It no GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Bot de status do Scrum](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Book-a-Room é um [bot do Microsoft Teams](../bots/what-are-bots.md) que permite
 
 ## <a name="attendance-app"></a>Aplicativo de presença
 
-O aplicativo de presença é uma guia [aplicativos de energia](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) que pode ser fixado em uma equipe. Ele foi projetado para registrar a presença, geralmente em configurações como ambientes de aprendizado e treinamento. Os usuários podem marcar ou editar a presença de até 30 dias no passado e exibir os relatórios de presença resumidos para um grupo inteiro ou participantes individuais.
+O aplicativo de presença é uma guia [aplicativos de energia](/powerapps/maker/canvas-apps/embed-teams-app) que pode ser fixado em uma equipe. Ele foi projetado para registrar a presença, geralmente em configurações como ambientes de aprendizado e treinamento. Os usuários podem marcar ou editar a presença de até 30 dias no passado e exibir os relatórios de presença resumidos para um grupo inteiro ou participantes individuais.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Demonstração do aplicativo de presença](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>Associar aplicativo do insights
+
+Associar o insights é um modelo de [aplicativos de energia](/powerapps/maker/canvas-apps/embed-teams-app) que permite que os funcionários de primeiro lugar capturem e enviem diretamente opiniões, opiniões e percepção do cliente. Os funcionários de primeiro lugar são geralmente o representante da empresa a ser direcionado para os clientes em um ponto de contato de um-para-um. Os dados coletados podem ser compartilhados e usados de forma colaborativa por equipes de negócios, por exemplo, por meio de uma guia do Power BI Teams, para melhorar o produto e aprimorar a experiência do cliente.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Exibição de comentários de insights gerados pelo aplicativo](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Exibição do Power BI de insights gerados pelo aplicativo](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 Tem uma ideia para um modelo de aplicativo que você gostaria de ver? [Informe-nos](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
