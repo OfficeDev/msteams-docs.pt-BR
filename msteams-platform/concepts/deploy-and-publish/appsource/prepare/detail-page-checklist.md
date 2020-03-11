@@ -2,12 +2,12 @@
 title: Criar uma ótima página de detalhes do aplicativo
 description: Descreve quais páginas de detalhes do aplicativo devem ter
 keywords: o Teams Publish Store Office Publishing Policy AppSource Content
-ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953513"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582864"
 ---
 # <a name="build-a-great-app-details-page"></a>Criar uma ótima página de detalhes do aplicativo
 
@@ -29,22 +29,22 @@ O nome de um aplicativo desempenha uma função crítica na forma como os usuár
 
 * Não use termos genéricos ou nomes semelhantes aos nomes de aplicativos existentes.
 * Não use "Teams", "Microsoft" ou "app" em seu nome de aplicativo.
-![Nome do aplicativo exibir](~/assets/images/store-detail-page/AppName-02.png)
-![nome do aplicativo modo de exibição appstudio](~/assets/images/store-detail-page/AppName-01.png)
+![Repositório nome do aplicativo](~/assets/images/store-detail-page/AppName-02.png)
+![exibir nome do aplicativo exibição do App Studio](~/assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>Ícone de cor
 
 Este é um dos primeiros elementos que os usuários visualizam. Deve ser atraente e atraente ao rolar pela loja de aplicativos. Certifique-se de que ele faz uma boa impressão e também comunica a imagem e a finalidade da sua marca. O AppSource tem mais dicas sobre como [criar uma identidade visual consistente](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
 ![Ícone do aplicativo exibir](~/assets/images/store-detail-page/AppIcon-02.png)
-![o ícone do aplicativo exibir appstudio](~/assets/images/store-detail-page/AppIcon-01.png)
+![o ícone do aplicativo exibir o app Studio View](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## <a name="outline-icon"></a>Ícone de estrutura de tópicos
 
 Isso é usado em extensões de mensagens marcadas como um favorito pelo usuário e o menu de navegação à esquerda. Certifique-se de que seja simples e reconhecível. O ícone de estrutura de tópicos deve conter somente branco e transparência (sem outras cores). Para especificações obrigatórias, *consulte* [criar um pacote de aplicativos para seu aplicativo do Microsoft Teams-ícones](../../../build-and-test/apps-package.md#icons).
 
-![Ícone de aplicativo estrutura de](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![tópicos da exibição do ícone do aplicativo exibir appstudio](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![Ícone do aplicativo estrutura de](~/assets/images/store-detail-page/AppIconOutline-02.png)
+![tópicos do repositório Exibir ícone de aplicativo estrutura de tópicos do App Studio](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## <a name="short-description"></a>Descrição breve
 
@@ -64,7 +64,7 @@ Este é um resumo conciso do seu aplicativo. Ela deve ser original, interessante
 
 Veja um modo de exibição no [app Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Exibição appstudio de descrição curta](~/assets/images/store-detail-page/ShortDescription-01.png)
+![Exibição do App Studio de descrição curta](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>Descrição longa
 
@@ -80,6 +80,22 @@ Isso fornece uma narrativa atraente realçando os principais recursos da soluç�
 * Use o Active Voice e fale diretamente com os usuários.
 * Use os pontos de marcador para listar seus recursos.
 * Inclua um link de ajuda ou suporte para que os usuários saibam como contatá-lo se tiverem dúvidas.
+* Certifique-se de chamar quaisquer limitações ou restrições para melhor orientação do usuário.
+
+
+>[!NOTE]
+>O Microsoft Teams oferece suporte à seguinte sintaxe de redução:  
+> **Links**. `[title](url/address/here)`.  
+>**Imagens**. `![alt text](url/address/here)`.  
+> Em **negrito**. `**bold text**`   `__bold text__`.  
+> **Itálico**. `*italicized text*`  `_italicized text`.  
+>**[Listas ordenadas](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[Lista não ordenada](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**Nova linha**. `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**Escapa.** Use uma barra invertida embutida para escapar caracteres especiais.. `\*asterisk`.
 
 **Permitido**
 
@@ -89,11 +105,11 @@ Isso fornece uma narrativa atraente realçando os principais recursos da soluç�
 
 Veja um modo de exibição no [app Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Exibição appstudio de descrição longa do aplicativo](~/assets/images/store-detail-page/LongDescription-01.png)
+![Exibição do App Studio de descrição de longa duração](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>Capturas de tela
 
-As capturas de tela carregadas no [painel do vendedor](https://sellerdashboard.microsoft.com/Registration) são exibidas no [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) e na lista de aplicativos no cliente do teams. Eles fornecem uma visualização visual do seu aplicativo junto com a sua descrição de aplicativo.
+As capturas de tela carregadas no [Partner Center](https://partner.microsoft.com) são exibidas no [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) e na lista de aplicativos no cliente do teams. Eles fornecem uma visualização visual do seu aplicativo junto com a sua descrição de aplicativo.
 Você pode fornecer de uma a cinco capturas de tela formatadas como arquivos. png,. jpg ou. gif. As capturas de tela devem ter 1366 x 768 pixels com um tamanho máximo de 1024 KB.
 
 **Fazer:**

@@ -2,12 +2,12 @@
 title: Publicar publicação
 description: O que fazer após a publicação do aplicativo
 keywords: publicar o Microsoft Teams postar certificado de atualização
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672547"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582857"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Manter e dar suporte ao aplicativo publicado 
 
@@ -27,7 +27,9 @@ Exemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * Não use o botão *Adicionar um novo aplicativo* para reenviar seu aplicativo. Em vez disso, use o bloco para seu aplicativo na guia Visão geral.
 * O appId no manifesto atualizado deve ser igual ao do manifesto atual, com um número de versão incrementado.
-* Aumente o número da versão em seu manifesto.
+* Aumente o número da versão no manifesto se você fizer alterações de manifesto no seu envio.
+* Envios atualizados são necessários para passar por um novo processo de revisão e validação.
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>Quando a atualização do aplicativo dispara o fluxo de consentimento do usuário?
 
@@ -35,4 +37,4 @@ Quando um usuário instala o aplicativo uma das primeiras coisas que eles fazem 
 
 * Adição de um novo recurso a um aplicativo, como a adição de um bot a um aplicativo somente de tabulação.
 * Alterar a matriz de permissões no manifesto.
-* Aumente o número de versão do aplicativo em seu manifesto.
+* Incrementando o número de versão do aplicativo em seu manifesto.

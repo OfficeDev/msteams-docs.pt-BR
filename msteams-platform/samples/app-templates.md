@@ -2,12 +2,12 @@
 title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416849"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587278"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -63,7 +63,7 @@ A conversa Q&um bots é uma maneira fácil de fornecer respostas para perguntas 
 
 ![Perguntas frequentes mais sobre gif](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>Suporte de RH
+## <a name="hr-support-bot"></a>Bot de suporte de RH
 
 O bot de suporte de RH é um&amigável para um bot que oferece um profissional de suporte/especialista da equipe de RH no loop quando não é possível ajudar. É possível fazer uma pergunta ao bot e o bot responde com uma resposta se ela estiver contida na base de dados de conhecimento. Caso contrário, o bot permite que o usuário envie uma consulta que, em seguida, é lançada em uma equipe pré-configurada de especialistas que ajudam a fornecer suporte, agindo de dentro da própria equipe. Além disso, o bot sugere links para as políticas/perguntas de RH recomendadas pesquisando marcas pré-configuradas na pergunta. Esses blocos também podem ser encontrados na guia associada como uma referência rápida. O suporte a RH funciona bem para o QnA de peso leve e para oferecer suporte rápido ao lançar novos projetos/iniciativas na organização.
 
@@ -71,7 +71,7 @@ O bot de suporte de RH é um&amigável para um bot que oferece um profissional d
 
 ![Suporte de RH](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>Pesquisa de lista
+## <a name="list-search-app"></a>Listar aplicativo de pesquisa
 
 A colaboração no Microsoft Teams freqüentemente faz referência a informações contidas em itens em uma lista do SharePoint. Simplesmente colar um link para o item em questão obriga todos a mudar o contexto da conversa, localizar as informações necessárias e, em seguida, retornar ao Teams para continuar a conversa. Como a conversa continua normalmente, as pessoas terão que voltar para o item de referência várias vezes para verificar novos comentários e atualizar suas memórias de informações contidas no item. Essa alternância de contexto cria uma barreira para a colaboração suave e é uma receita para coisas que ocorrem por meio de rachaduras.
 
@@ -81,7 +81,7 @@ Para ajudar a aliviar esse problema, estamos felizes em trazer para você o mode
 
 ![Listar aplicativo de pesquisa](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>Adesivos personalizados
+## <a name="custom-stickers-app"></a>Aplicativo adesivo personalizado
 
 Autoexpressão é essencial para uma cultura de equipe íntegra. Esse modelo de aplicativo é uma [extensão de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) que permite que os usuários usem adesivos e gifs personalizados no Microsoft Teams. Este modelo oferece uma experiência de configuração fácil e baseada na Web, onde qualquer pessoa com acesso à configuração pode carregar os GIFs/adesivos/imagens que eles desejam que seus usuários finais tenham, permitindo que toda a equipe use qualquer conjunto de adesivos escolhido.
 
@@ -91,7 +91,7 @@ Este aplicativo também permite o compartilhamento fácil de imagens/GIFs/adesiv
 
 ![Aplicativo adesivo](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Frases de apresentação
+## <a name="icebreaker-bot"></a>Bot Icebreaker
 
 O Icebreaker é um [bot do Microsoft Teams](../bots/what-are-bots.md) que ajuda sua equipe a ficar mais perto ao emparelhar dois membros aleatórios da equipe a cada semana para atender. O bot torna o agendamento fácil, sugerindo automaticamente as horas livres que funcionam para ambos os membros. Fortaleça as conexões pessoais e construa uma Knit Community com esse aplicativo.
 
@@ -158,4 +158,13 @@ Associar o insights é um modelo de [aplicativos de energia](/powerapps/maker/ca
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>Aplicativo incentivos
+
+Incentivos é um modelo de [aplicativos de energia](/powerapps/maker/canvas-apps/embed-teams-app) que gerencia e controla a participação do funcionário do incentivized em atividades designadas, como treinamentos e iniciativas de gerenciamento de alterações. Os administradores usam o aplicativo para estabelecer atividades designadas, atribuir pontos para conclusão e especificar os níveis de ponto de qualificação necessários para prêmios. Os funcionários usam o aplicativo para exibir seus pontos acumulados e, ao atingir as recompensas de qualificação, solicitação e reivindicação retidas.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![Demonstração do aplicativo de incentivos](../assets/images/incentives-app.png)
+
 Tem uma ideia para um modelo de aplicativo que você gostaria de ver? [Informe-nos](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
+
