@@ -19,6 +19,8 @@
       href: samples/code-samples.md
     - name: Modelos de aplicativo prontos para produção
       href: samples/app-templates.md
+    - name: Conectores de turnos prontos para produção
+      href: samples/shifts-wfm-connectors.md
 - name: Conceitos
   expanded: true
   items:
