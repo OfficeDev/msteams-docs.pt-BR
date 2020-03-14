@@ -2,12 +2,12 @@
 title: Diretrizes de design para bots
 description: Descreve as diretrizes para a criação de bots
 keywords: Diretrizes de design de equipes referência de bots
-ms.openlocfilehash: f59a1e9c280f27567692b4d10341db79d05c3464
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672868"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635281"
 ---
 # <a name="start-talking-with-bots"></a>Começar a falar com bots
 
@@ -31,27 +31,43 @@ Oferecemos suporte para até seis botões por cartão. Seja conciso ao escrever 
 
 Os gráficos são uma boa maneira de informar uma história, mas nem todas as conversas de bot exigem elementos gráficos, portanto, use-as para o máximo impacto.
 
+### <a name="onboarding-users"></a>Usuários de integração
+
+É fundamental que os bots se apresentem e transmitam o que eles podem fazer aos usuários. Esse *valor o Exchange* ajuda os usuários a entender o que fazer com o bot, onde as limitações podem estar, e o mais importante, ajuda os usuários a tolerar a interação com uma máquina que não será tão intuitiva como uma pessoa real. Além disso, ele concede permissão aos dados do usuário no Exchange para o valor real que o serviço fornece.
+
+#### <a name="welcome-messages"></a>Mensagens de boas-vindas
+
+As mensagens de boas-vindas são a melhor maneira de definir o tom do bot e devem ser usadas em cenários pessoais e de equipe ou grupo. A mensagem informa o que o bot faz e algumas maneiras comuns de interagir com ele. Use exemplos de recursos específicos, como "*Tente perguntar...*" em uma lista com marcadores. Sempre que possível, essas sugestões devem retornar respostas armazenadas. É fundamental que os exemplos de recursos funcionem sem exigir que os usuários entrem.
+
+#### <a name="tours"></a>Viagens
+
+Inclua um atributo *Take a Tour* com mensagens de boas-vindas e respostas para entrada de usuário equivalente a "*ajuda*". Essa é a maneira mais eficaz de permitir que os usuários saibam o que um bot pode fazer. Os carrossel em experiências de um-para-um são uma maneira excelente de informar essa história e incluir os botões de *experimentar que* os links para exemplos de respostas possíveis sejam incentivados. Os Tours também são bons lugares para falar sobre outros recursos do aplicativo. Por exemplo, você pode incluir capturas de tela das guias de extensões de mensagens e equipes.  Os usuários não devem ter que entrar no Access e usar um tour.
+
+Quando os Tours são usados em cenários de equipe ou grupo, eles devem ser abertos em um módulo de tarefa para não adicionar mais ruído de cartão às conversas em andamento entre usuários.
+
 ### <a name="responding-to-users-and-failing-gracefully"></a>Responder aos usuários e falhar normalmente
 
-Seu bot também deve ser capaz de responder a coisas como "Hi", "Help" e "Thanks", enquanto adota erros comuns de ortografia e coloquialismos em conta. Por exemplo:
+Seu bot também deve ser capaz de responder a coisas como "*Hi*", "*Help*" e "*thanks*" ao assumir erros comuns e coloquialismos em conta. Por exemplo:
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 
-`Hi` `how are you` `howdy`
+`"Hi"`  `"How are you"`  `"Howdy"`
 
 #### <a name="x2713-help"></a>&#x2713; ajuda
 
-`What do you do?` `How does this work?` `What the heck?`
+`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
 
 #### <a name="x2713-thanks"></a>&#x2713; agradecimentos
 
-`Thank you` `thankyou` `thx`
+`"Thank you"`  `"Thankyou"`  `"Thx"`
 
 O bot deve ser capaz de lidar com os seguintes tipos de consultas e entradas:
 
-* **Perguntas reconhecidas**: Estas são as perguntas de "melhor cenário" que você anteciparia dos usuários.
-* **Não há perguntas reconhecidas**: consultas sobre funcionalidades sem suporte, partes aleatórias de informações ou quando alguém deseja repetir o seu bot.
-* **Perguntas não reconhecidas**: entradas não inteligível (por exemplo, ininteligível).
+> [!div class="checklist"]
+>
+> * **Perguntas reconhecidas**. Essas são as perguntas de "cenário de melhor caso" que você espera dos usuários.
+> * **Não há perguntas reconhecidas**. Consultas sobre funcionalidades não suportadas e/ou entradas aleatórias, não relacionadas ou impróprias.
+> * **Perguntas não reconhecidas**: entrada ou entradas que são ininteligível, sem significado ou sem sentido.
 
 Exemplos de personalidade de bot e tipos de resposta:
 
@@ -92,11 +108,15 @@ As guias tornam o bot muito mais funcional. Com guias, você pode criar o seguin
 
 ### <a name="x2713-a-place-to-host-standing-queries"></a>&#x2713; um local para hospedar consultas em pé
 
-Em conversas pessoais entre um bot e uma única pessoa, as guias podem alojar informações e listas específicas do usuário. Eles também são um bom local para manter respostas de bot para perguntas frequentes (FAQs), de modo que os usuários não precisem continuar fazendo isso.
+Em conversas pessoais entre um bot e uma única pessoa, as guias podem conter informações e listas específicas do usuário. Eles também são um bom local para manter respostas de bot para perguntas frequentes (FAQs), de modo que os usuários não precisem continuar fazendo isso.
 
 ### <a name="x2713-a-place-to-finish-a-conversation"></a>&#x2713; um local para concluir uma conversa
 
-Você pode vincular a uma guia de um cartão. Se o seu bot fornecer uma resposta que exija algumas etapas adicionais, ele pode vincular a uma guia para concluir a tarefa ou o fluxo.
+Você pode vincular a uma guia de um cartão. Se o seu bot fornecer uma resposta que exija algumas etapas adicionais, ele pode vincular a uma guia para concluir a tarefa ou o fluxo. Por exemplo, em resposta a, "como faço para formatar meu iPhone?", uma boa resposta pode ser um cartão que descreve as primeiras etapas e tem um botão para *Mostrar mais* que, em seguida, leva o usuário à guia de *ajuda* do bot e vincula detalhadamente as instruções específicas.
+
+### <a name="x2713-a-place-to-host-a-settings-page"></a>&#x2713; um local para hospedar uma página de configurações
+
+Os bots devem ter um controle de usuário. Para muitos bots, ele é permitido por meio de uma interface de chat; no entanto, é difícil lembrar-se dessas configurações. Uma guia Configurações pode exibir configurações de usuários, permitir que os usuários alterem todos de uma vez e também podem ser um bom ponto de indisponibilidade para comportamentos personalizados de bot mais complexos.
 
 ### <a name="x2713-a-place-to-provide-some-help"></a>&#x2713; um local para fornecer ajuda
 
@@ -105,13 +125,27 @@ Adicione uma guia que instrua os usuários sobre como se comunicar com o bot. Vo
 ![Fornecer ajuda](~/assets/images/framework/framework_bots_tbot-help.png)
 
 > [!TIP]
-> A incorporação de partes do seu site em uma guia ajudará alguém a manter o contexto de uma conversa enquanto usa o serviço. Ele remove a necessidade de iniciar o serviço em um navegador e alternar entre aplicativos.
+> A incorporação de partes do seu site em uma guia ajudará os usuários a manter o contexto de uma conversa quando usarem o serviço. Ele remove a necessidade de iniciar o serviço em um navegador e alternar entre aplicativos.
 
 ---
 
-## <a name="best-practices"></a>Práticas recomendadas
+## <a name="bots-in-channels"></a>Bots em canais
 
-### <a name="x2713-bots-arent-assistants"></a>&#x2713; bots não são assistentes
+Chamar um bot em um canal pode ser realizado por `@mention`. A caixa de diálogo de bot deve ser exclusiva em canais e grupos vs. cenários um-para-um e, geralmente, é uma boa ideia considerar abordagens distintas. Isso se aplica especialmente nos seguintes casos:
+
+### <a name="sensitive-data-sent-by-a-bot"></a>Dados confidenciais enviados por um bot
+
+Embora os usuários de uma equipe possam ser conhecidos do serviço, as funções de usuário reais não podem. Isso significa que, por exemplo, em um cenário de educação que envolve o anti-intimidação, as informações de contato do pai e do aluno não serão compartilhadas em uma configuração de equipe. Em vez disso, a mensagem do bot pode ser: "dois incidentes anti-intimidação ocorridos hoje", junto com um botão para mostrar detalhes.
+
+Os detalhes de inicialização em uma página da Web ou um módulo de tarefa podem solicitar credenciais de usuário ou consultas em um índice para funções de usuário emparelhadas com contas AAD. Em ambas as opções, os dados estão em um escopo de exibição particular e não haverá perda de dados. Se os mesmos dados são enviados em um chat de um para um entre um usuário e o bot, os dados são visíveis apenas para o usuário naquele contexto e, portanto, é seguro para exibir totalmente na mensagem do bot. O uso de usuários de um canal para um chat de um-para-um deve ser evitado, no entanto, como a navegação forçada é altamente interrompida.
+
+### <a name="sending-cards-as-a-response-to-interactions"></a>Enviando cartões como uma resposta a interações
+
+Enquanto o envio de um cartão de carrossel em resposta para *fazer um tour* em um chat de um-para-um é perfeitamente aceitável, o mesmo padrão pode produzir dezenas ou centenas de *carrossel de Tour* em um canal ativo com muitos usuários. Para evitar isso, os cartões secundários devem ser hospedados em um módulo de tarefa. Este padrão mantém os usuários no contexto com o canal, mantém o canal limpo de respostas excessivas de bot e, opcionalmente, pode considerar diferentes funções de usuário quando o *Tour* é mostrado.
+
+## <a name="useful-tips"></a>Dicas úteis
+
+### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; lembrar, os bots não são assistentes
 
 Diferentemente de agentes, por exemplo, Cortana, bots atuam como especialistas.
 
