@@ -5,12 +5,12 @@ description: Como criar um bot para o Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672849"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635295"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
 
@@ -62,9 +62,9 @@ Situações em que você **deve** ter o registro de bot no Azure (por meio de su
 
 #### <a name="using-app-studio"></a>Usando o aplicativo Studio
 
-*O aplicativo Studio* é um aplicativo do Teams que ajuda você a criar aplicativos do Teams, incluindo o registro de seu serviço Web como um bot, a criação de um manifesto de aplicativo e o pacote de aplicativos. Ele também contém uma biblioteca de controle React e amostras configuráveis para cartões. Confira [Introdução ao Teams app Studio](../../concepts/build-and-test/app-studio-overview.md).
+O *App Studio* é um aplicativo do Teams que ajuda a criar aplicativos do Teams, incluindo o registro de serviço Web como um bot, a criação de um manifesto e de um pacote de aplicativos, e atualização de configurações. Ele também contém uma biblioteca de controle React e amostras configuráveis para cartões. Confira [Introdução ao Teams app Studio](../../concepts/build-and-test/app-studio-overview.md).
 
-Lembre-se de que, se você usar o aplicativo Studio para registrar seu serviço Web, precisará acessar o https://dev.botframework.com/bots para gerenciar seu registro. Algumas configurações (como seu ponto de extremidade de mensagem) também podem ser atualizadas no aplicativo Studio.
+Lembre-se de que, se você usar o aplicativo Studio para registrar seu serviço Web, precisará acessar o https://dev.botframework.com/bots para gerenciar seu registro.
 
 #### <a name="in-the-legacy-portal"></a>No portal herdado
 
