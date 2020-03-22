@@ -4,12 +4,12 @@ description: Descreve as dicas para o envio e a maioria das políticas com falha
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279785"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896517"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -51,7 +51,7 @@ Seção *Consulte também* [1100,5 — controle de cliente](/legal/marketplace/c
 
 Para obter informações adicionais sobre autenticação, consulte:
 
-* [Documentação de autenticação](/concepts/authentication/authentication.md)
+* [Documentação de autenticação](../../../authentication/authentication.md)
 * [Exemplo de autenticação de bot no nó](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Exemplo de autenticação de guia no nó](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Autenticação de guia/bot no/.NET C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

@@ -94,13 +94,13 @@
                   href: concepts/deploy-and-publish/appsource/post-publish/overview.md
                 - name: Programa de certificação de aplicativos
                   href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-    - name: Autenticação em aplicativos do teams
+    - name: Fluxos de autenticação em seus aplicativos
       items:
         - name: Visão geral da autenticação
           href: concepts/authentication/authentication.md
         - name: Configurar provedores de identidade
           href: concepts/authentication/configure-identity-provider.md
-- name: Interações orientadas por tarefas com Extensões de Mensagens
+- name: Extensões de mensagens
   items:
     - name: O que são extensões de mensagens?
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -141,6 +141,8 @@
           href: messaging-extensions/how-to/link-unfurling.md
         - name: Adicionar autenticação
           href: messaging-extensions/how-to/add-authentication.md
+        - name: Adicionar uma página de configuração
+          href: messaging-extensions/how-to/add-configuration-page.md
 - name: Bots de conversa
   items:
     - name: O que são bots no Microsoft Teams?
@@ -212,7 +214,7 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Mídia hospedada pelo aplicativo
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Experiências da Web incorporadas com Guias
+- name: Guias
   items:
     - name: O que são guias personalizadas?
       href: tabs/what-are-tabs.md
@@ -310,7 +312,7 @@
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: Criar um conector do O365
           href: webhooks-and-connectors/how-to/connectors-creating.md
-        - name: Enviar mensagens a Conectores e WebHooks
+        - name: Enviar mensagens a conectores e webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Recursos
   items:

@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Diretrizes de design de equipes referência configuração de guias
-ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365259"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896496"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -139,7 +139,7 @@ Há dois modos de notificação para alterações de conteúdo de guia:
 
 > [!div class="checklist"]
 >
-> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
 
   Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention` especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.
