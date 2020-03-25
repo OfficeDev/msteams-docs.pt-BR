@@ -4,12 +4,12 @@ author: laujan
 description: Como usar o SDK do teams Client para adicionar a funcionalidade de reconhecimento de equipes às suas guias personalizadas
 keywords: guias do teams o canal de grupo do SDK do JavaScript pessoal
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928507"
 ---
 # <a name="using-the-teams-client-sdk"></a>Usando o SDK do cliente do teams
 
@@ -23,6 +23,8 @@ A tabela a seguir descreve as funções da biblioteca do teams normalmente usada
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | Inicializa a biblioteca do teams. Essa função deve ser chamada antes de qualquer outra chamada de SDK.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Obtém o estado atual no qual a página está sendo executada. O retorno de chamada recupera o objeto **Context** .|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[obj de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Inicializa a biblioteca do Teams e define o [contexto do quadro](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) da guia, dependendo do contentUrl e do websiteUrl. Isso garante que a funcionalidade de ir para site/recarregar opere na URL correta.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Define o contexto do [quadro](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) da guia, dependendo do contentUrl e do websiteUrl. Isso garante que a funcionalidade de ir para site/recarregar opere na URL correta.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |O manipulador que é registrado quando o usuário alterna o modo de exibição de tela inteira de uma guia.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |O manipulador que é registrado quando o usuário seleciona o botão **configurações** habilitadas para reconfigurar uma guia.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Obtém as guias pertencentes ao aplicativo. O retorno de chamada recupera o objeto **TabInformation** . O objeto **TabInstanceParameters** é um parâmetro opcional.|[função](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|

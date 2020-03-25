@@ -2,12 +2,12 @@
 title: Solicitar permissões de dispositivo para a guia do Microsoft Teams
 description: Como atualizar seu manifesto de aplicativo para solicitar acesso a recursos nativos que geralmente exigem o consentimento do usuário
 keywords: desenvolvimento de guias do teams
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672454"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928514"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permissões de dispositivo para a guia do Microsoft Teams
 
@@ -15,7 +15,7 @@ Você pode querer enriquecer sua guia com recursos que exigem o acesso de funcio
 
 * Câmara
 * Microfone
-* Locais
+* Local
 * Notificações
 
 ![Tela de configurações de permissões de dispositivo](~/assets/images/tabs/device-permissions.png)
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Prompt de permissões de dispositivo de guias](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão nas sessões de logon
+
+As permissões de dispositivo nativo são armazenadas por sessão de logon. Isso significa que, se você fizer logon em outra instância do Microsoft Teams (por exemplo, em outro computador), suas permissões de dispositivo de suas sessões anteriores não estarão disponíveis. Em vez disso, você precisará consentir novamente as permissões de dispositivo para a nova sessoin de logon. Isso também significa que, se você fizer logout de equipes (ou mudar locatários dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior. Tenha isso em mente ao desenvolver permissões de dispositivo nativo: os recursos nativos que você concorda para são apenas para seu sessoin de logon _atual_ .
