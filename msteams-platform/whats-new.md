@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672427"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982141"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -17,6 +17,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar Membros paginados. | [Obter o contexto do Microsoft Teams para seu bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | O `replyToId` parâmetro em cargas enviadas a um bot não é mais criptografado, permitindo que você use esse valor para construir o deeplinks a essas mensagens. As cargas de mensagens incluem os valores criptografados no `legacy.replyToId`parâmetro.  |
 | 11/5/2019 | O logon único usando o SDK do teams JavaScript em uma página de conteúdo da Web está em visualização do desenvolvedor | [Logon único](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Documentação de bots e de mensagens de emails de conversa atualizada para refletir o SDK da estrutura de bot 4,6. A documentação do SDK do v3 está disponível na seção recursos. | Toda documentação de bot e de extensão de mensagens. |
