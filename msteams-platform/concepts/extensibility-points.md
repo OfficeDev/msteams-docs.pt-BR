@@ -4,12 +4,12 @@ author: clearab
 description: Compreenda os pontos de extensibilidade disponíveis para seu aplicativo no cliente do Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f65a5111bf59b08347291caa15c557dc0a48e886
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672522"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034026"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Pontos extensíveis no cliente do teams
 
@@ -23,11 +23,11 @@ Equipes, canais e bate-papos de grupo permitem que várias pessoas colaborem. Os
 
 Eles podem ser estendidos com:
 
-* **[Bots de conversa](~/bots/what-are-bots.md)** interagindo com membros da conversa através de chat e respondendo a eventos (como um novo membro que está sendo adicionado ou um canal que está sendo renomeado). Todas as conversas com um bot neste contexto são visíveis para todos os membros do canal ou grupo, portanto, você precisará garantir que a conversa seja relevante para todos.
+* [**Bots de conversa**](~/bots/what-are-bots.md) interagindo com membros da conversa através de chat e respondendo a eventos (como um novo membro que está sendo adicionado ou um canal que está sendo renomeado). Todas as conversas com um bot neste contexto são visíveis para todos os membros do canal ou grupo, portanto, você precisará garantir que a conversa seja relevante para todos.
 
-* **[Guias configuráveis](~/tabs/what-are-tabs.md)** que fornecem uma experiência Web incorporada de tela inteira configurada para o canal ou o chat de grupo em que está instalada. Todos os membros irão interagir no mesmo aplicativo Web compartilhado, de forma que uma experiência de aplicativo de página única sem estado seja típica.
+* [**Guias configuráveis**](~/tabs/what-are-tabs.md) que fornecem uma experiência Web incorporada de tela inteira configurada para o canal ou o chat de grupo em que está instalada. Todos os membros irão interagir no mesmo aplicativo Web compartilhado, de forma que uma experiência de aplicativo de página única sem estado seja típica.
 
-* **[WebHooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** permitindo que os serviços externos publiquem mensagens na conversa e seus usuários enviem mensagens para o serviço. Você pode tirar proveito de cartões e ações de cartões para criar mensagens ricas e acionáveis.
+* [**WebHooks e conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permitindo que os serviços externos publiquem mensagens na conversa e seus usuários enviem mensagens para o serviço. Você pode tirar proveito de cartões e ações de cartões para criar mensagens ricas e acionáveis.
 
 ### <a name="personal-apps"></a>Aplicativos pessoais
 
@@ -35,13 +35,13 @@ Os [aplicativos pessoais](~/concepts/design/personal-apps.md) são a parte do ap
 
 Eles podem conter:
 
-* **[Bots de conversas](~/bots/what-are-bots.md)** com uma conversa de um-para-um com o usuário. Como esta é uma conversa privada, se seu aplicativo precisa ter uma conversa de múltipla volta ou fornecer uma notificação relevante apenas para um único usuário, normalmente é melhor ter essa interação em um aplicativo pessoal.
+* [**Bots de conversas**](~/bots/what-are-bots.md) com uma conversa de um-para-um com o usuário. Como esta é uma conversa privada, se seu aplicativo precisa ter uma conversa de múltipla volta ou fornecer uma notificação relevante apenas para um único usuário, normalmente é melhor ter essa interação em um aplicativo pessoal.
 
-* **[Guias pessoais](~/tabs/what-are-tabs.md)** que fornecem uma experiência da Web incorporada em tela inteira.
+* [**Guias pessoais**](~/tabs/what-are-tabs.md)que fornecem uma experiência da Web incorporada em tela inteira.
 
 ## <a name="messages"></a>Mensagens
 
-As mensagens são o coração de colaboração no Microsoft Teams. Com um **[comando de ação de extensão de mensagens](~/messaging-extensions/what-are-messaging-extensions.md)**, seu aplicativo pode permitir que os usuários invoquem a API do aplicativo de uma mensagem, enviando o conteúdo da mensagem para o seu aplicativo para processamento ou ação. Seu aplicativo pode responder ao apresentar um formulário (um módulo de tarefa) ao usuário para coletar mais informações, enviar uma resposta para a mensagem original ou enviar uma mensagem diretamente ao usuário.
+As mensagens são o coração de colaboração no Microsoft Teams. Com um [**comando de ação de extensão de mensagens**](~/messaging-extensions/what-are-messaging-extensions.md), seu aplicativo pode permitir que os usuários invoquem a API do aplicativo de uma mensagem, enviando o conteúdo da mensagem para o seu aplicativo para processamento ou ação. Seu aplicativo pode responder ao apresentar um formulário (um módulo de tarefa) ao usuário para coletar mais informações, enviar uma resposta para a mensagem original ou enviar uma mensagem diretamente ao usuário.
 
 ## <a name="writing-messages"></a>Gravando mensagens
 
@@ -49,11 +49,11 @@ Seu aplicativo pode ajudar os usuários a criar mensagens mais eficazes, permiti
 
 Há três maneiras em que o aplicativo pode ajudar os usuários a criar melhores mensagens:
 
-* **[Messaging Extension-Search Commands](~/messaging-extensions/what-are-messaging-extensions.md)** permitindo a pesquisa rápida de um sistema externo, visualize os resultados dessa pesquisa e insira o resultado no bate-papo como um cartão rico.
+* [**Messaging Extension-Search Commands**](~/messaging-extensions/what-are-messaging-extensions.md) permitindo a pesquisa rápida de um sistema externo, visualize os resultados dessa pesquisa e insira o resultado no bate-papo como um cartão rico.
 
-* **[Messaging Extension-link Unfurling](~/messaging-extensions/what-are-messaging-extensions.md)** permite que seu aplicativo monitore domínios da Web nos quais você está interessado. Quando uma URL que contém esse domínio é colada na caixa de mensagem de redação, a API do aplicativo será invocada, permitindo que você adicione um cartão avançado à mensagem com informações adicionais sobre o item vinculado.
+* [**Messaging Extension-link Unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) permite que seu aplicativo monitore domínios da Web nos quais você está interessado. Quando uma URL que contém esse domínio é colada na caixa de mensagem de redação, a API do aplicativo será invocada, permitindo que você adicione um cartão avançado à mensagem com informações adicionais sobre o item vinculado.
 
-* **[Messaging Extension-os comandos de ação](~/messaging-extensions/what-are-messaging-extensions.md)** apresentam ao usuário um formulário de janela restrita (um módulo de tarefa), enviam os resultados do formulário para seu aplicativo e, em seguida, inserem uma mensagem na conversa diretamente ou criam parte de uma mensagem que o usuário pode editar antes de enviar à conversa.
+* [**Messaging Extension-os comandos de ação**](~/messaging-extensions/what-are-messaging-extensions.md) apresentam ao usuário um formulário de janela restrita (um módulo de tarefa), enviam os resultados do formulário para seu aplicativo e, em seguida, inserem uma mensagem na conversa diretamente ou criam parte de uma mensagem que o usuário pode editar antes de enviar à conversa.
 
 ## <a name="user-interface-ui-elements"></a>Elementos da interface do usuário (UI)
 

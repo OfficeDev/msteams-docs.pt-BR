@@ -2,13 +2,15 @@
 title: Introdução ao C#/.NET
 description: Introdução à criação de aplicativos ótimos no Microsoft Teams usando o C#/.NET
 keywords: Introdução ao .net c# Csharp
+ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: de133894042baaba897a9f046d613cd5dbb94eee
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672644"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034054"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Introdução à plataforma do Microsoft Teams com o C#/.NET e o app Studio
 
