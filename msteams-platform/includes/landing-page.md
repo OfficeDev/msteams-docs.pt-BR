@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: 4bfbef38bdafac6afc6c19b01666d2df111f8d17
-ms.sourcegitcommit: 301be564aabaa7e1437a436053805cb9abecda21
+ms.openlocfilehash: 85fb1f4f3112da1022613ac7d9a9cd5f64081abd
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "42949473"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43035595"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -354,7 +354,7 @@ ms.locfileid: "42949473"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Participação</h3>
+                                                    <h3>Aplicativo de presença</h3>
                                                     <p>Ajuda a equipe a registrar a participação e gerar resumos de relatórios.</p>
                                                 </div>
                                             </div>
@@ -373,7 +373,7 @@ ms.locfileid: "42949473"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Informações associadas</h3>
+                                                    <h3>Aplicativo Associate Insights</h3>
                                                     <p>Capacita os trabalhadores da linha de frente a obter comentários de clientes.</p>
                                                 </div>
                                             </div>
@@ -394,6 +394,44 @@ ms.locfileid: "42949473"
                                                 <div class="cardText">
                                                     <h3>Aplicativo Incentivos</h3>
                                                     <p>Gerencia e acompanha a participação incentivada em atividades e eventos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicativo Open Badges</h3>
+                                                    <p>Conceda e rastreie crachás de credenciais de aprendizado digital.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicativo Atividades de Grupo</h3>
+                                                    <p>Criar e gerenciar rapidamente os grupos de atividades e os fluxos de trabalho de colaboração.</p>
                                                 </div>
                                             </div>
                                         </div>
