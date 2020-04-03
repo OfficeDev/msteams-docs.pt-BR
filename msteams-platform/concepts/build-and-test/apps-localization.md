@@ -3,12 +3,12 @@ title: Localização para aplicativos da equipe
 description: Descreve problemas em relação à localização do aplicativo
 keywords: publicação do Microsoft Teams armazenar o idioma de localização do Office Publishing AppSource
 ms.date: 05/15/2018
-ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279757"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120274"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localização para aplicativos do Microsoft Teams
 
@@ -78,7 +78,7 @@ Por exemplo, você fornece um idioma padrão de ' fr ' (francês, todas as regi�
 Se o idioma do usuário estiver definido como ' en-CA ': 
 
 1. O cliente Teams usará as cadeias de caracteres ' fr ' substituí-las pelas cadeias de caracteres ' en '.
-2. Como nenhuma localazation "en-AC" é fornecida, as localizações de "en" serão usadas.
+2. Como nenhuma localização "en-AC" é fornecida, as localizações de "en" serão usadas.
 
 Se o idioma do usuário estiver definido como ' es-es ', o cliente do Microsoft Teams usará as cadeias de caracteres ' fr ' e não as substituirá por nenhum dos arquivos de idioma.
 

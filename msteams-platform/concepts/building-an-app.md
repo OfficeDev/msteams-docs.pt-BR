@@ -4,12 +4,12 @@ author: clearab
 description: Compreenda o processo típico para a criação de um aplicativo para o Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7c748829c481373dd7dfa011bfba4e7de3aba1bb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672794"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120252"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>Criar um aplicativo para o Microsoft Teams
 
@@ -17,7 +17,7 @@ Criar e distribuir um aplicativo criado na plataforma do Microsoft Teams envolve
 
 ## <a name="design-a-great-app"></a>Criar um ótimo aplicativo
 
-A etapa mais importante na criação de um aplicativo bem-sucedido para o Microsoft Teams é escolher a combinação certa de pontos de extensibilidade e elementos de interface do usuário para aproveitar. Às vezes, essa é uma decisão bastante fácil, mas para aplicativos mais complexos, você deve gastar bastante tempo entendendo o problema que você está tentando resolver com seu aplicativo e mapeando sua solução entre as várias maneiras pelas quais os usuários podem interagir com seu aplicativo no Microsoft Cliente do teams. Não subestime a importância do contexto e do escopo! Um bot de conversação que funciona muito bem em um chat de um-para-um pode não funcionar como parte de uma conversa de canal ou de chat de grupo.
+A etapa mais importante na criação de um aplicativo bem-sucedido para o Microsoft Teams é escolher a combinação certa de pontos de extensibilidade e elementos de interface do usuário para aproveitar. Às vezes, essa é uma decisão bastante fácil, mas para aplicativos mais complexos, você deve gastar bastante tempo entendendo o problema que você está tentando solucionar com seu aplicativo e mapear sua solução entre as várias maneiras pelas quais os usuários podem interagir com seu aplicativo no cliente do Microsoft Teams. Não subestime a importância do contexto e do escopo! Um bot de conversação que funciona muito bem em um chat de um-para-um pode não funcionar como parte de uma conversa de canal ou de chat de grupo.
 
 1. Primeiro, [entenda os pontos de extensibilidade do cliente do Teams e os elementos da interface do usuário](~/concepts/extensibility-points.md) disponíveis para seu aplicativo.
 
@@ -32,7 +32,7 @@ Depois de decidir quais pontos de extensibilidade e recursos seus aplicativos ap
 
 ## <a name="prepare-your-environment"></a>Preparar seu ambiente
 
-Você precisa certificar-se de que tem um ambiente onde pode carregar e testar o aplicativo Teams. Se você ainda não tiver uma assinatura do O365 com o Teams habilitado e a capacidade de carregar aplicativos nele, poderá [se inscrever no programa de desenvolvedor do O365](https://dev.office.com/devprogram) , que fornecerá acesso a uma assinatura gratuita do Office 365 para fins de desenvolvimento.
+Você precisa certificar-se de que tem um ambiente onde pode carregar e testar o aplicativo Teams. Se você ainda não tiver uma assinatura do O365 com o Teams habilitado e a capacidade de carregar aplicativos nele, poderá [se inscrever no programa de desenvolvedor do O365](https://developer.microsoft.com/microsoft-365/dev-program) , que fornecerá acesso a uma assinatura gratuita do Office 365 para fins de desenvolvimento.
 
 Consulte [preparar o seu ambiente do O365](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obter mais informações.
 
