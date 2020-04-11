@@ -1,4 +1,4 @@
-- name: Visão Geral
+- name: Visão geral
   expanded: true
   items:
     - name: O que são aplicativos do Microsoft Teams?
@@ -143,7 +143,7 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: Adicionar uma página de configuração
           href: messaging-extensions/how-to/add-configuration-page.md
-- name: Bots de conversa
+- name: Bots
   items:
     - name: O que são bots no Microsoft Teams?
       href: bots/what-are-bots.md

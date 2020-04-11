@@ -4,12 +4,12 @@ author: clearab
 description: Uma visão geral das extensões de mensagens na plataforma do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 01a038d57368826345a55358b1d628447b21f772
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672761"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225788"
 ---
 # <a name="what-are-messaging-extensions"></a>O que são extensões de mensagens?
 
@@ -64,10 +64,10 @@ Você também tem a opção de chamar o serviço quando uma URL é colada na ár
 
 Pronto para começar a criar? Experimente um dos nossos QuickStartES:
 
-* Início rápido para C #
+* **C#**
   * [Extensão de mensagens com comandos baseados em ação](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
   * [Extensão de mensagens com comandos baseados em pesquisa](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* Início rápido para JavaScript
+* **JavaScript**
   * [Extensão de mensagens com comandos baseados em ação](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensão de mensagens com comandos baseados em pesquisa](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 

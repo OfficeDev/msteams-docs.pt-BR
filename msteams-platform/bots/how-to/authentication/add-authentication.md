@@ -3,13 +3,13 @@ title: Adicionar autenticação ao bot do Microsoft Teams
 author: clearab
 description: Como adicionar a autenticação OAuth a um bot no Microsoft Teams.
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 63d06100f69a5dc3777bdfb20b3231a85dce1f04
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672612"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225795"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao bot do Microsoft Teams
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre como o serviço de bot do Azure trata a aute
 
 Neste artigo, você aprenderá:
 
-- **Como criar um bot habilitado para autenticação**. Você usará o [cs-auth-Sample][teams-auth-bot] para lidar com as credenciais de entrada do usuário e a geração do token de autenticação.
+- **Como criar um bot habilitado para autenticação**. Você usará o [cs-auth-Sample][teams-auth-bot-cs] para lidar com as credenciais de entrada do usuário e a geração do token de autenticação.
 - **Como implantar o bot no Azure e associá-lo a um provedor de identidade**. O provedor emite um token com base nas credenciais de entrada do usuário. O bot pode usar o token para acessar recursos, como um serviço de email, que requer autenticação. Para obter mais informações, consulte [Microsoft Teams Authentication Flow for bots](auth-flow-bot.md).
 - **Como integrar o bot no Microsoft Teams**. Após a integração do bot, você poderá entrar e trocar mensagens com ela em um chat.
 
@@ -39,8 +39,9 @@ Neste artigo, você aprenderá:
 
     | Amostra | Versão do BotBuilder | Demonstra |
     |:---|:---:|:---|
-    | **Autenticação de bot** no [cs-auth-Sample][teams-auth-bot] | V4 | Suporte do OAuthCard |
-    | **Autenticação de bot** no [Python-auth-Sample][teams-auth-bot-py] | V4 | Suporte do OAuthCard |
+    | **Autenticação de bot** no [cs-auth-Sample][teams-auth-bot-cs] | V4 | Suporte do OAuthCard |
+    | **Autenticação de bot** no [js-auth-Sample][teams-auth-bot-js] | V4| Suporte do OAuthCard  |
+    | **Autenticação de bot** no [py-auth-Sample][teams-auth-bot-py] | V4 | Suporte do OAuthCard |
 
 ## <a name="create-the-resource-group"></a>Criar o grupo de recursos
 
@@ -122,7 +123,7 @@ Neste procedimento, você usará um provedor do Azure AD; outros provedores de i
    1. Em **segredos do cliente**, selecione &#x2795; **novo segredo do cliente**.
    1. Adicione uma descrição para identificar esse segredo de outras pessoas que você talvez precise criar para esse aplicativo, como o *aplicativo de identidade de bot no Microsoft Teams*.
    1. Definir **expira** para sua seleção.
-   1. Selecione **Adicionar**.
+   1. Clique em **Adicionar**.
    1. Antes de sair desta página, **Registre o segredo**. Você usará esse valor mais tarde como o _segredo do cliente_ quando registrar seu aplicativo do Azure AD com o bot.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar a conexão do provedor de identidade e registrá-la com o bot
@@ -172,9 +173,9 @@ O nome da conexão é usado pelo código do bot para recuperar os tokens de aute
 
 Com as configurações preliminares concluídas, vamos nos concentrar na criação do bot a ser usado neste artigo.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-1. Clone [cs-auth-Sample][teams-auth-bot].
+1. Clone [cs-auth-Sample][teams-auth-bot-cs].
 1. Inicie o Visual Studio.
 1. Na barra de ferramentas **, selecione Arquivo-> Open-> Project/Solution** e abra o projeto bot.
 1. Na atualização C# **appSettings. JSON** da seguinte maneira:
@@ -182,7 +183,7 @@ Com as configurações preliminares concluídas, vamos nos concentrar na criaç�
     - Defina `ConnectionName` como o nome da conexão do provedor de identidade que você adicionou ao registro do canal de bot. O nome usado neste exemplo é *BotTeamsAuthADv1*.
     - Defina `MicrosoftAppId` como a **ID do aplicativo bot** que você salvou no momento do registro do canal de bot.
     - Defina `MicrosoftAppPassword` como o **segredo do cliente** que você salvou no momento do registro do canal do bot.
-    - Defina o `ConnectionName` como o nome da conexão do provedor de identidade. 
+    - Defina o `ConnectionName` como o nome da conexão do provedor de identidade.
 
     Dependendo dos caracteres no seu segredo de bot, talvez seja necessário escapar da senha por XML. Por exemplo, qualquer e comercial (&) precisará ser codificado como `&amp;`.
 
@@ -190,9 +191,28 @@ Com as configurações preliminares concluídas, vamos nos concentrar na criaç�
 
 1. No Gerenciador de soluções, navegue até a `TeamsAppManifest` pasta, abra `manifest.json` e defina `id` e `botId` para o **ID do aplicativo bot** que você salvou no momento do registro do canal de bot.
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js)
 
-1. Clone a amostra de [autenticação de bot do teams][teams-auth-bot-py] do repositório do github.
+1. [Nó clone-auth-Sample][teams-auth-bot-js].
+1. Em um console, navegue até o projeto: </br></br>
+`cd samples/javascript_nodejs/46.teams`  
+1. Instalar módulos</br></br>
+`npm install`
+1. Atualize a configuração **. env** da seguinte maneira:
+
+    - Defina `MicrosoftAppId` como a **ID do aplicativo bot** que você salvou no momento do registro do canal de bot.
+    - Defina `MicrosoftAppPassword` como o **segredo do cliente** que você salvou no momento do registro do canal do bot.
+    - Defina o `connectionName` como o nome da conexão do provedor de identidade.
+
+    Dependendo dos caracteres no seu segredo de bot, talvez seja necessário escapar da senha por XML. Por exemplo, qualquer e comercial (&) precisará ser codificado como `&amp;`.
+
+     [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
+
+1. Na `teamsAppManifest` pasta, abra `manifest.json` e defina `id` como sua ID do aplicativo da **Microsoft** e `botId` para o ID do **aplicativo bot** que você salvou no momento do registro do canal de bot.
+
+# <a name="python"></a>[Python](#tab/python)
+
+1. Clone [py-auth-Sample][teams-auth-bot-py] no repositório do github.
 1. Atualizar **config.py**:
 
     - Defina `ConnectionName` como o nome da configuração de conexão OAuth que você adicionou ao bot.
@@ -424,9 +444,9 @@ Com a autenticação, o Microsoft Teams se comporta de forma ligeiramente difere
 Uma **atividade de invocação** é enviada ao bot em vez da atividade de evento usada por outros canais.
 Isso é feito com a subclasse de **ActivityHandler**.
 
-**Bots/DialogBot. cs**
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-sample)
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+**Bots/DialogBot. cs**
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
@@ -458,7 +478,36 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js-dialog-sample)
+
+**bots/dialogBot. js**
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
+
+**bots/teamsBot. js**
+
+A *atividade chamar* deve ser encaminhada para a caixa de diálogo se o **OAuthPrompt** for usado.
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
+
+**diálogos/mainDialog. js**
+
+Em uma etapa da caixa de `beginDialog` diálogo, use para iniciar o prompt do OAuth, que solicita ao usuário para entrar.
+
+- Se o usuário já estiver conectado, isso gerará um evento de resposta de token, sem avisar o usuário.
+- Caso contrário, o usuário será solicitado a entrar. O serviço do Azure bot envia o evento de resposta do token após o usuário tentar entrar.
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+
+Na etapa da caixa de diálogo a seguir, verifique a presença de um token no resultado da etapa anterior. Se ele não for nulo, o usuário entrou com êxito.
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+
+**bots/logoutDialog. js**
+
+[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
+
+# <a name="python"></a>[Python](#tab/python-sample)
 
 **bots/dialog_bot. py**
 
@@ -468,7 +517,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 A *atividade chamar* deve ser encaminhada para a caixa de diálogo se o **OAuthPrompt** for usado.
 
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
 
 **caixas de diálogo/main_dialog. py**
 
@@ -481,7 +530,7 @@ Em uma etapa da caixa de `begin_dialog` diálogo, use para iniciar o prompt do O
 
 Na etapa da caixa de diálogo a seguir, verifique a presença de um token no resultado da etapa anterior. Se ele não for nulo, o usuário entrou com êxito.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
 **caixas de diálogo/logout_dialog. py**
 
@@ -489,9 +538,8 @@ Na etapa da caixa de diálogo a seguir, verifique a presença de um token no res
 
 ---
 
-## <a name="further-reading"></a>Leitura adicional
-
-- [Adicionar autenticação ao bot por meio do serviço de bot do Azure](https://aka.ms/azure-bot-add-authentication)
+> [!div class="nextstepaction"]
+> [Saiba mais sobre como adicionar a adição de autenticação por meio do serviço do Azure bot](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
@@ -502,9 +550,11 @@ Na etapa da caixa de diálogo a seguir, verifique a presença de um token no res
 [concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
-[teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+[teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
+
+[teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
