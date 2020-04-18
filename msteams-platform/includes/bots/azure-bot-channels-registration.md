@@ -1,6 +1,6 @@
-1. No [portal do Azure] [Azure-portal], no painel de navegação à esquerda, selecione **criar um recurso**.
-1. Na caixa de seleção do painel direito, digite "bot". E, na lista suspensa, selecione o **registro de canais de bot**.
-1. Clique no botão **criar** .
+1. No [portal do Azure](https://ms.portal.azure.com/#home), em serviços do Azure, selecione **criar um recurso**.
+1. Na caixa de pesquisa, digite "bot". E, na lista suspensa, selecione o **registro de canais de bot**.
+1. Selecione o botão **criar** .
 1. Na lâmina de **registro do canal do bot** , forneça as informações solicitadas sobre o bot.
 1. Deixe a caixa de **ponto de extremidade de mensagens** vazia por enquanto, você inserirá a URL necessária após a implantação do bot. A imagem a seguir mostra um exemplo das configurações de registro:
 

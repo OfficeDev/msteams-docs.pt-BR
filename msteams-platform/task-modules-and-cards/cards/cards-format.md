@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365245"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550949"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -61,15 +61,15 @@ A formatação é um pouco diferente entre a área de trabalho e as versões mó
 
 Na área de trabalho, a formatação de redução de cartão adaptável aparece como esta nos dois navegadores da Web e no aplicativo cliente do teams:
 
-![Formatação de redução de cartão adaptável no cliente de desktop](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formatação de redução de cartão adaptável no cliente de desktop](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 No iOS, a formatação de redução de cartão adaptável aparece da seguinte maneira:
 
-![Formatação de redução de cartão adaptável no iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formatação de redução de cartão adaptável no iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 No Android, a formatação de redução de cartão adaptável aparece da seguinte maneira:
 
-![Formatação de redução de cartão adaptável no Android](/assets/images/cards/Adaptive-markdown-Android.png)
+![Formatação de redução de cartão adaptável no Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>Mais informações sobre cartões adaptáveis
 
@@ -179,11 +179,11 @@ Nos cartões conectores, as novas linhas são `\n\n`renderizadas para, `\n` mas 
 
 Na área de trabalho, a redução da formatação de cartões de conector tem a seguinte aparência:
 
-![Redução da formatação de cartões de conector no cliente de desktop](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Redução da formatação de cartões de conector no cliente de desktop](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 No iOS, a redução da formatação de cartões de conector tem a seguinte aparência:
 
-![Redução da formatação de cartões de conector no cliente iOS](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Redução da formatação de cartões de conector no cliente iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Problemas
 
@@ -192,7 +192,7 @@ Problemas
 
 No Android, a redução da formatação de cartões de conector tem a seguinte aparência:
 
-![Redução da formatação de cartões de conector no cliente Android](/assets/images/cards/connector-android-markdown-combined.png)
+![Redução da formatação de cartões de conector no cliente Android](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Exemplo de formatação para redução de cartões de conector
 
@@ -268,11 +268,11 @@ Em cartões de conector, as novas linhas são renderizadas em `<p>` HTML usando 
 
 Na área de trabalho, a formatação HTML para cartões de conector tem a seguinte aparência:
 
-![Formatação HTML para cartões de conector no cliente de desktop](/assets/images/cards/Connector-desktop-html-combined.png)
+![Formatação HTML para cartões de conector no cliente de desktop](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 No iOS, a formatação HTML tem a seguinte aparência:
 
-![Formatação HTML para cartões de conector no cliente iOS](/assets/images/cards/connector-iphone-html-combined-80.png)
+![Formatação HTML para cartões de conector no cliente iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Problemas
 
@@ -281,7 +281,7 @@ Problemas
 
 No Android, a formatação HTML tem a seguinte aparência:
 
-![Formatação HTML para cartões de conector no cliente Android](/assets/images/cards/connector-android-html-combined.png)
+![Formatação HTML para cartões de conector no cliente Android](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>Exemplo de formatação para cartões de conexão HTML
 
@@ -356,11 +356,11 @@ Devido às diferenças de resolução entre a área de trabalho e a plataforma m
 
 Na área de trabalho, a formatação HTML aparece da seguinte maneira:
 
-![Formatação HTML no cliente de desktop](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![Formatação HTML no cliente de desktop](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 No iOS, a formatação HTML aparece da seguinte maneira:
 
-![Formatação HTML no cliente iOS](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![Formatação HTML no cliente iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Problemas
 
@@ -368,7 +368,7 @@ Problemas
 
 No Android, a formatação HTML aparece da seguinte maneira:
 
-![Formatação HTML no cliente Android](/assets/images/cards/card-formatting-xml-android-60.png)
+![Formatação HTML no cliente Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 Formatação de caracteres como negrito e itálico são exibidos corretamente no Android.
 

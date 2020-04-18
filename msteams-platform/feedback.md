@@ -1,17 +1,19 @@
 ---
-title: Suporte e comentários
-description: Suporte e comentários do desenvolvedor do Microsoft Teams
+title: Suporte e comentários do desenvolvedor do Microsoft Teams
+description: A equipe do produto Microsoft Teams responde à comunidade de desenvolvedores através de vários comentários e canais de suporte.
 keywords: Team feedback Developer questions problemas contatar suporte solicitar contribuições de bugs
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225781"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550942"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Suporte e comentários do desenvolvedor do Microsoft Teams  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Suporte e comentários do desenvolvedor do Microsoft Teams
 
-A equipe de produto do Microsoft Team responde à comunidade de desenvolvedores em vários canais.
+A equipe do produto Microsoft Teams responde à comunidade de desenvolvedores através de vários comentários e canais de suporte.
+
+## <a name="support-and-feedback-channels"></a>Canais de suporte e de comentários
 
 - **Perguntas gerais sobre a plataforma de desenvolvedor do Microsoft Teams:** Envie um email para [o suporte ao desenvolvedor do Microsoft Teams](mailto:microsoftteamsdev@microsoft.com). Esse endereço de email _não_ se destina a comentários ou sugestões sobre recursos não relacionados à plataforma do Microsoft Teams. Além disso, enquanto Lêmos todos os emails enviados para esse endereço, não respondemos a cada um.
 
