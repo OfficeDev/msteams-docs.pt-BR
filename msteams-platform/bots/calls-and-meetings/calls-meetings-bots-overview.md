@@ -2,12 +2,12 @@
 title: Chamadas e bots de reuniões online
 description: Saiba como os aplicativos do Microsoft Teams podem interagir com usuários usando voz e vídeo usando as APIs do Microsoft Graph para chamadas e reuniões online.
 keywords: chamadas de chamada para o vídeo de áudio IVR de voz online
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672620"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914613"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Chamadas e bots de reuniões online
 
@@ -36,8 +36,8 @@ Para usar essas APIs do Microsoft Graph em um aplicativo do Microsoft Teams, voc
 Veja mais informações sobre como criar e testar chamadas e bots de reuniões online:
 
 * [Referência da API do Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
-* [Exemplos de aplicativos](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md) e [permissões do Microsoft Graph para chamadas e bots de reuniões online](/registering-calling-bot.md#add-microsoft-graph-permissions)
+* [Aplicativos de exemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md) e [permissões do Microsoft Graph para chamadas e bots de reuniões online](./registering-calling-bot.md#add-microsoft-graph-permissions)
 * [Como desenvolver as chamadas e bots de reunião online no computador local](./debugging-local-testing-calling-meeting-bots.md)
 * [Obter mais informações sobre processamento de mídia em tempo real](./real-time-media-concepts.md)e [o que é necessário para dar suporte a mídia hospedada por aplicativos](./requirements-considerations-application-hosted-media-bots.md)
 * [Informações técnicas sobre como lidar com notificações de chamada de entrada](./call-notifications.md)

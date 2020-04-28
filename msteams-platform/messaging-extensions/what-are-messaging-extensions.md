@@ -4,12 +4,12 @@ author: clearab
 description: Uma visão geral das extensões de mensagens na plataforma do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225788"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914599"
 ---
 # <a name="what-are-messaging-extensions"></a>O que são extensões de mensagens?
 
@@ -42,7 +42,7 @@ O tipo de comando de extensão de mensagens define os elementos da interface do 
 
 ### <a name="action-commands"></a>Comandos de ação
 
-Os comandos de ação permitem apresentar aos usuários um pop-up modal para coletar ou exibir informações. Ao enviar o formulário, seu serviço Web pode responder inserindo uma mensagem na conversa diretamente ou inserindo uma mensagem na área de mensagem de redação e permitindo que o usuário envie a mensagem. Você pode até encadear vários formulários juntos para fluxos de trabalho mais complexos.
+Os comandos de ação permitem que você apresente aos usuários um pop-up modal para coletar ou exibir informações. Ao enviar o formulário, seu serviço Web pode responder inserindo uma mensagem na conversa diretamente ou inserindo uma mensagem na área de mensagem de redação e permitindo que o usuário envie a mensagem. Você pode até encadear vários formulários juntos para fluxos de trabalho mais complexos.
 
 Eles podem ser disparados da área de mensagem de redação, da caixa de comando ou de uma mensagem. Quando invocado de uma mensagem, a carga JSON inicial enviada ao bot inclui a mensagem inteira de onde foi invocado.
 
@@ -56,7 +56,7 @@ Eles podem ser disparados da área de mensagem de redação ou da caixa de coman
 
 ![comando de pesquisa de extensão de mensagens](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>Link Unfurling
+### <a name="link-unfurling"></a>Desenrolamento de link
 
 Você também tem a opção de chamar o serviço quando uma URL é colada na área de mensagem de composição. Essa funcionalidade, conhecida como **link Unfurling**, permite inscrever-se para receber uma chamada quando as URLs que contêm um determinado domínio são coladas na área de mensagem de composição. O serviço Web pode "unfurl" a URL em um cartão detalhado, fornecendo mais informações do que o cartão de visualização de site padrão. Você pode até mesmo adicionar botões para permitir que os usuários executem ações imediatamente sem sair do cliente do Microsoft Teams.
 

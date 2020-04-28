@@ -2,12 +2,12 @@
 title: Diretrizes de processo de aprovação do Microsoft Teams app
 description: Descreve o processo de aprovação para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Editor de publicação do Microsoft Teams AppSource
-ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
-ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
+ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43509316"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914543"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -28,7 +28,7 @@ Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o dispon
 > * Se seu aplicativo do Microsoft Teams contiver um bot, você deverá estar em conformidade com o [código de conduta do](https://aka.ms/bf-conduct)bot Developer Framework.
 > * Se seu aplicativo contiver um conector do Office 365, termos adicionais poderão ser aplicados. *Consulte* [Connectors Dashboard de desenvolvedor](https://aka.ms/connectorsdashboard) e [contrato de desenvolvedor de aplicativos](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>**Perguntas frequentes: aplicativos de equipe e contas de parceiros**
+## <a name="faqs--teams-apps-and-partner-accounts"></a>Perguntas frequentes: aplicativos de equipe e contas de parceiros
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Como faço para criar uma conta do Partner Center?
 
@@ -96,4 +96,4 @@ Envie um email para **<teamsubm@microsoft.com>** com os seguintes detalhes:
     * Uma captura de tela do problema.
 
 > [!div class="nextstepaction"]
-> [Saiba mais sobre as políticas de validação de aplicativos para o Microsoft Teams](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+> [Saiba mais sobre as políticas de validação de aplicativos para o Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)

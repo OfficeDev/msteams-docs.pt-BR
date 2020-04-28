@@ -4,12 +4,12 @@ description: Descreve as dicas para o envio e a maioria das políticas com falha
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896517"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914571"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -30,6 +30,7 @@ Este artigo aborda razões comuns de falha na validação dos aplicativos enviad
 * Seu aplicativo não deve baixar, instalar ou iniciar automaticamente qualquer código executável no ambiente do usuário. Todos os downloads devem buscar permissões explícitas do usuário.
 * Qualquer material que você associar à sua experiência, como descrições e documentação de suporte, deve ser preciso. Use a verificação ortográfica, a capitalização, a pontuação e a gramática corretas em suas descrições e materiais.
 * Fornecer informações de ajuda e suporte. É altamente recomendável que seu aplicativo inclua um link de ajuda/perguntas frequentes para a experiência do usuário de primeira execução. Para todos os aplicativos pessoais, recomendamos fornecer a página de ajuda como uma guia pessoal para uma melhor experiência do usuário.
+* Aumente o número de versão do aplicativo no manifesto se você fizer alterações de manifesto no seu envio.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fornecer uma experiência clara e simples de entrada/saída e inscrição
 
