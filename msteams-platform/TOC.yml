@@ -5,7 +5,7 @@
       href: overview.md
     - name: Quais são as novidades?
       href: whats-new.md
-- name: Introdução
+- name: Tutoriais e exemplos de código
   items:
     - name: 'Criar um aplicativo usando C#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Criar um aplicativo com o gerador do Yeoman
       href: tutorials/get-started-yeoman.md
-- name: Exemplos e modelos
+    - name: Estenda o cliente do Teams com aplicativos personalizados
+      href: tutorials/code-samples.md
+- name: Integrações e modelos de aplicativos
   items:
     - name: Modelos de aplicativos prontos para produção
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
       href: samples/shifts-wfm-connectors.md
-    - name: Aplicativos de exemplo
-      href: samples/code-samples.md
 - name: Conceitos
   expanded: true
   items:
@@ -80,7 +80,7 @@
               href: concepts/deploy-and-publish/appsource/publish.md
             - name: Preparar seu aplicativo
               items:
-                - name: Lista de verificação pré-envio
+                - name: Lista de verificação de pré-envio
                   href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
                 - name: Lista de verificação da página de detalhes do aplicativo
                   href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
@@ -104,6 +104,10 @@
   items:
     - name: O que são as Extensões de Mensagens?
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+        - name: Diretrizes de design das extensões de mensagens
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: Guias de início rápido
       items:
         - name: Com comando de ação
