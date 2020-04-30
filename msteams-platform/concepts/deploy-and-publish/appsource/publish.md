@@ -2,12 +2,12 @@
 title: Diretrizes de processo de aprovação do Microsoft Teams app
 description: Descreve o processo de aprovação para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Editor de publicação do Microsoft Teams AppSource
-ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 0f4a93f6c93ab0dd4147d7e6b8dce0beac26ed95
+ms.sourcegitcommit: 5207af18a032763fecf2b932d7e29ced1ee11ccd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914543"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "43937347"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -25,8 +25,8 @@ Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o dispon
 
 >[!NOTE]
 >
-> * Se seu aplicativo do Microsoft Teams contiver um bot, você deverá estar em conformidade com o [código de conduta do](https://aka.ms/bf-conduct)bot Developer Framework.
-> * Se seu aplicativo contiver um conector do Office 365, termos adicionais poderão ser aplicados. *Consulte* [Connectors Dashboard de desenvolvedor](https://aka.ms/connectorsdashboard) e [contrato de desenvolvedor de aplicativos](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Se seu aplicativo do Microsoft Teams contiver um bot, você deverá estar em conformidade com o [código de conduta do](https://aka.ms/bf-conduct)bot Developer Framework.
+>- Se seu aplicativo contiver um conector do Office 365, termos adicionais poderão ser aplicados. *Consulte* [Connectors Dashboard de desenvolvedor](https://aka.ms/connectorsdashboard) e [contrato de desenvolvedor de aplicativos](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>Perguntas frequentes: aplicativos de equipe e contas de parceiros
 
@@ -34,16 +34,36 @@ Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o dispon
 
 Há duas maneiras de criar uma conta de centro de parceiros:
 
-* Se você é novo no Partner Center e não tem uma conta na rede da Microsoft, [crie uma conta usando a página de registro do Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-* Se você já estiver inscrito na rede de parceiros, [crie uma conta diretamente no Partner Center usando um registro existente](/office/dev/store/).
+- Se você é novo no Partner Center e não tem uma conta na rede da Microsoft, [crie uma conta usando a página de registro do Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+- Se você já estiver inscrito na rede de parceiros, [crie uma conta diretamente no Partner Center usando um registro existente](/office/dev/store/).
 
-## <a name="how-do-i-add-my-phone-number-to-the-contact-info-section"></a>Como adiciono meu número de telefone à seção informações de contato?
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Como adiciono meu número de telefone à seção de contato de perfil de parceiro?
 
-O número de telefone tem três partes: código do país, código de área e número de telefone. Se nenhuma seção for aplicável, insira o número `0`.
+O número de telefone tem três partes: código do país, código de área e número de telefone. Se o número de telefone não incluir um código de área, deixe a segunda caixa vazia e preencha a terceira caixa.
 
-## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Por que recebo a mensagem "esta conta não está publicando qualificada" quando tento enviar meu suplemento por meio do Partner Center?
+## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>E se eu não conseguir encontrar minha conta da Office Store no Partner Center?
 
-Você receberá a mensagem de erro acima quando o [status da verificação da conta](/partner-center/verification-responses) estiver pendente. Você pode verificar o status de verificação da sua conta no [painel](https://partner.microsoft.com/dashboard) do centro de parceiro selecionando a opção **configurações** (o ícone de engrenagem) no canto superior direito do Shell de cabeçalho de página e escolhendo**configurações de conta** de**conta**  => de **configurações** => do desenvolvedor.
+Abra um [tíquete de suporte de parceiro](https://partner.microsoft.com/en-US/support/v2/?stage=1) e selecione o seguinte nos menus suspensos:
+
+| Menu | Opção |
+| -------   | -------  |
+|Categoria| Mercado comercial|
+| Tópico | Perguntas gerais sobre ajuda e instruções do Marketplace |
+| Subtópico| Suplemento do Office |
+
+*Confira também* [como abrir um tíquete de suporte para o Partner Center](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
+
+## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>Como gerenciar minhas configurações de conta e perfil de parceiro no Partner Center?
+
+Visite a página [gerenciar configurações de conta e informações de perfil](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) para obter orientação sobre como gerenciar as configurações de conta do seu centro de parceiros.
+
+## <a name="how-do-i-manage-my-office-store-account"></a>Como gerenciar minha conta da Office Store?
+
+Visite nossa [conta gerenciar a sua conta do Office Store no Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter orientação sobre como gerenciar sua conta da Office Store por meio do Partner Center.
+
+## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Por que recebo a mensagem "esta conta não está publicando qualificada" quando tento enviar meu suplemento por meio do Partner Center?
+
+Você receberá a mensagem de erro acima quando o [status da verificação](/partner-center/verification-responses) da sua conta estiver pendente. Você pode verificar o status de verificação da sua conta no [painel](https://partner.microsoft.com/dashboard) do centro de parceiro selecionando a opção **configurações** (o ícone de engrenagem) no canto superior direito do Shell de cabeçalho de página e escolhendo**configurações de conta** de**conta**  => de **configurações** => do desenvolvedor.
 
 ![Página de configurações de conta do centro de parceiros](../../../assets/images/partner-center-accts-page.png)
 
@@ -53,19 +73,16 @@ Durante o processo de verificação da conta, o status de cada etapa obrigatóri
 
 ![Erro de verificação da central de parceiros](../../../assets/images/partner-center-acct-verification-error.png)
 
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>Meu status de verificação de conta não é avançado além da propriedade de email. Como devo proceder?
+
+Durante o processo de verificação de **propriedade de email** , um email de verificação é enviado para o endereço de email de contato principal. Verifique a caixa de entrada de contato principal de um email de **maccount@<span>Microsoft</span>. com** com a ação de linha de assunto *necessária: Verifique sua conta de email com a Microsoft*, solicitando que você conclua o processo de verificação de email. O email de verificação será enviado para o endereço de email listado na página Configurações de conta no centro de parceiros.
+
+> [!NOTE]
+ >O link de verificação de email só é válido por sete dias. Você pode solicitar que reenviemos o email para você visitando sua página de perfil de parceiro e selecionando o link de **email de verificação de reenvio** . Para garantir que o email seja recebido, o email de lista branca do microsoft.com como um domínio seguro e verifique as pastas de lixo eletrônico.
+
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Como eu obteria mais suporte para as minhas questões relacionadas à conta?
 
-Visite a [página de ajuda e suporte para parceiros](https://aka.ms/marketplacepublishersupport) e procure soluções úteis para a documentação relacionada ao seu problema. Se as soluções ou documentos de autoatendimento fornecidos não forem úteis para resolver seu problema, registre um tíquete de suporte selecionando **fornecer detalhes do problema** na seção **próxima etapa** . Você pode procurar seu tópico de problema na caixa de pesquisa ou selecionar **Tópicos de navegação**, abaixo da caixa de pesquisa, para detalhar.
-
-> [!TIP]
-> Se você estiver procurando ajuda com um problema de **verificação de conta** :
->
->1. Abaixo da **caixa de pesquisa**, selecione **Procurar tópicos**.
->1. Selecione **todos os programas** no menu suspenso **categoria** .
-> 1. Selecione **conta, integração, acesso** no menu suspenso **tópico** .
->1. **Selecione uma opção** no menu suspenso **subtópico** .
->1. Para obter mais assistência. Selecione **fornecer detalhes do problema** na seção **próxima etapa** .
->
+Visite o nosso [suporte para o programa de mercado comercial na](/azure/marketplace/partner-center-portal/support) página de centro de parceria para obter orientações e etapas para criar um tíquete de suporte.
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what--should-i-do-next"></a>Verifiquei minhas pastas de email e não recebi o email de verificação. O que devo fazer em seguida?
 
@@ -79,9 +96,13 @@ Tente o seguinte:
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Quanto tempo o processo de verificação de emprego geralmente leva?
 
-Se todos os detalhes forem fornecidos corretamente, a verificação de emprego será concluída em 1 a 2 horas.
+Se todos os detalhes enviados estiverem corretos, a verificação de emprego será concluída em 1 a 2 horas.
 
-## <a name="ive-already-reached-out-to-support-is-there-a-way-to-expedite-my-case"></a>Já tenho chegado ao suporte, existe uma maneira de agilizar o meu caso?
+## <a name="how-long-does-the-business-verification-process-usually-take"></a>Quanto tempo o processo de "verificação de negócios" geralmente leva?
+
+A verificação de negócios leva de 1 a 2 dias úteis para ser concluída, desde que todos os documentos necessários tenham sido enviados.
+
+## <a name="if-ive-already-reached-out-to-the-support-team-will-my-ticket-be-expedited"></a>Se eu já tiver chegado à equipe de suporte, meu tíquete será acelerado?
 
 Os tíquetes de suporte serão resolvidos dentro do horário da semana. Procure as atualizações que serão enviadas para o email fornecido quando o tíquete de suporte foi gerado.
 
@@ -90,10 +111,11 @@ Os tíquetes de suporte serão resolvidos dentro do horário da semana. Procure 
 Envie um email para **<teamsubm@microsoft.com>** com os seguintes detalhes:
 
 1. **Linha de assunto**. *Problema de conta do centro de parceria para <App_Name>* (especifique o nome do seu aplicativo).
-2. **Corpo do email:**
+1. **Corpo do email:**
     * Número do tíquete de suporte:
     * Sua ID de vendedor:
-    * Uma captura de tela do problema.
+    * Uma captura de tela do problema (se possível):
 
+>
 > [!div class="nextstepaction"]
 > [Saiba mais sobre as políticas de validação de aplicativos para o Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
