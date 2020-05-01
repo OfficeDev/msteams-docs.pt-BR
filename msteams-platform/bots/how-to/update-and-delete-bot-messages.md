@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Como atualizar e excluir mensagens enviadas do bot do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 46994c6810197002ef1c108af4f725426395b37f
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914606"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "43957184"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Atualizar e excluir mensagens enviadas do bot
 
@@ -53,6 +53,22 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
+# <a name="rest-api"></a>[API REST](#tab/rest)
+
+>[!NOTE]
+>Você pode desenvolver aplicativos do teams em qualquer tecnologia de programação Web e chamar diretamente as [APIs REST do serviço do conector do bot](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). Para fazer isso, você precisará implementar procedimentos de segurança de [autenticação](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) com suas solicitações de API.
+
+Para atualizar uma atividade existente em uma conversa, inclua o `conversationId` e `activityId` o ponto de extremidade da solicitação. Para concluir esse cenário, você deve armazenar em cache a ID da atividade retornada pela chamada POST original.
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Corpo da solicitação** | Um objeto [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) |
+| **Retorna** | Um objeto [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) |
+
 ---
 
 ## <a name="deleting-messages"></a>Excluir mensagens
@@ -90,5 +106,17 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
----
+# <a name="rest-api"></a>[API REST](#tab/rest)
 
+ Para excluir uma atividade existente em uma conversa, inclua o `conversationId` e `activityId` o ponto de extremidade da solicitação.
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Corpo da solicitação** | n/d |
+| **Retorna** | Um código de status HTTP que indica o resultado da operação. Nada é especificado no corpo da resposta. |
+
+---
