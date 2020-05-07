@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma do Microsoft Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365252"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44119046"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>O que são guias personalizadas do Microsoft Teams?
 
@@ -24,7 +24,6 @@ Há dois tipos de guias disponíveis em Teams-Channel/Group e pessoal. Uma guia 
 
 > [!div class="checklist"]
 >
-> * Reconhecimento da lista inteira de uma equipe.
 > * Se uma guia for adicionada a um aplicativo que também tenha um bot, o bot também será adicionado à equipe.
 > * Reconhecimento da ID do AAD do usuário atual.
 > * Reconhecimento de localidade para o usuário indicar idioma, ou seja, `en-us`. 
