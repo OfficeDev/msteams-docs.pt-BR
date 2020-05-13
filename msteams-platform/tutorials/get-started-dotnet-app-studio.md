@@ -5,12 +5,12 @@ keywords: Introdução ao .net c# Csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550956"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210691"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Introdução à plataforma do Microsoft Teams com o C#/.NET e o app Studio
 
@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 
 ## <a name="build-and-run-the-sample"></a>Criar e executar o exemplo
 
-Depois que o repositório é clonado, use o Visual Studio para abrir o `Microsoft.Teams.Samples.HelloWorld.sln` arquivo de solução no diretório raiz do exemplo e `Build Solution` clique no `Build` menu. Você pode executar o exemplo pressionando `F5` ou escolhendo `Start Debugging` o `Debug` menu.
+Depois que o repositório é clonado, use o Visual Studio para abrir o arquivo `Microsoft.Teams.Samples.HelloWorld.sln` de solução no diretório raiz do exemplo e clique `Build Solution` no `Build` menu. Você pode executar o exemplo pressionando `F5` ou escolhendo `Start Debugging` o `Debug` menu.
 
 Quando o aplicativo for iniciado, você verá uma janela do navegador aberta com a raiz do aplicativo iniciado. Você pode navegar até as seguintes URLs para verificar se todas as URLs de aplicativo estão sendo carregadas:
 
@@ -76,15 +76,15 @@ Quando o aplicativo for iniciado, você verá uma janela do navegador aberta com
 <a name="HostSample"></a>
 
 > [!Note]
-> Se você receber uma mensagem de `Could not find a part of the path … bin\roslyn\csc.exe`erro, tente atualizar o pacote com o `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`comando. Confira [esta pergunta sobre StackOverflow](https://stackoverflow.com/questions/32780315) para obter mais detalhes.
+> Se você receber uma mensagem de erro `Could not find a part of the path … bin\roslyn\csc.exe` , tente atualizar o pacote com o comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Confira [esta pergunta sobre StackOverflow](https://stackoverflow.com/questions/32780315) para obter mais detalhes.
 
 ## <a name="host-the-sample-app"></a>Hospedar o aplicativo de exemplo
 
-Lembre-se de que aplicativos no Microsoft Teams são aplicativos da Web que expõem um ou mais recursos. Para que a plataforma do teams carregue seu aplicativo, seu aplicativo deve estar acessível pela Internet. Para tornar seu aplicativo alcançável da Internet, você precisa hospedar seu aplicativo. Você pode hospedá-lo no Microsoft Azure gratuitamente ou criar um túnel para o processo local em sua máquina de desenvolvimento usando `ngrok`o. Quando você terminar de hospedar seu aplicativo, anote sua URL raiz. Ele terá uma aparência semelhante a `https://yourteamsapp.ngrok.io` : `https://yourteamsapp.azurewebsites.net`ou.
+Lembre-se de que aplicativos no Microsoft Teams são aplicativos da Web que expõem um ou mais recursos. Para que a plataforma do teams carregue seu aplicativo, seu aplicativo deve estar acessível pela Internet. Para tornar seu aplicativo alcançável da Internet, você precisa hospedar seu aplicativo. Você pode hospedá-lo no Microsoft Azure gratuitamente ou criar um túnel para o processo local em sua máquina de desenvolvimento usando o `ngrok` . Quando você terminar de hospedar seu aplicativo, anote sua URL raiz. Ele terá uma aparência semelhante a: `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
 
 ### <a name="tunnel-using-ngrok"></a>Túnel usando ngrok
 
-Para testes rápidos, você pode executar o aplicativo na sua máquina local e criar um túnel para ele por meio de um ponto de extremidade da Web. o [ngrok](https://ngrok.com) é uma ferramenta gratuita que permite que você faça exatamente isso. Com o ngrok, você pode obter um endereço da `https://d0ac14a5.ngrok.io` Web como (esta URL é apenas um exemplo). Você pode [baixar e instalar](https://ngrok.com/download) o ngrok para o seu ambiente. Certifique-se de adicioná-lo a um local `PATH`no seu.
+Para testes rápidos, você pode executar o aplicativo na sua máquina local e criar um túnel para ele por meio de um ponto de extremidade da Web. o [ngrok](https://ngrok.com) é uma ferramenta gratuita que permite que você faça exatamente isso. Com o ngrok, você pode obter um endereço da Web como `https://d0ac14a5.ngrok.io` (esta URL é apenas um exemplo). Você pode [baixar e instalar](https://ngrok.com/download) o ngrok para o seu ambiente. Certifique-se de adicioná-lo a um local no seu `PATH` .
 
 Depois de instalá-lo, você pode abrir uma nova janela de terminal e executar o seguinte comando para criar um túnel. O exemplo usa a porta 3333, portanto, certifique-se de especificá-la aqui.
 
@@ -92,10 +92,10 @@ Depois de instalá-lo, você pode abrir uma nova janela de terminal e executar o
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-O Ngrok ouvirá as solicitações da Internet e irá encaminhá-las para seu aplicativo em execução na porta 3333. Você pode verificar abrindo seu navegador e indo `https://d0ac14a5.ngrok.io/hello` para carregar a página de saudação do aplicativo. Certifique-se de usar o endereço de encaminhamento exibido pelo ngrok em sua sessão de console, em vez desta URL.
+O Ngrok ouvirá as solicitações da Internet e irá encaminhá-las para seu aplicativo em execução na porta 3333. Você pode verificar abrindo seu navegador e indo para `https://d0ac14a5.ngrok.io/hello` carregar a página de saudação do aplicativo. Certifique-se de usar o endereço de encaminhamento exibido pelo ngrok em sua sessão de console, em vez desta URL.
 
 > [!NOTE]
-> Se você tiver usado uma porta diferente na etapa [criar e executar](#build-and-run-the-sample) acima, certifique-se de usar o mesmo número de porta para instalar `ngrok` o túnel.
+> Se você tiver usado uma porta diferente na etapa [criar e executar](#build-and-run-the-sample) acima, certifique-se de usar o mesmo número de porta para instalar o `ngrok` túnel.
 > [!TIP]
 > É uma boa ideia executar `ngrok` em uma janela diferente do terminal para mantê-la em execução sem interferir no aplicativo, que pode ser mais tarde interrompido, recriar e executar novamente. A `ngrok` sessão retornará informações de depuração úteis nesta janela.
 
@@ -115,7 +115,7 @@ O Visual Studio oferece suporte interno à implantação de aplicativos para dif
 
 O aplicativo de exemplo requer que as seguintes variáveis de ambiente sejam definidas para os valores que você fez antes.
 
-Abra o arquivo Web. config e localize a seção *appSettings* . Atualize o valor *MicrosoftAppId* com a ID de bot que você salvou anteriormente. Atualize o *MicrosoftAppPassword* com a senha de bot que você salvou anteriormente.
+Abra o arquivo appSettings. JSON. Atualize o valor *MicrosoftAppId* com a ID de bot que você salvou anteriormente. Atualize o *MicrosoftAppPassword* com a senha de bot que você salvou anteriormente.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="definir as chaves"/>
 
@@ -123,13 +123,13 @@ Depois que essas alterações forem feitas, reconstrua o aplicativo. Se você es
 
 ## <a name="configure-the-app-tab"></a>Configurar a guia aplicativo
 
-Após instalar o aplicativo em uma equipe, você precisará configurá-lo para exibir o conteúdo. Vá para um canal na equipe em que você instalou o exemplo de aplicativo e clique no botão **"+"** para adicionar uma nova guia. Em seguida, você `Hello World` pode escolher na lista **Adicionar uma guia** . Em seguida, será exibida uma caixa de diálogo de configuração. Esta caixa de diálogo permitirá que você escolha qual guia será exibida neste canal. Depois de selecionar a guia e clicar em `Save` , você poderá ver a `Hello World` guia carregada com a guia escolhida.
+Após instalar o aplicativo em uma equipe, você precisará configurá-lo para exibir o conteúdo. Vá para um canal na equipe em que você instalou o exemplo de aplicativo e clique no botão **"+"** para adicionar uma nova guia. Em seguida, você pode escolher `Hello World` na lista **Adicionar uma guia** . Em seguida, será exibida uma caixa de diálogo de configuração. Esta caixa de diálogo permitirá que você escolha qual guia será exibida neste canal. Depois de selecionar a guia e clicar em `Save` , você poderá ver a `Hello World` guia carregada com a guia escolhida.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Captura de tela da configuração" />
 
 ### <a name="test-your-bot-in-teams"></a>Testar seu bot no Teams
 
-Agora você pode interagir com o bot no Teams. Escolha um canal na equipe onde você registrou seu aplicativo e digite `@your-bot-name`. Isso é chamado de ** \@menção**. Qualquer mensagem enviada ao bot será enviada de volta para você como resposta.
+Agora você pode interagir com o bot no Teams. Escolha um canal na equipe onde você registrou seu aplicativo e digite `@your-bot-name` . Isso é chamado de ** \@ menção**. Qualquer mensagem enviada ao bot será enviada de volta para você como resposta.
 
 <img width="450px" title="Respostas de bot" src="~/assets/images/samples-hello-world-bot.png" />
 

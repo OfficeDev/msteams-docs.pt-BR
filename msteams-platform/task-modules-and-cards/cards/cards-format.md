@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550949"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210684"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -18,14 +18,14 @@ Os cartões dão suporte à formatação somente na propriedade Text, e não nas
 
 O suporte à formatação difere entre diferentes tipos de cartão, e a renderização do cartão pode diferir ligeiramente entre a área de trabalho e os clientes do Mobile Teams, bem como o Microsoft Teams no navegador da área de trabalho.
 
-Você pode incluir uma imagem embutida em qualquer placa do teams. As imagens são formatadas `.png`como `.jpg`, ou `.gif` arquivos, e não devem exceder 1024 × 1024 PX ou 1 MB. GIF animado não é oficialmente suportado. *Consulte* [referência de cartões](./cards-reference.md#inline-card-images)
+Você pode incluir uma imagem embutida em qualquer placa do teams. As imagens são formatadas como `.png` , `.jpg` ou `.gif` arquivos, e não devem exceder 1024 × 1024 PX ou 1 MB. GIF animado não é oficialmente suportado. *Consulte* [referência de cartões](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Formatando cartões com redução
 
 Há dois tipos de cartões que dão suporte à redução no Microsoft Teams:
 
 > [!div class="checklist"]
-> * **Cartões adaptáveis**: a redução é suportada no `Textblock` campo de cartão adaptável, `Fact.Title` bem `Fact.Value`como e. O HTML não é suportado em cartões adaptáveis.
+> * **Cartões adaptáveis**: a redução é suportada no campo de cartão adaptável `Textblock` , bem como `Fact.Title` e `Fact.Value` . O HTML não é suportado em cartões adaptáveis.
 > * **Cartões de conector do O365**: redução e HTML limitado são suportados nos cartões de conector do Office 365 nos campos de texto.
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Formatação de redução: cartões adaptáveis**](#tab/adaptive-md)
@@ -49,11 +49,11 @@ Não há suporte para as seguintes marcas de redução:
 * Blockquote
 
 > [!IMPORTANT]
-> Os cartões adaptáveis não dão suporte a qualquer formatação HTML.
+> Os cartões adaptáveis não oferecem suporte à formatação HTML.
 
 ### <a name="newlines-for-adaptive-cards"></a>Novas linhas para cartões adaptáveis
 
-Nas listas, você pode usar `\r` as `\n` sequências de escape ou de saída para novas linhas. Usar `\n\n` em uma lista fará com que o próximo elemento na lista seja recuado. Se você precisar de novas linhas em qualquer lugar no TextBlock `\n\n`, use.
+Nas listas, você pode usar `\r` as `\n` sequências de escape ou de saída para novas linhas. Usar `\n\n` em uma lista fará com que o próximo elemento na lista seja recuado. Se você precisar de novas linhas em qualquer lugar no TextBlock, use `\n\n` .
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Diferenças móveis e de área de trabalho para cartões adaptáveis
 
@@ -109,21 +109,21 @@ No Android, a formatação de redução de cartão adaptável aparece da seguint
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>Mencione o suporte de cartões adaptáveis
+### <a name="mention-support-within-adaptive-cards-v12"></a>Mencione o suporte de cartões adaptáveis v 1.2
+
+Mencionadas com base no cartão são compatíveis com clientes Web, desktop e dispositivos móveis. Você pode adicionar @ menção dentro de um corpo de cartão adaptável para bots e respostas de extensão de mensagens.  Para adicionar @ mençãos em cartões, siga a mesma lógica de notificação e renderização que as [mencionadas por mensagem em conversas de chat de grupo e canal](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+
+Os bots e as extensões de mensagens podem incluir menção dentro do conteúdo do cartão em elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
-> Mencione o suporte nos cartões atualmente é suportado apenas na [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) .
-
-Os bots e as extensões de mensagens agora podem incluir menção dentro do conteúdo do cartão nos elementos bloco de texto e FactSet.
+>Os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
 
 ### <a name="constructing-mentions"></a>Como criar menção
 
 Para incluir uma menção em um cartão adaptável, seu aplicativo precisa incluir os seguintes elementos
 
 * `<at>username</at>`nos elementos de cartão adaptável com suporte
-* O `mention` objeto dentro de uma `msteams` Propriedade no conteúdo do cartão, que inclui a ID de usuário do Team do usuário que está sendo mencionado
-
-Observe que os cartões com menção não têm suporte em clientes móveis no momento.
+* O `mention` objeto dentro de uma `msteams` propriedade no conteúdo do cartão, que inclui a ID de usuário do Team do usuário que está sendo mencionado
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Cartão adaptável de amostra com menção
 
@@ -164,16 +164,16 @@ Os cartões de conector dão suporte à redução limitada e à formatação HTM
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| cabeçalho (níveis 1&ndash;3) | **Text** | `### Text`|
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `### Text`|
 | tachado | ~~text~~ | `~~text~~` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | texto pré-formatado | `text` | ``preformatted text`` |
 | blockquote | >texto blockquote | `>blockquote text` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| hiperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | link de imagem |![Pato em uma pedra](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-Nos cartões conectores, as novas linhas são `\n\n`renderizadas para, `\n` mas `\r`não para ou.
+Nos cartões conectores, as novas linhas são renderizadas para `\n\n` , mas não para `\n` ou `\r` .
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferenças de dispositivos móveis e de área de trabalho para cartões de conexão usando redução
 
@@ -253,16 +253,16 @@ Os cartões de conector dão suporte à redução limitada e à formatação HTM
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto pré-formatado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| hiperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | link de imagem | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-Em cartões de conector, as novas linhas são renderizadas em `<p>` HTML usando a marca.
+Em cartões de conector, as novas linhas são renderizadas em HTML usando a `<p>` marca.
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Diferenças móveis e de área de trabalho para cartões de conexão usando HTML
 
@@ -341,13 +341,13 @@ Marcas HTML têm suporte para cartões simples como o herói e o cartão de mini
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto pré-formatado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| hiperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | link de imagem |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferenças móveis e de área de trabalho para cartões simples

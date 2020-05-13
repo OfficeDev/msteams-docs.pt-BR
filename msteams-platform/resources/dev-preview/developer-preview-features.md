@@ -2,26 +2,22 @@
 title: Recursos da visualização do desenvolvedor público
 description: Descreve os recursos da visualização pública de desenvolvedor do Microsoft Teams
 keywords: recursos do desenvolvedor de visualização do teams
-ms.openlocfilehash: abec097d9f3b6fb48a4a50cb26d73cf811151149
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672482"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210698"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Recursos do Public Developer Preview for Microsoft Teams
 
 A visualização do desenvolvedor inclui os seguintes novos recursos:
 
-## <a name="mention-support-in-adaptive-cards"></a>Mencione o suporte em cartões adaptáveis
+## <a name="adaptive-cards-v12-support"></a>Suporte para cartões adaptáveis v 1.2
 
-Agora você pode adicionar @ menção dentro de um corpo de cartão adaptável para bots e respostas de extensão de mensagens. @ as menção nos cartões seguem a mesma lógica de notificação e renderização que as mencionadas com base em mensagem regular. Observe que as mencionadas por cartão só são compatíveis com clientes da Web e de desktop atuais, com suporte para renderização em clientes móveis em breve.
+O suporte para [cartões adaptáveis v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) no Teams está agora disponível para o público em geral. No entanto, os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
 
-## <a name="adaptive-12-support"></a>Suporte 1,2 adaptável
-
-O Microsoft Teams agora oferece suporte à [versão adaptável 1,2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) na visualização do desenvolvedor. Observe que os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) ainda não têm suporte.
-
-## <a name="tabs-single-sign-on"></a>Logon único de guias
+## <a name="tabs-single-sign-on-sso"></a>Logon único de guias (SSO)
 
 Agora você pode usar o [logon único (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para fazer logon e autenticar um usuário na área de trabalho e móvel usando o SDK do teams JavaScript em uma página de conteúdo da Web. Um dos benefícios é que um usuário nunca precisa entrar; e depois de terem sido consentidas no aplicativo usando seu perfil: eles serão conectados automaticamente à sua guia (incluindo o móvel).
 
