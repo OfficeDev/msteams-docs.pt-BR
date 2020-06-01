@@ -2,27 +2,19 @@
 title: Referência de diretrizes de design
 description: Descreve as diretrizes para a criação de um aplicativo pessoal
 keywords: Diretrizes de design do Microsoft Teams aplicativos pessoais da estrutura de referência
-ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228070"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455496"
 ---
 # <a name="personal-apps"></a>Aplicativos pessoais
 
-> [!Important]
-> O suporte completo para guias em clientes móveis estará disponível em breve. Para se preparar para essa alteração, você deve seguir as [orientações para guias em celular](~/tabs/design/tabs-mobile.md) ao criar suas guias. Os aplicativos pessoais (guias estáticas) estão disponíveis atualmente na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md).
->
-> Quando o suporte completo para guias é liberado:
->
-> * Todas as guias sempre estarão disponíveis em dispositivos móveis
-> * O `contentUrl` **será carregado no cliente do Mobile Teams**.
-> * Para guias de canal/grupo, os usuários ainda podem abrir sua guia em um navegador separado `websiteUrl`por meio de `contentUrl` seu, no entanto, seu primeiro será carregado.
+> [!NOTE]
+> O suporte completo para guias em clientes móveis é suportado no Microsoft Teams. Você deve seguir as [orientações para guias em dispositivos móveis](../../tabs/design/tabs-mobile.md) ao criar guias para plataformas móveis.
 
-Um aplicativo pessoal é um aplicativo com escopo pessoal. Como desenvolvedor de aplicativos, você tem a opção de fornecer uma versão do seu aplicativo que é criada para o usuário individual. Nesta versão, a coleção de guias (e o bot, se você incluiu uma), foram projetadas para a pessoa. Dessa forma, você pode criar uma interação um-em-um com seus usuários.
-
-Um aplicativo pessoal é onde alguém pode ver tudo o que é o seu e todos os itens que foram exibidos recentemente no aplicativo. Ele coloca tudo em um só lugar. Na captura de tela a seguir, a contoso é um aplicativo pessoal no submenu de aplicativo pessoal.
+Um aplicativo pessoal é um aplicativo do teams com um escopo pessoal.  Como desenvolvedor de aplicativos, você tem a opção de fornecer uma versão do seu aplicativo que se concentra em interações com um único usuário. Pode ser um [bot de conversa](../../bots/what-are-bots.md) para participar de conversas de um-para-um com um usuário ou uma [guia pessoal](../../tabs/what-are-tabs.md) que forneça uma experiência Web incorporada. Os aplicativos pessoais permitem que os usuários exibam o conteúdo selecionado em um só lugar. Na captura de tela a seguir, a contoso é um aplicativo pessoal no submenu de aplicativo pessoal.
 
 ![imagem do menu de estouro de aplicativos](~/assets/images/Personal-apps-App-flyout.png)
 

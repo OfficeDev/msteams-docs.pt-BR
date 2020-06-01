@@ -3,16 +3,16 @@ title: Introdução ao app Studio para o Microsoft Teams
 description: Introdução à criação de aplicativos ótimos no Microsoft Teams usando o app Studio
 keywords: Introdução ao app Studio Teams
 ms.date: 03/20/2019
-ms.openlocfilehash: 9a88c6be552905a1dbd41d691c160a39f0123710
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672832"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453858"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolver aplicativos rapidamente com o app Studio para o Microsoft Teams
 
-O app Studio facilita o início da criação ou integração de seus próprios aplicativos do Microsoft Teams, independentemente de você desenvolver aplicativos personalizados para aplicativos de sua empresa ou SaaS para equipes em todo o mundo, simplificando a criação do manifesto e pacote para seu aplicativo e fornecer ferramentas úteis como o editor de cartão e uma biblioteca de controle de reagir.
+O app Studio facilita o início da criação ou integração de seus próprios aplicativos do Microsoft Teams, independentemente de você desenvolver aplicativos personalizados para aplicativos de sua empresa ou SaaS para equipes em todo o mundo, simplificando a criação do manifesto e pacote para o seu aplicativo e fornecendo ferramentas úteis como o editor de cartão e uma biblioteca de controle de reagir.
 
 ## <a name="installing-app-studio"></a>Instalando o app Studio
 
@@ -76,7 +76,7 @@ Observe que, se você tiver definido seu bot para suportar apenas um escopo, os 
 
 Esta seção permite que você adicione um conector ao seu aplicativo. Se você já tiver registrado um conector do Office 365, escolha *Configurar* e insira o nome e a ID do conector. Se quiser um novo conector, clique em *registrar* para ser levado para o painel do desenvolvedor do conector no navegador.
 
-##### <a name="messaging-extensions"></a>Extensões de mensagens
+##### <a name="messaging-extensions"></a>Extensões de Mensagens
 
 [As extensões de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) são uma maneira poderosa para os usuários entrarem com seu aplicativo no Microsoft Teams. Os usuários podem consultar informações do seu serviço e postá-las na forma de cartões, diretamente no canal ou na conversa de chat.
 

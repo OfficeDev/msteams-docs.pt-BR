@@ -2,12 +2,12 @@
 title: Diretrizes de design para bots
 description: Descreve as diretrizes para a criação de bots
 keywords: Diretrizes de design de equipes referência de bots
-ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635281"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453886"
 ---
 # <a name="start-talking-with-bots"></a>Começar a falar com bots
 
@@ -131,7 +131,7 @@ Adicione uma guia que instrua os usuários sobre como se comunicar com o bot. Vo
 
 ## <a name="bots-in-channels"></a>Bots em canais
 
-Chamar um bot em um canal pode ser realizado por `@mention`. A caixa de diálogo de bot deve ser exclusiva em canais e grupos vs. cenários um-para-um e, geralmente, é uma boa ideia considerar abordagens distintas. Isso se aplica especialmente nos seguintes casos:
+Chamar um bot em um canal pode ser realizado por `@mention` . A caixa de diálogo de bot deve ser exclusiva em canais e grupos vs. cenários um-para-um e, geralmente, é uma boa ideia considerar abordagens distintas. Isso se aplica especialmente nos seguintes casos:
 
 ### <a name="sensitive-data-sent-by-a-bot"></a>Dados confidenciais enviados por um bot
 
@@ -165,4 +165,4 @@ Determine se você deseja que o Tom seja amigável e claro, "apenas os fatos" ou
 
 Dê suporte a interações de várias perfeitas e ainda permitindo perguntas totalmente formadas. Prever a próxima etapa ajudará os usuários a obter muito mais facilidade nos fluxos de tarefas.
 
-Se um usuário executar várias etapas para concluir uma tarefa, permita que o bot as assuma por meio de cada etapa, mas termine por ter sugerido um caminho mais rápido. Por exemplo, se um usuário levou várias pessoas para definir uma reunião (especificando primeiro uma reunião e, em seguida, identificando com quem e, em seguida, informando a hora e, em seguida, informando o dia), conclua a conversa com a seguinte sugestão: na próxima vez, tente perguntar se você é possível agendar uma reunião com Bob em 1:00 amanhã.
+Se um usuário executar várias etapas para concluir uma tarefa, permita que o bot as assuma por meio de cada etapa, mas termine por ter sugerido um caminho mais rápido. Por exemplo, se um usuário levou várias pessoas para definir uma reunião (especificando primeiro uma reunião e, em seguida, identificando com quem e, em seguida, informando a hora e, em seguida, informando o dia), conclua a conversa com a seguinte sugestão: na próxima vez, tente perguntar se você pode agendar uma reunião com Bob em 1:00 amanhã.

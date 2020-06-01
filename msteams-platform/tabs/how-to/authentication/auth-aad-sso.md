@@ -2,12 +2,12 @@
 title: Logon Único
 description: Descreve o logon único (SSO)
 keywords: AAD de autenticação do Microsoft Teams
-ms.openlocfilehash: 1857651aecd902f04bd57f5b4e2fb0fda88eb348
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f9d94346aad7c096e4310f80b6cda73856afc8c
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672463"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455510"
 ---
 # <a name="single-sign-on"></a>Logon Único
 
@@ -41,12 +41,12 @@ Registre seu aplicativo no portal de registro para o ponto de extremidade do Azu
 * Obtendo sua ID de aplicativo do AAD
 * Especifique as permissões de que seu aplicativo precisa para o ponto de extremidade do AAD (e, opcionalmente, para o Microsoft Graph). 
 * Conceder à área de trabalho do Microsoft Teams, a Web e o aplicativo móvel para confiar no aplicativo
-* Preautor o aplicativo Microsoft Teams para seu aplicativo com o nome de escopo `access_as_user`padrão de.
+* Preautor o aplicativo Microsoft Teams para seu aplicativo com o nome de escopo padrão de `access_as_user` .
 
 > [!NOTE]
 > Há algumas restrições importantes que você deve ter em mente:
 >
-> * Só damos suporte a permissões de API de gráfico em nível de usuário (IE: email, Profile, offline_access, OpenID. Se você precisar acessar outros escopos de gráfico, leia nossa solução alternativa no final desta documentação.
+> * Só damos suporte a permissões de API de gráfico em nível de usuário, por exemplo, email, perfil, offline_access, OpenID. Se você precisar acessar outros escopos de gráfico, leia nossa solução alternativa no final desta documentação.
 > * É importante que o nome de domínio do aplicativo seja registrado com seu aplicativo do Azure AD. Este deve ser o mesmo nome de domínio no qual o aplicativo é executado ao solicitar um token de autenticação no Teams e também ao especificar a Propriedade Resource no manifesto do Teams (mais detalhes na próxima seção).
 > * No momento, não há suporte para vários domínios por aplicativo
 > * Também não há suporte para aplicativos que usam o `azurewebsites.net` domínio, já que esse domínio é muito comum e pode ser um risco de segurança
@@ -60,22 +60,22 @@ Registre seu aplicativo no portal de registro para o ponto de extremidade do Azu
     * Sair do **URI de redirecionamento** vazio
     * Escolha **registrar**
 3. Na página Visão geral, copie e salve a **ID do aplicativo (cliente)**. Você precisará dele mais tarde ao atualizar o manifesto do aplicativo do Microsoft Teams.
-4. Selecionar **Expor uma API** em **Gerenciar**. Selecione o link **definir** para gerar o URI da ID do aplicativo no formato `api://{AppID}`de. Insira o nome de domínio totalmente qualificado (com uma barra "/" acrescentada ao final) entre as barras duplas de avanço e o GUID. A ID completa deve ter a forma de:`api://fully-qualified-domain-name.com/{AppID}`
-    * ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`.
+4. Selecionar **Expor uma API** em **Gerenciar**. Selecione o link **definir** para gerar o URI da ID do aplicativo no formato de `api://{AppID}` . Insira o nome de domínio totalmente qualificado (com uma barra "/" acrescentada ao final) entre as barras duplas de avanço e o GUID. A ID completa deve ter a forma de:`api://fully-qualified-domain-name.com/{AppID}`
+    * ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` .
 
 > [!NOTE]
 > Se você receber um erro dizendo que o domínio já pertence a alguém, mas você é o seu proprietário, siga o procedimento em [Início Rápido: Adicionar um domínio personalizado ao Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) para registrá-lo e, em seguida, repita esta etapa. (Esse erro também pode ocorrer se você não tiver entrado com as credenciais de um administrador no Office 365 locação).
 
 5. Selecione o botão **Adicionar um escopo**. No painel que se abre, insira `access_as_user` como o **Nome de escopo**.
 6. Definir quem pode consentir? para administradores e usuários
-7. Preencha os campos para configurar os prompts de consentimento de usuário e administrador com os valores que são apropriados `access_as_user` para o escopo. Sugestões:
+7. Preencha os campos para configurar os prompts de consentimento de usuário e administrador com os valores que são apropriados para o `access_as_user` escopo. Sugestões:
     * **Título do consentimento do administrador:** O Microsoft Teams pode acessar o perfil do usuário
     * **Descrição do consentimento do administrador**: permite que o Teams chame as APIs Web do aplicativo como o usuário atual.
     * **Título de consentimento do usuário**: o Teams pode acessar seu perfil de usuário e fazer solicitações em seu nome
     * **Descrição do consentimento do usuário:** Habilitar o Teams para chamar as APIs deste aplicativo com os mesmos direitos
 8. Verifique se o **estado** está definido como **habilitado**
 9. Selecionar **Adicionar escopo**
-    * Observação: a parte de domínio do **nome do escopo** exibida logo abaixo do campo de texto deve corresponder automaticamente ao conjunto de URI da **ID do aplicativo** na `/access_as_user` etapa anterior, com acrescentado ao final; por exemplo: 
+    * Observação: a parte de domínio do **nome do escopo** exibida logo abaixo do campo de texto deve corresponder automaticamente ao conjunto de URI da **ID do aplicativo** na etapa anterior, com `/access_as_user` acrescentado ao final; por exemplo: 
         * `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7/access_as_user`
 10. Na seção **aplicativos cliente autorizados** , identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Cada uma das seguintes IDs precisa ser inserida:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Aplicativo móvel/aplicativo de área de trabalho do Microsoft Teams)
@@ -104,7 +104,7 @@ Adicione novas propriedades ao manifesto do Microsoft Teams:
 
 Observações:
 
-* O recurso para um aplicativo AAD normalmente será a raiz da URL do site e a appID (por exemplo, `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`). Também utilizamos esse valor para garantir que sua solicitação seja proveniente do mesmo domínio. Therefor certifique-se de `contentURL` que seu para sua guia usa os mesmos domínios de sua Propriedade Resource.
+* O recurso para um aplicativo AAD normalmente será a raiz da URL do site e a appID (por exemplo, `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` ). Também utilizamos esse valor para garantir que sua solicitação seja proveniente do mesmo domínio. Therefor certifique-se de que seu `contentURL` para sua guia usa os mesmos domínios de sua Propriedade Resource.
 * Você precisa estar usando o manifesto versão 1,5 ou superior para que esses campos sejam usados.
 * Escopos não são suportados no manifesto e, em vez disso, devem ser especificados na seção permissões de API no portal do Azure
 
@@ -126,7 +126,7 @@ Quando você chama `getAuthToken` e o consentimento do usuário adicional é nec
 
 ## <a name="demo-code"></a>Código de demonstração
 
-Por ora, você pode visitar nossa tarefa de aplicativo de teste [Meow](https://github.com/ydogandjiev/taskmeow) e usar o manifesto de `teams.auth.service.js` SSO `sso.auth.service.js` e fazer checkout do arquivo e do para ver como lidamos com o fluxo de trabalho de autenticação.
+Por ora, você pode visitar nossa tarefa de aplicativo de teste [Meow](https://github.com/ydogandjiev/taskmeow) e usar o manifesto de SSO e fazer checkout do `teams.auth.service.js` arquivo e do `sso.auth.service.js` para ver como lidamos com o fluxo de trabalho de autenticação.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
@@ -150,10 +150,10 @@ Outra abordagem para obter escopos de gráfico adicionais seria apresentar uma c
     * Certifique-se de usar o ponto de extremidade do gráfico v2 para esta troca
 2. Se o Exchange falhar, o AAD retornará uma exceção de concessão inválida. Há geralmente uma de duas mensagens de erro: `ConsentRequired` ou`InteractionRequired`
 3. Quando o Exchange falhar, você precisará solicitar o consentimento adicional. Recomendamos que você mostre algumas interfaces de usuário solicitando que o usuário conceda um consentimento adicional. Esta interface do usuário deve incluir um botão que dispare uma caixa de diálogo de consentimento do AAD usando nossa [API de autenticação AAD](~/concepts/authentication/auth-silent-aad.md).
-4. Ao solicitar o consentimento adicional do AAD, você precisa incluir `prompt=consent` em seu parâmetro de cadeia de caracteres de [consulta](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) para AAD caso contrário, o AAD não solicitará os escopos adicionais.
+4. Ao solicitar o consentimento adicional do AAD, você precisa incluir `prompt=consent` em seu [parâmetro de cadeia de caracteres de consulta](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) para AAD caso contrário, o AAD não solicitará os escopos adicionais.
     * Em vez de:`?scope={scopes}`
     * Use:`?prompt=consent&scope={scopes}`
-    * Certifique-se `{scopes}` de incluir todos os escopos para os quais você está solicitando o usuário (ex: mail. Read ou User. Read).
+    * Certifique-se de `{scopes}` incluir todos os escopos para os quais você está solicitando o usuário (ex: mail. Read ou User. Read).
 5. Depois que o usuário tiver concedido permissão adicional, repita o em em nome de fluxo para obter acesso a essas APIs adicionais.
 
 ### <a name="non-aad-authentication"></a>Autenticação não AAD

@@ -2,12 +2,12 @@
 title: Carregar seu aplicativo personalizado no Microsoft Teams
 description: Descreve como carregar seu aplicativo no Microsoft Teams
 keywords: Carregamento de aplicativos do teams
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672546"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453879"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
 
@@ -20,7 +20,7 @@ Para testar a experiência do aplicativo no Microsoft Teams, você precisa carre
 
 Para o desenvolvimento, bem como o envio do AppSource (anteriormente Office Store), você deve criar um pacote que contenha as informações para descrever sua experiência. O pacote, um arquivo. zip, contém o manifesto do aplicativo e os ícones que definem exclusivamente sua experiência.
 
-Para criar um pacote de carregamento, consulte [criar o pacote para seu aplicativo do Microsoft Teams](~/concepts/build-and-test/apps-package.md).
+Para criar um pacote de carregamento, consulte [criar o pacote para seu aplicativo do Microsoft Teams](../build-and-test/apps-package.md).
 
 Com seu pacote criado, agora você pode carregá-lo em uma equipe. Depois de carregado, ele estará disponível para todos os usuários da equipe selecionada e apenas para os usuários dessa equipe.
 
@@ -40,16 +40,16 @@ Há duas maneiras de carregar seu aplicativo para o Microsoft Teams:
 
 1. No canto inferior esquerdo do Teams, escolha o ícone de armazenamento. Na página loja, escolha "carregar um aplicativo personalizado".
 
-   ![Exibir equipe](~/assets/images/store-upload-a-custom-app.png)
+   ![Exibir equipe](../../assets/images/store-upload-a-custom-app.png)
 
 2. Na caixa de diálogo *abrir* , navegue até o pacote que você deseja carregar e escolha *abrir*.
 
 O pacote carregado agora deve estar disponível para uso na equipe ou conversa especificada na caixa de diálogo de consentimento. Se seu aplicativo não aparecer, o motivo mais comum é um erro no manifesto, principalmente IDs para o aplicativo, bot e extensões de mensagens. Se o aplicativo não tiver escopo para conversas, essa opção não será exibida.
 
 >[!NOTE]
-> Os aplicativos em conversas estão atualmente na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md)e a opção não será exibida se o Microsoft Teams não estiver em execução nesse modo.
+> Os aplicativos em conversas estão atualmente na [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md)e a opção não será exibida se o Microsoft Teams não estiver em execução nesse modo.
 
-![Exemplo de bot na lista de bots carregados](~/assets/images/botinlist.jpg)
+![Exemplo de bot na lista de bots carregados](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Carregar seu pacote em uma equipe usando a guia aplicativos
 
@@ -60,13 +60,13 @@ O pacote carregado agora deve estar disponível para uso na equipe ou conversa e
 
 2. Selecione a guia aplicativos e, em seguida, escolha *carregar um aplicativo personalizado* no canto inferior direito.
 
-   ![Carregar ponto de entrada](~/assets/images/uploadACustomApp.png)
+   ![Carregar ponto de entrada](../../assets/images/UploadACustomApp.png)
 
 3. Navegue até o pacote. zip e selecione-o em seu computador.
 
 4. Após uma breve pausa, você verá seu aplicativo carregado na lista.
 
-   ![Exemplo de bot na lista de bots carregados](~/assets/images/botinlist.jpg)
+   ![Exemplo de bot na lista de bots carregados](../../assets/images/botinlist.jpg)
 
 Se seu aplicativo não carregar, o motivo mais comum é um erro no manifesto, principalmente IDs para o aplicativo, bot e extensões de mensagens.
 
@@ -80,9 +80,9 @@ Se o aplicativo contiver guias, os usuários poderão fixá-los em qualquer conv
 
 3. Aceite o prompt de consentimento.
 
-4. Configure sua guia por meio de sua [página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) e escolha *salvar*.
+4. Configure sua guia por meio de sua [página de configuração](../../tabs/how-to/create-tab-pages/configuration-page.md) e escolha *salvar*.
 
-  ![A caixa de diálogo Adicionar uma guia, apresentando uma galeria de guias disponíveis](~/assets/images/tab_gallery.png)
+  ![A caixa de diálogo Adicionar uma guia, apresentando uma galeria de guias disponíveis](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>Acessar o bot carregado
 
@@ -102,15 +102,15 @@ Com o aplicativo carregado na equipe ou na conversa, os usuários podem configur
 
 2. Selecione seu conector na seção **carregado** na parte inferior.
 
-3. Configure seu conector por meio de sua [página de configuração](~/webhooks-and-connectors/how-to/connectors-creating.md) e escolha *salvar*.
+3. Configure seu conector por meio de sua [página de configuração](../../webhooks-and-connectors/how-to/connectors-creating.md) e escolha *salvar*.
 
-  ![A caixa de diálogo Adicionar uma guia, apresentando uma galeria de guias disponíveis.](~/assets/images/connector_gallery.png)
+  ![A caixa de diálogo Adicionar uma guia, apresentando uma galeria de guias disponíveis.](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>Acessar sua extensão de mensagens carregadas
 
 Um aplicativo carregado com uma extensão de mensagens aparece automaticamente no menu *mais opções* (*&#8943;*) na caixa de composição.
 
-![Extensões de Mensagens](~/assets/images/compose-extensions/cesampleapp.png)
+![Extensões de mensagens](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>Remover ou atualizar seu aplicativo
 
@@ -123,5 +123,5 @@ Se você alterar as informações do manifesto, remova primeiro o aplicativo e, 
 
 ## <a name="troubleshooting-notes"></a>Notas de solução de problemas
 
-* Se o manifesto não carregar, verifique se você seguiu todas as instruções em [criar o pacote](~/concepts/build-and-test/apps-package.md) e validou seu manifesto no [esquema](~/resources/schema/manifest-schema.md).
+* Se o manifesto não carregar, verifique se você seguiu todas as instruções em [criar o pacote](../../concepts/build-and-test/apps-package.md) e validou seu manifesto no [esquema](../../resources/schema/manifest-schema.md).
 

@@ -2,32 +2,22 @@
 title: Guias em dispositivos móveis
 description: Descreve as diretrizes para a criação de guias que funcionam em dispositivos móveis.
 keywords: Diretrizes de design de equipes guias de referência de aplicativos pessoais
-ms.openlocfilehash: 928fb8586434eca9cc1577fd45c6b94594724d7f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672717"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455517"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
-
-> [!Important]
-> O suporte completo para guias em clientes móveis estará disponível em breve. Para se preparar para esta alteração, você deve seguir as orientações ao criar suas guias. Os aplicativos pessoais (guias estáticas) estão disponíveis atualmente na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md). e as `...` guias de chat de canal/grupo estão disponíveis no menu de excedentes da guia.
->
-> Quando o suporte completo para guias é liberado:
->
-> * Todas as guias sempre estarão disponíveis em dispositivos móveis
-> * O `contentUrl` **será carregado no cliente do Mobile Teams**.
-> * Para guias de canal/grupo, os usuários ainda podem abrir sua guia em um navegador separado `websiteUrl`por meio de `contentUrl` seu, no entanto, seu primeiro será carregado.
-> * Se sua guia usa autenticação, você deve atualizar o SDK do JavaScript do Microsoft Teams para a versão 1.4.1 ou posterior, ou a autenticação falhará.
 
 As guias personalizadas podem fazer parte de um canal, de um chat de grupo ou de um aplicativo pessoal (aplicativos que contêm guias estáticas e/ou um bot de um para um).
 
 Os aplicativos pessoais estão disponíveis em clientes móveis na gaveta de aplicativos. O aplicativo só pode ser instalado a partir de um cliente da Web ou da área de trabalho, e pode levar até 24 horas para aparecer em clientes móveis.
 
-As guias de grupo e canal também estão disponíveis em clientes móveis. O comportamento padrão é atualmente usar o `websiteUrl` para iniciar sua guia em uma janela do navegador. No entanto, eles podem ser carregados em um cliente móvel clicando `...` no menu de excedentes ao lado da guia e escolhendo **abrir**, que `contentUrl` usará o para carregar a guia dentro do cliente móvel do Microsoft Teams.
+As guias de grupo e canal também estão disponíveis em clientes móveis. O comportamento padrão é atualmente usar o `websiteUrl` para iniciar sua guia em uma janela do navegador. No entanto, eles podem ser carregados em um cliente móvel clicando no `...` menu de excedentes ao lado da guia e escolhendo **abrir**, que usará o `contentUrl` para carregar a guia dentro do cliente móvel do Microsoft Teams.
 
-![gaveta de aplicativos móveis](~/assets/images/app-drawer.png)
+![gaveta de aplicativos móveis](../../assets/images/personal-app-mobile.png)
 
 ## <a name="developer-considerations-for-mobile-support"></a>Considerações de desenvolvedor para suporte móvel
 
@@ -63,7 +53,7 @@ Esta é uma grande área onde o trabalho é concluído. O aplicativo wiki segue 
 
 ![layout de tela única](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Listar
+#### <a name="list"></a>List
 
 As listas são ótimas para classificar e filtrar grandes quantidades de dados e são excelentes para manter as coisas mais importantes na parte superior. É útil usar colunas classificável. As ações podem ser adicionadas a cada item de lista no menu de reticências.
 
@@ -81,7 +71,7 @@ Veja a seguir um exemplo de aplicativo pessoal que contém duas guias estáticas
 
 ![guias e bots em dispositivos móveis](~/assets/images/mobile-tab-with-bot.png)
 
-### <a name="ui-components"></a>Componentes da interface do usuário
+### <a name="ui-components"></a>Componentes da interface de usuário
 
 #### <a name="color-palettes"></a>Paletas de cores
 

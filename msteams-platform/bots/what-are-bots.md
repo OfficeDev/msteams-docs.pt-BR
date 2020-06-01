@@ -4,12 +4,12 @@ author: clearab
 description: Uma visão geral dos bots de conversa no Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281843"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453865"
 ---
 # <a name="what-are-conversational-bots"></a>O que são bots de conversa?
 
@@ -53,7 +53,7 @@ Os bots no Microsoft Teams podem fazer parte de uma conversa de um-para-um, um c
 
 ### <a name="in-a-channel"></a>Em um canal
 
-Os canais contêm conversas encadeadas entre várias pessoas, potencialmente muitas pessoas (atualmente, até 2000). Isso pode causar o alcance maciço de bot, mas as interações individuais precisam ser concisas. Interações de múltipla volta tradicional provavelmente não funcionarão bem. Em vez disso, procure usar cartões interativos ou módulos de tarefas ou mova a conversa para uma conversa de um para um se precisar coletar muitas informações. O bot também terá acesso apenas às mensagens em que for `@mentioned` diretamente, não será possível recuperar mensagens adicionais da conversa usando o Microsoft Graph e permissões elevadas de nível de organização.
+Os canais contêm conversas encadeadas entre várias pessoas, potencialmente muitas pessoas (atualmente, até 2000). Isso pode causar o alcance maciço de bot, mas as interações individuais precisam ser concisas. Interações de múltipla volta tradicional provavelmente não funcionarão bem. Em vez disso, procure usar cartões interativos ou módulos de tarefas ou mova a conversa para uma conversa de um para um se precisar coletar muitas informações. O bot também terá acesso apenas às mensagens em que for `@mentioned` diretamente, embora você possa recuperar mensagens adicionais da conversa usando o Microsoft Graph e permissões elevadas de nível de organização.
 
 Alguns cenários em que os bots Excel em um canal incluem:
 
