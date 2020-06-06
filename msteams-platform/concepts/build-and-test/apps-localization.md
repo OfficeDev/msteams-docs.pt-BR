@@ -3,12 +3,12 @@ title: Localização para aplicativos da equipe
 description: Descreve problemas em relação à localização do aplicativo
 keywords: publicação do Microsoft Teams armazenar o idioma de localização do Office Publishing AppSource
 ms.date: 05/15/2018
-ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 30e4a2589bf5c1093723406c78cff2258554c486
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120274"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590855"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localização para aplicativos do Microsoft Teams
 
@@ -40,13 +40,13 @@ As imagens carregadas com o idioma inglês serão aquelas usadas no AppSource.
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>Localizando as cadeias de caracteres em seu manifesto de aplicativo
 
-Você deve usar o esquema de aplicativos do Microsoft Teams v 1.5 + para localizar corretamente seu aplicativo. Você pode fazer isso Configurando `$schema` o atributo no arquivo manifest. JSON como 'https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' e atualizando a propriedade ' manifestVersion ' para ' 1,5 '.
+Você deve usar o esquema de aplicativos do Microsoft Teams v 1.5 + para localizar corretamente seu aplicativo. Você pode fazer isso Configurando o `$schema` atributo no arquivo manifest. JSON como ' https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json ' e atualizando a propriedade ' manifestVersion ' para ' 1,5 '.
 
 ### <a name="example-manifestjson-change"></a>Alteração de manifesto de exemplo. JSON
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -66,7 +66,7 @@ Em seguida, você poderá adicionar a propriedade ' localizationInfo ' com o idi
 }
 ```
 
-Você pode fornecer arquivos. JSON adicionais com traduções de todas as cadeias de caracteres voltadas para o usuário em seu manifesto. Esses arquivos devem aderir ao [esquema JSON do arquivo de localização](../../resources/schema/localization-schema.md) e devem ser adicionados à propriedade "localizationInfo" do manifesto. Cada arquivo se correlaciona com uma marca de idioma que o cliente do teams usa para escolher as cadeias de caracteres apropriadas. A marca de idioma tem a forma <language> - <region> de mas é recomendável omitir <region> a parte para direcionar todas as regiões que dão suporte ao idioma desejado.
+Você pode fornecer arquivos. JSON adicionais com traduções de todas as cadeias de caracteres voltadas para o usuário em seu manifesto. Esses arquivos devem aderir ao [esquema JSON do arquivo de localização](../../resources/schema/localization-schema.md) e devem ser adicionados à propriedade "localizationInfo" do manifesto. Cada arquivo se correlaciona com uma marca de idioma que o cliente do teams usa para escolher as cadeias de caracteres apropriadas. A marca de idioma tem a forma de <language> - <region> mas é recomendável omitir a <region> parte para direcionar todas as regiões que dão suporte ao idioma desejado.
 
 O cliente Teams aplicará as cadeias de caracteres nesta ordem: cadeias de caracteres de idioma padrão-> cadeias de caracteres de idiomas do usuário-> idioma do usuário + cadeia de caracteres de região do usuário.
 
@@ -114,7 +114,7 @@ Portanto, é altamente recomendável fornecer traduções de nível superior, so
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
@@ -129,4 +129,4 @@ Portanto, é altamente recomendável fornecer traduções de nível superior, so
 
 ## <a name="handling-localized-text-submissions-from-your-users"></a>Lidando com envios de texto localizado de seus usuários
 
-Se você fornecer versões localizadas de seu aplicativo, é provável que seus usuários respondam com o mesmo idioma. O Microsoft Teams não traduz os envios do usuário de volta para o idioma padrão, para que seu aplicativo precise lidar com isso. Por exemplo, se você fornecer um localizado `commandList`, as respostas para o bot serão o texto localizado do comando, e não o idioma padrão. Seu aplicativo precisará responder de forma adequada.
+Se você fornecer versões localizadas de seu aplicativo, é provável que seus usuários respondam com o mesmo idioma. O Microsoft Teams não traduz os envios do usuário de volta para o idioma padrão, para que seu aplicativo precise lidar com isso. Por exemplo, se você fornecer um localizado `commandList` , as respostas para o bot serão o texto localizado do comando, e não o idioma padrão. Seu aplicativo precisará responder de forma adequada.

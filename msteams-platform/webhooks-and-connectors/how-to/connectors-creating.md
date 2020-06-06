@@ -1,14 +1,14 @@
 ---
 title: Conectores de Office 365
 description: Descreve como começar a usar os conectores do Office 365 no Microsoft Teams
-keywords: conector do teams o365
+keywords: conector do o365 no teams
 ms.date: 04/19/2019
-ms.openlocfilehash: e26c264cc418d326e783ff0378089d2565ecbfef
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9c18a4c0dfda449c1507b26e78889cfab56ffd5f
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672443"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590848"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Criando conectores do Office 365 para o Microsoft Teams
 
@@ -35,7 +35,7 @@ Os usuários vão concluir toda a experiência de configuração do conector sem
 
 Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente no Teams. O código deve:
 
-1. Inclua o SDK do JavaScript do Microsoft Teams. Isso dá a seu código acesso às APIs para executar operações comuns, como obter o contexto de usuário/canal/equipe atual e iniciar fluxos de autenticação. Inicialize o SDK ligando `microsoftTeams.initialize()`.
+1. Inclua o SDK do JavaScript do Microsoft Teams. Isso dá a seu código acesso às APIs para executar operações comuns, como obter o contexto de usuário/canal/equipe atual e iniciar fluxos de autenticação. Inicialize o SDK ligando `microsoftTeams.initialize()` .
 2. Chame `microsoftTeams.settings.setValidityState(true)` quando você deseja habilitar o botão salvar. Você deve fazer isso como uma resposta a uma entrada de usuário válida, como uma seleção ou uma atualização de campo.
 3. Registre um `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos, que é chamado quando o usuário clica em salvar.
 4. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. O que é salvo aqui também é o que será mostrado na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o seu conector.
@@ -49,8 +49,8 @@ Você pode reutilizar sua experiência de configuração da Web existente ou cri
 
 | Parâmetro   | Detalhes |
 |-------------|---------|
-| `entityId`       | A ID da entidade, conforme definido pelo código ao chamar `setSettings()`. |
-| `configName`  | O nome da configuração, conforme definido pelo código ao chamar `setSettings()`. |
+| `entityId`       | A ID da entidade, conforme definido pelo código ao chamar `setSettings()` . |
+| `configName`  | O nome da configuração, conforme definido pelo código ao chamar `setSettings()` . |
 | `contentUrl` | A URL da página de configuração, conforme definido pelo seu código ao chamar`setSettings()` |
 | `webhookUrl` | A URL do webhook criada para esse conector. Persista a URL do webhook e use-a para publicar o JSON estruturado para enviar cartões ao canal. A `webhookUrl` é retornada quando o aplicativo retorna com êxito. |
 | `appType` | Os valores retornados podem ser `mail`, `groups` ou `teams` correspondente ao Email do Office 365, Grupos do Office 365 ou Microsoft Teams respectivamente. |
@@ -59,7 +59,7 @@ Você pode reutilizar sua experiência de configuração da Web existente ou cri
 Se você precisar autenticar o usuário como parte do carregamento da página na etapa 2 acima, consulte [este link](~/tabs/how-to/authentication/auth-flow-tab.md) para obter detalhes sobre como você pode integrar o logon quando sua página é incorporada.
 
 > [!NOTE]
-> Devido a motivos de compatibilidade entre clientes, seu código precisará chamar `microsoftTeams.authentication.registerAuthenticationHandlers()` os métodos de retorno de chamada URL e Success/Failure antes `authenticate()`de chamar.
+> Devido a motivos de compatibilidade entre clientes, seu código precisará chamar `microsoftTeams.authentication.registerAuthenticationHandlers()` os métodos de retorno de chamada URL e Success/Failure antes de chamar `authenticate()` .
 
 #### <a name="handling-edits"></a>Como lidar com edições
 
@@ -73,25 +73,25 @@ Normalmente, essa chamada é feita como parte do seu manipulador de eventos Save
 
 #### <a name="handling-removals"></a>Como lidar com remoções
 
-Opcionalmente, você pode executar um manipulador de eventos quando o usuário remove uma configuração de conector existente. Você registra esse manipulador chamando `microsoftTeams.settings.registerOnRemoveHandler()`. Esse manipulador pode ser usado para realizar operações de limpeza, como a remoção de entradas de um banco de dados.
+Opcionalmente, você pode executar um manipulador de eventos quando o usuário remove uma configuração de conector existente. Você registra esse manipulador chamando `microsoftTeams.settings.registerOnRemoveHandler()` . Esse manipulador pode ser usado para realizar operações de limpeza, como a remoção de entradas de um banco de dados.
 
 ### <a name="including-the-connector-in-your-manifest"></a>Incluindo o conector em seu manifesto
 
 Você pode baixar o manifesto do aplicativo Teams gerado automaticamente no Portal. Para que você possa usá-lo para testar ou publicar seu aplicativo, no entanto, você deve fazer o seguinte:
 
-- Inclua dois ícones, seguindo as instruções em [ícones](~/concepts/build-and-test/apps-package.md#icons).
-- Modifique a `icons` parte do manifesto para referir-se aos nomes de arquivo dos ícones em vez de URLs.
+- Inclua dois ícones, seguindo as instruções nos [ícones](~/concepts/build-and-test/apps-package.md#icons).
+- Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
 
-O arquivo manifest. JSON a seguir contém os elementos básicos necessários para testar e enviar seu aplicativo.
+O seguinte arquivo manifest.json contém os elementos básicos necessários para testar e enviar seu aplicativo.
 
 > [!NOTE]
-> Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do seu conector.
+> Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do Conector.
 
-#### <a name="example-manifestjson-with-connector"></a>Exemplo de manifest. JSON com conector
+#### <a name="example-manifestjson-with-connector"></a>Exemplo de manifest.json com o Conector
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -127,13 +127,13 @@ O arquivo manifest. JSON a seguir contém os elementos básicos necessários par
 }
 ```
 
-## <a name="testing-your-connector"></a>Testando seu conector
+## <a name="testing-your-connector"></a>Testar o Conector
 
-Para testar seu conector, carregue-o em uma equipe como faria com qualquer outro aplicativo. Você pode criar um pacote. zip usando o arquivo de manifesto do painel do desenvolvedor de conectores (modificado conforme indicado na seção anterior) e os dois arquivos de ícone.
+Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto do Painel do Desenvolvedor do Connectors (modificado conforme indicado na seção anterior) e os dois arquivos de ícone.
 
-Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. Role até a parte inferior para ver o aplicativo na seção **carregado** .
+Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver o aplicativo na seção **Carregado**.
 
-![Captura de tela da seção carregada na caixa de diálogo conector](~/assets/images/connectors/connector_dialog_uploaded.png)
+![Captura de tela da seção carregada na caixa de diálogo do Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 Agora você pode iniciar a experiência de configuração. Lembre-se de que esse fluxo ocorre completamente no Microsoft Teams como uma experiência hospedada.
 
@@ -151,5 +151,5 @@ Depois de carregar seu pacote de aplicativos, para configurar e usar o conector 
 1. Selecione a barra **Adicionar a uma equipe** .
 1. Na próxima janela de diálogo, digite um nome de equipe ou de canal.
 1. Selecione **Configurar uma** barra de conector no canto inferior direito da janela da caixa de diálogo.
-1. O conector estará disponível na seção &#9679;&#9679;&#9679; => *mais opções* => *conectores* => *todos os* => *conectores da sua equipe* para essa equipe. Você pode navegar rolando até esta seção ou pesquisar o aplicativo do conector.
+1. O conector estará disponível na seção &#9679;&#9679;&#9679; => *mais opções*  =>  *conectores*  =>  *todos os*  =>  *conectores da sua equipe* para essa equipe. Você pode navegar rolando até esta seção ou pesquisar o aplicativo do conector.
 1. Para configurar ou modificar o conector, selecione a barra **Configurar** .
