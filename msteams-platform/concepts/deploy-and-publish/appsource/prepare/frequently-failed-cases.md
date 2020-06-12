@@ -4,12 +4,12 @@ description: Descreve as dicas para o envio e a maioria das políticas com falha
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914571"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704478"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -70,9 +70,10 @@ Para obter informações adicionais sobre autenticação, consulte:
 
 * As guias devem fornecer conteúdo focalizado e evitar elementos de interface do usuário desnecessários. Em geral, isso geralmente se refere à navegação desnecessária/aninhada em camadas, uma interface do usuário estranha ou irrelevante ao lado do conteúdo ou qualquer link que leva o usuário a conteúdo não relacionado. Por exemplo, abaixo está um modo de exibição de guia que omite menus de navegação e apenas exibe o conteúdo principal:
 
-![Exibição da guia](~/assets/images/faq/web-sp.png)
-![SharePoint do modo de exibição do SharePoint](~/assets/images/faq/tab-sp.png)
+![Modo de exibição da Web do SharePoint](~/assets/images/faq/web-sp.png)  
+![Exibição da guia do SharePoint](~/assets/images/faq/tab-sp.png)
 
+* As guias devem ter natureza clara e não incluir a navegação complexa.
 * Se houver várias opções de exibição, considere ter um menu de configuração de tabulação para o usuário escolher. Por exemplo, em vez de incorporar um menu dentro da guia, coloque o menu na página de configuração para que o modo de exibição de tabulação real seja limpo e focado.
 
 ![Página de configuração de grande ideia](~/assets/images/faq/wideidea.png)
@@ -80,10 +81,13 @@ Para obter informações adicionais sobre autenticação, consulte:
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>A configuração da guia &#9989; deve acontecer na tela configuração
 
 * A tela configuração deve explicar claramente o valor da experiência e como configurar a guia.
-* O processo de configuração não deve ser encerrado, a experiência do usuário e sempre permite que os usuários continuem.
+* O processo de configuração sempre deve fornecer uma maneira para que os usuários continuem não se desativam da experiência do usuário. Por exemplo, não mostre uma placa vazia após o usuário ter configurado a guia
+* O processo de entrada do usuário deve fazer parte do processo de configuração e deve ser concluído na interface do usuário da guia. Depois que o usuário tiver concluído a configuração e carregado sua guia, nenhuma ação adicional deverá ser necessária.
+* Não mostrar toda a sua página da Web na janela pop-up configuração de entrada.
 * Um usuário deve sempre ser capaz de concluir a experiência de configuração, mesmo que não possa encontrar imediatamente o conteúdo que está procurando.
 * A experiência de configuração deve fornecer opções para que o usuário encontre o conteúdo, fixe uma URL ou crie um novo conteúdo se ele não existir.
-* O usuário não deve ter que sair da experiência de configuração para criar conteúdo e voltar para o Microsoft Teams.
+* A experiência de configuração deve permanecer no contexto do Microsoft Teams. O usuário não deve ter que sair da experiência de configuração para criar conteúdo e, em seguida, retornar ao Teams para fixá-lo.
+* Use a área de visor disponível de forma eficiente. Não desperdice o uso de logotipos grandes dentro da configuração pop up
 
 ![O OneNote permite que os usuários colem um link do OneNote em não é possível encontrar anotações](~/assets/images/faq/tab-onenote-config.png)
 
@@ -105,26 +109,44 @@ O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui est
 
 * **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido**. Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"*. Use essa oportunidade para ensinar seus usuários.
 
-* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando`@*botname*`for mencionado () em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
+* **Use cartões adaptáveis e módulos de tarefas para tornar sua resposta de bot clara e acionável** 
+ [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos
+
+* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots devem enviar uma mensagem de boas-vindas na primeira inicialização
 
-As mensagens de boas-vindas são a melhor maneira de definir o tom de seu bot. Esta é a primeira interação de um usuário com o bot. Uma boa mensagem de boas-vindas pode incentivar o usuário a continuar a explorar o aplicativo. Se a mensagem de boas-vindas ou introdutória for confusa ou innítida, os usuários não verão o valor do aplicativo imediatamente e perderão os interesses. A mensagem de boas-vindas deve incluir o seguinte:
+As mensagens de boas-vindas são a melhor maneira de definir o tom de seu bot. Esta é a primeira interação de um usuário com o bot. Uma boa mensagem de boas-vindas pode incentivar o usuário a continuar a explorar o aplicativo. Se a mensagem de boas-vindas ou introdutória for confusa ou innítida, os usuários não verão o valor do aplicativo imediatamente e perderão os interesses.
 
-* Um comando help.
-* A proposta de valor
-* Todos os comandos válidos.
+### <a name="welcome-message-requirements"></a>Requisitos de mensagem de boas-vindas
 
-Veja algumas considerações ao criar sua mensagem de boas-vindas:
+* Identificar quem adicionou o bot a um canal.
+* Incluir uma proposta de valor.
+* Fornecer orientações para o uso do bot.
+* Apresente o texto fácil de ler e uma caixa de diálogo direta — preferivelmente um cartão com um botão de Tour de boas-vindas acionável que carrega um módulo de tarefa.
+* Mantenha-o simples, evite a caixa de diálogo de palavras/informativas.
+* Invocar a mensagem de boas-vindas com um ping, não dois ou mais pings simultâneos.
+* No bate-papo pessoal, a mensagem de boas-vindas só deve ser exibida para o usuário que configurou o aplicativo.  
+* Nunca envie um chat pessoal para todos os membros da equipe.
+* Nunca envie a mensagem de boas-vindas mais de uma vez. Repetir a mesma mensagem de boas-vindas por intervalos regulares não é permitida e é considerada como spam.
 
-#### <a name="personal-scope"></a>Escopo pessoal
+#### <a name="avoid-welcome-message-spamming"></a>Evitar o spam de mensagens de boas-vindas
 
-* **Torne sua mensagem concisa e informativa**. Provavelmente, as experiências dos usuários e o conhecimento do seu aplicativo irão variar. Eles podem ter usado seu aplicativo em outra plataforma ou não sabem nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
+* **Mensagem do canal por bot**. Não enviar spam a usuários criando novas postagens de chat separadas. Crie uma única postagem de thread com respostas no mesmo thread.
+* **Chat pessoal por bot**. Não envie várias mensagens. Envie uma mensagem com informações completas.
+
+#### <a name="notification-only-bot-welcome-messages"></a>Mensagens de boas-vindas do bot somente de notificação
+
+Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui uma mensagem que se comunica, *"Eu sou um bot somente para notificação e não conseguirá responder a seus chat"*.
+
+#### <a name="welcome-messages-in-the-personal-scope"></a>Mensagens de boas-vindas no escopo pessoal
+
+* **Torne sua mensagem concisa e informativa**.  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
 ![Bot e bot dinning](~/assets/images/faq/cafe-bot.png)
 
 * **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."*, *"é isso que eu posso fazer..."*.
 
-#### <a name="team-scope"></a>Escopo da equipe
+#### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensagens de boas-vindas no escopo de equipe/canal
 
 As coisas são um pouco diferentes quando o bot é adicionado pela primeira vez a um canal. Normalmente, você não deve enviar uma mensagem 1:1 para todas as pessoas da equipe, mas o bot pode enviar uma mensagem de boas-vindas no canal.
 

@@ -4,12 +4,12 @@ author: clearab
 description: Uma visão geral dos bots de conversa no Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453865"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704464"
 ---
 # <a name="what-are-conversational-bots"></a>O que são bots de conversa?
 
@@ -21,7 +21,7 @@ O GIF abaixo mostra um usuário que está se invertendo com um bot em um chat de
 
 ## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Criar um bot para o Teams com o Microsoft bot Framework
 
-O Microsoft bot Framework] ( https://dev.botframework.com/) é um SDK avançado para a criação de bots usando C#, Java, Python e JavaScript. Se você já tiver um bot baseado na estrutura de bot, poderá adaptá-lo facilmente para trabalhar no Microsoft Teams. Recomendamos que você use C# ou node. js para aproveitar os benefícios de nossos [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos do SDK do gerador de bot básico da seguinte maneira:
+O [Microsoft bot Framework](https://dev.botframework.com/) é um SDK avançado para a criação de bots usando C#, Java, Python e JavaScript. Se você já tiver um bot baseado na estrutura de bot, poderá adaptá-lo facilmente para trabalhar no Microsoft Teams. Recomendamos que você use C# ou Node.js para aproveitar os benefícios de nossos [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos do SDK do gerador de bot básico da seguinte maneira:
 
 * Use tipos de cartões especializados como o cartão de conexão do Office 365.
 * Consumir e definir dados de canal específicos de equipes em atividades.

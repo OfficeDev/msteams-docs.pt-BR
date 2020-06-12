@@ -1,17 +1,17 @@
 ---
-title: Enviar mensagens pró-ativas
+title: Enviar mensagens proativas
 author: clearab
 description: Como enviar mensagens pró-ativas com o bot do Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635274"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704457"
 ---
-# <a name="send-proactive-messages"></a>Enviar mensagens pró-ativas
+# <a name="send-proactive-messages"></a>Enviar mensagens proativas
 
 > [!Note]
 > Os exemplos de código neste artigo usam o SDK da estrutura de bot do v3 e as extensões SDK do v3 Teams. Conceitualmente, as informações se aplicam ao usar as versões v4 do SDK, mas o código é um pouco diferente.
@@ -28,7 +28,12 @@ Enviar uma mensagem para iniciar um novo thread de conversa é diferente de envi
 1. [Obter a ID exclusiva do usuário e a ID do locatário](#obtain-necessary-user-information)
 1. [Enviar a mensagem](#examples)
 
-Ao criar mensagens proativas **must** , você `MicrosoftAppCredentials.TrustServiceUrl`deve chamar e passar a URL do serviço antes de `ConnectorClient` criar o que você usará para enviar a mensagem. Se você não fizer isso, seu aplicativo receberá `401: Unauthorized` uma resposta. 
+Ao criar mensagens proativas, você **deve** chamar `MicrosoftAppCredentials.TrustServiceUrl` e passar a URL do serviço antes de criar o [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) que você usará para enviar a mensagem. Se você não fizer isso, seu aplicativo receberá uma `401: Unauthorized` resposta.
+
+> [!Tip]
+> Para obter mais detalhes sobre como configurar os `ConnectorClient` clientes .net, consulte o tópico [Enviar e receber atividades](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)
+>
+> Mais exemplos de envio de mensagens pró-ativas podem ser encontrados na documentação do serviço de bot do Azure [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages) e [Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages)
 
 ## <a name="best-practices-for-proactive-messaging"></a>Práticas recomendadas para mensagens proativas
 
@@ -68,7 +73,7 @@ Os bots podem criar novas conversas com um usuário individual do Microsoft Team
 > [!Note]
 > A instalação proativa de aplicativos usando o Graph está atualmente em versão beta.
 
-Ocasionalmente, pode ser necessário que usuários de mensagens de forma proativa não tenham sido instalados ou interagindo com o aplicativo anteriormente. Por exemplo, você deseja usar o [Communicator da empresa](~/samples/app-templates.md#company-communicator-app) para enviar mensagens para toda a sua organização. Para este cenário, você pode usar a API do Graph para instalar proativamente seu aplicativo para seus usuários e, em seguida, armazenar `conversationUpdate` em cache os valores necessários do evento que seu aplicativo receberá na instalação.
+Ocasionalmente, pode ser necessário que usuários de mensagens de forma proativa não tenham sido instalados ou interagindo com o aplicativo anteriormente. Por exemplo, você deseja usar o [Communicator da empresa](~/samples/app-templates.md#company-communicator) para enviar mensagens para toda a sua organização. Para este cenário, você pode usar a API do Graph para instalar proativamente seu aplicativo para seus usuários e, em seguida, armazenar em cache os valores necessários do `conversationUpdate` evento que seu aplicativo receberá na instalação.
 
 Você só pode instalar aplicativos que estão no catálogo de aplicativos organizacionais ou na loja de aplicativos do teams.
 
@@ -110,7 +115,7 @@ Esta ID é a ID de conversa exclusiva do chat pessoal. Armazene esse valor e reu
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Este exemplo usa o pacote NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
+Este exemplo usa o pacote NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Neste exemplo, `client` é uma `ConnectorClient` instância que já foi criada e autenticada conforme descrito nas atividades de [envio e recebimento](/azure/bot-service/dotnet/bot-builder-dotnet-connector)
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -174,9 +179,9 @@ async def _send_proactive_message():
 
 ## <a name="creating-a-channel-conversation"></a>Criando uma conversa de canal
 
-O bot adicionado pela equipe pode ser publicado em um canal para criar uma nova cadeia de resposta. Se você estiver usando o SDK de equipes do node. js `startReplyChain()` , use o que fornece um endereço totalmente preenchido com a ID de atividade e ID de conversa corretas. Se você estiver usando C#, confira o exemplo a seguir.
+O bot adicionado pela equipe pode ser publicado em um canal para criar uma nova cadeia de resposta. Se você estiver usando o Node.js o SDK do Teams, use o `startReplyChain()` que fornece um endereço totalmente preenchido com a ID de atividade e ID de conversa corretas. Se você estiver usando C#, confira o exemplo a seguir.
 
-Como alternativa, você pode usar a API REST e emitir uma solicitação POST para [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) o recurso.
+Como alternativa, você pode usar a API REST e emitir uma solicitação POST para o [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) recurso.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -228,7 +233,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-O trecho de código a seguir é de [teamsConversationBot. js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
+O trecho de código a seguir é de [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
