@@ -2,24 +2,24 @@
 title: Limitação de taxa
 description: Limitação de taxa e práticas recomendadas no Microsoft Teams
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42371762"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44800985"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Otimize seu bot: limitação de taxa e práticas recomendadas no Microsoft Teams
 
 Como princípio geral, seu aplicativo deve limitar o número de mensagens postadas para uma conversa de canal ou chat individual. Isso garante uma experiência ideal que não considera "spam" para seus usuários finais.
 
-Para proteger o Microsoft Teams e seus usuários, as solicitações de APIs de bot limitam as solicitações de entrada. Os aplicativos que ultrapassarem esse limite receberão um status de `HTTP 429 Too Many Requests` erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo envio de mensagens, enumerações de canal e buscas de lista.
+Para proteger o Microsoft Teams e seus usuários, as solicitações de APIs de bot limitam as solicitações de entrada. Os aplicativos que ultrapassarem esse limite receberão um `HTTP 429 Too Many Requests` status de erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo envio de mensagens, enumerações de canal e buscas de lista.
 
-Como os valores exatos dos limites de taxa estão sujeitos a alterações, recomendamos que seu aplicativo implemente o comportamento de retrocesso `HTTP 429 Too Many Requests`apropriado quando a API retornar.
+Como os valores exatos dos limites de taxa estão sujeitos a alterações, recomendamos que seu aplicativo implemente o comportamento de retrocesso apropriado quando a API retornar `HTTP 429 Too Many Requests` .
 
 ## <a name="handling-rate-limits"></a>Limites de taxa de manipulação
 
-Ao emitir uma operação de SDK do bot Builder, você pode `Microsoft.Rest.HttpOperationException` lidar e verificar o código de status.
+Ao emitir uma operação de SDK do bot Builder, você pode lidar `Microsoft.Rest.HttpOperationException` e verificar o código de status.
 
 ```csharp
 try
@@ -38,7 +38,7 @@ catch (HttpOperationException ex)
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
-Em geral, você deve tomar precauções simples para evitar o `HTTP 429` recebimento de respostas. Por exemplo, evite emitir várias solicitações à mesma conversa pessoal ou de canal. Em vez disso, considere o envio em lote das solicitações de API.
+Em geral, você deve tomar precauções simples para evitar o recebimento de `HTTP 429` respostas. Por exemplo, evite emitir várias solicitações à mesma conversa pessoal ou de canal. Em vez disso, considere o envio em lote das solicitações de API.
 
 Usar uma retirada exponencial com uma tremulação aleatória é a maneira recomendada de lidar com 429s. Isso garante que várias solicitações não introduzam colisões em tentativas.
 
@@ -107,19 +107,19 @@ Esse limite controla o tráfego que um bot tem permissão para gerar em uma úni
 
 | **Cenário** | **Período de tempo (s)** | **Máximo de operações permitidas** |
 | --- | --- | --- |
-|| 1 | 178 |
-| Enviar para conversa | duas | 8 |
+| Enviar para conversa | 1  | 7  |
+| Enviar para conversa | duas | 8  |
 | Enviar para conversa | até | 60 |
 | Enviar para conversa | 3600 | 1800 |
-| Criar conversa | 1 | 178 |
-| Criar conversa | duas | 8 |
+| Criar conversa | 1  | 7  |
+| Criar conversa | duas | 8  |
 | Criar conversa | até | 60 |
 | Criar conversa | 3600 | 1800 |
-| Obter membros de conversa| 1 | 14  |
+| Obter membros de conversa| 1  | 14  |
 | Obter membros de conversa| duas | 16  |
 | Obter membros de conversa| até | 120 |
 | Obter membros de conversa| 3600 | 3600 |
-| Obter conversas | 1 | 14  |
+| Obter conversas | 1  | 14  |
 | Obter conversas | duas | 16  |
 | Obter conversas | até | 120 |
 | Obter conversas | 3600 | 3600 |
@@ -130,15 +130,15 @@ Esse limite controla o tráfego que todos os bots podem gerar através de uma ú
 
 | **Cenário** | **Período de tempo (s)** | **Máximo de operações permitidas** |
 | --- | --- | --- |
-| Enviar para conversa | 1 | 14  |
+| Enviar para conversa | 1  | 14  |
 | Enviar para conversa | duas | 16  |
-| Criar conversa | 1 | 14  |
+| Criar conversa | 1  | 14  |
 | Criar conversa | duas | 16  |
-| Createconversation| 1 | 14  |
+| Createconversation| 1  | 14  |
 | Createconversation| duas | 16  |
-| Obter membros de conversa| 1 | 28 |
+| Obter membros de conversa| 1  | 28 |
 | Obter membros de conversa| duas | 32 |
-| Obter conversas | 1 | 28 |
+| Obter conversas | 1  | 28 |
 | Obter conversas | duas | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Bot por limite de data center
@@ -147,6 +147,6 @@ Esse limite controla o tráfego que um bot tem permissão para gerar em todos os
 
 |**Período de tempo (s)** | **Máximo de operações permitidas** |
 | --- | --- |
-| 1 | 508 |
+| 1  | 508 |
 | 1800 | 8000 |
 | 3600 | 15000 |

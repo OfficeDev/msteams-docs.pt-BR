@@ -3,11 +3,11 @@ title: Obter contexto para a guia
 description: Descreve como obter o contexto de usuário para suas guias
 keywords: contexto de usuário de guias do teams
 ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672462"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800951"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obter contexto para a guia do Microsoft Teams
 
@@ -43,15 +43,15 @@ Use espaços reservados em suas configurações ou URLs de conteúdo. O Microsof
 * {loginHint}: um valor adequado como uma dica de logon para o Azure AD. Em geral, esse é o nome de logon do usuário atual em seu locatário inicial.
 * {userPrincipalName}: o nome principal de usuário do usuário atual, no locatário atual.
 * {userobjectid}: a ID de objeto do Azure AD do usuário atual, no locatário atual.
-* {Theme}: o tema atual da interface do `default`usuário `dark`, como `contrast`, ou.
+* {Theme}: o tema atual da interface do usuário, como `default` , `dark` ou `contrast` .
 * {GroupId}: a ID do grupo do Office 365 em que a guia reside.
 * {tid}: a ID do locatário do Azure AD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como LanguageID-countryId (por exemplo, en-US).
 
 >[!NOTE]
->O espaço `{upn}` reservado anterior agora é preterido. Para compatibilidade com versões anteriores, no momento é sinônimo `{loginHint}`de.
+>O `{upn}` espaço reservado anterior agora é preterido. Para compatibilidade com versões anteriores, no momento é sinônimo de `{loginHint}` .
 
-Por exemplo, suponha que, em seu manifesto de guia `configURL` , você defina o atributo como
+Por exemplo, suponha que, em seu manifesto de guia, você defina o `configURL` atributo como
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
@@ -68,7 +68,7 @@ Ao configurar sua guia, o Teams chama esta URL:
 
 ### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obtendo contexto usando a biblioteca JavaScript do Microsoft Teams
 
-Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
+Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })` .
 
 A variável de contexto se parecerá com o exemplo a seguir.
 
@@ -100,7 +100,7 @@ A variável de contexto se parecerá com o exemplo a seguir.
 > [!Note]
 > Os canais privados estão atualmente na visualização do desenvolvedor privado.
 
-Quando a página de conteúdo é carregada em um canal privado, os dados recebidos da `getContext` chamada serão ofuscados para proteger a privacidade do canal. Os campos a seguir são alterados quando a página de conteúdo está em um canal privado. Se a página utiliza qualquer um dos valores abaixo, você precisará verificar o campo para determinar `channelType` se a página está carregada em um canal privado e responder de forma adequada.
+Quando a página de conteúdo é carregada em um canal privado, os dados recebidos da `getContext` chamada serão ofuscados para proteger a privacidade do canal. Os campos a seguir são alterados quando a página de conteúdo está em um canal privado. Se a página utiliza qualquer um dos valores abaixo, você precisará verificar o `channelType` campo para determinar se a página está carregada em um canal privado e responder de forma adequada.
 
 * `groupId`-Undefined para canais privados
 * `teamId`-Definir o threadId do canal privado
@@ -111,6 +111,6 @@ Quando a página de conteúdo é carregada em um canal privado, os dados recebid
 
 ## <a name="theme-change-handling"></a>Tratamento de alterações de temas
 
-Você pode registrar seu aplicativo para ser informado se o tema for alterado por `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`chamada.
+Você pode registrar seu aplicativo para ser informado se o tema for alterado por chamada `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
 
-O `theme` argumento na função será uma cadeia de caracteres com um valor de `default`, `dark`ou `contrast`.
+O `theme` argumento na função será uma cadeia de caracteres com um valor de `default` , `dark` ou `contrast` .

@@ -3,12 +3,12 @@ title: Empacotar seu aplicativo
 description: Saiba como empacotar seu aplicativo para teste, upload e publicação no Microsoft Teams
 keywords: pacote de aplicativos do teams
 ms.topic: conceptual
-ms.openlocfilehash: b76041b129e766dba2b401aaac0e12958a4e9b0d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672822"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801038"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Criar um pacote de aplicativos para seu aplicativo do Microsoft Teams
 
@@ -16,19 +16,19 @@ Os aplicativos no Teams são definidos por um arquivo JSON de manifesto de aplic
 
 Um pacote de aplicativos do Microsoft Teams é um arquivo. zip que contém o seguinte:
 
-* Um arquivo de manifesto chamado "manifest. JSON", que especifica os atributos do seu aplicativo e aponta para os recursos necessários para sua experiência, como o local da sua página de configuração da guia ou a ID do aplicativo da Microsoft para seu bot.
+* Um arquivo de manifesto chamado "manifest.js", que especifica os atributos do seu aplicativo e aponta para os recursos necessários para sua experiência, como o local da sua página de configuração da guia ou a ID do aplicativo da Microsoft para seu bot.
 * Um ícone de "estrutura de tópicos" transparente e um ícone de "cor" completo. Consulte os [ícones](#icons) mais adiante neste tópico para obter mais informações.
 
 ## <a name="creating-a-manifest"></a>Criar um manifesto
 
-O *Teams app Studio* pode ajudar a configurar seu manifesto. Ele também contém uma biblioteca de controle de reagir e exemplos configuráveis para cartões. Confira [visão geral do App Studio](~/concepts/build-and-test/app-studio-overview.md).
+O *Teams app Studio* pode ajudar a configurar seu manifesto. Ele também contém uma biblioteca de controle React e amostras configuráveis para cartões. Confira [visão geral do App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
-O arquivo de manifesto deve ser nomeado como "manifest. JSON" e estar no nível superior do pacote de carregamento. Observe que manifestos e pacotes criados anteriormente podem oferecer suporte a uma versão mais antiga do esquema. Para aplicativos do Teams e especialmente o envio do AppSource (anteriormente Office Store), você deve usar o [esquema de manifesto](~/resources/schema/manifest-schema.md)atual.
+O arquivo de manifesto deve ser nomeado como "manifest.js" e estar no nível superior do pacote de carregamento. Observe que manifestos e pacotes criados anteriormente podem oferecer suporte a uma versão mais antiga do esquema. Para aplicativos do Teams e especialmente o envio do AppSource (anteriormente Office Store), você deve usar o [esquema de manifesto](~/resources/schema/manifest-schema.md)atual.
 
 > [!TIP]
 > Especifique o esquema no início do manifesto para habilitar o IntelliSense ou suporte semelhante do editor de código:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Ícones
 

@@ -4,11 +4,11 @@ description: Descreve o cenário de ponta a ponta de ter uma conversa com um bot
 keywords: bot de conversa de canais de cenários de equipe
 ms.date: 06/25/2019
 ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42227994"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800970"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversas de chat de grupo e canal com um bot do Microsoft Teams
 
@@ -47,15 +47,15 @@ Para um bot em um grupo ou canal, além do esquema de [mensagem regular](https:/
 
 ### <a name="replying-to-messages"></a>Respondendo a mensagens
 
-Para responder a uma mensagem existente, chame [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) no .net ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) no node. js. O SDK do bot Builder trata de todos os detalhes.
+Para responder a uma mensagem existente, chame [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) no .net ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) em Node.js. O SDK do bot Builder trata de todos os detalhes.
 
-Se você optar por usar a API REST, também poderá chamar o ponto [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) de extremidade.
+Se você optar por usar a API REST, também poderá chamar o [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) ponto de extremidade.
 
-Em um canal, responder a uma mensagem é exibido como uma resposta para a cadeia de resposta inicial. O `conversation.id` contém o canal e a ID da mensagem de nível superior. Embora a estrutura de bot se encarrega dos detalhes, você pode armazenar em `conversation.id` cache as respostas futuras para esse segmento de conversa, conforme necessário.
+Em um canal, responder a uma mensagem é exibido como uma resposta para a cadeia de resposta inicial. O `conversation.id` contém o canal e a ID da mensagem de nível superior. Embora a estrutura de bot se encarrega dos detalhes, você pode armazenar em cache as `conversation.id` respostas futuras para esse segmento de conversa, conforme necessário.
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Práticas recomendadas: mensagens de boas-vindas no Teams
 
-Quando seu bot é adicionado ao grupo ou equipe, geralmente é útil enviar uma mensagem de boas-vindas apresentando o bot para todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade do bot e dos benefícios do usuário. O ideal é que a mensagem também inclua comandos para o usuário interagir com o aplicativo. Para fazer isso, certifique-se de que seu bot `conversationUpdate` responda à mensagem com `teamsAddMembers` o EventType no `channelData` objeto. Certifique-se de `memberAdded` que a ID é a própria ID de aplicativo do bot, porque o mesmo evento é enviado quando um usuário é adicionado a uma equipe. Confira o [membro da equipe ou a adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obter mais detalhes.
+Quando seu bot é adicionado ao grupo ou equipe, geralmente é útil enviar uma mensagem de boas-vindas apresentando o bot para todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade do bot e dos benefícios do usuário. O ideal é que a mensagem também inclua comandos para o usuário interagir com o aplicativo. Para fazer isso, certifique-se de que seu bot responda à `conversationUpdate` mensagem com o `teamsAddMembers` EventType no `channelData` objeto. Certifique-se de que a `memberAdded` ID é a própria ID de aplicativo do bot, porque o mesmo evento é enviado quando um usuário é adicionado a uma equipe. Confira o [membro da equipe ou a adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obter mais detalhes.
 
 Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot é adicionado. Para fazer isso, você poderia [buscar a lista de equipes](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) e enviar uma [mensagem direta](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)a cada usuário.
 
@@ -93,9 +93,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Você também pode usar a função `GetTextWithoutMentions`de extensão do Teams, que retira todas as menção, incluindo o bot.
+> Você também pode usar a função de extensão do teams `GetTextWithoutMentions` , que retira todas as menção, incluindo o bot.
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Código de exemplo do node. js: verificar e remover @bot mencionar
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js código de exemplo: verificar e retirar @bot menção
 
 ```javascript
 var text = message.text;
@@ -109,7 +109,7 @@ if (message.entities) {
 }
 ```
 
-Você também pode usar a função `getTextWithoutMentions`de extensão do Teams, que retira todas as menção, incluindo o bot.
+Você também pode usar a função de extensão do teams `getTextWithoutMentions` , que retira todas as menção, incluindo o bot.
 
 ### <a name="constructing-mentions"></a>Como criar menção
 
@@ -134,7 +134,7 @@ replyActivity.AddMentionToText(activity.From, MentionTextLocation.AppendText);
 await client.Conversations.ReplyToActivityAsync(replyActivity);
 ```
 
-#### <a name="nodejs-example"></a>Exemplo do node. js
+#### <a name="nodejs-example"></a>Exemplo de Node.js
 
 ```javascript
 // User to mention

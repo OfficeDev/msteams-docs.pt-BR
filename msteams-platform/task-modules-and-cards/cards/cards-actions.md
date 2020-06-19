@@ -3,15 +3,15 @@ title: Adicionar ações de cartão em um bot
 description: Descreve as ações do cartão no Microsoft Teams e como usá-las em seus bots
 keywords: ações de cartões de bots da equipe
 ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672658"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800966"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
-Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão[`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)suporte aos seguintes tipos de atividade (). Observe que essas ações diferem de `potentialActions` cartões conectores do Office 365 quando usadas de conectores.
+Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão suporte aos seguintes tipos de atividade ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Observe que essas ações diferem de `potentialActions` cartões conectores do Office 365 quando usadas de conectores.
 
 | Tipo | Action |
 | --- | --- |
@@ -22,8 +22,8 @@ Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão[`C
 | `signin` | Inicia o fluxo do OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
->* O Microsoft Teams `CardAction` não dá suporte a tipos não listados na tabela anterior.
->* O Microsoft Teams não `potentialActions` oferece suporte à propriedade.
+>* O Microsoft Teams não dá suporte `CardAction` a tipos não listados na tabela anterior.
+>* O Microsoft Teams não oferece suporte à `potentialActions` propriedade.
 >* As ações do cartão são diferentes das [ações sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) no serviço bot Framework/Azure bot. As ações sugeridas não são suportadas no Microsoft Teams: se você deseja que os botões apareçam em uma mensagem do bot do Teams, use um cartão.
 >* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado para o canal (eles não funcionarão enquanto o cartão estiver na caixa de mensagem de composição).
 
@@ -45,7 +45,7 @@ O `value` campo deve conter uma URL completa e corretamente formada.
 
 ## <a name="messageback"></a>messageBack
 
-Com `messageBack`o, você pode criar uma ação totalmente personalizada com as seguintes propriedades:
+Com `messageBack` o, você pode criar uma ação totalmente personalizada com as seguintes propriedades:
 
 | Propriedade | Descrição |
 | --- | --- |
@@ -54,7 +54,7 @@ Com `messageBack`o, você pode criar uma ação totalmente personalizada com as 
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto da ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use esta propriedade para simplificar o desenvolvimento de bot: seu código pode verificar uma única propriedade de nível superior para a lógica de bot de expedição. |
 
-A flexibilidade do `messageBack` significa que o código pode optar por não deixar uma mensagem de usuário visível no histórico simplesmente não usando `displayText`.
+A flexibilidade do `messageBack` significa que o código pode optar por não deixar uma mensagem de usuário visível no histórico simplesmente não usando `displayText` .
 
 ```json
 {
@@ -140,7 +140,7 @@ O `value` campo deve conter a cadeia de caracteres de texto ecoada no chat e, po
 
 A `invoke` ação é usada para invocar [módulos de tarefa](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
-A `invoke` ação contém três propriedades: `type`, `title`e `value`. A `value` propriedade pode conter uma cadeia de caracteres, um objeto JSON em formato ou um objeto JSON.
+A `invoke` ação contém três propriedades: `type` , `title` e `value` . A `value` propriedade pode conter uma cadeia de caracteres, um objeto JSON em formato ou um objeto JSON.
 
 ```json
 {
@@ -152,7 +152,7 @@ A `invoke` ação contém três propriedades: `type`, `title`e `value`. A `value
 }
 ```
 
-Quando um usuário clica no botão, seu bot receberá o `value` objeto com algumas informações adicionais. Observe que o tipo de atividade será `invoke` em vez de `message` (`activity.Type == "invoke"`).
+Quando um usuário clica no botão, seu bot receberá o `value` objeto com algumas informações adicionais. Observe que o tipo de atividade será `invoke` em vez de `message` ( `activity.Type == "invoke"` ).
 
 ### <a name="example-invoke-button-definition-net"></a>Exemplo: chamar definição de botão (.NET)
 
@@ -167,7 +167,7 @@ var button = new CardAction()
 
 ### <a name="example-incoming-invoke-message"></a>Exemplo: mensagem de invocação de entrada
 
-A propriedade de nível `replyToId` superior contém a ID da mensagem da qual a ação do cartão veio. Use-o se você quiser atualizar a mensagem.
+A propriedade de nível superior `replyToId` contém a ID da mensagem da qual a ação do cartão veio. Use-o se você quiser atualizar a mensagem.
 
 ```json
 {
@@ -227,7 +227,7 @@ Os cartões adaptáveis dão suporte a três tipos de ação:
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Cartão Action.](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-Além das ações mencionadas acima, você pode modificar a `Action.Submit` carga de cartão adaptável para dar suporte a ações da estrutura de bot `msteams` existentes usando uma `data` Propriedade no `Action.Submit`objeto of. As seções abaixo detalham como usar ações da estrutura de bot existentes com cartões adaptáveis.
+Além das ações mencionadas acima, você pode modificar a carga de cartão adaptável `Action.Submit` para dar suporte a ações da estrutura de bot existentes usando uma `msteams` propriedade no `data` objeto of `Action.Submit` . As seções abaixo detalham como usar ações da estrutura de bot existentes com cartões adaptáveis.
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartões adaptáveis com ação messageBack
 

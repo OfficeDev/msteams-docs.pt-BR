@@ -1,21 +1,21 @@
 ---
-title: Conversas de canal e grupo
+title: Conversas em canal e em grupo
 author: clearab
 description: Como enviar, receber e lidar com mensagens de um bot em um canal ou em um chat de grupo.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ada2839ba41e4004b5f48449f4e057830dd841b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc27d7638820cfa3c2b7cfe12b91b3a3a9fef1d
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672853"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44800998"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversas de chat de grupo e canal com um bot do Microsoft Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Ao adicionar o `teams` escopo `groupchat` ou ao bot, ele pode estar disponível para ser instalado em uma equipe ou em um chat de grupo. Isso permite que todos os membros da conversa interajam com o bot. Depois de instalado, ele também terá acesso aos metadados sobre a conversa como a lista de membros da conversa e, quando instalado em detalhes da equipe sobre essa equipe e a lista completa de canais.
+Ao adicionar o `teams` `groupchat` escopo ou ao bot, ele pode estar disponível para ser instalado em uma equipe ou em um chat de grupo. Isso permite que todos os membros da conversa interajam com o bot. Depois de instalado, ele também terá acesso aos metadados sobre a conversa como a lista de membros da conversa e, quando instalado em detalhes da equipe sobre essa equipe e a lista completa de canais.
 
 Os bots em um grupo ou canal só recebem mensagens quando são mencionadas ("@botname"), elas não recebem nenhuma outra mensagem enviada à conversa.
 
@@ -30,7 +30,7 @@ Um bot deve fornecer informações apropriadas e relevantes a todos os membros e
 
 Quando o bot é instalado em uma equipe, às vezes, pode ser necessário criar um novo thread de conversa em vez de responder a um existente. Essa é uma forma de [mensagens pró-ativas](~/bots/how-to/conversations/send-proactive-messages.md).
 
-## <a name="working-with--mentions"></a>Trabalhando com @ menciona
+## <a name="working-with-mentions"></a>Trabalhando com menção
 
 Cada mensagem para o bot a partir de um grupo ou canal conterá um @mention com seu próprio nome no texto da mensagem, portanto, você precisará garantir que as alças de análise da mensagem. O bot também pode recuperar outros usuários mencionados em uma mensagem e adicionar menção a qualquer mensagem enviada.
 
@@ -40,11 +40,11 @@ Você pode achar necessário retirar o @mentions do texto da mensagem que seu bo
 
 ### <a name="retrieving-mentions"></a>Como recuperar menção
 
-As menção são retornadas no `entities` objeto no Payload e contêm a identificação exclusiva do usuário e, na maioria dos casos, o nome do usuário mencionado. O texto da mensagem também incluirá a menção, como `<at>@John Smith<at>`. No entanto, você não deve confiar no texto da mensagem para recuperar as informações sobre o usuário; é possível que a pessoa que está enviando a mensagem a altere. Em vez disso, `entities` use o objeto.
+As menção são retornadas no `entities` objeto no Payload e contêm a identificação exclusiva do usuário e, na maioria dos casos, o nome do usuário mencionado. O texto da mensagem também incluirá a menção, como `<at>@John Smith<at>` . No entanto, você não deve confiar no texto da mensagem para recuperar as informações sobre o usuário; é possível que a pessoa que está enviando a mensagem a altere. Em vez disso, use o `entities` objeto.
 
 Você pode recuperar todas as menção na mensagem chamando a `GetMentions` função no SDK do bot Builder, que retorna uma matriz de `Mention` objetos.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +78,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -120,7 +120,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 @staticmethod
@@ -146,7 +146,7 @@ O `Mention` objeto tem duas propriedades que você precisará definir:
 
 O SDK da estrutura de bot fornece métodos e objetos auxiliares para facilitar a criação da menção.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +183,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-O `text` campo no objeto na `entities` matriz deve corresponder *exatamente* a uma parte do campo Message. `text` Caso contrário, a menção será ignorada.
+O `text` campo no objeto na `entities` matriz deve corresponder *exatamente* a uma parte do `text` campo Message. Caso contrário, a menção será ignorada.
 
 ```json
 {
@@ -227,7 +227,7 @@ O `text` campo no objeto na `entities` matriz deve corresponder *exatamente* a u
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -246,7 +246,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="sending-a-message-on-installation"></a>Enviando uma mensagem na instalação
 
-Quando seu bot é adicionado ao grupo ou equipe, pode ser útil enviar uma mensagem introduzindo-a. A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los. Você desejará inscrever- `conversationUpdate` se no evento com `teamMemberAdded` o EventType.  Como o evento é enviado quando um novo membro da equipe é adicionado, você precisa verificar se o novo membro adicionado é o bot. Consulte [Enviar uma mensagem de boas-vindas para um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md) para obter mais detalhes.
+Quando seu bot é adicionado ao grupo ou equipe, pode ser útil enviar uma mensagem introduzindo-a. A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los. Você desejará inscrever-se no `conversationUpdate` evento com o `teamMemberAdded` EventType.  Como o evento é enviado quando um novo membro da equipe é adicionado, você precisa verificar se o novo membro adicionado é o bot. Consulte [Enviar uma mensagem de boas-vindas para um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md) para obter mais detalhes.
 
 Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot é adicionado. Para fazer isso, você pode obter a lista de equipes e enviar uma mensagem direta a cada usuário.
 

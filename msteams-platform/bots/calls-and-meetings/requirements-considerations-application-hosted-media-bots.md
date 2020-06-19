@@ -4,11 +4,11 @@ description: Compreenda os requisitos e as considerações importantes relaciona
 keywords: mídia hospedada pelo aplicativo do Windows Server Azure VM
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672614"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800946"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados por aplicativos
 
@@ -19,7 +19,7 @@ Nem todas as orientações para o desenvolvimento de mensagens e bots de respost
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>O desenvolvimento de bot de mídia hospedado pelo aplicativo requer o/.NET C# e o Windows Server
 
-- Um bot de mídia hospedado por aplicativo requer `Microsoft.Graph.Communications.Calls.Media` a biblioteca do .net ([disponível aqui](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo, e o bot deve ser implantado em uma máquina Windows Server (ou em um sistema operacional convidado do Windows Server no Azure). Portanto, o bot deve ser desenvolvido em C# e no .NET Framework padrão e implantado no Microsoft Azure. Você não pode usar as APIs C++ ou node. js para acessar a mídia em tempo real e o .NET Core não é suportado para um bot de mídia hospedado por aplicativo.
+- Um bot de mídia hospedado por aplicativo requer a `Microsoft.Graph.Communications.Calls.Media` biblioteca do .net ([disponível aqui](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo, e o bot deve ser implantado em uma máquina Windows Server (ou em um sistema operacional convidado do Windows Server no Azure). Portanto, o bot deve ser desenvolvido em C# e no .NET Framework padrão e implantado no Microsoft Azure. Você não pode usar as APIs do C++ ou do Node.js para acessar a mídia em tempo real e o .NET Core não é suportado para um bot de mídia hospedado por aplicativo.
 
 - Um bot de mídia hospedado por aplicativo pode ser hospedado em um dos seguintes ambientes de serviço do Azure:
   - Serviço de nuvem.
@@ -28,7 +28,7 @@ Nem todas as orientações para o desenvolvimento de mensagens e bots de respost
   
 - Um bot de mídia hospedado por aplicativo não pode ser implantado como um aplicativo Web do Azure.
 
-- Um bot de mídia hospedado pelo aplicativo deve estar em execução em uma versão recente `Microsoft.Graph.Communications.Calls.Media` da biblioteca do .net. O bot deve usar a versão mais recente disponível do [pacote NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ou uma versão que não tenha mais de três meses. Versões mais antigas da biblioteca serão preteridas e podem não funcionar após alguns meses. Manter a `Microsoft.Graph.Communications.Calls.Media` biblioteca atualizada garantirá a melhor interoperabilidade entre o bot e o Microsoft Teams.
+- Um bot de mídia hospedado pelo aplicativo deve estar em execução em uma versão recente da `Microsoft.Graph.Communications.Calls.Media` biblioteca do .net. O bot deve usar a versão mais recente disponível do [pacote NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ou uma versão que não tenha mais de três meses. Versões mais antigas da biblioteca serão preteridas e podem não funcionar após alguns meses. Manter a `Microsoft.Graph.Communications.Calls.Media` biblioteca atualizada garantirá a melhor interoperabilidade entre o bot e o Microsoft Teams.
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>Chamadas de mídia em tempo real permanecem no computador onde foram criadas
 

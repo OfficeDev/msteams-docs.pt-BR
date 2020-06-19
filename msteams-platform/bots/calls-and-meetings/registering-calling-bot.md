@@ -3,17 +3,17 @@ title: Registrando um bot de chamada e reunião para o Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams
 keywords: áudio do bot de chamada mídia de vídeo de áudio/vídeo
 ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672865"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800945"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Registrando um bot de chamada para o Microsoft Teams
 
 Um bot que participa de chamadas de áudio/vídeo e reuniões online é um simples bot do Microsoft Teams com alguns recursos adicionais:
 
-* Há uma nova versão do manifesto de aplicativo do teams com duas configurações adicionais `supportsCalling` e `supportsVideo`. Essas configurações estão incluídas na versão de [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) do manifesto do aplicativo Microsoft Teams.
+* Há uma nova versão do manifesto de aplicativo do teams com duas configurações adicionais `supportsCalling` e `supportsVideo` . Essas configurações estão incluídas na versão de [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) do manifesto do aplicativo Microsoft Teams.
 * [As permissões do Microsoft Graph](./registering-calling-bot.md#add-microsoft-graph-permissions) devem ser configuradas para a ID do aplicativo da Microsoft de seu bot.
 * As chamadas do Microsoft Graph e as permissões de APIs de reuniões online exigem o consentimento do administrador do locatário.
 
@@ -21,12 +21,12 @@ Vamos discutir o acima mais detalhadamente.
 
 ## <a name="new-manifest-settings"></a>Novas configurações de manifesto
 
-Os bots de chamada e de reuniões online têm duas configurações adicionais no manifest. JSON que habilitam áudio/vídeo para o bot no Microsoft Teams.
+Os bots de chamadas e de reuniões online têm duas configurações adicionais no manifest.jsque permitem áudio/vídeo para o bot no Microsoft Teams.
 
-* `bots[0].supportsCalling`. Se presente e definido como `true`, o Microsoft Teams permitirá que o bot participe de chamadas e reuniões online.
-* `bots[0].supportsVideo`. Se presente e definido como `true`, o Teams sabe que seu bot oferece suporte a vídeo.
+* `bots[0].supportsCalling`. Se presente e definido como `true` , o Microsoft Teams permitirá que o bot participe de chamadas e reuniões online.
+* `bots[0].supportsVideo`. Se presente e definido como `true` , o Teams sabe que seu bot oferece suporte a vídeo.
 
-Se quiser que o IDE valide corretamente o esquema manifest. JSON para seu bot de chamada e de reunião para esses valores, você pode alterar `$schema` o atributo da seguinte maneira:
+Se quiser que o IDE valide corretamente o manifest.jsno esquema para o seu bot de chamada e de reunião para estes valores, você pode alterar o `$schema` atributo da seguinte maneira:
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -36,8 +36,8 @@ Se quiser que o IDE valide corretamente o esquema manifest. JSON para seu bot de
 
 A criação de um novo bot é abordada em mais detalhes no tópico [criar um bot para o Microsoft Teams](../how-to/create-a-bot-for-teams.md) , mas repetiremos alguns deles:
 
-1. Use este link para criar um novo bot: `https://dev.botframework.com/bots/new`. Se, em vez disso, você selecionar o botão *criar um bot* no portal da estrutura do bot, você criará seu bot no Microsoft Azure, para o qual você precisará de uma conta do Azure.
-1. Adicione o canal do Microsoft Teams. Clique na guia "chamada" na página Microsoft Teams Channel e selecione **habilitar chamadas**e, em seguida, atualizar **webhook (para chamadas)** com a URL https onde você receberá notificações de entrada,`https://contoso.com/teamsapp/api/calling`por exemplo,. Consulte [Configurando canais](/bot-framework/portal-configure-channels) para obter mais informações sobre como configurar canais.
+1. Use este link para criar um novo bot: `https://dev.botframework.com/bots/new` . Se, em vez disso, você selecionar o botão *criar um bot* no portal da estrutura do bot, você criará seu bot no Microsoft Azure, para o qual você precisará de uma conta do Azure.
+1. Adicione o canal do Microsoft Teams. Clique na guia "chamada" na página Microsoft Teams Channel e selecione **habilitar chamadas**e, em seguida, atualizar **webhook (para chamadas)** com a URL https onde você receberá notificações de entrada, por exemplo `https://contoso.com/teamsapp/api/calling` ,. Consulte [Configurando canais](/bot-framework/portal-configure-channels) para obter mais informações sobre como configurar canais.
   ![Configurar informações de canal do Microsoft Teams](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>Adicionar permissões do Microsoft Graph
@@ -72,7 +72,7 @@ Você deve configurar as permissões de aplicativo para o bot com antecedência.
 
 Para aplicativos que usam o ponto de extremidade do Azure AD v1, um administrador de locatários pode consentir as permissões de aplicativo usando o [portal do Azure](https://portal.azure.com) quando o aplicativo é instalado em sua organização ou você pode fornecer uma experiência de inscrição no seu aplicativo através da qual os administradores podem consentir as permissões que você configurou. Depois que o consentimento do administrador é registrado pelo Azure AD, seu aplicativo pode solicitar tokens sem precisar solicitar o consentimento novamente.
 
-Você pode confiar em um administrador para conceder as permissões de que seu aplicativo precisa no [portal do Azure](https://portal.azure.com); no entanto, geralmente, uma opção melhor é fornecer uma experiência de inscrição para administradores usando o ponto de extremidade `/adminconsent` do Azure ad v2.  Confira as [instruções sobre como criar uma URL de consentimento de administrador](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent) para obter mais informações.
+Você pode confiar em um administrador para conceder as permissões de que seu aplicativo precisa no [portal do Azure](https://portal.azure.com); no entanto, geralmente, uma opção melhor é fornecer uma experiência de inscrição para administradores usando o ponto de extremidade do Azure AD v2 `/adminconsent` .  Confira as [instruções sobre como criar uma URL de consentimento de administrador](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent) para obter mais informações.
 
 > [!NOTE]
 > A criação da URL de consentimento do administrador do locatário requer um URI de redirecionamento/URL de resposta configurado no [portal de registro do aplicativo](https://apps.dev.microsoft.com/). Para adicionar URLs de resposta para o bot, acesse o registro de bot, escolha opções avançadas-> editar manifesto de aplicativo.  Adicione a URL de redirecionamento à `replyUrls` coleção.

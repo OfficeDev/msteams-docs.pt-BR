@@ -4,11 +4,11 @@ description: Descreve o cenário de ponta a ponta de ter uma conversa 1-em-1 com
 keywords: cenários de equipes 1on1 1to1 bot de conversa
 ms.date: 05/20/2019
 ms.openlocfilehash: e23bb98160125d7fdbb4521467e2f522d6b6ce40
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672946"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800957"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa pessoal (de um em um) com um bot do Microsoft Teams
 

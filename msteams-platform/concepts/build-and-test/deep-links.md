@@ -3,11 +3,11 @@ title: Criar links de fundo
 description: Descreve links aprofundados e como usá-los em seus aplicativos
 keywords: deeplink de link profundo do teams
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672817"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44800958"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Criar links detalhados para conteúdo e recursos no Microsoft Teams
 
@@ -38,7 +38,7 @@ Forneça estes campos:
 ### <a name="generating-a-deep-link-to-your-tab"></a>Gerando um link profundo para sua guia
 
 > [!NOTE]
-> Guias estáticas têm um escopo de guias "pessoal" e configuráveis têm um escopo de "equipe". Os dois tipos de guia têm uma sintaxe levemente diferente, pois somente a guia configurável `channel` tem uma propriedade associada ao objeto Context. Consulte a referência do [manifesto](~/resources/schema/manifest-schema.md) para obter mais informações sobre escopos pessoais e de equipe.
+> Guias estáticas têm um escopo de guias "pessoal" e configuráveis têm um escopo de "equipe". Os dois tipos de guia têm uma sintaxe levemente diferente, pois somente a guia configurável tem uma `channel` propriedade associada ao objeto Context. Consulte a referência do [manifesto](~/resources/schema/manifest-schema.md) para obter mais informações sobre escopos pessoais e de equipe.
 > [!NOTE]
 > Os links profundos funcionarão corretamente somente se a guia tiver sido configurada usando a biblioteca v 0,4 ou posterior e por ter uma ID de entidade. Os links de profundidade para guias sem IDs de entidade ainda navegam até a guia, mas não podem fornecer a ID de subentidade para a guia.
 
@@ -50,8 +50,8 @@ Os parâmetros de consulta são:
 
 * `appId`&emsp;A ID do manifesto; por exemplo, "fe4a8eba-2a31-4737-8E33-e5fae6fee194"
 * `entityId`&emsp;A ID do item na guia, que você forneceu ao [Configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md); por exemplo, "tasklist123"
-* `entityWebUrl`ou `subEntityWebUrl` &emsp;um campo opcional com uma URL de fallback a ser usado se o cliente não tiver suporte para renderizar a guia; por exemplo, "https://tasklist.example.com/123" ou "https://tasklist.example.com/list123/task456"
-* `entityLabel`ou `subEntityLabel` &emsp;um rótulo para o item na sua guia, para usar ao exibir o link profundo; por exemplo, "lista de tarefas 123" ou "tarefa 456"
+* `entityWebUrl`ou `subEntityWebUrl` &emsp; um campo opcional com uma URL de fallback a ser usado se o cliente não tiver suporte para renderizar a guia; por exemplo, " https://tasklist.example.com/123 " ou " https://tasklist.example.com/list123/task456 "
+* `entityLabel`ou `subEntityLabel` &emsp; um rótulo para o item na sua guia, para usar ao exibir o link profundo; por exemplo, "lista de tarefas 123" ou "tarefa 456"
 * `context`&emsp;Um objeto JSON que contém os seguintes campos:
   * `subEntityId`&emsp;Uma ID para o item _dentro_ da guia; por exemplo, "task456"
   * `channelId`&emsp;O Microsoft Teams Channel ID (disponível no [contexto](~/tabs/how-to/access-teams-context.md)da guia; por exemplo, "19: cbe3683f25094106b826c9cada3afbe0@thread. Skype". Esta propriedade só está disponível em guias configuráveis com um escopo de "equipe". Ele não está disponível em guias estáticas, que têm um escopo de "pessoal".
@@ -115,7 +115,7 @@ Os parâmetros de consulta são:
 * `topicName`&emsp;Um campo opcional para o nome de exibição do chat, no caso de um chat com três ou mais usuários. Se esse campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
 * `message`&emsp;Um campo opcional para o texto da mensagem que você deseja inserir na caixa de composição do usuário atual enquanto o chat estiver em um estado de rascunho.
 
-Para usar esse link profundo com seu bot, você pode especificá-lo como o destino da URL no botão do cartão ou tocar a `openUrl` ação através do tipo de ação.
+Para usar esse link profundo com seu bot, você pode especificá-lo como o destino da URL no botão do cartão ou tocar a ação através do `openUrl` tipo de ação.
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Vincular à caixa de diálogo de agendamento
 
@@ -140,4 +140,4 @@ Os parâmetros de consulta são:
 
 No momento, não há suporte para a especificação do local. Ao gerar os horários de início e término, certifique-se de especificar o deslocamento UTC (fuso horário).
 
-Para usar esse link profundo com seu bot, você pode especificá-lo como o destino da URL no botão do cartão ou tocar a `openUrl` ação através do tipo de ação.
+Para usar esse link profundo com seu bot, você pode especificá-lo como o destino da URL no botão do cartão ou tocar a ação através do `openUrl` tipo de ação.
