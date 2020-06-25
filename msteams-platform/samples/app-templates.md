@@ -2,12 +2,12 @@
 title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 222128596dab2c7795cb15b63cc0520d3be970c4
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
+ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44801047"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44873392"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -75,6 +75,23 @@ Ele fornece uma base para criar recursos de comunicação direcionados personali
 
 ![Perguntas frequentes mais sobre gif](../assets/images/CompanyCommunicatorCompose.png)
 
+## <a name="contact-group-lookup-9734"></a>Pesquisa de &#9734; de grupo de contatos
+
+O aplicativo de pesquisa de grupo de contatos fornece uma abordagem conveniente e útil para criar, acessar e gerenciar os grupos de contatos da sua organização (anteriormente conhecidos como listas de distribuição ou grupos de comunicação). Os usuários podem exibir rapidamente e bater papo com membros do grupo, exibir o status do membro e criar um chat de grupo com membros selecionados no grupo de contatos, tudo dentro do ambiente do teams.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+
+:::row:::
+:::column span="2":::
+    ![Exibição de favoritos fixados de pesquisa no grupo de contatos](../assets/images/contact-group-lookup-favorites.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Início da pesquisa de grupo de contatos demonstração de chat](../assets/images/contact-group-lookup-chat.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
 CrowdSourcer é um [bot do Microsoft Teams](../bots/what-are-bots.md) que fornece às equipes consultadas informações que foram originadas de forma colaborativa de membros do grupo. É uma ótima maneira de responder às perguntas frequentes, permitindo que os participantes entrem em contato ativamente e contribuam para um recurso de informações divertido e útil.
@@ -101,7 +118,7 @@ O expert Finder é um [bot do Microsoft Teams](../bots/what-are-bots.md) que ide
 
 ![Demonstração dos resultados da pesquisa do Expert Finder](../assets/images/expert-finder.png)
 
-## <a name="faq-plus"></a>Perguntas Frequentes Plus 
+## <a name="faq-plus"></a>Perguntas Frequentes Plus
 
 A conversa Q&um bots é uma maneira fácil de fornecer respostas para perguntas frequentes dos usuários. No entanto, a maioria dos bots falha ao se envolver com usuários de forma significativa, pois não há nenhum homem no loop quando o bot falha. O bot de perguntas frequentes é um&amigável para um bot que traz um homem no loop quando não é possível ajudar. É possível fazer uma pergunta ao bot e o bot responde com uma resposta se ela estiver contida na base de dados de conhecimento. Caso contrário, o bot permite que o usuário envie uma consulta que, em seguida, é lançada em uma equipe pré-configurada de especialistas que ajudam a fornecer suporte, agindo de dentro da própria equipe.
 

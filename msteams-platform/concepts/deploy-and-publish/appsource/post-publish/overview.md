@@ -2,12 +2,12 @@
 title: Publicar publicação
 description: O que fazer após a publicação do aplicativo
 keywords: publicar o Microsoft Teams postar certificado de atualização
-ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582857"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867088"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Manter e dar suporte ao aplicativo publicado 
 
@@ -30,11 +30,19 @@ Exemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 * Aumente o número da versão no manifesto se você fizer alterações de manifesto no seu envio.
 * Envios atualizados são necessários para passar por um novo processo de revisão e validação.
 
+## <a name="app-updates-and-the-user-consent-flow"></a>Atualizações de aplicativos e o fluxo de consentimento do usuário
 
-### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>Quando a atualização do aplicativo dispara o fluxo de consentimento do usuário?
+Quando um usuário instala o aplicativo uma das primeiras coisas que eles fazem é o consentimento para dar permissão ao aplicativo para acessar os serviços e informações de que o aplicativo precisa para realizar o trabalho. Na maioria dos casos, após concluir uma atualização de aplicativo, a nova versão aparecerá automaticamente para os usuários finais. No entanto, há algumas atualizações para o [manifesto do aplicativo do teams](../../../../resources/schema/manifest-schema.md) que exigem a aceitação do usuário para serem concluídas e podem disparar novamente esse comportamento de consentimento:
 
-Quando um usuário instala o aplicativo uma das primeiras coisas que eles fazem é o consentimento para dar permissão ao aplicativo para acessar os serviços e informações de que o aplicativo precisa para realizar o trabalho. Ao atualizar seu aplicativo, isso pode disparar novamente esse comportamento de consentimento, especialmente se você tiver feito uma ou mais das seguintes alterações:
-
-* Adição de um novo recurso a um aplicativo, como a adição de um bot a um aplicativo somente de tabulação.
-* Alterar a matriz de permissões no manifesto.
-* Incrementando o número de versão do aplicativo em seu manifesto.
+ >[!div class="checklist"]
+>
+> * Um bot foi adicionado ou removido.
+> * Um valor exclusivo de bot existente `botId` foi alterado.
+> * Um `isNotificationOnly` valor booliano de bot existente foi alterado.
+> * Um `supportsFiles` valor booliano de bot existente foi alterado.
+> * Uma extensão de mensagens ( `composeExtensions` ) foi adicionada ou removida.
+> * Um novo conector foi adicionado.
+> * Uma nova guia estática/pessoal foi adicionada.
+> * Uma nova guia de grupo/canal configurável foi adicionada.
+> * Os `webApplicationInfo` valores foram alterados.
+>

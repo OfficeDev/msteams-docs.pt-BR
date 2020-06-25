@@ -4,12 +4,12 @@ author: clearab
 description: Adicione experiências de Popup modais para coletar ou exibir informações para seus usuários de seus aplicativos do Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800963"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867115"
 ---
 # <a name="what-are-task-modules"></a>O que são os módulos de tarefas?
 
@@ -54,7 +54,7 @@ Os módulos de tarefa podem ser invocados de guias, bots ou links profundas e o 
 
 ## <a name="the-taskinfo-object"></a>O objeto TaskInfo
 
-O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição do objeto está abaixo. Você **deve** definir `url` (para o iframe incorporado de ENE) ou `card` (para um cartão adaptável).
+O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição do objeto está abaixo. Você **deve** definir o `url` (para um iframe incorporado) ou `card` (para um cartão adaptável).
 
 | Atributo | Tipo | Descrição |
 | --- | --- | --- |

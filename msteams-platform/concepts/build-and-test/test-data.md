@@ -3,12 +3,12 @@ title: Adicionar dados de teste ao seu locatário de teste do Office 365
 description: Configurar sua assinatura do programa de desenvolvedor do Office 365 para testes bem-sucedidos de aplicativos do Microsoft Teams
 keywords: testando equipes do programa desenvolvedor de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672567"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867087"
 ---
 # <a name="add-test-data-to-your-office-365-test-tenant"></a>Adicionar dados de teste ao seu locatário de teste do Office 365
 

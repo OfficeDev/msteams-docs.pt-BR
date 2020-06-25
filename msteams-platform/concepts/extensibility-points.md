@@ -4,12 +4,12 @@ author: clearab
 description: Compreenda os pontos de extensibilidade disponíveis para seu aplicativo no cliente do Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 0624aefa7873678b1d69c1d5796340cdac69c381
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034026"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867129"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Pontos extensíveis no cliente do teams
 
@@ -37,7 +37,7 @@ Eles podem conter:
 
 * [**Bots de conversas**](~/bots/what-are-bots.md) com uma conversa de um-para-um com o usuário. Como esta é uma conversa privada, se seu aplicativo precisa ter uma conversa de múltipla volta ou fornecer uma notificação relevante apenas para um único usuário, normalmente é melhor ter essa interação em um aplicativo pessoal.
 
-* [**Guias pessoais**](~/tabs/what-are-tabs.md)que fornecem uma experiência da Web incorporada em tela inteira.
+* [**Guias pessoais**](~/tabs/what-are-tabs.md) que fornecem uma experiência da Web incorporada em tela inteira.
 
 ## <a name="messages"></a>Mensagens
 
@@ -63,9 +63,9 @@ Além de pontos de extensibilidade, a plataforma Microsoft Teams fornece element
 
 Os [cartões](~/task-modules-and-cards/what-are-cards.md) são contêineres de interface do usuário definidos por esquematizado JSON, que podem conter várias propriedades e anexos. Eles podem conter texto formatado, mídia, controles (como caixas suspensas e botões de opção) e botões que disparam ações de cartão. As ações do cartão podem enviar cargas para a API do seu aplicativo, abrir um link, iniciar fluxos de autenticação ou enviar mensagens para conversas. A plataforma do Microsoft Teams dá suporte a vários tipos de cartões, incluindo cartões adaptáveis, cartões herói, cartões de miniaturas e muito mais. Eles podem ser combinados em coleções de cartões e exibidos em uma lista ou carrossel.
 
-### <a name="task-modules"></a>Módulos de tarefa
+### <a name="task-modules"></a>Módulos de tarefas
 
-Os [módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md) permitem que você crie experiências pop-up restritas em seu aplicativo do Microsoft Teams. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado `<iframe>` , mostrar um widget, como YouTube ou Microsoft Stream Video, ou exibir um cartão adaptável. Eles são especialmente úteis para iniciar e concluir tarefas ou exibir informações ricas, como vídeos ou painéis do Power BI. Uma experiência de pop-up geralmente é mais natural para usuários que iniciam e concluem tarefas comparadas a uma guia ou uma experiência de bot baseada em conversas.
+Os [módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md) permitem que você crie experiências pop-up restritas em seu aplicativo do Microsoft Teams. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um `<iframe>` widget, como YouTube ou Microsoft Stream Video, ou exibir um cartão adaptável. Eles são especialmente úteis para iniciar e concluir tarefas ou exibir informações ricas, como vídeos ou painéis do Power BI. Uma experiência de pop-up geralmente é mais natural para usuários que iniciam e concluem tarefas comparadas a uma guia ou uma experiência de bot baseada em conversas.
 
 ### <a name="deep-links"></a>Deep links
 
@@ -76,5 +76,5 @@ Seu aplicativo pode criar [links de URL profundas](~/concepts/build-and-test/dee
 Uma [página de conteúdo da Web](~/tabs/how-to/create-tab-pages/content-page.md) é uma página da Web que você hospeda, que pode ser incorporada em uma guia ou em um módulo de tarefa. Para permitir que sua página da Web seja incorporada a um cliente do Microsoft Teams, ela deve:
 
 * Ser hospedado em um HTTPS.
-* Ser capaz de ser incorporado a `<iframe>` pelo cliente Teams.
-* Incluir o SDK do cliente JavaScript do Microsoft Teams e invocar `initialize()` o método do SDK na carga da página.
+* Ser capaz de ser incorporado `<iframe>` a pelo cliente Teams.
+* Incluir o SDK do cliente JavaScript do Microsoft Teams e invocar o método do SDK `initialize()` na carga da página.
