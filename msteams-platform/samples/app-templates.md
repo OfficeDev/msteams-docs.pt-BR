@@ -2,12 +2,12 @@
 title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873392"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888795"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -131,7 +131,7 @@ A conversa Q&um bots é uma maneira fácil de fornecer respostas para perguntas 
 >
 > &#x2714; rastrear o histórico de revisão de Q&como.
 >
-> &#x2714; configurar uma resposta com detalhes adicionais para exibir como um [cartão adaptável](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+> &#x2714; configurar uma resposta com detalhes adicionais para exibir como um [cartão adaptável](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 >
 [**Obter no GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Para ajudar a aliviar esse problema, estamos felizes em trazer para você o mode
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Listar aplicativo de pesquisa](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>Prêmios de área de trabalho &#9734;
+
+Prêmios de área de trabalho é um modelo de aplicativo do teams que fornece uma estrutura positiva para promover o reconhecimento e incentivar a cultura da apreciação dos funcionários no local de trabalho moderno. O aplicativo permite que você configure e gerencie um programa de recompensa e reconhecimento de funcionários (R&R), onde os funcionários podem facilmente acessar e endossar os colegas e o seu líder em R&R pode exibir indicações enviadas, conceder prêmios e anunciar destinatários.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Cartão de indicações de prêmios de área de trabalho ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Guia lista de prêmios do local de trabalho](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 Tem uma ideia para um modelo de aplicativo que você gostaria de ver? [Informe-nos](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
