@@ -2,12 +2,12 @@
 title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
-ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
+ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
+ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44943802"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -136,6 +136,23 @@ A conversa Q&um bots é uma maneira fácil de fornecer respostas para perguntas 
 [**Obter no GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![Perguntas frequentes mais sobre gif](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="goal-tracker-9734"></a>Controlador de meta &#9734;
+
+O aplicativo de controlador de meta é uma solução abrangente para que sua organização dê suporte ao estabelecimento de metas, a observação do progresso e a confirmação do sucesso no Microsoft Teams. O aplicativo permite que os usuários definam, rastreiem e atualizem objetivos em nível profissional, pessoal e de equipe. Os membros da equipe também recebem lembretes oportunas e atualizações de status para manter o foco e permanecer no controle.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Definir metas](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Exibir metas de conjunto](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="group-activities"></a>Atividades de grupo
 
@@ -287,6 +304,14 @@ Os scrums para chat de grupo são um assistente de Scrum de apoio que permite qu
 
 ![Demonstração de chat em grupo de scrums](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## <a name="share-now-9734"></a>Compartilhar agora &#9734;
+
+O aplicativo compartilhar agora promove a troca positiva de informações entre colegas, permitindo que os usuários compartilhem facilmente o conteúdo dentro do ambiente do teams. Os usuários participam do aplicativo para compartilhar itens de interesse com os membros da equipe, descobrir o novo conteúdo compartilhado, definir preferências e marcar favoritos para leitura posterior.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![Selecionar visualização de conteúdo](../assets/images/share-now-suggested-content.png)
+
 ## <a name="sharepoint-list-search"></a>Pesquisa de lista do SharePoint
 
 A colaboração no Microsoft Teams freqüentemente faz referência a informações contidas em itens em uma lista do SharePoint. Simplesmente colar um link para o item em questão obriga todos a mudar o contexto da conversa, localizar as informações necessárias e, em seguida, retornar ao Teams para continuar a conversa. Como a conversa continua normalmente, as pessoas terão que voltar para o item de referência várias vezes para verificar novos comentários e atualizar suas memórias de informações contidas no item. Essa alternância de contexto cria uma barreira para a colaboração suave e é uma receita para coisas que ocorrem por meio de rachaduras.
@@ -296,6 +321,23 @@ Para ajudar a aliviar esse problema, estamos felizes em trazer para você o mode
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Listar aplicativo de pesquisa](../assets/images/list-search-template.png)
+
+## <a name="visitor-management-9734"></a>&#9734; de gerenciamento de visitantes
+
+O aplicativo de gerenciamento de visitantes permite que sua organização e funcionários gerenciem de forma fácil e eficiente o processo de visitante no local, diretamente no Microsoft Teams. O aplicativo permite que os funcionários criem solicitações de visitantes, controlem centralmente um status de solicitação por meio do painel do visitante e recebam notificações em tempo real quando um visitante chegar.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Criar um modo de exibição de solicitação](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Notificação de chegada do visitante](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="workplace-awards-9734"></a>Prêmios de área de trabalho &#9734;
 
