@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Diretrizes de design de equipes referência configuração de guias
-ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914550"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021612"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -23,8 +23,8 @@ ms.locfileid: "43914550"
 >
 > **Guias de canal/grupo (configurável) em dispositivos móveis:**
 >
-> * Os clientes móveis só mostram guias com um valor para `websiteUrl`. Se quiser que a sua guia apareça nos clientes móveis do Microsoft Teams, você deve definir o `websiteUrl`valor de.
-> * O comportamento de abertura padrão no Mobile é abrir fora do navegador usando `websiteUrl`o. Para aplicativos publicados na loja de aplicativos públicos, se você quiser que a guia de canal seja aberta no Teams por padrão, siga as [orientações para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)e entre em seu representante de suporte para solicitar a lista branca.
+> * Os clientes móveis só mostram guias com um valor para `websiteUrl` . Se quiser que a sua guia apareça nos clientes móveis do Microsoft Teams, você deve definir o valor de `websiteUrl` .
+> * O comportamento de abertura padrão no Mobile é abrir fora do navegador usando o `websiteUrl` . Para aplicativos publicados na loja de aplicativos públicos, se você quiser que a guia de canal seja aberta no Teams por padrão, siga as [orientações para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)e entre em seu representante de suporte para solicitar a lista branca.
 
 Guias são Canvases que você pode usar para compartilhar conteúdo, reter conversas e hospedar serviços de terceiros, tudo em um fluxo de trabalho orgânica da equipe. Quando você cria uma guia no Microsoft Teams, ele coloca seu aplicativo Web front e Center onde ele é facilmente acessível contra conversas principais.
 
@@ -80,7 +80,7 @@ A tela da guia apresenta uma ótima oportunidade de marcar sua experiência. O l
 A incorporação de suas próprias cores e layouts twill também ajuda na comunicação de personalidade.
 
 > [!TIP]
-> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Consulte*, por exemplo [Teams Colors] (/Concepts/design/Components/Typography.MD
+> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira*, por exemplo, [cores de equipes](../../concepts/design/components/color.md)
 
 ---
 
@@ -108,7 +108,7 @@ As dimensões da página de configuração de guia:
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Diretrizes para o formato de página de configuração de guia
 
 * Baseie a altura mínima da área de conteúdo da página de configuração da guia em elementos gráficos de altura fixa.
-* Calcula o espaço vertical disponível (a altura da área de conteúdo na página de configuração) `window.innerHeight`usando o. Isso retorna o tamanho do `<iframe>` no qual a página de configuração reside, o que pode ser alterado em versões futuras. Usando esse valor, seu conteúdo será ajustado automaticamente para futuras alterações.
+* Calcula o espaço vertical disponível (a altura da área de conteúdo na página de configuração) usando o `window.innerHeight` . Isso retorna o tamanho do `<iframe>` no qual a página de configuração reside, o que pode ser alterado em versões futuras. Usando esse valor, seu conteúdo será ajustado automaticamente para futuras alterações.
 * Alocar espaço vertical para os elementos de altura variável menos o que é necessário para os elementos de altura fixa.
 * Para o estado de *logon* , centralizar o conteúdo verticalmente e horizontalmente.
 * Se você quiser uma imagem de plano de fundo, precisará de uma nova imagem, dimensionada para se ajustar à área (preferencial) ou pode manter a mesma imagem e escolher entre:

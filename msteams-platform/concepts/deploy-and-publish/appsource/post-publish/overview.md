@@ -2,20 +2,20 @@
 title: Publicar publicação
 description: O que fazer após a publicação do aplicativo
 keywords: publicar o Microsoft Teams postar certificado de atualização
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021570"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Manter e dar suporte ao aplicativo publicado 
 
-Depois que o aplicativo é aprovado e listado no catálogo de aplicativos públicos, você pode aumentar seu alcance obtendo a certificação do aplicativo ou adicionando um botão de download ao seu site.
+Depois que o aplicativo é aprovado e listado no catálogo de aplicativos públicos, você pode aumentar seu alcance, concluindo o programa de conformidade do aplicativo Microsoft 365 ou adicionando um botão de download no seu site.
 
-## <a name="application-certificate"></a>Certificado de aplicativo
+## <a name="m365-certified"></a>Certificado M365
 
-A Microsoft fornece um [programa de certificação de aplicativo](./application-certification.md) que compila suas informações de aplicativo e as apresenta na página de [conformidade e segurança do aplicativo do Microsoft Teams](https://aka.ms/AppCertification). Essas informações destinam-se a ajudar os administradores a escolher aplicativos seguros para suas organizações.
+O [programa de conformidade do Microsoft 365 app](./application-certification.md), é uma abordagem de três camadas para a segurança do aplicativo e conformidade. Cada camada é baseada na próxima – oferecendo um programa em camadas para atender às necessidades do cliente. Você pode saber mais sobre a postura de segurança e conformidade de aplicativos do teams visitando a [página conformidade](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Adicionar um botão de download ao seu site do produto
 

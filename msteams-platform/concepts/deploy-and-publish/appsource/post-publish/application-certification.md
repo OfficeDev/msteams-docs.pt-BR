@@ -1,49 +1,54 @@
 ---
 title: Certificação de aplicativos
-description: Descreve o programa de autoavaliação da Store apps
+description: Descreve o programa de conformidade do aplicativo Microsoft 365 da Store apps
 keywords: Centro de conformidade do appsource repositório de parceiros de certificação de aplicativos
 ms.date: 05/06/2019
-ms.openlocfilehash: ff159f39061dd7073a93d3270d254365db4b2228
-ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
+ms.openlocfilehash: c9ba13cb06d513f55ef4a6e41219401dcd8295f8
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "44170504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021584"
 ---
-# <a name="microsoft-teams-app-certification"></a>Certificação de aplicativos do Microsoft Teams
+# <a name="microsoft-365-app-compliance"></a>Conformidade do aplicativo Microsoft 365 
 
-O programa de certificação de aplicativos do Microsoft Teams é um programa piloto que permite que você conclua uma autoavaliação voluntária de segurança do aplicativo, gerenciamento de dados e práticas de conformidade. As informações fornecidas serão processadas e apresentadas aos clientes em potencial para que possam avaliar melhor seu aplicativo antes de habilitá-lo para sua organização. Como parte do [processo de envio de aplicativos](~/concepts/deploy-and-publish/apps-publish.md) , você terá a opção de concluir a avaliação, que será então compilada e apresentada aos administradores do Microsoft Teams.
+Criar um ecossistema de aplicativos seguro e confiável é a principal prioridade para a Microsoft. Vários investimentos têm como objetivo garantir que os aplicativos disponíveis na Microsoft Store sejam válidos, seguros e seguros. 
 
-![Certificação de aplicativos do Microsoft Teams](~/assets/images/self-assessment.png)
+  ![Abordagem de 3 camadas para conformidade de aplicativos](../../../../assets/images/3TierImage.png) 
+
+-   [Verificação do Publisher](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview) – permite que os desenvolvedores com uma conta verificada [do Microsoft Partner Network](https://partner.microsoft.com/membership) (MPN) associem uma identidade organizacional com seus aplicativos registrados por meio da [plataforma de identidade da Microsoft](https://docs.microsoft.com/azure/active-directory/develop/).
+-   [Atestado de Publicador](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) – os desenvolvedores realizam uma auto-avaliação das práticas de segurança, conformidade e gerenciamento de dados da organização. Essas informações são disponibilizadas para que os administradores de ti examinem. 
+-   [Certificação M365](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) – a Microsoft emprega um consultor de terceiros para analisar e validar os padrões de segurança e conformidade da organização. Esse é o nosso nível mais alto de certificação e oferece aos administradores de ti a garantia de que o aplicativo e a organização que o recebem operam de maneiras de promover o uso e o armazenamento de dados seguro.
+
 
 ## <a name="program-benefits"></a>Benefícios do programa
 
-Após concluir a avaliação, suas respostas serão compiladas e uma página para seu aplicativo será criada neste [site](https://aka.ms/AppCertification). Em vez de responder às solicitações de informações individualmente, você poderá apontar seus clientes aqui para obter informações completas sobre as práticas de manipulação de dados, segurança e conformidade dos seus aplicativos. Os administradores do Microsoft Teams são incentivados a usar esse catálogo para descobrir novos aplicativos que serão mais fáceis de avaliar e integradas em suas organizações.
+Cada camada no programa de conformidade do aplicativo Microsoft 365 oferece um nível diferente de garantia para seus clientes. Ao concluir a verificação do Publisher, você está garantindo aos clientes que sua empresa é o editor do seu aplicativo. O atestado de editor reduz a necessidade de voltar e avançar com seus clientes sobre as práticas de segurança do aplicativo. Publicamos suas respostas para perguntas comuns sobre segurança e conformidade em um local em um formato consistente para os clientes revisar. A camada final é a certificação M365. Após a conclusão, seus clientes saberão que você segue as práticas de segurança e de manipulação de dados seguro. Outros benefícios do programa de conformidade incluem:
+-   Livre – a Microsoft está cobrindo esse custo atualmente
+-   Ganhe um emblema no AppSource e em [documentos de desenvolvimento de conformidade](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+-   Diferenciação de outros aplicativos no repositório
+-   Redução de tempo para adoção de aplicativos para seus clientes
+-   Reduzir a quantidade de tempo que você gasta preenchendo RFPs
+-   Adição de confiança nas medidas de segurança e conformidade do aplicativo
 
-## <a name="how-to-join-the-program"></a>Como participar do programa
+## <a name="qualifying-application-types"></a>Qualificando tipos de aplicativo 
+### <a name="publisher-verification-applies-to-apps-which"></a>A verificação do Publisher aplica-se a aplicativos que: 
+- Usando o [OAuth 2,0 e o OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) para assinar usuários e solicitar acesso aos dados usando APIs do lado do serviço, como [o Microsoft Graph](https://developer.microsoft.com/graph/). 
+- Registrado no Azure AD como multilocatário. 
 
-Concluir a certificação do aplicativo é voluntário, mas altamente incentivada. Deixe-nos saber que você está interessado e vamos orientá-lo no processo.
+### <a name="publisher-attestation"></a>Atestado de Publicador
+-   Teams
+-   Word
+-   Excel
+-   PowerPoint
+-   Outlook
 
-### <a name="for-existing-store-apps"></a>Para aplicativos da loja existentes
+### <a name="m365-certification"></a>Certificação M365
+-   Teams
+-   Em breve: oferecerá a mesma cobertura de tipo de aplicativo que o atestado de publicação
 
-Se você já tem um aplicativo na loja de aplicativos e deseja participar do programa, entre em contato conosco preenchendo [este formulário](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu). Alguém da nossa equipe acompanhará o acompanhamento para que você comece a usar o processo.
+## <a name="how-to-start-the-program"></a>Como iniciar o programa
 
-### <a name="for-new-or-updated-store-apps"></a>Para aplicativos de armazenamento novos ou atualizados
+Concluir o programa de conformidade do aplicativo Microsoft 365 é voluntário, mas altamente incentivada. Você pode participar do programa, não importa onde você seja um aplicativo recém-adicionado ou se você esteve na loja há anos. 
 
-Para aplicativos enviados recentemente ou atualizar envios para aplicativos existentes, você será solicitado a participar durante o processo de aprovação. Embora isso não seja necessário e não bloqueie a aprovação do seu aplicativo, sugerimos enfaticamente que você tenha tempo para preencher a avaliação.
-
-### <a name="information-youll-need-to-provide"></a>Informações que você precisará fornecer
-
-Ao concluir a avaliação, você precisará dos seguintes tipos de informações.
-
-#### <a name="general"></a>Geral
-
-Informações básicas sobre o aplicativo, como detalhes de licenciamento e informações de contato.
-
-#### <a name="data-handling"></a>Manipulação de dados
-
-Informações sobre quais dados seu aplicativo está coletando, por que você está coletando essas informações e se o administrador tem qualquer controle sobre as informações coletadas. Os exemplos incluem dados acessados por meio do Microsoft Graph, qualquer recurso de bot e qualquer telemetria que você está coletando.
-
-#### <a name="security--compliance"></a>Conformidade e Segurança
-
-Informações relacionadas à segurança e conformidade de todo o aplicativo (não apenas seu aplicativo do Microsoft Teams, mas também os serviços subjacentes). As informações são armazenadas no catálogo do Microsoft Cloud app Security. Para obter mais informações, consulte [esta página](/cloud-app-security/attest-your-app).
+A primeira etapa é concluir a [verificação do Publisher](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview). A próxima etapa é concluir o [atestado de publicação](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation). Depois de concluir o atestado do Publicador, vamos falar com as próximas etapas para iniciar a certificação do M365.
