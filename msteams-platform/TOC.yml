@@ -7,7 +7,7 @@
       href: whats-new.md
 - name: Tutoriais e exemplos de código
   items:
-    - name: 'Criar um aplicativo usando C#'
+    - name: Criar um aplicativo usando C#
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Criar um aplicativo usando o Node
       href: tutorials/get-started-nodejs-app-studio.md
@@ -15,12 +15,16 @@
       href: tutorials/get-started-yeoman.md
     - name: Estenda o cliente do Teams com aplicativos personalizados
       href: tutorials/code-samples.md
-- name: Integrações e modelos de aplicativos
+- name: Modelos e integrações
   items:
     - name: Modelos de aplicativos prontos para produção
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
       href: samples/shifts-wfm-connectors.md
+    - name: Extensão do kit de ferramentas do Microsoft Teams
+      items:
+        - name: Extensão do kit de ferramentas do Teams para o Visual Studio Code
+          href: toolkit/visual-studio-code-overview.md
 - name: Conceitos
   expanded: true
   items:
@@ -112,13 +116,13 @@
               href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             - name: Criar uma guia pessoal
               href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+        - name: C#/ASP.NET Core
           items:
             - name: Criar uma guia de canal e grupo
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             - name: Criar uma guia pessoal
               href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
+        - name: C#/ASP.NET MVC
           items:
             - name: Criar uma guia de canal e grupo
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
@@ -171,7 +175,7 @@
       href: bots/bot-basics.md
     - name: Guias de início rápido
       items:
-        - name: 'Bot de conversa do Teams em C#'
+        - name: Bot de conversa do Teams em C#
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
         - name: Bot de conversa do Teams em JavaScript
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
@@ -248,13 +252,13 @@
       items:
         - name: Com comando de ação
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: Com comando de pesquisa
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
