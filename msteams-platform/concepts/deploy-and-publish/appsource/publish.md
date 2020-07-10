@@ -1,13 +1,13 @@
 ---
 title: Diretrizes de processo de aprovação do Microsoft Teams app
 description: Descreve o processo de aprovação para obter seu aplicativo publicado no Microsoft Teams App Store
-keywords: Editor de publicação do Microsoft Teams AppSource
-ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+keywords: Teams Publish Store Office Publishing Publish AppSource Partner Center
+ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704485"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091302"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 

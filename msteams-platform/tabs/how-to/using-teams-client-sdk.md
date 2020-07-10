@@ -1,19 +1,19 @@
 ---
-title: Usando o SDK do cliente do teams
+title: Usar o SDK do cliente do Teams
 author: laujan
 description: Como usar o SDK do teams Client para adicionar a funcionalidade de reconhecimento de equipes às suas guias personalizadas
 keywords: guias do teams o canal de grupo do SDK do JavaScript pessoal
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928507"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091295"
 ---
-# <a name="using-the-teams-client-sdk"></a>Usando o SDK do cliente do teams
+# <a name="using-the-teams-client-sdk"></a>Usar o SDK do cliente do Teams
 
-A **biblioteca JavaScript** do **cliente JavaScript do teams** e do Microsoft Teams é parte da [plataforma de desenvolvedor do Microsoft Teams](https://msdn.microsoft.com/microsoft-teams) e oferece ferramentas e processos para facilitar a criação de aplicativos do teams. O SDK do teams Client é distribuído como um pacote do NPM. A versão mais recente pode ser encontrada aqui <https://www.npmjs.com/package/@microsoft/teams-js>:. A biblioteca do teams está <https://github.com/OfficeDev/microsoft-teams-library-js>localizada em.
+A **biblioteca JavaScript** do **cliente JavaScript do teams** e do Microsoft Teams é parte da [plataforma de desenvolvedor do Microsoft Teams](/microsoftteams/platform/) e oferece ferramentas e processos para facilitar a criação de aplicativos do teams. O SDK do teams Client é distribuído como um pacote do NPM. A versão mais recente pode ser encontrada aqui: <https://www.npmjs.com/package/@microsoft/teams-js> . A biblioteca do teams está localizada em <https://github.com/OfficeDev/microsoft-teams-library-js> .
 
 A tabela a seguir descreve as funções da biblioteca do teams normalmente usadas no desenvolvimento de guias:
 
