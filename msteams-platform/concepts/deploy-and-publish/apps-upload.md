@@ -2,12 +2,12 @@
 title: Carregar seu aplicativo personalizado no Microsoft Teams
 description: Descreve como carregar seu aplicativo no Microsoft Teams
 keywords: Carregamento de aplicativos do teams
-ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453879"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103023"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
 
@@ -100,7 +100,7 @@ Com o aplicativo carregado na equipe ou na conversa, os usuários podem configur
 
 1. Vá para um canal da equipe. Escolha *mais opções* (*&#8943;*) e escolha *conectores*.
 
-2. Selecione seu conector na seção **carregado** na parte inferior.
+2. Selecione seu conector na seção **suplementos foi feito** na parte inferior.
 
 3. Configure seu conector por meio de sua [página de configuração](../../webhooks-and-connectors/how-to/connectors-creating.md) e escolha *salvar*.
 

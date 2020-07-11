@@ -4,12 +4,12 @@ author: clearab
 description: Descreve como responder à ação enviar do módulo de tarefa a partir de um comando de ação de extensão de mensagens
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867108"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103009"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefa
 
@@ -451,7 +451,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
       const attachmentContent = activityPreview.attachments[0].content;
       const userText = attachmentContent.body[1].text;
       const choiceSet = attachmentContent.body[3];
-      
+
       const submitData = {
         MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
         Option1: choiceSet.choices[0].title,
@@ -459,7 +459,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         Option3: choiceSet.choices[2].title,
         Question: userText
       };
-    
+
       const adaptiveCard = CardFactory.adaptiveCard({
         actions: [
           { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
@@ -488,7 +488,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
           ]
       }};
-    
+
       await context.sendActivity(responseActivity);
     }
 }
@@ -529,6 +529,61 @@ Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à 
 
 * * *
 
+### <a name="user-attribution-for-bots-messages"></a>Atribuição de usuário para mensagens de bots 
+
+Em cenários em que um bot envia mensagens em nome de um usuário, a atribuição da mensagem a esse usuário pode ajudar no contrato e apresentar um fluxo de interação mais natural. Este recurso permite que você envie mensagens em nome do usuário que está iniciando a mensagem.
+
+Na imagem abaixo, à esquerda está uma mensagem de cartão enviada por um bot *sem* a atribuição de usuário e à direita é um cartão enviado por um bot *com* atribuição de usuário.
+
+![Captura de tela](../../../assets/images/messaging-extension/user-attribution-bots.png)
+
+Para usar a atribuição de usuário no Teams, você precisa adicionar a `OnBehalfOf` entidade menção à `ChannelData` sua `Activity` carga que é enviada ao Teams.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
+
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# <a name="json"></a>[JSON](#tab/json-1)
+
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+
+* * *
+
+Veja a seguir uma descrição das entidades na `OnBehalfOf` matriz:
+
+#### <a name="details-of--onbehalfof-entity-schema"></a>Detalhes do `OnBehalfOf` esquema de entidade
+
+|Campo|Tipo|Descrição|
+|:---|:---|:---|
+|`itemId`|Número inteiro|Deve ser 0|
+|`mentionType`|Cadeia de caracteres|Deve ser "Person"|
+|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem foi enviada. O nome do remetente da mensagem apareceria como " \<user\> via \<bot name\> ".|
+|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não está disponível.|
+  
 ## <a name="next-steps"></a>Próximas etapas
 
 Adicionar um comando de pesquisa

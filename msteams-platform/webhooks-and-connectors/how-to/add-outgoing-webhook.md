@@ -5,18 +5,18 @@ description: ''
 keywords: guias do Microsoft Teams saída de webhook *
 ms.topic: conceptual
 ms.author: laujan
-ms.openlocfilehash: 4570e597484494f05f4e18b4d29746da96c73661
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4881dc8768c7c51947f6a80a55affe78c28874d3
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672642"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102995"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>Adicionar bots personalizados ao Microsoft Teams com WebHooks de saída
 
 ## <a name="what-are-outgoing-webhooks-in-teams"></a>O que são WebHooks de saída no Microsoft Teams?
 
-Os WebHooks são uma ótima maneira de a integração do Microsoft Teams com aplicativos externos. Um webhook é essencialmente uma solicitação POST enviada para uma URL de retorno de chamada. No Teams, os WebHooks de saída fornecem uma maneira simples de permitir que os usuários enviem mensagens para o seu serviço Web sem precisar passar por todo o processo de criação de bots por meio da [Microsoft bot Framework](https://dev.botframework.com/). Os WebHooks de saída postam dados do teams para qualquer serviço escolhido capaz de aceitar uma carga JSON. Após um webhook de saída ser adicionado a uma equipe, ele atua como bot, ouvindo canais para mensagens usando ** \@menção**, enviando notificações para serviços Web externos e respondendo com mensagens avançadas que podem incluir cartões e imagens.
+Os WebHooks são uma ótima maneira de a integração do Microsoft Teams com aplicativos externos. Um webhook é essencialmente uma solicitação POST enviada para uma URL de retorno de chamada. No Teams, os WebHooks de saída fornecem uma maneira simples de permitir que os usuários enviem mensagens para o seu serviço Web sem precisar passar por todo o processo de criação de bots por meio da [Microsoft bot Framework](https://dev.botframework.com/). Os WebHooks de saída postam dados do teams para qualquer serviço escolhido capaz de aceitar uma carga JSON. Após um webhook de saída ser adicionado a uma equipe, ele atua como bot, ouvindo canais para mensagens usando ** \@ menção**, enviando notificações para serviços Web externos e respondendo com mensagens avançadas que podem incluir cartões e imagens.
 
 ## <a name="outgoing-webhook-key-features"></a>Recursos de chave de webhook de saída
 
@@ -24,7 +24,7 @@ Os WebHooks são uma ótima maneira de a integração do Microsoft Teams com apl
 | ------- | ----------- |
 | Configuração com escopo| Os WebHooks têm escopo no nível da equipe. Você precisará passar pelo processo de instalação para cada equipe à qual deseja adicionar o webhook de saída. |
 | Mensagens reativas| Os usuários devem usar @mention para o webhook para receber mensagens. Atualmente, os usuários só podem enviar uma mensagem para um webhook de saída em canais públicos e não dentro do escopo pessoal ou privado |
-|Troca de mensagens HTTP padrão|As respostas aparecerão na mesma cadeia da mensagem de solicitação original e podem incluir qualquer conteúdo de mensagem da estrutura de bot (Rich Text, imagens, cartões e emojis). **Observação**: embora os WebHooks de saída possam usar cartões, eles não podem usar nenhuma ação de `openURL`cartão, exceto para.|
+|Troca de mensagens HTTP padrão|As respostas aparecerão na mesma cadeia da mensagem de solicitação original e podem incluir qualquer conteúdo de mensagem da estrutura de bot (Rich Text, imagens, cartões e emojis). **Observação**: embora os WebHooks de saída possam usar cartões, eles não podem usar nenhuma ação de cartão, exceto para `openURL` .|
 | Suporte ao método de API do teams|No Teams, os WebHooks de saída enviam um HTTP POST para um serviço Web e processam uma resposta de retorno. Eles não podem acessar nenhuma outra API como recuperar a lista ou a lista de canais em uma equipe.|
 
 ## <a name="adding-outgoing-webhook-processing-to-your-app"></a>Adicionando processamento de webhook de saída ao seu aplicativo
@@ -36,15 +36,15 @@ Os WebHooks são uma ótima maneira de a integração do Microsoft Teams com apl
 
 Seu serviço receberá mensagens no esquema de mensagens do serviço bot do Azure padrão. O conector da estrutura de bot é um serviço RESTful que permite que seu serviço processe o intercâmbio de mensagens formatadas por JSON por meio de protocolos HTTPS, conforme documentado na [API do serviço de bot do Azure](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Como alternativa, você pode seguir o [Microsoft bot Framework SDK] para processar e analisar mensagens. *Consulte também*  [sobre o serviço de bot do Azure](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
 
-Os WebHooks de saída têm escopo para o `team` nível e são visíveis para todos os membros da equipe. Assim como um bot, os usuários da AE precisam ** \@mencionar** o nome do webhook de saída para chamá-lo no canal.
+Os WebHooks de saída têm escopo para o `team` nível e são visíveis para todos os membros da equipe. Assim como um bot, os usuários precisam ** \@ mencionar** o nome do webhook de saída para chamá-lo no canal.
 
 ### <a name="2-create-a-method-to-verify-the-outgoing-webhook-hmac-token"></a>2. Crie um método para verificar o token HMAC de saída de webhook
 
-Para garantir que o serviço esteja recebendo chamadas apenas de clientes do Microsoft Teams, o Microsoft Teams fornece um `hmac` código HMAC no cabeçalho HTTP que deve sempre ser incluído no seu protocolo de autenticação.
+Para garantir que o serviço esteja recebendo chamadas apenas de clientes do Microsoft Teams, o Microsoft Teams fornece um código HMAC no `hmac` cabeçalho HTTP que deve sempre ser incluído no seu protocolo de autenticação.
 
 O código deve sempre validar a assinatura HMAC incluída na solicitação:
 
-* *Gere* o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas (*Confira* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para node. js ou *consulte* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#). O Microsoft Teams usa a criptografia HMAC de SHA256 padrão. Você precisará converter o corpo em uma matriz de bytes em UTF8.
+* *Gere* o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas (*consulte* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js ou *consulte* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). O Microsoft Teams usa a criptografia HMAC de SHA256 padrão. Você precisará converter o corpo em uma matriz de bytes em UTF8.
 * *Compute* o hash da matriz de bytes do token de segurança **fornecido pelo Microsoft Teams** quando você registrou o webhook de saída no cliente do teams]. *Confira* [criar um webhook de saída](#create-an-outgoing-webhook), abaixo.
 * *Converta* o hash em uma cadeia de caracteres usando a codificação UTF-8.
 * *Compare* o valor da cadeia de caracteres do hash gerado com o valor fornecido na solicitação HTTP.
