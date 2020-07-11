@@ -4,42 +4,42 @@ author: clearab
 description: Descreve como responder à ação enviar do módulo de tarefa a partir de um comando de ação de extensão de mensagens
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867108"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103009"
 ---
-# <a name="respond-to-the-task-module-submit-action"></a><span data-ttu-id="ef863-103">Responder à ação de envio do módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="ef863-103">Respond to the task module submit action</span></span>
+# <a name="respond-to-the-task-module-submit-action"></a><span data-ttu-id="939b7-103">Responder à ação de envio do módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="939b7-103">Respond to the task module submit action</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="ef863-104">Quando um usuário envia o módulo de tarefa, seu serviço Web receberá uma `composeExtension/submitAction` mensagem de invocação com os valores de ID de comando e de parâmetro definidos.</span><span class="sxs-lookup"><span data-stu-id="ef863-104">Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set.</span></span> <span data-ttu-id="ef863-105">Seu aplicativo terá cinco segundos para responder à invocação, caso contrário, o usuário receberá uma mensagem de erro "não é possível acessar o aplicativo" e qualquer resposta à invocação será ignorada pelo cliente do teams.</span><span class="sxs-lookup"><span data-stu-id="ef863-105">Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.</span></span>
+<span data-ttu-id="939b7-104">Quando um usuário envia o módulo de tarefa, seu serviço Web receberá uma `composeExtension/submitAction` mensagem de invocação com os valores de ID de comando e de parâmetro definidos.</span><span class="sxs-lookup"><span data-stu-id="939b7-104">Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set.</span></span> <span data-ttu-id="939b7-105">Seu aplicativo terá cinco segundos para responder à invocação, caso contrário, o usuário receberá uma mensagem de erro "não é possível acessar o aplicativo" e qualquer resposta à invocação será ignorada pelo cliente do teams.</span><span class="sxs-lookup"><span data-stu-id="939b7-105">Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.</span></span>
 
-<span data-ttu-id="ef863-106">Você tem as seguintes opções para responder.</span><span class="sxs-lookup"><span data-stu-id="ef863-106">You have the following options for responding.</span></span>
+<span data-ttu-id="939b7-106">Você tem as seguintes opções para responder.</span><span class="sxs-lookup"><span data-stu-id="939b7-106">You have the following options for responding.</span></span>
 
-* <span data-ttu-id="ef863-107">Sem resposta-você pode optar por usar a ação enviar para acionar um processo em um sistema externo e não fornecer nenhum feedback para o usuário.</span><span class="sxs-lookup"><span data-stu-id="ef863-107">No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user.</span></span> <span data-ttu-id="ef863-108">Isso pode ser útil para processos de execução longa, e você pode optar por fornecer comentários de outra maneira (por exemplo, com uma [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).</span><span class="sxs-lookup"><span data-stu-id="ef863-108">This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
-* <span data-ttu-id="ef863-109">[Outro módulo de tarefa](#respond-with-another-task-module) : você pode responder com um módulo de tarefa adicional como parte de uma interação de várias etapas.</span><span class="sxs-lookup"><span data-stu-id="ef863-109">[Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.</span></span>
-* <span data-ttu-id="ef863-110">[Resposta do cartão](#respond-with-a-card-inserted-into-the-compose-message-area) -você pode responder com um cartão em que o usuário pode interagir e/ou inserir em uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="ef863-110">[Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can then interact with and/or insert into a message.</span></span>
-* <span data-ttu-id="ef863-111">[Cartão adaptável do bot](#bot-response-with-adaptive-card) -Insira um cartão adaptável diretamente na conversa.</span><span class="sxs-lookup"><span data-stu-id="ef863-111">[Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.</span></span>
-* [<span data-ttu-id="ef863-112">Solicitar que o usuário autentique</span><span class="sxs-lookup"><span data-stu-id="ef863-112">Request the user authenticate</span></span>](~/messaging-extensions/how-to/add-authentication.md)
-* [<span data-ttu-id="ef863-113">Solicitar que o usuário forneça configuração adicional</span><span class="sxs-lookup"><span data-stu-id="ef863-113">Request the user provide additional configuration</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
+* <span data-ttu-id="939b7-107">Sem resposta-você pode optar por usar a ação enviar para acionar um processo em um sistema externo e não fornecer nenhum feedback para o usuário.</span><span class="sxs-lookup"><span data-stu-id="939b7-107">No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user.</span></span> <span data-ttu-id="939b7-108">Isso pode ser útil para processos de execução longa, e você pode optar por fornecer comentários de outra maneira (por exemplo, com uma [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).</span><span class="sxs-lookup"><span data-stu-id="939b7-108">This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+* <span data-ttu-id="939b7-109">[Outro módulo de tarefa](#respond-with-another-task-module) : você pode responder com um módulo de tarefa adicional como parte de uma interação de várias etapas.</span><span class="sxs-lookup"><span data-stu-id="939b7-109">[Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.</span></span>
+* <span data-ttu-id="939b7-110">[Resposta do cartão](#respond-with-a-card-inserted-into-the-compose-message-area) -você pode responder com um cartão em que o usuário pode interagir e/ou inserir em uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="939b7-110">[Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can then interact with and/or insert into a message.</span></span>
+* <span data-ttu-id="939b7-111">[Cartão adaptável do bot](#bot-response-with-adaptive-card) -Insira um cartão adaptável diretamente na conversa.</span><span class="sxs-lookup"><span data-stu-id="939b7-111">[Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.</span></span>
+* [<span data-ttu-id="939b7-112">Solicitar que o usuário autentique</span><span class="sxs-lookup"><span data-stu-id="939b7-112">Request the user authenticate</span></span>](~/messaging-extensions/how-to/add-authentication.md)
+* [<span data-ttu-id="939b7-113">Solicitar que o usuário forneça configuração adicional</span><span class="sxs-lookup"><span data-stu-id="939b7-113">Request the user provide additional configuration</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
 
-<span data-ttu-id="ef863-114">A tabela abaixo mostra quais tipos de respostas estão disponíveis com base no local de invocação ( `commandContext` ) da extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="ef863-114">The table below shows which types of responses are available based on the invoke location (`commandContext`) of the messaging extension.</span></span> <span data-ttu-id="ef863-115">Para autenticação ou configuração, depois que o usuário concluir o fluxo, a chamada original será reenviada ao seu serviço Web.</span><span class="sxs-lookup"><span data-stu-id="ef863-115">For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.</span></span>
+<span data-ttu-id="939b7-114">A tabela abaixo mostra quais tipos de respostas estão disponíveis com base no local de invocação ( `commandContext` ) da extensão de mensagens.</span><span class="sxs-lookup"><span data-stu-id="939b7-114">The table below shows which types of responses are available based on the invoke location (`commandContext`) of the messaging extension.</span></span> <span data-ttu-id="939b7-115">Para autenticação ou configuração, depois que o usuário concluir o fluxo, a chamada original será reenviada ao seu serviço Web.</span><span class="sxs-lookup"><span data-stu-id="939b7-115">For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.</span></span>
 
-|<span data-ttu-id="ef863-116">Tipo de resposta</span><span class="sxs-lookup"><span data-stu-id="ef863-116">Response Type</span></span> | <span data-ttu-id="ef863-117">Redação</span><span class="sxs-lookup"><span data-stu-id="ef863-117">compose</span></span> | <span data-ttu-id="ef863-118">barra de comandos</span><span class="sxs-lookup"><span data-stu-id="ef863-118">command bar</span></span> | <span data-ttu-id="ef863-119">message</span><span class="sxs-lookup"><span data-stu-id="ef863-119">message</span></span> |
+|<span data-ttu-id="939b7-116">Tipo de resposta</span><span class="sxs-lookup"><span data-stu-id="939b7-116">Response Type</span></span> | <span data-ttu-id="939b7-117">Redação</span><span class="sxs-lookup"><span data-stu-id="939b7-117">compose</span></span> | <span data-ttu-id="939b7-118">barra de comandos</span><span class="sxs-lookup"><span data-stu-id="939b7-118">command bar</span></span> | <span data-ttu-id="939b7-119">message</span><span class="sxs-lookup"><span data-stu-id="939b7-119">message</span></span> |
 |--------------|:-------------:|:-------------:|:---------:|
-|<span data-ttu-id="ef863-120">Resposta de cartão</span><span class="sxs-lookup"><span data-stu-id="ef863-120">Card response</span></span> | <span data-ttu-id="ef863-121">x</span><span class="sxs-lookup"><span data-stu-id="ef863-121">x</span></span> | <span data-ttu-id="ef863-122">x</span><span class="sxs-lookup"><span data-stu-id="ef863-122">x</span></span> | <span data-ttu-id="ef863-123">x</span><span class="sxs-lookup"><span data-stu-id="ef863-123">x</span></span> |
-|<span data-ttu-id="ef863-124">Outro módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="ef863-124">Another task module</span></span> | <span data-ttu-id="ef863-125">x</span><span class="sxs-lookup"><span data-stu-id="ef863-125">x</span></span> | <span data-ttu-id="ef863-126">x</span><span class="sxs-lookup"><span data-stu-id="ef863-126">x</span></span> | <span data-ttu-id="ef863-127">x</span><span class="sxs-lookup"><span data-stu-id="ef863-127">x</span></span> |
-|<span data-ttu-id="ef863-128">Bot com cartão adaptável</span><span class="sxs-lookup"><span data-stu-id="ef863-128">Bot with Adaptive Card</span></span> | <span data-ttu-id="ef863-129">x</span><span class="sxs-lookup"><span data-stu-id="ef863-129">x</span></span> |  | <span data-ttu-id="ef863-130">x</span><span class="sxs-lookup"><span data-stu-id="ef863-130">x</span></span> |
-| <span data-ttu-id="ef863-131">Nenhuma resposta</span><span class="sxs-lookup"><span data-stu-id="ef863-131">No response</span></span> | <span data-ttu-id="ef863-132">x</span><span class="sxs-lookup"><span data-stu-id="ef863-132">x</span></span> | <span data-ttu-id="ef863-133">x</span><span class="sxs-lookup"><span data-stu-id="ef863-133">x</span></span> | <span data-ttu-id="ef863-134">x</span><span class="sxs-lookup"><span data-stu-id="ef863-134">x</span></span> |
+|<span data-ttu-id="939b7-120">Resposta de cartão</span><span class="sxs-lookup"><span data-stu-id="939b7-120">Card response</span></span> | <span data-ttu-id="939b7-121">x</span><span class="sxs-lookup"><span data-stu-id="939b7-121">x</span></span> | <span data-ttu-id="939b7-122">x</span><span class="sxs-lookup"><span data-stu-id="939b7-122">x</span></span> | <span data-ttu-id="939b7-123">x</span><span class="sxs-lookup"><span data-stu-id="939b7-123">x</span></span> |
+|<span data-ttu-id="939b7-124">Outro módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="939b7-124">Another task module</span></span> | <span data-ttu-id="939b7-125">x</span><span class="sxs-lookup"><span data-stu-id="939b7-125">x</span></span> | <span data-ttu-id="939b7-126">x</span><span class="sxs-lookup"><span data-stu-id="939b7-126">x</span></span> | <span data-ttu-id="939b7-127">x</span><span class="sxs-lookup"><span data-stu-id="939b7-127">x</span></span> |
+|<span data-ttu-id="939b7-128">Bot com cartão adaptável</span><span class="sxs-lookup"><span data-stu-id="939b7-128">Bot with Adaptive Card</span></span> | <span data-ttu-id="939b7-129">x</span><span class="sxs-lookup"><span data-stu-id="939b7-129">x</span></span> |  | <span data-ttu-id="939b7-130">x</span><span class="sxs-lookup"><span data-stu-id="939b7-130">x</span></span> |
+| <span data-ttu-id="939b7-131">Nenhuma resposta</span><span class="sxs-lookup"><span data-stu-id="939b7-131">No response</span></span> | <span data-ttu-id="939b7-132">x</span><span class="sxs-lookup"><span data-stu-id="939b7-132">x</span></span> | <span data-ttu-id="939b7-133">x</span><span class="sxs-lookup"><span data-stu-id="939b7-133">x</span></span> | <span data-ttu-id="939b7-134">x</span><span class="sxs-lookup"><span data-stu-id="939b7-134">x</span></span> |
 
-## <a name="the-submitaction-invoke-event"></a><span data-ttu-id="ef863-135">O evento de chamar enviaraction</span><span class="sxs-lookup"><span data-stu-id="ef863-135">The submitAction invoke event</span></span>
+## <a name="the-submitaction-invoke-event"></a><span data-ttu-id="939b7-135">O evento de chamar enviaraction</span><span class="sxs-lookup"><span data-stu-id="939b7-135">The submitAction invoke event</span></span>
 
-<span data-ttu-id="ef863-136">Veja a seguir alguns exemplos de como receber a mensagem Invoke.</span><span class="sxs-lookup"><span data-stu-id="ef863-136">Below are examples of receiving the invoke message.</span></span>
+<span data-ttu-id="939b7-136">Veja a seguir alguns exemplos de como receber a mensagem Invoke.</span><span class="sxs-lookup"><span data-stu-id="939b7-136">Below are examples of receiving the invoke message.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ef863-137">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ef863-137">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="939b7-137">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-137">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="ef863-138">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ef863-138">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="939b7-138">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="939b7-138">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -61,9 +61,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ef863-139">JSON</span><span class="sxs-lookup"><span data-stu-id="ef863-139">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="939b7-139">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-139">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="ef863-140">Este é um exemplo do objeto JSON que você receberá.</span><span class="sxs-lookup"><span data-stu-id="ef863-140">This is an example of the JSON object you will receive.</span></span> <span data-ttu-id="ef863-141">O `commandContext` parâmetro indica onde sua extensão de mensagens foi disparada.</span><span class="sxs-lookup"><span data-stu-id="ef863-141">The `commandContext` parameter indicates where your messaging extension was triggered from.</span></span> <span data-ttu-id="ef863-142">O `data` objeto contém os campos no formulário como parâmetros e os valores que o usuário enviou.</span><span class="sxs-lookup"><span data-stu-id="ef863-142">The `data` object contains the fields on the form as parameters, and the values the user submitted.</span></span> <span data-ttu-id="ef863-143">O objeto JSON aqui é reduzido para realçar os campos mais relevantes.</span><span class="sxs-lookup"><span data-stu-id="ef863-143">The JSON object here is shortened to highlight the most relevant fields.</span></span>
+<span data-ttu-id="939b7-140">Este é um exemplo do objeto JSON que você receberá.</span><span class="sxs-lookup"><span data-stu-id="939b7-140">This is an example of the JSON object you will receive.</span></span> <span data-ttu-id="939b7-141">O `commandContext` parâmetro indica onde sua extensão de mensagens foi disparada.</span><span class="sxs-lookup"><span data-stu-id="939b7-141">The `commandContext` parameter indicates where your messaging extension was triggered from.</span></span> <span data-ttu-id="939b7-142">O `data` objeto contém os campos no formulário como parâmetros e os valores que o usuário enviou.</span><span class="sxs-lookup"><span data-stu-id="939b7-142">The `data` object contains the fields on the form as parameters, and the values the user submitted.</span></span> <span data-ttu-id="939b7-143">O objeto JSON aqui é reduzido para realçar os campos mais relevantes.</span><span class="sxs-lookup"><span data-stu-id="939b7-143">The JSON object here is shortened to highlight the most relevant fields.</span></span>
 
 ```json
 {
@@ -91,11 +91,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a><span data-ttu-id="ef863-144">Responder com um cartão inserido na área de mensagem de composição</span><span class="sxs-lookup"><span data-stu-id="ef863-144">Respond with a card inserted into the compose message area</span></span>
+## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a><span data-ttu-id="939b7-144">Responder com um cartão inserido na área de mensagem de composição</span><span class="sxs-lookup"><span data-stu-id="939b7-144">Respond with a card inserted into the compose message area</span></span>
 
-<span data-ttu-id="ef863-145">A maneira mais comum de responder à `composeExtension/submitAction` solicitação é com um cartão inserido na área de mensagem de composição.</span><span class="sxs-lookup"><span data-stu-id="ef863-145">The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area.</span></span> <span data-ttu-id="ef863-146">O usuário pode então optar por enviar o cartão para a conversa.</span><span class="sxs-lookup"><span data-stu-id="ef863-146">The user can then choose to submit the card to the conversation.</span></span> <span data-ttu-id="ef863-147">Para obter mais informações sobre o uso de cartões [, consulte cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).</span><span class="sxs-lookup"><span data-stu-id="ef863-147">For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
+<span data-ttu-id="939b7-145">A maneira mais comum de responder à `composeExtension/submitAction` solicitação é com um cartão inserido na área de mensagem de composição.</span><span class="sxs-lookup"><span data-stu-id="939b7-145">The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area.</span></span> <span data-ttu-id="939b7-146">O usuário pode então optar por enviar o cartão para a conversa.</span><span class="sxs-lookup"><span data-stu-id="939b7-146">The user can then choose to submit the card to the conversation.</span></span> <span data-ttu-id="939b7-147">Para obter mais informações sobre o uso de cartões [, consulte cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).</span><span class="sxs-lookup"><span data-stu-id="939b7-147">For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ef863-148">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ef863-148">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="939b7-148">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-148">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="ef863-149">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ef863-149">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="939b7-149">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="939b7-149">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ef863-150">JSON</span><span class="sxs-lookup"><span data-stu-id="ef863-150">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="939b7-150">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-150">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -186,36 +186,36 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-with-another-task-module"></a><span data-ttu-id="ef863-151">Responder com outro módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="ef863-151">Respond with another task module</span></span>
+## <a name="respond-with-another-task-module"></a><span data-ttu-id="939b7-151">Responder com outro módulo de tarefa</span><span class="sxs-lookup"><span data-stu-id="939b7-151">Respond with another task module</span></span>
 
-<span data-ttu-id="ef863-152">Você pode optar por responder ao `submitAction` evento com um módulo de tarefa adicional.</span><span class="sxs-lookup"><span data-stu-id="ef863-152">You can choose to respond to the `submitAction` event with an additional task module.</span></span> <span data-ttu-id="ef863-153">Isso pode ser útil quando:</span><span class="sxs-lookup"><span data-stu-id="ef863-153">This can be useful when:</span></span>
+<span data-ttu-id="939b7-152">Você pode optar por responder ao `submitAction` evento com um módulo de tarefa adicional.</span><span class="sxs-lookup"><span data-stu-id="939b7-152">You can choose to respond to the `submitAction` event with an additional task module.</span></span> <span data-ttu-id="939b7-153">Isso pode ser útil quando:</span><span class="sxs-lookup"><span data-stu-id="939b7-153">This can be useful when:</span></span>
 
-* <span data-ttu-id="ef863-154">Você precisa coletar grandes quantidades de informações.</span><span class="sxs-lookup"><span data-stu-id="ef863-154">You need to collect large amounts of information.</span></span>
-* <span data-ttu-id="ef863-155">Se você precisar alterar dinamicamente quais informações você está coletando com base na entrada do usuário</span><span class="sxs-lookup"><span data-stu-id="ef863-155">If you need to dynamically change what information you're collecting based on user input</span></span>
-* <span data-ttu-id="ef863-156">Se você precisar validar as informações enviadas pelo usuário e, potencialmente, reenviar o formulário com uma mensagem de erro, se houver algum problema.</span><span class="sxs-lookup"><span data-stu-id="ef863-156">If you need to validate the information submitted by the user and potentially resend the form with an error message if something is wrong.</span></span> 
+* <span data-ttu-id="939b7-154">Você precisa coletar grandes quantidades de informações.</span><span class="sxs-lookup"><span data-stu-id="939b7-154">You need to collect large amounts of information.</span></span>
+* <span data-ttu-id="939b7-155">Se você precisar alterar dinamicamente quais informações você está coletando com base na entrada do usuário</span><span class="sxs-lookup"><span data-stu-id="939b7-155">If you need to dynamically change what information you're collecting based on user input</span></span>
+* <span data-ttu-id="939b7-156">Se você precisar validar as informações enviadas pelo usuário e, potencialmente, reenviar o formulário com uma mensagem de erro, se houver algum problema.</span><span class="sxs-lookup"><span data-stu-id="939b7-156">If you need to validate the information submitted by the user and potentially resend the form with an error message if something is wrong.</span></span> 
 
-<span data-ttu-id="ef863-157">O método de resposta é o mesmo que [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span><span class="sxs-lookup"><span data-stu-id="ef863-157">The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span></span> <span data-ttu-id="ef863-158">Se você estiver usando o SDK da estrutura de bot, o mesmo evento será disparado para as duas ações de envio.</span><span class="sxs-lookup"><span data-stu-id="ef863-158">If you're using the Bot Framework SDK the same event will trigger for both submit actions.</span></span> <span data-ttu-id="ef863-159">Isso significa que você precisa certificar-se de adicionar lógica que determina a resposta correta.</span><span class="sxs-lookup"><span data-stu-id="ef863-159">This mean you need to be sure to add logic which determines the correct response.</span></span>
+<span data-ttu-id="939b7-157">O método de resposta é o mesmo que [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span><span class="sxs-lookup"><span data-stu-id="939b7-157">The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span></span> <span data-ttu-id="939b7-158">Se você estiver usando o SDK da estrutura de bot, o mesmo evento será disparado para as duas ações de envio.</span><span class="sxs-lookup"><span data-stu-id="939b7-158">If you're using the Bot Framework SDK the same event will trigger for both submit actions.</span></span> <span data-ttu-id="939b7-159">Isso significa que você precisa certificar-se de adicionar lógica que determina a resposta correta.</span><span class="sxs-lookup"><span data-stu-id="939b7-159">This mean you need to be sure to add logic which determines the correct response.</span></span>
 
-## <a name="bot-response-with-adaptive-card"></a><span data-ttu-id="ef863-160">Resposta de bot com cartão adaptável</span><span class="sxs-lookup"><span data-stu-id="ef863-160">Bot response with Adaptive Card</span></span>
+## <a name="bot-response-with-adaptive-card"></a><span data-ttu-id="939b7-160">Resposta de bot com cartão adaptável</span><span class="sxs-lookup"><span data-stu-id="939b7-160">Bot response with Adaptive Card</span></span>
 
 >[!Note]
-><span data-ttu-id="ef863-161">Esse fluxo requer que você adicione o `bot` objeto ao manifesto do seu aplicativo e que você tenha o escopo necessário definido para o bot.</span><span class="sxs-lookup"><span data-stu-id="ef863-161">This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot.</span></span> <span data-ttu-id="ef863-162">Use a mesma ID que sua extensão de mensagens para o bot.</span><span class="sxs-lookup"><span data-stu-id="ef863-162">Use the same Id as your messaging extension for your bot.</span></span>
+><span data-ttu-id="939b7-161">Esse fluxo requer que você adicione o `bot` objeto ao manifesto do seu aplicativo e que você tenha o escopo necessário definido para o bot.</span><span class="sxs-lookup"><span data-stu-id="939b7-161">This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot.</span></span> <span data-ttu-id="939b7-162">Use a mesma ID que sua extensão de mensagens para o bot.</span><span class="sxs-lookup"><span data-stu-id="939b7-162">Use the same Id as your messaging extension for your bot.</span></span>
 
-<span data-ttu-id="ef863-163">Você também pode responder à ação de envio inserindo uma mensagem com um cartão adaptável no canal com um bot.</span><span class="sxs-lookup"><span data-stu-id="ef863-163">You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot.</span></span> <span data-ttu-id="ef863-164">O usuário poderá visualizar a mensagem antes de enviá-la e potencialmente editar/interagir com ela também.</span><span class="sxs-lookup"><span data-stu-id="ef863-164">Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well.</span></span> <span data-ttu-id="ef863-165">Isso pode ser muito útil em cenários em que você precisa coletar informações de seus usuários antes de criar uma resposta de cartão adaptável ou quando precisar atualizar o cartão após alguém interagir com ele.</span><span class="sxs-lookup"><span data-stu-id="ef863-165">This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response, or when you're going to need to update the card after someone interacts with it.</span></span> <span data-ttu-id="ef863-166">O cenário a seguir mostra como o aplicativo Polly usa esse fluxo para configurar uma pesquisa sem incluir as etapas de configuração na conversa do canal.</span><span class="sxs-lookup"><span data-stu-id="ef863-166">The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation.</span></span>
+<span data-ttu-id="939b7-163">Você também pode responder à ação de envio inserindo uma mensagem com um cartão adaptável no canal com um bot.</span><span class="sxs-lookup"><span data-stu-id="939b7-163">You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot.</span></span> <span data-ttu-id="939b7-164">O usuário poderá visualizar a mensagem antes de enviá-la e potencialmente editar/interagir com ela também.</span><span class="sxs-lookup"><span data-stu-id="939b7-164">Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well.</span></span> <span data-ttu-id="939b7-165">Isso pode ser muito útil em cenários em que você precisa coletar informações de seus usuários antes de criar uma resposta de cartão adaptável ou quando precisar atualizar o cartão após alguém interagir com ele.</span><span class="sxs-lookup"><span data-stu-id="939b7-165">This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response, or when you're going to need to update the card after someone interacts with it.</span></span> <span data-ttu-id="939b7-166">O cenário a seguir mostra como o aplicativo Polly usa esse fluxo para configurar uma pesquisa sem incluir as etapas de configuração na conversa do canal.</span><span class="sxs-lookup"><span data-stu-id="939b7-166">The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation.</span></span>
 
-1. <span data-ttu-id="ef863-167">O usuário clica na extensão de mensagens para disparar o módulo de tarefa.</span><span class="sxs-lookup"><span data-stu-id="ef863-167">The user clicks the messaging extension to trigger the task module.</span></span>
-2. <span data-ttu-id="ef863-168">O usuário configura a pesquisa com o módulo de tarefa.</span><span class="sxs-lookup"><span data-stu-id="ef863-168">The user configures the poll with the task module.</span></span>
-3. <span data-ttu-id="ef863-169">Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para compilar a pesquisa como um cartão adaptável e a envia como `botMessagePreview` resposta ao cliente.</span><span class="sxs-lookup"><span data-stu-id="ef863-169">After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.</span></span>
-4. <span data-ttu-id="ef863-170">O usuário pode visualizar a mensagem de cartão adaptável antes do bot inseri-la no canal.</span><span class="sxs-lookup"><span data-stu-id="ef863-170">The user can then preview the adaptive card message before the bot inserts it into the channel.</span></span> <span data-ttu-id="ef863-171">Se o aplicativo ainda não for um membro do canal, clique em `Send` adicionará a ele.</span><span class="sxs-lookup"><span data-stu-id="ef863-171">If the app is not already a member of the channel, clicking `Send` will add the it.</span></span>
-   1. <span data-ttu-id="ef863-172">O usuário também pode escolher a `Edit` mensagem, que as retorna para o módulo de tarefa original.</span><span class="sxs-lookup"><span data-stu-id="ef863-172">The user can also chose to `Edit` the message, which returns them to the original task module.</span></span>
-5. <span data-ttu-id="ef863-173">Interagir com o cartão adaptável altera a mensagem antes de enviá-la.</span><span class="sxs-lookup"><span data-stu-id="ef863-173">Interacting with the adaptive card changes the message before sending it.</span></span>
-6. <span data-ttu-id="ef863-174">Quando o usuário clica `Send` no bot envia a mensagem para o canal.</span><span class="sxs-lookup"><span data-stu-id="ef863-174">Once the user clicks `Send` the bot posts the message to the channel.</span></span>
+1. <span data-ttu-id="939b7-167">O usuário clica na extensão de mensagens para disparar o módulo de tarefa.</span><span class="sxs-lookup"><span data-stu-id="939b7-167">The user clicks the messaging extension to trigger the task module.</span></span>
+2. <span data-ttu-id="939b7-168">O usuário configura a pesquisa com o módulo de tarefa.</span><span class="sxs-lookup"><span data-stu-id="939b7-168">The user configures the poll with the task module.</span></span>
+3. <span data-ttu-id="939b7-169">Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para compilar a pesquisa como um cartão adaptável e a envia como `botMessagePreview` resposta ao cliente.</span><span class="sxs-lookup"><span data-stu-id="939b7-169">After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.</span></span>
+4. <span data-ttu-id="939b7-170">O usuário pode visualizar a mensagem de cartão adaptável antes do bot inseri-la no canal.</span><span class="sxs-lookup"><span data-stu-id="939b7-170">The user can then preview the adaptive card message before the bot inserts it into the channel.</span></span> <span data-ttu-id="939b7-171">Se o aplicativo ainda não for um membro do canal, clique em `Send` adicionará a ele.</span><span class="sxs-lookup"><span data-stu-id="939b7-171">If the app is not already a member of the channel, clicking `Send` will add the it.</span></span>
+   1. <span data-ttu-id="939b7-172">O usuário também pode escolher a `Edit` mensagem, que as retorna para o módulo de tarefa original.</span><span class="sxs-lookup"><span data-stu-id="939b7-172">The user can also chose to `Edit` the message, which returns them to the original task module.</span></span>
+5. <span data-ttu-id="939b7-173">Interagir com o cartão adaptável altera a mensagem antes de enviá-la.</span><span class="sxs-lookup"><span data-stu-id="939b7-173">Interacting with the adaptive card changes the message before sending it.</span></span>
+6. <span data-ttu-id="939b7-174">Quando o usuário clica `Send` no bot envia a mensagem para o canal.</span><span class="sxs-lookup"><span data-stu-id="939b7-174">Once the user clicks `Send` the bot posts the message to the channel.</span></span>
 
-### <a name="respond-to-initial-submit-action"></a><span data-ttu-id="ef863-175">Responder à ação de envio inicial</span><span class="sxs-lookup"><span data-stu-id="ef863-175">Respond to initial submit action</span></span>
+### <a name="respond-to-initial-submit-action"></a><span data-ttu-id="939b7-175">Responder à ação de envio inicial</span><span class="sxs-lookup"><span data-stu-id="939b7-175">Respond to initial submit action</span></span>
 
-<span data-ttu-id="ef863-176">Para habilitar esse fluxo, seu módulo de tarefa deve responder à `composeExtension/submitAction` mensagem inicial com uma visualização do cartão que o bot enviará ao canal.</span><span class="sxs-lookup"><span data-stu-id="ef863-176">To enable this flow your task module should respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot will send to the channel.</span></span> <span data-ttu-id="ef863-177">Isso dá ao usuário a oportunidade de verificar o cartão antes de enviá-lo e também tentará instalar o bot na conversa se ele ainda não estiver instalado.</span><span class="sxs-lookup"><span data-stu-id="ef863-177">This gives the user the opportunity to verify the card before sending, and also will attempt to install your bot in the conversation if it is not already installed.</span></span>
+<span data-ttu-id="939b7-176">Para habilitar esse fluxo, seu módulo de tarefa deve responder à `composeExtension/submitAction` mensagem inicial com uma visualização do cartão que o bot enviará ao canal.</span><span class="sxs-lookup"><span data-stu-id="939b7-176">To enable this flow your task module should respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot will send to the channel.</span></span> <span data-ttu-id="939b7-177">Isso dá ao usuário a oportunidade de verificar o cartão antes de enviá-lo e também tentará instalar o bot na conversa se ele ainda não estiver instalado.</span><span class="sxs-lookup"><span data-stu-id="939b7-177">This gives the user the opportunity to verify the card before sending, and also will attempt to install your bot in the conversation if it is not already installed.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ef863-178">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ef863-178">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="939b7-178">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-178">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="ef863-179">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ef863-179">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="939b7-179">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="939b7-179">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -295,10 +295,10 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ef863-180">JSON</span><span class="sxs-lookup"><span data-stu-id="ef863-180">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="939b7-180">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-180">JSON</span></span>](#tab/json)
 
 >[!Note]
-><span data-ttu-id="ef863-181">O `activityPreview` deve conter uma `message` atividade com exatamente 1 anexo de cartão adaptável.</span><span class="sxs-lookup"><span data-stu-id="ef863-181">The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.</span></span> <span data-ttu-id="ef863-182">O `<< Card Payload >>` valor é um espaço reservado para o cartão que você deseja enviar.</span><span class="sxs-lookup"><span data-stu-id="ef863-182">The `<< Card Payload >>` value is a placeholder for the card you wish to send.</span></span>
+><span data-ttu-id="939b7-181">O `activityPreview` deve conter uma `message` atividade com exatamente 1 anexo de cartão adaptável.</span><span class="sxs-lookup"><span data-stu-id="939b7-181">The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.</span></span> <span data-ttu-id="939b7-182">O `<< Card Payload >>` valor é um espaço reservado para o cartão que você deseja enviar.</span><span class="sxs-lookup"><span data-stu-id="939b7-182">The `<< Card Payload >>` value is a placeholder for the card you wish to send.</span></span>
 
 ```json
 {
@@ -319,11 +319,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="the-botmessagepreview-send-and-edit-events"></a><span data-ttu-id="ef863-183">Eventos de envio e edição do botMessagePreview</span><span class="sxs-lookup"><span data-stu-id="ef863-183">The botMessagePreview send and edit events</span></span>
+### <a name="the-botmessagepreview-send-and-edit-events"></a><span data-ttu-id="939b7-183">Eventos de envio e edição do botMessagePreview</span><span class="sxs-lookup"><span data-stu-id="939b7-183">The botMessagePreview send and edit events</span></span>
 
-<span data-ttu-id="ef863-184">Sua extensão de mensagem agora precisará responder a duas novas variedades da `composeExtension/submitAction` invocação, onde `value.botMessagePreviewAction = "send"` e `value.botMessagePreviewAction = "edit"` .</span><span class="sxs-lookup"><span data-stu-id="ef863-184">Your message extension will now need to respond to two new varieties of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.</span></span>
+<span data-ttu-id="939b7-184">Sua extensão de mensagem agora precisará responder a duas novas variedades da `composeExtension/submitAction` invocação, onde `value.botMessagePreviewAction = "send"` e `value.botMessagePreviewAction = "edit"` .</span><span class="sxs-lookup"><span data-stu-id="939b7-184">Your message extension will now need to respond to two new varieties of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ef863-185">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ef863-185">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="939b7-185">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-185">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="ef863-186">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ef863-186">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="939b7-186">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="939b7-186">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -357,7 +357,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ef863-187">JSON</span><span class="sxs-lookup"><span data-stu-id="ef863-187">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="939b7-187">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-187">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -390,17 +390,17 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="respond-to-botmessagepreview-edit"></a><span data-ttu-id="ef863-188">Responder à edição do botMessagePreview</span><span class="sxs-lookup"><span data-stu-id="ef863-188">Respond to botMessagePreview edit</span></span>
+### <a name="respond-to-botmessagepreview-edit"></a><span data-ttu-id="939b7-188">Responder à edição do botMessagePreview</span><span class="sxs-lookup"><span data-stu-id="939b7-188">Respond to botMessagePreview edit</span></span>
 
-<span data-ttu-id="ef863-189">Se o usuário decidir editar o cartão antes de enviá-lo clicando no botão **Editar** , você receberá uma `composeExtension/submitAction` chamada `value.botMessagePreviewAction = edit` .</span><span class="sxs-lookup"><span data-stu-id="ef863-189">If the user decides to edit the card before sending by clicking the **Edit** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`.</span></span> <span data-ttu-id="ef863-190">Normalmente, você deve responder retornando o módulo de tarefa enviado em resposta à `composeExtension/fetchTask` chamada inicial que iniciou a interação.</span><span class="sxs-lookup"><span data-stu-id="ef863-190">You should typically respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction.</span></span> <span data-ttu-id="ef863-191">Isso permite que o usuário inicie o processo, inserindo novamente as informações originais.</span><span class="sxs-lookup"><span data-stu-id="ef863-191">This allows the user to start the process over by re-entering the original information.</span></span> <span data-ttu-id="ef863-192">Você também deve considerar o uso das informações que agora estão disponíveis para preencher previamente o módulo de tarefa, para que o usuário não tenha preenchido todas as informações do zero.</span><span class="sxs-lookup"><span data-stu-id="ef863-192">You should also consider using the information you now have available to pre-populate the task module so the user doesn't have fill out all of the information from scratch.</span></span>
+<span data-ttu-id="939b7-189">Se o usuário decidir editar o cartão antes de enviá-lo clicando no botão **Editar** , você receberá uma `composeExtension/submitAction` chamada `value.botMessagePreviewAction = edit` .</span><span class="sxs-lookup"><span data-stu-id="939b7-189">If the user decides to edit the card before sending by clicking the **Edit** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`.</span></span> <span data-ttu-id="939b7-190">Normalmente, você deve responder retornando o módulo de tarefa enviado em resposta à `composeExtension/fetchTask` chamada inicial que iniciou a interação.</span><span class="sxs-lookup"><span data-stu-id="939b7-190">You should typically respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction.</span></span> <span data-ttu-id="939b7-191">Isso permite que o usuário inicie o processo, inserindo novamente as informações originais.</span><span class="sxs-lookup"><span data-stu-id="939b7-191">This allows the user to start the process over by re-entering the original information.</span></span> <span data-ttu-id="939b7-192">Você também deve considerar o uso das informações que agora estão disponíveis para preencher previamente o módulo de tarefa, para que o usuário não tenha preenchido todas as informações do zero.</span><span class="sxs-lookup"><span data-stu-id="939b7-192">You should also consider using the information you now have available to pre-populate the task module so the user doesn't have fill out all of the information from scratch.</span></span>
 
-<span data-ttu-id="ef863-193">Confira [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span><span class="sxs-lookup"><span data-stu-id="ef863-193">See [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span></span>
+<span data-ttu-id="939b7-193">Confira [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span><span class="sxs-lookup"><span data-stu-id="939b7-193">See [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).</span></span>
 
-### <a name="respond-to-botmessagepreview-send"></a><span data-ttu-id="ef863-194">Responder a botMessagePreview enviar</span><span class="sxs-lookup"><span data-stu-id="ef863-194">Respond to botMessagePreview send</span></span>
+### <a name="respond-to-botmessagepreview-send"></a><span data-ttu-id="939b7-194">Responder a botMessagePreview enviar</span><span class="sxs-lookup"><span data-stu-id="939b7-194">Respond to botMessagePreview send</span></span>
 
-<span data-ttu-id="ef863-195">Quando o usuário clicar no botão **Enviar** , você receberá uma `composeExtension/submitAction` chamada com `value.botMessagePreviewAction = send` .</span><span class="sxs-lookup"><span data-stu-id="ef863-195">Once the user clicks the **Send** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`.</span></span> <span data-ttu-id="ef863-196">Seu serviço Web precisará criar e enviar uma mensagem proativa com o cartão adaptável à conversa e também responder à invocação.</span><span class="sxs-lookup"><span data-stu-id="ef863-196">Your web service will need to create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.</span></span>
+<span data-ttu-id="939b7-195">Quando o usuário clicar no botão **Enviar** , você receberá uma `composeExtension/submitAction` chamada com `value.botMessagePreviewAction = send` .</span><span class="sxs-lookup"><span data-stu-id="939b7-195">Once the user clicks the **Send** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`.</span></span> <span data-ttu-id="939b7-196">Seu serviço Web precisará criar e enviar uma mensagem proativa com o cartão adaptável à conversa e também responder à invocação.</span><span class="sxs-lookup"><span data-stu-id="939b7-196">Your web service will need to create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ef863-197">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ef863-197">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="939b7-197">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-197">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -441,7 +441,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="ef863-198">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ef863-198">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="939b7-198">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="939b7-198">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -451,7 +451,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
       const attachmentContent = activityPreview.attachments[0].content;
       const userText = attachmentContent.body[1].text;
       const choiceSet = attachmentContent.body[3];
-      
+
       const submitData = {
         MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
         Option1: choiceSet.choices[0].title,
@@ -459,7 +459,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         Option3: choiceSet.choices[2].title,
         Question: userText
       };
-    
+
       const adaptiveCard = CardFactory.adaptiveCard({
         actions: [
           { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
@@ -488,15 +488,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
           ]
       }};
-    
+
       await context.sendActivity(responseActivity);
     }
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ef863-199">JSON</span><span class="sxs-lookup"><span data-stu-id="ef863-199">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="939b7-199">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-199">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="ef863-200">Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à seguinte.</span><span class="sxs-lookup"><span data-stu-id="ef863-200">You will receive a new `composeExtension/submitAction` message similar to the one below.</span></span>
+<span data-ttu-id="939b7-200">Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à seguinte.</span><span class="sxs-lookup"><span data-stu-id="939b7-200">You will receive a new `composeExtension/submitAction` message similar to the one below.</span></span>
 
 ```json
 {
@@ -529,10 +529,65 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="next-steps"></a><span data-ttu-id="ef863-201">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="ef863-201">Next Steps</span></span>
+### <a name="user-attribution-for-bots-messages"></a><span data-ttu-id="939b7-201">Atribuição de usuário para mensagens de bots</span><span class="sxs-lookup"><span data-stu-id="939b7-201">User attribution for bots messages</span></span> 
 
-<span data-ttu-id="ef863-202">Adicionar um comando de pesquisa</span><span class="sxs-lookup"><span data-stu-id="ef863-202">Add a search command</span></span>
+<span data-ttu-id="939b7-202">Em cenários em que um bot envia mensagens em nome de um usuário, a atribuição da mensagem a esse usuário pode ajudar no contrato e apresentar um fluxo de interação mais natural.</span><span class="sxs-lookup"><span data-stu-id="939b7-202">In scenarios where a bot sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow.</span></span> <span data-ttu-id="939b7-203">Este recurso permite que você envie mensagens em nome do usuário que está iniciando a mensagem.</span><span class="sxs-lookup"><span data-stu-id="939b7-203">This feature allows you to send messages on behalf of the user who is initiating the message.</span></span>
 
-* [<span data-ttu-id="ef863-203">Definir comandos de pesquisa</span><span class="sxs-lookup"><span data-stu-id="ef863-203">Define search commands</span></span>](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+<span data-ttu-id="939b7-204">Na imagem abaixo, à esquerda está uma mensagem de cartão enviada por um bot *sem* a atribuição de usuário e à direita é um cartão enviado por um bot *com* atribuição de usuário.</span><span class="sxs-lookup"><span data-stu-id="939b7-204">In the image below, on the left is a card message sent by a bot *without* user attribution and on the right is a card sent by a bot *with* user attribution.</span></span>
+
+![Captura de tela](../../../assets/images/messaging-extension/user-attribution-bots.png)
+
+<span data-ttu-id="939b7-206">Para usar a atribuição de usuário no Teams, você precisa adicionar a `OnBehalfOf` entidade menção à `ChannelData` sua `Activity` carga que é enviada ao Teams.</span><span class="sxs-lookup"><span data-stu-id="939b7-206">To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.</span></span>
+
+# <a name="cnet"></a>[<span data-ttu-id="939b7-207">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="939b7-207">C#/.NET</span></span>](#tab/dotnet-1)
+
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# <a name="json"></a>[<span data-ttu-id="939b7-208">JSON</span><span class="sxs-lookup"><span data-stu-id="939b7-208">JSON</span></span>](#tab/json-1)
+
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+
+* * *
+
+<span data-ttu-id="939b7-209">Veja a seguir uma descrição das entidades na `OnBehalfOf` matriz:</span><span class="sxs-lookup"><span data-stu-id="939b7-209">Below is a description of the entities in the `OnBehalfOf` of Array:</span></span>
+
+#### <a name="details-of--onbehalfof-entity-schema"></a><span data-ttu-id="939b7-210">Detalhes do `OnBehalfOf` esquema de entidade</span><span class="sxs-lookup"><span data-stu-id="939b7-210">Details of  `OnBehalfOf` entity schema</span></span>
+
+|<span data-ttu-id="939b7-211">Campo</span><span class="sxs-lookup"><span data-stu-id="939b7-211">Field</span></span>|<span data-ttu-id="939b7-212">Tipo</span><span class="sxs-lookup"><span data-stu-id="939b7-212">Type</span></span>|<span data-ttu-id="939b7-213">Descrição</span><span class="sxs-lookup"><span data-stu-id="939b7-213">Description</span></span>|
+|:---|:---|:---|
+|`itemId`|<span data-ttu-id="939b7-214">Número inteiro</span><span class="sxs-lookup"><span data-stu-id="939b7-214">Integer</span></span>|<span data-ttu-id="939b7-215">Deve ser 0</span><span class="sxs-lookup"><span data-stu-id="939b7-215">Should be 0</span></span>|
+|`mentionType`|<span data-ttu-id="939b7-216">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="939b7-216">String</span></span>|<span data-ttu-id="939b7-217">Deve ser "Person"</span><span class="sxs-lookup"><span data-stu-id="939b7-217">Should be "person"</span></span>|
+|`mri`|<span data-ttu-id="939b7-218">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="939b7-218">String</span></span>|<span data-ttu-id="939b7-219">Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem foi enviada.</span><span class="sxs-lookup"><span data-stu-id="939b7-219">Message resource identifier (MRI) of the person on whose behalf the message is sent.</span></span> <span data-ttu-id="939b7-220">O nome do remetente da mensagem apareceria como " \<user\> via \<bot name\> ".</span><span class="sxs-lookup"><span data-stu-id="939b7-220">Message sender name would appear as "\<user\> via \<bot name\>".</span></span>|
+|`displayName`|<span data-ttu-id="939b7-221">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="939b7-221">String</span></span>|<span data-ttu-id="939b7-222">Nome da pessoa.</span><span class="sxs-lookup"><span data-stu-id="939b7-222">Name of the person.</span></span> <span data-ttu-id="939b7-223">Usado como fallback em caso de resolução de nome não está disponível.</span><span class="sxs-lookup"><span data-stu-id="939b7-223">Used as fallback in case name resolution is unavailable.</span></span>|
+  
+## <a name="next-steps"></a><span data-ttu-id="939b7-224">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="939b7-224">Next Steps</span></span>
+
+<span data-ttu-id="939b7-225">Adicionar um comando de pesquisa</span><span class="sxs-lookup"><span data-stu-id="939b7-225">Add a search command</span></span>
+
+* [<span data-ttu-id="939b7-226">Definir comandos de pesquisa</span><span class="sxs-lookup"><span data-stu-id="939b7-226">Define search commands</span></span>](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
