@@ -3,12 +3,12 @@ title: Conectores de Office 365
 description: Descreve como começar a usar os conectores do Office 365 no Microsoft Teams
 keywords: conector do o365 no teams
 ms.date: 04/19/2019
-ms.openlocfilehash: 9c18a4c0dfda449c1507b26e78889cfab56ffd5f
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: 9c89463830d46512e622dcf4c256a867d419de83
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590848"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137651"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Criando conectores do Office 365 para o Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "44590848"
 
 Você pode distribuir seu conector registrado como parte do seu pacote de aplicativos do Microsoft Teams. Seja como uma solução autônoma ou um dos vários [recursos](~/concepts/extensibility-points.md) que sua experiência habilita no Teams, você pode [empacotar](~/concepts/build-and-test/apps-package.md) e [publicar](~/concepts/deploy-and-publish/apps-publish.md) seu conector como parte do seu envio do AppSource ou pode fornecer os usuários diretamente para upload no Microsoft Teams.
 
-Para distribuir seu conector, você precisa se registrar usando o [painel do desenvolvedor conectores](https://outlook.office.com/connectors/home/login/#/publish). Por padrão, quando um conector é registrado, supõe-se que seu conector funcionará em todos os produtos do Office 365 que dão suporte a eles, incluindo o Outlook e o Microsoft Teams. Se esse _não_ for o caso e você precisar criar um conector que funciona apenas no Microsoft Teams, fale conosco diretamente no [suporte de envios do teams Store](mailto:TeamsSubSupport@microsoft.com).
+Para distribuir seu conector, você precisa se registrar usando o [painel do desenvolvedor conectores](https://outlook.office.com/connectors/home/login/#/publish). Por padrão, quando um conector é registrado, supõe-se que seu conector funcionará em todos os produtos do Office 365 que dão suporte a eles, incluindo o Outlook e o Microsoft Teams. Se esse _não_ for o caso e você precisar criar um conector que funciona apenas no Microsoft Teams, fale conosco diretamente nos [envios de aplicativos do Microsoft Teams](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
 > Após escolher **salvar** no painel do desenvolvedor conectores, seu conector é registrado. Se você deseja publicar seu conector no AppSource, siga as instruções em [publicar seu aplicativo do Microsoft Teams para o AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não deseja publicar seu aplicativo no AppSource e, em vez disso, apenas distribuí-lo diretamente para sua organização, você pode fazer isso [publicando em sua organização](#publish-connectors-for-your-organization). Se você só quiser publicar na sua organização, nenhuma ação adicional será necessária no painel do conector.

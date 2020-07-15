@@ -4,12 +4,12 @@ author: clearab
 description: Descreve como responder à ação enviar do módulo de tarefa a partir de um comando de ação de extensão de mensagens
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103009"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137658"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefa
 
@@ -531,7 +531,7 @@ Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à 
 
 ### <a name="user-attribution-for-bots-messages"></a>Atribuição de usuário para mensagens de bots 
 
-Em cenários em que um bot envia mensagens em nome de um usuário, a atribuição da mensagem a esse usuário pode ajudar no contrato e apresentar um fluxo de interação mais natural. Este recurso permite que você envie mensagens em nome do usuário que está iniciando a mensagem.
+Em cenários em que um bot envia mensagens em nome de um usuário, a atribuição da mensagem a esse usuário pode ajudar no contrato e apresentar um fluxo de interação mais natural. Este recurso permite que você atributo uma mensagem do bot para um usuário em cujo nome foi enviado.
 
 Na imagem abaixo, à esquerda está uma mensagem de cartão enviada por um bot *sem* a atribuição de usuário e à direita é um cartão enviado por um bot *com* atribuição de usuário.
 

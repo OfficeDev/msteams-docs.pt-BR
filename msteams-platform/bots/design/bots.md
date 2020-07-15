@@ -2,12 +2,12 @@
 title: Diretrizes de design para bots
 description: Descreve as diretrizes para a criação de bots
 keywords: Diretrizes de design de equipes referência de bots
-ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453886"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137672"
 ---
 # <a name="start-talking-with-bots"></a>Começar a falar com bots
 
@@ -33,7 +33,7 @@ Os gráficos são uma boa maneira de informar uma história, mas nem todas as co
 
 ### <a name="onboarding-users"></a>Usuários de integração
 
-É fundamental que os bots se apresentem e transmitam o que eles podem fazer aos usuários. Esse *valor o Exchange* ajuda os usuários a entender o que fazer com o bot, onde as limitações podem estar, e o mais importante, ajuda os usuários a tolerar a interação com uma máquina que não será tão intuitiva como uma pessoa real. Além disso, ele concede permissão aos dados do usuário no Exchange para o valor real que o serviço fornece.
+É fundamental que os bots se apresentem e transmitam o que eles podem fazer para os usuários. Esse *valor o Exchange* ajuda os usuários a entender o que fazer com o bot, onde as limitações podem estar, e o mais importante, ajuda os usuários a tolerar a interação com uma máquina que não será tão intuitiva como uma pessoa real. Além disso, ele concede permissão aos dados do usuário no Exchange para o valor real que o serviço fornece.
 
 #### <a name="welcome-messages"></a>Mensagens de boas-vindas
 

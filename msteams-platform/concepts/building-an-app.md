@@ -4,14 +4,17 @@ author: clearab
 description: Compreenda o processo típico para a criação de um aplicativo para o Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 748b5cf6c6bc1bf51c1f647348012057627d2679
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120252"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137644"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>Criar um aplicativo para o Microsoft Teams
+
+> [!NOTE] 
+> Tentando começar rapidamente? Você pode criar aplicativos do teams com o [Microsoft Teams Toolkit e o Visual Studio Code](../toolkit/visual-studio-code-overview.md).
 
 Criar e distribuir um aplicativo criado na plataforma do Microsoft Teams envolve decidir o que compilar, criar seus serviços Web, criar um pacote de aplicativos e distribuir esse pacote aos seus usuários finais de destino. Ele será um administrador de uma organização que decidirá quem pode acessar e instalar seu aplicativo, e será até que seus usuários instalem seu aplicativo em qualquer contexto específico.
 
@@ -48,7 +51,7 @@ Depois de decidir como os usuários vão interagir com seu aplicativo, seu tempo
 
 * SDK da estrutura de bot para [extensões de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) e [bots de conversa](~/bots/what-are-bots.md)
 * SDK do cliente JavaScript do teams para [guias](~/tabs/what-are-tabs.md) e outras páginas de conteúdo
-* Um [gerador Yeoman](~/tutorials/get-started-yeoman.md) para criar aplicativos no node. js
+* Um [gerador Yeoman](~/tutorials/get-started-yeoman.md) para criar aplicativos no Node.js
 * **Visualização** Um conjunto de controles de código aberto para suas páginas de conteúdo da Web- [IU fluente](https://microsoft.github.io/fluent-ui-react/)
 * [Modelos de aplicativos](~/samples/app-templates.md) prontos para produção
 * Várias [amostras](~/samples/code-samples.md) para ajudá-lo a começar
@@ -79,12 +82,8 @@ Seu aplicativo pode aproveitar os vários pontos de extensibilidade no cliente d
 
 Por exemplo, imagine que seu aplicativo contém um bot de conversa que funciona em conversas pessoais e de equipe, bem como como uma guia pessoal e uma guia canal. Quando seu aplicativo é instalado, ele será instalado em um contexto específico-se um usuário instalar o aplicativo em uma equipe, ele não terá necessariamente instalado a parte pessoal do seu aplicativo. Isso pode ser um pouco confuso em primeiro lugar, apenas lembre-se de nunca esperar que todas as partes do aplicativo sejam instaladas e configuradas em qualquer contexto específico.
 
-## <a name="get-started-quickly"></a>Introdução rápida
-
-Quer começar rapidamente? Confira um dos tutoriais de introdução ou um QuickStart para um recurso de plataforma específica (que pode ser encontrado em cada recurso da documentação).
-
-TUTORIAIS introdutórios:
+## <a name="getting-started-tutorials"></a>Tutoriais de introdução
 
 * [Criar um bot e um aplicativo de guia no C #](~/tutorials/get-started-dotnet-app-studio.md)
-* [Criar um bot e um aplicativo de guia em JavaScript/node. js](~/tutorials/get-started-nodejs-app-studio.md)
-* [Criar um aplicativo com o gerador Yeoman](~/tutorials/get-started-yeoman.md)
+* [Criar um bot e um aplicativo de guia em JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)
+* [Criar um aplicativo com o gerador do Yeoman](~/tutorials/get-started-yeoman.md)

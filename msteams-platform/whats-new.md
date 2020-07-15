@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453851"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137633"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -17,6 +17,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |Introdução à criação de aplicativos do teams com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | Permissões de consentimento específicas do recurso usando as APIs do Microsoft Graph estão no Developer Preview. |[Consentimento específico de recurso (RSC) — visualização do desenvolvedor](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar Membros paginados. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | O `replyToId` parâmetro em cargas enviadas a um bot não é mais criptografado, permitindo que você use esse valor para construir o deeplinks a essas mensagens. As cargas de mensagens incluem os valores criptografados no parâmetro. `legacy.replyToId`.  |
