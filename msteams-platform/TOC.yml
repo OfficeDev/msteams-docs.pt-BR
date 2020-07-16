@@ -13,7 +13,7 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Criar um aplicativo com o gerador do Yeoman
       href: tutorials/get-started-yeoman.md
-    - name: Estenda o cliente do Teams com aplicativos personalizados
+    - name: Saiba mais sobre aplicativos personalizados para o Teams
       href: tutorials/code-samples.md
 - name: Modelos e integrações
   items:
