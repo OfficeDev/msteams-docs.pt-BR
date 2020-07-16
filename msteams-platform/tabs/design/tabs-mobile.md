@@ -2,14 +2,17 @@
 title: Guias em dispositivos móveis
 description: Descreve as diretrizes para a criação de guias que funcionam em dispositivos móveis.
 keywords: Diretrizes de design de equipes guias de referência de aplicativos pessoais
-ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455517"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145919"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
+
+> [!NOTE]
+> Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` Propriedade (veja abaixo). As guias pessoais estão atualmente disponíveis no [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). O suporte completo para guias em clientes móveis será lançado em breve. Para se preparar para a atualização, você deve seguir o apresentado aqui ao criar suas guias.
 
 As guias personalizadas podem fazer parte de um canal, de um chat de grupo ou de um aplicativo pessoal (aplicativos que contêm guias estáticas e/ou um bot de um para um).
 
@@ -53,7 +56,7 @@ Esta é uma grande área onde o trabalho é concluído. O aplicativo wiki segue 
 
 ![layout de tela única](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>List
+#### <a name="list"></a>Lista
 
 As listas são ótimas para classificar e filtrar grandes quantidades de dados e são excelentes para manter as coisas mais importantes na parte superior. É útil usar colunas classificável. As ações podem ser adicionadas a cada item de lista no menu de reticências.
 

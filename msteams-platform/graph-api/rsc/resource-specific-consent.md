@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico de autorização do AAD SSO do Microsoft Teams
-ms.openlocfilehash: 7d0927fc360d8c005326cdff6453796fb45bf113
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867136"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145911"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>Consentimento específico de recurso (RSC) — visualização do desenvolvedor
 
 >[!NOTE]
->As permissões de consentimento específicas do recurso só estão disponíveis em clientes de área de trabalho e Android após a visualização do desenvolvedor ter sido habilitada. Veja [como habilitar a visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) para obter mais informações.
+>As permissões de consentimento específicas do recurso estão disponíveis nos clientes da área de trabalho e da Web após a visualização do desenvolvedor ter sido habilitada. Veja [como habilitar a visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) para obter mais informações.
 
 O consentimento específico de recurso (RSC) é uma integração da API do Microsoft Teams e do Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar equipes específicas dentro de uma organização. O modelo de permissões de consentimento específico de recurso (RSC) permite que os *proprietários de equipe* concedam a permissão para um aplicativo acessar e/ou modificar os dados de uma equipe. As permissões do tipo granular, específicas de equipes, de RSC definem o que um aplicativo pode fazer dentro de uma equipe específica:
 
