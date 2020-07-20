@@ -5,7 +5,7 @@ keywords: Kit de ferramentas do Visual Studio Teams
 ms.date: 06/30/2020
 ms.openlocfilehash: e5715cf23cfd221b65afe0e6258ce06ff98770aa
 ms.sourcegitcommit: 694babb79d379360a20cf928a9d2b88dd6d3bdd0
-ms.translationtype: MT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "45051704"
