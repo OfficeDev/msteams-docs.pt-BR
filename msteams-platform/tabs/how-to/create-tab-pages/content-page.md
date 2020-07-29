@@ -5,12 +5,12 @@ description: ''
 keywords: guias do teams com o canal de grupo configurado como estático
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137630"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434486"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -66,7 +66,7 @@ Um módulo de tarefa é uma experiência de pop-up modal que você pode disparar
 
 Certifique-se de que todos os domínios de URL usados nas suas guias estão incluídos na `validDomains` matriz em seu [manifesto](~/concepts/build-and-test/apps-package.md). Para obter mais informações, consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) na referência de esquema de manifesto. No entanto, lembre-se de que a funcionalidade principal da sua guia existe no Microsoft Teams e não fora do teams.
 
-## <a name="showing-a-native-loading-indicator"></a>Mostrando um indicador de carregamento nativo
+## <a name="show-a-native-loading-indicator"></a>Mostrar um indicador de carregamento nativo
 
 A partir [do esquema de manifesto v 1.7](../../../resources/schema/manifest-schema.md), você pode fornecer um [indicador de carregamento nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) sempre que o conteúdo da Web é carregado no Teams, por exemplo, [página de conteúdo da guia](#integrate-your-code-with-teams), página de [configuração](configuration-page.md), [página de remoção](removal-page.md) e [módulos de tarefa em guias](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 

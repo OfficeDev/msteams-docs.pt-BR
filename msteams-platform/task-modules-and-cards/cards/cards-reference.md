@@ -2,12 +2,12 @@
 title: Referência de cartões
 description: Descreve todas as ações de cartões e cartões disponíveis para bots no Microsoft Teams
 keywords: referência de cartões de bots
-ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44800980"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434542"
 ---
 # <a name="cards-reference"></a>Referência de cartões
 
@@ -52,7 +52,7 @@ As imagens devem ter no máximo 1024 × 1024 e 1 MB no formato PNG, JPEG ou GIF;
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem |
-| alt | String | Descrição acessível da imagem |
+| alt | Cadeia de caracteres | Descrição acessível da imagem |
 
 ### <a name="buttons"></a>Botões
 
@@ -74,6 +74,9 @@ Um cartão personalizável que pode conter qualquer combinação de texto, fala,
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> Os elementos de mídia atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
 
 ### <a name="example-adaptive-card"></a>Cartão adaptável de exemplo
 
@@ -580,7 +583,7 @@ Um cartão que normalmente contém uma única imagem em miniatura, um ou mais bo
 }
 ```
 
-### <a name="for-more-information"></a>Para saber mais
+### <a name="for-more-information"></a>Para obter mais informações
 
 Referência da estrutura do bot:
 

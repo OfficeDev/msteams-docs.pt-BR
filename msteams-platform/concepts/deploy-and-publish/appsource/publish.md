@@ -2,12 +2,12 @@
 title: Diretrizes de processo de aprovação do Microsoft Teams app
 description: Descreve o processo de aprovação para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Teams Publish Store Office Publishing Publish AppSource Partner Center
-ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434472"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -40,7 +40,7 @@ Há duas maneiras de criar uma conta de centro de parceiros:
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>E se eu não conseguir encontrar minha conta da Office Store no Partner Center?
 
-Abra um [tíquete de suporte do centro de parceria](https://partner.microsoft.com/en-US/support/v2/?stage=1) e selecione o seguinte nos menus suspensos:
+Abra um [tíquete de suporte do centro de parceria](https://partner.microsoft.com/support/v2/?stage=1) e selecione o seguinte nos menus suspensos:
 
 | Menu | Opção |
 | -------   | -------  |

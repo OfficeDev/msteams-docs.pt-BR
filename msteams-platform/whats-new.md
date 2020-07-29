@@ -2,14 +2,17 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137633"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434528"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
+
+>[!TIP]
+> Confira nossos modelos prontos para produção no [**Catálogo de modelos de aplicativos do teams**](samples/app-templates.md). O catálogo está em ordem alfabética e as novas adições são marcadas com uma estrela **&#9734;**.
 
 ## <a name="change-log"></a>Log de Alterações
 
@@ -17,8 +20,15 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|
+|07/14/2020|Revelar uma documentação de indicador de carregamento nativo|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |Introdução à criação de aplicativos do teams com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Logon único para guias GA para clientes da Web e de desktop do Microsoft Teams|[Logon único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| Esquema de manifesto atualizado para a versão 1,7| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Permissões de consentimento específicas do recurso usando as APIs do Microsoft Graph estão no Developer Preview. |[Consentimento específico de recurso (RSC) — visualização do desenvolvedor](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|Integrar agentes virtuais de energia com o Teams|[Integrar um chatbot de agentes virtuais de energia ao Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|Integrar sistemas WFM com o conector de turnos para o Microsoft Teams|[O Microsoft Teams desloca os conectores do WFM](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar Membros paginados. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | O `replyToId` parâmetro em cargas enviadas a um bot não é mais criptografado, permitindo que você use esse valor para construir o deeplinks a essas mensagens. As cargas de mensagens incluem os valores criptografados no parâmetro. `legacy.replyToId`.  |
 | 11/5/2019 | O logon único usando o SDK do teams JavaScript em uma página de conteúdo da Web está no Developer Preview. | [Logon único](tabs/how-to/authentication/auth-aad-sso.md) |

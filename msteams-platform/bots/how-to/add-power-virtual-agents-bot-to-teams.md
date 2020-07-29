@@ -4,14 +4,14 @@ author: laujan
 description: integração de um chatbot de agentes virtuais de alimentação na plataforma do Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 4f32a3c13d9288c3e733e92369645bcf9e32d586
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: 57b06fd0d3e1fae0cbfb927335fb1b5941396bb0
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44800994"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434509"
 ---
-# <a name="integrate-your-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integre seus agentes virtuais de chatbot com o Microsoft Teams
+# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integrar um chatbot de agentes virtuais de energia ao Microsoft Teams
 
 [Os agentes virtuais de alimentação](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) são uma solução de interface gráfica orientada e sem código que capacita todos os membros da sua equipe a criarem chatbotss avançados e de conversa que se integram facilmente à plataforma do Microsoft Teams. Todo o conteúdo criado nos agentes de energia virtual é renderizado naturalmente no Teams e nos agentes virtuais de energia os bots participam dos usuários na tela de bate-papo nativo do teams. Seus administradores de ti, analistas de negócios, especialistas de domínio e desenvolvedores de aplicativos qualificados podem projetar, desenvolver e publicar agentes virtuais inteligentes para o Microsoft Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou registrar-se diretamente na estrutura do bot.  *Consulte* [Create a chatbot for Teams with Microsoft Power virtual Agents](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents).
 
