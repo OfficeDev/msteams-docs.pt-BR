@@ -3,12 +3,12 @@ title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434535"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531272"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -110,6 +110,23 @@ Este aplicativo também permite o compartilhamento fácil de imagens/GIFs/adesiv
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![Aplicativo adesivo](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>&#9734; e-prescrições 
+
+E-prescrições é um aplicativo baseado em [aplicativos de energia](/powerapps/maker/canvas-apps/embed-teams-app)que aprimora a telemedicina e o tratamento virtual ao automatizar o processo de emissão e-prescrições para pacientes. Profissionais médicos podem revisar rapidamente compromissos, gerar e-prescrições e enviar emails com anexos da e-médica para pacientes diretamente dentro da plataforma do teams.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![Captura de tela do aplicativo E-prescrições. Mostra como um provedor de assistência médica pode selecionar um botão gerar para solicitar uma receita médica para um paciente.](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Captura de tela do aplicativo E-prescrições. Mostra como os administradores podem gerenciar os provedores de assistência médica que usam o aplicativo.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>Localizador especialista
 
