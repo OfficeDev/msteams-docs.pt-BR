@@ -3,12 +3,12 @@ title: Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
 description: Introdução ao desenvolvimento de aplicativos personalizados de grande parte diretamente no Visual Studio Code com o Microsoft Teams Toolkit
 keywords: Kit de ferramentas de código do Visual Studio
 ms.date: 06/30/2020
-ms.openlocfilehash: 17f21d1656b32074318030b9df9e643200f58f80
-ms.sourcegitcommit: ecf7ca8e77e77fe3f4cad1b13e3d31a825155555
-ms.translationtype: Auto
+ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45054249"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531256"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
 
@@ -87,7 +87,7 @@ Se você quiser depurar seu aplicativo baseado em guia no localhost usando HTTPS
 
 * Criar e executar o aplicativo
   * Siga o instuctions na seção **criar e executar** do Leiame do projeto para que ele seja atendido https://localhost:3000/tab . Geralmente, isso envolverá a `npm install` execução`npm start`
-  * Navegar para https://localhost:3000/tab do Google Chrome
+  * Navegue até https://localhost:3000/tab no Google Chrome ou borda Chromium.
 
 * Adquirir o certificado SSL:
   * Abra a janela do Chrome Developer Tools ( `ctrl + shift + i`  /  `cmd + option + i` ).
