@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434528"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587724"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -18,12 +18,13 @@ ms.locfileid: "45434528"
 
 O log de alterações lista as alterações na plataforma do Microsoft Teams e no conjunto de documentos. Às vezes, as entradas podem ser usadas para chamar a atenção para um novo recurso que é simplesmente de interesse para desenvolvedores do teams.
 
-| **Date** | **Anotações** | **Tópicos alterados** |
+| **Date** | **Observações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
 | 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
+|07/20/2020|Ferramenta de validação de aplicativos do teams para envios do AppSource.|[Ferramenta de validação de aplicativos do teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Revelar uma documentação de indicador de carregamento nativo|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-| 07/01/2020 |Introdução à criação de aplicativos do teams com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Introdução à criação de aplicativos do teams com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Logon único para guias GA para clientes da Web e de desktop do Microsoft Teams|[Logon único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema de manifesto atualizado para a versão 1,7| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Permissões de consentimento específicas do recurso usando as APIs do Microsoft Graph estão no Developer Preview. |[Consentimento específico de recurso (RSC) — visualização do desenvolvedor](graph-api/rsc/resource-specific-consent.md) |

@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210684"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587808"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -116,7 +116,8 @@ Mencionadas com base no cartão são compatíveis com clientes Web, desktop e di
 Os bots e as extensões de mensagens podem incluir menção dentro do conteúdo do cartão em elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
->Os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
+> * Os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
+> * Não há suporte para as mencionações de equipe & de canal em mensagens de bot.
 
 ### <a name="constructing-mentions"></a>Como criar menção
 
@@ -164,7 +165,7 @@ Os cartões de conector dão suporte à redução limitada e à formatação HTM
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| cabeçalho (níveis 1 &ndash; 3) | **Text** | `### Text`|
+| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `### Text`|
 | tachado | ~~text~~ | `~~text~~` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -253,7 +254,7 @@ Os cartões de conector dão suporte à redução limitada e à formatação HTM
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -341,7 +342,7 @@ Marcas HTML têm suporte para cartões simples como o herói e o cartão de mini
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

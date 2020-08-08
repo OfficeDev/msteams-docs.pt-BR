@@ -1,21 +1,24 @@
 ---
-title: Link Unfurling
+title: Desenrolamento de link
 author: clearab
 description: Como executar o link Unfurling com a extensão de mensagens em um aplicativo do Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279771"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587801"
 ---
-# <a name="link-unfurling"></a>Link Unfurling
+# <a name="link-unfurling"></a>Desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Com o link Unfurling seu aplicativo pode se registrar para `invoke` receber uma atividade quando as URLs com um domínio específico são coladas na área de mensagem de composição. O `invoke` conterá a URL completa que foi colada na área de mensagem de redação, e você pode responder com um cartão que o usuário pode *unfurl*, fornecendo informações ou ações adicionais. Isso funciona de forma semelhante a um [comando de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md), com a URL servindo como o termo de pesquisa.
+> [!NOTE]
+> No momento, o link Unfurling não é suportado em clientes móveis.
+
+Com o link Unfurling seu aplicativo pode se registrar para receber uma `invoke` atividade quando as URLs com um domínio específico são coladas na área de mensagem de composição. O `invoke` conterá a URL completa que foi colada na área de mensagem de redação, e você pode responder com um cartão que o usuário pode *unfurl*, fornecendo informações ou ações adicionais. Isso funciona de forma semelhante a um [comando de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md), com a URL servindo como o termo de pesquisa.
 
 A extensão de mensagens do DevOps do Azure usa o link Unfurling para procurar por URLs coladas na área de mensagem de redação que apontam para um item de trabalho. Na captura de tela abaixo, um usuário colou em uma URL para um item de trabalho no Azure DevOps que a extensão de mensagens foi resolvida em um cartão.
 
@@ -23,7 +26,7 @@ A extensão de mensagens do DevOps do Azure usa o link Unfurling para procurar p
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Adicionar link Unfurling ao manifesto do aplicativo
 
-Para fazer isso, você adicionará uma `messageHandlers` nova matriz à `composeExtensions` seção de seu aplicativo JSON de manifesto. Você pode fazer isso com a ajuda do App Studio ou manualmente. As listagens de domínio podem incluir curingas, `*.example.com`por exemplo. Isso corresponde exatamente a um segmento do domínio; Se você precisar coincidir `a.b.example.com` e usar `*.*.example.com`.
+Para fazer isso, você adicionará uma nova `messageHandlers` matriz à `composeExtensions` seção de seu aplicativo JSON de manifesto. Você pode fazer isso com a ajuda do App Studio ou manualmente. As listagens de domínio podem incluir curingas, por exemplo `*.example.com` . Isso corresponde exatamente a um segmento do domínio; Se você precisar coincidir `a.b.example.com` e usar `*.*.example.com` .
 
 ### <a name="using-app-studio"></a>Usando o aplicativo Studio
 
@@ -34,7 +37,7 @@ Para fazer isso, você adicionará uma `messageHandlers` nova matriz à `compose
 
 ### <a name="manually"></a>Manualmente
 
-Para habilitar sua extensão de mensagens para interagir com os links dessa forma, primeiro você precisará `messageHandlers` adicionar a matriz ao manifesto do aplicativo, como no exemplo abaixo. Este exemplo não é o manifesto completo, confira [referência de manifesto](~/resources/schema/manifest-schema.md) para um exemplo de manifesto completo.
+Para habilitar sua extensão de mensagens para interagir com os links dessa forma, primeiro você precisará adicionar a `messageHandlers` matriz ao manifesto do aplicativo, como no exemplo abaixo. Este exemplo não é o manifesto completo, confira [referência de manifesto](~/resources/schema/manifest-schema.md) para um exemplo de manifesto completo.
 
 ```json
 ...
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {

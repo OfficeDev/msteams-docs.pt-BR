@@ -2,12 +2,12 @@
 title: Preparar seu locatário do Office 365
 description: Como começar a usar o Microsoft Teams no Office 365
 keywords: Configurar o carregamento do Office 365 locatário Teams
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914564"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587766"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Preparar seu locatário do Office 365
 
@@ -16,7 +16,7 @@ Se você é assinante do Office 365, pode desenvolver aplicativos para o Microso
 * Business Essentials
 * Business Premium
 * Enterprise E1, E3 e e5
-* Desenvolvedor
+* Developer
 * Education, Education Plus e Education e5
 
 O Microsoft Teams também estará disponível para clientes que se inscreveram no E4 antes da sua [aposentadoria](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
@@ -31,13 +31,25 @@ Se o Microsoft Teams não tiver sido habilitado para sua organização, você pr
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Habilitar aplicativos personalizados do Teams e ativar o carregamento de aplicativos personalizados
 
+Ative o aplicativo de Sideload personalizado para o seu locatário do desenvolvedor da seguinte maneira:
+
+1. Faça logon no [centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com sua credencial de administrador. 
+
+2. Selecione **Mostrar todas as**  -->  **equipes**. 
+
+![imagem do menu de estouro de aplicativos](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. Navegar para políticas de instalação de **aplicativos do teams**  -->  **Setup Policies**  -->  **global (padrão para toda a organização)**  
+
+![imagem do menu de estouro de aplicativos](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. Alternar **carregar aplicativos personalizados** para a posição **ativado** .
+
+Isso é tudo. Agora, seu locatário de teste permitirá o Sideload de aplicativos personalizados.
+
 > [!Note] 
-> Se você estiver usando a plataforma de desenvolvedor do Office 365 para criar seu aplicativo, essas configurações já devem estar configuradas para permitir que você crie, carregue e teste seu aplicativo.
+> Pode levar até 24 horas antes de o Sideload ser habilitado. Durante o interim, você pode usar **upload \<your tenant> para** para testar seu aplicativo.
 
-Há três configurações relevantes para habilitar aplicativos personalizados e carregamento de aplicativos personalizados:
+![imagem do menu de estouro de aplicativos](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **Configuração** => de aplicativo personalizado para toda a organização**permita a interação com aplicativos** => personalizados **— essa** configuração habilita ou desabilita aplicativos personalizados para sua organização. Ele precisa estar ativado. 
-* **Configuração** =>  => **do** aplicativo personalizado de equipe**permitir que os membros carreguem aplicativos personalizados**— essa configuração se aplica a cada equipe individual no Microsoft Teams. Se você quiser instalar o aplicativo para uma equipe específica, será necessário que ele esteja ativado para essa equipe.
-* **Política** => de aplicativo personalizada => **de** usuário o**usuário pode carregar aplicativos personalizados**— essa configuração controla as permissões para um usuário individual. Você precisará habilitar isso para pessoas com permissão para carregar aplicativos personalizados.
-
-Para obter informações completas sobre como essas configurações interagem, *consulte* [gerenciar políticas e configurações de aplicativos personalizados no Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) e [gerenciar políticas de configuração de aplicativos no Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+Para obter informações completas sobre como essas configurações interagem, *consulte*, [gerenciar políticas e configurações personalizadas de aplicativos no Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) e [gerenciar políticas de instalação de aplicativos no Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

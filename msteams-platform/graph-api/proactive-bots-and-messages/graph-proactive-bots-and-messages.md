@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico de instalação do chat de mensagens pró-ativas do teams
-ms.openlocfilehash: 735dbfa39222f312b4f3714b5c009dfd1bf28b05
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434493"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587738"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Habilitar instalação de bot proativo e mensagens pró-ativas no Teams com o Microsoft Graph (visualização pública)
 
@@ -79,7 +79,7 @@ O `teamsAppId` pode ser recuperado do catálogo de aplicativos da sua organizaç
 Solicitação **http Get** :
 
 ```http
-GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 A solicitação retornará um `teamsApp` objeto. O objeto retornado `id` é a ID do aplicativo gerado pelo catálogo do aplicativo e é diferente do "ID:" que você forneceu no manifesto do aplicativo do Microsoft Teams:
@@ -156,7 +156,7 @@ O `chatId` também pode ser recuperado da seguinte maneira:
 
 **Referência do Microsoft Graph:** [obter chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** você precisará do seu aplicativo `{teamsAppInstallationId}` se não o tiver, use o seguinte:
+**1.** você precisará do seu aplicativo `{teamsAppInstallationId}` . Se você não o tiver, use o seguinte:
 
 Solicitação **http Get** :
 

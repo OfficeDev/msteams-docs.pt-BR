@@ -2,17 +2,14 @@
 title: Logon Único
 description: Descreve o logon único (SSO)
 keywords: API de logon único do AAD no SSO de autenticação de equipes
-ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021598"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587731"
 ---
 # <a name="single-sign-on-sso"></a>Logon único (SSO)
-
-> [!NOTE]
-> * A API de logon único (SSO) geralmente está disponível na Web e na área de trabalho. O Mobile estará disponível em breve. Enquanto isso, recomendamos fazer o fallback para nossa [API de autenticação clássica](auth-flow-tab.md) no celular.
 
 Os usuários entram no Microsoft Teams por meio de suas contas corporativas, de estudante ou da Microsoft (Office 365, Outlook, etc.). Você pode aproveitar isso permitindo que um único logon autorize sua guia do Microsoft Teams (ou módulo de tarefa) em clientes móveis ou de desktop. Portanto, se um usuário concorda em usar seu aplicativo, ele não precisará ser remetido em outro dispositivo, ele será conectado automaticamente. Além disso, prefetch seu token de acesso para melhorar o desempenho e os tempos de carga.
 
@@ -87,6 +84,21 @@ Registre seu aplicativo no[portal do Azure ad](https://azure.microsoft.com/featu
     * offline_access
     * OpenId
     * perfil
+
+13. Navegar para **autenticação**
+
+    Se um aplicativo não recebeu o consentimento do administrador de ti, os usuários precisarão fornecer consentimento na primeira vez em que usarem um aplicativo.
+
+    Definir um URI de redirecionamento:
+    * Selecione **Adicionar uma plataforma**.
+    * Selecione **Web**.
+    * Insira o **URI de redirecionamento** para seu aplicativo. Essa será a página em que um fluxo de concessão implícito bem-sucedido redirecionará o usuário.
+
+    Habilite a concessão implícita marcando as seguintes caixas:  
+    Token de ID de ✔  
+    Token de acesso ✔  
+    
+    
 
 > [!NOTE]
 >
