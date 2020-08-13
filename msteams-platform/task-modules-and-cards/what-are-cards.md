@@ -2,14 +2,14 @@
 title: Apresentando cartões
 description: Descreve os cartões e como eles são usados em bots, conectores e extensões de mensagens
 keywords: conectores de mensagens dos cartões de bots
-ms.openlocfilehash: a260313c6e9442ce7bd76524e41e6465617bafb5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6d850f83183f12fa0c228a7a89b23e58f523e15b
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672652"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651653"
 ---
-# <a name="cards"></a>Placa
+# <a name="cards"></a>Cartões
 
 Um *cartão* é um contêiner de interface do usuário (IU) para informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos. Os cartões podem incluir botões que podem acionar [ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -28,7 +28,16 @@ O Microsoft Teams usa cartões em três locais diferentes:
 
 * Conectores
 * Bots
-* Extensões de Mensagens
+* Extensões de mensagens
+
+## <a name="adaptive-cards-and-incoming-webhooks"></a>Cartões adaptáveis e WebHooks de entrada
+
+> [!NOTE]
+> Os cartões adaptáveis são suportados em WebHooks de entrada como parte do [programa Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). As visualizações públicas estão disponíveis para acesso antecipado e comentários. Embora o lançamento seja estável e tenha passou por testes extensivos, ele não se destina ao uso em produção.
+>
+> ✔ Dentro da visualização do desenvolvedor, todos os elementos nativos do esquema de cartão adaptável, exceto `Action.Submit` , são totalmente suportados.
+>
+> ✔ As ações com suporte são [**Action. OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action. iscard**](https://adaptivecards.io/explorer/Action.ShowCard.html)e [**Action. ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ## <a name="cards-in-connectors"></a>Cartões em conectores
 

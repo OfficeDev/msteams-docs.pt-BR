@@ -2,13 +2,12 @@
 title: Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
 description: Introdução ao desenvolvimento de aplicativos personalizados de grande parte diretamente no Visual Studio Code com o Microsoft Teams Toolkit
 keywords: Kit de ferramentas de código do Visual Studio
-ms.date: 06/30/2020
-ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531256"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651660"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
 
@@ -67,11 +66,11 @@ Quando um aplicativo é instalado, o cliente do teams analisa o arquivo de manif
 
 1. Para configurar seu aplicativo, navegue até a guia **Microsoft Teams Toolkit** no Visual Studio Code.
 1. Selecione **Editar pacote de aplicativos** para exibir a página de **detalhes do aplicativo** .
-1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. [Saiba mais](https://aka.ms/teams-toolkit-manifest)
+1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. [Saiba Mais](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Empacotar seu aplicativo
 
-Modificar você é a página de **detalhes do aplicativo** ou atualizar o **manifesto**, ou arquivos **. env** na pasta do seu aplicativo **. publish** irá gerar automaticamente seu arquivo de **Development.zip** . Você precisará incluir [dois ícones](../concepts/build-and-test/apps-package.md#icons) na mesma pasta.
+Modificar você é a página de **detalhes do aplicativo** ou atualizar o **manifesto**, ou arquivos **. env** na pasta do seu aplicativo  **. publish** irá gerar automaticamente seu arquivo de **Development.zip** . Você precisará incluir [dois ícones](../concepts/build-and-test/apps-package.md#icons) na mesma pasta.
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
 
@@ -86,21 +85,21 @@ Se você quiser depurar seu aplicativo baseado em guia no localhost usando HTTPS
   <summary>Expanda aqui</summary>
 
 * Criar e executar o aplicativo
-  * Siga o instuctions na seção **criar e executar** do Leiame do projeto para que ele seja atendido https://localhost:3000/tab . Geralmente, isso envolverá a `npm install` execução`npm start`
+  * Siga o instuctions na seção **criar e executar** do Leiame do projeto para que ele seja atendido https://localhost:3000/tab . Geralmente, isso envolverá a `npm install` execução `npm start`
   * Navegue até https://localhost:3000/tab no Google Chrome ou borda Chromium.
 
 * Adquirir o certificado SSL:
   * Abra a janela do Chrome Developer Tools ( `ctrl + shift + i`  /  `cmd + option + i` ).
   * Clique na `Security` guia
-  * Clique em `View certificate` e você terá a opção de baixar o certificado, arrastando-o para sua área de trabalho no os X, ou clicando na `Details` guia no Windows e clicando em`Copy to File…`
+  * Clique em `View certificate` e você terá a opção de baixar o certificado, arrastando-o para sua área de trabalho no os X, ou clicando na `Details` guia no Windows e clicando em `Copy to File…`
   * Nomeie o arquivo <*tudo*>. cer e salve-o em uma pasta que não exija consentimento do administrador para executar uma ação de gravação.
   
 * Instalar o certificado no **Windows**
   * Escolha a `DER encoded binary X.509 (.CER)` opção (a primeira) e salve-a.
   * Clique duas vezes no certificado e instale-o.
-  * Escolha`Local Machine`
-  * Seleção`Place all certificates in the following store`
-  * Escolha`Trusted Root Certification Authorities`
+  * Escolha `Local Machine`
+  * Seleção `Place all certificates in the following store`
+  * Escolha `Trusted Root Certification Authorities`
   * Confirmar sua instalação
   
 * Instalar o certificado **Mac os X**
