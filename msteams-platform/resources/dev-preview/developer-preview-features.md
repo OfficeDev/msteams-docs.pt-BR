@@ -2,12 +2,12 @@
 title: Recursos da visualização do desenvolvedor público
 description: Descreve os recursos da visualização pública de desenvolvedor do Microsoft Teams
 keywords: recursos do desenvolvedor de visualização do teams
-ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: e607a6c65253a5fd94f8a805f1264a567bb8fd24
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210698"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819172"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Recursos do Public Developer Preview for Microsoft Teams
 
@@ -22,12 +22,6 @@ O suporte para [cartões adaptáveis v 1.2](https://github.com/microsoft/Adaptiv
 Agora você pode usar o [logon único (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para fazer logon e autenticar um usuário na área de trabalho e móvel usando o SDK do teams JavaScript em uma página de conteúdo da Web. Um dos benefícios é que um usuário nunca precisa entrar; e depois de terem sido consentidas no aplicativo usando seu perfil: eles serão conectados automaticamente à sua guia (incluindo o móvel).
 
 Nossa visualização do desenvolvedor está disponível nas versões 1,5 e posteriores do manifesto. Nossa implementação atual só pode obter uma quantidade limitada de APIs de gráfico, mas fornecemos uma solução alternativa para obter APIs de gráfico adicionais usando nossa API de autenticação existente.
-
-## <a name="personal-apps-static-tabs-and-1-1-bots-enabled-on-mobile"></a>Aplicativos pessoais (guias estáticas e bots 1-1) habilitados no Mobile
-
-Os aplicativos pessoais instalados (guias estáticos e bots 1-1) já estão disponíveis na bandeja de aplicativos em dispositivos móveis. Consulte [diretrizes de design para dispositivos móveis](~/tabs/design/tabs-mobile.md) para obter diretrizes de design. Os aplicativos podem ser instalados apenas de um cliente da Web ou da área de trabalho e podem levar até 4 horas para que estejam disponíveis no celular após a instalação.
-
-Isso inclui a capacidade de um administrador do sistema de fixar um aplicativo por meio de [políticas de configuração de aplicativos](/microsoftteams/teams-app-setup-policies). Os aplicativos que foram afixados serão exibidos na gaveta de aplicativos.
 
 ## <a name="calls-and-online-meeting-bots"></a>Chamadas e bots de reunião online
 

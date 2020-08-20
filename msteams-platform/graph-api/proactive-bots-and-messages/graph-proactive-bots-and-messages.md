@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico de instalação do chat de mensagens pró-ativas do teams
-ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587738"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819158"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Habilitar instalação de bot proativo e mensagens pró-ativas no Teams com o Microsoft Graph (visualização pública)
 
 >[!IMPORTANT]
-> As visualizações públicas do Microsoft Graph estão disponíveis para acesso antecipado e comentários. Embora este lançamento tenha transcorrido testes extensivos, ele não se destina ao uso em produção.
+> As visualizações públicas do Microsoft Graph e do Microsoft Teams estão disponíveis para acesso antecipado e comentários. Embora este lançamento tenha transcorrido testes extensivos, ele não se destina ao uso em produção.
 
 ## <a name="proactive-messaging-in-teams"></a>Mensagens pró-ativas no Teams
 
@@ -46,7 +46,7 @@ Para usar essas permissões, você deve adicionar uma chave de [webApplicationIn
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
-> * **ID** — sua ID de aplicativo do Azure AD.
+> * **ID**  — sua ID de aplicativo do Azure AD.
 > * **recurso** — a URL do recurso para o aplicativo.
 >
 
@@ -63,14 +63,14 @@ Para usar essas permissões, você deve adicionar uma chave de [webApplicationIn
 
 ### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>✔ Criar e publicar seu bot de mensagens pró-ativas para o Microsoft Teams
 
-Para começar, você precisará de um [bot para o Microsoft Teams](../../bots/how-to/create-a-bot-for-teams.md) com recursos [proativos de mensagens](../../concepts/bots/bot-conversations/bots-conv-proactive.md) e [publicado](../../concepts/deploy-and-publish/overview.md) no [Catálogo de aplicativos](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) da sua organização ou no [AppSource](https://appsource.microsoft.com/).
+Para começar, você precisará de um [bot para o Microsoft Teams](../../bots/how-to/create-a-bot-for-teams.md) com recursos [proativos de mensagens](../../concepts/bots/bot-conversations/bots-conv-proactive.md) e  [publicado](../../concepts/deploy-and-publish/overview.md) no [Catálogo de aplicativos](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) da sua organização ou no [AppSource](https://appsource.microsoft.com/).
 
 >[!TIP]
 > O modelo de aplicativo do [**Communicator da empresa**](../..//samples/app-templates.md#company-communicator) pronto para produção permite transmissão de mensagens e é uma boa base para criar seu aplicativo de bot proativo.
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ Obter o `teamsAppId` para seu aplicativo
 
-**1.** você precisará das `teamsAppId` próximas etapas.
+**1.** você precisará das `teamsAppId`  próximas etapas.
 
 O `teamsAppId` pode ser recuperado do catálogo de aplicativos da sua organização:
 
@@ -82,7 +82,7 @@ Solicitação **http Get** :
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-A solicitação retornará um `teamsApp` objeto. O objeto retornado `id` é a ID do aplicativo gerado pelo catálogo do aplicativo e é diferente do "ID:" que você forneceu no manifesto do aplicativo do Microsoft Teams:
+A solicitação retornará um `teamsApp`  objeto. O objeto retornado `id`  é a ID do aplicativo gerado pelo catálogo do aplicativo e é diferente do "ID:" que você forneceu no manifesto do aplicativo do Microsoft Teams:
 
 ```json
 {
@@ -98,14 +98,14 @@ A solicitação retornará um `teamsApp` objeto. O objeto retornado `id` é a ID
 }
 ```
 
-**2.** se seu aplicativo já foi carregado/suplementos foi feito para um usuário no escopo pessoal, você pode recuperar o da `teamsAppId` seguinte maneira:
+**2.**  se seu aplicativo já foi carregado/suplementos foi feito para um usuário no escopo pessoal, você pode recuperar o da `teamsAppId` seguinte maneira:
 
 **Referência de página do Microsoft Graph:** [listar aplicativos instalados para o usuário](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
 Solicitação **http Get** :
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 **3.** se seu aplicativo já tiver sido carregado/suplementos foi feito para um canal no escopo da equipe, você poderá recuperar o da `teamsAppId` seguinte maneira:
@@ -115,7 +115,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 Solicitação **http Get** :
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
+GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
@@ -176,7 +176,7 @@ Solicitação **http Get** (permissão – `TeamsAppInstallation.ReadWriteSelfFo
 
 A propriedade **ID** da resposta é o `chatId` .
 
-Como alternativa, você pode recuperar o `chatId` com a solicitação abaixo, mas ele exigirá a permissão mais ampla `Chat.Read.All` :
+Como alternativa, você pode recuperar o `chatId`  com a solicitação abaixo, mas ele exigirá a permissão mais ampla `Chat.Read.All` :
 
 Solicitação **http Get** (permissão – `Chat.Read.All` ):
 

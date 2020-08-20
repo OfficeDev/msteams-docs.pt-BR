@@ -3,12 +3,12 @@ title: Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio
 description: Introdução ao desenvolvimento de aplicativos personalizados de grande parte diretamente no Visual Studio com o Microsoft Teams Toolkit
 keywords: Kit de ferramentas do Visual Studio Teams
 ms.topic: overview
-ms.openlocfilehash: 33005174dc1e12e6473522e7d7ee09920a989689
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651813"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819200"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio
 
@@ -22,7 +22,7 @@ O Microsoft Teams Toolkit permite que você crie aplicativos personalizados do t
 
 ![módulo asp.net do Visual Studio](../assets/images/visual-studio-web-dev-module.png)
 
-3. Se quiser testar seu aplicativo implantando-o a partir do Visual Studio, você precisará ter o IIS (serviços de informações da Internet) instalado em seu ambiente de desenvolvimento. O Visual Studio não inclui o IIS e ele não está incluído na configuração padrão do Windows 10, Windows 8 ou Windows 7; no entanto, você pode baixar a versão mais recente do [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=48264.)
+3. Se quiser testar seu aplicativo implantando-o a partir do Visual Studio, você precisará ter o IIS (serviços de informações da Internet) instalado em seu ambiente de desenvolvimento. O Visual Studio não inclui o IIS e ele não está incluído na configuração padrão do Windows 10, Windows 8 ou Windows 7; no entanto, você pode baixar a versão mais recente no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=48264).
 
 ![Exibição da página de download do IIS](../assets/images/iis.png)
 
@@ -81,7 +81,7 @@ Quando um aplicativo é instalado, o cliente do teams analisa o arquivo de manif
 
 ## <a name="package-your-app"></a>Empacotar seu aplicativo
 
-A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto**ou arquivos **. env** na pasta do seu aplicativo **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.js** e os [dois arquivos de ícone](../concepts/build-and-test/apps-package.md#icons).
+A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto**ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.js** e os [dois arquivos de ícone](../concepts/build-and-test/apps-package.md#icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
 
