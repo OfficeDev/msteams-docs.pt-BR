@@ -344,6 +344,10 @@
       items:
         - name: Habilitar a instalação de bot proativo e o sistema de mensagens proativas
           href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: Importar mensagens
+      items:
+        - name: Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Recursos
   items:
     - name: Bots - SDK v3
