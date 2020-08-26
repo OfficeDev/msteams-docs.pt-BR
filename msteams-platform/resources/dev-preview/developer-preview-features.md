@@ -1,21 +1,17 @@
 ---
 title: Recursos da visualização do desenvolvedor público
-description: Descreve os recursos da visualização pública de desenvolvedor do Microsoft Teams
+description: Detalhes dos recursos do Microsoft Teams Public Developer Preview
 keywords: recursos do desenvolvedor de visualização do teams
-ms.openlocfilehash: e607a6c65253a5fd94f8a805f1264a567bb8fd24
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 773e0334bddf45b7b86d31329b99607f3b70c534
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819172"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874839"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Recursos do Public Developer Preview for Microsoft Teams
 
 A visualização do desenvolvedor inclui os seguintes novos recursos:
-
-## <a name="adaptive-cards-v12-support"></a>Suporte para cartões adaptáveis v 1.2
-
-O suporte para [cartões adaptáveis v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) no Teams está agora disponível para o público em geral. No entanto, os [elementos de mídia](https://adaptivecards.io/explorer/Media.html) atualmente não têm suporte em cartões adaptáveis v 1.2 na plataforma do teams.
 
 ## <a name="tabs-single-sign-on-sso"></a>Logon único de guias (SSO)
 
@@ -28,3 +24,19 @@ Nossa visualização do desenvolvedor está disponível nas versões 1,5 e poste
 Com a adição das [APIs do Microsoft Graph para chamadas e reuniões online](/graph/api/resources/communications-api-overview?view=graph-rest-beta), os aplicativos do Microsoft Teams agora podem interagir com usuários de maneiras ricas usando voz e vídeo. Essas APIs permitem que você adicione novos recursos do aplicativo, como resposta de voz interativa (IVR), controle de chamadas e acesso a fluxos de áudio e/ou vídeo em tempo real para chamadas e reuniões, incluindo área de trabalho e compartilhamento de aplicativos.
 
 Adicionamos uma nova seção sobre como criar e desenvolver chamadas e bots de reuniões online, começando pela [visão geral](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
+## <a name="image-enlarge-support"></a>Suporte ampliação de imagem
+
+Agora, é possível que os bots indiquem quais imagens compartilhadas em cartões adaptáveis no Microsoft Teams podem ser ampliadas. Isso é útil para cenários como compartilhar guias visuais passo a passo detalhadas por meio de bots, que podem ser difíceis de ler para os usuários. Para tornar uma imagem expansível, basta sinalizá-la `allowExpand: true` conforme mostrado abaixo.
+
+```json
+    {
+      "type": "Image",
+      "url": "https://picsum.photos/200/200?image=110",
+      "msTeams": {
+        "allowExpand": true
+      }
+    }
+```
+Isso fará com que o cliente da Web do teams/desktop processe um elemento ao passar o mouse sobre a imagem para permitir que o usuário expanda a imagem.
+

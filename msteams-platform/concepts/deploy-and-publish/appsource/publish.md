@@ -1,13 +1,13 @@
 ---
-title: Diretrizes de processo de aprovação do Microsoft Teams app
-description: Descreve o processo de aprovação para obter seu aplicativo publicado no Microsoft Teams App Store
+title: Diretrizes de processo de envio de aprovação do aplicativo Microsoft Teams
+description: Descreve o processo de aprovação de envio para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Teams Publish Store Office Publishing Publish AppSource Partner Center
-ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434472"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874867"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -28,6 +28,7 @@ Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o dispon
 >
 >- Se seu aplicativo do Microsoft Teams contiver um bot, você deverá estar em conformidade com o [código de conduta do](https://aka.ms/bf-conduct)bot Developer Framework.
 >- Se seu aplicativo contiver um conector do Office 365, termos adicionais poderão ser aplicados. *Consulte* [Connectors Dashboard de desenvolvedor](https://aka.ms/connectorsdashboard) e [contrato de desenvolvedor de aplicativos](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Para disponibilizar seu aplicativo para usuários GCC e evitar listagens de aplicativos duplicados no repositório, o fluxo/processo de autenticação deve identificar e rotear o usuário para a URL de conteúdo especificado/esperado para usuários GCC.
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>Perguntas frequentes: aplicativos de equipe e contas de parceiros
 
@@ -54,7 +55,7 @@ Visite nossa [página de suporte de editores](https://aka.ms/marketplacepublishe
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>Como gerenciar minha conta da Office Store?
 
-Visite nossa [conta gerenciar a sua conta do Office Store no Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter orientação sobre como gerenciar sua conta da Office Store por meio do Partner Center.
+Visite nossa  [conta gerenciar a sua conta do Office Store no Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter orientação sobre como gerenciar sua conta da Office Store por meio do Partner Center.
 
 ## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Como adiciono meu número de telefone à seção de contato de perfil de parceiro?
 
@@ -93,7 +94,7 @@ Tente o seguinte:
 
 1. Verifique a pasta de lixo eletrônico/spam.
 1. Limpe o cache do navegador, vá para o painel de conta do centro de parceiros e selecione o link **reenviar email de verificação** para que o email de verificação seja enviado novamente ao seu endereço de email.
-1. Tente acessar o link de **email de verificação de reenvio** de outro navegador.
+1. Tente acessar o link de  **email de verificação de reenvio** de outro navegador.
 1. Trabalhe com seu departamento de ti para garantir que os emails de verificação não sejam bloqueados pelo servidor de email.
 1. Ajuste o filtro de spam do seu servidor para permitir/listar todos os emails de **maccount@microsoft. <span></span> com**.
 

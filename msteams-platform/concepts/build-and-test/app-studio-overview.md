@@ -3,12 +3,12 @@ title: Introdução ao app Studio para o Microsoft Teams
 description: Introdução à criação de aplicativos ótimos no Microsoft Teams usando o app Studio
 keywords: Introdução ao app Studio Teams
 ms.date: 03/20/2019
-ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: b8bae38ae2a3044d87389b4bd5ee3d5a7d1e029d
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874874"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolver aplicativos rapidamente com o app Studio para o Microsoft Teams
 
@@ -40,7 +40,7 @@ Quando estiver no app Studio, clique na guia *Editor de manifesto* , onde você 
 
 ### <a name="manifest-editor"></a>Editor de manifesto
 
-Como mencionado anteriormente, a parte mais significativa de um pacote de aplicativos do Microsoft Teams é seu arquivo manifest. JSON. Este arquivo, que deve estar em conformidade com o esquema de aplicativos do Microsoft [Teams](~/resources/schema/manifest-schema.md), contém metadados que permitem que o Microsoft Teams apresente corretamente o aplicativo aos usuários.
+Como mencionado anteriormente, a parte mais significativa de um pacote de aplicativos do Microsoft Teams é sua manifest.jsno arquivo. Este arquivo, que deve estar em conformidade com o esquema de aplicativos do Microsoft [Teams](~/resources/schema/manifest-schema.md), contém metadados que permitem que o Microsoft Teams apresente corretamente o aplicativo aos usuários.
 
 A guia Editor de manifesto no app Studio simplifica a criação do manifesto, permitindo que você descreva o aplicativo, carregue seus ícones, adicione recursos de aplicativo e produza um arquivo. zip que pode ser carregado facilmente no Teams para teste ou distribuído para outros usuários. Observe que o app Studio não produz código funcional para seu aplicativo ou hospeda seu aplicativo. Seu aplicativo já deve estar hospedado e em execução na URL listada no manifesto para o processo de carregamento do aplicativo resultar em um aplicativo em funcionamento.
 
@@ -48,7 +48,7 @@ A guia Editor de manifesto no app Studio simplifica a criação do manifesto, pe
 
 A seção detalhes do editor de manifesto define a descrição de alto nível do aplicativo que você está fazendo. Isso inclui itens como o nome do aplicativo, a descrição e a marca visual. Você pode gerar automaticamente um GUID para seu aplicativo e fornecer URLs para sua declaração de privacidade e termos de uso.
 
-#### <a name="capabilities"></a>Funcionalidades
+#### <a name="capabilities"></a>Recursos
 
 A seção Capabilities do editor de manifesto é onde os recursos do aplicativo são definidos e onde os detalhes de cada uma dessas funcionalidades são listados.
 
@@ -92,13 +92,16 @@ Cada comando requer um título e uma ID. Opcionalmente, o comando pode conter um
 
 #### <a name="test-and-distribute"></a>Testar e distribuir
 
-Depois de concluir a definição do aplicativo, a seção de teste e distribuição permite exportar a definição do aplicativo como um arquivo zip, que pode ser compartilhado e carregado no cliente do teams para teste. Clique em exportar para baixar o arquivo zip como *AppName. zip* no diretório de download padrão.
+Depois de concluir a definição do aplicativo, a seção de teste e distribuição permite exportar a definição do aplicativo como um arquivo zip, que pode ser compartilhado e carregado no cliente do teams para teste. Clique em exportar para baixar o arquivo zip como *appname.zip* no diretório de download padrão.
+
+##### <a name="publish-your-app-to-teams"></a>Publicar seu aplicativo no Teams
+Na home page do seu projeto, você pode carregar seu aplicativo para uma equipe, enviar seu aplicativo para o repositório de aplicativos personalizado da empresa para usuários em sua organização ou enviar seu aplicativo para a origem do aplicativo para todos os usuários do teams. Seu administrador de ti revisará esses envios. Você pode retornar à página *publicar* para verificar seu status de envio e saber se seu aplicativo foi aprovado ou rejeitado pelo seu administrador de ti. Este também é o local em que você vai enviar atualizações para seu aplicativo ou cancelar qualquer envio ativo no momento.
 
 ### <a name="card-editor"></a>Editor de cartão
 
 Um cartão é um contêiner para partes de informação curtas ou relacionadas. O Microsoft Teams suporta cartões, que podem ter várias propriedades e anexos. Os cartões são uma forma importante para que os bots e conectores transmitam informações acionáveis aos usuários. 
 
-Para tornar esse processo mais fácil e menos propenso a erros, a guia Editor de cartões permite criar cartões herói ou cartões de miniatura usando um formulário e verificar e testar o cartão resultante (exatamente como o usuário veria) por meio de um bot. Ele também fornece o código JSON, C# ou node. js correspondente para o cartão que você pode copiar/colar no código-fonte do seu aplicativo.
+Para tornar esse processo mais fácil e menos propenso a erros, a guia Editor de cartões permite criar cartões herói ou cartões de miniatura usando um formulário e verificar e testar o cartão resultante (exatamente como o usuário veria) por meio de um bot. Ele também fornece o código JSON, C# ou Node.js correspondente para o cartão que você pode copiar/colar no código-fonte do aplicativo.
 
 Se você já tem um cartão que gostaria de verificar dentro do Teams, você pode colar o JSON para aquele cartão na guia JSON em *adicionar informações sobre o cartão* e enviá-lo para si mesmo para ver a sua aparência em um chat.
 
