@@ -2,24 +2,25 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587724"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303714"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
 >[!TIP]
-> Confira nossos modelos prontos para produção no [**Catálogo de modelos de aplicativos do teams**](samples/app-templates.md). O catálogo está em ordem alfabética e as novas adições são marcadas com uma estrela **&#9734;**.
+> Confira nossos modelos prontos para produção no   [**Catálogo de modelos de aplicativos do teams**](samples/app-templates.md). O catálogo está em ordem alfabética e as novas adições são marcadas com uma estrela **&#9734;**.
 
 ## <a name="change-log"></a>Log de Alterações
 
 O log de alterações lista as alterações na plataforma do Microsoft Teams e no conjunto de documentos. Às vezes, as entradas podem ser usadas para chamar a atenção para um novo recurso que é simplesmente de interesse para desenvolvedores do teams.
 
-| **Date** | **Observações** | **Tópicos alterados** |
+| **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+| 08/12/2020 |Suporte a cartões adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 | 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Ferramenta de validação de aplicativos do teams para envios do AppSource.|[Ferramenta de validação de aplicativos do teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|
@@ -49,10 +50,10 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 | 02/18/2019 | A criação de links detalhados para o chat privado está fora da visualização do desenvolvedor e está disponível. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Revelar informações de SKU e de licenciamento no contexto da guia. | [Contexto da guia](~/concepts/tabs/tabs-context.md) |
 | 11/12/2018 | As guias no chat de grupo agora estão disponíveis na versão de lançamento do Teams e foram movidas para a visualização do desenvolvedor. Como parte desse trabalho, a seção Tabs foi reformulada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | A introdução ao node JS e ao .NET/C# foi atualizada para usar o app Studio no Teams e uma nova seção foi adicionada ao Hospedagem de aplicativos de equipes baseados em nós no Azure. | [Introdução à plataforma do Microsoft Teams com o C#/.net e o app Studio](~/get-started/get-started-dotnet-app-studio.md), [introdução à plataforma do Microsoft Teams com o nó js e o app Studio](~/get-started/get-started-nodejs-app-studio.md), [hospedam o seu aplicativo do nó Teams no Azure](~/get-started/get-started-nodejs-in-azure.md)|
+| 11/11/2018 | A introdução ao node JS e ao .NET/C# foi atualizada para usar o app Studio no Teams e uma nova seção foi adicionada ao Hospedagem de aplicativos de equipes baseados em nós no Azure. | [Introdução à plataforma do Microsoft Teams com o C#/.net e o app Studio](~/get-started/get-started-dotnet-app-studio.md),  [introdução à plataforma do Microsoft Teams com o nó js e o app Studio](~/get-started/get-started-nodejs-app-studio.md), [hospedam o seu aplicativo do nó Teams no Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Agora você pode criar links detalhados para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | A estrutura do SharePoint 1,7 foi fornecida e com uma nova funcionalidade para usar a guia Microsoft Teams como uma Web Part da estrutura do SharePoint. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | O recurso "módulo de tarefa" foi lançado. Um módulo de tarefa permite que você crie experiências pop-up restritas em seu aplicativo do Microsoft Teams, dos bots e das guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um `<iframe>` widget baseado em um YouTube ou Microsoft Stream Video, ou exibir um [cartão adaptável](https://docs.microsoft.com/adaptive-cards/). | [Visão geral do módulo de tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md), [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | O recurso "módulo de tarefa" foi lançado. Um módulo de tarefa permite que você crie experiências pop-up restritas em seu aplicativo do Microsoft Teams, dos bots e das guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um `<iframe>` widget baseado em um YouTube ou Microsoft Stream Video, ou exibir um [cartão adaptável](https://docs.microsoft.com/adaptive-cards/). | [Visão geral do módulo de tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | As informações de formatação de cartões foram atualizadas e testadas nos clientes de desktop, iOS e Android para o Microsoft Teams. | [Cartões](~/concepts/cards/cards.md), [formatação de cartão](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | As chamadas e as APIs de reuniões online para o Microsoft Graph foram lançadas para a versão beta, e os aplicativos do teams agora podem interagir com os usuários de formas sofisticadas usando voz e vídeo. | [Chamadas e bots de reuniões online](~/concepts/calls-and-meetings/registering-calling-bot.md), [conceitos de mídia em tempo real](~/concepts/calls-and-meetings/real-time-media-concepts.md), [registro de um bot de chamada](~/concepts/calls-and-meetings/registering-calling-bot.md), [depuração e teste local](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [mídia hospedada por aplicativos](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [tratamento de notificações de chamadas de entrada](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | As páginas de configuração da guia agora são significativamente mais altas. | [Design da guia](tabs/design/tabs.md) |

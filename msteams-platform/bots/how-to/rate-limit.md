@@ -2,12 +2,12 @@
 title: Limitação de taxa
 description: Limitação de taxa e práticas recomendadas no Microsoft Teams
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44800985"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303707"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Otimize seu bot: limitação de taxa e práticas recomendadas no Microsoft Teams
 
@@ -108,19 +108,19 @@ Esse limite controla o tráfego que um bot tem permissão para gerar em uma úni
 | **Cenário** | **Período de tempo (s)** | **Máximo de operações permitidas** |
 | --- | --- | --- |
 | Enviar para conversa | 1  | 7  |
-| Enviar para conversa | duas | 8  |
+| Enviar para conversa | 2  | 8  |
 | Enviar para conversa | até | 60 |
 | Enviar para conversa | 3600 | 1800 |
 | Criar conversa | 1  | 7  |
-| Criar conversa | duas | 8  |
+| Criar conversa | 2  | 8  |
 | Criar conversa | até | 60 |
 | Criar conversa | 3600 | 1800 |
 | Obter membros de conversa| 1  | 14  |
-| Obter membros de conversa| duas | 16  |
+| Obter membros de conversa| 2  | 16  |
 | Obter membros de conversa| até | 120 |
 | Obter membros de conversa| 3600 | 3600 |
 | Obter conversas | 1  | 14  |
-| Obter conversas | duas | 16  |
+| Obter conversas | 2  | 16  |
 | Obter conversas | até | 120 |
 | Obter conversas | 3600 | 3600 |
 
@@ -131,22 +131,12 @@ Esse limite controla o tráfego que todos os bots podem gerar através de uma ú
 | **Cenário** | **Período de tempo (s)** | **Máximo de operações permitidas** |
 | --- | --- | --- |
 | Enviar para conversa | 1  | 14  |
-| Enviar para conversa | duas | 16  |
+| Enviar para conversa | 2  | 16  |
 | Criar conversa | 1  | 14  |
-| Criar conversa | duas | 16  |
+| Criar conversa | 2  | 16  |
 | Createconversation| 1  | 14  |
-| Createconversation| duas | 16  |
+| Createconversation| 2  | 16  |
 | Obter membros de conversa| 1  | 28 |
-| Obter membros de conversa| duas | 32 |
+| Obter membros de conversa| 2  | 32 |
 | Obter conversas | 1  | 28 |
-| Obter conversas | duas | 32 |
-
-## <a name="bot-per-data-center-limit"></a>Bot por limite de data center
-
-Esse limite controla o tráfego que um bot tem permissão para gerar em todos os threads em um Data Center (entre vários locatários).
-
-|**Período de tempo (s)** | **Máximo de operações permitidas** |
-| --- | --- |
-| 1  | 508 |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| Obter conversas | 2  | 32 |
