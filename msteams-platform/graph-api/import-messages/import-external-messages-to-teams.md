@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: margens de atraso de equipes importar mensagens gráfico de API Microsoft migrar postagem migração
-ms.openlocfilehash: 8e8b21c9a38570d7ede745e27b9316b7aba29956
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
+ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46820362"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47340946"
 ---
-# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Microsoft Teams usando o Microsoft Graph
+# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
 >[!IMPORTANT]
 > As visualizações públicas do Microsoft Graph e do Microsoft Teams estão disponíveis para acesso antecipado e comentários. Embora este lançamento tenha transcorrido testes extensivos, ele não se destina ao uso em produção.
@@ -54,7 +54,7 @@ Como os dados existentes estão sendo migrados, a manutenção dos carimbos de d
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissões
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs abordadas|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.067Z"
 }
 ```
@@ -100,7 +100,7 @@ A criação de um canal para as mensagens importadas é semelhante ao cenário c
 
 1. Coloque o novo canal `migration mode` , um estado especial que rebarra os usuários da maioria das atividades de chat no canal até que o processo de migração seja concluído.  Inclua o `channelCreationMode` atributo de instância com o `migration` valor na solicitação post para identificar explicitamente a nova equipe como sendo criada para migração.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissões
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs abordadas|
 |-|-|-|-|-|-|
