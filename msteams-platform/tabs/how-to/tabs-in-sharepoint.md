@@ -4,13 +4,13 @@ author: laujan
 description: Como implantar sua guia do teams existente no SharePoint como uma Web Part da estrutura do SharePoint.
 keywords: guias do Microsoft Teams desenvolvimento do SharePoint Framework
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: b29cd29891779a69a0342f10d383792b3818590a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672687"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818938"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Adicionando uma guia do Microsoft Teams no SharePoint como uma Web Part SPFx
 
@@ -29,7 +29,7 @@ Com a edição de novembro do Teams e do SharePoint Framework v. 1,7, os desenvo
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -48,7 +48,7 @@ Com a edição de novembro do Teams e do SharePoint Framework v. 1,7, os desenvo
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -87,37 +87,37 @@ O aplicativo de exemplo que estamos usando é um aplicativo de gerenciamento de 
 
 Baixe o manifesto do aplicativo de exemplo [**aqui**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
-No Microsoft Teams, clique no ícone do repositório no canto inferior esquerdo e, em seguida, em "carregar um aplicativo personalizado" no canto inferior esquerdo. O arquivo a ser carregado estará localizado na pasta downloads; Ele é chamado de TalentMgmt-Azure. zip. Se tudo correr bem, você verá a tela de instalação/consentimento para o aplicativo de gerenciamento de talento. Escolha a equipe que você deseja instalar e clique no botão instalar. Agora você está livre para experimentar o aplicativo.
+No Microsoft Teams, clique no ícone do repositório no canto inferior esquerdo e, em seguida, em "carregar um aplicativo personalizado" no canto inferior esquerdo. O arquivo a ser carregado estará localizado na pasta downloads; Ele é chamado de TalentMgmt-Azure.zip. Se tudo correr bem, você verá a tela de instalação/consentimento para o aplicativo de gerenciamento de talento. Escolha a equipe que você deseja instalar e clique no botão instalar. Agora você está livre para experimentar o aplicativo.
 
 ## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>Etapa 2: usar a guia Teams no SharePoint
 
-Carregue e implante seu pacote de aplicativos do teams no seu catálogo de `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`aplicativos do SharePoint `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`, por exemplo,.
+Carregue e implante seu pacote de aplicativos do teams no seu catálogo de aplicativos do SharePoint `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` , por exemplo, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` .
 
 Quando solicitado, habilite "tornar esta solução disponível para todos os sites na organização":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+![Guias no modo de exibição do SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
 Em seu site, crie uma nova página clicando no botão de engrenagem no canto superior direito e, em seguida, "adicionar uma página":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+![Modo de exibição do SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
 Você verá a experiência de criação de páginas do SharePoint. Nomeie a página "guia minhas equipes".
 
 Abra a caixa de ferramentas da Web Part pressionando o botão + e selecione sua guia Teams (chamada "contoso HR"). As Web Parts são classificadas em ordem alfabética; Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso criará uma Web Part na tela de desenho que contém a guia de suas equipes:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+![Exibição de guia](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 Pressione o botão "publicar" ao concluir a edição.
 
 Talvez você queira clicar em "Adicionar página à navegação" para ter uma referência rápida à página na barra de navegação esquerda:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+![Guia na imagem do SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="step-3-explore-app-pages-in-sharepoint"></a>Etapa 3: explorar as páginas do aplicativo no SharePoint
 
 Depois que a página for publicada, você poderá explorar [a ativação do aplicativo do Microsoft Teams para uma experiência mais completa dentro do SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Isso converte a página atual em uma página de aplicativo, mostrando o layout de página normal do SharePoint com uma experiência de página inteira para a guia Teams:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+![Imagem de guias no SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="more-information"></a>Mais informações
 

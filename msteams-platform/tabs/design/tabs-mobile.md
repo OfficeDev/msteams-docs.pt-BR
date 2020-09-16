@@ -2,17 +2,17 @@
 title: Guias em dispositivos móveis
 description: Descreve as diretrizes para a criação de guias que funcionam em dispositivos móveis.
 keywords: Diretrizes de design de equipes guias de referência de aplicativos pessoais
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819043"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
 > [!NOTE]
-> Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` Propriedade (veja abaixo). As guias pessoais estão atualmente disponíveis no [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). O suporte completo para guias em clientes móveis será lançado em breve. Para se preparar para a atualização, você deve seguir o apresentado aqui ao criar suas guias.
+> Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` Propriedade (veja abaixo).
 
 As guias personalizadas podem fazer parte de um canal, de um chat de grupo ou de um aplicativo pessoal (aplicativos que contêm guias estáticas e/ou um bot de um para um).
 
@@ -56,7 +56,7 @@ Esta é uma grande área onde o trabalho é concluído. O aplicativo wiki segue 
 
 ![layout de tela única](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Lista
+#### <a name="list"></a>Listar
 
 As listas são ótimas para classificar e filtrar grandes quantidades de dados e são excelentes para manter as coisas mais importantes na parte superior. É útil usar colunas classificável. As ações podem ser adicionadas a cada item de lista no menu de reticências.
 
@@ -92,7 +92,7 @@ Usar nossa paleta neutra aprovada para planos de fundo, notificações, texto e 
 
 A maneira como os botões são estilizados ajuda a comunicar o tipo de ação que eles disparam. Mantemos uma ampla variedade de botões formatados para mostrar diferentes níveis de ênfase. Os botões podem ter texto, um ícone ou uma combinação de texto e um ícone. Para comunicar diferentes níveis em uma hierarquia, projetamos os botões principal e secundário dentro de cada categoria.
 
-![recolhe](~/assets/images/buttons.png)
+![imagem de botões](~/assets/images/buttons.png)
 
 ![controles de seleção](~/assets/images/selection-controls.png)
 

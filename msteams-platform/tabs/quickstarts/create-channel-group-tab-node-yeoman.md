@@ -1,17 +1,17 @@
 ---
-title: Criar uma guia de canal e grupo personalizado com o Node. js e o gerador Yeoman para o Microsoft Teams
+title: Criar uma guia de canal e grupo personalizado com Node.js e o gerador Yeoman para o Microsoft Teams
 author: laujan
 description: Um guia de início rápido para criar uma guia de canal e grupo com o gerador Yeoman para o Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: c5e028dcc117d729f2bf366923d03568b7f557a4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672661"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818931"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Criar uma guia de canal e grupo personalizado com o Node. js e o gerador Yeoman para o Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Criar uma guia de canal e grupo personalizado com Node.js e o gerador Yeoman para o Microsoft Teams
 
 >[!NOTE]
 >Este QuickStart segue as etapas descritas no [Build Your First Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) wiki encontrado no repositório do GitHub do Microsoft OfficeDev.
@@ -35,7 +35,7 @@ Selecione **n**.
 >[!IMPORTANT]
 >O componente de caminho **yourDefaultTabNameTab**, referenciado neste QuickStart, é o valor que você inseriu no gerador para o **nome de guia padrão** mais a **guia**Word.
 >
->Por exemplo: DefaultTabName: **MyTab** => **/MyTabTab/**
+>Por exemplo: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
 No diretório do projeto, navegue até o seguinte:
 
@@ -43,7 +43,7 @@ No diretório do projeto, navegue até o seguinte:
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-É aí que você encontrará sua lógica de tabulação. Localize o `render()` método e adicione a seguinte `<div>` marca e conteúdo à parte superior do código `<PanelBody>` do contêiner:
+É aí que você encontrará sua lógica de tabulação. Localize o `render()` método e adicione a seguinte `<div>` marca e conteúdo à parte superior do `<PanelBody>` código do contêiner:
 
 ```html
     <PanelBody>
@@ -61,7 +61,7 @@ Abra um prompt de comando no diretório do projeto para concluir as próximas ta
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Para exibir a página de configuração de guia `https://localhost:3007/<yourDefaultAppNameTab>/config.html`, vá para. Você verá o seguinte:
+Para exibir a página de configuração de guia, vá para `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Você verá o seguinte:
 
 ![captura de tela da página de configuração](~/assets/images/tab-images/configurationPage.png)
 

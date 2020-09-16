@@ -1,16 +1,16 @@
 ---
 title: Criar uma página de configuração
 author: laujan
-description: ''
+description: como criar uma página de configuração
 keywords: guias do teams com o canal de grupo configurável
 ms.topic: conceptualF
-ms.author: laujan
-ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434479"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819022"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -102,7 +102,7 @@ A [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.con
 
 1. Use o método [SDK do teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
 
-#### <a name="insert-placeholders-in-the-configurationurl"></a>Inserir espaços reservados no`configurationURL`
+#### <a name="insert-placeholders-in-the-configurationurl"></a>Inserir espaços reservados no `configurationURL`
 
 Os espaços reservados de interface de contexto podem ser adicionados à sua base `configurationUrl` . Por exemplo:
 
@@ -162,7 +162,7 @@ Certifique-se de que todos os domínios usados nas páginas da guia estão lista
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar ou remover uma guia
 
-As opções de remoção suportadas podem aprimorar ainda mais a experiência do usuário. Você pode permitir que os usuários modifiquem, reconfigurem ou renomeie uma guia de grupo/canal, definindo a propriedade do manifesto `canUpdateConfiguration` como `true` .  Além disso, você pode designar o que acontece com o conteúdo quando uma guia é removida, incluindo uma página de opções de remoção no seu aplicativo e definir um valor para a `removeUrl` Propriedade na `setSettings()` configuração (veja abaixo). As guias pessoais não podem ser modificadas, mas podem ser desinstaladas pelo usuário. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
+As opções de remoção suportadas podem aprimorar ainda mais a experiência do usuário. Você pode permitir que os usuários modifiquem, reconfigurem ou renomeie uma guia de grupo/canal, definindo a propriedade do manifesto `canUpdateConfiguration` como `true` .  Além disso, você pode designar o que acontece com o conteúdo quando uma guia é removida, incluindo uma página de opções de remoção no seu aplicativo e definir um valor para a `removeUrl` Propriedade na  `setSettings()` configuração (veja abaixo). As guias pessoais não podem ser modificadas, mas podem ser desinstaladas pelo usuário. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## <a name="mobile-clients"></a>Clientes móveis
 

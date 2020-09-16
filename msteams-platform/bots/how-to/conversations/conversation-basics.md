@@ -1,25 +1,25 @@
 ---
-title: Noções básicas da conversa
+title: Noções básicas sobre conversas
 author: clearab
 description: Como ter uma conversa com um bot do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2d241ad04509c596e97647138bab2a749fa0f74c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: bc016a8f0dcce474f80898dc93e309692ba20471
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672596"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819050"
 ---
-# <a name="conversation-basics"></a>Noções básicas da conversa
+# <a name="conversation-basics"></a>Noções básicas sobre conversas
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Uma conversa é uma série de mensagens enviadas entre o bot e um ou mais usuários. Há três tipos de conversas (também chamadas de escopos) no Teams:
 
-* `teams`Também chamado de conversações de canal, visíveis para todos os membros do canal.
-* `personal`Conversas entre bots e um único usuário.
-* `groupChat`Converse entre um bot e dois ou mais usuários. O também habilita o bot em conversas de reunião.
+* `teams` Também chamado de conversações de canal, visíveis para todos os membros do canal.
+* `personal` Conversas entre bots e um único usuário.
+* `groupChat` Converse entre um bot e dois ou mais usuários. O também habilita o bot em conversas de reunião.
 
 Um bot se comporta de forma ligeiramente diferente dependendo do tipo de conversa envolvido em:
 
@@ -30,17 +30,17 @@ Para habilitar o bot em um escopo específico, adicione esse escopo ao [manifest
 
 ## <a name="activities"></a>Atividades
 
-Cada mensagem é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, o Teams posta a mensagem no bot; especificamente, ele envia um objeto JSON para o ponto de extremidade de mensagem de seu bot. O bot examina a mensagem para determinar seu tipo e responde de acordo.
+Cada mensagem é um `Activity` objeto do tipo `messageType: message` . Quando um usuário envia uma mensagem, o Teams posta a mensagem no bot; especificamente, ele envia um objeto JSON para o ponto de extremidade de mensagem de seu bot. O bot examina a mensagem para determinar seu tipo e responde de acordo.
 
 A conversa básica é manipulada por meio do conector da estrutura de bot, uma única API REST para permitir que seu bot se comunique com o Teams e outros canais. O SDK do bot Builder fornece acesso fácil a essa API, funcionalidade adicional para gerenciar o fluxo e o estado da conversa e maneiras simples de incorporar serviços cognitivas, como o processamento de idioma natural (NLP).
 
 ## <a name="receive-a-message"></a>Receber uma mensagem
 
-Para receber uma mensagem de texto, use `Text` a propriedade do `Activity` objeto. No manipulador de atividade do bot, use o objeto de contexto Turn `Activity` para ler uma única solicitação de mensagem.
+Para receber uma mensagem de texto, use a `Text` Propriedade do `Activity` objeto. No manipulador de atividade do bot, use o objeto de contexto Turn `Activity` para ler uma única solicitação de mensagem.
 
 O código a seguir mostra um exemplo.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -50,7 +50,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -66,7 +66,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -76,7 +76,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -123,19 +123,19 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Enviar uma mensagem
 
-Para enviar uma mensagem de texto, especifique a cadeia de caracteres que você deseja enviar como atividade. Nos manipuladores de atividade do bot, use o `SendActivityAsync` método Turn Context Object para enviar uma resposta de mensagem única. Você também pode usar o método do `SendActivitiesAsync` objeto para enviar várias respostas ao mesmo tempo. O código a seguir mostra um exemplo de envio de uma mensagem quando alguém é adicionado a uma conversa  
+Para enviar uma mensagem de texto, especifique a cadeia de caracteres que você deseja enviar como atividade. Nos manipuladores de atividade do bot, use o método Turn Context Object `SendActivityAsync` para enviar uma resposta de mensagem única. Você também pode usar o método do objeto `SendActivitiesAsync` para enviar várias respostas ao mesmo tempo. O código a seguir mostra um exemplo de envio de uma mensagem quando alguém é adicionado a uma conversa  
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -150,7 +150,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 
@@ -165,7 +165,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -218,16 +218,16 @@ O `channelData` objeto não está incluído nas mensagens em conversas pessoais,
 
 Um objeto channelData típico em uma atividade enviada ao seu bot contém as seguintes informações:
 
-* `eventType`Tipo de evento Teams; aprovado apenas em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `tenant.id`ID de locatário do Azure Active Directory; aprovado em todos os contextos
-* `team`Aprovado apenas em contextos de canal, não no chat pessoal.
-  * `id`GUID do canal
-  * `name`Nome da equipe; passado apenas em casos de [eventos de renomeação de equipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `channel`É passado apenas em contextos de canal quando o bot é mencionado ou para eventos em canais no Teams onde o bot foi adicionado
-  * `id`GUID do canal
-  * `name`Nome do canal; passou apenas em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`Preterido. Essa propriedade é incluída apenas para compatibilidade com versões anteriores.
-* `channelData.teamsChannelId`Preterido. Essa propriedade é incluída apenas para compatibilidade com versões anteriores.
+* `eventType` Tipo de evento Teams; aprovado apenas em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* `tenant.id` ID de locatário do Azure Active Directory; aprovado em todos os contextos
+* `team` Aprovado apenas em contextos de canal, não no chat pessoal.
+  * `id` GUID do canal
+  * `name` Nome da equipe; passado apenas em casos de [eventos de renomeação de equipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* `channel` É passado apenas em contextos de canal quando o bot é mencionado ou para eventos em canais no Teams onde o bot foi adicionado
+  * `id` GUID do canal
+  * `name` Nome do canal; passou apenas em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channelData.teamsTeamId` Preterido. Essa propriedade é incluída apenas para compatibilidade com versões anteriores.
+* `channelData.teamsChannelId` Preterido. Essa propriedade é incluída apenas para compatibilidade com versões anteriores.
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>Exemplo do objeto channelData (evento channelCreated)
 
@@ -255,14 +255,14 @@ Seu bot pode enviar Rich Text, imagens e cartões. Os usuários podem enviar Ric
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔                | ✔                |                                                                                         |
 | Imagens  | ✔                | ✔                | Máximo de 1024 × 1024 e 1 MB no formato PNG, JPEG ou GIF; GIF animado não é suportado  |
-| Placa     | ✖                | ✔                | Consulte a [referência de cartões de equipe](~/task-modules-and-cards/cards/cards-reference.md) para cartões suportados |
+| Cartões     | ✖                | ✔                | Consulte a [referência de cartões de equipe](~/task-modules-and-cards/cards/cards-reference.md) para cartões suportados |
 | Emojis    | ✖                | ✔                | No momento, o Microsoft Teams oferece suporte a emojis via UTF-16 (como U + 1F600 para Grinning face)          |
 
 ## <a name="adding-notifications-to-your-message"></a>Adicionando notificações à sua mensagem
 
-As notificações alertam os usuários sobre novas tarefas, mencionadas e comentários relacionados ao que estão trabalhando ou precisam examinar inserindo um aviso no feed de atividades. Você pode definir notificações para que disparem da mensagem do bot `TeamsChannelData` , `Notification.Alert` definindo a propriedade Objects como true. Se uma notificação será disparada, em última análise dependerá das configurações de equipe do usuário individual e você não poderá ignorar essas configurações programaticamente. O tipo de notificação será um cabeçalho ou uma faixa e um email.
+As notificações alertam os usuários sobre novas tarefas, mencionadas e comentários relacionados ao que estão trabalhando ou precisam examinar inserindo um aviso no feed de atividades. Você pode definir notificações para que disparem da mensagem do bot, definindo a `TeamsChannelData` Propriedade Objects `Notification.Alert` como true. Se uma notificação será disparada, em última análise dependerá das configurações de equipe do usuário individual e você não poderá ignorar essas configurações programaticamente. O tipo de notificação será um cabeçalho ou uma faixa e um email.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -274,7 +274,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -288,7 +288,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 
@@ -300,7 +300,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -341,10 +341,10 @@ As imagens podem ser no máximo 1024 × 1024 e 1 MB no formato PNG, JPEG ou GIF;
 
 Recomendamos que você especifique a altura e a largura de cada imagem usando XML. Se você usar redução, o tamanho da imagem padrão será 256 × 256. Por exemplo:
 
-* Use`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Não use-`![Duck on a rock](http://aka.ms/Fo983c)`
+* Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Não use- `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="next-steps"></a>Próximas etapas
 
 * [Enviando mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
-* [Inscrever-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

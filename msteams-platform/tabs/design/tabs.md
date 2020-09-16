@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Diretrizes de design de equipes referência configuração de guias
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819036"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -16,14 +16,9 @@ ms.locfileid: "45021612"
 >
 > Siga as [orientações para guias em celular](./tabs-mobile.md) ao criar suas guias. Se sua guia usa autenticação, você deve atualizar o SDK do JavaScript do Microsoft Teams para a versão 1.4.1 ou posterior, ou a autenticação falhará.
 >
-> **Guias pessoais (estáticos) no celular:**
->
-> * As guias estáticas (aplicativo pessoal) estão disponíveis na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md).
-> * Ao criar suas guias estáticas, certifique-se de seguir as [orientações para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
->
 > **Guias de canal/grupo (configurável) em dispositivos móveis:**
 >
-> * Os clientes móveis só mostram guias com um valor para `websiteUrl` . Se quiser que a sua guia apareça nos clientes móveis do Microsoft Teams, você deve definir o valor de `websiteUrl` .
+> * Os clientes móveis só mostram guias configuráveis com um valor para `websiteUrl` . Se quiser que a sua guia apareça nos clientes móveis do Microsoft Teams, você deve definir o valor de `websiteUrl` .
 > * O comportamento de abertura padrão no Mobile é abrir fora do navegador usando o `websiteUrl` . Para aplicativos publicados na loja de aplicativos públicos, se você quiser que a guia de canal seja aberta no Teams por padrão, siga as [orientações para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)e entre em seu representante de suporte para solicitar a lista branca.
 
 Guias são Canvases que você pode usar para compartilhar conteúdo, reter conversas e hospedar serviços de terceiros, tudo em um fluxo de trabalho orgânica da equipe. Quando você cria uma guia no Microsoft Teams, ele coloca seu aplicativo Web front e Center onde ele é facilmente acessível contra conversas principais.
@@ -58,7 +53,7 @@ As equipes podem ser usadas em tamanhos de janela tão pequenos quanto 720px, en
 
 ### <a name="flat-navigation"></a>Navegação simples
 
-Pedimos aos desenvolvedores não adicionar o portal inteiro a uma guia. manter a navegação relativamente simples ajuda a manter um modelo de conversa mais simples. Em outras palavras, a conversa é sobre uma lista de coisas, como itens de trabalho triantigos, ou uma única coisa, como uma espec.
+Pedimos aos desenvolvedores não adicionar o portal inteiro a uma guia. Manter a navegação relativamente simples ajuda a manter um modelo de conversa mais simples. Em outras palavras, a conversa é sobre uma lista de coisas, como itens de trabalho triantigos, ou uma única coisa, como uma espec.
 
 Há desafios de navegação inerentes com uma hierarquia de navegação profunda em conversas encadeadas. Para a melhor experiência do usuário, a navegação de guia deve ser mantida no mínimo e ser projetada da seguinte maneira:
 
@@ -103,7 +98,9 @@ A incorporação de suas próprias cores e layouts twill também ajuda na comuni
 
 As dimensões da página de configuração de guia:
 
-<img width="450px" title="Tamanhos de guias de configuração" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="Tamanhos de guias de configuração" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Diretrizes para o formato de página de configuração de guia
 
@@ -117,7 +114,7 @@ As dimensões da página de configuração de guia:
 
 Quando dimensionado corretamente, sua página de configuração de guia deve ser semelhante a esta:
 
-<img width="450px" title="Nova guia de configuração" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="Nova guia de configuração" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
@@ -139,7 +136,7 @@ Há dois modos de notificação para alterações de conteúdo de guia:
 
 > [!div class="checklist"]
 >
-> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
 
-  Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention` especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.
+  Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention`  especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.

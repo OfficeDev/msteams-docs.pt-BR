@@ -3,13 +3,13 @@ title: Criar uma guia de canal e grupo com o ASP.NET Core MVC
 author: laujan
 description: Um guia de início rápido para criar uma guia de canal e grupo personalizado com o ASP.NET Core MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 57c22d10414eb8ec93249584219488397f0b6b33
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: cda91825ee37da94ee84747c5d2439c2940c728b
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672668"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818924"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Criar uma guia de canal e grupo personalizado com o ASP.NET Core MVC
 
@@ -37,7 +37,7 @@ Para compilar e executar o aplicativo, pressione **F5** ou escolha **Iniciar Dep
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este projeto foi criado a partir de um modelo vazio do aplicativo Web do ASP.NET Core 2,2 com a caixa de seleção *avançado-configurar para https* selecionada na instalação. Os serviços do MVC são registrados pelo método da `ConfigureServices()` estrutura de injeção de dependência. Além disso, o modelo vazio não habilita o fornecimento de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:
+Este projeto foi criado a partir de um modelo vazio do aplicativo Web do ASP.NET Core 2,2 com a caixa de seleção *avançado-configurar para https* selecionada na instalação. Os serviços do MVC são registrados pelo método da estrutura de injeção de dependência `ConfigureServices()` . Além disso, o modelo vazio não habilita o fornecimento de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 - Um **ícone de cor completa** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um arquivo **manifest. JSON** que especifica os atributos do seu aplicativo.
+- Um **manifest.jsno** arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser zipados em um pacote de aplicativos para uso no carregamento de sua guia para o Microsoft Teams.
 
@@ -93,7 +93,7 @@ Na janela do Visual Studio Solution Explorer, clique com o botão direito do mou
 
 ### <a name="views"></a>Modos de exibição
 
-#### <a name="home"></a>Página Inicial
+#### <a name="home"></a>Home
 
 ASP.NET Core trata os arquivos denominados *index* como o padrão/home page do site. Quando a URL do navegador apontar para a raiz do site, **index. cshtml** será exibido como a home page do seu aplicativo.
 
@@ -113,13 +113,13 @@ Os controladores usam a propriedade ViewBag para transferir valores dinamicament
 ngrok http https://localhost:443560 -host-header="localhost:44360"
 ```
 
-- O Ngrok ouvirá as solicitações da Internet e as roteará para seu aplicativo quando estiver em execução na porta 44355.  Deve ser parecido com `https://y8rCgT2b.ngrok.io/` o local em que o *y8rCgT2b* é substituído pela URL https do ngrok alfanumérico.
+- O Ngrok ouvirá as solicitações da Internet e as roteará para seu aplicativo quando estiver em execução na porta 44355.  Deve ser parecido `https://y8rCgT2b.ngrok.io/` com o local em que o *y8rCgT2b* é substituído pela URL https do ngrok alfanumérico.
 
 - Certifique-se de manter o prompt de comando com o ngrok em execução e tome nota da URL — você precisará dela mais tarde.
 
 ## <a name="update-your-application"></a>Atualizar seu aplicativo
 
-Na **guia. cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. A seleção do botão **selecionar cinza** ou **selecionar vermelho** `saveGray()` dispara `saveRed()`ou, respectivamente, `settings.setValidityState(true)`define e habilita o botão **salvar** na página de configuração. Esse código permite que as equipes saibam que você atende aos requisitos de configuração e a instalação pode continuar. Ao salvar, os parâmetros de `settings.setSettings` são definidos. Por fim `saveEvent.notifySuccess()` , é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+Na **guia. cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. A seleção do botão **selecionar cinza** ou **selecionar vermelho** dispara `saveGray()` ou `saveRed()` , respectivamente, define `settings.setValidityState(true)` e habilita o botão **salvar** na página de configuração. Esse código permite que as equipes saibam que você atende aos requisitos de configuração e a instalação pode continuar. Ao salvar, os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

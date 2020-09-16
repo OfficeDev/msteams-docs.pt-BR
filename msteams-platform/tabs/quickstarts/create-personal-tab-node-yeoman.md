@@ -1,17 +1,17 @@
 ---
-title: 'QuickStart: criar uma guia pessoal personalizada com node. js e o gerador Yeoman para o Microsoft Teams'
+title: 'Início rápido: criar uma guia pessoal personalizada com Node.js e o gerador Yeoman para o Microsoft Teams'
 author: laujan
 description: Um guia de início rápido para criar uma guia pessoal com o gerador Yeoman para o Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 2d1b17360b92a161179091c1f6ba06ffa194e958
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672446"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818882"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>QuickStart: criar uma guia pessoal personalizada com node. js e o gerador Yeoman para o Microsoft Teams
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Início rápido: criar uma guia pessoal personalizada com Node.js e o gerador Yeoman para o Microsoft Teams
 
 >[!NOTE]
 >Este QuickStart segue as etapas descritas no [Build Your First Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) wiki encontrado no repositório do GitHub do Microsoft OfficeDev.
@@ -27,13 +27,13 @@ Use as teclas de seta para selecionar a guia estático.
 >[!IMPORTANT]
 >O componente de caminho *yourDefaultTabNameTab*, referenciado neste QuickStart, é o valor que você inseriu no gerador para o *nome de guia padrão* mais a *guia*Word.
 >
->Por exemplo: DefaultTabName: *MyTab* => */MyTabTab/*
+>Por exemplo: DefaultTabName: *MyTab*  =>  */MyTabTab/*
 
 ## <a name="create-your-personal-tab"></a>Criar sua guia pessoal
 
 Para adicionar uma guia pessoal a este aplicativo, você criará uma página de conteúdo e atualizará os arquivos existentes:
 
-- No editor de códigos, crie um novo arquivo HTML, **Personal. html** e adicione a marcação a seguir:
+- No editor de códigos, crie um novo arquivo HTML, **personal.html** e adicione a marcação a seguir:
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +55,19 @@ Para adicionar uma guia pessoal a este aplicativo, você criará uma página de 
 </html>
 ```
 
-- Salve **Personal. html** na pasta **da Web** do seu aplicativo:
+- Salve **personal.html** na pasta **da Web** do seu aplicativo:
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Abra **manifest. JSON** em seu editor de código:
+- Abra o **manifest.jsno** editor de código:
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Adicione o seguinte à matriz vazia `staticTabs` (`staticTabs":[]`) e adicione o seguinte objeto JSON:
+Adicione o seguinte à matriz vazia `staticTabs` ( `staticTabs":[]` ) e adicione o seguinte objeto JSON:
 
 ```json
 {
@@ -82,7 +82,7 @@ Adicione o seguinte à matriz vazia `staticTabs` (`staticTabs":[]`) e adicione o
 
 Lembre-se de atualizar o componente de caminho **"contentURL"** **yourDefaultTabNameTab** com seu nome de guia real.
 
-- Salve o **manifesto. JSON**atualizado.
+- Salve o **manifest.jsatualizado em**.
 
 - A página de conteúdo deve ser fornecida em um IFrame. Abra **Tab. TS** no editor de código:
 
@@ -104,7 +104,7 @@ Abra um prompt de comando no diretório do projeto para concluir as próximas ta
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Para exibir sua guia pessoal, vá para`http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Para exibir sua guia pessoal, vá para `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![captura de tela pessoal](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 

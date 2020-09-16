@@ -1,16 +1,16 @@
 ---
-title: Criar uma página de remoção de guia
+title: Criar uma página de remoção de guias
 author: laujan
 description: Como criar uma página de remoção de guia
 keywords: guias do teams grupo de grupos configuráveis remover excluir
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: 576a3bc88d8776a193b48868d37df204c3112fd8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672456"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818896"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar ou remover uma guia de grupo de canais
 
@@ -18,11 +18,11 @@ Você pode estender e aprimorar a experiência do usuário oferecendo suporte à
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar sua guia para ser reconfigurada após a instalação
 
-O **manifest. JSON** define os recursos e recursos da guia. A Propriedade Tab `canUpdateConfiguration` Instance tem um valor Boolean que indica se um usuário pode modificar ou reconfigurar a guia após ela ser criada:
+O **manifest.js** define os recursos e recursos da guia. A Propriedade Tab Instance `canUpdateConfiguration` tem um valor Boolean que indica se um usuário pode modificar ou reconfigurar a guia após ela ser criada:
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será`true`|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será `true`|
 
 Quando sua guia for carregada para um chat de grupo ou canal, o Microsoft Teams adicionará um menu suspenso de clique com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração:
 
@@ -30,7 +30,7 @@ Quando sua guia for carregada para um chat de grupo ou canal, o Microsoft Teams 
 | ----------------------- | :----: | ----- | ----------- |
 |     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um iframe, permitindo que o usuário Reconfigure a guia.  |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme ele aparece na barra de guias.          |
-|     Remover              |   √    |   √   |  Se a `removeURL` Propriedade e o valor são incluídos na **página de configuração**, a **página de remoção** é carregada em um iframe e apresentada ao usuário. Se uma página de remoção não for incluída, a caixa de diálogo confirmar será exibida para o usuário.          |
+|     Remover              |   √    |   √   |  Se a  `removeURL` propriedade e o valor são incluídos na **página de configuração**, a **página de remoção** é carregada em um iframe e apresentada ao usuário. Se uma página de remoção não for incluída, a caixa de diálogo confirmar será exibida para o usuário.          |
 |||||
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Criar uma página de remoção de guia para seu aplicativo
@@ -39,7 +39,7 @@ A página de remoção opcional é uma página HTML que você hospeda e é exibi
 
 ### <a name="register-a-remove-handler"></a>Registrar um manipulador de remoção
 
-Opcionalmente, em sua lógica de página de remoção, você pode `registerOnRemoveHandler((RemoveEvent) => {}` invocar o manipulador de eventos quando o usuário remove uma configuração de guia existente. O método utiliza a [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface e executa o código no manipulador quando um usuário tenta remover conteúdo. Ele é usado para realizar operações de limpeza, como remover o recurso subjacente que força o conteúdo da guia. Somente um manipulador de remoção pode ser registrado por vez.
+Opcionalmente, em sua lógica de página de remoção, você pode invocar o `registerOnRemoveHandler((RemoveEvent) => {}` manipulador de eventos quando o usuário remove uma configuração de guia existente. O método utiliza a [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface e executa o código no manipulador quando um usuário tenta remover conteúdo. Ele é usado para realizar operações de limpeza, como remover o recurso subjacente que força o conteúdo da guia. Somente um manipulador de remoção pode ser registrado por vez.
 
 A `RemoveEvent` interface descreve um objeto com dois métodos:
 
@@ -49,7 +49,7 @@ A `RemoveEvent` interface descreve um objeto com dois métodos:
 
 #### <a name="use-the-getsettings-function"></a>Usar a `getSettings()` função
 
-Você pode usar `getSettings()`o para designar o conteúdo da guia a ser removido. A `getSettings((Settings) =>{})` função assume o [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) e fornece os valores de propriedade de configurações válidos que podem ser recuperados.
+Você pode usar `getSettings()` o para designar o conteúdo da guia a ser removido. A `getSettings((Settings) =>{})` função assume o [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) e fornece os valores de propriedade de configurações válidos que podem ser recuperados.
 
 #### <a name="use-the-getcontext-function"></a>Usar a `getContext()` função
 
@@ -57,7 +57,7 @@ Você pode usar `getContext()` o para recuperar o contexto atual no qual o quadr
 
 #### <a name="include-authentication"></a>Incluir autenticação
 
-Você pode exigir autenticação antes de permitir que um usuário exclua o conteúdo da guia. As informações de contexto podem ser usadas para ajudar a construir solicitações de autenticação e URLs de página de autorização. Confira [o fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md). Certifique-se de que todos os domínios usados nas páginas da guia estão `manifest.json` `validDomains` listados na matriz.
+Você pode exigir autenticação antes de permitir que um usuário exclua o conteúdo da guia. As informações de contexto podem ser usadas para ajudar a construir solicitações de autenticação e URLs de página de autorização. Confira [o fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md). Certifique-se de que todos os domínios usados nas páginas da guia estão listados na `manifest.json` `validDomains` matriz.
 
 Veja a seguir um exemplo de bloco de código de remoção de guia:
 
@@ -88,5 +88,5 @@ Após a execução do manipulador remove, `removeEvent.notifySuccess()` ou `remo
 
 >[!NOTE]
 >Para garantir que o controle de um usuário autorizado sobre uma guia não seja inibido, o Microsoft Teams removerá a guia nos casos de êxito e de falha. \
->O Microsoft Teams habilita o botão **remover** após 5 segundos, mesmo se sua `setValidityState()`guia não tiver chamado. \
+>O Microsoft Teams habilita o botão **remover** após 5 segundos, mesmo se sua guia não tiver chamado `setValidityState()` . \
 >Quando o usuário seleciona **remover** o Teams remove a guia após 30 segundos, independentemente de suas ações terem sido concluídas.

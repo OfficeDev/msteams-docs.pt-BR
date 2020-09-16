@@ -3,13 +3,13 @@ title: Criar uma guia pessoal com o ASP. NET Core MVC
 author: laujan
 description: Um guia de início rápido para criar uma guia pessoal personalizada com o ASP. NET Core MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 3bdd23692eca5ff3f6fc3f82cdaa233d34d4c69f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 7fcb0862647dec15bc93eecf9ce637d52892825c
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672451"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818910"
 ---
 # <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>Criar uma guia pessoal personalizada com o ASP. NET Core MVC
 
@@ -37,7 +37,7 @@ Para compilar e executar o aplicativo, pressione **F5** ou escolha **Iniciar Dep
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este projeto foi criado a partir de um ASP. Modelo vazio do aplicativo Web do NET Core 2,2 com a caixa de seleção *avançado-configurar para https* selecionada na instalação. Os serviços do MVC são registrados pelo método da `ConfigureServices()` estrutura de injeção de dependência. Além disso, o modelo vazio não habilita o fornecimento de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:
+Este projeto foi criado a partir de um ASP. Modelo vazio do aplicativo Web do NET Core 2,2 com a caixa de seleção *avançado-configurar para https* selecionada na instalação. Os serviços do MVC são registrados pelo método da estrutura de injeção de dependência `ConfigureServices()` . Além disso, o modelo vazio não habilita o fornecimento de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 * Um **ícone de cor completa** medindo 192 x 192 pixels.
 * Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-* Um arquivo **manifest. JSON** que especifica os atributos do seu aplicativo.
+* Um **manifest.jsno** arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser zipados em um pacote de aplicativos para uso no carregamento de sua guia para o Microsoft Teams. O Microsoft Teams carregará o `contentUrl` especificado no manifesto, o incorporará em um iframe e o renderizará na sua guia.
 
@@ -93,7 +93,7 @@ Na janela do Visual Studio Solution Explorer, clique com o botão direito do mou
 
 ### <a name="views"></a>Modos de exibição
 
-#### <a name="home"></a>Página Inicial
+#### <a name="home"></a>Home
 
 Pelas. NET Core trata os arquivos denominados *index* como o padrão/home page do site. Quando a URL do navegador apontar para a raiz do site, *index. cshtml* será exibido como a home page do seu aplicativo.
 
@@ -115,7 +115,7 @@ Os controladores usam a propriedade ViewBag para transferir valores dinamicament
 ngrok http https://localhost:44345 -host-header="localhost:44345"
 ```
 
-* O Ngrok ouvirá as solicitações da Internet e as roteará para seu aplicativo quando estiver em execução na porta 44325.  Deve ser parecido com `https://y8rPrT2b.ngrok.io/` o local em que o *y8rPrT2b* é substituído pela URL https do ngrok alfanumérico.
+* O Ngrok ouvirá as solicitações da Internet e as roteará para seu aplicativo quando estiver em execução na porta 44325.  Deve ser parecido `https://y8rPrT2b.ngrok.io/` com o local em que o *y8rPrT2b* é substituído pela URL https do ngrok alfanumérico.
 
 * Certifique-se de manter o prompt de comando com o ngrok em execução e tome nota da URL — você precisará dela mais tarde.
 

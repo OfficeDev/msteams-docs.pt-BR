@@ -1,16 +1,16 @@
 ---
 title: Adicionar bots personalizados ao Microsoft Teams com WebHooks de saída
 author: laujan
-description: ''
+description: como adicionar um webhook de saída
 keywords: guias do Microsoft Teams saída de webhook *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: 4881dc8768c7c51947f6a80a55affe78c28874d3
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.author: lajanuar
+ms.openlocfilehash: 04fc86fc3df7601235cb7f6bb7e53da59777f49f
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45102995"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819057"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>Adicionar bots personalizados ao Microsoft Teams com WebHooks de saída
 
@@ -44,7 +44,7 @@ Para garantir que o serviço esteja recebendo chamadas apenas de clientes do Mic
 
 O código deve sempre validar a assinatura HMAC incluída na solicitação:
 
-* *Gere* o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas (*consulte* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js ou *consulte* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). O Microsoft Teams usa a criptografia HMAC de SHA256 padrão. Você precisará converter o corpo em uma matriz de bytes em UTF8.
+* *Gere* o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas (*consulte* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js ou  *consulte* [Teams webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). O Microsoft Teams usa a criptografia HMAC de SHA256 padrão. Você precisará converter o corpo em uma matriz de bytes em UTF8.
 * *Compute* o hash da matriz de bytes do token de segurança **fornecido pelo Microsoft Teams** quando você registrou o webhook de saída no cliente do teams]. *Confira* [criar um webhook de saída](#create-an-outgoing-webhook), abaixo.
 * *Converta* o hash em uma cadeia de caracteres usando a codificação UTF-8.
 * *Compare* o valor da cadeia de caracteres do hash gerado com o valor fornecido na solicitação HTTP.

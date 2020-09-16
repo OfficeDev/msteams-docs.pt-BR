@@ -1,16 +1,16 @@
 ---
 title: Postar solicitações externas para o Microsoft Teams com WebHooks de entrada
 author: laujan
-description: ''
+description: como adicionar webhook de entrada ao aplicativo do teams
 keywords: guias do Microsoft Teams saída de webhook *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: c2b3f5dd581441f89aff344c35fe7e110d4d2e68
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 3aa795170af9695fc375043c94e794f814b38646
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672886"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819064"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Postar solicitações externas para o Microsoft Teams com WebHooks de entrada
 
@@ -19,7 +19,7 @@ ms.locfileid: "41672886"
 Os WebHooks de entrada são um tipo especial de conector no Microsoft Teams que oferecem uma maneira simples para um aplicativo externo compartilhar conteúdo em canais de equipe e é freqüentemente usado como ferramentas de rastreamento e de notificação. O Microsoft Teams fornece uma URL exclusiva para a qual você envia uma carga JSON com a mensagem que você deseja postar, normalmente em um formato de cartão. Os cartões são contêineres de interface do usuário (UI) que contêm conteúdo e ações relacionadas a um único tópico e são uma maneira de apresentar dados de mensagens de forma consistente. O Microsoft Teams usa cartões dentro de três recursos:
 
 * Bots
-* Extensões de Mensagens
+* Extensões de mensagens
 * Conectores
 
 ## <a name="incoming-webhook-key-features"></a>Recursos principais de webhook de entrada
@@ -38,7 +38,7 @@ Os WebHooks de entrada são um tipo especial de conector no Microsoft Teams que 
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Adicionar um webhook de entrada a um canal do teams
 
 > [!Important]  
-> Se as **configurações** => de**Membros** => da equipe**permitir que os membros criem, atualizem e removerem conectores** estiverem selecionados, qualquer membro da equipe poderá adicionar, modificar ou excluir um conector.
+> Se as configurações de **Settings**  =>  **Membros**da equipe  =>  **permitir que os membros criem, atualizem e removerem conectores** estiverem selecionados, qualquer membro da equipe poderá adicionar, modificar ou excluir um conector.
 
 1. Navegue até o canal onde você deseja adicionar o webhook e selecione (&#8226;&#8226;&#8226;) *mais opções* da barra de navegação superior.
 1. Escolha **conectores** no menu suspenso e procure **webhook de entrada**.
