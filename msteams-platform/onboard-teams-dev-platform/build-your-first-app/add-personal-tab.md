@@ -3,12 +3,14 @@ title: Criar uma guia pessoal para o Microsoft Teams
 author: heath-hamilton
 description: Saiba como criar uma guia pessoal no seu primeiro aplicativo do Microsoft Teams.
 ms.topic: tutorial
-ms.openlocfilehash: 1c782adce2201550d30d658907d507dc6a1337f3
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: lajanuar
+ms.date: 08/31/2020
+ms.openlocfilehash: 5dbe3a8314102807992b15e34a15c23f395c4d74
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651863"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964596"
 ---
 # <a name="create-a-personal-tab-for-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
@@ -18,7 +20,7 @@ Há dois tipos de guias no Microsoft Teams. Neste tutorial, você criará uma *g
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Você precisa de um aplicativo básico em execução para começar. Se você não tiver um, confira [Compilar e executar seu primeiro aplicativo do Microsoft Teams](build-and-run-with-toolkit.md).
+Você precisa de uma guia pessoal em execução básica para começar. Se você não tiver um, confira [Compilar e executar seu primeiro aplicativo do Microsoft Teams](../build-your-first-app/build-and-run.md).
 
 ## <a name="your-assignment"></a>Sua atribuição
 
@@ -29,12 +31,12 @@ As pessoas da sua organização têm problemas para localizar informações bás
 > [!div class="checklist"]
 >
 > * Identificar as propriedades de manifesto do aplicativo e scaffolding relevantes para guias pessoais
-> * Criar conteúdo para sua guia
-> * Atualizar o tema de cores da guia com base na preferência do usuário
+> * Criar conteúdo de guia
+> * Atualizar o tema de cores de uma guia com base na preferência do usuário
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>Identificar manifesto de aplicativo relevante e componentes do scaffolding
+## <a name="identify-relevant-app-project-components"></a>Identificar componentes de projeto de aplicativo relevantes
 
-Grande parte do aplicativo de guia scaffolding e do manifesto é configurada automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia pessoal.
+Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia pessoal.
 
 ### <a name="app-manifest"></a>Manifesto do aplicativo
 
@@ -60,7 +62,7 @@ O trecho de código a seguir do manifesto de aplicativo (o `manifest.json` arqui
 
 O aplicativo scaffolding fornece os componentes para renderizar sua guia no Teams. Há muitas coisas com as quais você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
 
-* `Tab.js`arquivo no `src/components` diretório do projeto
+* `Tab.js` arquivo no `src/components` diretório do projeto
 * SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes front-end do seu projeto
 
 ## <a name="create-your-tab-content"></a>Criar seu conteúdo de guia
@@ -108,17 +110,17 @@ Adicione a regra a seguir para `App.css` que os links de email sejam mais fácei
 
 Salve suas alterações. Vá para a guia do aplicativo no Microsoft Teams para exibir o novo conteúdo.
 
-![Captura de tela de exemplo de uma guia pessoal com conteúdo estático](../doc-links/images/personal-tab-tutorial-content.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="Captura de tela de exemplo de guia pessoal com conteúdo estático.":::
 
 ## <a name="update-the-tab-theme"></a>Atualizar o tema da guia
 
 Bons aplicativos se sentem nativos para o Microsoft Teams, portanto, é importante que as mesclagens de tabulação com o tema do teams que seus usuários preferem: padrão (claro), escuro ou alto contraste. Como você pode ter notado na última captura de tela, sua guia ainda tem um plano de fundo claro quando o cliente está usando o tema escuro. Essa não é uma experiência de usuário recomendada.
 
-O [SDK de cliente do Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) pode tornar seu aplicativo ciente e reagir às alterações de tema no cliente. Vamos examinar como fazer isso.
+O [SDK de cliente do Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) pode tornar seu aplicativo ciente e reagir às alterações de tema no cliente. Vamos examinar como fazer isso.
 
 ### <a name="get-context-about-the-teams-client"></a>Obter contexto sobre o cliente Teams
 
-No `Tab.js` arquivo, há uma `microsoftTeams.getContext()` chamada que fornece alguns [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) , entre outros detalhes, o tema de cliente configurado. Graças ao aplicativo scaffolding, use este código como é para acessar a `context` interface e suas propriedades.
+No `Tab.js` arquivo, há uma `microsoftTeams.getContext()` chamada que fornece alguns [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) , entre outros detalhes, o tema de cliente configurado. Graças ao aplicativo scaffolding, use este código como é para acessar a `context` interface e suas propriedades.
 
 ```JavaScript
   componentDidMount(){
@@ -151,7 +153,7 @@ Você precisa de um manipulador para que o estado do aplicativo seja alterado co
 Seu manipulador de alteração de tema está no local, mas você precisa de algum código que responda às alterações e alinhe as cores da guia com o tema atual.
 
 > [!NOTE]
-> O exemplo a seguir é apenas uma maneira de aplicar estilos à sua guia. Use o código como está, expanda nele ou escreva o seu próprio.
+> O exemplo a seguir é apenas uma maneira de aplicar estilos à sua guia. Use o código como está, expanda nele ou escreva seu próprio.
 
 Armazenar o estado fornecido pelo manipulador de alteração de tema no `isTheme` .
 
@@ -179,23 +181,22 @@ Forneça algumas lógicas condicionais para renderizar os estilos da guia com ba
 
 Verifique sua guia no Microsoft Teams. A aparência deve corresponder ao tema escuro.
 
-![Captura de tela de exemplo de uma guia pessoal com conteúdo estático](../doc-links/images/personal-tab-tutorial-updated-theme.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-updated-theme.png" alt-text="Exemplo de captura de tela de uma guia pessoal com conteúdo estático.":::
 
 ## <a name="well-done"></a>Muito bem
 
 Parabéns! Você tem um aplicativo do teams com uma guia pessoal que facilita a localização de contatos importantes em sua organização.
-
-## <a name="next-step"></a>Próxima etapa
-
-Você sabe como criar uma guia para uso pessoal. Vejamos o que é necessário para criar uma guia para os canais de equipe e chats.
-
-> [!div class="nextstepaction"]
-> [Criar uma guia de canal](add-channel-tab.md)
 
 ## <a name="learn-more"></a>Saiba mais
 
 * [Guia autenticar usuários com SSO](../../tabs/how-to/authentication/auth-aad-sso.md): se você quiser apenas que usuários autorizados exibam sua guia, configure o logon único (SSO) por meio do Azure Active Directory (AD).
 * [Inserir conteúdo de um aplicativo Web existente ou página da Web](../../tabs/how-to/add-tab.md#tab-requirements): mostramos como criar novo conteúdo para uma guia pessoal, mas você também pode carregar o conteúdo de uma URL externa.
 * [Criar uma experiência perfeita para sua guia](../../tabs/design/tabs.md): consulte as diretrizes recomendadas para a criação de guias do teams.
-* [Criar guias para dispositivos móveis](../../tabs/design/tabs-mobile.md): entenda como desenvolver guias para smartphones e tablets.
+* [Criar guias para celular](../../tabs/design/tabs-mobile.md): entenda como desenvolver guias para telefones e tablets.
 
+## <a name="next-lesson"></a>Próxima lição
+
+Você sabe como criar uma guia para uso pessoal. Vejamos o que é necessário para criar uma guia para os canais de equipe e chats.
+
+> [!div class="nextstepaction"]
+> [Criar uma guia de canal](../build-your-first-app/add-channel-tab.md)

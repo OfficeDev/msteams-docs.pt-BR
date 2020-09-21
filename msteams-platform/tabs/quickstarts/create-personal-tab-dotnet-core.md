@@ -1,6 +1,16 @@
 ---
-Título: "criar uma guia pessoal com o ASP.NET Core" autor: laujan Descrição: um guia de início rápido para criar uma guia pessoal personalizada com o Core do ASP.NET.
-MS. Topic: início rápido MS. Author: lajanuar
+title: Criar uma guia pessoal com o ASP.NET Core
+author: laujan
+description: Um guia de início rápido para criar uma guia pessoal personalizada com o ASP.NET Core.
+ms.topic: quickstart
+ms.author: lajanuar
+ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964575"
+---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Criar uma guia pessoal personalizada com o ASP.NET Core
 
 Neste QuickStart, veremos como criar uma guia pessoal personalizada com as páginas principais do Razor do ASP.Net C# e do. Também usaremos o [app Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.

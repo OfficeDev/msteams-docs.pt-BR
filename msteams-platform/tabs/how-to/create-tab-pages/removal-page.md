@@ -5,12 +5,12 @@ description: Como criar uma página de remoção de guia
 keywords: guias do teams grupo de grupos configuráveis remover excluir
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818896"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964589"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar ou remover uma guia de grupo de canais
 
@@ -39,7 +39,7 @@ A página de remoção opcional é uma página HTML que você hospeda e é exibi
 
 ### <a name="register-a-remove-handler"></a>Registrar um manipulador de remoção
 
-Opcionalmente, em sua lógica de página de remoção, você pode invocar o `registerOnRemoveHandler((RemoveEvent) => {}` manipulador de eventos quando o usuário remove uma configuração de guia existente. O método utiliza a [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface e executa o código no manipulador quando um usuário tenta remover conteúdo. Ele é usado para realizar operações de limpeza, como remover o recurso subjacente que força o conteúdo da guia. Somente um manipulador de remoção pode ser registrado por vez.
+Opcionalmente, em sua lógica de página de remoção, você pode invocar o `registerOnRemoveHandler((RemoveEvent) => {}` manipulador de eventos quando o usuário remove uma configuração de guia existente. O método utiliza a [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface e executa o código no manipulador quando um usuário tenta remover conteúdo. Ele é usado para realizar operações de limpeza, como remover o recurso subjacente que força o conteúdo da guia. Somente um manipulador de remoção pode ser registrado por vez.
 
 A `RemoveEvent` interface descreve um objeto com dois métodos:
 
@@ -49,11 +49,11 @@ A `RemoveEvent` interface descreve um objeto com dois métodos:
 
 #### <a name="use-the-getsettings-function"></a>Usar a `getSettings()` função
 
-Você pode usar `getSettings()` o para designar o conteúdo da guia a ser removido. A `getSettings((Settings) =>{})` função assume o [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) e fornece os valores de propriedade de configurações válidos que podem ser recuperados.
+Você pode usar `getSettings()` o para designar o conteúdo da guia a ser removido. A `getSettings((Settings) =>{})` função assume o [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) e fornece os valores de propriedade de configurações válidos que podem ser recuperados.
 
 #### <a name="use-the-getcontext-function"></a>Usar a `getContext()` função
 
-Você pode usar `getContext()` o para recuperar o contexto atual no qual o quadro está sendo executado. A `getContext((Context) =>{})` função assume o [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) e fornece valores de `Context` Propriedade válidos que você pode usar em sua lógica de página de remoção para determinar o conteúdo a ser exibido na página de remoção.
+Você pode usar `getContext()` o para recuperar o contexto atual no qual o quadro está sendo executado. A `getContext((Context) =>{})` função assume o [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) e fornece valores de `Context` Propriedade válidos que você pode usar em sua lógica de página de remoção para determinar o conteúdo a ser exibido na página de remoção.
 
 #### <a name="include-authentication"></a>Incluir autenticação
 

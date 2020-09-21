@@ -1,14 +1,16 @@
 ---
-title: Criar uma guia de canal para o Microsoft Teams
 author: heath-hamilton
 description: Saiba como criar uma guia de canal em seu primeiro aplicativo do Microsoft Teams.
+ms.author: lajanuar
+ms.date: 08/31/2020
 ms.topic: tutorial
-ms.openlocfilehash: f0c59328219b5611efc02c9eb04db6fdc517ca08
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+title: Criar uma guia de canal para o Microsoft Teams
+ms.openlocfilehash: 2346c67d10ea857bdafbfac6d29a07cb58f5c644
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651864"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964610"
 ---
 # <a name="create-a-channel-tab-for-teams"></a>Criar uma guia de canal para o Microsoft Teams
 
@@ -16,7 +18,7 @@ Neste tutorial, você criará uma *guia canal*básico, uma página de conteúdo 
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Você precisa de um aplicativo básico em execução para começar. Se você não tiver um, siga as instruções em [Compilar e execute o primeiro aplicativo do Microsoft Teams](build-and-run-with-toolkit.md). Ao criar seu projeto de aplicativo, escolha somente a opção de **guia canal ou grupo Teams** .
+Você precisa de um aplicativo básico em execução para começar. Se você não tiver um, siga as [instruções Build e Run Your Teams First app](../build-your-first-app/build-and-run.md). Ao criar seu projeto de aplicativo, escolha somente a opção de **guia canal ou grupo Teams** .
 
 ## <a name="your-assignment"></a>Sua atribuição
 
@@ -28,15 +30,15 @@ Você pode facilitar a localização dessas informações criando uma guia de ca
 
 > [!div class="checklist"]
 >
-> * Identificar o manifesto do aplicativo e os componentes do scaffolding relevantes para as guias de canal
-> * Criar conteúdo para sua guia
+> * Identificar as propriedades de manifesto do aplicativo e scaffolding relevantes para as guias de canal
+> * Criar conteúdo de guia
 > * Criar conteúdo para a página de configuração de uma guia
-> * Permitir que a guia seja configurada e instalada
+> * Permitir que uma guia seja configurada e instalada
 > * Fornecer um nome de guia sugerido
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>Identificar manifesto de aplicativo relevante e componentes do scaffolding
+## <a name="identify-relevant-app-project-components"></a>Identificar componentes de projeto de aplicativo relevantes
 
-Grande parte do aplicativo de guia canal scaffolding e manifesto é configurada automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia canal.
+Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia canal.
 
 ### <a name="app-manifest"></a>Manifesto do aplicativo
 
@@ -141,7 +143,7 @@ Adicione algum conteúdo à sua página de configuração. Vá para o diretório
 
 ## <a name="allow-the-tab-to-be-configured-and-installed"></a>Permitir que a guia seja configurada e instalada
 
-Para que os usuários configurem e instalem com êxito a guia canal, você deve adicionar a URL de host que você configurou ao [criar e executar seu primeiro aplicativo](build-and-run-with-toolkit.md) no componente da página de configuração.
+Para que os usuários configurem e instalem com êxito a guia canal, você deve adicionar a URL de host que você configurou ao [criar e executar seu primeiro aplicativo](../build-your-first-app/build-and-run.md) no componente da página de configuração.
 
 Vá para `TabConfig.js` e localize `microsoftTeams.settings.setSettings` . Para `"contentUrl"` , substitua a `localhost:3000` parte da URL pelo domínio em que você está hospedando o conteúdo da guia (conforme mostrado).
 
@@ -177,11 +179,11 @@ Para ver as páginas de configuração e conteúdo da guia canal, você deve ins
 1. Escolha **Adicionar a uma equipe** ou **Adicionar a um chat** e localize um canal ou chat que você possa usar para teste.
 1. Selecione **Configurar uma guia**. A página de configuração é exibida.
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Captura de tela de exemplo de uma página de configuração da guia canal":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Exemplo de captura de tela de uma guia canal com conteúdo estático.":::
 
 Depois de selecionar **salvar** para configurar a guia, o conteúdo é exibido.
 
-![Captura de tela de exemplo de uma guia de canal com conteúdo estático](../doc-links/images/channel-tab-tutorial-content-installed.png)
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Exemplo de captura de tela da guia canal com conteúdo estático.":::
 
 ## <a name="well-done"></a>Muito bem
 
@@ -192,4 +194,11 @@ Parabéns! Você tem um aplicativo Teams com uma guia de canal para exibir conte
 * [Guia autenticar usuários com SSO](../../tabs/how-to/authentication/auth-aad-sso.md): se você quiser apenas que usuários autorizados exibam sua guia, configure o logon único (SSO) por meio do Azure Active Directory (AD).
 * [Inserir conteúdo de um aplicativo Web existente ou página da Web](../../tabs/how-to/add-tab.md#tab-requirements): mostramos como criar novo conteúdo para uma guia pessoal, mas você também pode carregar o conteúdo de uma URL externa.
 * [Criar uma experiência perfeita para sua guia](../../tabs/design/tabs.md): consulte as diretrizes recomendadas para a criação de guias do teams.
-* [Criar guias para dispositivos móveis](../../tabs/design/tabs-mobile.md): entenda como desenvolver guias para smartphones e tablets.
+* [Criar guias para celular](../../tabs/design/tabs-mobile.md): entenda como desenvolver guias para telefones e tablets.
+
+## <a name="next-lesson"></a>Próxima lição
+
+Você sabe como criar uma guia para colaboração. Deseja tentar criar um tipo diferente de aplicativo do teams?
+
+> [!div class="nextstepaction"]
+> [Criar um bot](../build-your-first-app/add-bot.md)

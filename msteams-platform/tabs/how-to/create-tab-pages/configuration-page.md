@@ -3,14 +3,14 @@ title: Criar uma página de configuração
 author: laujan
 description: como criar uma página de configuração
 keywords: guias do teams com o canal de grupo configurável
-ms.topic: conceptualF
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819022"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964603"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -22,7 +22,7 @@ Uma página de configuração é um tipo especial de [página de conteúdo](cont
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configurando uma guia chat de grupo ou canal
 
-Uma página de configuração informa a página de conteúdo como ela deve renderizar. O aplicativo deve fazer referência ao SDK e à chamada do [cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoft.initialize()` . Além disso, suas URLs devem ser pontos de extremidade HTTPS seguros e disponíveis na nuvem. Veja a seguir um exemplo de página de configuração.
+Uma página de configuração informa a página de conteúdo como ela deve renderizar. O aplicativo deve fazer referência ao SDK e à chamada do [cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoft.initialize()` . Além disso, suas URLs devem ser pontos de extremidade HTTPS seguros e disponíveis na nuvem. Veja a seguir um exemplo de página de configuração.
 
 ```html
 <head>
@@ -85,7 +85,7 @@ Aqui, os usuários são apresentados com dois botões de opção, **selecione ci
 1. O `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos é disparado.
 1. O botão **salvar** na página de configuração do aplicativo, carregado no Microsoft Teams, está habilitado.
 
-Esse código permite que as equipes saibam que os requisitos de configuração foram satisfeitos e a instalação pode continuar. Ao **salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface, para a instância atual (consulte [interface de configurações](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ). Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+Esse código permite que as equipes saibam que os requisitos de configuração foram satisfeitos e a instalação pode continuar. Ao **salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface, para a instância atual (consulte [interface de configurações](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 >[!NOTE]
 >
@@ -96,11 +96,11 @@ Esse código permite que as equipes saibam que os requisitos de configuração f
 
 Sua guia pode exigir informações contextuais para exibir conteúdo relevante. As informações contextuais podem aprimorar ainda mais o apelo da guia ao fornecer uma experiência de usuário mais personalizada.
 
-A [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) do Microsoft Teams define as propriedades que podem ser usadas para sua configuração de guia. Você pode coletar os valores de variáveis de dados de contexto de duas maneiras:
+A [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) do Microsoft Teams define as propriedades que podem ser usadas para sua configuração de guia. Você pode coletar os valores de variáveis de dados de contexto de duas maneiras:
 
 1. Insira espaços reservados para cadeia de caracteres de consulta de URL no seu manifesto `configurationURL` .
 
-1. Use o método [SDK do teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
+1. Use o método [SDK do teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{}` .
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Inserir espaços reservados no `configurationURL`
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar a `getContext()` função para recuperar o contexto
 
-Quando invocado, a `microsoftTeams.getContext((context) => {})` função recupera a [interface de contexto](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). Você pode adicionar essa função à página de configuração para recuperar os valores de contexto:
+Quando invocado, a `microsoftTeams.getContext((context) => {})` função recupera a [interface de contexto](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Você pode adicionar essa função à página de configuração para recuperar os valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
