@@ -246,7 +246,7 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Mídia hospedada pelo aplicativo
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Extensões de Mensagens - interações orientadas a tarefas
+- name: Extensões de mensagens - interações orientadas a tarefas
   items:
     - name: O que são as Extensões de Mensagens?
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -330,6 +330,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: Enviar mensagens a conectores e webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Aplicativos em reuniões
+  items:
+    - name: Criar seu aplicativo
+      items:
+        - name: Caixa de diálogo na reunião
+          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+        - name: Guia na reunião
+          href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: APIs REST do Graph do Teams
   items:
     - name: Consentimento específico do recurso
