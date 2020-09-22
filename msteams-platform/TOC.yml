@@ -31,6 +31,16 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Extensão do kit de ferramentas do Teams para o Visual Studio
           href: toolkit/visual-studio-overview.md
+- name: Aplicativos em reuniões
+  items:
+    - name: Aplicativos do Teams em reuniões
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Criar aplicativos para reuniões do Teams
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Desenvolva uma conversa na reunião
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: Desenvolva uma guia na reunião
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Conceitos
   expanded: true
   items:
