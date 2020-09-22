@@ -1,17 +1,17 @@
 ---
-title: Projetando uma guia na reunião do Microsoft Teams
+title: Criar uma guia na reunião do Microsoft Teams
 author: heath-hamilton
 description: Orientações e práticas recomendadas para projetar a guia na reunião do Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097943"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178320"
 ---
-# <a name="designing-an-in-meeting-tab"></a>Criar uma guia na reunião
+# <a name="design-an-in-meeting-tab"></a>Criar uma guia na reunião
 
 A guia na reunião é uma tela para aumentar a colaboração durante as reuniões. Com base na capacidade de guia do Teams, os participantes podem ver e interagir com o conteúdo do aplicativo em um espaço dedicado fora do estágio da reunião por meio de exibições compartilhadas ou baseadas em função.
 

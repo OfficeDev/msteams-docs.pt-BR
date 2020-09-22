@@ -1,17 +1,17 @@
 ---
-title: Criando uma caixa de diálogo do Microsoft Teams na reunião
+title: Criar uma caixa de diálogo do Microsoft Teams na reunião
 author: heath-hamilton
 description: Orientações e práticas recomendadas para criar uma caixa de diálogo de reunião para o Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 449e6cdf9aecefba9fe70099c961ab56955306f8
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e9671d8d284311d3d0a299573d3f0e08b195e97
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097955"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178327"
 ---
-# <a name="designing-an-in-meeting-dialog"></a>Criar uma caixa de diálogo na reunião
+# <a name="design-an-in-meeting-dialog"></a>Criar uma caixa de diálogo na reunião
 
 Caixas de diálogo na reunião exibidas no estágio de reunião do teams. Eles exigem a atenção, a confirmação ou a interação de um usuário, mas são sutis e não interrompem a reunião.
 
