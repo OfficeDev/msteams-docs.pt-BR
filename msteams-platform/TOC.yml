@@ -1,10 +1,25 @@
-- name: Visão geral
+- name: Visão Geral
   expanded: true
   items:
-    - name: O que são aplicativos do Microsoft Teams?
+    - name: Crie aplicativos para o Microsoft Teams
       href: overview.md
     - name: Quais são as novidades?
       href: whats-new.md
+- name: Desenvolva seu primeiro aplicativo
+  expanded: true
+  items:
+    - name: Visão geral e pré-requisitos
+      href: build-your-first-app/build-first-app-overview.md
+    - name: 'Crie um "Olá, mundo!" aplicativo'
+      href: build-your-first-app/build-and-run.md
+    - name: Construir uma guia pessoal
+      href: build-your-first-app/build-personal-tab.md
+    - name: Construir uma guia de canal
+      href: build-your-first-app/build-channel-tab.md
+    - name: Construir um bot
+      href: build-your-first-app/build-bot.md
+    - name: Construir uma extensão de mensagens
+      href: build-your-first-app/build-messaging-extension.md
 - name: Tutoriais e exemplos de código
   items:
     - name: Criar um aplicativo usando C#
@@ -15,8 +30,12 @@
       href: tutorials/get-started-yeoman.md
     - name: Saiba mais sobre aplicativos personalizados para o Teams
       href: tutorials/code-samples.md
-- name: Modelos e integrações
+- name: Integrações e modelos
   items:
+    - name: Integrar aplicativos Web
+      href: samples/integrating-web-apps.md
+    - name: Criar aplicativos de código baixo
+      href: samples/teams-low-code-solutions.md
     - name: Modelos de aplicativos prontos para produção
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
@@ -44,9 +63,9 @@
 - name: Conceitos
   expanded: true
   items:
-    - name: Criar aplicativos para o Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: Pontos de extensibilidade no cliente do Teams
+    - name: Recursos do aplicativo
+      href: concepts/capabilities-overview.md
+    - name: Pontos de entrada do aplicativo
       href: concepts/extensibility-points.md
     - name: Criar seu aplicativo
       items:
@@ -167,17 +186,17 @@
           items:
             - name: Fluxo de autenticação
               href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: Usar a autenticação do Microsoft Azure Active Directory
+            - name: Adicionar autenticação do Azure AD
               href: tabs/how-to/authentication/auth-tab-aad.md
             - name: Usar a autenticação silenciosa
               href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Usar a autenticação de logon único
+            - name: Usar autenticação de logon único
               href: tabs/how-to/authentication/auth-aad-sso.md
         - name: Usar o SDK do cliente do Teams
           href: tabs/how-to/using-teams-client-sdk.md
         - name: Obter contexto adicional do Teams
           href: tabs/how-to/access-teams-context.md
-        - name: Guias do DevTools para Microsoft Teams
+        - name: Guias do DevTools para o Microsoft Teams
           href: tabs/how-to/developer-tools.md
         - name: Adicionar sua guia personalizada ao Microsoft Office SharePoint Online
           href: tabs/how-to/tabs-in-sharepoint.md
@@ -313,7 +332,7 @@
       items:
         - name: Projetar cartões eficazes
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatação do texto do cartão
+        - name: Formatar texto de cartão
           href: task-modules-and-cards/cards/cards-format.md
         - name: Adicionar e responder às ações do cartão
           href: task-modules-and-cards/cards/cards-actions.md
