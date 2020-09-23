@@ -5,12 +5,12 @@ description: Como criar um bot para o Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635295"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178313"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
 
@@ -171,7 +171,14 @@ Para criar um pacote de aplicativos, você precisa adicionar seu manifesto de ap
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
 
+> [!NOTE]
+> Para carregar o bot com êxito, o administrador de locatários deve primeiro [permitir o carregamento](/microsoftteams/manage-apps#manage-org-wide-app-settings) de aplicativos personalizados ou de terceiros no Teams.
+
 Se você estiver usando o aplicativo Studio, é possível instalar seu aplicativo a partir da guia **Testar e distribuir** do **Editor de manifesto**. Como alternativa, você pode instalar o pacote do aplicativo clicando no menu de estouro de `...` do trilho de navegação à esquerda, clicando em **Mais aplicativos**e, em seguida, em**Carregar um link personalizado do aplicativo**. Você também pode importar um manifesto de aplicativo ou pacote de aplicativos para o aplicativo Studio para fazer atualizações adicionais antes de carregar.
+
+## <a name="bots-in-teams-meetings"></a>Bots nas reuniões do Teams
+
+O Teams oferecem suporte à invocação de bot durante reuniões. Quando o bot recebe a mensagem de invocação, ele pode identificar o usuário e o locatário de `userId` e `tenantId`. O `meetingId` pode ser encontrado como parte do objeto `channelData`. O bot pode usar o `userId` e `meetingId`  para a solicitação da API do `GetParticipant` para recuperar funções de usuário.
 
 ## <a name="next-steps"></a>Próximas etapas
 
