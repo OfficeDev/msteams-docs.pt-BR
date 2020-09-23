@@ -1,58 +1,145 @@
 ---
-title: Plataforma para desenvolvedores do Microsoft Teams
-author: clearab
-description: Página de visão geral descrevendo a plataforma de desenvolvedor do Microsoft Teams e como começar a criar aplicativos para o Microsoft Teams.
+title: Criar aplicativos para a plataforma do Microsoft Teams
+author: heath-hamilton
+description: Visão geral de como os desenvolvedores podem estender e personalizar os recursos do Microsoft Teams com aplicativos personalizados.
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455482"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209785"
 ---
-# <a name="what-are-microsoft-teams-apps"></a><span data-ttu-id="f409f-103">O que são aplicativos do Microsoft Teams?</span><span class="sxs-lookup"><span data-stu-id="f409f-103">What are Microsoft Teams apps?</span></span>
+# <a name="build-apps-for-microsoft-teams"></a><span data-ttu-id="50cac-103">Criar aplicativos para o Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="50cac-103">Build apps for Microsoft Teams</span></span>
 
-<span data-ttu-id="f409f-104">O Microsoft Teams é um espaço de trabalho de colaboração no Office 365 que se integra com aplicativos e serviços que as pessoas usam para fazer o trabalho em conjunto.</span><span class="sxs-lookup"><span data-stu-id="f409f-104">Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together.</span></span> <span data-ttu-id="f409f-105">A plataforma de desenvolvedor do Microsoft Teams permite que os desenvolvedores integrem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões mais rapidamente, fornecer foco (reduzindo a alternância de contexto) e criar colaboração em torno de conteúdo e fluxos de trabalho existentes.</span><span class="sxs-lookup"><span data-stu-id="f409f-105">The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows.</span></span> <span data-ttu-id="f409f-106">Os aplicativos criados na plataforma do Microsoft Teams são pontes entre o cliente do Teams e seus serviços e fluxos de trabalho; colocá-los diretamente no contexto da plataforma de colaboração.</span><span class="sxs-lookup"><span data-stu-id="f409f-106">Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.</span></span>
+<span data-ttu-id="50cac-104">Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para o local em que as pessoas coletam, aprendem e funcionam cada vez.</span><span class="sxs-lookup"><span data-stu-id="50cac-104">Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.</span></span>
 
-## <a name="what-can-teams-apps-do"></a><span data-ttu-id="f409f-107">O que os aplicativos do teams podem fazer?</span><span class="sxs-lookup"><span data-stu-id="f409f-107">What can Teams apps do?</span></span>
+<span data-ttu-id="50cac-105">Os aplicativos são como estender o Microsoft Teams para atender às suas necessidades.</span><span class="sxs-lookup"><span data-stu-id="50cac-105">Apps are how you extend Teams to fit your needs.</span></span> <span data-ttu-id="50cac-106">Crie uma marca de algo novo para o Microsoft Teams ou integre um aplicativo existente.</span><span class="sxs-lookup"><span data-stu-id="50cac-106">Create something brand new for Teams or integrate an existing app.</span></span>
 
-<span data-ttu-id="f409f-108">Os aplicativos criados na plataforma do Microsoft Teams concentram-se principalmente no aumento da colaboração e na melhoria da produtividade.</span><span class="sxs-lookup"><span data-stu-id="f409f-108">Apps built on the Microsoft Teams platform primarily focus on increasing collaboration and improving productivity.</span></span> <span data-ttu-id="f409f-109">Seu aplicativo pode ser algo simples, como notificações de lançamento de outros sistemas ou aplicativos multifacetados complexos.</span><span class="sxs-lookup"><span data-stu-id="f409f-109">Your app can be something simple, like posting notifications from other systems, or complex multi-faceted applications.</span></span> <span data-ttu-id="f409f-110">Só tenha em mente que o Microsoft Teams é uma plataforma de colaboração social; os melhores aplicativos se concentram em ajudar as pessoas a se expressarm e a trabalhar melhor juntos.</span><span class="sxs-lookup"><span data-stu-id="f409f-110">Just keep in mind that Teams is a social collaboration platform; the best apps focus on helping people express themselves and work better together.</span></span>
+## <a name="what-are-teams-apps"></a><span data-ttu-id="50cac-107">O que são aplicativos do teams?</span><span class="sxs-lookup"><span data-stu-id="50cac-107">What are Teams apps?</span></span>
 
-* <span data-ttu-id="f409f-111">**Colabore em itens em sistemas externos.**</span><span class="sxs-lookup"><span data-stu-id="f409f-111">**Collaborate on items in external systems.**</span></span> <span data-ttu-id="f409f-112">Um dos principais cenários de um aplicativo personalizado do Microsoft Teams é trazer informações ou itens para o Microsoft Teams de outro lugar e ter uma conversa em torno dela.</span><span class="sxs-lookup"><span data-stu-id="f409f-112">One of the core scenarios for a custom Teams app is to bring information or items into Teams from some other place, and have a conversation around it.</span></span> <span data-ttu-id="f409f-113">Você pode enviar informações para o Microsoft Teams, permitir que os usuários pesquisem e o recebam sob demanda, ou disponibilizá-lo em um modo de exibição da Web incorporado.</span><span class="sxs-lookup"><span data-stu-id="f409f-113">You can push information into Teams, enable your users to search for and pull it on demand, or make it available in an embedded web view.</span></span>
+<span data-ttu-id="50cac-108">Os aplicativos do teams são uma combinação de [recursos](concepts/capabilities-overview.md) e [pontos de entrada](concepts/extensibility-points.md).</span><span class="sxs-lookup"><span data-stu-id="50cac-108">Teams apps are a combination of [capabilities](concepts/capabilities-overview.md) and [entry points](concepts/extensibility-points.md).</span></span> <span data-ttu-id="50cac-109">Por exemplo, as pessoas podem bater papo com o *bot* do seu aplicativo (recurso) em um *canal* (ponto de entrada).</span><span class="sxs-lookup"><span data-stu-id="50cac-109">For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).</span></span>
 
-* <span data-ttu-id="f409f-114">**Disparar fluxos de trabalho de conversas.**</span><span class="sxs-lookup"><span data-stu-id="f409f-114">**Trigger workflows from conversations.**</span></span> <span data-ttu-id="f409f-115">Freqüentemente as conversas resultam na necessidade de iniciar um fluxo de trabalho ou concluir alguma ação; Dê uma nota sobre isso, revise minha solicitação pull, converta-a em um líder de vendas, etc. O aplicativo do Microsoft Teams pode colocar o acesso a esse fluxo de trabalho dentro do teams.</span><span class="sxs-lookup"><span data-stu-id="f409f-115">Often conversations result in the need to kick off some workflow or complete some action; take a note about that, review my pull request, convert that to a sales lead, etc. Your Teams app can put access to that workflow right inside of Teams.</span></span>
+<span data-ttu-id="50cac-110">Alguns aplicativos são simples (notificações de envio), enquanto outros são complexos (gerenciar registros de pacientes).</span><span class="sxs-lookup"><span data-stu-id="50cac-110">Some apps are simple (send notifications), while others are complex (manage patient records).</span></span> <span data-ttu-id="50cac-111">Ao planejar seu aplicativo, lembre-se de que o Microsoft Teams é um hub de colaboração.</span><span class="sxs-lookup"><span data-stu-id="50cac-111">When planning your app, remember that Teams is a collaboration hub.</span></span> <span data-ttu-id="50cac-112">Os melhores aplicativos do teams ajudam as pessoas a se expressarem e trabalhem melhor juntos.</span><span class="sxs-lookup"><span data-stu-id="50cac-112">The best Teams apps help people express themselves and work better together.</span></span>
 
-* <span data-ttu-id="f409f-116">**Notifique a equipe de eventos importantes.**</span><span class="sxs-lookup"><span data-stu-id="f409f-116">**Notify your team of important events.**</span></span> <span data-ttu-id="f409f-117">Doente de notificações por email?</span><span class="sxs-lookup"><span data-stu-id="f409f-117">Sick of email notifications?</span></span> <span data-ttu-id="f409f-118">Envie notificações para o Microsoft Teams!</span><span class="sxs-lookup"><span data-stu-id="f409f-118">Send notifications to Teams instead!</span></span> <span data-ttu-id="f409f-119">Enviar notificações diretamente aos usuários, a um canal, ao feed de atividades ou a qualquer pessoa que se inscrever neles.</span><span class="sxs-lookup"><span data-stu-id="f409f-119">Send notifications directly to users, to a channel, to the Activity Feed, or to anyone who subscribes to them.</span></span>
+:::row:::
+   :::column span="":::
 
-* <span data-ttu-id="f409f-120">**Incorporar funcionalidade de outros sites/serviços.**</span><span class="sxs-lookup"><span data-stu-id="f409f-120">**Embed functionality from other sites/services.**</span></span> <span data-ttu-id="f409f-121">Às vezes, você só precisa tornar seu aplicativo mais fácil de descobrir.</span><span class="sxs-lookup"><span data-stu-id="f409f-121">Sometimes you just need to make your app easier to discover.</span></span> <span data-ttu-id="f409f-122">Incorpore seu aplicativo de página única existente ou crie algo a partir do zero para o Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="f409f-122">Embed your existing single-page app, or build something from scratch for Teams.</span></span>
+### <a name="tabs"></a><span data-ttu-id="50cac-113">Guias</span><span class="sxs-lookup"><span data-stu-id="50cac-113">Tabs</span></span>
 
-## <a name="how-do-teams-apps-work"></a><span data-ttu-id="f409f-123">Como os aplicativos do teams funcionam?</span><span class="sxs-lookup"><span data-stu-id="f409f-123">How do Teams apps work?</span></span>
+<span data-ttu-id="50cac-114">**Obter informações de forma mais conveniente**: às vezes você só precisa fazer coisas mais fáceis de encontrar.</span><span class="sxs-lookup"><span data-stu-id="50cac-114">**Get information more conveniently**: Sometimes you just need to make things easier to find.</span></span> <span data-ttu-id="50cac-115">Exibir uma página da Web importante em uma [guia](tabs/what-are-tabs.md), que oferece uma experiência de tela inteira para conteúdo estático e dinâmico no Teams.</span><span class="sxs-lookup"><span data-stu-id="50cac-115">Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.</span></span>
 
-<span data-ttu-id="f409f-124">A primeira coisa a saber sobre aplicativos personalizados para o Microsoft Teams (além de quão incríveis podem ser), é que o Microsoft Teams não é um serviço de hospedagem.</span><span class="sxs-lookup"><span data-stu-id="f409f-124">The first thing to know about custom apps for Microsoft Teams (other than how amazing they can be), is that Teams is not a hosting service.</span></span> <span data-ttu-id="f409f-125">Seu pacote de aplicativos contém metadados sobre seu aplicativo (nome, ícones, etc.) e ponteiros para os serviços Web que você hospeda para o seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f409f-125">Your app package contains metadata about your app (name, icons, etc.), and pointers to the web services you host that power your app.</span></span> <span data-ttu-id="f409f-126">O Microsoft Teams fornece o mecanismo de distribuição, construções de interface do usuário/UX para que você possa aproveitar e APIs que você pode usar para aumentar as informações e ações disponíveis para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f409f-126">Microsoft Teams provides the distribution mechanism, UI/UX constructs for you to take advantage of, and APIs you can use to augment the information and actions available to your app.</span></span>
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Representação conceitual da aparência das guias no cliente do teams." border="false":::
 
-<span data-ttu-id="f409f-127">Um aplicativo do teams consiste em três partes principais:</span><span class="sxs-lookup"><span data-stu-id="f409f-127">A Teams app consists of three major pieces:</span></span>
+   :::column-end:::
+   :::column span="":::
 
-* <span data-ttu-id="f409f-128">**O cliente Microsoft Teams (Web, desktop ou celular)** onde os usuários irão interagir com seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f409f-128">**The Microsoft Teams client (web, desktop or mobile)** where users will interact with your app.</span></span>
-* <span data-ttu-id="f409f-129">**Seu pacote de aplicativos do Microsoft Teams** que cria o aplicativo instalado pelos seus usuários e que contém os metadados e ponteiros de seu aplicativo para seus serviços.</span><span class="sxs-lookup"><span data-stu-id="f409f-129">**Your Teams app package** that creates the app installed by your users, and contains your app's metadata and pointers to your services.</span></span>
-* <span data-ttu-id="f409f-130">**Seu serviço, fluxo de trabalho ou site** que executa a lógica necessária, o armazenamento de dados e as chamadas de API para alimentar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f409f-130">**Your service, workflow or website** which perform the necessary logic, data storage and API calls to power your app.</span></span>
+### <a name="messaging-extensions"></a><span data-ttu-id="50cac-117">Extensões de mensagens</span><span class="sxs-lookup"><span data-stu-id="50cac-117">Messaging extensions</span></span>
 
-<span data-ttu-id="f409f-131">É importante ter em mente que qualquer funcionalidade que você expor em um aplicativo do Microsoft Teams está disponível pela Internet, a menos que você execute etapas adicionais para protegê-lo.</span><span class="sxs-lookup"><span data-stu-id="f409f-131">It is important to keep in mind that any functionality you expose in a Microsoft Teams app is publicly available over the internet unless you take additional steps to secure it.</span></span> <span data-ttu-id="f409f-132">Se você estiver fornecendo acesso a informações confidenciais ou protegidas, certifique-se de que seus serviços estão no mínimo Autenticando o ponto de extremidade conectando ao seu aplicativo ou [autentique seus usuários](concepts/authentication/authentication.md).</span><span class="sxs-lookup"><span data-stu-id="f409f-132">If you are providing access to confidential or protected information you'll want make sure your services are at a minimum authenticating the endpoint connecting to your app, or [authenticating your users](concepts/authentication/authentication.md).</span></span>
+<span data-ttu-id="50cac-118">Facilitar **a multitarefas**: com [extensões de mensagens](messaging-extensions/what-are-messaging-extensions.md), você pode compartilhar rapidamente informações externas em uma conversa.</span><span class="sxs-lookup"><span data-stu-id="50cac-118">**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation.</span></span> <span data-ttu-id="50cac-119">Você também pode agir em uma mensagem, como criar um tíquete de ajuda com base no conteúdo de uma postagem de canal.</span><span class="sxs-lookup"><span data-stu-id="50cac-119">You also can act on a message, such as creating a help ticket based on the content of a channel post.</span></span>
 
-## <a name="how-can-you-share-your-teams-app"></a><span data-ttu-id="f409f-133">Como você pode compartilhar seu aplicativo do Microsoft Teams?</span><span class="sxs-lookup"><span data-stu-id="f409f-133">How can you share your Teams app?</span></span>
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Representação conceitual da aparência das extensões de mensagens no cliente do teams." border="false":::
 
-<span data-ttu-id="f409f-134">Quando estiver pronto para compartilhar seus aplicativos do Microsoft Teams, você terá três opções, dependendo de quem é o público-alvo.</span><span class="sxs-lookup"><span data-stu-id="f409f-134">When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.</span></span>
+   :::column-end:::
+:::row-end:::
 
-* <span data-ttu-id="f409f-135">**[Carregar seu aplicativo diretamente](concepts/deploy-and-publish/apps-upload.md)** Se seu aplicativo só precisa ser compartilhado para sua equipe ou algumas pessoas em sua organização, você pode compartilhar seu pacote de aplicativos e carregá-lo diretamente.</span><span class="sxs-lookup"><span data-stu-id="f409f-135">**[Upload your app directly](concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.</span></span>
-* <span data-ttu-id="f409f-136">**[Publicar em seu catálogo de aplicativos organizacional](concepts/deploy-and-publish/apps-upload.md)** Você pode compartilhar seu aplicativo com toda a sua organização por meio do seu catálogo de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="f409f-136">**[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-upload.md)** You can share your app with your entire organization through your app catalog.</span></span>
-* <span data-ttu-id="f409f-137">**[Publicar na loja de aplicativos públicos](concepts/deploy-and-publish/apps-upload.md)** Se seu aplicativo for para todos, você poderá publicá-lo em nossa loja de aplicativos públicos.</span><span class="sxs-lookup"><span data-stu-id="f409f-137">**[Publish to the public app store](concepts/deploy-and-publish/apps-upload.md)** If your app is for everyone, you can publish it to our public app store.</span></span> <span data-ttu-id="f409f-138">Dependendo de suas metas, você pode estar qualificado para assistência de marketing e vendas.</span><span class="sxs-lookup"><span data-stu-id="f409f-138">Depending on your goals, you might be eligible for marketing and sales assistance.</span></span>
+:::row:::
+   :::column span="":::
 
-## <a name="get-started"></a><span data-ttu-id="f409f-139">Introdução</span><span class="sxs-lookup"><span data-stu-id="f409f-139">Get started</span></span>
+### <a name="bots"></a><span data-ttu-id="50cac-121">Bots</span><span class="sxs-lookup"><span data-stu-id="50cac-121">Bots</span></span>
 
-* [<span data-ttu-id="f409f-140">Criar um bot e um aplicativo de guia no C #</span><span class="sxs-lookup"><span data-stu-id="f409f-140">Build a bot and tab app in C#</span></span>](tutorials/get-started-dotnet-app-studio.md)
-* [<span data-ttu-id="f409f-141">Criar um bot e um aplicativo de guia em JavaScript/node. js</span><span class="sxs-lookup"><span data-stu-id="f409f-141">Build a bot and tab app in JavaScript/Node.js</span></span>](tutorials/get-started-nodejs-app-studio.md)
+<span data-ttu-id="50cac-122">**Transforme as palavras em ações**: as conversas freqüentemente resultam na necessidade de fazer algo (gerar um pedido, analisar meu código, verificar o status do tíquete, etc.).</span><span class="sxs-lookup"><span data-stu-id="50cac-122">**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.).</span></span> <span data-ttu-id="50cac-123">Um [bot](bots/what-are-bots.md) pode disparar esses tipos de fluxos de trabalho no Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="50cac-123">A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.</span></span>
 
-## <a name="learn-more"></a><span data-ttu-id="f409f-142">Saiba mais</span><span class="sxs-lookup"><span data-stu-id="f409f-142">Learn more</span></span>
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Representação conceitual da aparência dos bots no cliente do teams." border="false":::
 
-* [<span data-ttu-id="f409f-143">Pontos de extensibilidade no cliente do Teams</span><span class="sxs-lookup"><span data-stu-id="f409f-143">Extensibility points in the Teams client</span></span>](concepts/extensibility-points.md)
-* [<span data-ttu-id="f409f-144">Criando aplicativos para o Teams</span><span class="sxs-lookup"><span data-stu-id="f409f-144">Building apps for Teams</span></span>](concepts/building-an-app.md)
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a><span data-ttu-id="50cac-125">Webhooks</span><span class="sxs-lookup"><span data-stu-id="50cac-125">Webhooks</span></span>
+
+<span data-ttu-id="50cac-126">**Comunicar-se com aplicativos externos**: os [WebHooks de entrada](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) são uma maneira simples de enviar notificações automaticamente de outro aplicativo para um canal do teams.</span><span class="sxs-lookup"><span data-stu-id="50cac-126">**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel.</span></span> <span data-ttu-id="50cac-127">Com os [WebHooks de saída](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), Message Your Web Service com um @mention.</span><span class="sxs-lookup"><span data-stu-id="50cac-127">With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.</span></span>
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Representação conceitual da aparência dos conectores no cliente do teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a><span data-ttu-id="50cac-129">Microsoft Graph para Teams</span><span class="sxs-lookup"><span data-stu-id="50cac-129">Microsoft Graph for Teams</span></span>
+
+<span data-ttu-id="50cac-130">**Use os dados do teams**: a [API do Microsoft Graph para Teams](https://docs.microsoft.com/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que podem ajudá-lo a criar ou aprimorar recursos para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="50cac-130">**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.</span></span>
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Representação conceitual da API do Microsoft Graph para Teams." border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="get-started"></a><span data-ttu-id="50cac-132">Introdução</span><span class="sxs-lookup"><span data-stu-id="50cac-132">Get started</span></span>
+
+<span data-ttu-id="50cac-133">Vá em com nossos tutoriais de primeiro aplicativo ou descubra como integrar e importar aplicativos existentes.</span><span class="sxs-lookup"><span data-stu-id="50cac-133">Jump right in with our first app tutorials or find out how to integrate and import existing apps.</span></span>
+
+:::row:::
+   :::column span="2":::
+
+### <a name="start-building"></a><span data-ttu-id="50cac-134">Começar a criar</span><span class="sxs-lookup"><span data-stu-id="50cac-134">Start building</span></span>
+
+   <span data-ttu-id="50cac-135">Familiarize-se rapidamente com a compilação para o Microsoft Teams criando um aplicativo simples e adicionando alguns recursos usados com frequência.</span><span class="sxs-lookup"><span data-stu-id="50cac-135">Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="50cac-136">Criar seu primeiro aplicativo agora</span><span class="sxs-lookup"><span data-stu-id="50cac-136">Build your first app now</span></span>](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a><span data-ttu-id="50cac-137">Integração com o Teams</span><span class="sxs-lookup"><span data-stu-id="50cac-137">Integrate with Teams</span></span>
+
+   <span data-ttu-id="50cac-138">Misturar os recursos que os usuários adoram em um aplicativo Web, serviço ou sistema existente com os recursos de colaboração do teams.</span><span class="sxs-lookup"><span data-stu-id="50cac-138">Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="50cac-139">Integrar um aplicativo existente</span><span class="sxs-lookup"><span data-stu-id="50cac-139">Integrate an existing app</span></span>](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a><span data-ttu-id="50cac-140">Um pouco de código é muito longo</span><span class="sxs-lookup"><span data-stu-id="50cac-140">A little code goes a long way</span></span>
+
+   <span data-ttu-id="50cac-141">Você não precisa ser um programador especialista para criar um grande aplicativo do teams.</span><span class="sxs-lookup"><span data-stu-id="50cac-141">You don't need to be an expert programmer to build a great Teams app.</span></span> <span data-ttu-id="50cac-142">Tente uma das várias soluções de código baixo.</span><span class="sxs-lookup"><span data-stu-id="50cac-142">Try one of several low-code solutions.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="50cac-143">Criar um aplicativo de código baixo</span><span class="sxs-lookup"><span data-stu-id="50cac-143">Create a low-code app</span></span>](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a><span data-ttu-id="50cac-144">Recursos</span><span class="sxs-lookup"><span data-stu-id="50cac-144">Resources</span></span>
+
+* [<span data-ttu-id="50cac-145">Adicionar um botão compartilhar ao Teams ao seu site</span><span class="sxs-lookup"><span data-stu-id="50cac-145">Add a Share to Teams button to your website</span></span>](concepts/build-and-test/share-to-teams.md)
+* [<span data-ttu-id="50cac-146">Sistema de design fluente</span><span class="sxs-lookup"><span data-stu-id="50cac-146">Fluent Design System</span></span>](https://fluentsite.z22.web.core.windows.net/)
+* [<span data-ttu-id="50cac-147">SDK do cliente JavaScript do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="50cac-147">Microsoft Teams JavaScript client SDK</span></span>](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* <span data-ttu-id="50cac-148">[SDK da estrutura de bot para JavaScript](https://github.com/Microsoft/botbuilder-js) e [SDK da estrutura de bot para .net](https://github.com/Microsoft/botbuilder-dotnet/)</span><span class="sxs-lookup"><span data-stu-id="50cac-148">[Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)</span></span>
+* [<span data-ttu-id="50cac-149">Publicar seu aplicativo em uma organização ou AppSource</span><span class="sxs-lookup"><span data-stu-id="50cac-149">Publish your app to an organization or AppSource</span></span>](concepts/deploy-and-publish/overview.md)
