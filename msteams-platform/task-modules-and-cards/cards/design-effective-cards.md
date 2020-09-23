@@ -1,15 +1,15 @@
 ---
-title: Criando cartões eficazes
+title: Designar cartões eficazes
 description: Descreve as diretrizes de design para criar cartões
 keywords: Diretrizes de design de equipes referência de cartões de estrutura de referência leve
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672893"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209834"
 ---
-# <a name="designing-effective-cards"></a>Criando cartões eficazes
+# <a name="design-effective-cards"></a>Designar cartões eficazes
 
 Os cartões são trechos acionáveis do conteúdo que você pode adicionar a uma conversa através de um bot, um conector ou um aplicativo. Usando texto, elementos gráficos e botões, os cartões permitem que você se comunique com uma audiência.
 

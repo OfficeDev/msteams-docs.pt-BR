@@ -1,16 +1,16 @@
 ---
 title: Estender o aplicativo do Microsoft Teams com uma guia personalizada
 author: laujan
-description: Um guia para criar uma guia
+description: Como criar uma guia para o Microsoft Teams usando o app Studio ou manualmente.
 keywords: guias do teams com o canal de grupo configurável
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819029"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209715"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Estender o aplicativo do Microsoft Teams com uma guia personalizada
 
@@ -84,7 +84,7 @@ O conteúdo exibido para guias pessoais é o mesmo para todos os usuários e é 
 |`name`|String|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
 |`contentUrl`|String|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
 |`websiteUrl`|String|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
-|`scopes`|Matriz de enumeração|1 |✔|As guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser configurada somente como parte de um aplicativo pessoal.|
+|`scopes`|Matriz de enumeração|1|✔|As guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser configurada somente como parte de um aplicativo pessoal.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Exemplo de manifesto de guia pessoal simples
 
@@ -111,7 +111,7 @@ As guias canal/grupo são adicionadas à `configurableTabs` matriz. Você pode d
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|A URL do https://para a página de configuração.|
 |`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será `true`|
-|`scopes`|Matriz de enumeração|1 |✔|As guias configuráveis dão suporte somente a `team` e os `groupchat` escopos. |
+|`scopes`|Matriz de enumeração|1|✔|As guias configuráveis dão suporte somente a `team` e os `groupchat` escopos. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Exemplo de manifesto de guia de canal/grupo simples
 

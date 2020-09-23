@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma do teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c9e76d13c96c48f88b555b3d740912017a8b2d0a
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 67b509e7d4f71fe6b597a22bb9141f51dc8284ab
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818875"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209771"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>O que são guias personalizadas do Microsoft Teams?
 
@@ -55,4 +55,4 @@ Você pode ter um máximo de uma (1) guia de canal/grupo e até dezesseis (16) G
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por ter sua guia de canal/grupo/guia pessoal exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` propriedade. Para garantir a melhor experiência do usuário, você deve seguir as [orientações para guias em celular](~/tabs/design/tabs-mobile.md) ao criar suas guias.
+Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` propriedade. Para garantir a melhor experiência do usuário, você deve seguir as [orientações para guias em celular](~/tabs/design/tabs-mobile.md) ao criar suas guias.

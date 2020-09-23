@@ -1,80 +1,71 @@
 ---
-title: Pontos extensíveis no cliente do teams
-author: clearab
-description: Compreenda os pontos de extensibilidade disponíveis para seu aplicativo no cliente do Microsoft Teams.
+title: Pontos de entrada para aplicativos do teams
+author: heath-hamilton
+description: Descreve como e onde as pessoas usam seu aplicativo no Microsoft Teams.
 ms.topic: conceptual
-ms.author: anclear
-ms.openlocfilehash: 0624aefa7873678b1d69c1d5796340cdac69c381
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: 1c68467177fc440993f059133f049f18785374b7
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867129"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209778"
 ---
-# <a name="extensible-points-in-the-teams-client"></a>Pontos extensíveis no cliente do teams
+# <a name="entry-points-for-teams-apps"></a>Pontos de entrada para aplicativos do teams
 
-Um aplicativo criado na plataforma do Microsoft Teams estende o cliente do Microsoft Teams (Web, Mobile e desktop) com os serviços Web que você hospeda. A plataforma do Microsoft Teams fornece um conjunto avançado e flexível de pontos de extensibilidade, construções de interface do usuário e APIs para que você tire proveito da criação do aplicativo. Seu aplicativo pode ser tão simples quanto a incorporação de seu site existente dentro de uma guia para sua equipe ou um aplicativo multifacetado totalmente repleto que envolve seus usuários em toda a abrangência do cliente Teams. Você pode optar por integrar um aplicativo existente ou criar uma nova experiência criada inteiramente para o Microsoft Teams.
+A plataforma de equipe fornece um conjunto flexível de pontos de entrada onde as pessoas podem descobrir e usar seu aplicativo. Seu aplicativo pode ser tão simples quanto a incorporação de um site existente em uma guia pessoal ou um aplicativo multifacetado que os usuários interagem com vários pontos de entrada.
 
-Há vários lugares em que o cliente do Microsoft Teams pode ser estendido para permitir que os usuários interajam com seu aplicativo. Dependendo do seu cenário, você pode optar por se concentrar em um único ponto de extensão (como um bot de conversa pessoal) ou combinar vários pontos de extensão.
+Os aplicativos mais bem-sucedidos se sentem nativos para o Microsoft Teams, portanto, é importante planejar cuidadosamente os pontos de entrada do seu aplicativo.
 
-## <a name="teams-channels-and-group-chats"></a>Equipes, canais e bate-papos de grupo
+## <a name="teams-channels-and-group-chats"></a>Equipes, canais e chats de grupo
 
-Equipes, canais e bate-papos de grupo permitem que várias pessoas colaborem. Os aplicativos desse contexto estão disponíveis para todos os membros do grupo ou da conversa, geralmente concentrando-se em Habilitar fluxos de trabalho colaborativos adicionais ou desbloquear novas interações sociais. Seu aplicativo terá acesso às APIs, permitindo que ele obtenha informações sobre os membros da conversa, os canais de uma equipe e metadados sobre a equipe ou conversa.
+Equipes, canais e chats de grupo são espaços de colaboração. Os aplicativos que usam esses pontos de entrada estão disponíveis para todos os membros e normalmente se concentram em fluxos de trabalho adicionais ou desbloqueiam as novas interações sociais.
 
-Eles podem ser estendidos com:
+Veja como os recursos de aplicativos do teams são comumente usados em contextos colaborativos:
 
-* [**Bots de conversa**](~/bots/what-are-bots.md) interagindo com membros da conversa através de chat e respondendo a eventos (como um novo membro que está sendo adicionado ou um canal que está sendo renomeado). Todas as conversas com um bot neste contexto são visíveis para todos os membros do canal ou grupo, portanto, você precisará garantir que a conversa seja relevante para todos.
+* As [**guias**](~/tabs/what-are-tabs.md) fornecem uma experiência da Web incorporada em tela cheia configurada para o chat de equipe, canal ou grupo. Todos os membros interagem com o mesmo conteúdo baseado na Web, de forma que uma experiência de aplicativo de página única sem estado seja típica.
 
-* [**Guias configuráveis**](~/tabs/what-are-tabs.md) que fornecem uma experiência Web incorporada de tela inteira configurada para o canal ou o chat de grupo em que está instalada. Todos os membros irão interagir no mesmo aplicativo Web compartilhado, de forma que uma experiência de aplicativo de página única sem estado seja típica.
+* [**As extensões de mensagens**](~/messaging-extensions/what-are-messaging-extensions.md) são atalhos para inserir conteúdo externo em uma conversa ou executar ações em mensagens sem sair do Microsoft Teams. O link Unfurling fornece conteúdo avançado ao compartilhar conteúdo de uma URL comum.
 
-* [**WebHooks e conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permitindo que os serviços externos publiquem mensagens na conversa e seus usuários enviem mensagens para o serviço. Você pode tirar proveito de cartões e ações de cartões para criar mensagens ricas e acionáveis.
+* Os [**bots**](~/bots/what-are-bots.md) interagem com membros da conversa através de chat e respondendo a eventos (como adicionar um novo membro ou renomear um canal). Conversas com um bot nesses contextos são visíveis para todos os membros da equipe, canal ou grupo, portanto, as conversas de bot devem ser relevantes para todos.
 
-### <a name="personal-apps"></a>Aplicativos pessoais
+* [**WebHooks e conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permitem que um serviço externo publique mensagens em uma conversa e os usuários enviem mensagens para um serviço.
 
-Os [aplicativos pessoais](~/concepts/design/personal-apps.md) são a parte do aplicativo do Microsoft Teams que se concentra em interações com um único usuário. A experiência é exclusiva para cada usuário individual. Esta parte do seu aplicativo pode ser fixada para o trilho de navegação à esquerda, habilitando o acesso de um clique para seus usuários.
+* [**API REST do Microsoft Graph**](https://docs.microsoft.com/graph/teams-concept-overview) para obter dados sobre equipes, canais e chats de grupo para ajudar a automatizar e gerenciar processos de equipes.
 
-Eles podem conter:
+## <a name="personal-apps"></a>Aplicativos pessoais
 
-* [**Bots de conversas**](~/bots/what-are-bots.md) com uma conversa de um-para-um com o usuário. Como esta é uma conversa privada, se seu aplicativo precisa ter uma conversa de múltipla volta ou fornecer uma notificação relevante apenas para um único usuário, normalmente é melhor ter essa interação em um aplicativo pessoal.
+Os [aplicativos pessoais](~/concepts/design/personal-apps.md) se concentram em interações com um único usuário. A experiência desse contexto é exclusiva para cada usuário. Os usuários podem fixar aplicativos pessoais no trilho esquerdo de navegação para acesso rápido.
 
-* [**Guias pessoais**](~/tabs/what-are-tabs.md) que fornecem uma experiência da Web incorporada em tela inteira.
+Veja aqui como os recursos do teams são comumente usados em contextos pessoais:
 
-## <a name="messages"></a>Mensagens
+* Os [**bots**](~/bots/what-are-bots.md) têm conversas de uma em um com um usuário. Os bots que exigem conversas Multiturn ou fornecem notificações relevantes apenas a um usuário específico são mais adequados em contextos pessoais.
 
-As mensagens são o coração de colaboração no Microsoft Teams. Com um [**comando de ação de extensão de mensagens**](~/messaging-extensions/what-are-messaging-extensions.md), seu aplicativo pode permitir que os usuários invoquem a API do aplicativo de uma mensagem, enviando o conteúdo da mensagem para o seu aplicativo para processamento ou ação. Seu aplicativo pode responder ao apresentar um formulário (um módulo de tarefa) ao usuário para coletar mais informações, enviar uma resposta para a mensagem original ou enviar uma mensagem diretamente ao usuário.
+* As [**guias**](~/tabs/what-are-tabs.md) fornecem uma experiência Web incorporada em tela inteira que é significativa para usuários individuais.
 
-## <a name="writing-messages"></a>Gravando mensagens
+## <a name="ui-components"></a>Componentes da interface do usuário
 
-Seu aplicativo pode ajudar os usuários a criar mensagens mais eficazes, permitindo que eles pesquisem ou executem ações em um sistema externo e insiram os resultados em um formato avançado e estruturado completo com botões acionáveis.
+Os aplicativos normalmente exibem um ou mais componentes de interface do usuário da equipe padrão. Compilar seu aplicativo usando esses componentes leva a experiências ricas que se sentem nativas para os usuários do Microsoft Teams.
 
-Há três maneiras em que o aplicativo pode ajudar os usuários a criar melhores mensagens:
+### <a name="cards"></a>Cartões
 
-* [**Messaging Extension-Search Commands**](~/messaging-extensions/what-are-messaging-extensions.md) permitindo a pesquisa rápida de um sistema externo, visualize os resultados dessa pesquisa e insira o resultado no bate-papo como um cartão rico.
+Os [cartões](~/task-modules-and-cards/what-are-cards.md) são contêineres de interface do usuário definidos por JSON que podem conter texto formatado, mídias, controles (como menus suspensos e botões de opção) e botões que disparam uma ação.
 
-* [**Messaging Extension-link Unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) permite que seu aplicativo monitore domínios da Web nos quais você está interessado. Quando uma URL que contém esse domínio é colada na caixa de mensagem de redação, a API do aplicativo será invocada, permitindo que você adicione um cartão avançado à mensagem com informações adicionais sobre o item vinculado.
-
-* [**Messaging Extension-os comandos de ação**](~/messaging-extensions/what-are-messaging-extensions.md) apresentam ao usuário um formulário de janela restrita (um módulo de tarefa), enviam os resultados do formulário para seu aplicativo e, em seguida, inserem uma mensagem na conversa diretamente ou criam parte de uma mensagem que o usuário pode editar antes de enviar à conversa.
-
-## <a name="user-interface-ui-elements"></a>Elementos da interface do usuário (UI)
-
-Além de pontos de extensibilidade, a plataforma Microsoft Teams fornece elementos de interface do usuário flexíveis para que os aplicativos aproveitem o. Esses elementos permitem que você crie experiências ricas que se sentem nativas ao cliente do teams.
-
-### <a name="cards--card-actions"></a>Cartões & ações do cartão
-
-Os [cartões](~/task-modules-and-cards/what-are-cards.md) são contêineres de interface do usuário definidos por esquematizado JSON, que podem conter várias propriedades e anexos. Eles podem conter texto formatado, mídia, controles (como caixas suspensas e botões de opção) e botões que disparam ações de cartão. As ações do cartão podem enviar cargas para a API do seu aplicativo, abrir um link, iniciar fluxos de autenticação ou enviar mensagens para conversas. A plataforma do Microsoft Teams dá suporte a vários tipos de cartões, incluindo cartões adaptáveis, cartões herói, cartões de miniaturas e muito mais. Eles podem ser combinados em coleções de cartões e exibidos em uma lista ou carrossel.
+As ações do cartão podem enviar cargas para a API do seu aplicativo, abrir um link, iniciar fluxos de autenticação ou enviar mensagens para conversas. A plataforma do Microsoft Teams suporta vários cartões, incluindo cartões adaptáveis, cartões herói, cartões de miniaturas e muito mais. Você pode combinar conjuntos de cartões e exibi-los em uma lista ou carrossel.
 
 ### <a name="task-modules"></a>Módulos de tarefas
 
-Os [módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md) permitem que você crie experiências pop-up restritas em seu aplicativo do Microsoft Teams. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um `<iframe>` widget, como YouTube ou Microsoft Stream Video, ou exibir um cartão adaptável. Eles são especialmente úteis para iniciar e concluir tarefas ou exibir informações ricas, como vídeos ou painéis do Power BI. Uma experiência de pop-up geralmente é mais natural para usuários que iniciam e concluem tarefas comparadas a uma guia ou uma experiência de bot baseada em conversas.
+Os [módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md) oferecem experiências modais no Microsoft Teams. Eles são especialmente úteis para iniciar fluxos de trabalho, coletar entradas do usuário ou exibir informações ricas, como vídeos ou painéis do Power BI. Em módulos de tarefa, você pode executar código de front-end personalizado, exibir um `<iframe>` widget ou mostrar um cartão adaptável.
+
+Ao considerar como você deseja criar seu aplicativo, lembre-se de que as modalidades são naturais para que os usuários insiram informações ou concluam tarefas comparadas a uma guia ou uma experiência de bot baseada em conversas.
 
 ### <a name="deep-links"></a>Deep links
 
-Seu aplicativo pode criar [links de URL profundas](~/concepts/build-and-test/deep-links.md) para ajudar a navegar pelo seu usuário por meio do seu aplicativo e do cliente do teams. Você pode criar um deeplink para a maioria das entidades no Teams e alguns (como uma nova solicitação de reunião) permitem preencher previamente as informações usando cadeias de caracteres de consulta na URL. Por exemplo, seu bot de conversa pode enviar uma mensagem para um canal com um deeplink para um módulo de tarefa que resulte em um cartão ser enviado como uma mensagem de um para um usuário, que por sua vez contém um deeplink para criar uma nova reunião com um usuário específico em uma determinada data/hora. Use links de profunda para se conectar aos vários pontos de extensão disponíveis para seu aplicativo, mantendo sempre o usuário no contexto correto.
+Seu aplicativo pode criar [links de URL profundas](~/concepts/build-and-test/deep-links.md) para ajudar a navegar pelo seu usuário por meio do seu aplicativo e do cliente do teams. Você pode criar um link profundo para a maioria das entidades no Teams e alguns (como uma nova solicitação de reunião) permitem preencher previamente as informações usando cadeias de caracteres de consulta na URL.
 
-### <a name="web-content-pages"></a>Páginas de conteúdo da Web
+Por exemplo, seu bot de conversa pode enviar uma mensagem para um canal com um link profundo para um módulo de tarefa que resulte em um cartão ser enviado como uma mensagem de um-para-um para um usuário, que por sua vez contém um link profundo para criar uma nova reunião com um usuário específico em uma determinada data/hora. Use links de profunda para se conectar aos vários pontos de extensão disponíveis para seu aplicativo, mantendo sempre o usuário no contexto correto.
 
-Uma [página de conteúdo da Web](~/tabs/how-to/create-tab-pages/content-page.md) é uma página da Web que você hospeda, que pode ser incorporada em uma guia ou em um módulo de tarefa. Para permitir que sua página da Web seja incorporada a um cliente do Microsoft Teams, ela deve:
+### <a name="web-based-content"></a>Conteúdo baseado na Web
 
-* Ser hospedado em um HTTPS.
-* Ser capaz de ser incorporado `<iframe>` a pelo cliente Teams.
-* Incluir o SDK do cliente JavaScript do Microsoft Teams e invocar o método do SDK `initialize()` na carga da página.
+[Conteúdo baseado na Web](~/tabs/how-to/create-tab-pages/content-page.md) é uma página da Web que você hospeda, que pode ser incorporada em um módulo de tarefa ou guia.
