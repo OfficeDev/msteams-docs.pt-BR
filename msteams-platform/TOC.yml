@@ -50,16 +50,6 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Extensão do kit de ferramentas do Teams para o Visual Studio
           href: toolkit/visual-studio-overview.md
-- name: Aplicativos em reuniões
-  items:
-    - name: Aplicativos do Teams em reuniões
-      href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Criar aplicativos para reuniões do Teams
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: Desenvolva uma conversa na reunião
-      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-    - name: Desenvolva uma guia na reunião
-      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Conceitos
   expanded: true
   items:
@@ -361,12 +351,16 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Aplicativos em reuniões
   items:
-    - name: Criar seu aplicativo
+    - name: Aplicativos do Teams em reuniões
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Crie aplicativos para reuniões do Teams
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Crie seu aplicativo na reunião
       items:
         - name: Caixa de diálogo na reunião
-          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Guia na reunião
-          href: apps-in-teams-meetings/designing-in-meeting-tab.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: APIs REST do Graph do Teams
   items:
     - name: Consentimento específico do recurso
