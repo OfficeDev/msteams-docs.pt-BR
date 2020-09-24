@@ -5,12 +5,12 @@ description: Visão geral dos aplicativos nas reuniões do Microsoft Teams com b
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
-ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
+ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48204021"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237885"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Aplicativos em reuniões do Teams (visualização)
 
@@ -62,7 +62,9 @@ Centros de extensibilidade de aplicativos da reunião da equipe em três conceit
 ✔ Para um aplicativo pode ser visível em uma reunião do teams em duas áreas:
 
 &emsp;&emsp;**Painel lateral**&#9679;. </br>
-> **Observação**: se o _manifesto do aplicativo_ especificar que a guia será [otimizada para o painel lateral](create-apps-for-teams-meetings.md#in-meeting), isso será exibido. Também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeita às diretrizes de design especificadas.
+
+> [!NOTE]
+> Se o _manifesto do aplicativo_ especificar que a guia será [otimizada para o painel lateral](create-apps-for-teams-meetings.md#in-meeting), isso será exibido. Também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeita às diretrizes de design especificadas.
 
 &emsp;&emsp;&#9679; **caixa de diálogo de reunião**. Use a caixa de diálogo de reunião para exibir conteúdo acionável para os participantes da reunião. *Consulte* [criar aplicativos para reuniões do teams](create-apps-for-teams-meetings.md).
 

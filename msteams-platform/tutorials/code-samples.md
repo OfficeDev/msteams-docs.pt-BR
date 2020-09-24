@@ -2,12 +2,12 @@
 title: Exemplos de código do Microsoft Teams
 description: Links e descrições de exemplos de aplicativos para a plataforma de desenvolvedor do Microsoft Teams
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 955588608fde694b163104d0a9e9e94289719003
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7a81494d7808c27c495c660b5d58f7779ba87c83
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44800979"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237955"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Tutoriais e exemplos de código para a plataforma de desenvolvedor do Microsoft Teams
 
@@ -15,7 +15,7 @@ Aqui, você encontrará uma lista de tutoriais e exemplos de código que demonst
 
 ## <a name="getting-started-with-microsoft-learn"></a>Introdução ao Microsoft Learn
 
-| Funcionalidade| Módulo de aprendizado|
+| Recursos| Módulo de aprendizado|
 |--------|-------------|
 | Guias — experiências da Web incorporadas  |  [Criar experiências da Web incorporadas com guias do Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
 | Webhooks e conectores  |  [Conectar serviços Web ao Microsoft Teams com WebHooks e conectores do Office 365](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
@@ -30,7 +30,7 @@ Para baixar nossos exemplos do GitHub:
 1. Selecione um dos projetos listados abaixo e abra o projeto no GitHub.
 2. Escolha o botão **clone ou download** e copie a URL
 3. Abra um prompt de comando no diretório pai no qual você deseja instalar o projeto de exemplo
-4. Sejam`git clone <pasted url>`
+4. Sejam `git clone <pasted url>`
 
 ### <a name="for-netc-samples"></a>Para amostras .NET/C#
 
@@ -55,10 +55,12 @@ Como sempre, o arquivo LEIAme do projeto deve ter mais informações sobre neces
 
 | Amostra | Descrição | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
-| Comando de pesquisa | Extensão de mensagens simples com um comando de pesquisa | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/50.teams-messaging-extension-search)|
-| Comando ação | Extensão de mensagens simples com um comando Action. Resposta inserida na área de mensagem de composição. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/51.teams-messaging-extensions-action)|
-| Comando Action com resposta de bot | Extensão de mensagens com um comando Action. Resposta inserida na conversa pelo bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/53.teams-messaging-extensions-action-preview)|
-| Comando de pesquisa | extensão de mensagens com um comando de pesquisa e autenticação e configuração | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/52.teams-messaging-extensions-search-auth-config)|
+| Extensões de mensagens-pesquisa | Extensão de mensagens que aceita solicitações de pesquisa e retorna resultados. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Extensões de mensagens-ação | Extensão de mensagens que aceita parâmetros e retorna um cartão. Além disso, como receber uma mensagem encaminhada como um parâmetro em uma extensão de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Extensões de mensagens-auth e config | A extensão de mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados após o usuário entrar. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| Extensões de mensagens-visualização de ação | Demonstra como criar um fluxo de visualização e edição para uma extensão de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
+| Desenrolamento de link | Extensão de mensagens que executa o link Unfurling. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+
 
 ## <a name="outgoing-webhooks"></a>WebHooks de saída
 

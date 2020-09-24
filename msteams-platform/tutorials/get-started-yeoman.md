@@ -1,15 +1,15 @@
 ---
 title: Introdução ao gerador Yeoman para o Microsoft Teams
 description: Introdução à criação de aplicativos ótimos com o gerador Yeoman para o Microsoft Teams
-keywords: Getting Started node. js NodeJS Yeoman
+keywords: introdução node.js NodeJS Yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034040"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237990"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Criar seu primeiro aplicativo do Microsoft Teams
 
@@ -26,7 +26,7 @@ Você precisa instalar o seguinte em sua máquina antes de começar a usar o ger
 
 ### <a name="install-node"></a>Nó de instalação
 
-Você precisa ter o NodeJS instalado em sua máquina. Você deve usar a versão mais recente do [LTS](https://nodejs.org/dist/latest-v8.x/).
+Você precisa ter o NodeJS instalado em sua máquina. Você deve usar a versão mais recente do [LTS](https://nodejs.org).
 
 ### <a name="install-a-code-editor"></a>Instalar um editor de códigos
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>Gerar seu projeto
 
-Abra um prompt de comando e crie um novo diretório no qual você deseja criar seu projeto e, nesse diretório, digite o `yo teams`comando. Isso iniciará o gerador de aplicativos do Teams e você será solicitado a fornecer um conjunto de perguntas.
+Abra um prompt de comando e crie um novo diretório no qual você deseja criar seu projeto e, nesse diretório, digite o comando `yo teams` . Isso iniciará o gerador de aplicativos do Teams e você será solicitado a fornecer um conjunto de perguntas.
 
 ![Times Yo](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,7 +68,7 @@ A primeira pergunta é sobre o nome do projeto, você pode deixá-lo como está 
 
 A etapa a seguir solicita um título do seu projeto, este título será usado no manifesto e na descrição do seu aplicativo. E, em seguida, você será solicitado a fornecer um nome de empresa, que também será usado no manifesto.
 
-A quinta pergunta pergunta sobre qual versão do manifesto você deseja usar. Para este tutorial, `v1.5`selecione, que é o esquema geral disponível atual.
+A quinta pergunta pergunta sobre qual versão do manifesto você deseja usar. Para este tutorial `v1.5` , selecione, que é o esquema geral disponível atual.
 
 Depois disso, o gerador solicitará quais itens você deseja adicionar ao seu projeto. Você pode selecionar um único ou qualquer combinação de itens. Por enquanto, basta selecionar *uma guia*.
 
@@ -88,7 +88,7 @@ O próximo conjunto de perguntas será baseado na seleção de itens anteriormen
 
 Depois que o gerador for concluído, você poderá abrir a solução em seu editor de código favorito. Reserve um minuto ou dois e familiarize-se com o modo como o código está organizado-você pode ler mais sobre isso na documentação da [estrutura do projeto](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) .
 
-Sua guia estará localizada no `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` arquivo. Esta é a classe baseada em reagir do TypeScript para sua guia. `render()` localize o método e adicione uma linha de código `<PanelBody>` dentro do controle para que ele tenha a seguinte aparência:
+Sua guia estará localizada no `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` arquivo. Esta é a classe baseada em reagir do TypeScript para sua guia. Localize o `render()` método e adicione uma linha de código dentro do `<PanelBody>` controle para que ele tenha a seguinte aparência:
 
 ``` TypeScript
 <PanelBody>
@@ -104,7 +104,7 @@ Salve o arquivo e retorne ao prompt de comando.
 
 Agora você pode criar seu projeto. Isso é feito em duas etapas (ou uma etapa, veja abaixo).
 
-Primeiro, você precisa criar o arquivo de manifesto do aplicativo Teams, que você carrega/Sideload no Microsoft Teams. Isso é feito pela tarefa `gulp manifest`Gulp. Isso validará o manifesto e criará um arquivo zip no `./package` diretório.
+Primeiro, você precisa criar o arquivo de manifesto do aplicativo Teams, que você carrega/Sideload no Microsoft Teams. Isso é feito pela tarefa Gulp `gulp manifest` . Isso validará o manifesto e criará um arquivo zip no `./package` diretório.
 
 Para compilar a solução, use o `gulp build` comando. Isso irá transcompilar sua solução na `./dist` pasta. 
 
@@ -120,9 +120,9 @@ Agora você poderá navegar até `http://localhost:3007/myFirstAppTab/` para gar
 
 O Microsoft Teams não permite que seu aplicativo hospedado no localhost, portanto, você precisa publicá-lo em uma URL pública ou usar um proxy, como ngrok.
 
-Boa notícia é que o projeto estruturado tem esse interno. Quando você executar `gulp ngrok-serve` o serviço ngrok será iniciado em segundo plano, com uma entrada DNS exclusiva e pública e também empacotará o manifesto com essa URL exclusiva e, em seguida, fará exatamente a mesma coisa `gulp serve`que.
+Boa notícia é que o projeto estruturado tem esse interno. Quando você executar `gulp ngrok-serve` o serviço ngrok será iniciado em segundo plano, com uma entrada DNS exclusiva e pública e também empacotará o manifesto com essa URL exclusiva e, em seguida, fará exatamente a mesma coisa que `gulp serve` .
 
-Depois de `gulp ngrok-serve`executar o, criar uma nova equipe do Microsoft Teams e quando ela for criada clique no nome da equipe, vá para as configurações do Teams e selecione *aplicativos*. No canto inferior direito, você verá um link *carregar um aplicativo personalizado*, selecione-o e navegue até a pasta do projeto e a subpasta `package`chamada. Selecione o arquivo zip nessa pasta e escolha abrir. Seu aplicativo agora está suplementos foi feito no Microsoft Teams.
+Depois de executar `gulp ngrok-serve` o, criar uma nova equipe do Microsoft Teams e quando ela for criada clique no nome da equipe, vá para as configurações do Teams e selecione *aplicativos*. No canto inferior direito, você verá um link *carregar um aplicativo personalizado*, selecione-o e navegue até a pasta do projeto e a subpasta chamada `package` . Selecione o arquivo zip nessa pasta e escolha abrir. Seu aplicativo agora está suplementos foi feito no Microsoft Teams.
 
 ![aplicativo Suplementos foi feito](~/assets/yeoman-images/teams-first-app-4.png)
 

@@ -5,18 +5,18 @@ description: Criar e executar seu primeiro aplicativo do Microsoft Teams, uma gu
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210087"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237829"
 ---
-# <a name="build-a-hello-world-teams-app"></a>Criar um "Olá, mundo!" Aplicativo de equipes
+# <a name="build-a-hello-world-teams-app"></a>Crie um "Olá, mundo!" Aplicativo de equipes
 
 Você pode ir direto para o desenvolvimento da plataforma do Microsoft Teams criando uma guia pessoal que exibe "Olá, mundo!"
 
-## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
+## <a name="1-create-your-app-project"></a>1. criar seu projeto de aplicativo
 
 Use o Microsoft Teams Toolkit no Visual Studio Code para configurar seu primeiro projeto de aplicativo.
 
@@ -27,7 +27,7 @@ Use o Microsoft Teams Toolkit no Visual Studio Code para configurar seu primeiro
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de tela mostrando como configurar seu projeto de aplicativo com o Visual Studio Code Teams Toolkit.":::
 1. Verifique a opção de **guia pessoal** e selecione **concluir** na parte inferior da tela para configurar seu projeto.
 
-## <a name="understand-important-app-project-components"></a>Compreender os principais componentes do projeto de aplicativo
+## <a name="2-understand-important-app-project-components"></a>2. compreender os principais componentes do projeto de aplicativos
 
 Quando o kit de ferramentas configura seu projeto, você tem os componentes para criar uma guia pessoal básica para o Microsoft Teams. Os diretórios e arquivos do projeto são exibidos na área do Explorer do Visual Studio Code.
 
@@ -57,7 +57,7 @@ Veja alguns detalhes sobre os arquivos de pacote de aplicativos:
 |**Logotipo colorido**|`.png`|192 &times; 192 pixels|`icon.color`|`.publish/color.png`|
 |**Logotipo da estrutura de tópicos**|`.png`|32 &times; 32 pixels|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>Executar o aplicativo
+## <a name="3-run-your-app"></a>3. Execute seu aplicativo
 
 Nos juros de tempo, você criará e executará seu aplicativo localmente.
 
@@ -68,7 +68,7 @@ Nos juros de tempo, você criará e executará seu aplicativo localmente.
 1. Abra um navegador e vá para `https://localhost:3000` para exibir uma página da Web em branco chamada **Guia do Microsoft Teams**. (Não se preocupe se você não consegue ver conteúdo na página.)<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Captura de tela mostrando como exibir seu aplicativo em execução em um navegador.":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar um túnel seguro para seu aplicativo
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar um túnel seguro para seu aplicativo
 
 Seu aplicativo está em execução no servidor Web local. Para executar seu aplicativo no Teams, você deve tornar seu `localhost` acessível por meio de HTTPS.
 
@@ -82,7 +82,7 @@ Instale o [ngrok](https://ngrok.com/download) se ainda não tiver feito isso. Ao
 
 O manifesto do aplicativo agora aponta para onde você está hospedando o aplicativo.
 
-## <a name="sideload-your-app-in-teams"></a>Sideload seu aplicativo no Microsoft Teams
+## <a name="5-sideload-your-app-in-teams"></a>5. Sideload seu aplicativo no Microsoft Teams
 
 Com o aplicativo em execução e acessível via HTTPS, você está pronto para carregá-lo no Microsoft Teams.
 
@@ -105,6 +105,6 @@ Expanda na guia pessoal que você acabou de criar ou criar outro tipo de aplicat
 > [!div class="nextstepaction"]
 > [Adicionar à sua guia pessoal](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [Criar uma guia de canal](../build-your-first-app/build-channel-tab.md)
+> [Construir uma guia de canal](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
-> [Criar um bot](../build-your-first-app/build-bot.md)
+> [Construir um bot](../build-your-first-app/build-bot.md)

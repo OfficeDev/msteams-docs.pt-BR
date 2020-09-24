@@ -5,12 +5,12 @@ description: Saiba como criar um bot para seu primeiro aplicativo do Microsoft T
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3d1b63aace7fda971fb6ccaddddf631b4b2ad9
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210051"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237822"
 ---
 # <a name="build-a-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -34,7 +34,7 @@ Seu local de trabalho está usando [guias](../build-your-first-app/build-persona
 
 Se você ainda não tiver feito isso, não se esqueça de [entender e instalar os pré-requisitos de desenvolvimento do teams](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
+## <a name="1-create-your-app-project"></a>1. criar seu projeto de aplicativo
 
 O Microsoft Teams Toolkit ajuda você a configurar os seguintes componentes para seu aplicativo:
 
@@ -53,7 +53,7 @@ O Microsoft Teams Toolkit ajuda você a configurar os seguintes componentes para
 1. Opcion Insira um nome personalizado para o bot e selecione **criar**. (Lembre-se de que esse é o nome do seu bot e não o nome do aplicativo Teams que você já especificou.)
 1. Selecione **concluir** na parte inferior da tela para configurar seu projeto.
 
-## <a name="identify-relevant-app-project-components"></a>Identificar componentes de projeto de aplicativo relevantes
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar componentes de projeto de aplicativo relevantes
 
 Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para a criação de um bot.
 
@@ -105,7 +105,7 @@ O aplicativo scaffolding fornece um `botActivityHandler.js` arquivo, localizado 
 
 O `.env` arquivo, também no diretório raiz, armazena a ID de bot e a senha.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar um túnel seguro para seu aplicativo
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. configurar um túnel seguro para seu aplicativo
 
 Para fins de teste, vamos hospedar seu bot em um servidor Web local (porta 3978).
 
@@ -116,7 +116,7 @@ Para fins de teste, vamos hospedar seu bot em um servidor Web local (porta 3978)
 
 O manifesto do aplicativo está apontando para o local em que você está hospedando o bot.
 
-## <a name="configuring-your-bot"></a>Configurando o bot
+## <a name="4-configure-your-bot"></a>4. configure seu bot
 
 Para usar um bot no Teams, você deve registrá-lo com o serviço de bot do Azure. Sorte para você, isso é feito automaticamente quando você configura seu aplicativo usando o Teams Toolkit.
 
@@ -140,7 +140,7 @@ Você deve especificar uma URL de ponto de extremidade para receber e processar 
 
 Seu bot poderá responder às mensagens no Teams.
 
-## <a name="run-your-app"></a>Executar o aplicativo
+## <a name="5-run-your-app"></a>5. Execute o aplicativo
 
 Você configurou uma URL para hospedar seu bot e configurá-la para lidar com as mensagens. É hora de colocar o bot em funcionamento.
 
@@ -151,19 +151,19 @@ Se tiver êxito, você verá algo parecido com a seguinte mensagem, indicando qu
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-bot-in-teams"></a>Sideload seu bot no Microsoft Teams
+## <a name="6-sideload-your-bot-in-teams"></a>6. Sideload seu bot no Microsoft Teams
 
 Com o bot em execução, você pode instalá-lo no Microsoft Teams.
 
 > [!TIP]
-> Se você ainda não suplementos foi feito um aplicativo do Microsoft Teams e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> Se você ainda não suplementos foi feito um aplicativo do Microsoft Teams e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Faça logon no cliente do teams com sua conta que permita o aplicativo Sideload.
 1. Selecione **aplicativos**e, em seguida, escolha **carregar um aplicativo personalizado**.
 1. Vá para a pasta do projeto de aplicativo `.publish` e selecione `Development.zip` .
 1. Na janela instalar, selecione **Adicionar** para instalar seu aplicativo.
 
-## <a name="test-your-bot"></a>Testar o bot
+## <a name="7-test-your-bot"></a>7. teste seu bot
 
 Agora, para a parte divertida: Vamos dizer "Olá" ao seu bot em um chat de um a um.
 

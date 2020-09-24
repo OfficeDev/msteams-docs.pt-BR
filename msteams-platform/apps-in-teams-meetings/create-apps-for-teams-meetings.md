@@ -1,16 +1,16 @@
 ---
-title: Criar aplicativos para reuniões do teams
+title: Criar aplicativos para reuniões do Teams
 author: laujan
 description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48181971"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237983"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Criar aplicativos para reuniões do Teams (visualização)
 
@@ -27,7 +27,7 @@ ms.locfileid: "48181971"
 
 1. Algumas APIs de reunião, como `GetParticipant` exigirão um [registro de bot e uma ID de aplicativo de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para gerar tokens de autenticação.
 
-1. Os desenvolvedores devem aderir às diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes de diálogo na](designing-in-meeting-dialog.md) reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
+1. Os desenvolvedores devem aderir às diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como durante as reuniões (consulte [a caixa de diálogo na reunião](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) e as diretrizes [de design da guia na reunião](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) ).
 
 ## <a name="meeting-apps-api-reference"></a>Referência da API de aplicativos de reunião
 
@@ -269,7 +269,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 #### <a name="in-meeting-dialog"></a>**caixa de diálogo na reunião**
 
-✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](designing-in-meeting-dialog.md).
+✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
 
 ✔ Consulte o fluxo de autenticação do Microsoft [Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md).
 

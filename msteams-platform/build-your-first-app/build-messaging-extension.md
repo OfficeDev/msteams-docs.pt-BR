@@ -5,12 +5,12 @@ description: Saiba como criar uma extensão de mensagens para seu primeiro aplic
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210062"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237815"
 ---
 # <a name="build-a-teams-messaging-extension"></a>Criar uma extensão de mensagens do Microsoft Teams
 
@@ -36,7 +36,7 @@ O suporte técnico da sua organização comunica-se com os usuários por meio do
 
 Se você ainda não tiver feito isso, não se esqueça de [entender e instalar os pré-requisitos de desenvolvimento do teams](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Criar seu projeto de aplicativo
+## <a name="1-create-your-app-project"></a>1. criar seu projeto de aplicativo
 
 O Microsoft Teams Toolkit ajuda você a configurar os seguintes componentes para sua extensão de mensagens:
 
@@ -58,7 +58,7 @@ O Microsoft Teams Toolkit ajuda você a configurar os seguintes componentes para
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot para sua extensão de mensagens.":::
 1. Selecione **concluir** na parte inferior da tela para configurar seu projeto.
 
-## <a name="identify-relevant-app-project-components"></a>Identificar componentes de projeto de aplicativo relevantes
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar componentes de projeto de aplicativo relevantes
 
 Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit.
 
@@ -108,9 +108,9 @@ Vamos entender algumas das propriedades que o kit de ferramentas criou para voc�
 
 O aplicativo scaffolding inclui um `.env` arquivo, localizado no diretório raiz do seu projeto, que armazena a ID e a senha do bot da extensão do sistema de mensagens.
 
-Além disso, no diretório raiz, há um `botActivityHandler.js` arquivo para lidar com a sua extensão de mensagens (ou tecnicamente, o [bot da extensão de mensagens](#configuring-the-bot-for-your-messaging-extension)) responde a consultas de pesquisa no Microsoft Teams.
+Além disso, no diretório raiz, há um `botActivityHandler.js` arquivo para lidar com a sua extensão de mensagens (ou tecnicamente, o [bot da extensão de mensagens](#4-configure-the-bot-for-your-messaging-extension)) responde a consultas de pesquisa no Microsoft Teams.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar um túnel seguro para seu aplicativo
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. configurar um túnel seguro para seu aplicativo
 
 Para fins de teste, vamos hospedar sua extensão de mensagens em um servidor Web local (porta 3978).
 
@@ -121,7 +121,7 @@ Para fins de teste, vamos hospedar sua extensão de mensagens em um servidor Web
 
 O manifesto do aplicativo está apontando para o local em que você está hospedando o bot usado pela extensão de mensagens.
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>Configurando o bot para sua extensão de mensagens
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. Configure o bot para sua extensão de mensagens
 
 As extensões de mensagens dependem de bots para enviar e processar solicitações de usuário do teams para seu serviço hospedado.
 
@@ -145,7 +145,7 @@ Você deve especificar uma URL de ponto de extremidade de bot para receber e pro
 
 O bot será capaz de lidar com consultas em sua extensão de mensagens.
 
-## <a name="run-your-app"></a>Executar o aplicativo
+## <a name="5-run-your-app"></a>5. Execute o aplicativo
 
 Você configurou uma URL para hospedar sua extensão de mensagens e configurá-la para lidar com pesquisas. É hora de colocar seu aplicativo em funcionamento.
 
@@ -156,19 +156,19 @@ Se tiver êxito, você verá algo parecido com a seguinte mensagem, indicando qu
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>Sideload sua extensão de mensagens no Microsoft Teams
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. Sideload sua extensão de mensagens no Microsoft Teams
 
 Com sua extensão de mensagens em execução, você pode instalá-lo no Microsoft Teams.
 
 > [!TIP]
-> Se você ainda não suplementos foi feito um aplicativo do Microsoft Teams e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> Se você ainda não suplementos foi feito um aplicativo do Microsoft Teams e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Faça logon no cliente do teams com sua conta que permita o aplicativo Sideload.
 1. Selecione **aplicativos**e, em seguida, escolha **carregar um aplicativo personalizado**.
 1. Vá para a pasta do projeto de aplicativo `.publish` e selecione `Development.zip` .
 1. Na janela instalar, selecione **Adicionar** para instalar seu aplicativo.
 
-## <a name="test-your-messaging-extension"></a>Testar sua extensão de mensagens
+## <a name="7-test-your-messaging-extension"></a>7. testar sua extensão de mensagens
 
 Saiba como as extensões de mensagens funcionam em um chat do Microsoft Teams.
 

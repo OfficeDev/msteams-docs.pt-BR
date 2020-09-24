@@ -2,12 +2,12 @@
 title: Autenticação para guias usando o Azure Active Directory
 description: Descreve a autenticação no Microsoft Teams e como usá-la em guias
 keywords: AAD de guias de autenticação de equipes
-ms.openlocfilehash: 211c08ce1a51a8f0f13e622856a808661dc97b39
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: a1d3a96e23706012b643b5827701b49e2306d847
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800965"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237780"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma guia do Microsoft Teams
 
@@ -136,10 +136,10 @@ Este código analisa os pares chave-valor recebidos do Azure AD `window.location
 
 ### <a name="notes"></a>Observações
 
-`NotifyFailure()`o tem os seguintes motivos de falha predefinidos:
+`NotifyFailure()` o tem os seguintes motivos de falha predefinidos:
 
-* `CancelledByUser`o usuário fechou a janela pop-up antes de concluir o fluxo de autenticação.
-* `FailedToOpenWindow`Não foi possível abrir a janela pop-up. Ao executar o Microsoft Teams em um navegador, isso normalmente significa que a janela foi bloqueada por um bloqueador de pop-up.
+* `CancelledByUser` o usuário fechou a janela pop-up antes de concluir o fluxo de autenticação.
+* `FailedToOpenWindow` Não foi possível abrir a janela pop-up. Ao executar o Microsoft Teams em um navegador, isso normalmente significa que a janela foi bloqueada por um bloqueador de pop-up.
 
 Se tiver êxito, você poderá atualizar ou recarregar a página e mostrar o conteúdo relevante para o usuário autenticado agora. Se a autenticação falhar, exiba uma mensagem de erro.
 
@@ -147,6 +147,9 @@ Seu aplicativo pode definir seu próprio cookie de sessão para que o usuário n
 
 > [!NOTE]
 > O Chrome 80, agendado para lançamento no início de 2020, apresenta novos valores de cookie e impõe políticas de cookies por padrão. É recomendável que você defina o uso pretendido para seus cookies, em vez de confiar no comportamento padrão do navegador. *Confira* o [atributo SameSite cookie (atualização 2020)](../../../resources/samesite-cookie-update.md).
+
+>[!NOTE]
+>Para obter o token correto para os usuários gratuitos e convidados do Microsoft Teams, é importante que os aplicativos usem o ponto de extremidade específico do locatário https://login.microsoftonline.com/ **{tenantid}**. Você pode obter tenantid da mensagem do bot ou do contexto da guia. Se os aplicativos usarem https://login.microsoftonline.com/common , os usuários receberão tokens incorretos e farão logon no locatário "Home", em vez do locatário que estão atualmente conectados.
 
 Para obter mais informações sobre logon único (SSO), confira o artigo [autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

@@ -4,12 +4,12 @@ description: Descreve o esquema suportado pelo manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: b67b23278a2d2bbb2b24c0e828f01cf1789c6191
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039283"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237976"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -316,7 +316,7 @@ O nome da sua experiência de aplicativo, exibido aos usuários na experiência 
 |`short`|30 caracteres|✔|O nome de exibição curto para o aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, usado se o nome completo do aplicativo exceder 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descrição
 
 **Obrigatório** — objeto
 
@@ -382,10 +382,10 @@ Usado quando sua experiência de aplicativo tem uma experiência de guia de cana
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
-|`scopes`|matriz de enumeração|1 |✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
+|`scopes`|matriz de enumeração|1|✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|matriz de enumeração|1 ||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e`sharePointWebPart` |
+|`supportedSharePointHosts`|matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -401,7 +401,7 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |`name`|string|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
 |`contentUrl`|string|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
 |`websiteUrl`|string|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
-|`scopes`|matriz de enumeração|1 |✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
+|`scopes`|matriz de enumeração|1|✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
 
 > [!NOTE]
 > Se suas guias exigirem informações dependentes de contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, *consulte* [obter contexto para a guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -417,10 +417,10 @@ O item é uma matriz (máximo de apenas 1 elemento &mdash; atualmente apenas um 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
-|`scopes`|matriz de enumeração|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
-|`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será**`false`**|
-|`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será`**false**`|
-|`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Será**`false`**|
+|`scopes`|matriz de enumeração|3D|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será **`false`**|
+|`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será `**false**`|
+|`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Será **`false`**|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -428,14 +428,14 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeração|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de enumeração|3D|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|title|cadeia de caracteres|12 |✔|O nome do comando do bot|
+|title|string|12 |✔|O nome do comando do bot|
 |description|string|128 caracteres|✔|Uma descrição de texto simples ou um exemplo da sintaxe de comando e seus argumentos.|
 
 ## <a name="connectors"></a>conectores
@@ -449,7 +449,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
-|`scopes`|matriz de enumeração|1 |✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
+|`scopes`|matriz de enumeração|1|✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
 |`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -468,7 +468,7 @@ O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `obj
 |`botId`|string|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que faz a extensão do sistema de mensagens, conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de aplicativo geral.|
 |`commands`|matriz de objetos|10 |✔|matriz de comandos que a extensão de mensagens oferece suporte|
 |`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
-|`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no`validDomains`|
+|`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no `validDomains`|
 |`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadeias de caracteres|||matriz de domínios para o qual o manipulador de mensagens de link pode se registrar.|
 
@@ -485,7 +485,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|string|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
 |`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
 |`initialRun`|booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: **false**.|
-|`context`|matriz de cadeias de caracteres|3 ||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
+|`context`|matriz de cadeias de caracteres|3D||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor Boolean que indica se ele deve buscar o módulo de tarefa dinamicamente. Padrão: **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagem.|
 |`taskInfo.title`|string|64 caracteres||Título inicial da caixa de diálogo.|
@@ -556,7 +556,10 @@ Especifique a ID do aplicativo AAD e as informações do gráfico para ajudar os
 
 **Opcional** — Boolean
 
-Indicar onde ou não mostrar o indicador de carregamento quando um app/Tab estiver sendo carregado. Padrão: **false**.
+Indica se o indicador de carregamento deve ou não ser mostrado quando um app/Tab é carregado. Padrão: **false**.
+>[!NOTE]
+>Se você definir "showLoadingIndicator: true" em seu manifesto de aplicativo, para que a página seja carregada corretamente, você deve modificar as páginas de conteúdo de suas guias e módulos de tarefa, de acordo com o protocolo descrito em [Mostrar um documento indicador de carregamento nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) .
+
 
 ## <a name="isfullscreen"></a>isFullScreen
 

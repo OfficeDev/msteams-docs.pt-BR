@@ -1,24 +1,20 @@
 ---
 author: heath-hamilton
-description: Saiba como criar uma guia de canal para seu primeiro aplicativo do Microsoft Teams.
+description: Saiba como criar uma guia de canal e grupo para seu primeiro aplicativo do Microsoft Teams.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Criar uma guia de canal do teams
-ms.openlocfilehash: d0846c3af23fd9df6013f989e9f455f711d05a5f
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Criar uma guia de canal e grupo do teams
+ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210090"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237808"
 ---
-# <a name="build-a-teams-channel-tab"></a>Criar uma guia de canal do teams
+# <a name="build-a-teams-channel-and-group-tab"></a>Criar uma guia de canal e grupo do teams
 
-Neste tutorial, você criará uma *guia canal*básico, uma página de conteúdo de tela inteira para um canal de equipe ou chat. Ao contrário de uma guia pessoal, os usuários podem configurar alguns aspectos de uma guia de canal (por exemplo, renomear a guia de forma que ela seja significativa para o canal).
-
-## <a name="before-you-begin"></a>Antes de começar
-
-Você precisa de um aplicativo básico em execução para começar. Se você não tiver um, siga as [instruções Build e Run Your Teams First app](../build-your-first-app/build-and-run.md). Ao criar seu projeto de aplicativo, escolha somente a opção de **guia canal ou grupo Teams** .
+Neste tutorial, você criará uma guia de *canal* básica (também conhecida como uma *Guia de grupo*), que é uma página de tela inteira de um canal de equipe ou bate-papo. Ao contrário de uma guia pessoal, os usuários podem configurar alguns aspectos desse tipo de guia (por exemplo, renomear a guia de forma que ela seja significativa para o canal).
 
 ## <a name="your-assignment"></a>Sua atribuição
 
@@ -30,19 +26,33 @@ Você pode facilitar a localização dessas informações criando uma guia de ca
 
 > [!div class="checklist"]
 >
-> * Identificar algumas das propriedades de manifesto de aplicativo e scaffolding relevantes para as guias de canal
+> * Criar um projeto de aplicativo usando o Microsoft Teams Toolkit para o Visual Studio Code
+> * Identificar algumas das propriedades de manifesto do aplicativo e scaffolding relevantes para as guias canal e grupo
+> * Hospedar um aplicativo localmente
 > * Criar conteúdo de guia
 > * Criar conteúdo para a página de configuração de uma guia
 > * Permitir que uma guia seja configurada e instalada
 > * Fornecer um nome de guia sugerido
 
-## <a name="identify-relevant-app-project-components"></a>Identificar componentes de projeto de aplicativo relevantes
+## <a name="1-create-your-app-project"></a>1. criar seu projeto de aplicativo
 
-Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia canal.
+O Microsoft Teams Toolkit ajuda você a configurar o manifesto do aplicativo e o scaffolding relevantes para as guias canal e grupo, incluindo uma página de configuração básica e uma página de conteúdo que exibe um "Olá, mundo!" Mensagem.
+
+> [!TIP]
+> Se você ainda não criou um projeto de aplicativos do Microsoft Teams, talvez ache útil seguir [estas instruções](../build-your-first-app/build-and-run.md) para explicar os projetos com mais detalhes.
+
+1. No Visual Studio Code, selecione **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: na barra de atividades à esquerda e escolha **criar um novo aplicativo Teams**.
+1. Insira um nome para seu aplicativo do Microsoft Teams. (Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto de aplicativo em sua máquina local.)
+1. Na tela **Adicionar recursos** , selecione **Tab** , **grupo ou guia canal de equipe**.
+1. Selecione **concluir** na parte inferior da tela para configurar seu projeto.  
+
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar componentes de projeto de aplicativo relevantes
+
+Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para a criação de uma guia canal e grupo.
 
 ### <a name="app-manifest"></a>Manifesto do aplicativo
 
-O trecho de código a seguir do manifesto de aplicativo mostra [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , que inclui as propriedades e os valores padrão relevantes para as guias de canal.
+O trecho de código a seguir do manifesto de aplicativo mostra [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , que inclui as propriedades e os valores padrão relevantes para as guias canal e grupo.
 
 ```JSON
 "configurableTabs": [
@@ -65,7 +75,27 @@ O trecho de código a seguir do manifesto de aplicativo mostra [`configurableTab
 
 O aplicativo scaffolding fornece um `TabConfig.js` arquivo, localizado no `src/components` diretório do seu projeto, para renderizar a página de configuração da guia (mais sobre isso em breve).
 
-## <a name="create-your-tab-content"></a>Criar seu conteúdo de guia
+## <a name="3-run-your-app"></a>3. Execute seu aplicativo
+
+Nos juros de tempo, você criará e executará seu aplicativo localmente.
+
+1. Em um terminal, vá para o diretório raiz do seu projeto de aplicativo e execute `npm install` .
+1. Executar `npm start` .
+
+Após a conclusão, há uma **compilação bem-sucedida!** mensagem no terminal.
+
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar um túnel seguro para seu aplicativo
+
+Para fins de teste, vamos hospedar sua guia em um servidor Web local (porta 3000).
+
+1. Em um terminal, execute `ngrok http 3000` .
+1. Copie a URL HTTPS que você forneceu.
+1. Em seu `.publish` diretório, abra `Development.env` .
+1. Substitua o `baseUrl0` valor pela URL copiada. (Por exemplo, alterar `baseUrl0=http://localhost:3000` para `baseUrl0=https://85528b2b3ca5.ngrok.io` .)
+
+O manifesto do aplicativo está apontando para o local em que você está hospedando a guia.
+
+## <a name="5-customize-your-tab-content-page"></a>5. personalizar a página de conteúdo da guia
 
 Abra o manifesto do aplicativo ( `manifest.json` ) no `.publish` diretório e defina as seguintes propriedades no [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , que define a página de conteúdo da guia.
 
@@ -121,9 +151,9 @@ a {
 }
 ```
 
-## <a name="create-your-tab-configuration-page"></a>Criar a página de configuração da guia
+## <a name="6-create-your-tab-configuration-page"></a>6. criar sua página de configuração de guia
 
-Cada guia de canal tem uma página de configuração, modal com pelo menos uma opção de configuração que é exibida ao instalar o aplicativo. A página de configuração, por padrão, pergunta aos usuários se eles desejam notificar o canal ou chat quando a guia é instalada.
+Cada guia em um canal ou chat tem uma página de configuração, uma janela restrita com pelo menos uma opção de instalação que é exibida quando os usuários instalam seu aplicativo. A página de configuração, por padrão, pergunta aos usuários se eles desejam notificar o canal ou chat quando a guia é instalada.
 
 Adicione algum conteúdo à sua página de configuração. Vá para o diretório do seu projeto `src/components` , abra `TabConfig.js` e insira algum conteúdo dentro `return()` (conforme mostrado).
 
@@ -141,9 +171,9 @@ return (
 > [!TIP]
 > No mínimo, forneça algumas breves informações sobre o aplicativo nesta página, pois essa pode ser a primeira vez que os usuários estão aprendendo. Você também pode incluir opções de configuração personalizada ou um [fluxo de trabalho de autenticação](../tabs/how-to/authentication/auth-aad-sso.md), que é comum nas páginas de configuração da guia.
 
-## <a name="allow-the-tab-to-be-configured-and-installed"></a>Permitir que a guia seja configurada e instalada
+## <a name="7-allow-the-tab-to-be-configured-and-installed"></a>7. permitir que a guia seja configurada e instalada
 
-Para que os usuários configurem e instalem com êxito a guia canal, você deve adicionar a URL de host que você configurou ao [criar e executar seu primeiro aplicativo](../build-your-first-app/build-and-run.md) no componente da página de configuração.
+Para que os usuários configurem e instalem a guia com êxito, você deve adicionar a [URL de host segura que você configurou](#4-set-up-a-secure-tunnel-to-your-app) ao componente da página de configuração.
 
 Vá para `TabConfig.js` e localize `microsoftTeams.settings.setSettings` . Para `"contentUrl"` , substitua a `localhost:3000` parte da URL pelo domínio em que você está hospedando o conteúdo da guia (conforme mostrado).
 
@@ -155,7 +185,7 @@ microsoftTeams.settings.setSettings({
 
 Além disso, certifique-se de que `microsoftTeams.settings.setValidityState(true);` . Ele é, por padrão, se definido como `false` , o botão **salvar** está desabilitado na página de configuração.
 
-## <a name="provide-a-suggested-tab-name"></a>Fornecer um nome de guia sugerido
+## <a name="8-provide-a-suggested-tab-name"></a>8. fornecer um nome de guia sugerido
 
 Quando você instala uma guia para uso pessoal, o nome para exibição é a `name` Propriedade na `staticTabs` parte do manifesto do aplicativo (por exemplo, **meus contatos**). Quando você instala uma guia canal, por padrão, o nome do aplicativo é exibido (por exemplo, **First-app**).
 
@@ -170,9 +200,9 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="view-the-channel-tab"></a>Exibir a guia canal
+## <a name="9-view-the-tab"></a>9. exibir a guia
 
-Para ver as páginas de configuração e conteúdo da guia canal, você deve instalá-lo em um canal ou chat.
+Para ver as páginas de configuração e conteúdo da guia, você deve instalá-lo em um canal ou chat.
 
 1. No cliente do Microsoft Teams, selecione **aplicativos**.
 1. Selecione **carregar um aplicativo personalizado** e escolha o seu aplicativo `Development.zip` .
@@ -184,7 +214,7 @@ Para ver as páginas de configuração e conteúdo da guia canal, você deve ins
 
 ## <a name="well-done"></a>Muito bem
 
-Parabéns! Você tem um aplicativo Teams com uma guia de canal para exibir conteúdo útil em canais e chats.
+Parabéns! Você tem um aplicativo do teams com uma guia para exibir conteúdo útil em canais e chats.
 
 ## <a name="learn-more"></a>Saiba mais
 
@@ -199,4 +229,4 @@ Parabéns! Você tem um aplicativo Teams com uma guia de canal para exibir conte
 Você sabe como criar uma guia para colaboração. Deseja tentar criar um tipo diferente de aplicativo do teams?
 
 > [!div class="nextstepaction"]
-> [Criar um bot](../build-your-first-app/build-bot.md)
+> [Construir um bot](../build-your-first-app/build-bot.md)

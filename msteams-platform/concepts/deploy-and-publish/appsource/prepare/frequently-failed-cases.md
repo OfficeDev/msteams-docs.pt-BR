@@ -4,12 +4,12 @@ description: Descreve as dicas para o envio e a maioria das políticas com falha
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704478"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237857"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -114,19 +114,22 @@ O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui est
 
 * **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
 
-### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots devem enviar uma mensagem de boas-vindas na primeira inicialização
+### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots pessoais devem enviar uma mensagem de boas-vindas na primeira inicialização
 
-As mensagens de boas-vindas são a melhor maneira de definir o tom de seu bot. Esta é a primeira interação de um usuário com o bot. Uma boa mensagem de boas-vindas pode incentivar o usuário a continuar a explorar o aplicativo. Se a mensagem de boas-vindas ou introdutória for confusa ou innítida, os usuários não verão o valor do aplicativo imediatamente e perderão os interesses.
+Uma mensagem de boas-vindas é a melhor maneira de definir o Tom para seu bot pessoal/chat. Esta é a primeira interação de um usuário com o bot. Uma boa mensagem de boas-vindas pode incentivar o usuário a continuar a explorar o aplicativo. Se a mensagem de boas-vindas ou introdutória for confusa ou innítida, os usuários não verão o valor do aplicativo imediatamente e perderão os interesses.
+
+> [!Note]
+> Uma mensagem de boas-vindas é opcional para um bot de canal.
 
 ### <a name="welcome-message-requirements"></a>Requisitos de mensagem de boas-vindas
 
-* Identificar quem adicionou o bot a um canal.
-* Incluir uma proposta de valor.
-* Fornecer orientações para o uso do bot.
-* Apresente o texto fácil de ler e uma caixa de diálogo direta — preferivelmente um cartão com um botão de Tour de boas-vindas acionável que carrega um módulo de tarefa.
+* Inclua uma proposta de valor com o Tour de boas-vindas.
+* Fornecer orientação de avanço para usar o bot.
+* Apresente texto fácil de ler e uma caixa de diálogo direta, de preferência um cartão com um botão de Tour de boas-vindas acionável que carrega um módulo de tarefa.
 * Mantenha-o simples, evite a caixa de diálogo de palavras/informativas.
+* Inclua cartões e botões adaptáveis para tornar a mensagem de boas-vindas mais utilizável.
 * Invocar a mensagem de boas-vindas com um ping, não dois ou mais pings simultâneos.
-* No bate-papo pessoal, a mensagem de boas-vindas só deve ser exibida para o usuário que configurou o aplicativo.  
+* Uma mensagem de boas-vindas só deve ser exibida para o usuário que configurou o aplicativo, de preferência em um bate-papo pessoal 1:1.
 * Nunca envie um chat pessoal para todos os membros da equipe.
 * Nunca envie a mensagem de boas-vindas mais de uma vez. Repetir a mesma mensagem de boas-vindas por intervalos regulares não é permitida e é considerada como spam.
 
