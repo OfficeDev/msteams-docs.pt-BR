@@ -2,12 +2,12 @@
 title: Diretrizes de processo de envio de aprovação do aplicativo Microsoft Teams
 description: Descreve o processo de aprovação de envio para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Teams Publish Store Office Publishing Publish AppSource Partner Center
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874867"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279690"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -30,7 +30,7 @@ Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o dispon
 >- Se seu aplicativo contiver um conector do Office 365, termos adicionais poderão ser aplicados. *Consulte* [Connectors Dashboard de desenvolvedor](https://aka.ms/connectorsdashboard) e [contrato de desenvolvedor de aplicativos](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 >- Para disponibilizar seu aplicativo para usuários GCC e evitar listagens de aplicativos duplicados no repositório, o fluxo/processo de autenticação deve identificar e rotear o usuário para a URL de conteúdo especificado/esperado para usuários GCC.
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>Perguntas frequentes: aplicativos de equipe e contas de parceiros
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>Perguntas frequentes: aplicativos de equipe e processo de verificação de contas de parceiros no Partner Center
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Como faço para criar uma conta do Partner Center?
 
@@ -49,11 +49,11 @@ Abra um [tíquete de suporte do centro de parceria](https://partner.microsoft.co
 | Tópico | Perguntas gerais sobre ajuda e instruções do Marketplace |
 | Subtópico| Suplemento do Office |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>Onde posso obter suporte para meus problemas do centro de parceria?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Onde posso obter suporte para meus problemas de conta do centro de parceiros?
 
 Visite nossa [página de suporte de editores](https://aka.ms/marketplacepublishersupport) para procurar seu tópico de problema e encontre orientações. Se a orientação fornecida não for útil, [abra um tíquete de suporte do centro de parceria](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-## <a name="how-do-i-manage-my-office-store-account"></a>Como gerenciar minha conta da Office Store?
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>Como gerenciar minha conta da Office Store no Partner Center?
 
 Visite nossa  [conta gerenciar a sua conta do Office Store no Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter orientação sobre como gerenciar sua conta da Office Store por meio do Partner Center.
 
@@ -77,12 +77,12 @@ Durante o processo de verificação da conta, o status de cada etapa obrigatóri
 
 ![Erro de verificação da central de parceiros](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>Meu status de verificação de conta não é avançado além da propriedade de email. Como devo proceder?
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Meu status de verificação de conta não é avançado além da propriedade de email no Partner Center. Como devo proceder?
 
 Durante o processo de verificação de **propriedade de email** , um email de verificação é enviado para o endereço de email de contato principal. Verifique a caixa de entrada de contato principal de um email de **maccount@<span>Microsoft</span>. com** com a ação de linha de assunto *necessária: Verifique sua conta de email com a Microsoft*, solicitando que você conclua o processo de verificação de email. O email de verificação será enviado para o endereço de email listado na página Configurações de conta no centro de parceiros.
 
 > [!NOTE]
- >O link de verificação de email só é válido por sete dias. Você pode solicitar que reenviemos o email para você visitando sua página de perfil de parceiro e selecionando o link de **email de verificação de reenvio** . Para garantir que o email seja recebido, o email de lista branca do microsoft.com como um domínio seguro e verifique as pastas de lixo eletrônico.
+ >O link de verificação de email só é válido por sete dias. Você pode solicitar que reenviemos o email para você visitando sua página de perfil de parceiro e selecionando o link de **email de verificação de reenvio** . Para garantir que os emails sejam recebidos, os emails de lista segura do microsoft.com como um domínio seguro e verifique suas pastas de lixo eletrônico.
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Como eu obteria mais suporte para as minhas questões relacionadas à conta?
 

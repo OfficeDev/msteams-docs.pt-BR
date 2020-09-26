@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303714"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279657"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -20,7 +20,13 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|09/22/2020|Nova orientação "introdução às equipes do Microsoft Teams"|[Criar sua primeira visão geral do App Teams](build-your-first-app/build-first-app-overview.md)|
+|9/18/2020|Suporte para aplicativos de equipes em reunião (visualização pública)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|8/19/2020|Importar mensagens do teams com o Microsoft Graph|[Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Suporte a cartões adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/10/2020|Introdução à criação de aplicativos do teams com o Visual Studio Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-overview.md) |
+|08/06/2020|Suporte para autenticação SSO de guias|[Desenvolver uma guia SSO do Microsoft Teams](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|07/27/2020 | Mensagens e bots proativos do Graph (visualização pública)|[Habilitar instalação de bot proativo e mensagens pró-ativas no Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Ferramenta de validação de aplicativos do teams para envios do AppSource.|[Ferramenta de validação de aplicativos do teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|

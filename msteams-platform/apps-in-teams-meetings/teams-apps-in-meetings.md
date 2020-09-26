@@ -5,12 +5,12 @@ description: Visão geral dos aplicativos nas reuniões do Microsoft Teams com b
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237885"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279713"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Aplicativos em reuniões do Teams (visualização)
 
@@ -129,4 +129,4 @@ Você pode acessar a página  **Opções de reunião** da seguinte maneira:
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Habilitar aplicativos em reuniões do teams] (apps-in-Teams-reuniões/habilitar-apps-in-reuniões. MD
+> [Crie aplicativos para reuniões do Teams](create-apps-for-teams-meetings.md)

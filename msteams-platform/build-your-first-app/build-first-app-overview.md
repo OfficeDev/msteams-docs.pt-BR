@@ -5,14 +5,14 @@ description: Visão geral e pré-requisitos para a criação do primeiro aplicat
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210046"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279706"
 ---
-# <a name="building-your-first-teams-app-overview"></a>Criando a primeira visão geral do aplicativo de equipes
+# <a name="build-your-first-teams-app-overview"></a>Criar sua primeira visão geral do App Teams
 
 Nas aulas **Compilar suas primeiras aplicativos** , você cria aplicativos básicos do teams. Cada tutorial percorre como criar um aplicativo simples e de equipe real ao apresentar as ferramentas comuns, conceitos fundamentais e recursos mais avançados.
 
@@ -105,6 +105,6 @@ Depois de configurar sua conta e ambiente, você pode começar a criar.
 ### <a name="other-tutorials"></a>Outros tutoriais
 
 > [!div class="nextstepaction"]
-> [Criar um bot](../build-your-first-app/build-bot.md)
+> [Construir um bot](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
-> [Criar uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
+> [Construir uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
