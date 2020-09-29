@@ -157,7 +157,7 @@
       items:
         - name: Visão geral do design
           href: tabs/design/tabs.md
-        - name: Guias em clientes móveis
+        - name: Guias em dispositivos móveis
           href: tabs/design/tabs-mobile.md
     - name: Guias de instruções
       expanded: true
