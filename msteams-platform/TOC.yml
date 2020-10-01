@@ -103,6 +103,8 @@
           href: concepts/deploy-and-publish/apps-upload.md
         - name: Publicar seu aplicativo na sua organização
           href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+        - name: Criar uma oferta de SaaS para o seu aplicativo Microsoft Teams
+          href: concepts/deploy-and-publish/add-saas-offer.md
         - name: Publicar seu aplicativo no AppSource
           items:
             - name: Compreender o envio no AppSource
