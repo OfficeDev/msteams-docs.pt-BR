@@ -3,12 +3,12 @@ title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279808"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326352"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -67,6 +67,21 @@ Book-a-Room é um [bot do Microsoft Teams](../bots/what-are-bots.md) que permite
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![Demonstração de livro a sala](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>&#9734; de acesso de criação
+
+A criação de acesso é um aplicativo baseado em [plataforma de alimentação](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)da Microsoft que dá suporte à administração da criação de limiares de ocupação e das normas de distancing social, permitindo que os diretores de recursos gerenciem, rastreiem e relatem a presença local do funcionário. O aplicativo, criado usando os [aplicativos de alimentação](/powerapps/powerapps-overview)da Microsoft, e a [automatização de energia](/power-automate/getting-started), integra-se totalmente ao Microsoft Teams e permite que as organizações determinem a criação da preparação, estabeleçam critérios de qualificação para o acesso no local e coletem insights para planejamento futuro.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Criar cartão de reserva de acesso](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Exibição da chave de acesso de criação](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>Celebrações
 

@@ -5,17 +5,17 @@ description: Visão geral dos aplicativos nas reuniões do Microsoft Teams com b
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279713"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326309"
 ---
-# <a name="apps-in-teams-meetings-preview"></a>Aplicativos em reuniões do Teams (visualização)
+# <a name="apps-in-teams-meetings-release-preview"></a>Aplicativos em reuniões do Teams (versão prévia)
 
 >[!IMPORTANT]
-> Os recursos incluídos no Microsoft Teams Preview são fornecidos apenas para fins de acesso antecipado, teste e comentários. Eles podem sofrer alterações antes de ficarem disponíveis no lançamento público e não devem ser usados em aplicativos de produção.
+> Os recursos realçados no Microsoft Teams Release Preview são fornecidos apenas para fins de percepção prévia e feedback. Eles podem sofrer alterações antes de poderem ser habilitados.
 
 As reuniões são fundamentais para a produtividade no Microsoft Teams. Eles permitem colaboração, parceria, comunicação informada e comentários compartilhados em um fórum inclusivo e ativo. Como desenvolvedor, você pode criar uma [guia configurável](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md)e aplicativos de [extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md) para aprimorar e enriquecer uma experiência de reunião do teams. Os usuários da reunião podem acessar os aplicativos, por meio da Galeria de guias, para habilitar os cenários relevantes, como preparar um quadro Kanban, iniciar uma caixa de diálogo acionável em reunião ou criar uma votação de reunião. O aplicativo de reunião pode fornecer uma experiência do usuário para cada estágio do ciclo de vida da reunião com base no status do participante.
 
@@ -126,7 +126,7 @@ Você pode acessar a página  **Opções de reunião** da seguinte maneira:
 1. **Federado/externo**. Um usuário federado é um usuário do teams externo em outra organização que foi convidado a participar de uma reunião. Como esses usuários têm credenciais válidas com parceiros federados, eles são tratados como autenticados pelo Teams, mas não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. Se você deseja que usuários externos tenham acesso a equipes e canais, o acesso de convidados pode ser uma opção melhor. _Consulte_ [gerenciar o acesso externo no Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anônimo**. Os usuários anônimos não têm uma identidade do Active Directory e não são federados com um locatário. O participante anônimo é como um usuário externo, mas sua identidade não é projetada na reunião. Usuários anônimos não poderão acessar aplicativos em uma janela de reunião.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximos passos
 
 > [!div class="nextstepaction"]
 > [Crie aplicativos para reuniões do Teams](create-apps-for-teams-meetings.md)

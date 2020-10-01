@@ -5,17 +5,17 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279671"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326302"
 ---
-# <a name="create-apps-for-teams-meetings-preview"></a>Criar aplicativos para reuniões do Teams (visualização)
+# <a name="create-apps-for-teams-meetings-release-preview"></a>Criar aplicativos para reuniões do Teams (versão prévia)
 
 >[!IMPORTANT]
-> Os recursos incluídos no Microsoft Teams Preview são fornecidos apenas para fins de acesso antecipado, teste e comentários. Eles podem sofrer alterações antes de ficarem disponíveis no lançamento público e não devem ser usados em aplicativos de produção.
+> Os recursos realçados no Microsoft Teams Release Preview são fornecidos apenas para fins de percepção prévia e feedback. Eles podem sofrer alterações antes de poderem ser habilitados.
 
 ## <a name="prerequisites-and-considerations"></a>Pré-requisitos e considerações
 
@@ -27,7 +27,7 @@ ms.locfileid: "48279671"
 
 1. Algumas APIs de reunião, como `GetParticipant` exigirão um [registro de bot e uma ID de aplicativo de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para gerar tokens de autenticação.
 
-1. Os desenvolvedores devem aderir às diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como durante as reuniões (consulte [a caixa de diálogo na reunião](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) e as diretrizes [de design da guia na reunião](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) ).
+1. Os desenvolvedores devem aderir às diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes de diálogo na](design/designing-in-meeting-dialog.md) reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
 
 ## <a name="meeting-apps-api-reference"></a>Referência da API de aplicativos de reunião
 
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
+    "meetingRole":"Presenter",
+    "conversation":{
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+        }
 }
 ```
 
@@ -112,10 +112,10 @@ o **meetingRole** pode ser *organizador*, *apresentador*ou *participante*.
 
 ```json
 {
-   "meetingRole":"Attendee",
+   "meetingRole":"Presenter",
    "conversation":{
       "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
    }
 }
 ```
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+    "notification": {
+    "alertInMeeting": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+    }
+},
+    "replyToId": "1493070356924"
+    }
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -210,6 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 As funcionalidades de aplicativos de reuniões são declaradas em seu **configurableTabs**manifesto de aplicativo por meio de  ->  **escopos** configurableTabs e matrizes de **contexto** . O *escopo* define para quem e o *contexto* define onde seu aplicativo estará disponível.
 
+> [!NOTE]
+> Use o [esquema de manifesto da visualização do desenvolvedor](../resources/schema/manifest-schema-dev-preview.md) para experimentá-lo em seu manifesto de aplicativo.
+
 ```json
 "configurableTabs": [
     {
@@ -232,7 +235,7 @@ As funcionalidades de aplicativos de reuniões são declaradas em seu **configur
 
 ### <a name="context-property"></a>Propriedade Context
 
-A guia `context` e `scopes` as propriedades funcionam em harmonia para permitir que você determine onde você deseja que seu aplicativo apareça. Enquanto as guias no `personal` escopo só podem ter um contexto, ou seja, `personalTab`  `team` ou `groupchat` abas com escopo podem ter mais de um contexto. Os valores possíveis para a propriedade Context são os seguintes:
+A guia `context` e `scopes` as propriedades funcionam em harmonia para permitir que você determine onde você deseja que seu aplicativo apareça. As guias no `team` `groupchat` escopo ou podem ter mais de um contexto. Os valores possíveis para a propriedade Context são os seguintes:
 
 * **channelTab**: uma guia no cabeçalho de um canal de equipe.
 * **privateChatTab**: uma guia no cabeçalho de um grupo bate-papo entre um conjunto de usuários que não estão no contexto de uma equipe ou reunião.
@@ -257,9 +260,9 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ### <a name="in-meeting"></a>Na reunião
 
-#### <a name="side-panel"></a>**painel lateral**
+#### <a name="sidepanel"></a>**sidePanel**
 
-✔ Em seu manifesto de aplicativo, adicione **sidePanel** à matriz **meetingSurfaces** , conforme descrito acima.
+✔ Em seu manifesto de aplicativo, adicione **sidePanel** à matriz de **contexto** , conforme descrito acima.
 
 ✔ Na reunião, bem como em todos os cenários, o aplicativo será renderizado em uma guia na reunião que tenha 320px de largura. Sua guia deve ser otimizada para isso. *Consulte* [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -269,7 +272,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 #### <a name="in-meeting-dialog"></a>**caixa de diálogo na reunião**
 
-✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
+✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](design/designing-in-meeting-dialog.md).
 
 ✔ Consulte o fluxo de autenticação do Microsoft [Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -278,7 +281,10 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 ✔ Como parte da carga de solicitação de notificação, inclua a URL onde o conteúdo a ser expedido está hospedado.
 
 > [!NOTE]
-> Essas notificações são persistentes por natureza. Você deve chamar a função [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente após um usuário executar uma ação no modo de exibição da Web. Esse é um requisito para o envio de aplicativos. *Consulte também*, [SDK do teams: módulo de tarefa](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Essas notificações são persistentes por natureza. Você deve chamar a função [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente após um usuário executar uma ação no modo de exibição da Web. Esse é um requisito para o envio de aplicativos. *Consulte também*, [SDK do teams: módulo de tarefa](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Se quiser que seu aplicativo dê suporte a usuários anônimos, a carga de solicitação de chamada inicial deve confiar no `from.id`  (ID do usuário) solicitar metadados no `from` objeto, e não no `from.aadObjectId` (Azure Active Directory ID do usuário) solicitar metadados. *Consulte* [usando módulos de tarefas em guias](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [criar e enviar o módulo de tarefa](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="post-meeting"></a>Pós-reunião
 
