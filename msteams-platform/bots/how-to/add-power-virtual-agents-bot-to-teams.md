@@ -4,12 +4,12 @@ author: laujan
 description: integração de um chatbot de agentes virtuais de alimentação na plataforma do Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279693"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397684"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integrar um chatbot de agentes virtuais de energia ao Microsoft Teams
 
@@ -39,11 +39,12 @@ Se o [upload de aplicativos personalizados estiver habilitado](/microsoftteams/a
 
   * Selecione o ícone repositório de aplicativos na parte inferior da barra de navegação à esquerda na sua instância do Teams e pesquise o **app Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Localizando o app Studio no repositório" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Selecione o bloco do **app Studio** e escolha **instalar** na caixa de diálogo pop-up.
 >
-&emsp;&emsp; <img  width="450px" title="Instalando o app Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Crie o manifesto do aplicativo do teams no app Studio**.  Os bots no Teams são definidos por um arquivo de manifesto de aplicativo (JSON) que fornece informações básicas sobre o bot e seus recursos. No **app Studio** , selecione **Editor de manifesto**para   =>  **criar um novo aplicativo**.
 3. **Adicione os detalhes de bot**. Para obter uma descrição completa de cada campo, confira [definição de esquema de manifesto](../../resources/schema/manifest-schema.md). Certifique-se de concluir todos os campos obrigatórios.

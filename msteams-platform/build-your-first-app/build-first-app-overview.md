@@ -5,12 +5,12 @@ description: Visão geral e pré-requisitos para a criação do primeiro aplicat
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279706"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397691"
 ---
 # <a name="build-your-first-teams-app-overview"></a>Criar sua primeira visão geral do App Teams
 
@@ -69,7 +69,7 @@ Você pode obter uma conta de teste gratuita do teams que permite que o aplicati
 1. Selecione **ingressar agora** e siga as instruções na tela.
 1. Quando você chegar à tela de boas-vindas, selecione **Configurar a assinatura E5**.
 1. Configurar sua conta de administrador. Após concluir, você verá uma tela como esta.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê após se inscrever no programa de desenvolvedor do Microsoft 365.":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams.":::
 1. Faça logon no Microsoft Teams usando a conta de administrador que você acabou de configurar.
 1. Verifique se agora você tem a opção **carregar um aplicativo personalizado** .
 
@@ -85,13 +85,14 @@ O Microsoft Teams exibe o conteúdo do aplicativo apenas por meio de conexões H
 1. Instale o [ngrok](https://ngrok.com/download).
 1. Instale a versão mais recente do [Visual Studio Code](https://code.visualstudio.com/download). (As versões anteriores podem não funcionar com o kit de ferramentas.)
 1. No Visual Studio Code, selecione **extensões** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: na barra de atividades à esquerda e instale o **Microsoft Teams Toolkit**.
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustração que mostra onde no Visual Studio Code você pode instalar a extensão do kit de ferramentas do Microsoft Teams.":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams.":::
 
 ## <a name="about-the-tutorials"></a>Sobre os tutoriais
 
 Você pode começar com qualquer um dos Teams **Construa suas primeiras lições de aplicativos** . Se você não tem certeza de onde começar, siga nosso caminho amigável de iniciantes e crie um "Olá, mundo!" aplicativo.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Árvore de qualificações que mostra os planos de aprendizado dos tutoriais de criação dos seus primeiros aplicativos do teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams." border="false":::
 
 ## <a name="next-step"></a>Próxima etapa
 

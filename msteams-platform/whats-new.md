@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279657"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397663"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -21,7 +21,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
 |09/22/2020|Nova orientação "introdução às equipes do Microsoft Teams"|[Criar sua primeira visão geral do App Teams](build-your-first-app/build-first-app-overview.md)|
-|9/18/2020|Suporte para aplicativos de equipes em reunião (visualização pública)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|9/18/2020|Suporte para aplicativos de equipes em reunião (versão prévia)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|Importar mensagens do teams com o Microsoft Graph|[Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Suporte a cartões adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Introdução à criação de aplicativos do teams com o Visual Studio Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-overview.md) |
@@ -32,7 +32,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 |07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Revelar uma documentação de indicador de carregamento nativo|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Introdução à criação de aplicativos do teams com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|Logon único para guias GA para clientes da Web e de desktop do Microsoft Teams|[Logon único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|Logon único para guias GA para clientes da Web e de desktop do Microsoft Teams|[Sign-On único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema de manifesto atualizado para a versão 1,7| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Permissões de consentimento específicas do recurso usando as APIs do Microsoft Graph estão no Developer Preview. |[Consentimento específico de recurso (RSC) — visualização do desenvolvedor](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|Integrar agentes virtuais de energia com o Teams|[Integrar um chatbot de agentes virtuais de energia ao Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

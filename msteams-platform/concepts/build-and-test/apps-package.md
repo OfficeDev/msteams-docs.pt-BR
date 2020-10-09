@@ -3,12 +3,12 @@ title: Empacotar seu aplicativo
 description: Saiba como empacotar seu aplicativo para teste, upload e publicação no Microsoft Teams
 keywords: pacote de aplicativos do teams
 ms.topic: conceptual
-ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801038"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397698"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Criar um pacote de aplicativos para seu aplicativo do Microsoft Teams
 
@@ -45,6 +45,11 @@ O `color` ícone é usado no Microsoft Teams (em aplicativos e galerias de guias
 
 O `outline` ícone é usado nestes lugares: a barra de aplicativos e as extensões de mensagens que o usuário marcou como "favorito". Este ícone deve ter 32x32 pixels. O ícone de estrutura de tópicos deve conter somente branco e transparência (sem outras cores). O ícone pode ser branco com um plano de fundo transparente ou transparente com um plano de fundo branco. O ícone de estrutura de tópicos não deve ter preenchimento adicional ao redor do ícone e deve ser tão cortado possível e ainda manter as dimensões de 32x32. Veja alguns exemplos bons:
 
+> [!TIP]
+>  * A cor deve ser "branco" no RGB (vermelho: 255, verde: 255, azul: 255).
+>  * Todas as outras partes do ícone devem ser transparentes.
+>  * Para passar, o ícone pequeno deve ser totalmente transparente, o canal alfa para ser 0 e qualquer outro valor é uma falha.
+
 ![Exemplos de ícones de tópicos](~/assets/images/icons/sample20x20s.png)
 
 Por exemplo, digamos que sua empresa seja contoso. Você enviaria dois ícones:
@@ -59,8 +64,8 @@ Veja como os ícones aparecerão na interface do usuário:
 
 #### <a name="flyout"></a>Janelas
 
-![Exemplo de ícones da contoso](~/assets/images/icons/flyout.png)
+![Submenu da Contoso de exemplo](~/assets/images/icons/flyout.png)
 
 #### <a name="app-bar-and-home-screen"></a>Barra de aplicativos e tela inicial
 
-![Exemplo de ícones da contoso](~/assets/images/icons/appbarhomescreen.png)
+![Exemplo de barra de aplicativos da Contoso homescreen](~/assets/images/icons/appbarhomescreen.png)

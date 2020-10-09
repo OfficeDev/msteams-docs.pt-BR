@@ -2,12 +2,12 @@
 title: Carregar seu aplicativo personalizado no Microsoft Teams
 description: Descreve como carregar seu aplicativo no Microsoft Teams
 keywords: Carregamento de aplicativos do teams
-ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: 6fbcd7a81c113d25a26ee6db15865929a53def0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103023"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397705"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
 
@@ -40,9 +40,11 @@ Há duas maneiras de carregar seu aplicativo para o Microsoft Teams:
 
 1. No canto inferior esquerdo do Teams, escolha o ícone de armazenamento. Na página loja, escolha "carregar um aplicativo personalizado".
 
-   ![Exibir equipe](../../assets/images/store-upload-a-custom-app.png)
+  ![Exibir equipe](../../assets/images/store-upload-a-custom-app2.png)
 
 2. Na caixa de diálogo *abrir* , navegue até o pacote que você deseja carregar e escolha *abrir*.
+
+   ![Menu Adicionar](../../assets/images/NewappAddmenudropdown.png)
 
 O pacote carregado agora deve estar disponível para uso na equipe ou conversa especificada na caixa de diálogo de consentimento. Se seu aplicativo não aparecer, o motivo mais comum é um erro no manifesto, principalmente IDs para o aplicativo, bot e extensões de mensagens. Se o aplicativo não tiver escopo para conversas, essa opção não será exibida.
 

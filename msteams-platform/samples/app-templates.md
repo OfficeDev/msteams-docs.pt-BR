@@ -3,12 +3,12 @@ title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326352"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397726"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -90,6 +90,18 @@ Comemorações é um aplicativo do teams que ajuda os membros da equipe a se com
 O aplicativo fornece uma interface fácil para que todos os membros da equipe adicionem pessoal e visualizem seus eventos, além de permitir que o usuário selecione as equipes nas quais os eventos são compartilhados.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>Lista de verificação &#9734;
+
+A lista de verificação é um aplicativo personalizado de [extensão de mensagens](../messaging-extensions/what-are-messaging-extensions.md) do Microsoft Teams que permite que você colabore com sua equipe criando uma lista de verificação compartilhada em um chat ou canal. O aplicativo é suportado em todos os clientes da plataforma de equipes — desktop, navegador, iOS e Android, e está pronto para implantação como parte da sua assinatura do Microsoft 365.  
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Criar lista de verificação no modo de exibição do teams](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>Communicator da empresa
 
@@ -276,7 +288,7 @@ Incentivos é um modelo de [aplicativos de energia](/powerapps/maker/canvas-apps
 
 ![Demonstração do aplicativo de incentivos](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>Gerador de verificação de incidentes 
+## <a name="incident-reporter"></a>Gerador de verificação de incidentes
 
 O incidentes reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  que otimiza o gerenciamento de incidentes em sua organização. O bot facilita a coleta automatizada de dados de incidentes, relatórios de incidentes personalizados, notificações relevantes dos interessados e acompanhamento de incidentes de ponta a ponta.
 
@@ -307,6 +319,18 @@ Os crachás abertos são um aplicativo do Microsoft Teams que permite que as pes
 :::row:::
 :::column span="2":::
     ![Exibição de selos concedidos](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>&#9734; de votação
+
+O Poll é um aplicativo personalizado de [extensão de mensagens](../messaging-extensions/what-are-messaging-extensions.md) do Microsoft Teams que permite criar e enviar pesquisas rapidamente em um chat ou canal para coletar opiniões e preferências da equipe. O aplicativo é suportado em todos os clientes da plataforma de equipes — desktop, navegador, iOS e Android, e está pronto para implantação como parte da sua assinatura do Microsoft 365.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Criar pesquisa no modo de exibição do teams](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ Check-ins de equipe é um aplicativo baseado em [aplicativos de energia](/powera
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Criar exibição de check-in](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>Pesquisa &#9734;
+
+A pesquisa é um aplicativo personalizado de [extensão de mensagens](../messaging-extensions/what-are-messaging-extensions.md) do Microsoft Teams que permite criar uma pesquisa em um chat ou canal para coletar dados e obter informações acionáveis.  O aplicativo é suportado em todos os clientes da plataforma de equipes — desktop, navegador, iOS e Android, e está pronto para implantação como parte da sua assinatura do Microsoft 365.  
+
+[Obter no GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![Criar pesquisa no modo de exibição do teams](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>&#9734; de gerenciamento de visitantes
 
