@@ -1,18 +1,18 @@
 ---
+title: Introdução-criar uma guia canal e grupo
 author: heath-hamilton
-description: Saiba como criar uma guia de canal e grupo para seu primeiro aplicativo do Microsoft Teams.
+description: Crie rapidamente uma guia de canal e grupo do Microsoft Teams usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Criar uma guia de canal e grupo do teams
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237808"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452852"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>Criar uma guia de canal e grupo do teams
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Criar uma guia de canal e grupo para o Microsoft Teams
 
 Neste tutorial, você criará uma guia de *canal* básica (também conhecida como uma *Guia de grupo*), que é uma página de tela inteira de um canal de equipe ou bate-papo. Ao contrário de uma guia pessoal, os usuários podem configurar alguns aspectos desse tipo de guia (por exemplo, renomear a guia de forma que ela seja significativa para o canal).
 
@@ -210,7 +210,7 @@ Para ver as páginas de configuração e conteúdo da guia, você deve instalá-
 1. Selecione **Configurar uma guia**. A página de configuração é exibida.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de tela de uma página de configuração da guia canal.":::
 1. Selecione **salvar** para configurar a guia. O conteúdo é exibido.<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de tela de uma guia canal com visualização de conteúdo estático.":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de tela de uma página de configuração da guia canal.":::
 
 ## <a name="well-done"></a>Muito bem
 

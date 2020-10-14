@@ -1,18 +1,18 @@
 ---
-title: Criar uma guia pessoal do teams
+title: Introdução-criar uma guia pessoal
 author: heath-hamilton
-description: Saiba como criar uma guia pessoal para seu primeiro aplicativo do Microsoft Teams.
+description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237801"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452740"
 ---
-# <a name="build-a-teams-personal-tab"></a>Criar uma guia pessoal do teams
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
 As guias são uma maneira simples de fazer a superfície de conteúdo em seu aplicativo, incorporando essencialmente uma página da Web no Microsoft Teams.
 
@@ -181,7 +181,7 @@ if (isTheme === "default") {
 
 Verifique sua guia no Microsoft Teams. A aparência deve corresponder ao tema escuro.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de tela de uma guia pessoal com visualização de conteúdo estático.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de tela de uma guia pessoal com conteúdo estático.":::
 
 ## <a name="well-done"></a>Muito bem
 

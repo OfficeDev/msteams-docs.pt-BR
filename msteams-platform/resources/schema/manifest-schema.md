@@ -4,16 +4,16 @@ description: Descreve o esquema suportado pelo manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b514bbe8e04e674f5aafb3dff3acfe08072d814f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237976"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452733"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
-O manifesto do Microsoft Teams descreve como o aplicativo integra-se ao produto Microsoft Teams. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . As versões anteriores 1.0-1.4 também são suportadas (usando "v1. x" na URL).
+O manifesto do Microsoft Teams descreve como o aplicativo integra-se ao produto Microsoft Teams. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . As versões anteriores 1.0-1.6 também são suportadas (usando "v1. x" na URL).
 
 O seguinte exemplo de esquema mostra todas as opções de extensibilidade.
 
@@ -273,7 +273,7 @@ A URL https://que faz referência ao esquema JSON para o manifesto.
 
 **Obrigatório** — cadeia de caracteres
 
-A versão do esquema de manifesto que este manifesto está usando. Ele deve ser "1,5".
+A versão do esquema de manifesto que este manifesto está usando. Ele deve ser "1,7".
 
 ## <a name="version"></a>versão
 
@@ -316,7 +316,7 @@ O nome da sua experiência de aplicativo, exibido aos usuários na experiência 
 |`short`|30 caracteres|✔|O nome de exibição curto para o aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, usado se o nome completo do aplicativo exceder 30 caracteres.|
 
-## <a name="description"></a>descrição
+## <a name="description"></a>description
 
 **Obrigatório** — objeto
 
@@ -384,7 +384,7 @@ Usado quando sua experiência de aplicativo tem uma experiência de guia de cana
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
 |`scopes`|matriz de enumeração|1|✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
-|`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
+|`sharePointPreviewImage`|cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -398,9 +398,9 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
-|`name`|string|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
-|`contentUrl`|string|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
-|`websiteUrl`|string|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
+|`name`|cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
+|`contentUrl`|cadeia de caracteres|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
+|`websiteUrl`|cadeia de caracteres|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
 |`scopes`|matriz de enumeração|1|✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
 
 > [!NOTE]
@@ -450,7 +450,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
 |`scopes`|matriz de enumeração|1|✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
-|`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
+|`connectorId`|cadeia de caracteres|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -469,7 +469,7 @@ O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `obj
 |`commands`|matriz de objetos|10 |✔|matriz de comandos que a extensão de mensagens oferece suporte|
 |`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no `validDomains`|
-|`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
+|`messageHandlers.type`|cadeia de caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadeias de caracteres|||matriz de domínios para o qual o manipulador de mensagens de link pode se registrar.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions. Commands
@@ -481,26 +481,26 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|A ID do comando.|
-|`title`|string|32 caracteres|✔|O nome do comando amigável.|
-|`type`|string|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
-|`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
+|`title`|cadeia de caracteres|32 caracteres|✔|O nome do comando amigável.|
+|`type`|cadeia de caracteres|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
+|`description`|cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
 |`initialRun`|booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: **false**.|
 |`context`|matriz de cadeias de caracteres|3D||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor Boolean que indica se ele deve buscar o módulo de tarefa dinamicamente. Padrão: **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagem.|
-|`taskInfo.title`|string|64 caracteres||Título inicial da caixa de diálogo.|
-|`taskInfo.width`|string|||Largura da caixa de diálogo: um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
-|`taskInfo.height`|string|||Altura da caixa de diálogo-um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
-|`taskInfo.url`|string|||URL do WebView inicial.|
+|`taskInfo.title`|cadeia de caracteres|64 caracteres||Título inicial da caixa de diálogo.|
+|`taskInfo.width`|cadeia de caracteres|||Largura da caixa de diálogo: um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
+|`taskInfo.height`|cadeia de caracteres|||Altura da caixa de diálogo-um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
+|`taskInfo.url`|cadeia de caracteres|||URL do WebView inicial.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando utiliza. Mínimo: 1; máximo: 5.|
-|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro conforme ele aparece no cliente. Isso é incluído na solicitação do usuário.|
-|`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
-|`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade deste parâmetro.|
-|`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro.|
-|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefas para o `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.name`|cadeia de caracteres|64 caracteres|✔|O nome do parâmetro conforme ele aparece no cliente. Isso é incluído na solicitação do usuário.|
+|`parameters.title`|cadeia de caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
+|`parameters.description`|cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade deste parâmetro.|
+|`parameters.value`|cadeia de caracteres|512 caracteres||Valor inicial para o parâmetro.|
+|`parameters.inputType`|cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefas para o `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para o `choiceset` . Use somente quando o `parameter.inputType` é `choiceset` .|
-|`parameters.choices.title`|string|128 caracteres|✔|Título da escolha.|
-|`parameters.choices.value`|string|512 caracteres|✔|O valor da escolha.|
+|`parameters.choices.title`|cadeia de caracteres|128 caracteres|✔|Título da escolha.|
+|`parameters.choices.value`|cadeia de caracteres|512 caracteres|✔|O valor da escolha.|
 
 ## <a name="permissions"></a>permissões
 
@@ -549,7 +549,7 @@ Especifique a ID do aplicativo AAD e as informações do gráfico para ajudar os
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Esta ID deve ser um GUID.|
-|`resource`|string|2048 caracteres||URL de recurso do aplicativo para aquisição de token de autenticação para SSO.|
+|`resource`|cadeia de caracteres|2048 caracteres||URL de recurso do aplicativo para aquisição de token de autenticação para SSO.|
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especificar [consentimento específico de recurso](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) granular|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -582,8 +582,8 @@ Defina as propriedades que seu aplicativo usará para postar em um feed de ativi
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|O tipo de notificação. *Veja abaixo*.|
-|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
-|`templateText`|string|128 caracteres|✔|Ex: "{actor} tarefa criada {TaskId} para você"|
+|`description`|cadeia de caracteres|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
+|`templateText`|cadeia de caracteres|128 caracteres|✔|Ex: "{actor} tarefa criada {TaskId} para você"|
 
 ```json
 {

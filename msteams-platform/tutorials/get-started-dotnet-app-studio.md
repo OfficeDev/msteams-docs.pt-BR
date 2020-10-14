@@ -5,12 +5,12 @@ keywords: Introdução ao .net c# Csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 3aca72a43765036c0014a9e16fa585575fe97b2e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210691"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452839"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Introdução à plataforma do Microsoft Teams com o C#/.NET e o app Studio
 
@@ -107,17 +107,17 @@ O Microsoft Azure permite que você hospede seu aplicativo .NET em uma camada gr
 
 O Visual Studio oferece suporte interno à implantação de aplicativos para diferentes provedores, incluindo o Azure.
 
-<img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
+<img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Atualizar as credenciais para seu aplicativo hospedado
 
 O aplicativo de exemplo requer que as seguintes variáveis de ambiente sejam definidas para os valores que você fez antes.
 
-Abra o arquivo appSettings. JSON. Atualize o valor *MicrosoftAppId* com a ID de bot que você salvou anteriormente. Atualize o *MicrosoftAppPassword* com a senha de bot que você salvou anteriormente.
+Abra o appsettings.jsem arquivo. Atualize o valor *MicrosoftAppId* com a ID de bot que você salvou anteriormente. Atualize o *MicrosoftAppPassword* com a senha de bot que você salvou anteriormente.
 
-<img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="definir as chaves"/>
+<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
 Depois que essas alterações forem feitas, reconstrua o aplicativo. Se você estiver usando o ngrok, execute o aplicativo localmente e, se estiver hospedando no Azure, reimplante o aplicativo.
 
@@ -125,22 +125,22 @@ Depois que essas alterações forem feitas, reconstrua o aplicativo. Se você es
 
 Após instalar o aplicativo em uma equipe, você precisará configurá-lo para exibir o conteúdo. Vá para um canal na equipe em que você instalou o exemplo de aplicativo e clique no botão **"+"** para adicionar uma nova guia. Em seguida, você pode escolher `Hello World` na lista **Adicionar uma guia** . Em seguida, será exibida uma caixa de diálogo de configuração. Esta caixa de diálogo permitirá que você escolha qual guia será exibida neste canal. Depois de selecionar a guia e clicar em `Save` , você poderá ver a `Hello World` guia carregada com a guia escolhida.
 
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Captura de tela da configuração" />
+<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>Testar seu bot no Teams
 
 Agora você pode interagir com o bot no Teams. Escolha um canal na equipe onde você registrou seu aplicativo e digite `@your-bot-name` . Isso é chamado de ** \@ menção**. Qualquer mensagem enviada ao bot será enviada de volta para você como resposta.
 
-<img width="450px" title="Respostas de bot" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Testar sua extensão de mensagens
 
 Para testar sua extensão de mensagens, você pode clicar nos três pontos abaixo da caixa de entrada no modo de exibição de conversa. Um menu será exibido com o aplicativo **"Olá mundo"** . Quando você clicar nele, verá um monte de textos aleatórios aparecendo. Você pode escolher qualquer uma delas e ela será inserida na conversa.
 
-<img width="530px" title="Menu de extensão de mensagens" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="530px" title="Resultado da extensão de mensagens" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Escolha um dos textos aleatórios, e você verá um cartão formatado e pronto para enviar com sua própria mensagem na parte inferior.
 
-<img width="530px" title="Envio de extensão de mensagens" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

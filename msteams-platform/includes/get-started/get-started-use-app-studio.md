@@ -93,7 +93,7 @@ Agora não há bots para mostrar. Clique em *Configurar*. Isso exibirá a caixa 
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-Adicione um nome de bot, como `Contoso bot` e clique em ambos os botões em *escopo*.
+Adicione um nome de bot, como `Contoso bot` e selecione todos os três botões em *escopo*.
 
 Escolha *criar bot* para sair da caixa de diálogo. O app Studio gastará um momento registrando seu bot com a Microsoft e, em seguida, deverá exibir o novo bot na lista de bot. Agora seria uma boa hora para abrir um arquivo de texto no bloco de notas e copiar e colar sua nova ID de bot nela. Você precisará dessa ID mais tarde.
 

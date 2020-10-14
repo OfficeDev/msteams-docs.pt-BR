@@ -1,18 +1,18 @@
 ---
-title: Criar uma extensão de mensagens do Microsoft Teams
+title: Introdução-criar uma extensão de mensagens
 author: heath-hamilton
-description: Saiba como criar uma extensão de mensagens para seu primeiro aplicativo do Microsoft Teams.
+description: Crie rapidamente uma extensão de mensagens do Microsoft Teams usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237815"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452831"
 ---
-# <a name="build-a-teams-messaging-extension"></a>Criar uma extensão de mensagens do Microsoft Teams
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>Criar uma extensão de mensagens para o Microsoft Teams
 
 Há dois tipos de extensões de *mensagens*do Microsoft Teams: [comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) e [comandos de ação](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
@@ -173,9 +173,9 @@ Com sua extensão de mensagens em execução, você pode instalá-lo no Microsof
 Saiba como as extensões de mensagens funcionam em um chat do Microsoft Teams.
 
 1. Inicie um novo chat. Na caixa redigir e selecione **mais** :::image type="icon" source="../assets/icons/teams-client-more.png"::: e escolha o aplicativo de extensão de mensagens que você acabou de suplementos foi feito.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustração mostrando como você pode acessar uma extensão de mensagens baseada em pesquisa na caixa de composição do teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot para sua extensão de mensagens.":::
 1. Tente pesquisar algo (por exemplo, "bilhetes"). Se seu aplicativo estiver funcionando, você verá resultados de pesquisa de exemplo (você pode adicionar o seu próprio mais tarde).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Uma captura de tela mostrando como uma extensão de mensagens baseada em pesquisa é usada na caixa de composição do teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot para sua extensão de mensagens.":::
 
 ## <a name="well-done"></a>Muito bem
 

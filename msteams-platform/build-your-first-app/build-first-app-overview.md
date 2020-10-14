@@ -1,18 +1,18 @@
 ---
-title: Introdução à criação do primeiro aplicativo do teams
+title: Introdução-Crie sua primeira visão geral e pré-requisitos do aplicativo
 author: heath-hamilton
-description: Visão geral e pré-requisitos para a criação do primeiro aplicativo do Microsoft Teams
+description: Saiba como começar a usar o desenvolvimento de aplicativos do Microsoft Teams e configurar seu ambiente.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397691"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452600"
 ---
-# <a name="build-your-first-teams-app-overview"></a>Criar sua primeira visão geral do App Teams
+# <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo Microsoft Teams
 
 Nas aulas **Compilar suas primeiras aplicativos** , você cria aplicativos básicos do teams. Cada tutorial percorre como criar um aplicativo simples e de equipe real ao apresentar as ferramentas comuns, conceitos fundamentais e recursos mais avançados.
 

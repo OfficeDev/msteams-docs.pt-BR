@@ -1,17 +1,20 @@
 ---
-title: Criar uma extensão de mensagens
+title: Criar uma extensão de mensagens para o Teams
 author: clearab
-description: Como criar uma extensão de mensagens para um aplicativo do Microsoft Teams.
+description: Saiba como criar uma extensão de mensagens do Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452593"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>Criar uma extensão de mensagens no Microsoft Teams
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Criar uma extensão de mensagens para o Microsoft Teams
+
+> [!TIP]
+> Procurando uma maneira mais rápida de começar? Crie uma [extensão de mensagens](../../build-your-first-app/build-messaging-extension.md) usando o Microsoft Teams Toolkit.
 
 Em um nível alto, você precisará concluir as etapas a seguir para criar uma extensão de mensagens.
 
@@ -128,9 +131,9 @@ Após a reunião começar, os participantes do teams podem interagir diretamente
 
 1. **Localização** Sua extensão de mensagens pode ser invocada a partir da área de mensagem de composição, da caixa de comando ou @mentioned no chat da reunião.
 
-1. **Metadados**. Quando sua extensão de mensagens é invocada, ela pode identificar o usuário e o locatário de `userId` e `tenantId` . O `meetingId` pode ser encontrado como parte do `channelData` objeto. Seu aplicativo pode usar o `userId` e o `meetingId`  para a `GetParticipant` solicitação de API para recuperar funções de usuário.
+1. **Metadados**. Quando sua extensão de mensagens é invocada, ela pode identificar o usuário e o locatário de `userId` e `tenantId` . O `meetingId` pode ser encontrado como parte do objeto `channelData`. Seu aplicativo pode usar o `userId` e o `meetingId`  para a `GetParticipant` solicitação de API para recuperar funções de usuário.
 
-1. **Tipo de comando**. Se sua extensão de mensagem usa [comandos baseados em ação](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), ela deve seguir as guias autenticação de [logon único](../../tabs/how-to/authentication/auth-aad-sso.md) . 
+1. **Tipo de comando**. Se sua extensão de mensagem usa [comandos baseados em ação](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), ela deve seguir as guias autenticação de [logon único](../../tabs/how-to/authentication/auth-aad-sso.md) .
 
 1. **Experiência do usuário**. Você deve determinar a experiência do usuário final para extensões de mensagens invocadas durante um chat de reunião.
 

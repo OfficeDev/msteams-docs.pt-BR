@@ -1,15 +1,15 @@
 ---
-title: Criar uma guia na reunião do Microsoft Teams
+title: Desenvolva uma guia na reunião
 author: heath-hamilton
-description: Orientações e práticas recomendadas para projetar a guia na reunião do Microsoft Teams.
+description: Saiba como projetar efetivamente uma guia na reunião do Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4f75591468de41b5d4d3ac62a25b93412b3fccaa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243324"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452656"
 ---
 # <a name="design-an-in-meeting-tab"></a>Desenvolva uma guia na reunião
 
@@ -40,7 +40,7 @@ A guia na reunião exibe o conteúdo do aplicativo usando as seguintes dimensõe
 * **Largura**: 280 pixels para a área de WebView. Há 20 pixels de enchimento nos lados esquerdo e direito do WebView.
 * **Altura**: sangramento completo para a parte inferior da guia. Há 20 pixels de preenchimento entre a área da WebView e o cabeçalho da guia.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface de usuário de uma guia na reunião da extensão de reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 1. **Ícone do aplicativo**: o ponto de entrada para a guia na reunião.
 1. **Cabeçalho**: inclui o nome da guia.
@@ -62,13 +62,13 @@ Veja o que saber sobre rolagem na guia na reunião:
 * Você só pode ver o conteúdo que você rolou para (nada acima ou abaixo).
 * O ScrollBar é parte do conteúdo da WebView.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Ilustração que mostra como a rolagem do conteúdo da WebView na guia na reunião funciona." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 ### <a name="navigation"></a>Navegação
 
 Para cenários com camadas de navegação ou conteúdo pesado, recomendamos permitir que os usuários naveguem para uma camada secundária. Os usuários devem ser capazes de voltar para a camada anterior.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Ilustração mostrando como funciona a navegação para uma camada secundária na guia na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 ## <a name="components"></a>Componentes
 
@@ -100,7 +100,7 @@ Os layouts de guia na reunião devem poder ser dimensionados para vários tamanh
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Ilustração mostrando que o conteúdo da guia na reunião parece com uma guia de tela inteira antes e depois de uma reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="before-the-meeting"></a>Antes da reunião
 
@@ -108,7 +108,7 @@ Certifique-se de que o layout de Tabulação pode se adaptar a um layout à dire
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Ilustração que mostra como o conteúdo da guia de pré-reunião é condensado para a guia na reunião durante uma reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="during-the-meeting"></a>Durante a reunião
 
@@ -121,7 +121,7 @@ O conteúdo da guia ajusta o layout e o local da guia na reunião.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Ilustração mostrando como você deve projetar a guia na reunião para o tema escuro usado em reuniões do teams." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Fazer: design para um tema escuro
 
@@ -129,7 +129,7 @@ As reuniões do teams são otimizadas para o modo escuro para ajudar a reduzir o
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Ilustração que mostra que você não deve usar cores que não conduzam ao tema escuro da equipe." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>Não: usar cores desconhecidas
 
@@ -142,7 +142,7 @@ As cores que em conflito com o ambiente de reunião podem ser discadas e parecer
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Ilustração mostrando você só deve permitir rolagem vertical na guia na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="do-scroll-vertically"></a>Fazer: rolar verticalmente
 
@@ -150,7 +150,7 @@ Os usuários antecipam a rolagem vertical no Teams (e em outros lugares).
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Ilustração mostrando como mostrar você não deve permitir rolagem horizontal na guia na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>Não: rolar horizontalmente
 
@@ -163,7 +163,7 @@ A rolagem horizontal não é um comportamento esperado no Microsoft Teams. Outra
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Ilustração mostrando o layout recomendado de uma única coluna na guia na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="do-single-columns"></a>Fazer: colunas únicas
 
@@ -171,7 +171,7 @@ Dada a natureza estreita da guia na reunião, é altamente recomendável exibir 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Ilustração que mostra como um layout de duas colunas na guia na reunião não é ideal." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="dont-multiple-columns"></a>Não: várias colunas
 
@@ -184,7 +184,7 @@ Devido ao espaço limitado da guia na reunião, layouts com mais de uma coluna n
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Ilustração mostrar você sempre deve fornecer um botão voltar se seu aplicativo de guia na reunião tiver mais de uma camada de navegação." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="do-have-a-back-button"></a>Fazer: ter um botão voltar
 
@@ -192,7 +192,7 @@ Se você tiver mais de uma camada de navegação, os usuários devem ser capazes
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Ilustração mostrando que adicionar outro botão fechar na guia na reunião para navegação é redundante e pode causar problemas." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="dont-include-another-close-button"></a>Não: incluir outro botão fechar
 
@@ -205,7 +205,7 @@ O fornecimento de uma opção para fechar o conteúdo da guia na reunião pode c
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Ilustração mostrando que você precisa ter cuidado ao usar as modalidades (ou seja, módulos de tarefas) na guia na reunião, de acordo com o espaço limitado." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="O exemplo mostra como a guia na reunião da reunião pode parecer da perspectiva de um organizador da reunião." border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>Cuidado: usar caixas de diálogo em um espaço estreito
 

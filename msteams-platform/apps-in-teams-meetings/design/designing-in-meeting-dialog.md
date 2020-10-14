@@ -1,15 +1,15 @@
 ---
-title: Criar uma caixa de diálogo do Microsoft Teams na reunião
+title: Desenvolva uma conversa na reunião
 author: heath-hamilton
-description: Orientações e práticas recomendadas para criar uma caixa de diálogo de reunião para o Microsoft Teams.
+description: Saiba como projetar com eficiência uma caixa de diálogo de reunião do Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 89e532e6dbd83e54269606f6e051fa377de68f62
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243320"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452670"
 ---
 # <a name="design-an-in-meeting-dialog"></a>Desenvolva uma conversa na reunião
 
@@ -36,7 +36,7 @@ O exemplo a seguir mostra o que a caixa de diálogo de reunião pode parecer da 
 
 ## <a name="anatomy"></a>Anatomia
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Anatomia da interface do usuário de um modo de exibição de diálogo na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 1. **ícone de aplicativo**
 1. **Nome do aplicativo**
@@ -51,7 +51,7 @@ As caixas de diálogo de reunião podem variar de tamanho para conta para difere
 * **Altura**: a altura da caixa de diálogo é determinada pelo conteúdo do WebView. A rolagem vertical assume o conteúdo que excede a altura máxima especificada.
 * **Largura**: a largura do WebView é um valor absoluto dentro do intervalo especificado.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Ilustração mostrando as possíveis dimensões de uma caixa de diálogo em reunião. Altura: a altura da caixa de diálogo é determinada pelo conteúdo do WebView. A rolagem vertical assume o conteúdo que excede a altura máxima (definida por você). Mín: nenhum. Máx: 400 pixels (320 pixels de exibição). Largura: a largura do WebView é um valor absoluto dentro do intervalo especificado. Mín.: 288 pixels (256 pixels de exibição). Máx: 468 pixels (436 pixels de exibição)." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 ## <a name="behavior"></a>Comportamento
 
@@ -61,7 +61,7 @@ Consulte comportamento geral da caixa de diálogo de reunião, como REST, carreg
 
 As caixas de diálogo de reunião são alinhadas no centro do estágio da reunião. Eles não podem ser arrastados e funcionam dentro da estrutura de notificações de nível de sistema do teams.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma caixa de diálogo em reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 ### <a name="aggregation"></a>Agregação
 
@@ -76,7 +76,7 @@ A rolagem ocorre na parte do WebView de uma caixa de diálogo de reunião. Lembr
 * Você só deve rolar verticalmente.
 * Você só pode ver o conteúdo que você rolou para (nada acima ou abaixo).
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Ilustração mostrando como funciona a rolagem do conteúdo da WebView na caixa de diálogo de reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 ### <a name="buttons"></a>Botões
 
@@ -114,7 +114,7 @@ Enquanto as caixas de diálogo em reunião podem fazer chamadas mais eficazes, e
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Ilustração mostrando como limitar o conteúdo da caixa de diálogo de reunião a uma tela única para que os usuários possam se concentrar na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="do-keep-it-contained"></a>Fazer: manter continha
 
@@ -122,7 +122,7 @@ Limite o conteúdo da caixa de diálogo de reunião para uma tela única, para q
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="A ilustração que mostra como as caixas de diálogo de reunião não devem exigir que os usuários naveguem pelo conteúdo." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>Não: incluir várias etapas
 
@@ -135,18 +135,18 @@ As caixas de diálogo de reunião não precisam exigir que os usuários naveguem
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Ilustração mostrando por que você deve remover conteúdo desnecessário que não ajude os usuários a realizar algo rapidamente." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Outra ilustração que mostra por que você deve remover conteúdo desnecessário que não ajude os usuários a realizar algo rapidamente." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Ilustração mostrando que, se você precisar de interações complexas, é recomendável usar uma única coluna no painel de reunião à direita." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>Fazer: limitar o número de interações
 
@@ -154,7 +154,7 @@ Remover conteúdo desnecessário que não ajude os usuários a realizar algo rap
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Ilustração que mostra que muitas interações na caixa de diálogo na reunião atrapalham a reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>Não: apresentar elementos desnecessários
 
@@ -167,7 +167,7 @@ Você pode ser capaz de criar uma única caixa de diálogo de reunião com vári
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Ilustração mostrando um layout ideal para diálogos em reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>Fazer: usar layouts de uma única coluna
 
@@ -175,7 +175,7 @@ Como as caixas de diálogo estão no centro do estágio da reunião, a conclusã
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Ilustração mostrando o layout para diálogos em reunião que não é recomendado." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="dont-clutter-the-space"></a>Não: desobstruir o espaço
 
@@ -188,7 +188,7 @@ O conteúdo denso ou muito estruturado pode ser confuso e impressionante, especi
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Ilustração que mostra como o tamanho da caixa de diálogo na reunião deve sempre ser o mesmo." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="do-keep-it-consistent"></a>Fazer: manter consistente
 
@@ -196,7 +196,7 @@ Isso é importante porque as caixas de diálogo na reunião sempre são exibidas
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Ilustração mostrando como você não deve usar tamanhos de caixa de diálogo diferentes." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>Não: sempre se ajusta ao conteúdo
 
@@ -209,7 +209,7 @@ Você pode estar tentando evitar a rolagem horizontal, mas vários tamanhos de d
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Ilustração mostrando onde colocar os botões na caixa de diálogo na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>Fazer: alinhar à direita a ação principal
 
@@ -217,7 +217,7 @@ Você pode estar tentando evitar a rolagem horizontal, mas vários tamanhos de d
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Ilustração mostrando onde não colocar botões na caixa de diálogo na reunião." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="O exemplo mostra como a caixa de diálogo de reunião pode se parecer com a perspectiva de um participante da reunião." border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: alinhar ações à esquerda ou ao centro
 

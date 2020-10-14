@@ -2,12 +2,12 @@
 title: Criar uma ótima página de detalhes do aplicativo
 description: Descreve os requisitos para a página de detalhes do aplicativo
 keywords: o Teams Publish Store Office Publishing Policy AppSource Content
-ms.openlocfilehash: 90ce6962668c6a7a66bb10d33b1315340de29b4d
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326323"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452765"
 ---
 # <a name="build-a-great-app-details-page"></a>Criar uma ótima página de detalhes do aplicativo
 
@@ -31,7 +31,7 @@ A página detalhes apresenta a primeira impressão de seu aplicativo para os usu
 >* Use estes recursos para obter orientação:
 
 * [Guia de nome do aplicativo](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft Trademark e diretrizes de marca](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)
+* [Microsoft Trademark e diretrizes de marca](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **Fazer:**
 

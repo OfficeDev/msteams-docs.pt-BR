@@ -1,20 +1,20 @@
 ---
-title: Preparar seu locatário do Office 365
-description: Como começar a usar o Microsoft Teams no Office 365
-keywords: Configurar o carregamento do Office 365 locatário Teams
-ms.openlocfilehash: a246b13ae3a12a486a06ff9d98d37d4d147e4ed4
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+title: Prepare seu locatário do Microsoft 365
+description: Como começar a usar o Teams no Microsoft 365
+keywords: Configurar o carregamento de Microsoft 365 locatário Teams
+ms.openlocfilehash: 67a0342a7e8605097eed53dd1b0bdf273d537c0e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874860"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452761"
 ---
-# <a name="prepare-your-office-365-tenant"></a>Preparar seu locatário do Office 365
+# <a name="prepare-your-microsoft-365-tenant"></a>Prepare seu locatário do Microsoft 365
 
-Se você é assinante do Office 365, pode desenvolver aplicativos para o Microsoft Teams com um dos seguintes [planos](https://products.office.com/business/compare-more-office-365-for-business-plans):
+Se você for assinante do Microsoft 365, poderá desenvolver aplicativos para o Microsoft Teams com um dos seguintes [planos](https://products.office.com/business/compare-more-office-365-for-business-plans):
 
-* Business Essentials
-* Business Premium
+* Básica
+* Padrão
 * Enterprise E1, E3 e e5
 * Developer
 * Education, Education Plus e Education e5
@@ -23,7 +23,7 @@ O Microsoft Teams também estará disponível para clientes que se inscreveram n
 
 ## <a name="just-need-a-development-environment"></a>Precisa apenas de um ambiente de desenvolvimento?
 
-Se você não tiver uma conta do Office 365, você poderá se inscrever em uma assinatura do [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . É *grátis* por 90 dias e será renovado continuamente, desde que você o esteja usando para a atividade de desenvolvimento. Se você tiver uma assinatura do Visual Studio *Enterprise* ou *Professional* , ambos os programas incluirão uma [assinatura](https://aka.ms/MyVisualStudioBenefits)gratuita de desenvolvedor do Microsoft 365, ativa pela vida da sua assinatura do Visual Studio. *Confira* [Configurar uma assinatura de desenvolvedor do Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+Se você não tiver uma conta do Microsoft 365, você pode se inscrever para uma assinatura do [microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . É *grátis* por 90 dias e será renovado continuamente, desde que você o esteja usando para a atividade de desenvolvimento. Se você tiver uma assinatura do Visual Studio *Enterprise* ou *Professional* , ambos os programas incluirão uma [assinatura](https://aka.ms/MyVisualStudioBenefits)gratuita de desenvolvedor do Microsoft 365, ativa pela vida da sua assinatura do Visual Studio. *Confira* [Configurar uma assinatura de desenvolvedor do Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Habilitar o Microsoft Teams para sua organização 
 

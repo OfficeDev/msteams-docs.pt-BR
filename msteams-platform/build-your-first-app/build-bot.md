@@ -1,18 +1,18 @@
 ---
-title: Criar um bot do Microsoft Teams
+title: Introdução-criar um bot
 author: heath-hamilton
-description: Saiba como criar um bot para seu primeiro aplicativo do Microsoft Teams.
+description: Crie rapidamente um bot do Microsoft Teams usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 78fe535137864a72dcacf20857572599a7c2409a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237822"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452789"
 ---
-# <a name="build-a-teams-bot"></a>Criar um bot do Microsoft Teams
+# <a name="build-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
 
 Você criará um aplicativo de *bot* básico neste tutorial. Um bot atua como intermediário entre os usuários do Teams e o serviço Web. As pessoas podem bater papo com um bot para obter informações rapidamente ou iniciar fluxos de trabalho e tarefas realizadas pelo serviço.
 
@@ -136,7 +136,7 @@ Você deve especificar uma URL de ponto de extremidade para receber e processar 
 1. Vá para **Gerenciamento de bot > registros de bot existentes** e selecione o bot que você criou durante a instalação.
 1. No campo **endereço do ponto de extremidade do bot** , insira o servidor Web local onde você está hospedando o bot ( `baseUrl10` valor) e anexe `/api/messages` a ele.
 
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Ilustração mostrando onde você pode configurar a URL do ponto de extremidade do bot no kit de ferramentas do teams.":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot.":::
 
 Seu bot poderá responder às mensagens no Teams.
 
@@ -169,12 +169,12 @@ Agora, para a parte divertida: Vamos dizer "Olá" ao seu bot em um chat de um a 
 
 1. No Teams, selecione **mais** :::image type="icon" source="../assets/icons/teams-client-more.png"::: no lado esquerdo.
 1. Localize e escolha o bot que você acabou de suplementos foi feito.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Ilustração mostrando onde você acessa o bot no Microsoft Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot.":::
 1. Na caixa redigir, envie uma `Hello` mensagem.
 
 Seu bot responde com algo como a mensagem a seguir.
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Uma captura de tela mostrando um usuário diga "Olá" para um bot do Microsoft Teams e obtendo uma resposta.":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot.":::
 
 ## <a name="well-done"></a>Muito bem
 
