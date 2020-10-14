@@ -1,18 +1,21 @@
 ---
-title: Criar um bot para o Microsoft Teams
+title: Crie um bot para equipes
 author: clearab
-description: Como criar um bot para o Microsoft Teams usando o aplicativo Studio, Yeoman Generator e outras ferramentas.
+description: Aprenda a criar um bot no Teams
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 86ef162ceee07b1f66992d6943b22336d717c9f7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209827"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452796"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
+
+> [!TIP]
+> Procurando uma maneira mais rápida para iniciar? Crie um [bot](../../build-your-first-app/build-bot.md) utilizando o kit de ferramentas do Microsoft Teams.
 
 Será necessário concluir as etapas a seguir para criar um bot de conversa:
 
@@ -114,7 +117,7 @@ Assim como nas extensões de mensagens e guias, você atualiza o [manifesto de a
 
 Opcionalmente, você pode definir uma ou mais listas de comandos que você pode recomendar para os usuários. O objeto é uma matriz (máximo de 2 elementos) com todos os elementos do tipo `object`. Você deve definir uma lista de comandos separada para cada escopo compatível com o bot. *Confira* [menus de bot](./create-a-bot-commands-menu.md), para obter mais informações.
 
-|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|Name| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeração|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10|✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
