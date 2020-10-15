@@ -164,7 +164,7 @@
     - name: Guias de instruções
       expanded: true
       items:
-        - name: Adicionar guias ao seu aplicativo
+        - name: Criar uma guia para o Teams
           href: tabs/how-to/add-tab.md
         - name: Criar páginas de guia
           items:
@@ -292,7 +292,7 @@
     - name: Guias de instruções
       expanded: true
       items:
-        - name: Criar uma extensão de mensagens
+        - name: Criar uma extensão de mensagens para o Teams
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Comandos baseados em ação
           items:
