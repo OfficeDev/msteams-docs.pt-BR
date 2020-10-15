@@ -4,12 +4,13 @@ description: Descreve as dicas para o envio e a maioria das políticas com falha
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
+ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237857"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465933"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 

@@ -1,13 +1,13 @@
 ---
 title: Publicar publicação
 description: O que fazer após a publicação do aplicativo
-keywords: publicar o Microsoft Teams postar certificado de atualização
-ms.openlocfilehash: d2cc6c5427c5b4f7320f0ec2e022f2c69467a33d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: publicar publicação atualizar manifesto de atualização de aplicativo de certificação
+ms.openlocfilehash: 58e81688ab9a8b55d2b035fc9b43cb58dddb6133
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819151"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465912"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Manter e dar suporte ao seu aplicativo publicado 
 
@@ -19,7 +19,7 @@ O [programa de conformidade do Microsoft 365 app](./application-certification.md
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Adicionar um botão de download ao seu site do produto
 
-Se seu aplicativo estiver no Microsoft Teams Store, você poderá gerar um link para o seu site que inicia o Teams e mostra uma caixa de diálogo de consentimento e instalação para que os usuários adicionem o aplicativo.
+Se seu aplicativo estiver no repositório global do Microsoft Teams, você poderá gerar um link para o seu site que inicia o Teams e mostra uma caixa de diálogo de consentimento e instalação para que os usuários adicionem o aplicativo.
 O formato é:  `https://teams.microsoft.com/l/app/<appId>` onde AppID é o GUID que eles declaram no manifesto enviado.
 Exemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` é o link para instalar o Trello.
 
@@ -27,7 +27,7 @@ Exemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * Não use o botão *Adicionar um novo aplicativo* para reenviar seu aplicativo. Em vez disso, use o bloco para seu aplicativo na guia Visão geral.
 * O appId no manifesto atualizado deve ser igual ao do manifesto atual, com um número de versão incrementado.
-* Aumente o número da versão no manifesto se você fizer alterações de manifesto no seu envio.
+* Aumente o número da versão no manifesto se você fizer qualquer alteração no envio, incluindo o nome do aplicativo ou qualquer metadado no manifesto.
 * Envios atualizados são necessários para passar por um novo processo de revisão e validação.
 
 ## <a name="app-updates-and-the-user-consent-flow"></a>Atualizações de aplicativos e o fluxo de consentimento do usuário

@@ -1,13 +1,13 @@
 ---
 title: Criar uma ótima página de detalhes do aplicativo
 description: Descreve os requisitos para a página de detalhes do aplicativo
-keywords: o Teams Publish Store Office Publishing Policy AppSource Content
-ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+keywords: Teams Publish Store Office Publishing Policy AppSource conteúdo captura de tela do logotipo descrição do nome do aplicativo Descrição curta descrição
+ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452765"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465940"
 ---
 # <a name="build-a-great-app-details-page"></a>Criar uma ótima página de detalhes do aplicativo
 
@@ -91,7 +91,7 @@ Este é um resumo conciso do seu aplicativo. Ela deve ser original, interessante
 **Permitido**
 
 * Não repita o título.
-* Não abreviar a Microsoft para "MS".
+* Não abreviar a Microsoft como "MS" ou "MSFT".
 * Não use uma terminologia jargão ou especializada, não é possível supor que os usuários saibam o que procurar.
 * Evite a referência desnecessária aos nomes de produtos da Microsoft, a menos que seja absolutamente necessário.
 * Não indicam ou sugerem que o aplicativo é uma oferta da Microsoft.

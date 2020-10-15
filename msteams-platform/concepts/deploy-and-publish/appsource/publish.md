@@ -1,13 +1,13 @@
 ---
 title: Diretrizes de processo de envio de aprovação do aplicativo Microsoft Teams
 description: Descreve o processo de aprovação de envio para obter seu aplicativo publicado no Microsoft Teams App Store
-keywords: Teams Publish Store Office Publishing Publish AppSource Partner Center
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: Teams Publish Store publicação do Office Publishing publicar AppSource parceiro parceiros conta de verificação de conta não publicar qualificado
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279690"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465926"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -76,6 +76,11 @@ Você receberá a mensagem de erro acima quando o [status da verificação](/par
 Durante o processo de verificação da conta, o status de cada etapa obrigatória: propriedade de email, verificação de emprego e verificação de negócios — será exibida. Depois que o processo de verificação for concluído com êxito, o status de verificação do registro na página de perfil mudará de "pendente" para "autorizado" e as etapas do processo não serão mais exibidas.
 
 ![Erro de verificação da central de parceiros](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>O que é verificado no processo de verificação de conta do Partner Center e como responder?
+Há três áreas de verificação: propriedade de email, emprego e negócios. Confira os detalhes do [que é verificado e como responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond) se você for o contato principal (administrador global ou administrador de contas), recomendamos que você vá para seu perfil de parceiro para monitorar o status de verificação e controlar o progresso.
+
+Quando o processo de verificação estiver concluído, o status de verificação do registro na página de perfil será alterado de *pendente* para *autorizado* e as etapas do processo com status, exibidas na página, desaparecerão. O contato principal receberá um email da Microsoft dentro de alguns dias úteis após a conclusão da verificação.
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Meu status de verificação de conta não é avançado além da propriedade de email no Partner Center. Como devo proceder?
 
