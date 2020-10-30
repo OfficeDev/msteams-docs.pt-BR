@@ -2,19 +2,20 @@
 title: Lista de verificação de envio
 description: A lista de verificação a ser usada antes de publicar seu aplicativo do Microsoft Teams no AppSource
 keywords: Teams Publish Store publicação Office Publishing Checklist listar aplicativos Teams appsource validação
-ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 1b25a449901c303269334e5cea6de46fa3b6f6e5
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465919"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796299"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar para envio do AppSource  
 
 Para ser listado no AppSource, seu aplicativo deve passar por um processo de aprovação. Este é um serviço gratuito fornecido pelo grupo Microsoft Teams que verifica se seu aplicativo funciona conforme descrito, contém todos os metadados apropriados e fornece conteúdo que seria valioso para um usuário final. Para ajudá-lo a obter uma aprovação rápida, certifique-se de que seu aplicativo atenda aos seguintes requisitos e diretrizes:
 
 * **Método de distribuição:** Certifique-se de que seu aplicativo destina-se à publicação em uma plataforma de armazenamento. Há [outras opções](../../overview.md) para distribuir o aplicativo sem publicar no AppSource.
-* **Políticas de validação:** Seu aplicativo deve passar por todas as [políticas de validação do AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)atual. Verifique seu aplicativo na [ferramenta de validação](#teams-app-validation-tool) antes do envio. Observe que essas políticas estão sujeitas a alterações.
+* **Políticas de validação:** Seu aplicativo deve passar por todas as [políticas de validação do AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) atual antes do envio. Observe que essas políticas estão sujeitas a alterações. 
+* * * Autotestar seu aplicativo com a [ferramenta de validação de manifesto](#teams-app-validation-tool) .
 * **Página de detalhes do aplicativo:** Seu aplicativo deve alinhar com a  [lista de verificação de página de detalhes do aplicativo](detail-page-checklist.md).
 * **Dicas e casos com falhas freqüentes:** Preste atenção especial às dicas listadas [e às ocorrências com falhas freqüentes](frequently-failed-cases.md)  para aprimorar o envio de aplicativos e o tempo de aprovação.
 * **Manifesto do aplicativo:** Verifique o manifesto do aplicativo na [lista de verificação do manifesto do aplicativo](app-manifest-checklist.md).
@@ -82,10 +83,10 @@ Inclua o seguinte:
 
 * Você pode optar por carregar suas notas de teste no SharePoint. Em caso afirmativo, forneça um link público para o arquivo.
 
-* **Contas de teste**. Uma conta de teste será necessária se o aplicativo permitir apenas contas licenciadas ou de resafeing do back-end. Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração de equipe.
+* **Contas de teste** . Uma conta de teste será necessária se o aplicativo permitir apenas contas licenciadas ou de resafeing do back-end. Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração de equipe.
 
-* **Etapas de integração**. Se a configuração prévia por um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas de administrador e de não administração configuradas para validação. Observação: você pode se inscrever para uma assinatura do [programa de desenvolvedor do Office 365](https://developer.microsoft.com/microsoft-365/dev-program) . É *grátis* por 90 dias e será renovado continuamente, desde que você o esteja usando para a atividade de desenvolvimento.
+* **Etapas de integração** . Se a configuração prévia por um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas de administrador e de não administração configuradas para validação. Observação: você pode se inscrever para uma assinatura do [programa de desenvolvedor do Office 365](https://developer.microsoft.com/microsoft-365/dev-program) . É *grátis* por 90 dias e será renovado continuamente, desde que você o esteja usando para a atividade de desenvolvimento.
 
-* **Observações sobre os recursos do aplicativo no Teams**: detalhe todos os recursos que o aplicativo oferece no Teams e as etapas para testar cada recurso.
+* **Observações sobre os recursos do aplicativo no Teams** : detalhe todos os recursos que o aplicativo oferece no Teams e as etapas para testar cada recurso.
 
-* **Vídeo mostrando a funcionalidade do aplicativo (opcional)**: você pode fornecer uma gravação de vídeo do produto para que possamos entender totalmente a funcionalidade do aplicativo.
+* **Vídeo mostrando a funcionalidade do aplicativo (opcional)** : você pode fornecer uma gravação de vídeo do produto para que possamos entender totalmente a funcionalidade do aplicativo.

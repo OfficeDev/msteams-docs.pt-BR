@@ -1,13 +1,13 @@
 ---
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
-keywords: Diretrizes de design de equipes referência configuração de guias
-ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+keywords: Teams design Guidelines Reference Framework Tabs Configuration guia canal de configuração guia estática guia de equipes de design simples
+ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819036"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796208"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -59,9 +59,9 @@ Há desafios de navegação inerentes com uma hierarquia de navegação profunda
 
 > [!div class="checklist"]
 >
-> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade**. Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
->* **Abre uma pseudo caixa de diálogo em um iframe**. Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
->* **Abre uma página do navegador**.
+> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade** . Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
+>* **Abre uma pseudo caixa de diálogo em um iframe** . Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
+>* **Abre uma página do navegador** .
 
 ### <a name="personality"></a>Personalidade
 
@@ -75,7 +75,7 @@ A tela da guia apresenta uma ótima oportunidade de marcar sua experiência. O l
 A incorporação de suas próprias cores e layouts twill também ajuda na comunicação de personalidade.
 
 > [!TIP]
-> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira*, por exemplo, [cores de equipes](../../concepts/design/components/color.md)
+> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira* , por exemplo, [cores de equipes](../../concepts/design/components/color.md)
 
 ---
 
@@ -136,7 +136,7 @@ Há dois modos de notificação para alterações de conteúdo de guia:
 
 > [!div class="checklist"]
 >
-> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+> * **Use a API do aplicativo para notificar os usuários sobre as alterações** . Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **Use um bot** . Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
 
   Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention`  especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.

@@ -2,12 +2,12 @@
 title: Diretrizes de processo de envio de aprovação do aplicativo Microsoft Teams
 description: Descreve o processo de aprovação de envio para obter seu aplicativo publicado no Microsoft Teams App Store
 keywords: Teams Publish Store publicação do Office Publishing publicar AppSource parceiro parceiros conta de verificação de conta não publicar qualificado
-ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 2879717aebd9d295cdf37cc0371b68f5f695b86b
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465926"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796306"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envie seu aplicativo para o AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "48465926"
 Publicar seu aplicativo no [AppSource](https://appsource.microsoft.com) o disponibiliza no catálogo de aplicativos do Microsoft Teams e na Web. Em um nível alto, o processo de envio de seu aplicativo para o AppSource é:
 
 1. Desenvolva seu aplicativo seguindo as [diretrizes de design](~/concepts/design/understand-use-cases.md). As guias devem seguir as [diretrizes de design de guia](~/tabs/design/tabs.md). Os bots devem seguir as [diretrizes de design de bot](~/bots/design/bots.md).
-1. Verifique se o aplicativo atende às [políticas de validação](/legal/marketplace/certification-policies) de aplicativos do Microsoft Teams.
+1. Verifique se o aplicativo atende às [políticas de validação](/legal/marketplace/certification-policies) de aplicativos do Microsoft Teams. 
+1. Autotestar seu aplicativo com a [ferramenta de validação de manifesto](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) .
 1. [Configurar uma conta de desenvolvedor](/office/dev/store/open-a-developer-account) no [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *Consulte também* [como criar uma conta de centro de parceiros](#how-do-i-create-a-partner-center-account) na seção perguntas frequentes, abaixo.
 1. Prepare seu aplicativo para envio, seguindo nossa [lista de verificação de envio](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Revise nossas [dicas para um envio de aplicativo bem-sucedido](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -84,7 +85,7 @@ Quando o processo de verificação estiver concluído, o status de verificação
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Meu status de verificação de conta não é avançado além da propriedade de email no Partner Center. Como devo proceder?
 
-Durante o processo de verificação de **propriedade de email** , um email de verificação é enviado para o endereço de email de contato principal. Verifique a caixa de entrada de contato principal de um email de **maccount@<span>Microsoft</span>. com** com a ação de linha de assunto *necessária: Verifique sua conta de email com a Microsoft*, solicitando que você conclua o processo de verificação de email. O email de verificação será enviado para o endereço de email listado na página Configurações de conta no centro de parceiros.
+Durante o processo de verificação de **propriedade de email** , um email de verificação é enviado para o endereço de email de contato principal. Verifique a caixa de entrada de contato principal de um email de **maccount@ <span>Microsoft</span>. com** com a ação de linha de assunto *necessária: Verifique sua conta de email com a Microsoft* , solicitando que você conclua o processo de verificação de email. O email de verificação será enviado para o endereço de email listado na página Configurações de conta no centro de parceiros.
 
 > [!NOTE]
  >O link de verificação de email só é válido por sete dias. Você pode solicitar que reenviemos o email para você visitando sua página de perfil de parceiro e selecionando o link de **email de verificação de reenvio** . Para garantir que os emails sejam recebidos, os emails de lista segura do microsoft.com como um domínio seguro e verifique suas pastas de lixo eletrônico.
@@ -101,7 +102,7 @@ Tente o seguinte:
 1. Limpe o cache do navegador, vá para o painel de conta do centro de parceiros e selecione o link **reenviar email de verificação** para que o email de verificação seja enviado novamente ao seu endereço de email.
 1. Tente acessar o link de  **email de verificação de reenvio** de outro navegador.
 1. Trabalhe com seu departamento de ti para garantir que os emails de verificação não sejam bloqueados pelo servidor de email.
-1. Ajuste o filtro de spam do seu servidor para permitir/listar todos os emails de **maccount@microsoft. <span></span> com**.
+1. Ajuste o filtro de spam do seu servidor para permitir/listar todos os emails de **maccount@microsoft. <span></span> com** .
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Quanto tempo o processo de verificação de emprego geralmente leva?
 
@@ -123,7 +124,7 @@ Consulte nossa documentação do [Marketplace comercial](/azure/marketplace/) pa
 
 Envie um email para **<teamsubm@microsoft.com>** com os seguintes detalhes:
 
-1. **Linha de assunto**. *Problema de conta do centro de parceria para <App_Name>* (especifique o nome do seu aplicativo).
+1. **Linha de assunto** . *Problema de conta do centro de parceria para <App_Name>* (especifique o nome do seu aplicativo).
 1. **Corpo do email:**
     * Número do tíquete de suporte:
     * Sua ID de vendedor:

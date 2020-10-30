@@ -3,12 +3,13 @@ title: Manipular eventos de bot
 description: Descreve como lidar com eventos em bots para o Microsoft Teams
 keywords: eventos de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800954"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796173"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Manipular eventos de bot no Microsoft Teams
 
@@ -133,7 +134,7 @@ bot.on('conversationUpdate', (msg) => {
 O bot recebe um `conversationUpdate` com `membersAdded` quando um usuário o adiciona diretamente para chat pessoal. Nesse caso, a carga que seu bot recebe não contém o `channelData.team` objeto. Você deve usá-lo como um filtro caso queira que seu bot ofereça uma mensagem de [boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) diferente dependendo do escopo.
 
 > [!NOTE]
-> Para bots com escopo pessoal, seu bot sempre receberá o `conversationUpdate` evento uma única vez, mesmo que o bot seja removido e adicionado novamente. Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente. Veja um [exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.
+> Para bots com escopo pessoal, seu bot sempre receberá o `conversationUpdate` evento uma única vez, mesmo que o bot seja removido e adicionado novamente. Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente. Veja um [ exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>Exemplo de esquema: bot adicionado ao contexto pessoal
 
@@ -154,11 +155,11 @@ O bot recebe um `conversationUpdate` com `membersAdded` quando um usuário o adi
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -260,11 +261,11 @@ O bot é notificado quando a equipe que está sendo renomeada. Ele recebe um `co
 
 ## <a name="channel-updates"></a>Atualizações de canal
 
-O bot é notificado quando um canal é criado, renomeado ou excluído em uma equipe onde foi adicionado. Novamente, o `conversationUpdate` evento é recebido, e um identificador de eventos específico do teams é enviado como parte do `channelData.eventType` objeto, onde os dados do `channel.id` canal são o GUID do canal e `channel.name` contém o próprio nome do canal.
+O bot é notificado quando um canal é criado, renomeado ou excluído em uma equipe onde foi adicionado. Novamente, o `conversationUpdate` evento é recebido, e um identificador de eventos específico do teams é enviado como parte do `channelData.eventType` objeto, onde os dados do  `channel.id` canal são o GUID do canal e `channel.name` contém o próprio nome do canal.
 
 Os eventos do canal são os seguintes:
 
-* **channelCreated** &emsp; Um usuário adiciona um novo canal à equipe
+_ **channelCreated** &emsp; um usuário adiciona um novo canal à equipe
 * **channelRenamed** &emsp; Um usuário renomeia um canal existente
 * **channelDeleted** &emsp; Um usuário remove um canal
 
@@ -348,7 +349,7 @@ Os eventos do canal são os seguintes:
 
 ## <a name="reactions"></a>Reações
 
-O `messageReaction` evento é enviado quando um usuário adiciona ou remove sua reação a uma mensagem que foi enviada originalmente pelo bot. `replyToId`contém a ID da mensagem específica.
+O `messageReaction` evento é enviado quando um usuário adiciona ou remove sua reação a uma mensagem que foi enviada originalmente pelo bot. `replyToId` contém a ID da mensagem específica.
 
 ### <a name="schema-example-a-user-likes-a-message"></a>Exemplo de esquema: um usuário gosta de uma mensagem
 

@@ -5,12 +5,12 @@ description: como criar uma página de conteúdo
 keywords: guias do teams com o canal de grupo configurado como estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818903"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796313"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -28,7 +28,7 @@ O objetivo geral da guia é fornecer acesso a conteúdo significativo e envolven
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar seu código com o Microsoft Teams
 
-Para que sua página seja exibida no Teams, você deve incluir o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) e incluir uma chamada para `microsoftTeams.initialize()` depois que a página for carregada. É assim que sua página e o cliente Teams se comunicam:
+Para que sua página seja exibida no Teams, você deve incluir o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) e incluir uma chamada para `microsoftTeams.initialize()` depois que a página for carregada. É assim que sua página e o cliente Teams se comunicam:
 
 ```html
 <!DOCTYPE html>
@@ -75,8 +75,8 @@ A partir [do esquema de manifesto v 1.7](../../../resources/schema/manifest-sche
 
 1. Para mostrar o indicador de carregamento, adicione-o `"showLoadingIndicator": true` ao seu manifesto. 
 2. Lembre-se de chamar `microsoftTeams.initialize();` .
-3. **Opcional**. Se você estiver pronto para imprimir na tela e quiser carregar o restante do conteúdo do aplicativo, você pode ocultar manualmente o indicador de carregamento chamando `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obrigatório**. Por fim, chame `microsoftTeams.appInitialization.notifySuccess()` para notificar as equipes de que seu aplicativo carregou com êxito. O Microsoft Teams ocultará o indicador de carregamento, se aplicável. Se  `notifySuccess`  não for chamado dentro de 30 segundos, será considerado que seu aplicativo esgotou o tempo limite e uma tela de erro com uma opção de repetição será exibida.
+3. **Opcional** . Se você estiver pronto para imprimir na tela e quiser carregar o restante do conteúdo do aplicativo, você pode ocultar manualmente o indicador de carregamento chamando `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obrigatório** . Por fim, chame `microsoftTeams.appInitialization.notifySuccess()` para notificar as equipes de que seu aplicativo carregou com êxito. O Microsoft Teams ocultará o indicador de carregamento, se aplicável. Se  `notifySuccess`  não for chamado dentro de 30 segundos, será considerado que seu aplicativo esgotou o tempo limite e uma tela de erro com uma opção de repetição será exibida.
 5. Se o aplicativo não puder ser carregado, você poderá chamá-lo `microsoftTeams.appInitialization.notifyFailure(reason);` para permitir que as equipes saibam que houve um erro. Uma tela de erro será exibida para o usuário:
 
 ```typescript

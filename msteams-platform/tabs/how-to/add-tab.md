@@ -1,21 +1,21 @@
 ---
-title: Criar uma guia para o Teams
+title: Criar uma guia usando o app Studio
 author: laujan
-description: Saiba como criar uma guia do Microsoft Teams
+description: Saiba como criar uma guia do Microsoft Teams usando o app Studio.
 keywords: guias do teams com o canal de grupo configurável
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 4e6554a3fdba2ee53bf6d76cd6e25a55b14f7bdd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452754"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796152"
 ---
-# <a name="create-a-tab-for-microsoft-teams"></a>Criar uma guia para o Microsoft Teams
+# <a name="create-a-tab-using-app-studio"></a>Criar uma guia usando o app Studio
 
 > [!TIP]
-> Procurando uma maneira mais rápida de começar? Crie uma guia [pessoal](../../build-your-first-app/build-personal-tab.md) ou [canal e grupo](../../build-your-first-app/build-channel-tab.md) usando o Microsoft Teams Toolkit.
+> Procurando uma maneira mais rápida para iniciar? Crie uma guia [pessoal](../../build-your-first-app/build-personal-tab.md) ou [canal e grupo](../../build-your-first-app/build-channel-tab.md) usando o Microsoft Teams Toolkit.
 
 As guias permitem que você sirva o conteúdo da Web que você hospeda para seu canal, chat de grupo e usuários pessoais. Em um nível alto, você precisará concluir as etapas a seguir para criar uma guia:
 
@@ -67,11 +67,11 @@ Você pode usar o aplicativo App Studio no cliente Microsoft Teams para ajudar a
 1. Abra o app Studio e selecione a guia **Editor do manifesto** .
 1. Escolha o bloco **criar um novo aplicativo** .
 1. Adicione os detalhes do aplicativo (consulte a [definição de esquema de manifesto](~/resources/schema/manifest-schema.md) para obter uma descrição completa de cada campo).
-1. Na seção recursos, selecione **guias**.
-    * Para obter uma guia pessoal, escolha *Adicionar uma guia pessoal* e selecione **Adicionar**. Você receberá uma janela de diálogo pop-up onde você pode adicionar os detalhes da guia.
-    * Para uma guia canal/grupo, em *guia equipe* , selecione **Adicionar** e preencha os campos guia detalhes na janela pop-up da guia equipe. Certifique-se de que a *configuração pode atualizar? * Caixas de *chat* de equipe e grupo são verificadas e selecione **salvar**.
+1. Na seção recursos, selecione **guias** .
+    * Para obter uma guia pessoal, escolha *Adicionar uma guia pessoal* e selecione **Adicionar** . Você receberá uma janela de diálogo pop-up onde você pode adicionar os detalhes da guia.
+    * Para uma guia canal/grupo, em *guia equipe* , selecione **Adicionar** e preencha os campos guia detalhes na janela pop-up da guia equipe. Certifique-se de que a *configuração pode atualizar?* Caixas de *chat* de equipe e grupo são verificadas e selecione **salvar** .
 1. Na seção *domínios e permissões* , os *domínios do campo Tabs* devem conter sua URL de host ou de proxy reverso sem o prefixo HTTPS.
-1. Na guia **Finish**  =>  **teste de término e distribuição** , você pode **baixar** seu pacote de aplicativos, **instalar** o pacote em uma equipe ou **Enviar** para a loja de aplicativos do teams para aprovação. *Se você estiver usando um proxy reverso, receberá um aviso no campo **Descrição** à direita. O aviso pode ser ignorado durante o teste da guia*.
+1. Na guia **Finish**  =>  **teste de término e distribuição** , você pode **baixar** seu pacote de aplicativos, **instalar** o pacote em uma equipe ou **Enviar** para a loja de aplicativos do teams para aprovação. *Se você estiver usando um proxy reverso, receberá um aviso no campo **Descrição** à direita. O aviso pode ser ignorado durante o teste da guia* .
 
 ## <a name="create-your-app-package-manually"></a>Crie seu pacote de aplicativos manualmente
 
@@ -84,9 +84,9 @@ O conteúdo exibido para guias pessoais é o mesmo para todos os usuários e é 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
-|`name`|Cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
-|`contentUrl`|Cadeia de caracteres|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
-|`websiteUrl`|Cadeia de caracteres|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
+|`name`|String|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
+|`contentUrl`|String|2048 caracteres|✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
+|`websiteUrl`|String|2048 caracteres||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
 |`scopes`|Matriz de enumeração|1|✔|As guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser configurada somente como parte de um aplicativo pessoal.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Exemplo de manifesto de guia pessoal simples
@@ -112,7 +112,7 @@ As guias canal/grupo são adicionadas à `configurableTabs` matriz. Você pode d
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔|A URL do https://para a página de configuração.|
+|`configurationUrl`|String|2048 caracteres|✔|A URL do https://para a página de configuração.|
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Será `true`|
 |`scopes`|Matriz de enumeração|1|✔|As guias configuráveis dão suporte somente a `team` e os `groupchat` escopos. |
 
@@ -136,9 +136,9 @@ Depois de concluir o seu `manifest.json` pacote, em uma pasta zip, juntamente co
 ### <a name="upload-app-package-directly-to-a-team"></a>Carregar o pacote de aplicativos diretamente para uma equipe
 
 1. Abra o cliente do Microsoft Teams. Se você usar a [versão baseada na Web](https://teams.microsoft.com) , poderá inspecionar seu código de front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md)do navegador.
-1. No painel *YourTeams* à esquerda, selecione o `...` menu ao lado da equipe que você está usando para testar sua guia e escolha **Gerenciar equipe**.
+1. No painel *YourTeams* à esquerda, selecione o `...` menu ao lado da equipe que você está usando para testar sua guia e escolha **Gerenciar equipe** .
 1. No painel principal, selecione **aplicativos** na barra de guias e escolha **carregar um aplicativo personalizado** localizado no canto inferior direito da página.
-1. Abra o diretório do projeto, navegue até a pasta **./Package** , selecione a pasta zip do pacote de aplicativos e escolha **abrir**. Sua guia será carregada no Microsoft Teams.
+1. Abra o diretório do projeto, navegue até a pasta **./Package** , selecione a pasta zip do pacote de aplicativos e escolha **abrir** . Sua guia será carregada no Microsoft Teams.
 
 ### <a name="view-your-tab-in-teams"></a>Exibir sua guia no Teams
 

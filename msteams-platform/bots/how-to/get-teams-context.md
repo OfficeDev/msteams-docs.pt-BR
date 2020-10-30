@@ -1,15 +1,15 @@
 ---
 title: Obter o contexto específico da equipe para o bot
-author: clearab
+author: laujan
 description: Como obter o contexto específico da equipe da Microsoft para o bot, incluindo a lista de conversas, detalhes e lista de canais.
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 55f93a914cdb0f92885ff535424cd823072184aa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.author: lajanuar
+ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237788"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796341"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obter o contexto específico da equipe para o bot
 
@@ -79,37 +79,42 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Você pode emitir diretamente uma solicitação GET no `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` , usando o valor de `serviceUrl` como ponto de extremidade. O valor de `serviceUrl` tende a ser estável, mas pode ser alterado. Quando uma nova mensagem chega, seu bot deve confirmar seu valor armazenado para `serviceUrl` .
+Você pode emitir diretamente uma solicitação GET no `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` , usando o valor de `serviceUrl` como ponto de extremidade. O valor de `serviceUrl` tende a ser estável, mas pode ser alterado. Quando uma nova mensagem chega, seu bot deve confirmar seu valor armazenado para `serviceUrl` . A carga de resposta também indicará se o usuário é um usuário regular ou anônimo.
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
+GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
 
 Response body
 {
-    "continuationToken": "asdfqwerueiqpiewr",
-    "members":
-        [{
-            "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-            "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-            "givenName": "Larry",
-            "surname": "Brown",
-            "email": "Larry.Brown@fabrikam.com",
-            "userPrincipalName": "labrown@fabrikam.com"
-        }, {
-            "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-            "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
-            "givenName": "John",
-            "surname": "Patterson",
-            "email": "johnp@fabrikam.com",
-            "userPrincipalName": "johnp@fabrikam.com"
-        }, {
-            "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-            "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-            "givenName": "Rick",
-            "surname": "Stevens",
-            "email": "Rick.Stevens@fabrikam.com",
-            "userPrincipalName": "rstevens@fabrikam.com"
-        }]
+   "continuationToken":"asdfqwerueiqpiewr",
+   "members":[
+      {
+         "id":"29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+         "name":"Anon1 (Guest)",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"anonymous"
+      },
+      {
+         "id":"29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
+         "objectId":"76b0b09f-d410-48fd-993e-84da521a597b",
+         "givenName":"John",
+         "surname":"Patterson",
+         "email":"johnp@fabrikam.com",
+         "userPrincipalName":"johnp@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      },
+      {
+         "id":"29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
+         "objectId":"6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
+         "givenName":"Rick",
+         "surname":"Stevens",
+         "email":"Rick.Stevens@fabrikam.com",
+         "userPrincipalName":"rstevens@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      }
+   ]
 }
 ```
 
@@ -159,10 +164,12 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Você pode emitir diretamente uma solicitação GET no `/v3/conversations/{conversationId}/members/{userId}` , usando o valor de `serviceUrl` como ponto de extremidade. O valor de `serviceUrl` tende a ser estável, mas pode ser alterado. Quando uma nova mensagem chega, seu bot deve confirmar seu valor armazenado para `serviceUrl` .
+Você pode emitir diretamente uma solicitação GET no `/v3/conversations/{conversationId}/members/{userId}` , usando o valor de `serviceUrl` como ponto de extremidade. O valor de `serviceUrl` tende a ser estável, mas pode ser alterado. Quando uma nova mensagem chega, seu bot deve confirmar seu valor armazenado para `serviceUrl` . Isso pode ser usado para usuários do regulares e usuários anônimos.
+
+Veja a seguir uma amostra de resposta para o usuário regular
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/labrown@fabrikam.com"
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
 
 Response body
 {
@@ -171,7 +178,23 @@ Response body
     "givenName": "Larry",
     "surname": "Brown",
     "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com"
+    "userPrincipalName": "labrown@fabrikam.com",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"user"
+}
+```
+
+Veja a seguir a resposta para o usuário anônimo
+
+```http
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
+
+Response body
+{
+    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+    "name": "Anon1 (Guest)",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"anonymous"
 }
 ```
 

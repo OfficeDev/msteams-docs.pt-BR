@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
-ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465933"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796334"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -60,9 +60,9 @@ Para obter informações adicionais sobre autenticação, consulte:
 
 ### <a name="9989-response-times-must-be-reasonable"></a>Os tempos de resposta &#9989; devem ser razoáveis
 
-* **Guias**. Se uma resposta a uma ação levar mais de três segundos, você deverá fornecer um aviso ou mensagem de carregamento.
-* **Bots**. Uma resposta a um comando de usuário deve ocorrer dentro de dois segundos. Se for necessário processamento maior, seu aplicativo deverá exibir um indicador de digitação.
-* **Extensões de composição**. Uma resposta a um comando de usuário deve ocorrer dentro de cinco segundos.
+* **Guias** . Se uma resposta a uma ação levar mais de três segundos, você deverá fornecer um aviso ou mensagem de carregamento.
+* **Bots** . Uma resposta a um comando de usuário deve ocorrer dentro de dois segundos. Se for necessário processamento maior, seu aplicativo deverá exibir um indicador de digitação.
+* **Extensões de composição** . Uma resposta a um comando de usuário deve ocorrer dentro de cinco segundos.
 
 > [!TIP]
 > Certifique-se de que o aplicativo exibe um indicador de carregamento ou alguma forma de aviso quando o aplicativo está demorando mais do que o esperado para responder.
@@ -75,6 +75,8 @@ Para obter informações adicionais sobre autenticação, consulte:
 ![Exibição da guia do SharePoint](~/assets/images/faq/tab-sp.png)
 
 * As guias devem ter natureza clara e não incluir a navegação complexa.
+* As guias não devem apresentar uma barra de aplicativos com ícones no trilho esquerdo que entram em conflito com a navegação do teams principal.
+* As guias que têm recursos de edição complexos no aplicativo devem abrir o modo de exibição do editor em várias janelas, e não na guia.
 * Se houver várias opções de exibição, considere ter um menu de configuração de tabulação para o usuário escolher. Por exemplo, em vez de incorporar um menu dentro da guia, coloque o menu na página de configuração para que o modo de exibição de tabulação real seja limpo e focado.
 
 ![Página de configuração de grande ideia](~/assets/images/faq/wideidea.png)
@@ -100,20 +102,20 @@ Para obter informações adicionais sobre autenticação, consulte:
 
 O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui estão algumas dicas para ajudar seu bot a responder de forma inteligente aos usuários:
 
-* **Usar listas de comandos**. Analisar a entrada do usuário ou prever a intenção do usuário é difícil. Em vez de permitir que os usuários adivinhem o que o seu bot pode fazer, forneça uma lista de comandos que seu bot entenda.
+* **Usar listas de comandos** . Analisar a entrada do usuário ou prever a intenção do usuário é difícil. Em vez de permitir que os usuários adivinhem o que o seu bot pode fazer, forneça uma lista de comandos que seu bot entenda.
 
 ![Lista de comandos de fluxo](~/assets/images/faq/flow-bot.png)
 
-* **Incluir um comando help**. É provável que os usuários digitem "ajuda" quando forem perdidos ou quando o bot não responder conforme o esperado. Inclua um comando help que descreva como o valor do aplicativo será experiente em todos os comandos válidos.
+* **Incluir um comando help** . É provável que os usuários digitem "ajuda" quando forem perdidos ou quando o bot não responder conforme o esperado. Inclua um comando help que descreva como o valor do aplicativo será experiente em todos os comandos válidos.
 
 ![Comando Flow Help](~/assets/images/faq/flow-help.png)
 
-* **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido**. Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"*. Use essa oportunidade para ensinar seus usuários.
+* **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido** . Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"* . Use essa oportunidade para ensinar seus usuários.
 
 * **Use cartões adaptáveis e módulos de tarefas para tornar sua resposta de bot clara e acionável** 
  [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos
 
-* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
+* **Considere todos os escopos** . Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots pessoais devem enviar uma mensagem de boas-vindas na primeira inicialização
 
@@ -136,19 +138,19 @@ Uma mensagem de boas-vindas é a melhor maneira de definir o Tom para seu bot pe
 
 #### <a name="avoid-welcome-message-spamming"></a>Evitar o spam de mensagens de boas-vindas
 
-* **Mensagem do canal por bot**. Não enviar spam a usuários criando novas postagens de chat separadas. Crie uma única postagem de thread com respostas no mesmo thread.
-* **Chat pessoal por bot**. Não envie várias mensagens. Envie uma mensagem com informações completas.
+* **Mensagem do canal por bot** . Não enviar spam a usuários criando novas postagens de chat separadas. Crie uma única postagem de thread com respostas no mesmo thread.
+* **Chat pessoal por bot** . Não envie várias mensagens. Envie uma mensagem com informações completas.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Mensagens de boas-vindas do bot somente de notificação
 
-Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui uma mensagem que se comunica, *"Eu sou um bot somente para notificação e não conseguirá responder a seus chat"*.
+Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui uma mensagem que se comunica, *"Eu sou um bot somente para notificação e não conseguirá responder a seus chat"* .
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensagens de boas-vindas no escopo pessoal
 
-* **Torne sua mensagem concisa e informativa**.  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
+* **Torne sua mensagem concisa e informativa** .  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
 ![Bot e bot dinning](~/assets/images/faq/cafe-bot.png)
 
-* **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."*, *"é isso que eu posso fazer..."*.
+* **Tornar sua mensagem acionável** . Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."* , *"é isso que eu posso fazer..."* .
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensagens de boas-vindas no escopo de equipe/canal
 

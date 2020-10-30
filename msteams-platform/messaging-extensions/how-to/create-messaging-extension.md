@@ -1,20 +1,20 @@
 ---
-title: Criar uma extensão de mensagens para o Teams
+title: Criar uma extensão de mensagens usando o app Studio
 author: clearab
-description: Saiba como criar uma extensão de mensagens do Microsoft Teams
+description: Saiba como criar uma extensão de mensagens do Microsoft Teams usando o app Studio.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452593"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796180"
 ---
-# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Criar uma extensão de mensagens para o Microsoft Teams
+# <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagens usando o app Studio
 
 > [!TIP]
-> Procurando uma maneira mais rápida de começar? Crie uma [extensão de mensagens](../../build-your-first-app/build-messaging-extension.md) usando o Microsoft Teams Toolkit.
+> Procurando uma maneira mais rápida para iniciar? Crie uma [extensão de mensagens](../../build-your-first-app/build-messaging-extension.md) usando o Microsoft Teams Toolkit.
 
 Em um nível alto, você precisará concluir as etapas a seguir para criar uma extensão de mensagens.
 
@@ -131,11 +131,11 @@ Após a reunião começar, os participantes do teams podem interagir diretamente
 
 1. **Localização** Sua extensão de mensagens pode ser invocada a partir da área de mensagem de composição, da caixa de comando ou @mentioned no chat da reunião.
 
-1. **Metadados**. Quando sua extensão de mensagens é invocada, ela pode identificar o usuário e o locatário de `userId` e `tenantId` . O `meetingId` pode ser encontrado como parte do objeto `channelData`. Seu aplicativo pode usar o `userId` e o `meetingId`  para a `GetParticipant` solicitação de API para recuperar funções de usuário.
+1. **Metadados** . Quando sua extensão de mensagens é invocada, ela pode identificar o usuário e o locatário de `userId` e `tenantId` . O `meetingId` pode ser encontrado como parte do objeto `channelData`. Seu aplicativo pode usar o `userId` e o `meetingId`  para a `GetParticipant` solicitação de API para recuperar funções de usuário.
 
-1. **Tipo de comando**. Se sua extensão de mensagem usa [comandos baseados em ação](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), ela deve seguir as guias autenticação de [logon único](../../tabs/how-to/authentication/auth-aad-sso.md) .
+1. **Tipo de comando** . Se sua extensão de mensagem usa [comandos baseados em ação](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), ela deve seguir as guias autenticação de [logon único](../../tabs/how-to/authentication/auth-aad-sso.md) .
 
-1. **Experiência do usuário**. Você deve determinar a experiência do usuário final para extensões de mensagens invocadas durante um chat de reunião.
+1. **Experiência do usuário** . Sua extensão de mensagens deve ter a aparência e se comportar da mesma forma que faria fora de uma reunião.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -154,7 +154,7 @@ Experimente em um QuickStart:
   * [Extensão de mensagens com comandos baseados em ação](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensão de mensagens com comandos baseados em pesquisa](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Saiba mais sobre os conceitos de extensões de mensagens:
+Saiba mais sobre conceitos de desenvolvimento do teams:
 
-* [Entender os recursos do aplicativo Teams?](~/concepts/extensibility-points.md)
+* [Entender os recursos do aplicativo Teams](../../concepts/capabilities-overview.md)
 * [O que são extensões de mensagens?](~/messaging-extensions/what-are-messaging-extensions.md)

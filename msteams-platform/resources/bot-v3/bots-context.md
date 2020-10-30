@@ -4,11 +4,11 @@ description: Descreve como obter contexto para bots no Microsoft Teams
 keywords: contexto de bots do teams
 ms.date: 05/20/2019
 ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800953"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796159"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obter contexto para o bot do Microsoft Teams
 

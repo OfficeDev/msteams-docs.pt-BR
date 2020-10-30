@@ -5,12 +5,12 @@ description: Visão geral dos aplicativos nas reuniões do Microsoft Teams com b
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 13fc44e9831cf58f0ab847eab06cc5b99ed8cc70
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452635"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796222"
 ---
 # <a name="apps-in-teams-meetings-developer-preview"></a>Aplicativos em reuniões do Teams (Developer Preview)
 
@@ -32,6 +32,9 @@ Centros de extensibilidade de aplicativos da reunião da equipe em três conceit
 
 > [!IMPORTANT]
 > Assim como ocorre com todos os aplicativos de guia, seu aplicativo precisará seguir o [fluxo de autenticação SSO](../tabs/how-to/authentication/auth-aad-sso.md) do teams para guias.
+
+> [!NOTE]
+> Os clientes móveis dão suporte a guias apenas nas superfícies de reunião prévia e posterior. As experiências de reunião (painel e caixa de diálogo na reunião) no Mobile estarão disponíveis em breve
 
 ### <a name="pre-meeting-app-experience"></a>Experiência do aplicativo de pré-venda
 
@@ -61,12 +64,12 @@ Centros de extensibilidade de aplicativos da reunião da equipe em três conceit
 
 ✔ Para um aplicativo pode ser visível em uma reunião do teams em duas áreas:
 
-&emsp;&emsp;**Painel lateral**&#9679;. </br>
+&emsp;&emsp;**Painel lateral** &#9679;. </br>
 
 > [!NOTE]
 > Se o _manifesto do aplicativo_ especificar que a guia será [otimizada para o painel lateral](create-apps-for-teams-meetings.md#in-meeting), isso será exibido. Também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeita às diretrizes de design especificadas.
 
-&emsp;&emsp;&#9679; **caixa de diálogo de reunião**. Use a caixa de diálogo de reunião para exibir conteúdo acionável para os participantes da reunião. *Consulte* [criar aplicativos para reuniões do teams](create-apps-for-teams-meetings.md).
+&emsp;&emsp;&#9679; **caixa de diálogo de reunião** . Use a caixa de diálogo de reunião para exibir conteúdo acionável para os participantes da reunião. *Consulte* [criar aplicativos para reuniões do teams](create-apps-for-teams-meetings.md).
 
 **Experiência de reunião:**
 
@@ -102,31 +105,31 @@ Para implementação de extensão de mensagens, Confira nossa documentação [de
 
 Você pode criar seu aplicativo com autorização específica do participante. Por exemplo, talvez apenas um organizador e/ou apresentador possa criar uma pesquisa em reuniões. Embora as configurações de participante padrão sejam determinadas pelo administrador de ti de uma organização, um organizador da reunião pode querer alterar as configurações de uma reunião específica. Os organizadores podem fazer essas alterações na página da Web opções de reunião.
 
-1. **Organizador**. O organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Somente os usuários com uma conta do M365 (que possui uma licença do Teams) podem ser organizadores e controlar as permissões dos participantes.
-1. **Apresentador**. Os apresentadores têm praticamente os mesmos recursos do organizador; no entanto, um apresentador não pode remover um organizador da sessão ou modificar as opções de reunião da sessão. Por padrão, os participantes que ingressam em uma reunião têm a função apresentador.
-1. **Participante**. Um participante é um usuário que foi convidado a participar de uma reunião, mas que não está autorizado a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma configuração de reunião ou compartilhar conteúdo.
+1. **Organizador** . O organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Somente os usuários com uma conta do M365 (que possui uma licença do Teams) podem ser organizadores e controlar as permissões dos participantes.
+1. **Apresentador** . Os apresentadores têm praticamente os mesmos recursos do organizador; no entanto, um apresentador não pode remover um organizador da sessão ou modificar as opções de reunião da sessão. Por padrão, os participantes que ingressam em uma reunião têm a função apresentador.
+1. **Participante** . Um participante é um usuário que foi convidado a participar de uma reunião, mas que não está autorizado a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma configuração de reunião ou compartilhar conteúdo.
 
 _Ver_ [ **funções em uma reunião do teams**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 Você pode acessar a página  **Opções de reunião** da seguinte maneira:
 
-&#11200; no Microsoft Teams, **vá para** ![ o logotipo calendário calendário ](../assets/images/apps-in-meetings/calendar-logo.png) , selecione uma reunião e, em seguida, **Opções de reunião**.
+&#11200; no Microsoft Teams, **vá para** ![ o logotipo calendário calendário ](../assets/images/apps-in-meetings/calendar-logo.png) , selecione uma reunião e, em seguida, **Opções de reunião** .
 
-&#11200; em um convite de reunião, selecione **Opções de reunião**.
+&#11200; em um convite de reunião, selecione **Opções de reunião** .
 
-&#11200; durante uma reunião, selecione **Mostrar participantes** ![ Mostrar ícone ](../assets/images/apps-in-meetings/show-participants.png) de participantes nos controles da reunião. Em seguida, acima da lista de participantes, escolha **gerenciar permissões**.
+&#11200; durante uma reunião, selecione **Mostrar participantes** ![ Mostrar ícone ](../assets/images/apps-in-meetings/show-participants.png) de participantes nos controles da reunião. Em seguida, acima da lista de participantes, escolha **gerenciar permissões** .
 
 ### <a name="user-types"></a>Tipos de usuários
 
 > [!NOTE]
 > Os tipos de usuário podem participar de reuniões e assumir uma das funções de participante descritas acima. O tipo de usuário não é exposto como parte da API **getParticipantRole** .
 
-1. **Dentro do locatário**. Esses usuários pertencem à organização e têm credenciais no Azure Active Directory para o locatário. Em geral, eles são funcionários remotos ou no local.
-1. **Convidado**. Um convidado é um participante de outra organização que tenha sido convidado a acessar o Microsoft Teams ou outros recursos no locatário da sua organização. Os convidados são adicionados ao Active Directory da sua organização e podem receber praticamente todos os mesmos recursos do teams que um membro da equipe nativo com acesso total aos bate-papos, reuniões e arquivos da equipe. _Ver_ [o acesso de convidados no Microsoft Teams](/microsoftteams/guest-access)
-1. **Federado/externo**. Um usuário federado é um usuário do teams externo em outra organização que foi convidado a participar de uma reunião. Como esses usuários têm credenciais válidas com parceiros federados, eles são tratados como autenticados pelo Teams, mas não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. Se você deseja que usuários externos tenham acesso a equipes e canais, o acesso de convidados pode ser uma opção melhor. _Consulte_ [gerenciar o acesso externo no Microsoft Teams](/microsoftteams/manage-external-access)
-1. **Anônimo**. Os usuários anônimos não têm uma identidade do Active Directory e não são federados com um locatário. O participante anônimo é como um usuário externo, mas sua identidade não é projetada na reunião. Usuários anônimos não poderão acessar aplicativos em uma janela de reunião.
+1. **Dentro do locatário** . Esses usuários pertencem à organização e têm credenciais no Azure Active Directory para o locatário. Em geral, eles são funcionários remotos ou no local.
+1. **Convidado** . Um convidado é um participante de outra organização que tenha sido convidado a acessar o Microsoft Teams ou outros recursos no locatário da sua organização. Os convidados são adicionados ao Active Directory da sua organização e podem receber praticamente todos os mesmos recursos do teams que um membro da equipe nativo com acesso total aos bate-papos, reuniões e arquivos da equipe. _Ver_ [o acesso de convidados no Microsoft Teams](/microsoftteams/guest-access)
+1. **Federado/externo** . Um usuário federado é um usuário do teams externo em outra organização que foi convidado a participar de uma reunião. Como esses usuários têm credenciais válidas com parceiros federados, eles são tratados como autenticados pelo Teams, mas não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. Se você deseja que usuários externos tenham acesso a equipes e canais, o acesso de convidados pode ser uma opção melhor. _Consulte_ [gerenciar o acesso externo no Microsoft Teams](/microsoftteams/manage-external-access)
+1. **Anônimo** . Os usuários anônimos não têm uma identidade do Active Directory e não são federados com um locatário. O participante anônimo é como um usuário externo, mas sua identidade não é projetada na reunião. Usuários anônimos não poderão acessar aplicativos em uma janela de reunião.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximas Etapas
 
 > [!div class="nextstepaction"]
 > [Crie aplicativos para reuniões do Teams](create-apps-for-teams-meetings.md)

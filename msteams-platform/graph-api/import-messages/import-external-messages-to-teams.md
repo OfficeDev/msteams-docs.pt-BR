@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: gráfico de API de mensagens de importação de equipes Microsoft migrar migração post
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465905"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796292"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -41,7 +41,7 @@ Em um nível alto, o processo de importação consiste no seguinte:
 
 ### <a name="set-up-your-office-365-tenant"></a>Configurar seu locatário do Office 365
 
-✔ Garantir que um locatário do Office 365 existe para os dados de importação. Para obter mais informações sobre como configurar uma locação do Office 365 para o Teams, *consulte*, [Prepare Your Office 365 locatário](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+✔ Garantir que um locatário do Office 365 existe para os dados de importação. Para obter mais informações sobre como configurar uma locação do Office 365 para o Teams, *consulte* , [Prepare Your Office 365 locatário](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
 ✔ Certifique-se de que os membros da equipe estão no Azure Active Directory (AAD).  Para obter mais informações, *consulte* [Adicionar um novo usuário](/azure/active-directory/fundamentals/add-users-azure-active-directory) ao Azure Active Directory.
 
 ## <a name="step-one-create-a-team"></a>Etapa 1: criar uma equipe
@@ -50,11 +50,11 @@ Como os dados existentes estão sendo migrados, a manutenção dos carimbos de d
 
 > [Crie uma nova equipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um carimbo de data/hora Back-in-time usando a propriedade de recurso da equipe  `createdDateTime`  . Coloque a nova equipe no `migration mode` , um estado especial que faz a barra de usuários da maioria das atividades dentro da equipe até que o processo de migração seja concluído. Inclua o `teamCreationMode` atributo de instância com o `migration` valor na solicitação post para identificar explicitamente a nova equipe como sendo criada para migração.  
 
-> **Observação**: o `createdDateTime` campo só será preenchido para instâncias de uma equipe ou canal que foram migrados.
+> **Observação** : o `createdDateTime` campo só será preenchido para instâncias de uma equipe ou canal que foram migrados.
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permissões
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs abordadas|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -98,7 +98,7 @@ A criação de um canal para as mensagens importadas é semelhante ao cenário c
 
 > [Crie um novo canal](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um carimbo de data/hora de entrada usando a propriedade de recurso Channel `createdDateTime` . Coloque o novo canal `migration mode` , um estado especial que rebarra os usuários da maioria das atividades de chat no canal até que o processo de migração seja concluído.  Inclua o `channelCreationMode` atributo de instância com o `migration` valor na solicitação post para identificar explicitamente a nova equipe como sendo criada para migração.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permissões
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs abordadas|
 |-|-|-|-|-|-|
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>Mensagem de erro
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>Etapa três: importar mensagens
 
-Depois que a equipe e o canal tiverem sido criados, você poderá começar a enviar mensagens de Back-in-time usando as `createdDateTime` `from`  teclas e no corpo da solicitação. **Observação**: não há suporte para mensagens importadas com `createdDateTime` versões anteriores ao segmento de mensagem `createdDateTime` .
+Depois que a equipe e o canal tiverem sido criados, você poderá começar a enviar mensagens de Back-in-time usando as `createdDateTime` `from`  teclas e no corpo da solicitação. **Observação** : não há suporte para mensagens importadas com `createdDateTime` versões anteriores ao segmento de mensagem `createdDateTime` .
 
 > [!NOTE]
 > createdDateTime deve ser exclusivo nas mensagens no mesmo thread.
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>Solicitação (postar uma mensagem com uma imagem embutida)
 
-> **Observação**: não há escopos de permissão especiais neste cenário, pois a solicitação faz parte do chat; os escopos para chat também são aplicados aqui.
+> **Observação** : não há escopos de permissão especiais neste cenário, pois a solicitação faz parte do chat; os escopos para chat também são aplicados aqui.
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Você pode importar mensagens de usuários que não estão no Teams. **Observação**: as mensagens importadas para usuários que não estão presentes no locatário não poderão ser pesquisadas no cliente ou portais de conformidade do Microsoft Teams durante a visualização pública.
+* Você pode importar mensagens de usuários que não estão no Teams. **Observação** : as mensagens importadas para usuários que não estão presentes no locatário não poderão ser pesquisadas no cliente ou portais de conformidade do Microsoft Teams durante a visualização pública.
 
 * Depois que a `completeMigration` solicitação é feita, não é possível importar outras mensagens para a equipe.
 

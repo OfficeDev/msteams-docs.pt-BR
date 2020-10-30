@@ -4,12 +4,12 @@ author: clearab
 description: Entenda como os WebHooks e conectores podem conectar seus serviços Web ao cliente do teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2be6f82bba0efe05a22a8da9da0acc1e0ad6fa00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6a2453cb7d0c2d55a8df938849313f47702e5585
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672442"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796369"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>O que são WebHooks e conectores?
 
@@ -29,7 +29,7 @@ Os conectores permitem que os usuários assinem receber notificações e mensage
 
 ### <a name="incoming-webhooks"></a>WebHooks de entrada
 
-Os WebHooks de entrada são um tipo de conector mais simples. Para qualquer canal no Team (se eles estiverem habilitados para essa equipe), você pode optar por expor um ponto de extremidade HTTPS que aceitará corretamente o JSON e inserir mensagens nesse canal. Eles são uma maneira rápida e fácil de conectar um canal ao seu serviço e são mais usados para cenários que são exclusivos para uma equipe específica. Por exemplo, você pode criar um webhook de entrada no seu canal do DevOps e configurar seus serviços de compilação, implantação e monitoramento para enviar alertas.
+Os WebHooks de entrada são o tipo mais simples de conector. Para qualquer canal no Team (se eles estiverem habilitados para essa equipe), você pode optar por expor um ponto de extremidade HTTPS que aceitará corretamente o JSON e inserir mensagens nesse canal. Eles são uma maneira rápida e fácil de conectar um canal ao seu serviço e são mais usados para cenários que são exclusivos para uma equipe específica. Por exemplo, você pode criar um webhook de entrada no seu canal do DevOps e configurar seus serviços de compilação, implantação e monitoramento para enviar alertas.
 
 Confira [criar um webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
 
