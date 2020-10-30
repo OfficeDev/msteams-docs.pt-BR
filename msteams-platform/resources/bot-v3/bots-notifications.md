@@ -3,55 +3,56 @@ title: Manipular eventos de bot
 description: Descreve como lidar com eventos em bots para o Microsoft Teams
 keywords: eventos de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800954"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796173"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a><span data-ttu-id="e85be-104">Manipular eventos de bot no Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="e85be-104">Handle bot events in Microsoft Teams</span></span>
+# <a name="handle-bot-events-in-microsoft-teams"></a><span data-ttu-id="d0f41-104">Manipular eventos de bot no Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="d0f41-104">Handle bot events in Microsoft Teams</span></span>
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-<span data-ttu-id="e85be-105">O Microsoft Teams envia notificações ao bot para alterações ou eventos que ocorrem em escopos onde o bot está ativo.</span><span class="sxs-lookup"><span data-stu-id="e85be-105">Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="e85be-106">Você pode usar esses eventos para disparar a lógica de serviço, como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="e85be-106">You can use these events to trigger service logic, such as the following:</span></span>
+<span data-ttu-id="d0f41-105">O Microsoft Teams envia notificações ao bot para alterações ou eventos que ocorrem em escopos onde o bot está ativo.</span><span class="sxs-lookup"><span data-stu-id="d0f41-105">Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="d0f41-106">Você pode usar esses eventos para disparar a lógica de serviço, como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="d0f41-106">You can use these events to trigger service logic, such as the following:</span></span>
 
-* <span data-ttu-id="e85be-107">Acionar uma mensagem de boas-vindas quando seu bot é adicionado a uma equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-107">Trigger a welcome message when your bot is added to a team</span></span>
-* <span data-ttu-id="e85be-108">Informações de consulta e de grupo de cache quando o bot é adicionado a um chat de grupo</span><span class="sxs-lookup"><span data-stu-id="e85be-108">Query and cache group information when the bot is added to a group chat</span></span>
-* <span data-ttu-id="e85be-109">Atualizar informações armazenadas em cache nas informações de associação ou canal da equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-109">Update cached information on team membership or channel information</span></span>
-* <span data-ttu-id="e85be-110">Remover informações armazenadas em cache de uma equipe se o bot for removido</span><span class="sxs-lookup"><span data-stu-id="e85be-110">Remove cached information for a team if the bot is removed</span></span>
-* <span data-ttu-id="e85be-111">Quando uma mensagem de bot é curtida por um usuário</span><span class="sxs-lookup"><span data-stu-id="e85be-111">When a bot message is liked by a user</span></span>
+* <span data-ttu-id="d0f41-107">Acionar uma mensagem de boas-vindas quando seu bot é adicionado a uma equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-107">Trigger a welcome message when your bot is added to a team</span></span>
+* <span data-ttu-id="d0f41-108">Informações de consulta e de grupo de cache quando o bot é adicionado a um chat de grupo</span><span class="sxs-lookup"><span data-stu-id="d0f41-108">Query and cache group information when the bot is added to a group chat</span></span>
+* <span data-ttu-id="d0f41-109">Atualizar informações armazenadas em cache nas informações de associação ou canal da equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-109">Update cached information on team membership or channel information</span></span>
+* <span data-ttu-id="d0f41-110">Remover informações armazenadas em cache de uma equipe se o bot for removido</span><span class="sxs-lookup"><span data-stu-id="d0f41-110">Remove cached information for a team if the bot is removed</span></span>
+* <span data-ttu-id="d0f41-111">Quando uma mensagem de bot é curtida por um usuário</span><span class="sxs-lookup"><span data-stu-id="d0f41-111">When a bot message is liked by a user</span></span>
 
-<span data-ttu-id="e85be-112">Cada evento de bot é enviado como um `Activity` objeto no qual `messageType` define quais informações estão no objeto.</span><span class="sxs-lookup"><span data-stu-id="e85be-112">Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object.</span></span> <span data-ttu-id="e85be-113">Para mensagens do tipo `message` , consulte [envio e recebimento de mensagens](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span><span class="sxs-lookup"><span data-stu-id="e85be-113">For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span></span>
+<span data-ttu-id="d0f41-112">Cada evento de bot é enviado como um `Activity` objeto no qual `messageType` define quais informações estão no objeto.</span><span class="sxs-lookup"><span data-stu-id="d0f41-112">Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object.</span></span> <span data-ttu-id="d0f41-113">Para mensagens do tipo `message` , consulte [envio e recebimento de mensagens](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span><span class="sxs-lookup"><span data-stu-id="d0f41-113">For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span></span>
 
-<span data-ttu-id="e85be-114">Equipes e eventos de grupo, geralmente disparados `conversationUpdate` com o tipo, têm informações de evento adicionais do teams passadas como parte do objeto e, `channelData` portanto, seu manipulador de eventos deve consultar a `channelData` carga das equipes `eventType` e metadados adicionais específicos do evento.</span><span class="sxs-lookup"><span data-stu-id="e85be-114">Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.</span></span>
+<span data-ttu-id="d0f41-114">Equipes e eventos de grupo, geralmente disparados `conversationUpdate` com o tipo, têm informações de evento adicionais do teams passadas como parte do objeto e, `channelData` portanto, seu manipulador de eventos deve consultar a `channelData` carga das equipes `eventType` e metadados adicionais específicos do evento.</span><span class="sxs-lookup"><span data-stu-id="d0f41-114">Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.</span></span>
 
-<span data-ttu-id="e85be-115">A tabela a seguir lista os eventos que o seu bot pode receber e executar ações.</span><span class="sxs-lookup"><span data-stu-id="e85be-115">The following table lists the events that your bot can receive and take action on.</span></span>
+<span data-ttu-id="d0f41-115">A tabela a seguir lista os eventos que o seu bot pode receber e executar ações.</span><span class="sxs-lookup"><span data-stu-id="d0f41-115">The following table lists the events that your bot can receive and take action on.</span></span>
 
-|<span data-ttu-id="e85be-116">Tipo</span><span class="sxs-lookup"><span data-stu-id="e85be-116">Type</span></span>|<span data-ttu-id="e85be-117">Objeto Payload</span><span class="sxs-lookup"><span data-stu-id="e85be-117">Payload object</span></span>|<span data-ttu-id="e85be-118">EventType de equipes</span><span class="sxs-lookup"><span data-stu-id="e85be-118">Teams eventType</span></span> |<span data-ttu-id="e85be-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="e85be-119">Description</span></span>|<span data-ttu-id="e85be-120">Escopo</span><span class="sxs-lookup"><span data-stu-id="e85be-120">Scope</span></span>|
+|<span data-ttu-id="d0f41-116">Tipo</span><span class="sxs-lookup"><span data-stu-id="d0f41-116">Type</span></span>|<span data-ttu-id="d0f41-117">Objeto Payload</span><span class="sxs-lookup"><span data-stu-id="d0f41-117">Payload object</span></span>|<span data-ttu-id="d0f41-118">EventType de equipes</span><span class="sxs-lookup"><span data-stu-id="d0f41-118">Teams eventType</span></span> |<span data-ttu-id="d0f41-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="d0f41-119">Description</span></span>|<span data-ttu-id="d0f41-120">Escopo</span><span class="sxs-lookup"><span data-stu-id="d0f41-120">Scope</span></span>|
 |---|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[<span data-ttu-id="e85be-121">Membro adicionado à equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-121">Member added to team</span></span>](#team-member-or-bot-addition)| <span data-ttu-id="e85be-122">todos os</span><span class="sxs-lookup"><span data-stu-id="e85be-122">all</span></span> |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[<span data-ttu-id="e85be-123">O membro foi removido da equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-123">Member was removed from team</span></span>](#team-member-or-bot-removed)| `groupChat` & `team` |
-| `conversationUpdate` | |`teamRenamed`| [<span data-ttu-id="e85be-124">A equipe foi renomeada</span><span class="sxs-lookup"><span data-stu-id="e85be-124">Team was renamed</span></span>](#team-name-updates)| `team` |
-| `conversationUpdate` | |`channelCreated`| [<span data-ttu-id="e85be-125">Um canal foi criado</span><span class="sxs-lookup"><span data-stu-id="e85be-125">A channel was created</span></span>](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelRenamed`| [<span data-ttu-id="e85be-126">Um canal foi renomeado</span><span class="sxs-lookup"><span data-stu-id="e85be-126">A channel was renamed</span></span>](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelDeleted`| [<span data-ttu-id="e85be-127">Um canal foi excluído</span><span class="sxs-lookup"><span data-stu-id="e85be-127">A channel was deleted</span></span>](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [<span data-ttu-id="e85be-128">Reação à mensagem de bot</span><span class="sxs-lookup"><span data-stu-id="e85be-128">Reaction to bot message</span></span>](#reactions)| <span data-ttu-id="e85be-129">todos os</span><span class="sxs-lookup"><span data-stu-id="e85be-129">all</span></span> |
-| `messageReaction` |`reactionsRemoved`|| [<span data-ttu-id="e85be-130">Reação removida da mensagem de bot</span><span class="sxs-lookup"><span data-stu-id="e85be-130">Reaction removed from bot message</span></span>](#reactions)| <span data-ttu-id="e85be-131">todos os</span><span class="sxs-lookup"><span data-stu-id="e85be-131">all</span></span> |
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[<span data-ttu-id="d0f41-121">Membro adicionado à equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-121">Member added to team</span></span>](#team-member-or-bot-addition)| <span data-ttu-id="d0f41-122">todos os</span><span class="sxs-lookup"><span data-stu-id="d0f41-122">all</span></span> |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[<span data-ttu-id="d0f41-123">O membro foi removido da equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-123">Member was removed from team</span></span>](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [<span data-ttu-id="d0f41-124">A equipe foi renomeada</span><span class="sxs-lookup"><span data-stu-id="d0f41-124">Team was renamed</span></span>](#team-name-updates)| `team` |
+| `conversationUpdate` | |`channelCreated`| [<span data-ttu-id="d0f41-125">Um canal foi criado</span><span class="sxs-lookup"><span data-stu-id="d0f41-125">A channel was created</span></span>](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelRenamed`| [<span data-ttu-id="d0f41-126">Um canal foi renomeado</span><span class="sxs-lookup"><span data-stu-id="d0f41-126">A channel was renamed</span></span>](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelDeleted`| [<span data-ttu-id="d0f41-127">Um canal foi excluído</span><span class="sxs-lookup"><span data-stu-id="d0f41-127">A channel was deleted</span></span>](#channel-updates)|`team` |
+| `messageReaction` |`reactionsAdded`|| [<span data-ttu-id="d0f41-128">Reação à mensagem de bot</span><span class="sxs-lookup"><span data-stu-id="d0f41-128">Reaction to bot message</span></span>](#reactions)| <span data-ttu-id="d0f41-129">todos os</span><span class="sxs-lookup"><span data-stu-id="d0f41-129">all</span></span> |
+| `messageReaction` |`reactionsRemoved`|| [<span data-ttu-id="d0f41-130">Reação removida da mensagem de bot</span><span class="sxs-lookup"><span data-stu-id="d0f41-130">Reaction removed from bot message</span></span>](#reactions)| <span data-ttu-id="d0f41-131">todos os</span><span class="sxs-lookup"><span data-stu-id="d0f41-131">all</span></span> |
 
-## <a name="team-member-or-bot-addition"></a><span data-ttu-id="e85be-132">Adição de um membro da equipe ou de bot</span><span class="sxs-lookup"><span data-stu-id="e85be-132">Team member or bot addition</span></span>
+## <a name="team-member-or-bot-addition"></a><span data-ttu-id="d0f41-132">Adição de um membro da equipe ou de bot</span><span class="sxs-lookup"><span data-stu-id="d0f41-132">Team member or bot addition</span></span>
 
-<span data-ttu-id="e85be-133">O [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) evento é enviado ao bot quando recebe informações sobre atualizações de associação para equipes em que foram adicionadas.</span><span class="sxs-lookup"><span data-stu-id="e85be-133">The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="e85be-134">Ele também recebe uma atualização quando foi adicionado pela primeira vez especificamente para conversas pessoais.</span><span class="sxs-lookup"><span data-stu-id="e85be-134">It also receives an update when it has been added for the first time specifically for personal conversations.</span></span> <span data-ttu-id="e85be-135">Observe que as informações do usuário ( `Id` ) são exclusivas para o bot e podem ser armazenadas em cache para uso futuro pelo serviço (como enviar uma mensagem para um usuário específico).</span><span class="sxs-lookup"><span data-stu-id="e85be-135">Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).</span></span>
+<span data-ttu-id="d0f41-133">O [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) evento é enviado ao bot quando recebe informações sobre atualizações de associação para equipes em que foram adicionadas.</span><span class="sxs-lookup"><span data-stu-id="d0f41-133">The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="d0f41-134">Ele também recebe uma atualização quando foi adicionado pela primeira vez especificamente para conversas pessoais.</span><span class="sxs-lookup"><span data-stu-id="d0f41-134">It also receives an update when it has been added for the first time specifically for personal conversations.</span></span> <span data-ttu-id="d0f41-135">Observe que as informações do usuário ( `Id` ) são exclusivas para o bot e podem ser armazenadas em cache para uso futuro pelo serviço (como enviar uma mensagem para um usuário específico).</span><span class="sxs-lookup"><span data-stu-id="d0f41-135">Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).</span></span>
 
-### <a name="bot-or-user-added-to-a-team"></a><span data-ttu-id="e85be-136">Bot ou usuário adicionado a uma equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-136">Bot or user added to a team</span></span>
+### <a name="bot-or-user-added-to-a-team"></a><span data-ttu-id="d0f41-136">Bot ou usuário adicionado a uma equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-136">Bot or user added to a team</span></span>
 
-<span data-ttu-id="e85be-137">O `conversationUpdate` evento com o `membersAdded` objeto no payload é enviado quando um bot é adicionado a uma equipe ou um novo usuário é adicionado a uma equipe onde um bot foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="e85be-137">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added.</span></span> <span data-ttu-id="e85be-138">O Microsoft Teams também adiciona `eventType.teamMemberAdded` o `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="e85be-138">Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.</span></span>
+<span data-ttu-id="d0f41-137">O `conversationUpdate` evento com o `membersAdded` objeto no payload é enviado quando um bot é adicionado a uma equipe ou um novo usuário é adicionado a uma equipe onde um bot foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="d0f41-137">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added.</span></span> <span data-ttu-id="d0f41-138">O Microsoft Teams também adiciona `eventType.teamMemberAdded` o `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="d0f41-138">Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.</span></span>
 
-<span data-ttu-id="e85be-139">Como esse evento é enviado em ambos os casos, você deve analisar o `membersAdded` objeto para determinar se a adição era um usuário ou o próprio bot.</span><span class="sxs-lookup"><span data-stu-id="e85be-139">Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself.</span></span> <span data-ttu-id="e85be-140">Para o último, uma prática recomendada é enviar uma [mensagem de boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) ao canal para que os usuários possam entender os recursos que o seu bot fornece.</span><span class="sxs-lookup"><span data-stu-id="e85be-140">For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.</span></span>
+<span data-ttu-id="d0f41-139">Como esse evento é enviado em ambos os casos, você deve analisar o `membersAdded` objeto para determinar se a adição era um usuário ou o próprio bot.</span><span class="sxs-lookup"><span data-stu-id="d0f41-139">Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself.</span></span> <span data-ttu-id="d0f41-140">Para o último, uma prática recomendada é enviar uma [mensagem de boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) ao canal para que os usuários possam entender os recursos que o seu bot fornece.</span><span class="sxs-lookup"><span data-stu-id="d0f41-140">For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.</span></span>
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a><span data-ttu-id="e85be-141">Código de exemplo: verificando se o bot foi o membro adicionado</span><span class="sxs-lookup"><span data-stu-id="e85be-141">Example code: Checking whether bot was the added member</span></span>
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a><span data-ttu-id="d0f41-141">Código de exemplo: verificando se o bot foi o membro adicionado</span><span class="sxs-lookup"><span data-stu-id="d0f41-141">Example code: Checking whether bot was the added member</span></span>
 
-##### <a name="net"></a><span data-ttu-id="e85be-142">.NET</span><span class="sxs-lookup"><span data-stu-id="e85be-142">.NET</span></span>
+##### <a name="net"></a><span data-ttu-id="d0f41-142">.NET</span><span class="sxs-lookup"><span data-stu-id="d0f41-142">.NET</span></span>
 
 ```csharp
     for (int i = 0; i < sourceMessage.MembersAdded.Count; i++)
@@ -64,7 +65,7 @@ ms.locfileid: "44800954"
     }
 ```
 
-##### <a name="nodejs"></a><span data-ttu-id="e85be-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="e85be-143">Node.js</span></span>
+##### <a name="nodejs"></a><span data-ttu-id="d0f41-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="d0f41-143">Node.js</span></span>
 
 ```javascript
 const builder = require('botbuilder');
@@ -89,7 +90,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a><span data-ttu-id="e85be-144">Exemplo de esquema: bot adicionado à equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-144">Schema example: Bot added to team</span></span>
+#### <a name="schema-example-bot-added-to-team"></a><span data-ttu-id="d0f41-144">Exemplo de esquema: bot adicionado à equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-144">Schema example: Bot added to team</span></span>
 
 ```json
 {
@@ -128,14 +129,14 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="bot-added-for-personal-context-only"></a><span data-ttu-id="e85be-145">Bot adicionado somente para contexto pessoal</span><span class="sxs-lookup"><span data-stu-id="e85be-145">Bot added for personal context only</span></span>
+### <a name="bot-added-for-personal-context-only"></a><span data-ttu-id="d0f41-145">Bot adicionado somente para contexto pessoal</span><span class="sxs-lookup"><span data-stu-id="d0f41-145">Bot added for personal context only</span></span>
 
-<span data-ttu-id="e85be-146">O bot recebe um `conversationUpdate` com `membersAdded` quando um usuário o adiciona diretamente para chat pessoal.</span><span class="sxs-lookup"><span data-stu-id="e85be-146">Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat.</span></span> <span data-ttu-id="e85be-147">Nesse caso, a carga que seu bot recebe não contém o `channelData.team` objeto.</span><span class="sxs-lookup"><span data-stu-id="e85be-147">In this case, the payload that your bot receives doesn't contain the `channelData.team` object.</span></span> <span data-ttu-id="e85be-148">Você deve usá-lo como um filtro caso queira que seu bot ofereça uma mensagem de [boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) diferente dependendo do escopo.</span><span class="sxs-lookup"><span data-stu-id="e85be-148">You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.</span></span>
+<span data-ttu-id="d0f41-146">O bot recebe um `conversationUpdate` com `membersAdded` quando um usuário o adiciona diretamente para chat pessoal.</span><span class="sxs-lookup"><span data-stu-id="d0f41-146">Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat.</span></span> <span data-ttu-id="d0f41-147">Nesse caso, a carga que seu bot recebe não contém o `channelData.team` objeto.</span><span class="sxs-lookup"><span data-stu-id="d0f41-147">In this case, the payload that your bot receives doesn't contain the `channelData.team` object.</span></span> <span data-ttu-id="d0f41-148">Você deve usá-lo como um filtro caso queira que seu bot ofereça uma mensagem de [boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) diferente dependendo do escopo.</span><span class="sxs-lookup"><span data-stu-id="d0f41-148">You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e85be-149">Para bots com escopo pessoal, seu bot sempre receberá o `conversationUpdate` evento uma única vez, mesmo que o bot seja removido e adicionado novamente.</span><span class="sxs-lookup"><span data-stu-id="e85be-149">For personal scoped bots, your bot will only ever receive the `conversationUpdate` event a single time, even if the bot is removed and re-added.</span></span> <span data-ttu-id="e85be-150">Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente.</span><span class="sxs-lookup"><span data-stu-id="e85be-150">For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely.</span></span> <span data-ttu-id="e85be-151">Veja um [exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.</span><span class="sxs-lookup"><span data-stu-id="e85be-151">See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.</span></span>
+> <span data-ttu-id="d0f41-149">Para bots com escopo pessoal, seu bot sempre receberá o `conversationUpdate` evento uma única vez, mesmo que o bot seja removido e adicionado novamente.</span><span class="sxs-lookup"><span data-stu-id="d0f41-149">For personal scoped bots, your bot will only ever receive the `conversationUpdate` event a single time, even if the bot is removed and re-added.</span></span> <span data-ttu-id="d0f41-150">Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente.</span><span class="sxs-lookup"><span data-stu-id="d0f41-150">For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely.</span></span> <span data-ttu-id="d0f41-151">Veja um [ exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.</span><span class="sxs-lookup"><span data-stu-id="d0f41-151">See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.</span></span>
 
-#### <a name="schema-example-bot-added-to-personal-context"></a><span data-ttu-id="e85be-152">Exemplo de esquema: bot adicionado ao contexto pessoal</span><span class="sxs-lookup"><span data-stu-id="e85be-152">Schema example: bot added to personal context</span></span>
+#### <a name="schema-example-bot-added-to-personal-context"></a><span data-ttu-id="d0f41-152">Exemplo de esquema: bot adicionado ao contexto pessoal</span><span class="sxs-lookup"><span data-stu-id="d0f41-152">Schema example: bot added to personal context</span></span>
 
 ```json
 {
@@ -154,11 +155,11 @@ bot.on('conversationUpdate', (msg) => {
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -172,11 +173,11 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="team-member-or-bot-removed"></a><span data-ttu-id="e85be-153">Membro da equipe ou bot removido</span><span class="sxs-lookup"><span data-stu-id="e85be-153">Team member or bot removed</span></span>
+## <a name="team-member-or-bot-removed"></a><span data-ttu-id="d0f41-153">Membro da equipe ou bot removido</span><span class="sxs-lookup"><span data-stu-id="d0f41-153">Team member or bot removed</span></span>
 
-<span data-ttu-id="e85be-154">O `conversationUpdate` evento com o `membersRemoved` objeto no payload é enviado quando seu bot é removido de uma equipe ou um usuário é removido de uma equipe onde um bot foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="e85be-154">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added.</span></span> <span data-ttu-id="e85be-155">O Microsoft Teams também adiciona `eventType.teamMemberRemoved` o `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="e85be-155">Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object.</span></span> <span data-ttu-id="e85be-156">Assim como com o `membersAdded` objeto, você deve analisar o `membersRemoved` objeto para a ID do aplicativo do bot para determinar quem foi removido.</span><span class="sxs-lookup"><span data-stu-id="e85be-156">As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.</span></span>
+<span data-ttu-id="d0f41-154">O `conversationUpdate` evento com o `membersRemoved` objeto no payload é enviado quando seu bot é removido de uma equipe ou um usuário é removido de uma equipe onde um bot foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="d0f41-154">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added.</span></span> <span data-ttu-id="d0f41-155">O Microsoft Teams também adiciona `eventType.teamMemberRemoved` o `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="d0f41-155">Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object.</span></span> <span data-ttu-id="d0f41-156">Assim como com o `membersAdded` objeto, você deve analisar o `membersRemoved` objeto para a ID do aplicativo do bot para determinar quem foi removido.</span><span class="sxs-lookup"><span data-stu-id="d0f41-156">As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.</span></span>
 
-### <a name="schema-example-team-member-removed"></a><span data-ttu-id="e85be-157">Exemplo de esquema: membro da equipe removido</span><span class="sxs-lookup"><span data-stu-id="e85be-157">Schema example: Team member removed</span></span>
+### <a name="schema-example-team-member-removed"></a><span data-ttu-id="d0f41-157">Exemplo de esquema: membro da equipe removido</span><span class="sxs-lookup"><span data-stu-id="d0f41-157">Schema example: Team member removed</span></span>
 
 ```json
 {
@@ -216,14 +217,14 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="team-name-updates"></a><span data-ttu-id="e85be-158">Atualizações de nome de equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-158">Team name updates</span></span>
+## <a name="team-name-updates"></a><span data-ttu-id="d0f41-158">Atualizações de nome de equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-158">Team name updates</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e85be-159">Não há nenhuma funcionalidade para consultar todos os nomes de equipe, e o nome da equipe não é retornado em cargas de outros eventos.</span><span class="sxs-lookup"><span data-stu-id="e85be-159">There is no functionality to query all team names, and team name is not returned in payloads from other events.</span></span>
+> <span data-ttu-id="d0f41-159">Não há nenhuma funcionalidade para consultar todos os nomes de equipe, e o nome da equipe não é retornado em cargas de outros eventos.</span><span class="sxs-lookup"><span data-stu-id="d0f41-159">There is no functionality to query all team names, and team name is not returned in payloads from other events.</span></span>
 
-<span data-ttu-id="e85be-160">O bot é notificado quando a equipe que está sendo renomeada.</span><span class="sxs-lookup"><span data-stu-id="e85be-160">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="e85be-161">Ele recebe um `conversationUpdate` evento com `eventType.teamRenamed` no `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="e85be-161">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span> <span data-ttu-id="e85be-162">Observe que não há notificações para criação ou exclusão de equipes, porque os bots só existem como parte do Teams e não têm visibilidade fora do escopo em que foram adicionados.</span><span class="sxs-lookup"><span data-stu-id="e85be-162">Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.</span></span>
+<span data-ttu-id="d0f41-160">O bot é notificado quando a equipe que está sendo renomeada.</span><span class="sxs-lookup"><span data-stu-id="d0f41-160">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="d0f41-161">Ele recebe um `conversationUpdate` evento com `eventType.teamRenamed` no `channelData` objeto.</span><span class="sxs-lookup"><span data-stu-id="d0f41-161">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span> <span data-ttu-id="d0f41-162">Observe que não há notificações para criação ou exclusão de equipes, porque os bots só existem como parte do Teams e não têm visibilidade fora do escopo em que foram adicionados.</span><span class="sxs-lookup"><span data-stu-id="d0f41-162">Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.</span></span>
 
-### <a name="schema-example-team-renamed"></a><span data-ttu-id="e85be-163">Exemplo de esquema: equipe renomeada</span><span class="sxs-lookup"><span data-stu-id="e85be-163">Schema example: Team renamed</span></span>
+### <a name="schema-example-team-renamed"></a><span data-ttu-id="d0f41-163">Exemplo de esquema: equipe renomeada</span><span class="sxs-lookup"><span data-stu-id="d0f41-163">Schema example: Team renamed</span></span>
 
 ```json
 { 
@@ -258,17 +259,17 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="channel-updates"></a><span data-ttu-id="e85be-164">Atualizações de canal</span><span class="sxs-lookup"><span data-stu-id="e85be-164">Channel updates</span></span>
+## <a name="channel-updates"></a><span data-ttu-id="d0f41-164">Atualizações de canal</span><span class="sxs-lookup"><span data-stu-id="d0f41-164">Channel updates</span></span>
 
-<span data-ttu-id="e85be-165">O bot é notificado quando um canal é criado, renomeado ou excluído em uma equipe onde foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="e85be-165">Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added.</span></span> <span data-ttu-id="e85be-166">Novamente, o `conversationUpdate` evento é recebido, e um identificador de eventos específico do teams é enviado como parte do `channelData.eventType` objeto, onde os dados do `channel.id` canal são o GUID do canal e `channel.name` contém o próprio nome do canal.</span><span class="sxs-lookup"><span data-stu-id="e85be-166">Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.</span></span>
+<span data-ttu-id="d0f41-165">O bot é notificado quando um canal é criado, renomeado ou excluído em uma equipe onde foi adicionado.</span><span class="sxs-lookup"><span data-stu-id="d0f41-165">Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added.</span></span> <span data-ttu-id="d0f41-166">Novamente, o `conversationUpdate` evento é recebido, e um identificador de eventos específico do teams é enviado como parte do `channelData.eventType` objeto, onde os dados do  `channel.id` canal são o GUID do canal e `channel.name` contém o próprio nome do canal.</span><span class="sxs-lookup"><span data-stu-id="d0f41-166">Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.</span></span>
 
-<span data-ttu-id="e85be-167">Os eventos do canal são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="e85be-167">The channel events are as follows:</span></span>
+<span data-ttu-id="d0f41-167">Os eventos do canal são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="d0f41-167">The channel events are as follows:</span></span>
 
-* <span data-ttu-id="e85be-168">**channelCreated** &emsp; Um usuário adiciona um novo canal à equipe</span><span class="sxs-lookup"><span data-stu-id="e85be-168">**channelCreated**&emsp;A user adds a new channel to the team</span></span>
-* <span data-ttu-id="e85be-169">**channelRenamed** &emsp; Um usuário renomeia um canal existente</span><span class="sxs-lookup"><span data-stu-id="e85be-169">**channelRenamed**&emsp;A user renames an existing channel</span></span>
-* <span data-ttu-id="e85be-170">**channelDeleted** &emsp; Um usuário remove um canal</span><span class="sxs-lookup"><span data-stu-id="e85be-170">**channelDeleted**&emsp;A user removes a channel</span></span>
+<span data-ttu-id="d0f41-168">_ **channelCreated** &emsp; um usuário adiciona um novo canal à equipe</span><span class="sxs-lookup"><span data-stu-id="d0f41-168">_ **channelCreated**&emsp;A user adds a new channel to the team</span></span>
+* <span data-ttu-id="d0f41-169">**channelRenamed** &emsp; Um usuário renomeia um canal existente</span><span class="sxs-lookup"><span data-stu-id="d0f41-169">**channelRenamed**&emsp;A user renames an existing channel</span></span>
+* <span data-ttu-id="d0f41-170">**channelDeleted** &emsp; Um usuário remove um canal</span><span class="sxs-lookup"><span data-stu-id="d0f41-170">**channelDeleted**&emsp;A user removes a channel</span></span>
 
-### <a name="full-schema-example-channelcreated"></a><span data-ttu-id="e85be-171">Exemplo de esquema completo: channelCreated</span><span class="sxs-lookup"><span data-stu-id="e85be-171">Full schema example: channelCreated</span></span>
+### <a name="full-schema-example-channelcreated"></a><span data-ttu-id="d0f41-171">Exemplo de esquema completo: channelCreated</span><span class="sxs-lookup"><span data-stu-id="d0f41-171">Full schema example: channelCreated</span></span>
 
 ```json
 {
@@ -306,7 +307,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-excerpt-channeldata-for-channelrenamed"></a><span data-ttu-id="e85be-172">Trecho de esquema: channelData para channelRenamed</span><span class="sxs-lookup"><span data-stu-id="e85be-172">Schema excerpt: channelData for channelRenamed</span></span>
+### <a name="schema-excerpt-channeldata-for-channelrenamed"></a><span data-ttu-id="d0f41-172">Trecho de esquema: channelData para channelRenamed</span><span class="sxs-lookup"><span data-stu-id="d0f41-172">Schema excerpt: channelData for channelRenamed</span></span>
 
 ```json
 ⋮
@@ -326,7 +327,7 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-### <a name="schema-excerpt-channeldata-for-channeldeleted"></a><span data-ttu-id="e85be-173">Trecho de esquema: channelData para channelDeleted</span><span class="sxs-lookup"><span data-stu-id="e85be-173">Schema excerpt: channelData for channelDeleted</span></span>
+### <a name="schema-excerpt-channeldata-for-channeldeleted"></a><span data-ttu-id="d0f41-173">Trecho de esquema: channelData para channelDeleted</span><span class="sxs-lookup"><span data-stu-id="d0f41-173">Schema excerpt: channelData for channelDeleted</span></span>
 
 ```json
 ⋮
@@ -346,11 +347,11 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-## <a name="reactions"></a><span data-ttu-id="e85be-174">Reações</span><span class="sxs-lookup"><span data-stu-id="e85be-174">Reactions</span></span>
+## <a name="reactions"></a><span data-ttu-id="d0f41-174">Reações</span><span class="sxs-lookup"><span data-stu-id="d0f41-174">Reactions</span></span>
 
-<span data-ttu-id="e85be-175">O `messageReaction` evento é enviado quando um usuário adiciona ou remove sua reação a uma mensagem que foi enviada originalmente pelo bot.</span><span class="sxs-lookup"><span data-stu-id="e85be-175">The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot.</span></span> <span data-ttu-id="e85be-176">`replyToId`contém a ID da mensagem específica.</span><span class="sxs-lookup"><span data-stu-id="e85be-176">`replyToId` contains the ID of the specific message.</span></span>
+<span data-ttu-id="d0f41-175">O `messageReaction` evento é enviado quando um usuário adiciona ou remove sua reação a uma mensagem que foi enviada originalmente pelo bot.</span><span class="sxs-lookup"><span data-stu-id="d0f41-175">The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot.</span></span> <span data-ttu-id="d0f41-176">`replyToId` contém a ID da mensagem específica.</span><span class="sxs-lookup"><span data-stu-id="d0f41-176">`replyToId` contains the ID of the specific message.</span></span>
 
-### <a name="schema-example-a-user-likes-a-message"></a><span data-ttu-id="e85be-177">Exemplo de esquema: um usuário gosta de uma mensagem</span><span class="sxs-lookup"><span data-stu-id="e85be-177">Schema example: A user likes a message</span></span>
+### <a name="schema-example-a-user-likes-a-message"></a><span data-ttu-id="d0f41-177">Exemplo de esquema: um usuário gosta de uma mensagem</span><span class="sxs-lookup"><span data-stu-id="d0f41-177">Schema example: A user likes a message</span></span>
 
 ```json
 {
@@ -392,7 +393,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a><span data-ttu-id="e85be-178">Exemplo de esquema: um usuário não curti uma mensagem</span><span class="sxs-lookup"><span data-stu-id="e85be-178">Schema example: A user un-likes a message</span></span>
+### <a name="schema-example-a-user-un-likes-a-message"></a><span data-ttu-id="d0f41-178">Exemplo de esquema: um usuário não curti uma mensagem</span><span class="sxs-lookup"><span data-stu-id="d0f41-178">Schema example: A user un-likes a message</span></span>
 
 ```json
 {
