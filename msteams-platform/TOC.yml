@@ -164,7 +164,7 @@
     - name: Guias de instruções
       expanded: true
       items:
-        - name: Criar uma guia para o Teams
+        - name: Criar uma guia usando o App Studio
           href: tabs/how-to/add-tab.md
         - name: Criar páginas de guia
           items:
@@ -215,7 +215,7 @@
     - name: Guias de instruções
       expanded: true
       items:
-        - name: Criar um bot para o Teams
+        - name: Criar um bot usando o App Studio
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Integrar o chatbot do seu Agente Virtual com o Teams
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: Guias de instruções
       expanded: true
       items:
-        - name: Criar uma extensão de mensagens para o Teams
+        - name: Criar uma extensão de mensagem usando o App Studio
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Comandos baseados em ação
           items:
@@ -363,7 +363,7 @@
           href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Guia na reunião
           href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: APIs REST do Graph do Teams
+- name: Integração da API REST do Microsoft Graph
   items:
     - name: Consentimento específico do recurso
       items:
