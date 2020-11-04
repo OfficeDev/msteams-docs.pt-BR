@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
-ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796334"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877068"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -19,7 +19,7 @@ Este artigo aborda razões comuns de falha na validação dos aplicativos enviad
 >[!NOTE]
 >A **[seção 1140](/legal/marketplace/certification-policies#1140-teams)** é específica para o Microsoft Teams e a **[subseção 1140,4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** trata dos requisitos de funcionalidade para aplicativos do teams.
 
-## <a name="validation-guidelines"></a>Diretrizes de validação
+## <a name="validation-guidelines--most-failed-test-cases"></a>Diretrizes de validação & os casos de teste mais falharam
 
 ### <a name="9989-general-considerations"></a>&#9989; considerações gerais
 
@@ -31,6 +31,7 @@ Este artigo aborda razões comuns de falha na validação dos aplicativos enviad
 * Seu aplicativo não deve baixar, instalar ou iniciar automaticamente qualquer código executável no ambiente do usuário. Todos os downloads devem buscar permissões explícitas do usuário.
 * Qualquer material que você associar à sua experiência, como descrições e documentação de suporte, deve ser preciso. Use a verificação ortográfica, a capitalização, a pontuação e a gramática corretas em suas descrições e materiais.
 * Fornecer informações de ajuda e suporte. É altamente recomendável que seu aplicativo inclua um link de ajuda/perguntas frequentes para a experiência do usuário de primeira execução. Para todos os aplicativos pessoais, recomendamos fornecer a página de ajuda como uma guia pessoal para uma melhor experiência do usuário.
+* Os aplicativos não devem tirar o usuário do teams para cenários de usuário principais. Usando módulos de tarefa as guias AMD são recomendadas para exibir informações para o usuário no Teams.
 * Aumente o número de versão do aplicativo no manifesto se você fizer alterações de manifesto no seu envio.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fornecer uma experiência clara e simples de entrada/saída e inscrição
@@ -60,9 +61,9 @@ Para obter informações adicionais sobre autenticação, consulte:
 
 ### <a name="9989-response-times-must-be-reasonable"></a>Os tempos de resposta &#9989; devem ser razoáveis
 
-* **Guias** . Se uma resposta a uma ação levar mais de três segundos, você deverá fornecer um aviso ou mensagem de carregamento.
-* **Bots** . Uma resposta a um comando de usuário deve ocorrer dentro de dois segundos. Se for necessário processamento maior, seu aplicativo deverá exibir um indicador de digitação.
-* **Extensões de composição** . Uma resposta a um comando de usuário deve ocorrer dentro de cinco segundos.
+* **Guias**. Se uma resposta a uma ação levar mais de três segundos, você deverá fornecer um aviso ou mensagem de carregamento.
+* **Bots**. Uma resposta a um comando de usuário deve ocorrer dentro de dois segundos. Se for necessário processamento maior, seu aplicativo deverá exibir um indicador de digitação.
+* **Extensões de composição**. Uma resposta a um comando de usuário deve ocorrer dentro de cinco segundos.
 
 > [!TIP]
 > Certifique-se de que o aplicativo exibe um indicador de carregamento ou alguma forma de aviso quando o aplicativo está demorando mais do que o esperado para responder.
@@ -102,24 +103,25 @@ Para obter informações adicionais sobre autenticação, consulte:
 
 O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui estão algumas dicas para ajudar seu bot a responder de forma inteligente aos usuários:
 
-* **Usar listas de comandos** . Analisar a entrada do usuário ou prever a intenção do usuário é difícil. Em vez de permitir que os usuários adivinhem o que o seu bot pode fazer, forneça uma lista de comandos que seu bot entenda.
+* **Usar listas de comandos**. Analisar a entrada do usuário ou prever a intenção do usuário é difícil. Em vez de permitir que os usuários adivinhem o que o seu bot pode fazer, forneça uma lista de comandos que seu bot entenda.
 
 ![Lista de comandos de fluxo](~/assets/images/faq/flow-bot.png)
 
-* **Incluir um comando help** . É provável que os usuários digitem "ajuda" quando forem perdidos ou quando o bot não responder conforme o esperado. Inclua um comando help que descreva como o valor do aplicativo será experiente em todos os comandos válidos.
+* **Incluir um comando help**. É provável que os usuários digitem "ajuda" quando forem perdidos ou quando o bot não responder conforme o esperado. Inclua um comando help que descreva como o valor do aplicativo será experiente em todos os comandos válidos.
 
 ![Comando Flow Help](~/assets/images/faq/flow-help.png)
 
-* **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido** . Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"* . Use essa oportunidade para ensinar seus usuários.
+* **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido**. Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"*. Use essa oportunidade para ensinar seus usuários.
 
 * **Use cartões adaptáveis e módulos de tarefas para tornar sua resposta de bot clara e acionável** 
  [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos
 
-* **Considere todos os escopos** . Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
+* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
 
-### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots pessoais devem enviar uma mensagem de boas-vindas na primeira inicialização
+### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; bots pessoais sempre devem enviar uma mensagem de boas-vindas na primeira inicialização
 
 Uma mensagem de boas-vindas é a melhor maneira de definir o Tom para seu bot pessoal/chat. Esta é a primeira interação de um usuário com o bot. Uma boa mensagem de boas-vindas pode incentivar o usuário a continuar a explorar o aplicativo. Se a mensagem de boas-vindas ou introdutória for confusa ou innítida, os usuários não verão o valor do aplicativo imediatamente e perderão os interesses.
+Consulte a seção abaixo para ver os requisitos de mensagem de boas-vindas.
 
 > [!Note]
 > Uma mensagem de boas-vindas é opcional para um bot de canal.
@@ -127,34 +129,54 @@ Uma mensagem de boas-vindas é a melhor maneira de definir o Tom para seu bot pe
 ### <a name="welcome-message-requirements"></a>Requisitos de mensagem de boas-vindas
 
 * Inclua uma proposta de valor com o Tour de boas-vindas.
-* Fornecer orientação de avanço para usar o bot.
+* Fornecer orientação de avanço para usar o aplicativo.
+* Incluir orientações sobre como se inscrever e configurar seu aplicativo
 * Apresente texto fácil de ler e uma caixa de diálogo direta, de preferência um cartão com um botão de Tour de boas-vindas acionável que carrega um módulo de tarefa.
-* Mantenha-o simples, evite a caixa de diálogo de palavras/informativas.
+* Mantenha a caixa de diálogo simples e usável com botões e cartões — Evite texto longo, caixa de diálogo informativa.
 * Inclua cartões e botões adaptáveis para tornar a mensagem de boas-vindas mais utilizável.
 * Invocar a mensagem de boas-vindas com um ping, não dois ou mais pings simultâneos.
 * Uma mensagem de boas-vindas só deve ser exibida para o usuário que configurou o aplicativo, de preferência em um bate-papo pessoal 1:1.
-* Nunca envie um chat pessoal para todos os membros da equipe.
+* Os aplicativos pessoais sempre devem fornecer uma mensagem de boas-vindas a um usuário.
+* Nunca envie um chat pessoal para todos os membros da equipe-isso é considerado spam.
 * Nunca envie a mensagem de boas-vindas mais de uma vez. Repetir a mesma mensagem de boas-vindas por intervalos regulares não é permitida e é considerada como spam.
 
 #### <a name="avoid-welcome-message-spamming"></a>Evitar o spam de mensagens de boas-vindas
 
-* **Mensagem do canal por bot** . Não enviar spam a usuários criando novas postagens de chat separadas. Crie uma única postagem de thread com respostas no mesmo thread.
-* **Chat pessoal por bot** . Não envie várias mensagens. Envie uma mensagem com informações completas.
+* **Mensagem do canal por bot**. Não enviar spam a usuários criando novas postagens de chat separadas. Crie uma única postagem de thread com respostas no mesmo thread.
+* **Chat pessoal por bot**. Não envie várias mensagens. Envie uma mensagem com informações completas. Repetir a mesma mensagem de boas-vindas por intervalos regulares não é permitida e é considerada como spam.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Mensagens de boas-vindas do bot somente de notificação
 
-Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui uma mensagem que se comunica, *"Eu sou um bot somente para notificação e não conseguirá responder a seus chat"* .
+Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui uma mensagem que se comunica, *"Eu sou um bot somente para notificação e não conseguirá responder a seus chat"*.
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensagens de boas-vindas no escopo pessoal
 
-* **Torne sua mensagem concisa e informativa** .  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
+* **Torne sua mensagem concisa e informativa**.  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
 ![Bot e bot dinning](~/assets/images/faq/cafe-bot.png)
 
-* **Tornar sua mensagem acionável** . Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."* , *"é isso que eu posso fazer..."* .
+* **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."* , *"é isso que eu posso fazer..."*.
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensagens de boas-vindas no escopo de equipe/canal
 
 As coisas são um pouco diferentes quando o bot é adicionado pela primeira vez a um canal. Normalmente, você não deve enviar uma mensagem 1:1 para todas as pessoas da equipe, mas o bot pode enviar uma mensagem de boas-vindas no canal.
+
+### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; capacidade de resposta móvel, sem vendas diretas ou pagamentos
+* Suas guias, cartões adaptáveis, mensagens de bot e conteúdo nos módulos de tarefas devem ser responsivos para os tamanhos de telas de dispositivos móveis do varios.
+* Os aplicativos que dão suporte ao iOS devem estar totalmente funcionais no dispositivo iPad mais recente usando a versão mais recente do iOS.
+* Não deve incluir referências diretas para compras no aplicativo, ofertas de avaliação, interface do usuário que visa fazer a venda de versões pagas ou links para qualquer loja online, onde os usuários podem comprar ou adquirir outros conteúdos, aplicativos ou suplementos de seu aplicativo do Microsoft Teams no so móvel (Android, iOS).
+* A versão iOS ou Android do suplemento não deve mostrar qualquer interface do usuário ou idioma ou um link para outros aplicativos, suplementos ou sites que pedem que o usuário pague.
+* A política de privacidade associada e as páginas de termos de uso também devem ser livres de qualquer UI de comércio ou links de armazenamento.
+
+### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; não postar dados confidenciais para uma audiência não destinado a exibir os dados
+Seu aplicativo do Microsoft Teams não deve postar informações confidenciais, como instrumento de cartão de crédito/pagamento financeiro, informações de identificação pessoal, integridade ou rastreamento de contato para uma audiência que não se destina a exibir esses dados.
+
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; não transmite detalhes de pagamento financeiro ou transações financeiras completas por meio de seu aplicativo do teams
+* O aplicativo do Microsoft Teams não deve solicitar que os usuários façam um pagamento diretamente dentro da interface do teams
+* Os aplicativos podem não transmitir detalhes do instrumento financeiro através do usuário na interface do aplicativo. Os aplicativos só poderão transmitir links para serviços de pagamento seguro para os usuários se isso for divulgado nos termos de uso do aplicativo, política de privacidade e qualquer página de perfil ou site para o aplicativo antes que um usuário concorde em usar o aplicativo.
+
+### <a name="9989-clear-warning-before-downloading-any-files-or-exes-into-users-environment"></a>&#9989; limpar aviso antes de baixar arquivos ou EXEs no ambiente do usuário
+Avise os usuários antes de o aplicativo baixar qualquer arquivo ou EXEs na máquina ou no ambiente do usuário
+
 
 > [!div class="nextstepaction"]
 > [Saiba mais sobre as políticas de aprovação do teams app](/legal/marketplace/certification-policies#1140-teams) 

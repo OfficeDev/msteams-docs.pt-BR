@@ -5,18 +5,18 @@ description: Crie rapidamente uma extensão de mensagens do Microsoft Teams usan
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 68f2bf7c71182499dc8f6f50e03ea3d97f03ded2
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452831"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877076"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Criar uma extensão de mensagens para o Microsoft Teams
 
-Há dois tipos de extensões de *mensagens*do Microsoft Teams: [comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) e [comandos de ação](../messaging-extensions/how-to/action-commands/define-action-command.md).
+Há dois tipos de extensões de *mensagens* do Microsoft Teams: [comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) e [comandos de ação](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
-Nesta lição, você criará um *comando de pesquisa* (também conhecido como uma *extensão de mensagens baseada em pesquisa*), que é um atalho para localizar conteúdo externo e compartilhá-lo no Microsoft Teams. Os usuários podem acessar os comandos de pesquisa a partir da [caixa de comando ou de composição do teams](../messaging-extensions/what-are-messaging-extensions.md).
+Nesta lição, você criará um *comando de pesquisa* (também conhecido como uma *extensão de mensagens baseada em pesquisa* ), que é um atalho para localizar conteúdo externo e compartilhá-lo no Microsoft Teams. Os usuários podem acessar os comandos de pesquisa a partir da [caixa de comando ou de composição do teams](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="your-assignment"></a>Sua atribuição
 
@@ -164,7 +164,7 @@ Com sua extensão de mensagens em execução, você pode instalá-lo no Microsof
 > Se você ainda não suplementos foi feito um aplicativo do Microsoft Teams e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Faça logon no cliente do teams com sua conta que permita o aplicativo Sideload.
-1. Selecione **aplicativos**e, em seguida, escolha **carregar um aplicativo personalizado**.
+1. Selecione **aplicativos** e, em seguida, escolha **carregar um aplicativo personalizado**.
 1. Vá para a pasta do projeto de aplicativo `.publish` e selecione `Development.zip` .
 1. Na janela instalar, selecione **Adicionar** para instalar seu aplicativo.
 
@@ -172,10 +172,9 @@ Com sua extensão de mensagens em execução, você pode instalá-lo no Microsof
 
 Saiba como as extensões de mensagens funcionam em um chat do Microsoft Teams.
 
-1. Inicie um novo chat. Na caixa redigir e selecione **mais** :::image type="icon" source="../assets/icons/teams-client-more.png"::: e escolha o aplicativo de extensão de mensagens que você acabou de suplementos foi feito.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot para sua extensão de mensagens.":::
+1. Inicie um novo chat. Na caixa redigir, selecione **mais** :::image type="icon" source="../assets/icons/teams-client-more.png"::: e escolha o aplicativo de extensão de mensagens que você acabou de suplementos foi feito.
 1. Tente pesquisar algo (por exemplo, "bilhetes"). Se seu aplicativo estiver funcionando, você verá resultados de pesquisa de exemplo (você pode adicionar o seu próprio mais tarde).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ilustração mostrando como, no Teams Toolkit, para fazer logon na sua conta do Microsoft 365 para criar um novo bot para sua extensão de mensagens.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Uma captura de tela mostrando como uma extensão de mensagens baseada em pesquisa é usada na caixa de composição do teams.":::
 
 ## <a name="well-done"></a>Muito bem
 
@@ -203,7 +202,7 @@ Isso pode ser um problema de autenticação. Siga estas etapas para concluir a c
 
 ### <a name="bot-isnt-connected-to-teams"></a>O bot não está conectado ao Teams
 
-Se você instalou o aplicativo, mas não está funcionando, certifique-se de que o bot da extensão de mensagens está [conectado ao *canal*da equipe do serviço de bot do Azure](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
+Se você instalou o aplicativo, mas não está funcionando, certifique-se de que o bot da extensão de mensagens está [conectado ao *canal* da equipe do serviço de bot do Azure](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
 É importante entender que isso não é o mesmo que um canal no Microsoft Teams. Nesse caso, um canal é como o serviço de bot do Azure conecta seu bot ao Teams ou a um [aplicativo de comunicação da Microsoft ou de terceiros com suporte](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 

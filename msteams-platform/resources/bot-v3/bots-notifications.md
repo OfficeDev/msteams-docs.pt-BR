@@ -3,13 +3,14 @@ title: Manipular eventos de bot
 description: Descreve como lidar com eventos em bots para o Microsoft Teams
 keywords: eventos de bots do teams
 ms.date: 05/20/2019
+ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796173"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877040"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Manipular eventos de bot no Microsoft Teams
 
@@ -42,7 +43,7 @@ A tabela a seguir lista os eventos que o seu bot pode receber e executar ações
 
 ## <a name="team-member-or-bot-addition"></a>Adição de um membro da equipe ou de bot
 
-O [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) evento é enviado ao bot quando recebe informações sobre atualizações de associação para equipes em que foram adicionadas. Ele também recebe uma atualização quando foi adicionado pela primeira vez especificamente para conversas pessoais. Observe que as informações do usuário ( `Id` ) são exclusivas para o bot e podem ser armazenadas em cache para uso futuro pelo serviço (como enviar uma mensagem para um usuário específico).
+O [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) evento é enviado ao bot quando recebe informações sobre atualizações de associação para equipes em que foram adicionadas. Ele também recebe uma atualização quando foi adicionado pela primeira vez especificamente para conversas pessoais. Observe que as informações do usuário ( `Id` ) são exclusivas para o bot e podem ser armazenadas em cache para uso futuro pelo serviço (como enviar uma mensagem para um usuário específico).
 
 ### <a name="bot-or-user-added-to-a-team"></a>Bot ou usuário adicionado a uma equipe
 
@@ -94,39 +95,89 @@ bot.on('conversationUpdate', (msg) => {
 
 ```json
 {
-    "membersAdded": [
-        {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-        }
-    ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "eventType": "teamMemberAdded",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    }
+   "membersAdded":[
+      {
+         "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2017-02-23T12:38:35.312-07:00",
+   "id":"f:5f85c2ad",
+   "channelId":"msteams",
+   "serviceUrl":"https://smba.trafficmanager.net/amer-client-ss.msg/",
+   "from":{
+      "id":"29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+   },
+   "conversation":{
+      "isGroup":true,
+      "conversationType":"channel",
+      "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+   },
+   "recipient":{
+      "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+      "name":"SongsuggesterBot"
+   },
+   "channelData":{
+      "team":{
+         "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+      },
+      "eventType":"teamMemberAdded",
+      "tenant":{
+         "id":"72f988bf-86f1-41af-91ab-2d7cd011db47"
+      }
+   }
 }
+```
+
+### <a name="user-added-to-a-meeting"></a>Usuário adicionado a uma reunião
+
+O `conversationUpdate` evento com o `membersAdded` objeto no payload é enviado quando um usuário é adicionado a uma reunião agendada privada. Os detalhes do evento serão enviados mesmo quando usuários anônimos ingressarem na reunião. 
+
+> [!NOTE]
+>
+>* Quando um usuário anônimo é adicionado a uma reunião, o objeto membersAdded Payload não tem o `aadObjectId` campo.
+>* Quando um usuário anônimo é adicionado a uma reunião, `from` o objeto no Payload sempre tem a ID do organizador da reunião, mesmo que o usuário anônimo tenha sido adicionado por outro apresentador.
+
+#### <a name="schema-example-user-added-to-meeting"></a>Exemplo de esquema: usuário adicionado à reunião
+
+```json
+{
+   "membersAdded":[
+      {
+         "id":"229:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2020-09-29T21:11:38.6542339Z",
+   "id":"f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",
+   "channelId":"msteams",
+   "serviceUrl":"https://canary.botapi.skype.com/amer/",
+   "from":{
+      "id":"29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",
+      "aadObjectId":"f30ba569-abef-4e97-8762-35f85cbae706"
+   },
+   "conversation":{
+      "isGroup":true,
+      "tenantId":"e15762ef-a8d8-416b-871c-25516354f1fe",
+      "id":"19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"
+   },
+   "recipient":{
+      "id":"28:3af3604a-d4fc-486b-911e-86fab41aa91c",
+      "name":"EchoBot1_Rename"
+   },
+   "channelData":{
+      "tenant":{
+         "id":"e15762ef-a8d8-416b-871c-25516354f1fe"
+      },
+      "source":null,
+      "meeting":{
+         "id":"MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="
+      }
+   }
+}
+
 ```
 
 ### <a name="bot-added-for-personal-context-only"></a>Bot adicionado somente para contexto pessoal
@@ -217,6 +268,20 @@ O `conversationUpdate` evento com o `membersRemoved` objeto no payload é enviad
 }
 ```
 
+### <a name="user-removed-from-a-meeting"></a>Usuário removido de uma reunião
+
+O `conversationUpdate` evento com o `membersRemoved` objeto no payload é enviado quando um usuário é removido de uma reunião agendada privada. Os detalhes do evento serão enviados mesmo quando usuários anônimos ingressarem na reunião. 
+
+> [!NOTE]
+>
+>_ Quando um usuário anônimo é removido de uma reunião, o objeto membersRemoved Payload não tem o `aadObjectId` campo.
+>* Quando um usuário anônimo é removido de uma reunião, `from` o objeto no Payload sempre tem a ID do organizador da reunião, mesmo que o usuário anônimo tenha sido removido por outro apresentador.
+
+#### <a name="schema-example-user-removed-from-meeting"></a>Exemplo de esquema: usuário removido da reunião
+
+{       "membersRemoved":        {           "ID": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"         }       ],       "Type": "conversationUpdate",       "timestamp": "2020-09-29T21:15:08.6391139 z", "       ID": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",       "channelId": "msteams",       "ServiceUrl": " https://canary.botapi.skype.com/amer/ ",       "de": {         "ID": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw", "         aadObjectId": "f30ba569-ABEF-4e97-8762-35f85cbae706"       },       "conversa": {    
+        "IsGroup": true,         "tenantid": "e15762ef-a8d8-416B-871c-25516354f1fe",         "ID": "19: meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread. v2"       },       "destinatário": {         "ID": "28:3af3604a-D4FC-486b-911e-86fab41aa91c",         "Name": "EchoBot1_Rename"}, "             ChannelData": {         "locatário": {           "ID": "e15762ef-a8d8-416B-871c-25516354f1fe"         },         "Source": nulo,         "Meeting": "           MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA = ="         }       }    }   
+
 ## <a name="team-name-updates"></a>Atualizações de nome de equipe
 
 > [!NOTE]
@@ -265,7 +330,7 @@ O bot é notificado quando um canal é criado, renomeado ou excluído em uma equ
 
 Os eventos do canal são os seguintes:
 
-_ **channelCreated** &emsp; um usuário adiciona um novo canal à equipe
+* **channelCreated** &emsp; Um usuário adiciona um novo canal à equipe
 * **channelRenamed** &emsp; Um usuário renomeia um canal existente
 * **channelDeleted** &emsp; Um usuário remove um canal
 

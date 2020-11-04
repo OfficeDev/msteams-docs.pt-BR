@@ -1,15 +1,15 @@
 ---
-title: Logon Único
+title: Suporte a logon único para guias
 description: Descreve o logon único (SSO)
 keywords: API de logon único do AAD no SSO de autenticação de equipes
-ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796376"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877054"
 ---
-# <a name="single-sign-on-sso"></a>Sign-On único (SSO)
+# <a name="single-sign-on-sso-support-for-tabs"></a>Suporte de logon único (SSO) para guias
 
 Os usuários entram no Microsoft Teams por meio de suas contas corporativas, de estudante ou da Microsoft (Office 365, Outlook, etc.). Você pode aproveitar isso permitindo que um único logon autorize sua guia do Microsoft Teams (ou módulo de tarefa) em clientes móveis ou de desktop. Portanto, se um usuário concorda em usar seu aplicativo, ele não precisará ser remetido em outro dispositivo, ele será conectado automaticamente. Além disso, prefetch seu token de acesso para melhorar o desempenho e os tempos de carga.
 
@@ -52,7 +52,7 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do teams qu
 1. Obtenha sua [ID de aplicativo do Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Especifique as permissões de que seu aplicativo precisa para o ponto de extremidade do Azure AD e, opcionalmente, o Microsoft Graph.
 3. [Conceder permissões](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) para aplicativos de desktop, Web e móveis do teams.
-4. Pré-autorizar o Microsoft Teams selecionando o botão **Adicionar um escopo** e no painel que é aberto, insira `access_as_user` como o **nome do escopo** .
+4. Pré-autorizar o Microsoft Teams selecionando o botão **Adicionar um escopo** e no painel que é aberto, insira `access_as_user` como o **nome do escopo**.
 
 > [!NOTE]
 > Há algumas restrições importantes que você deve ter em mente:
@@ -69,14 +69,14 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do teams qu
     * Defina o **nome** como o nome do aplicativo.
     * Escolha os **tipos de conta com suporte** (qualquer tipo de conta funcionará) ¹
     * Deixe o **URI de Redirecionamento** vazio.
-    * Escolha **Registrar** .
-3. Na página Visão geral, copie e salve a **ID do aplicativo (cliente)** . Você precisará dele mais tarde ao atualizar o manifesto do aplicativo do Microsoft Teams.
-4. Em **Gerenciar** , selecione **Expor uma API** . 
+    * Escolha **Registrar**.
+3. Na página Visão geral, copie e salve a **ID do aplicativo (cliente)**. Você precisará dele mais tarde ao atualizar o manifesto do aplicativo do Microsoft Teams.
+4. Em **Gerenciar** , selecione **Expor uma API**. 
 5. Selecione o link **definir** para gerar o URI da ID do aplicativo no formato de `api://{AppID}` . Insira o nome de domínio totalmente qualificado (com uma barra "/" acrescentada ao final) entre as barras duplas de avanço e o GUID. A ID completa deve ter a forma de: `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
     O nome de domínio totalmente qualificado é o nome de domínio legível para pessoas a partir do qual seu aplicativo é fornecido. Se você estiver usando um serviço de encapsulamento como ngrok, será necessário atualizar esse valor sempre que o subdomínio do ngrok for alterado. 
-6. Selecione o botão **Adicionar um escopo** . No painel que se abre, insira `access_as_user` como o **Nome de escopo** .
+6. Selecione o botão **Adicionar um escopo**. No painel que se abre, insira `access_as_user` como o **Nome de escopo**.
 7. Definir **quem pode consentir?** para `Admins and users`
 8. Preencha os campos para configurar os prompts de consentimento de usuário e administrador com os valores que são apropriados para o `access_as_user` escopo:
     * **Título do consentimento do administrador:** O Microsoft Teams pode acessar o perfil do usuário.
@@ -87,10 +87,10 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do teams qu
 10. Selecione o botão **Adicionar escopo** para salvar 
     * A parte de domínio do **nome do escopo** exibida logo abaixo do campo de texto deve coincidir automaticamente com o conjunto de URI da **ID do aplicativo** na etapa anterior, com `/access_as_user` acrescentado ao final:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. Na seção **aplicativos cliente autorizados** , identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Selecione *Adicionar um aplicativo cliente* . Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado que você criou na etapa anterior:
+11. Na seção **aplicativos cliente autorizados** , identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Selecione *Adicionar um aplicativo cliente*. Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado que você criou na etapa anterior:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicativo móvel/aplicativo de área de trabalho do Microsoft Teams)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicativo Web do Teams)
-12. Navegue até **permissões de API** . Selecione *Adicionar uma permissão*  >  *Microsoft Graph*  >  *as permissões delegadas* do Microsoft Graph e, em seguida, adicione as seguintes permissões:
+12. Navegue até **permissões de API**. Selecione *Adicionar uma permissão*  >  *Microsoft Graph*  >  *as permissões delegadas* do Microsoft Graph e, em seguida, adicione as seguintes permissões:
     * User. Read (ativado por padrão)
     * email
     * offline_access
@@ -102,8 +102,8 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do teams qu
     Se um aplicativo não recebeu o consentimento do administrador de ti, os usuários precisarão fornecer consentimento na primeira vez em que usarem um aplicativo.
 
     Definir um URI de redirecionamento:
-    * Selecione **Adicionar uma plataforma** .
-    * Selecione **Web** .
+    * Selecione **Adicionar uma plataforma**.
+    * Selecione **Web**.
     * Insira o **URI de redirecionamento** para seu aplicativo. Essa será a página em que um fluxo de concessão implícito bem-sucedido redirecionará o usuário. Este será o mesmo nome de domínio totalmente qualificado que você inseriu na etapa 5 seguido pela rota de API onde uma resposta de autenticação deve ser enviada. Se você estiver seguindo qualquer um dos exemplos do Teams, isso será: `https://subdomain.example.com/auth-end`
 
     Em seguida, habilite a concessão implícita marcando as seguintes caixas:  
