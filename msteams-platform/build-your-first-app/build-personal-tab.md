@@ -3,20 +3,20 @@ title: Introdução-criar uma guia pessoal
 author: heath-hamilton
 description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452740"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931726"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
 As guias são uma maneira simples de fazer a superfície de conteúdo em seu aplicativo, incorporando essencialmente uma página da Web no Microsoft Teams.
 
-Há dois tipos de guias no Microsoft Teams. Neste tutorial, você criará uma *guia pessoal*, uma página de conteúdo de tela inteira para usuários individuais. (As guias pessoais são as coisas mais próximas de uma experiência de site tradicional no Microsoft Teams.)
+Há dois tipos de guias no Microsoft Teams. Neste tutorial, você criará uma *guia pessoal* , uma página de conteúdo de tela inteira para usuários individuais. (As guias pessoais são as coisas mais próximas de uma experiência de site tradicional no Microsoft Teams.)
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -30,40 +30,26 @@ As pessoas da sua organização têm problemas para localizar informações bás
 
 > [!div class="checklist"]
 >
-> * Identificar algumas das propriedades de manifesto do aplicativo e scaffolding relevantes para guias pessoais
+> * Identificar algumas das configurações do aplicativo e scaffolding relevantes para guias pessoais
 > * Criar conteúdo de guia
 > * Atualizar o tema de cores de uma guia com base na preferência do usuário
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. identificar componentes de projeto de aplicativo relevantes
 
-Grande parte do manifesto do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia pessoal.
+Grande parte das configurações do aplicativo e do scaffolding são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit. Vamos examinar os principais componentes para criar uma guia pessoal.
 
-### <a name="app-manifest"></a>Manifesto do aplicativo
+### <a name="app-configurations"></a>Configurações do aplicativo
 
-O trecho de código a seguir do manifesto de aplicativo (o `manifest.json` arquivo no diretório do seu projeto `.publish` ) mostra [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , que inclui propriedades e valores padrão relevantes para guias pessoais.
+Você pode exibir e atualizar suas configurações de aplicativo usando o app Studio, que está incluído no kit de ferramentas.
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: Um identificador exclusivo para a página exibida pela guia.
-* `name`: O nome de exibição da guia (por exemplo, "meus contatos").
-* `contentUrl`: A URL do host da página de conteúdo da guia (deve ser HTTPS).
-* `scopes`: Especifica a guia é somente para uso pessoal.
+Durante a instalação, o kit de ferramentas configurou inicialmente a página de conteúdo da guia, onde você exibe o conteúdo principal. No kit de ferramentas, vá para o **app Studio** e selecione **guias** para ver a configuração.
 
 ### <a name="app-scaffolding"></a>Aplicativo scaffolding
 
-O aplicativo scaffolding fornece os componentes para renderizar sua guia no Teams. Há muitas coisas com as quais você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
+O aplicativo scaffolding fornece os componentes para renderizar sua guia pessoal no Microsoft Teams. Há muitas coisas com as quais você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
 
-* `Tab.js` arquivo no `src/components` diretório do projeto
-* SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes front-end do seu projeto
+* `Tab.js` arquivo no `src/components` diretório do projeto. Isso é para o processamento da página de conteúdo da guia.
+* SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes de front-end do seu projeto.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personalizar a página de conteúdo da guia
 
@@ -181,7 +167,7 @@ if (isTheme === "default") {
 
 Verifique sua guia no Microsoft Teams. A aparência deve corresponder ao tema escuro.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de tela de uma guia pessoal com conteúdo estático.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de tela de uma guia pessoal com visualização de conteúdo estático.":::
 
 ## <a name="well-done"></a>Muito bem
 
@@ -193,7 +179,7 @@ Parabéns! Você tem um aplicativo do teams com uma guia pessoal que facilita a 
 * [Inserir conteúdo de um aplicativo Web existente ou página da Web](../tabs/how-to/add-tab.md#tab-requirements): mostramos como criar novo conteúdo para uma guia pessoal, mas você também pode carregar o conteúdo de uma URL externa.
 * [Criar uma experiência perfeita para sua guia](../tabs/design/tabs.md): consulte as diretrizes recomendadas para a criação de guias do teams.
 * [Criar guias para celular](../tabs/design/tabs-mobile.md): entenda como desenvolver guias para telefones e tablets.
-* [Integrar com a API do Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Usar os dados do teams com a API do Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Criar uma guia sem o kit de ferramentas](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>Próxima lição

@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
-ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 6e3f6e09de68cdb00743c6954b999c35ceefcdf7
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877068"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931803"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -33,6 +33,10 @@ Este artigo aborda razões comuns de falha na validação dos aplicativos enviad
 * Fornecer informações de ajuda e suporte. É altamente recomendável que seu aplicativo inclua um link de ajuda/perguntas frequentes para a experiência do usuário de primeira execução. Para todos os aplicativos pessoais, recomendamos fornecer a página de ajuda como uma guia pessoal para uma melhor experiência do usuário.
 * Os aplicativos não devem tirar o usuário do teams para cenários de usuário principais. Usando módulos de tarefa as guias AMD são recomendadas para exibir informações para o usuário no Teams.
 * Aumente o número de versão do aplicativo no manifesto se você fizer alterações de manifesto no seu envio.
+* O aplicativo não deve retirar os usuários do teams para cenários de usuário principais. Os destinos de link em aplicativos não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams, por exemplo, dentro de módulos e guias de tarefas.
+* Os aplicativos pessoais permitem que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe.
+* As guias de canal não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
+* As guias de canal que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, e não uma guia.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fornecer uma experiência clara e simples de entrada/saída e inscrição
 
@@ -50,6 +54,7 @@ Seção *Consulte também* [1100,5 — controle de cliente](/legal/marketplace/c
   * Autorizar uma conta/serviço => desautorizar/negar uma conta/serviço.
   * Registrar uma conta/serviço => cancelar o registro/cancelar a assinatura de uma conta/serviço.
 * Se seu aplicativo requer uma conta ou serviço, você deve fornecer uma maneira de o usuário se inscrever ou criar uma solicitação de inscrição. Uma exceção poderá ser concedida se o aplicativo for um aplicativo empresarial.
+* Certifique-se de fornecer orientação de avanço para um novo usuário sobre como se inscrever para usar seus serviços de aplicativos. Se um link de inscrição pronto não estiver disponível, um modo claro para frente poderá ser fornecido na página de descrição do aplicativo, na mensagem de boas-vindas, na mensagem de ajuda e na janela de entrada onde você solicitar que o usuário entre em seus serviços. Os aplicativos que não têm um fluxo de inscrição fácil também podem incluir uma guia de ajuda ou um link para uma página da Web, onde um novo usuário pode ver orientações detalhadas sobre como configurar seu aplicativo com o Microsoft Teams.  Isso é para garantir que um novo usuário não seja exibido um obstáculo ao tentar o aplicativo pela primeira vez.
 * A funcionalidade de entrada/saída deve funcionar em clientes móveis. Verifique se você está usando o [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) versão 1.4.1 ou posterior.
 
 Para obter informações adicionais sobre autenticação, consulte:
@@ -114,9 +119,13 @@ O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui est
 * **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido**. Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"*. Use essa oportunidade para ensinar seus usuários.
 
 * **Use cartões adaptáveis e módulos de tarefas para tornar sua resposta de bot clara e acionável** 
- [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos
+ [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos. Também as respostas de bot não devem ser textuais com texto longo. Os bots devem fazer uso de cartões adaptáveis & módulos de tarefas em vez de interface de usuário baseada em chat de conversa e respostas de texto demoradas
 
 * **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
+
+* Não **envie dados confidenciais**. Os bots não devem enviar dados confidenciais para uma equipe, um chat de grupo ou uma conversa 1:1, onde há uma audiência que não deve ser capaz de exibir esses dados
+
+* **Forneça uma mensagem de boas-vindas**. O bot deve fornecer uma mensagem de boas-vindas do FRE que inclui um tutorial interativo com cartões de carrossel ou botões "Experimente", para incentivar o contrato.
 
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; bots pessoais sempre devem enviar uma mensagem de boas-vindas na primeira inicialização
 

@@ -3,14 +3,14 @@ title: Introdução-Crie sua primeira visão geral e pré-requisitos do aplicati
 author: heath-hamilton
 description: Saiba como começar a usar o desenvolvimento de aplicativos do Microsoft Teams e configurar seu ambiente.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452600"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931789"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo Microsoft Teams
 
@@ -22,11 +22,11 @@ Aqui está uma ideia do que você saberá depois de percorrer as lições.
 
 > [!div class="checklist"]
   >
-  > * **Comece a trabalhar rapidamente com o Teams Toolkit**: o Microsoft Teams Toolkit para Visual Studio Code cuida da criação do seu projeto de aplicativo e do scaffolding, para que você possa ter um aplicativo em execução em minutos.
-  > * **Defina seu aplicativo com o manifesto**: o manifesto do aplicativo é onde você especifica os recursos e serviços que seu aplicativo da equipe usa.
-  > * **Escopo do seu aplicativo público**: Crie um aplicativo do teams para uso pessoal, colaboração ou ambos.
-  > * **Obtenha experiência com estruturas do teams**: Personalize seu aplicativo (por exemplo, altere seu esquema de cores para corresponder ao tema do Teams) com a ajuda do SDK do JavaScript do teams. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
-  > * **Expanda em seu aplicativo**: em todas as lições, você encontrará tópicos relacionados que provavelmente você está interessado (como diretrizes de autenticação e Design).
+  > * **Comece a trabalhar rapidamente com o Teams Toolkit** : o Microsoft Teams Toolkit para Visual Studio Code cuida da criação do seu projeto de aplicativo e do scaffolding, para que você possa ter um aplicativo em execução em minutos.
+  > * **Configurar seu aplicativo com o app Studio** : Especifique os recursos e serviços que seu aplicativo de equipe usa.
+  > * **Escopo do seu aplicativo público** : Crie um aplicativo do teams para uso pessoal, colaboração ou ambos.
+  > * **Obtenha experiência com ferramentas e SDKs do Microsoft Teams** : Personalize seu aplicativo (por exemplo, altere seu esquema de cores para corresponder ao tema do Teams) com a ajuda do SDK do Microsoft Teams JavaScript. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
+  > * **Expanda em seu aplicativo** : em todas as lições, você encontrará tópicos relacionados que provavelmente você está interessado (como diretrizes de autenticação e Design).
 
 ## <a name="teams-app-fundamentals"></a>Conceitos básicos do aplicativo Teams
 
@@ -34,15 +34,15 @@ Antes de começar os tutoriais, você deve saber o seguinte sobre a criação de
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>Os aplicativos podem ter vários recursos e pontos de entrada
 
-Os aplicativos do teams são compostos por um ou mais [recursos de plataforma](../concepts/capabilities-overview.md) e [pontos de entrada](../concepts/extensibility-points.md). Você pode apresentar seu aplicativo usando vários [componentes e convenções de interface do usuário](../concepts/extensibility-points.md#ui-components)específicos para equipes, como módulos de cartões e tarefas.
+Um aplicativo do teams é composto por um ou mais [recursos de plataforma](../concepts/capabilities-overview.md) (como as pessoas usam o aplicativo) e pontos de [entrada](../concepts/extensibility-points.md) (onde as pessoas detectam o aplicativo).
 
 ### <a name="teams-doesnt-host-your-app"></a>O Microsoft Teams não hospeda seu aplicativo
 
-Um aplicativo do teams inclui três partes importantes:
+Um aplicativo do teams inclui as seguintes partes importantes:
 
 * A lógica, o armazenamento de dados e as chamadas de API que alimentam o aplicativo. Esses serviços não são hospedados pelo Microsoft Teams e devem ser acessíveis via HTTPS.
 * O cliente do Microsoft Teams (Web, desktop ou celular) onde as pessoas usam o aplicativo.
-* Seu pacote de aplicativos, que você usa para instalar o aplicativo no Teams. Ele contém metadados do aplicativo e ponteiros para seus serviços hospedados.
+* Sua ID de aplicativo, que permite que você configure seu aplicativo com o app Studio.
 
 ## <a name="get-prerequisites"></a>Obter pré-requisitos
 
@@ -69,7 +69,7 @@ Você pode obter uma conta de teste gratuita do teams que permite que o aplicati
 1. Selecione **ingressar agora** e siga as instruções na tela.
 1. Quando você chegar à tela de boas-vindas, selecione **Configurar a assinatura E5**.
 1. Configurar sua conta de administrador. Após concluir, você verá uma tela como esta.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams.":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê após se inscrever no programa de desenvolvedor do Microsoft 365.":::
 1. Faça logon no Microsoft Teams usando a conta de administrador que você acabou de configurar.
 1. Verifique se agora você tem a opção **carregar um aplicativo personalizado** .
 
@@ -79,20 +79,20 @@ Você pode obter uma conta de teste gratuita do teams que permite que o aplicati
 
 Você pode criar aplicativos do teams com suas ferramentas preferenciais, mas essas lições mostram como você pode começar rapidamente com o Microsoft Teams Toolkit para o Visual Studio Code.
 
-O Microsoft Teams exibe o conteúdo do aplicativo apenas por meio de conexões HTTPS. Como você hospedará seu primeiro aplicativo localmente para poupar tempo, aprenderá a usar o [ngrok para configurar um túnel seguro](../concepts/build-and-test/debug.md#locally-hosted) entre o Teams e seu aplicativo. (Os aplicativos de equipe de nível de produção são hospedados na nuvem.)
+O Microsoft Teams exibe o conteúdo do aplicativo apenas por meio de conexões HTTPS. Para depurar determinados tipos de aplicativos localmente, como um bot, você aprenderá a usar o [ngrok para configurar um túnel seguro](../concepts/build-and-test/debug.md#locally-hosted) entre o Teams e seu aplicativo. (Os aplicativos do teams de produção são hospedados na nuvem.)
 
 1. Instale o [Node.js](https://nodejs.org/en/).
-1. Instale o [ngrok](https://ngrok.com/download).
+1. Instale o [ngrok](https://ngrok.com/download) se você planeja criar um bot ou uma extensão de mensagem.
 1. Instale a versão mais recente do [Visual Studio Code](https://code.visualstudio.com/download). (As versões anteriores podem não funcionar com o kit de ferramentas.)
 1. No Visual Studio Code, selecione **extensões** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: na barra de atividades à esquerda e instale o **Microsoft Teams Toolkit**.
 
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams.":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustração que mostra onde no Visual Studio Code você pode instalar a extensão do kit de ferramentas do Microsoft Teams.":::
 
 ## <a name="about-the-tutorials"></a>Sobre os tutoriais
 
 Você pode começar com qualquer um dos Teams **Construa suas primeiras lições de aplicativos** . Se você não tem certeza de onde começar, siga nosso caminho amigável de iniciantes e crie um "Olá, mundo!" aplicativo.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Árvore de qualificações que mostra os planos de aprendizado dos tutoriais de criação dos seus primeiros aplicativos do teams." border="false":::
 
 ## <a name="next-step"></a>Próxima etapa
 

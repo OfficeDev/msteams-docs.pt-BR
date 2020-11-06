@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Teams design Guidelines Reference Framework Tabs Configuration guia canal de configuração guia estática guia de equipes de design simples
-ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796208"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931796"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -59,9 +59,9 @@ Há desafios de navegação inerentes com uma hierarquia de navegação profunda
 
 > [!div class="checklist"]
 >
-> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade** . Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
->* **Abre uma pseudo caixa de diálogo em um iframe** . Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
->* **Abre uma página do navegador** .
+> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade**. Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
+>* **Abre uma pseudo caixa de diálogo em um iframe**. Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
+>* **Abre uma página do navegador**.
 
 ### <a name="personality"></a>Personalidade
 
@@ -130,13 +130,71 @@ Sempre que possível, cartões e bots devem se vincular detalhadamente a dados m
 
 Em muitos casos, o nome do seu aplicativo criará um nome de guia ótimo. Mas, também considere nomear suas guias de acordo com a funcionalidade que elas fornecem.
 
+### <a name="multi-window"></a>Várias janelas
+
+As guias de canal que têm recursos de edição complexos devem abrir o modo de exibição editor em várias janelas, em vez de uma guia.
+
+### <a name="no-horizontal-scrolling"></a>Sem rolagem horizontal
+
+A guia não deve ter rolagem horizontal.
+
+### <a name="easy-navigation"></a>Navegação fácil
+
+A navegação dentro de um aplicativo de guia deve ser fácil de seguir, ou seja, as páginas têm o seguinte, onde necessário/aplicável:
+* Botões voltar
+* Cabeçalhos de página
+* Estrutural
+* Menus de reficação
+
+### <a name="undo-last-action"></a>Desfazer última ação
+
+O usuário deve ser capaz de desfazer a última ação no aplicativo.
+
+### <a name="share-content"></a>Compartilhar conteúdo
+
+Os aplicativos pessoais devem permitir que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe. A guia canal deve fornecer navegação que complementa a navegação principal do Teams, em vez de entrar em conflito com ela (como barras de navegação do trilho esquerdo).
+
+### <a name="single-view"></a>Modo de exibição único
+
+Os aplicativos pessoais devem apresentar conteúdo de instâncias com escopo de chat de grupo ou de equipe desse aplicativo em um modo de exibição único, por exemplo, um usuário do Trello deve ser capaz de ver todas as instâncias das placas do Trello que participam em um nível de equipe em seu aplicativo pessoal.
+
+### <a name="no-app-bar"></a>Nenhuma barra de aplicativos
+
+As guias não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
+
+### <a name="navigation"></a>Navegação
+
+Guias não devem ter mais de três níveis de navegação no aplicativo.
+
+### <a name="l2l3-view"></a>Modo de exibição L2/L3
+
+As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
+
+### <a name="no-link-to-external-browser"></a>Nenhum link para o navegador externo
+
+Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams, por exemplo, dentro de módulos de tarefas, guias, etc.
+
 ## <a name="notifications-for-tabs"></a>Notificações para guias
 
 Há dois modos de notificação para alterações de conteúdo de guia:
 
 > [!div class="checklist"]
 >
-> * **Use a API do aplicativo para notificar os usuários sobre as alterações** . Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Use um bot** . Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 
-  Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention`  especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.
+> * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+
+Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention`  especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.
+
+### <a name="tab-design-best-practices"></a>Práticas recomendadas de design da guia
+
+* As guias pessoais/estáticas devem permitir que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe.
+* Guias pessoais/estáticas podem apresentar conteúdo de instâncias com escopo de chat de grupo ou equipe do aplicativo em um único modo de exibição.
+* Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams (exemplo-interno, módulos de tarefas, guias, etc.).
+* As guias devem ser responsivas aos temas da equipe. Quando o tema do teams é alterado, o tema dentro do aplicativo também deve ser alterado para refletir esse tema.
+* As guias devem usar componentes com estilo de equipe onde for possível. Isso significa adotar fontes do Teams, digitar rampas, paletas de cores, sistema de grade, movimento, Tom de voz, etc.
+* As guias devem usar os comportamentos de interação do teams para navegação na página, posição e uso de caixas de diálogo, hierarquias de informações, etc.
+* As guias devem usar o menu e/ou Breadcrumbs da equipe padrão para navegação no aplicativo. As guias não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
+* Guias não devem ter mais do que três níveis de navegação no aplicativo.
+* As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
+* Guias que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, em vez de uma guia (para área de trabalho e Web).

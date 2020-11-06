@@ -4,12 +4,12 @@ author: laujan
 description: Detalhe as soluções de código baixo e nenhuma da Microsoft disponíveis para o Teams
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210092"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931754"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Criar aplicativos personalizados de baixo código para o Microsoft Teams
 
@@ -94,3 +94,8 @@ O [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/
 [Anunciando atualizações de plataforma de energia e de equipes para ajudar os clientes a se adaptarem ao trabalho remoto](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [O Microsoft Teams está moldando o futuro do trabalho com recursos de baixo código para aprimorar o espaço de trabalho digital](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>✔ Gerenciar aplicativos de plataforma de energia
+
+> [!div class="nextstepaction"]
+> [Gerenciar aplicativos da plataforma de alimentação da Microsoft no centro de administração do Microsoft Teams](/microsoftteams/manage-power-platform-apps)

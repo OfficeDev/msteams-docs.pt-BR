@@ -3,14 +3,14 @@ title: Introdução-compilar e executar seu primeiro aplicativo
 author: heath-hamilton
 description: Criar rapidamente um aplicativo do Microsoft Teams que exibe um "Olá, mundo!" mensagem usando o Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 62c4bd950183ceb64fb30b528661cf84e9210d89
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452642"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931770"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>Criar e executar seu primeiro aplicativo do Microsoft Teams
 
@@ -21,23 +21,17 @@ Você pode ir direto para o desenvolvimento do Microsoft Teams criando uma guia 
 Use o Microsoft Teams Toolkit no Visual Studio Code para configurar seu primeiro projeto de aplicativo.
 
 1. No Visual Studio Code, selecione **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: na barra de atividades à esquerda e escolha **criar um novo aplicativo Teams**.
-:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
-1. Insira um nome para seu aplicativo do Microsoft Teams. (Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto de aplicativo em sua máquina local.)
+1. Quando solicitado, entre com sua conta de desenvolvimento do Microsoft 365.
 1. Na tela **Adicionar recursos** , selecione **Tab** e **Avançar**.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
-1. Verifique a opção de **guia pessoal** e selecione **concluir** na parte inferior da tela para configurar seu projeto.
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de tela mostrando como configurar seu projeto de aplicativo com o Visual Studio Code Teams Toolkit.":::
+1. Insira um nome para seu aplicativo do Microsoft Teams. (Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto de aplicativo em sua máquina local.)
+1. Marque somente a opção **guia pessoal** e selecione **concluir** na parte inferior da tela para configurar seu projeto.
 
 ## <a name="2-understand-important-app-project-components"></a>2. compreender os principais componentes do projeto de aplicativos
 
 Quando o kit de ferramentas configura seu projeto, você tem os componentes para criar uma guia pessoal básica para o Microsoft Teams. Os diretórios e arquivos do projeto são exibidos na área do Explorer do Visual Studio Code.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
-
-Vamos reservar alguns momentos para entender alguns dos principais arquivos que os desenvolvedores de aplicativos do teams trabalham.
-
-### <a name="app-manifest-manifestjson"></a>Manifesto do aplicativo ( `manifest.json` )
-
-Localizado no `.publish` diretório, o manifesto do aplicativo é o ponto de partida para qualquer projeto de aplicativo. O manifesto define os atributos fundamentais do aplicativo e aponta para os recursos necessários. Quando você instala um aplicativo, o Teams analisa o manifesto para entender como renderizar seu aplicativo no cliente.
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Captura de tela mostrando arquivos de projeto de aplicativo para uma guia pessoal no Visual Studio Code.":::
 
 ### <a name="app-scaffolding"></a>Aplicativo scaffolding
 
@@ -45,56 +39,34 @@ O kit de ferramentas cria automaticamente o scaffolding para você no `src` dire
 
 Se você criar uma guia durante a configuração, por exemplo, o `App.js` arquivo no `src/components` diretório é importante porque trata da inicialização e do roteamento do seu aplicativo. Ele chama o [SDK do Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md) para estabelecer a comunicação entre o seu aplicativo e o Teams.
 
-### <a name="app-package-developmentzip"></a>Pacote de aplicativos ( `Development.zip` )
+### <a name="app-id"></a>ID do aplicativo
 
-Localizado no `.publish` diretório, você precisará do pacote de aplicativos para [Sideload seu aplicativo](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) no Microsoft Teams. O pacote também é usado durante [a publicação no catálogo de aplicativos da sua organização](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) ou no [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
+Sua ID de aplicativo do Microsoft Teams é necessária para configurar seu aplicativo com o app Studio. Você pode encontrar a ID no `teamsAppId` objeto, localizada no arquivo do seu projeto `package.json` .
 
-Veja alguns detalhes sobre os arquivos de pacote de aplicativos:
-
-|Nome|Tipo|Size|Local do manifesto|Nome do arquivo de kit|
-|---|---|:---:|:---:|-----|
-|**Manifesto do aplicativo**|`.json`| — | — |`.publish/manifest.json`|
-|**Logotipo colorido**|`.png`|192 &times; 192 pixels|`icon.color`|`.publish/color.png`|
-|**Logotipo da estrutura de tópicos**|`.png`|32 &times; 32 pixels|`icon.outline`|`.publish/outline.png`|
-
-## <a name="3-run-your-app"></a>3. Execute seu aplicativo
+## <a name="3-build-and-run-your-app"></a>3. Compilar e executar o aplicativo
 
 Nos juros de tempo, você criará e executará seu aplicativo localmente.
 
 (Essas informações também estão disponíveis no kit de ferramentas `README` .)
 
 1. Em um terminal, vá para o diretório raiz do seu projeto de aplicativo e execute `npm install` .
-1. Executar `npm start` . Após a conclusão, há uma **compilação bem-sucedida!** mensagem no terminal.
-1. Abra um navegador e vá para `https://localhost:3000` para exibir uma página da Web em branco chamada **Guia do Microsoft Teams**. (Não se preocupe se você não consegue ver conteúdo na página.)<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
+1. Executar `npm start` .
 
-## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar um túnel seguro para seu aplicativo
+Após a conclusão, há uma **compilação bem-sucedida!** mensagem no terminal. O aplicativo está sendo executado `https://localhost:3000` .
 
-Seu aplicativo está em execução no servidor Web local. Para executar seu aplicativo no Teams, você deve tornar seu `localhost` acessível por meio de HTTPS.
+## <a name="4-sideload-your-app-in-teams"></a>4. Sideload seu aplicativo no Microsoft Teams
 
-Instale o [ngrok](https://ngrok.com/download) se ainda não tiver feito isso. Ao executar essa ferramenta, você cria duas URLs disponíveis globalmente que apontam para o servidor Web local ( `http://localhost:3000` ). Você precisa da URL de encaminhamento que começa com `HTTPS` .
-
-1. Abra um novo terminal e execute `ngrok http 3000` .
-1. Copie a URL HTTPS que você está vendo (Confira o exemplo a seguir).
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
-1. Em seu `.publish` diretório, abra `Development.env` .
-1. Substitua o `baseUrl0` valor pela URL copiada. (Por exemplo, alterar `baseUrl0=http://localhost:3000` para `baseUrl0=https://85528b2b3ba5.ngrok.io` .)
-
-O manifesto do aplicativo agora aponta para onde você está hospedando o aplicativo.
-
-## <a name="5-sideload-your-app-in-teams"></a>5. Sideload seu aplicativo no Microsoft Teams
-
-Com o aplicativo em execução e acessível via HTTPS, você está pronto para carregá-lo no Microsoft Teams.
+Seu aplicativo está pronto para teste no Teams. Para fazer isso, você deve ter uma conta que permita o aplicativo Sideload. (Se você não tiver certeza de que tem isso, saiba mais sobre como obter uma [conta de desenvolvimento do teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 
 > [!TIP]
-> Antes de fazer o Sideload do aplicativo, verifique se há problemas usando o [recurso de validação do kit de ferramentas](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool). Os erros devem ser corrigidos para Sideload com êxito o aplicativo.
+> Antes de fazer o Sideload do aplicativo, verifique se há problemas usando o [recurso de validação no app Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), que está incluído no kit de ferramentas. Os erros devem ser corrigidos para Sideload com êxito o aplicativo.
 
-1. Faça logon no cliente do teams com sua conta que permita o aplicativo Sideload. (Se você não tiver certeza de que tem isso, saiba mais sobre como obter uma [conta de desenvolvimento do teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
-1. Selecione **aplicativos**e, em seguida, escolha **carregar um aplicativo personalizado**.
-1. Vá para a pasta do projeto de aplicativo `.publish` e selecione `Development.zip` . Uma janela restrita de instalação é exibida.
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
-1. Selecione **Adicionar** para instalar seu aplicativo.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Captura de tela mostrando como criar um novo aplicativo com o Visual Studio Code Teams Toolkit.":::
+1. No Visual Studio Code, pressione a tecla **F5** para iniciar um cliente Web do teams.
+1. Para exibir o conteúdo do aplicativo no Teams, especifique o local em que o aplicativo está em execução ( `localhost` ) é confiável:
+   1. Abra uma nova guia na mesma janela do navegador (Google Chrome por padrão), aberta após pressionar **F5**.
+   1. Vá até `https://localhost:3000/tab` a página e vá até ela.
+1. Volte para o Microsoft Teams. Na caixa de diálogo, selecione **Adicionar para mim** para instalar o aplicativo.
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Captura de tela mostrando um exemplo de aplicativo de guia pessoal &quot;Olá, mundo!&quot; executado no Teams.":::
 
 🎉 Parabéns! Seu aplicativo está em execução no Microsoft Teams.
 
