@@ -2,12 +2,12 @@
 title: Diretrizes de design para bots
 description: Descreve as diretrizes para a criação de bots
 keywords: Diretrizes de design de equipes referência de bots
-ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137672"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992635"
 ---
 # <a name="start-talking-with-bots"></a>Começar a falar com bots
 
@@ -16,6 +16,20 @@ Bots são aplicativos de conversa que executam um conjunto estreito ou específi
 ---
 
 ## <a name="guidelines"></a>Diretrizes
+
+### <a name="bot-design-guidelines"></a>Diretrizes de design de bot
+
+* Os bots devem fornecer notificações relevantes quando houver atividade.
+* Os bots não devem enviar dados confidenciais para uma equipe, chat de grupo ou conversa 1:1 para uma audiência que não deva exibir esses dados.
+* As notificações de bot devem incluir dados significativos para informar a relevância da notificação aos usuários.
+* O tom do bot deve refletir a voz do Teams, conforme definido nas diretrizes.
+* Os bots devem fornecer uma mensagem de boas-vindas da experiência de primeira execução que destaque o valor do bot e quais são suas funções principais, isso pode ser uma forma de "fazer um tour", um tutorial interativo com cartões de carrossel ou botões "Experimente".
+* O texto do bot não deve ter erros de ortografia ou de gramática.
+* Os bots devem fornecer um conjunto de comandos de bot predefinidos que podem ser acionáveis.
+* As mensagens de bot devem ser fáceis de entender e acionáveis.
+* Os bots devem fornecer comandos de ajuda de fallback quando uma mensagem não é compreendida.
+* Formulários, incorporados em cartões, enviados por um bot devem fornecer entradas determinísticas que não exigem atualização sequencial.
+* As notificações de bot devem ter o escopo para uma equipe, chat de grupo ou 1:1 conversa com conteúdo relevante para a audiência.
 
 ### <a name="avatars"></a>Avatares
 
@@ -37,17 +51,18 @@ Os gráficos são uma boa maneira de informar uma história, mas nem todas as co
 
 #### <a name="welcome-messages"></a>Mensagens de boas-vindas
 
-As mensagens de boas-vindas são a melhor maneira de definir o tom do bot e devem ser usadas em cenários pessoais e de equipe ou grupo. A mensagem informa o que o bot faz e algumas maneiras comuns de interagir com ele. Use exemplos de recursos específicos, como "*Tente perguntar...*" em uma lista com marcadores. Sempre que possível, essas sugestões devem retornar respostas armazenadas. É fundamental que os exemplos de recursos funcionem sem exigir que os usuários entrem.
+As mensagens de boas-vindas são a melhor maneira de definir o tom do bot e devem ser usadas em cenários pessoais e de equipe ou grupo. A mensagem informa o que o bot faz e algumas maneiras comuns de interagir com ele. Use exemplos de recursos específicos, como " *Tente perguntar...* " em uma lista com marcadores. Sempre que possível, essas sugestões devem retornar respostas armazenadas. É fundamental que os exemplos de recursos funcionem sem exigir que os usuários entrem.
+*Confira* [os requisitos de mensagem de boas-vindas](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) para obter orientações adicionais.
 
 #### <a name="tours"></a>Viagens
 
-Inclua um atributo *Take a Tour* com mensagens de boas-vindas e respostas para entrada de usuário equivalente a "*ajuda*". Essa é a maneira mais eficaz de permitir que os usuários saibam o que um bot pode fazer. Os carrossel em experiências de um-para-um são uma maneira excelente de informar essa história e incluir os botões de *experimentar que* os links para exemplos de respostas possíveis sejam incentivados. Os Tours também são bons lugares para falar sobre outros recursos do aplicativo. Por exemplo, você pode incluir capturas de tela das guias de extensões de mensagens e equipes.  Os usuários não devem ter que entrar no Access e usar um tour.
+Inclua um atributo *Take a Tour* com mensagens de boas-vindas e respostas para entrada de usuário equivalente a " *ajuda* ". Essa é a maneira mais eficaz de permitir que os usuários saibam o que um bot pode fazer. Os carrossel em experiências de um-para-um são uma maneira excelente de informar essa história e incluir os botões de *experimentar que* os links para exemplos de respostas possíveis sejam incentivados. Os Tours também são bons lugares para falar sobre outros recursos do aplicativo. Por exemplo, você pode incluir capturas de tela das guias de extensões de mensagens e equipes.  Os usuários não devem ter que entrar no Access e usar um tour.
 
 Quando os Tours são usados em cenários de equipe ou grupo, eles devem ser abertos em um módulo de tarefa para não adicionar mais ruído de cartão às conversas em andamento entre usuários.
 
 ### <a name="responding-to-users-and-failing-gracefully"></a>Responder aos usuários e falhar normalmente
 
-Seu bot também deve ser capaz de responder a coisas como "*Hi*", "*Help*" e "*thanks*" ao assumir erros comuns e coloquialismos em conta. Por exemplo:
+Seu bot também deve ser capaz de responder a coisas como " *Hi* ", " *Help* " e " *thanks* " ao assumir erros comuns e coloquialismos em conta. Por exemplo:
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 
@@ -67,7 +82,7 @@ O bot deve ser capaz de lidar com os seguintes tipos de consultas e entradas:
 >
 > * **Perguntas reconhecidas**. Essas são as perguntas de "cenário de melhor caso" que você espera dos usuários.
 > * **Não há perguntas reconhecidas**. Consultas sobre funcionalidades não suportadas e/ou entradas aleatórias, não relacionadas ou impróprias.
-> * **Perguntas não reconhecidas**: entrada ou entradas que são ininteligível, sem significado ou sem sentido.
+> * **Perguntas não reconhecidas** : entrada ou entradas que são ininteligível, sem significado ou sem sentido.
 
 Exemplos de personalidade de bot e tipos de resposta:
 

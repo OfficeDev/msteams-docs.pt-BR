@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
-ms.openlocfilehash: 6e3f6e09de68cdb00743c6954b999c35ceefcdf7
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: 180a12563d11f9089f8350521a40937edb2e6b3e
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931803"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992643"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -31,19 +31,17 @@ Este artigo aborda razões comuns de falha na validação dos aplicativos enviad
 * Seu aplicativo não deve baixar, instalar ou iniciar automaticamente qualquer código executável no ambiente do usuário. Todos os downloads devem buscar permissões explícitas do usuário.
 * Qualquer material que você associar à sua experiência, como descrições e documentação de suporte, deve ser preciso. Use a verificação ortográfica, a capitalização, a pontuação e a gramática corretas em suas descrições e materiais.
 * Fornecer informações de ajuda e suporte. É altamente recomendável que seu aplicativo inclua um link de ajuda/perguntas frequentes para a experiência do usuário de primeira execução. Para todos os aplicativos pessoais, recomendamos fornecer a página de ajuda como uma guia pessoal para uma melhor experiência do usuário.
-* Os aplicativos não devem tirar o usuário do teams para cenários de usuário principais. Usando módulos de tarefa as guias AMD são recomendadas para exibir informações para o usuário no Teams.
+* Os aplicativos não devem tirar o usuário do teams para cenários de usuário principais. O uso de guias/módulos de tarefas é recomendado para exibir informações para os usuários do teams.
 * Aumente o número de versão do aplicativo no manifesto se você fizer alterações de manifesto no seu envio.
 * O aplicativo não deve retirar os usuários do teams para cenários de usuário principais. Os destinos de link em aplicativos não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams, por exemplo, dentro de módulos e guias de tarefas.
 * Os aplicativos pessoais permitem que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe.
-* As guias de canal não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
-* As guias de canal que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, e não uma guia.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fornecer uma experiência clara e simples de entrada/saída e inscrição
 
 Seção *Consulte também* [1100,5 — controle de cliente](/legal/marketplace/certification-policies#11005-customer-control)
 
 * Se seu aplicativo ou suplemento depender de contas ou serviços externos, a experiência de entrada/saída e inscrição deverá ser aparente e alcançável em todos os recursos do seu aplicativo.
-* Se houver uma opção de entrada explícita fornecida para o usuário, deverá haver uma opção de saída correspondente (mesmo que o aplicativo esteja usando autenticação de SSO/[silenciosa](~/tabs/how-to/authentication/auth-silent-aad.md)).
+* Se houver uma opção de entrada explícita fornecida para o usuário, deverá haver uma opção de saída correspondente (mesmo que o aplicativo esteja usando a [autenticação silenciosa](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * A opção de saída deve apenas desconectar o usuário da capacidade do seu aplicativo e não do cliente do teams.
 * No mínimo, a opção de saída deve desconectar o usuário dos mesmos recursos acessados com a opção de entrada. Por exemplo, se a opção de entrada incluir uma extensão de mensagens e uma guia, a opção de saída deve incluir a extensão de mensagens e a guia.
 
@@ -53,8 +51,17 @@ Seção *Consulte também* [1100,5 — controle de cliente](/legal/marketplace/c
   * Conectar uma conta/serviço => desconectar uma conta/serviço.
   * Autorizar uma conta/serviço => desautorizar/negar uma conta/serviço.
   * Registrar uma conta/serviço => cancelar o registro/cancelar a assinatura de uma conta/serviço.
-* Se seu aplicativo requer uma conta ou serviço, você deve fornecer uma maneira de o usuário se inscrever ou criar uma solicitação de inscrição. Uma exceção poderá ser concedida se o aplicativo for um aplicativo empresarial.
-* Certifique-se de fornecer orientação de avanço para um novo usuário sobre como se inscrever para usar seus serviços de aplicativos. Se um link de inscrição pronto não estiver disponível, um modo claro para frente poderá ser fornecido na página de descrição do aplicativo, na mensagem de boas-vindas, na mensagem de ajuda e na janela de entrada onde você solicitar que o usuário entre em seus serviços. Os aplicativos que não têm um fluxo de inscrição fácil também podem incluir uma guia de ajuda ou um link para uma página da Web, onde um novo usuário pode ver orientações detalhadas sobre como configurar seu aplicativo com o Microsoft Teams.  Isso é para garantir que um novo usuário não seja exibido um obstáculo ao tentar o aplicativo pela primeira vez.
+* Se seu aplicativo requer uma conta ou serviço, você deve fornecer uma maneira de o usuário se inscrever ou criar uma solicitação de inscrição. Uma exceção pode ser concedida se seu aplicativo requer uma licença para usar. No entanto, esses cenários confiram uma maneira clara de ser fornecida uma nova assinatura de usuário.
+* Certifique-se de fornecer orientação de avanço para um novo usuário sobre como se inscrever para usar seus serviços de aplicativos. Se um link de inscrição pronto não estiver disponível, o modo claro para frente poderá ser fornecido nas seguintes áreas
+
+> [!div class="checklist"]
+>
+> * nas seções de descrição do seu aplicativo;
+> * na mensagem de boas-vindas do aplicativo;
+> * na mensagem de ajuda do seu aplicativo;
+> * na janela em que você pede que um usuário entre em seus serviços;
+
+* Os aplicativos que não têm um fluxo de inscrição fácil também podem incluir uma guia de ajuda ou um link para uma página da Web, onde um novo usuário pode ver orientações detalhadas sobre como configurar seu aplicativo com o Microsoft Teams.  Isso é para garantir que um novo usuário não seja bloqueado ao tentar o aplicativo pela primeira vez.
 * A funcionalidade de entrada/saída deve funcionar em clientes móveis. Verifique se você está usando o [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) versão 1.4.1 ou posterior.
 
 Para obter informações adicionais sobre autenticação, consulte:
@@ -73,19 +80,23 @@ Para obter informações adicionais sobre autenticação, consulte:
 > [!TIP]
 > Certifique-se de que o aplicativo exibe um indicador de carregamento ou alguma forma de aviso quando o aplicativo está demorando mais do que o esperado para responder.
 
-### <a name="9989-tab-content-should-not-have-excessive-chrome-or-layered-navigation"></a>O conteúdo da guia &#9989; não deve ter uma navegação em camadas ou cromo excessivo
+### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>O conteúdo da guia &#9989; não deve ter uma navegação em camadas ou cromo excessivo
 
 * As guias devem fornecer conteúdo focalizado e evitar elementos de interface do usuário desnecessários. Em geral, isso geralmente se refere à navegação desnecessária/aninhada em camadas, uma interface do usuário estranha ou irrelevante ao lado do conteúdo ou qualquer link que leva o usuário a conteúdo não relacionado. Por exemplo, abaixo está um modo de exibição de guia que omite menus de navegação e apenas exibe o conteúdo principal:
 
-![Modo de exibição da Web do SharePoint](~/assets/images/faq/web-sp.png)  
-![Exibição da guia do SharePoint](~/assets/images/faq/tab-sp.png)
+![Modo de exibição da Web do SharePoint](../../../../assets/images/faq/web-sp.png)  
+![Exibição da guia do SharePoint](../../../../assets/images/faq/tab-sp.png)
 
 * As guias devem ter natureza clara e não incluir a navegação complexa.
+* As guias de canal que têm recursos de edição complexos no aplicativo devem abrir o modo de exibição editor em uma janela múltipla, e não uma guia.
+* As guias de canal não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
 * As guias não devem apresentar uma barra de aplicativos com ícones no trilho esquerdo que entram em conflito com a navegação do teams principal.
-* As guias que têm recursos de edição complexos no aplicativo devem abrir o modo de exibição do editor em várias janelas, e não na guia.
+* Guias com recursos de edição complexos no aplicativo devem abrir o modo de exibição editor em uma janela múltipla, e não na guia.
 * Se houver várias opções de exibição, considere ter um menu de configuração de tabulação para o usuário escolher. Por exemplo, em vez de incorporar um menu dentro da guia, coloque o menu na página de configuração para que o modo de exibição de tabulação real seja limpo e focado.
+* Inclua uma guia *ajuda* como uma guia estática para avisar os usuários sobre como configurar, inscrever e usar o aplicativo.
+* Inclua uma guia de *configurações* disponível no cabeçalho do aplicativo.
 
-![Página de configuração de grande ideia](~/assets/images/faq/wideidea.png)
+![Página de configuração de grande ideia](../../../../assets/images/faq/wideidea.png)
 
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>A configuração da guia &#9989; deve acontecer na tela configuração
 
@@ -98,11 +109,11 @@ Para obter informações adicionais sobre autenticação, consulte:
 * A experiência de configuração deve permanecer no contexto do Microsoft Teams. O usuário não deve ter que sair da experiência de configuração para criar conteúdo e, em seguida, retornar ao Teams para fixá-lo.
 * Use a área de visor disponível de forma eficiente. Não desperdice o uso de logotipos grandes dentro da configuração pop up
 
-![O OneNote permite que os usuários colem um link do OneNote em não é possível encontrar anotações](~/assets/images/faq/tab-onenote-config.png)
+![O OneNote permite que os usuários colem um link do OneNote em não é possível encontrar anotações](../../../../assets/images/faq/tab-onenote-config.png)
 
-![Os usuários sempre podem criar um novo plano no Planner, caso não haja nenhum existente](~/assets/images/faq/tab-planner-config.png)
+![Os usuários sempre podem criar um novo plano no Planner, caso não haja nenhum existente](../../../../assets/images/faq/tab-planner-config.png)
 
-![O SharePoint também permite que o usuário Cole diretamente um link do SharePoint](~/assets/images/faq/tab-sp-config.png)
+![O SharePoint também permite que o usuário Cole diretamente um link do SharePoint](../../../../assets/images/faq/tab-sp-config.png)
 
 ### <a name="9989-bots-must-always-be-responsive-and-fail-gracefully"></a>Os bots de &#9989; devem sempre ser responsivos e falhar normalmente
 
@@ -110,18 +121,20 @@ O bot deve ser responsivo para qualquer comando e não para o usuário. Aqui est
 
 * **Usar listas de comandos**. Analisar a entrada do usuário ou prever a intenção do usuário é difícil. Em vez de permitir que os usuários adivinhem o que o seu bot pode fazer, forneça uma lista de comandos que seu bot entenda.
 
-![Lista de comandos de fluxo](~/assets/images/faq/flow-bot.png)
+![Lista de comandos de fluxo](../../../../assets/images/faq/flow-bot.png)
 
 * **Incluir um comando help**. É provável que os usuários digitem "ajuda" quando forem perdidos ou quando o bot não responder conforme o esperado. Inclua um comando help que descreva como o valor do aplicativo será experiente em todos os comandos válidos.
 
-![Comando Flow Help](~/assets/images/faq/flow-help.png)
+![Comando Flow Help](../../../../assets/images/faq/flow-help.png)
 
 * **Inclua o conteúdo da ajuda ou orientações quando seu bot for perdido**. Quando o bot não entende a entrada do usuário, ele deve sugerir uma ação alternativa. Por exemplo, *"Eu não entendo. Digite "ajuda" para obter mais informações. "* Não responda com uma mensagem de erro ou simplesmente, *"não compreendo"*. Use essa oportunidade para ensinar seus usuários.
 
 * **Use cartões adaptáveis e módulos de tarefas para tornar sua resposta de bot clara e acionável** 
  [Cartões adaptáveis com botões que chamam módulos de tarefa](/task-modules-and-cards/task-modules/task-modules-bots) aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em oposição ao usuário que está digitando os comandos. Também as respostas de bot não devem ser textuais com texto longo. Os bots devem fazer uso de cartões adaptáveis & módulos de tarefas em vez de interface de usuário baseada em chat de conversa e respostas de texto demoradas
 
-* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md#bots).)
+* **Considere todos os escopos**. Certifique-se de que o bot forneça respostas apropriadas quando for mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o seu bot não fornecer um contexto significativo dentro do escopo pessoal ou do Teams, desabilite esse escopo por meio do manifesto. (Consulte o `bots` bloco na [referência do esquema de manifesto do Microsoft Teams](../../../../resources/schema/manifest-schema.md#bots).)
+
+* **Incluir equipe, chat de grupo ou conversa 1:1**. As notificações de bot devem incluir uma equipe, um chat de grupo ou uma conversa de um-para-um com conteúdo relevante para o público.
 
 * Não **envie dados confidenciais**. Os bots não devem enviar dados confidenciais para uma equipe, um chat de grupo ou uma conversa 1:1, onde há uma audiência que não deve ser capaz de exibir esses dados
 
@@ -161,7 +174,7 @@ Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui u
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensagens de boas-vindas no escopo pessoal
 
 * **Torne sua mensagem concisa e informativa**.  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
-![Bot e bot dinning](~/assets/images/faq/cafe-bot.png)
+![Bot e bot dinning](../../../../assets/images/faq/cafe-bot.png)
 
 * **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."* , *"é isso que eu posso fazer..."*.
 
@@ -170,22 +183,45 @@ Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui u
 As coisas são um pouco diferentes quando o bot é adicionado pela primeira vez a um canal. Normalmente, você não deve enviar uma mensagem 1:1 para todas as pessoas da equipe, mas o bot pode enviar uma mensagem de boas-vindas no canal.
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; capacidade de resposta móvel, sem vendas diretas ou pagamentos
-* Suas guias, cartões adaptáveis, mensagens de bot e conteúdo nos módulos de tarefas devem ser responsivos para os tamanhos de telas de dispositivos móveis do varios.
+
+* Suas guias, cartões adaptáveis, mensagens de bot e conteúdo nos módulos de tarefas devem ser responsivos para uma variedade de tamanhos de telas de dispositivos móveis.
 * Os aplicativos que dão suporte ao iOS devem estar totalmente funcionais no dispositivo iPad mais recente usando a versão mais recente do iOS.
-* Não deve incluir referências diretas para compras no aplicativo, ofertas de avaliação, interface do usuário que visa fazer a venda de versões pagas ou links para qualquer loja online, onde os usuários podem comprar ou adquirir outros conteúdos, aplicativos ou suplementos de seu aplicativo do Microsoft Teams no so móvel (Android, iOS).
+* Não deve incluir referências diretas para compras no aplicativo, ofertas de avaliação, ofertas para versões pagas ou links para qualquer loja online, onde os usuários podem comprar ou adquirir outros conteúdos, aplicativos ou suplementos do aplicativo do Microsoft Teams no sistema operacional móvel (Android, iOS).
 * A versão iOS ou Android do suplemento não deve mostrar qualquer interface do usuário ou idioma ou um link para outros aplicativos, suplementos ou sites que pedem que o usuário pague.
 * A política de privacidade associada e as páginas de termos de uso também devem ser livres de qualquer UI de comércio ou links de armazenamento.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; não postar dados confidenciais para uma audiência não destinado a exibir os dados
-Seu aplicativo do Microsoft Teams não deve postar informações confidenciais, como instrumento de cartão de crédito/pagamento financeiro, informações de identificação pessoal, integridade ou rastreamento de contato para uma audiência que não se destina a exibir esses dados.
+
+O aplicativo do Microsoft Teams não deve postar dados confidenciais, como instrumento de cartão de crédito/pagamento financeiro, informações de identificação pessoal (PIN), integridade ou rastreamento de contato para uma audiência que não se destina a exibir esses dados.
 
 ### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; não transmite detalhes de pagamento financeiro ou transações financeiras completas por meio de seu aplicativo do teams
+
 * O aplicativo do Microsoft Teams não deve solicitar que os usuários façam um pagamento diretamente dentro da interface do teams
 * Os aplicativos podem não transmitir detalhes do instrumento financeiro através do usuário na interface do aplicativo. Os aplicativos só poderão transmitir links para serviços de pagamento seguro para os usuários se isso for divulgado nos termos de uso do aplicativo, política de privacidade e qualquer página de perfil ou site para o aplicativo antes que um usuário concorde em usar o aplicativo.
 
-### <a name="9989-clear-warning-before-downloading-any-files-or-exes-into-users-environment"></a>&#9989; limpar aviso antes de baixar arquivos ou EXEs no ambiente do usuário
-Avise os usuários antes de o aplicativo baixar qualquer arquivo ou EXEs na máquina ou no ambiente do usuário
+### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; limpar aviso antes de baixar arquivos ou executáveis ( `.exe` ) no ambiente de um usuário
 
+Avise os usuários antes que seu aplicativo Baixe qualquer arquivo ou executável ( `.exe`  ) no computador ou no ambiente do usuário.
+
+### <a name="9989-messaging-extensions-should-provide-help-text-and-be-easy-to-read"></a>&#9989; extensões de mensagens devem fornecer texto de ajuda e ser fácil de ler
+
+* A extensão de mensagens baseada em pesquisa deve fornecer texto de ajuda sobre como Pesquisar com eficiência (por exemplo, mostrar a entrada de exemplos).
+* Os módulos de tarefa devem incluir um ícone e um nome curto em que eles estão contidos ou criados no aplicativo.
+* Os executáveis de extensão de mensagem `@mention` devem ser claros, fáceis de entender e fáceis de ler.
+![Extensão de mensagem](../../../../assets/images/faq/message-extension.png)
+
+## <a name="app-category-mapping"></a>Mapeamento de categoria de aplicativo
+
+| Categoria Teams       | Categorias de computador  |
+|:---------------------|:---------------|
+| Análise e BI | Análise, visualização de dados e BI |
+| Desenvolvedor e ti | Ferramentas de desenvolvedor, administrador de ti |
+| Educação | Educação |
+| Recursos humanos | Recursos humanos e recrutamento |
+| Produtividade | Gerenciamento de conteúdo, arquivos e documentos, produtividade, treinamento e tutoriais e utilitários |
+| Gerenciamento de projeto | Comunicação, gerenciamento de projetos, fluxo de trabalho e gerenciamento de negócios |
+| Vendas e suporte | Gerenciamento de clientes e de contatos, suporte ao cliente, gerenciamento financeiro, vendas e marketing |
+| Social e divertido | Galerias de imagens e vídeos, estilo de vida, notícias e clima, social, viagem e navegação |
 
 > [!div class="nextstepaction"]
-> [Saiba mais sobre as políticas de aprovação do teams app](/legal/marketplace/certification-policies#1140-teams) 
+> [Saiba mais sobre as políticas de aprovação do teams app](/legal/marketplace/certification-policies#1140-teams)
