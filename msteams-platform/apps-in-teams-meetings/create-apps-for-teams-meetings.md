@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: cf42d660c9b4a82f8e28d4d4379194c1bcc681e1
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796166"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997968"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Criar aplicativos para reuniões do Teams (Developer Preview)
 
@@ -27,7 +27,9 @@ ms.locfileid: "48796166"
 
 1. Algumas APIs de reunião, como `GetParticipant` exigirão um [registro de bot e uma ID de aplicativo de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para gerar tokens de autenticação.
 
-1. Os desenvolvedores devem aderir às diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes de diálogo na](design/designing-in-meeting-dialog.md) reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
+1. Como desenvolvedor, você deve cumprir as diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes da caixa](design/designing-in-meeting-dialog.md) de diálogo na reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
+
+1. Observe que, para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades de evento da reunião. Esses eventos podem estar dentro da caixa de diálogo de reunião (consulte o `bot Id` parâmetro de conclusão `Notification Signal API` ) e outras superfícies no ciclo de vida da reunião
 
 ## <a name="meeting-apps-api-reference"></a>Referência da API de aplicativos de reunião
 
@@ -52,6 +54,7 @@ Confira a documentação [obter o contexto da guia de suas equipes](../tabs/how-
 > * O Microsoft Teams atualmente não oferece suporte a grandes listas de distribuição ou tamanhos de lista de mais de 350 participantes da `GetParticipant` API.
 >
 > * O suporte para o SDK da estrutura de bot estará disponível em breve.
+
 
 #### <a name="request"></a>Solicitação
 
@@ -97,7 +100,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Carga de resposta
 <!-- markdownlint-disable MD036 -->
 
-**função** em "reunião" pode ser *organizador* , *apresentador* ou *participante* .
+**função** em "reunião" pode ser *organizador* , *apresentador* ou *participante*.
 
 **Exemplo 1**
 
@@ -128,10 +131,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>Códigos de resposta
 
-**403** : o aplicativo não tem permissão para obter informações do participante. Esta será a resposta de erro mais comum e será disparada quando o aplicativo não estiver instalado na reunião, como quando o aplicativo é desabilitado pelo administrador de locatários ou bloqueado durante a mitigação de site ativo.  
-**200** : informações do participante recuperadas com êxito  
-**401** : token inválido  
-**404** : a reunião não existe ou o participante não pode ser encontrado.
+**403** : o aplicativo não tem permissão para obter informações do participante. Esta será a resposta de erro mais comum e será disparada quando o aplicativo não estiver instalado na reunião, como quando está desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ativo.  
+**200** : as informações do participante foram recuperadas com êxito.  
+**401** : token inválido.  
+**404** : o participante não pode ser encontrado. 
+**500** : a reunião expirou (mais de 60 dias desde o término da reunião) ou o participante não tem permissões com base em sua função.
+
+**Em breve**
+
+**404** : a reunião expirou ou o participante não pode ser encontrado. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>API NotificationSignal
@@ -155,7 +163,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> O completionBotId no externalResourceUrl na carga de solicitação abaixo é um parâmetro opcional. É a ID do bot que é declarada no manifesto. O bot receberá um objeto result.
+> *  Na carga solicitada abaixo, o `completionBotId` parâmetro de `externalResourceUrl` é opcional. É o `Bot ID` que é declarado no manifesto. O bot receberá um objeto result.
+> * Os parâmetros Width e Height de externalResourceUrl devem estar em pixels. Consulte as [diretrizes de design](design/designing-in-meeting-dialog.md) para garantir que as dimensões estejam dentro dos limites permitidos.
+> * A URL é a página carregada como `<iframe>` dentro da caixa de diálogo em reunião. O domínio da URL deve estar na matriz do aplicativo `validDomains` em seu manifesto do aplicativo.
+
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -167,7 +178,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -181,7 +192,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -198,7 +209,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
@@ -261,13 +272,13 @@ A guia `context` e `scopes` as propriedades funcionam em harmonia para permitir 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar seu aplicativo para cenários de reunião
 
 > [!NOTE]
-> * Para que seu aplicativo fique visível na Galeria de guias, ele precisa **suportar guias configuráveis** e o **escopo de chat de grupo** .
+> * Para que seu aplicativo fique visível na Galeria de guias, ele precisa **suportar guias configuráveis** e o **escopo de chat de grupo**.
 >
 > * Os clientes móveis dão suporte a guias apenas nas superfícies de reunião prévia e posterior. As experiências de reunião (painel e caixa de diálogo na reunião) no Mobile estarão disponíveis em breve. Siga as [orientações para guias em celular](../tabs/design/tabs-mobile.md) ao criar suas guias para dispositivos móveis. 
 
 ### <a name="pre-meeting"></a>Pré-reunião
 
-Os usuários com funções de organizador e/ou apresentador adicionam guias a uma reunião usando o botão mais ➕ nas páginas **chat** de reunião e **detalhes** da reunião. As extensões de mensagens são adicionadas ao via menu de reticências/estouro &#x25CF;&#x25CF;&#x25CF; localizada abaixo da área de mensagem de composição no chat. Os bots são adicionados a um chat de reunião usando a **@** tecla "" e selecionando **obter bots** .
+Os usuários com funções de organizador e/ou apresentador adicionam guias a uma reunião usando o botão mais ➕ nas páginas **chat** de reunião e **detalhes** da reunião. As extensões de mensagens são adicionadas ao via menu de reticências/estouro &#x25CF;&#x25CF;&#x25CF; localizada abaixo da área de mensagem de composição no chat. Os bots são adicionados a um chat de reunião usando a **@** tecla "" e selecionando **obter bots**.
 
 ✔ A identidade do usuário *deve* ser confirmada por meio de [guias de SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após essa autenticação, o aplicativo pode recuperar a função de usuário por meio da API getparticipante.
 

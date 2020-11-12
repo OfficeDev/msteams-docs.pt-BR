@@ -3,12 +3,12 @@ title: Empacotar seu aplicativo
 description: Saiba como empacotar seu aplicativo para teste, upload e publicação no Microsoft Teams
 keywords: pacote de aplicativos do teams
 ms.topic: conceptual
-ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397698"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997983"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Criar um pacote de aplicativos para seu aplicativo do Microsoft Teams
 
@@ -28,7 +28,7 @@ O arquivo de manifesto deve ser nomeado como "manifest.js" e estar no nível sup
 > [!TIP]
 > Especifique o esquema no início do manifesto para habilitar o IntelliSense ou suporte semelhante do editor de código:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Ícones
 

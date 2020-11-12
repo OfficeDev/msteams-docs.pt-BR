@@ -3,12 +3,12 @@ title: Pesquisar com extensões de mensagens
 description: Descreve como desenvolver extensões de mensagens baseadas na pesquisa
 keywords: pesquisa de extensões de mensagens de extensões de mensagens do teams
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801039"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997997"
 ---
 # <a name="search-with-messaging-extensions"></a>Pesquisar com extensões de mensagens
 
@@ -30,7 +30,7 @@ Para a extensão de mensagens com base na pesquisa, defina o `type` parâmetro c
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,7 +87,7 @@ Para a extensão de mensagens com base na pesquisa, defina o `type` parâmetro c
 
 Você pode testar sua extensão de mensagens carregando seu aplicativo.
 
-Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais. Escolha o botão **mais opções** (**&#8943;**) na caixa redigir e escolha sua extensão de mensagens.
+Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais. Escolha o botão **mais opções** ( **&#8943;** ) na caixa redigir e escolha sua extensão de mensagens.
 
 ## <a name="add-event-handlers"></a>Adicionar manipuladores de eventos
 

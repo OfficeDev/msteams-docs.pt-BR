@@ -4,14 +4,14 @@ description: Detalhes de teste de consentimento específico do recurso no Teams 
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
+ms.topic: tutorial
 keywords: Gráfico de postagem do AAD RSC do Microsoft Teams Authorization SSO
-ms.openlocfilehash: a7384222e5e4cba164f918186ce53b4c1b702016
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531263"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995006"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testar permissões de consentimento específicas do recurso no Teams
 
@@ -20,8 +20,8 @@ O consentimento específico de recurso (RSC) é uma integração da API do Micro
 > [!NOTE]
 >Para testar as permissões de RSC, seu arquivo de manifesto de aplicativo do Microsoft Teams deve incluir uma chave de **webApplicationInfo** preenchida com os seguintes campos:
 >
-> - **ID** — sua ID de aplicativo do Azure AD, *consulte* [registrar seu aplicativo no portal do Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **recurso** — qualquer cadeia de caracteres, *consulte* a observação em [atualizar seu manifesto de aplicativo do Microsoft Teams](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **ID**  — sua ID de aplicativo do Azure AD, *consulte* [registrar seu aplicativo no portal do Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **recurso**  — qualquer cadeia de caracteres, *consulte* a observação em  [atualizar seu manifesto de aplicativo do Microsoft Teams](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **permissões de aplicativo** – permissões de RSC para seu aplicativo, *consulte* [permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -54,10 +54,10 @@ O consentimento específico de recurso (RSC) é uma integração da API do Micro
 
 Para verificar se as permissões de RSC estão sendo atendidas pela carga da solicitação de API, você precisará copiar o [código de teste JSON do RSC](test-rsc-json-file.md) para o seu ambiente local e atualizar os seguintes valores:
 
-1. `azureADAppId`— ID de aplicativo do Azure AD do seu aplicativo.
-1. `azureADAppSecret`— seu segredo de aplicativo do Azure AD (senha)
-1. `token_scope`— o escopo é obrigatório para obter um token-definir o valor comohttps://graph.microsoft.com/.default
-1. `teamGroupId`— Você pode obter a ID do grupo de equipe do cliente do teams da seguinte maneira:
+1. `azureADAppId`  — ID de aplicativo do Azure AD do seu aplicativo.
+1. `azureADAppSecret`  — seu segredo de aplicativo do Azure AD (senha)
+1. `token_scope`  — o escopo é obrigatório para obter um token-definir o valor como https://graph.microsoft.com/.default
+1. `teamGroupId` — Você pode obter a ID do grupo de equipe do cliente do teams da seguinte maneira:
 
 > [!div class="checklist"]
 >

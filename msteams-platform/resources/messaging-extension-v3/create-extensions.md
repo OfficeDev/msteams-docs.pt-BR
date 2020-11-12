@@ -2,12 +2,12 @@
 title: Iniciar ações com extensões de mensagens
 description: Criar extensões de mensagens baseadas em ação para permitir que os usuários disparem serviços externos
 keywords: pesquisa de extensões de mensagens de extensões de mensagens do teams
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801040"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997990"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar ações com extensões de mensagens
 
@@ -29,7 +29,7 @@ Para iniciar ações de uma extensão de mensagens, defina o `type` parâmetro c
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -226,7 +226,7 @@ Veja a seguir um exemplo do `value` objeto que contém os detalhes da mensagem q
 
 Você pode testar sua extensão de mensagens carregando seu aplicativo. Consulte [carregando seu aplicativo em uma equipe](~/concepts/deploy-and-publish/apps-upload.md) para obter detalhes.
 
-Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais. Escolha o botão **mais opções** (**&#8943;**) na caixa redigir e escolha sua extensão de mensagens.
+Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais. Escolha o botão **mais opções** ( **&#8943;** ) na caixa redigir e escolha sua extensão de mensagens.
 
 ## <a name="collecting-input-from-users"></a>Coleta de entrada de usuários
 

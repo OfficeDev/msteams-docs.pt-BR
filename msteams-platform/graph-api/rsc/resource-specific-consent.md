@@ -4,14 +4,14 @@ description: Descreve o consentimento específico do recurso no Microsoft Teams 
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: Gráfico de autorização do AAD SSO do Microsoft Teams
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796187"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995020"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimento específico de recurso (RSC)
 
@@ -25,18 +25,18 @@ O consentimento específico de recurso (RSC) é uma integração da API do Micro
 |Permissão de aplicativo| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obter as configurações da equipe.|
-|TeamSettings. ReadWrite. Group|Atualize as configurações da equipe.|
+|TeamSettings.ReadWrite.Group|Atualizar as configurações para esta equipe.|
 |ChannelSettings.Read.Group|Obtenha os nomes de canal, as descrições de canal e as configurações de canal para esta equipe.|
-|ChannelSettings. ReadWrite. Group|Atualize os nomes de canal, as descrições de canal e as configurações de canal para essa equipe.|
+|ChannelSettings.ReadWrite.Group|Atualize os nomes de canal, as descrições de canal e as configurações de canal para essa equipe.|
 |Channel.Create.Group|Criar canais nesta equipe.|
 |Channel.Delete.Group|Excluir canais nesta equipe.|
 |ChannelMessage.Read.Group |Obtenha as mensagens do canal da equipe.|
-|TeamsAppInstallation. Read. Group|Obtenha uma lista dos aplicativos instalados pela equipe.|
+|TeamsAppInstallation.Read.Group|Obtenha uma lista dos aplicativos instalados pela equipe.|
 |TeamsTab.Read.Group|Obtenha uma lista das guias da equipe.|
 |TeamsTab.Create.Group|Criar guias nesta equipe.|
-|TeamsTab. ReadWrite. Group|Atualize as guias da equipe.|
+|TeamsTab.ReadWrite.Group|Atualize as guias desta equipe.|
 |TeamsTab.Delete.Group|Excluir as guias dessa equipe.|
-|TeamMember. Read. Group|Obter membros da equipe.|
+|TeamMember.Read.Group|Obter membros da equipe.|
 
 >[!NOTE]
 >As permissões específicas do recurso estão disponíveis apenas para aplicativos do teams instalados no cliente do Teams e atualmente não fazem parte do portal do Azure Active Directory.
@@ -60,7 +60,7 @@ Você pode habilitar ou desabilitar o [consentimento do proprietário do grupo](
 > [!div class="checklist"]
 >
 >- Entre no [portal do Azure](https://portal.azure.com) como um administrador [global/administrador da empresa](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
- > - [Selecione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise applications**  =>  configurações de consentimento do usuário **de consentimento e permissões de** aplicativos corporativos do Azure Active Directory  =>  **User consent settings** .
+ > - [Selecione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise applications**  =>  configurações de consentimento do usuário **de consentimento e permissões de** aplicativos corporativos do Azure Active Directory  =>  **User consent settings**.
 > - Habilitar, desabilitar ou limitar o consentimento do usuário com o controle chamado de **proprietário de grupo com consentimento para aplicativos acessando dados** (o padrão é **permitir o consentimento do proprietário do grupo para todos os proprietários do grupo** ). Para que um proprietário de equipe instale um aplicativo usando RSC, o consentimento do proprietário do grupo deve estar habilitado para esse usuário.
 
 ![configuração do Azure RSC](../../assets/images/azure-rsc-configuration.png)
@@ -147,9 +147,9 @@ Depois que o aplicativo tiver sido instalado em uma equipe, você poderá usar o
 > - No cliente do Microsoft Teams, selecione **equipes** na barra de navegação da extrema esquerda.
 > - Selecione a equipe onde o aplicativo está instalado no menu suspenso.
 > - Selecione o ícone **mais opções** (&#8943;).
-> - Selecione **obter link para a equipe** .
+> - Selecione **obter link para a equipe**.
 > - Copie e salve o valor de **GroupId** da cadeia de caracteres.
-> - Faça logon no **Explorador do Graph** .
+> - Faça logon no **Explorador do Graph**.
 > - Faça uma chamada **Get** para o ponto de extremidade a seguir: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . O campo clientAppId na resposta será mapeado para a appId especificada no manifesto do aplicativo Teams.
   ![Resposta do explorador do Graph para obter uma chamada.](../../assets/images/graph-permissions.png)
  

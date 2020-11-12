@@ -3,12 +3,12 @@ title: Enviar mensagens a Conectores e WebHooks
 description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237962"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998004"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -135,7 +135,7 @@ Para todos os outros detalhes sobre as Ações do cartão do conector, confira *
 
 Siga estas etapas para ver como enviar um cartão simples para um Conector.
 
-1. No Microsoft Teams, escolha **Mais opções** (**&#8943;**) ao lado do nome do canal e escolha **Conectores**.
+1. No Microsoft Teams, escolha **Mais opções** ( **&#8943;** ) ao lado do nome do canal e escolha **Conectores**.
 2. Role pela lista de Conectores para o **Webhook de entrada** e escolha **Adicionar**.
 3. Digite um nome para o Webhook, carregue uma imagem para associar aos dados dele e escolha **Criar**.
 4. Copie o Webhook para a área de transferência e salve-o. Será necessário a URL do Webhook para enviar informações ao Microsoft Teams.
@@ -185,7 +185,7 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -264,7 +264,7 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
 > - O campo `"contentType"` deve ser definido para o tipo de cartão adaptável.
 > - O objeto `"content"` é o cartão formatado em JSON.
 
-** 3. ** Teste seu cartão adaptável com o Postman
+**3.** Teste seu cartão adaptável com o Postman
 
 Você pode testar seu cartão adaptável usando o [Postman](https://www.postman.com) para enviar uma solicitação POST para o URL que você criou ao configurar o webhook de entrada. Cole seu arquivo JSON no corpo da solicitação e visualize sua mensagem de cartão adaptável no Teams.
 

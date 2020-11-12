@@ -3,17 +3,17 @@ title: Contribuindo para a documentação do Microsoft Teams
 description: etapas para criar e publicar a documentação do Microsoft Teams
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
-ms.openlocfilehash: 5e76c6521792d7db1b589d7e6ad3fe0ac2bd8479
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.topic: contributor-guide
+ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "44800941"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995013"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Contribuindo para a documentação do Microsoft Teams
 
-A [documentação do teams](/microsoftteams/platform/overview) é parte da biblioteca de documentação técnica do [Microsoft docs](https://docs.microsoft.com/) . O conteúdo é organizado em grupos chamados docsets, cada um deles representando um grupo de documentos relacionados gerenciados como uma entidade única. Os artigos no mesmo docset têm a mesma extensão de caminho de URL após *docs <span></span> . Microsoft.com*.  Por exemplo, `/docs.microsoft.com/microsoftteams/...` é o início do caminho de arquivo do teams docset. Os artigos do teams são escritos em sintaxe de [redução](#markdown-reference) e hospedados no [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+A [documentação do teams](/microsoftteams/platform/overview) é parte da biblioteca de documentação técnica do [Microsoft docs](https://docs.microsoft.com/) . O conteúdo é organizado em grupos chamados docsets, cada um deles representando um grupo de documentos relacionados gerenciados como uma entidade única. Os artigos no mesmo docset têm a mesma extensão de caminho de URL após *docs <span></span> . Microsoft.com*.  Por exemplo,  `/docs.microsoft.com/microsoftteams/...`   é o início do caminho de arquivo do teams docset. Os artigos do teams são escritos em sintaxe de  [redução](#markdown-reference) e hospedados no [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## <a name="set-up-your-workspace"></a>Configurar seu espaço de trabalho
 
@@ -22,7 +22,7 @@ A [documentação do teams](/microsoftteams/platform/overview) é parte da bibli
 > * Instale o [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Instale o [Visual Studio Code](https://code.visualstudio.com/) (vs Code).
 > * Instalar o [pacote de criação de docs](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) diretamente a partir do vs Code Marketplace
-<br>&emsp;&emsp;ou
+<br>&emsp;&emsp; ou
 
 > [!div class="checklist"]
 >
@@ -34,7 +34,7 @@ A [documentação do teams](/microsoftteams/platform/overview) é parte da bibli
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Analisar o guia de colaboradores de docs da Microsoft
 
-O [guia contribuidores](/contribute) oferece orientações para criar, publicar e atualizar o conteúdo técnico no Microsoft/docs. *Confira também*o [estilo de docs e início rápido de voz](/contribute/style-quick-start) .
+O [guia contribuidores](/contribute) oferece orientações para criar, publicar e atualizar o conteúdo técnico no Microsoft/docs. *Confira também* o [estilo de docs e início rápido de voz](/contribute/style-quick-start) .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guias de escrita, estilo e conteúdo da Microsoft
 
@@ -58,10 +58,10 @@ Para obter mais informações sobre hiperlinks e caminhos de arquivo, *consulte*
 > Para fazer referência a um artigo que faz *parte da* plataforma de docset do Microsoft Teams:<br>
 > &emsp;&#x2714; usar um caminho relativo sem uma barra de avanço à esquerda.<br>
 > &emsp;&#x2714; incluir a extensão do arquivo de redução.<br>
->Ex: **diretório pai/diretório/caminho-para-article. MD** — >`[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+>Ex:  **diretório pai/diretório/caminho-para-article. MD** — > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
 > Para fazer referência a um <https://docs.microsoft.com/> artigo da biblioteca de docs da Microsoft () que *não faz parte da* plataforma do teams docset:<br>
 > &emsp;&#x2714; use um caminho relativo que comece com uma barra.<br>
-> &emsp;&#x2714; não inclua a extensão de arquivo. <br> Ex: **/docset/address-to-file-location** — >`[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+> &emsp;&#x2714; não inclua a extensão de arquivo. <br> Ex:  **/docset/address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
 >
 
 ## <a name="code-samples-and-snippets"></a>Exemplos de código e trechos

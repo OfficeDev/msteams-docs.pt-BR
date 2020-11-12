@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452810"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997955"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -20,6 +20,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|11/11/2020| Esquema de manifesto atualizado para a versão 1,8| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |9/30/2020|O envio e o recebimento de arquivos para bots em dispositivos móveis agora são suportados.|[Enviar e receber arquivos através do bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nova orientação "introdução às equipes do Microsoft Teams"|[Criar sua primeira visão geral do App Teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Suporte para aplicativos de equipes em reunião (versão prévia)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
