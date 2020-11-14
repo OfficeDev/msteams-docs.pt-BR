@@ -3,12 +3,14 @@ title: Modelos de aplicativo do Microsoft Teams
 description: Links e descrições de modelos de aplicativos para a plataforma Microsoft Teams
 ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
-ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.author: lajanuar
+author: laujan
+ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
+ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397726"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "49019615"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -302,6 +304,23 @@ O incidentes reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  
 :::row:::
 :::column span="2":::
     ![Exibição de escopo pessoal de verificação de incidentes](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="new-employee-onboarding9734"></a>Nova integração de funcionários&#9734;
+
+A integração de novos funcionários é uma solução integrada de integração do Microsoft Teams e [do SharePoint](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) que permite que sua organização forneça uma experiência de integração consistente e de alta qualidade para os funcionários em sua jornada de novo contratação. O aplicativo pode ser usado por equipes de recursos humanos e gerentes de contratação para fornecer informações relevantes durante todo o processo de orientação e indução e por novas contratações para compartilhar comentários, fornecer introduções e concluir tarefas de integração.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    Cartão de boas **-vindas do novo funcionário** ![ Imagem do cartão de boas-vindas de novo funcionário](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Nova lista de verificação** ![ de funcionários Imagem da nova lista de verificação de funcionários](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
