@@ -2,12 +2,12 @@
 title: Obter contexto para a guia
 description: Descreve como obter o contexto de usuário para suas guias
 keywords: contexto de usuário de guias do teams
-ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 8c94c4fd895896186ddda20bfaafd1d6ccdc1e73
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800951"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346795"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obter contexto para a guia do Microsoft Teams
 
@@ -47,6 +47,36 @@ Use espaços reservados em suas configurações ou URLs de conteúdo. O Microsof
 * {GroupId}: a ID do grupo do Office 365 em que a guia reside.
 * {tid}: a ID do locatário do Azure AD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como LanguageID-countryId (por exemplo, en-US).
+* {osLocaleInfo}: informações de localidade mais detalhadas do sistema operacional do usuário, se disponíveis. Pode ser usado em conjunto com:
+    * o pacote @microsoft do/Globe NPM para garantir que seu aplicativo respeite a data do sistema operacional do usuário e
+    * configuração de formato de hora.
+* {Identificação_da_sessão}: ID exclusiva da sessão atual do teams para uso na correlação de dados de telemetria.
+* {channelId}: a ID do Microsoft Teams para o canal ao qual o conteúdo está associado.
+* {channelName}: o nome do canal ao qual o conteúdo está associado.
+* {chatmanager}: o Microsoft Teams ID para o chat com o qual o conteúdo está associado.
+* {URL}: URL de conteúdo desta guia.
+* {websiteUrl}: URL do site desta guia.
+* {favoriteChannelsOnly}: sinalizador que permite selecionar apenas os canais favoritos.
+* {favoriteTeamsOnly}: sinalizador que permite selecionar apenas o Microsoft Teams favoritos.
+* {userTeamRole}: função do usuário atual na equipe.
+* {teamtype}: o tipo da equipe.
+* {isTeamLocked}: o status bloqueado da equipe.
+* {isTeamArchived}: o status arquivado da equipe.
+* {IsFullScreen}: indica se a guia está no modo de tela inteira.
+* {teamSiteUrl}: o site raiz do SharePoint associado à equipe.
+* {teamSiteDomain}: o domínio do site do SharePoint raiz associado à equipe.
+* {teamSitePath}: o caminho relativo para o site do SharePoint associado à equipe.
+* {channelRelativeUrl}: o caminho relativo para a pasta do SharePoint associada ao canal.
+* {tenantSKU}: o tipo de licença para o locatário do usuário atual.
+* {ringid}: ID de anel atual.
+* {appSessionId}: ID exclusiva da sessão atual para uso na correlação de dados de telemetria.
+* {completionBotId}: especifica uma ID de bot para enviar o resultado da interação do usuário com o módulo de tarefa.
+* {Conversation}: a ID da conversa.
+* {hostClientType}: tipo do cliente host. (Os valores possíveis são: Android, Ios, Web, desktop e Rigel.)
+* {frameContext}: o contexto em que a URL da guia é carregada (conteúdo, tarefa, configuração, remoção, sidePanel).
+* {SharePoint}: isso só está disponível quando hospedado no SharePoint.
+* {MeetingID}: é usado por guia ao executar no contexto da reunião.
+* {userlicensetype} O tipo de licença para o usuário atual.
 
 >[!NOTE]
 >O `{upn}` espaço reservado anterior agora é preterido. Para compatibilidade com versões anteriores, no momento é sinônimo de `{loginHint}` .
@@ -102,12 +132,12 @@ A variável de contexto se parecerá com o exemplo a seguir.
 
 Quando a página de conteúdo é carregada em um canal privado, os dados recebidos da `getContext` chamada serão ofuscados para proteger a privacidade do canal. Os campos a seguir são alterados quando a página de conteúdo está em um canal privado. Se a página utiliza qualquer um dos valores abaixo, você precisará verificar o `channelType` campo para determinar se a página está carregada em um canal privado e responder de forma adequada.
 
-* `groupId`-Undefined para canais privados
-* `teamId`-Definir o threadId do canal privado
-* `teamName`-Definir o nome do canal privado
-* `teamSiteUrl`-Definir como a URL de um site distinto exclusivo do SharePoint para o canal privado
-* `teamSitePath`-Definir como o caminho de um site exclusivo do SharePoint distinto para o canal privado
-* `teamSiteDomain`-Definir para o domínio de um domínio de site do SharePoint distinto e exclusivo para o canal privado
+* `groupId` -Undefined para canais privados
+* `teamId` -Definir o threadId do canal privado
+* `teamName` -Definir o nome do canal privado
+* `teamSiteUrl` -Definir como a URL de um site distinto exclusivo do SharePoint para o canal privado
+* `teamSitePath` -Definir como o caminho de um site exclusivo do SharePoint distinto para o canal privado
+* `teamSiteDomain` -Definir para o domínio de um domínio de site do SharePoint distinto e exclusivo para o canal privado
 
 ## <a name="theme-change-handling"></a>Tratamento de alterações de temas
 

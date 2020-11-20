@@ -5,17 +5,14 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997968"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358011"
 ---
-# <a name="create-apps-for-teams-meetings-developer-preview"></a>Criar aplicativos para reuniões do Teams (Developer Preview)
-
->[!IMPORTANT]
-> Os recursos incluídos no Microsoft Teams Developer Preview são fornecidos apenas para fins de acesso antecipado, teste e comentários. Eles podem sofrer alterações antes de ficarem disponíveis no lançamento público e não devem ser usados em aplicativos de produção.
+# <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
 ## <a name="prerequisites-and-considerations"></a>Pré-requisitos e considerações
 
@@ -35,7 +32,7 @@ ms.locfileid: "48997968"
 
 |API|Descrição|Solicitação|Origem|
 |---|---|----|---|
-|**UserContext**| Obter informações contextuais para exibir conteúdo relevante em uma guia do teams. |_**microsoftTeams. GetContext (() => {/ *...* / } )**_|SDK de cliente do Microsoft Teams|
+|**UserContext**| Obter informações contextuais para exibir conteúdo relevante em uma guia do teams. |_**microsoftTeams. GetContext (() => {/*...* / } )**_|SDK de cliente do Microsoft Teams|
 |**Getparticipante**|Essa API permite que um bot busque informações do participante por ID de reunião e ID de participante.|**Obter** _**/v1/Meetings/{meetingId}/participants/{participantId}? tenantid = {tenantid}**_ |SDK do Microsoft bot Framework|
 |**NotificationSignal** |Os sinais de reunião serão entregues usando a seguinte API de notificação de conversa existente (para chat do usuário-bot). Essa API permite que os desenvolvedores sinalizem com base na ação do usuário final para mostrar uma bolha de diálogo na reunião.|**Postar** _**/v3/Conversations/{conversationId}/Activities**_|SDK do Microsoft bot Framework|
 
@@ -43,7 +40,7 @@ ms.locfileid: "48997968"
 
 Confira a documentação [obter o contexto da guia de suas equipes](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) para obter orientação sobre como identificar e recuperar informações contextuais para o seu conteúdo de guia. Como parte da extensibilidade de reuniões, um novo valor foi adicionado para a carga de resposta:
 
-✔ **MeetingID** : usada por uma guia ao executar no contexto da reunião.
+✔ **MeetingID**: usada por uma guia ao executar no contexto da reunião.
 
 ### <a name="getparticipant-api"></a>API getparticipante
 
@@ -100,7 +97,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Carga de resposta
 <!-- markdownlint-disable MD036 -->
 
-**função** em "reunião" pode ser *organizador* , *apresentador* ou *participante*.
+**função** em "reunião" pode ser *organizador*, *apresentador* ou *participante*.
 
 **Exemplo 1**
 
@@ -131,15 +128,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>Códigos de resposta
 
-**403** : o aplicativo não tem permissão para obter informações do participante. Esta será a resposta de erro mais comum e será disparada quando o aplicativo não estiver instalado na reunião, como quando está desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ativo.  
-**200** : as informações do participante foram recuperadas com êxito.  
-**401** : token inválido.  
-**404** : o participante não pode ser encontrado. 
-**500** : a reunião expirou (mais de 60 dias desde o término da reunião) ou o participante não tem permissões com base em sua função.
+**403**: o aplicativo não tem permissão para obter informações do participante. Esta será a resposta de erro mais comum e será disparada quando o aplicativo não estiver instalado na reunião, como quando está desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ativo.  
+**200**: as informações do participante foram recuperadas com êxito.  
+**401**: token inválido.  
+**404**: o participante não pode ser encontrado. 
+**500**: a reunião expirou (mais de 60 dias desde o término da reunião) ou o participante não tem permissões com base em sua função.
 
 **Em breve**
 
-**404** : a reunião expirou ou o participante não pode ser encontrado. 
+**404**: a reunião expirou ou o participante não pode ser encontrado. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>API NotificationSignal
@@ -222,10 +219,10 @@ await context.sendActivity(replyActivity);
 
 #### <a name="response-codes"></a>Códigos de resposta
 
-**201** : atividade com sinal enviado com êxito  
-**401** : token inválido  
-**403** : o aplicativo não tem permissão para enviar o sinal. Nesse caso, a carga deve conter uma mensagem de erro mais detalhada. Podem existir vários motivos: aplicativo desabilitado pelo administrador de locatários, bloqueado durante a mitigação de sites ativos, etc.  
-**404** : o chat de reunião não existe  
+**201**: atividade com sinal enviado com êxito  
+**401**: token inválido  
+**403**: o aplicativo não tem permissão para enviar o sinal. Nesse caso, a carga deve conter uma mensagem de erro mais detalhada. Podem existir vários motivos: aplicativo desabilitado pelo administrador de locatários, bloqueado durante a mitigação de sites ativos, etc.  
+**404**: o chat de reunião não existe  
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitar o aplicativo para reuniões do teams
 
@@ -260,11 +257,11 @@ As funcionalidades de aplicativos de reuniões são declaradas em seu **configur
 
 A guia `context` e `scopes` as propriedades funcionam em harmonia para permitir que você determine onde você deseja que seu aplicativo apareça. As guias no `team` `groupchat` escopo ou podem ter mais de um contexto. Os valores possíveis para a propriedade Context são os seguintes:
 
-* **channelTab** : uma guia no cabeçalho de um canal de equipe.
-* **privateChatTab** : uma guia no cabeçalho de um grupo bate-papo entre um conjunto de usuários que não estão no contexto de uma equipe ou reunião.
-* **meetingChatTab** : uma guia no cabeçalho de um chat de grupo entre um conjunto de usuários no contexto de uma reunião agendada.
-* **meetingDetailsTab** : uma guia no cabeçalho do modo de exibição detalhes da reunião do calendário.
-* **meetingSidePanel** : um painel na reunião aberto por meio da barra unificada (u-bar).
+* **channelTab**: uma guia no cabeçalho de um canal de equipe.
+* **privateChatTab**: uma guia no cabeçalho de um grupo bate-papo entre um conjunto de usuários que não estão no contexto de uma equipe ou reunião.
+* **meetingChatTab**: uma guia no cabeçalho de um chat de grupo entre um conjunto de usuários no contexto de uma reunião agendada.
+* **meetingDetailsTab**: uma guia no cabeçalho do modo de exibição detalhes da reunião do calendário.
+* **meetingSidePanel**: um painel na reunião aberto por meio da barra unificada (u-bar).
 
 > [!NOTE]
 > A propriedade "Context" atualmente não é suportada e, portanto, será ignorada em clientes móveis
@@ -284,7 +281,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
  ✔ Com base na função de usuário, o aplicativo agora terá a capacidade de apresentar experiências específicas de função. Por exemplo, um aplicativo de sondagem pode permitir que somente os organizadores e os apresentadores criem uma nova pesquisa.
 
-> **Observação** : as atribuições de função podem ser alteradas enquanto uma reunião estiver em andamento.  *Consulte* [funções em uma reunião do teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
+> **Observação**: as atribuições de função podem ser alteradas enquanto uma reunião estiver em andamento.  *Consulte* [funções em uma reunião do teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
 ### <a name="in-meeting"></a>Na reunião
 
@@ -298,6 +295,10 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ Consulte o fluxo de autenticação do Microsoft [Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é muito semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2,0 diretamente. *Confira também* a [plataforma de identidade da Microsoft e o fluxo de código de autorização do OAuth 2,0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
+✔ Extensão de mensagem deve funcionar conforme o esperado quando um usuário está em um modo de exibição na reunião e deve ser capaz de postar cartões de extensão de mensagem de composição.
+
+✔ AppName em-Meeting-ToolTip deve indicar o nome do aplicativo na-barra U da reunião.
+
 #### <a name="in-meeting-dialog"></a>**caixa de diálogo na reunião**
 
 ✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](design/designing-in-meeting-dialog.md).
@@ -308,9 +309,11 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ Como parte da carga de solicitação de notificação, inclua a URL onde o conteúdo a ser expedido está hospedado.
 
+✔ Caixa de diálogo de reunião não deve usar o módulo de tarefa.
+
 > [!NOTE]
 >
-> * Essas notificações são persistentes por natureza. Você deve chamar a função [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente após um usuário executar uma ação no modo de exibição da Web. Esse é um requisito para o envio de aplicativos. *Consulte também* , [SDK do teams: módulo de tarefa](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * Essas notificações são persistentes por natureza. Você deve chamar a função [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente após um usuário executar uma ação no modo de exibição da Web. Esse é um requisito para o envio de aplicativos. *Consulte também*, [SDK do teams: módulo de tarefa](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 >
 > * Se quiser que seu aplicativo dê suporte a usuários anônimos, a carga de solicitação de chamada inicial deve confiar no `from.id`  (ID do usuário) solicitar metadados no `from` objeto, e não no `from.aadObjectId` (Azure Active Directory ID do usuário) solicitar metadados. *Consulte* [usando módulos de tarefas em guias](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [criar e enviar o módulo de tarefa](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 

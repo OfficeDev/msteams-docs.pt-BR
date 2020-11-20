@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Saiba como projetar efetivamente uma guia na reunião do Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877026"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346669"
 ---
 # <a name="design-an-in-meeting-tab"></a>Desenvolva uma guia na reunião
 
@@ -37,16 +37,16 @@ O exemplo a seguir mostra a guia na reunião que exibe o conteúdo do aplicativo
 
 A guia na reunião exibe o conteúdo do aplicativo usando as seguintes dimensões:
 
-* **Largura** : 280 pixels para a área de WebView. Há 20 pixels de enchimento nos lados esquerdo e direito do WebView.
-* **Altura** : sangramento completo para a parte inferior da guia. Há 20 pixels de preenchimento entre a área da WebView e o cabeçalho da guia.
+* **Largura**: 280 pixels para a área de WebView. Há 20 pixels de enchimento nos lados esquerdo e direito do WebView.
+* **Altura**: sangramento completo para a parte inferior da guia. Há 20 pixels de preenchimento entre a área da WebView e o cabeçalho da guia.
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface de usuário de uma guia na reunião da extensão de reunião." border="false":::
 
-1. **Ícone do aplicativo** : o ponto de entrada para a guia na reunião.
-1. **Cabeçalho** : inclui o nome da guia.
-1. **Nome** : o nome da instância de tabulação.
-1. **Dispensar** : descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.
-1. **WebView** : exibe todo o conteúdo de aplicativo de terceiros.
+1. **Ícone do aplicativo**: o ponto de entrada para a guia na reunião.
+1. **Cabeçalho**: inclui o nome da guia.
+1. **Nome**: o nome da instância de tabulação.
+1. **Dispensar**: descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.
+1. **WebView**: exibe todo o conteúdo de aplicativo de terceiros.
 
 ## <a name="behavior"></a>Comportamento
 
@@ -125,7 +125,7 @@ O conteúdo da guia ajusta o layout e o local da guia na reunião.
 
 #### <a name="do-design-for-a-dark-theme"></a>Fazer: design para um tema escuro
 
-As reuniões do teams são otimizadas para o modo escuro para ajudar a reduzir o ruído visual e cognitiva, para que os usuários possam se concentrar na discussão e no conteúdo compartilhado.
+As reuniões do teams são otimizadas para o modo escuro para ajudar a reduzir o ruído visual e cognitiva, para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. A guia na reunião deve aplicar um tema escuro e deve seguir as diretrizes.
 
    :::column-end:::
    :::column span="":::

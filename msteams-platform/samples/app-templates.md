@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019615"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358025"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -307,7 +307,7 @@ O incidentes reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>Nova integração de funcionários&#9734;
+## <a name="new-employee-onboarding-9734"></a>Nova integração de funcionários &#9734;
 
 A integração de novos funcionários é uma solução integrada de integração do Microsoft Teams e [do SharePoint](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) que permite que sua organização forneça uma experiência de integração consistente e de alta qualidade para os funcionários em sua jornada de novo contratação. O aplicativo pode ser usado por equipes de recursos humanos e gerentes de contratação para fornecer informações relevantes durante todo o processo de orientação e indução e por novas contratações para compartilhar comentários, fornecer introduções e concluir tarefas de integração.
 
@@ -360,6 +360,20 @@ As respostas rápidas são um aplicativo do Microsoft Teams que oferece uma solu
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Exemplo de exibição de respostas](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>Refletir &#9734;
+
+O reflita é um aplicativo personalizado de [extensão de mensagens](../messaging-extensions/what-are-messaging-extensions.md) do Microsoft Teams que fornece um recurso seguro e inclusivo para que os membros da equipe compartilhem o estado de seus colegas e/ou os líderes de grupo diretamente no Teams. O aplicativo está disponível nos chats de canal, grupo, reunião e 1:1 e a resposta de check-in pode ser definida como público, privado para remetente ou totalmente anônimo.
+
+[Obter no GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **Sondagem de bom desempenho**
+    
+    ![Refletir o aplicativo de pesquisa do usuário](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>Suporte remoto
 

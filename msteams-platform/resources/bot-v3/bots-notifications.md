@@ -5,12 +5,12 @@ keywords: eventos de bots do teams
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877040"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346725"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Manipular eventos de bot no Microsoft Teams
 
@@ -185,7 +185,7 @@ O `conversationUpdate` evento com o `membersAdded` objeto no payload é enviado 
 O bot recebe um `conversationUpdate` com `membersAdded` quando um usuário o adiciona diretamente para chat pessoal. Nesse caso, a carga que seu bot recebe não contém o `channelData.team` objeto. Você deve usá-lo como um filtro caso queira que seu bot ofereça uma mensagem de [boas-vindas](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) diferente dependendo do escopo.
 
 > [!NOTE]
-> Para bots com escopo pessoal, seu bot sempre receberá o `conversationUpdate` evento uma única vez, mesmo que o bot seja removido e adicionado novamente. Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente. Veja um [ exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.
+> Para bots com escopo pessoal, seu bot receberá o `conversationUpdate` evento várias vezes, mesmo que o bot seja removido e adicionado novamente. Para desenvolvimento e testes, você pode achar útil adicionar uma função auxiliar que permitirá redefinir seu bot completamente. Veja um [ exemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou um [exemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obter mais detalhes sobre como implementar isso.
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>Exemplo de esquema: bot adicionado ao contexto pessoal
 

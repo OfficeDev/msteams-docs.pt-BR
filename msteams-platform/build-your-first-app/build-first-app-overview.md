@@ -5,12 +5,12 @@ description: Saiba como começar a usar o desenvolvimento de aplicativos do Micr
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931789"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346809"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo Microsoft Teams
 
@@ -22,11 +22,11 @@ Aqui está uma ideia do que você saberá depois de percorrer as lições.
 
 > [!div class="checklist"]
   >
-  > * **Comece a trabalhar rapidamente com o Teams Toolkit** : o Microsoft Teams Toolkit para Visual Studio Code cuida da criação do seu projeto de aplicativo e do scaffolding, para que você possa ter um aplicativo em execução em minutos.
-  > * **Configurar seu aplicativo com o app Studio** : Especifique os recursos e serviços que seu aplicativo de equipe usa.
-  > * **Escopo do seu aplicativo público** : Crie um aplicativo do teams para uso pessoal, colaboração ou ambos.
-  > * **Obtenha experiência com ferramentas e SDKs do Microsoft Teams** : Personalize seu aplicativo (por exemplo, altere seu esquema de cores para corresponder ao tema do Teams) com a ajuda do SDK do Microsoft Teams JavaScript. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
-  > * **Expanda em seu aplicativo** : em todas as lições, você encontrará tópicos relacionados que provavelmente você está interessado (como diretrizes de autenticação e Design).
+  > * **Comece a trabalhar rapidamente com o Teams Toolkit**: o Microsoft Teams Toolkit para Visual Studio Code cuida da criação do seu projeto de aplicativo e do scaffolding, para que você possa ter um aplicativo em execução em minutos.
+  > * **Configurar seu aplicativo com o app Studio**: Especifique os recursos e serviços que seu aplicativo de equipe usa.
+  > * **Escopo do seu aplicativo público**: Crie um aplicativo do teams para uso pessoal, colaboração ou ambos.
+  > * **Obtenha experiência com ferramentas e SDKs do Microsoft Teams**: Personalize seu aplicativo (por exemplo, altere seu esquema de cores para corresponder ao tema do Teams) com a ajuda do SDK do Microsoft Teams JavaScript. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
+  > * **Expanda em seu aplicativo**: em todas as lições, você encontrará tópicos relacionados que provavelmente você está interessado (como diretrizes de autenticação e Design).
 
 ## <a name="teams-app-fundamentals"></a>Conceitos básicos do aplicativo Teams
 
@@ -74,6 +74,9 @@ Você pode obter uma conta de teste gratuita do teams que permite que o aplicati
 1. Verifique se agora você tem a opção **carregar um aplicativo personalizado** .
 
 </details>
+
+> [!Note]
+> Se ainda não conseguir Sideload aplicativos, consulte [habilitar aplicativos personalizados do Teams e ativar o carregamento de aplicativos personalizados](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ### <a name="install-your-development-tools"></a>Instalar suas ferramentas de desenvolvimento
 

@@ -2,12 +2,12 @@
 title: Adicionar ações de cartão em um bot
 description: Descreve as ações do cartão no Microsoft Teams e como usá-las em seus bots
 keywords: ações de cartões de bots da equipe
-ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44800966"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346774"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
@@ -24,7 +24,7 @@ Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão su
 > [!NOTE]
 >* O Microsoft Teams não dá suporte `CardAction` a tipos não listados na tabela anterior.
 >* O Microsoft Teams não oferece suporte à `potentialActions` propriedade.
->* As ações do cartão são diferentes das [ações sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) no serviço bot Framework/Azure bot. As ações sugeridas não são suportadas no Microsoft Teams: se você deseja que os botões apareçam em uma mensagem do bot do Teams, use um cartão.
+>* As ações do cartão são diferentes das [ações sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no serviço bot Framework/Azure bot. As ações sugeridas não são suportadas no Microsoft Teams: se você deseja que os botões apareçam em uma mensagem do bot do Teams, use um cartão.
 >* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado para o canal (eles não funcionarão enquanto o cartão estiver na caixa de mensagem de composição).
 
 O Microsoft Teams também oferece suporte a [ações de cartões adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usados apenas por cartões adaptáveis. Essas ações estão listadas em suas próprias seções no final desta referência.
@@ -74,7 +74,7 @@ A `value` propriedade pode ser uma cadeia de caracteres JSON serializada ou um o
 
 ### <a name="inbound-message-example"></a>Exemplo de mensagem de entrada
 
-`replyToId`contém a ID da mensagem da qual a ação do cartão veio. Use-o se você quiser atualizar a mensagem.
+`replyToId` contém a ID da mensagem da qual a ação do cartão veio. Use-o se você quiser atualizar a mensagem.
 
 ```json
 {
@@ -229,13 +229,16 @@ Os cartões adaptáveis dão suporte a três tipos de ação:
 
 Além das ações mencionadas acima, você pode modificar a carga de cartão adaptável `Action.Submit` para dar suporte a ações da estrutura de bot existentes usando uma `msteams` propriedade no `data` objeto of `Action.Submit` . As seções abaixo detalham como usar ações da estrutura de bot existentes com cartões adaptáveis.
 
+> [!NOTE]
+> Adicionar `msteams` a dados, com uma ação de estrutura de bot, não funciona com um módulo de tarefa de cartão adaptável.
+
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartões adaptáveis com ação messageBack
 
 Para incluir uma `messageBack` ação com um cartão adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definido como`messageBack` |
+| `type` | Definido como `messageBack` |
 | `displayText` | Opcional. Ecoado pelo usuário para o fluxo de chat quando a ação é executada. Este texto *não* é enviado ao bot. |
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto da ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use esta propriedade para simplificar o desenvolvimento de bot: seu código pode verificar uma única propriedade de nível superior para a lógica de bot de expedição. |
@@ -263,7 +266,7 @@ Para incluir uma `imBack` ação com um cartão adaptável, inclua os seguintes 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definido como`imBack` |
+| `type` | Definido como `imBack` |
 | `value` | Cadeia de caracteres que precisa ser ecoada de volta no chat |
 
 #### <a name="example"></a>Exemplo
@@ -287,7 +290,7 @@ Para incluir uma `signin` ação com um cartão adaptável, inclua os seguintes 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definido como`signin` |
+| `type` | Definido como `signin` |
 | `value` | Defina como a URL para a qual você deseja redirecionar  |
 
 #### <a name="example"></a>Exemplo

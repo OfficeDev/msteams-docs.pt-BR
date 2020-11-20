@@ -1,17 +1,17 @@
 ---
-title: Testando o consentimento específico do recurso no Teams
+title: Testar o consentimento específico do recurso no Teams
 description: Detalhes de teste de consentimento específico do recurso no Teams usando o postmaster
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Gráfico de postagem do AAD RSC do Microsoft Teams Authorization SSO
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995006"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366851"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Testar permissões de consentimento específicas do recurso no Teams
 
@@ -91,4 +91,5 @@ Execute toda a coleção Permissions para cada chamada de API. As permissões qu
 
 > [!div class="nextstepaction"]
 >
-> [Saiba mais sobre a API do Graph e o Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Saiba mais: API e equipes do Microsoft Graph](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+

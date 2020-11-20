@@ -2,12 +2,12 @@
 title: Registrando um bot de chamada e reunião para o Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams
 keywords: áudio do bot de chamada mídia de vídeo de áudio/vídeo
-ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209750"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346844"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrar um bot de chamada para o Microsoft Teams
 
@@ -37,7 +37,7 @@ Se quiser que o IDE valide corretamente o manifest.jsno esquema para o seu bot d
 A criação de um novo bot é abordada em mais detalhes no tópico [criar um bot para o Microsoft Teams](../how-to/create-a-bot-for-teams.md) , mas repetiremos alguns deles:
 
 1. Use este link para criar um novo bot: `https://dev.botframework.com/bots/new` . Se, em vez disso, você selecionar o botão *criar um bot* no portal da estrutura do bot, você criará seu bot no Microsoft Azure, para o qual você precisará de uma conta do Azure.
-1. Adicione o canal do Microsoft Teams. Clique na guia "chamada" na página Microsoft Teams Channel e selecione **habilitar chamadas**e, em seguida, atualizar **webhook (para chamadas)** com a URL https onde você receberá notificações de entrada, por exemplo `https://contoso.com/teamsapp/api/calling` ,. Consulte [Configurando canais](/bot-framework/portal-configure-channels) para obter mais informações sobre como configurar canais.
+1. Adicione o canal do Microsoft Teams. Clique na guia "chamada" na página Microsoft Teams Channel e selecione **habilitar chamadas** e, em seguida, atualizar **webhook (para chamadas)** com a URL https onde você receberá notificações de entrada, por exemplo `https://contoso.com/teamsapp/api/calling` ,. Consulte [Configurando canais](/bot-framework/portal-configure-channels) para obter mais informações sobre como configurar canais.
   ![Configurar informações de canal do Microsoft Teams](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>Adicionar permissões do Microsoft Graph
@@ -50,8 +50,8 @@ O Microsoft Graph expõe permissões granulares que controlam o acesso que os ap
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Iniciar chamadas de saída 1:1 do aplicativo (visualização)|Permite que o aplicativo faça chamadas de saída para um único usuário e transfira chamadas para usuários no diretório da sua organização, sem um usuário conectado.|Sim|
 |_Calls.InitiateGroupCall.All_|Iniciar a saída de chamadas de grupo do aplicativo (visualização)|Permite que o aplicativo faça chamadas para vários usuários e adicione participantes a reuniões em sua organização, sem um usuário conectado.|Sim|
-|_Calls.JoinGroupCall.All_|Ingresse em reuniões e chamadas de grupo como um aplicativo (visualização)|Permite que o aplicativo ingresse em reuniões agendadas e chamadas de grupo em sua organização, sem um usuário conectado. O aplicativo será associado aos privilégios de um usuário do diretório para reuniões em seu locatário.|Sim|
-|_Calls.JoinGroupCallasGuest.All_|Ingressar em reuniões e chamadas de grupo como um convidado (visualização)|Permite que o aplicativo ingresse anonimamente no grupo chamadas e em reuniões agendadas em sua organização, sem um usuário conectado. O aplicativo ingressará como convidado para reuniões em seu locatário.|Sim|
+|_Calls.JoinGroupCall.All_|Ingresse em reuniões e chamadas de grupo como um aplicativo (visualização)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Sim|
+|_Calls.JoinGroupCallasGuest.All_|Ingressar em reuniões e chamadas de grupo como um convidado (visualização)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Sim|
 |_Calls. AccessMedia. All_ <sup> _Veja abaixo_</sup>|Acessar fluxos de mídia em uma chamada como um aplicativo (visualização)|Permite que o aplicativo obtenha acesso direto aos fluxos de mídia em uma chamada sem um usuário conectado.|Sim|
 
 > [!IMPORTANT]
@@ -66,7 +66,7 @@ O Microsoft Graph expõe permissões granulares que controlam o acesso que os ap
 
 ### <a name="assigning-permissions"></a>Atribuindo permissões
 
-Você deve configurar as permissões de aplicativo para o bot com antecedência. Recomendamos o uso do [portal de registro de aplicativos da Microsoft](https://apps.dev.microsoft.com/) , conforme descrito [aqui](/graph/auth_register_app_v2) , porque o seu bot foi configurado; no entanto, você ainda pode usar o [portal do Azure](https://aka.ms/aadapplist) se preferir usar o [ponto de extremidade do Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Você deve configurar as permissões de aplicativo para o bot com antecedência usando o [portal do Azure](https://aka.ms/aadapplist) se preferir usar o [ponto de extremidade do Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="getting-tenant-administrator-consent"></a>Obtendo consentimento do administrador de locatários
 

@@ -1,13 +1,13 @@
 ---
-title: Suporte a logon único para bots
+title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de entrada ou o serviço do Azure bot com o suporte a cartão OAuth.
 keywords: token, token de usuário, suporte SSO para bots
-ms.openlocfilehash: 0b896f7e13847f529075b5562a6c3eb2542482bf
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877834"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346851"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte de logon único (SSO) para bots
 
@@ -22,9 +22,9 @@ O OAuth 2,0 é um padrão aberto para autenticação e autorização usados pelo
 1. O bot envia uma mensagem com um OAuthCard que contém a `tokenExchangeResource` propriedade. Ele diz às Teams para obter um token de autenticação para o aplicativo bot. O usuário recebe mensagens em todos os pontos de extremidade ativos do usuário.
 
 > [!NOTE]
-> ✔ Um usuário pode ter mais de um ponto de extremidade ativo por vez.  
-> ✔ O token de bot é recebido de todos os pontos de extremidade ativos do usuário.
-> ✔ Suporte de logon único exige que o aplicativo seja instalado no escopo pessoal.
+>* Um usuário pode ter mais de um ponto de extremidade ativo por vez.  
+>* O token de bot é recebido de todos os pontos de extremidade ativos do usuário.
+>* No momento, o suporte a logon único exige que o aplicativo seja instalado no escopo pessoal.
 
 2. Se esta for a primeira vez que o usuário atual usou seu aplicativo bot, haverá um prompt de solicitação para o consentimento (se o consentimento for necessário) ou para lidar com a autenticação de depuração (como a autenticação de dois fatores).
 
@@ -36,7 +36,7 @@ O OAuth 2,0 é um padrão aberto para autenticação e autorização usados pelo
   
 6. O token será analisado no aplicativo bot para extrair as informações necessárias, como o endereço de email do usuário.
   
-## <a name="develop-an-single-sign-on-microsoft-teams-bot"></a>Desenvolver um bot de logon único do Microsoft Teams
+## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>Desenvolver um bot de logon único do Microsoft Teams
   
 As etapas a seguir são necessárias para desenvolver um bot do Microsoft Teams SSO:
 
@@ -46,7 +46,7 @@ As etapas a seguir são necessárias para desenvolver um bot do Microsoft Teams 
 
 ### <a name="create-an-azure-account"></a>Crie uma conta do Azure
 
-Esta etapa é semelhante ao fluxo de [fluxo de SSO de guia](../../../tabs/how-to/authentication/auth-aad-sso.md) :
+Esta etapa é semelhante ao [fluxo de SSO de guia](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
 1. Obtenha sua [ID de aplicativo do Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Especifique as permissões de que seu aplicativo precisa para o ponto de extremidade do Azure AD e, opcionalmente, o Microsoft Graph.
@@ -79,7 +79,7 @@ Adicione novas propriedades ao manifesto do Microsoft Teams:
 
 A solicitação para obter o token é uma solicitação de mensagem POST normal (usando o esquema de mensagens existente). Ele está incluído nos anexos de um OAuthCard. O esquema da classe OAuthCard é definido no [esquema do Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é muito semelhante a um cartão de conexão. O Microsoft Teams tratará essa solicitação como uma aquisição de token silencioso se a `TokenExchangeResource` propriedade for preenchida no cartão. Para o canal Teams, honramos apenas a `Id` propriedade, que identifica exclusivamente uma solicitação de token.
 
-Se esta for a primeira vez que o usuário está usando seu aplicativo e o consentimento do usuário for necessário, o usuário será mostrado em uma caixa de diálogo para continuar com a experiência de consentimento semelhante à seguinte. Quando o usuário seleciona **continue** , duas coisas diferentes ocorrem dependendo se o bot está definido ou não e um botão de entrada no OAuthCard.
+Se esta for a primeira vez que o usuário está usando seu aplicativo e o consentimento do usuário for necessário, o usuário será mostrado em uma caixa de diálogo para continuar com a experiência de consentimento semelhante à seguinte. Quando o usuário seleciona **continue**, duas coisas diferentes ocorrem dependendo se o bot está definido ou não e um botão de entrada no OAuthCard.
 
 ![Caixa de diálogo de consentimento](../../../assets/images/bots/bots-consent-dialogbox.png)
 
@@ -87,7 +87,7 @@ Se o bot definir um botão de entrada, o fluxo de entrada para bots será dispar
 
 Se o bot não fornecer um botão de entrada no cartão, ele acionará o consentimento do usuário para um conjunto mínimo de permissões. Esse token é útil para a autenticação básica e obter o endereço de email do usuário.
 
-**Solicitação de token C# sem um botão de entrada** :
+**Solicitação de token C# sem um botão de entrada**:
 
 ```csharp
 var attachment = new Attachment
@@ -113,7 +113,7 @@ var attachment = new Attachment
 
 A resposta com o token é enviada por meio de uma atividade Invoke com o mesmo esquema que outras pessoas invocam atividades que os bots recebem hoje. A única diferença é o nome de chamada, de **entrada/tokenExchange** e o campo de **valor** que conterá a **ID** (uma cadeia de caracteres) da solicitação inicial para obter o token e o campo de **token** (um valor de cadeia de caracteres incluindo o token). Observe que você pode receber várias respostas para uma determinada solicitação se o usuário tiver vários pontos de extremidade ativos. Você precisará desduplicar as respostas com o token.
 
-**Código C# para responder à manipulação da atividade de invocação** :
+**Código C# para responder à manipulação da atividade de invocação**:
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivity

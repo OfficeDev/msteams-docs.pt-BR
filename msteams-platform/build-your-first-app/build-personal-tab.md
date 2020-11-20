@@ -5,18 +5,18 @@ description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Micro
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931726"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346802"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
 As guias são uma maneira simples de fazer a superfície de conteúdo em seu aplicativo, incorporando essencialmente uma página da Web no Microsoft Teams.
 
-Há dois tipos de guias no Microsoft Teams. Neste tutorial, você criará uma *guia pessoal* , uma página de conteúdo de tela inteira para usuários individuais. (As guias pessoais são as coisas mais próximas de uma experiência de site tradicional no Microsoft Teams.)
+Há dois tipos de guias no Microsoft Teams. Neste tutorial, você criará uma *guia pessoal*, uma página de conteúdo de tela inteira para usuários individuais. (As guias pessoais são as coisas mais próximas de uma experiência de site tradicional no Microsoft Teams.)
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -106,7 +106,7 @@ O [SDK de cliente do Microsoft Teams](https://docs.microsoft.com/javascript/api/
 
 ### <a name="get-context-about-the-teams-client"></a>Obter contexto sobre o cliente Teams
 
-No `Tab.js` arquivo, há uma `microsoftTeams.getContext()` chamada que fornece alguns [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) , entre outros detalhes, o tema de cliente configurado. Graças ao aplicativo scaffolding, use este código como é para acessar a `context` interface e suas propriedades.
+No `Tab.js` arquivo, há uma `microsoftTeams.getContext()` chamada que fornece alguns [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) , entre outros detalhes, o tema de cliente configurado. Graças ao aplicativo scaffolding, use este código como é para acessar a `context` interface e suas propriedades.
 
 ```JavaScript
 componentDidMount(){

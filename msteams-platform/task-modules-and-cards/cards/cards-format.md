@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto do cartão no Microsoft Teams
 keywords: formato de cartões de bots da equipe
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587808"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346704"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -18,7 +18,7 @@ Os cartões dão suporte à formatação somente na propriedade Text, e não nas
 
 O suporte à formatação difere entre diferentes tipos de cartão, e a renderização do cartão pode diferir ligeiramente entre a área de trabalho e os clientes do Mobile Teams, bem como o Microsoft Teams no navegador da área de trabalho.
 
-Você pode incluir uma imagem embutida em qualquer placa do teams. As imagens são formatadas como `.png` , `.jpg` ou `.gif` arquivos, e não devem exceder 1024 × 1024 PX ou 1 MB. GIF animado não é oficialmente suportado. *Consulte* [referência de cartões](./cards-reference.md#inline-card-images)
+Você pode incluir uma imagem embutida em qualquer placa do teams. As imagens são formatadas como  `.png` , `.jpg` ou `.gif` arquivos, e não devem exceder 1024 × 1024 PX ou 1 MB. GIF animado não é oficialmente suportado. *Consulte* [referência de cartões](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Formatando cartões com redução
 
@@ -32,7 +32,7 @@ Há dois tipos de cartões que dão suporte à redução no Microsoft Teams:
 
  Os estilos suportados para `Textblock` `Fact.Title` e `Fact.Value` são:
 
-| Estilo | Exemplo | Markdown |
+| Style | Exemplo | Markdown |
 | --- | --- | --- |
 | bold | **Negrito** | ```**Bold**``` |
 | italic | _Itálico_ | ```_Italic_``` |
@@ -79,7 +79,7 @@ No Android, a formatação de redução de cartão adaptável aparece da seguint
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ No Android, a formatação de redução de cartão adaptável aparece da seguint
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -123,7 +123,7 @@ Os bots e as extensões de mensagens podem incluir menção dentro do conteúdo 
 
 Para incluir uma menção em um cartão adaptável, seu aplicativo precisa incluir os seguintes elementos
 
-* `<at>username</at>`nos elementos de cartão adaptável com suporte
+* `<at>username</at>` nos elementos de cartão adaptável com suporte
 * O `mention` objeto dentro de uma `msteams` propriedade no conteúdo do cartão, que inclui a ID de usuário do Team do usuário que está sendo mencionado
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Cartão adaptável de amostra com menção
@@ -139,7 +139,7 @@ Para incluir uma menção em um cartão adaptável, seu aplicativo precisa inclu
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -161,11 +161,11 @@ Para incluir uma menção em um cartão adaptável, seu aplicativo precisa inclu
 
 Os cartões de conector dão suporte à redução limitada e à formatação HTML. O suporte a HTML é descrito na última seção.
 
-| Estilo | Exemplo | Markdown |
+| Style | Exemplo | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `### Text`|
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `### Text`|
 | tachado | ~~text~~ | `~~text~~` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -202,7 +202,7 @@ No Android, a redução da formatação de cartões de conector tem a seguinte a
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ No Android, a redução da formatação de cartões de conector tem a seguinte a
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -250,18 +250,18 @@ No Android, a redução da formatação de cartões de conector tem a seguinte a
 
 Os cartões de conector dão suporte à redução limitada e à formatação HTML. A redução é descrita na próxima seção.
 
-| Estilo | Exemplo | HTML |
+| Style | Exemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto pré-formatado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `<blockquote>text</blockquote>` |
 | hiperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| link de imagem | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| link de imagem | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 Em cartões de conector, as novas linhas são renderizadas em HTML usando a `<p>` marca.
 
@@ -291,7 +291,7 @@ No Android, a formatação HTML tem a seguinte aparência:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ No Android, a formatação HTML tem a seguinte aparência:
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -338,18 +338,18 @@ No Android, a formatação HTML tem a seguinte aparência:
 
 Marcas HTML têm suporte para cartões simples como o herói e o cartão de miniatura. Não há suporte para redução.
 
-| Estilo | Exemplo | HTML |
+| Style | Exemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| cabeçalho (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| cabeçalho (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | tachado | ~~text~~ | `<strike>text</strike>` |
 | lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto pré-formatado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `<blockquote>text</blockquote>` |
 | hiperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| link de imagem |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| link de imagem |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferenças móveis e de área de trabalho para cartões simples
 
@@ -377,6 +377,6 @@ Formatação de caracteres como negrito e itálico são exibidos corretamente no
 
 Essas capturas de tela foram criadas usando o Teams AppStudio, onde a propriedade Text de um cartão herói foi definida como a cadeia de caracteres a seguir. Você pode testar a formatação em seus próprios cartões modificando esse código.
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

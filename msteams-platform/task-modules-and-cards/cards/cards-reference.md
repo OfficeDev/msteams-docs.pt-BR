@@ -2,12 +2,12 @@
 title: Referência de cartões
 description: Descreve todas as ações de cartões e cartões disponíveis para bots no Microsoft Teams
 keywords: referência de cartões de bots
-ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452607"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346739"
 ---
 # <a name="cards-reference"></a>Referência de cartões
 
@@ -47,12 +47,12 @@ Seu cartão pode conter uma imagem embutida, incluindo um link para a imagem pub
 
 As imagens são dimensionadas para cima ou para baixo em tamanho, mantendo a taxa de proporção para cobrir a área da imagem e, em seguida, cortadas do centro para obter a taxa de proporção apropriada para o cartão.
 
-As imagens devem ter no máximo 1024 × 1024 e 1 MB no formato PNG, JPEG ou GIF; GIF animado não é oficialmente suportado.
+As imagens devem ter no máximo 1024 × 1024 no formato PNG, JPEG ou GIF; GIF animado não é oficialmente suportado.
 
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem |
-| alt | Cadeia de caracteres | Descrição acessível da imagem |
+| alt | Cadeia de Caracteres | Descrição acessível da imagem |
 
 ### <a name="buttons"></a>Botões
 
@@ -70,7 +70,7 @@ Um cartão personalizável que pode conter qualquer combinação de texto, fala,
 
 ### <a name="support-for-adaptive-cards"></a>Suporte para cartões adaptáveis
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -226,7 +226,7 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 
 ### <a name="support-for-hero-cards"></a>Suporte para cartões herói
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -289,7 +289,7 @@ O cartão de lista foi adicionado pelo Microsoft Teams para fornecer funções a
 
 ### <a name="support-for-list-cards"></a>Suporte para cartões de lista
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 |
@@ -299,7 +299,7 @@ O cartão de lista foi adicionado pelo Microsoft Teams para fornecer funções a
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas.|
-| itens | Matriz de itens de lista  ||
+| items | Matriz de itens de lista  ||
 | recolhe | Matriz de objetos Action | Conjunto de ações aplicáveis ao cartão atual. Máximo de 6. |
 
 ### <a name="example-list-card"></a>Exemplo de cartão de lista
@@ -364,7 +364,7 @@ O cartão de conexão do Office 365 fornece um layout flexível com várias seç
 
 ### <a name="support-for-office-365-connector-cards"></a>Suporte para cartões conectores do Office 365
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
@@ -482,7 +482,7 @@ Um cartão que permite que um bot forneça um recibo para o usuário. Normalment
 
 ### <a name="support-for-receipts-cards"></a>Suporte para cartões de recibos
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -502,7 +502,7 @@ A *ação de entrada* pode ser usada de qualquer cartão no Microsoft Teams, e n
 
 ### <a name="support-for-signin-cards"></a>Suporte para placas de entrada
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -520,7 +520,7 @@ Um cartão que normalmente contém uma única imagem em miniatura, um ou mais bo
 
 ### <a name="support-for-thumbnail-cards"></a>Suporte para cartões em miniatura
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -601,7 +601,7 @@ O [layout do carrossel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-ca
 
 ### <a name="support-for-carousel-collections"></a>Suporte para coleções de carrossel
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -625,7 +625,7 @@ As propriedades são as mesmas do herói ou do cartão de miniatura.
 
 O layout de lista mostra uma lista de cartões empilhados verticalmente, opcionalmente com os botões de ação associados.
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Estrutura de bot |
+| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
