@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: f448885e3664209858eb90fa9f0853c3d31e015a
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358011"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409110"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -289,7 +289,8 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ Em seu manifesto de aplicativo, adicione **sidePanel** à matriz de **contexto** , conforme descrito acima.
 
-✔ Na reunião, bem como em todos os cenários, o aplicativo será renderizado em uma guia na reunião que tenha 320px de largura. Sua guia deve ser otimizada para isso. *Consulte* [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔ Na reunião, bem como em todos os cenários, o aplicativo será renderizado em uma guia na reunião que tenha 320px de largura. Sua guia deve ser otimizada para isso. *Consulte* [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔ Consultar o [SDK do teams](../tabs/how-to/access-teams-context.md#user-context) para usar a API **userContext** para rotear as solicitações de acordo.
 

@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validação de aplicativos do Microsoft Teams falha na maioria dos casos de teste com aprovação rápida appsource Publish
-ms.openlocfilehash: 180a12563d11f9089f8350521a40937edb2e6b3e
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: b1333448eb8b8e1e2310114bf95404b74aa95b58
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409103"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido
 
@@ -176,7 +176,7 @@ Notificações apenas bots devem enviar uma mensagem de boas-vindas que inclui u
 * **Torne sua mensagem concisa e informativa**.  Provavelmente, a experiência do usuário com o e o conhecimento do seu aplicativo irão variar. Um usuário pode ter usado seu aplicativo em outra plataforma ou não sabe nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todos os públicos e em algumas frases explique o que o seu bot faz e as maneiras de interagir com ele. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
 ![Bot e bot dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."* , *"é isso que eu posso fazer..."*.
+* **Tornar sua mensagem acionável**. Considere a primeira coisa que você deseja que os usuários façam após instalar seu aplicativo. Há um comando interessante que ele deve tentar? Há outra experiência de integração que precisa saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos, como *"Experimente fazer isso...."*, *"é isso que eu posso fazer..."*.
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensagens de boas-vindas no escopo de equipe/canal
 
@@ -209,19 +209,6 @@ Avise os usuários antes que seu aplicativo Baixe qualquer arquivo ou executáve
 * Os módulos de tarefa devem incluir um ícone e um nome curto em que eles estão contidos ou criados no aplicativo.
 * Os executáveis de extensão de mensagem `@mention` devem ser claros, fáceis de entender e fáceis de ler.
 ![Extensão de mensagem](../../../../assets/images/faq/message-extension.png)
-
-## <a name="app-category-mapping"></a>Mapeamento de categoria de aplicativo
-
-| Categoria Teams       | Categorias de computador  |
-|:---------------------|:---------------|
-| Análise e BI | Análise, visualização de dados e BI |
-| Desenvolvedor e ti | Ferramentas de desenvolvedor, administrador de ti |
-| Educação | Educação |
-| Recursos humanos | Recursos humanos e recrutamento |
-| Produtividade | Gerenciamento de conteúdo, arquivos e documentos, produtividade, treinamento e tutoriais e utilitários |
-| Gerenciamento de projeto | Comunicação, gerenciamento de projetos, fluxo de trabalho e gerenciamento de negócios |
-| Vendas e suporte | Gerenciamento de clientes e de contatos, suporte ao cliente, gerenciamento financeiro, vendas e marketing |
-| Social e divertido | Galerias de imagens e vídeos, estilo de vida, notícias e clima, social, viagem e navegação |
 
 > [!div class="nextstepaction"]
 > [Saiba mais sobre as políticas de aprovação do teams app](/legal/marketplace/certification-policies#1140-teams)

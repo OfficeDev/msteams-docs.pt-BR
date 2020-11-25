@@ -5,12 +5,12 @@ keywords: eventos de bots do teams
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346725"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409047"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Manipular eventos de bot no Microsoft Teams
 
@@ -279,8 +279,42 @@ O `conversationUpdate` evento com o `membersRemoved` objeto no payload é enviad
 
 #### <a name="schema-example-user-removed-from-meeting"></a>Exemplo de esquema: usuário removido da reunião
 
-{       "membersRemoved":        {           "ID": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"         }       ],       "Type": "conversationUpdate",       "timestamp": "2020-09-29T21:15:08.6391139 z", "       ID": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",       "channelId": "msteams",       "ServiceUrl": " https://canary.botapi.skype.com/amer/ ",       "de": {         "ID": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw", "         aadObjectId": "f30ba569-ABEF-4e97-8762-35f85cbae706"       },       "conversa": {    
-        "IsGroup": true,         "tenantid": "e15762ef-a8d8-416B-871c-25516354f1fe",         "ID": "19: meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread. v2"       },       "destinatário": {         "ID": "28:3af3604a-D4FC-486b-911e-86fab41aa91c",         "Name": "EchoBot1_Rename"}, "             ChannelData": {         "locatário": {           "ID": "e15762ef-a8d8-416B-871c-25516354f1fe"         },         "Source": nulo,         "Meeting": "           MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA = ="         }       }    }   
+```
+{   
+      "membersRemoved": 
+        {  
+          "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
+        }   
+      ],   
+      "type": "conversationUpdate",   
+      "timestamp": "2020-09-29T21:15:08.6391139Z",   
+      "id": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",   
+      "channelId": "msteams",   
+      "serviceUrl": "https://canary.botapi.skype.com/amer/",   
+      "from": {   
+        "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
+        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
+      },   
+      "conversation": {    
+        "isGroup": true,   
+        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
+        "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
+      },   
+      "recipient": {   
+        "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
+        "name": "EchoBot1_Rename"   
+      },   
+      "channelData": {   
+        "tenant": {   
+          "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
+        },   
+        "source": null,   
+        "meeting": {   
+          "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
+        }   
+      }   
+}
+```
 
 ## <a name="team-name-updates"></a>Atualizações de nome de equipe
 

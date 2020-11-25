@@ -5,12 +5,12 @@ description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Micro
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346802"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409068"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
@@ -48,7 +48,7 @@ Durante a instalação, o kit de ferramentas configurou inicialmente a página d
 
 O aplicativo scaffolding fornece os componentes para renderizar sua guia pessoal no Microsoft Teams. Há muitas coisas com as quais você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
 
-* `Tab.js` arquivo no `src/components` diretório do projeto. Isso é para o processamento da página de conteúdo da guia.
+* `Tab.js` arquivo no `src/components` diretório do projeto. Isso é para renderizar a página de conteúdo da guia.
 * SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes de front-end do seu projeto.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personalizar a página de conteúdo da guia
