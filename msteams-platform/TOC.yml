@@ -229,8 +229,6 @@
               href: bots/how-to/conversations/channel-and-group-conversations.md
             - name: Enviar mensagens proativas
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: Enviar e receber arquivos
-              href: bots/how-to/conversations/send-and-receive-files.md
         - name: Depurar seu bot
           items:
             - name: Depuração local com um IDE
