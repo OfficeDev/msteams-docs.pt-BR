@@ -3,14 +3,15 @@ title: Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio
 description: Introdução ao desenvolvimento de aplicativos personalizados de grande parte diretamente no Visual Studio com o Microsoft Teams Toolkit
 keywords: Kit de ferramentas do Visual Studio Teams
 ms.topic: overview
-ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.author: lajanuar
+ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819200"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476983"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Teams Toolkit e o Visual Studio
 
 O Microsoft Teams Toolkit permite que você crie aplicativos personalizados do teams diretamente no IDE (ambiente de desenvolvimento integrado) do Visual Studio. O Microsoft Teams Toolkit orienta você durante o processo e oferece tudo o que você precisa para criar, depurar e iniciar o aplicativo Teams.
 
@@ -18,7 +19,7 @@ O Microsoft Teams Toolkit permite que você crie aplicativos personalizados do t
 
 1. [Habilitar visualização do desenvolvedor](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Certifique-se de que o ** <span>ASP.ne</span>T e o módulo de desenvolvimento da Web** foram adicionados à sua instância do Visual Studio. Você pode verificar seguindo as etapas descritas em [Modificar o Visual Studio adicionando ou removendo cargas de trabalho e](/visualstudio/install/modify-visual-studio?view=vs-2019) documentação de componente.
+1. Certifique-se de que o **<span>ASP.ne</span>T e o módulo de desenvolvimento da Web** foram adicionados à sua instância do Visual Studio. Você pode verificar seguindo as etapas descritas em [Modificar o Visual Studio adicionando ou removendo cargas de trabalho e](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentação de componente.
 
 ![módulo asp.net do Visual Studio](../assets/images/visual-studio-web-dev-module.png)
 
@@ -43,7 +44,7 @@ O Microsoft Teams Toolkit para Visual Studio está disponível para download no 
 
 1. Selecione **criar um novo projeto**.
 1. Escolha **aplicativo Microsoft Teams** e selecione **Avançar**.
-1. Você chegará à tela **configurar seu novo projeto** , onde você pode escolher o **nome do projeto**, o **local**e o **nome da solução**.
+1. Você chegará à tela **configurar seu novo projeto** , onde você pode escolher o **nome do projeto**, o **local** e o **nome da solução**.
 1. Marque a caixa rotulada **Colocar solução e projeto no mesmo diretório**.
 1. Uma janela pop-up com o rótulo **Adicionar recursos** permitirá que você escolha um ou mais recursos para a configuração do projeto.
 1. Selecione o botão **Avançar** para concluir o processo de configuração.
@@ -77,11 +78,11 @@ Quando um aplicativo é instalado, o cliente do teams analisa o arquivo de manif
 1. Para configurar seu aplicativo, na página inicial do **Microsoft Teams Toolkit** , selecione **Editar pacote de aplicativos** .
 1. No menu suspenso **meus ambientes** , selecione **desenvolvimento**.
 1. Você vai parar na página de **detalhes do aplicativo** , onde você pode editar os campos de Propriedade do seu aplicativo.
-1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. [Saiba Mais](https://aka.ms/teams-toolkit-manifest)
+1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. [Saiba mais](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Empacotar seu aplicativo
 
-A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto**ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.js** e os [dois arquivos de ícone](../concepts/build-and-test/apps-package.md#icons).
+A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto** ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.js** e os [dois arquivos de ícone](../concepts/build-and-test/apps-package.md#icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
 

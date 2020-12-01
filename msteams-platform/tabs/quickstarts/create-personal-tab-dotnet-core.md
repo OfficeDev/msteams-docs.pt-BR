@@ -4,16 +4,16 @@ author: laujan
 description: Um guia de início rápido para criar uma guia pessoal personalizada com o ASP.NET Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992628"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49476934"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>Criar uma guia pessoal com o ASP.NET Core
 
-Neste QuickStart, veremos como criar uma guia pessoal personalizada com as páginas principais do Razor do ASP.Net C# e do. Também usaremos o [app Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.
+Neste QuickStart, abordaremos a criação de uma guia pessoal personalizada com as páginas do Razor do core e do ASP.Net C#. Também usaremos o [app Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -68,7 +68,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 - Um **manifest.jsno** arquivo que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser zipados em um pacote de aplicativos para uso no carregamento de sua guia para o Microsoft Teams. O Microsoft Teams carregará o `contentUrl` especificado no manifesto, o incorporará em um iframe e o renderizará na sua guia.
+Esses arquivos precisam ser zipados em um pacote de aplicativos para uso no carregamento de sua guia para o Microsoft Teams. O Microsoft Teams carregará o `contentUrl` especificado no manifesto, o incorporará em um <iframe \> e o renderizará na sua guia.
 
 ### <a name="csproj"></a>. csproj
 

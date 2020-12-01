@@ -2,14 +2,16 @@
 title: Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
 description: Introdução ao desenvolvimento de aplicativos personalizados de grande parte diretamente no Visual Studio Code com o Microsoft Teams Toolkit
 keywords: Kit de ferramentas de código do Visual Studio
-ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.topic: overview
+ms.author: lajanuar
+ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651660"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476927"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Teams Toolkit e o Visual Studio Code
 
 O Microsoft Teams Toolkit permite que você crie aplicativos personalizados do teams diretamente no ambiente de código do Visual Studio. O kit de ferramentas orienta você durante o processo e oferece tudo o que você precisa para criar, depurar e iniciar o aplicativo Teams.
 
@@ -26,9 +28,7 @@ O Microsoft Teams Toolkit para Visual Studio Code está disponível para downloa
 - [Importar um projeto existente](#import-an-existing-teams-app-project)
 - [Configurar seu aplicativo](#configure-your-app)
 - [Empacotar seu aplicativo](#package-your-app)
-- [Executar o aplicativo no Microsoft Teams](#run-your-app-in-teams)
-- [Validar seu aplicativo](#validate-your-app)
-- [Publicar seu aplicativo](#publish-your-app-to-teams)
+- [Executar o aplicativo localmente ou no Teams](#run-your-app)
 
 ## <a name="set-up-a-new-teams-project"></a>Configurar um novo projeto do teams
 
@@ -66,66 +66,29 @@ Quando um aplicativo é instalado, o cliente do teams analisa o arquivo de manif
 
 1. Para configurar seu aplicativo, navegue até a guia **Microsoft Teams Toolkit** no Visual Studio Code.
 1. Selecione **Editar pacote de aplicativos** para exibir a página de **detalhes do aplicativo** .
-1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. [Saiba Mais](https://aka.ms/teams-toolkit-manifest)
+1. A edição dos campos na página de detalhes do aplicativo atualiza o conteúdo do manifest.jsem um arquivo que será fornecido como parte do pacote de aplicativos. *Consulte* [Editor de manifesto do App Studio](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Empacotar seu aplicativo
 
-Modificar você é a página de **detalhes do aplicativo** ou atualizar o **manifesto**, ou arquivos **. env** na pasta do seu aplicativo  **. publish** irá gerar automaticamente seu arquivo de **Development.zip** . Você precisará incluir [dois ícones](../concepts/build-and-test/apps-package.md#icons) na mesma pasta.
+A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto** ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . Você precisará incluir [dois ícones](../concepts/build-and-test/apps-package.md#icons) na mesma pasta.
 
-## <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
+## <a name="run-your-app"></a>Executar o aplicativo
 
-Confira o **Compilar e executar* conteúdo em sua página inicial do projeto para obter instruções detalhadas para empacotar e testar seu aplicativo. Em geral, você precisa instalar o servidor do aplicativo, fazê-lo em execução e, em seguida, configurar uma solução de encapsulamento para que o Microsoft Teams possa acessar o conteúdo em execução do localhost.
+### <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
 
-## <a name="add-a-trusted-certificate-for-localhost"></a>Adicionar um certificado confiável para localhost
+Confira o **Compilar e executar* o conteúdo na página inicial do seu projeto para obter instruções detalhadas sobre como empacotar e testar seu aplicativo. Em geral, você precisa instalar o servidor do aplicativo, fazê-lo em execução e, em seguida, configurar uma solução de encapsulamento para que o Microsoft Teams possa acessar o conteúdo em execução do localhost.
 
-Se você quiser depurar seu aplicativo baseado em guia no localhost usando HTTPS, será necessário adicionar um certificado para localhost ao `Trusted Root Certification Authorities` catálogo. Você só precisa concluir esta etapa uma vez por máquina.</br></br>
+### <a name="enable-development-from-localhost"></a>Habilitar o desenvolvimento do localhost
 
-**Criar e instalar um certificado confiável:**
-<details>
-  <summary>Expanda aqui</summary>
+Se quiser depurar seu aplicativo baseado em guia no localhost usando HTTPS, você precisará informar ao seu navegador para confiar no aplicativo que está sendo servido <https://localhost> . Navegue até <https://localhost:3000/tab>. Se você vir um aviso indicando que o site não é confiável, escolha a opção para continuar mesmo assim. Agora, seu aplicativo deve estar acessível no cliente do teams.
 
-* Criar e executar o aplicativo
-  * Siga o instuctions na seção **criar e executar** do Leiame do projeto para que ele seja atendido https://localhost:3000/tab . Geralmente, isso envolverá a `npm install` execução `npm start`
-  * Navegue até https://localhost:3000/tab no Google Chrome ou borda Chromium.
+### <a name="run-your-app-in-teams"></a>Executar o aplicativo no Microsoft Teams
 
-* Adquirir o certificado SSL:
-  * Abra a janela do Chrome Developer Tools ( `ctrl + shift + i`  /  `cmd + option + i` ).
-  * Clique na `Security` guia
-  * Clique em `View certificate` e você terá a opção de baixar o certificado, arrastando-o para sua área de trabalho no os X, ou clicando na `Details` guia no Windows e clicando em `Copy to File…`
-  * Nomeie o arquivo <*tudo*>. cer e salve-o em uma pasta que não exija consentimento do administrador para executar uma ação de gravação.
-  
-* Instalar o certificado no **Windows**
-  * Escolha a `DER encoded binary X.509 (.CER)` opção (a primeira) e salve-a.
-  * Clique duas vezes no certificado e instale-o.
-  * Escolha `Local Machine`
-  * Seleção `Place all certificates in the following store`
-  * Escolha `Trusted Root Certification Authorities`
-  * Confirmar sua instalação
-  
-* Instalar o certificado **Mac os X**
-  * No OS X, abra o utilitário de acesso de chaves e selecione `System` no menu à esquerda. Clique no ícone de cadeado para habilitar as alterações.
-  * Clique no botão de adição próximo à parte inferior para adicionar um novo certificado e selecione o `localhost.cer` arquivo que você arrastou para a área de trabalho. Clique `Always Trust` na caixa de diálogo exibida.
-  * Após adicionar o certificado ao chaveiro do sistema, clique duas vezes no certificado e expanda a `Trust` seção dos detalhes do certificado. Selecione `Always Trust` para cada opção.
-
-> [!IMPORTANT]
-> Se você receber um aviso de certificado de segurança, navegue até https://localhost:3000/tab . Se o site ainda não for confiável, reinicie seu computador e localhost deverá ser aceito como confiável.
-</details>
-
-## <a name="run-your-app-in-teams"></a>Executar o aplicativo no Microsoft Teams
-- Pré-requisitos:
-  - [Habilitar o modo de visualização do desenvolvedor do teams](https://aka.ms/teams-toolkit-enable-devpreview)
+Pré-requisitos: [habilitar o modo de visualização do desenvolvedor do teams](https://aka.ms/teams-toolkit-enable-devpreview)
 
 1. Navegue até a barra de atividade no lado esquerdo da janela de código do Visual Studio.
 1. Selecione o ícone **executar** para exibir o modo de exibição **executar e depurar** .
 1. Você também pode usar o atalho de teclado `Ctrl+Shift+D` .
-
-## <a name="validate-your-app"></a>Validar seu aplicativo
-
-A página **validar** permite verificar o pacote do aplicativo antes de enviar o aplicativo para o AppSource. Basta carregar o pacote de manifesto e a ferramenta de validação verificará seu aplicativo em todos os casos de teste relacionados ao manifesto. Para cada teste com falha, a descrição fornece um link de documentação para ajudá-lo a corrigir o erro. Para os testes difíceis de automatizar, a lista de **verificação preliminar** detalha 7 dos casos de teste com falha mais comuns, bem como vincular a uma lista de verificação de envio completa.
-
-## <a name="publish-your-app-to-teams"></a>Publicar seu aplicativo no Teams
-
-Na home page do seu projeto, você pode carregar seu aplicativo para uma equipe, enviar seu aplicativo para o repositório de aplicativos personalizado da empresa para usuários em sua organização ou enviar seu aplicativo para a origem do aplicativo para todos os usuários do teams. Seu administrador de ti revisará esses envios. Você pode retornar à página *publicar* para verificar seu status de envio e saber se seu aplicativo foi aprovado ou rejeitado pelo seu administrador de ti. Este também é o local em que você vai enviar atualizações para seu aplicativo ou cancelar qualquer envio ativo no momento.
 
 > [!div class="nextstepaction"]
 > [Próxima etapa: manutenção e suporte do seu aplicativo publicado](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

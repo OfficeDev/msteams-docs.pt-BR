@@ -1,9 +1,9 @@
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Para concluir este QuickStart, você precisará de um locatário do Office 365 e de uma equipe configurada para *permitir o carregamento de aplicativos personalizados* habilitados. Para saber mais, confira [preparar seu locatário do Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-  - Se você não tiver uma conta do Office 365, você poderá inscrever-se em uma assinatura gratuita por meio do [programa de desenvolvedor do Office 365](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). A assinatura permanecerá ativa, contanto que você esteja usando-a para desenvolvimento contínuo.
+- Para concluir este QuickStart, você precisará de um locatário do Microsoft 365 e de uma equipe configurada para *permitir o carregamento de aplicativos personalizados* habilitados. Para saber mais, consulte [Prepare Your Microsoft 365 locatário](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+  - Se você não tiver uma conta do Microsoft 365, você poderá se inscrever em uma assinatura gratuita através do [programa de desenvolvedores da Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). A assinatura permanecerá ativa, contanto que você esteja usando-a para desenvolvimento contínuo.
 
-- Você usará o app Studio para importar o aplicativo para o Microsoft Teams. Para instalar o app Studio **** ![selecionar aplicativo](~/assets/images/tab-images/storeApp.png) da loja de aplicativos no canto inferior esquerdo do aplicativo Teams e pesquise o app Studio. Depois de localizar o bloco, selecione-o e escolha instalar na caixa de diálogo janela pop-up.
+- Você usará o app Studio para importar o aplicativo para o Microsoft Teams. Para instalar o app Studio selecionar aplicativo da loja de **aplicativos** ![ ](~/assets/images/tab-images/storeApp.png) no canto inferior esquerdo do aplicativo Teams e pesquise o app Studio. Depois de localizar o bloco, selecione-o e escolha instalar na caixa de diálogo janela pop-up.
 
 Além disso, este projeto requer que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
