@@ -5,12 +5,12 @@ description: Criar rapidamente um aplicativo do Microsoft Teams que exibe um "Ol
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 62c4bd950183ceb64fb30b528661cf84e9210d89
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: 2d357ef71bfc4c498b54d94f9d0717cf886df17d
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931770"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552476"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>Criar e executar seu primeiro aplicativo do Microsoft Teams
 
@@ -26,6 +26,10 @@ Use o Microsoft Teams Toolkit no Visual Studio Code para configurar seu primeiro
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de tela mostrando como configurar seu projeto de aplicativo com o Visual Studio Code Teams Toolkit.":::
 1. Insira um nome para seu aplicativo do Microsoft Teams. (Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto de aplicativo em sua máquina local.)
 1. Marque somente a opção **guia pessoal** e selecione **concluir** na parte inferior da tela para configurar seu projeto.
+
+> [!NOTE]
+
+> Para instalar o pacote do aplicativo depois de criar um novo projeto no kit de ferramentas, pressione F5/executar. Ele iniciará o Chrome e instalará seu pacote. O pacote é armazenado no app Studio e instalado usando o `appId` .
 
 ## <a name="2-understand-important-app-project-components"></a>2. compreender os principais componentes do projeto de aplicativos
 

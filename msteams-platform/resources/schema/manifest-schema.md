@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 3bf8bcc0ff99228b5dafded319df6f21ade56c2b
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 26c6ca0ed6edceb9b34c84c28a43a63f65a348de
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346683"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552553"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -399,7 +399,7 @@ Usado quando sua experiência de aplicativo tem uma experiência de guia de cana
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|cadeia de caracteres|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
+|`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
 |`scopes`|matriz de enums|1|✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de enums|6 ||O conjunto de `contextItem` escopos onde há suporte para uma tabulação. Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
@@ -416,7 +416,7 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`entityId`|cadeia de caracteres|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
+|`entityId`|string|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
 |`name`|cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
 |`contentUrl`|cadeia de caracteres||✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
 |`websiteUrl`|cadeia de caracteres|||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
@@ -437,7 +437,7 @@ O item é uma matriz (máximo de apenas 1 elemento &mdash; atualmente apenas um 
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|cadeia de caracteres|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
+|`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
 |`scopes`|matriz de enums|3D|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será **`false`**|
 |`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será `**false**`|
@@ -471,7 +471,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|cadeia de caracteres|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
+|`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
 |`scopes`|matriz de enums|1|✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
 |`connectorId`|cadeia de caracteres|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
 
@@ -488,7 +488,7 @@ O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `obj
 
 |Nome| Tipo | Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|cadeia de caracteres|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que faz a extensão do sistema de mensagens, conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de aplicativo geral.|
+|`botId`|string|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que faz a extensão do sistema de mensagens, conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de aplicativo geral.|
 |`commands`|matriz de objetos|10 |✔|matriz de comandos que a extensão de mensagens oferece suporte|
 |`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no `validDomains`|
@@ -503,7 +503,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|cadeia de caracteres|64 caracteres|✔|A ID do comando.|
+|`id`|string|64 caracteres|✔|A ID do comando.|
 |`title`|cadeia de caracteres|32 caracteres|✔|O nome do comando amigável.|
 |`type`|cadeia de caracteres|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
 |`description`|cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
@@ -567,11 +567,11 @@ O objeto é uma matriz com todos os elementos do tipo `string` .
 
 **Opcional** — objeto
 
-Especifique a ID do aplicativo AAD e as informações do gráfico para ajudar os usuários a entrarem diretamente no aplicativo AAD.
+Especifique a ID do aplicativo do Azure Active Directory (Azure AD) e as informações do Microsoft Graph para ajudar os usuários a entrarem diretamente no seu aplicativo. Se seu aplicativo estiver registrado no Azure AD, você deve fornecer a ID do aplicativo, para que os administradores possam facilmente revisar permissões e conceder consentimento no centro de administração do Microsoft Teams.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|cadeia de caracteres|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Esta ID deve ser um GUID.|
+|`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Esta ID deve ser um GUID.|
 |`resource`|cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para aquisição de token de autenticação para SSO.|
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especificar [consentimento específico de recurso](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) granular|
 
@@ -604,7 +604,7 @@ Defina as propriedades que seu aplicativo usará para postar em um feed de ativi
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`type`|cadeia de caracteres|32 caracteres|✔|O tipo de notificação. *Veja abaixo*.|
+|`type`|string|32 caracteres|✔|O tipo de notificação. *Veja abaixo*.|
 |`description`|cadeia de caracteres|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
 |`templateText`|cadeia de caracteres|128 caracteres|✔|Ex: "{actor} tarefa criada {TaskId} para você"|
 

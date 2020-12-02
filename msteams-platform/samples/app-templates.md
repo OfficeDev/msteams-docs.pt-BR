@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358025"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552574"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Microsoft Teams
 
@@ -166,6 +166,23 @@ E-prescrições é um aplicativo baseado em [aplicativos de energia](/powerapps/
 :::row:::
 :::column span="2":::
     ![Captura de tela do aplicativo E-prescrições. Mostra como os administradores podem gerenciar os provedores de assistência médica que usam o aplicativo.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="employee-training-9734"></a>Treinamento de funcionários &#9734;
+
+O treinamento de funcionários é um aplicativo do Microsoft Teams que permite que os organizadores publiquem, rastreiem e promovam facilmente eventos de aprendizado e treinamento para sua organização.  Com o aplicativo, os planejadores de eventos podem enviar lembretes e notificações a eventos inscritos e os funcionários podem indicar interesse em eventos futuros, permanecer atualizados em eventos atuais e compartilhar detalhes do evento com colegas por meio da extensão de mensagens do Microsoft Teams.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **Exibir eventos** ![ de treinamento de funcionários Imagem da guia treinamento de funcionários](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Criar evento** ![ de treinamento de funcionários Formulário de evento de criação de treinamento de funcionários](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 

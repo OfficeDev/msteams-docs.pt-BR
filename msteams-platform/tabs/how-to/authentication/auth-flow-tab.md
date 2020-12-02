@@ -2,12 +2,12 @@
 title: Fluxo de autenticação para guias
 description: Descreve o fluxo de autenticação em guias
 keywords: guias de fluxo de autenticação de equipes
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346676"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552539"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Fluxo de autenticação do Microsoft Teams para guias
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346676"
 
 O OAuth 2,0 é um padrão aberto para autenticação e autorização usados pelo Azure AD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2,0 é um pré-requisito para trabalhar com autenticação no Microsoft Teams; [Veja aqui uma boa visão geral](https://aaronparecki.com/oauth-2-simplified/) que é mais fácil de seguir do que a [especificação formal](https://oauth.net/2/). O fluxo de autenticação para guias e bots é um pouco diferente porque guias são muito semelhantes aos sites para que eles possam usar o OAuth 2,0 diretamente; os bots não são e devem fazer algumas coisas de forma diferente, mas os conceitos principais são idênticos.
 
-para obter um exemplo que demonstra o fluxo de autenticação para guias e bots usando o nó usando o [tipo de concessão implícita OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
+*Veja*, [iniciar o fluxo de autenticação para guias](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) para obter um exemplo de fluxo de autenticação para guias e bots usando o nó e o [tipo de concessão implícita OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
 
 ![Diagrama de sequência de autenticação de guia](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ para obter um exemplo que demonstra o fluxo de autenticação para guias e bots 
 
 ## <a name="treat-tab-context-as-hints"></a>Tratar contexto da guia como dicas
 
-Embora o contexto de tabulação forneça informações úteis sobre o usuário, não use essas informações para autenticar o usuário se você o recebe como parâmetros de URL para a URL de conteúdo da sua guia ou chamando a `microsoftTeams.getContext()` função no SDK do cliente do Microsoft Teams. Um ator mal-intencionado pode invocar a URL de conteúdo da guia com seus próprios parâmetros, e uma página da Web representando o Microsoft Teams pode carregar sua URL de conteúdo de tabulação em um iframe e retornar seus próprios dados para a `getContext()` função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usar.
+Embora o contexto de guia forneça informações úteis sobre o usuário, não use essas informações para autenticar o usuário se ele for como parâmetros de URL para a URL de conteúdo da sua guia ou chamando a `microsoftTeams.getContext()` função no Microsoft Teams Client SDK. Um ator mal-intencionado pode invocar a URL de conteúdo da guia com seus próprios parâmetros, e uma página da Web representando o Microsoft Teams pode carregar sua URL de conteúdo de tabulação em um iframe e retornar seus próprios dados para a `getContext()` função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usar. Consulte as observações em [navegar até a página autorização na página pop-up](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
 ## <a name="samples"></a>Exemplos
 

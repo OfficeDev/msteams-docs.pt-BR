@@ -3,12 +3,12 @@ title: Empacotar seu aplicativo
 description: Saiba como empacotar seu aplicativo para teste, upload e publicação no Microsoft Teams
 keywords: pacote de aplicativos do teams
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997983"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552567"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Criar um pacote de aplicativos para seu aplicativo do Microsoft Teams
 
@@ -45,12 +45,13 @@ O `color` ícone é usado no Microsoft Teams (em aplicativos e galerias de guias
 
 O `outline` ícone é usado nestes lugares: a barra de aplicativos e as extensões de mensagens que o usuário marcou como "favorito". Este ícone deve ter 32x32 pixels. O ícone de estrutura de tópicos deve conter somente branco e transparência (sem outras cores). O ícone pode ser branco com um plano de fundo transparente ou transparente com um plano de fundo branco. O ícone de estrutura de tópicos não deve ter preenchimento adicional ao redor do ícone e deve ser tão cortado possível e ainda manter as dimensões de 32x32. Veja alguns exemplos bons:
 
-> [!TIP]
->  * A cor deve ser "branco" no RGB (vermelho: 255, verde: 255, azul: 255).
->  * Todas as outras partes do ícone devem ser transparentes.
->  * Para passar, o ícone pequeno deve ser totalmente transparente, o canal alfa para ser 0 e qualquer outro valor é uma falha.
-
 ![Exemplos de ícones de tópicos](~/assets/images/icons/sample20x20s.png)
+
+[! Dica para criar o ícone transparente]
+
+* A cor deve ser "branco" no RGB (vermelho: 255, verde: 255, azul: 255).
+* Todas as outras partes do ícone devem ser transparentes.
+* Para passar, o ícone pequeno deve ser totalmente transparente com um valor de canal alfa de 0 — qualquer outro valor é uma falha.
 
 Por exemplo, digamos que sua empresa seja contoso. Você enviaria dois ícones:
 

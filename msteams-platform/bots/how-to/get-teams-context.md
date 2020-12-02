@@ -4,12 +4,12 @@ author: laujan
 description: Como obter o contexto específico da equipe da Microsoft para o bot, incluindo a lista de conversas, detalhes e lista de canais.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796341"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552469"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obter o contexto específico da equipe para o bot
 
@@ -19,7 +19,7 @@ Um bot pode acessar dados de contexto adicionais sobre uma equipe ou bate-papo e
 
 ## <a name="fetching-the-roster-or-user-profile"></a>Buscando a lista ou o perfil do usuário
 
-Seu bot pode consultar a lista de membros e seus perfis básicos, incluindo IDs de usuário de equipes e informações do Azure Active Directory (Azure AD), como Name e objectId. Você pode usar essas informações para correlacionar as identidades do usuário, por exemplo, para verificar se um usuário fez logon em uma guia através de credenciais do Azure AD, é membro da equipe. O código de exemplo abaixo usa o ponto de extremidade paginado para recuperar a lista. Embora você ainda possa usar a versão não paginada, ele não será confiável em grandes equipes e não deverá ser usado. Confira [Este artigo](~/resources/team-chat-member-api-changes.md) para obter mais informações.
+Seu bot pode consultar a lista de membros e seus perfis básicos, incluindo IDs de usuário de equipes e informações do Azure Active Directory (Azure AD), como Name e objectId. Você pode usar essas informações para correlacionar as identidades do usuário, por exemplo, para verificar se um usuário fez logon em uma guia através de credenciais do Azure AD, é membro da equipe. O código de exemplo abaixo usa o ponto de extremidade paginado para recuperar a lista. Para obter membros da conversa, o tamanho mínimo ou máximo da página depende da implementação. Tamanho de página menor que 50, são tratados como 50 e tamanho de página maior do que 500, são limitados em 500. Embora você ainda possa usar a versão não paginada, ele não será confiável em grandes equipes e não deverá ser usado. *Confira* [as alterações nas APIs de bot do teams para buscar membros da equipe/chat](~/resources/team-chat-member-api-changes.md) para obter informações adicionais.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

@@ -2,12 +2,12 @@
 title: Criar links de fundo
 description: Descreve links aprofundados e como usá-los em seus aplicativos
 keywords: deeplink de link profundo do teams
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796327"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552560"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Criar links detalhados para conteúdo e recursos no Microsoft Teams
 
@@ -15,6 +15,22 @@ Você pode criar links para informações e recursos dentro do cliente do teams.
 
 * Navegar o usuário para o conteúdo em uma das guias do seu aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário sobre uma atividade importante. Quando o usuário toca na notificação, o link profundo navega para a guia para que o usuário possa exibir mais detalhes sobre a atividade.
 * O aplicativo automatiza ou simplifica determinadas tarefas do usuário, como criar um chat ou agendar uma reunião, preenchendo os links detalhados com os parâmetros necessários. Isso evita a necessidade de que os usuários insiram informações manualmente.
+
+> [!NOTE]
+>
+> Um deeplink inicia o navegador primeiro antes de navegar para o conteúdo e informações da seguinte maneira:
+>
+> **Guia**:  
+> ✔ Navega diretamente para a URL deeplink.
+>
+> **Bot**:  
+> ✔ Deeplink no corpo do cartão-abre no navegador primeiro.  
+> ✔ Deeplink adicionada à ação OpenURL no cartão adaptável – navega diretamente para a URL deeplink.  
+> ✔ Hiperlink redução de texto no cartão-abre no navegador primeiro.  
+>
+> **Chat**:  
+> ✔ Redução de hiperlink de mensagem de texto: navega diretamente para a URL de deeplink.  
+> ✔ Link colado na conversa de chat geral – navega diretamente para a URL deeplink.
 
 ## <a name="deep-linking-to-your-tab"></a>Vinculação profunda à sua guia
 
@@ -24,6 +40,9 @@ Como alternativa, você também pode gerar links detalhados programaticamente, u
 
 > [!NOTE]
 > Isso é diferente dos links fornecidos pelo item de menu **Copiar link para guia** , que apenas gera um link profundo que aponta para essa guia.
+
+>[!NOTE]
+> Atualmente, o shareDeepLink não funciona em plataformas móveis.
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Mostrando um link profundo para um item na sua guia
 
@@ -45,6 +64,10 @@ Forneça estes campos:
 Use este formato para um link profundo que você pode usar em um bot, conector ou uma placa de extensão de mensagens:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> Se o bot enviar uma mensagem contendo um `TextBlock` com um link profundo, uma nova guia do navegador será aberta quando o usuário selecionar o link. Isso acontece no Chrome e no aplicativo de área de trabalho do Microsoft Teams, ambos executados no Linux.
+> Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl` , a guia equipes será aberta na guia navegador atual quando o usuário clicar no link. Nenhuma guia novo navegador é aberta.
 
 Os parâmetros de consulta são:
 

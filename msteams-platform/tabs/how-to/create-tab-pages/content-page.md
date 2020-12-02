@@ -5,12 +5,12 @@ description: como criar uma página de conteúdo
 keywords: guias do teams com o canal de grupo configurado como estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796313"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552532"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -71,12 +71,14 @@ Certifique-se de que todos os domínios de URL usados nas suas guias estão incl
 A partir [do esquema de manifesto v 1.7](../../../resources/schema/manifest-schema.md), você pode fornecer um [indicador de carregamento nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) sempre que o conteúdo da Web é carregado no Teams, por exemplo, [página de conteúdo da guia](#integrate-your-code-with-teams), página de [configuração](configuration-page.md), [página de remoção](removal-page.md) e [módulos de tarefa em guias](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Se você indicar  `"showLoadingIndicator : true`  no manifesto do aplicativo, todas as páginas configuração de guia, conteúdo e remoção e todos os módulos de tarefa com base em iframe devem seguir o protocolo obrigatório, abaixo:
+> 1. O indicador de carregamento nativo ainda não é suportado em dispositivos móveis.
+> 2. Se você indicar  `"showLoadingIndicator : true`  no manifesto do aplicativo, todas as páginas configuração de guia, conteúdo e remoção e todos os módulos de tarefa com base em iframe devem seguir o protocolo obrigatório, abaixo:
+
 
 1. Para mostrar o indicador de carregamento, adicione-o `"showLoadingIndicator": true` ao seu manifesto. 
 2. Lembre-se de chamar `microsoftTeams.initialize();` .
-3. **Opcional** . Se você estiver pronto para imprimir na tela e quiser carregar o restante do conteúdo do aplicativo, você pode ocultar manualmente o indicador de carregamento chamando `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obrigatório** . Por fim, chame `microsoftTeams.appInitialization.notifySuccess()` para notificar as equipes de que seu aplicativo carregou com êxito. O Microsoft Teams ocultará o indicador de carregamento, se aplicável. Se  `notifySuccess`  não for chamado dentro de 30 segundos, será considerado que seu aplicativo esgotou o tempo limite e uma tela de erro com uma opção de repetição será exibida.
+3. **Opcional**. Se você estiver pronto para imprimir na tela e quiser carregar o restante do conteúdo do aplicativo, você pode ocultar manualmente o indicador de carregamento chamando `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obrigatório**. Por fim, chame `microsoftTeams.appInitialization.notifySuccess()` para notificar as equipes de que seu aplicativo carregou com êxito. O Microsoft Teams ocultará o indicador de carregamento, se aplicável. Se  `notifySuccess`  não for chamado dentro de 30 segundos, será considerado que seu aplicativo esgotou o tempo limite e uma tela de erro com uma opção de repetição será exibida.
 5. Se o aplicativo não puder ser carregado, você poderá chamá-lo `microsoftTeams.appInitialization.notifyFailure(reason);` para permitir que as equipes saibam que houve um erro. Uma tela de erro será exibida para o usuário:
 
 ```typescript

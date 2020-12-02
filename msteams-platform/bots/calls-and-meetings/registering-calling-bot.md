@@ -2,12 +2,12 @@
 title: Registrando um bot de chamada e reunião para o Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams
 keywords: áudio do bot de chamada mídia de vídeo de áudio/vídeo
-ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346844"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552441"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrar um bot de chamada para o Microsoft Teams
 
@@ -50,12 +50,12 @@ O Microsoft Graph expõe permissões granulares que controlam o acesso que os ap
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Iniciar chamadas de saída 1:1 do aplicativo (visualização)|Permite que o aplicativo faça chamadas de saída para um único usuário e transfira chamadas para usuários no diretório da sua organização, sem um usuário conectado.|Sim|
 |_Calls.InitiateGroupCall.All_|Iniciar a saída de chamadas de grupo do aplicativo (visualização)|Permite que o aplicativo faça chamadas para vários usuários e adicione participantes a reuniões em sua organização, sem um usuário conectado.|Sim|
-|_Calls.JoinGroupCall.All_|Ingresse em reuniões e chamadas de grupo como um aplicativo (visualização)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Sim|
-|_Calls.JoinGroupCallasGuest.All_|Ingressar em reuniões e chamadas de grupo como um convidado (visualização)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Sim|
+|_Calls.JoinGroupCall.All_|Ingresse em reuniões e chamadas de grupo como um aplicativo (visualização)|Permite que o aplicativo ingresse em reuniões agendadas e chamadas de grupo em sua organização, sem um usuário conectado. O aplicativo será associado aos privilégios de um usuário do diretório para reuniões em seu locatário.|Sim|
+|_Calls.JoinGroupCallasGuest.All_|Ingressar em reuniões e chamadas de grupo como um convidado (visualização)|Permite que o aplicativo ingresse anonimamente no grupo chamadas e em reuniões agendadas em sua organização, sem um usuário conectado. O aplicativo ingressará como convidado para reuniões em seu locatário.|Sim|
 |_Calls. AccessMedia. All_ <sup> _Veja abaixo_</sup>|Acessar fluxos de mídia em uma chamada como um aplicativo (visualização)|Permite que o aplicativo obtenha acesso direto aos fluxos de mídia em uma chamada sem um usuário conectado.|Sim|
 
 > [!IMPORTANT]
-> Você **não pode** usar a API Microsoft. Graph. calls. Media para registrar ou manter o conteúdo de mídia de chamadas ou reuniões que seu bot acessa.
+> Você **não pode** usar a API de acesso à mídia para registrar ou persistir o conteúdo de mídia de chamadas ou reuniões que seu aplicativo acessa, ou dados derivados desse conteúdo de mídia ("Record" ou "Recording"), sem primeiro chamar a [ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) para indicar que a gravação foi iniciada e receber uma resposta de êxito dessa API. Se o aplicativo começar a gravar qualquer reunião/chamada, ele deverá finalizar a gravação antes de chamar a `updateRecordingStatus` API para indicar que a gravação foi concluída.
 
 ### <a name="application-permissions-online-meetings"></a>Permissões de aplicativo: reuniões online
 

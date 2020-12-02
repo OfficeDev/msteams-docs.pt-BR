@@ -5,12 +5,12 @@ description: Saiba como criar um bot do Microsoft Teams usando o App Studio.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 42b825ff2883e9b2b8b13dbd6774ed7ce6d0f40f
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796348"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49476950"
 ---
 # <a name="create-a-bot-using-app-studio"></a>Criar um bot usando o App Studio
 
@@ -52,7 +52,7 @@ Você tem duas opções ao registrar seu serviço Web com a estrutura bot. Você
 
 ### <a name="without-an-azure-subscription"></a>Sem uma assinatura do Azure.
 
-Se você não quiser criar seu registro de bot no Azure, **deverá** usar esse link-https://dev.botframework.com/bots/newou o aplicativo Studio. Se você clicar no botão *criar um bot* , no portal de estrutura de bot, você criará seu registro de bot no Microsoft Azure e será necessário fornecer uma assinatura do Azure. Para gerenciar seu registro ou migrar para uma assinatura do Azure após a criação, vá para: https://dev.botframework.com/bots.
+Se você não quiser criar seu registro de bot no Azure, **deverá** usar esse link-https://dev.botframework.com/bots/newou o aplicativo Studio. Se você clicar no botão *criar um bot*, no portal de estrutura de bot, você criará seu registro de bot no Microsoft Azure e será necessário fornecer uma assinatura do Azure. Para gerenciar seu registro ou migrar para uma assinatura do Azure após a criação, vá para: https://dev.botframework.com/bots.
 
 Ao editar as propriedades de um registro de estrutura de bot existente não registrado no Azure, você verá uma coluna "status de migração" e um botão azul "migrar" que o levará para o portal do Microsoft Azure. Não selecione o botão "migrar", a menos que você queira fazer isso. Em vez disso, selecione o **nome** do bot e você poderá editar suas propriedades:
 
@@ -83,7 +83,8 @@ Você também pode registrar seu serviço Web Criando um recurso de registro de 
 
 O [portal de estrutura de bot](https://dev.botframework.com) é otimizado para registro de bots no Microsoft Azure. Aqui estão algumas coisas que você precisa saber:
 
-* O canal do Microsoft Teams para bots registado no Azure é **gratuito** . As mensagens enviadas por meio do canal do Teams NÃO contarão como as mensagens consumidas para o bot.
+* Certifique-se de adicionar o Microsoft Teams como um canal da lista de canais em destaque após criar seu bot.
+* O canal do Microsoft Teams para bots registado no Azure é **gratuito**. As mensagens enviadas por meio do canal do Teams NÃO contarão como as mensagens consumidas para o bot.
 * Se você registrá-lo usando o Microsoft Azure, seu código de bot não precisará ser *hospedado* no Microsoft Azure.
 * Se você registrar um bot usando o portal do Microsoft Azure, é necessário ter uma conta do Microsoft Azure. Você pode [criar uma gratuitamente](https://azure.microsoft.com/free/). Para verificar sua identidade ao criar uma conta do Azure, você deve fornecer um cartão de crédito, mas ele não será cobrado. É sempre gratuito criar e usar bots com o Microsoft Teams.
 
@@ -96,12 +97,12 @@ O [manifesto do aplicativo](~/resources/schema/manifest-schema.md) define os met
 1. No cliente do Teams, abra o aplicativo Studio no menu de estouro **...** no trilho de navegação à esquerda. Se o aplicativo Studio ainda não estiver instalado, você poderá fazer isso pesquisando por ele.
 2. Na guia **Editor de manifesto** selecione **Criar um novo aplicativo** (ou se você estiver adicionando um bot a um aplicativo existente, é possível importar seu pacote de aplicativos)
 3. Adicione os detalhes do aplicativo (Confira [definição de esquema de manifesto](~/resources/schema/manifest-schema.md) para obter descrições completas de cada campo).
-4. Na guia **bots** , selecione o botão **Configurar** .
-5. Você pode criar um novo registro de serviço Web ( **novo bot** ) ou, se você já tiver registrado um, selecione **bot existente** .
+4. Na guia **bots**, selecione o botão **Configurar**.
+5. Você pode criar um novo registro de serviço Web (**novo bot**) ou, se você já tiver registrado um, selecione **bot existente**.
 6. Selecione os recursos e os escopos necessários para seu bot.
 7. Se necessário, atualize o endereço do ponto de extremidade do bot para apontar para o seu bot. Ela deve ser similar a `https://someplace.com/api/messages`.
 8. Opcionalmente, adicione [comandos de bot](~/bots/how-to/create-a-bot-commands-menu.md).
-9. Opcionalmente, você poderá baixar o pacote do aplicativo concluído na guia **testar e distribuir** .
+9. Opcionalmente, você poderá baixar o pacote do aplicativo concluído na guia **testar e distribuir**.
 
 ### <a name="create-it-manually"></a>Criar manualmente
 
@@ -177,7 +178,7 @@ Para criar um pacote de aplicativos, você precisa adicionar seu manifesto de ap
 > [!NOTE]
 > Para carregar o bot com êxito, o administrador de locatários deve primeiro [permitir o carregamento](/microsoftteams/manage-apps#manage-org-wide-app-settings) de aplicativos personalizados ou de terceiros no Teams.
 
-Se você estiver usando o aplicativo Studio, é possível instalar seu aplicativo a partir da guia **Testar e distribuir** do **Editor de manifesto** . Como alternativa, você pode instalar o pacote do aplicativo clicando no menu de estouro de `...` do trilho de navegação à esquerda, clicando em **Mais aplicativos** e, em seguida, em **Carregar um link personalizado do aplicativo** . Você também pode importar um manifesto de aplicativo ou pacote de aplicativos para o aplicativo Studio para fazer atualizações adicionais antes de carregar.
+Se você estiver usando o aplicativo Studio, é possível instalar seu aplicativo a partir da guia **Testar e distribuir** do **Editor de manifesto**. Como alternativa, você pode instalar o pacote do aplicativo clicando no menu de estouro de `...` do trilho de navegação à esquerda, clicando em **Mais aplicativos** e, em seguida, em **Carregar um link personalizado do aplicativo**. Você também pode importar um manifesto de aplicativo ou pacote de aplicativos para o aplicativo Studio para fazer atualizações adicionais antes de carregar.
 
 ## <a name="bots-in-teams-meetings"></a>Bots nas reuniões do Teams
 

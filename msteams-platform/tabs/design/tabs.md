@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Teams design Guidelines Reference Framework Tabs Configuration guia canal de configuração guia estática guia de equipes de design simples
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931796"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552546"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -75,7 +75,7 @@ A tela da guia apresenta uma ótima oportunidade de marcar sua experiência. O l
 A incorporação de suas próprias cores e layouts twill também ajuda na comunicação de personalidade.
 
 > [!TIP]
-> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira* , por exemplo, [cores de equipes](../../concepts/design/components/color.md)
+> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira*, por exemplo, [cores de equipes](../../concepts/design/components/color.md)
 
 ---
 
@@ -172,7 +172,7 @@ As páginas secundárias e terciários em uma guia devem ser abertas em um modo 
 
 ### <a name="no-link-to-external-browser"></a>Nenhum link para o navegador externo
 
-Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams, por exemplo, dentro de módulos de tarefas, guias, etc.
+Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams. Por exemplo, dentro de módulos de tarefas, guias, etc.
 
 ## <a name="notifications-for-tabs"></a>Notificações para guias
 
@@ -198,3 +198,4 @@ Enviar uma mensagem para um thread de guia aumenta a conscientização da ativid
 * Guias não devem ter mais do que três níveis de navegação no aplicativo.
 * As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
 * Guias que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, em vez de uma guia (para área de trabalho e Web).
+* Para uma experiência de usuário aprimorada, inclua um bot pessoal que envia uma mensagem de boas-vindas ao usuário na primeira execução e responde aos comandos **Hi**, **Help** e **Hello** . Você pode consultar a documentação sobre [bots de conversa](../../bots/what-are-bots#in-a-one-to-one-chat) para obter mais assistência.

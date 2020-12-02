@@ -2,12 +2,12 @@
 title: Suporte a logon único para guias
 description: Descreve o logon único (SSO)
 keywords: API de logon único do AAD no SSO de autenticação de equipes
-ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346788"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552447"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte de logon único (SSO) para guias
 
@@ -21,6 +21,12 @@ Os usuários entram no Microsoft Teams por meio de suas contas corporativas, de 
 > ✔ Teams para iOS (_versão_: 2.0.18 e posterior)  
 >
 > Para obter a melhor experiência com o Microsoft Teams, use a versão mais recente do iOS e do Android.
+
+>[!NOTE]
+> **Início rápido**  
+>
+> O caminho mais simples para começar a usar o SSO de guia é com o Microsoft Teams Toolkit para o Visual Studio Code. [Saiba mais](../../../toolkit/visual-studio-code-tab-sso.md)
+
 
 ## <a name="how-sso-works-at-runtime"></a>Como o SSO funciona em tempo de execução
 
