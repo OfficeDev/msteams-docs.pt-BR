@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997955"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576831"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -20,7 +20,10 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|11/30/2020|Novo: Identity Platform Integration with Teams Toolkit e Visual Studio Code for Tabs|[Autenticação de logon único com o Teams Toolkit e o Visual Studio Code for Tabs](toolkit/visual-studio-code-tab-sso.md)|
+|11/16/2020|Manifesto do aplicativo do teams atualizado para a versão 1,8|Referência: esquema de manifesto para o Microsoft Teams|[Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Esquema de manifesto atualizado para a versão 1,8| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
+|11/10/2020|Diretrizes de design do bot do teams|[Diretrizes de design de bot](bots/design/bots.md#bot-design-guidelines)|
 |9/30/2020|O envio e o recebimento de arquivos para bots em dispositivos móveis agora são suportados.|[Enviar e receber arquivos através do bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nova orientação "introdução às equipes do Microsoft Teams"|[Criar sua primeira visão geral do App Teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Suporte para aplicativos de equipes em reunião (versão prévia)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -29,7 +32,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 |08/10/2020|Introdução à criação de aplicativos do teams com o Visual Studio Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e o Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Suporte para autenticação SSO de guias|[Desenvolver uma guia SSO do Microsoft Teams](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Mensagens e bots proativos do Graph (visualização pública)|[Habilitar instalação de bot proativo e mensagens pró-ativas no Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
+| 07/22/2020 |Atualizações de recursos de dispositivo móvel.|[Solicitar permissões de dispositivo para a guia do Microsoft Teams](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Ferramenta de validação de aplicativos do teams para envios do AppSource.|[Ferramenta de validação de aplicativos do teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Criar um assistente virtual para o Teams|[Assistente virtual para o Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Revelar uma documentação de indicador de carregamento nativo|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)

@@ -4,12 +4,12 @@ author: clearab
 description: Adicione experiências de Popup modais para coletar ou exibir informações para seus usuários de seus aplicativos do Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 44d4e308614763b9da36c2abb7dd150778484c56
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867115"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576852"
 ---
 # <a name="what-are-task-modules"></a>O que são os módulos de tarefas?
 
@@ -61,10 +61,10 @@ O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição 
 | `title` | string | Aparece abaixo do nome do aplicativo e à direita do ícone do aplicativo |
 | `height` | número ou cadeia de caracteres | Pode ser um número que representa a altura do módulo de tarefa em pixels, ou `small` , `medium` ou `large` . [Veja abaixo como a altura e a largura são manipuladas](#task-module-sizing). |
 | `width` | número ou cadeia de caracteres | Pode ser um número que representa a largura do módulo de tarefa em pixels, ou `small` , `medium` ou `large` . [Veja abaixo como a altura e a largura são manipuladas](#task-module-sizing). |
-| `url` | string | A URL da página carregada como `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do seu aplicativo. |
+| `url` | cadeia de caracteres | A URL da página carregada como `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do seu aplicativo. |
 | `card` | Cartão adaptável ou um anexo de cartão de bot de cartão adaptável | O JSON para o cartão adaptável que aparece no módulo de tarefa. Se você estiver invocando de um bot, precisará usar o cartão de readaptação JSON em um objeto de estrutura de bot `attachment` . Em uma guia, você usará apenas um cartão adaptável. [Veja um exemplo.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Se um cliente não oferecer suporte ao recurso do módulo de tarefa, essa URL será aberta em uma guia do navegador. |
-| `completionBotId` | string | Especifica uma ID do aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga do evento. |
+| `fallbackUrl` | cadeia de caracteres | Se um cliente não oferecer suporte ao recurso do módulo de tarefa, essa URL será aberta em uma guia do navegador. |
+| `completionBotId` | cadeia de caracteres | Especifica uma ID do aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga do evento. |
 
 > [!NOTE]
 > O recurso de módulo de tarefa requer que os domínios de qualquer URL que você deseja carregar estejam incluídos na `validDomains` matriz no manifesto do seu aplicativo.
@@ -214,7 +214,7 @@ Aqui estão as informações sobre `APP_ID` e `BOT_APP_ID` :
 | Valor | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Sim | A [ID](~/resources/schema/manifest-schema.md#id) do aplicativo que chama o módulo de tarefa. A [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) no manifesto para `APP_ID` deve conter o domínio para `url` se `url` estiver na URL. (O ID do aplicativo já é conhecido quando um módulo de tarefa é invocado de uma guia ou de um bot, que é o motivo pelo qual ele não está incluído no `TaskInfo` .) |
-| `BOT_APP_ID` | string | Não | Se um valor for `completionBotId` especificado, o `result` objeto é enviado por meio de uma `task/submit invoke` mensagem para o bot especificado. `BOT_APP_ID`deve ser especificado como um bot no manifesto do aplicativo, ou seja, você não pode simplesmente enviá-lo para qualquer bot. |
+| `BOT_APP_ID` | string | Não | Se um valor for `completionBotId` especificado, o `result` objeto é enviado por meio de uma `task/submit invoke` mensagem para o bot especificado. `BOT_APP_ID` deve ser especificado como um bot no manifesto do aplicativo, ou seja, você não pode simplesmente enviá-lo para qualquer bot. |
 
 Observe que é válido para `APP_ID` e `BOT_APP_ID` ser o mesmo, e em muitos casos será se um aplicativo tiver um bot, pois é recomendável usá-lo como a ID de um aplicativo, se houver um.
 
@@ -238,5 +238,11 @@ O Microsoft Teams garantirá que a navegação pelo teclado funcione corretament
 
 ## <a name="task-module-samples"></a>Amostras de módulo de tarefa
 
-* [Exemplo deNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
+* [ Exemplo deNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
 * [Exemplo de/.NET C#](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
+> [!div class="nextstepaction"]
+> [Saiba mais: solicitar permissões de dispositivo](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[Saiba mais: permissões da Galeria de câmera e imagem](/concepts/device-capabilities/mobile-camera-image-permissions.md)

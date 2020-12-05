@@ -2,12 +2,12 @@
 title: Diretrizes de design para guias
 description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
 keywords: Teams design Guidelines Reference Framework Tabs Configuration guia canal de configuração guia estática guia de equipes de design simples
-ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552546"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576859"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
 
@@ -198,4 +198,4 @@ Enviar uma mensagem para um thread de guia aumenta a conscientização da ativid
 * Guias não devem ter mais do que três níveis de navegação no aplicativo.
 * As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
 * Guias que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, em vez de uma guia (para área de trabalho e Web).
-* Para uma experiência de usuário aprimorada, inclua um bot pessoal que envia uma mensagem de boas-vindas ao usuário na primeira execução e responde aos comandos **Hi**, **Help** e **Hello** . Você pode consultar a documentação sobre [bots de conversa](../../bots/what-are-bots#in-a-one-to-one-chat) para obter mais assistência.
+* Para uma experiência de usuário aprimorada, inclua um bot pessoal que envia uma mensagem de boas-vindas ao usuário na primeira execução e responde aos comandos **Hi**, **Help** e **Hello** . Você pode consultar a documentação sobre [bots de conversa](../../bots/what-are-bots.md#in-a-one-to-one-chat) para obter mais assistência.
