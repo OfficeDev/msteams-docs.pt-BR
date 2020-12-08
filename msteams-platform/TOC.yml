@@ -134,6 +134,12 @@
           href: concepts/authentication/authentication.md
         - name: Configurar provedores de identidade
           href: concepts/authentication/configure-identity-provider.md
+    - name: Habilitar recursos do dispositivo
+      items:
+        - name: Solicitar permissões do dispositivo
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: Câmera e galeria
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Guias - experiências incorporadas na Web
   items:
     - name: O que são as guias personalizadas?
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: Adicionar sua guia personalizada ao Microsoft Office SharePoint Online
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Solicitar permissões do dispositivo
-          href: tabs/how-to/native-device-permissions.md
 - name: Bots — interações baseadas em conversas
   items:
     - name: O que são os bots no Microsoft Teams?
