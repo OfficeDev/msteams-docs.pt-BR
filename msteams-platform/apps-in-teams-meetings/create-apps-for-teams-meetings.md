@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de função de participante do usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576824"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605228"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -24,7 +24,7 @@ ms.locfileid: "49576824"
 
 1. Algumas APIs de reunião, como `GetParticipant` exigirão um [registro de bot e uma ID de aplicativo de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para gerar tokens de autenticação.
 
-1. Como desenvolvedor, você deve cumprir as diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes da caixa](design/designing-in-meeting-dialog.md) de diálogo na reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
+1. Como desenvolvedor, você deve cumprir as diretrizes gerais de [design da guia do teams](../tabs/design/tabs.md) para cenários anteriores e posteriores à reunião, bem como as [diretrizes da caixa](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) de diálogo na reunião para a caixa de diálogo na reunião disparada durante uma reunião do teams.
 
 1. Observe que, para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades de evento da reunião. Esses eventos podem estar dentro da caixa de diálogo de reunião (consulte o `bot Id` parâmetro de conclusão `Notification Signal API` ) e outras superfícies no ciclo de vida da reunião
 
@@ -111,6 +111,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    }
 }
 ```
+
 #### <a name="response-codes"></a>Códigos de resposta
 
 **403**: o aplicativo não tem permissão para obter informações do participante. Esta será a resposta de erro mais comum e será disparada quando o aplicativo não estiver instalado na reunião, como quando está desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ativo.  
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  Na carga solicitada abaixo, o `completionBotId` parâmetro de `externalResourceUrl` é opcional. É o `Bot ID` que é declarado no manifesto. O bot receberá um objeto result.
-> * Os parâmetros Width e Height de externalResourceUrl devem estar em pixels. Consulte as [diretrizes de design](design/designing-in-meeting-dialog.md) para garantir que as dimensões estejam dentro dos limites permitidos.
+> * Os parâmetros Width e Height de externalResourceUrl devem estar em pixels. Consulte as [diretrizes de design](design/designing-apps-in-meetings.md) para garantir que as dimensões estejam dentro dos limites permitidos.
 > * A URL é a página carregada como `<iframe>` dentro da caixa de diálogo em reunião. O domínio da URL deve estar na matriz do aplicativo `validDomains` em seu manifesto do aplicativo.
 
 
@@ -256,9 +257,9 @@ A guia `context` e `scopes` as propriedades funcionam em harmonia para permitir 
 > [!NOTE]
 > * Para que seu aplicativo fique visível na Galeria de guias, ele precisa **suportar guias configuráveis** e o **escopo de chat de grupo**.
 >
-> * Os clientes móveis dão suporte a guias apenas nas superfícies de reunião prévia e posterior. As experiências de reunião (painel e caixa de diálogo na reunião) no Mobile estarão disponíveis em breve. Siga as [orientações para guias em celular](../tabs/design/tabs-mobile.md) ao criar suas guias para dispositivos móveis. 
+> * Os clientes móveis dão suporte a guias apenas nas superfícies de reunião prévia e posterior. As experiências de reunião (guia e caixa de diálogo na reunião) no Mobile estarão disponíveis em breve. Siga as [orientações para guias em celular](../tabs/design/tabs-mobile.md) ao criar suas guias para dispositivos móveis.
 
-### <a name="pre-meeting"></a>Pré-reunião
+### <a name="before-a-meeting"></a>Antes de uma reunião
 
 Os usuários com funções de organizador e/ou apresentador adicionam guias a uma reunião usando o botão mais ➕ nas páginas **chat** de reunião e **detalhes** da reunião. As extensões de mensagens são adicionadas ao via menu de reticências/estouro &#x25CF;&#x25CF;&#x25CF; localizada abaixo da área de mensagem de composição no chat. Os bots são adicionados a um chat de reunião usando a **@** tecla "" e selecionando **obter bots**.
 
@@ -268,7 +269,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 > **Observação**: as atribuições de função podem ser alteradas enquanto uma reunião estiver em andamento.  *Consulte* [funções em uma reunião do teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### <a name="in-meeting"></a>Na reunião
+### <a name="during-a-meeting"></a>Durante uma reunião
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ AppName em-Meeting-ToolTip deve indicar o nome do aplicativo na-barra U da reunião.
 
-#### <a name="in-meeting-dialog"></a>**caixa de diálogo na reunião**
+#### <a name="in-meeting-dialog"></a>**Caixa de diálogo na reunião**
 
-✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](design/designing-in-meeting-dialog.md).
+✔ Você deve cumprir as diretrizes de [design da caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 ✔ Consulte o fluxo de autenticação do Microsoft [Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -303,7 +304,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 >
 > * Se quiser que seu aplicativo dê suporte a usuários anônimos, a carga de solicitação de chamada inicial deve confiar no `from.id`  (ID do usuário) solicitar metadados no `from` objeto, e não no `from.aadObjectId` (Azure Active Directory ID do usuário) solicitar metadados. *Consulte* [usando módulos de tarefas em guias](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [criar e enviar o módulo de tarefa](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### <a name="post-meeting"></a>Pós-reunião
+### <a name="after-a-meeting"></a>Após uma reunião
 
 As configurações pós-instalação e pré-reunião são equivalentes.
 

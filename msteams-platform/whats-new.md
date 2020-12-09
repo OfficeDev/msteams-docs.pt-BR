@@ -2,12 +2,12 @@
 title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 keywords: Teams novidades mais recentes
-ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576831"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604463"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>O que há de novo para desenvolvedores no Microsoft Teams
 
@@ -23,7 +23,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 |11/30/2020|Novo: Identity Platform Integration with Teams Toolkit e Visual Studio Code for Tabs|[Autenticação de logon único com o Teams Toolkit e o Visual Studio Code for Tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Manifesto do aplicativo do teams atualizado para a versão 1,8|Referência: esquema de manifesto para o Microsoft Teams|[Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Esquema de manifesto atualizado para a versão 1,8| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/10/2020|Diretrizes de design do bot do teams|[Diretrizes de design de bot](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|Diretrizes de design do bot do teams|[Diretrizes de design de bot](bots/design/bots.md)|
 |9/30/2020|O envio e o recebimento de arquivos para bots em dispositivos móveis agora são suportados.|[Enviar e receber arquivos através do bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nova orientação "introdução às equipes do Microsoft Teams"|[Criar sua primeira visão geral do App Teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Suporte para aplicativos de equipes em reunião (versão prévia)|[Criar aplicativos para reuniões](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e aplicativos do teams [em reuniões do teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -75,7 +75,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 | 08/06/2018 | Agora, seu bot pode enviar e receber arquivos.| [Enviar e receber arquivos através do bot](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | A visualização do desenvolvedor agora oferece suporte a vários comandos no Messaging Extensions. | [Extensões de mensagens foram estendidas](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | As informações sobre a nova certificação do aplicativo foram adicionadas à seção publicação. |[Permissões de manifesto](resources/schema/manifest-schema.md#permissions)|
-| 07/16/2018 | Na visualização do desenvolvedor, mais espaço foi alocado para a página de configuração da guia. | [A página de configuração da guia é significativamente mais alta](tabs/design/tabs.md#configuration-page-height)|
+| 07/16/2018 | Na visualização do desenvolvedor, mais espaço foi alocado para a página de configuração da guia. | [A página de configuração da guia é significativamente mais alta](tabs/design/tabs.md)|
 | 07/12/2018 | Informações sobre o acesso de convidados. | [Acesso para convidado no Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Foram adicionadas informações de pré-lançamento para o catálogo de aplicativos do Microsoft Teams locatário. | [Publicar seu aplicativo do Microsoft Teams](~/publishing/apps-publish.md)|
 | 05/31/2018 | O Microsoft Teams Developer Preview (Ring 3,6) foi atualizado para incluir a capacidade de adicionar bots e guias ao chat de grupo. | [Recursos na visualização do desenvolvedor](~/resources/dev-preview/developer-preview-features.md), [esquema de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md)|

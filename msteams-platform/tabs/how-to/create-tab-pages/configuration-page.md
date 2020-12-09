@@ -5,12 +5,12 @@ description: como criar uma página de configuração
 keywords: guias do teams com o canal de grupo configurável
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964603"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605322"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -166,7 +166,7 @@ As opções de remoção suportadas podem aprimorar ainda mais a experiência do
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` Propriedade (veja abaixo). O suporte completo para guias em clientes móveis será lançado em breve. Para se preparar para a atualização, siga as [orientações para guias em celular](~/tabs/design/tabs-mobile.md) ao criar suas guias.
+Se você optar por ter a guia canal/grupo exibida em clientes móveis do Microsoft Teams, a `setSettings()` configuração deverá ter um valor para a `websiteUrl` Propriedade (veja abaixo). Confira [diretrizes para guias em celular](~/tabs/design/tabs-mobile.md).
 
 Configuração do Microsoft Teams SetSettings () para a página de remoção e/ou clientes móveis:
 

@@ -5,16 +5,16 @@ description: Crie rapidamente uma guia de canal e grupo do Microsoft Teams usand
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 46b5410a1ae7c866f8998362765dfe5462df94cb
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: bb87d34974469057287cf63725e7722125c57c34
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931761"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605242"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Criar uma guia de canal e grupo para o Microsoft Teams
 
-Neste tutorial, você criará uma guia de *canal* básica (também conhecida como uma *Guia de grupo* ), que é uma página de tela inteira de um canal de equipe ou bate-papo. Ao contrário de uma guia pessoal, os usuários podem configurar alguns aspectos desse tipo de guia (por exemplo, renomear a guia de forma que ela seja significativa para o canal).
+Neste tutorial, você criará uma guia de *canal* básica (também conhecida como uma *Guia de grupo*), que é uma página de tela inteira de um canal de equipe ou bate-papo. Ao contrário de uma guia pessoal, os usuários podem configurar alguns aspectos desse tipo de guia (por exemplo, renomear a guia de forma que ela seja significativa para o canal).
 
 ## <a name="your-assignment"></a>Sua atribuição
 
@@ -62,8 +62,8 @@ Você pode exibir e atualizar suas configurações de aplicativo usando o app St
 
 Durante a instalação, o kit de ferramentas configurou inicialmente dois componentes essenciais de guias de canal e Grupo:
 
-* **Página de configuração** : a caixa de diálogo para adicionar uma guia a um canal ou chat. (No app Studio, você pode encontrar esta página acessando **guias > equipe**.)
-* **Página de conteúdo** : onde você exibe o conteúdo principal. (No app Studio, você pode encontrar esta página acessando **guias > adicionar uma guia pessoal**.)
+* **Página de configuração**: a janela restrita para adicionar uma guia a um canal ou chat. (No app Studio, você pode encontrar esta página acessando **guias > equipe**.)
+* **Página de conteúdo**: onde você exibe o conteúdo principal. (No app Studio, você pode encontrar esta página acessando **guias > adicionar uma guia pessoal**.)
 
 ### <a name="app-scaffolding"></a>Aplicativo scaffolding
 
@@ -119,7 +119,7 @@ a {
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. personalizar a página de configuração da guia
 
-Cada guia em um canal ou chat tem uma página de configuração, uma caixa de diálogo com pelo menos uma opção de instalação que é exibida quando os usuários adicionam seu aplicativo. A página de configuração, por padrão, pergunta aos usuários se eles desejam notificar o canal ou chat quando a guia é instalada.
+Cada guia em um canal ou chat tem uma página de configuração, uma janela restrita com pelo menos uma opção de configuração exibida quando os usuários adicionam seu aplicativo. A página de configuração, por padrão, pergunta aos usuários se eles desejam notificar o canal ou chat quando a guia é instalada.
 
 Adicione um conteúdo personalizado à sua página de configuração. Vá para o diretório do seu projeto `src/components` , abra `TabConfig.js` e atualize o conteúdo do espaço reservado dentro `return()` (conforme mostrado no exemplo a seguir).
 
@@ -139,9 +139,9 @@ return (
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. forneça um nome de guia sugerido
 
-Quando você adiciona uma guia de canal ou grupo, por padrão, o nome do aplicativo é exibido (por exemplo, **First-app** ).
+Quando você adiciona uma guia de canal ou grupo, por padrão, o nome do aplicativo é exibido (por exemplo, **First-app**).
 
-Isso pode ser bem, dependendo do que você chama no seu aplicativo, mas talvez você queira fornecer um nome que faça mais sentido no contexto de colaboração de grupo (por exemplo, **contatos da equipe** ).
+Isso pode ser bem, dependendo do que você chama no seu aplicativo, mas talvez você queira fornecer um nome que faça mais sentido no contexto de colaboração de grupo (por exemplo, **contatos da equipe**).
 
 No `TabConfig.js` , vá para `microsoftTeams.settings.setSettings` . Adicione a `suggestedDisplayName` propriedade com o nome da guia que você deseja exibir por padrão (conforme mostrado). Use o nome fornecido ou crie o seu próprio. (Por padrão, os usuários podem alterar o nome se desejarem).
 
@@ -171,8 +171,8 @@ Seu aplicativo está pronto para teste no Teams. Para fazer isso, você deve ter
 1. Para exibir o conteúdo do aplicativo no Teams, especifique o local em que o aplicativo está em execução ( `localhost` ) é confiável:
    1. Abra uma nova guia na mesma janela do navegador (Google Chrome por padrão), aberta após pressionar **F5**.
    1. Vá até `https://localhost:3000/tab` a página e vá até ela.
-1. Volte para o Microsoft Teams. Na caixa de diálogo, selecione **Adicionar a uma equipe** ou **Adicionar a um chat** e localize um canal ou chat que você possa usar para teste.
-1. Selecione **Configurar uma guia**. A página de configuração é exibida em uma caixa de diálogo.<br/>
+1. Volte para o Microsoft Teams. Na janela restrita, selecione **Adicionar a uma equipe** ou **Adicionar a um chat** e localize um canal ou chat que você possa usar para teste.
+1. Selecione **Configurar uma guia**. A página de configuração é exibida em uma janela restrita.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de tela de uma página de configuração da guia canal.":::
 1. Selecione **salvar** para configurar a guia. A página de conteúdo é exibida.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de tela de uma guia canal com visualização de conteúdo estático.":::

@@ -4,12 +4,12 @@ description: Introdução ao desenvolvimento de aplicativos personalizados de gr
 keywords: Kit de ferramentas do Visual Studio Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476983"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604484"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Teams Toolkit e o Visual Studio
 
@@ -82,7 +82,7 @@ Quando um aplicativo é instalado, o cliente do teams analisa o arquivo de manif
 
 ## <a name="package-your-app"></a>Empacotar seu aplicativo
 
-A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto** ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.js** e os [dois arquivos de ícone](../concepts/build-and-test/apps-package.md#icons).
+A modificação da página de **detalhes do aplicativo** ou a atualização do **manifesto** ou arquivos **. env** na pasta do seu aplicativo  **. publish** gerará automaticamente seu arquivo de **Development.zip** . O arquivo Development.zip inclui três arquivos necessários: o **manifest.jsem** e [dois ícones](../concepts/build-and-test/apps-package.md#app-icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar e executar o aplicativo localmente
 

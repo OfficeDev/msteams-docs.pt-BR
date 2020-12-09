@@ -1,135 +1,138 @@
 ---
-title: Designar cartões eficazes
-description: Descreve as diretrizes de design para criar cartões
-keywords: Diretrizes de design de equipes referência de cartões de estrutura de referência leve
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Criando cartões adaptáveis para seu aplicativo
+description: Saiba como projetar cartões adaptáveis para equipes e obter o kit de interface do usuário do Microsoft Teams.
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209834"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604491"
 ---
-# <a name="design-effective-cards"></a>Designar cartões eficazes
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando cartões adaptáveis para seu aplicativo do Microsoft Teams
 
-Os cartões são trechos acionáveis do conteúdo que você pode adicionar a uma conversa através de um bot, um conector ou um aplicativo. Usando texto, elementos gráficos e botões, os cartões permitem que você se comunique com uma audiência.
+Um cartão adaptável contém um corpo de forma livre de elementos de cartão e conjunto opcional de ações. Cartões adaptáveis são trechos acionáveis do conteúdo que você pode adicionar a uma conversa por meio de um bot ou extensão de mensagens. Usando texto, elementos gráficos e botões, esses cartões fornecem comunicação avançada com o público.
 
-Nossa estrutura de cartão elimina o ônus de projetar um UX totalmente funcional. Desenvolvemos vários tipos de cartões padrão e cada um cabe em nossas plataformas suportadas. Isso significa que o layout está totalmente encaredo e você não precisará desenvolver iterações de cartão diferentes entre plataformas. Em vez disso, você pode se concentrar na discagem em seu conteúdo.
+A estrutura de cartão adaptável é usada em vários produtos da Microsoft, incluindo o Teams. Você pode enviar cartões dentro de mensagens para usuários via bots ou extensões de mensagens. Os usuários podem executar ações em cartões, quando presentes.
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
-## <a name="guidelines"></a>Diretrizes
+## <a name="microsoft-teams-ui-kit"></a>Kit de interface do usuário do Microsoft Teams
 
-Considere um cartão como uma resposta a uma pergunta de usuário ou uma configuração. Um cartão pode responder a uma pergunta direta (como "quantos erros abertos eu tenho?") ou a uma condição (como "Enviar uma lista de meus bugs abertos às 9 AM todos os dias").
+Você pode encontrar diretrizes de design mais abrangentes para cartões adaptáveis no Teams, incluindo elementos que podem ser capturados e modificados conforme necessário, no kit de interface do usuário do Microsoft Teams. O kit de interface do usuário também aborda tópicos essenciais, como temas, acessibilidade e dimensionamento responsivo.
 
-> [!TIP]
-> O uso de um dos nossos tipos de cartão padrão significa que você já saberá que todas as suas respostas serão bem processadas em todas as plataformas suportadas.
+> [!div class="nextstepaction"]
+> [Obter o kit de interface do usuário do Microsoft Teams (figma)](https://www.figma.com/community/file/916836509871353159)
 
-Um cartão pode incluir qualquer um dos seguintes elementos:<br />
+## <a name="adaptive-cards-designer"></a>Designer de cartões adaptáveis
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+Você também pode começar a criar seus cartões adaptáveis diretamente no navegador.
 
-1. **Texto do envelope**: melhor usado para mensagens de chat. Por exemplo, se você deseja que um bot diga: "aqui está o que eu encontrei!" ou "hora do seu resumo de notícias do 1:00", essa mensagem é melhor exibida no texto do envelope.
+> [!div class="nextstepaction"]
+> [Experimente o designer de cartões adaptáveis](https://adaptivecards.io/designer/)
 
-   O texto do envelope é uma ótima maneira de injetar uma pequena personalidade no seu serviço, apenas se lembre de mantê-lo relativamente curto.
-
-2. **Título**: seu título sempre será o maior texto no seu cartão. Ele também serve como seu "gancho", portanto, tente manter o título curto, fácil de lembrar e fácil de digitalizar.
-
-3. **Subtítulo**: melhor usado para atribuição, mote ou como uma diretiva secundária. Este componente aparece logo abaixo do título.
-
-4. **Image**: as imagens são dimensionadas de acordo com o contêiner. Os cartões herói têm uma largura máxima de 420px, as miniaturas têm uma largura máxima de 100px e os modos de exibição de lista só permitem o medianiz 32px no modo de área de trabalho.
-
-5. **Texto**: melhor usado para texto sem formatação no corpo do cartão. O tamanho máximo depende do tipo de cartão que você selecionou.
-
-6. **Botões**: melhor usado para abrir páginas da Web, guias ou conteúdo de chat adicional. Certifique-se de manter o texto do botão curto e para o ponto.
-
-   Você pode incluir até 6 botões por cartão, mas seria recomendável seguir uma filosofia ' menos mais ' aqui.
-
-7. **Região de toque**: esta é a região de clique do cartão. A maioria dos usuários desejará clicar em imagens automaticamente, portanto, experimente e crie seu texto para que eles saibam onde devem tocar ou clicar.
-
-> [!TIP]
-> Não é necessário incluir todos os elementos em cada cartão que você criar. Permitir que o conteúdo dite seus elementos.
-
----
-
-## <a name="types-of-cards"></a>Tipos de cartões
+## <a name="types-of-adaptive-cards"></a>Tipos de cartões adaptáveis
 
 ### <a name="hero"></a>Destaque
 
-Nosso maior cartão. Melhor usado para artigos, descrições longas ou cenários em que a imagem está informando a maior parte da história.
+Nosso maior cartão. Use para compartilhar artigos ou cenários onde uma imagem diz maior parte da história.
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
 ### <a name="thumbnail"></a>Thumbnail
 
-Curta e doce. Esses cartões são ideais para respostas curtas ou se você deseja retornar vários cartões de uma só vez, para que o usuário possa escolher entre várias opções. Acreditamos que essas são uma ótima maneira de vincular detalhadamente a outra guia ou serviço Web.
+Use para enviar uma mensagem acionável simples.
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
-### <a name="sign-in"></a>Entrar
+### <a name="list"></a>Listar
 
-Alguns serviços exigem que os usuários entrem de forma independente da nossa autenticação. Nesse caso, você apresentaria um cartão de conexão antes que o usuário possa se conectar ao seu serviço.
+Use em cenários em que você deseja que o usuário escolha um item de uma lista, mas os itens não precisam de muita explicação.
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
-
-> [!TIP]
-> Limitar as ocorrências de um cartão de entrada adicional, uma vez que elas representam uma considerável bomba de velocidade para novos usuários.
-
----
-
-## <a name="card-collections"></a>Coleções de cartões
-
-Também temos tipos de cartões padrão que são mais usados quando você deseja apresentar vários pedaços de conteúdo de uma só vez ou em uma sucessão rápida. Para essa finalidade, temos um carrossel, um resumo, uma lista e o que chamamos de uma ' mesclagem em bolha '.
-
-### <a name="carousel"></a>Carrossel
-
-Melhor usado para artigos, compras e navegação através de cartões.
-
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
-
-> [!TIP]
-> O carrossel será a altura máxima do seu maior cartão. Recomendamos o uso do mesmo tipo de cartão e campos de conteúdo no todo.
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
 ### <a name="digest"></a>Digest
 
-Melhor usado para notícias, resumos e sempre que você deseja que o usuário exiba vários cartões de uma só vez. Recomendamos o uso de cartões de miniatura para resumos.
+Use para resumos de notícias e postagens de arredondamento. Observação: Recomendamos o cartão de miniatura de uma atualização única ou de um item de notícias.
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
-### <a name="lists"></a>Listas
+### <a name="media"></a>Mídia
 
-As listas são uma ótima maneira de apresentar um conjunto de objetos que podem ser varridos em um cenário "escolha um destes". As listas são melhores usadas para itens que não precisam de muita explicação.
+Use quando quiser combinar texto e mídia, como áudio ou vídeo.
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
-### <a name="bubble-merge"></a>Mesclagem em bolha
+### <a name="people"></a>Pessoas
 
-Alguns efeitos interessantes podem ser obtidos enviando um herói e várias miniaturas em uma sucessão rápida. Recomendamos essa abordagem quando você quiser atender um resultado principal, mas incluir alguns itens relacionados.
+Melhor usado quando você transmite com eficiência as pessoas envolvidas em uma tarefa.
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
 
----
+### <a name="request-ticket"></a>Solicitar Tíquete
+
+Use para obter entradas rápidas de um usuário para criar automaticamente uma tarefa ou um tíquete.
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
+
+### <a name="imageset"></a>ImageSet
+
+Use para enviar várias miniaturas de imagem.
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
+
+### <a name="actionset"></a>ActionSet
+
+Use quando você quiser que o usuário selecione um botão e, em seguida, coletar a entrada de usuário do mesmo cartão.
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
+
+### <a name="choiceset"></a>Choiceset
+
+Use para coletar várias entradas do usuário.
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="O exemplo mostra um cartão adaptável." border="false":::
+
+## <a name="anatomy"></a>Anatomia
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Ilustração mostrando a anatomia de interface do usuário de um cartão adaptável." border="false":::
+
+Cartões adaptáveis têm muita flexibilidade. Mas, no mínimo, é recomendável que você inclua os seguintes componentes em todos os cartões:
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Cabeçalho**: torne os cabeçalhos claros e concisos, mas descritivos.|
+|B|**Cópia de corpo**: Use para transmitir detalhes que seja muito longo ou não seja importante o suficiente para incluir no cabeçalho.|
+|C|**Ações principais**: como prática recomendada, inclua ações primárias de 1-3. São permitidos no máximo seis.|
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
-### <a name="keep-the-noise-down"></a>Mantenha o ruído pressionado
+### <a name="primary-and-secondary-actions"></a>Ações primárias e secundárias
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Exemplo mostrando uma prática recomendada de cartões adaptáveis." border="false":::
+
+#### <a name="do-use-up-to-six-primary-actions"></a>Fazer: usar até seis ações principais
+
+Embora os cartões adaptáveis possam suportar seis ações principais, a maioria dos cartões não precisa de. As ações devem ser claras, concisas e diretas. Menos é mais.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Exemplo mostrando uma prática recomendada de cartões adaptáveis." border="false":::
+
+#### <a name="dont-use-more-than-six-primary-actions"></a>Não: usar mais de seis ações principais
+
+Os cartões adaptáveis devem apresentar conteúdo rápido e acionável. Muitas ações podem sobrecarregar um usuário.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="frequency"></a>Frequência
+
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Exemplo mostrando uma prática recomendada de cartões adaptáveis." border="false":::
+
+#### <a name="do-be-concise"></a>Fazer: seja conciso
 
 É fácil enviar vários cartões para uma conversa, mas depois que os cartões saem do modo de exibição, eles se tornam menos úteis. Tente se limitar ao Essentials. Isso se aplica especialmente em um canal em que os usuários têm menos tolerância para o que eles percebem como "ruído".
-
-### <a name="test-on-mobile"></a>Testar em dispositivos móveis
-
-Os ambientes móveis são restritos por espaço e largura de banda, portanto, tenha cuidado ao incluir imagens de tamanho excessivo e conjuntos de dados grandes em listas e carrossel. Além disso, as larguras de título e os comprimentos de texto ficarão truncados em dispositivos móveis, portanto, outra coisa para ficar atento.
-
-### <a name="check-your-graphics"></a>Verifique seus elementos gráficos
-
-Os elementos gráficos serão dimensionados e, portanto, não se esqueça de visualizá-los em todas as plataformas.
-
-### <a name="avoid-including-text-in-a-graphic"></a>Evitar incluir texto em um gráfico
-
-Tudo o que precisa ser lido por um usuário deve ser incluído em um campo de texto. Após a escala dinâmica de uma imagem, qualquer texto que você adicionar a um gráfico poderá se tornar ininteligível.
-
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>Use menção se quiser a atenção de usuários específicos
-
-> [!NOTE]
-> Mencione o suporte nos cartões atualmente é suportado apenas na [visualização do desenvolvedor](~/resources/dev-preview/developer-preview-intro.md) .
-
-As mencionas são uma ótima maneira de notificar usuários específicos em uma equipe ou em um chat de grupo. Você pode incluir um cartão em cenários, como uma tarefa atribuída a um usuário ou fornecer Parabéns a uma equipe. Saiba como incluir mençãos em cartões na página de [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). 

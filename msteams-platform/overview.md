@@ -5,18 +5,21 @@ description: Visão geral de como os desenvolvedores podem estender e personaliz
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 6f5f3454885320669ef42383529d39fcfcfdfee8
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209785"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604784"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>Criar aplicativos para o Microsoft Teams
+# <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
 Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para o local em que as pessoas coletam, aprendem e funcionam cada vez.
 
 Os aplicativos são como estender o Microsoft Teams para atender às suas necessidades. Crie uma marca de algo novo para o Microsoft Teams ou integre um aplicativo existente.
+
+> [!div class="nextstepaction"]
+> [Iniciar aqui](build-your-first-app/build-first-app-overview.md)
 
 ## <a name="what-are-teams-apps"></a>O que são aplicativos do teams?
 
@@ -139,7 +142,7 @@ Vá em com nossos tutoriais de primeiro aplicativo ou descubra como integrar e i
 ## <a name="resources"></a>Recursos
 
 * [Adicionar um botão compartilhar ao Teams ao seu site](concepts/build-and-test/share-to-teams.md)
-* [Sistema de design fluente](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interface do usuário do Fluent</a>
 * [SDK do cliente JavaScript do Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [SDK da estrutura de bot para JavaScript](https://github.com/Microsoft/botbuilder-js) e [SDK da estrutura de bot para .net](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publicar seu aplicativo em uma organização ou AppSource](concepts/deploy-and-publish/overview.md)

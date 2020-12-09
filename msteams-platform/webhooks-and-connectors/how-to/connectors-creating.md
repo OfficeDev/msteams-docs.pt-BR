@@ -3,12 +3,12 @@ title: Conectores de Office 365
 description: Descreve como começar a usar os conectores do Office 365 no Microsoft Teams
 keywords: conector do o365 no teams
 ms.date: 04/19/2019
-ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998018"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605339"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Criando conectores do Office 365 para o Microsoft Teams
 
@@ -79,7 +79,7 @@ Opcionalmente, você pode executar um manipulador de eventos quando o usuário r
 
 Você pode baixar o manifesto do aplicativo Teams gerado automaticamente no Portal. Para que você possa usá-lo para testar ou publicar seu aplicativo, no entanto, você deve fazer o seguinte:
 
-- Inclua dois ícones, seguindo as instruções nos [ícones](~/concepts/build-and-test/apps-package.md#icons).
+- [Inclua dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
 
 O seguinte arquivo manifest.json contém os elementos básicos necessários para testar e enviar seu aplicativo.

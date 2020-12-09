@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 26c6ca0ed6edceb9b34c84c28a43a63f65a348de
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552553"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604610"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -376,7 +376,7 @@ Uma matriz de objetos especificando traduções de idiomas adicionais.
 
 **Obrigatório** — objeto
 
-Ícones usados no aplicativo Teams. Os arquivos de ícone devem ser incluídos como parte do pacote de carregamento. Consulte [ícones](~/concepts/build-and-test/apps-package.md#icons) para obter mais informações.
+Ícones usados no aplicativo Teams. Os arquivos de ícone devem ser incluídos como parte do pacote de carregamento. Consulte [ícones](../../concepts/build-and-test/apps-package.md#app-icons) para obter mais informações.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -400,11 +400,11 @@ Usado quando sua experiência de aplicativo tem uma experiência de guia de cana
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar a guia.|
-|`scopes`|matriz de enums|1|✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
+|`scopes`|matriz de enums|1 |✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de enums|6 ||O conjunto de `contextItem` escopos onde há suporte para uma tabulação. Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|matriz de enums|1||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e `sharePointWebPart` |
+|`supportedSharePointHosts`|matriz de enums|1 ||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -421,8 +421,8 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |`contentUrl`|cadeia de caracteres||✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
 |`websiteUrl`|cadeia de caracteres|||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
 |`searchUrl`|cadeia de caracteres|||A URL do https://para apontar para as consultas de pesquisa de um usuário.|
-|`scopes`|matriz de enums|1|✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
-|`context` | matriz de enums| duas|| O conjunto de `contextItem` escopos onde há suporte para uma tabulação.|
+|`scopes`|matriz de enums|1 |✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
+|`context` | matriz de enums| 2 || O conjunto de `contextItem` escopos onde há suporte para uma tabulação.|
 
 > [!NOTE]
 > Se suas guias exigirem informações dependentes de contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, *consulte* [obter contexto para a guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -438,7 +438,7 @@ O item é uma matriz (máximo de apenas 1 elemento &mdash; atualmente apenas um 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
-|`scopes`|matriz de enums|3D|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`scopes`|matriz de enums|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será **`false`**|
 |`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será `**false**`|
 |`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Será **`false`**|
@@ -451,7 +451,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enums|3D|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de enums|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
@@ -472,7 +472,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
-|`scopes`|matriz de enums|1|✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
+|`scopes`|matriz de enums|1 |✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
 |`connectorId`|cadeia de caracteres|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -508,7 +508,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|cadeia de caracteres|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
 |`description`|cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
 |`initialRun`|booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: **false**.|
-|`context`|matriz de cadeias de caracteres|3D||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
+|`context`|matriz de cadeias de caracteres|3 ||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor Boolean que indica se ele deve buscar o módulo de tarefa dinamicamente. Padrão: **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagem.|
 |`taskInfo.title`|cadeia de caracteres|64 caracteres||Título inicial da caixa de diálogo.|

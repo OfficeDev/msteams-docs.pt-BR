@@ -1,201 +1,236 @@
 ---
-title: Diretrizes de design para guias
-description: Descreve as diretrizes para a criação de guias de conteúdo e colaboração
-keywords: Teams design Guidelines Reference Framework Tabs Configuration guia canal de configuração guia estática guia de equipes de design simples
-ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+title: Projetando sua guia para área de trabalho e Web
+description: Saiba como criar uma guia do Teams (área de trabalho e Web) e obter o kit de interface do usuário do Microsoft Teams.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576859"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604640"
 ---
-# <a name="content-and-conversations-all-at-once-using-tabs"></a>Conteúdo e conversas, todos ao mesmo tempo usando guias
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Projetando sua guia para a área de trabalho e a Web do Microsoft Teams
 
-> [!Important]
-> **Guias em clientes móveis**
->
-> Siga as [orientações para guias em celular](./tabs-mobile.md) ao criar suas guias. Se sua guia usa autenticação, você deve atualizar o SDK do JavaScript do Microsoft Teams para a versão 1.4.1 ou posterior, ou a autenticação falhará.
->
-> **Guias de canal/grupo (configurável) em dispositivos móveis:**
->
-> * Os clientes móveis só mostram guias configuráveis com um valor para `websiteUrl` . Se quiser que a sua guia apareça nos clientes móveis do Microsoft Teams, você deve definir o valor de `websiteUrl` .
-> * O comportamento de abertura padrão no Mobile é abrir fora do navegador usando o `websiteUrl` . Para aplicativos publicados na loja de aplicativos públicos, se você quiser que a guia de canal seja aberta no Teams por padrão, siga as [orientações para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)e entre em seu representante de suporte para solicitar a lista branca.
+Uma guia é uma tela grande para o conteúdo que facilita a colaboração. Para guiar o design do aplicativo, as informações a seguir descrevem e ilustra como as pessoas podem adicionar, usar e gerenciar guias no Teams.
 
-Guias são Canvases que você pode usar para compartilhar conteúdo, reter conversas e hospedar serviços de terceiros, tudo em um fluxo de trabalho orgânica da equipe. Quando você cria uma guia no Microsoft Teams, ele coloca seu aplicativo Web front e Center onde ele é facilmente acessível contra conversas principais.
+## <a name="microsoft-teams-ui-kit"></a>Kit de interface do usuário do Microsoft Teams
 
-## <a name="guidelines"></a>Diretrizes
+Você pode encontrar diretrizes de design de guia abrangentes, incluindo elementos que podem ser capturados e modificados conforme necessário, no kit de interface do usuário do Microsoft Teams. O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e dimensionamento responsivo que não são abordados aqui.
 
-Uma guia boa deve exibir as seguintes características:
+> [!div class="nextstepaction"]
+> [Obter o kit de interface do usuário do Microsoft Teams (figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="focused-functionality"></a>Funcionalidade prioritária
+## <a name="add-a-tab"></a>Adicionar uma guia
 
-As guias funcionam melhor quando são criadas para atender a uma necessidade específica. Concentre-se em um pequeno conjunto de tarefas ou em um subconjunto de dados que é relevante para o canal em que a guia se encontra.
+Você pode adicionar uma guia do repositório do Teams (AppSource) ou em um dos seguintes contextos:
 
-### <a name="reduced-chrome"></a>Cromo reduzido
+* Chat
+* Canal
+* Reunião (antes, durante ou após a reunião)
 
-Evite criar vários painéis em uma guia, adicionar camadas de navegação ou exigir que os usuários rolem verticalmente e horizontalmente em uma guia. Em outras palavras, tente não ter tabulações na guia.
+O exemplo a seguir mostra como uma guia é adicionada em um canal.
 
-### <a name="integration"></a>Integração
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="O exemplo mostra uma guia que está sendo adicionada em um canal." border="false":::
 
-Encontre maneiras de notificar os usuários sobre a atividade de guia postando [cartões adaptáveis](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) a uma conversa.
+## <a name="set-up-a-tab"></a>Configurar uma guia
 
-### <a name="conversational"></a>Coloquial
+Há um pequeno processo de configuração para adicionar um aplicativo como uma guia de canal, chat ou reunião. A experiência é larga para você. Por exemplo, você pode ter uma descrição de como usar o aplicativo e algumas configurações opcionais. Inclua uma etapa de logon aqui se você precisar autenticar usuários.
 
-Encontre uma maneira de facilitar a conversa em torno de uma guia. Isso garante que o centro de conversas fique no conteúdo, nos dados ou no processo em mãos.
+### <a name="tab-configuration-modal"></a>Configuração da guia modal
 
-### <a name="streamlined-access"></a>Acesso simplificado
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="O exemplo mostra uma configuração de guia modal." border="false":::
 
-Certifique-se de que você está concedendo acesso às pessoas certas no momento certo. Manter o processo de entrada simples evitará a criação de barreiras para contribuição e colaboração.
+### <a name="anatomy-tab-configuration-modal"></a>Anatomia: janela de configuração da guia
 
-### <a name="responsiveness-to-window-sizing"></a>Capacidade de resposta para dimensionamento de janela
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma configuração de tabulação modal." border="false":::
 
-As equipes podem ser usadas em tamanhos de janela tão pequenos quanto 720px, então garantir que uma guia possa ser usada em uma pequena janela seja tão importante quanto a usabilidade em resoluções muito altas.
+|Contador|Descrição|
+|----------|-----------|
+|1|**Logotipo do aplicativo**: logotipo completo do aplicativo de cor do seu aplicativo.|
+|2 |**Nome do aplicativo**: nome completo do seu aplicativo.|
+|3 |**iframe**: espaço responsivo para o conteúdo do aplicativo (por exemplo, configurações de guia ou autenticação).|
+|4 |**Sobre link**: abre uma caixa de diálogo mostrando mais informações sobre o aplicativo, como uma descrição completa, permissões exigidas pelo aplicativo e links para sua política de privacidade e termos de serviço.
+|5 |**Botão fechar**: fecha a janela restrita.|
+|6 |**Opção notificar membros da equipe**: a janela restrita pergunta se você deseja criar uma postagem permitindo que outros saibam que você adicionou uma guia.|
+|7 |**Botão voltar**: vai para a etapa anterior com base em onde a caixa de diálogo foi aberta.|
+|8 |**Botão salvar**: conclui a configuração da guia.|
 
-### <a name="flat-navigation"></a>Navegação simples
+### <a name="tab-authentication-with-single-sign-on"></a>Autenticação de guia com logon único
 
-Pedimos aos desenvolvedores não adicionar o portal inteiro a uma guia. Manter a navegação relativamente simples ajuda a manter um modelo de conversa mais simples. Em outras palavras, a conversa é sobre uma lista de coisas, como itens de trabalho triantigos, ou uma única coisa, como uma espec.
+Você pode adicionar uma etapa em que os usuários devem entrar primeiro com suas credenciais da Microsoft. Esse método de autenticação é chamado SSO (logon único).
 
-Há desafios de navegação inerentes com uma hierarquia de navegação profunda em conversas encadeadas. Para a melhor experiência do usuário, a navegação de guia deve ser mantida no mínimo e ser projetada da seguinte maneira:
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="O exemplo mostra uma tela de autenticação de guia." border="false":::
 
-> [!div class="checklist"]
->
-> * **Abre um módulo de tarefa, como um item de trabalho individual ou uma entidade**. Isso impede totalmente o chat e é a melhor opção para manter o chat especificamente sobre a guia e não as subentidades ou experiências de edição.
->* **Abre uma pseudo caixa de diálogo em um iframe**. Se usado com um plano de fundo em tela, recomendamos usar a cor mais clara em vez do escuro. A `app-gray-10 at 30%` transparência funciona bem.
->* **Abre uma página do navegador**.
+### <a name="designing-a-tab-setup-with-ui-templates"></a>Projetando uma configuração de guia com modelos de interface do usuário
 
-### <a name="personality"></a>Personalidade
+Use um dos seguintes modelos de interface do usuário do Microsoft Teams para ajudar a criar sua experiência de configuração de guia:
 
-A tela da guia apresenta uma ótima oportunidade de marcar sua experiência. O logotipo é uma parte importante da sua identidade e conexão com os usuários. portanto, não se esqueça de incluí-lo:
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato verificável e permitir que os usuários executem ações em uma lista inteira ou em itens individuais.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): formulários são para coletar, validar e enviar entradas do usuário de forma estruturada.
+* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para vários cenários, incluindo o login, experiências de tela de apresentação, mensagens de erro e muito mais.
 
-> [!div class="checklist"]
->
->* Coloque o logotipo no canto esquerdo ou direito ou ao longo da borda inferior
-> * Mantenha seu logotipo pequeno e discreto
+## <a name="view-a-tab"></a>Exibir uma guia
 
-A incorporação de suas próprias cores e layouts twill também ajuda na comunicação de personalidade.
+As guias fornecem uma experiência Web de tela inteira no Microsoft Teams, onde você pode exibir conteúdo colaborativo, como quadros de tarefas e painéis, e informações importantes.
 
-> [!TIP]
-> Trabalhe com o nosso estilo visual para que seu serviço se sente como parte do teams. *Confira*, por exemplo, [cores de equipes](../../concepts/design/components/color.md)
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="O exemplo mostra uma guia com um quadro de tarefas." border="false":::
 
----
+### <a name="anatomy-tab"></a>Anatomia: Tab
 
-## <a name="tab-layouts"></a>Layouts de guia
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface de usuário de uma guia." border="false":::
 
-[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
+|Contador|Descrição|
+|----------|-----------|
+|1|**Nome da guia**: rótulo de navegação para sua guia.|
+|2 |**Estouro de tabulação**: abre ações de tabulação, como renomear e remover.|
+|3 |**Chat de guia**: abre um thread de chat à direita, permitindo que os usuários tenham uma conversa ao lado do conteúdo.|
+|4 |**iframe**: exibe o conteúdo da guia.
 
----
+### <a name="designing-a-tab-with-ui-templates"></a>Projetando uma guia com modelos de interface do usuário
 
-## <a name="types-of-tabs"></a>Tipos de guias
+Use um dos seguintes modelos de interface do usuário do Microsoft Teams para ajudar a criar sua experiência de guia:
 
-[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato verificável e permitir que os usuários executem ações em uma lista inteira ou em itens individuais.
+* [Quadro de tarefas](../../concepts/design/design-teams-app-ui-templates.md#task-board): um quadro de tarefas, às vezes chamado de um quadro Kanban ou uma pista de baixo, é uma coleção de cartões usados para acompanhar o status de itens de trabalho ou tíquetes.
+* [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela contendo vários cartões que oferecem uma visão geral de dados ou conteúdo.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): formulários são para coletar, validar e enviar entradas do usuário de forma estruturada.
+* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para vários cenários, incluindo o login, experiências de tela de apresentação, mensagens de erro e muito mais.
+* [NAV à esquerda](../../concepts/design/design-teams-app-ui-templates.md#left-nav): o modelo de navegação à esquerda pode ajudar se sua guia requer alguma navegação. Em geral, você deve manter a navegação de guia no mínimo.
 
----
+## <a name="use-a-tab-to-collaborate"></a>Usar uma guia para colaborar
 
-## <a name="configuration-page-height"></a>Altura da página de configuração
+As guias ajudam a facilitar as conversas sobre o conteúdo em um local central.
 
->[!IMPORTANT]
->Em setembro de 2018, a altura da [página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) da guia foi aumentada enquanto a largura permanece inalterada. Se o seu aplicativo for projetado para o tamanho mais antigo, a página de configuração da guia terá uma grande quantidade de espaço em branco vertical. Aplicativos de repositório herdados isentos dessa alteração precisarão entrar em contato com a Microsoft após a atualização para acomodar as novas dimensões.
+### <a name="thread-discussion"></a>Discussão de thread
 
-As dimensões da página de configuração de guia:
+Os usuários podem postar automaticamente para um canal ou chat após terem adicionado uma nova guia. Isso não apenas notifica os membros da equipe do novo conteúdo e fornece um link para Tab, permitindo que as pessoas comecem a falar sobre a guia.
 
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="O exemplo mostra uma guia sendo discutida em um thread de canal." border="false":::
 
-<img width="450px" title="Tamanhos de guias de configuração" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+### <a name="side-by-side-discussion"></a>Discussão lado a lado
 
+Os usuários podem ter uma conversa ao lado de exibir o conteúdo da guia.
 
-### <a name="guidelines-for-tab-configuration-page-format"></a>Diretrizes para o formato de página de configuração de guia
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="O exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
 
-* Baseie a altura mínima da área de conteúdo da página de configuração da guia em elementos gráficos de altura fixa.
-* Calcula o espaço vertical disponível (a altura da área de conteúdo na página de configuração) usando o `window.innerHeight` . Isso retorna o tamanho do `<iframe>` no qual a página de configuração reside, o que pode ser alterado em versões futuras. Usando esse valor, seu conteúdo será ajustado automaticamente para futuras alterações.
-* Alocar espaço vertical para os elementos de altura variável menos o que é necessário para os elementos de altura fixa.
-* Para o estado de *logon* , centralizar o conteúdo verticalmente e horizontalmente.
-* Se você quiser uma imagem de plano de fundo, precisará de uma nova imagem, dimensionada para se ajustar à área (preferencial) ou pode manter a mesma imagem e escolher entre:
-  * alinhamento no canto superior esquerdo.
-  * dimensionar a imagem para ajustá-la.
+### <a name="permissions-and-role-based-views"></a>Permissões e exibições baseadas em função
 
-Quando dimensionado corretamente, sua página de configuração de guia deve ser semelhante a esta:
+A experiência de guia pode ser diferente para os usuários, dependendo de suas permissões. Por exemplo, um usuário pode acessar a guia sem precisar fazer logon. Outro usuário, no entanto, deve assinar e receberá um conteúdo ligeiramente diferente.
 
-<img width="450px" title="Nova guia de configuração" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
+## <a name="manage-a-tab"></a>Gerenciar uma guia
+
+Você pode incluir opções para renomear, remover ou modificar uma guia.
+
+### <a name="anatomy-tab-menu"></a>Anatomia: menu de guia
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu guia." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|1|**Configurações**: (opcional) permite que os usuários modifiquem as configurações de uma guia após serem adicionadas.|
+|2 |**Rename**: permite que os usuários forneçam um nome mais significativo para a guia para a equipe.|
+|3 |**Remover**: Remove a guia do canal, chat ou reunião.|
+
+## <a name="tab-notifications-and-deep-linking"></a>Notificações de guia e vinculação profunda
+
+Você pode enviar uma mensagem com um link profundo para sua guia. Por exemplo, um cartão mostra um resumo dos dados de erros que um usuário pode selecionar para ver todo o bug em uma guia. O envio de mensagens sobre a atividade de guia aumenta a conscientização sem notificar explicitamente todos (ou seja, atividades sem ruído). Você também pode @mention usuários específicos, se necessário.
+
+Notifique os usuários da atividade de guia de uma das seguintes maneiras:
+
+* **Bot**: esse método é preferível, especialmente se o thread de guia for direcionado. A conversa encadeada da guia é movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+* **Mensagem**: uma mensagem aparece no feed de atividades do usuário com um [link profundo para a guia](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
-### <a name="always-include-a-default-state"></a>Sempre incluir um estado padrão
+### <a name="collaboration"></a>Colaboração
 
-Inclua um estado padrão para facilitar a configuração de guias, mesmo que sua guia seja configurável.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Ilustração mostrando o que fazer com o design de navegação de guia." border="false":::
 
-### <a name="deep-linking"></a>Vinculação profunda
+#### <a name="do-facilitate-conversation"></a>Fazer: facilitar a conversa
 
-Sempre que possível, cartões e bots devem se vincular detalhadamente a dados mais ricos em uma guia hospedada. Por exemplo, um cartão pode exibir um resumo dos dados de bug, mas clicar nele pode mostrar o erro inteiro em uma guia.
+Incluir conteúdo e componentes que as pessoas podem falar. Se ele não couber no contexto de um chat, canal ou reunião, ele não pertence à sua guia.
 
-### <a name="naming"></a>Nomenclatura
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Ilustração mostrando o que não fazer com o design de navegação de guia." border="false":::
 
-Em muitos casos, o nome do seu aplicativo criará um nome de guia ótimo. Mas, também considere nomear suas guias de acordo com a funcionalidade que elas fornecem.
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Não: trate sua guia como qualquer outra página da Web
 
-### <a name="multi-window"></a>Várias janelas
+Uma guia não é uma página da Web que alguém pode exibir uma vez. Uma guia deve exibir o conteúdo mais importante e relevante que as pessoas precisam para realizar algo juntos.
 
-As guias de canal que têm recursos de edição complexos devem abrir o modo de exibição editor em várias janelas, em vez de uma guia.
-
-### <a name="no-horizontal-scrolling"></a>Sem rolagem horizontal
-
-A guia não deve ter rolagem horizontal.
-
-### <a name="easy-navigation"></a>Navegação fácil
-
-A navegação dentro de um aplicativo de guia deve ser fácil de seguir, ou seja, as páginas têm o seguinte, onde necessário/aplicável:
-* Botões voltar
-* Cabeçalhos de página
-* Estrutural
-* Menus de reficação
-
-### <a name="undo-last-action"></a>Desfazer última ação
-
-O usuário deve ser capaz de desfazer a última ação no aplicativo.
-
-### <a name="share-content"></a>Compartilhar conteúdo
-
-Os aplicativos pessoais devem permitir que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe. A guia canal deve fornecer navegação que complementa a navegação principal do Teams, em vez de entrar em conflito com ela (como barras de navegação do trilho esquerdo).
-
-### <a name="single-view"></a>Modo de exibição único
-
-Os aplicativos pessoais devem apresentar conteúdo de instâncias com escopo de chat de grupo ou de equipe desse aplicativo em um modo de exibição único, por exemplo, um usuário do Trello deve ser capaz de ver todas as instâncias das placas do Trello que participam em um nível de equipe em seu aplicativo pessoal.
-
-### <a name="no-app-bar"></a>Nenhuma barra de aplicativos
-
-As guias não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
+   :::column-end:::
+:::row-end:::
 
 ### <a name="navigation"></a>Navegação
 
-Guias não devem ter mais de três níveis de navegação no aplicativo.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Ilustração mostrando o que fazer com o design de navegação de guia." border="false":::
 
-### <a name="l2l3-view"></a>Modo de exibição L2/L3
+#### <a name="do-limit-tasks-and-data"></a>Fazer: limitar tarefas e dados
 
-As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
+As guias funcionam melhor quando atendem a necessidades específicas. Inclua um conjunto limitado de tarefas e dados relevantes para a equipe ou grupo.
 
-### <a name="no-link-to-external-browser"></a>Nenhum link para o navegador externo
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustração mostrando o que não fazer com o design de navegação de guia." border="false":::
 
-Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams. Por exemplo, dentro de módulos de tarefas, guias, etc.
+#### <a name="dont-embed-your-entire-app"></a>Não: Incorpore todo o aplicativo
 
-## <a name="notifications-for-tabs"></a>Notificações para guias
+Usar uma guia para exibir um aplicativo inteiro com navegação de vários níveis e interações complexas leva à sobrecarga de informações.
 
-Há dois modos de notificação para alterações de conteúdo de guia:
+   :::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
->
-> * **Use a API do aplicativo para notificar os usuários sobre as alterações**. Esta mensagem aparecerá no feed de atividades do usuário e no link profundo para a guia. *consulte*  [criar links de profundas para conteúdo e recursos no Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+### <a name="setup"></a>Configurar
 
-> * **Use um bot**. Esse método é preferível, especialmente se o thread de guia for direcionado. O resultado será que a conversa encadeada da guia será movida para o modo de exibição como ativo recentemente. Esse método também permite uma certa sofisticação na forma como a notificação é enviada.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustração mostrando o que fazer com o design da configuração de guia." border="false":::
 
-Enviar uma mensagem para um thread de guia aumenta a conscientização da atividade para todos os usuários sem notificar explicitamente todos. Isso é conscientização sem ruído. Além disso, quando você `@mention`  especifica os usuários, a mesma notificação será colocada em seus feeds, vinculando-os diretamente ao encadeamento de tabulação.
+#### <a name="do-keep-it-simple"></a>Fazer: simplificar
 
-### <a name="tab-design-best-practices"></a>Práticas recomendadas de design da guia
+Se seu aplicativo requer autenticação, tente integrar o Microsoft Single Sign-on (SSO) para obter uma experiência de entrada mais contínua. Além disso, inclua apenas as informações essenciais e as etapas para adicionar a guia.
 
-* As guias pessoais/estáticas devem permitir que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe.
-* Guias pessoais/estáticas podem apresentar conteúdo de instâncias com escopo de chat de grupo ou equipe do aplicativo em um único modo de exibição.
-* Os destinos de link em guias não devem ser vinculados a um navegador externo, mas devem ser vinculados a elementos div contidos no Teams (exemplo-interno, módulos de tarefas, guias, etc.).
-* As guias devem ser responsivas aos temas da equipe. Quando o tema do teams é alterado, o tema dentro do aplicativo também deve ser alterado para refletir esse tema.
-* As guias devem usar componentes com estilo de equipe onde for possível. Isso significa adotar fontes do Teams, digitar rampas, paletas de cores, sistema de grade, movimento, Tom de voz, etc.
-* As guias devem usar os comportamentos de interação do teams para navegação na página, posição e uso de caixas de diálogo, hierarquias de informações, etc.
-* As guias devem usar o menu e/ou Breadcrumbs da equipe padrão para navegação no aplicativo. As guias não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estejam em conflito com a navegação do teams principal.
-* Guias não devem ter mais do que três níveis de navegação no aplicativo.
-* As páginas secundárias e terciários em uma guia devem ser abertas em um modo de exibição L2/L3 na área de guia principal que é navegada por navegação estrutural.
-* Guias que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição editor em várias janelas, em vez de uma guia (para área de trabalho e Web).
-* Para uma experiência de usuário aprimorada, inclua um bot pessoal que envia uma mensagem de boas-vindas ao usuário na primeira execução e responde aos comandos **Hi**, **Help** e **Hello** . Você pode consultar a documentação sobre [bots de conversa](../../bots/what-are-bots.md#in-a-one-to-one-chat) para obter mais assistência.
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustração mostrando o que não fazer com o design da configuração de guia." border="false":::
+
+#### <a name="dont-have-too-many-steps"></a>Não: ter muitas etapas
+
+Remova as etapas desnecessárias para adicionar uma guia.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="theming"></a>Temas
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustração mostrando o que fazer com os temas de tabulação." border="false":::
+
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Fazer: aproveitar os tokens de cores do teams
+
+Cada tema do teams tem seu próprio esquema de cores. Para lidar automaticamente com alterações de temas, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (IU fluente)</a> em seu design.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustração mostrando o que não fazer com os temas de tabulação." border="false":::
+
+#### <a name="dont-hard-code-color-values"></a>Não: valores de cor de código fixo
+
+Se você não usar tokens de cores do Teams, seus designs serão menos escalonáveis e levará mais tempo para gerenciar.
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="validate-your-design"></a>Validar o design
+
+Se você planeja publicar seu aplicativo no AppSource, você deve compreender os problemas de design que geralmente causam falha nos aplicativos durante o envio.
+
+> [!div class="nextstepaction"]
+> [Verificar diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
