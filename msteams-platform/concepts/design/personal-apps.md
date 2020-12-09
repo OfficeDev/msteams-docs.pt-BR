@@ -1,73 +1,178 @@
 ---
-title: Referência de diretrizes de design
-description: Descreve as diretrizes para a criação de um aplicativo pessoal
-keywords: Diretrizes de design do Microsoft Teams aplicativos pessoais da estrutura de referência
-ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+title: Criando seu aplicativo pessoal
+description: Saiba como criar um aplicativo pessoal do Teams e obter o kit de interface do usuário do Microsoft Teams.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455496"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604959"
 ---
-# <a name="personal-apps"></a><span data-ttu-id="f603e-104">Aplicativos pessoais</span><span class="sxs-lookup"><span data-stu-id="f603e-104">Personal apps</span></span>
+# <a name="designing-your-personal-app-for-microsoft-teams"></a><span data-ttu-id="dc88c-103">Projetando seu aplicativo pessoal para o Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="dc88c-103">Designing your personal app for Microsoft Teams</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="f603e-105">O suporte completo para guias em clientes móveis é suportado no Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="f603e-105">Full support for tabs on mobile clients is supported in Teams.</span></span> <span data-ttu-id="f603e-106">Você deve seguir as [orientações para guias em dispositivos móveis](../../tabs/design/tabs-mobile.md) ao criar guias para plataformas móveis.</span><span class="sxs-lookup"><span data-stu-id="f603e-106">You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating tabs for mobile platforms.</span></span>
+<span data-ttu-id="dc88c-104">Um aplicativo pessoal pode ser um bot, um espaço de trabalho privado ou ambos.</span><span class="sxs-lookup"><span data-stu-id="dc88c-104">A personal app can be a bot, private workspace, or both.</span></span> <span data-ttu-id="dc88c-105">Às vezes, ele funciona como um local para criar ou exibir o conteúdo, outras vezes, ele oferece ao usuário uma visão geral de todos os itens que são seus, quando o aplicativo é configurado como uma guia em vários canais.</span><span class="sxs-lookup"><span data-stu-id="dc88c-105">Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.</span></span>
 
-<span data-ttu-id="f603e-107">Um aplicativo pessoal é um aplicativo do teams com um escopo pessoal.</span><span class="sxs-lookup"><span data-stu-id="f603e-107">A personal app is a Teams application with a personal scope.</span></span>  <span data-ttu-id="f603e-108">Como desenvolvedor de aplicativos, você tem a opção de fornecer uma versão do seu aplicativo que se concentra em interações com um único usuário.</span><span class="sxs-lookup"><span data-stu-id="f603e-108">As an app developer, you have the option to provide a version of your app that focuses on interactions with a single user.</span></span> <span data-ttu-id="f603e-109">Pode ser um [bot de conversa](../../bots/what-are-bots.md) para participar de conversas de um-para-um com um usuário ou uma [guia pessoal](../../tabs/what-are-tabs.md) que forneça uma experiência Web incorporada.</span><span class="sxs-lookup"><span data-stu-id="f603e-109">It can be a [conversational bot](../../bots/what-are-bots.md) to engage in one-to-one conversations with a user or a [personal tab](../../tabs/what-are-tabs.md) providing an embedded web experience.</span></span> <span data-ttu-id="f603e-110">Os aplicativos pessoais permitem que os usuários exibam o conteúdo selecionado em um só lugar.</span><span class="sxs-lookup"><span data-stu-id="f603e-110">Personal apps enable users to view their select content in one place.</span></span> <span data-ttu-id="f603e-111">Na captura de tela a seguir, a contoso é um aplicativo pessoal no submenu de aplicativo pessoal.</span><span class="sxs-lookup"><span data-stu-id="f603e-111">In the following screenshot, Contoso is a personal app in the personal app flyout.</span></span>
+<span data-ttu-id="dc88c-106">Para guiar o design do aplicativo, as informações a seguir descrevem e ilustra como as pessoas podem adicionar, usar e gerenciar aplicativos pessoais no Teams.</span><span class="sxs-lookup"><span data-stu-id="dc88c-106">To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.</span></span>
 
-![imagem do menu de estouro de aplicativos](~/assets/images/Personal-apps-App-flyout.png)
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="dc88c-107">Kit de interface do usuário do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="dc88c-107">Microsoft Teams UI Kit</span></span>
 
----
+<span data-ttu-id="dc88c-108">Você pode encontrar diretrizes abrangentes de design de aplicativo pessoal, incluindo elementos que podem ser capturados e modificados conforme necessário, no kit de interface do usuário do Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="dc88c-108">You can find comprehensive personal app design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="dc88c-109">O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e dimensionamento responsivo que não são abordados aqui.</span><span class="sxs-lookup"><span data-stu-id="dc88c-109">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="f603e-113">Diretrizes</span><span class="sxs-lookup"><span data-stu-id="f603e-113">Guidelines</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="dc88c-110">Obter o kit de interface do usuário do Microsoft Teams (figma)</span><span class="sxs-lookup"><span data-stu-id="dc88c-110">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-<span data-ttu-id="f603e-114">Um aplicativo pessoal normalmente contém as seguintes guias:</span><span class="sxs-lookup"><span data-stu-id="f603e-114">A personal app typically contains the following tabs:</span></span>
+## <a name="add-a-personal-app"></a><span data-ttu-id="dc88c-111">Adicionar um aplicativo pessoal</span><span class="sxs-lookup"><span data-stu-id="dc88c-111">Add a personal app</span></span>
 
-### <a name="your-tab"></a><span data-ttu-id="f603e-115">Sua guia</span><span class="sxs-lookup"><span data-stu-id="f603e-115">Your tab</span></span>
+<span data-ttu-id="dc88c-112">Você pode adicionar um aplicativo pessoal do repositório do Teams (AppSource) ou o submenu do aplicativo selecionando o ícone **mais** no lado esquerdo do Teams (mostrado no exemplo a seguir).</span><span class="sxs-lookup"><span data-stu-id="dc88c-112">You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).</span></span>
 
-<span data-ttu-id="f603e-116">Este é o local onde os usuários verão todas as suas coisas.</span><span class="sxs-lookup"><span data-stu-id="f603e-116">This is where your users will see all their stuff.</span></span> <span data-ttu-id="f603e-117">É seu espaço pessoal.</span><span class="sxs-lookup"><span data-stu-id="f603e-117">It's their personal space.</span></span> <span data-ttu-id="f603e-118">A guia pode ser organizada como uma lista, uma grade, colunas ou uma tela única... o que funcionar melhor para o seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f603e-118">The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application.</span></span> <span data-ttu-id="f603e-119">Para obter informações adicionais sobre como criar guias eficazes, consulte: [design de guias](../../tabs/design/tabs.md).</span><span class="sxs-lookup"><span data-stu-id="f603e-119">For additional information on designing effective tabs see: [Tabs design](../../tabs/design/tabs.md).</span></span>
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="O exemplo mostra como adicionar um aplicativo pessoal do submenu de aplicativo." border="false":::
 
-<span data-ttu-id="f603e-120">Como essa guia pode mostrar itens de vários canais, cada item deve exibir sua própria equipe, canal e guia para que o usuário possa ver facilmente onde ele se originou.</span><span class="sxs-lookup"><span data-stu-id="f603e-120">Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated.</span></span>
+## <a name="use-a-personal-app-private-workspace"></a><span data-ttu-id="dc88c-114">Usar um aplicativo pessoal (espaço de trabalho privado)</span><span class="sxs-lookup"><span data-stu-id="dc88c-114">Use a personal app (private workspace)</span></span>
 
-![Guia tarefas pessoais](~/assets/images/Personal-apps-MY-tab.png)
+<span data-ttu-id="dc88c-115">Com um espaço de trabalho privado, você pode visualizar o conteúdo do aplicativo que é significativo para você em um local central sem sair do Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="dc88c-115">With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.</span></span>
 
-### <a name="recent"></a><span data-ttu-id="f603e-122">Recentemente</span><span class="sxs-lookup"><span data-stu-id="f603e-122">Recent</span></span>
+<span data-ttu-id="dc88c-116">(Observação de implementação: o espaço de trabalho privado baseia-se no recurso de [*Tabulação pessoal*](../../build-your-first-app/build-personal-tab.md) .)</span><span class="sxs-lookup"><span data-stu-id="dc88c-116">(Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)</span></span>
 
-<span data-ttu-id="f603e-123">A guia **recente** permite que alguém Navegue por tudo o que exibiu recentemente em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f603e-123">The **Recent** tab lets someone browse everything they've recently viewed in your app.</span></span> <span data-ttu-id="f603e-124">Ela é listada em ordem cronológica (do mais para menos recente).</span><span class="sxs-lookup"><span data-stu-id="f603e-124">It's listed in chronological order (from most to least recent).</span></span> <span data-ttu-id="f603e-125">Clicar em um item nesta lista navegará o usuário para o canal e a guia do item.</span><span class="sxs-lookup"><span data-stu-id="f603e-125">Clicking on an item in this list will navigate the user to that item's channel and tab.</span></span>
+### <a name="anatomy-personal-app-private-workspace"></a><span data-ttu-id="dc88c-117">Anatomia: aplicativo pessoal (espaço de trabalho privado)</span><span class="sxs-lookup"><span data-stu-id="dc88c-117">Anatomy: Personal app (private workspace)</span></span>
 
-![Guia recente](~/assets/images/Personal-apps-Recent-tab.png)
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="O exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
-### <a name="all"></a><span data-ttu-id="f603e-127">Todos</span><span class="sxs-lookup"><span data-stu-id="f603e-127">All</span></span>
+|<span data-ttu-id="dc88c-119">Contador</span><span class="sxs-lookup"><span data-stu-id="dc88c-119">Counter</span></span>|<span data-ttu-id="dc88c-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="dc88c-120">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="dc88c-121">A</span><span class="sxs-lookup"><span data-stu-id="dc88c-121">A</span></span>|<span data-ttu-id="dc88c-122">**Atribuição de aplicativos**: o logotipo e o nome do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-122">**App attribution**: Your app logo and name.</span></span>|
+|<span data-ttu-id="dc88c-123">B</span><span class="sxs-lookup"><span data-stu-id="dc88c-123">B</span></span>|<span data-ttu-id="dc88c-124">**Guias**: fornece navegação para seu aplicativo pessoal.</span><span class="sxs-lookup"><span data-stu-id="dc88c-124">**Tabs**: Provides navigation for your personal app.</span></span> <span data-ttu-id="dc88c-125">Por exemplo, inclua uma guia **sobre** ou **ajuda** .</span><span class="sxs-lookup"><span data-stu-id="dc88c-125">For example, include an **About** or **Help** tab.</span></span>|
+|<span data-ttu-id="dc88c-126">C</span><span class="sxs-lookup"><span data-stu-id="dc88c-126">C</span></span>|<span data-ttu-id="dc88c-127">**Pop-up View**: envia o conteúdo do aplicativo de uma janela pai para uma janela filho autônoma.</span><span class="sxs-lookup"><span data-stu-id="dc88c-127">**Popout view**: Pushes your app content from a parent window to a standalone child window.</span></span>|
+|<span data-ttu-id="dc88c-128">D</span><span class="sxs-lookup"><span data-stu-id="dc88c-128">D</span></span>|<span data-ttu-id="dc88c-129">**Mais menu**: inclui informações e opções adicionais do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-129">**More menu**: Includes additional app information and options.</span></span> <span data-ttu-id="dc88c-130">(Você poderia, opcionalmente, fazer **configurações** uma guia.)</span><span class="sxs-lookup"><span data-stu-id="dc88c-130">(You could alternatively make **Settings** a tab.)</span></span>|
 
-<span data-ttu-id="f603e-128">Esta é uma lista de todas as suas guias na organização da pessoa (com as quais elas têm acesso, assim mesmo).</span><span class="sxs-lookup"><span data-stu-id="f603e-128">This is a list of all your tabs in the person's organization (the ones they have access to, anyway).</span></span> <span data-ttu-id="f603e-129">Em outras palavras, ele mostra a eles em qualquer lugar em que o aplicativo está sendo usado.</span><span class="sxs-lookup"><span data-stu-id="f603e-129">In other words, it shows them everywhere the app is being used.</span></span> <span data-ttu-id="f603e-130">Como ocorre com a guia **recente** , selecionar algo na lista trará o usuário diretamente para o canal e a guia relevantes.</span><span class="sxs-lookup"><span data-stu-id="f603e-130">As with the **Recent** tab, selecting something in the list will bring the user straight to the relevant channel and tab.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="O exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
 
-### <a name="bot"></a><span data-ttu-id="f603e-131">Bot</span><span class="sxs-lookup"><span data-stu-id="f603e-131">Bot</span></span>
+|<span data-ttu-id="dc88c-132">Contador</span><span class="sxs-lookup"><span data-stu-id="dc88c-132">Counter</span></span>|<span data-ttu-id="dc88c-133">Descrição</span><span class="sxs-lookup"><span data-stu-id="dc88c-133">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="dc88c-134">A</span><span class="sxs-lookup"><span data-stu-id="dc88c-134">A</span></span>|<span data-ttu-id="dc88c-135">**Guias**: fornece navegação para seu aplicativo pessoal.</span><span class="sxs-lookup"><span data-stu-id="dc88c-135">**Tabs**: Provides navigation for your personal app.</span></span>|
+|<span data-ttu-id="dc88c-136">1 </span><span class="sxs-lookup"><span data-stu-id="dc88c-136">1</span></span>|<span data-ttu-id="dc88c-137">**iframe**: exibe o conteúdo do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-137">**iframe**: Displays your app content.</span></span>|
 
-<span data-ttu-id="f603e-132">Um bot não é necessário, mas é uma ótima maneira de se comunicar de forma direta e privada com seus usuários.</span><span class="sxs-lookup"><span data-stu-id="f603e-132">A bot isn't required, but it's a great way to communicate directly and privately with your users.</span></span> <span data-ttu-id="f603e-133">A notificação é uma das funções mais importantes de um aplicativo pessoal e qual é a melhor maneira de notificá-lo do que com comunicação direta?</span><span class="sxs-lookup"><span data-stu-id="f603e-133">Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?</span></span>
+### <a name="designing-with-ui-templates"></a><span data-ttu-id="dc88c-138">Projetando com modelos de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="dc88c-138">Designing with UI templates</span></span>
 
-<span data-ttu-id="f603e-134">Os bots entregam mensagens na forma de cartões, que podem fornecer informações específicas (como um alerta que o novo conteúdo está disponível) ou atualizações amplas (como uma lista de tarefas diárias).</span><span class="sxs-lookup"><span data-stu-id="f603e-134">Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list).</span></span> <span data-ttu-id="f603e-135">Para obter informações adicionais sobre como projetar bots efetivos, consulte: [design de bot](../../bots/design/bots.md).</span><span class="sxs-lookup"><span data-stu-id="f603e-135">For additional information on designing effective bots see: [Bot design](../../bots/design/bots.md).</span></span>
+<span data-ttu-id="dc88c-139">Use um dos seguintes modelos de interface do usuário do Microsoft Teams para ajudar a criar sua guia pessoal:</span><span class="sxs-lookup"><span data-stu-id="dc88c-139">Use one of the following Teams UI templates to help design your personal tab:</span></span>
 
-![Saudação de bot](~/assets/images/Personal-apps-Bot.png)
+* <span data-ttu-id="dc88c-140">[Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato verificável e permitir que os usuários executem ações em uma lista inteira ou em itens individuais.</span><span class="sxs-lookup"><span data-stu-id="dc88c-140">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="dc88c-141">[Quadro de tarefas](../../concepts/design/design-teams-app-ui-templates.md#task-board): um quadro de tarefas, às vezes chamado de um quadro Kanban ou uma pista de baixo, é uma coleção de cartões usados para acompanhar o status de itens de trabalho ou tíquetes.</span><span class="sxs-lookup"><span data-stu-id="dc88c-141">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
+* <span data-ttu-id="dc88c-142">[Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela contendo vários cartões que oferecem uma visão geral de dados ou conteúdo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-142">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
+* <span data-ttu-id="dc88c-143">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): formulários são para coletar, validar e enviar entradas do usuário de forma estruturada.</span><span class="sxs-lookup"><span data-stu-id="dc88c-143">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="dc88c-144">[Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para vários cenários, incluindo o login, experiências de tela de apresentação, mensagens de erro e muito mais.</span><span class="sxs-lookup"><span data-stu-id="dc88c-144">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="dc88c-145">[NAV à esquerda](../../concepts/design/design-teams-app-ui-templates.md#left-nav): o modelo de navegação à esquerda pode ajudar se sua guia requer alguma navegação.</span><span class="sxs-lookup"><span data-stu-id="dc88c-145">[Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation.</span></span> <span data-ttu-id="dc88c-146">Em geral, você deve manter a navegação de guia no mínimo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-146">In general, you should keep tab navigation to a minimum.</span></span>
 
-### <a name="help-and-settings"></a><span data-ttu-id="f603e-137">Ajuda e configurações</span><span class="sxs-lookup"><span data-stu-id="f603e-137">Help and Settings</span></span>
+## <a name="use-a-personal-app-bot"></a><span data-ttu-id="dc88c-147">Usar um aplicativo pessoal (bot)</span><span class="sxs-lookup"><span data-stu-id="dc88c-147">Use a personal app (bot)</span></span>
 
-<span data-ttu-id="f603e-138">O conteúdo da ajuda permite que os usuários descubram as nuances de seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f603e-138">Help content enables users to discover the nuances of your app.</span></span> <span data-ttu-id="f603e-139">Adicione uma guia **configurações** para ter a possibilidade de personalizá-la.</span><span class="sxs-lookup"><span data-stu-id="f603e-139">Add a **Settings** tab to give them the ability to further customize it.</span></span>
+<span data-ttu-id="dc88c-148">Os aplicativos pessoais podem incluir um bot para conversas de uma em um e notificações privadas (por exemplo, quando um colega posta um comentário na sua prancheta).</span><span class="sxs-lookup"><span data-stu-id="dc88c-148">Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on your artboard).</span></span> <span data-ttu-id="dc88c-149">O bot está disponível em uma guia que você especificar.</span><span class="sxs-lookup"><span data-stu-id="dc88c-149">The bot is available in a tab you specify.</span></span>
 
-### <a name="about"></a><span data-ttu-id="f603e-140">Sobre</span><span class="sxs-lookup"><span data-stu-id="f603e-140">About</span></span>
+### <a name="anatomy-personal-app-bot"></a><span data-ttu-id="dc88c-150">Anatomia: aplicativo pessoal (bot)</span><span class="sxs-lookup"><span data-stu-id="dc88c-150">Anatomy: Personal app (bot)</span></span>
 
-<span data-ttu-id="f603e-141">Inclua uma guia **sobre** para fornecer informações como números de versão, recursos, privacidade e links de permissões.</span><span class="sxs-lookup"><span data-stu-id="f603e-141">Include an **About** tab to provide information like version number, capabilities, privacy, and permissions links.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="O exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 
-## <a name="best-practices"></a><span data-ttu-id="f603e-142">Práticas recomendadas</span><span class="sxs-lookup"><span data-stu-id="f603e-142">Best practices</span></span>
+|<span data-ttu-id="dc88c-152">Contador</span><span class="sxs-lookup"><span data-stu-id="dc88c-152">Counter</span></span>|<span data-ttu-id="dc88c-153">Descrição</span><span class="sxs-lookup"><span data-stu-id="dc88c-153">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="dc88c-154">A</span><span class="sxs-lookup"><span data-stu-id="dc88c-154">A</span></span>|<span data-ttu-id="dc88c-155">**Guia bot**: por exemplo, inclua uma guia **chat** para acessar conversas e notificações de bot.</span><span class="sxs-lookup"><span data-stu-id="dc88c-155">**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.</span></span>|
+|<span data-ttu-id="dc88c-156">B</span><span class="sxs-lookup"><span data-stu-id="dc88c-156">B</span></span>|<span data-ttu-id="dc88c-157">**Mensagem de bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um cartão adaptável).</span><span class="sxs-lookup"><span data-stu-id="dc88c-157">**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).</span></span>|
+|<span data-ttu-id="dc88c-158">C</span><span class="sxs-lookup"><span data-stu-id="dc88c-158">C</span></span>|<span data-ttu-id="dc88c-159">**Caixa de composição**: campo de entrada para envio de mensagens ao bot.</span><span class="sxs-lookup"><span data-stu-id="dc88c-159">**Compose box**: Input field for sending messages to the bot.</span></span>|
 
-### <a name="communicate-directly-with-your-users"></a><span data-ttu-id="f603e-143">Comunicar-se diretamente com seus usuários</span><span class="sxs-lookup"><span data-stu-id="f603e-143">Communicate directly with your users</span></span>
+## <a name="best-practices"></a><span data-ttu-id="dc88c-160">Práticas recomendadas</span><span class="sxs-lookup"><span data-stu-id="dc88c-160">Best practices</span></span>
 
-<span data-ttu-id="f603e-144">Use um bot para notificar os usuários sobre alterações e novos recursos.</span><span class="sxs-lookup"><span data-stu-id="f603e-144">Use a bot to notify users of changes and new features.</span></span>
+### <a name="tab-priority"></a><span data-ttu-id="dc88c-161">Prioridade de tabulação</span><span class="sxs-lookup"><span data-stu-id="dc88c-161">Tab priority</span></span>
 
-### <a name="customize-your-tabs"></a><span data-ttu-id="f603e-145">Personalizar suas guias...</span><span class="sxs-lookup"><span data-stu-id="f603e-145">Customize your tabs...</span></span>
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a><span data-ttu-id="dc88c-162">Fazer: mostrar o conteúdo mais relevante na primeira guia</span><span class="sxs-lookup"><span data-stu-id="dc88c-162">Do: Show the most relevant content in the first tab</span></span>
 
-<span data-ttu-id="f603e-146">Sinta-se à vontade para adicionar outras guias que ajudarão os usuários a realizar tarefas específicas.</span><span class="sxs-lookup"><span data-stu-id="f603e-146">Feel free to add other tabs that will help your users accomplish specific tasks.</span></span>
+<span data-ttu-id="dc88c-163">Com o dimensionamento responsivo, as guias à direita podem ficar truncadas ou fora de visão.</span><span class="sxs-lookup"><span data-stu-id="dc88c-163">With responsive sizing, tabs on the right may become truncated or out of view.</span></span>
 
-### <a name="and-make-them-relevant-to-every-user"></a><span data-ttu-id="f603e-147">... e torná-los relevantes a todos os usuários</span><span class="sxs-lookup"><span data-stu-id="f603e-147">...and make them relevant to every user</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
 
-<span data-ttu-id="f603e-148">Cada guia que você declarar no manifesto do aplicativo ficará visível para todos os usuários.</span><span class="sxs-lookup"><span data-stu-id="f603e-148">Every tab you declare in your app manifest will be visible to all users.</span></span> <span data-ttu-id="f603e-149">Por exemplo, se seu aplicativo pessoal é uma ferramenta de relatório de despesas que é usada por gerentes e funcionários, uma guia de **aprovação** deve fornecer conteúdo que seja significativo para ambas as funções.</span><span class="sxs-lookup"><span data-stu-id="f603e-149">For example, if your personal app is an expense reporting tool that is used by both managers and employees, an **Approval** tab should provide content that is meaningful to both roles.</span></span>
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a><span data-ttu-id="dc88c-165">Não: liderança com conteúdo secundário ou metadados</span><span class="sxs-lookup"><span data-stu-id="dc88c-165">Don’t: Lead with secondary content or metadata</span></span>
+
+<span data-ttu-id="dc88c-166">Como um aplicativo Web padrão, a navegação de guia deve progredir em uma ordem que ajuda a fazer sentido dos principais recursos do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-166">Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+### <a name="tab-hierarchy"></a><span data-ttu-id="dc88c-168">Hierarquia de guias</span><span class="sxs-lookup"><span data-stu-id="dc88c-168">Tab hierarchy</span></span>
+
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a><span data-ttu-id="dc88c-169">Fazer: as guias devem ser de hierarquia igual e representar páginas de aplicativo de chave</span><span class="sxs-lookup"><span data-stu-id="dc88c-169">Do: Tabs should be of equal hierarchy and represent key app pages</span></span>
+
+<span data-ttu-id="dc88c-170">Suas guias devem categorizar os principais recursos e conteúdo do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-170">Your tabs should categorize your app’s primary features and content.</span></span> <span data-ttu-id="dc88c-171">Com o dimensionamento responsivo, o conteúdo à direita pode ficar truncado ou fora do modo de exibição.</span><span class="sxs-lookup"><span data-stu-id="dc88c-171">With responsive sizing, content on the right may become truncated or out of view.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+#### <a name="dont-include-different-levels-of-hierarchy"></a><span data-ttu-id="dc88c-173">Não: incluir níveis diferentes de hierarquia</span><span class="sxs-lookup"><span data-stu-id="dc88c-173">Don't: Include different levels of hierarchy</span></span>
+
+<span data-ttu-id="dc88c-174">O conteúdo deve progredir em uma ordem lógica que ajude os usuários a fazer sentido.</span><span class="sxs-lookup"><span data-stu-id="dc88c-174">Your content should progress in a logical order that helps users make sense of it.</span></span> <span data-ttu-id="dc88c-175">Se você tiver duas guias que estão intimamente relacionadas, considere combiná-las em uma guia.</span><span class="sxs-lookup"><span data-stu-id="dc88c-175">If you have two tabs that are closely related, consider combining them into one tab.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+### <a name="first-run-experience"></a><span data-ttu-id="dc88c-177">Tela de apresentação</span><span class="sxs-lookup"><span data-stu-id="dc88c-177">First-run experience</span></span>
+
+#### <a name="do-include-a-first-run-experience"></a><span data-ttu-id="dc88c-178">Fazer: incluir uma experiência de primeira execução</span><span class="sxs-lookup"><span data-stu-id="dc88c-178">Do: Include a first-run experience</span></span>
+
+<span data-ttu-id="dc88c-179">Deve haver pelo menos uma tela de boas-vindas na primeira vez que você usa um aplicativo pessoal.</span><span class="sxs-lookup"><span data-stu-id="dc88c-179">There should be at least a welcome screen the first time you use a personal app.</span></span> <span data-ttu-id="dc88c-180">Para bots, descreva o que seu bot pode fazer e forneça ações rápidas, como um botão de entrada.</span><span class="sxs-lookup"><span data-stu-id="dc88c-180">For bots, describe what your bot can do and provide quick actions, such as a sign-in button.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+#### <a name="dont-start-with-a-blank-screen"></a><span data-ttu-id="dc88c-183">Não: começar com uma tela em branco</span><span class="sxs-lookup"><span data-stu-id="dc88c-183">Don't: Start with a blank screen</span></span>
+
+<span data-ttu-id="dc88c-184">Os usuários podem ser confundidos se nada é exibido na primeira vez que executam o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-184">Users might be confused if nothing displays the first time they run your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+### <a name="personalized-content"></a><span data-ttu-id="dc88c-186">Conteúdo personalizado</span><span class="sxs-lookup"><span data-stu-id="dc88c-186">Personalized content</span></span>
+
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a><span data-ttu-id="dc88c-187">Fazer: agregar o conteúdo do aplicativo relevante a um usuário</span><span class="sxs-lookup"><span data-stu-id="dc88c-187">Do: Aggregate app content relevant to a user</span></span>
+
+<span data-ttu-id="dc88c-188">Seja uma guia ou um bot pessoal, exiba o conteúdo relacionado à atividade de um usuário em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-188">Whether it's a personal tab or bot, display content related to only a user's activity in your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a><span data-ttu-id="dc88c-191">Não: Mostrar conteúdo abrangente ou muito amplo</span><span class="sxs-lookup"><span data-stu-id="dc88c-191">Don’t: Show unrelated or overly broad content</span></span>
+
+<span data-ttu-id="dc88c-192">Em contextos pessoais, não exibe conteúdo para equipes que um usuário não faz parte do.</span><span class="sxs-lookup"><span data-stu-id="dc88c-192">In personal contexts, don’t display content for teams a user isn't part of.</span></span> <span data-ttu-id="dc88c-193">O conteúdo do bot pessoal deve se concentrar na pessoa, não em um grupo.</span><span class="sxs-lookup"><span data-stu-id="dc88c-193">Personal bot content should focus on the individual—not a group.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+### <a name="complex-app-features"></a><span data-ttu-id="dc88c-196">Recursos de aplicativos complexos</span><span class="sxs-lookup"><span data-stu-id="dc88c-196">Complex app features</span></span>
+
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a><span data-ttu-id="dc88c-197">Fazer: permitir que os usuários acessem recursos complexos em um navegador</span><span class="sxs-lookup"><span data-stu-id="dc88c-197">Do: Allow users to access complex features in a browser</span></span>
+
+<span data-ttu-id="dc88c-198">Seu aplicativo deve se concentrar nas tarefas principais no Teams, mas você ainda pode exibir o aplicativo completo autônomo em um navegador.</span><span class="sxs-lookup"><span data-stu-id="dc88c-198">Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+#### <a name="dont-include-your-entire-app"></a><span data-ttu-id="dc88c-200">Não: inclua todo o aplicativo</span><span class="sxs-lookup"><span data-stu-id="dc88c-200">Don’t: Include your entire app</span></span>
+
+<span data-ttu-id="dc88c-201">A menos que você tenha criado o aplicativo especificamente para o Teams, provavelmente tem recursos que não fazem sentido em uma ferramenta de colaboração.</span><span class="sxs-lookup"><span data-stu-id="dc88c-201">Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="O exemplo mostra uma prática recomendada de aplicativo pessoal." border="false":::
+
+## <a name="manage-a-personal-tab"></a><span data-ttu-id="dc88c-203">Gerenciar uma guia pessoal</span><span class="sxs-lookup"><span data-stu-id="dc88c-203">Manage a personal tab</span></span>
+
+<span data-ttu-id="dc88c-204">No lado esquerdo do Teams, os usuários podem clicar com o botão direito do mouse no aplicativo pessoal para fixar, remover e configurar outras opções de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="dc88c-204">On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="O exemplo mostra opções para gerenciar um aplicativo pessoal." border="false":::
+
+## <a name="learn-more"></a><span data-ttu-id="dc88c-206">Saiba mais</span><span class="sxs-lookup"><span data-stu-id="dc88c-206">Learn more</span></span>
+
+<span data-ttu-id="dc88c-207">Essas outras diretrizes de design podem ajudar dependendo do escopo do seu aplicativo pessoal:</span><span class="sxs-lookup"><span data-stu-id="dc88c-207">These other design guidelines may help depending on the scope of your personal app:</span></span>
+
+* [<span data-ttu-id="dc88c-208">Criar sua guia</span><span class="sxs-lookup"><span data-stu-id="dc88c-208">Designing your tab</span></span>](../../tabs/design/tabs.md)
+* [<span data-ttu-id="dc88c-209">Projetando o bot</span><span class="sxs-lookup"><span data-stu-id="dc88c-209">Designing you bot</span></span>](../../bots/design/bots.md)
+
+## <a name="validate-your-design"></a><span data-ttu-id="dc88c-210">Validar o design</span><span class="sxs-lookup"><span data-stu-id="dc88c-210">Validate your design</span></span>
+
+<span data-ttu-id="dc88c-211">Se você planeja publicar seu aplicativo no AppSource, você deve compreender os problemas de design que geralmente causam falha nos aplicativos durante o envio.</span><span class="sxs-lookup"><span data-stu-id="dc88c-211">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="dc88c-212">Verificar diretrizes de validação de design</span><span class="sxs-lookup"><span data-stu-id="dc88c-212">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
