@@ -3,12 +3,12 @@ title: Enviar mensagens a Conectores e WebHooks
 description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998004"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604477"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -135,7 +135,7 @@ Para todos os outros detalhes sobre as Ações do cartão do conector, confira *
 
 Siga estas etapas para ver como enviar um cartão simples para um Conector.
 
-1. No Microsoft Teams, escolha **Mais opções** ( **&#8943;** ) ao lado do nome do canal e escolha **Conectores**.
+1. No Microsoft Teams, escolha **Mais opções** (**&#8943;**) ao lado do nome do canal e escolha **Conectores**.
 2. Role pela lista de Conectores para o **Webhook de entrada** e escolha **Adicionar**.
 3. Digite um nome para o Webhook, carregue uma imagem para associar aos dados dele e escolha **Criar**.
 4. Copie o Webhook para a área de transferência e salve-o. Será necessário a URL do Webhook para enviar informações ao Microsoft Teams.
@@ -173,7 +173,7 @@ As etapas a seguir usam o PowerShell. Iremos supor que você o tenha instalado e
 2. Se o POST tiver êxito, você verá uma saída **1** simples por `Invoke-RestMethod`.
 3. Verifique o canal do Microsoft Teams associado à URL do Webhook. Você deverá ver o novo cartão postado no canal.
 
-- Inclua dois ícones, seguindo as instruções nos [ícones](~/concepts/build-and-test/apps-package.md#icons).
+- [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
 
 O seguinte arquivo manifest.json contém os elementos básicos necessários para testar e enviar seu aplicativo.
