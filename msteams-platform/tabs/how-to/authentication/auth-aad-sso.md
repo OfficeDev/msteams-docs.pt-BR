@@ -2,12 +2,12 @@
 title: Suporte a logon único para guias
 description: Descreve o logon único (SSO)
 keywords: API de logon único do AAD no SSO de autenticação de equipes
-ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 3eff1cd1d73573c8eaade63580516f432fe082a1
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552447"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731983"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte de logon único (SSO) para guias
 
@@ -25,7 +25,7 @@ Os usuários entram no Microsoft Teams por meio de suas contas corporativas, de 
 >[!NOTE]
 > **Início rápido**  
 >
-> O caminho mais simples para começar a usar o SSO de guia é com o Microsoft Teams Toolkit para o Visual Studio Code. [Saiba mais](../../../toolkit/visual-studio-code-tab-sso.md)
+> O caminho mais simples para começar a usar o SSO de guia é com o Microsoft Teams Toolkit para o Visual Studio Code. [Saiba Mais](../../../toolkit/visual-studio-code-tab-sso.md)
 
 
 ## <a name="how-sso-works-at-runtime"></a>Como o SSO funciona em tempo de execução
@@ -96,7 +96,7 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do teams qu
 11. Na seção **aplicativos cliente autorizados** , identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Selecione *Adicionar um aplicativo cliente*. Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado que você criou na etapa anterior:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicativo móvel/aplicativo de área de trabalho do Microsoft Teams)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicativo Web do Teams)
-12. Navegue até **permissões de API**. Selecione *Adicionar uma permissão*  >  *Microsoft Graph*  >  *as permissões delegadas* do Microsoft Graph e, em seguida, adicione as seguintes permissões da API do Microsoft Graph:
+12. Navegue até **permissões de API**. Selecione *Adicionar uma permissão*  >    >  *as permissões delegadas* do Microsoft Graph e, em seguida, adicione as seguintes permissões da API do Microsoft Graph:
     * User. Read (ativado por padrão)
     * email
     * offline_access
@@ -168,7 +168,7 @@ Depois de receber o token de acesso no retorno de chamada de êxito, você poder
 
 ## <a name="sample-code"></a>Código de exemplo
 
-Visite nosso exemplo de aplicativo: [guias MSTeams de SSO de exemplo-NodeJS](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Visite nosso exemplo de aplicativo: [exemplo de SSO PNP MSTeams](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 O LEIAme explica como configurar seu ambiente de desenvolvimento e como configurar seu aplicativo no Azure AD. Você também pode encontrar mais informações sobre como o exemplo é estruturado na [seção estrutura de aplicativos](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) para ajudar a se familiarizar com a codebase.
 

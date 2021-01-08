@@ -39,7 +39,7 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Criar um aplicativo com o gerador do Yeoman
       href: tutorials/get-started-yeoman.md
-    - name: Saiba mais sobre aplicativos personalizados para o Teams
+    - name: Amostras de códigos e tutoriais
       href: tutorials/code-samples.md
 - name: Integrações e modelos
   items:
@@ -380,6 +380,8 @@
           href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Recursos
   items:
+    - name: Instruções do Moodle para o Microsoft Teams
+      href: resources/moodleInstructions.md
     - name: Bots - SDK v3
       href: resources/bot-v3/bots-overview.md
       items:

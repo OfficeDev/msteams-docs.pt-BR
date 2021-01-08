@@ -5,12 +5,12 @@ description: como criar uma página de configuração
 keywords: guias do teams com o canal de grupo configurável
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c041c311245bb5bfc5e2655ef8d596b2839fdb70
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605322"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731962"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -85,7 +85,7 @@ Aqui, os usuários são apresentados com dois botões de opção, **selecione ci
 1. O `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos é disparado.
 1. O botão **salvar** na página de configuração do aplicativo, carregado no Microsoft Teams, está habilitado.
 
-Esse código permite que as equipes saibam que os requisitos de configuração foram satisfeitos e a instalação pode continuar. Ao **salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface, para a instância atual (consulte [interface de configurações](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+Esse código permite que as equipes saibam que os requisitos de configuração foram satisfeitos e a instalação pode continuar. Ao **salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface, para a instância atual. Para obter mais informações, consulte [interface de configurações](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 >[!NOTE]
 >

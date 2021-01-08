@@ -2,16 +2,16 @@
 title: Adicionar ações de cartão em um bot
 description: Descreve as ações do cartão no Microsoft Teams e como usá-las em seus bots
 keywords: ações de cartões de bots da equipe
-ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 2bee1072405d91cd29d1aa227884516a87d10bde
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346774"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768071"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
-Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão suporte aos seguintes tipos de atividade ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Observe que essas ações diferem de `potentialActions` cartões conectores do Office 365 quando usadas de conectores.
+Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão suporte aos seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Observe que essas ações diferem de `potentialActions` cartões conectores do Office 365 quando usadas de conectores.
 
 | Tipo | Action |
 | --- | --- |
@@ -24,7 +24,7 @@ Os cartões usados por bots e extensões de mensagens no Microsoft Teams dão su
 > [!NOTE]
 >* O Microsoft Teams não dá suporte `CardAction` a tipos não listados na tabela anterior.
 >* O Microsoft Teams não oferece suporte à `potentialActions` propriedade.
->* As ações do cartão são diferentes das [ações sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no serviço bot Framework/Azure bot. As ações sugeridas não são suportadas no Microsoft Teams: se você deseja que os botões apareçam em uma mensagem do bot do Teams, use um cartão.
+>* As ações do cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no serviço bot Framework/Azure bot. As ações sugeridas não são suportadas no Microsoft Teams: se você deseja que os botões apareçam em uma mensagem do bot do Teams, use um cartão.
 >* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado para o canal (eles não funcionarão enquanto o cartão estiver na caixa de mensagem de composição).
 
 O Microsoft Teams também oferece suporte a [ações de cartões adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usados apenas por cartões adaptáveis. Essas ações estão listadas em suas próprias seções no final desta referência.
@@ -304,6 +304,44 @@ Para incluir uma `signin` ação com um cartão adaptável, inclua os seguintes 
         "type": "signin",
         "value": "https://signin.com"
     }
+  }
+}
+```
+
+### <a name="adaptive-cards-with-invoke-action"></a>Cartões adaptáveis com ação chamar
+ 
+Para incluir uma `invoke` ação com um cartão adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
+
+| Propriedade | Descrição |
+| --- | --- |
+| `type` | Definido como `task/fetch` |
+| `data` | Definir o valor  |
+
+#### <a name="example"></a>Exemplo
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    }
+  }
+}
+```
+
+#### <a name="example-2-with-additional-payload-data"></a>Exemplo 2 (com dados de conteúdo adicional)
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
   }
 }
 ```

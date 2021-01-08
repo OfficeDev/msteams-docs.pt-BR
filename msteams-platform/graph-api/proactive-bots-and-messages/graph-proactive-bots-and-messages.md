@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico de instalação do chat de mensagens pró-ativas do teams
-ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: ee1620c8fdcaeeecf0e8b0992017bf6f2fbacbf9
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819158"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731969"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Habilitar instalação de bot proativo e mensagens pró-ativas no Teams com o Microsoft Graph (visualização pública)
 
@@ -27,7 +27,7 @@ As mensagens pró-ativas são iniciadas por bots para iniciar conversas com um u
 |Mensagem pró-ativa ad-hoc| O bot interjects uma mensagem sem interromper o fluxo de conversa.|
 |Mensagem proativa baseada em caixa de diálogo | O bot cria um novo encadeamento de caixa de diálogo, assume o controle de uma conversa, entrega a mensagem proativa, fecha e retorna o controle para a caixa de diálogo anterior.|
 
-*Ver*, [enviar notificações proativas para os usuários SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
+*Ver*, [enviar notificações proativas para os usuários SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="proactive-app-installation-in-teams"></a>Instalação de aplicativo proativo no Teams
 
@@ -35,7 +35,7 @@ Antes que o bot possa proativamente mensagens de um usuário, ele precisa ser in
 
 ## <a name="permissions"></a>Permissões
 
-As permissões de [tipo de recurso teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) do Microsoft Graph permitem que você gerencie o ciclo de vida de instalação de seu aplicativo para todos os escopos de usuário (pessoal) ou de equipe (canal) na plataforma Microsoft Teams:
+As permissões de [tipo de recurso teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) do Microsoft Graph permitem que você gerencie o ciclo de vida de instalação de seu aplicativo para todos os escopos de usuário (pessoal) ou de equipe (canal) na plataforma Microsoft Teams:
 
 |Permissão de aplicativo | Descrição|
 |------------------|---------------------|
@@ -74,7 +74,7 @@ Para começar, você precisará de um [bot para o Microsoft Teams](../../bots/ho
 
 O `teamsAppId` pode ser recuperado do catálogo de aplicativos da sua organização:
 
-**Referência de página do Microsoft Graph:** [tipo de recurso teamsApp](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+**Referência de página do Microsoft Graph:** [tipo de recurso teamsApp](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
 Solicitação **http Get** :
 
@@ -100,7 +100,7 @@ A solicitação retornará um `teamsApp`  objeto. O objeto retornado `id`  é a 
 
 **2.**  se seu aplicativo já foi carregado/suplementos foi feito para um usuário no escopo pessoal, você pode recuperar o da `teamsAppId` seguinte maneira:
 
-**Referência de página do Microsoft Graph:** [listar aplicativos instalados para o usuário](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Referência de página do Microsoft Graph:** [listar aplicativos instalados para o usuário](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 Solicitação **http Get** :
 
@@ -110,7 +110,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **3.** se seu aplicativo já tiver sido carregado/suplementos foi feito para um canal no escopo da equipe, você poderá recuperar o da `teamsAppId` seguinte maneira:
 
-**Referência de página do Microsoft Graph:** [listar aplicativos no Team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Referência de página do Microsoft Graph:** [listar aplicativos no Team](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 Solicitação **http Get** :
 
@@ -119,11 +119,11 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 ```
 
 >[!TIP]
-> Você pode filtrar em qualquer um dos campos do objeto [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) para restringir a lista de resultados.
+> Você pode filtrar em qualquer um dos campos do objeto [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) para restringir a lista de resultados.
 
 ### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔ Determinar se o seu bot está instalado atualmente para um destinatário de mensagem
 
-**Referência de página do Microsoft Graph:** [listar aplicativos instalados para o usuário](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Referência de página do Microsoft Graph:** [listar aplicativos instalados para o usuário](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 Solicitação **http Get** :
 
@@ -131,11 +131,11 @@ Solicitação **http Get** :
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-Essa solicitação retornará uma matriz vazia se o aplicativo não estiver instalado, ou uma matriz com um único objeto [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) , se tiver sido instalado.
+Essa solicitação retornará uma matriz vazia se o aplicativo não estiver instalado, ou uma matriz com um único objeto [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) , se tiver sido instalado.
 
 ### <a name="-install-your-app"></a>✔ Instalar seu aplicativo
 
-**Referência do Microsoft Graph: instalar o** [aplicativo para o usuário](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Referência de página do Microsoft Graph:** [instalar o aplicativo para o usuário](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 Solicitação **http post** :
 
@@ -154,7 +154,7 @@ Quando seu aplicativo for instalado para o usuário, o bot receberá uma `conver
 
 O `chatId` também pode ser recuperado da seguinte maneira:
 
-**Referência do Microsoft Graph:** [obter chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Referência de página do Microsoft Graph:** [obter chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **1.** você precisará do seu aplicativo `{teamsAppInstallationId}` . Se você não o tiver, use o seguinte:
 
@@ -186,7 +186,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 ### <a name="-send-proactive-messages"></a>✔ Enviar mensagens pró-ativas
 
-Depois que o bot for adicionado para um usuário ou uma equipe e tiver adquirido as informações necessárias do usuário, ele poderá começar a [enviar mensagens pró-ativas](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp).
+Depois que o bot for adicionado para um usuário ou uma equipe e tiver adquirido as informações necessárias do usuário, ele poderá começar a [enviar mensagens pró-ativas](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 # <a name="c--net"></a>[C#/.NET](#tab/csharp)
 
@@ -307,7 +307,7 @@ module.exports.ProactiveBot = ProactiveBot;
 ## <a name="related-topic-for-teams-administrators"></a>Tópico relacionado para administradores do teams
 >
 > [!div class="nextstepaction"]
-> [**Gerenciar políticas de configuração de aplicativos no Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+> [**Gerenciar políticas de configuração de aplicativo no Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 
 ## <a name="view-additional-code-samples"></a>Exibir exemplos de código adicionais
 >

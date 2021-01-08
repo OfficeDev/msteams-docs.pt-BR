@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto para o Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c66add190b0492170acf9756980ee16fb1fdf1fd
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604610"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739053"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -403,7 +403,7 @@ Usado quando sua experiência de aplicativo tem uma experiência de guia de cana
 |`scopes`|matriz de enums|1 |✔|No momento, as guias configuráveis só dão suporte a `team` e os `groupchat` escopos. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de enums|6 ||O conjunto de `contextItem` escopos onde há suporte para uma tabulação. Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
+|`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|matriz de enums|1 ||Define como sua guia será disponibilizada no SharePoint. Opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -417,10 +417,10 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
-|`name`|cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
-|`contentUrl`|cadeia de caracteres||✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
-|`websiteUrl`|cadeia de caracteres|||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
-|`searchUrl`|cadeia de caracteres|||A URL do https://para apontar para as consultas de pesquisa de um usuário.|
+|`name`|string|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
+|`contentUrl`|string||✔|A URL https://que aponta para a interface do usuário da entidade a ser exibida na tela do teams.|
+|`websiteUrl`|string|||A URL do https://para apontar para o modo de exibição de um usuário em um navegador.|
+|`searchUrl`|string|||A URL do https://para apontar para as consultas de pesquisa de um usuário.|
 |`scopes`|matriz de enums|1 |✔|Atualmente, as guias estáticas oferecem suporte somente ao `personal` escopo, o que significa que ela pode ser provisionada somente como parte da experiência pessoal.|
 |`context` | matriz de enums| 2 || O conjunto de `contextItem` escopos onde há suporte para uma tabulação.|
 
@@ -440,7 +440,7 @@ O item é uma matriz (máximo de apenas 1 elemento &mdash; atualmente apenas um 
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID de [aplicativo](#id)geral.|
 |`scopes`|matriz de enums|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Será **`false`**|
-|`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será `**false**`|
+|`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Será **`false`**|
 |`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Será **`false`**|
 |`supportsCalling`|booliano|||Um valor que indica onde um bot dá suporte à chamada de áudio. **Importante**: esta propriedade é experimental no momento. As propriedades experimental podem não ser concluídas e podem sofrer alterações antes de ficarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração, e não deve ser usado em aplicativos de produção. Será **`false`**|
 |`supportsVideo`|booliano|||Um valor que indica onde um bot dá suporte à chamada de vídeo. **Importante**: esta propriedade é experimental no momento. As propriedades experimental podem não ser concluídas e podem sofrer alterações antes de ficarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração, e não deve ser usado em aplicativos de produção. Será **`false`**|
@@ -473,7 +473,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL do https://a ser usada ao configurar o conector.|
 |`scopes`|matriz de enums|1 |✔|Especifica se o conector oferece uma experiência no contexto de um canal em uma `team` ou uma experiência com escopo para um usuário individual ( `personal` ). Atualmente, só `team` há suporte para o escopo.|
-|`connectorId`|cadeia de caracteres|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
+|`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o conector que corresponde à sua ID no [painel do desenvolvedor de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -492,7 +492,7 @@ O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `obj
 |`commands`|matriz de objetos|10 |✔|matriz de comandos que a extensão de mensagens oferece suporte|
 |`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que os aplicativos sejam chamados quando determinadas condições são atendidas. Os domínios também devem ser listados no `validDomains`|
-|`messageHandlers.type`|cadeia de caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
+|`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadeias de caracteres|||matriz de domínios para o qual o manipulador de mensagens de link pode se registrar.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions. Commands
@@ -504,26 +504,26 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|A ID do comando.|
-|`title`|cadeia de caracteres|32 caracteres|✔|O nome do comando amigável.|
-|`type`|cadeia de caracteres|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
-|`description`|cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
+|`title`|string|32 caracteres|✔|O nome do comando amigável.|
+|`type`|string|64 caracteres||Tipo do comando. Um `query` ou `action` . Padrão: **consulta**.|
+|`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
 |`initialRun`|booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: **false**.|
 |`context`|matriz de cadeias de caracteres|3 ||Define onde a extensão de mensagem pode ser chamada. Qualquer combinação de `compose` , `commandBox` , `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor Boolean que indica se ele deve buscar o módulo de tarefa dinamicamente. Padrão: **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagem.|
-|`taskInfo.title`|cadeia de caracteres|64 caracteres||Título inicial da caixa de diálogo.|
-|`taskInfo.width`|cadeia de caracteres|||Largura da caixa de diálogo: um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
-|`taskInfo.height`|cadeia de caracteres|||Altura da caixa de diálogo-um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
-|`taskInfo.url`|cadeia de caracteres|||URL do WebView inicial.|
+|`taskInfo.title`|string|64 caracteres||Título inicial da caixa de diálogo.|
+|`taskInfo.width`|string|||Largura da caixa de diálogo: um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
+|`taskInfo.height`|string|||Altura da caixa de diálogo-um número em pixels ou layout padrão, como ' grande ', ' médio ' ou ' pequeno '.|
+|`taskInfo.url`|string|||URL do WebView inicial.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando utiliza. Mínimo: 1; máximo: 5.|
-|`parameters.name`|cadeia de caracteres|64 caracteres|✔|O nome do parâmetro conforme ele aparece no cliente. Isso é incluído na solicitação do usuário.|
-|`parameters.title`|cadeia de caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
-|`parameters.description`|cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade deste parâmetro.|
-|`parameters.value`|cadeia de caracteres|512 caracteres||Valor inicial para o parâmetro.|
-|`parameters.inputType`|cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefas para o `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro conforme ele aparece no cliente. Isso é incluído na solicitação do usuário.|
+|`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
+|`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade deste parâmetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro.|
+|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefas para o `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para o `choiceset` . Use somente quando o `parameter.inputType` é `choiceset` .|
-|`parameters.choices.title`|cadeia de caracteres|128 caracteres|✔|Título da escolha.|
-|`parameters.choices.value`|cadeia de caracteres|512 caracteres|✔|O valor da escolha.|
+|`parameters.choices.title`|string|128 caracteres|✔|Título da escolha.|
+|`parameters.choices.value`|string|512 caracteres|✔|O valor da escolha.|
 
 ## <a name="permissions"></a>permissões
 
@@ -572,7 +572,7 @@ Especifique a ID do aplicativo do Azure Active Directory (Azure AD) e as informa
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Esta ID deve ser um GUID.|
-|`resource`|cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para aquisição de token de autenticação para SSO.|
+|`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para aquisição de token de autenticação para SSO.|
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especificar [consentimento específico de recurso](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) granular|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -605,8 +605,8 @@ Defina as propriedades que seu aplicativo usará para postar em um feed de ativi
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|O tipo de notificação. *Veja abaixo*.|
-|`description`|cadeia de caracteres|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
-|`templateText`|cadeia de caracteres|128 caracteres|✔|Ex: "{actor} tarefa criada {TaskId} para você"|
+|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
+|`templateText`|string|128 caracteres|✔|Ex: "{actor} tarefa criada {TaskId} para você"|
 
 ```json
 {
