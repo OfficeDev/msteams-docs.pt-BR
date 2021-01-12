@@ -1,48 +1,48 @@
 ---
-title: Introdução-Crie sua primeira visão geral e pré-requisitos do aplicativo
+title: Começar - Criar sua primeira visão geral do aplicativo e pré-requisitos
 author: heath-hamilton
 description: Saiba como começar a usar o desenvolvimento de aplicativos do Microsoft Teams e configurar seu ambiente.
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 06e26c57e6f6d3fd0bbeb981ef7ab46c8217bb4a
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346809"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795458"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo Microsoft Teams
 
-Nas aulas **Compilar suas primeiras aplicativos** , você cria aplicativos básicos do teams. Cada tutorial percorre como criar um aplicativo simples e de equipe real ao apresentar as ferramentas comuns, conceitos fundamentais e recursos mais avançados.
+Na criação das **lições do seu primeiro aplicativo,** você cria aplicativos básicos do Teams. Cada tutorial explica como criar um aplicativo teams simples e real ao mesmo tempo em que apresenta ferramentas comuns, conceitos fundamentais e recursos mais avançados.
 
 ## <a name="what-youll-learn"></a>O que você aprenderá
 
-Aqui está uma ideia do que você saberá depois de percorrer as lições.
+Aqui está uma ideia do que você vai saber depois de passar pelas lições.
 
 > [!div class="checklist"]
   >
-  > * **Comece a trabalhar rapidamente com o Teams Toolkit**: o Microsoft Teams Toolkit para Visual Studio Code cuida da criação do seu projeto de aplicativo e do scaffolding, para que você possa ter um aplicativo em execução em minutos.
-  > * **Configurar seu aplicativo com o app Studio**: Especifique os recursos e serviços que seu aplicativo de equipe usa.
-  > * **Escopo do seu aplicativo público**: Crie um aplicativo do teams para uso pessoal, colaboração ou ambos.
-  > * **Obtenha experiência com ferramentas e SDKs do Microsoft Teams**: Personalize seu aplicativo (por exemplo, altere seu esquema de cores para corresponder ao tema do Teams) com a ajuda do SDK do Microsoft Teams JavaScript. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
-  > * **Expanda em seu aplicativo**: em todas as lições, você encontrará tópicos relacionados que provavelmente você está interessado (como diretrizes de autenticação e Design).
+  > * **Começar rapidamente com** o Kit de Ferramentas do Teams: o Kit de Ferramentas do Microsoft Teams para Visual Studio Code cuida da criação do projeto do aplicativo e do scaffolding para que você possa ter um aplicativo em execução em minutos.
+  > * **Configure seu aplicativo com o App Studio:** especifique os recursos e serviços que seu aplicativo do Teams usa.
+  > * **Escopo do público do seu aplicativo:** crie um aplicativo do Teams para uso pessoal, colaboração ou ambos.
+> * **Obter experiência com ferramentas e SDKs do Teams:** personalize seu aplicativo com a ajuda do SDK do cliente JavaScript do Teams. Por exemplo, altere o esquema de cores do seu aplicativo para corresponder ao tema do Teams. Além disso, saiba mais sobre as ferramentas comuns para criar e gerenciar bots.
+  > * **Expanda seu aplicativo:** ao longo das lições, você encontrará tópicos relacionados em que provavelmente está interessado (como diretrizes de autenticação e design).
 
 ## <a name="teams-app-fundamentals"></a>Conceitos básicos do aplicativo Teams
 
-Antes de começar os tutoriais, você deve saber o seguinte sobre a criação de aplicativos para o Microsoft Teams.
+Antes de começar os tutoriais, você deve saber o seguinte sobre como criar aplicativos para o Teams.
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>Os aplicativos podem ter vários recursos e pontos de entrada
 
-Um aplicativo do teams é composto por um ou mais [recursos de plataforma](../concepts/capabilities-overview.md) (como as pessoas usam o aplicativo) e pontos de [entrada](../concepts/extensibility-points.md) (onde as pessoas detectam o aplicativo).
+Um aplicativo teams é feito de um ou mais recursos de plataforma [(como](../concepts/capabilities-overview.md) as pessoas usam o aplicativo) e pontos de entrada [(onde](../concepts/extensibility-points.md) as pessoas descubram o aplicativo).
 
-### <a name="teams-doesnt-host-your-app"></a>O Microsoft Teams não hospeda seu aplicativo
+### <a name="teams-doesnt-host-your-app"></a>O Teams não hospeda seu aplicativo
 
-Um aplicativo do teams inclui as seguintes partes importantes:
+Um aplicativo do Teams inclui as seguintes partes importantes:
 
-* A lógica, o armazenamento de dados e as chamadas de API que alimentam o aplicativo. Esses serviços não são hospedados pelo Microsoft Teams e devem ser acessíveis via HTTPS.
-* O cliente do Microsoft Teams (Web, desktop ou celular) onde as pessoas usam o aplicativo.
-* Sua ID de aplicativo, que permite que você configure seu aplicativo com o app Studio.
+* A lógica, o armazenamento de dados e as chamadas à API que ligarão seu aplicativo. Esses serviços não são hospedados pelo Teams e devem estar acessíveis via HTTPS.
+* O cliente do Teams (web, desktop ou dispositivos móveis) onde as pessoas usam seu aplicativo.
+* Sua ID de aplicativo, que permite configurar seu aplicativo com o App Studio.
 
 ## <a name="get-prerequisites"></a>Obter pré-requisitos
 
@@ -50,61 +50,61 @@ Verifique se você tem a conta certa para criar aplicativos do Teams e instalar 
 
 ### <a name="set-up-your-development-account"></a>Configurar sua conta de desenvolvimento
 
-Você precisa de uma conta do Microsoft Teams que permite o Sideload de aplicativos personalizado. (Sua conta já pode fornecer isso).
+Você precisa de uma conta do Teams que permita o sideload de aplicativo personalizado. (Sua conta pode já fornecer isso.)
 
-1. Se você tiver uma conta do Microsoft Teams, verifique se você pode Sideload aplicativos no Microsoft Teams:
-    1. No cliente do Microsoft Teams, selecione **aplicativos**.
-    1. Procure uma opção para **carregar um aplicativo personalizado**.
+1. Se você tiver uma conta do Teams, verifique se pode fazer o sideload de aplicativos no Teams:
+    1. No cliente do Teams, selecione **Aplicativos.**
+    1. Procure uma opção para **carregar um aplicativo personalizado.**
 
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Ilustração mostrando onde você pode carregar um aplicativo personalizado no Microsoft Teams.":::
+    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Imagem mostrando onde no Teams você pode carregar um aplicativo personalizado.":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
 
-<summary><b>Selecione aqui</b> se você não conseguir ver a opção Sideload ou se não tiver uma conta do teams.</summary>
+<summary><b>Selecione aqui</b> se não conseguir ver a opção de sideload ou se não tiver uma conta do Teams.</summary>
 
-Você pode obter uma conta de teste gratuita do teams que permite que o aplicativo Sideload ingresse no programa de desenvolvedor do 365 da Microsoft. (O processo de registro leva aproximadamente dois minutos.)
+Você pode obter uma conta de teste gratuita do Teams que permite o sideload do aplicativo in joining the Microsoft 365 developer program. (O processo de registro leva aproximadamente dois minutos.)
 
-1. Vá para o [programa Microsoft 365 Developer](https://developer.microsoft.com/microsoft-365/dev-program).
-1. Selecione **ingressar agora** e siga as instruções na tela.
-1. Quando você chegar à tela de boas-vindas, selecione **Configurar a assinatura E5**.
-1. Configurar sua conta de administrador. Após concluir, você verá uma tela como esta.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê após se inscrever no programa de desenvolvedor do Microsoft 365.":::
-1. Faça logon no Microsoft Teams usando a conta de administrador que você acabou de configurar.
-1. Verifique se agora você tem a opção **carregar um aplicativo personalizado** .
+1. Vá para o [programa de desenvolvedor do Microsoft 365.](https://developer.microsoft.com/microsoft-365/dev-program)
+1. Selecione **Ingressar Agora** e siga as instruções na tela.
+1. Quando chegar à tela de boas-vindas, selecione **Configurar assinatura do E5.**
+1. Configurar sua conta de administrador. Depois de concluir, você deverá ver uma tela como esta.
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê depois de se inscrever no programa para desenvolvedores do Microsoft 365.":::
+1. Entre no Teams usando a conta de administrador que você acabou de configurar.
+1. Verifique se agora você tem **a opção Carregar um aplicativo** personalizado.
 
 </details>
 
 > [!Note]
-> Se ainda não conseguir Sideload aplicativos, consulte [habilitar aplicativos personalizados do Teams e ativar o carregamento de aplicativos personalizados](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Se você ainda não conseguir fazer o sideload de aplicativos, confira habilitar aplicativos personalizados do Teams e [ativar o carregamento de aplicativos personalizados.](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 ### <a name="install-your-development-tools"></a>Instalar suas ferramentas de desenvolvimento
 
-Você pode criar aplicativos do teams com suas ferramentas preferenciais, mas essas lições mostram como você pode começar rapidamente com o Microsoft Teams Toolkit para o Visual Studio Code.
+Você pode criar aplicativos do Teams com suas ferramentas preferidas, mas essas lições mostram como você pode começar rapidamente com o Microsoft Teams Toolkit para Visual Studio Code.
 
-O Microsoft Teams exibe o conteúdo do aplicativo apenas por meio de conexões HTTPS. Para depurar determinados tipos de aplicativos localmente, como um bot, você aprenderá a usar o [ngrok para configurar um túnel seguro](../concepts/build-and-test/debug.md#locally-hosted) entre o Teams e seu aplicativo. (Os aplicativos do teams de produção são hospedados na nuvem.)
+O Teams exibe o conteúdo do aplicativo somente por meio de conexões HTTPS. Para depurar certos tipos de aplicativos localmente, como um bot, você aprenderá a usar [o ngrok](../concepts/build-and-test/debug.md#locally-hosted) para configurar um túnel seguro entre o Teams e seu aplicativo. (Os aplicativos do Teams de produção são hospedados na nuvem.)
 
 1. Instale o [Node.js](https://nodejs.org/en/).
-1. Instale o [ngrok](https://ngrok.com/download) se você planeja criar um bot ou uma extensão de mensagem.
-1. Instale a versão mais recente do [Visual Studio Code](https://code.visualstudio.com/download). (As versões anteriores podem não funcionar com o kit de ferramentas.)
-1. No Visual Studio Code, selecione **extensões** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: na barra de atividades à esquerda e instale o **Microsoft Teams Toolkit**.
+1. Instale [o ngrok](https://ngrok.com/download) se você planeja criar um bot ou extensão de mensagens.
+1. Instale a versão mais recente do [Visual Studio Code.](https://code.visualstudio.com/download) (As versões anteriores podem não funcionar com o kit de ferramentas.)
+1. No Visual Studio Code, selecione **Extensões na** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: Barra de Atividades à esquerda e instale o Kit de Ferramentas do Microsoft **Teams.**
 
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustração que mostra onde no Visual Studio Code você pode instalar a extensão do kit de ferramentas do Microsoft Teams.":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Imagem mostrando onde no Visual Studio Code você pode instalar a extensão do Kit de Ferramentas do Microsoft Teams.":::
 
 ## <a name="about-the-tutorials"></a>Sobre os tutoriais
 
-Você pode começar com qualquer um dos Teams **Construa suas primeiras lições de aplicativos** . Se você não tem certeza de onde começar, siga nosso caminho amigável de iniciantes e crie um "Olá, mundo!" aplicativo.
+Você pode começar com qualquer um dos Teams para **criar suas primeiras lições de** aplicativo. Se você não tiver certeza de onde ir primeiro, siga nosso caminho amigável para iniciantes e crie um "Hello, World!" app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Árvore de qualificações que mostra os planos de aprendizado dos tutoriais de criação dos seus primeiros aplicativos do teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Árvore de habilidades mostrando caminhos de aprendizagem para os tutoriais de &quot;criar seu primeiro aplicativo&quot; do Teams." border="false":::
 
 ## <a name="next-step"></a>Próxima etapa
 
-Depois de configurar sua conta e ambiente, você pode começar a criar.
+Depois de configurar sua conta e seu ambiente, você pode começar a criar.
 
-### <a name="beginner-friendly-tutorial"></a>Tutorial amigável de iniciantes
+### <a name="beginner-friendly-tutorial"></a>Tutorial amigável para iniciantes
 
 > [!div class="nextstepaction"]
-> [Criar um aplicativo "Olá, mundo!"](../build-your-first-app/build-and-run.md)
+> [Criar um aplicativo "Hello, World!"](../build-your-first-app/build-and-run.md)
 
 ### <a name="other-tutorials"></a>Outros tutoriais
 
