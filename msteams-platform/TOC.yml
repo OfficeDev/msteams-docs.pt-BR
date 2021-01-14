@@ -34,19 +34,19 @@
       items:
         - name: Chatbot com C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot com JavaScript (GitHub)
+        - name: Chatbot com Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Chatbot com Python (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: Exemplos de extensão de mensagem
       items:
-        - name: Comandos de ação com o C# /.net (GitHub)
+        - name: Comandos de ação com o C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Comandos de ação com TypeScript/node.js (GitHub)
+        - name: Comandos de ação com Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Pesquisar comandos com o C# /.net (GitHub)
+        - name: Comandos de pesquisa com with C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Pesquisar comandos com TypeScript/node. js (GitHub)
+        - name: Comandos de pesquisa com with Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: Aplicativos básicos
   items:
@@ -126,12 +126,14 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: SDK do cliente JavaScript do Teams
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: Bot Framework do Node.js para bots e extensões de mensagens (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: SDK do Bot Framework do .NET para bots e extensões de mensagens(GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: SDKs do Microsoft Graph
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: SDKs herdados
       items:
         - name: SDK de bots (v3)
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: Guias de início rápido
       items:
-        - name: Guia pessoal com node. js/React
+        - name: Guia pessoal com Node.js
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: Guia pessoal com C# /ASP.NET Core
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Guia pessoal com o C# /ASP.NET MVC
+        - name: Guia pessoal com C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Guia canal com node.js/React
+        - name: Guia do canal com Node.js
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
         - name: Guia canal com C# /ASP.net Core
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Guia canal com C# /ASP.NET MVC
+        - name: Guia do canal com C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: Criar uma página de conteúdo
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Criar uma página de remoção
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Usando o SDK do cliente do JavaScript do Teams
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: Como obter contexto adicional
+    - name: Obtenha contexto para sua guia
       href: tabs/how-to/access-teams-context.md
 - name: Criar bots
   items:
