@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto do Microsoft Teams
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797049"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845627"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -299,7 +299,7 @@ A versão do esquema de manifesto que este manifesto está usando. Deve ser "1.7
 
 A versão do aplicativo específico. Se você atualizar algo em seu manifesto, a versão também deverá ser incrementada. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente, e o usuário recebe a nova funcionalidade. Se esse aplicativo foi enviado para a loja, o novo manifesto terá que ser re-enviado e revalidado. Em seguida, os usuários desse aplicativo receberão o novo manifesto atualizado automaticamente em algumas horas, depois que ele for aprovado.
 
-Se o aplicativo solicitou a alteração de permissões, os usuários serão solicitados a atualizar e consentir de novo para o aplicativo.
+Se as permissões solicitadas pelo aplicativo mudarem, os usuários serão solicitados a atualizar e consentir de novo para o aplicativo.
 
 Esta cadeia de caracteres de versão deve seguir [o padrão de semver](http://semver.org/) (MAJOR. MINOR. PATCH).
 
@@ -318,7 +318,7 @@ Especifica informações sobre sua empresa. Para aplicativos enviados ao AppSour
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`name`|32 caracteres|✔|O nome de exibição do desenvolvedor.|
-|`websiteUrl`|2048 caracteres|✔|A https:// URL para o site do desenvolvedor. Este link deve levar os usuários para a sua empresa ou página de aterrissagem específica do produto.|
+|`websiteUrl`|2048 caracteres|✔|A https:// URL para o site do desenvolvedor. Esse link deve levar os usuários para a sua empresa ou página de aterrissagem específica do produto.|
 |`privacyUrl`|2048 caracteres|✔|A https:// URL da política de privacidade do desenvolvedor.|
 |`termsOfUseUrl`|2048 caracteres|✔|A https:// URL para os termos de uso do desenvolvedor.|
 |`mpnId`|10 caracteres| |**Opcional** A ID do Microsoft Partner Network que identifica a organização parceira que está criando o aplicativo.|
@@ -365,7 +365,7 @@ Permite a especificação de um idioma padrão, bem como ponteiros para arquivos
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
-Uma matriz de objetos especificando traduções de idiomas adicionais.
+Uma matriz de objetos especificando traduções de idioma adicionais.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -381,11 +381,11 @@ Uma matriz de objetos especificando traduções de idiomas adicionais.
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`outline`|32 x 32 pixels|✔|Um caminho de arquivo relativo para um ícone transparente de contorno PNG de 32 x 32.|
-|`color`|192 x 192 pixels|✔|Um caminho de arquivo relativo para um ícone PNG de 192 x 192 cores completas.|
+|`color`|192 x 192 pixels|✔|Um caminho relativo do arquivo para um ícone PNG de 192 x 192 cores completas.|
 
 ## <a name="accentcolor"></a>accentColor
 
-**Opcional** — código de cor HEX HTML
+**Opcional** — código de cor Hex HTML
 
 Uma cor a ser usada em conjunto com e como plano de fundo para seus ícones de contorno.
 
@@ -395,7 +395,7 @@ O valor deve ser um código de cor HTML válido começando com '#', por `#4464ee
 
 **Opcional** — matriz
 
-Usado quando a experiência do aplicativo tem uma experiência de guia de canal de equipe que exige configuração extra antes de ser adicionada. Guias configuráveis só têm suporte no escopo das equipes  (não pessoal) e, atualmente, só há suporte para uma guia por aplicativo.
+Usado quando a experiência do aplicativo tem uma experiência de guia de canal de equipe que exige configuração extra antes de ser adicionada. Guias configuráveis são suportadas apenas no escopo de equipes  (não pessoais) e, no momento, só há suporte para uma guia por aplicativo.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -442,7 +442,7 @@ O item é uma matriz (máximo de apenas 1 elemento atualmente apenas um bot é p
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
 |`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
 |`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
-|`supportsCalling`|booliano|||Um valor indicando onde um bot dá suporte a chamada de áudio. **IMPORTANTE:** esta propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
+|`supportsCalling`|booliano|||Um valor indicando onde um bot dá suporte a chamada de áudio. **IMPORTANTE:** essa propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
 |`supportsVideo`|booliano|||Um valor indicando onde um bot dá suporte à chamada de vídeo. **IMPORTANTE:** essa propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
@@ -489,11 +489,11 @@ O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `obj
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|string|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que é o suporte à extensão de mensagens, conforme registrado na Estrutura do Bot. Isso pode ser o mesmo que a ID geral do aplicativo.|
-|`commands`|matriz de objetos|10 |✔|matriz de comandos com suporte da extensão de mensagens|
+|`commands`|matriz de objetos|10 |✔|Matriz de comandos compatíveis com a extensão de mensagens|
 |`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
-|`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas. Os domínios também devem estar listados em `validDomains`|
+|`messageHandlers`|matriz de objetos|5 ||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas.|
 |`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
-|`messageHandlers.value.domains`|matriz de cadeias de caracteres|||matriz de domínios que o manipulador de mensagens de link pode registrar.|
+|`messageHandlers.value.domains`|matriz de cadeias de caracteres|||Matriz de domínios em que o manipulador de mensagens de link pode se registrar.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -513,7 +513,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens.|
 |`taskInfo.title`|string|64 caracteres||Título da caixa de diálogo inicial.|
 |`taskInfo.width`|string|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
-|`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
+|`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
 |`taskInfo.url`|string|||URL inicial do webview.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando leva. Mínimo: 1; máximo: 5.|
 |`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. Isso está incluído na solicitação do usuário.|
@@ -552,7 +552,7 @@ Especifica os recursos nativos no dispositivo de um usuário aos que seu aplicat
 
 **Optional**, except **Required** where noted
 
-Uma lista de domínios válidos para sites que o aplicativo espera carregar no cliente do Teams. As listagem de domínio podem incluir caracteres curinga, por `*.example.com` exemplo. Isso corresponde a exatamente um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com` . Se a configuração da guia ou a interface do usuário de conteúdo precisar navegar para qualquer outro domínio além do uso para a configuração de guia, esse domínio deverá ser especificado aqui.
+Uma lista de domínios válidos para sites que o aplicativo espera carregar no cliente do Teams. As listagem de domínio podem incluir caracteres curinga, por `*.example.com` exemplo. Isso corresponde a exatamente um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com` . Se a configuração da guia ou a interface do usuário do conteúdo precisar navegar para qualquer outro domínio além do uso da configuração de guia, esse domínio deverá ser especificado aqui.
 
 No **entanto,** não é necessário incluir os domínios de provedores de identidade que você deseja suportar em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para o accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]` .
 
@@ -572,7 +572,7 @@ Especifique a ID do aplicativo do Azure Active Directory (Azure AD) e as informa
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|string|2048 caracteres|✔|URL do recurso do aplicativo para aquisição de token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando o SSO, certifique-se de inserir um valor fictício de cadeia de caracteres nesse campo para o manifesto do aplicativo, por exemplo, para https://notapplicable evitar uma resposta de erro. |
+|`resource`|string|2048 caracteres|✔|URL do recurso do aplicativo para aquisição de token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando o SSO, certifique-se de inserir um valor fictício de cadeia de caracteres nesse campo para o manifesto do aplicativo, por exemplo, para evitar https://notapplicable uma resposta de erro. |
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especifique o [consentimento específico do recurso granular.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -581,7 +581,7 @@ Especifique a ID do aplicativo do Azure Active Directory (Azure AD) e as informa
 
 Indica se o indicador de carregamento será ou não mostre quando um aplicativo/guia estiver sendo carregado. Padrão: **false**.
 >[!NOTE]
->Se você definir "showLoadingIndicator : true" no manifesto do aplicativo, para [que a](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) página seja carregada corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa de acordo com o protocolo descrito em Mostrar um documento indicador de carregamento nativo.
+>Se você definir "showLoadingIndicator : true" no manifesto do aplicativo, para [que a](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) página seja carregada corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefas de acordo com o protocolo descrito em Mostrar um documento indicador de carregamento nativo.
 
 
 ## <a name="isfullscreen"></a>isFullScreen
