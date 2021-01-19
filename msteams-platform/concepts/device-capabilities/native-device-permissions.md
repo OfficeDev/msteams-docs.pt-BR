@@ -1,68 +1,69 @@
 ---
-title: Solicitar permissões de dispositivo para a guia do Microsoft Teams
-description: Como atualizar seu manifesto de aplicativo para solicitar acesso a recursos nativos que geralmente exigem o consentimento do usuário
-keywords: desenvolvimento de guias do teams
-ms.openlocfilehash: 6be183d2610616f3bd3bdf32554976322193c132
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+title: Solicitar permissões de dispositivo para sua guia do Microsoft Teams
+description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
+keywords: desenvolvimento de guias do Teams
+ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
+ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731976"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "49886741"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permissões de dispositivo para a guia do Microsoft Teams
+# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permissões de dispositivo para sua guia do Microsoft Teams
 
-Você pode querer enriquecer sua guia com recursos que exigem acesso à funcionalidade de dispositivo nativo, como:
+Talvez você queira enriquecer sua guia com recursos que exigem acesso à funcionalidade do dispositivo nativo, como:
 
 > [!div class="checklist"]
 >
-> * Câmara
+> * Câmera
 > * Microfone
 > * Local
 > * Notificações
 
-[!Note] Para integrar os recursos de câmera e imagem no seu aplicativo móvel do Microsoft Teams, consulte [recursos de câmera e imagem no Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [!NOTE]
+> Para integrar recursos de câmera e imagem ao seu aplicativo móvel do Microsoft Teams, confira recursos de [câmera e imagem no Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
-> * No presente, o cliente do teams Mobile só dá suporte ao acesso a `camera` ,, `gallery` `mic` e `location` a recursos nativos do dispositivo e está disponível em todas as construções de aplicativos, incluindo guias. </br>
-> * Suporte para `camera` , `gallery` e `mic` é habilitado por meio da [**API selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Para captura de imagem única, você pode usar a [**API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
-> * O suporte para `location` é habilitado por meio da [**API getLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). É recomendável usar esta API como a [**API de geolocalização**](../../resources/schema/manifest-schema.md#devicepermissions) não é totalmente suportada em todos os clientes de desktop.
+> * No momento, o cliente móvel do Teams só dá suporte ao acesso a , e por meio de recursos de dispositivo nativo e está disponível em todas as construções de `camera` `gallery` `mic` `location` aplicativo, incluindo guias. </br>
+> * Suporte para `camera` , e é habilitado por meio de `gallery` `mic` [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Para captura de imagem única, você pode usar [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
+> * O suporte `location` para é habilitado por meio da API [**getLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). É recomendável que você use essa API como API [**de geolocalização**](../../resources/schema/manifest-schema.md#devicepermissions) atualmente não é totalmente suportada em todos os clientes da área de trabalho.
 
 ## <a name="device-permissions"></a>Permissões de dispositivos
 
-O acesso às permissões de dispositivo de um usuário permite que você construa experiências muito mais ricas, por exemplo:
+Acessar as permissões de dispositivo de um usuário permite que você crie experiências muito mais completas, por exemplo:
 
 * Gravar e compartilhar vídeos curtos
-* Gravar memorandos de áudio curtos e salvá-los para mais tarde
-* Usar informações de local de usuário para exibir informações relevantes
+* Grave memorandos de áudio curtos e salve-os para mais tarde
+* Usar informações de localização do usuário para exibir informações relevantes
 
-Embora o acesso a esses recursos seja padrão nos navegadores da Web mais modernos, você precisa permitir que as equipes saibam quais recursos você gostaria de usar atualizando o manifesto do aplicativo. Isso permitirá que você solicite permissões, da mesma forma que faria em um navegador, enquanto seu aplicativo está sendo executado no cliente de área de trabalho do Microsoft Teams.
+Embora o acesso a esses recursos seja padrão na maioria dos navegadores da Web modernos, você precisa permitir que o Teams saiba quais recursos você gostaria de usar atualizando o manifesto do aplicativo. Isso permitirá que você peça permissões, da mesma forma que faria em um navegador, enquanto seu aplicativo está sendo executado no cliente da área de trabalho do Teams.
 
 ## <a name="manage-permissions"></a>Gerenciar permissões
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-1. Abra o Microsoft Teams.
-1. No canto superior direito da janela, selecione o ícone do seu perfil.
-1. Selecione   ->  **permissões** de configurações no menu suspenso.
+1. Abra o Teams.
+1. No canto superior direito da janela, selecione o ícone de perfil.
+1. Selecione **Permissões de**  ->  **Configurações** no menu suspenso.
 1. Escolha as configurações desejadas.
 
-![Tela de configurações da área de trabalho de permissões de dispositivo](../../assets/images/tabs/device-permissions.png)
+![Tela de configurações da área de trabalho de permissões do dispositivo](../../assets/images/tabs/device-permissions.png)
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-1. Abra o Microsoft Teams.
-1. Vá até **configurações** de  ->  **permissões do aplicativo**.
+1. Abra o Teams.
+1. Vá para **Configurações**  ->  **de Permissões do Aplicativo.**
 1. Selecione o aplicativo para o qual você precisa escolher as configurações.
 1. Escolha as configurações desejadas.
 
-![Tela de configurações móveis de permissões de dispositivo](../../assets/images/tabs/MobilePermissions.png)
+![Tela de configurações móveis de permissões do dispositivo](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
 ## <a name="properties"></a>Propriedades
 
-Atualize o seu aplicativo `manifest.json` adicionando `devicePermissions` e especificando quais das cinco Propriedades você gostaria de usar em seu aplicativo:
+Atualize seus aplicativos `manifest.json` adicionando e especificando quais das cinco propriedades você gostaria `devicePermissions` de usar em seu aplicativo:
 
 ``` json
 "devicePermissions": [
@@ -75,21 +76,21 @@ Atualize o seu aplicativo `manifest.json` adicionando `devicePermissions` e espe
 ```
 > [!Note]
 >
-> A mídia também é usada para permissões de câmera no celular.
+> A mídia também é usada para permissões de câmera em dispositivos móveis.
 
-Cada propriedade permitirá que o usuário solicite o consentimento deles:
+Cada propriedade permitirá que você peça ao usuário que peça seu consentimento:
 
 | Propriedade      | Descrição   |
 | --- | --- |
-| corre         | permissão para usar a câmera, microfone, alto-falantes e galeria de mídia do Access |
-| localização geográfica   | permissão para retornar o local do usuário      |
-| por | permissão para enviar as notificações de usuário      |
-| Midi          | permissão para enviar e receber informações de Midi de um instrumento musical digital   |
+| mídia         | permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso |
+| geolocalização   | permissão para retornar o local do usuário      |
+| notifications | permissão para enviar as notificações do usuário      |
+| midi          | permissão para enviar e receber informações midi de um instrumento digital de música   |
 | openExternal  | permissão para abrir links em aplicativos externos  |
 
-## <a name="checking-permissions-from-your-tab"></a>Verificando permissões na sua guia
+## <a name="checking-permissions-from-your-tab"></a>Verificando permissões na guia
 
-Depois de adicionar o `devicePermissions` manifesto do aplicativo, você poderá verificar as permissões usando a API "permissões" do HTML5 sem causar um aviso.
+Depois de adicionar ao manifesto do aplicativo, você pode verificar permissões usando `devicePermissions` a API de "permissões" HTML5 sem causar um prompt.
 
 ``` Javascript
 // Different query options:
@@ -109,23 +110,23 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="prompting-the-user"></a>Avisar o usuário
+## <a name="prompting-the-user"></a>Solicitar ao usuário
 
-Para mostrar um prompt para obter consentimento para acessar permissões de dispositivo, você precisará aproveitar a API de HTML5 ou Teams apropriada. 
+Para mostrar uma solicitação para obter consentimento para acessar as permissões do dispositivo, você precisa aproveitar o HTML5 apropriado ou a API do Teams. 
 
-Por exemplo, para solicitar que o usuário acesse seu local, você precisará chamar `getCurrentPosition` :
+Por exemplo, para solicitar que o usuário acesse sua localização, você precisa `getCurrentPosition` chamar:
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
 ```
 
-Para usar a câmera na área de trabalho ou na Web, o Microsoft Teams mostrará um prompt de permissão quando você ligar `getUserMedia` :
+Para usar a câmera na área de trabalho ou na Web, o Teams mostrará um prompt de permissão quando você `getUserMedia` chamar:
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-Para capturar a imagem em dispositivos móveis, o Microsoft Teams Mobile solicitará permissão ao chamar `captureImage()` :
+Para capturar a imagem em dispositivos móveis, o Teams Mobile solicitará permissão quando você `captureImage()` chamar:
 
 ```Javascript
 microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
@@ -133,13 +134,13 @@ microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: micros
 });
 ```
 
-As notificações solicitarão o usuário quando você ligar `requestPermission` :
+As notificações solicitarão ao usuário quando você `requestPermission` chamar:
 
 ```Javascript
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-Para usar a Galeria de fotos da câmera ou do Access, o Teams Mobile solicitará permissão ao chamar `selectMedia()` :
+Para usar a câmera ou acessar a galeria de fotos, o dispositivo móvel do Teams solicitará permissão quando você `selectMedia()` chamar:
 
 ```JavaScript
 microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -147,7 +148,7 @@ microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.
 });
 ```
 
-Para usar o MIC, o Teams Mobile solicitará permissão ao chamar `selectMedia()` :
+Para usar o mic, o dispositivo móvel do Teams solicitará permissão quando você `selectMedia()` chamar:
 
 ```JavaScript 
 microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -155,7 +156,7 @@ microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.m
 });
 ```
 
-Para solicitar que o usuário Compartilhe o local na interface de mapa, o Teams Mobile solicitará permissão ao chamar `getLocation()` :
+Para solicitar que o usuário compartilhe o local na interface do mapa, o teams Mobile solicitará permissão quando você `getLocation()` chamar:
 
 ```JavaScript 
 microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -165,13 +166,13 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Guias de permissões de dispositivo de área de trabalho](~/assets/images/tabs/device-permissions-prompt.png)
+![Prompt de permissões do dispositivo da área de trabalho de guias](~/assets/images/tabs/device-permissions-prompt.png)
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
 ![Prompt de permissões de dispositivo móvel de guias](../../assets/images/tabs/MobileLocationPermission.png)
 
 
-## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão nas sessões de logon
+## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão entre sessões de logon
 
-As permissões de dispositivo nativo são armazenadas para cada sessão de logon. Isso significa que, se você fizer logon em outra instância do Teams (por exemplo, em outro computador), as permissões do dispositivo de suas sessões anteriores não estarão disponíveis. Em vez disso, você precisará consentir novamente as permissões de dispositivo para a nova sessão de logon. Isso também significa que, se você fizer logout de equipes (ou mudar locatários dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior. Tenha isso em mente ao desenvolver permissões de dispositivo nativo: os recursos nativos que você concorda para são apenas para sua sessão de login _atual_ .
+As permissões nativas do dispositivo são armazenadas para cada sessão de logon. Isso significa que, se você fizer logon em outra instância do Teams (por exemplo, em outro computador), as permissões do dispositivo de suas sessões anteriores não estarão disponíveis. Em vez disso, você precisará concordar com as permissões do dispositivo para a nova sessão de logon. Isso também significa que, se você sair do Teams (ou mudar de locatário dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior. Lembre-se disso ao desenvolver permissões de dispositivo nativas: as funcionalidades nativas que você consentir são apenas para sua _sessão de_ logon atual.
