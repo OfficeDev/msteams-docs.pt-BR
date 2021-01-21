@@ -5,12 +5,12 @@ description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Kit d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797803"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911909"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
@@ -24,7 +24,7 @@ Você precisa de uma guia pessoal de execução básica para começar. Se você 
 
 ## <a name="your-assignment"></a>Sua atribuição
 
-As pessoas em sua organização têm problemas para encontrar informações básicas de contato para funções importantes (help desk, RH, etc.). Você é responsável por garantir que eles possam encontrar essas informações rapidamente em um só lugar. Como você faria isso? Uma guia pessoal do Teams, claro.
+As pessoas em sua organização têm problemas para encontrar informações básicas de contato para funções importantes (help desk, RH, etc.). Você é responsável por garantir que eles encontrem rapidamente essas informações em um só lugar. Como você faria isso? Uma guia pessoal do Teams, claro.
 
 ## <a name="what-youll-learn"></a>O que você aprenderá
 
@@ -47,7 +47,7 @@ No kit de ferramentas, vá para o **App Studio** para exibir e atualizar as conf
 O scaffolding do aplicativo fornece os componentes para renderizar sua guia pessoal no Teams. Há muito com o que você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
 
 * `Tab.js` no diretório `src/components` do projeto. Isso é para renderizar sua página de conteúdo de guia.
-* Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
+* SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes front-end do seu projeto.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Personalizar a página de conteúdo da guia
 
@@ -98,13 +98,13 @@ Salve suas alterações. Vá até a guia do seu aplicativo no Teams para exibir 
 
 ## <a name="3-update-the-tab-theme"></a>3. Atualizar o tema da guia
 
-Os bons aplicativos são nativos para o Teams, portanto, é importante que sua guia se combina com o tema do Teams de sua preferência pelos usuários: padrão (claro), escuro ou alto contraste. Como você deve ter notado na última captura de tela, sua guia ainda tem um plano de fundo claro quando o cliente está usando o tema escuro. Essa não é uma experiência de usuário recomendada.
+Bons aplicativos são nativos para o Teams, portanto, é importante que sua guia se combina com o tema do Teams de sua preferência pelos usuários: padrão (claro), escuro ou alto contraste. Como você deve ter notado na última captura de tela, sua guia ainda tem um plano de fundo claro quando o cliente está usando o tema escuro. Essa não é uma experiência de usuário recomendada.
 
 O [SDK do cliente JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) do Teams pode fazer com que seu aplicativo saiba e reaja a alterações de tema no cliente. Vamos ver como fazer isso.
 
 ### <a name="get-context-about-the-teams-client"></a>Obter contexto sobre o cliente do Teams
 
-Em seu arquivo, há uma chamada que fornece alguns detalhes sobre o tema do cliente configurado, entre `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) outros. Graças ao scaffolding do aplicativo, use esse código como está para acessar a `context` interface e suas propriedades.
+No arquivo, há uma chamada que fornece alguns detalhes sobre o tema do `Tab.js` `microsoftTeams.getContext()` cliente [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) configurado, entre outros. Graças ao scaffolding do aplicativo, use esse código como está para acessar a `context` interface e suas propriedades.
 
 ```JavaScript
 componentDidMount(){
@@ -122,7 +122,7 @@ componentDidMount(){
 
 Com as propriedades em mãos, seu aplicativo tem uma compreensão sólida do que está acontecendo em `context` torno dele no Teams. Mas o aplicativo ainda não sabe que sua aparência deve refletir qualquer tema que um usuário escolher.
 
-Você precisa de um manipulador para que o estado do seu aplicativo mude com o tema. Insira o manipulador de alteração de tema a seguir imediatamente após a `microsoftTeams.getContext()` chamada.
+Você precisa de um manipulador para que o estado do seu aplicativo mude com o tema. Insira o manipulador de alterações de tema a seguir imediatamente após a `microsoftTeams.getContext()` chamada.
 
 ```JavaScript
   microsoftTeams.registerOnThemeChangeHandler(theme => {
@@ -134,7 +134,7 @@ Você precisa de um manipulador para que o estado do seu aplicativo mude com o t
 
 ### <a name="match-theme-styles"></a>Corresponder estilos de tema
 
-O manipulador de alterações de temas está em uso, mas você precisa de alguns códigos que respondam a essas alterações e alinhe as cores da guia com o tema atual.
+O manipulador de alterações de temas está em uso, mas você precisa de algum código que responda a essas alterações e alinhe as cores da guia com o tema atual.
 
 > [!NOTE]
 > O exemplo a seguir é apenas uma maneira de aplicar estilos à guia. Use o código como está, expanda-o ou escreva o seu próprio.
@@ -176,12 +176,11 @@ Parabéns! Você tem um aplicativo teams com uma guia pessoal que facilita a enc
 
 ## <a name="learn-more"></a>Saiba mais
 
-* Autenticar usuários de guia com [SSO:](../tabs/how-to/authentication/auth-aad-sso.md)se você quiser apenas usuários autorizados exibindo sua guia, configurar o SSO (single sign-on) por meio do Azure Active Directory (AD).
-* [Inserir conteúdo de](../tabs/how-to/tab-requirements.md)um aplicativo Web ou página da Web existente: mostramos como criar novo conteúdo para uma guia pessoal, mas você também pode carregar conteúdo de uma URL externa.
-* [Crie uma experiência perfeita para sua guia:](../tabs/design/tabs.md)confira as diretrizes recomendadas para projetar guias do Teams.
-* [Criar guias para dispositivos móveis:](../tabs/design/tabs-mobile.md)entenda como desenvolver guias para telefones e tablets.
-* [Utilizar dados do Teams com o Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Criar uma guia sem o kit de ferramentas](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* Siga nossas [diretrizes de design](../tabs/design/tabs.md) e crie com modelos de interface do usuário prontos para [produção](../concepts/design/design-teams-app-ui-templates.md) para criar uma experiência perfeita.
+* Entenda [as considerações móveis](../tabs/design/tabs-mobile.md) para guias.
+* [Adicione autenticação SSO à guia.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Utilize dados do Teams com [o Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Crie uma guia sem o kit de ferramentas.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Próxima lição
 

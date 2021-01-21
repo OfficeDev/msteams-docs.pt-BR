@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 64c6e44177f1fb598895f748dbd0ec1c0b1e3aa1
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797887"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911951"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>O que são guias do Microsoft Teams?
 
@@ -18,7 +18,7 @@ As guias são páginas da Web com suporte para o Teams inseridas no Microsoft Te
 > [!NOTE]
 > O Chrome 80, agendado para lançamento no início de 2020, apresenta novos valores de cookie e impõe políticas de cookie por padrão. É recomendável definir o uso pretendido para seus cookies em vez de depender do comportamento padrão do navegador. *Veja* [o atributo de cookie SameSite (atualização de 2020).](../resources/samesite-cookie-update.md)
 
-Há dois tipos de guias disponíveis no Teams: canal/grupo e pessoal. As guias canal/grupo oferecem conteúdo para canais e chats em grupo e são uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na Web. Guias pessoais, juntamente com bots com escopo pessoal, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados na barra de navegação esquerda para facilitar o acesso.
+Há dois tipos de guias disponíveis no Teams: canal/grupo e pessoal. As guias de canal/grupo oferecem conteúdo a canais e chats em grupo e são uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na Web. Guias pessoais, juntamente com bots com escopo pessoal, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados na barra de navegação esquerda para facilitar o acesso.
 
 ## <a name="lesser-known-tab-features"></a>Recursos de guia menos conhecidos
 
@@ -37,8 +37,8 @@ Há dois tipos de guias disponíveis no Teams: canal/grupo e pessoal. As guias c
 **Cenário:** Traga um recurso existente baseado na Web para o Teams. \
 **Exemplo:** Você cria uma guia pessoal em seu aplicativo do Teams que apresenta um site corporativo informacional aos usuários.
 
-**Cenário:** Adicione páginas de suporte a um bot do Teams ou extensão de mensagens. \
-**Exemplo:** Você cria guias pessoais que fornecem sobre *e* *ajudam o* conteúdo da página da Web aos usuários.
+**Cenário:** Adicione páginas de suporte a um bot ou extensão de mensagens do Teams. \
+**Exemplo:** Você cria guias pessoais que fornecem sobre *e* ajudam *o* conteúdo da página da Web aos usuários.
 
 **Cenário:** Forneça acesso a itens com os que seus usuários interagem regularmente para diálogo cooperativo e colaboração. \
 **Exemplo:** Você cria uma guia de canal/grupo com vinculação profunda a itens individuais.
@@ -55,7 +55,7 @@ Você pode ter no máximo uma (1) guia canal/grupo e até dezesseis (16) guias p
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por que seu canal ou guia de grupo apareça em clientes móveis do Teams, a configuração deverá `setSettings()` ter um valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as orientações para guias em [dispositivos](~/tabs/design/tabs-mobile.md) móveis ao criar suas guias. Os aplicativos [distribuídos por meio do Appsource](~/concepts/deploy-and-publish/appsource/publish.md) têm um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
+Se você optar por que seu canal ou guia de grupo apareça em clientes móveis do Teams, a configuração deve `setSettings()` ter um valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as orientações para guias em [dispositivos](~/tabs/design/tabs-mobile.md) móveis ao criar suas guias. Os aplicativos [distribuídos por meio do Appsource](~/concepts/deploy-and-publish/appsource/publish.md) têm um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
 
 | **Funcionalidade do aplicativo** | **Comportamento se o aplicativo for aprovado** | **Comportamento se o aplicativo não for aprovado** |
 | --- | --- | --- |
@@ -65,12 +65,11 @@ Se você optar por que seu canal ou guia de grupo apareça em clientes móveis d
 
 >[!NOTE]
 >
->- O comportamento padrão dos aplicativos só será aplicável se eles são distribuídos por meio do AppSource. Não há processo de aprovação para aplicativos distribuídos por meio de outros [métodos de distribuição.](~/concepts/deploy-and-publish/overview.md) Por padrão, todas as guias são abertas no cliente do Teams.
+>- O comportamento padrão dos aplicativos só é aplicável se eles são distribuídos por meio da loja do Teams (AppSource). Não há processo de aprovação para aplicativos distribuídos por meio de outros [métodos de distribuição.](~/concepts/deploy-and-publish/overview.md) Por padrão, todas as guias são abertas no cliente do Teams.
 >- Para iniciar uma avaliação do seu aplicativo para dispositivos móveis, entre em contato teamsubm@microsoft.com os detalhes do aplicativo.
 
+> [!div class="nextstepaction"]
+> [Saiba mais: Solicitar permissões de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Saiba mais: Solicitar permissões de dispositivo](/concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
->[Saiba mais: Permissões de câmera e galeria de imagens](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+>[Saiba mais: Permissões de câmera e galeria de imagens](../concepts/device-capabilities/mobile-camera-image-permissions.md)

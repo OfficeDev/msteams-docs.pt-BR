@@ -5,12 +5,12 @@ description: Crie rapidamente um canal e uma guia de grupo do Microsoft Teams us
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 0692d28653063c2f886db9a03e7136379edde9c3
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797873"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911874"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Criar uma guia de canal e grupo para o Microsoft Teams
 
@@ -36,11 +36,11 @@ Você pode tornar essas informações mais fáceis de encontrar criando uma guia
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Se ainda não o fez, entenda e instale os pré-requisitos de desenvolvimento [do Teams.](build-first-app-overview.md#get-prerequisites)
+Se você ainda não o fez, entenda e instale os pré-requisitos de desenvolvimento [do Teams.](build-first-app-overview.md#get-prerequisites)
 
-## <a name="1-create-your-app-project"></a>1. Criar seu projeto de aplicativo
+## <a name="1-create-your-app-project"></a>1. Crie seu projeto de aplicativo
 
-O Microsoft Teams Toolkit ajuda a configurar seu aplicativo e configurar o scaffolding relevante para as guias de canal e grupo, incluindo uma página de configuração básica e uma página de conteúdo que exibe um "Hello, World!" message.
+O Microsoft Teams Toolkit ajuda a configurar seu aplicativo e configurar o scaffolding relevante para guias de canal e grupo, incluindo uma página de configuração básica e uma página de conteúdo que exibe um "Hello, World!" message.
 
 > [!TIP]
 > Se você ainda não criou um projeto de aplicativo do [](../build-your-first-app/build-and-run.md) Teams antes, talvez seja útil seguir estas instruções que explicam os projetos com mais detalhes.
@@ -48,7 +48,7 @@ O Microsoft Teams Toolkit ajuda a configurar seu aplicativo e configurar o scaff
 1. No Visual Studio Code, selecione **o Microsoft Teams** na Barra de Atividades à esquerda e escolha Criar um novo aplicativo do :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Teams.**
 1. Quando solicitado, entre com sua conta de desenvolvimento do Microsoft 365.
 1. Na tela **Adicionar recursos,** selecione **Tab** e **Next.**
-1. Insira um nome para seu aplicativo do Teams. (Esse é o nome padrão do seu aplicativo e também o nome do diretório do projeto do aplicativo no computador local.) Selecione **a guia Canal do Grupo ou do Teams.**
+1. Insira um nome para seu aplicativo do Teams. (Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto do aplicativo em seu computador local.) Selecione **a guia Canal do Grupo ou do Teams.**
 1. Selecione **Concluir** na parte inferior da tela para configurar seu projeto.  
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. Identifique componentes relevantes do projeto do aplicativo
@@ -111,7 +111,7 @@ a {
 }
 ```
 
-## <a name="4-customize-your-tab-configuration-page"></a>4. Personalizar a página de configuração da guia
+## <a name="4-customize-your-tab-configuration-page"></a>4. Personalizar sua página de configuração de guia
 
 Cada guia em um canal ou chat tem uma página de configuração, uma modal com pelo menos uma opção de configuração exibida quando os usuários adicionam seu aplicativo. Por padrão, a página de configuração pergunta aos usuários se eles querem notificar o canal ou o chat quando a guia é instalada.
 
@@ -129,7 +129,7 @@ return (
 ```
  
 > [!TIP]
-> No mínimo, forneça algumas breves informações sobre seu aplicativo nesta página, pois essa pode ser a primeira vez que os usuários o aprenderão. Você também pode incluir opções de configuração personalizadas ou um fluxo [de](../tabs/how-to/authentication/auth-aad-sso.md)trabalho de autenticação, o que é comum nas páginas de configuração de guia.
+> No mínimo, forneça algumas breves informações sobre seu aplicativo nesta página, pois essa pode ser a primeira vez que os usuários estão aprendendo sobre ele. Você também pode incluir opções de configuração personalizadas ou um fluxo [de](../tabs/how-to/authentication/auth-aad-sso.md)trabalho de autenticação, o que é comum nas páginas de configuração de guia.
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. Forneça um nome de guia sugerido
 
@@ -150,7 +150,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="6-build-and-run-your-app"></a>6. Crie e execute seu aplicativo
 
-No interesse do tempo, você criará e executará seu aplicativo localmente.
+No interesse de tempo, você criará e executará seu aplicativo localmente.
 
 (Essas informações também estão disponíveis no kit de `README` ferramentas.)
 
@@ -164,7 +164,7 @@ Depois de concluído, há um **compilado com êxito!** no terminal. Seu aplicati
 Seu aplicativo está pronto para ser testado no Teams. Para fazer isso, você deve ter uma conta que permita o sideload do aplicativo. (Se você não tiver certeza de que tem isso, saiba mais sobre como obter uma conta [de desenvolvimento do Teams.)](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
 
 1. No Visual Studio Code, pressione a **tecla F5** para iniciar um cliente Web do Teams.
-1. Para exibir o conteúdo do aplicativo no Teams, especifique que onde seu aplicativo está sendo executado ( `localhost` ) é confiável:
+1. Para exibir o conteúdo do aplicativo no Teams, especifique que onde o aplicativo está sendo executado ( `localhost` ) é confiável:
    1. Abra uma nova guia na mesma janela do navegador (Google Chrome por padrão) que foi aberta após pressionar **F5**.
    1. Vá para `https://localhost:3000/tab` a página e prossiga para a página.
 1. Volte para o Teams. Na modalidade, selecione **Adicionar a uma equipe** ou Adicionar a um **chat** e localize um canal ou chat que você possa usar para teste.
@@ -179,12 +179,11 @@ Parabéns! Você tem um aplicativo teams com uma guia para exibir conteúdo úti
 
 ## <a name="learn-more"></a>Saiba mais
 
-* Autenticar usuários de guia com [SSO:](../tabs/how-to/authentication/auth-aad-sso.md)se você quiser apenas usuários autorizados exibindo sua guia, de configurar o SSO (single sign-on) por meio do Azure Active Directory (AD).
-* [Inserir conteúdo de um](../tabs/how-to/add-tab.md#tab-requirements)aplicativo Web ou página da Web existente: mostramos como criar novo conteúdo para uma guia, mas você também pode carregar conteúdo de uma URL externa.
-* [Crie uma experiência de guia perfeita:](../tabs/design/tabs.md)confira as diretrizes recomendadas para projetar guias do Teams.
-* [Criar guias para dispositivos móveis:](../tabs/design/tabs-mobile.md)entenda como desenvolver guias para telefones e tablets.
+* Siga nossas [diretrizes de design](../tabs/design/tabs.md) e crie com modelos de interface do usuário prontos para [produção](../concepts/design/design-teams-app-ui-templates.md) para criar uma experiência perfeita.
+* Entenda [as considerações móveis](../tabs/design/tabs-mobile.md) para guias.
+* [Adicione autenticação SSO à guia.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Utilize dados do Teams com [o Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Criar uma guia sem o kit de ferramentas](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
-* [Utilizar dados do Teams com o Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>Próxima lição
 

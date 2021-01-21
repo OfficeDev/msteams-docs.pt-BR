@@ -5,12 +5,12 @@ description: Obter uma visão geral de como os desenvolvedores podem estender os
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 45be2dd7d0e421ac331cfc02703f0b81eab3dfe5
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 9f043fd5bab441ce88b0e04b4254b925aff25aad
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797768"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911881"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
@@ -23,9 +23,9 @@ Os aplicativos são como você estende o Teams para se ajustar às suas necessid
 
 ## <a name="what-are-teams-apps"></a>O que são aplicativos do Teams?
 
-Os aplicativos do Teams são uma combinação [de recursos](concepts/capabilities-overview.md) e pontos [de entrada.](concepts/extensibility-points.md) Por exemplo, as pessoas podem conversar com o *bot* (recurso) do seu aplicativo em um *canal* (ponto de entrada).
+Os aplicativos do Teams são uma combinação [de recursos e](concepts/capabilities-overview.md) pontos de [entrada.](concepts/extensibility-points.md) Por exemplo, as pessoas podem conversar com o *bot* (recurso) do seu aplicativo em um *canal* (ponto de entrada).
 
-Alguns aplicativos são simples (enviar notificações), enquanto outros são complexos (gerenciar registros de pacientes). Ao planejar seu aplicativo, lembre-se de que o Teams é um hub de colaboração. Os melhores aplicativos do Teams ajudam as pessoas a se expressarem e trabalharem melhor juntas.
+Alguns aplicativos são simples (enviar notificações), enquanto outros são complexos (gerenciam registros de pacientes). Ao planejar seu aplicativo, lembre-se de que o Teams é um hub de colaboração. Os melhores aplicativos do Teams ajudam as pessoas a se expressarem e trabalharem melhor juntas.
 
 :::row:::
    :::column span="":::
@@ -42,7 +42,7 @@ Alguns aplicativos são simples (enviar notificações), enquanto outros são co
 
 ### <a name="bots"></a>Bots
 
-**Transforme palavras em ações:** as conversas geralmente resultam na necessidade de fazer algo (gerar uma ordem, revisar meu código, verificar o status do tíquete etc.). Um [bot](bots/what-are-bots.md) pode dar início a esses tipos de fluxos de trabalho dentro do Teams.
+**Transforme palavras em ações:** as conversas geralmente resultam na necessidade de fazer algo (gerar uma ordem, revisar meu código, verificar o status do tíquete etc.). Um [bot](bots/what-are-bots.md) pode dar início a esses tipos de fluxos de trabalho no Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Representação conceitual da aparência dos bots no cliente do Teams." border="false":::
 
@@ -107,7 +107,7 @@ Alguns aplicativos são simples (enviar notificações), enquanto outros são co
 :::row:::
    :::column span="2":::
 
-## <a name="integrate-with-teams"></a>Integração com o Teams
+## <a name="integrate-with-teams"></a>Integrar com o Teams
 
    Combinar os recursos que os usuários gostam de um aplicativo Web, serviço ou sistema existente com os recursos colaborativos do Teams.
 
@@ -139,7 +139,7 @@ Alguns aplicativos são simples (enviar notificações), enquanto outros são co
 ## <a name="resources"></a>Recursos
 
 * [Adicionar um botão Compartilhar com o Teams ao seu site](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interface do usuário do Fluent</a>
+* [Projetar seu aplicativo teams](concepts/design/design-teams-app-overview.md)
 * [SDK do cliente JavaScript do Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [SDK do Bot Framework para JavaScript](https://github.com/Microsoft/botbuilder-js) e [SDK da Estrutura de Bot para .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publicar seu aplicativo em uma organização ou no AppSource](concepts/deploy-and-publish/overview.md)
+* SDK do Bot Framework para [JavaScript](https://github.com/Microsoft/botbuilder-js) e [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publicar seu aplicativo do Teams](concepts/deploy-and-publish/overview.md)

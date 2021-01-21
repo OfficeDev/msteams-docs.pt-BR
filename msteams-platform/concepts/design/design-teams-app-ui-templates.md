@@ -1,30 +1,53 @@
 ---
-title: Criando seu aplicativo com modelos de interface do usuário
+title: Projetando seu aplicativo com modelos de interface do usuário
 author: heath-hamilton
-description: Projete seu aplicativo mais rapidamente com componentes de interface de usuário padronizados, layouts e padrões comumente vistos no Microsoft Teams.
+description: Projete seu aplicativo mais rapidamente com componentes, layouts e padrões padronizados da interface do usuário geralmente vistos no Microsoft Teams.
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 144c18ab03d76e442a4de64a5c61af76cb2b8b5f
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: b4d244bbf78ac85042d5caf8ec84afe42e79b3c7
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605777"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911923"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo do Microsoft Teams com modelos de interface do usuário
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
-Projete seu aplicativo Microsoft Teams mais rápido com modelos de interface do usuário. Os modelos são uma coleção de componentes baseados na interface do usuário fluente que funcionam em casos comuns de uso de equipes, dando mais tempo para você descobrir a melhor experiência para os seus usuários.
+Projete seu aplicativo Microsoft Teams mais rapidamente com modelos de interface do usuário. Os modelos são um conjunto de componentes baseados na interface do usuário fluente que funcionam em casos de uso comuns do Teams, dando mais tempo para você descobrir a melhor experiência para seus usuários.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interface do usuário do Microsoft Teams
+## <a name="getting-started-with-tools-and-samples"></a>Getting started with tools and samples
 
-Você pode obter modelos de interface do usuário do Microsoft Teams UI Kit, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
+Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usando modelos de interface do usuário.
+
+### <a name="microsoft-teams-ui-kit"></a>Kit de interface do usuário do Microsoft Teams
+
+Pegue modelos de interface do usuário para seu design de aplicativo do Kit de Interface do Usuário do Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
 > [!div class="nextstepaction"]
-> [Obter o kit de interface do usuário do Microsoft Teams (figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obter o kit de interface do usuário (Ltdma)](https://www.figma.com/community/file/916836509871353159)
+
+### <a name="microsoft-teams-ui-library"></a>Biblioteca de interface do usuário do Microsoft Teams
+
+Exibir e testar modelos de interface do usuário individuais do Teams e componentes relacionados em seu navegador.
+
+> [!div class="nextstepaction"]
+> [Experimente a biblioteca de interface do usuário (playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+
+Importe esses modelos e componentes relacionados diretamente para seu projeto de aplicativo do Teams.
+
+> [!div class="nextstepaction"]
+> [Obter a biblioteca de interface do usuário (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+
+### <a name="sample-app"></a>Aplicativo de exemplo
+
+Instale um aplicativo de exemplo para ver a aparência e o comportamento dos modelos de interface do usuário nos contextos do Teams.
+
+> [!div class="nextstepaction"]
+> [Obter o aplicativo de exemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="list"></a>Listar
 
-Você pode usar uma lista para exibir itens relacionados em um formato verificável e permitir que os usuários executem ações em uma lista inteira ou em itens individuais.
+Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="O exemplo mostra um modelo de interface do usuário de lista." border="false":::
 
@@ -35,21 +58,21 @@ Você pode usar uma lista para exibir itens relacionados em um formato verificá
 
 ## <a name="dashboard"></a>Painel
 
-Um painel exibe diferentes tipos de conteúdo em um local central (aplicativo pessoal ou guia do Teams). Os usuários devem poder personalizar pelo menos alguns dos itens que eles veem em um painel.
+Um painel exibe diferentes tipos de conteúdo em um local central (aplicativo pessoal ou guia do Teams). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="O exemplo mostra um modelo de interface do usuário do painel." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Analisar dados
-* Métricas do relatório
-* Organizar informações diferentes em um único local
+* Métricas de relatório
+* Organizar informações diferentes em um só lugar
 
 ## <a name="form"></a>Formulário
 
-Formulários são usados para coletar, validar e enviar a entrada do usuário de forma estruturada. Limpar rótulos e agrupamentos lógicos de campos de entrada são fundamentais para uma boa experiência de usuário.
+Os formulários são usados para coletar, validar e enviar entradas do usuário de maneira estruturada. Limpar a rotulagem e os agrupamentos lógicos dos campos de entrada são fundamentais para uma boa experiência do usuário.
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="O exemplo mostra um modelo de interface de usuário de formulário." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="O exemplo mostra um modelo de interface do usuário do formulário." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -60,9 +83,9 @@ Formulários são usados para coletar, validar e enviar a entrada do usuário de
 
 ## <a name="sign-in"></a>Entrar
 
-Você pode criar fluxos de entrada do aplicativo para diferentes contextos de equipes e provedores de identidade. O exemplo a seguir inclui o logon único (SSO), que recomendamos para a experiência de autenticação mais simples.
+Você pode projetar fluxos de entrada do aplicativo para diferentes contextos e provedores de identidade do Teams. O exemplo a seguir inclui o SSO (logo único), que recomendamos para a experiência de autenticação mais simples.
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de entrada." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de login." border="false":::
 
 ### <a name="top-use-case"></a>Principais casos de uso
 
@@ -70,21 +93,21 @@ Você pode criar fluxos de entrada do aplicativo para diferentes contextos de eq
 
 ## <a name="task-board"></a>Quadro de tarefas
 
-Um quadro de tarefas, às vezes chamado de quadro Kanban ou pistas de reutilização, é uma coleção de cartões usados para acompanhar o status de itens de trabalho ou tíquetes. Ele também pode ser usado para classificar qualquer tipo de conteúdo em categorias. Você pode editar e mover os cartões entre as colunas.
+Um quadro de tarefas, às vezes chamado de tabuleiro kanban ou trilhos de mesa, é uma coleção de cartões frequentemente usada para acompanhar o status de itens de trabalho ou tíquetes. Ele também pode ser usado para classificar qualquer tipo de conteúdo em categorias. Você pode editar e mover os cartões entre colunas.
 
 :::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="O exemplo mostra um modelo de interface do usuário do quadro de tarefas." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Gerenciamento de projetos. Atribuindo tarefas e status de acompanhamento
-* Debate. Adicionando ideias em diferentes categorias
-* Classificar exercícios. Organizar qualquer tipo de informação em buckets
+* Gerenciamento de projetos. Atribuindo tarefas e status de controle
+* Brainstorming. Adicionando ideias em categorias diferentes
+* Classificar exercícios. Organizando qualquer tipo de informação em buckets
 
 ## <a name="data-visualization"></a>Visualização de dados
 
-Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para empilhar e organizar visualizações de dados na mesma página. Os cartões são dimensionados para ajustar o layout da coluna e preencher os espaços em branco.
+Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para empilhar e organizar visualizações de dados na mesma página. Os cartões são dimensionados para caber no layout de coluna e preencher espaços em branco.
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="O exemplo mostra um modelo de interface do usuário de visualização de dados." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -93,7 +116,7 @@ Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para e
 
 ## <a name="wizard"></a>Assistente
 
-Um assistente orienta um usuário através de várias telas para concluir uma tarefa (como um processo de configuração).
+Um assistente orienta um usuário em várias telas para concluir uma tarefa (como um processo de configuração).
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente." border="false":::
 
@@ -101,53 +124,53 @@ Um assistente orienta um usuário através de várias telas para concluir uma ta
 
 * Configurar
 * Integração
-* Experiências de tela de apresentação
+* Experiências de primeira vez
 
 ## <a name="empty-state"></a>Estado vazio
 
-O modelo de estado vazio pode ser usado para vários cenários, incluindo as experiências de início de sessão, mensagens de erro e muito mais. É altamente flexível, adaptando-o para usar um, alguns ou todos os componentes no design a seguir.
+O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais. É altamente flexível : adapte-o para usar um, alguns ou todos os componentes no design a seguir.
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário de estado vazio." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Entrar
-* Mensagens de boas-vindas e experiências de primeira execução
-* Mensagens de êxito
+* Mensagens de boas-vindas e experiências de primeira vez
+* Mensagens de sucesso
 * Mensagens de erro
 
 ## <a name="notification-bar"></a>Notification bar
 
-Uma barra de notificação é uma área dedicada para exibir uma breve e importante mensagens que não exigem que o usuário execute ações imediatas. Cores e ícones específicos de plano de fundo são associados a tipos específicos de mensagens (veja abaixo).
+Uma barra de notificação é uma área dedicada para exibir mensagens breves e importantes que não exigem que o usuário tome medidas imediatas. Cores de plano de fundo e ícones específicos estão associados a tipos específicos de mensagens (veja abaixo).
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos da barra de notificações." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos de barra de notificação." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Mensagens, erros e avisos críticos
-* Mensagens de êxito
+* Mensagens críticas, erros e avisos
+* Mensagens de sucesso
 * Mensagens informativas ou promocionais
 
-## <a name="left-nav"></a>Navegação à esquerda
+## <a name="left-nav"></a>Nav à esquerda
 
-Use o NAV esquerdo para navegar por várias páginas dentro da guia de suas equipes. No exemplo a seguir, a navegação à esquerda está entre a lista de canais e o conteúdo da guia.
+Use a navegação à esquerda para navegar em várias páginas na guia do Teams. No exemplo a seguir, a navegação à esquerda fica entre a lista de canais e o conteúdo da guia.
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="O exemplo mostra um modelo de nav à esquerda." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Navegar em várias páginas em uma guia do Microsoft Teams
-* Dividir aplicativos complexos em várias páginas
+* Procurar várias páginas em uma guia do Teams
+* Separar aplicativos complexos em várias páginas
 
 ## <a name="breadcrumb"></a>Navegação estrutural
 
-Os Breadcrumbs são um auxílio de navegação que transmite a hierarquia do seu aplicativo. Eles ajudam os usuários a entender como a página que estão sendo visualizadas se ajustam à experiência geral e têm acesso com um clique aos níveis mais altos nessa hierarquia.
+As navegação são um auxílio de navegação que transmite a hierarquia do seu aplicativo. Eles ajudam os usuários a entender como a página que estão exibindo se encaixa na experiência geral e têm acesso de um clique para níveis mais altos nessa hierarquia.
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="O exemplo mostra um modelo de navegação estrutural." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="O exemplo mostra um modelo de breadcrumb." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Hierarquia de comunicação
+* Comunicar hierarquia
 * Navegação
 
 ## <a name="toolbar"></a>Barra de ferramentas
@@ -159,22 +182,18 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Ações contextuais no conteúdo do aplicativo
-* Filtro contextual e localizar
-* Navegação e trilhas
+* Filtro contextual e encontrar
+* Navegação e navegação
 
 ## <a name="stage"></a>Etapa
 
-O estágio oferece uma maneira para que os usuários abram uma entidade, como uma imagem, um arquivo ou um site, no Microsoft Teams, em vez de abri-lo em outro aplicativo ou navegador. O principal caso de uso do estágio é visualização; a superfície não deve ser usada para interações complexas.
+O estágio oferece uma maneira para os usuários abrirem uma entidade, como uma imagem, arquivo ou site, no Teams, em vez de abri-la em outro aplicativo ou navegador. O principal caso de uso do estágio é exibição; a superfície não deve ser usada para interações complexas.
 
-(Observação de implementação: Crie seu estágio usando um [módulo de tarefa](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)grande.)
+(Observação de implementação: crie seu estágio usando um módulo [de tarefa grande.)](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="O exemplo mostra um modelo de estágio." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Abrir uma entidade no Microsoft Teams em vez de outro aplicativo ou navegador
+* Abrir uma entidade no Teams em vez de outro aplicativo ou navegador
 * Mídia de destaque ou outro conteúdo
-
-## <a name="microsoft-teams-ui-library-coming-soon"></a>Biblioteca de interface do usuário do Microsoft Teams (disponível em breve)
-
-A biblioteca de interface do usuário do Microsoft Teams permitirá que você importe esses modelos de interface do usuário prontos para produção diretamente para o seu projeto de aplicativo.
