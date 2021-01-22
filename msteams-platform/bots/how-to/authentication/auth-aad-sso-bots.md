@@ -1,103 +1,173 @@
 ---
 title: Suporte de logon único para bots
-description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de entrada ou o serviço do Azure bot com o suporte a cartão OAuth.
-keywords: token, token de usuário, suporte SSO para bots
-ms.openlocfilehash: ee9dbee063acf90f5596fc95d002caf53f88a08a
-ms.sourcegitcommit: 0a9e91c65d88512eda895c21371b3cd4051dca0d
+description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de login ou o serviço de bot do azure com suporte para cartão OAuth.
+keywords: token, token de usuário, suporte a SSO para bots
+ms.topic: conceptual
+ms.openlocfilehash: 8537cf41cdd7218b9bf7618fccf0e1704ac6b815
+ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "49729066"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49917580"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a><span data-ttu-id="85821-105">Suporte de logon único (SSO) para bots</span><span class="sxs-lookup"><span data-stu-id="85821-105">Single sign-on (SSO) support for bots</span></span>
+# <a name="single-sign-on-sso-support-for-bots"></a><span data-ttu-id="6c89f-105">Suporte a SSO (single sign-on) para bots</span><span class="sxs-lookup"><span data-stu-id="6c89f-105">Single sign-on (SSO) support for bots</span></span>
 
-<span data-ttu-id="85821-106">A autenticação de logon único no Azure Active Directory (Azure AD) minimiza o número de vezes que os usuários precisam inserir suas credenciais de logon, atualizando silenciosamente o token de autenticação.</span><span class="sxs-lookup"><span data-stu-id="85821-106">Single sign-on authentication in Azure Active Directory (Azure AD) minimizes the number of times users need to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="85821-107">Se os usuários concordarem em usar seu aplicativo, eles não precisarão ser consentidos novamente em outro dispositivo e serão conectados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="85821-107">If users agree to use your app, they will not have to consent again on another device and will be signed in automatically.</span></span> <span data-ttu-id="85821-108">O fluxo é muito semelhante ao [suporte de SSO da guia do teams]( ../../../tabs/how-to/authentication/auth-aad-sso.md).</span><span class="sxs-lookup"><span data-stu-id="85821-108">The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso.md).</span></span> <span data-ttu-id="85821-109">A diferença é o protocolo de como um bot solicita tokens e recebe respostas.</span><span class="sxs-lookup"><span data-stu-id="85821-109">The difference is the protocol for how a bot requests tokens and receives responses.</span></span>
+<span data-ttu-id="6c89f-106">A autenticação de login único no Azure Active Directory (AAD) minimiza o número de vezes que os usuários precisam inserir suas credenciais de entrada ao atualizar silenciosamente o token de autenticação.</span><span class="sxs-lookup"><span data-stu-id="6c89f-106">Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign in credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="6c89f-107">Se os usuários concordarem em usar seu aplicativo, eles não precisarão dar consentimento novamente em outro dispositivo e poderão entrar automaticamente.</span><span class="sxs-lookup"><span data-stu-id="6c89f-107">If users agree to use your app, they need not provide consent again on another device and can sign in automatically.</span></span> <span data-ttu-id="6c89f-108">O fluxo é semelhante ao do suporte ao SSO da guia [Do Microsoft Teams,](../../../tabs/how-to/authentication/auth-aad-sso.md)no entanto, a diferença está no protocolo de como um bot solicita [tokens](#request-a-bot-token) e recebe [respostas.](#receive-the-bot-token)</span><span class="sxs-lookup"><span data-stu-id="6c89f-108">The flow is similar to that of [Microsoft Teams tab SSO support](../../../tabs/how-to/authentication/auth-aad-sso.md), however, the difference is in the protocol for how a bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token).</span></span>
 
-<span data-ttu-id="85821-110">O OAuth 2,0 é um padrão aberto para autenticação e autorização usados pelo Azure Active Directory (Azure AD) e muitos outros provedores de identidade.</span><span class="sxs-lookup"><span data-stu-id="85821-110">OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers.</span></span> <span data-ttu-id="85821-111">Uma compreensão básica do OAuth 2,0 é um pré-requisito para trabalhar com autenticação no Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="85821-111">A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.</span></span>
+>[!NOTE]
+> <span data-ttu-id="6c89f-109">O OAuth 2.0 é um padrão aberto para autenticação e autorização usados pelo AAD e muitos outros provedores de identidade.</span><span class="sxs-lookup"><span data-stu-id="6c89f-109">OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers.</span></span> <span data-ttu-id="6c89f-110">Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-110">A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.</span></span>
 
-## <a name="bot-sso-at-runtime"></a><span data-ttu-id="85821-112">SSO do bot no tempo de execução</span><span class="sxs-lookup"><span data-stu-id="85821-112">Bot SSO at runtime</span></span>
+## <a name="bot-sso-at-runtime"></a><span data-ttu-id="6c89f-111">SSO de bot em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="6c89f-111">Bot SSO at runtime</span></span>
 
 ![SSO do bot no diagrama de tempo de execução](../../../assets/images/bots/bots-sso-diagram.png)
 
-1. <span data-ttu-id="85821-114">O bot envia uma mensagem com um OAuthCard que contém a `tokenExchangeResource` propriedade.</span><span class="sxs-lookup"><span data-stu-id="85821-114">The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property.</span></span> <span data-ttu-id="85821-115">Ele diz às Teams para obter um token de autenticação para o aplicativo bot.</span><span class="sxs-lookup"><span data-stu-id="85821-115">It tells Teams to obtain an authentication token for the bot application.</span></span> <span data-ttu-id="85821-116">O usuário recebe mensagens em todos os pontos de extremidade ativos do usuário.</span><span class="sxs-lookup"><span data-stu-id="85821-116">The user receives messages at all the active endpoints of the user.</span></span>
+<span data-ttu-id="6c89f-113">Conclua as seguintes etapas para obter tokens de aplicativo de bot e autenticação:</span><span class="sxs-lookup"><span data-stu-id="6c89f-113">Complete the following steps to get authentication and bot application tokens:</span></span>
+
+1. <span data-ttu-id="6c89f-114">O bot envia uma mensagem com um OAuthCard que contém a `tokenExchangeResource` propriedade.</span><span class="sxs-lookup"><span data-stu-id="6c89f-114">The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property.</span></span> <span data-ttu-id="6c89f-115">Ele informa ao Teams para obter um token de autenticação para o aplicativo bot.</span><span class="sxs-lookup"><span data-stu-id="6c89f-115">It tells Teams to obtain an authentication token for the bot application.</span></span> <span data-ttu-id="6c89f-116">O usuário recebe mensagens em todos os pontos de extremidade do usuário ativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-116">The user receives messages at all the active user endpoints.</span></span>
 
     > [!NOTE]
-    >* <span data-ttu-id="85821-117">Um usuário pode ter mais de um ponto de extremidade ativo por vez.</span><span class="sxs-lookup"><span data-stu-id="85821-117">A user can have more than one active endpoint at a time.</span></span>  
-    >* <span data-ttu-id="85821-118">O token de bot é recebido de todos os pontos de extremidade ativos do usuário.</span><span class="sxs-lookup"><span data-stu-id="85821-118">The bot token is received from every active endpoint of the user.</span></span>
-    >* <span data-ttu-id="85821-119">No momento, o suporte a logon único exige que o aplicativo seja instalado no escopo pessoal.</span><span class="sxs-lookup"><span data-stu-id="85821-119">Single sign-on support currently requires the app to be installed in personal scope.</span></span>
+    >* <span data-ttu-id="6c89f-117">Um usuário pode ter mais de um ponto de extremidade ativo por vez.</span><span class="sxs-lookup"><span data-stu-id="6c89f-117">A user can have more than one active endpoint at a time.</span></span>
+    >* <span data-ttu-id="6c89f-118">O token de bot é recebido de cada ponto de extremidade de usuário ativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-118">The bot token is received from every active user endpoint.</span></span>
+    >* <span data-ttu-id="6c89f-119">O aplicativo deve ser instalado no escopo pessoal para suporte a SSO.</span><span class="sxs-lookup"><span data-stu-id="6c89f-119">The app must be installed in personal scope for SSO support.</span></span>
 
-2. <span data-ttu-id="85821-120">Se esta for a primeira vez que o usuário atual usou seu aplicativo bot, haverá um prompt de solicitação para o consentimento (se o consentimento for necessário) ou para lidar com a autenticação de depuração (como a autenticação de dois fatores).</span><span class="sxs-lookup"><span data-stu-id="85821-120">If it is the first time the current user has used your bot application, there will be a request prompt to consent (if consent is required) or to handle step-up authentication (such as two-factor authentication).</span></span>
+2. <span data-ttu-id="6c89f-120">Se o usuário atual estiver usando seu aplicativo bot pela primeira vez, um prompt de solicitação será exibido solicitando que o usuário faça um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="6c89f-120">If the current user is using your bot application for the first time, a request prompt appears requesting the user to do one of the following:</span></span>
+    * <span data-ttu-id="6c89f-121">Forneça consentimento, se necessário.</span><span class="sxs-lookup"><span data-stu-id="6c89f-121">Provide consent, if required.</span></span>
+    * <span data-ttu-id="6c89f-122">Tratar a autenticação de etapa, como a autenticação de dois fatores.</span><span class="sxs-lookup"><span data-stu-id="6c89f-122">Handle step-up authentication, such as two-factor authentication.</span></span>
 
-3. <span data-ttu-id="85821-121">O Microsoft Teams solicita o token do aplicativo bot do ponto de extremidade do Azure AD para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="85821-121">Microsoft Teams requests the bot application token from the Azure AD endpoint for the current user.</span></span>
+3. <span data-ttu-id="6c89f-123">O Teams solicita o token do aplicativo bot do ponto de extremidade do AAD para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="6c89f-123">Teams requests the bot application token from the AAD endpoint for the current user.</span></span>
 
-4. <span data-ttu-id="85821-122">O Azure AD envia o token do aplicativo bot para o aplicativo Teams.</span><span class="sxs-lookup"><span data-stu-id="85821-122">Azure AD sends the bot application token to the Teams application.</span></span>
+4. <span data-ttu-id="6c89f-124">O AAD envia o token do aplicativo bot para o aplicativo do Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-124">AAD sends the bot application token to the Teams application.</span></span>
 
-5. <span data-ttu-id="85821-123">O Microsoft Teams envia o token para o bot como parte do objeto de valor retornado pela atividade Invoke com o nome de entrada/tokenExchange.</span><span class="sxs-lookup"><span data-stu-id="85821-123">Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name sign-in/tokenExchange.</span></span>
+5. <span data-ttu-id="6c89f-125">O Teams envia o token para o bot como parte do objeto de valor retornado pela atividade de invocação com o nome **entrar/tokenExchange**.</span><span class="sxs-lookup"><span data-stu-id="6c89f-125">Teams sends the token to the bot as part of the value object returned by the invoke activity with the name **sign-in/tokenExchange**.</span></span>
   
-6. <span data-ttu-id="85821-124">O token será analisado no aplicativo bot para extrair as informações necessárias, como o endereço de email do usuário.</span><span class="sxs-lookup"><span data-stu-id="85821-124">The token will be parsed in the bot application to extract the needed information, such as the user's email address.</span></span>
+6. <span data-ttu-id="6c89f-126">O token analisado no aplicativo bot fornece as informações necessárias, como o endereço de email do usuário.</span><span class="sxs-lookup"><span data-stu-id="6c89f-126">The parsed token in the bot application provides the required information, such as the user's email address.</span></span>
   
-## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a><span data-ttu-id="85821-125">Desenvolver um bot de logon único do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="85821-125">Develop a Single sign-on Microsoft Teams bot</span></span>
+## <a name="develop-an-sso-teams-bot"></a><span data-ttu-id="6c89f-127">Desenvolver um bot do SSO Teams</span><span class="sxs-lookup"><span data-stu-id="6c89f-127">Develop an SSO Teams bot</span></span>
   
-<span data-ttu-id="85821-126">As etapas a seguir são necessárias para desenvolver um bot do Microsoft Teams SSO:</span><span class="sxs-lookup"><span data-stu-id="85821-126">The following steps are required to develop an SSO Microsoft Teams bot:</span></span>
+<span data-ttu-id="6c89f-128">Conclua as seguintes etapas para desenvolver um bot do SSO Teams:</span><span class="sxs-lookup"><span data-stu-id="6c89f-128">Complete the following steps to develop an SSO Teams bot:</span></span>
 
-1. [<span data-ttu-id="85821-127">Criar uma conta gratuita do Azure</span><span class="sxs-lookup"><span data-stu-id="85821-127">Create an Azure free account</span></span>](#create-an-azure-account)
-2. [<span data-ttu-id="85821-128">Atualizar o manifesto do aplicativo do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="85821-128">Update your Teams app manifest</span></span>](#update-your-app-manifest)
-3. [<span data-ttu-id="85821-129">Adicionar o código para solicitar e receber o token de bot</span><span class="sxs-lookup"><span data-stu-id="85821-129">Add the code to request and receive the bot token</span></span>](#request-a-bot-token)
+1. <span data-ttu-id="6c89f-129">[Registre seu aplicativo por meio do portal do AAD.](#register-your-app-through-the-aad-portal)</span><span class="sxs-lookup"><span data-stu-id="6c89f-129">[Register your app through the AAD portal](#register-your-app-through-the-aad-portal).</span></span>
+2. <span data-ttu-id="6c89f-130">[Atualize o manifesto do aplicativo Teams para seu bot.](#update-your-teams-application-manifest-for-your-bot)</span><span class="sxs-lookup"><span data-stu-id="6c89f-130">[Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).</span></span>
+3. <span data-ttu-id="6c89f-131">[Adicione o código para solicitar e receber um token de bot.](#add-the-code-to-request-and-receive-a-bot-token)</span><span class="sxs-lookup"><span data-stu-id="6c89f-131">[Add the code to request and receive a bot token](#add-the-code-to-request-and-receive-a-bot-token).</span></span>
 
-### <a name="create-an-azure-account"></a><span data-ttu-id="85821-130">Crie uma conta do Azure</span><span class="sxs-lookup"><span data-stu-id="85821-130">Create an Azure account</span></span>
+### <a name="register-your-app-through-the-aad-portal"></a><span data-ttu-id="6c89f-132">Registrar seu aplicativo por meio do portal do AAD</span><span class="sxs-lookup"><span data-stu-id="6c89f-132">Register your app through the AAD portal</span></span>
 
-<span data-ttu-id="85821-131">Esta etapa é semelhante ao [fluxo de SSO de guia](../../../tabs/how-to/authentication/auth-aad-sso.md):</span><span class="sxs-lookup"><span data-stu-id="85821-131">This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):</span></span>
+<span data-ttu-id="6c89f-133">As etapas para registrar seu aplicativo por meio do portal do AAD são semelhantes ao [fluxo SSO da guia.](../../../tabs/how-to/authentication/auth-aad-sso.md)</span><span class="sxs-lookup"><span data-stu-id="6c89f-133">The steps to register your app through the AAD portal are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md).</span></span> <span data-ttu-id="6c89f-134">Conclua as seguintes etapas para registrar seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="6c89f-134">Complete the following steps to register your app:</span></span>
 
-1. <span data-ttu-id="85821-132">Obter sua [ID de aplicativo do Azure ad](/graph/concepts/auth-register-app-v2) para o Teams desktop, o Web ou o cliente móvel.</span><span class="sxs-lookup"><span data-stu-id="85821-132">Get your [Azure AD Application ID](/graph/concepts/auth-register-app-v2) for Teams desktop, web, or mobile client.</span></span>
-2. <span data-ttu-id="85821-133">Especifique as permissões de que seu aplicativo precisa para o ponto de extremidade do Azure AD e, opcionalmente, o Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="85821-133">Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.</span></span>
-3. <span data-ttu-id="85821-134">[Conceder permissões](/azure/active-directory/develop/v2-permissions-and-consent) para aplicativos de desktop, Web e móveis do teams.</span><span class="sxs-lookup"><span data-stu-id="85821-134">[Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.</span></span>
-4. <span data-ttu-id="85821-135">Selecione **Adicionar um escopo**.</span><span class="sxs-lookup"><span data-stu-id="85821-135">Select **Add a scope**.</span></span>
-5. <span data-ttu-id="85821-136">No painel que é aberto, adicione um aplicativo cliente inserindo `access_as_user` como o **nome do escopo**.</span><span class="sxs-lookup"><span data-stu-id="85821-136">In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.</span></span>
+1. <span data-ttu-id="6c89f-135">Registre um novo aplicativo no [Azure Active Directory – portal de Registros de Aplicativos.](https://go.microsoft.com/fwlink/?linkid=2083908)</span><span class="sxs-lookup"><span data-stu-id="6c89f-135">Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.</span></span>
+2. <span data-ttu-id="6c89f-136">Selecione **Novo Registro.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-136">Select **New Registration**.</span></span> <span data-ttu-id="6c89f-137">A **página Registrar um aplicativo** é exibida.</span><span class="sxs-lookup"><span data-stu-id="6c89f-137">The **Register an application** page appears.</span></span>
+3. <span data-ttu-id="6c89f-138">Na página **Registrar um aplicativo,** insira os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="6c89f-138">In the **Register an application** page, enter the following values:</span></span>
+    1. <span data-ttu-id="6c89f-139">Insira um **nome** para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-139">Enter a **Name** for your app.</span></span>
+    2. <span data-ttu-id="6c89f-140">Escolha os **tipos de conta com suporte,** selecione o tipo de conta de locatário único ou de vários locatários.</span><span class="sxs-lookup"><span data-stu-id="6c89f-140">Choose the **Supported account types**, select single tenant or multitenant account type.</span></span>
+
+        > [!NOTE]
+        >
+        > <span data-ttu-id="6c89f-141">Os usuários não são solicitados a consentir e são concedidos tokens de acesso imediatamente, se o aplicativo AAD estiver registrado no mesmo locatário em que estão fazendo uma solicitação de autenticação no Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-141">The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams.</span></span> <span data-ttu-id="6c89f-142">No entanto, os usuários devem dar consentimento para as permissões, se o aplicativo AAD estiver registrado em um locatário diferente.</span><span class="sxs-lookup"><span data-stu-id="6c89f-142">However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.</span></span>
+
+    3. <span data-ttu-id="6c89f-143">Escolha **Registrar**.</span><span class="sxs-lookup"><span data-stu-id="6c89f-143">Choose **Register**.</span></span>
+4. <span data-ttu-id="6c89f-144">Na página de visão geral, copie e salve a **ID do aplicativo (cliente).**</span><span class="sxs-lookup"><span data-stu-id="6c89f-144">On the overview page, copy and save the **Application (client) ID**.</span></span> <span data-ttu-id="6c89f-145">Você precisará dele mais tarde ao atualizar seu manifesto de aplicativo do Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-145">You need it later when updating your Teams application manifest.</span></span>
+5. <span data-ttu-id="6c89f-146">Em **Gerenciar**, selecione **Expor uma API**.</span><span class="sxs-lookup"><span data-stu-id="6c89f-146">Under **Manage**, select **Expose an API**.</span></span> 
+
+   > [!IMPORTANT]
+    > * <span data-ttu-id="6c89f-147">Se você estiver criando um bot autônomo, insira o URI da ID do Aplicativo como `api://botid-{YourBotId}` .</span><span class="sxs-lookup"><span data-stu-id="6c89f-147">If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`.</span></span> <span data-ttu-id="6c89f-148">Aqui, **YourBotId** é sua ID de aplicativo do AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-148">Here **YourBotId** is your AAD application ID.</span></span>
+    > * <span data-ttu-id="6c89f-149">Se você estiver criando um aplicativo com um bot e uma guia, insira o URI da ID do Aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}` .</span><span class="sxs-lookup"><span data-stu-id="6c89f-149">If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.</span></span>
+
+5. <span data-ttu-id="6c89f-150">Selecione as permissões que seu aplicativo precisa para o ponto de extremidade do AAD e, opcionalmente, para o Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="6c89f-150">Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.</span></span>
+6. <span data-ttu-id="6c89f-151">[Conceda permissões para aplicativos](/azure/active-directory/develop/v2-permissions-and-consent) móveis, da web e da área de trabalho do Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-151">[Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.</span></span>
+7. <span data-ttu-id="6c89f-152">Selecione **Adicionar um escopo.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-152">Select **Add a scope**.</span></span>
+8. <span data-ttu-id="6c89f-153">No painel que é aberto, adicione um aplicativo cliente inserindo `access_as_user` como o nome do **escopo.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-153">In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.</span></span>
 
     >[!NOTE]
-    > <span data-ttu-id="85821-137">O escopo "access_as_user" usado para adicionar um aplicativo cliente é para "administradores e usuários".</span><span class="sxs-lookup"><span data-stu-id="85821-137">The "access_as_user" scope used to add a client app is for "Administrators and users".</span></span>
+    > <span data-ttu-id="6c89f-154">O escopo "access_as_user" usado para adicionar um aplicativo cliente é para "Administradores e usuários".</span><span class="sxs-lookup"><span data-stu-id="6c89f-154">The "access_as_user" scope used to add a client app is for "Administrators and users".</span></span>
+    >
+    > <span data-ttu-id="6c89f-155">Você deve estar ciente das seguintes restrições importantes:</span><span class="sxs-lookup"><span data-stu-id="6c89f-155">You must be aware of the following important restrictions:</span></span>
+    >
+    > * <span data-ttu-id="6c89f-156">Somente as permissões da API do Microsoft Graph em nível de usuário, como email, perfil, offline_access e OpenId, são suportadas.</span><span class="sxs-lookup"><span data-stu-id="6c89f-156">Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported.</span></span> <span data-ttu-id="6c89f-157">Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)</span><span class="sxs-lookup"><span data-stu-id="6c89f-157">If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).</span></span>
+    > * <span data-ttu-id="6c89f-158">O nome de domínio do seu aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-158">Your application's domain name must be same as the domain name that you have registered for your AAD application.</span></span>
+    > * <span data-ttu-id="6c89f-159">Atualmente, não há suporte para vários domínios por aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-159">Multiple domains per app are currently not supported.</span></span>
+    > * <span data-ttu-id="6c89f-160">Aplicativos que usam `azurewebsites.net` o domínio não são suportados porque é comum e pode ser um risco à segurança.</span><span class="sxs-lookup"><span data-stu-id="6c89f-160">Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.</span></span>
 
-    > [!IMPORTANT]
-    > * <span data-ttu-id="85821-138">Se você estiver criando um bot autônomo, defina o URI da ID do aplicativo como `api://botid-{YourBotId}` aqui, **YourBotId** refere-se à sua ID de aplicativo do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="85821-138">If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers to your Azure AD application ID.</span></span>
-    > * <span data-ttu-id="85821-139">Se você estiver criando um aplicativo com um bot e uma guia, defina o URI da ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}` .</span><span class="sxs-lookup"><span data-stu-id="85821-139">If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.</span></span>
+#### <a name="update-the-azure-portal-with-the-oauth-connection"></a><span data-ttu-id="6c89f-161">Atualizar o portal do Azure com a conexão OAuth</span><span class="sxs-lookup"><span data-stu-id="6c89f-161">Update the Azure portal with the OAuth connection</span></span>
 
-### <a name="update-your-app-manifest"></a><span data-ttu-id="85821-140">Atualizar o manifesto do aplicativo</span><span class="sxs-lookup"><span data-stu-id="85821-140">Update your app manifest</span></span>
+<span data-ttu-id="6c89f-162">Conclua as seguintes etapas para atualizar o portal do Azure com a conexão OAuth:</span><span class="sxs-lookup"><span data-stu-id="6c89f-162">Complete the following steps to update the Azure portal with the OAuth connection:</span></span>
 
-<span data-ttu-id="85821-141">Adicione novas propriedades ao manifesto do Microsoft Teams:</span><span class="sxs-lookup"><span data-stu-id="85821-141">Add new properties to your Microsoft Teams manifest:</span></span>
+1. <span data-ttu-id="6c89f-163">No Portal do Azure, navegue até Registro **de Canais de Bot.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-163">In the Azure Portal, navigate to **Bot Channels Registration**.</span></span>
 
-<span data-ttu-id="85821-142">**WebApplicationInfo** -o pai dos seguintes elementos:</span><span class="sxs-lookup"><span data-stu-id="85821-142">**WebApplicationInfo** - The parent of the following elements:</span></span>
+2. <span data-ttu-id="6c89f-164">Vá para **permissões de API.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-164">Go to **API Permissions**.</span></span> <span data-ttu-id="6c89f-165">Selecione **Adicionar uma permissão permissões**  >  **delegadas** do Microsoft Graph e, em  >  seguida, adicione as seguintes permissões da API do Microsoft Graph:</span><span class="sxs-lookup"><span data-stu-id="6c89f-165">Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:</span></span>
+    * <span data-ttu-id="6c89f-166">User.Read (habilitado por padrão)</span><span class="sxs-lookup"><span data-stu-id="6c89f-166">User.Read (enabled by default)</span></span>
+    * <span data-ttu-id="6c89f-167">email</span><span class="sxs-lookup"><span data-stu-id="6c89f-167">email</span></span>
+    * <span data-ttu-id="6c89f-168">offline_access</span><span class="sxs-lookup"><span data-stu-id="6c89f-168">offline_access</span></span>
+    * <span data-ttu-id="6c89f-169">OpenId</span><span class="sxs-lookup"><span data-stu-id="6c89f-169">OpenId</span></span>
+    * <span data-ttu-id="6c89f-170">perfil</span><span class="sxs-lookup"><span data-stu-id="6c89f-170">profile</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="85821-143">**ID** – a ID do cliente do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="85821-143">**id** - The client ID of the application.</span></span> <span data-ttu-id="85821-144">Esta é a ID do aplicativo que você obteve como parte do registro do aplicativo com o Azure AD.</span><span class="sxs-lookup"><span data-stu-id="85821-144">This is the application ID that you obtained as part of registering the application with Azure AD.</span></span>
->* <span data-ttu-id="85821-145">**Resource** -o domínio e o subdomínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="85821-145">**resource** - The domain and subdomain of your application.</span></span> <span data-ttu-id="85821-146">Este é o mesmo URI (incluindo o `api://` protocolo) que você registrou ao criar seu `scope` na etapa 6 acima.</span><span class="sxs-lookup"><span data-stu-id="85821-146">This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step 6 above.</span></span> <span data-ttu-id="85821-147">Você não deve incluir o `access_as_user` caminho em seu recurso.</span><span class="sxs-lookup"><span data-stu-id="85821-147">You shouldn't include the `access_as_user` path in your resource.</span></span> <span data-ttu-id="85821-148">A parte de domínio desse URI deve corresponder ao domínio, incluindo todos os subdomínios, usados nas URLs do manifesto de aplicativo do Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="85821-148">The domain part of this URI should match the domain, including any subdomains, used in the URLs of your Teams application manifest.</span></span>
+3. <span data-ttu-id="6c89f-171">Selecione **Configurações** no painel esquerdo e escolha **Adicionar Configuração** na seção Configurações de Conexão **OAuth.**</span><span class="sxs-lookup"><span data-stu-id="6c89f-171">Select **Settings** on the left pane and choose **Add Setting** under the **OAuth Connection Settings** section.</span></span>
+
+    ![Exibição SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
+
+4. <span data-ttu-id="6c89f-173">Execute as seguintes etapas para concluir o formulário **Nova Configuração de** Conexão:</span><span class="sxs-lookup"><span data-stu-id="6c89f-173">Perform the following steps to complete the **New Connection Setting** form:</span></span>
+
+    >[!NOTE]
+    > <span data-ttu-id="6c89f-174">**A concessão** implícita pode ser necessária no aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-174">**Implicit grant** may be required in the AAD application.</span></span>
+
+    1. <span data-ttu-id="6c89f-175">Insira um **nome na** página **Nova Configuração de** Conexão.</span><span class="sxs-lookup"><span data-stu-id="6c89f-175">Enter a **Name** in the **New Connection Setting** page.</span></span> <span data-ttu-id="6c89f-176">Esse é o nome que é referenciado dentro das configurações do seu código de serviço de bot na etapa *5* do Bot SSO em [tempo de execução.](#bot-sso-at-runtime)</span><span class="sxs-lookup"><span data-stu-id="6c89f-176">This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).</span></span>
+    2. <span data-ttu-id="6c89f-177">Na lista **drop-down** do Provedor de Serviços, selecione **Azure Active Directory v2**.</span><span class="sxs-lookup"><span data-stu-id="6c89f-177">From the **Service Provider** drop-down, select **Azure Active Directory v2**.</span></span>
+    3. <span data-ttu-id="6c89f-178">Insira as credenciais do cliente, como **id do** cliente e **segredo do cliente** para o aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-178">Enter the client credentials, such as **Client id** and **Client secret** for the AAD application.</span></span>
+    4. <span data-ttu-id="6c89f-179">Para a **URL do Exchange de token,** use o valor de escopo definido em Atualizar seu manifesto de aplicativo do Teams para seu [bot.](#update-your-teams-application-manifest-for-your-bot)</span><span class="sxs-lookup"><span data-stu-id="6c89f-179">For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).</span></span> <span data-ttu-id="6c89f-180">A URL do Exchange de token indica ao SDK que esse aplicativo AAD está configurado para SSO.</span><span class="sxs-lookup"><span data-stu-id="6c89f-180">The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.</span></span>
+    5. <span data-ttu-id="6c89f-181">Na caixa **ID de locatário,** insira *comum*.</span><span class="sxs-lookup"><span data-stu-id="6c89f-181">In the **Tenant ID** box, enter *common*.</span></span>
+    6. <span data-ttu-id="6c89f-182">Adicione todos os **Escopos configurados** ao especificar permissões para APIs downstream para seu aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-182">Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application.</span></span> <span data-ttu-id="6c89f-183">Com a ID do cliente e o segredo do cliente fornecidos, o armazenamento de token troca o token por um token de gráfico com permissões definidas.</span><span class="sxs-lookup"><span data-stu-id="6c89f-183">With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.</span></span>
+    7. <span data-ttu-id="6c89f-184">Selecione **Salvar**.</span><span class="sxs-lookup"><span data-stu-id="6c89f-184">Select **Save**.</span></span>
+
+    ![Exibição de configuração VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+
+### <a name="update-your-teams-application-manifest-for-your-bot"></a><span data-ttu-id="6c89f-186">Atualizar o manifesto do aplicativo Teams para seu bot</span><span class="sxs-lookup"><span data-stu-id="6c89f-186">Update your Teams application manifest for your bot</span></span>
+
+<span data-ttu-id="6c89f-187">Se o aplicativo contiver um bot autônomo, use o código a seguir para adicionar novas propriedades ao manifesto do aplicativo Teams:</span><span class="sxs-lookup"><span data-stu-id="6c89f-187">If the application contains a standalone bot, then use the following code to add new properties to the Teams application manifest:</span></span>
 
 ```json
-"webApplicationInfo": {
-  "id": "00000000-0000-0000-0000-000000000000",
-  "resource": "api://subdomain.example.com/00000000-0000-0000-0000-000000000000"
-}
+    "webApplicationInfo": 
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
+        }
+```
+<span data-ttu-id="6c89f-188">Se o aplicativo contiver um bot e uma guia, use o código a seguir para adicionar novas propriedades ao manifesto do aplicativo Teams:</span><span class="sxs-lookup"><span data-stu-id="6c89f-188">If the application contains a bot and a tab, then use the following code to add new properties to the Teams application manifest:</span></span>
+
+```json
+    "webApplicationInfo": 
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
+        }
 ```
 
-### <a name="request-a-bot-token"></a><span data-ttu-id="85821-149">Solicitar um token de bot</span><span class="sxs-lookup"><span data-stu-id="85821-149">Request a bot token</span></span>
+<span data-ttu-id="6c89f-189">**webApplicationInfo** é o pai dos seguintes elementos:</span><span class="sxs-lookup"><span data-stu-id="6c89f-189">**webApplicationInfo** is the parent of the following elements:</span></span>
 
-<span data-ttu-id="85821-150">A solicitação para obter o token é uma solicitação de mensagem POST normal (usando o esquema de mensagens existente).</span><span class="sxs-lookup"><span data-stu-id="85821-150">The request to get the token is a normal POST message request (using the existing message schema).</span></span> <span data-ttu-id="85821-151">Ele está incluído nos anexos de um OAuthCard.</span><span class="sxs-lookup"><span data-stu-id="85821-151">It is included in the attachments of an OAuthCard.</span></span> <span data-ttu-id="85821-152">O esquema da classe OAuthCard é definido no [esquema do Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é muito semelhante a um cartão de conexão.</span><span class="sxs-lookup"><span data-stu-id="85821-152">The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card.</span></span> <span data-ttu-id="85821-153">O Microsoft Teams tratará essa solicitação como uma aquisição de token silencioso se a `TokenExchangeResource` propriedade for preenchida no cartão.</span><span class="sxs-lookup"><span data-stu-id="85821-153">Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card.</span></span> <span data-ttu-id="85821-154">Para o canal Teams, honramos apenas a `Id` propriedade, que identifica exclusivamente uma solicitação de token.</span><span class="sxs-lookup"><span data-stu-id="85821-154">For the Teams channel, we honor only the `Id` property, which uniquely identifies a token request.</span></span>
+* <span data-ttu-id="6c89f-190">**id** - A ID do cliente do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-190">**id** - The client ID of the application.</span></span> <span data-ttu-id="6c89f-191">Essa é a ID do aplicativo que você obteve como parte do registro do aplicativo no AAD.</span><span class="sxs-lookup"><span data-stu-id="6c89f-191">This is the application ID that you obtained as part of registering the application with AAD.</span></span>
+* <span data-ttu-id="6c89f-192">**resource** - O domínio e o subdomínio do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6c89f-192">**resource** - The domain and subdomain of your application.</span></span> <span data-ttu-id="6c89f-193">Esse é o mesmo URI, incluindo o protocolo que você registrou ao criar seu aplicativo em Registrar seu aplicativo por meio `api://` `scope` do portal do [AAD.](#register-your-app-through-the-aad-portal)</span><span class="sxs-lookup"><span data-stu-id="6c89f-193">This is the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the AAD portal](#register-your-app-through-the-aad-portal).</span></span> <span data-ttu-id="6c89f-194">Você não deve incluir `access_as_user` o caminho em seu recurso.</span><span class="sxs-lookup"><span data-stu-id="6c89f-194">You must not include the `access_as_user` path in your resource.</span></span> <span data-ttu-id="6c89f-195">A parte de domínio desse URI deve corresponder ao domínio e aos sub-domínios usados nas URLs do manifesto do aplicativo Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-195">The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.</span></span>
+
+### <a name="add-the-code-to-request-and-receive-a-bot-token"></a><span data-ttu-id="6c89f-196">Adicionar o código para solicitar e receber um token de bot</span><span class="sxs-lookup"><span data-stu-id="6c89f-196">Add the code to request and receive a bot token</span></span>
+
+#### <a name="request-a-bot-token"></a><span data-ttu-id="6c89f-197">Solicitar um token de bot</span><span class="sxs-lookup"><span data-stu-id="6c89f-197">Request a bot token</span></span>
+
+<span data-ttu-id="6c89f-198">A solicitação para obter o token é uma solicitação de mensagem POST normal usando o esquema de mensagem existente.</span><span class="sxs-lookup"><span data-stu-id="6c89f-198">The request to get the token is a normal POST message request using the existing message schema.</span></span> <span data-ttu-id="6c89f-199">Ele está incluído nos anexos de um OAuthCard.</span><span class="sxs-lookup"><span data-stu-id="6c89f-199">It is included in the attachments of an OAuthCard.</span></span> <span data-ttu-id="6c89f-200">O esquema para a classe OAuthCard é definido no [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é semelhante a um cartão de login.</span><span class="sxs-lookup"><span data-stu-id="6c89f-200">The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is similar to a sign-in card.</span></span> <span data-ttu-id="6c89f-201">O Teams trata essa solicitação como uma aquisição de token silencioso `TokenExchangeResource` se a propriedade estiver preenchida no cartão.</span><span class="sxs-lookup"><span data-stu-id="6c89f-201">Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card.</span></span> <span data-ttu-id="6c89f-202">Para o canal do Teams, apenas a propriedade, que `Id` identifica exclusivamente uma solicitação de token, é aumenteda.</span><span class="sxs-lookup"><span data-stu-id="6c89f-202">For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.</span></span>
 
 >[!NOTE]
-> <span data-ttu-id="85821-155">A estrutura de bot `OAuthPrompt` ou o `MultiProviderAuthDialog` tem suporte para autenticação de logon único (SSO).</span><span class="sxs-lookup"><span data-stu-id="85821-155">The Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for single sign-on (SSO) authentication.</span></span>
+> <span data-ttu-id="6c89f-203">O Microsoft Bot Framework ou o Microsoft Bot Framework `OAuthPrompt` `MultiProviderAuthDialog` tem suporte para autenticação SSO.</span><span class="sxs-lookup"><span data-stu-id="6c89f-203">The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.</span></span>
 
-<span data-ttu-id="85821-156">Se esta for a primeira vez que o usuário está usando seu aplicativo e o consentimento do usuário for necessário, o usuário será mostrado em uma caixa de diálogo para continuar com a experiência de consentimento semelhante à seguinte.</span><span class="sxs-lookup"><span data-stu-id="85821-156">If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below.</span></span> <span data-ttu-id="85821-157">Quando o usuário seleciona **continue**, duas coisas diferentes ocorrem dependendo se o bot está definido ou não e um botão de entrada no OAuthCard.</span><span class="sxs-lookup"><span data-stu-id="85821-157">When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.</span></span>
+<span data-ttu-id="6c89f-204">Se o usuário estiver usando o aplicativo pela primeira vez e o consentimento do usuário for necessário, a caixa de diálogo a seguir parece continuar com a experiência de consentimento:</span><span class="sxs-lookup"><span data-stu-id="6c89f-204">If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:</span></span>
 
-![Caixa de diálogo de consentimento](../../../assets/images/bots/bots-consent-dialogbox.png)
+![Caixa de diálogo consentimento](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-<span data-ttu-id="85821-159">Se o bot definir um botão de entrada, o fluxo de entrada para bots será disparado de forma semelhante ao fluxo de entrada de um botão de cartão em um fluxo de mensagens.</span><span class="sxs-lookup"><span data-stu-id="85821-159">If the bot defines a sign-in button, the sign-in flow for bots will be triggered similarly to the sign-in flow from a card button in a message stream.</span></span> <span data-ttu-id="85821-160">O desenvolvedor deve decidir quais permissões solicitar ao usuário para o consentimento.</span><span class="sxs-lookup"><span data-stu-id="85821-160">It is up to the developer to decide which permissions to ask for the user to consent.</span></span> <span data-ttu-id="85821-161">Essa abordagem é recomendada se você precisar de um token com permissões além disso `openId` , por exemplo, se você deseja trocar o token para recursos de Graph.</span><span class="sxs-lookup"><span data-stu-id="85821-161">This approach is recommended if you need a token with permissions beyond `openId`, for example, if you want to exchange the token for graph resources.</span></span>
+<span data-ttu-id="6c89f-206">Quando o usuário seleciona **Continuar,** ocorrem os seguintes eventos:</span><span class="sxs-lookup"><span data-stu-id="6c89f-206">When the user selects **Continue**, the following events occur:</span></span>
 
-<span data-ttu-id="85821-162">Se o bot não fornecer um botão de entrada no cartão, ele acionará o consentimento do usuário para um conjunto mínimo de permissões.</span><span class="sxs-lookup"><span data-stu-id="85821-162">If the bot is not providing a sign-in button on the card, it triggers user consent for a minimal set of permissions.</span></span> <span data-ttu-id="85821-163">Esse token é útil para a autenticação básica e obter o endereço de email do usuário.</span><span class="sxs-lookup"><span data-stu-id="85821-163">This token is useful for basic authentication and getting the user's email address.</span></span>
+* <span data-ttu-id="6c89f-207">Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens.</span><span class="sxs-lookup"><span data-stu-id="6c89f-207">If the bot defines a sign-in button, the sign in flow for bots is triggered similar to the sign in flow from an OAuth card button in a message stream.</span></span> <span data-ttu-id="6c89f-208">O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário.</span><span class="sxs-lookup"><span data-stu-id="6c89f-208">The developer must decide which permissions require user's consent.</span></span> <span data-ttu-id="6c89f-209">Essa abordagem é recomendada se você exigir um token com permissões além `openId` .</span><span class="sxs-lookup"><span data-stu-id="6c89f-209">This approach is recommended if you require a token with permissions beyond `openId`.</span></span> <span data-ttu-id="6c89f-210">Por exemplo, se você quiser trocar o token por recursos de gráfico.</span><span class="sxs-lookup"><span data-stu-id="6c89f-210">For example, if you want to exchange the token for graph resources.</span></span>
 
-<span data-ttu-id="85821-164">**Solicitação de token C# sem um botão de entrada**:</span><span class="sxs-lookup"><span data-stu-id="85821-164">**C# token request without a sign-in button**:</span></span>
+* <span data-ttu-id="6c89f-211">Se o bot não estiver fornecendo um botão de logon no cartão OAuth, o consentimento do usuário será necessário para um conjunto mínimo de permissões.</span><span class="sxs-lookup"><span data-stu-id="6c89f-211">If the bot is not providing a sign-in button on the OAuth card, user consent is required for a minimal set of permissions.</span></span> <span data-ttu-id="6c89f-212">Esse token é útil para autenticação básica e para obter o endereço de email do usuário.</span><span class="sxs-lookup"><span data-stu-id="6c89f-212">This token is useful for basic authentication and to get the user's email address.</span></span>
+
+##### <a name="c-token-request-without-a-sign-in-button"></a><span data-ttu-id="6c89f-213">Solicitação de token C# sem um botão de logon</span><span class="sxs-lookup"><span data-stu-id="6c89f-213">C# token request without a sign-in button</span></span>
 
 ```csharp
-var attachment = new Attachment
+    var attachment = new Attachment
             {
                 Content = new OAuthCard
                 {
@@ -113,91 +183,68 @@ var attachment = new Attachment
             // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
             // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
 
-   await turnContext.SendActivityAsync(activity, cancellationToken);
+       await turnContext.SendActivityAsync(activity, cancellationToken);
 ```
 
-#### <a name="receiving-the-token"></a><span data-ttu-id="85821-165">Recebendo o token</span><span class="sxs-lookup"><span data-stu-id="85821-165">Receiving the token</span></span>
+#### <a name="receive-the-bot-token"></a><span data-ttu-id="6c89f-214">Receber o token de bot</span><span class="sxs-lookup"><span data-stu-id="6c89f-214">Receive the bot token</span></span>
 
-<span data-ttu-id="85821-166">A resposta com o token é enviada por meio de uma atividade Invoke com o mesmo esquema que outras pessoas invocam atividades que os bots recebem hoje.</span><span class="sxs-lookup"><span data-stu-id="85821-166">The response with the token is sent through an invoke activity with the same schema as others invoke activities the bots receive today.</span></span> <span data-ttu-id="85821-167">A única diferença é o nome de chamada, de **entrada/tokenExchange** e o campo de **valor** que conterá a **ID** (uma cadeia de caracteres) da solicitação inicial para obter o token e o campo de **token** (um valor de cadeia de caracteres incluindo o token).</span><span class="sxs-lookup"><span data-stu-id="85821-167">The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field which will contain the **Id** (a string) of the initial request to get the token and the **token** field (a string value including the token).</span></span> <span data-ttu-id="85821-168">Observe que você pode receber várias respostas para uma determinada solicitação se o usuário tiver vários pontos de extremidade ativos.</span><span class="sxs-lookup"><span data-stu-id="85821-168">Please note that you might receive multiple responses for a given request if the user has multiple active endpoints.</span></span> <span data-ttu-id="85821-169">Você precisará desduplicar as respostas com o token.</span><span class="sxs-lookup"><span data-stu-id="85821-169">It is up to you to deduplicate the responses with the token.</span></span>
+<span data-ttu-id="6c89f-215">A resposta com o token é enviada por meio de uma atividade de invocação com o mesmo esquema de outras atividades de invocação que os bots recebem hoje.</span><span class="sxs-lookup"><span data-stu-id="6c89f-215">The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today.</span></span> <span data-ttu-id="6c89f-216">A única diferença é o nome de invocação, **o sign-in/tokenExchange** e o **campo de** valor.</span><span class="sxs-lookup"><span data-stu-id="6c89f-216">The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field.</span></span> <span data-ttu-id="6c89f-217">O **campo** de valor contém a **Id**, uma cadeia de caracteres da solicitação inicial para obter o token e o campo **de token,** um valor de cadeia de caracteres incluindo o token.</span><span class="sxs-lookup"><span data-stu-id="6c89f-217">The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.</span></span>
 
-<span data-ttu-id="85821-170">**Código C# para responder à manipulação da atividade de invocação**:</span><span class="sxs-lookup"><span data-stu-id="85821-170">**C# code to respond to handle the invoke activity**:</span></span>
+>[!NOTE]
+> <span data-ttu-id="6c89f-218">Você poderá receber várias respostas para uma determinada solicitação se o usuário tiver vários pontos de extremidade ativos.</span><span class="sxs-lookup"><span data-stu-id="6c89f-218">You might receive multiple responses for a given request if the user has multiple active endpoints.</span></span> <span data-ttu-id="6c89f-219">Você deve duplicar as respostas com o token.</span><span class="sxs-lookup"><span data-stu-id="6c89f-219">You must deduplicate the responses with the token.</span></span>
+
+##### <a name="c-code-to-handle-the-invoke-activity"></a><span data-ttu-id="6c89f-220">Código C# para manipular a atividade de invocação</span><span class="sxs-lookup"><span data-stu-id="6c89f-220">C# code to handle the invoke activity</span></span>
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivityAsync
-  (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-        {
-            try
+    protected override async Task<InvokeResponse> OnInvokeActivityAsync
+    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
             {
-                if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
+                try
                 {
-                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                    return new InvokeResponse() { Status = 200 };
+                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
+                    {
+                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
+                        return new InvokeResponse() { Status = 200 };
+                    }
+                    else
+                    {
+                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
+                    }
                 }
-                else
+                catch (InvokeResponseException e)
                 {
-                    return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
+                    return e.CreateInvokeResponse();
                 }
             }
-            catch (InvokeResponseException e)
+```
+
+<span data-ttu-id="6c89f-221">É `turnContext.activity.value` do tipo [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) e contém o token que pode ser usado ainda mais pelo seu bot.</span><span class="sxs-lookup"><span data-stu-id="6c89f-221">The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot.</span></span> <span data-ttu-id="6c89f-222">Você deve armazenar os tokens por motivos de desempenho e atualize-os.</span><span class="sxs-lookup"><span data-stu-id="6c89f-222">You must store the tokens for performance reasons and refresh them.</span></span>
+
+### <a name="update-the-auth-sample"></a><span data-ttu-id="6c89f-223">Atualizar o exemplo de auth</span><span class="sxs-lookup"><span data-stu-id="6c89f-223">Update the auth sample</span></span>
+
+<span data-ttu-id="6c89f-224">Abra [o exemplo de auth do Teams](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) e conclua as seguintes etapas para atualizá-lo:</span><span class="sxs-lookup"><span data-stu-id="6c89f-224">Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:</span></span>
+
+1. <span data-ttu-id="6c89f-225">Atualize o TeamsBot para manipular a dedudução da solicitação de entrada incluindo o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="6c89f-225">Update the TeamsBot to handle the deduping of the incoming request by including the following code:</span></span>
+
+    ```csharp
+        protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
             {
-                return e.CreateInvokeResponse();
+                await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
             }
-        }
-```
-
-<span data-ttu-id="85821-171">O `turnContext.activity.value` é do tipo [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) e contém o token que pode ser usado com seu bot.</span><span class="sxs-lookup"><span data-stu-id="85821-171">The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot.</span></span> <span data-ttu-id="85821-172">Armazene os tokens com segurança por motivos de desempenho e atualize-os.</span><span class="sxs-lookup"><span data-stu-id="85821-172">Store the tokens securely for performance reasons and refresh them.</span></span>
-
-### <a name="update-the-azure-portal-with-the-oauth-connection"></a><span data-ttu-id="85821-173">Atualizar o portal do Azure com a conexão OAuth</span><span class="sxs-lookup"><span data-stu-id="85821-173">Update the Azure portal with the OAuth connection</span></span>
-
-1. <span data-ttu-id="85821-174">No portal do Azure, volte para o **registro de canais de bot**.</span><span class="sxs-lookup"><span data-stu-id="85821-174">In the Azure Portal, navigate back to the **Bot Channels Registration**.</span></span>
-
-2. <span data-ttu-id="85821-175">Alterne para a folha **configurações** e escolha **Adicionar configuração** na seção Configurações de conexão OAuth.</span><span class="sxs-lookup"><span data-stu-id="85821-175">Switch to the **Settings** blade and choose **Add Setting** under the OAuth Connection Settings section.</span></span>
-
-    ![Exibição SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
-
-3. <span data-ttu-id="85821-177">Preencha o formulário de **configuração de conexão** :</span><span class="sxs-lookup"><span data-stu-id="85821-177">Complete the **Connection Setting** form:</span></span>
-
-    > [!div class="checklist"]
-    >
-    > * <span data-ttu-id="85821-178">Insira um nome para a nova configuração de conexão.</span><span class="sxs-lookup"><span data-stu-id="85821-178">Enter a name for your new Connection Setting.</span></span> <span data-ttu-id="85821-179">Este será o nome que é referenciado dentro das configurações do código do serviço de bot na **etapa 5**.</span><span class="sxs-lookup"><span data-stu-id="85821-179">This will be the name that gets referenced inside the settings of your bot service code in **step 5**.</span></span>
-    > * <span data-ttu-id="85821-180">No menu suspenso provedor de serviços, selecione **Azure Active Directory v2**.</span><span class="sxs-lookup"><span data-stu-id="85821-180">In the Service Provider dropdown, select **Azure Active Directory V2**.</span></span>
-    >* <span data-ttu-id="85821-181">Insira as credenciais do cliente para o aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="85821-181">Enter the client credentials for the AAD application.</span></span>
-
-    >[!NOTE]
-    > <span data-ttu-id="85821-182">A **concessão implícita** pode ser necessária no aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="85821-182">**Implicit grant** may be required in the AAD application.</span></span>
-
-    >* <span data-ttu-id="85821-183">Para a URL do token do Exchange, use o valor de escopo definido na etapa anterior do aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="85821-183">For the Token Exchange URL, use the scope value defined in the previous step of your AAD application.</span></span> <span data-ttu-id="85821-184">A presença da URL de token do Exchange indica ao SDK que este aplicativo AAD está configurado para SSO.</span><span class="sxs-lookup"><span data-stu-id="85821-184">The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.</span></span>
-    >* <span data-ttu-id="85821-185">Especifique "comum" como a **ID do locatário**.</span><span class="sxs-lookup"><span data-stu-id="85821-185">Specify "common" as the **Tenant ID**.</span></span>
-    >* <span data-ttu-id="85821-186">Adicione todos os escopos configurados ao especificar permissões para APIs de downstream para seu aplicativo AAD.</span><span class="sxs-lookup"><span data-stu-id="85821-186">Add all the scopes configured when specifying permissions to downstream APIs for your AAD application.</span></span> <span data-ttu-id="85821-187">Com a ID do cliente e o segredo do cliente fornecidos, o repositório de tokens irá trocar o token de um token de gráfico com permissões definidas para você.</span><span class="sxs-lookup"><span data-stu-id="85821-187">With the client id and client secret provided, the token store will exchange the token for a graph token with defined permissions for you.</span></span>
-    >* <span data-ttu-id="85821-188">Selecione **Salvar**.</span><span class="sxs-lookup"><span data-stu-id="85821-188">Select **Save**.</span></span>
-
-    ![Exibição de configuração de VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
-
-### <a name="update-the-auth-sample"></a><span data-ttu-id="85821-190">Atualizar o exemplo de autenticação</span><span class="sxs-lookup"><span data-stu-id="85821-190">Update the auth sample</span></span>
-
-<span data-ttu-id="85821-191">Comece com o [exemplo de autenticação do Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).</span><span class="sxs-lookup"><span data-stu-id="85821-191">Start with the [teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).</span></span>
-
-1. <span data-ttu-id="85821-192">Atualize o TeamsBot para incluir o seguinte.</span><span class="sxs-lookup"><span data-stu-id="85821-192">Update the TeamsBot to include the following.</span></span> <span data-ttu-id="85821-193">Para lidar com o deduping da solicitação de entrada, confira a seguir:</span><span class="sxs-lookup"><span data-stu-id="85821-193">To handle the deduping of the incoming request, see below:</span></span>
-
-```csharp
-     protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-        {
-            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-        }
-    protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-        {
-            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-        }
-```
+        protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+            {
+                await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+            }
+    ```
   
-2. <span data-ttu-id="85821-194">Atualize o `appsettings.json` para incluir o `botId` , senha e o nome da conexão definido acima.</span><span class="sxs-lookup"><span data-stu-id="85821-194">Update the `appsettings.json` to include the `botId`, password, and the connection name defined above.</span></span>
-3. <span data-ttu-id="85821-195">Atualize o manifesto e verifique se `token.botframework.com` está na seção domínios válidos.</span><span class="sxs-lookup"><span data-stu-id="85821-195">Update the manifest and ensure that `token.botframework.com` is in the valid domains section.</span></span>
-4. <span data-ttu-id="85821-196">Zip o manifesto com as imagens de perfil e instalá-lo no Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="85821-196">Zip the manifest with the profile images and install it in Teams.</span></span>
+2. <span data-ttu-id="6c89f-226">Atualização para incluir o , senha e o nome de conexão definido em Atualizar o `appsettings.json` `botId` portal do [Azure com a conexão OAuth](#update-the-azure-portal-with-the-oauth-connection).</span><span class="sxs-lookup"><span data-stu-id="6c89f-226">Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).</span></span>
+3. <span data-ttu-id="6c89f-227">Atualize o manifesto e verifique `token.botframework.com` se ele está na lista de domínios válidos.</span><span class="sxs-lookup"><span data-stu-id="6c89f-227">Update the manifest and ensure that `token.botframework.com` is in the valid domains list.</span></span> <span data-ttu-id="6c89f-228">Para saber mais, confira [o exemplo de auth do Teams.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)</span><span class="sxs-lookup"><span data-stu-id="6c89f-228">For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).</span></span>
+4. <span data-ttu-id="6c89f-229">Zip the manifest with the profile images and install it in Teams.</span><span class="sxs-lookup"><span data-stu-id="6c89f-229">Zip the manifest with the profile images and install it in Teams.</span></span>
 
-#### <a name="additional-code-samples"></a><span data-ttu-id="85821-197">Exemplos de código adicionais</span><span class="sxs-lookup"><span data-stu-id="85821-197">Additional code samples</span></span>
+#### <a name="additional-code-samples"></a><span data-ttu-id="6c89f-230">Exemplos de código adicionais</span><span class="sxs-lookup"><span data-stu-id="6c89f-230">Additional code samples</span></span>
 
-* <span data-ttu-id="85821-198">[Amostra C# usando o SDK da estrutura de bot](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).</span><span class="sxs-lookup"><span data-stu-id="85821-198">[C# sample using the Bot Framework SDK](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).</span></span>
+* <span data-ttu-id="6c89f-231">[Exemplo de C# usando o SDK da Estrutura de Bot.](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)</span><span class="sxs-lookup"><span data-stu-id="6c89f-231">[C# sample using the Bot Framework SDK](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).</span></span>
 
-* <span data-ttu-id="85821-199">[Exemplo C# usando o SDK da estrutura de bot para reduplicar a solicitação de token](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).</span><span class="sxs-lookup"><span data-stu-id="85821-199">[C# sample using the Bot Framework SDK to deduplicate the token request](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).</span></span>
+* <span data-ttu-id="6c89f-232">[Exemplo de C# usando o SDK da Estrutura de Bot para desuplicar a solicitação de token.](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)</span><span class="sxs-lookup"><span data-stu-id="6c89f-232">[C# sample using the Bot Framework SDK to deduplicate the token request](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).</span></span>
 
-* <span data-ttu-id="85821-200">[Amostra C# sem usar o repositório de token do SDK da estrutura de bot](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).</span><span class="sxs-lookup"><span data-stu-id="85821-200">[C# sample without using the Bot Framework SDK token store](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).</span></span>
+* <span data-ttu-id="6c89f-233">[Exemplo de C# sem usar o armazenamento de tokens do SDK da](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)Estrutura de Bot.</span><span class="sxs-lookup"><span data-stu-id="6c89f-233">[C# sample without using the Bot Framework SDK token store](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).</span></span>
