@@ -5,16 +5,16 @@ description: visão geral dos aplicativos em reuniões do Teams com base na fun�
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api
-ms.openlocfilehash: 217737cbbf73104d4d78cf817e6df0244229c53c
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 63c383f1bc7eaa92e2bd4ff378756064ee85ed70
+ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797754"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49917594"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicativos em reuniões do Teams
 
-As reuniões são fundamentais para a produtividade no Teams. Eles permitem colaboração, parceria, comunicação informada e comentários compartilhados em um fórum inclusivo e ativo. Como desenvolvedor, você pode criar [aplicativos](../tabs/what-are-tabs.md#how-do-tabs-work) [](../messaging-extensions/what-are-messaging-extensions.md) de guia configurável, [bot](../bots/what-are-bots.md)e extensão de mensagem para aprimorar e enriquecer uma experiência de reunião do Teams. Os usuários da reunião podem acessar aplicativos, por meio da galeria de guias, para habilitar cenários relevantes, como pré-preparação de um quadro kanban, lançamento de uma caixa de diálogo a actionable na reunião ou criação de uma votação pós-reunião. Seu aplicativo de reunião pode oferecer uma experiência de usuário para cada estágio do ciclo de vida da reunião com base no status do participante.
+As reuniões são fundamentais para a produtividade no Teams. Eles permitem colaboração, parceria, comunicação informada e comentários compartilhados em um fórum inclusivo e ativo. Como desenvolvedor, você pode criar [aplicativos](../tabs/what-are-tabs.md#how-do-tabs-work) [](../messaging-extensions/what-are-messaging-extensions.md) de guia configurável, [bot](../bots/what-are-bots.md)e extensão de mensagem para aprimorar e enriquecer uma experiência de reunião do Teams. Os usuários da reunião podem acessar aplicativos, por meio da galeria de guias, para habilitar cenários relevantes, como pré-preparação de um quadro kanban, início de uma caixa de diálogo a actionable na reunião ou criação de uma votação pós-reunião. Seu aplicativo de reunião pode oferecer uma experiência de usuário para cada estágio do ciclo de vida da reunião com base no status do participante.
 
 A extensibilidade do aplicativo de reunião do Teams é voltada para três conceitos:
 
@@ -28,7 +28,7 @@ A extensibilidade do aplicativo de reunião do Teams é voltada para três conce
 ## <a name="tabs"></a>Guias
 
 > [!IMPORTANT]
-> Assim como em todos os aplicativos de guia, seu aplicativo precisará seguir o fluxo de autenticação [SSO](../tabs/how-to/authentication/auth-aad-sso.md) do Teams para guias.
+> Assim como em todos os aplicativos de guia, seu aplicativo precisará seguir o fluxo de autenticação [SSO](../tabs/how-to/authentication/auth-aad-sso.md) do Teams para as guias.
 
 > [!NOTE]
 > Os clientes móveis só suportam Guias em Superfícies de Pré e Pós-Reunião. As experiências na reunião (caixa de diálogo e painel na reunião) em dispositivos móveis estarão disponíveis em breve
@@ -65,7 +65,7 @@ A extensibilidade do aplicativo de reunião do Teams é voltada para três conce
 
 ✔ um aplicativo ficar visível em uma reunião do Teams em duas áreas:
 
-&emsp;&emsp;&#9679; painel **lateral.** </br>
+&emsp;&emsp;&#9679; painel **lateral**. </br>
 
 > [!NOTE]
 > Se o _manifesto do_ aplicativo especifica que a guia é otimizada para o painel [lateral,](create-apps-for-teams-meetings.md#during-a-meeting)é onde ela será exibida. Ele também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeito às diretrizes de design especificadas.
@@ -112,7 +112,7 @@ Você pode projetar seu aplicativo com autorização específica do participante
 
 1. **Organizador**. O organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Somente os usuários com uma conta do M365 (que possuem uma licença do Teams) podem ser organizadores e controlar as permissões dos participantes.
 1. **Apresentador.** Os apresentadores têm quase os mesmos recursos que o organizador; no entanto, um apresentador não pode remover um organizador da sessão ou modificar as opções de reunião da sessão. Por padrão, os participantes que participam de uma reunião têm a função de apresentador.
-1. **Attendee**. Um participante é um usuário que foi convidado a participar de uma reunião, mas que não está autorizado a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar as configurações da reunião ou compartilhar conteúdo.
+1. **Attendee**. Um participante é um usuário que foi convidado a participar de uma reunião, mas que não está autorizado a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma configuração da reunião ou compartilhar conteúdo.
 
 _Ver_ [ **Funções em uma reunião do Teams**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
@@ -120,7 +120,7 @@ Você pode acessar a  **página de opções de** reunião da seguinte forma:
 
 &#11200; Teams, vá para **o** logotipo do ![ ](../assets/images/apps-in-meetings/calendar-logo.png) calendário, selecione uma reunião e, em seguida, opções **de reunião.**
 
-&#11200; Em um convite de reunião, selecione opções **de reunião.**
+&#11200; em um convite de reunião, selecione **opções de reunião.**
 
 &#11200; Durante uma reunião, selecione **Mostrar** participantes que mostram o ![ ícone dos participantes nos ](../assets/images/apps-in-meetings/show-participants.png) controles da reunião. Em seguida, acima da lista de participantes, escolha **Gerenciar permissões.**
 
@@ -137,6 +137,6 @@ Você pode acessar a  **página de opções de** reunião da seguinte forma:
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Criar seu aplicativo](create-apps-for-teams-meetings.md)
+> [Criar seu aplicativo](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 > [!div class="nextstepaction"]
 > [Criar seu aplicativo](create-apps-for-teams-meetings.md)
