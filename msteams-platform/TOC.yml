@@ -332,6 +332,8 @@
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: Adicionar autenticação ao seu bot
           href: bots/how-to/authentication/add-authentication.md
+        - name: Usar autenticação SSO
+          href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: Extensões de mensagens
       href: messaging-extensions/how-to/add-authentication.md
 - name: Usar dados do Teams com o Microsoft Graph
