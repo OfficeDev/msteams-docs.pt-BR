@@ -3,12 +3,12 @@ title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de login ou o serviço de bot do azure com suporte para cartão OAuth.
 keywords: token, token de usuário, suporte a SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: 8537cf41cdd7218b9bf7618fccf0e1704ac6b815
-ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
+ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
+ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "49917580"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "49935251"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (single sign-on) para bots
 
@@ -82,7 +82,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
     >
     > Você deve estar ciente das seguintes restrições importantes:
     >
-    > * Somente as permissões da API do Microsoft Graph em nível de usuário, como email, perfil, offline_access e OpenId, são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
+    > * Somente as permissões da API do Microsoft Graph em nível de usuário, como email, perfil, offline_access e OpenId, são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` `Mail.Read` ou, confira [a solução alternativa recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
     > * O nome de domínio do seu aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD.
     > * Atualmente, não há suporte para vários domínios por aplicativo.
     > * Aplicativos que usam `azurewebsites.net` o domínio não são suportados porque é comum e pode ser um risco à segurança.
@@ -100,7 +100,7 @@ Conclua as seguintes etapas para atualizar o portal do Azure com a conexão OAut
     * OpenId
     * perfil
 
-3. Selecione **Configurações** no painel esquerdo e escolha **Adicionar Configuração** na seção Configurações de Conexão **OAuth.**
+3. Selecione **Configurações** no painel esquerdo e escolha **Adicionar** Configuração na seção Configurações de Conexão **OAuth.**
 
     ![Exibição SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
@@ -149,7 +149,7 @@ Se o aplicativo contiver um bot e uma guia, use o código a seguir para adiciona
 
 #### <a name="request-a-bot-token"></a>Solicitar um token de bot
 
-A solicitação para obter o token é uma solicitação de mensagem POST normal usando o esquema de mensagem existente. Ele está incluído nos anexos de um OAuthCard. O esquema para a classe OAuthCard é definido no [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é semelhante a um cartão de login. O Teams trata essa solicitação como uma aquisição de token silencioso `TokenExchangeResource` se a propriedade estiver preenchida no cartão. Para o canal do Teams, apenas a propriedade, que `Id` identifica exclusivamente uma solicitação de token, é aumenteda.
+A solicitação para obter o token é uma solicitação de mensagem POST normal usando o esquema de mensagens existente. Ele está incluído nos anexos de um OAuthCard. O esquema para a classe OAuthCard é definido no [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é semelhante a um cartão de login. O Teams trata essa solicitação como uma aquisição de token silencioso `TokenExchangeResource` se a propriedade estiver preenchida no cartão. Para o canal do Teams, apenas a propriedade, que `Id` identifica exclusivamente uma solicitação de token, é aumenteda.
 
 >[!NOTE]
 > O Microsoft Bot Framework ou o Microsoft Bot Framework `OAuthPrompt` `MultiProviderAuthDialog` tem suporte para autenticação SSO.
@@ -160,7 +160,7 @@ Se o usuário estiver usando o aplicativo pela primeira vez e o consentimento do
 
 Quando o usuário seleciona **Continuar,** ocorrem os seguintes eventos:
 
-* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` . Por exemplo, se você quiser trocar o token por recursos de gráfico.
+* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` . Por exemplo, se você quiser trocar o token por recursos gráficos.
 
 * Se o bot não estiver fornecendo um botão de logon no cartão OAuth, o consentimento do usuário será necessário para um conjunto mínimo de permissões. Esse token é útil para autenticação básica e para obter o endereço de email do usuário.
 
@@ -191,7 +191,7 @@ Quando o usuário seleciona **Continuar,** ocorrem os seguintes eventos:
 A resposta com o token é enviada por meio de uma atividade de invocação com o mesmo esquema de outras atividades de invocação que os bots recebem hoje. A única diferença é o nome de invocação, **o sign-in/tokenExchange** e o **campo de** valor. O **campo** de valor contém a **Id**, uma cadeia de caracteres da solicitação inicial para obter o token e o campo **de token,** um valor de cadeia de caracteres incluindo o token.
 
 >[!NOTE]
-> Você poderá receber várias respostas para uma determinada solicitação se o usuário tiver vários pontos de extremidade ativos. Você deve duplicar as respostas com o token.
+> Você pode receber várias respostas para uma determinada solicitação se o usuário tiver vários pontos de extremidade ativos. Você deve duplicar as respostas com o token.
 
 ##### <a name="c-code-to-handle-the-invoke-activity"></a>Código C# para manipular a atividade de invocação
 
@@ -244,7 +244,3 @@ Abra [o exemplo de auth do Teams](https://github.com/microsoft/BotBuilder-Sample
 #### <a name="additional-code-samples"></a>Exemplos de código adicionais
 
 * [Exemplo de C# usando o SDK da Estrutura de Bot.](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)
-
-* [Exemplo de C# usando o SDK da Estrutura de Bot para desuplicar a solicitação de token.](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)
-
-* [Exemplo de C# sem usar o armazenamento de tokens do SDK da](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)Estrutura de Bot.
