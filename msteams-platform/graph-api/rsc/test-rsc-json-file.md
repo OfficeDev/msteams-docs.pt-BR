@@ -1,19 +1,19 @@
 ---
 title: Testar o consentimento específico do recurso no Teams
-description: Como testar o consentimento específico do recurso no Teams usando o postmaster
+description: Como testar o consentimento específico de recursos no Teams usando o Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
-keywords: Gráfico de postagem do AAD RSC do Microsoft Teams Authorization SSO
-ms.openlocfilehash: 63b2b708cf775816c5e6c0bb39a36537c2f20722
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.topic: how-to
+keywords: autorização do OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796140"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014513"
 ---
-# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="91cce-104">Testar JSON de coleção de postmaster do RSC</span><span class="sxs-lookup"><span data-stu-id="91cce-104">Test RSC Postman collection JSON</span></span>
+# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="9fce7-104">JSON da coleção RSC Postman de teste</span><span class="sxs-lookup"><span data-stu-id="9fce7-104">Test RSC Postman collection JSON</span></span>
 
 ```json
 {
