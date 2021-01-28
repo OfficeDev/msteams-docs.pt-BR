@@ -1,27 +1,28 @@
 ---
-title: Solicitar permissões de dispositivo para sua guia do Microsoft Teams
+title: Solicitar permissões de dispositivo para sua guia
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
+ms.topic: how-to
 keywords: desenvolvimento de guias do Teams
-ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886741"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014527"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permissões de dispositivo para sua guia do Microsoft Teams
 
-Talvez você queira enriquecer sua guia com recursos que exigem acesso à funcionalidade do dispositivo nativo, como:
+Talvez você queira enriquecer sua guia com recursos que exigem acesso à funcionalidade nativa do dispositivo, como:
 
 > [!div class="checklist"]
 >
 > * Câmera
 > * Microfone
-> * Local
+> * Localização
 > * Notificações
 
 > [!NOTE]
-> Para integrar recursos de câmera e imagem ao seu aplicativo móvel do Microsoft Teams, confira recursos de [câmera e imagem no Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> Para integrar recursos de câmera e imagem ao seu aplicativo móvel do Microsoft Teams, confira as funcionalidades de [câmera e imagem no Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
@@ -37,7 +38,7 @@ Acessar as permissões de dispositivo de um usuário permite que você crie expe
 * Grave memorandos de áudio curtos e salve-os para mais tarde
 * Usar informações de localização do usuário para exibir informações relevantes
 
-Embora o acesso a esses recursos seja padrão na maioria dos navegadores da Web modernos, você precisa permitir que o Teams saiba quais recursos você gostaria de usar atualizando o manifesto do aplicativo. Isso permitirá que você peça permissões, da mesma forma que faria em um navegador, enquanto seu aplicativo está sendo executado no cliente da área de trabalho do Teams.
+Embora o acesso a esses recursos seja padrão na maioria dos navegadores da Web modernos, você precisa permitir que o Teams saiba quais recursos você gostaria de usar atualizando o manifesto do aplicativo. Isso permitirá que você peça permissões, da mesma forma que faria em um navegador, enquanto seu aplicativo é executado no cliente de área de trabalho do Teams.
 
 ## <a name="manage-permissions"></a>Gerenciar permissões
 
@@ -83,7 +84,7 @@ Cada propriedade permitirá que você peça ao usuário que peça seu consentime
 | Propriedade      | Descrição   |
 | --- | --- |
 | mídia         | permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso |
-| geolocalização   | permissão para retornar o local do usuário      |
+| geolocalização   | permissão para retornar a localização do usuário      |
 | notifications | permissão para enviar as notificações do usuário      |
 | midi          | permissão para enviar e receber informações midi de um instrumento digital de música   |
 | openExternal  | permissão para abrir links em aplicativos externos  |
@@ -156,7 +157,7 @@ microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.m
 });
 ```
 
-Para solicitar que o usuário compartilhe o local na interface do mapa, o teams Mobile solicitará permissão quando você `getLocation()` chamar:
+Para solicitar que o usuário compartilhe o local na interface do mapa, o dispositivo móvel do Teams solicitará permissão quando você `getLocation()` chamar:
 
 ```JavaScript 
 microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -173,6 +174,6 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 ![Prompt de permissões de dispositivo móvel de guias](../../assets/images/tabs/MobileLocationPermission.png)
 
 
-## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão entre sessões de logon
+## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão em sessões de logon
 
-As permissões nativas do dispositivo são armazenadas para cada sessão de logon. Isso significa que, se você fizer logon em outra instância do Teams (por exemplo, em outro computador), as permissões do dispositivo de suas sessões anteriores não estarão disponíveis. Em vez disso, você precisará concordar com as permissões do dispositivo para a nova sessão de logon. Isso também significa que, se você sair do Teams (ou mudar de locatário dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior. Lembre-se disso ao desenvolver permissões de dispositivo nativas: as funcionalidades nativas que você consentir são apenas para sua _sessão de_ logon atual.
+As permissões nativas do dispositivo são armazenadas para cada sessão de logon. Isso significa que se você fizer logon em outra instância do Teams (por exemplo, em outro computador), as permissões do dispositivo de suas sessões anteriores não estarão disponíveis. Em vez disso, você precisará concordar com as permissões do dispositivo para a nova sessão de logon. Isso também significa que, se você sair do Teams (ou mudar de locatário dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior. Lembre-se disso ao desenvolver permissões de dispositivo nativas: as funcionalidades nativas que você consentir são apenas para sua _sessão de_ logon atual.

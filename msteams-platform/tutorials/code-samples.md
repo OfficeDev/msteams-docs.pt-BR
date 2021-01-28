@@ -1,13 +1,14 @@
 ---
-title: Exemplos de código do Microsoft Teams
+title: Exemplos de código do aplicativo
 description: Links e descrições de aplicativos de exemplo para a plataforma de desenvolvedores do Microsoft Teams
+ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
-ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
+ms.openlocfilehash: f51ffb22a5e6b3b757d1971422adf955d95fb223
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49912313"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014107"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Tutoriais e exemplos de código para a plataforma de desenvolvedor do Microsoft Teams
 
@@ -51,7 +52,7 @@ Como sempre, o arquivo README do projeto deve ter mais informações sobre neces
 >[!TIP]
 >Visite o [repositório de Exemplos](https://github.com/Microsoft/BotBuilder-Samples) da Estrutura de Bot para exibir exemplos voltados para tarefas do SDK do Microsoft Bot Framework v4 para C#, JavaScript, TypeScript e Python.
 
-## <a name="messaging-extensions-using-the-v4-sdk"></a>Extensões de mensagens (usando o SDK v4)
+## <a name="messaging-extensions-using-the-v4-sdk"></a>Extensões de Mensagens (usando o SDK v4)
 
 | Amostra | Descrição | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
@@ -59,7 +60,7 @@ Como sempre, o arquivo README do projeto deve ter mais informações sobre neces
 | Extensões de mensagens - ação | Extensão de mensagens que aceita parâmetros e retorna um cartão. Além disso, como receber uma mensagem encaminhada como um parâmetro em uma Extensão de Mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extensões de mensagens - auth e config | Extensão de mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados depois que o usuário se inscreva. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
 | Extensões de mensagens - visualização de ação | Demonstra como criar um fluxo de Visualização e Edição para uma Extensão de Mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
-| Desenrolamento de link | Extensão de mensagens que executa o link desesqueamento. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+| Desenrolamento de link | Extensão de Mensagens que executa o desesqueamento do link. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
 
 
 ## <a name="outgoing-webhooks"></a>Webhooks de saída
@@ -67,14 +68,14 @@ Como sempre, o arquivo README do projeto deve ter mais informações sobre neces
 | Amostra | Descrição
 |--------|-------------
 | [Webhook de saída para C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Ilustra como criar um **Webhook de** saída para o Microsoft Teams em C#/.NET.
-| [Webhook de saída para Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Ilustra como criar um **Webhook** de saída simples para o Microsoft Teams em cerca de 50 linhas Node.js código.
+| [Webhook de saída para Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Ilustra como criar um **Webhook** de saída simples para o Microsoft Teams em cerca de 50 linhas de Node.js código.
 
 ## <a name="connectors"></a>Conectores
 
 | Amostra | Descrição
 |--------|-------------
 | [Conector de exemplo para Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | Este exemplo, escrito em Node.js, mostra como criar um conector para o Microsoft Teams usando o GitHub como um exemplo para gerar notificações de conector.
-| [Conector de exemplo para C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | Este exemplo, escrito em C#, mostra como criar um conector para o Microsoft Teams usando um aplicativo de lista de tarefas de exemplo como exemplo para gerar notificações de conector. Este exemplo também mostra como implementar a funcionalidade de logon na página de configuração do conector. 
+| [Conector de exemplo para C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | Este exemplo, escrito em C#, mostra como criar um conector para o Microsoft Teams usando um aplicativo de lista de tarefas de exemplo como um exemplo para gerar notificações de conector. Este exemplo também mostra como implementar a funcionalidade de logon na página de configuração do conector. 
 
 ## <a name="graph-api"></a>Graph API
 

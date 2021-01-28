@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Como assinar eventos de conversa do seu bot do Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911958"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014317"
 ---
 # <a name="subscribe-to-conversation-events"></a>Inscrever-se para eventos de conversa
 
@@ -44,12 +44,14 @@ A tabela a seguir mostra uma lista de eventos de atualização de conversa do Te
 | members added   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro adicionado](#team-members-added)   | Todos |
 | membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro foi removido](#team-members-removed) | groupChat & equipe |
 | equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe foi renomeada](#team-renamed)       | Equipe |
+| equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe foi excluída](#team-deleted)       | Equipe |
 | equipe arquivada        | teamArchived       | OnTeamsTeamArchivedAsync    | [Uma equipe foi arquivada](#team-archived)       | Equipe |
-| equipe restaurada        | teamRestored      | OnTeamsTeamRestoredAsync    | [Uma equipe foi renomeada](#team-renamed)       | Equipe |
+| equipe desarquivada        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Uma equipe foi desarquivada](#team-unarchived)       | Equipe |
+| equipe restaurada        | teamRestored      | OnTeamsTeamRestoredAsync    | [Uma equipe foi restaurada](#team-restored)       | Equipe |
 
 ### <a name="channel-created"></a>Canal criado
 
-O evento de criação do canal é enviado ao bot sempre que um novo canal é criado em uma equipe em que o bot está instalado.
+O evento de criação do canal é enviado ao seu bot sempre que um novo canal é criado em uma equipe em que o bot está instalado.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -385,7 +387,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
-O evento é enviado ao seu bot na primeira vez em que é adicionado a uma conversa e sempre que um novo usuário é adicionado a uma equipe ou chat de grupo em que seu `teamMemberAdded` bot está instalado. As informações do usuário (ID) são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo serviço (por exemplo, enviar uma mensagem para um usuário específico).
+O evento é enviado ao seu bot na primeira vez em que é adicionado a uma conversa e sempre que um novo usuário é adicionado a uma equipe ou chat de grupo em que seu `teamMemberAdded` bot está instalado. As informações do usuário (ID) são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo serviço (como enviar uma mensagem para um usuário específico).
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -527,7 +529,7 @@ _ * *
 
 ### <a name="team-members-removed"></a>Membros da equipe removidos
 
-O evento é enviado para seu bot se ele for removido de uma equipe e sempre que qualquer usuário for removido de uma equipe da que seu `teamMemberRemoved` bot é membro. Você pode determinar se o novo membro removido foi o próprio bot ou um usuário observando o `Activity` objeto do `turnContext` .  Se o campo do objeto for o mesmo do campo do objeto, o membro removido será o bot; caso `Id` `MembersRemoved` `Id` `Recipient` contrário, será um usuário.  O bot geralmente `Id` será: `28:<MicrosoftAppId>`
+O evento é enviado para seu bot se ele for removido de uma equipe e sempre que qualquer usuário for removido de uma equipe da que seu `teamMemberRemoved` bot é membro. Você pode determinar se o novo membro removido foi o próprio bot ou um usuário observando o `Activity` objeto do `turnContext` .  Se o campo do objeto for o mesmo que o campo do objeto, o membro removido será o bot; caso `Id` `MembersRemoved` `Id` `Recipient` contrário, será um usuário.  O bot geralmente `Id` será: `28:<MicrosoftAppId>`
 
 [!Note] Quando um usuário é excluído permanentemente de um locatário, `membersRemoved conversationUpdate` o evento é acionado.
 
@@ -712,6 +714,158 @@ async def on_teams_team_renamed(
 
 * * *
 
+### <a name="team-deleted"></a>Equipe excluída
+
+Seu bot é notificado quando a equipe em que está foi excluída. Ele recebe um `conversationUpdate` evento com `eventType.teamDeleted` no `channelData` objeto.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    //handle delete event
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            //handle delete event
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamDeleted",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_deleted(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    //handle delete event
+    )
+```
+
+* * *
+
+### <a name="team-restored"></a>Equipe restaurada
+
+O bot recebe uma notificação quando é restaurado da exclusão. Ele recebe um `conversationUpdate` evento `eventType.teamrestored` com no `channelData` objeto.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamrestored",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_restored(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    return await turn_context.send_activity(
+        MessageFactory.text(f"The team name is {team_info.name}")
+    )
+```
+
+* * *
+
 ### <a name="team-archived"></a>Equipe arquivada
 
 O bot recebe uma notificação quando a equipe em que está instalado é arquivada. Ele recebe um `conversationUpdate` evento `eventType.teamarchived` com no `channelData` objeto.
@@ -790,14 +944,15 @@ async def on_teams_team_archived(
 
 * * *
 
-### <a name="team-restored"></a>Equipe restaurada
 
-O bot recebe uma notificação quando a equipe em que está instalada é restaurada. Ele recebe um `conversationUpdate` evento `eventType.teamrestored` com no `channelData` objeto.
+### <a name="team-unarchived"></a>Equipe desarquivada
+
+O bot recebe uma notificação quando a equipe em que está instalado está desarquivada. Ele recebe um `conversationUpdate` evento `eventType.teamUnarchived` com no `channelData` objeto.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
     var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
@@ -810,8 +965,8 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+        this.onTeamsTeamUnarchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
             const message = MessageFactory.attachment(card);
             await turnContext.sendActivity(message);
             await next();
@@ -847,7 +1002,7 @@ export class MyBot extends TeamsActivityHandler {
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
             "name": "Team Name"
         },
-        "eventType": "teamrestored",
+        "eventType": "teamUnarchived",
         "tenant": { 
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
@@ -858,7 +1013,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_team_restored(
+async def on_teams_team_unarchived(
     self, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(
@@ -1094,7 +1249,7 @@ async def on_reactions_removed(
 * * *
 
 ## <a name="samples"></a>Exemplos
-Para ver o código de exemplo mostrando os eventos de conversa de bots, confira:
+Para código de exemplo mostrando os eventos de conversa de bots, confira:
 
 [Exemplo de eventos de conversa de bots do Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
 

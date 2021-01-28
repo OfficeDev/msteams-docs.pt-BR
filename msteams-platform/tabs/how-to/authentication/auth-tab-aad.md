@@ -1,13 +1,14 @@
 ---
 title: Autenticação para guias usando o Azure Active Directory
-description: Descreve a autenticação no Teams e como usá-la nas guias
+description: Descreve a autenticação no Teams e como usá-la em guias
+ms.topic: how-to
 keywords: guias de autenticação do Teams AAD
-ms.openlocfilehash: f6df2dbf84583488ddc0c57798d423b6288af16d
-ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
+ms.openlocfilehash: 1502d2634b39230e0428863383bf97ada0be0359
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49777928"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014562"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma guia do Microsoft Teams
 
@@ -52,7 +53,7 @@ microsoftTeams.authentication.authenticate({
 
 ### <a name="notes"></a>Observações
 
-* A URL que você passa é `microsoftTeams.authentication.authenticate()` a página inicial do fluxo de autenticação. Neste exemplo, que é `/tab-auth/simple-start` . Isso deve corresponder ao que você registrou no Portal de Registro de [Aplicativos do Azure AD.](https://apps.dev.microsoft.com)
+* A URL que você passa é `microsoftTeams.authentication.authenticate()` a página inicial do fluxo de autenticação. Neste exemplo, isso é `/tab-auth/simple-start` . Isso deve corresponder ao que você registrou no Portal de Registro de [Aplicativos do Azure AD.](https://apps.dev.microsoft.com)
 
 * O fluxo de autenticação deve iniciar em uma página que está em seu domínio. Esse domínio também deve estar listado [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) na seção do manifesto. Não fazer isso resultará em um pop-up vazio.
 
@@ -60,7 +61,7 @@ microsoftTeams.authentication.authenticate({
 
 ## <a name="navigate-to-the-authorization-page-from-your-popup-page"></a>Navegue até a página de autorização em sua página pop-up
 
-Quando sua página pop-up ( ) é `/tab-auth/simple-start` exibida, o código a seguir é executado. O principal objetivo desta página é redirecionar para seu provedor de identidade para que o usuário possa entrar. Esse redirecionamento pode ser feito no lado do servidor usando HTTP 302, mas nesse caso é feito no lado do cliente usando com uma chamada para `window.location.assign()` . Isso também permite ser usado para recuperar informações de dicas que `microsoftTeams.getContext()` podem ser passadas para o Azure AD.
+Quando sua página pop-up ( `/tab-auth/simple-start` ) é exibida, o código a seguir é executado. O principal objetivo desta página é redirecionar para seu provedor de identidade para que o usuário possa entrar. Esse redirecionamento pode ser feito no lado do servidor usando HTTP 302, mas nesse caso é feito no lado do cliente usando com uma chamada para `window.location.assign()` . Isso também permite ser usado para recuperar informações de dicas que `microsoftTeams.getContext()` podem ser passadas para o Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -132,7 +133,7 @@ if (hashParams["error"]) {
 }
 ````
 
-Este código analisará os pares chave-valor recebidos do Azure AD usando `window.location.hash` a `getHashParameters()` função auxiliar. Se encontrar um , e o valor for o mesmo fornecido no início do fluxo de autenticação, ele retornará o token de acesso para a guia chamando; caso contrário, ele relata um `access_token` `state` erro com `notifySuccess()` `notifyFailure()` .
+Este código analisará os pares chave-valor recebidos do Azure AD usando `window.location.hash` a `getHashParameters()` função auxiliar. Se encontrar um , e o valor for o mesmo fornecido no início do fluxo de autenticação, ele retornará o token de acesso para a guia chamando ; caso contrário, ele relata um `access_token` `state` erro com `notifySuccess()` `notifyFailure()` .
 
 ### <a name="notes"></a>Observações
 
@@ -151,7 +152,7 @@ Seu aplicativo pode definir seu próprio cookie de sessão para que o usuário n
 >[!NOTE]
 >Para obter o token correto para usuários convidados e gratuitos do Microsoft Teams, é importante que os aplicativos usem o ponto de extremidade específico do https://login.microsoftonline.com/ **locatário {tenantId}**. Você pode obter tenantId no contexto de guia ou mensagem de bot. Se os aplicativos usarem, os usuários receberão tokens incorretos e entrarão no locatário "home" em vez do locatário em que estão https://login.microsoftonline.com/common atualmente assinados.
 
-Para obter mais informações sobre o Sign-On único (SSO), consulte o artigo [Autenticação silenciosa.](~/tabs/how-to/authentication/auth-silent-AAD.md)
+Para obter mais informações sobre o SSO (single Sign-On) consulte o artigo [Autenticação silenciosa.](~/tabs/how-to/authentication/auth-silent-AAD.md)
 
 ## <a name="samples"></a>Exemplos
 

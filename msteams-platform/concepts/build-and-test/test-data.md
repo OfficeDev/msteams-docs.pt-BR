@@ -1,48 +1,49 @@
 ---
-title: Adicionar dados de teste ao seu locatário de teste do Office 365
-description: Configurar sua assinatura do programa de desenvolvedor do Office 365 para testes bem-sucedidos de aplicativos do Microsoft Teams
-keywords: testando equipes do programa desenvolvedor de aplicativos
+title: Adicionar dados de teste ao locatário de teste do Office 365
+description: Configurar sua assinatura do programa de desenvolvedor do Office 365 para testes bem-sucedidos dos Aplicativos do Microsoft Teams
+ms.topic: how-to
+keywords: testar equipes do programa para desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 97eeb9c35b22adf75ad7f630fb2a621f0330e060
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867087"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014436"
 ---
-# <a name="add-test-data-to-your-office-365-test-tenant"></a>Adicionar dados de teste ao seu locatário de teste do Office 365
+# <a name="add-test-data-to-your-office-365-test-tenant"></a>Adicionar dados de teste ao locatário de teste do Office 365
 
-Configure sua assinatura do programa de desenvolvedor do O365 (ou outro locatário de teste) para facilitar o teste dos aplicativos que você criou.  Ele ajudará você a:
+Configurar sua assinatura do programa de desenvolvedor do O365 (ou outro locatário de teste) para facilitar o teste dos aplicativos que você criou.  Isso ajudará você a:
 
 - Criar novas equipes e canais em sua organização
 
-- Adicione os usuários criados por meio do pacote de conteúdo do usuário a essas equipes.
+- Adicione os usuários criados por meio do pacote de conteúdo do Usuário a essas equipes.
 
 ## <a name="before-you-start"></a>Antes de começar
 
-Se você ainda não tem um locatário de teste, será necessário participar do programa de desenvolvedor do Office 365 e inscrever-se para uma assinatura de desenvolvedor. Você também precisará instalar os módulos do PowerShell necessários. Para qualquer locatário que você usar, precisará ter permissões de administrador global para executar os scripts.
+Se você ainda não tiver um locatário de teste, precisará ingressar no programa de desenvolvedor do Office 365 e se inscrever para uma assinatura de desenvolvedor. Você também precisará instalar os módulos do PowerShell necessários. Para qualquer locatário que você usar, você precisará ter permissões de administrador global para executar os scripts.
 
 1. [Ingressar no Programa para Desenvolvedores do Office 365](/office/developer-program/office-365-developer-program)
 2. [Configurar uma assinatura de desenvolvedor do Microsoft 365](/office/developer-program/office-365-developer-program-get-started)
-3. [Usar pacotes de dados de exemplo com sua assinatura de desenvolvedor do Office 365 para instalar o pacote de conteúdo de usuários](/office/developer-program/install-sample-packs)
-4. [Instalar o módulo do teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Instalar o módulo PowerShell do Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+3. [Usar pacotes de dados de exemplo com sua assinatura de desenvolvedor do Office 365 para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs)
+4. [Instalar o módulo do PowerShell do Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [Instalar o módulo do PowerShell do Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
 ### <a name="optional-step-allow-upload-of-custom-apps"></a>Etapa opcional: permitir o carregamento de aplicativos personalizados
 
-Por padrão, somente administradores globais ou administradores de serviços do teams podem carregar aplicativos personalizados no catálogo de aplicativos do locatário.  Você também pode permitir que todos os usuários carreguem aplicativos personalizados para uso próprio ou para o Microsoft Teams para testes.
+Por padrão, somente administradores globais ou administradores de serviço de equipes podem carregar aplicativos personalizados no catálogo de aplicativos do locatário.  Você também pode permitir que todos os usuários carreguem aplicativos personalizados para seu próprio uso ou para equipes para teste.
 
-Para habilitar essa configuração, você precisará atualizar a política de instalação do aplicativo global no portal de administração do Microsoft Teams.
+Para habilitar essa configuração, você precisará atualizar a Política de Configuração de Aplicativo global no Portal de Administração do Teams.
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Captura de tela da política de configuração de aplicativos" />
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Captura de tela da política de configuração do aplicativo" />
 
 Para obter mais informações, consulte:
 
- - [Gerenciar políticas de configuração de aplicativos no Microsoft Teams](/microsoftteams/teams-app-setup-policies)
+ - [Gerenciar políticas de configuração de aplicativo no Teams](/microsoftteams/teams-app-setup-policies)
 
 ## <a name="create-teams-and-channels"></a>Criar equipes e canais
 
-Salve o seguinte trecho de código como XML (. xml) e anote onde você o salvou.  Este XML define a estrutura das equipes e canais que serão criados-junto com seus membros.
+Salve o trecho de código a seguir como um XML (.xml) e observe onde você o salvou.  Esse XML define a estrutura das equipes e canais que serão criados, juntamente com seus membros.
 
 ```xml
 <?xml version="1.0"?>
@@ -156,7 +157,7 @@ Salve o seguinte trecho de código como XML (. xml) e anote onde você o salvou.
 </Teams>
 ```
 
-Salve o trecho de código a seguir como um script do PowerShell (. ps1) e anote onde você o salvou.  Este script executa as etapas para criar equipes e canais e adicionar membros a eles.
+Salve o trecho de código a seguir como um script do PowerShell (.ps1) e observe onde você o salvou.  Esse script executa as etapas para criar equipes e canais e adicionar membros a elas.
 
 ```powershell
 Param(
@@ -247,9 +248,9 @@ else {
 }
 ```
 
-Abra uma sessão do Windows PowerShell no modo do administrador.  Execute o script que você acabou de salvar.  Você será solicitado a fornecer as credenciais – use as credenciais de administrador global que você recebeu quando se inscreveu pela primeira vez em sua assinatura de desenvolvedor.
+Abra uma sessão do Windows PowerShell no modo Administrador.  Execute o script que você acabou de salvar.  Você será solicitado a fornecer as credenciais: use as credenciais de Administrador Global recebidas quando se inscreveu pela primeira vez em sua assinatura de desenvolvedor.
 
 > [!Note]
-> O script levará vários minutos para executar-não fechar a sessão do PowerShell.  Se você modificou os usuários em sua assinatura do que foi criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados ao Teams.  À medida que o script é executado, ocorrerá a saída de ações bem-sucedidas ou com falha.
+> O script levará vários minutos para ser executado. Não feche sua sessão do PowerShell.  Se você modificou os usuários em sua assinatura do que é criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados às equipes.  À medida que o script for executado, as ações bem-sucedidas ou com falha serão executadas.
 
-Após a execução do script, você pode fazer logon no cliente do Microsoft Teams com uma das contas de usuário e exibir as equipes recém-criadas.
+Depois que o script terminar a execução, você poderá fazer logon no cliente do Teams com uma das contas de usuário e exibir as equipes recém-criadas.

@@ -4,16 +4,17 @@ description: Descreve dicas para um envio bem-sucedido à loja do Teams e os mot
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f4226bdae94db073711cb1e126a7991804b050ac
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+keywords: Validação dos aplicativos do Teams com falha nos casos de teste de publicação rápida de aplicativos de aprovação
+ms.openlocfilehash: ad1818bbe2f085f5f1dc1bbef5f6a7b7b9ba08af
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797831"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014443"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Dicas para um envio de aplicativo bem-sucedido do Microsoft Teams
 
-Este artigo aborda os motivos comuns pelos quais os aplicativos enviados falham na validação. Embora ele não se destine a ser uma lista exaustiva de todos os possíveis problemas com seu aplicativo, seguir este guia aumentará a probabilidade de seu envio de aplicativo passar pela primeira vez. *Consulte Políticas* [de certificação do Marketplace comercial](/legal/marketplace/certification-policies) para uma lista extensa de políticas de validação.
+Este artigo aborda os motivos comuns pelos quais os aplicativos enviados falham na validação. Embora não se destine a ser uma lista exaustiva de todos os possíveis problemas com seu aplicativo, seguir este guia aumentará a probabilidade de seu envio de aplicativo passar pela primeira vez. *Consulte Políticas* [de certificação do Marketplace comercial](/legal/marketplace/certification-policies) para uma lista extensa de políticas de validação.
 
 >[!NOTE]
 >**[A seção 1140 é](/legal/marketplace/certification-policies#1140-teams)** específica do Microsoft Teams e **[a subseção 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** aborda os requisitos de funcionalidade para aplicativos do Teams.
@@ -32,7 +33,7 @@ Este artigo aborda os motivos comuns pelos quais os aplicativos enviados falham 
 * Fornecer informações de ajuda e suporte. É altamente recomendável que seu aplicativo inclua um link de ajuda/perguntas frequentes para a experiência do usuário na primeira vez. Para todos os aplicativos pessoais, recomendamos fornecer sua página de ajuda como uma guia pessoal para uma melhor experiência do usuário.
 * Os aplicativos não devem tirar o usuário do Teams para os principais cenários do usuário. É recomendável usar módulos/guias de tarefas para exibir informações aos usuários no Teams.
 * Incremente o número da versão do aplicativo no manifesto se você fizer alterações de manifesto no envio.
-* O aplicativo não deve tirar os usuários do Teams para os principais cenários do usuário. Os destinos de link em aplicativos não devem vincular a um navegador externo, mas devem vincular a elementos div contidos no Teams, por exemplo, dentro de Módulos de Tarefas e guias.
+* O aplicativo não deve tirar os usuários do Teams para cenários principais do usuário. Os destinos de link em aplicativos não devem vincular a um navegador externo, mas devem vincular a elementos div contidos no Teams, por exemplo, dentro de Módulos de Tarefas e guias.
 * Os aplicativos pessoais permitem que os usuários compartilhem conteúdo de uma experiência de aplicativo pessoal com outros membros da equipe.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fornecer uma experiência clara e simples de entrar/sair e inscrever-se
@@ -87,7 +88,7 @@ Para obter informações adicionais sobre autenticação, consulte:
 ![Exibição de guia do SharePoint](../../../../assets/images/faq/tab-sp.png)
 
 * As guias devem ser claras na natureza e não incluir navegação complexa.
-* As guias de canal que têm recursos de edição complexos dentro do aplicativo devem abrir o modo de exibição do editor em uma janela de várias janelas, em vez de em uma guia.
+* As guias de canal que têm recursos complexos de edição dentro do aplicativo devem abrir o modo de exibição do editor em uma janela de várias janelas em vez de em uma guia.
 * As guias de canal não devem fornecer uma barra de aplicativos com ícones no trilho esquerdo que estão em conflito com a navegação principal do Teams.
 * As guias não devem apresentar uma barra de aplicativos com ícones no trilho esquerdo que estão em conflito com a navegação principal do Teams.
 * Guias com recursos complexos de edição dentro do aplicativo devem abrir o modo de exibição do editor em uma janela de várias janelas em vez de na guia.
@@ -152,7 +153,7 @@ Confira abaixo a seção para requisitos de mensagem de boas-vindas.
 * Inclua uma proposta de valor com o tour de boas-vindas.
 * Fornecer orientações passo a passo para usar o aplicativo.
 * Incluir diretrizes sobre como se inscrever e configurar seu aplicativo
-* Apresentar texto fácil de ler e um diálogo direto — preferencialmente um cartão com um botão de tour de boas-vindas a actionable que carrega um módulo de tarefa.
+* Apresentar texto fácil de ler e um diálogo simples — preferencialmente um cartão com um botão de tour de boas-vindas a actionable que carrega um módulo de tarefa.
 * Mantenha-o simples e fácil de ser possível com botões e cartões — evite texto longo, diálogo conversada.
 * Inclua cartões e botões adaptáveis para tornar a mensagem de boas-vindas mais usável.
 * Invoque a mensagem de boas-vindas com um ping, não dois ou mais pings simultâneos.
@@ -187,20 +188,20 @@ As coisas são um pouco diferentes quando o bot é adicionado pela primeira vez 
 * Os aplicativos que suportam iOS devem estar totalmente funcionais no dispositivo iPad mais recente usando a versão mais recente do iOS.
 * Não deve incluir referências diretas a compras no aplicativo, ofertas de avaliação, ofertas para versões pagas ou links para qualquer loja online onde os usuários possam comprar ou adquirir outros conteúdos, aplicativos ou complementos do seu aplicativo Teams no sistema operacional móvel (Android, iOS).
 * A versão para iOS ou Android do complemento não deve mostrar nenhuma interface do usuário ou idioma ou link para outros aplicativos, complementos ou sites que peçam ao usuário para pagar.
-* As páginas de Política de Privacidade e Termos de Uso associadas também não devem ter nenhuma interface do usuário de comércio ou links da Loja.
+* As páginas de Política de Privacidade e Termos de Uso associadas também devem estar livres de qualquer interface do usuário de comércio ou links da Loja.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; Não postar dados confidenciais para uma audiência que não se destina a exibir os dados
 
-Seu aplicativo do Teams não deve postar dados confidenciais, como cartão de crédito/instrumento de pagamento financeiro, INFORMAÇÕES de Identificação Pessoal (PIN), saúde ou informações de rastreamento de contato para uma audiência que não se destina a exibir esses dados.
+Seu aplicativo teams não deve postar dados confidenciais, como cartão de crédito/instrumento de pagamento financeiro, INFORMAÇÕES de Identificação Pessoal (PIN), saúde ou informações de rastreamento de contato para uma audiência que não se destina a exibir esses dados.
 
 ### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; Não transmita detalhes de pagamento financeiro ou conclua transações financeiras por meio de seu aplicativo do Teams
 
 * Seu aplicativo teams não deve pedir aos usuários para fazer um pagamento diretamente na interface do Teams
 * Os aplicativos podem não transmitir detalhes do instrumento financeiro por meio do usuário na interface do aplicativo. Os aplicativos só podem transmitir links para proteger serviços de pagamento aos usuários se isso for divulgado nos Termos de Uso, na Política de Privacidade e em qualquer página de perfil ou site do aplicativo antes que um usuário concorde em usar o aplicativo.
 
-### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Limpar aviso antes de baixar arquivos ou executáveis ( `.exe` ) no ambiente de um usuário
+### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Limpar aviso antes de baixar arquivos ou arquivos executáveis ( `.exe` ) no ambiente de um usuário
 
-Avise os usuários antes que seu aplicativo baixe arquivos ou arquivos executáveis ( `.exe`  )no computador ou ambiente do usuário.
+Avise os usuários antes de seu aplicativo baixar arquivos ou arquivos executáveis ( `.exe`  )no computador ou ambiente do usuário.
 
 ### <a name="9989-messaging-extensions-should-provide-help-text-and-be-easy-to-read"></a>&#9989; extensões de mensagens devem fornecer texto de ajuda e ser fáceis de ler
 

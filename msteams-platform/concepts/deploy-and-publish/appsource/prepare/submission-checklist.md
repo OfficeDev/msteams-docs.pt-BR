@@ -1,13 +1,14 @@
 ---
-title: Lista de verificação de envio
+title: Lista de verificação de envio da Loja
 description: A lista de verificação a ser usada antes de publicar seu aplicativo Microsoft Teams no AppSource
+ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 8d20d0106c1b2d8da38c5802b977634925afffcc
-ms.sourcegitcommit: db19fee033b41152267bb524d67aee5b7f64b04a
+ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797472"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014212"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar-se para o envio do AppSource  
 
@@ -68,7 +69,7 @@ Diretrizes de política de privacidade:
 
 Sua declaração de termos de uso deve ser específica e aplicável ao seu aplicativo e/ou oferta de complemento.
 
-### <a name="support-urls"></a>URLs de suporte
+### <a name="support-urls"></a>UrLs de suporte
 
 As URLs de suporte não devem exigir autenticação ou credencial de logon para entrar em contato com você em caso de problemas com seu aplicativo.
 
@@ -86,9 +87,9 @@ Inclua o seguinte:
 
 * Você pode optar por carregar suas notas de teste no SharePoint. Se sim, forneça um link público para o arquivo.
 
-* **Contas de teste.** Uma conta de teste será necessária se seu aplicativo permitir apenas contas licenciadas ou a lista segura do back-end. Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração em equipe.
+* **Contas de teste.** Uma conta de teste será necessária se seu aplicativo permitir apenas contas licenciadas ou lista segura do back-end. Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração em equipe.
 
-* **Etapas de integração.** Se a pré-configuração de um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas de administrador e não administrador configuradas para validação. Observação: você pode se inscrever para uma assinatura do Programa para Desenvolvedores do [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Ele é *gratuito por* 90 dias e será renovado continuamente, desde que você o esteja usando para atividades de desenvolvimento.
+* **Etapas de integração.** Se a pré-configuração feita por um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas configuradas de administrador e não administrador para validação. Observação: você pode se inscrever para uma assinatura do Programa para Desenvolvedores do [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Ele é *gratuito por* 90 dias e será renovado continuamente, desde que você o esteja usando para atividades de desenvolvimento.
 
 * **Observações sobre os recursos do aplicativo no Teams:** detalhe todos os recursos que o aplicativo oferece no Teams e as etapas para testar cada recurso.
 

@@ -1,15 +1,16 @@
 ---
 title: Referência de esquema de manifesto
 description: Descreve o esquema de manifesto do Microsoft Teams
+ms.topic: reference
 keywords: esquema de manifesto do teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 8fff56d229cc137df8356b06214893dc984396a0
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845627"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014604"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -299,7 +300,7 @@ A versão do esquema de manifesto que este manifesto está usando. Deve ser "1.7
 
 A versão do aplicativo específico. Se você atualizar algo em seu manifesto, a versão também deverá ser incrementada. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente, e o usuário recebe a nova funcionalidade. Se esse aplicativo foi enviado para a loja, o novo manifesto terá que ser re-enviado e revalidado. Em seguida, os usuários desse aplicativo receberão o novo manifesto atualizado automaticamente em algumas horas, depois que ele for aprovado.
 
-Se as permissões solicitadas pelo aplicativo mudarem, os usuários serão solicitados a atualizar e consentir de novo para o aplicativo.
+Se o aplicativo solicitou a alteração de permissões, os usuários serão solicitados a atualizar e consentir de novo para o aplicativo.
 
 Esta cadeia de caracteres de versão deve seguir [o padrão de semver](http://semver.org/) (MAJOR. MINOR. PATCH).
 
@@ -334,7 +335,7 @@ O nome da experiência do seu aplicativo, exibido aos usuários na experiência 
 |`short`|30 caracteres|✔|O nome de exibição curto do aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, usado se o nome completo do aplicativo exceder 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descrição
 
 **Obrigatório —** objeto
 
@@ -365,7 +366,7 @@ Permite a especificação de um idioma padrão, bem como ponteiros para arquivos
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
-Uma matriz de objetos especificando traduções de idioma adicionais.
+Uma matriz de objetos especificando traduções de idiomas adicionais.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -381,11 +382,11 @@ Uma matriz de objetos especificando traduções de idioma adicionais.
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`outline`|32 x 32 pixels|✔|Um caminho de arquivo relativo para um ícone transparente de contorno PNG de 32 x 32.|
-|`color`|192 x 192 pixels|✔|Um caminho relativo do arquivo para um ícone PNG de 192 x 192 cores completas.|
+|`color`|192 x 192 pixels|✔|Um caminho de arquivo relativo para um ícone PNG de 192 x 192 cores completas.|
 
 ## <a name="accentcolor"></a>accentColor
 
-**Opcional** — código de cor Hex HTML
+**Opcional** — código de cor HEX HTML
 
 Uma cor a ser usada em conjunto com e como plano de fundo para seus ícones de contorno.
 
@@ -395,7 +396,7 @@ O valor deve ser um código de cor HTML válido começando com '#', por `#4464ee
 
 **Opcional** — matriz
 
-Usado quando a experiência do aplicativo tem uma experiência de guia de canal de equipe que exige configuração extra antes de ser adicionada. Guias configuráveis são suportadas apenas no escopo de equipes  (não pessoais) e, no momento, só há suporte para uma guia por aplicativo.
+Usado quando a experiência do aplicativo tem uma experiência de guia de canal de equipe que exige configuração extra antes de ser adicionada. Guias configuráveis só têm suporte no escopo das equipes  (não pessoal) e, atualmente, só há suporte para uma guia por aplicativo.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -410,7 +411,7 @@ Usado quando a experiência do aplicativo tem uma experiência de guia de canal 
 
 **Opcional** — matriz
 
-Define um conjunto de guias que podem ser "fixadas" por padrão, sem que o usuário as adicione manualmente. As guias estáticas declaradas `personal` no escopo são sempre fixadas à experiência pessoal do aplicativo. Atualmente, as guias estáticas declaradas no escopo `team` não são suportadas.
+Define um conjunto de guias que podem ser "fixadas" por padrão, sem que o usuário as adicione manualmente. As guias estáticas declaradas `personal` no escopo são sempre fixadas à experiência pessoal do aplicativo. As guias estáticas declaradas no `team` escopo não são suportadas no momento.
 
 Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo `object` . Esse bloco é necessário apenas para soluções que fornecem uma solução de guia estática.
 
@@ -438,20 +439,20 @@ O item é uma matriz (máximo de apenas 1 elemento atualmente apenas um bot é p
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a ID geral [do aplicativo.](#id)|
-|`scopes`|matriz de enums|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`scopes`|matriz de enums|3|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
 |`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
 |`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
 |`supportsCalling`|booliano|||Um valor indicando onde um bot dá suporte a chamada de áudio. **IMPORTANTE:** essa propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
-|`supportsVideo`|booliano|||Um valor indicando onde um bot dá suporte à chamada de vídeo. **IMPORTANTE:** essa propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
+|`supportsVideo`|booliano|||Um valor que indica onde um bot dá suporte à chamada de vídeo. **IMPORTANTE:** essa propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  Ele é fornecido apenas para fins de teste e exploração e não deve ser usado em aplicativos de produção. Padrão: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de 2 elementos) com todos os elementos do tipo; você deve definir uma lista de comandos separada para cada escopo ao qual seu `object` bot oferece suporte. Consulte [menus de bot](~/bots/how-to/create-a-bot-commands-menu.md) para obter mais informações.
+Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de 2 elementos) com todos os elementos do tipo; você deve definir uma lista de comandos separada para cada escopo ao qual seu `object` bot oferece suporte. Consulte [menus de Bot](~/bots/how-to/create-a-bot-commands-menu.md) para obter mais informações.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enums|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de enums|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -484,7 +485,7 @@ Define uma extensão de mensagens para o aplicativo.
 > [!NOTE]
 > O nome do recurso foi alterado de "extensão de composição" para "extensão de mensagens" em novembro de 2017, mas o nome do manifesto permanece o mesmo para que as extensões existentes continuem a funcionar.
 
-O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `object` . Esse bloqueio é necessário apenas para soluções que fornecem uma extensão de mensagens.
+O item é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `object` . Esse bloco é necessário apenas para soluções que fornecem uma extensão de mensagens.
 
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -508,20 +509,20 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|string|64 caracteres||Tipo do comando. Um ou `query` `action` . Padrão: **consulta**.|
 |`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade desse comando.|
 |`initialRun`|booliano|||Um valor booliana que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: **false**.|
-|`context`|matriz de cadeias de caracteres|3 ||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação de `compose` , `commandBox` `message` . O padrão é `["compose","commandBox"]`.|
+|`context`|matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação de `compose` , `commandBox` `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor booliana que indica se ele deve buscar o módulo de tarefa dinamicamente. Padrão: **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens.|
 |`taskInfo.title`|string|64 caracteres||Título da caixa de diálogo inicial.|
 |`taskInfo.width`|string|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
-|`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
+|`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.url`|string|||URL inicial do webview.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando leva. Mínimo: 1; máximo: 5.|
 |`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. Isso está incluído na solicitação do usuário.|
 |`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
 |`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
 |`parameters.value`|string|512 caracteres||Valor inicial do parâmetro.|
-|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
-|`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset` o . Use somente quando `parameter.inputType` for `choiceset` .|
+|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um dos `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para o `choiceset` . Use somente quando `parameter.inputType` for `choiceset` .|
 |`parameters.choices.title`|string|128 caracteres|✔|Título da escolha.|
 |`parameters.choices.value`|string|512 caracteres|✔|O valor da escolha.|
 
@@ -552,7 +553,7 @@ Especifica os recursos nativos no dispositivo de um usuário aos que seu aplicat
 
 **Optional**, except **Required** where noted
 
-Uma lista de domínios válidos para sites que o aplicativo espera carregar no cliente do Teams. As listagem de domínio podem incluir caracteres curinga, por `*.example.com` exemplo. Isso corresponde a exatamente um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com` . Se a configuração da guia ou a interface do usuário do conteúdo precisar navegar para qualquer outro domínio além do uso da configuração de guia, esse domínio deverá ser especificado aqui.
+Uma lista de domínios válidos para sites que o aplicativo espera carregar no cliente do Teams. As listagem de domínio podem incluir caracteres curinga, por `*.example.com` exemplo. Isso corresponde a exatamente um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com` . Se a configuração da guia ou a interface do usuário de conteúdo precisar navegar para qualquer outro domínio além do uso para a configuração de guia, esse domínio deverá ser especificado aqui.
 
 No **entanto,** não é necessário incluir os domínios de provedores de identidade que você deseja suportar em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para o accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]` .
 
@@ -581,7 +582,7 @@ Especifique a ID do aplicativo do Azure Active Directory (Azure AD) e as informa
 
 Indica se o indicador de carregamento será ou não mostre quando um aplicativo/guia estiver sendo carregado. Padrão: **false**.
 >[!NOTE]
->Se você definir "showLoadingIndicator : true" no manifesto do aplicativo, para [que a](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) página seja carregada corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefas de acordo com o protocolo descrito em Mostrar um documento indicador de carregamento nativo.
+>Se você definir "showLoadingIndicator : true" no manifesto do aplicativo, para [que a](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) página seja carregada corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa de acordo com o protocolo descrito em Mostrar um documento indicador de carregamento nativo.
 
 
 ## <a name="isfullscreen"></a>isFullScreen

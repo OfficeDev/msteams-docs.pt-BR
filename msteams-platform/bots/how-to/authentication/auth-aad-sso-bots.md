@@ -3,12 +3,12 @@ title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de login ou o serviço de bot do azure com suporte para cartão OAuth.
 keywords: token, token de usuário, suporte a SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
-ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
+ms.openlocfilehash: 8669e00fcfcfb69844c4d63c9e7aa06b47567705
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49935251"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014492"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (single sign-on) para bots
 
@@ -52,7 +52,7 @@ Conclua as seguintes etapas para desenvolver um bot do SSO Teams:
 
 ### <a name="register-your-app-through-the-aad-portal"></a>Registrar seu aplicativo por meio do portal do AAD
 
-As etapas para registrar seu aplicativo por meio do portal do AAD são semelhantes ao [fluxo SSO da guia.](../../../tabs/how-to/authentication/auth-aad-sso.md) Conclua as seguintes etapas para registrar seu aplicativo:
+As etapas para registrar seu aplicativo por meio do portal do AAD são semelhantes ao [fluxo de SSO da guia.](../../../tabs/how-to/authentication/auth-aad-sso.md) Conclua as seguintes etapas para registrar seu aplicativo:
 
 1. Registre um novo aplicativo no [Azure Active Directory – portal de Registros de Aplicativos.](https://go.microsoft.com/fwlink/?linkid=2083908)
 2. Selecione **Novo Registro.** A **página Registrar um aplicativo** é exibida.
@@ -82,7 +82,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
     >
     > Você deve estar ciente das seguintes restrições importantes:
     >
-    > * Somente as permissões da API do Microsoft Graph em nível de usuário, como email, perfil, offline_access e OpenId, são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` `Mail.Read` ou, confira [a solução alternativa recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
+    > * Somente as permissões da API do Microsoft Graph em nível de usuário, como email, perfil, offline_access e OpenId, são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
     > * O nome de domínio do seu aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD.
     > * Atualmente, não há suporte para vários domínios por aplicativo.
     > * Aplicativos que usam `azurewebsites.net` o domínio não são suportados porque é comum e pode ser um risco à segurança.
@@ -91,7 +91,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
 
 Conclua as seguintes etapas para atualizar o portal do Azure com a conexão OAuth:
 
-1. No Portal do Azure, navegue até Registro **de Canais de Bot.**
+1. No Portal do Azure, navegue até **registros de aplicativo.**
 
 2. Vá para **permissões de API.** Selecione **Adicionar uma permissão permissões**  >  **delegadas** do Microsoft Graph e, em  >  seguida, adicione as seguintes permissões da API do Microsoft Graph:
     * User.Read (habilitado por padrão)
@@ -100,18 +100,20 @@ Conclua as seguintes etapas para atualizar o portal do Azure com a conexão OAut
     * OpenId
     * perfil
 
-3. Selecione **Configurações** no painel esquerdo e escolha **Adicionar** Configuração na seção Configurações de Conexão **OAuth.**
+3. No Portal do Azure, navegue até Registro **de Canais de Bot.**
+
+4. Selecione **Configurações** no painel esquerdo e escolha **Adicionar** Configuração na seção Configurações de Conexão **OAuth.**
 
     ![Exibição SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. Execute as seguintes etapas para concluir o formulário **Nova Configuração de** Conexão:
+5. Execute as seguintes etapas para concluir o formulário **Nova Configuração de** Conexão:
 
     >[!NOTE]
     > **A concessão** implícita pode ser necessária no aplicativo AAD.
 
     1. Insira um **nome na** página **Nova Configuração de** Conexão. Esse é o nome que é referenciado dentro das configurações do seu código de serviço de bot na etapa *5* do Bot SSO em [tempo de execução.](#bot-sso-at-runtime)
     2. Na lista **drop-down** do Provedor de Serviços, selecione **Azure Active Directory v2**.
-    3. Insira as credenciais do cliente, como **id do** cliente e **segredo do cliente** para o aplicativo AAD.
+    3. Insira as credenciais do cliente, como **id do cliente** e **segredo do cliente** para o aplicativo AAD.
     4. Para a **URL do Exchange de token,** use o valor de escopo definido em Atualizar seu manifesto de aplicativo do Teams para seu [bot.](#update-your-teams-application-manifest-for-your-bot) A URL do Exchange de token indica ao SDK que esse aplicativo AAD está configurado para SSO.
     5. Na caixa **ID de locatário,** insira *comum*.
     6. Adicione todos os **Escopos configurados** ao especificar permissões para APIs downstream para seu aplicativo AAD. Com a ID do cliente e o segredo do cliente fornecidos, o armazenamento de token troca o token por um token de gráfico com permissões definidas.
@@ -149,7 +151,7 @@ Se o aplicativo contiver um bot e uma guia, use o código a seguir para adiciona
 
 #### <a name="request-a-bot-token"></a>Solicitar um token de bot
 
-A solicitação para obter o token é uma solicitação de mensagem POST normal usando o esquema de mensagens existente. Ele está incluído nos anexos de um OAuthCard. O esquema para a classe OAuthCard é definido no [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é semelhante a um cartão de login. O Teams trata essa solicitação como uma aquisição de token silencioso `TokenExchangeResource` se a propriedade estiver preenchida no cartão. Para o canal do Teams, apenas a propriedade, que `Id` identifica exclusivamente uma solicitação de token, é aumenteda.
+A solicitação para obter o token é uma solicitação de mensagem POST normal usando o esquema de mensagem existente. Ele está incluído nos anexos de um OAuthCard. O esquema para a classe OAuthCard é definido no [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) e é semelhante a um cartão de login. O Teams trata essa solicitação como uma aquisição de token silencioso `TokenExchangeResource` se a propriedade estiver preenchida no cartão. Para o canal do Teams, apenas a propriedade, que `Id` identifica exclusivamente uma solicitação de token, é aumenteda.
 
 >[!NOTE]
 > O Microsoft Bot Framework ou o Microsoft Bot Framework `OAuthPrompt` `MultiProviderAuthDialog` tem suporte para autenticação SSO.
@@ -160,7 +162,7 @@ Se o usuário estiver usando o aplicativo pela primeira vez e o consentimento do
 
 Quando o usuário seleciona **Continuar,** ocorrem os seguintes eventos:
 
-* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` . Por exemplo, se você quiser trocar o token por recursos gráficos.
+* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` . Por exemplo, se você quiser trocar o token por recursos de gráfico.
 
 * Se o bot não estiver fornecendo um botão de logon no cartão OAuth, o consentimento do usuário será necessário para um conjunto mínimo de permissões. Esse token é útil para autenticação básica e para obter o endereço de email do usuário.
 

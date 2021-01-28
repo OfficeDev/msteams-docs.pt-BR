@@ -1,17 +1,18 @@
 ---
-title: Formatos de mídia compatíveis com bots
-description: Os bots no Microsoft Teams só dão suporte aos seguintes formatos de mídia para conteúdo de áudio e vídeo.
-keywords: formatos de mídia dos bots do teams
-ms.openlocfilehash: c4382400529f1e9850aaa9f8c077649458a85796
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Formatos de mídia com suporte para bots
+description: Os bots no Microsoft Teams são compatíveis apenas com os seguintes formatos de mídia para conteúdo de áudio e vídeo.
+ms.topic: reference
+keywords: formatos de mídia de bots do teams
+ms.openlocfilehash: 1f6fe7abf33ae9b831a2c7a5315be3161ac6952d
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672481"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014345"
 ---
-# <a name="supported-media-formats-for-bots"></a>Formatos de mídia compatíveis com bots
+# <a name="supported-media-formats-for-bots"></a>Formatos de mídia com suporte para bots
 
-Os bots no Microsoft Teams só dão suporte aos seguintes formatos de mídia para conteúdo de áudio e vídeo.
+Os bots no Microsoft Teams são compatíveis apenas com os seguintes formatos de mídia para conteúdo de áudio e vídeo.
 
 | Formatar | Mais informações |
 | --- | --- |

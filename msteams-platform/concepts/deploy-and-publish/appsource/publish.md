@@ -1,14 +1,14 @@
 ---
-title: Diretrizes do processo de envio de aprovação de aplicativos do Microsoft Teams
+title: Noções básicas sobre o processo de envio da loja do Teams
 description: Descreve o processo de envio de aprovação para publicar seu aplicativo na loja de aplicativos do Microsoft Teams
-ms.topic: conceptual
+ms.topic: overview
 keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible app submission
-ms.openlocfilehash: 3dac91e8591edec597f6435fdc2bab989820661a
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: d2dc624c6dd13896397041c5c69ce5c5eb471a5b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886748"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014408"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar seu aplicativo para o AppSource
 
@@ -29,7 +29,7 @@ Disponibilizar seu aplicativo no catálogo de aplicativos do Microsoft Teams e n
 >[!NOTE]
 >
 >- Seu aplicativo teams deve ser responsivo para dispositivos móveis e estar em conformidade com nenhum requisito [de](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) venda em sistema operacional móvel (iOS e Android). 
->- Se seu aplicativo teams contém um bot, você deve estar em conformidade com o Código de Conduta da Estrutura [do Desenvolvedor de Bot.](https://aka.ms/bf-conduct)
+>- Se seu aplicativo Teams contiver um bot, você deverá estar em conformidade com o Código de Conduta da Estrutura [do Desenvolvedor de Bot.](https://aka.ms/bf-conduct)
 >- Se seu aplicativo contiver um Conector do Office 365, termos adicionais poderão ser aplicados. Consulte [o Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard) e o Contrato de Desenvolvedor de [Aplicativos.](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)
 >- Para disponibilizar seu aplicativo para usuários do Government Community Cloud (GCC) e evitar listagens de aplicativos duplicadas na loja, o processo ou fluxo de autenticação deve identificar e rotear o usuário para a URL de conteúdo especificada ou esperada para usuários GCC.
 
@@ -54,7 +54,7 @@ Abra um [tíquete de suporte do Partner Center](https://partner.microsoft.com/su
 
 ## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Onde posso obter suporte para meus problemas de conta do Partner Center?
 
-Visite a [página de suporte de editores](https://aka.ms/marketplacepublishersupport) para pesquisar o tópico do problema e encontrar orientações. Se a orientação fornecida não for útil, aumente um tíquete [de suporte do Partner Center.](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)
+Visite a [página de suporte de editores](https://aka.ms/marketplacepublishersupport) para pesquisar o tópico do problema e encontrar orientações. Se as orientações fornecidas não são úteis, eleva um tíquete [de suporte do Partner Center.](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)
 
 ## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>Como faço para gerenciar minha conta da Office Store no Partner Center?
 
@@ -70,13 +70,13 @@ Visite a [página Gerenciar configurações de conta e informações de](/window
 
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Por que eu recebo a mensagem "Esta conta não é qualificada para publicação", quando tento enviar meu complemento por meio do Partner Center?
 
-Você recebe a mensagem de erro acima quando o [status de verificação da conta](/partner-center/verification-responses) está pendente. Verifique o status de verificação da sua conta no painel  [do](https://partner.microsoft.com/dashboard)Partner Center. Select **Settings**, the gear icon in the upper-right corner of the page header shell. Escolha **Configurações da conta de desenvolvedor**  =>     =>  **Configurações da conta.**
+Você recebe a mensagem de erro acima quando o [status de verificação da conta](/partner-center/verification-responses) está pendente. Verifique o status de verificação da sua conta no painel  [do](https://partner.microsoft.com/dashboard)Partner Center. Select **Settings**, the gear icon in the upper-right corner of the page header shell. Escolha **Configurações de desenvolvedor**  =>  **Configurações da** conta de   =>  **conta.**
 
 ![Página de configurações da conta do Partner Center](../../../assets/images/partner-center-accts-page.png)
 
 ![Status de verificação do Partner Center](../../../assets/images/partner-center-verification-status.png)
 
-O status de cada etapa necessária, como Propriedade do **Email,** Verificação de Emprego e Verificação de **Negócios,** é exibido no processo de verificação da conta. Após a conclusão do processo de verificação, o status de verificação do registro na página de perfil muda de *pendente* para *autorizado.* As etapas do processo não são mais exibidas.
+O status de cada etapa necessária, como Propriedade do **Email,** Verificação de Emprego e Verificação de **Negócios,** são exibidos no processo de verificação da conta. Após a conclusão do processo de verificação, o status de verificação do registro na página de perfil muda de *pendente* para *autorizado.* As etapas do processo não são mais exibidas.
 
 ![Erro de verificação do Partner Center](../../../assets/images/partner-center-acct-verification-error.png)
 
@@ -88,7 +88,7 @@ Após a conclusão do processo de verificação, o status de verificação do re
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-the-partner-center-how-should-i-proceed"></a>O status de verificação da minha conta não avançou além da Propriedade de Email no Partner Center. Como devo prosseguir?
 
-Durante o **processo de verificação de propriedade** de email, um email de verificação é enviado para o endereço de email de contato principal. Verifique sua caixa de entrada de contato principal para ver um email da **maccount@<span>microsoft.com</span>com** a linha de assunto Ação necessária: verifique sua conta de *email com a Microsoft.* Conclua o processo de verificação de email. O email de verificação é enviado para o endereço de email listado na página de configurações da sua conta no Partner Center.
+Durante o **processo de verificação de propriedade** de email, um email de verificação é enviado para o endereço de email principal do contato. Verifique sua caixa de entrada de contato principal para ver um email da **maccount@<span>microsoft.com</span>com** a linha de assunto Ação necessária: verifique sua conta de *email com a Microsoft.* Conclua o processo de verificação de email. O email de verificação é enviado para o endereço de email listado na página de configurações da sua conta no Partner Center.
 
 > [!NOTE]
 > * O link de verificação de email só é válido por sete dias. 
@@ -97,7 +97,7 @@ Durante o **processo de verificação de propriedade** de email, um email de ver
 
 ## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a>Como obter mais suporte para problemas relacionados à minha conta?
 
-Visite a [página Suporte do Marketplace Comercial](/azure/marketplace/partner-center-portal/support) no Partner Center para obter orientações e etapas para criar um tíquete de suporte.
+Visite a [página Suporte para o programa Marketplace Comercial](/azure/marketplace/partner-center-portal/support) no Partner Center para obter orientações e etapas para criar um tíquete de suporte.
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what-must-i-do-next"></a>Eu tenho verificado minhas pastas de email e não recebi o email de verificação. O que devo fazer em seguida?
 
@@ -138,11 +138,11 @@ Envie um email para **<teamsubm@microsoft.com>** ele com os seguintes detalhes:
 
 | Categoria do Teams       | Categorias de computador  |
 |:---------------------|:---------------|
-| Análise e BI | Análise, visualização de dados e BI |
+| Análise e BI | Análise, Visualização de Dados e BI |
 | Desenvolvedor e IT | Ferramentas de Desenvolvedor, Administrador de IT |
 | Educação | Educação |
 | Recursos humanos | Recursos humanos e recrutação |
-| Produtividade | Gerenciamento de conteúdo, arquivos e documentos, produtividade, treinamento e tutoriais e utilitários |
+| Produtividade | Gerenciamento de conteúdo, arquivos e documentos, produtividade, treinamentos e tutoriais e utilitários |
 | Gerenciamento de projeto | Comunicação, Gerenciamento de Projetos, Fluxo de Trabalho e Gerenciamento de Negócios |
 | Vendas e suporte | Gerenciamento de Clientes e Contatos, Suporte ao Cliente, Gerenciamento Financeiro, Vendas e Marketing |
 | Social e divertido | Galerias de imagens e vídeo, estilo de vida, notícias e clima, social, viagens e navegação |
