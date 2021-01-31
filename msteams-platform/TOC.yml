@@ -28,7 +28,7 @@
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Criar um aplicativo usando o Node.js
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Criar um aplicativo usando o gerador do Yeoman
+    - name: Criar um aplicativo usando o gerador Yeoman
       href: tutorials/get-started-yeoman.md
     - name: Exemplos de bot
       items:
@@ -230,6 +230,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
     - name: Obter contexto para o bot
       href: bots/how-to/get-teams-context.md
+    - name: Enviar e receber arquivos
+      href: bots/how-to/bots-filesv4.md
     - name: Manipulação de taxa de bot limitado
       href: bots/how-to/rate-limit.md
     - name: Bots de chamadas e reuniões
