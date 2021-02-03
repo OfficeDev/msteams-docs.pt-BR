@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões de equipes
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api
-ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 7f6d8fec735aa21033c6bcb2462c20458634f10a
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797761"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073093"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -30,7 +30,7 @@ ms.locfileid: "49797761"
 
 ## <a name="meeting-apps-api-reference"></a>Referência da API de aplicativos de reunião
 
-|API|Descrição|Solicitação|Origem|
+|API|Descrição|Solicitação|Source|
 |---|---|----|---|
 |**GetUserContext**| Obter informações contextuais para exibir conteúdo relevante em uma guia do Teams. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|SDK do cliente Microsoft Teams|
 |**GetParticipant**|Essa API permite que um bot busque informações de um participante por ID da reunião e ID do participante.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -256,7 +256,7 @@ Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativ
 
 ### <a name="context-property"></a>Propriedade Context
 
-A guia e as propriedades funcionam em harmonia para permitir que você `context` determine onde deseja que seu aplicativo `scopes` apareça. As guias no `team` escopo ou no escopo podem ter mais de um `groupchat` contexto. Os valores possíveis para a propriedade de contexto são:
+A guia e as propriedades funcionam em harmonia para permitir que você `context` determine onde deseja que seu aplicativo `scopes` apareça. As guias no escopo `team` ou no escopo podem ter mais de um `groupchat` contexto. Os valores possíveis para a propriedade de contexto são:
 
 * **channelTab**: uma guia no header de um canal de equipe.
 * **privateChatTab**: uma guia no header de um chat de grupo entre um conjunto de usuários que não estão no contexto de uma equipe ou reunião.
@@ -276,11 +276,11 @@ A guia e as propriedades funcionam em harmonia para permitir que você `context`
 
 ### <a name="before-a-meeting"></a>Antes de uma reunião
 
-Os usuários com funções de organizador e/ou apresentador adicionam guias a uma reunião usando o botão mais ➕ nas páginas de detalhes de **chat** **e reunião.** Extensões de mensagens são adicionadas por meio do menu de reellipses/estouro &#x25CF;&#x25CF;&#x25CF; localizado abaixo da área de mensagem de redação no chat. Bots são adicionados a um chat de reunião usando a **@** tecla " " e **selecionando Obter bots**.
+Usuários com funções de organizador e/ou apresentador adicionam guias a uma reunião usando o botão mais ➕ nas páginas de detalhes de **chat** **e reunião.** Extensões de mensagens são adicionadas por meio do menu de reellipses/estouro &#x25CF;&#x25CF;&#x25CF; localizado abaixo da área de mensagem de redação no chat. Os bots são adicionados a um chat de reunião usando a **@** tecla " " e selecionando Obter **bots**.
 
-✔ A identidade do *usuário deve ser* confirmada por meio do [SSO das guias.](../tabs/how-to/authentication/auth-aad-sso.md) Após essa autenticação, o aplicativo pode recuperar a função de usuário por meio da API GetParticipant.
+✔ A identidade do *usuário deve* ser confirmada por meio das guias [SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após essa autenticação, o aplicativo pode recuperar a função de usuário por meio da API GetParticipant.
 
- ✔ Com base na função de usuário, o aplicativo agora terá a capacidade de apresentar experiências específicas da função. Por exemplo, um aplicativo de sondagem pode permitir que apenas organizadores e apresentadores criem uma nova sondagem.
+ ✔ Com base na função de usuário, o aplicativo agora terá a capacidade de apresentar experiências específicas da função. Por exemplo, um aplicativo de sondagem pode permitir que apenas organizadores e apresentadores criem uma nova votação.
 
 > **OBSERVAÇÃO:** as atribuições de função podem ser alteradas enquanto uma reunião está em andamento.  *Confira* [Funções em uma reunião do Teams.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019) 
 
@@ -290,7 +290,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ no manifesto do aplicativo, adicione **sidePanel** à matriz **de contexto** conforme descrito acima.
 
-✔ Na reunião, bem como em todos os cenários, o aplicativo será renderizado em uma guia na reunião que tem 320px de largura. Sua guia deve ser otimizada para isso. *See*, [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+✔ Na reunião, bem como em todos os cenários, o aplicativo será renderizado em uma guia na reunião que tem 320px de largura. Sua guia deve ser otimizada para isso. *Consulte*, [interface FrameContext](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 )
 
 ✔Referir ao [SDK](../tabs/how-to/access-teams-context.md#user-context) do Teams para usar a API **userContext** para encaminhar solicitações de acordo.
@@ -307,7 +307,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 
 ✔ Confira o fluxo [de autenticação do Teams para guias.](../tabs/how-to/authentication/auth-flow-tab.md)
 
-✔ Usar a API [de](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) notificação para sinalizar que uma notificação de bolha precisa ser disparada.
+✔ Usar a [API NotificationSignal](create-apps-for-teams-meetings.md#notificationsignal-api) para sinalizar que uma notificação de bolha precisa ser disparada.
 
 ✔ Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser apresentado está hospedado.
 
@@ -317,7 +317,7 @@ Os usuários com funções de organizador e/ou apresentador adicionam guias a um
 >
 > * Essas notificações são persistentes na natureza. Você deve invocar [**a função submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no modo de exibição da Web. Esse é um requisito para envio de aplicativo. *Consulte também*, [SDK do Teams: módulo de tarefa.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
 >
-> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga da solicitação de invocação inicial deverá depender dos metadados de solicitação (ID do usuário) no objeto, não nos metadados de solicitação (ID do usuário) do `from.id` `from` `from.aadObjectId` Azure Active Directory. *See* [Using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and Create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga da solicitação de invocação inicial deverá depender dos metadados de solicitação (ID do usuário) no objeto, não nos metadados de solicitação (ID do usuário) do `from.id` `from` `from.aadObjectId` Azure Active Directory. *Consulte* [Usando módulos de tarefa em guias e](../task-modules-and-cards/task-modules/task-modules-tabs.md) Criar e enviar o módulo de [tarefa.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 
