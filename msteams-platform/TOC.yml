@@ -20,9 +20,9 @@
       href: build-your-first-app/build-bot.md
     - name: Criar uma extensão de mensagens
       href: build-your-first-app/build-messaging-extension.md
-- name: Tutoriais e exemplos
+- name: Amostras de códigos e tutoriais
   items:
-    - name: Visão Geral
+    - name: Tutoriais
       href: tutorials/code-samples.md
     - name: Criar um aplicativo usando C#
       href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Criar um aplicativo usando o gerador Yeoman
       href: tutorials/get-started-yeoman.md
-    - name: Exemplos de bot
-      items:
-        - name: Chatbot com C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot com Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: Chatbot com Python (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: Exemplos de extensão de mensagem
-      items:
-        - name: Comandos de ação com o C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Comandos de ação com Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Comandos de pesquisa com with C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Comandos de pesquisa com with Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: Exemplos de código
+      href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Aplicativos básicos
   items:
     - name: Recursos do aplicativo Teams
