@@ -3,12 +3,12 @@ title: Lista de verificação de envio da Loja
 description: A lista de verificação a ser usada antes de publicar seu aplicativo Microsoft Teams no AppSource
 ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 02490d7a020b8887589c65840a0abe597887527f
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014212"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093933"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar-se para o envio do AppSource  
 
@@ -37,7 +37,7 @@ A ferramenta de validação de aplicativo consiste em um [validador de aplicativ
 >
 > * [**Home page do Validador de Aplicativo**](https://dev.teams.microsoft.com/appvalidation.html)
 > * [**Kit de ferramentas do Visual Studio Code do Teams**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Validador de aplicativo do Teams
 
@@ -89,7 +89,7 @@ Inclua o seguinte:
 
 * **Contas de teste.** Uma conta de teste será necessária se seu aplicativo permitir apenas contas licenciadas ou lista segura do back-end. Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração em equipe.
 
-* **Etapas de integração.** Se a pré-configuração feita por um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas configuradas de administrador e não administrador para validação. Observação: você pode se inscrever para uma assinatura do Programa para Desenvolvedores do [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Ele é *gratuito por* 90 dias e será renovado continuamente, desde que você o esteja usando para atividades de desenvolvimento.
+* **Etapas de integração.** Se a pré-configuração de um administrador de locatários for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas de administrador e não administrador configuradas para validação. Observação: você pode se inscrever para uma assinatura do [Programa para Desenvolvedores do Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Ele é gratuito *por* 90 dias e será renovado continuamente, desde que você o esteja usando para atividades de desenvolvimento.
 
 * **Observações sobre os recursos do aplicativo no Teams:** detalhe todos os recursos que o aplicativo oferece no Teams e as etapas para testar cada recurso.
 

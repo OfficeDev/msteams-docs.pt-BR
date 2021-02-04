@@ -3,12 +3,12 @@ title: Guias em dispositivos móveis
 description: Descreve as diretrizes para a criação de guias que funcionam em dispositivos móveis.
 ms.topic: conceptual
 keywords: diretrizes de design de equipes guias móveis de estrutura de referência de aplicativos pessoais
-ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 70ff46e446b146b134f34830e8867133cbeeca14
+ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014170"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093285"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -61,7 +61,7 @@ As listas são ótimas para classificar e filtrar grandes quantidades de dados e
 
 Grades são úteis para mostrar elementos que são altamente visuais. Ele ajuda a incluir um filtro ou controle de pesquisa na parte superior.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Imagem mostrando uma guia móvel do Teams com um layout de grade." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Ilustração mostrando uma guia móvel do Teams com um layout de grade." border="false":::
 
 ### <a name="tabs-with-bots-on-mobile"></a>Guias com bots em dispositivos móveis
 
@@ -136,3 +136,6 @@ Para que a autenticação funcione em clientes móveis, você deve atualizar o S
 ### <a name="low-bandwidth-and-intermittent-connections"></a>Baixa largura de banda e conexões intermitentes
 
 Clientes móveis precisam funcionar regularmente com baixa largura de banda e conexões intermitentes. Seu aplicativo deve lidar com os tempos-tempos de forma adequada, fornecendo uma mensagem contextual para o usuário. Você também deve ter indicadores de progresso do usuário para fornecer comentários aos usuários sobre processos de longa duração.
+
+> [!NOTE]
+> As guias são habilitadas no celular somente depois que o aplicativo é adicionado a uma lista de autorização, com base na entrada da equipe de aprovação. Para verificar a capacidade de resposta móvel, entre em contato com teamsubm@microsoft.com. 

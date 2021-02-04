@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
-ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
+ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50072886"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093961"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativo para o Microsoft Teams
 
@@ -21,11 +21,17 @@ Modelos de aplicativos são aplicativos prontos para produção para o Microsoft
 ### <a name="key-benefits"></a>Principais benefícios
 
 * **Experiência de plug and play:** Todos os modelos de aplicativo incluem scripts de implantações que permitirão que você hospede todos os serviços necessários no Microsoft Azure. Nenhuma codificação é necessária para implantar os aplicativos.
-* **Código pronto para produção:** Os modelos de aplicativos estão em conformidade com as práticas recomendadas de segurança e infraestrutura, e todas as alterações enviadas pela comunidade são revisadas para garantir a conformidade contínua.
+* **Código pronto para produção:** Os modelos de aplicativos estão em conformidade com as práticas recomendadas de segurança e infraestrutura, e todas as alterações enviadas à comunidade são revisadas para garantir a conformidade contínua.
 * **Personalizável e extensível:** Enquanto todos os modelos de aplicativos estão prontos para implantação como estão, fornecemos toda a base de código e scripts de implantação para que você possa personalizá-los ou estendizá-los facilmente de acordo com suas necessidades exclusivas.
 * **Documentação detalhada & suporte:** Todos os modelos de aplicativo são acompanhados pela documentação de ponta a ponta sobre as etapas de arquitetura, implantação e configuração da solução. Os repositórios também são monitorados, portanto, informe todos os problemas encontrados a fim de emitir um problema no GitHub.
 
-## <a name="appointment-manager-9734"></a>Gerenciador de Compromissos &#9734;
+## <a name="adoption-bot-9734"></a>Adoção de bots &#9734;
+
+Bot de adoção é um bot de chat com cuidado do usuário criado com o Power Virtual Agent para Teams (PVA). Ele pode ser considerado como a versão PVA do FAQPlus. O Bot de Adoção responde mais de 100 perguntas comuns sobre o Microsoft 365 e o Teams. Você pode editar os tópicos incluídos, adicionar seus próprios tópicos e ingerir perguntas frequentes existentes. Se os usuários precisam de ajuda adicional, o Bot de Adoção pode conectá-los a especialistas ou até mesmo ser estendido para abrir tíquetes de serviço com conectores de fluxo premium.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
+
+## <a name="appointment-manager-9734"></a>Gerenciador de compromissos &#9734;
 
 O Gerenciador de Compromissos é um modelo de aplicativo do Teams para ajudar as empresas a criar, gerenciar e conduzir compromissos virtuais com os consumidores por meio do Teams. As novas solicitações de compromissos dos consumidores são visíveis nos canais do Teams, onde eles podem ser atribuídos e reatribuídos rapidamente aos funcionários de uma equipe. As solicitações de compromisso podem ser visualizadas em níveis de equipe ou pessoal por meio de guias personalizadas. Cada compromisso é associado a uma reunião online do Teams, por isso, os funcionários e os consumidores podem facilmente ingressar na reunião no horário agendado.
 
@@ -38,13 +44,13 @@ O modelo de aplicativo se integra ao Microsoft Bookings para facilitar o gerenci
 
 ## <a name="ask-away"></a>Pergunte-se
 
-Ask Away é um [bot do Microsoft Teams](../bots/what-are-bots.md) que permite que os usuários conduzam sessões de perguntas&A (pergunta e resposta) no Teams. Usando o bot Pergunte-se, os membros da equipe podem enviar e votações compartilhadas por colegas, permitindo que os hosts de Q&A reúnam facilmente perguntas mais importantes em um canal ou chat. O bot pode ser usado para conduzir uma sessão de perguntas e&A em tempo real em uma reunião do Teams e permite que os participantes enviem perguntas ao vivo por meio de chat.
+Ask Away é um [bot do Microsoft Teams](../bots/what-are-bots.md) que permite que os usuários conduzam sessões de perguntas&A (pergunta e resposta) no Teams. Usando o bot Pergunte-se, os membros da equipe podem enviar e votações compartilhadas por colegas, permitindo que os hosts de P&e R reúnam facilmente perguntas mais importantes em um canal ou chat. O bot pode ser usado para conduzir perguntas e respostas em tempo real&Uma sessão em uma reunião do Teams e permite que os participantes enviem perguntas ao vivo por meio de chat.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
 
 :::row:::
   :::column span="2":::
-    ![Exibição da caixa de diálogo pop-up de placar de líderes para que os usuários votem em perguntas](../assets/images/ask-away-app.png)  
+    ![View of the leaderboard pop-up dialog for users to vote on questions](../assets/images/ask-away-app.png)  
 :::column-end:::
 :::row-end:::
 
@@ -71,7 +77,7 @@ O aplicativo Presença é uma [guia do Power Apps](/powerapps/maker/canvas-apps/
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
-![Demonstração do aplicativo de presença](../assets/images/attendance-app.png)
+![Demonstração do aplicativo de participação](../assets/images/attendance-app.png)
 
 ## <a name="book-a-room"></a>Book-a-room
 
@@ -83,7 +89,7 @@ Book-a-room é um bot do [Microsoft Teams](../bots/what-are-bots.md) que permite
 
 ## <a name="building-access"></a>Acesso à construção
 
-O Building Access é um aplicativo baseado no Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)que oferece suporte à administração da criação de limites de acumulação e normas de distanciamento social, permitindo que os diretores de instalações gerenciem, rastreiem e reportem a presença de funcionários no local. O aplicativo, criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview)e o [Power Automate,](/power-automate/getting-started)integra-se profundamente ao Microsoft Teams e permite que as organizações determinem a preparação da construção, estabeleçam critérios de qualificação para o acesso local e reúnam ideias para planejamento futuro.
+O Building Access é um aplicativo baseado no Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)que oferece suporte à administração da criação de limites de acumulação e de padrões de distanciamento social, permitindo que os diretores de instalações gerenciem, rastreiem e reportem a presença de funcionários no local. O aplicativo, criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview)e o [Power Automate,](/power-automate/getting-started)integra-se profundamente ao Microsoft Teams e permite que as organizações determinem a preparação da construção, estabeleçam critérios de qualificação para o acesso local e reúnam ideias para planejamento futuro.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
@@ -116,7 +122,7 @@ A lista de verificação é um aplicativo de extensão de mensagens personalizad
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Lista de drop-ins da sala de &#9734;
+## <a name="classroom-drop-in-9734"></a>Drop-in classroom &#9734;
 
 O Drop-in sala de aula é um aplicativo baseado na Plataforma do Microsoft [Power Que](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)permite que os líderes do sistema encontrem equipes de classe (salas de aula virtuais) e adicionem a si mesmos ou outras pessoas a essas equipes de classe por um período de lista de participantes especificado, conforme necessário. O aplicativo criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview) e o [Power Automate](/power-automate/getting-started)se integra profundamente ao Microsoft Teams para garantir que as instituições educacionais possam otimizar suas operações em um ambiente de aprendizado híbrido, fornecendo acesso a participantes relevantes para equipes de classe de acordo com os requisitos de negócios.
 
@@ -126,7 +132,7 @@ O Drop-in sala de aula é um aplicativo baseado na Plataforma do Microsoft [Powe
 
 ## <a name="company-communicator"></a>Communicator da empresa
 
-O aplicativo Communicator da empresa permite que as equipes corporativas criem e enviem mensagens destinadas a várias equipes ou a um grande número de funcionários por chat, permitindo que a organização alcance os funcionários exatamente onde eles colaboram. Utilize esse modelo para vários cenários, como novos anúncios de iniciativa, integração de funcionários, aprendizado e desenvolvimento modernos ou transmissões em toda a organização.
+O aplicativo Communicator da Empresa permite que as equipes corporativas criem e enviem mensagens destinadas a várias equipes ou a um grande número de funcionários por chat, permitindo que a organização alcance os funcionários exatamente onde eles colaboram. Utilize esse modelo para vários cenários, como novos anúncios de iniciativa, integração de funcionários, aprendizado e desenvolvimento modernos ou transmissões em toda a organização.
 
 O aplicativo fornece uma interface fácil para os usuários designados criarem, visualizarem, colaborarem e enviarem mensagens.
 
@@ -187,7 +193,7 @@ Os usuários do Teams também podem realizar as seguintes atividades:
 * Configure um formulário de envio padrão que os funcionários precisem enviar para cada ideia. 
 * Revise e gerencie as ideias e a lista de campanhas.
 * Modificar e excluir campanhas.
-* Revise os líderes de ideias.
+* Revise os placares de líderes de ideias.
 * Vote e compartilhe ideias priorizadas.
 * Envie ideias para uma campanha.
 * Exibir a ideia de outro membro da equipe.
@@ -254,7 +260,7 @@ O Expert Finder é um [bot do Microsoft Teams](../bots/what-are-bots.md) que ide
 
 ## <a name="faq-plus"></a>Perguntas Frequentes Plus
 
-Os bots de P e&conversa são uma maneira fácil de fornecer respostas a perguntas frequentes dos usuários. No entanto, a maioria dos bots falha ao interagir com os usuários de maneira significativa porque não há humanos no loop quando o bot falha. O bot de perguntas frequentes é&um bot que traz uma pessoa ao loop quando não consegue ajudar. É possível fazer uma pergunta ao bot e o bot responderá com uma resposta se ele estiver contido na base de dados de conhecimento. Caso não seja, o bot permite que o usuário envie uma consulta que, em seguida, é postada para uma equipe pré-configurada de especialistas que ajudam a fornecer suporte agindo sobre as notificações de dentro da própria equipe.
+Os bots de P e&conversa são uma maneira fácil de fornecer respostas a perguntas frequentes feita pelos usuários. No entanto, a maioria dos bots falha ao interagir com os usuários de maneira significativa porque não há humanos no loop quando o bot falha. O bot de perguntas frequentes é&um bot que traz uma pessoa ao loop quando não consegue ajudar. É possível fazer uma pergunta ao bot e o bot responderá com uma resposta se ele estiver contido na base de dados de conhecimento. Caso não seja, o bot permite que o usuário envie uma consulta que, em seguida, é postada para uma equipe pré-configurada de especialistas que ajudam a fornecer suporte agindo sobre as notificações de dentro da própria equipe.
 
 > [!NOTE]
 > A versão mais recente do **FaQ Plus** oferece suporte a resoluções de perguntas e&A aprimoradas, permitindo que uma equipe de especialistas conclua o seguinte:
@@ -273,7 +279,7 @@ Os bots de P e&conversa são uma maneira fácil de fornecer respostas a pergunta
 
 ## <a name="goal-tracker"></a>Goal Tracker
 
-O aplicativo Goal Tracker é uma solução abrangente para sua organização dar suporte ao estabelecimento de metas, observar o progresso e confirmar o sucesso no Microsoft Teams. O aplicativo permite aos usuários definir, acompanhar e atualizar objetivos em nível profissional, pessoal e de equipe. Os membros da equipe também recebem lembretes e atualizações de status em tempo há tempo para permanecerem focados e se manterem no controle.
+O aplicativo Goal Tracker é uma solução abrangente para sua organização dar suporte ao estabelecimento de metas, observar o progresso e confirmar o sucesso no Microsoft Teams. O aplicativo permite aos usuários definir, acompanhar e atualizar objetivos em nível profissional, pessoal e de equipe. Os membros da equipe também recebem lembretes e atualizações de status o mais rápido possível para permanecerem focados e se manterem no controle.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
 
@@ -307,7 +313,7 @@ O aplicativo Great Ideas dá suporte e capacita a inovação e a criatividade em
 
 ## <a name="group-activities"></a>Atividades de grupo
 
-Atividades em grupo é um aplicativo do Microsoft Teams que torna mais fácil para os proprietários de equipe criar rapidamente grupos de atividades e gerenciar fluxos de trabalho de colaboração dentro do contexto do Microsoft Teams. Os autores de atividades são habilitados para criar atividades, distribuir aleatoriamente membros da equipe em grupos e, opcionalmente, fazer com que o bot envie lembretes até que as atividades sejam concluídas.
+Atividades de grupo é um aplicativo do Microsoft Teams que torna mais fácil para os proprietários de equipe criar rapidamente grupos de atividades e gerenciar fluxos de trabalho de colaboração dentro do contexto do Microsoft Teams. Os autores de atividades são habilitados para criar atividades, distribuir aleatoriamente membros da equipe em grupos e, opcionalmente, fazer com que o bot envie lembretes até que as atividades sejam concluídas.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
 
@@ -367,7 +373,7 @@ Incentivos é um modelo [do Power Apps](/powerapps/maker/canvas-apps/embed-teams
 
 ## <a name="incident-reporter"></a>Incident Reporter
 
-O Incident Reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  que otimiza o gerenciamento de incidentes em sua organização. O bot facilita a coleta automatizada de dados de incidentes, relatórios de incidentes personalizados, notificações relevantes de participantes e rastreamento de incidentes de ponta a ponta.
+O Incident Reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  que otimiza o gerenciamento de incidentes em sua organização. O bot facilita a coleta automatizada de dados de incidentes, relatórios de incidentes personalizados, notificações relevantes de participantes e controle de incidentes de ponta a ponta.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
@@ -384,7 +390,7 @@ O Incident Reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  qu
 
 ## <a name="inspection-9734"></a>Inspeção &#9734;
 
- A inspeção é um aplicativo do Microsoft Teams que permite que os funcionários de linha de frente inspecionem tudo, desde locais até ativos e equipamentos. Por exemplo, uma loja de varejo, fábrica de manufatura ou veículos e máquinas. Há dois aplicativos nesta solução, cada um destinado a tipos diferentes de usuários.
+ Inspeção é um aplicativo do Microsoft Teams que permite que os funcionários de linha de frente inspecionem tudo, desde locais até ativos e equipamentos. Por exemplo, uma loja de varejo, fábrica de manufatura ou veículos e máquinas. Há dois aplicativos nesta solução, cada um destinado a tipos diferentes de usuários.
 
 O aplicativo permite que os funcionários de linha de frente inspecionem um ativo ou área, gerenciem a qualidade de produtos e serviços ou mantenham a segurança no local de trabalho. Ela facilita a comunicação entre os membros da equipe para resolver problemas encontrados durante a inspeção. O aplicativo fornece relatórios simples para que os gerentes agilizarem a resolução de problemas e realçam as tendências.
 
@@ -399,7 +405,7 @@ O aplicativo Relatório de Problemas capacita os funcionários e gerentes a cria
 
 Os gerentes de equipe usam o aplicativo Gerenciar Problemas para configurar a experiência do aplicativo, incluindo o canal no qual as mensagens do Microsoft Teams e as tarefas do Planner são criadas pelo aplicativo. Os gerentes também usam o aplicativo para criar formulários de modelo para coletar detalhes quando um usuário relata um problema. Por exemplo, revise, edite ou exclua formulários de modelo de problema. O aplicativo também pode ser usado para revisar problemas da equipe, relatar o histórico de problemas e gerenciar com eficiência a resolução de problemas.
 
-Os funcionários usam o aplicativo Relatório de Problemas para registrar problemas e detalhes necessários para resolvê-los. O aplicativo também é usado para modificar e resolver problemas existentes e obter uma visão de alto nível de problemas individuais ou de equipe.
+Os funcionários usam o aplicativo Relatório de Problemas para registrar problemas e detalhes necessários para resolvê-los. O aplicativo também é usado para modificar e resolver problemas existentes e obter uma visão de alto nível de problemas individuais ou da equipe.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
 
@@ -424,7 +430,7 @@ A Integração de Novos Funcionários é uma Solução integrada de Integração
 
 ## <a name="open-badges"></a>Selos abertos
 
-Selos Abertos é um aplicativo do Microsoft Teams que permite que as pessoas ganhem selos de credenciais de aprendizagem digital dentro do contexto do Teams e compartilhem-os em todos os lugares. Usando recursos da autoridade de emissão de selos digitais de terceiros, [Badgr](https://badgr.org/), selos concedidos são gravados no perfil Badgr de um destinatário e disponíveis para criar e compartilhar uma imagem rica de jornadas de aprendizagem do tempo de vida.
+Selos Abertos é um aplicativo do Microsoft Teams que permite que as pessoas ganhem selos de credenciais de aprendizagem digital dentro do contexto do Teams e compartilhem-os em todos os lugares. Usando recursos da autoridade de emissão de selos digitais de terceiros, [Badgr](https://badgr.org/), selos concedidos são registrados no perfil Badgr de um destinatário e disponíveis para criar e compartilhar uma imagem rica de jornadas de aprendizagem do tempo de vida.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
 
@@ -453,7 +459,7 @@ O Poll é um aplicativo de extensão de mensagens personalizado do Microsoft [Te
 
 ## <a name="quick-responses"></a>Respostas rápidas
 
-Respostas Rápidas é um aplicativo do Microsoft Teams que oferece uma solução robusta para responder com eficiência às perguntas frequentes (perguntas frequentes) dos usuários. Em vez de responder cada consulta manualmente e continuamente repetindo informações, o aplicativo criará uma biblioteca de respostas para uma experiência interativa do usuário por meio de extensões de mensagens [do](../messaging-extensions/what-are-messaging-extensions.md)Teams.
+Respostas Rápidas é um aplicativo do Microsoft Teams que oferece uma solução robusta para responder com eficiência às perguntas frequentes (perguntas frequentes) frequentes dos usuários. Em vez de responder cada consulta manualmente e continuamente repetindo informações, o aplicativo criará uma biblioteca de respostas para uma experiência interativa do usuário por meio de extensões de mensagens [do](../messaging-extensions/what-are-messaging-extensions.md)Teams.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -461,7 +467,7 @@ Respostas Rápidas é um aplicativo do Microsoft Teams que oferece uma solução
 
 ## <a name="rapid-assist-9734"></a>Assistência Rápida &#9734;
 
-A Assistência Rápida é um aplicativo baseado no Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) que permite que os associados voltados ao cliente se conectem rapidamente com os especialistas para obter respostas rápidas, pesquisar informações, acompanhar solicitações abertas e permitir que os especialistas recebam notificações para receber rapidamente uma chamada para ajudar a responder perguntas. O aplicativo criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview) e o [Power Automate](/power-automate/getting-started)se integra profundamente ao Microsoft Teams para permitir que as organizações conectem facilmente funcionários de linha de frente com ligações corporativas para resolver consultas de clientes e proporcionar uma excelente experiência ao cliente. 
+A Assistência Rápida é um aplicativo baseado no Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) que permite que os associados voltados ao cliente se conectem rapidamente aos especialistas para obter respostas rápidas, pesquisar informações, acompanhar solicitações abertas e permitir que os especialistas recebam notificações para receber rapidamente uma chamada para ajudar a responder perguntas. O aplicativo criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview) e o [Power Automate](/power-automate/getting-started)se integra profundamente ao Microsoft Teams para permitir que as organizações conectem facilmente funcionários de linha de frente com ligações corporativas para resolver consultas de clientes e proporcionar uma excelente experiência ao cliente. 
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
 
@@ -524,7 +530,7 @@ Request-a-team é um aplicativo do Microsoft Teams que otimiza a criação de no
 
 ## <a name="scrums-for-channels"></a>Scrums para canais
 
-O Scrums for Channels é um aplicativo assistente scrum que permite aos usuários agendar e executar o scrums em canais no Microsoft Teams. O aplicativo é ótimo para equipes remotas e equipes compostas por membros de diferentes locais geográficos e fusos horário para compartilhar atualizações diárias e garantir a participação em reuniões de stand-up do scrum.
+O Scrums for Channels é um aplicativo assistente scrum que permite aos usuários agendar e executar o scrums em canais no Microsoft Teams. O aplicativo é ótimo para equipes remotas e equipes compostas por membros de localidades geográficas e fusos horário variados para compartilhar atualizações diárias e garantir a participação em reuniões de stand-up.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
@@ -593,7 +599,7 @@ A pesquisa é um aplicativo de extensão de mensagens personalizado do Microsoft
 
 ## <a name="virtual-rounding-9734"></a>Arredondamento virtual &#9734;
 
-Os provedores de sala de emergência e hospital fazem dezenas e, muitas vezes, centenas de "rodadas" por dia. Esses check-ins rápidos em pacientes destinam-se a fornecer uma verificação de status sobre como o paciente está se saindo e garantir que as preocupações do paciente sejam tratadas. Embora o arredondamento seja uma prática essencial para garantir que os pacientes sejam monitorados por vários tipos de provedores, eles representam um enorme esvaziamento no PPE, porque para cada visita, de cada provedor, uma nova máscara e um novo conjunto de pacientes devem ser usados. Com esses modelos de aplicativo, os funcionários médicos podem conduzir facilmente rodadas virtualmente, por meio de uma reunião do Microsoft Teams entre o provedor e o paciente.
+Os provedores de sala de emergência e hospital fazem dezenas e, muitas vezes, centenas de "rodadas" por dia. Esses check-ins rápidos em pacientes destinam-se a fornecer uma verificação de status sobre como o paciente está se saindo e garantir que as preocupações do paciente sejam tratadas. Embora o arredondamento seja uma prática essencial para garantir que os pacientes sejam monitorados por vários tipos de provedores, eles representam um enorme esvaziamento no PPE, porque para cada visita, de cada provedor, uma nova máscara e um novo conjunto de pacientes devem ser usados. Com esses modelos de aplicativo, os funcionários médicos podem conduzir facilmente turnos virtualmente, por meio de uma reunião do Microsoft Teams entre o provedor e o paciente.
 
 A solução de Arredondamento Virtual também é referenciada na postagem do blog De Ciências da Vida e Saúde [da](https://aka.ms/teamsvirtualrounding)Microsoft.
 
