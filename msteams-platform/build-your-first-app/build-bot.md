@@ -5,12 +5,12 @@ description: Crie rapidamente um bot do Microsoft Teams usando o Kit de Ferramen
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911944"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140465"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
 
@@ -138,4 +138,4 @@ Se você instalou seu aplicativo, mas o bot não está funcionando, certifique-s
 * Siga nossas [diretrizes de design](../bots/design/bots.md) e crie com modelos de interface do usuário prontos para [produção](../concepts/design/design-teams-app-ui-templates.md) para criar uma experiência perfeita.
 * [Autenticação de bot no Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Criar um bot sem o kit de ferramentas](../bots/how-to/create-a-bot-for-teams.md)
+* [Criar um bot sem o kit de ferramentas](../resources/bot-v3/bots-create.md)
