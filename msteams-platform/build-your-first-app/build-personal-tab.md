@@ -5,12 +5,12 @@ description: Crie rapidamente uma guia pessoal do Microsoft Teams usando o Kit d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911909"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162898"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Criar uma guia pessoal para o Microsoft Teams
 
@@ -47,7 +47,7 @@ No kit de ferramentas, vá para o **App Studio** para exibir e atualizar as conf
 O scaffolding do aplicativo fornece os componentes para renderizar sua guia pessoal no Teams. Há muito com o que você pode trabalhar, mas, por enquanto, você só precisa se concentrar no seguinte:
 
 * `Tab.js` no diretório `src/components` do projeto. Isso é para renderizar sua página de conteúdo de guia.
-* SDK do cliente JavaScript do Microsoft Teams, que vem pré-carregado nos componentes front-end do seu projeto.
+* Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Personalizar a página de conteúdo da guia
 
@@ -98,7 +98,7 @@ Salve suas alterações. Vá até a guia do seu aplicativo no Teams para exibir 
 
 ## <a name="3-update-the-tab-theme"></a>3. Atualizar o tema da guia
 
-Bons aplicativos são nativos para o Teams, portanto, é importante que sua guia se combina com o tema do Teams de sua preferência pelos usuários: padrão (claro), escuro ou alto contraste. Como você deve ter notado na última captura de tela, sua guia ainda tem um plano de fundo claro quando o cliente está usando o tema escuro. Essa não é uma experiência de usuário recomendada.
+Os bons aplicativos são nativos para o Teams, portanto, é importante que sua guia se combina com o tema do Teams de sua preferência pelos usuários: padrão (claro), escuro ou alto contraste. Como você deve ter notado na última captura de tela, sua guia ainda tem um plano de fundo claro quando o cliente está usando o tema escuro. Essa não é uma experiência de usuário recomendada.
 
 O [SDK do cliente JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) do Teams pode fazer com que seu aplicativo saiba e reaja a alterações de tema no cliente. Vamos ver como fazer isso.
 
@@ -122,7 +122,7 @@ componentDidMount(){
 
 Com as propriedades em mãos, seu aplicativo tem uma compreensão sólida do que está acontecendo em `context` torno dele no Teams. Mas o aplicativo ainda não sabe que sua aparência deve refletir qualquer tema que um usuário escolher.
 
-Você precisa de um manipulador para que o estado do seu aplicativo mude com o tema. Insira o manipulador de alterações de tema a seguir imediatamente após a `microsoftTeams.getContext()` chamada.
+Você precisa de um manipulador para que o estado do seu aplicativo mude com o tema. Insira o manipulador de alteração de tema a seguir imediatamente após a `microsoftTeams.getContext()` chamada.
 
 ```JavaScript
   microsoftTeams.registerOnThemeChangeHandler(theme => {
@@ -148,7 +148,7 @@ Na `render()` função, armazene o estado fornecido pelo manipulador de alteraç
 Depois de armazenar o estado fornecido pelo manipulador de alterações de tema, forneça alguma lógica condicional para renderizar os estilos da guia com base no tema atual. O exemplo a seguir mostra uma maneira básica de fazer isso:
 1. Verifique o tema atual em `isTheme` .
 2. Crie um `newTheme` objeto com propriedades CSS relevantes para o tema atual.
-3. Aplicar o CSS ao elemento HTML raiz do conteúdo da guia ( `<div>` ).
+3. Aplicar o CSS ao elemento HTML raiz do conteúdo da guia ( `<div style={newTheme}>` ).
 
 ```JavaScript
 let newTheme
