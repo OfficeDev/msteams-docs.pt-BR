@@ -1,39 +1,44 @@
 ---
-title: Obter contexto para o bot
+title: Obter contexto para seu bot do Microsoft Teams
 description: Descreve como obter contexto para bots no Microsoft Teams
-keywords: contexto de bots do teams
+keywords: contexto de bots do Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 1465e6624b4eaadd73e2d4d9cf87fccedc002e52
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796159"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231545"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a><span data-ttu-id="ac216-104">Obter contexto para o bot do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="ac216-104">Get context for your Microsoft Teams bot</span></span>
+# <a name="get-context-for-your-microsoft-teams-bot"></a><span data-ttu-id="8e6f5-104">Obter contexto para seu bot do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8e6f5-104">Get context for your Microsoft Teams bot</span></span>
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-<span data-ttu-id="ac216-105">Seu bot pode acessar contexto adicional sobre a equipe ou chat, como perfil de usuário.</span><span class="sxs-lookup"><span data-stu-id="ac216-105">Your bot can access additional context about the team or chat, such as user profile.</span></span> <span data-ttu-id="ac216-106">Essas informações podem ser usadas para enriquecer a funcionalidade do seu bot e fornecer uma experiência mais personalizada.</span><span class="sxs-lookup"><span data-stu-id="ac216-106">This information can be used to enrich your bot's functionality and provide a more personalized experience.</span></span>
+<span data-ttu-id="8e6f5-105">Seu bot pode acessar contexto adicional sobre a equipe ou o chat, como o perfil do usuário.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-105">Your bot can access additional context about the team or chat, such as user profile.</span></span> <span data-ttu-id="8e6f5-106">Essas informações podem ser usadas para enriquecer a funcionalidade do bot e proporcionar uma experiência mais personalizada.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-106">This information can be used to enrich your bot's functionality and provide a more personalized experience.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ac216-107">Essas &ndash; APIs de bot específicas do Microsoft Teams são mais bem acessadas por meio de nossas extensões para o SDK do bot Builder.</span><span class="sxs-lookup"><span data-stu-id="ac216-107">These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK.</span></span> <span data-ttu-id="ac216-108">Para o C#/.NET, baixe [o pacote NuGet Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .</span><span class="sxs-lookup"><span data-stu-id="ac216-108">For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.</span></span> <span data-ttu-id="ac216-109">Para o desenvolvimento de Node.js, a funcionalidade do BotBuilder para Microsoft Teams foi incorporada ao [SDK da estrutura de bot](https://github.com/microsoft/botframework-sdk) a partir da v 4.6.</span><span class="sxs-lookup"><span data-stu-id="ac216-109">For Node.js development, the BotBuilder for Microsoft Teams functionality has been incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) as of v4.6.</span></span>
+>
+> * <span data-ttu-id="8e6f5-107">As APIs de bot específicas do Microsoft Teams são melhor acessadas por meio de nossas extensões para o SDK do Construtor de Bots.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-107">Microsoft Teams-specific bot APIs are best accessed through our extensions for the Bot Builder SDK.</span></span>
+> * <span data-ttu-id="8e6f5-108">Para C# ou .NET, baixe nosso [pacote NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-108">For C# or .NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.</span></span>
+> * <span data-ttu-id="8e6f5-109">Para Node.js desenvolvimento, a funcionalidade do Construtor de Bots para Equipes é incorporada ao [SDK](https://github.com/microsoft/botframework-sdk) do Bot Framework v4.6.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-109">For Node.js development, the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.</span></span>
 
-## <a name="fetching-the-team-roster"></a><span data-ttu-id="ac216-110">Buscando a lista de equipes</span><span class="sxs-lookup"><span data-stu-id="ac216-110">Fetching the team roster</span></span>
+## <a name="fetch-the-team-roster"></a><span data-ttu-id="8e6f5-110">Buscar a lista de escalação da equipe</span><span class="sxs-lookup"><span data-stu-id="8e6f5-110">Fetch the team roster</span></span>
 
-<span data-ttu-id="ac216-111">O bot pode consultar a lista de membros da equipe e seus perfis básicos, que inclui as IDs de usuário do Teams e as informações do Azure Active Directory (Azure AD), como nome e objectId.</span><span class="sxs-lookup"><span data-stu-id="ac216-111">Your bot can query for the list of team members and their basic profiles, which includes Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId.</span></span> <span data-ttu-id="ac216-112">Você pode usar essas informações para correlacionar as identidades do usuário; por exemplo, para verificar se um usuário conectado a uma guia por meio de credenciais do Azure AD é um membro da equipe.</span><span class="sxs-lookup"><span data-stu-id="ac216-112">You can use this information to correlate user identities; for example, to check whether a user logged into a tab through Azure AD credentials is a member of the team.</span></span>
+<span data-ttu-id="8e6f5-111">Seu bot pode consultar a lista de membros da equipe e seus perfis básicos.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-111">Your bot can query for the list of team members and their basic profiles.</span></span> <span data-ttu-id="8e6f5-112">Os perfis básicos incluem IDs de usuário do Teams e informações do Azure Active Directory (AAD), como nome e ID de objeto.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-112">The basic profiles include Teams user IDs and Azure Active Directory (AAD) information such as name and object ID.</span></span> <span data-ttu-id="8e6f5-113">Você pode usar essas informações para correlacionar as identidades dos usuários.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-113">You can use this information to correlate user identities.</span></span> <span data-ttu-id="8e6f5-114">Por exemplo, verifique se um usuário conectado a uma guia por meio de credenciais do AAD é um membro da equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-114">For example, check if a user logged into a tab through AAD credentials is a team member.</span></span>
 
-### <a name="rest-api-example"></a><span data-ttu-id="ac216-113">Exemplo de API REST</span><span class="sxs-lookup"><span data-stu-id="ac216-113">REST API example</span></span>
+### <a name="rest-api-example"></a><span data-ttu-id="8e6f5-115">Exemplo de API REST</span><span class="sxs-lookup"><span data-stu-id="8e6f5-115">REST API example</span></span>
 
-<span data-ttu-id="ac216-114">Você pode emitir diretamente uma solicitação GET no [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) , usando o valor de `serviceUrl` como ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="ac216-114">You can directly issue a GET request on [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.</span></span>
+<span data-ttu-id="8e6f5-116">Emitir diretamente uma solicitação GET [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) em , usando o valor como ponto de `serviceUrl` extremidade.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-116">Directly issue a GET request on [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the `serviceUrl` value as the endpoint.</span></span>
 
-<span data-ttu-id="ac216-115">O `teamId` pode ser encontrado no `channeldata` objeto da carga de atividade que seu bot recebe nos seguintes cenários:</span><span class="sxs-lookup"><span data-stu-id="ac216-115">The `teamId` can be found in the `channeldata` object of the activity payload that your bot receives in the following scenarios:</span></span>
-* <span data-ttu-id="ac216-116">Quando um usuário mensagens ou interage com seu bot em um contexto de equipe (consulte [recebendo mensagens](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages))</span><span class="sxs-lookup"><span data-stu-id="ac216-116">When a user messages or interacts with your bot in a team context (see [Receiving Messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages))</span></span>
-* <span data-ttu-id="ac216-117">Quando um novo usuário ou bot é adicionado a uma equipe (consulte [bot ou User Added to a Team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team))</span><span class="sxs-lookup"><span data-stu-id="ac216-117">When a new user or bot is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team))</span></span>
+<span data-ttu-id="8e6f5-117">Pode ser encontrado no objeto da carga de atividade que seu `teamId` bot recebe nos seguintes `channeldata` cenários:</span><span class="sxs-lookup"><span data-stu-id="8e6f5-117">The `teamId` can be found in the `channeldata` object of the activity payload that your bot receives in the following scenarios:</span></span>
+
+* <span data-ttu-id="8e6f5-118">Quando um usuário mensagens ou interage com seu bot em um contexto de equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-118">When a user messages or interacts with your bot in a team context.</span></span> <span data-ttu-id="8e6f5-119">Para obter mais informações, consulte [recebimento de mensagens.](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-119">For more information, see [receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages).</span></span>
+* <span data-ttu-id="8e6f5-120">Quando um novo usuário ou bot é adicionado a uma equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-120">When a new user or bot is added to a team.</span></span> <span data-ttu-id="8e6f5-121">Para obter mais informações, consulte [bot ou usuário adicionado a uma equipe.](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-121">For more information, see [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team).</span></span>
 
 > [!NOTE]
->* <span data-ttu-id="ac216-118">Certifique-se de usar a ID da equipe ao chamar a API</span><span class="sxs-lookup"><span data-stu-id="ac216-118">Make sure to use the team id when calling the api</span></span>
->* <span data-ttu-id="ac216-119">O valor de `serviceUrl` tende a ser estável, mas pode ser alterado.</span><span class="sxs-lookup"><span data-stu-id="ac216-119">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="ac216-120">Quando uma nova mensagem chega, seu bot deve verificar seu valor armazenado de `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="ac216-120">When a new message arrives, your bot should verify its stored value of `serviceUrl`.</span></span>
+>
+>* <span data-ttu-id="8e6f5-122">Sempre use a ID de equipe ao chamar a API.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-122">Always use the team ID when calling the API.</span></span>
+>* <span data-ttu-id="8e6f5-123">O `serviceUrl` valor tende a ser estável, mas pode mudar.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-123">The `serviceUrl` value tends to be stable but can change.</span></span> <span data-ttu-id="8e6f5-124">Quando uma nova mensagem chega, seu bot deve verificar seu valor `serviceUrl` armazenado.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-124">When a new message arrives, your bot must verify its stored `serviceUrl` value.</span></span>
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -63,9 +68,9 @@ Response body
 }]
 ```
 
-### <a name="net-example"></a><span data-ttu-id="ac216-121">Exemplo .NET</span><span class="sxs-lookup"><span data-stu-id="ac216-121">.NET example</span></span>
+### <a name="net-example"></a><span data-ttu-id="8e6f5-125">Exemplo de .NET</span><span class="sxs-lookup"><span data-stu-id="8e6f5-125">.NET example</span></span>
 
-<span data-ttu-id="ac216-122">Chamar `GetConversationMembersAsync` usando `Team.Id` para retornar uma lista de IDs de usuário.</span><span class="sxs-lookup"><span data-stu-id="ac216-122">Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.</span></span>
+<span data-ttu-id="8e6f5-126">Chamada `GetConversationMembersAsync` usando para retornar uma lista de `Team.Id` IDs de usuário.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-126">Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.</span></span>
 
 ```csharp
 // Fetch the members in the current conversation
@@ -88,7 +93,7 @@ foreach (var member in members.AsTeamsChannelAccounts())
 await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
-### <a name="nodejstypescript-example"></a><span data-ttu-id="ac216-123">Exemplo de Node.js/TypeScript</span><span class="sxs-lookup"><span data-stu-id="ac216-123">Node.js/TypeScript example</span></span>
+### <a name="nodejs-or-typescript-example"></a><span data-ttu-id="8e6f5-127">Node.js ou typeScript</span><span class="sxs-lookup"><span data-stu-id="8e6f5-127">Node.js or TypeScript example</span></span>
 
 ```typescript
 
@@ -111,31 +116,31 @@ connector.fetchMembers(
 );
 ```
 
-<span data-ttu-id="ac216-124">*Confira também* [exemplos da estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span><span class="sxs-lookup"><span data-stu-id="ac216-124">*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span></span>
+<span data-ttu-id="8e6f5-128">Além disso, confira [exemplos de Estrutura de Bot.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-128">Also, see [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span></span>
 
-## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a><span data-ttu-id="ac216-125">Buscando perfil de usuário ou lista no chat de grupo ou pessoal</span><span class="sxs-lookup"><span data-stu-id="ac216-125">Fetching user profile or roster in personal or group chat</span></span>
+## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a><span data-ttu-id="8e6f5-129">Buscar perfil de usuário ou lista de lista em bate-papo pessoal ou em grupo</span><span class="sxs-lookup"><span data-stu-id="8e6f5-129">Fetch user profile or roster in personal or group chat</span></span>
 
-<span data-ttu-id="ac216-126">Você também pode fazer a mesma chamada de API para qualquer chat pessoal para obter as informações de perfil do usuário batendo papo com seu bot.</span><span class="sxs-lookup"><span data-stu-id="ac216-126">You can also make the same API call for any personal chat to obtain the profile information of the user chatting with your bot.</span></span>
+<span data-ttu-id="8e6f5-130">Você pode fazer a chamada à API para qualquer chat pessoal para obter as informações de perfil do usuário conversando com seu bot.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-130">You can make the API call for any personal chat to obtain the profile information of the user chatting with your bot.</span></span>
 
-<span data-ttu-id="ac216-127">Os métodos de chamada de API e SDK são idênticos para buscar a lista de equipes, como é o objeto de resposta.</span><span class="sxs-lookup"><span data-stu-id="ac216-127">The API call and SDK methods are identical to fetching the team roster, as is the response object.</span></span> <span data-ttu-id="ac216-128">A única diferença é passar no `conversationId` lugar do `teamId` .</span><span class="sxs-lookup"><span data-stu-id="ac216-128">The only difference is you pass the `conversationId` instead of the `teamId`.</span></span>
+<span data-ttu-id="8e6f5-131">A chamada à API, os métodos SDK e o objeto de resposta são idênticos à busca da lista de participantes da equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-131">The API call, SDK methods, and the response object are identical to fetching the team roster.</span></span> <span data-ttu-id="8e6f5-132">A única diferença é que você passa `conversationId` o em vez de `teamId` .</span><span class="sxs-lookup"><span data-stu-id="8e6f5-132">The only difference is you pass the `conversationId` instead of the `teamId`.</span></span>
 
-## <a name="fetching-the-list-of-channels-in-a-team"></a><span data-ttu-id="ac216-129">Buscando a lista de canais em uma equipe</span><span class="sxs-lookup"><span data-stu-id="ac216-129">Fetching the list of channels in a team</span></span>
+## <a name="fetch-the-list-of-channels-in-a-team"></a><span data-ttu-id="8e6f5-133">Buscar a lista de canais em uma equipe</span><span class="sxs-lookup"><span data-stu-id="8e6f5-133">Fetch the list of channels in a team</span></span>
 
-<span data-ttu-id="ac216-130">O bot pode consultar a lista de canais de uma equipe.</span><span class="sxs-lookup"><span data-stu-id="ac216-130">Your bot can query the list of channels in a team.</span></span>
+<span data-ttu-id="8e6f5-134">Seu bot pode consultar a lista de canais em uma equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-134">Your bot can query the list of channels in a team.</span></span>
 
 > [!NOTE]
 >
->* <span data-ttu-id="ac216-131">O nome do canal geral padrão é retornado como `null` permitir para localização.</span><span class="sxs-lookup"><span data-stu-id="ac216-131">The name of the default General channel is returned as `null` to allow for localization.</span></span>
->* <span data-ttu-id="ac216-132">A ID do canal geral sempre corresponde à ID da equipe.</span><span class="sxs-lookup"><span data-stu-id="ac216-132">The channel ID for the General channel always matches the team ID.</span></span>
+>* <span data-ttu-id="8e6f5-135">O nome do canal Geral padrão é retornado para `null` permitir a localização.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-135">The name of the default General channel is returned as `null` to allow for localization.</span></span>
+>* <span data-ttu-id="8e6f5-136">A ID do canal Geral sempre corresponde à ID da equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-136">The channel ID for the General channel always matches the team ID.</span></span>
 
-### <a name="rest-api-example"></a><span data-ttu-id="ac216-133">Exemplo de API REST</span><span class="sxs-lookup"><span data-stu-id="ac216-133">REST API example</span></span>
+### <a name="rest-api-example"></a><span data-ttu-id="8e6f5-137">Exemplo de API REST</span><span class="sxs-lookup"><span data-stu-id="8e6f5-137">REST API example</span></span>
 
-<span data-ttu-id="ac216-134">Você pode emitir diretamente uma solicitação GET no `/teams/{teamId}/conversations/` , usando o valor de `serviceUrl` como ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="ac216-134">You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.</span></span>
+<span data-ttu-id="8e6f5-138">Emitir diretamente uma solicitação GET `/teams/{teamId}/conversations/` em , usando o valor como ponto de `serviceUrl` extremidade.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-138">Directly issue a GET request on `/teams/{teamId}/conversations/`, using the `serviceUrl` value as the endpoint.</span></span>
 
-<span data-ttu-id="ac216-135">A única fonte de `teamId` é uma mensagem do contexto da equipe-uma mensagem de um usuário ou a mensagem que seu bot recebe quando é adicionada a uma equipe (consulte [bot ou User Added to a Team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)).</span><span class="sxs-lookup"><span data-stu-id="ac216-135">The only source for `teamId` is a message from the team context - either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)).</span></span>
+<span data-ttu-id="8e6f5-139">A única origem `teamId` é uma mensagem do contexto da equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-139">The only source for `teamId` is a message from the team context.</span></span> <span data-ttu-id="8e6f5-140">A mensagem é uma mensagem de um usuário ou a mensagem que seu bot recebe quando ela é adicionada a uma equipe.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-140">The message is either a message from a user or the message that your bot receives when it is added to a team.</span></span> <span data-ttu-id="8e6f5-141">Para obter mais informações, consulte [bot ou usuário adicionado a uma equipe.](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-141">For more information, see [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ac216-136">O valor de `serviceUrl` tende a ser estável, mas pode ser alterado.</span><span class="sxs-lookup"><span data-stu-id="ac216-136">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="ac216-137">Quando uma nova mensagem chega, seu bot deve verificar seu valor armazenado de `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="ac216-137">When a new message arrives, your bot should verify its stored value of `serviceUrl`.</span></span>
+> <span data-ttu-id="8e6f5-142">O `serviceUrl` valor tende a ser estável, mas pode mudar.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-142">The `serviceUrl` value tends to be stable but can change.</span></span> <span data-ttu-id="8e6f5-143">Quando uma nova mensagem chega, seu bot deve verificar seu valor `serviceUrl` armazenado.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-143">When a new message arrives, your bot must verify its stored `serviceUrl` value.</span></span>
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -158,17 +163,17 @@ Response body
 }
 ```
 
-#### <a name="net-example"></a><span data-ttu-id="ac216-138">Exemplo .NET</span><span class="sxs-lookup"><span data-stu-id="ac216-138">.NET example</span></span>
+#### <a name="net-example"></a><span data-ttu-id="8e6f5-144">Exemplo de .NET</span><span class="sxs-lookup"><span data-stu-id="8e6f5-144">.NET example</span></span>
 
-<span data-ttu-id="ac216-139">O exemplo a seguir usa a `FetchChannelList` chamada das [extensões do Microsoft Teams para o SDK do bot Builder para .net](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):</span><span class="sxs-lookup"><span data-stu-id="ac216-139">The following example uses the `FetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):</span></span>
+<span data-ttu-id="8e6f5-145">O exemplo a seguir usa `FetchChannelList` a chamada das extensões do Teams para o SDK do Construtor de [Bots para .NET:](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)</span><span class="sxs-lookup"><span data-stu-id="8e6f5-145">The following example uses the `FetchChannelList` call from the [Teams extensions for the Bot Builder SDK for .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):</span></span>
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
 ```
 
-#### <a name="nodejs-example"></a><span data-ttu-id="ac216-140">Exemplo de Node.js</span><span class="sxs-lookup"><span data-stu-id="ac216-140">Node.js example</span></span>
+#### <a name="nodejs-example"></a><span data-ttu-id="8e6f5-146">Node.js exemplo</span><span class="sxs-lookup"><span data-stu-id="8e6f5-146">Node.js example</span></span>
 
-<span data-ttu-id="ac216-141">O exemplo a seguir usa `fetchChannelList` a chamada das [extensões do Microsoft Teams para o SDK do bot Builder para Node.js](https://www.npmjs.com/package/botbuilder-teams).</span><span class="sxs-lookup"><span data-stu-id="ac216-141">The following example uses `fetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).</span></span>
+<span data-ttu-id="8e6f5-147">O exemplo a seguir `fetchChannelList` usa a chamada das [extensões do Teams para o SDK do ](https://www.npmjs.com/package/botbuilder-teams)Construtor de Bots Node.js:</span><span class="sxs-lookup"><span data-stu-id="8e6f5-147">The following example uses `fetchChannelList` call from the [Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams):</span></span>
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -184,4 +189,38 @@ connector.fetchChannelList(
     }
   }
 );
+```
+
+## <a name="get-clientinfo-in-your-bot-context"></a><span data-ttu-id="8e6f5-148">Obter clientInfo em seu contexto de bot</span><span class="sxs-lookup"><span data-stu-id="8e6f5-148">Get clientInfo in your bot context</span></span>
+
+<span data-ttu-id="8e6f5-149">Você pode buscar o clientInfo dentro da atividade do bot.</span><span class="sxs-lookup"><span data-stu-id="8e6f5-149">You can fetch the clientInfo within your bot's activity.</span></span> <span data-ttu-id="8e6f5-150">ClientInfo contém as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="8e6f5-150">The clientInfo contains the following properties:</span></span>
+
+* <span data-ttu-id="8e6f5-151">Locale</span><span class="sxs-lookup"><span data-stu-id="8e6f5-151">Locale</span></span>
+* <span data-ttu-id="8e6f5-152">País</span><span class="sxs-lookup"><span data-stu-id="8e6f5-152">Country</span></span>
+* <span data-ttu-id="8e6f5-153">Plataforma</span><span class="sxs-lookup"><span data-stu-id="8e6f5-153">Platform</span></span>
+* <span data-ttu-id="8e6f5-154">Timezone</span><span class="sxs-lookup"><span data-stu-id="8e6f5-154">Timezone</span></span>
+
+### <a name="json-example"></a><span data-ttu-id="8e6f5-155">Exemplo de JSON</span><span class="sxs-lookup"><span data-stu-id="8e6f5-155">JSON example</span></span>
+
+```json
+[
+    {
+        "type": "clientInfo",
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Windows",
+        "timezone": "Asia/Calcutta"
+    }
+]
+```
+
+### <a name="c-example"></a><span data-ttu-id="8e6f5-156">Exemplo de C#</span><span class="sxs-lookup"><span data-stu-id="8e6f5-156">C# example</span></span>
+
+```csharp
+var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
+
+{
+    var clientinfo = context.Activity.Entities[0];
+    await context.PostAsync($"ClientInfo: clientinfo ");
+}
 ```

@@ -1,70 +1,67 @@
 ---
-title: Solicitar permissões de dispositivo para sua guia
+title: Solicitar permissões de dispositivo para seu aplicativo microsoft Teams
+keywords: permissões de recursos de aplicativos do Teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 ms.topic: how-to
-keywords: desenvolvimento de guias do Teams
-ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 0343754eacbb6088a3e44fa5df8ec90e3b10b076
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014527"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231607"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a><span data-ttu-id="7c1a4-104">Solicitar permissões de dispositivo para sua guia do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="7c1a4-104">Request device permissions for your Microsoft Teams tab</span></span>
+# <a name="request-device-permissions-for-your-microsoft-teams-app"></a><span data-ttu-id="6925e-104">Solicitar permissões de dispositivo para seu aplicativo microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="6925e-104">Request device permissions for your Microsoft Teams app</span></span>
 
-<span data-ttu-id="7c1a4-105">Talvez você queira enriquecer sua guia com recursos que exigem acesso à funcionalidade nativa do dispositivo, como:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-105">You might want to enrich your tab with features that require access to native device functionality like:</span></span>
-
-> [!div class="checklist"]
->
-> * <span data-ttu-id="7c1a4-106">Câmera</span><span class="sxs-lookup"><span data-stu-id="7c1a4-106">Camera</span></span>
-> * <span data-ttu-id="7c1a4-107">Microfone</span><span class="sxs-lookup"><span data-stu-id="7c1a4-107">Microphone</span></span>
-> * <span data-ttu-id="7c1a4-108">Localização</span><span class="sxs-lookup"><span data-stu-id="7c1a4-108">Location</span></span>
-> * <span data-ttu-id="7c1a4-109">Notificações</span><span class="sxs-lookup"><span data-stu-id="7c1a4-109">Notifications</span></span>
+<span data-ttu-id="6925e-105">Você pode enriquecer seu aplicativo teams com recursos nativos do dispositivo, como câmera, microfone e localização.</span><span class="sxs-lookup"><span data-stu-id="6925e-105">You can enrich your Teams app with native device capabilities, such as camera, microphone, and location.</span></span> <span data-ttu-id="6925e-106">Este documento orienta você sobre como solicitar o consentimento do usuário e acessar as permissões do dispositivo nativo.</span><span class="sxs-lookup"><span data-stu-id="6925e-106">This document guides you on how to request user consent and access the native device permissions.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7c1a4-110">Para integrar recursos de câmera e imagem ao seu aplicativo móvel do Microsoft Teams, confira as funcionalidades de [câmera e imagem no Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span><span class="sxs-lookup"><span data-stu-id="7c1a4-110">To integrate camera and image capabilities within your Microsoft Teams mobile app, see [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span></span>
+> <span data-ttu-id="6925e-107">Para integrar recursos de mídia ao seu aplicativo móvel do Microsoft Teams, confira [Integrar recursos de mídia.](mobile-camera-image-permissions.md)</span><span class="sxs-lookup"><span data-stu-id="6925e-107">To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).</span></span>
 
-> [!IMPORTANT]
->
-> * <span data-ttu-id="7c1a4-111">No momento, o cliente móvel do Teams só dá suporte ao acesso a , e por meio de recursos de dispositivo nativo e está disponível em todas as construções de `camera` `gallery` `mic` `location` aplicativo, incluindo guias.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-111">At present, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs.</span></span> </br>
-> * <span data-ttu-id="7c1a4-112">Suporte para `camera` , e é habilitado por meio de `gallery` `mic` [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="7c1a4-112">Support for `camera`, `gallery`, and `mic` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span></span> <span data-ttu-id="7c1a4-113">Para captura de imagem única, você pode usar [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="7c1a4-113">For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).</span></span>
-> * <span data-ttu-id="7c1a4-114">O suporte `location` para é habilitado por meio da API [**getLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="7c1a4-114">Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span></span> <span data-ttu-id="7c1a4-115">É recomendável que você use essa API como API [**de geolocalização**](../../resources/schema/manifest-schema.md#devicepermissions) atualmente não é totalmente suportada em todos os clientes da área de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-115">It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.</span></span>
+## <a name="native-device-permissions"></a><span data-ttu-id="6925e-108">Permissões de dispositivo nativo</span><span class="sxs-lookup"><span data-stu-id="6925e-108">Native device permissions</span></span>
 
-## <a name="device-permissions"></a><span data-ttu-id="7c1a4-116">Permissões de dispositivos</span><span class="sxs-lookup"><span data-stu-id="7c1a4-116">Device permissions</span></span>
+<span data-ttu-id="6925e-109">Você deve solicitar as permissões do dispositivo para acessar as funcionalidades nativas do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6925e-109">You must request the device permissions to access native device capabilities.</span></span> <span data-ttu-id="6925e-110">As permissões de dispositivo funcionam da mesma forma para todas as construções de aplicativo, como guias, módulos de tarefa ou extensões de mensagens.</span><span class="sxs-lookup"><span data-stu-id="6925e-110">The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions.</span></span> <span data-ttu-id="6925e-111">O usuário deve ir para a página de permissões nas configurações do Teams para gerenciar as permissões do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6925e-111">The user must go to the permissions page in Teams settings to manage device permissions.</span></span>
+<span data-ttu-id="6925e-112">Ao acessar os recursos do dispositivo, você pode criar experiências mais completas na plataforma do Teams, como:</span><span class="sxs-lookup"><span data-stu-id="6925e-112">By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:</span></span>
+* <span data-ttu-id="6925e-113">Capturar e exibir imagens.</span><span class="sxs-lookup"><span data-stu-id="6925e-113">Capture and view images.</span></span>
+* <span data-ttu-id="6925e-114">Grave e compartilhe vídeos curtos.</span><span class="sxs-lookup"><span data-stu-id="6925e-114">Record and share short videos.</span></span>
+* <span data-ttu-id="6925e-115">Grave memorandos de áudio e salve-os para uso posterior.</span><span class="sxs-lookup"><span data-stu-id="6925e-115">Record audio memos and save them for later use.</span></span>
+* <span data-ttu-id="6925e-116">Use as informações de local do usuário para exibir informações relevantes.</span><span class="sxs-lookup"><span data-stu-id="6925e-116">Use the location information of the user to display relevant information.</span></span>
 
-<span data-ttu-id="7c1a4-117">Acessar as permissões de dispositivo de um usuário permite que você crie experiências muito mais completas, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-117">Accessing a user’s device permissions allows you to build much richer experiences, for example:</span></span>
+## <a name="access-device-permissions"></a><span data-ttu-id="6925e-117">Acessar permissões de dispositivo</span><span class="sxs-lookup"><span data-stu-id="6925e-117">Access device permissions</span></span>
 
-* <span data-ttu-id="7c1a4-118">Gravar e compartilhar vídeos curtos</span><span class="sxs-lookup"><span data-stu-id="7c1a4-118">Record and share short videos</span></span>
-* <span data-ttu-id="7c1a4-119">Grave memorandos de áudio curtos e salve-os para mais tarde</span><span class="sxs-lookup"><span data-stu-id="7c1a4-119">Record short audio memos and save them for later</span></span>
-* <span data-ttu-id="7c1a4-120">Usar informações de localização do usuário para exibir informações relevantes</span><span class="sxs-lookup"><span data-stu-id="7c1a4-120">Use user location information to display relevant information</span></span>
+<span data-ttu-id="6925e-118">O [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do cliente JavaScript do Microsoft Teams fornece as ferramentas [](#manage-permissions) necessárias para que seu aplicativo móvel do Teams acesse as permissões de dispositivo do usuário e crie uma experiência mais rica.</span><span class="sxs-lookup"><span data-stu-id="6925e-118">The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.</span></span>
 
-<span data-ttu-id="7c1a4-121">Embora o acesso a esses recursos seja padrão na maioria dos navegadores da Web modernos, você precisa permitir que o Teams saiba quais recursos você gostaria de usar atualizando o manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-121">While access to these features is standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest.</span></span> <span data-ttu-id="7c1a4-122">Isso permitirá que você peça permissões, da mesma forma que faria em um navegador, enquanto seu aplicativo é executado no cliente de área de trabalho do Teams.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-122">This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.</span></span>
+<span data-ttu-id="6925e-119">Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, você deve informar o Teams sobre os recursos que você usa atualizando o manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6925e-119">While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest.</span></span> <span data-ttu-id="6925e-120">Essa atualização permite que você peça permissões enquanto seu aplicativo é executado no cliente da área de trabalho do Teams.</span><span class="sxs-lookup"><span data-stu-id="6925e-120">This update allows you to ask for permissions while your app runs on the Teams desktop client.</span></span>
 
-## <a name="manage-permissions"></a><span data-ttu-id="7c1a4-123">Gerenciar permissões</span><span class="sxs-lookup"><span data-stu-id="7c1a4-123">Manage permissions</span></span>
+> [!NOTE] 
+> <span data-ttu-id="6925e-121">Atualmente, o suporte do Microsoft Teams para recursos de mídia só está disponível para clientes móveis.</span><span class="sxs-lookup"><span data-stu-id="6925e-121">Currently, Microsoft Teams support for media capabilities is only available for mobile clients.</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="7c1a4-124">Desktop</span><span class="sxs-lookup"><span data-stu-id="7c1a4-124">Desktop</span></span>](#tab/desktop)
+## <a name="manage-permissions"></a><span data-ttu-id="6925e-122">Gerenciar permissões</span><span class="sxs-lookup"><span data-stu-id="6925e-122">Manage permissions</span></span>
 
-1. <span data-ttu-id="7c1a4-125">Abra o Teams.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-125">Open Teams.</span></span>
-1. <span data-ttu-id="7c1a4-126">No canto superior direito da janela, selecione o ícone de perfil.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-126">In the upper right corner of the window, select your profile icon.</span></span>
-1. <span data-ttu-id="7c1a4-127">Selecione **Permissões de**  ->  **Configurações** no menu suspenso.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-127">Select **Settings** -> **Permissions** from the drop-down menu.</span></span>
-1. <span data-ttu-id="7c1a4-128">Escolha as configurações desejadas.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-128">Choose your desired settings.</span></span>
+<span data-ttu-id="6925e-123">Um usuário pode gerenciar permissões de dispositivo nas  configurações do Teams selecionando **Permissões** Permitir ou Negar para aplicativos específicos.</span><span class="sxs-lookup"><span data-stu-id="6925e-123">A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.</span></span>
+ 
+# <a name="desktop"></a>[<span data-ttu-id="6925e-124">Desktop</span><span class="sxs-lookup"><span data-stu-id="6925e-124">Desktop</span></span>](#tab/desktop)
 
-![Tela de configurações da área de trabalho de permissões do dispositivo](../../assets/images/tabs/device-permissions.png)
+1. <span data-ttu-id="6925e-125">Abra seu aplicativo do Teams.</span><span class="sxs-lookup"><span data-stu-id="6925e-125">Open your Teams app.</span></span>
+1. <span data-ttu-id="6925e-126">Selecione o ícone de perfil no canto superior direito da janela.</span><span class="sxs-lookup"><span data-stu-id="6925e-126">Select your profile icon in the upper right corner of the window.</span></span>
+1. <span data-ttu-id="6925e-127">Selecione **Permissões de**  >  **Configurações** no menu suspenso.</span><span class="sxs-lookup"><span data-stu-id="6925e-127">Select **Settings** > **Permissions** from the drop-down menu.</span></span>
+1. <span data-ttu-id="6925e-128">Selecione as configurações desejadas.</span><span class="sxs-lookup"><span data-stu-id="6925e-128">Select your desired settings.</span></span>
 
-# <a name="mobile"></a>[<span data-ttu-id="7c1a4-130">Mobile</span><span class="sxs-lookup"><span data-stu-id="7c1a4-130">Mobile</span></span>](#tab/mobile)
+   ![Tela de configurações da área de trabalho de permissões do dispositivo](../../assets/images/tabs/device-permissions.png)
 
-1. <span data-ttu-id="7c1a4-131">Abra o Teams.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-131">Open Teams.</span></span>
-1. <span data-ttu-id="7c1a4-132">Vá para **Configurações**  ->  **de Permissões do Aplicativo.**</span><span class="sxs-lookup"><span data-stu-id="7c1a4-132">Go to **Settings** -> **App Permissions**.</span></span>
-1. <span data-ttu-id="7c1a4-133">Selecione o aplicativo para o qual você precisa escolher as configurações.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-133">Select the app you need to choose settings for.</span></span>
-1. <span data-ttu-id="7c1a4-134">Escolha as configurações desejadas.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-134">Choose your desired settings.</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="6925e-130">Mobile</span><span class="sxs-lookup"><span data-stu-id="6925e-130">Mobile</span></span>](#tab/mobile)
 
-![Tela de configurações móveis de permissões do dispositivo](../../assets/images/tabs/MobilePermissions.png)
+1. <span data-ttu-id="6925e-131">Abra o Teams.</span><span class="sxs-lookup"><span data-stu-id="6925e-131">Open Teams.</span></span>
+1. <span data-ttu-id="6925e-132">Vá para **Configurações**  >  **de Permissões do Aplicativo.**</span><span class="sxs-lookup"><span data-stu-id="6925e-132">Go to **Settings** > **App Permissions**.</span></span>
+1. <span data-ttu-id="6925e-133">Selecione o aplicativo para o qual você precisa escolher as configurações.</span><span class="sxs-lookup"><span data-stu-id="6925e-133">Select the app for which you need to choose the settings.</span></span>
+1. <span data-ttu-id="6925e-134">Selecione as configurações desejadas.</span><span class="sxs-lookup"><span data-stu-id="6925e-134">Select your desired settings.</span></span>
+
+    ![Tela de configurações móveis de permissões do dispositivo](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
-## <a name="properties"></a><span data-ttu-id="7c1a4-136">Propriedades</span><span class="sxs-lookup"><span data-stu-id="7c1a4-136">Properties</span></span>
+## <a name="specify-permissions"></a><span data-ttu-id="6925e-136">Especificar permissões</span><span class="sxs-lookup"><span data-stu-id="6925e-136">Specify permissions</span></span>
 
-<span data-ttu-id="7c1a4-137">Atualize seus aplicativos `manifest.json` adicionando e especificando quais das cinco propriedades você gostaria `devicePermissions` de usar em seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-137">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d like to use in your application:</span></span>
+<span data-ttu-id="6925e-137">Atualize seus aplicativos `manifest.json` adicionando `devicePermissions` e especificando quais das cinco propriedades você usa em seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="6925e-137">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:</span></span>
 
 ``` json
 "devicePermissions": [
@@ -75,23 +72,20 @@ ms.locfileid: "50014527"
     "openExternal"
 ],
 ```
-> [!Note]
->
-> <span data-ttu-id="7c1a4-138">A mídia também é usada para permissões de câmera em dispositivos móveis.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-138">Media is also used for camera permissions on mobile.</span></span>
 
-<span data-ttu-id="7c1a4-139">Cada propriedade permitirá que você peça ao usuário que peça seu consentimento:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-139">Each property will allow you to prompt the user to ask for their consent:</span></span>
+<span data-ttu-id="6925e-138">Cada propriedade permite que você peça ao usuário que peça seu consentimento:</span><span class="sxs-lookup"><span data-stu-id="6925e-138">Each property allows you to prompt the user to ask for their consent:</span></span>
 
-| <span data-ttu-id="7c1a4-140">Propriedade</span><span class="sxs-lookup"><span data-stu-id="7c1a4-140">Property</span></span>      | <span data-ttu-id="7c1a4-141">Descrição</span><span class="sxs-lookup"><span data-stu-id="7c1a4-141">Description</span></span>   |
+| <span data-ttu-id="6925e-139">Propriedade</span><span class="sxs-lookup"><span data-stu-id="6925e-139">Property</span></span>      | <span data-ttu-id="6925e-140">Descrição</span><span class="sxs-lookup"><span data-stu-id="6925e-140">Description</span></span>   |
 | --- | --- |
-| <span data-ttu-id="7c1a4-142">mídia</span><span class="sxs-lookup"><span data-stu-id="7c1a4-142">media</span></span>         | <span data-ttu-id="7c1a4-143">permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso</span><span class="sxs-lookup"><span data-stu-id="7c1a4-143">permission to use the camera, microphone, speakers, and access media gallery</span></span> |
-| <span data-ttu-id="7c1a4-144">geolocalização</span><span class="sxs-lookup"><span data-stu-id="7c1a4-144">geolocation</span></span>   | <span data-ttu-id="7c1a4-145">permissão para retornar a localização do usuário</span><span class="sxs-lookup"><span data-stu-id="7c1a4-145">permission to return the user's location</span></span>      |
-| <span data-ttu-id="7c1a4-146">notifications</span><span class="sxs-lookup"><span data-stu-id="7c1a4-146">notifications</span></span> | <span data-ttu-id="7c1a4-147">permissão para enviar as notificações do usuário</span><span class="sxs-lookup"><span data-stu-id="7c1a4-147">permission to send the user notifications</span></span>      |
-| <span data-ttu-id="7c1a4-148">midi</span><span class="sxs-lookup"><span data-stu-id="7c1a4-148">midi</span></span>          | <span data-ttu-id="7c1a4-149">permissão para enviar e receber informações midi de um instrumento digital de música</span><span class="sxs-lookup"><span data-stu-id="7c1a4-149">permission to send and receive midi information from a digital musical instrument</span></span>   |
-| <span data-ttu-id="7c1a4-150">openExternal</span><span class="sxs-lookup"><span data-stu-id="7c1a4-150">openExternal</span></span>  | <span data-ttu-id="7c1a4-151">permissão para abrir links em aplicativos externos</span><span class="sxs-lookup"><span data-stu-id="7c1a4-151">permission to open links in external applications</span></span>  |
+| <span data-ttu-id="6925e-141">mídia</span><span class="sxs-lookup"><span data-stu-id="6925e-141">media</span></span>         | <span data-ttu-id="6925e-142">Permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso.</span><span class="sxs-lookup"><span data-stu-id="6925e-142">Permission to use the camera, microphone, speakers, and access media gallery.</span></span> |
+| <span data-ttu-id="6925e-143">geolocalização</span><span class="sxs-lookup"><span data-stu-id="6925e-143">geolocation</span></span>   | <span data-ttu-id="6925e-144">Permissão para retornar a localização do usuário.</span><span class="sxs-lookup"><span data-stu-id="6925e-144">Permission to return the user's location.</span></span>      |
+| <span data-ttu-id="6925e-145">notifications</span><span class="sxs-lookup"><span data-stu-id="6925e-145">notifications</span></span> | <span data-ttu-id="6925e-146">Permissão para enviar as notificações do usuário.</span><span class="sxs-lookup"><span data-stu-id="6925e-146">Permission to send the user notifications.</span></span>      |
+| <span data-ttu-id="6925e-147">midi</span><span class="sxs-lookup"><span data-stu-id="6925e-147">midi</span></span>          | <span data-ttu-id="6925e-148">Permissão para enviar e receber informações MIDI (Interface Digital de Instrumento Digital) de um instrumento digital.</span><span class="sxs-lookup"><span data-stu-id="6925e-148">Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.</span></span>   |
+| <span data-ttu-id="6925e-149">openExternal</span><span class="sxs-lookup"><span data-stu-id="6925e-149">openExternal</span></span>  | <span data-ttu-id="6925e-150">Permissão para abrir links em aplicativos externos.</span><span class="sxs-lookup"><span data-stu-id="6925e-150">Permission to open links in external applications.</span></span>  |
 
-## <a name="checking-permissions-from-your-tab"></a><span data-ttu-id="7c1a4-152">Verificando permissões na guia</span><span class="sxs-lookup"><span data-stu-id="7c1a4-152">Checking permissions from your tab</span></span>
+## <a name="check-permissions-from-your-app"></a><span data-ttu-id="6925e-151">Verificar permissões do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6925e-151">Check permissions from your app</span></span>
 
-<span data-ttu-id="7c1a4-153">Depois de adicionar ao manifesto do aplicativo, você pode verificar permissões usando `devicePermissions` a API de "permissões" HTML5 sem causar um prompt.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-153">Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.</span></span>
+<span data-ttu-id="6925e-152">Depois de `devicePermissions` adicionar ao manifesto do aplicativo, verifique as permissões usando a API de permissões **HTML5** sem causar um aviso:</span><span class="sxs-lookup"><span data-stu-id="6925e-152">After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:</span></span>
 
 ``` Javascript
 // Different query options:
@@ -111,69 +105,85 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="prompting-the-user"></a><span data-ttu-id="7c1a4-154">Solicitar ao usuário</span><span class="sxs-lookup"><span data-stu-id="7c1a4-154">Prompting the user</span></span>
+## <a name="use-teams-apis-to-get-device-permissions"></a><span data-ttu-id="6925e-153">Usar APIs do Teams para obter permissões de dispositivo</span><span class="sxs-lookup"><span data-stu-id="6925e-153">Use Teams APIs to get device permissions</span></span>
 
-<span data-ttu-id="7c1a4-155">Para mostrar uma solicitação para obter consentimento para acessar as permissões do dispositivo, você precisa aproveitar o HTML5 apropriado ou a API do Teams.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-155">To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API.</span></span> 
+<span data-ttu-id="6925e-154">Aproveite o HTML5 apropriado ou a API do Teams para exibir uma solicitação de consentimento para acessar as permissões do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6925e-154">Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent to access device permissions.</span></span>
 
-<span data-ttu-id="7c1a4-156">Por exemplo, para solicitar que o usuário acesse sua localização, você precisa `getCurrentPosition` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-156">For example, to prompt the user to access their location you need to call `getCurrentPosition`:</span></span>
+> [!IMPORTANT]
+> * <span data-ttu-id="6925e-155">Suporte para `camera` , e é habilitado por meio de `gallery` `microphone` [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="6925e-155">Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span></span> <span data-ttu-id="6925e-156">Use [**a API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) para uma única captura de imagem.</span><span class="sxs-lookup"><span data-stu-id="6925e-156">Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.</span></span>
+> * <span data-ttu-id="6925e-157">O suporte `location` para é habilitado por meio da API [**getLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="6925e-157">Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span></span> <span data-ttu-id="6925e-158">Você deve usar isso para localização, pois a API de geolocalização HTML5 atualmente não é totalmente suportada no cliente de área de `getLocation API` trabalho do Teams.</span><span class="sxs-lookup"><span data-stu-id="6925e-158">You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.</span></span>
 
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
-```
+<span data-ttu-id="6925e-159">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="6925e-159">For example:</span></span>
+ * <span data-ttu-id="6925e-160">Para solicitar que o usuário acesse sua localização, você deve `getCurrentPosition()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-160">To prompt the user to access their location you must call `getCurrentPosition()`:</span></span>
 
-<span data-ttu-id="7c1a4-157">Para usar a câmera na área de trabalho ou na Web, o Teams mostrará um prompt de permissão quando você `getUserMedia` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-157">To use the camera on desktop or web, Teams will show a permission prompt when you call `getUserMedia`:</span></span>
+    ```Javascript
+    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    ```
 
-```Javascript
-navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-```
+ * <span data-ttu-id="6925e-161">Para solicitar que o usuário acesse a câmera na área de trabalho ou na Web, você deve `getUserMedia()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-161">To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:</span></span>
 
-<span data-ttu-id="7c1a4-158">Para capturar a imagem em dispositivos móveis, o Teams Mobile solicitará permissão quando você `captureImage()` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-158">To capture the image on mobile, Teams mobile will ask for permission when you call `captureImage()`:</span></span>
+    ```Javascript
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+    ```
 
-```Javascript
-microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-  /* ... */
-});
-```
+ * <span data-ttu-id="6925e-162">Para capturar a imagem em dispositivos móveis, o Teams Mobile solicita permissão ao `captureImage()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-162">To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:</span></span>
 
-<span data-ttu-id="7c1a4-159">As notificações solicitarão ao usuário quando você `requestPermission` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-159">Notifications will prompt the user when you call `requestPermission`:</span></span>
+    ```Javascript
+    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+      /* ... */
+    });
+    ```
 
-```Javascript
-Notification.requestPermission(function(result) { /* ... */ });
-```
+ * <span data-ttu-id="6925e-163">As notificações solicitarão ao usuário quando você `requestPermission()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-163">Notifications will prompt the user when you call `requestPermission()`:</span></span>
 
-<span data-ttu-id="7c1a4-160">Para usar a câmera ou acessar a galeria de fotos, o dispositivo móvel do Teams solicitará permissão quando você `selectMedia()` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-160">To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
-
-```JavaScript
-microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
-
-<span data-ttu-id="7c1a4-161">Para usar o mic, o dispositivo móvel do Teams solicitará permissão quando você `selectMedia()` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-161">To use mic, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
-
-```JavaScript 
-microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
-
-<span data-ttu-id="7c1a4-162">Para solicitar que o usuário compartilhe o local na interface do mapa, o dispositivo móvel do Teams solicitará permissão quando você `getLocation()` chamar:</span><span class="sxs-lookup"><span data-stu-id="7c1a4-162">To prompt user to share location on map interface, Teams mobile will ask permission when you call `getLocation()`:</span></span>
-
-```JavaScript 
-microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-  /* ... *
-/});
-```
-
-# <a name="desktop"></a>[<span data-ttu-id="7c1a4-163">Desktop</span><span class="sxs-lookup"><span data-stu-id="7c1a4-163">Desktop</span></span>](#tab/desktop)
-
-![Prompt de permissões do dispositivo da área de trabalho de guias](~/assets/images/tabs/device-permissions-prompt.png)
-
-# <a name="mobile"></a>[<span data-ttu-id="7c1a4-165">Mobile</span><span class="sxs-lookup"><span data-stu-id="7c1a4-165">Mobile</span></span>](#tab/mobile)
-
-![Prompt de permissões de dispositivo móvel de guias](../../assets/images/tabs/MobileLocationPermission.png)
+    ```Javascript
+    Notification.requestPermission(function(result) { /* ... */ });
+    ```
 
 
-## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="7c1a4-167">Comportamento de permissão em sessões de logon</span><span class="sxs-lookup"><span data-stu-id="7c1a4-167">Permission behavior across login sessions</span></span>
 
-<span data-ttu-id="7c1a4-168">As permissões nativas do dispositivo são armazenadas para cada sessão de logon.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-168">Native device permissions are stored for every login session.</span></span> <span data-ttu-id="7c1a4-169">Isso significa que se você fizer logon em outra instância do Teams (por exemplo, em outro computador), as permissões do dispositivo de suas sessões anteriores não estarão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-169">It means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available.</span></span> <span data-ttu-id="7c1a4-170">Em vez disso, você precisará concordar com as permissões do dispositivo para a nova sessão de logon.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-170">Instead, you will need to re-consent to device permissions for the new login session.</span></span> <span data-ttu-id="7c1a4-171">Isso também significa que, se você sair do Teams (ou mudar de locatário dentro do Teams), suas permissões de dispositivo serão excluídas para essa sessão de logon anterior.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-171">It also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session.</span></span> <span data-ttu-id="7c1a4-172">Lembre-se disso ao desenvolver permissões de dispositivo nativas: as funcionalidades nativas que você consentir são apenas para sua _sessão de_ logon atual.</span><span class="sxs-lookup"><span data-stu-id="7c1a4-172">Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.</span></span>
+
+* <span data-ttu-id="6925e-164">Para usar a câmera ou acessar a galeria de fotos, o dispositivo móvel do Teams solicita permissão ao `selectMedia()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-164">To use the camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:</span></span>
+
+    ```JavaScript
+    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    );
+    ```
+
+* <span data-ttu-id="6925e-165">Para usar o microfone, o dispositivo móvel do Teams solicita permissão ao `selectMedia()` chamar:</span><span class="sxs-lookup"><span data-stu-id="6925e-165">To use the microphone, Teams mobile asks permission when you call `selectMedia()`:</span></span>
+
+    ```JavaScript 
+    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    });
+    ```
+
+* <span data-ttu-id="6925e-166">Para solicitar que o usuário compartilhe o local na interface de mapa, o dispositivo móvel do Teams solicita permissão quando você `getLocation()` chama:</span><span class="sxs-lookup"><span data-stu-id="6925e-166">To prompt the user to share location on the map interface, Teams mobile asks permission when you call `getLocation()`:</span></span>
+
+    ```JavaScript 
+    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+      /* ... *
+    /});
+    ```
+# <a name="desktop"></a>[<span data-ttu-id="6925e-167">Desktop</span><span class="sxs-lookup"><span data-stu-id="6925e-167">Desktop</span></span>](#tab/desktop)
+
+   ![Prompt de permissões do dispositivo da área de trabalho de guias](~/assets/images/tabs/device-permissions-prompt.png)
+
+# <a name="mobile"></a>[<span data-ttu-id="6925e-169">Mobile</span><span class="sxs-lookup"><span data-stu-id="6925e-169">Mobile</span></span>](#tab/mobile)
+
+   ![Prompt de permissões de dispositivo móvel de guias](../../assets/images/tabs/MobileLocationPermission.png)
+
+* * * 
+
+## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="6925e-171">Comportamento de permissão em sessões de logon</span><span class="sxs-lookup"><span data-stu-id="6925e-171">Permission behavior across login sessions</span></span>
+
+<span data-ttu-id="6925e-172">As permissões do dispositivo são armazenadas para cada sessão de logon.</span><span class="sxs-lookup"><span data-stu-id="6925e-172">Device permissions are stored for every login session.</span></span> <span data-ttu-id="6925e-173">Isso significa que, se você entrar em outra instância do Teams, por exemplo, em outro computador, suas permissões de dispositivo de suas sessões anteriores não estarão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="6925e-173">It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available.</span></span> <span data-ttu-id="6925e-174">Portanto, você deve consentir outra vez com as permissões de dispositivo para a nova sessão.</span><span class="sxs-lookup"><span data-stu-id="6925e-174">Therefore, you must re-consent to device permissions for the new session.</span></span> <span data-ttu-id="6925e-175">Isso também significa que, se você sair do Teams ou mudar de locatário no Teams, suas permissões de dispositivo serão excluídas da sessão de logon anterior.</span><span class="sxs-lookup"><span data-stu-id="6925e-175">It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.</span></span>  
+
+> [!NOTE]
+> <span data-ttu-id="6925e-176">Quando você consente com as permissões do dispositivo nativo, ele é válido somente para sua _sessão de_ logon atual.</span><span class="sxs-lookup"><span data-stu-id="6925e-176">When you consent to the native device permissions, it is valid only for your _current_ login session.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="6925e-177">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="6925e-177">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="6925e-178">Integrar recursos de mídia no Teams</span><span class="sxs-lookup"><span data-stu-id="6925e-178">Integrate media capabilities in Teams</span></span>](mobile-camera-image-permissions.md)

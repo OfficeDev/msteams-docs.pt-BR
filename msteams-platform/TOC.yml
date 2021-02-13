@@ -54,7 +54,7 @@
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: Criar um assistente virtual
           href: samples/virtual-assistant.md
-    - name: Modelos de aplicativos prontos para produção
+    - name: Modelos de aplicativos para o Teams
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
       href: samples/shifts-wfm-connectors.md
@@ -68,9 +68,11 @@
       href: concepts/build-and-test/deep-links.md
     - name: Funcionalidades de dispositivo
       items:
+        - name: Visão Geral
+          href: concepts/device-capabilities/device-capabilities-overview.md
         - name: Solicitar permissões do dispositivo
           href: concepts/device-capabilities/native-device-permissions.md
-        - name: Usando a câmera e a galeria de fotos
+        - name: Integrar recursos de mídia
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Criar seu aplicativo
   items:
