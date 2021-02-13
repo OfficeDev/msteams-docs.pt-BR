@@ -4,16 +4,16 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 7e256423ad713b81f9d4bc3760c33903ef91b179
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911951"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231663"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>O que são guias do Microsoft Teams?
 
-As guias são páginas da Web com suporte para o Teams inseridas no Microsoft Teams. Eles são marcas html <iframe simples que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um \> usuário individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web no Teams ou adicionar funcionalidades específicas do Teams ao conteúdo da Web. *Confira* [o SDK do cliente JavaScript do Teams.](/javascript/api/overview/msteams-client)
+As guias são páginas da Web com suporte para o Teams inseridas no Microsoft Teams. Eles são marcas html <iframe simples que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um \> usuário individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web no Teams ou adicionar funcionalidades específicas do Teams ao conteúdo da Web. *Confira* [o SDK do cliente JavaScript](/javascript/api/overview/msteams-client)do Teams.
 
 > [!NOTE]
 > O Chrome 80, agendado para lançamento no início de 2020, apresenta novos valores de cookie e impõe políticas de cookie por padrão. É recomendável definir o uso pretendido para seus cookies em vez de depender do comportamento padrão do navegador. *Veja* [o atributo de cookie SameSite (atualização de 2020).](../resources/samesite-cookie-update.md)
@@ -55,7 +55,7 @@ Você pode ter no máximo uma (1) guia canal/grupo e até dezesseis (16) guias p
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por que seu canal ou guia de grupo apareça em clientes móveis do Teams, a configuração deve `setSettings()` ter um valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as orientações para guias em [dispositivos](~/tabs/design/tabs-mobile.md) móveis ao criar suas guias. Os aplicativos [distribuídos por meio do Appsource](~/concepts/deploy-and-publish/appsource/publish.md) têm um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
+Se você optar por que seu canal ou guia de grupo apareça em clientes móveis do Teams, a configuração deverá `setSettings()` ter um valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as [orientações para guias](~/tabs/design/tabs-mobile.md) em dispositivos móveis ao criar suas guias. Os aplicativos [distribuídos por meio do Appsource](~/concepts/deploy-and-publish/appsource/publish.md) têm um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
 
 | **Funcionalidade do aplicativo** | **Comportamento se o aplicativo for aprovado** | **Comportamento se o aplicativo não for aprovado** |
 | --- | --- | --- |
@@ -72,4 +72,4 @@ Se você optar por que seu canal ou guia de grupo apareça em clientes móveis d
 > [Saiba mais: Solicitar permissões de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[Saiba mais: Permissões de câmera e galeria de imagens](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Saiba mais: Integrar recursos de mídia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

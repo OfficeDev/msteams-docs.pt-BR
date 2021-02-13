@@ -3,12 +3,12 @@ title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 ms.topic: reference
 keywords: teams what's new latest
-ms.openlocfilehash: 37192878bf6c3e3697faf535dcd757c2ceb1f5f3
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 49603a9e48cd0a9951c6d9f0132a705770322de4
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014555"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231649"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -21,6 +21,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|02/09/2021|Novo: Visão geral dos recursos adicionados ao dispositivo. <br/> Atualização: as informações de funcionalidade do microfone são adicionadas nas permissões do dispositivo nativo e integram arquivos de recursos de mídia.|[Visão geral,](concepts/device-capabilities/device-capabilities-overview.md) [Solicitar permissões do dispositivo,](concepts/device-capabilities/native-device-permissions.md)Integrar [recursos de mídia](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 |11/30/2020|Novo: integração da plataforma de identidade com o Kit de Ferramentas do Teams e o Visual Studio Code para guias|[Autenticação de login único com o Kit de Ferramentas do Teams e o Visual Studio Code para guias](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Manifesto do aplicativo Teams atualizado para a versão 1.8|[Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Diretrizes de design de bot do Teams|[Diretrizes de design de bot](bots/design/bots.md)|
@@ -30,7 +31,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 |8/19/2020|Importar mensagens do Teams com o Microsoft Graph|[Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Suporte a Cartões Adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Começar a criar aplicativos do Teams com o Visual Studio Toolkit.|[Criar aplicativos com o Kit de Ferramentas do Microsoft Teams e o Visual Studio Code](toolkit/visual-studio-overview.md) |
-|08/06/2020|Suporte para autenticação SSO de guias|[Desenvolver uma guia SSO do Microsoft Teams](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|08/06/2020|Suporte para autenticação SSO de Guias|[Desenvolver uma guia SSO do Microsoft Teams](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Bots e mensagens proativos do Graph (Visualização Pública)|[Habilitar a instalação proativa de bots e mensagens proativas no Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Atualizações de funcionalidade de dispositivo móvel.|[Solicitar permissões de dispositivo para sua guia do Microsoft Teams](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Ferramenta de Validação de Aplicativos do Teams para envios do AppSource.|[Ferramenta de Validação de Aplicativos do Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
@@ -40,7 +41,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 |07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema de manifesto atualizado para a versão 1.7| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Permissões de consentimento específicas de recursos usando APIs do Microsoft Graph estão na visualização do desenvolvedor. |[Consentimento específico do recurso (RSC) — Visualização do Desenvolvedor](graph-api/rsc/resource-specific-consent.md) |
-|5/18/2020|Integrar agentes virtuais do Power com o Teams|[Integrar um chatbot do Power Virtual Agents ao Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|5/18/2020|Integrar Agentes Virtuais Do Power com o Teams|[Integrar um chatbot de Agentes Virtuais Do Power com o Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrar sistemas WFM com o Shifts Connector para o Teams|[Conectores WFM de turnos do Microsoft Teams](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar membros pagedos. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | O parâmetro em cargas enviadas para um bot não é mais criptografado, permitindo que você use esse valor para construir `replyToId` deeplinks para essas mensagens. As cargas de mensagens incluem os valores criptografados no parâmetro. `legacy.replyToId`.  |
@@ -51,7 +52,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 | 8/28/2019 | Suporte para canais privados em guias e conectores. | [Obtenha contexto para sua guia](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Compartilhe um site externo, de um site externo, em um canal do Teams. | [Compartilhar com o Teams](~/share-to-teams.md) |
 | 05/25/2019 | Responder com mensagem de bot do módulo de tarefa. | [Responder com mensagem de bot do módulo de tarefa](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
-| 05/25/2019 | Bots em chats em grupo. | [Interagir com um bot no chat ou no canal de grupo](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
+| 05/25/2019 | Bots em chats em grupo. | [Interagir com um bot no chat de grupo ou canal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | Localização do manifesto do aplicativo. | [Localização de aplicativos](~/publishing/apps-localization.md) |
 | 05/20/2019 | Ações de mensagem. | [Ações de mensagem](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Vincular desesqueamento (visualizações de URL personalizadas). | [Desenrolamento de link](messaging-extensions/how-to/link-unfurling.md)|
@@ -59,7 +60,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 | 05/06/2019 | Os Modelos de Aplicativo agora estão disponíveis. | [Modelos de aplicativo](~/samples/app-templates.md) |
 | 04/23/2019 | As Extensões de Mensagens baseadas em Ações agora estão disponíveis. | [Extensões de mensagem baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | Criar links profundos para o chat privado está fora da visualização do desenvolvedor e disponível. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
-| 01/23/2019 | Informações de SKU e licenceType de navegação no contexto da guia. | [Contexto de guia](~/concepts/tabs/tabs-context.md) |
+| 01/23/2019 | Informações de SKU e licenceType de navegação no contexto da guia. | [Contexto da guia](~/concepts/tabs/tabs-context.md) |
 | 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams e foram movidas da visualização do desenvolvedor. Como parte desse trabalho, a seção de guias foi reformulada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | A iniciação para o Nó JS e para .NET/C# foi atualizada para usar o App Studio no Teams, e uma nova seção foi adicionada sobre a hospedagem de aplicativos do Teams baseados em nós no Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -80,7 +81,7 @@ O log de alterações lista as alterações feitas na plataforma do Microsoft Te
 | 06/07/2018 | As informações de pré-lançamento do Catálogo de Aplicativos de Locatários do Microsoft Teams foram adicionadas. | [Publicar seu aplicativo do Microsoft Teams](~/publishing/apps-publish.md)|
 | 05/31/2018 | A visualização do desenvolvedor do Teams (anel 3.6) foi atualizada para incluir a capacidade de adicionar bots e guias ao chat em grupo. | [Recursos na visualização do desenvolvedor,](~/resources/dev-preview/developer-preview-features.md) [esquema de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md)|
 | 05/29/2018 | Agora há suporte para cartões adaptáveis no Teams nas [ações de cartão adaptáveis no Teams.](task-modules-and-cards/cards/cards-reference.md) |
-| 05/29/2018 | Se você estiver usando a [visualização de desenvolvedor](~/resources/dev-preview/developer-preview-intro.md), seu bot agora pode enviar e receber arquivos.| [Enviar e receber arquivos por meio de seu bot](~/concepts/bots/bots-files.md), Recursos na [Visualização pública do desenvolvedor para o Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
+| 05/29/2018 | Se você estiver usando a [visualização do desenvolvedor,](~/resources/dev-preview/developer-preview-intro.md)seu bot agora pode enviar e receber arquivos.| [Enviar e receber arquivos por meio de seu bot](~/concepts/bots/bots-files.md), Recursos na [Visualização pública do desenvolvedor para o Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID foi adicionado à carga para as `Invoke` ações do cartão e do `MessageBack` cartão. Isso é especialmente útil se você precisar atualizar a mensagem de onde a ação do cartão veio. | [Ações do cartão](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Este tópico foi adicionado para controlar alterações na interface de programação do Teams e neste conjunto de documentação. | [Novidades](~/whats-new.md)|
 | 04/10/2018 | Alterou as URLs de autenticação para usar consistentemente a ID de locatário no caminho. | [Fluxo de autenticação para guias,](~/concepts/authentication/auth-flow-tab.md) [autenticação de guia do AAD](~/concepts/authentication/auth-tab-AAD.md)|

@@ -4,40 +4,40 @@ author: clearab
 description: Descreve como responder à ação enviar do módulo de tarefa a partir de um comando de ação de extensão de mensagens
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 1fb2f2dc51d7de1208a5a913abf2d38cb80c401a
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137658"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231642"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefa
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Quando um usuário envia o módulo de tarefa, seu serviço Web receberá uma `composeExtension/submitAction` mensagem de invocação com os valores de ID de comando e de parâmetro definidos. Seu aplicativo terá cinco segundos para responder à invocação, caso contrário, o usuário receberá uma mensagem de erro "não é possível acessar o aplicativo" e qualquer resposta à invocação será ignorada pelo cliente do teams.
+Depois que um usuário envia o módulo de tarefa, seu serviço Web recebe uma mensagem de invocação com a ID de comando e os valores `composeExtension/submitAction` de parâmetro. Seu aplicativo tem cinco segundos para responder à invocação, caso contrário, o usuário recebe uma mensagem de erro Não é possível alcançar o aplicativo *e* qualquer resposta à invocação é ignorada pelo cliente do Teams.
 
-Você tem as seguintes opções para responder.
+Você tem as seguintes opções para responder:
 
-* Sem resposta-você pode optar por usar a ação enviar para acionar um processo em um sistema externo e não fornecer nenhum feedback para o usuário. Isso pode ser útil para processos de execução longa, e você pode optar por fornecer comentários de outra maneira (por exemplo, com uma [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Outro módulo de tarefa](#respond-with-another-task-module) : você pode responder com um módulo de tarefa adicional como parte de uma interação de várias etapas.
-* [Resposta do cartão](#respond-with-a-card-inserted-into-the-compose-message-area) -você pode responder com um cartão em que o usuário pode interagir e/ou inserir em uma mensagem.
-* [Cartão adaptável do bot](#bot-response-with-adaptive-card) -Insira um cartão adaptável diretamente na conversa.
-* [Solicitar que o usuário autentique](~/messaging-extensions/how-to/add-authentication.md)
+* Nenhuma resposta - Você pode optar por usar a ação enviar para disparar um processo em um sistema externo e não fornecer nenhum comentário ao usuário. Isso pode ser útil para processos de longa duração e você pode optar por fornecer comentários de outra maneira (por exemplo, com uma [mensagem proativa.](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Outro módulo de](#respond-with-another-task-module) tarefa - Você pode responder com um módulo de tarefa adicional como parte de uma interação em várias etapas.
+* [Resposta do](#respond-with-a-card-inserted-into-the-compose-message-area) cartão - Você pode responder com um cartão com o que o usuário pode interagir e/ou inserir em uma mensagem.
+* [Cartão adaptável do bot](#bot-response-with-adaptive-card) : insira um Cartão Adaptável diretamente na conversa.
+* [Solicitar a autenticação do usuário](~/messaging-extensions/how-to/add-authentication.md)
 * [Solicitar que o usuário forneça configuração adicional](~/messaging-extensions/how-to/add-configuration-page.md)
 
-A tabela abaixo mostra quais tipos de respostas estão disponíveis com base no local de invocação ( `commandContext` ) da extensão de mensagens. Para autenticação ou configuração, depois que o usuário concluir o fluxo, a chamada original será reenviada ao seu serviço Web.
+Para autenticação ou configuração, depois que o usuário concluir o fluxo, a invocação original será re-enviada ao seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis com base no local de `commandContext` invocação da extensão de mensagens: 
 
-|Tipo de resposta | Redação | barra de comandos | message |
+|Tipo de resposta | compose | barra de comandos | mensagem |
 |--------------|:-------------:|:-------------:|:---------:|
-|Resposta de cartão | x | x | x |
+|Resposta do cartão | x | x | x |
 |Outro módulo de tarefa | x | x | x |
-|Bot com cartão adaptável | x |  | x |
+|Bot com Cartão Adaptável | x |  | x |
 | Nenhuma resposta | x | x | x |
 
-## <a name="the-submitaction-invoke-event"></a>O evento de chamar enviaraction
+## <a name="the-submitaction-invoke-event"></a>O evento submitAction invoke
 
-Veja a seguir alguns exemplos de como receber a mensagem Invoke.
+Exemplos de recebimento da mensagem de invocação são os seguinte:
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -63,7 +63,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Este é um exemplo do objeto JSON que você receberá. O `commandContext` parâmetro indica onde sua extensão de mensagens foi disparada. O `data` objeto contém os campos no formulário como parâmetros e os valores que o usuário enviou. O objeto JSON aqui é reduzido para realçar os campos mais relevantes.
+Este é um exemplo do objeto JSON que você recebe. O `commandContext` parâmetro indica de onde a extensão de mensagens foi disparada. O `data` objeto contém os campos no formulário como parâmetros e os valores que o usuário enviou. O objeto JSON aqui é reduzido para realçar os campos mais relevantes.
 
 ```json
 {
@@ -91,9 +91,9 @@ Este é um exemplo do objeto JSON que você receberá. O `commandContext` parâm
 
 * * *
 
-## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>Responder com um cartão inserido na área de mensagem de composição
+## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>Responder com um cartão inserido na área de mensagem de redação
 
-A maneira mais comum de responder à `composeExtension/submitAction` solicitação é com um cartão inserido na área de mensagem de composição. O usuário pode então optar por enviar o cartão para a conversa. Para obter mais informações sobre o uso de cartões [, consulte cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
+A maneira mais comum de responder à `composeExtension/submitAction` solicitação é com um cartão inserido na área de mensagem de redação. Em seguida, o usuário pode optar por enviar o cartão para a conversa. Para obter mais informações sobre como usar cartões, consulte [cartões e ações de cartão.](~/task-modules-and-cards/cards/cards-actions.md)
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -101,7 +101,6 @@ A maneira mais comum de responder à `composeExtension/submitAction` solicitaç�
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
   ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
-    dynamic Data = JObject.Parse(action.Data.ToString());
     var response = new MessagingExtensionActionResponse
     {
         ComposeExtension = new MessagingExtensionResult
@@ -110,13 +109,13 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
             Type = "result",
         },
     };
-    var card = new HeroCard
-    {
-        Title = Data["formField1"] as string,
-        Subtitle = Data["formField2"]  as string,
-        Text = Data["formField3"]  as string,
-    };
-
+    var createCardData = ((JObject)action.Data).ToObject<CreateCardData>();
+var card = new HeroCard
+{
+     Title = createCardData.Title,
+     Subtitle = createCardData.Subtitle,
+     Text = createCardData.Text,
+};
     var attachments = new List<MessagingExtensionAttachment>();
     attachments.Add(new MessagingExtensionAttachment
     {
@@ -124,11 +123,8 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
         ContentType = HeroCard.ContentType,
         Preview = card.ToAttachment(),
     });
-
     response.ComposeExtension.Attachments = attachments;
-
     return response;
-
 }
 ```
 
@@ -188,32 +184,32 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-another-task-module"></a>Responder com outro módulo de tarefa
 
-Você pode optar por responder ao `submitAction` evento com um módulo de tarefa adicional. Isso pode ser útil quando:
+Você pode optar por responder ao evento `submitAction` com um módulo de tarefa adicional. Isso pode ser útil quando:
 
 * Você precisa coletar grandes quantidades de informações.
-* Se você precisar alterar dinamicamente quais informações você está coletando com base na entrada do usuário
-* Se você precisar validar as informações enviadas pelo usuário e, potencialmente, reenviar o formulário com uma mensagem de erro, se houver algum problema. 
+* Se você precisar alterar dinamicamente quais informações está coletando com base na entrada do usuário
+* Se você precisar validar as informações enviadas pelo usuário e potencialmente reendá-lo com uma mensagem de erro se algo estiver errado. 
 
-O método de resposta é o mesmo que [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md). Se você estiver usando o SDK da estrutura de bot, o mesmo evento será disparado para as duas ações de envio. Isso significa que você precisa certificar-se de adicionar lógica que determina a resposta correta.
+O método de resposta é o mesmo [que responder ao evento `fetchTask` inicial.](~/messaging-extensions/how-to/action-commands/create-task-module.md) Se você estiver usando o SDK da Estrutura de Bot, os mesmos gatilhos de evento para ambas as ações de envio. Isso significa que você deve adicionar lógica que determina a resposta correta.
 
-## <a name="bot-response-with-adaptive-card"></a>Resposta de bot com cartão adaptável
+## <a name="bot-response-with-adaptive-card"></a>Resposta de bot com Cartão Adaptável
 
 >[!Note]
->Esse fluxo requer que você adicione o `bot` objeto ao manifesto do seu aplicativo e que você tenha o escopo necessário definido para o bot. Use a mesma ID que sua extensão de mensagens para o bot.
+>Esse fluxo exige que você adicione o objeto ao manifesto do aplicativo e que tenha o `bot` escopo necessário definido para o bot. Use a mesma ID da extensão de mensagens do bot.
 
-Você também pode responder à ação de envio inserindo uma mensagem com um cartão adaptável no canal com um bot. O usuário poderá visualizar a mensagem antes de enviá-la e potencialmente editar/interagir com ela também. Isso pode ser muito útil em cenários em que você precisa coletar informações de seus usuários antes de criar uma resposta de cartão adaptável ou quando precisar atualizar o cartão após alguém interagir com ele. O cenário a seguir mostra como o aplicativo Polly usa esse fluxo para configurar uma pesquisa sem incluir as etapas de configuração na conversa do canal.
+Você também pode responder à ação enviar inserindo uma mensagem com um Cartão Adaptável no canal com um bot. O usuário pode visualizar a mensagem antes de encaminhá-la e também pode editá-la ou interagir com ela. Isso pode ser muito útil em cenários em que você coleta informações de seus usuários antes de criar uma resposta de cartão adaptável ou quando você atualiza o cartão depois que alguém interage com ele. O cenário a seguir mostra como o aplicativo Quelinha usa esse fluxo para configurar uma sondagem sem incluir as etapas de configuração na conversa do canal:
 
-1. O usuário clica na extensão de mensagens para disparar o módulo de tarefa.
-2. O usuário configura a pesquisa com o módulo de tarefa.
-3. Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para compilar a pesquisa como um cartão adaptável e a envia como `botMessagePreview` resposta ao cliente.
-4. O usuário pode visualizar a mensagem de cartão adaptável antes do bot inseri-la no canal. Se o aplicativo ainda não for um membro do canal, clique em `Send` adicionará a ele.
-   1. O usuário também pode escolher a `Edit` mensagem, que as retorna para o módulo de tarefa original.
+1. O usuário seleciona a extensão de mensagens para disparar o módulo de tarefa.
+2. O usuário configura a sondagem com o módulo de tarefa.
+3. Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para criar a sondagem como um Cartão Adaptável e envia-a como uma resposta `botMessagePreview` ao cliente.
+4. Em seguida, o usuário pode visualizar a mensagem do cartão adaptável antes que o bot a insira no canal. Se o aplicativo ainda não for membro do canal, a seleção `Send` o adiciona.
+   1. O usuário também pode escolher a `Edit` mensagem, que o retornará para o módulo de tarefa original.
 5. Interagir com o cartão adaptável altera a mensagem antes de enviá-la.
-6. Quando o usuário clica `Send` no bot envia a mensagem para o canal.
+6. Depois que o usuário seleciona `Send` o bot, posta a mensagem no canal.
 
 ### <a name="respond-to-initial-submit-action"></a>Responder à ação de envio inicial
 
-Para habilitar esse fluxo, seu módulo de tarefa deve responder à `composeExtension/submitAction` mensagem inicial com uma visualização do cartão que o bot enviará ao canal. Isso dá ao usuário a oportunidade de verificar o cartão antes de enviá-lo e também tentará instalar o bot na conversa se ele ainda não estiver instalado.
+Para habilitar esse fluxo, seu módulo de tarefa deve responder à mensagem inicial com uma visualização do cartão que o `composeExtension/submitAction` bot envia para o canal. Isso dá ao usuário a oportunidade de verificar o cartão antes de enviar e também tentar instalar seu bot na conversa se ele ainda não estiver instalado.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -221,7 +217,7 @@ Para habilitar esse fluxo, seu módulo de tarefa deve responder à `composeExten
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
   ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
-  dynamic Data = JObject.Parse(action.Data.ToString());
+  dynamic createCardData = ((JObject) action.Data).ToObject(typeof(JObject));
   var response = new MessagingExtensionActionResponse
   {
     ComposeExtension = new MessagingExtensionResult
@@ -298,7 +294,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 # <a name="json"></a>[JSON](#tab/json)
 
 >[!Note]
->O `activityPreview` deve conter uma `message` atividade com exatamente 1 anexo de cartão adaptável. O `<< Card Payload >>` valor é um espaço reservado para o cartão que você deseja enviar.
+>Deve `activityPreview` conter uma atividade com exatamente `message` 1 anexo de cartão adaptável. O `<< Card Payload >>` valor é um espaço reservado para o cartão que você deseja enviar.
 
 ```json
 {
@@ -319,9 +315,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="the-botmessagepreview-send-and-edit-events"></a>Eventos de envio e edição do botMessagePreview
+### <a name="the-botmessagepreview-send-and-edit-events"></a>Os eventos de envio e edição botMessagePreview
 
-Sua extensão de mensagem agora precisará responder a duas novas variedades da `composeExtension/submitAction` invocação, onde `value.botMessagePreviewAction = "send"` e `value.botMessagePreviewAction = "edit"` .
+Sua extensão de mensagem deve responder agora a duas novas variedades da `composeExtension/submitAction` invocação, onde `value.botMessagePreviewAction = "send"` e `value.botMessagePreviewAction = "edit"` .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -390,15 +386,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="respond-to-botmessagepreview-edit"></a>Responder à edição do botMessagePreview
+### <a name="respond-to-botmessagepreview-edit"></a>Responder à edição botMessagePreview
 
-Se o usuário decidir editar o cartão antes de enviá-lo clicando no botão **Editar** , você receberá uma `composeExtension/submitAction` chamada `value.botMessagePreviewAction = edit` . Normalmente, você deve responder retornando o módulo de tarefa enviado em resposta à `composeExtension/fetchTask` chamada inicial que iniciou a interação. Isso permite que o usuário inicie o processo, inserindo novamente as informações originais. Você também deve considerar o uso das informações que agora estão disponíveis para preencher previamente o módulo de tarefa, para que o usuário não tenha preenchido todas as informações do zero.
+Se o usuário editar o cartão antes de enviar selecionando o **botão** Editar, você receberá uma `composeExtension/submitAction` invocação com `value.botMessagePreviewAction = edit` . Normalmente, você deve responder retornando o módulo de tarefa enviado em resposta à invocação inicial `composeExtension/fetchTask` que iniciou a interação. Isso permite que o usuário inicie o processo de novo inserindo as informações originais. Use as informações disponíveis para preencher previamente o módulo de tarefa para que o usuário não tenha que preencher todas as informações do zero.
 
-Confira [responder ao `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).
+Veja [respondendo ao evento `fetchTask` inicial.](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-### <a name="respond-to-botmessagepreview-send"></a>Responder a botMessagePreview enviar
+### <a name="respond-to-botmessagepreview-send"></a>Responder ao envio de botMessagePreview
 
-Quando o usuário clicar no botão **Enviar** , você receberá uma `composeExtension/submitAction` chamada com `value.botMessagePreviewAction = send` . Seu serviço Web precisará criar e enviar uma mensagem proativa com o cartão adaptável à conversa e também responder à invocação.
+Depois que o usuário seleciona o **botão Enviar,** você recebe uma `composeExtension/submitAction` invocação com `value.botMessagePreviewAction = send` . Seu serviço Web precisa criar e enviar uma mensagem proativa com o Cartão Adaptável para a conversa e também responder à invocação.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -496,7 +492,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à seguinte.
+Você recebe uma nova `composeExtension/submitAction` mensagem semelhante à seguinte:
 
 ```json
 {
@@ -529,15 +525,15 @@ Você receberá uma nova `composeExtension/submitAction` mensagem semelhante à 
 
 * * *
 
-### <a name="user-attribution-for-bots-messages"></a>Atribuição de usuário para mensagens de bots 
+### <a name="user-attribution-for-bots-messages"></a>Atribuição do usuário para mensagens de bots 
 
-Em cenários em que um bot envia mensagens em nome de um usuário, a atribuição da mensagem a esse usuário pode ajudar no contrato e apresentar um fluxo de interação mais natural. Este recurso permite que você atributo uma mensagem do bot para um usuário em cujo nome foi enviado.
+Em cenários em que um bot envia mensagens em nome de um usuário, atribuir a mensagem a esse usuário pode ajudar no envolvimento e mostrar um fluxo de interação mais natural. Esse recurso permite que você atribua uma mensagem do seu bot a um usuário em cujo nome ela foi enviada.
 
-Na imagem abaixo, à esquerda está uma mensagem de cartão enviada por um bot *sem* a atribuição de usuário e à direita é um cartão enviado por um bot *com* atribuição de usuário.
+Na imagem a seguir, à esquerda há uma mensagem de cartão enviada por um *bot* sem atribuição do usuário e à direita está um cartão enviado por um *bot* com atribuição do usuário.
 
 ![Captura de tela](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-Para usar a atribuição de usuário no Teams, você precisa adicionar a `OnBehalfOf` entidade menção à `ChannelData` sua `Activity` carga que é enviada ao Teams.
+Para usar a atribuição do usuário em equipes, você deve adicionar a entidade de menção à sua `OnBehalfOf` carga que é enviada para o `ChannelData` `Activity` Teams.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -573,16 +569,16 @@ Para usar a atribuição de usuário no Teams, você precisa adicionar a `OnBeha
 
 * * *
 
-Veja a seguir uma descrição das entidades na `OnBehalfOf` matriz:
+A seção a seguir é uma descrição das entidades na `OnBehalfOf` matriz:
 
-#### <a name="details-of--onbehalfof-entity-schema"></a>Detalhes do `OnBehalfOf` esquema de entidade
+#### <a name="details-of--onbehalfof-entity-schema"></a>Detalhes do  `OnBehalfOf` esquema de entidade
 
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
-|`itemId`|Número inteiro|Deve ser 0|
-|`mentionType`|Cadeia de caracteres|Deve ser "Person"|
-|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem foi enviada. O nome do remetente da mensagem apareceria como " \<user\> via \<bot name\> ".|
-|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não está disponível.|
+|`itemId`|Inteiro|Deve ser 0|
+|`mentionType`|Cadeia de caracteres|Deve ser "pessoa"|
+|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem apareceria como " \<user\> via \<bot name\> ".|
+|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback no caso de a resolução de nomes não estar disponível.|
   
 ## <a name="next-steps"></a>Próximas etapas
 
