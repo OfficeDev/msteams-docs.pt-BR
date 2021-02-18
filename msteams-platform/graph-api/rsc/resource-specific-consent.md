@@ -5,13 +5,13 @@ localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
-keywords: autorização do OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1b5c0f645d93ed33c11bf3279e70133f35f53a2c
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+keywords: teams authorization OAuth SSO AAD rsc Graph
+ms.openlocfilehash: 97f642b203a1f7fb4cd9332b61265c0b27788e2b
+ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093926"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "50270795"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimento específico do recurso (RSC)
 
@@ -19,7 +19,7 @@ O consentimento específico do recurso (RSC) é uma integração da API do Micro
 
 ## <a name="resource-specific-permissions"></a>Permissões específicas do recurso
 
-|Permissão de aplicativo| Ação |
+|Permissão de aplicativo| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obter as configurações dessa equipe.|
 |TeamSettings.ReadWrite.Group|Atualizar as configurações para esta equipe.|
@@ -43,7 +43,7 @@ O consentimento específico do recurso (RSC) é uma integração da API do Micro
 As etapas para habilenciar o RSC em seu aplicativo são as seguintes:
 
 1. [Configure as configurações de consentimento do proprietário do grupo no portal do Azure Active Directory.](#configure-group-owner-consent-settings-in-the-azure-ad-portal)
-1. [Registre seu aplicativo com a Microsoft Identity Platform por meio do portal do Azure AD.](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
+1. [Registre seu aplicativo na Plataforma de Identidade da Microsoft por meio do portal do Azure AD.](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
 1. [Revise suas permissões de aplicativo no portal do Azure AD.](#review-your-application-permissions-in-the-azure-ad-portal)
 1. [Obtenha um token de acesso da Plataforma de Identidade da Microsoft.](#obtain-an-access-token-from-the-microsoft-identity-platform)
 1. [Atualize o manifesto do aplicativo Teams.](#update-your-teams-app-manifest)
@@ -60,7 +60,7 @@ Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory
  > - [Selecione o](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) consentimento de aplicativos empresariais do **Azure Active Directory** e  =>    =>  **as** permissões  =>  **configurações de consentimento do usuário.**
 > - Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado consentimento do proprietário do grupo para aplicativos que acessam dados **(o** padrão é Permitir consentimento do proprietário do grupo para todos **os proprietários do grupo).** Para que o proprietário da equipe instale um aplicativo usando RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
 
-![configuração do azure rsc](../../assets/images/azure-rsc-configuration.png)
+![configuração rsc do azure](../../assets/images/azure-rsc-configuration.png)
 
 Para habilitar ou desabilitar o consentimento do proprietário do grupo usando o PowerShell, siga as etapas descritas em Configurar consentimento do proprietário do grupo [usando o PowerShell.](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell)
 
@@ -141,7 +141,7 @@ Depois que o aplicativo for instalado em uma equipe, você poderá usar o Explor
 > [!div class="checklist"]
 >
 >- Obter **groupId** da equipe do cliente do Teams.
-> - No cliente do Teams, selecione **Teams** na barra de inv da extrema esquerda.
+> - No cliente do Teams, selecione **Teams** na barra de entrada à esquerda.
 > - Selecione a equipe em que o aplicativo está instalado no menu suspenso.
 > - Selecione o **ícone Mais opções** (&#8943;).
 > - Selecione **Obter link para a equipe.**
@@ -149,7 +149,12 @@ Depois que o aplicativo for instalado em uma equipe, você poderá usar o Explor
 > - Faça logoff **no Explorador do Graph.**
 > - Faça uma **chamada GET** para o seguinte ponto de extremidade: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . O campo clientAppId na resposta será mapeado para a appId especificada no manifesto do aplicativo do Teams.
   ![Resposta do Explorador do Graph à chamada GET.](../../assets/images/graph-permissions.png)
- 
+
+## <a name="code-sample"></a>Exemplo de código
+| **Nome do exemplo** | **Descrição** | **C#** |
+|-----------------|-----------------|----------------|
+| Consentimento Específico do Recurso (RSC) | Use RSC para chamar APIs do Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+
 ## <a name="test-resource-specific-consent"></a>Testar o consentimento específico do recurso
  
 > [!div class="nextstepaction"]
@@ -160,3 +165,4 @@ Depois que o aplicativo for instalado em uma equipe, você poderá usar o Explor
 > [!div class="nextstepaction"]
 > [**Consentimento específico do recurso no Microsoft Teams para administradores**](/MicrosoftTeams/resource-specific-consent)
 > 
+
