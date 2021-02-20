@@ -74,6 +74,8 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: Integrar recursos de mídia
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+        - name: Integrar QR ou capacidade de leitura de código de barras
+          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Criar seu aplicativo
   items:
     - name: Visão Geral
