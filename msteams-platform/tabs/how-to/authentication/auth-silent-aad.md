@@ -2,39 +2,39 @@
 title: Autenticação silenciosa
 description: Descreve a autenticação silenciosa
 ms.topic: conceptual
-keywords: autenticação silenciosa de SSO do Teams AAD
-ms.openlocfilehash: e55e415aba08fdedf4409abf39115838c3a5faf0
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: autenticação do teams SSO silent AAD
+ms.openlocfilehash: db8409cd4a6edface6d5dc3b3de6698852eaaa24
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014093"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449225"
 ---
-# <a name="silent-authentication"></a><span data-ttu-id="bee8a-104">Autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="bee8a-104">Silent authentication</span></span>
+# <a name="silent-authentication"></a><span data-ttu-id="343d8-104">Autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="343d8-104">Silent authentication</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bee8a-105">Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que esteja usando pelo menos a versão 1.4.1 do SDK JavaScript do Teams.</span><span class="sxs-lookup"><span data-stu-id="bee8a-105">For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.</span></span>
+> <span data-ttu-id="343d8-105">Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando pelo menos a versão 1.4.1 do SDK JavaScript do Teams.</span><span class="sxs-lookup"><span data-stu-id="343d8-105">For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.</span></span>
 
-<span data-ttu-id="bee8a-106">A autenticação silenciosa no Azure Active Directory (Azure AD) minimiza o número de vezes que um usuário precisa inserir suas credenciais de logon ao atualizar silenciosamente o token de autenticação.</span><span class="sxs-lookup"><span data-stu-id="bee8a-106">Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="bee8a-107">(Para suporte verdadeiro ao single sign-on, veja nossa [Documentação de SSO)](~/tabs/how-to/authentication/auth-aad-sso.md)</span><span class="sxs-lookup"><span data-stu-id="bee8a-107">(For true single sign-on support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))</span></span>
+<span data-ttu-id="343d8-106">A autenticação silenciosa no Azure Active Directory (AAD) minimiza o número de vezes que um usuário inssinge suas credenciais de entrada atualize silenciosamente o token de autenticação.</span><span class="sxs-lookup"><span data-stu-id="343d8-106">Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="343d8-107">Para ver o suporte verdadeiro ao login único, consulte [documentação do SSO](~/tabs/how-to/authentication/auth-aad-sso.md).</span><span class="sxs-lookup"><span data-stu-id="343d8-107">For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).</span></span>
 
-<span data-ttu-id="bee8a-108">Se quiser manter seu código completamente do lado do cliente, você pode usar a Biblioteca de Autenticação do [Azure Active Directory](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para tentar adquirir um token de acesso do Azure AD silenciosamente.</span><span class="sxs-lookup"><span data-stu-id="bee8a-108">If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently.</span></span> <span data-ttu-id="bee8a-109">Isso significa que o usuário pode nunca ver uma caixa de diálogo pop-up se ele tiver se assinado recentemente.</span><span class="sxs-lookup"><span data-stu-id="bee8a-109">This means that the user may never see a popup dialog if they have signed in recently.</span></span>
+<span data-ttu-id="343d8-108">Se você quiser manter seu código completamente no lado do cliente, você pode usar a biblioteca de autenticação [do AAD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obter um token de acesso AAD silenciosamente.</span><span class="sxs-lookup"><span data-stu-id="343d8-108">If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently.</span></span> <span data-ttu-id="343d8-109">Se o usuário tiver se assinado recentemente, ele nunca verá uma caixa de diálogo pop-up.</span><span class="sxs-lookup"><span data-stu-id="343d8-109">If the user has signed in recently, they never see a popup dialog box.</span></span>
 
-<span data-ttu-id="bee8a-110">Embora a biblioteca ADAL.js seja otimizada para aplicativos AngularJS, ela também funciona com aplicativos de página única JavaScript puros.</span><span class="sxs-lookup"><span data-stu-id="bee8a-110">Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.</span></span>
+<span data-ttu-id="343d8-110">Embora a biblioteca ADAL.js seja otimizada para aplicativos AngularJS, ela também funciona com aplicativos de página única JavaScript puros.</span><span class="sxs-lookup"><span data-stu-id="343d8-110">Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bee8a-111">Atualmente, a autenticação silenciosa só funciona para guias.</span><span class="sxs-lookup"><span data-stu-id="bee8a-111">Currently, silent authentication only works for tabs.</span></span> <span data-ttu-id="bee8a-112">Ele ainda não funciona ao entrar de um bot.</span><span class="sxs-lookup"><span data-stu-id="bee8a-112">It does not yet work when signing in from a bot.</span></span>
+> <span data-ttu-id="343d8-111">Atualmente, a autenticação silenciosa só funciona para guias.</span><span class="sxs-lookup"><span data-stu-id="343d8-111">Currently, silent authentication only works for tabs.</span></span> <span data-ttu-id="343d8-112">Ele não funciona ao entrar de um bot.</span><span class="sxs-lookup"><span data-stu-id="343d8-112">It does not work when signing in from a bot.</span></span>
 
-## <a name="how-silent-authentication-works"></a><span data-ttu-id="bee8a-113">Como funciona a autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="bee8a-113">How silent authentication works</span></span>
+## <a name="how-silent-authentication-works"></a><span data-ttu-id="343d8-113">Como funciona a autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="343d8-113">How silent authentication works</span></span>
 
-<span data-ttu-id="bee8a-114">A ADAL.js biblioteca cria um iframe oculto para o fluxo de concessão implícito do OAuth 2.0, mas especifica para que o Azure AD nunca mostre a página `prompt=none` de logon.</span><span class="sxs-lookup"><span data-stu-id="bee8a-114">The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow, but it specifies `prompt=none` so that Azure AD never shows the login page.</span></span> <span data-ttu-id="bee8a-115">Se a interação do usuário for necessária porque o usuário precisa entrar ou conceder acesso ao aplicativo, o Azure AD retornará imediatamente um erro que ADAL.js então relata ao seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bee8a-115">If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app.</span></span> <span data-ttu-id="bee8a-116">Neste ponto, seu aplicativo pode mostrar um botão de logon, se necessário.</span><span class="sxs-lookup"><span data-stu-id="bee8a-116">At this point your app can show a login button if needed.</span></span>
+<span data-ttu-id="343d8-114">A ADAL.js cria um iframe oculto para o fluxo implícito de concessão do OAuth 2.0.</span><span class="sxs-lookup"><span data-stu-id="343d8-114">The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow.</span></span> <span data-ttu-id="343d8-115">Mas a biblioteca especifica `prompt=none` , portanto, o Azure AD nunca mostra a página de logom.</span><span class="sxs-lookup"><span data-stu-id="343d8-115">But the library specifies `prompt=none`, so Azure AD never shows the sign in page.</span></span> <span data-ttu-id="343d8-116">Se a interação do usuário for necessária porque o usuário precisa entrar ou conceder acesso ao aplicativo, o AAD retornará imediatamente um erro que ADAL.js relatórios para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="343d8-116">If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app.</span></span> <span data-ttu-id="343d8-117">Neste ponto, seu aplicativo pode mostrar um botão de login, se necessário.</span><span class="sxs-lookup"><span data-stu-id="343d8-117">At this point your app can show a sign in button if required.</span></span>
 
-## <a name="how-to-do-silent-authentication"></a><span data-ttu-id="bee8a-117">Como fazer a autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="bee8a-117">How to do silent authentication</span></span>
+## <a name="how-to-do-silent-authentication"></a><span data-ttu-id="343d8-118">Como fazer autenticação silenciosa</span><span class="sxs-lookup"><span data-stu-id="343d8-118">How to do silent authentication</span></span>
 
-<span data-ttu-id="bee8a-118">O código neste artigo vem do exemplo de aplicativo do [Microsoft Teams Authentication Sample (Node).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)</span><span class="sxs-lookup"><span data-stu-id="bee8a-118">The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).</span></span>
+<span data-ttu-id="343d8-119">O código neste artigo vem do aplicativo de exemplo do Teams que é o nó de exemplo [de autenticação do Teams.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)</span><span class="sxs-lookup"><span data-stu-id="343d8-119">The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).</span></span>
 
-### <a name="include-and-configure-adal"></a><span data-ttu-id="bee8a-119">incluir e configurar a ADAL</span><span class="sxs-lookup"><span data-stu-id="bee8a-119">include and configure ADAL</span></span>
+### <a name="include-and-configure-adal"></a><span data-ttu-id="343d8-120">incluir e configurar o ADAL</span><span class="sxs-lookup"><span data-stu-id="343d8-120">include and configure ADAL</span></span>
 
-<span data-ttu-id="bee8a-120">Inclua a ADAL.js nas páginas de guia e configure a ADAL com a ID do cliente e a URL de redirecionamento:</span><span class="sxs-lookup"><span data-stu-id="bee8a-120">Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:</span></span>
+<span data-ttu-id="343d8-121">Inclua a ADAL.js em suas páginas de tabulação e configure o ADAL com a ID do cliente e a URL de redirecionamento:</span><span class="sxs-lookup"><span data-stu-id="343d8-121">Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:</span></span>
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -50,9 +50,9 @@ ms.locfileid: "50014093"
 </script>
 ```
 
-### <a name="get-the-user-context"></a><span data-ttu-id="bee8a-121">Obter o contexto do usuário</span><span class="sxs-lookup"><span data-stu-id="bee8a-121">Get the user context</span></span>
+### <a name="get-the-user-context"></a><span data-ttu-id="343d8-122">Obter o contexto do usuário</span><span class="sxs-lookup"><span data-stu-id="343d8-122">Get the user context</span></span>
 
-<span data-ttu-id="bee8a-122">Na página de conteúdo da guia, chame `microsoftTeams.getContext()` para obter uma dica de logon para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="bee8a-122">In the tab's content page, call `microsoftTeams.getContext()` to get a login hint for the current user.</span></span> <span data-ttu-id="bee8a-123">Isso será usado como um login_hint na chamada para o Azure AD.</span><span class="sxs-lookup"><span data-stu-id="bee8a-123">This will be used as a login_hint in the call to Azure AD.</span></span>
+<span data-ttu-id="343d8-123">Na página de conteúdo da guia, chame para obter uma dica de `microsoftTeams.getContext()` login para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="343d8-123">In the tab's content page, call `microsoftTeams.getContext()` to get a sign in hint for the current user.</span></span> <span data-ttu-id="343d8-124">Isso é usado como loginHint na chamada ao AAD.</span><span class="sxs-lookup"><span data-stu-id="343d8-124">This is used as a loginHint in the call to AAD.</span></span>
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -65,11 +65,11 @@ if (loginHint) {
 }
 ```
 
-### <a name="authenticate"></a><span data-ttu-id="bee8a-124">Autenticar</span><span class="sxs-lookup"><span data-stu-id="bee8a-124">Authenticate</span></span>
+### <a name="authenticate"></a><span data-ttu-id="343d8-125">Autenticar</span><span class="sxs-lookup"><span data-stu-id="343d8-125">Authenticate</span></span>
 
-<span data-ttu-id="bee8a-125">Se a ADAL tiver um token não vendido em cache para o usuário, use-o.</span><span class="sxs-lookup"><span data-stu-id="bee8a-125">If ADAL has an unexpired token cached for the user, use that.</span></span> <span data-ttu-id="bee8a-126">Caso contrário, tente obter um token silenciosamente `acquireToken(resource, callback)` chamando.</span><span class="sxs-lookup"><span data-stu-id="bee8a-126">Otherwise, attempt to get a token silently by calling `acquireToken(resource, callback)`.</span></span> <span data-ttu-id="bee8a-127">ADAL.js chamará sua função de retorno de chamada com o token solicitado ou um erro se a autenticação falhar.</span><span class="sxs-lookup"><span data-stu-id="bee8a-127">ADAL.js will call your callback function with the requested token, or an error if authentication fails.</span></span>
+<span data-ttu-id="343d8-126">Se o ADAL tiver um token nãoexpirado armazenado em cache para o usuário, use o token.</span><span class="sxs-lookup"><span data-stu-id="343d8-126">If ADAL has an unexpired token cached for the user, use the token.</span></span> <span data-ttu-id="343d8-127">Como alternativa, tente obter um token silenciosamente chamando `acquireToken(resource, callback)` .</span><span class="sxs-lookup"><span data-stu-id="343d8-127">Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`.</span></span> <span data-ttu-id="343d8-128">ADAL.js chamará sua função de retorno de chamada com o token solicitado ou dará um erro se a autenticação falhar.</span><span class="sxs-lookup"><span data-stu-id="343d8-128">ADAL.js will call your callback function with the requested token, or give an error if authentication fails.</span></span>
 
-<span data-ttu-id="bee8a-128">Se você receber um erro na função de retorno de chamada, mostre um botão de logon e volte para um logon explícito.</span><span class="sxs-lookup"><span data-stu-id="bee8a-128">If you get an error in the callback function, show a login button and fall back to an explicit login.</span></span>
+<span data-ttu-id="343d8-129">Se você receber um erro na função de retorno de chamada, mostre um botão de login e volte para uma assinatura explícita.</span><span class="sxs-lookup"><span data-stu-id="343d8-129">If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.</span></span>
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -100,11 +100,11 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 });
 ```
 
-### <a name="process-the-return-value"></a><span data-ttu-id="bee8a-129">Processar o valor de retorno</span><span class="sxs-lookup"><span data-stu-id="bee8a-129">Process the return value</span></span>
+### <a name="process-the-return-value"></a><span data-ttu-id="343d8-130">Processar o valor de retorno</span><span class="sxs-lookup"><span data-stu-id="343d8-130">Process the return value</span></span>
 
-<span data-ttu-id="bee8a-130">Deixe ADAL.js cuidar da análise do resultado do Azure AD chamando na `AuthenticationContext.handleWindowCallback(hash)` página de retorno de chamada de logon.</span><span class="sxs-lookup"><span data-stu-id="bee8a-130">Let ADAL.js take care of parsing the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the login callback page.</span></span>
+<span data-ttu-id="343d8-131">ADAL.js analisar o resultado do AAD chamando a página de retorno `AuthenticationContext.handleWindowCallback(hash)` de chamada de login.</span><span class="sxs-lookup"><span data-stu-id="343d8-131">ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign in callback page.</span></span>
 
-<span data-ttu-id="bee8a-131">Verifique se temos um usuário e uma chamada válidas ou para relatar `microsoftTeams.authentication.notifySuccess()` o status de volta à página de conteúdo da guia `microsoftTeams.authentication.notifyFailure()` principal.</span><span class="sxs-lookup"><span data-stu-id="bee8a-131">Check that we have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report status back to your main tab content page.</span></span>
+<span data-ttu-id="343d8-132">Verifique se você tem um usuário válido e chame ou para relatar o status à página de conteúdo `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` da guia principal.</span><span class="sxs-lookup"><span data-stu-id="343d8-132">Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.</span></span>
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
