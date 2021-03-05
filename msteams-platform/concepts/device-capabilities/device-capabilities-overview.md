@@ -1,14 +1,14 @@
 ---
 title: Visão geral dos recursos do dispositivo
 description: Visão geral dos recursos de dispositivo nativo.
-keywords: camera image media microphone mic qr code qrcode bar code barcode barcode scan capabilities native device permissions
+keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 ms.topic: overview
-ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294723"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449588"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo 
 
@@ -37,4 +37,4 @@ Depois de obter acesso aos recursos do dispositivo, use APIs de recursos de míd
 * Capturar e compartilhar imagens
 * Verificar QR ou código de barras usando o [controle de scanner](qr-barcode-scanner-capability.md)
 * Gravar áudio por microfone
-* Compartilhar as informações de local
+* Compartilhar local usando [o se picker de localização](location-capability.md).

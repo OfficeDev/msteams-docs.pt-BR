@@ -3,12 +3,12 @@ title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Tea
 keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 ms.topic: how-to
-ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294744"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449433"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
 
@@ -17,6 +17,7 @@ Você pode enriquecer seu aplicativo do Teams com recursos de dispositivo nativo
 > [!NOTE]
 > * Para integrar recursos de mídia ao seu aplicativo móvel do Microsoft Teams, consulte [Integrar recursos de mídia.](mobile-camera-image-permissions.md)
 > * Para integrar a QR ou o recurso de scanner de código de barras no aplicativo móvel do Microsoft Teams, consulte Integrar o recurso de scanner de código de barras ou [QR no Teams](qr-barcode-scanner-capability.md)
+> * Para integrar recursos de localização ao seu aplicativo móvel do Microsoft Teams, consulte [Integrar recursos de localização.](location-capability.md)
 
 ## <a name="native-device-permissions"></a>Permissões de dispositivo nativo
 
@@ -113,7 +114,7 @@ Aproveite o HTML5 apropriado ou a API do Teams para exibir um prompt para obter 
 
 > [!IMPORTANT]
 > * Suporte para `camera` , e está habilitado por meio da API `gallery` `microphone` [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Use [**a API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) para uma única captura de imagem.
-> * O suporte `location` para está habilitado por meio da API [**getLocation.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Você deve usá-lo para localização, pois a API de localização geográfica HTML5 não tem suporte total no cliente de área de `getLocation API` trabalho do Teams.
+> * O suporte `location` para é habilitado por meio da API [**getLocation.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Você deve usá-lo para localização, pois a API de localização geográfica HTML5 não tem suporte total no cliente de área de `getLocation API` trabalho do Teams.
 
 Por exemplo:
  * Para solicitar que o usuário acesse sua localização, você deve chamar `getCurrentPosition()` :
@@ -192,3 +193,6 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 > [!div class="nextstepaction"]
 > [Integrar a QR ou o recurso de scanner de código de barras no Teams](qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrar recursos de localização no Teams](location-capability.md)

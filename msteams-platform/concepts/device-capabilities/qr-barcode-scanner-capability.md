@@ -1,22 +1,26 @@
 ---
-title: Integrar a QR ou o recurso de scanner de código de barras
+title: Integrar QR ou capacidade de leitura de código de barras
 description: Como usar o SDK do cliente JavaScript do Teams para aproveitar o recurso de QR ou scanner de código de barras
 keywords: camera media qr code qrcode bar barcode scanner scan capabilities native device permissions
 ms.author: lajanuar
-ms.openlocfilehash: 048c6b58fc126d1dd08867605784b6a150737195
-ms.sourcegitcommit: 0bb6efb3003a1949288e4601e3301b69e67d4c26
+ms.openlocfilehash: 1a13de1a4d9e03f0f36f03af0fdd948cf74a0392
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50295086"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449413"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar a QR ou o recurso de scanner de código de barras 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
 
-Código de barras é um método de representação de dados em um formulário visual e acessível por máquina. O código de barras contém informações sobre um produto, como um tipo, tamanho, fabricante e País de origem na forma de barras e espaços. O código é lido usando o scanner óptico em sua câmera de dispositivo nativa. Para uma experiência colaborativa mais rica, você pode integrar o recurso de QR ou scanner de código de barras fornecido na plataforma Teams com seu aplicativo do Teams. Este documento orienta você sobre como integrar o recurso.  
+Este documento orienta você sobre como integrar o recurso de QR ou scanner de código de barras. 
+
+Código de barras é um método de representação de dados em um formulário visual e acessível por máquina. O código de barras contém informações sobre um produto, como um tipo, tamanho, fabricante e País de origem na forma de barras e espaços. O código é lido usando o scanner óptico em sua câmera de dispositivo nativa. Para uma experiência colaborativa mais rica, você pode integrar o recurso de QR ou scanner de código de barras fornecido na plataforma Teams com seu aplicativo do Teams.   
 
 Você pode usar o [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript do Microsoft Teams, que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use a `scanBarCode` API para integrar o recurso de scanner ao seu aplicativo. 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Vantagem de integrar a QR ou o recurso de scanner de código de barras
+
+A seguir estão as vantagens da integração dos recursos de QR ou scanner de código de barras: 
 
 * A integração permite que os desenvolvedores de aplicativo web na plataforma teams aproveitem a funcionalidade de verificação de QR ou código de barras com o SDK do cliente JavaScript do Teams.
 * Com esse recurso, o usuário só precisa alinhar uma QR ou código de barras em um quadro no centro da interface do usuário do scanner e o código é verificado automaticamente. Os dados armazenados são compartilhados de volta com o aplicativo Web de chamada. Isso evita o inconveniente e os erros humanos de inserir códigos de produto longos ou outras informações relevantes manualmente.
@@ -44,7 +48,7 @@ Atualize seu aplicativo do Teams [manifest.jsno](../../resources/schema/manifest
 
 A API invoca o controle de scanner que permite ao usuário examinar diferentes tipos de código de `ScanBarCode` barras e retorna o resultado como uma cadeia de caracteres.
 
-Para personalizar a experiência de verificação de código de barras, a configuração opcional do código de barras é passada como entrada para `ScanBarCode` a API. Você pode especificar o intervalo de tempo de verificação em segundos usando `timeOutIntervalInSec` . Seu valor padrão é 30 segundos e o valor máximo é 60 segundos.
+Para personalizar a experiência de verificação de código de barras, a configuração opcional do código de barras é passada como entrada para a `ScanBarCode` API. Você pode especificar o intervalo de tempo de verificação em segundos usando `timeOutIntervalInSec` . Seu valor padrão é 30 segundos e o valor máximo é 60 segundos.
 
 A **API scanBarCode()** dá suporte aos seguintes tipos de código de barras:
 
@@ -105,3 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 > [!div class="nextstepaction"]
 > [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Integrar recursos de localização no Teams](location-capability.md)

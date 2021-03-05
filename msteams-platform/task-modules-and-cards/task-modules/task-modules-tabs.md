@@ -1,19 +1,19 @@
 ---
 title: Usando módulos de tarefas nas guias do Microsoft Teams
-description: Explica como invocar módulos de tarefas de guias do Microsoft Teams usando o SDK do cliente do Microsoft Teams.
-keywords: guias da equipe de módulos de tarefas SDK do cliente
-ms.openlocfilehash: e10958195713f338a9b5e0a0672d8b6a29da9264
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+description: Explica como invocar módulos de tarefas das guias do Teams usando o SDK de cliente do Microsoft Teams.
+keywords: task modules teams tabs client sdk
+ms.openlocfilehash: 3f1da4d5eec31638d69adc01a45831534d015f41
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "44800943"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449553"
 ---
 # <a name="using-task-modules-in-tabs"></a>Usando módulos de tarefas em guias
 
-Adicionar um módulo de tarefa à sua guia pode simplificar bastante a experiência do usuário para qualquer fluxo de trabalho que exija a entrada de dados. Os módulos de tarefas permitem coletar a entrada em um pop-up que reconhece equipes. Um bom exemplo disso é a edição de cartões do Planner; Você pode usar módulos de tarefa para criar uma experiência semelhante.
+Adicionar um módulo de tarefa à sua guia pode simplificar muito a experiência do usuário para todos os fluxos de trabalho que exigem entrada de dados. Os módulos de tarefas permitem coletar suas entradas em um pop-up com conhecimento do Teams. Um bom exemplo disso é editar cartões do Planner; você pode usar módulos de tarefa para criar uma experiência semelhante.
 
-Para dar suporte ao recurso de módulo de tarefa, duas novas funções foram adicionadas ao [SDK do cliente do Microsoft Teams](/javascript/api/overview/msteams-client):
+Para dar suporte ao recurso de módulo de tarefa, duas novas funções foram adicionadas ao [SDK do cliente do Microsoft Teams:](/javascript/api/overview/msteams-client)
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -29,20 +29,20 @@ microsoftTeams.tasks.submitTask(
 
 Vamos ver como cada um deles funciona.
 
-## <a name="invoking-a-task-module-from-a-tab"></a>Invocar um módulo de tarefa a partir de uma guia
+## <a name="invoking-a-task-module-from-a-tab"></a>Invocando um módulo de tarefa de uma guia
 
-Para invocar um módulo de tarefa a partir de uma guia `microsoftTeams.tasks.startTask()` , use a passagem de um [objeto TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) e uma `submitHandler` função de retorno de chamada opcional. Conforme descrito anteriormente, há dois casos que devem ser considerados:
+Para invocar um módulo de tarefa de uma guia, use `microsoftTeams.tasks.startTask()` passar um [objeto TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) e uma função `submitHandler` de retorno de chamada opcional. Conforme descrito anteriormente, há dois casos a considerar:
 
-1. O valor de `TaskInfo.url` é definido como uma URL. A janela módulo de tarefas aparece e `TaskModule.url` é carregada como `<iframe>` dentro dela. O JavaScript nessa página deve chamar `microsoftTeams.initialize()` . Se houver uma `submitHandler` função na página e houver um erro ao invocar `microsoftTeams.tasks.startTask()` , `submitHandler` a chamada será `err` definida como a cadeia de caracteres de erro indicando o erro, conforme descrito [abaixo](#task-module-invocation-errors).
-1. O valor de `taskInfo.card` é o [JSON para um cartão adaptável](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). Nesse caso, obviamente, não há nenhuma `submitHandler` função JavaScript a ser chamada quando o usuário fecha ou pressiona um botão no cartão adaptável; a única maneira de receber o que o usuário inseriu é passando o resultado para um bot. Para usar um módulo de tarefa de cartão adaptável de uma guia, seu aplicativo deve incluir um bot para obter qualquer informação do usuário. Isso é explicado abaixo.
+1. O valor de `TaskInfo.url` é definido como uma URL. A janela do módulo de tarefas é exibida `TaskModule.url` e carregada como uma dentro `<iframe>` dela. JavaScript nessa página deve chamar `microsoftTeams.initialize()` . Se houver uma função na página e houver um erro ao invocar , será invocado com definido como a cadeia de caracteres de erro indicando o erro `submitHandler` `microsoftTeams.tasks.startTask()` conforme descrito `submitHandler` `err` [abaixo](#task-module-invocation-errors).
+1. O valor de `taskInfo.card` é [o JSON para um cartão Adaptável.](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment) Nesse caso, obviamente, não há nenhuma função JavaScript a ser chamada quando o usuário fecha ou pressiona um botão no cartão Adaptável; a única maneira de receber o que o usuário entrou é passando o resultado para um `submitHandler` bot. Para usar um módulo de tarefa de cartão adaptável de uma guia, seu aplicativo deve incluir um bot para obter informações de volta do usuário. Isso é explicado abaixo.
 
-## <a name="example-invoking-a-task-module"></a>Exemplo: invocação de um módulo de tarefa
+## <a name="example-invoking-a-task-module"></a>Exemplo: Invocando um módulo de tarefa
 
-O código a seguir é adaptado da [amostra do módulo de tarefa](~/task-modules-and-cards/what-are-task-modules.md#task-module-samples). Veja a seguir como é o módulo de tarefas:
+O código a seguir é adaptado do [exemplo do módulo de tarefas](~/task-modules-and-cards/what-are-task-modules.md#code-sample). Veja a aparência do módulo de tarefas:
 
-![Módulo de tarefa-formulário personalizado](~/assets/images/task-module/task-module-custom-form.png)
+![Módulo de Tarefa - Formulário Personalizado](~/assets/images/task-module/task-module-custom-form.png)
 
-O `submitHandler` é muito simples; ele apenas ecoa o valor de `err` ou `result` para o console:
+O `submitHandler` é muito simples; ele apenas ecoa o valor de `err` ou para o `result` console:
 
 ```javascript
 let taskInfo = {
@@ -68,29 +68,29 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 ## <a name="submitting-the-result-of-a-task-module"></a>Enviando o resultado de um módulo de tarefa
 
-A `submitHandler` função é usada com o `TaskInfo.url` . A `submitHandler` função reside na `TaskInfo.url` página da Web. Se houver um erro ao invocar o módulo de tarefa `submitHandler` , sua função será invocada imediatamente com uma `err` cadeia de caracteres indicando qual [erro ocorreu](#task-module-invocation-errors). A `submitHandler` função também é chamada com uma `err` cadeia de caracteres quando o usuário pressiona o X no canto superior direito do módulo de tarefa.
+A `submitHandler` função é usada com `TaskInfo.url` . A `submitHandler` função reside na página da `TaskInfo.url` Web. Se houver um erro ao invocar o módulo de tarefa, sua função será imediatamente invocada com uma cadeia de caracteres indicando `submitHandler` `err` qual erro [ocorreu](#task-module-invocation-errors). A função também é chamada com uma cadeia de caracteres quando o usuário `submitHandler` pressiona o X no canto superior direito do módulo de `err` tarefa.
 
-Se não houver um erro de invocação e o usuário não pressionar X para descartar, o usuário pressionará um botão quando terminar. Dependendo se é uma URL ou um cartão adaptável no módulo de tarefa, veja o que acontece:
+Se não houver nenhum erro de invocação e o usuário não pressionar X para descartá-lo, o usuário pressionará um botão quando terminar. Dependendo se for uma URL ou um cartão adaptável no módulo de tarefas, veja o que acontece:
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-Depois de validar o que o usuário inseriu, você chama a `microsoftTeams.tasks.submitTask()` função do SDK (mencionada em diante para `submitTask()` fins de legibilidade). Você pode chamar `submitTask()` sem qualquer parâmetro se quiser que o Microsoft Teams feche o módulo de tarefa, mas a maior parte do tempo desejará passar um objeto ou uma cadeia de caracteres para o seu `submitHandler` .
+Depois de validar o que o usuário instalou, você chama a função SDK (conhecida a seguir como para fins de capacidade `microsoftTeams.tasks.submitTask()` `submitTask()` de leitura). Você pode chamar sem qualquer parâmetro se quiser que o Teams feche o módulo de tarefa, mas na maioria das vezes você vai querer passar um objeto ou uma cadeia de caracteres para `submitTask()` seu `submitHandler` .
 
-Passe seu resultado como o primeiro parâmetro. O Microsoft Teams invocará `submitHandler` onde `err` será `null` e `result` será o objeto/cadeia de caracteres que você passa para `submitTask()` . Se você chamar `submitTask()` com um `result` parâmetro, você **deve** passar um `appId` ou uma matriz de `appId` cadeias de caracteres: isso permite que as equipes validem que o aplicativo enviando o resultado é o mesmo que invocar o módulo de tarefa.
+Passe o resultado como o primeiro parâmetro. O Teams `submitHandler` invocará onde `err` estará e será o `null` `result` objeto/cadeia de caracteres que você passou para `submitTask()` . Se você fizer uma chamada com um parâmetro, deverá passar uma ou uma matriz de cadeias de `submitTask()` `result`  `appId` caracteres: isso permite ao Teams validar que o aplicativo que está enviando o resultado é o mesmo que invocou o módulo `appId` de tarefa.
 
 ### <a name="adaptive-card-taskinfocard"></a>Cartão adaptável ( `TaskInfo.card` )
 
-Se você chamou o módulo de tarefa com um `submitHandler` , quando o usuário pressiona um `Action.Submit` botão, os valores no cartão serão retornados como o valor de `result` . Se o usuário pressionar o botão ESC ou pressionar o X, `err` será retornado. Como alternativa, se seu aplicativo contiver um bot além de uma guia, você pode simplesmente incluir o `appId` bot como o valor de `completionBotId` no `TaskInfo` objeto. O corpo do cartão adaptável (conforme preenchido pelo usuário) será enviado ao bot através de uma `task/submit invoke` mensagem quando o usuário pressiona um `Action.Submit` botão. O esquema para o objeto que você recebe é muito semelhante ao [esquema que você recebe para tarefas/busca e mensagens/envio](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages); a única diferença é que o esquema do objeto JSON é um objeto Card adaptável, em vez de um objeto *que contém* um objeto Card adaptável como [quando os cartões adaptáveis são usados com bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+Se você invocar o módulo de tarefa com um , quando o usuário pressionar um botão, os valores no cartão serão retornados como `submitHandler` `Action.Submit` o valor de `result` . Se o usuário pressionar o botão Esc ou pressionar o X, `err` será retornado em vez disso. Como alternativa, se seu aplicativo contiver um bot além de uma guia, você pode simplesmente incluir o bot como o `appId` `completionBotId` valor do `TaskInfo` objeto. O corpo do cartão adaptável (conforme preenchido pelo usuário) será enviado para o bot por meio de uma mensagem quando o usuário `task/submit invoke` pressionar um `Action.Submit` botão. O esquema do objeto recebido é muito semelhante ao esquema recebido para mensagens [de tarefa/busca e tarefa/envio;](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages) a única diferença é que o esquema do objeto JSON é um  objeto de cartão Adaptável em vez de um objeto que contém um objeto de cartão adaptável como quando cartões adaptáveis são usados com [bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
-## <a name="example-submitting-the-result-of-a-task-module"></a>Exemplo: enviando o resultado de um módulo de tarefa
+## <a name="example-submitting-the-result-of-a-task-module"></a>Exemplo: enviar o resultado de um módulo de tarefa
 
-Relembre o [formulário no módulo de tarefa acima](#example-invoking-a-task-module) com um formulário HTML. Veja onde o formulário está definido:
+[Lembre-se do formulário no módulo de tarefa acima](#example-invoking-a-task-module) com um formulário HTML. Aqui é onde o formulário é definido:
 
 ```html
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
 ```
 
-Há cinco campos neste formulário, mas estamos interessados apenas nos valores de três deles para este exemplo: `name` , `email` e `favoriteBook` .
+Há cinco campos neste formulário, mas estamos interessados apenas nos valores de três deles para este exemplo: `name` `email` , e `favoriteBook` .
 
 Aqui está a `validateForm()` função que chama `submitTask()` :
 
@@ -108,11 +108,11 @@ function validateForm() {
 
 ## <a name="task-module-invocation-errors"></a>Erros de invocação de módulo de tarefa
 
-Estes são os possíveis valores `err` que podem ser recebidos pelo `submitHandler` :
+Aqui estão os valores possíveis `err` dos que podem ser recebidos pelo seu `submitHandler` :
 
-| Problema | Mensagem de erro (valor de `err` ) |
+| Problema | Mensagem de erro (valor `err` de ) |
 | ------- | ------------------------------ |
-| Valores para ambos `TaskInfo.url` e `TaskInfo.card` foram especificados. | "Os valores para o cartão e a URL foram especificados. Uma ou outra, mas não ambas, são permitidas. " |
-| Nem `TaskInfo.url` `TaskInfo.card` especificado. | "Você deve especificar um valor para o cartão ou a URL". |
+| Valores para ambos `TaskInfo.url` `TaskInfo.card` e foram especificados. | "Os valores para cartão e url foram especificados. Um ou outro, mas não ambos, são permitidos." |
+| Nem `TaskInfo.url` `TaskInfo.card` especificado. | "Você deve especificar um valor para cartão ou url." |
 | Inválido `appId` . | "AppId inválido". |
-| Botão X pressionando o usuário, fechando-o. | "O usuário cancelou/fechou o módulo de tarefas". |
+| O usuário pressionou o botão X, fechando-o. | "O usuário cancelou/fechou o módulo de tarefa." |

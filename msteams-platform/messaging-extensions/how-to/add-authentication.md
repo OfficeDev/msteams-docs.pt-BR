@@ -4,12 +4,12 @@ author: clearab
 description: Como adicionar autenticação a uma extensão de mensagens
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4ebe65af06240d13ceb99fe3b7640ab402d716c5
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: d673f52e63ba845675f6631470af68d65c7297ad
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911867"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449567"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Adicionar autenticação à extensão de mensagens
 
@@ -17,7 +17,7 @@ ms.locfileid: "49911867"
 
 ## <a name="identify-the-user"></a>Identificar o usuário
 
-Todas as solicitações para seus serviços incluem a ID ofuscada do usuário que realizou a solicitação, bem como o nome de exibição do usuário e a ID de objeto do Azure Active Directory.
+Todas as solicitações aos seus serviços incluem a ID ofuscada do usuário que realizou a solicitação, bem como o nome de exibição do usuário e a ID do objeto do Azure Active Directory.
 
 ```json
 "from": {
@@ -27,22 +27,22 @@ Todas as solicitações para seus serviços incluem a ID ofuscada do usuário qu
 },
 ```
 
-Os `id` valores e os valores são `aadObjectId` garantidos como sendo os do usuário autenticado do Teams. Eles podem ser usados como chaves para procurar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário do Azure Active Directory do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e de canal da qual a solicitação se originou.
+Os `id` valores e são `aadObjectId` garantidos como os do usuário do Teams autenticado. Elas podem ser usadas como chaves para procurar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário do Azure Active Directory do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação se originou.
 
 ## <a name="authentication"></a>Autenticação
 
-Se o serviço exigir autenticação do usuário, você precisará entrar no usuário antes que ele possa usar a extensão de mensagens. Se você tiver escrito um bot ou uma guia que entre no usuário, esta seção deve ser familiar.
+Se o serviço exigir autenticação do usuário, você precisará entrar no usuário antes que ele possa usar a extensão de mensagens. Se você tiver escrito um bot ou uma guia que assina no usuário, esta seção deve ser familiar.
 
 A sequência é a seguinte:
 
-1. O usuário emite uma consulta ou a consulta padrão é automaticamente enviada ao serviço.
-2. Seu serviço verifica se o usuário foi autenticado primeiro inspecionando a ID de usuário do Teams.
-3. Se o usuário não tiver sido autenticado, envie uma resposta `auth` com uma `openUrl` ação sugerida, incluindo a URL de autenticação.
-4. O cliente Microsoft Teams inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação determinada.
-5. Depois que o usuário entrar, você deverá fechar a janela e enviar um "código de autenticação" para o cliente do Teams.
-6. Em seguida, o cliente do Teams em seguida emira a consulta para seu serviço, o que inclui o código de autenticação passado na etapa 5.
+1. O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.
+2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando a ID do usuário do Teams.
+3. Se o usuário não tiver sido autenticado, envie uma `auth` resposta com uma ação `openUrl` sugerida, incluindo a URL de autenticação.
+4. O cliente do Microsoft Teams inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação determinada.
+5. Depois que o usuário entrar, feche a janela e envie um "código de autenticação" para o cliente do Teams.
+6. Em seguida, o cliente do Teams reenvia a consulta ao seu serviço, que inclui o código de autenticação passado na etapa 5.
 
-Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer spoof ou comprometer o fluxo de login. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
+Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de login. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responder com uma ação de login
 
@@ -68,24 +68,24 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
-> Para que a experiência de login seja hospedada em um pop-up do Teams, a parte de domínio da URL deve estar na lista de domínios válidos do seu aplicativo. (Consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.)
+> Para que a experiência de login seja hospedada em um pop-up do Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. (Consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.)
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de login
 
-Sua experiência de login deve ser responsiva e caber em uma janela pop-up. Ele deve se integrar ao [SDK](/javascript/api/overview/msteams-client)do cliente JavaScript do Microsoft Teams, que usa a passagem de mensagens.
+Sua experiência de login deve ser responsiva e adequada dentro de uma janela pop-up. Ele deve se integrar ao [SDK do cliente JavaScript do Microsoft Teams,](/javascript/api/overview/msteams-client)que usa a passagem de mensagens.
 
-Assim como outras experiências incorporadas em execução no Microsoft Teams, seu código dentro da janela precisa primeiro `microsoftTeams.initialize()` chamar. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que pode passá-la para a URL de entrada do OAuth.
+Assim como com outras experiências incorporadas em execução no Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()` . Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário do Teams para sua janela, que poderá passá-lo para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de login
 
-Quando a solicitação de login for concluída e redirecionada de volta para sua página, ela deverá executar as seguintes etapas:
+Quando a solicitação de login for concluída e redirecionar para sua página, ela deverá executar as seguintes etapas:
 
 1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de logon (como tokens OAuth 2.0).
-2. Ligue `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
+2. Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
 
-Neste ponto, a janela é fechada e o controle é passado para o cliente do Teams. O cliente agora pode reemarciar a consulta do usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
+Neste ponto, a janela fecha e o controle é passado para o cliente do Teams. O cliente agora pode reeditar a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
 
-#### <a name="reissued-request-example"></a>Exemplo de solicitação em reemissão
+#### <a name="reissued-request-example"></a>Exemplo de solicitação reemissão
 
 ```json
 {
@@ -134,9 +134,9 @@ Neste ponto, a janela é fechada e o controle é passado para o cliente do Teams
 }
 ```
 
-## <a name="samples"></a>Exemplos
-Para código de exemplo mostrando o processo de autenticação messaging-extensions, consulte:
-
-[Exemplo de autenticação de extensões de mensagens do Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+## <a name="code-sample"></a>Exemplo de código
+|**Exemplo de nome** | **Descrição** |**.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Extensões de mensagens - auth e config | Uma Extensão de Mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados depois que o usuário se inscreveu. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

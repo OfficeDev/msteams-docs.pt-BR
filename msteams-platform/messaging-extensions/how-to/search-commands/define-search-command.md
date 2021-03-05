@@ -1,74 +1,79 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagens
 author: clearab
-description: Definir comandos de pesquisa de extensão de mensagens para os aplicativos do Microsoft Teams.
+description: Definir comandos de pesquisa de extensão de mensagens para aplicativos do Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b6837fb8a131d8ce3e2bbd0c51c2861dbffda2bc
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 18bac3049fec8fead168c12f2832bfbbb72cf609
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672762"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449266"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Os comandos de pesquisa de extensão de mensagens permitem que os usuários pesquisem sistemas externos e insiram os resultados da pesquisa em uma mensagem na forma de um cartão.
+Comandos de pesquisa de extensão de mensagens permitem que os usuários pesquisem sistemas externos e insiram os resultados dessa pesquisa em uma mensagem na forma de um cartão.
 
-## <a name="choose-messaging-extension-invoke-locations"></a>Escolher locais de invocação de mensagens
+> [!NOTE]
+> O limite de tamanho do cartão de resultado é de 28 KB. O cartão não será enviado se seu tamanho exceder 28 KB. 
 
-A primeira coisa que você precisa decidir é onde o comando de pesquisa pode ser acionado (ou mais especificamente, *invocado*) a partir do. O comando de pesquisa pode ser chamado a partir de um ou dos dois locais a seguir:
+## <a name="choose-messaging-extension-invoke-locations"></a>Escolher locais de invocação de extensão de mensagens
 
-* Os botões na parte inferior da área de redação da mensagem
-* Por @mentioning na caixa comando
+A primeira coisa que você precisa decidir é de onde o comando de pesquisa pode ser acionado (ou especificamente, *invocado*). Seu comando de pesquisa pode ser invocado de um ou ambos os seguintes locais:
 
-Quando invocado da área de mensagem de composição, o usuário terá a opção de enviar os resultados para a conversa. Quando invocado na caixa comando, o usuário pode interagir com o cartão resultante ou copiá-lo para uso em qualquer lugar.
+* Os botões na parte inferior da área de mensagem de redação
+* Por @mentioning na caixa de comando
 
-## <a name="add-the-command-to-your-app-manifest"></a>Adicione o comando ao manifesto do aplicativo
+Quando invocado da área de mensagem de redação, o usuário terá a opção de enviar os resultados para a conversa. Quando invocado da caixa de comando, o usuário pode interagir com o cartão resultante ou copiá-lo para uso em outro lugar.
 
-Agora que você decidiu como os usuários irão interagir com seu comando de pesquisa, é hora de adicioná-lo ao manifesto do seu aplicativo. Para fazer isso, você adicionará um `composeExtension` novo objeto ao nível superior de seu aplicativo JSON de manifesto. Você pode fazer isso com a ajuda do App Studio ou manualmente.
+## <a name="add-the-command-to-your-app-manifest"></a>Adicionar o comando ao manifesto do aplicativo
 
-### <a name="create-a-command-using-app-studio"></a>Criar um comando usando o app Studio
+Agora que você decidiu como os usuários interagirão com seu comando de pesquisa, é hora de adicioná-lo ao manifesto do aplicativo. Para fazer isso, você adicionará um novo objeto ao nível superior do JSON do `composeExtension` manifesto do aplicativo. Você pode fazer isso com a ajuda do App Studio ou manualmente.
 
-As etapas a seguir supõem que você já tenha [criado uma extensão de mensagens](~/messaging-extensions/how-to/create-messaging-extension.md).
+### <a name="create-a-command-using-app-studio"></a>Criar um comando usando o App Studio
 
-1. No cliente Microsoft Teams, abra o **app Studio** e selecione a guia **Editor de manifesto** .
-2. Se você já criou seu pacote de aplicativos no app Studio, escolha-o na lista. Caso contrário, você pode importar um pacote de aplicativos existente.
-3. Clique no botão **Adicionar** na seção comando.
-4. Escolha **permitir que os usuários consultem o serviço para obter informações e insiram isso em uma mensagem**.
-5. Adicione uma **ID de comando** e um **título**.
-6. Selecione onde você deseja que seu comando de pesquisa seja disparado. Selecionar a **mensagem** não altera atualmente o comportamento do seu comando de pesquisa.
-7. Adicione o parâmetro de pesquisa.
-8. Clique em Salvar.
+O pré-requisito para criar um comando de pesquisa é que você já deve criar uma extensão de mensagens. Para obter informações sobre como criar uma extensão de mensagens, consulte [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-### <a name="manually-create-a-command"></a>Criar um comando manualmente
+**Para criar um comando de pesquisa**
 
-Para adicionar manualmente seu comando de pesquisa de extensão de mensagens ao manifesto do seu aplicativo, você precisará adicionar os parâmetros `composeExtension.commands` de acompanhamento à sua matriz de objetos.
+1. No cliente do Microsoft Teams, abra **o App Studio** e selecione a guia Editor **de** manifesto.
+1. Se você já criou um pacote de aplicativos no **App Studio**, escolha-o na lista. Se você não tiver criado um pacote de aplicativos, importe um existente.
+1. Depois de importar um pacote de aplicativos, selecione **Extensões de mensagens** em **Recursos**.
+1. Selecione **Adicionar** na seção **Comando** na página extensões de mensagens.
+1. Escolha **Permitir que os usuários consultem seu serviço para obter informações e insira-os em uma mensagem**.
+1. Adicione uma **ID de Comando** e um **Título.**
+1. Selecione o local de onde o comando de pesquisa deve ser acionado. Selecionar **mensagem** no momento não altera o comportamento do comando de pesquisa.
+1. Adicione o parâmetro de pesquisa e selecione **Salvar**.
+ 
+### <a name="manually-create-a-command"></a>Criar manualmente um comando
+
+Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao manifesto do aplicativo, você precisará adicionar os seguintes parâmetros à `composeExtension.commands` sua matriz de objetos.
 
 | Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
-| `id` | ID exclusiva que você atribui a este comando. A solicitação do usuário incluirá essa ID. | Sim | 1.0 |
-| `title` | Nome do comando. Esse valor é exibido na interface do usuário. | Sim | 1.0 |
-| `description` | Texto de ajuda que indica o que esse comando faz. Esse valor é exibido na interface do usuário. | Sim | 1.0 |
+| `id` | ID exclusiva que você atribui a esse comando. A solicitação do usuário incluirá essa ID. | Sim | 1.0 |
+| `title` | Nome do comando. Esse valor aparece na interface do usuário. | Sim | 1.0 |
+| `description` | Texto de ajuda que indica o que esse comando faz. Esse valor aparece na interface do usuário. | Sim | 1.0 |
 | `type` | Deve ser `query` | Não | 1.4 |
-|`initialRun` | Se definido como **true**, indica que este comando deve ser executado assim que o usuário escolhe este comando na interface do usuário. | Não | 1.0 |
-| `context` | Matriz opcional de valores que define o contexto no qual a ação de pesquisa está disponível. Os valores possíveis `message`são `compose`,, `commandBox`ou. O padrão é `["compose", "commandBox"]`. | Não | 1,5 |
+|`initialRun` | Se definido como **true**, indica que esse comando deve ser executado assim que o usuário escolher esse comando na interface do usuário. | Não | 1.0 |
+| `context` | Matriz opcional de valores que define o contexto em que a ação de pesquisa está disponível. Os valores possíveis `message` são `compose` , ou `commandBox` . O padrão é `["compose", "commandBox"]`. | Não | 1,5 |
 
-Você também precisará adicionar os detalhes do parâmetro Search, que definirá o texto visível para o usuário no cliente Teams.
+Você também precisará adicionar os detalhes do parâmetro de pesquisa, que definirá o texto visível para seu usuário no cliente do Teams.
 
 | Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Lista estática de parâmetros para o comando. | Não | 1.0 |
-| `parameter.name` | O nome do parâmetro. Isso é enviado para o serviço na solicitação do usuário. | Sim | 1.0 |
-| `parameter.description` | Descreve os fins deste parâmetro ou o exemplo do valor que deve ser fornecido. Esse valor é exibido na interface do usuário. | Sim | 1.0 |
-| `parameter.title` | Título ou rótulo curto de parâmetro amigável. | Sim | 1.0 |
-| `parameter.inputType` | Defina como o tipo de entrada obrigatória. Os valores possíveis `text`incluem `textarea`, `number` `date` `time`,,, `toggle`. O padrão é definido como`text` | Não | 1.4 |
+| `parameter.name` | O nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
+| `parameter.description` | Descreve as finalidades desse parâmetro ou o exemplo do valor que deve ser fornecido. Esse valor aparece na interface do usuário. | Sim | 1.0 |
+| `parameter.title` | Título ou rótulo de parâmetro fácil de usar curto. | Sim | 1.0 |
+| `parameter.inputType` | De acordo com o tipo de entrada necessário. Os valores possíveis `text` `textarea` incluem , `number` , , , , `date` `time` `toggle` . Padrão é definido como `text` | Não | 1.4 |
 
-#### <a name="app-manifest-example"></a>Exemplo de manifesto de aplicativo
+#### <a name="app-manifest-example"></a>Exemplo de manifesto do aplicativo
 
-Veja a seguir um exemplo de um `composeExtensions` objeto que define um comando de pesquisa. Não é um exemplo de manifesto completo, para o esquema de manifesto de aplicativo completo, consulte: [esquema de manifesto do aplicativo](~/resources/schema/manifest-schema.md).
+Veja a seguir um exemplo de `composeExtensions` um objeto que define um comando de pesquisa. Não é um exemplo do manifesto completo, para o esquema de manifesto completo do aplicativo, consulte: [Esquema de manifesto do aplicativo](~/resources/schema/manifest-schema.md).
 
 ```json
 {
@@ -97,6 +102,6 @@ Veja a seguir um exemplo de um `composeExtensions` objeto que define um comando 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você adicionou o comando de pesquisa, precisará [lidar com a solicitação de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+Agora que você adicionou o comando de pesquisa, precisará lidar [com a solicitação de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

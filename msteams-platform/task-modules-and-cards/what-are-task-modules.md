@@ -4,12 +4,12 @@ author: clearab
 description: Adicione experiências pop-up modais para coletar ou exibir informações aos usuários de seus aplicativos do Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bd353e8330f2587e2504d6c00346feeff89d6a4d
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294730"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449546"
 ---
 # <a name="what-are-task-modules"></a>O que são os módulos de tarefas?
 
@@ -45,7 +45,7 @@ Os módulos de tarefa podem ser invocados de guias, bots ou links profundos e o 
 
 | **Invocado por meio de...** | **O módulo de tarefa é HTML/JavaScript** | **Módulo de tarefa é cartão adaptável** |
 | --- | --- | --- |
-| **JavaScript em uma guia** | 1. Use a função SDK do cliente do Teams `tasks.startTask()` com uma função de retorno de chamada `submitHandler(err, result)` opcional <br/><br/> 2. No código do módulo de tarefas, quando o usuário terminar, chame a função SDK do Teams `tasks.submitTask()` com um objeto como `result` parâmetro. Se um `submitHandler` retorno de chamada tiver sido especificado em , o Teams o `tasks.startTask()` chamará como um `result` parâmetro.<br/><br/> 3. Se houve um erro ao invocar , a `tasks.startTask()` função é chamada com uma cadeia de `submitHandler` `err` caracteres. <br/><br/> 4. Você também pode especificar um ao chamar - nesse `completionBotId` caso é enviado para o `teams.startTask()` `result` bot. | 1. Chame a função SDK do cliente do Teams com um objeto TaskInfo e contendo o JSON para o cartão Adaptável para mostrar no `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` pop-up do módulo de tarefas. <br/><br/> 2. Se um retorno de chamada tiver sido especificado em , o Teams o chamará com uma cadeia de caracteres se houver um erro ao invocar ou se o usuário fechar o `submitHandler` pop-up do módulo de tarefa usando o X na parte superior `tasks.startTask()` `err` `tasks.startTask()` direita. <br/><br/> 3. Se o usuário pressionar um botão Action.Submit, seu `data` objeto será retornado como o valor de `result` . |
+| **JavaScript em uma guia** | 1. Use a função SDK do cliente do Teams `tasks.startTask()` com uma função de retorno de chamada `submitHandler(err, result)` opcional <br/><br/> 2. No código do módulo de tarefas, quando o usuário terminar, chame a função SDK do Teams `tasks.submitTask()` com um objeto como `result` parâmetro. Se um `submitHandler` retorno de chamada tiver sido especificado em , o Teams o `tasks.startTask()` chamará como um `result` parâmetro.<br/><br/> 3. Se houve um erro ao invocar , a `tasks.startTask()` função é chamada com uma cadeia de `submitHandler` `err` caracteres. <br/><br/> 4. Você também pode especificar um ao chamar - nesse `completionBotId` caso é enviado para o `teams.startTask()` `result` bot. | 1. Chame a função SDK do cliente do Teams com um objeto TaskInfo e contendo o JSON para o cartão Adaptável para mostrar no `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` pop-up do módulo de tarefas. <br/><br/> 2. Se um retorno de chamada tiver sido especificado em , o Teams a chamará com uma cadeia de caracteres se houver um erro ao invocar ou se o usuário fechar o `submitHandler` pop-up do módulo de tarefa usando o X na parte superior `tasks.startTask()` `err` `tasks.startTask()` direita. <br/><br/> 3. Se o usuário pressionar um botão Action.Submit, seu `data` objeto será retornado como o valor de `result` . |
 | **Botão de cartão bot** | 1. Botões de cartão bot, dependendo do tipo de botão, podem invocar módulos de tarefa de duas maneiras: uma URL de link profundo ou enviando uma `task/fetch` mensagem. Confira abaixo como funcionam as URLs de link profundo. <br/><br/> 2. Se a ação do botão for ( tipo de botão para cartões adaptáveis), um evento (um HTTP POST sob as cobertas) será enviado para o bot e o bot responderá ao POST com `type` `task/fetch` HTTP `Action.Submit` `task/fetch invoke` 200 e ao corpo da resposta contendo um wrapper ao redor do [objeto TaskInfo.](#the-taskinfo-object) Isso é explicado em detalhes ao [invocar um módulo de tarefa por meio de tarefa/busca.](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch)<br/><br/> 3. O Teams exibe o módulo de tarefas; quando o usuário for concluído, chame a função SDK do Teams `tasks.submitTask()` com um objeto como `result` parâmetro. <br/><br/> 4. O bot recebe uma `task/submit invoke` mensagem que contém o `result` objeto. Você tem três maneiras diferentes de responder à mensagem: fazendo nada (a tarefa concluída com êxito), exibindo uma mensagem para o usuário em uma janela pop-up ou invocando outra janela de módulo de tarefa (ou seja, criando uma experiência como `task/submit` assistente). Essas três opções são mais discutidas [na discussão detalhada sobre tarefa/envio.](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit) | 1. Como botões em cartões da Estrutura de Bot, os botões em cartões adaptáveis suportam duas maneiras de invocar módulos de tarefa: URLs de link profundo com botões e usando `Action.openUrl` `task/fetch` `Action.Submit` botões. <br/><br/> 2. Os módulos de tarefa com cartões adaptáveis funcionam de forma muito semelhante à ocorrência HTML/JavaScript (consulte à esquerda). A principal diferença é que, como não há JavaScript quando você está usando cartões Adaptáveis, não há como chamar `tasks.submitTask()` . Em vez disso, o Teams tira o objeto e o retorna como a carga do `data` `Action.Submit` `task/submit` evento, conforme descrito [aqui](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). |
 | **URL de link profundo** <br/>[Sintaxe de URL](#task-module-deep-link-syntax) | 1. O Teams invoca o módulo de tarefas; a URL que aparece dentro `<iframe>` do especificado no parâmetro do link `url` profundo. Não há `submitHandler` retorno de chamada. <br/><br/> 2. Dentro do JavaScript da página no módulo de tarefas, chame para fechar com um objeto como um parâmetro, o mesmo que ao invocá-lo de uma guia ou um botão de cartão `tasks.submitTask()` `result` de bot. No entanto, a lógica de conclusão é ligeiramente diferente. Se sua lógica de conclusão reside no cliente (ou seja, se não houver bot), não há retorno de chamada, portanto, qualquer lógica de conclusão deve estar no código anterior à chamada `submitHandler` para `tasks.submitTask()` . Os erros de invocação são relatados apenas por meio do console. Se você tiver um bot, poderá especificar um parâmetro no `completionBotId` link profundo para enviar o objeto por meio de um `result` `task/submit` evento. | 1. O Teams invoca o módulo de tarefas; o corpo do cartão JSON do cartão Adaptável é especificado como um valor codificado por URL do parâmetro `card` do link profundo. <br/><br/> 2. O usuário fecha o módulo de tarefa clicando no X no canto superior direito do módulo de tarefa ou pressionando `Action.Submit` um botão no cartão. Como não há para chamar, você deve ter um bot para enviar o valor dos campos `submitHandler` de cartão adaptáveis para. Você usa o parâmetro no link profundo para especificar o bot para o qual `completionBotId` enviar os dados por meio de um `task/submit invoke` evento. |
 
@@ -61,10 +61,10 @@ O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição 
 | `title` | string | Aparece abaixo do nome do aplicativo e à direita do ícone do aplicativo |
 | `height` | número ou cadeia de caracteres | Pode ser um número que representa a altura do módulo de tarefas em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
 | `width` | número ou cadeia de caracteres | Pode ser um número que representa a largura do módulo de tarefa em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
-| `url` | cadeia de caracteres | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
+| `url` | string | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
 | `card` | Cartão adaptável ou um anexo de cartão de bot de cartão adaptável | O JSON do cartão Adaptável a ser exibido no módulo de tarefa. Se você estiver invocando de um bot, precisará usar o JSON de cartão adaptável em um objeto Bot `attachment` Framework. Em uma guia, você usará apenas um Cartão Adaptável. [Veja um exemplo.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | cadeia de caracteres | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
-| `completionBotId` | cadeia de caracteres | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
+| `fallbackUrl` | string | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
+| `completionBotId` | string | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
 
 > [!NOTE]
 > O recurso de módulo de tarefa exige que os domínios de todas as URLs que você deseja carregar sejam incluídos na matriz no manifesto `validDomains` do aplicativo.
@@ -149,7 +149,7 @@ E o CSS é:
 
 ## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a>Cartão adaptável ou anexo de cartão bot adaptável
 
-Conforme mencionado acima, dependendo de como você está invocando o seu, você precisará usar um cartão Adaptável ou um anexo de cartão de bot de cartão adaptável (que é apenas um cartão adaptável envolvido em um objeto `card` attachment).
+Conforme mencionado acima, dependendo de como você está invocando seu, você precisará usar um cartão Adaptável ou um anexo de cartão de bot de cartão adaptável (que é apenas um cartão adaptável envolvido em um objeto `card` attachment).
 
 Ao invocar de uma guia, você precisará usar um cartão adaptável. Veja um exemplo muito simples:
 
@@ -236,10 +236,13 @@ Com módulos de tarefa baseados em HTML/JavaScript, é sua responsabilidade gara
 
 O Microsoft Teams garantirá que a navegação do teclado funcione corretamente do header do módulo de tarefas para o HTML e vice-versa.
 
-## <a name="task-module-samples"></a>Exemplos de módulo de tarefa
+## <a name="code-sample"></a>Exemplo de código
+|**Exemplo de nome** | **Descrição** | **.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Exemplo de módulo de tarefa (Bots-V4) | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Exemplo de módulo de tarefa (Guias + Bots-V3) | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
-* [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
-* [Exemplo de C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
 
 > [!div class="nextstepaction"]
 > [Saiba mais: Solicitar permissões de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
@@ -249,3 +252,6 @@ O Microsoft Teams garantirá que a navegação do teclado funcione corretamente 
 
 > [!div class="nextstepaction"]
 > [Saiba mais: Integrar a QR ou o recurso de scanner de código de barras no Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Saiba mais: Integrar recursos de localização no Teams](../concepts/device-capabilities/location-capability.md)

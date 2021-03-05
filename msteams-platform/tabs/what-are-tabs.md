@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 547042297491d508c146a87fb9511bb4c643e7f5
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: af6d0a87fbbb87ae4abf09a2ff53319299f452df
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294716"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449217"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>O que são guias do Microsoft Teams?
 
@@ -49,7 +49,7 @@ Uma guia personalizada é declarada no manifesto do aplicativo do pacote do apli
 
 Se você optar por expor sua guia no escopo de canal/grupo ou pessoal, você precisará apresentar uma página de conteúdo HTML <iframe \> em sua guia. [](~/tabs/how-to/create-tab-pages/content-page.md) Para guias pessoais, a URL de conteúdo é definida diretamente no manifesto do aplicativo do Teams pela `contentUrl` propriedade na `staticTabs` matriz. O conteúdo da guia será o mesmo para todos os usuários.
 
-Para guias de canal/grupo, você também precisa criar uma página de configuração adicional que permita que os usuários configurem a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso porque sua guia canal/grupo pode ser adicionada a várias equipes ou chats de grupo diferentes. Em cada instalação subsequente, os usuários poderão configurar a guia, permitindo que você adapte a experiência conforme necessário. Quando os usuários adicionam ou configuram uma guia, uma URL está sendo associada à guia apresentada na interface do usuário do Teams. Configurar uma guia é simplesmente adicionar parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia Placas do Azure, a página de configuração permite escolher qual placa a guia carregará. A URL da página de configuração é especificada pela  `configurationUrl` propriedade na matriz no manifesto do `configurableTabs` aplicativo.
+Para guias de canal/grupo, você também precisa criar uma página de configuração adicional que permita que os usuários configurem a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso porque sua guia canal/grupo pode ser adicionada a várias equipes ou chats de grupo diferentes. Em cada instalação subsequente, os usuários poderão configurar a guia, permitindo que você adapte a experiência conforme necessário. Quando os usuários adicionam ou configuram uma guia, uma URL está sendo associada à guia apresentada na interface do usuário do Teams. Configurar uma guia é simplesmente adicionar parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia Placas do Azure, a página de configuração permite que você escolha qual placa a guia carregará. A URL da página de configuração é especificada pela  `configurationUrl` propriedade na matriz no manifesto do `configurableTabs` aplicativo.
 
 Você pode ter no máximo uma (1) guia canal/grupo e até dezesseis (16) guias pessoais por aplicativo.
 
@@ -77,3 +77,5 @@ Se você optar por que seu canal ou guia de grupo apareça em clientes móveis d
 > [!div class="nextstepaction"]
 > [Saiba mais: Integrar a QR ou o recurso de scanner de código de barras no Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 
+> [!div class="nextstepaction"]
+> [Saiba mais: Integrar recursos de localização no Teams](../concepts/device-capabilities/location-capability.md)
