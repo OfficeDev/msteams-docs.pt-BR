@@ -24,12 +24,14 @@
   items:
     - name: Tutoriais
       href: tutorials/code-samples.md
-    - name: Criar um aplicativo usando C#
+    - name: Criar um aplicativo usando C# ou .NET
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Criar um aplicativo usando o Node.js
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Criar um aplicativo usando o gerador Yeoman
       href: tutorials/get-started-yeoman.md
+    - name: Atualizar o Microsoft Teams usando o gerador do Yeoman
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: Exemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Aplicativos básicos
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: Integrar QR ou capacidade de leitura de código de barras
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: Integrar os recursos de localização
+          href: concepts/device-capabilities/location-capability.md
 - name: Criar seu aplicativo
   items:
     - name: Visão Geral
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Habilitar o consentimento específico do recurso
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Habilitar a instalação e a mensagem de bot proativa
+    - name: Instalação proativa de aplicativos usando a API do Graph e enviar mensagens
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importar mensagens de terceiros
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Recursos
           href: resources/dev-preview/developer-preview-features.md
+    - name: Mudanças na margem da guia
+      href: resources/removing-tab-margins.md
     - name: Atributo de cookie SameSite (atualização de 2020)
       href: resources/samesite-cookie-update.md
     - name: Contribuindo para os documentos do Teams
