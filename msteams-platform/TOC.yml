@@ -31,7 +31,7 @@
     - name: Criar um aplicativo usando o gerador Yeoman
       href: tutorials/get-started-yeoman.md
     - name: Atualizar o Microsoft Teams usando o gerador do Yeoman
-      href: tutorials/UpgradeTeamsUsingYeoman.md
+      href: tutorials/upgrade-using-yeoman.md
     - name: Exemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Aplicativos básicos
