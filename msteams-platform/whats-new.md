@@ -3,17 +3,17 @@ title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 ms.topic: reference
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479848"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753543"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
 >[!TIP]
-> Confira nossos modelos prontos para produção no catálogo [**Modelos de Aplicativos do Teams.**](samples/app-templates.md) O catálogo é alfabético e as adições mais novas são marcadas com uma marca **&#9734;**.
+> Confira soluções de exemplo para cenários de equipe comuns no catálogo de modelos [**de aplicativos do Teams**](samples/app-templates.md)! O catálogo é alfabético e as adições mais novas são marcadas com uma ☆.
 
 ## <a name="change-log"></a>Log de Alterações
 

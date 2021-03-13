@@ -3,12 +3,12 @@ title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de visita ou o serviço de bot do azure com o suporte ao cartão OAuth.
 keywords: token, token de usuário, suporte a SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: a023c232186ce855c0b262f8cb535ec9d05db95a
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449483"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753529"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
@@ -82,7 +82,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
     >
     > Você deve estar ciente das seguintes restrições importantes:
     >
-    > * Somente as permissões de API do Microsoft Graph no nível do usuário, como email, perfil, offline_access e OpenId são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
+    > * Somente as permissões de API do Microsoft Graph no nível do usuário, como email, perfil, offline_access e OpenId são suportadas. Se você precisar de acesso a outros escopos do Microsoft Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes).
     > * O nome de domínio do aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD.
     > * No momento, não há suporte para vários domínios por aplicativo.
     > * Os aplicativos que usam `azurewebsites.net` o domínio não têm suporte porque é comum e pode ser um risco de segurança.

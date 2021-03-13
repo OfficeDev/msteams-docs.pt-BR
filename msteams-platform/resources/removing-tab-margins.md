@@ -5,14 +5,14 @@ description: Descreve como a remoção das margens de tabulação melhorará a e
 keywords: guia removendo preenchimento de margens
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: 87766a40730fdaa2da80c2e0031eab655a993c33
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: 57e6b15999ffc41c0a3e09897ba565f9b3bf3705
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479949"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753515"
 ---
-# <a name="tab-margin-changes"></a>Alterações de margem de tabulação
+# <a name="tab-margin-changes"></a>Mudanças na margem da guia
 
 Este documento descreve como a remoção de margens em torno de todas as guias no Microsoft Teams melhorará a experiência do desenvolvedor ao criar aplicativos. Este é um aprimoramento introduzido no Microsoft Teams em 2021.
 Remover as margens ao redor de todas as guias permitirá que os desenvolvedores criem aplicativos que pareçam mais nativos para o Teams. Isso também se alinhará com nossos designs [de kit de interface do usuário.](~/tabs/design/tabs.md) A maioria dos aplicativos já fica melhor sem as margens ao redor de suas experiências. No entanto, algumas guias são afetadas visualmente por essa alteração, e os desenvolvedores devem fazer as alterações necessárias.
@@ -26,7 +26,7 @@ Remover as margens ao redor de todas as guias permitirá que os desenvolvedores 
 
 ## <a name="guidelines"></a>Diretrizes
 
-Os aplicativos do Microsoft Teams que usam guias serão afetados por essa alteração. Os desenvolvedores devem mudar para [Visualização](~/resources/dev-preview/developer-preview-intro.md) de Desenvolvedor Público para determinar como suas guias são afetadas e fazer as alterações necessárias.
+Os aplicativos do Microsoft Teams que usam guias serão afetados por essa alteração. Os desenvolvedores devem alternar para [Visualização](~/resources/dev-preview/developer-preview-intro.md) de Desenvolvedor Público para determinar como suas guias são afetadas e fazer as alterações necessárias.
 
 Os desenvolvedores de guias não devem confiar no Teams para fornecer margens ao redor de suas guias. Os desenvolvedores são incentivados a adicionar margens ao redor de seus designs de tabulação onde é necessário. Designs de aplicativos em produção podem parecer que há preenchimento extra, ou seja, margens fornecidas pelo Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e desaparecerá em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
 
