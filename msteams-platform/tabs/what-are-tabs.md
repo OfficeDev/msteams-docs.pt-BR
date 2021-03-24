@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: af6d0a87fbbb87ae4abf09a2ff53319299f452df
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449217"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034646"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>O que são guias do Microsoft Teams?
 
@@ -57,16 +57,16 @@ Você pode ter no máximo uma (1) guia canal/grupo e até dezesseis (16) guias p
 
 Se você optar por que seu canal ou guia de grupo apareça em clientes móveis do Teams, a configuração deve ter um `setSettings()` valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as [diretrizes](~/tabs/design/tabs-mobile.md) para guias no celular ao criar suas guias. Os aplicativos [distribuídos por meio do Appsource](~/concepts/deploy-and-publish/appsource/publish.md) têm um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
 
-| **Funcionalidade do aplicativo** | **Comportamento se o aplicativo for aprovado** | **Comportamento se o aplicativo não for aprovado** |
-| --- | --- | --- |
-| **Guias estáticas** | O aplicativo aparece na barra inferior dos clientes móveis. Guias abertas no cliente teams. | O aplicativo não aparece na barra inferior dos clientes móveis. |
-| **Guias configuráveis** | A guia é aberta no cliente teams usando `contentUrl` . | A guia é aberta em um navegador fora do cliente do Teams usando `websiteUrl` . |
+| **Tipo de guia** | **Comportamento do App se ele for otimizado para clientes móveis** | **Comportamento do Aplicativo se ele não for otimizado para clientes móveis** |
+|:-----|:-----|:-----|
+| **Guias estáticas** ou **guias pessoais**|O aplicativo aparece na barra inferior dos clientes móveis. As guias são abertas em uma webview no aplicativo dentro do cliente do Teams. | O aplicativo não aparece em clientes móveis. |
+| **Guias configuráveis** | As guias abrem em um webview no aplicativo dentro do cliente do Teams usando `contentUrl` o . | Selecionar **Guia** abre o conteúdo usando `websiteUrl` o no navegador da Web padrão no dispositivo. |
 
 
->[!NOTE]
+> [!NOTE]
 >
->- O comportamento padrão dos aplicativos só será aplicável se eles são distribuídos por meio do Armazenamento do Teams (AppSource). Não há processo de aprovação para aplicativos distribuídos por meio de outros métodos [de distribuição.](~/concepts/deploy-and-publish/overview.md) Por padrão, todas as guias são abertas no cliente teams.
->- Para iniciar uma avaliação do seu aplicativo para dispositivos móveis, entre em contato com teamsubm@microsoft.com com os detalhes do aplicativo.
+> * [Os aplicativos enviados ao AppSource para publicação no Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) são avaliados automaticamente para a capacidade de resposta móvel. Para qualquer consulta, entre em contato com teamsubm@microsoft.com.
+> * Para todos os aplicativos que não são distribuídos por meio do [AppSource](../concepts/deploy-and-publish/overview.md), as guias abrem em uma webview no aplicativo dentro dos clientes do Teams por padrão e não há um processo de aprovação separado necessário.
 
 > [!div class="nextstepaction"]
 > [Saiba mais: Solicitar permissões de dispositivo](../concepts/device-capabilities/native-device-permissions.md)

@@ -3,12 +3,12 @@ title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 ms.topic: reference
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753543"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034723"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -21,6 +21,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|03/18/2021|Aviso: atualize para a versão **4.10** ou acima do SDK da Estrutura de Bots conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |03/05/2021 | O escopo de instalação padrão e a funcionalidade de grupo estão na visualização do desenvolvedor.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|Reordenar guias de aplicativo pessoal|[Reordenar a guia de chat em aplicativos pessoais](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|

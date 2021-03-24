@@ -5,12 +5,12 @@ description: como criar uma página de conteúdo
 keywords: teams tabs group channel configurble static
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479869"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034695"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -28,7 +28,7 @@ O objetivo geral da guia deve ser fornecer acesso a conteúdo significativo e en
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar seu código com o Teams
 
-Para que sua página seja exibida no Teams, você deve incluir o [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) do cliente JavaScript do Microsoft Teams e incluir uma chamada para depois que sua `microsoftTeams.initialize()` página for carregada. É assim que sua página e o cliente do Teams se comunicam:
+Para que sua página seja exibida no Teams, você deve incluir o [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do cliente JavaScript do Microsoft Teams e incluir uma chamada para depois que sua `microsoftTeams.initialize()` página for carregada. É assim que sua página e o cliente do Teams se comunicam:
 
 ```html
 <!DOCTYPE html>
@@ -54,7 +54,7 @@ Para que sua página seja exibida no Teams, você deve incluir o [SDK](/javascri
 
 O [SDK JavaScript do cliente](~/tabs/how-to/using-teams-client-sdk.md) do Teams fornece muitas funções adicionais que podem ser úteis durante o desenvolvimento de sua página de conteúdo.
 
-### <a name="deep-links"></a>Deep links
+### <a name="deep-links"></a>Links profundos
 
 Você pode criar links profundos para entidades no Teams. Normalmente, eles são usados para criar links que navegam para conteúdo e informações em sua guia. Consulte [Criar links profundos para conteúdo e recursos no Microsoft Teams.](~/concepts/build-and-test/deep-links.md)
 
@@ -93,7 +93,7 @@ Se você criar um bot com *um escopo* pessoal, ele será a primeira posição de
 A partir do esquema de manifesto [v1.7](../../../resources/schema/manifest-schema.md), você pode fornecer um indicador de carregamento nativo onde quer que o conteúdo da Web seja carregado no Teams, por [exemplo,](#integrate-your-code-with-teams)página de conteúdo de tabulação, [](configuration-page.md)página de configuração, [](removal-page.md) página de remoção e [módulos](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)de tarefa nas guias . [](../../../resources/schema/manifest-schema.md#showloadingindicator)
 
 > [!NOTE]
-> 1. O indicador de carregamento nativo ainda não tem suporte em dispositivos móveis.
+> 1. O comportamento em clientes móveis não é configurável por meio dessa propriedade de manifesto. Os clientes móveis mostram um indicador de carregamento nativo por padrão em páginas de conteúdo e módulos de tarefa baseados em iframe. Esse indicador no celular é mostrado quando uma solicitação é feita para buscar conteúdo e é descartada assim que a solicitação é concluída.
 > 2. Se você indicar no manifesto do aplicativo, todas as páginas de configuração, conteúdo e remoção de guias e todos os módulos de tarefa baseados em iframe devem seguir o protocolo obrigatório  `"showLoadingIndicator : true`  abaixo:
 
 
