@@ -334,6 +334,8 @@
   items:
     - name: Visão Geral
       href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+    - name: Kit de ferramentas do Microsoft Graph
+      href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Introdução
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Habilitar o consentimento específico do recurso
