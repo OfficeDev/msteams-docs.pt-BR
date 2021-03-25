@@ -4,12 +4,12 @@ author: laujan
 description: Uma visão geral das guias personalizadas na plataforma teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: d72d70ac97a7da427f22ef7e84c73f235dc395c6
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034646"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176960"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>O que são guias do Microsoft Teams?
 
@@ -51,7 +51,7 @@ Se você optar por expor sua guia no escopo de canal/grupo ou pessoal, você pre
 
 Para guias de canal/grupo, você também precisa criar uma página de configuração adicional que permita que os usuários configurem a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso porque sua guia canal/grupo pode ser adicionada a várias equipes ou chats de grupo diferentes. Em cada instalação subsequente, os usuários poderão configurar a guia, permitindo que você adapte a experiência conforme necessário. Quando os usuários adicionam ou configuram uma guia, uma URL está sendo associada à guia apresentada na interface do usuário do Teams. Configurar uma guia é simplesmente adicionar parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia Placas do Azure, a página de configuração permite que você escolha qual placa a guia carregará. A URL da página de configuração é especificada pela  `configurationUrl` propriedade na matriz no manifesto do `configurableTabs` aplicativo.
 
-Você pode ter no máximo uma (1) guia canal/grupo e até dezesseis (16) guias pessoais por aplicativo.
+Você pode ter vários canais ou guias de grupo e até dezesseis guias pessoais por aplicativo.
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
