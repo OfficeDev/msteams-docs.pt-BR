@@ -4,12 +4,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073086"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382328"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -132,10 +132,12 @@ A ação `ActionCard` oferece suporte a três tipos de entrada:
 
 Se desejar que uma lista de seleção múltipla seja exibida inicialmente no estilo compacto, especifique `"isMultiSelect": true` e `"style": true`.
 
-> [!NOTE]
-> Especificar `compact` para a propriedade `style` no Microsoft Teams é o mesmo que especificar `normal` para a propriedade `style` no Microsoft Outlook.
+Para obter mais informações sobre as ações do cartão de conector, consulte **{Actions}**(/outlook/actionable-messages/card-reference#actions) na referência do cartão de mensagem acionável.
 
-Para todos os outros detalhes sobre as Ações do cartão do conector, confira **[Ações](/outlook/actionable-messages/card-reference#actions)** na referência do cartão de mensagem acionável.
+> [!NOTE]
+> Especificando `compact`para a `style` propriedade no Microsoft Teams é o mesmo que especificar `normal` para a `style` propriedade no Microsoft Outlook.
+> 
+> Para a ação HttpPOST, o token do portador é incluído com as solicitações. Esse token inclui a identidade do Azure AD do usuário do Office 365 que executou a ação.
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configurando um webhook de entrada personalizado
 
