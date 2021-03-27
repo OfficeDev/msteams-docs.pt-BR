@@ -5,12 +5,12 @@ description: como criar uma página de configuração
 keywords: canal de grupo de guias do teams configurável
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034674"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382358"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -22,7 +22,15 @@ Uma página de configuração é um tipo especial [de página de conteúdo.](con
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configurando uma guia de chat de canal ou grupo
 
-O aplicativo deve fazer referência ao [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do cliente JavaScript do Microsoft Teams e chamar `microsoft.initialize()` . Além disso, as URLs usadas devem ser pontos de extremidade HTTPS protegidos e disponíveis na nuvem. O código a seguir é um exemplo de uma página de configuração:
+O aplicativo deve fazer referência ao [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do cliente JavaScript do Microsoft Teams e chamar `microsoft.initialize()` . Além disso, as URLs usadas devem ser pontos de extremidade HTTPS protegidos e disponíveis na nuvem. 
+
+### <a name="example"></a>Exemplo
+
+Um exemplo de página de configuração é mostrado na imagem a seguir: 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+O código correspondente para a página de configuração é mostrado na seção a seguir:
 
 ```html
 <head>
@@ -79,7 +87,17 @@ O aplicativo deve fazer referência ao [SDK](/javascript/api/overview/msteams-cl
 ...
 ```
 
-Escolha Selecionar **Botão Cinza** ou **Selecione Vermelho** na página de configuração, para exibir o conteúdo da guia com um ícone cinza ou vermelho. A escolha do botão relativo dispara `saveGray()` ou `saveRed()` invoca o seguinte:
+Escolha Selecionar **Botão Cinza** ou **Selecione Vermelho** na página de configuração, para exibir o conteúdo da guia com um ícone cinza ou vermelho. 
+
+A imagem a seguir exibe o conteúdo da guia com ícone cinza:
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+A imagem a seguir exibe o conteúdo da guia com o ícone vermelho:
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+Escolher o botão relativo dispara `saveGray()` ou , e invoca o `saveRed()` seguinte:
 
 1. O `settings.setValidityState(true)` é definido como true.
 1. O `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos é acionado.

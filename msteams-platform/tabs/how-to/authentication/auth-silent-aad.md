@@ -3,12 +3,12 @@ title: Autenticação silenciosa
 description: Descreve a autenticação silenciosa
 ms.topic: conceptual
 keywords: autenticação do teams SSO silent AAD
-ms.openlocfilehash: db8409cd4a6edface6d5dc3b3de6698852eaaa24
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449225"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382342"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
@@ -67,7 +67,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Autenticar
 
-Se o ADAL tiver um token nãoexpirado armazenado em cache para o usuário, use o token. Como alternativa, tente obter um token silenciosamente chamando `acquireToken(resource, callback)` . ADAL.js chamará sua função de retorno de chamada com o token solicitado ou dará um erro se a autenticação falhar.
+Se a ADAL tiver um token armazenado em cache para o usuário que não expirou, use esse token. Como alternativa, tente obter um token silenciosamente chamando `acquireToken(resource, callback)` . ADAL.js chama a função de retorno de chamada com o token solicitado ou fornece um erro se a autenticação falhar.
 
 Se você receber um erro na função de retorno de chamada, mostre um botão de login e volte para uma assinatura explícita.
 
@@ -116,5 +116,19 @@ if (authContext.isCallback(window.location.hash)) {
             microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
         }
     }
+}
+```
+
+### <a name="handle-sign-out-flow"></a>Manipular fluxo de saída
+
+Use o código a seguir para manipular o fluxo de saída no AAD Auth:
+
+> [!NOTE]
+> Embora o logout para a guia ou bot do Teams seja feito, a sessão atual também está desmarcada.
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```

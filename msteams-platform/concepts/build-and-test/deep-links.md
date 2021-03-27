@@ -3,12 +3,12 @@ title: Criar links profundos para conteúdo
 description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753508"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378326"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Criar links profundos para conteúdo e recursos no Microsoft Teams
 
@@ -141,6 +141,23 @@ Os parâmetros de consulta são:
 * `message`: Um campo opcional para o texto da mensagem que você deseja inserir na caixa de redação do usuário atual enquanto o chat está em um estado de rascunho.
 
 Para usar esse link profundo com seu bot, você pode especificar isso como o destino da URL no botão do cartão ou tocar em ação por meio do tipo `openUrl` de ação.
+
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>Links profundos para guias da Estrutura do SharePoint
+
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no aplicativo de área de trabalho do Chrome e do Microsoft Teams em execução no Linux.
+> Se o bot enviar a mesma URL de link profundo para um , a guia Teams será aberta no navegador atual quando o usuário `Action.OpenUrl` selecionar o link. Nenhuma nova guia do navegador é aberta.
+
+Os parâmetros de consulta são:
+
+* `appID` - Sua ID de manifesto **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - A ID do item que você forneceu [ao configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, **tasklist123**.
+* `entityWebUrl` - Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar a renderização da guia - https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 .
+* `entityName` - Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, a Lista de Tarefas 123 ou a Tarefa 456.
+
+Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Vinculando à caixa de diálogo de agendamento
 
