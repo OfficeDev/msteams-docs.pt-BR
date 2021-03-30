@@ -132,10 +132,10 @@ A ação `ActionCard` oferece suporte a três tipos de entrada:
 
 Se desejar que uma lista de seleção múltipla seja exibida inicialmente no estilo compacto, especifique `"isMultiSelect": true` e `"style": true`.
 
-Para obter mais informações sobre as ações do cartão de conector, consulte **{Actions}**(/outlook/actionable-messages/card-reference#actions) na referência do cartão de mensagem acionável.
+Para obter mais informações sobre as ações do cartão de conector, consulte **[Ações]**(/outlook/actionable-messages/card-reference#actions) na referência do cartão de mensagem acionável.
 
 > [!NOTE]
-> Especificando `compact`para a `style` propriedade no Microsoft Teams é o mesmo que especificar `normal` para a `style` propriedade no Microsoft Outlook.
+> Especificar `compact` para a propriedade `style` no Microsoft Teams é o mesmo que especificar `normal` para a propriedade `style` no Microsoft Outlook.
 > 
 > Para a ação HttpPOST, o token do portador é incluído com as solicitações. Esse token inclui a identidade do Azure AD do usuário do Office 365 que executou a ação.
 
