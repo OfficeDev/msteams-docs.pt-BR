@@ -6,17 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: 8cf4f964aba7ce9375b1b259ae88a7fbcb620631
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: 1b5a8ccc243c795801552519b4b52f51366e047d
+ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176953"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "51403966"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
-
->[!IMPORTANT]
-> As visualizações públicas do Microsoft Graph e do Microsoft Teams estão disponíveis para acesso antecipado e comentários. Embora essa versão tenha passado por testes abrangentes, ela não se destina a ser usada na produção.
 
 Com o Microsoft Graph, você pode migrar o histórico de mensagens e os dados existentes dos usuários de um sistema externo para um canal do Teams. Ao habilitar a recriação de uma hierarquia de mensagens de plataforma de terceiros dentro do Teams, os usuários podem continuar suas comunicações de maneira perfeita e continuar sem interrupção.
 
@@ -66,12 +63,12 @@ Como os dados existentes estão sendo migrados, manter os datas de data/hora ori
 #### <a name="request-create-a-team-in-migration-state"></a>Solicitação (criar uma equipe no estado de migração)
 
 ```http
-POST https://graph.microsoft.com/beta/teams
+POST https://graph.microsoft.com/v1.0/teams
 
 Content-Type: application/json
 {
   "@microsoft.graph.teamCreationMode": "migration",
-  "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
@@ -82,8 +79,8 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/operations/{operationId}
-Content-Location: /teams/{teamId}
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
 ```
 
 #### <a name="error-messages"></a>Mensagens de erro
@@ -99,7 +96,7 @@ Content-Location: /teams/{teamId}
 
 A criação de um canal para as mensagens importadas é semelhante ao cenário de criação de equipe:
 
-> [Crie um novo canal](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso `createdDateTime` channel. Coloque o novo canal em , um estado especial que barra os usuários da maioria das atividades de chat dentro do canal até que o processo `migration mode` de migração seja concluído.  Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `channelCreationMode` nova equipe como sendo criada para `migration` migração.  
+> [Crie um novo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso `createdDateTime` channel. Coloque o novo canal em , um estado especial que barra os usuários da maioria das atividades de chat dentro do canal até que o processo `migration mode` de migração seja concluído.  Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `channelCreationMode` nova equipe como sendo criada para `migration` migração.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>Permissões
 
@@ -110,7 +107,7 @@ A criação de um canal para as mensagens importadas é semelhante ao cenário d
 #### <a name="request-create-a-channel-in-migration-state"></a>Solicitação (criar um canal no estado de migração)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/channels
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 
 Content-Type: application/json
 {
@@ -128,8 +125,8 @@ Content-Type: application/json
 HTTP/1.1 202 Accepted
 
 {
-   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
-   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
    "createdDateTime":null,
    "displayName":"Architecture Discussion",
    "description":"This channel is where we debate all future architecture plans",
@@ -161,7 +158,7 @@ Depois que a equipe e o canal foram criados, você pode começar a enviar mensag
 #### <a name="request-post-message-that-is-text-only"></a>Solicitação (mensagem POST que é somente texto)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
    "createdDateTime":"2019-02-04T19:58:15.511Z",
@@ -185,7 +182,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
    "id":"id-value",
    "replyToId":null,
    "etag":"id-value",
@@ -232,7 +229,7 @@ HTTP/1.1 200 OK
 > **Observação**: não há escopos de permissão especiais neste cenário, pois a solicitação faz parte do chatMessage; os escopos para chatMessage também se aplicam aqui.
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
   "body": {
@@ -255,7 +252,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
     "id": "id-value",
     "replyToId": null,
     "etag": "id-value",
@@ -290,25 +287,12 @@ HTTP/1.1 200 OK
 
 ## <a name="step-four-complete-migration-mode"></a>Etapa quatro: concluir o modo de migração
 
-Depois que o processo de migração de mensagens é concluído, a equipe e o canal são retirados do modo de migração usando o  `completeMigration`  método. Esta etapa abre os recursos de equipe e canal para uso geral pelos membros da equipe. A ação está vinculada à `team` instância.
-
-#### <a name="request-end-team-migration-mode"></a>Solicitação (modo de migração de equipe final)
-
-```http
-POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
-
-```
-
-#### <a name="response"></a>Resposta
-
-```http
-HTTP/1.1 204 NoContent
-```
+Depois que o processo de migração de mensagens é concluído, a equipe e o canal são retirados do modo de migração usando o  `completeMigration`  método. Esta etapa abre os recursos de equipe e canal para uso geral pelos membros da equipe. A ação está vinculada à `team` instância. Todos os canais devem ser concluídos fora do modo de migração antes que a equipe possa ser concluída.
 
 #### <a name="request-end-channel-migration-mode"></a>Solicitação (modo de migração de canal final)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
@@ -318,10 +302,16 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMi
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="error-response"></a>Resposta de erro
+#### <a name="request-end-team-migration-mode"></a>Solicitação (modo de migração de equipe final)
 
 ```http
-400 Bad Request
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
+```
+
+#### <a name="response"></a>Resposta
+
+```http
+HTTP/1.1 204 NoContent
 ```
 
 * Ação chamada em um `team` ou que não está em `channel` `migrationMode` .
@@ -333,7 +323,7 @@ Você pode adicionar um membro a uma equipe usando a [interface do usuário](htt
 #### <a name="request-add-member"></a>Solicitação (adicionar membro)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/members
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
 {
@@ -353,8 +343,6 @@ HTTP/1.1 204 No Content
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
-
-* Você pode importar mensagens de usuários que não estão no Teams. **OBSERVAÇÃO**: As mensagens importadas para usuários que não estão presentes no locatário não serão pesquisáveis nos portais de conformidade ou cliente do Teams durante a Visualização Pública.
 
 * Depois que `completeMigration` a solicitação for feita, você não poderá importar mais mensagens para a equipe.
 
@@ -378,7 +366,6 @@ HTTP/1.1 204 No Content
 |Mensagens com texto rico|Vídeos|
 |Cadeia de resposta de mensagens|Announcements|
 |Processamento de alta taxa de transferência|Trechos de código|
-||Cartões adaptáveis|
 ||Adesivos|
 ||Emojis|
 ||Aspas|
@@ -387,4 +374,4 @@ HTTP/1.1 204 No Content
 
 ## <a name="see-also"></a>Confira também
 > [!div class="nextstepaction"]
->[Saiba mais sobre a integração do Microsoft Graph e do Teams](/graph/teams-concept-overview)
+> [Saiba mais sobre a integração do Microsoft Graph e do Teams](/graph/teams-concept-overview)
