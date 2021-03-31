@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto de cartão no Microsoft Teams
 keywords: formato de cartões de bots do teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455390"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421613"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -159,12 +159,14 @@ Para incluir uma menção em um cartão Adaptável, seu aplicativo precisa inclu
 
 
 ### <a name="information-masking-in-adaptive-cards"></a>Mascaramento de informações em cartões adaptáveis
-Use a propriedade mascarar informações para mascarar informações específicas, como senha ou informações confidenciais dos usuários.
+Use a propriedade mascarar informações para mascarar informações específicas, como senha ou informações confidenciais de usuários dentro do elemento de entrada de cartão [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptável. 
+
+> [!NOTE]
+> O recurso só dá suporte ao mascaramento de informações do lado do cliente, o texto de entrada mascarada é enviado como texto claro para o endereço de ponto de extremidade https especificado durante a configuração [do bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
 
 > [!NOTE]
 > A propriedade de mascaramento de informações está disponível apenas na visualização do desenvolvedor.
 
-#### <a name="mask-information"></a>Informações sobre máscara
 Para mascarar informações em cartões adaptáveis, adicione a propriedade para `isMasked` **digitar** e de definir seu valor `Input.Text` como *true*.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Cartão adaptável de exemplo com a propriedade mascaramento
@@ -203,7 +205,7 @@ Além disso, seu aplicativo deve incluir os seguintes elementos:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -216,7 +218,60 @@ Um Cartão Adaptável de largura total aparece da seguinte forma: Exibição de 
 
 Se você não tiver definido a propriedade como Full , o modo de exibição padrão do Cartão Adaptável será o seguinte: Modo de exibição cartão adaptável de largura `width`  ![ pequena](../../assets/images/cards/small-width-adaptive-card.png)
 
+### <a name="typeahead-support"></a>Suporte a Typeahead
 
+Dentro do elemento de esquema, pedir que os usuários filtrem e selecionem por meio de um número considerável de opções podem reduzir significativamente a conclusão [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) da tarefa. O suporte a typeahead em cartões adaptáveis pode simplificar a seleção de entrada restringindo ou filtrando o conjunto de opções de entrada enquanto um usuário digita a entrada. 
+
+#### <a name="enable-typeahead-in-adaptive-cards"></a>Habilitar typeahead em cartões adaptáveis
+
+Para habilitar typeahead dentro `Input.Choiceset` do conjunto para e garantir que está definido como `style` `filtered` `isMultiSelect` `false` . 
+
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>Exemplo de cartão adaptável com suporte a typeahead
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### <a name="stage-view-for-images-in-adaptive-cards"></a>Exibição de estágio para imagens em Cartões Adaptáveis
+Em um cartão Adaptável, você pode usar a propriedade para adicionar a capacidade de exibir imagens na exibição `msteams` de estágio seletivamente. Quando os usuários pairam sobre as imagens, eles veriam um ícone de expansão, para o qual o `allowExpand` atributo é definido como `true` . Para obter informações sobre como usar a propriedade, consulte o exemplo a seguir:
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+Quando os usuários pairam sobre a imagem, um ícone de expansão aparece no canto superior direito da imagem: cartão adaptável com imagem ![ expansível](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+A imagem aparece no exibição de estágio quando o usuário seleciona o botão expandir: ![ Imagem expandida para exibição de estágio](../../assets/images/cards/adaptivecard-expand-image.png)
+
+Na exibição de estágio, os usuários podem ampliar e diminuir o zoom da imagem. Você pode selecionar quais imagens em seu cartão adaptável precisam ter esse recurso.
+
+> [!NOTE]
+> A funcionalidade de zoom e zoom só se aplica aos elementos de imagem (tipo de imagem) em um cartão Adaptável.
+
+> [!NOTE]
+> Para aplicativos móveis do Teams, a funcionalidade de exibição de estágio para imagens em Cartões Adaptáveis está disponível por padrão e os usuários poderão exibir imagens de cartão adaptáveis no modo de exibição de estágio simplesmente tocando na imagem, independentemente de o atributo estar presente ou `allowExpand` não.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Formatação de marcação: cartões de conector O365**](#tab/connector-md)
 
@@ -226,7 +281,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. O supor
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| header (níveis 1 &ndash; 3) | **Text** | `### Text`|
+| header (níveis 1 &ndash; 3) | **Texto** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -315,7 +370,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. Markdow
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -403,7 +458,7 @@ As marcas HTML são suportadas para cartões simples, como o herói e o cartão 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

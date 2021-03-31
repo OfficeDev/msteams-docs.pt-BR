@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382349"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435033"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -289,6 +289,8 @@ Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de 
     ![Experiência de pré-reunião](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
+    > [!NOTE] 
+    > Atualmente, na guia reuniões, não há suporte para obter detalhes da reunião e informações dos participantes.
 
 **Para adicionar uma extensão de mensagens a uma reunião**
 
