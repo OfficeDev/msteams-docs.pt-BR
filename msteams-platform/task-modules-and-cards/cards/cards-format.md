@@ -3,12 +3,12 @@ title: Formatação de texto em cartões
 description: Descreve a formatação de texto de cartão no Microsoft Teams
 keywords: formato de cartões de bots do teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
+ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421613"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51474996"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -242,6 +242,10 @@ Para habilitar typeahead dentro `Input.Choiceset` do conjunto para e garantir qu
 ``` 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Exibição de estágio para imagens em Cartões Adaptáveis
+
+> [!NOTE]
+> Esse recurso está disponível apenas na visualização do desenvolvedor.
+ 
 Em um cartão Adaptável, você pode usar a propriedade para adicionar a capacidade de exibir imagens na exibição `msteams` de estágio seletivamente. Quando os usuários pairam sobre as imagens, eles veriam um ícone de expansão, para o qual o `allowExpand` atributo é definido como `true` . Para obter informações sobre como usar a propriedade, consulte o exemplo a seguir:
 
 ``` json
