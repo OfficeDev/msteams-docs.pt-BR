@@ -4,19 +4,19 @@ summary: Obter documentação, código de exemplo, tutoriais e muito mais para a
 brand: teams
 metadata:
   title: Documentação do desenvolvedor da Plataforma Microsoft Teams
-  description: A plataforma de desenvolvedor do Microsoft Teams torna mais fácil para os desenvolvedores integrarem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões com mais rapidez, fornecer foco (reduzindo a troca de contexto) e criar colaboração em torno de conteúdo e fluxos de trabalho existentes. .
+  description: A plataforma de desenvolvedor do Microsoft Teams facilita que os desenvolvedores integrem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões com mais rapidez, oferecer foco (reduzindo a alternação de contexto) e criar colaboração em torno de conteúdo e fluxos de trabalho existentes. .
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: a0bcb386423f937603a6bfca56b5954d55c97bc0
-  ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+  ms.openlocfilehash: 3ac38fce0273be69c358f085037449bb5b9626f2
+  ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "50270781"
+  ms.lasthandoff: 03/31/2021
+  ms.locfileid: "51475939"
 highlightedContent:
   items:
   - title: "Novo no desenvolvimento do Teams? \U0001F680Comece aqui!"
@@ -73,10 +73,13 @@ conceptualContent:
       text: 'Criar um aplicativo do Teams usando C #'
     - url: /microsoftteams/platform/samples/teams-low-code-solutions
       itemType: how-to-guide
-      text: Criar aplicativos, bots e fluxos de código baixo do Teams com o Microsoft Power Platform
+      text: Criar aplicativos, bots e fluxos de baixo código do Teams com o Microsoft Power Platform
     - url: /microsoftteams/platform/resources/schema/manifest-schema
       itemType: reference
       text: Esquema de manifesto para aplicativos do Teams
+    - url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+      itemType: reference
+      text: Criar soluções para aplicativos do Microsoft Teams
   - title: Saiba mais
     links:
     - url: /learn/modules/intro-microsoft-teams-apps
@@ -93,7 +96,7 @@ conceptualContent:
       text: Criar interações orientadas a tarefas com extensões de mensagens
     - url: /learn/modules/msteams-task-modules/
       itemType: learn
-      text: Coletar informações de entrada e coleta com módulos de tarefa
+      text: Coletar informações de entrada e coletar informações com módulos de tarefa
     - url: /learn/modules/msteams-webhooks-connectors/
       itemType: learn
       text: Conectar serviços Web a canais e equipes com webhooks e Conectores do Office 365
@@ -104,23 +107,23 @@ conceptualContent:
       text: Integrar aplicativos Web
     - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
       itemType: how-to-guide
-      text: Integrar um chatbot do Power Virtual Agents
+      text: Integrar um chatbot de Agentes Virtuais do Power
     - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
       itemType: reference
-      text: Integrar o botão Compartilhar com o Teams para o seu site
+      text: Integrar o botão Compartilhar com o Teams para seu site
     - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
       itemType: reference
       text: Integrar uma guia do Teams ao SharePoint
     - url: /microsoftteams/platform/resources/moodleinstructions
       itemType: how-to-guide
-      text: Integração com o sistema de gerenciamento de aprendizagem Mhari
+      text: Integrar-se ao sistema de gerenciamento de aprendizagem Moodle
     - url: /microsoftteams/platform/samples/app-templates
       itemType: reference
-      text: Integrar modelos de aplicativos prontos para produção
+      text: Integrar modelos de aplicativo prontos para produção
     - url: /microsoftteams/platform/samples/shifts-wfm-connectors
       itemType: reference
       text: Integrar conectores shifts prontos para produção
-  - title: Conectar-se
+  - title: Conecte-se
     links:
     - url: https://developer.microsoft.com/microsoft-teams/blogs/
       itemType: overview
@@ -135,17 +138,17 @@ conceptualContent:
     links:
     - url: /microsoftteams/platform/feedback
       itemType: overview
-      text: Comunidade de desenvolvedores do Microsoft Teams e resposta
+      text: Resposta e comunidade de desenvolvedores do Microsoft Teams
     - url: /microsoftteams/platform/resources/teams-contributor-reference
       itemType: overview
       text: Contribuir com a documentação do Microsoft Teams
 tools:
   title: SDKs e ferramentas
   items:
-  - title: Extensão do Kit de Ferramentas do Microsoft Teams para Visual Studio Code
+  - title: Microsoft Teams Toolkit extensão para Visual Studio Código
     imageSrc: /media/logos/logo_vs-code.svg
     url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: Extensão do Kit de Ferramentas do Microsoft Teams para Visual Studio
+  - title: Microsoft Teams Toolkit extensão para Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
     url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: SDK do cliente JavaScript para guias e outras experiências hospedadas
@@ -163,6 +166,6 @@ tools:
   - title: Microsoft Teams App Studio
     imageSrc: ./assets/icons/AppStudioIcon.png
     url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
-  - title: Gerador Yeoman do Microsoft Teams
+  - title: Gerador yeoman para o Microsoft Teams
     imageSrc: ./assets/icons/Yeoman.png
     url: https://github.com/OfficeDev/generator-teams
