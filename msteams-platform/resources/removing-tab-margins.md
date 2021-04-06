@@ -5,12 +5,12 @@ description: Descreve como a remoção das margens de tabulação melhorará a e
 keywords: guia removendo preenchimento de margens
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827925"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585817"
 ---
 # <a name="tab-margin-changes"></a>Mudanças na margem da guia
 
@@ -18,6 +18,9 @@ Este documento descreve como a remoção de margens em torno de todas as guias n
 Remover as margens ao redor de todas as guias permitirá que os desenvolvedores criem aplicativos que pareçam mais nativos para o Teams. Isso também se alinhará com nossos designs [de kit de interface do usuário.](~/tabs/design/tabs.md) A maioria dos aplicativos já fica melhor sem as margens ao redor de suas experiências. No entanto, algumas guias são afetadas visualmente por essa alteração, e os desenvolvedores devem fazer as alterações necessárias.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Inteligência de tabulação e sem margens" border="false":::
+
+> [!NOTE]
+> Esse recurso não é aplicável a clientes móveis, pois as guias exibidas nos clientes móveis não têm margens. 
 
 ## <a name="timelines"></a>Linhas do tempo
 

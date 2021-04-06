@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
-ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
+ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51435033"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585845"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -233,6 +233,7 @@ Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativ
 
 > [!NOTE]
 > Tente atualizar o manifesto do aplicativo com o [esquema de manifesto](../resources/schema/manifest-schema-dev-preview.md).
+> Aplicativos em reuniões precisam *de escopo de groupchat.* O *escopo da* equipe funciona apenas para guias em canais.
 
 ```json
 
@@ -249,11 +250,14 @@ Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativ
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` está disponível no momento apenas na visualização do desenvolvedor.
 
 ### <a name="context-property"></a>Propriedade Context
 
@@ -266,6 +270,7 @@ A guia `context` e `scopes` as propriedades permitem determinar onde seu aplicat
 | **meetingChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários no contexto de uma reunião agendada. |
 | **meetingDetailsTab** | Uma guia no header da exibição de detalhes da reunião do calendário. |
 | **meetingSidePanel** | Um painel na reunião foi aberto por meio da barra unificada (U-bar). |
+| **meetingStage** | Um aplicativo do sidepanel pode ser compartilhado no estágio de reunião. |
 
 > [!NOTE]
 > `Context` atualmente, não há suporte para clientes móveis.
@@ -326,6 +331,18 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 > [!NOTE]
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no web-view. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte [Módulo de tarefas do SDK do Teams.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
 > * Se você quiser que seu aplicativo suporte usuários anônimos, sua carga inicial de solicitação de invocação deve depender dos metadados de solicitação no objeto, não `from.id` `from` nos `from.aadObjectId` metadados de solicitação. `from.id` é a ID do usuário e é a ID do `from.aadObjectId` Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### <a name="share-to-stage"></a>Compartilhar em estágio 
+
+> [!NOTE]
+> Esse recurso só pode ser aproveitado na visualização do dev insider
+
+
+Esse recurso oferece aos desenvolvedores a capacidade de compartilhar um aplicativo no estágio de reunião. Habilitando o compartilhamento para o estágio de reunião, os participantes da reunião podem colaborar em tempo real. 
+
+O contexto necessário é meetingStage no manifesto do aplicativo. Um pré-requisito para isso é ter o contexto meetingSidePanel. Isso habilita o botão "Compartilhar" no sidepanel conforme solicitado abaixo
+
+
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 

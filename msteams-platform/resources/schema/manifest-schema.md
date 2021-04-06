@@ -4,16 +4,16 @@ description: Descreve o esquema de manifesto do Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 291d748d546dec16fa4bf748318b8749b7d0275d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479849"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585838"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
-O manifesto do Teams descreve como o aplicativo se integra ao produto do Microsoft Teams. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json) . Versões anteriores 1.0-1.4 também são suportadas (usando "v1.x" na URL).
+O manifesto do Teams descreve como o aplicativo se integra ao produto do Microsoft Teams. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) . Versões anteriores 1.0-1.4 também são suportadas (usando "v1.x" na URL).
 
 O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
 
@@ -21,8 +21,8 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.8",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -276,50 +276,8 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
       }
     ]
   },
-  "defaultInstallScope": {
-     "type": "string",
-     "enum": [
-        "personal",
-        "team",
-        "groupchat",
-        "meetings"
-      ],
-      "description": "The install scope is defined for this app by default. It is the option displayed on the button when a user tries to add the app."
-    },
-  "defaultGroupCapability": {
-      "type": "object",
-      "properties": {
-        "team": {
-          "type": "string",
-          "enum": [
-            "tab",
-            "bot",
-            "connector"
-          ],
-          "description": "When the selected install scope is Team, this field specifies the default capability available."
-    },
-    "groupchat": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Group Chat, this field specifies the default capability available."
-    },
-    "meetings": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Meetings, this field specifies the default capability available."
-      }
-    },
-    "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
-    "additionalProperties": false
-
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
 }
 ```
 
@@ -335,7 +293,7 @@ A https:// URL de referência do Esquema JSON para o manifesto.
 
 **Obrigatório —** cadeia de caracteres
 
-A versão do esquema de manifesto que este manifesto está usando. Deve ser 1,7.
+A versão do esquema de manifesto que este manifesto está usando. Deve ser 1,9.
 
 ## <a name="version"></a>versão
 
@@ -447,11 +405,11 @@ Usado quando a experiência do aplicativo tem uma experiência de guia de canal 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A https:// URL a ser usada ao configurar a guia.|
-|`scopes`|matriz de números|1 |✔|Atualmente, as guias configuráveis suportam apenas `team` os `groupchat` escopos e. |
+|`scopes`|matriz de números|1|✔|Atualmente, as guias configuráveis suportam apenas `team` os `groupchat` escopos e. |
 |`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de números|6 ||O conjunto de `contextItem` escopos em que há suporte para uma guia. Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|matriz de números|1 ||Define como sua guia é disponibilizada no SharePoint. As opções `sharePointFullPage` são e `sharePointWebPart` |
+|`supportedSharePointHosts`|matriz de números|1||Define como sua guia é disponibilizada no SharePoint. As opções `sharePointFullPage` são e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -468,8 +426,8 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |`contentUrl`|string||✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
 |`websiteUrl`|string|||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
 |`searchUrl`|string|||A https:// URL a ser apontada para as consultas de pesquisa de um usuário.|
-|`scopes`|matriz de números|1 |✔|Atualmente, as guias estáticas suportam apenas o escopo, o que significa que ele só pode ser `personal` provisionado como parte da experiência pessoal.|
-|`context` | matriz de números| 2 || O conjunto de `contextItem` escopos em que há suporte para uma guia.|
+|`scopes`|matriz de números|1|✔|Atualmente, as guias estáticas suportam apenas o escopo, o que significa que ele só pode ser `personal` provisionado como parte da experiência pessoal.|
+|`context` | matriz de números| 2|| O conjunto de `contextItem` escopos em que há suporte para uma guia.|
 
 > [!NOTE]
 > Se suas guias exigirem informações dependentes de contexto para exibir  conteúdo relevante ou para iniciar um fluxo de autenticação, consulte Obter contexto para a [guia Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -485,7 +443,7 @@ O item é uma matriz (máximo de apenas 1 elemento atualmente, apenas um bot é 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo da ID geral [do aplicativo.](#id)|
-|`scopes`|matriz de números|3 |✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`scopes`|matriz de números|3|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
 |`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
 |`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
@@ -498,7 +456,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de números|3 |✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de números|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -519,7 +477,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A https:// URL a ser usada ao configurar o conector.|
-|`scopes`|matriz de números|1 |✔|Especifica se o Conector oferece uma experiência no contexto de um canal em um , ou uma experiência com escopo apenas para um `team` usuário individual ( `personal` ). Atualmente, apenas o `team` escopo é suportado.|
+|`scopes`|matriz de números|1|✔|Especifica se o Conector oferece uma experiência no contexto de um canal em um , ou uma experiência com escopo apenas para um `team` usuário individual ( `personal` ). Atualmente, apenas o `team` escopo é suportado.|
 |`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o Conector que corresponde à sua ID no [Painel do Desenvolvedor de Conectores.](https://aka.ms/connectorsdashboard)|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -555,7 +513,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|string|64 caracteres||Tipo do comando. Um dos `query` ou `action` . Padrão: **consulta**.|
 |`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
 |`initialRun`|booliano|||Um valor booleano indica se o comando é executado inicialmente sem parâmetros. O padrão é **false**.|
-|`context`|matriz de cadeias de caracteres|3 ||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação `compose` de , , `commandBox` `message` . O padrão é `["compose","commandBox"]`.|
+|`context`|matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação `compose` de , , `commandBox` `message` . O padrão é `["compose","commandBox"]`.|
 |`fetchTask`|booliano|||Um valor booleano que indica se ele deve buscar o módulo de tarefa dinamicamente. O padrão é **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens.|
 |`taskInfo.title`|string|64 caracteres||Título da caixa de diálogo inicial.|
