@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
-ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
+ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "51493052"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596685"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
 Modelos de aplicativo são exemplos de aplicativos completos para o Microsoft Teams que são de código aberto e disponíveis no GitHub. Cada modelo de aplicativo contém instruções detalhadas para implantar e instalar esse aplicativo para sua organização. Ele também fornece um aplicativo de exemplo que você pode instalar e começar a usar imediatamente. O código-fonte completo também está disponível, o que permite explorá-lo em detalhes ou bifurcar o código e alterá-lo para atender aos seus requisitos específicos.
 Todos os modelos de aplicativo são fornecidos nos termos de [Licença do MIT.](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE)
->[!NOTE] 
->Você, não a Microsoft, deve licenciar e dar suporte a aplicativos criados a partir de modelos de aplicativos para seus usuários e organizações.
+> [!NOTE] 
+> Você deve licenciar e dar suporte a aplicativos criados a partir de modelos de aplicativos para seus usuários e organizações. A Microsoft não é responsável por licenças e suporte.
 
 **&#9734; Indica modelos de aplicativo recém-lançados.**
 
@@ -28,13 +28,29 @@ Todos os modelos de aplicativo são fornecidos nos termos de [Licença do MIT.](
 * **Personalizável e extensível:** Embora todos os modelos de aplicativo possam ser implantados com configuração mínima, fornecemos toda a base de código e scripts de implantação para que você possa personalizá-los ou estendí-los facilmente para se ajustar às suas necessidades exclusivas.
 * **Documentação detalhada:** Todos os modelos de aplicativo são acompanhados por documentação de ponta a ponta em etapas de arquitetura de solução, implantação e configuração.  
 
-## <a name="adoption-bot-9734"></a>Adoção bot &#9734;
+## <a name="adoption-bot"></a>Bot de adoção 
 
 O Bot de Adoção é um bot de chat de cuidado do usuário criado com o Power Virtual Agent for Teams (PVA). Ele pode ser considerado como a versão PVA do FAQPlus. O Bot de Adoção responde a mais de 100 perguntas comuns sobre o Microsoft 365 e o Teams. Você pode editar os tópicos existentes, adicionar seus próprios tópicos e ingerir perguntas frequentes existentes. Se os usuários precisarem de ajuda adicional, o Bot de Adoção poderá conectá-los a especialistas ou até mesmo ser estendido para abrir tíquetes de serviço com conectores de fluxo premium. Esse bot pode ser instalado por conta própria ou integrado a um aplicativo personalizado, como o [Hub de Adoção.](https://github.com/akporzondek/adoption_hub)
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="appointment-manager-9734"></a>Gerenciador de Compromissos &#9734;
+## <a name="adoption-tool-9734"></a>Ferramenta de adoção &#9734;
+
+A Ferramenta de Adoção consiste nos dois modelos de aplicativo a seguir:
+
+### <a name="champion-management-platform"></a>Plataforma de Gerenciamento de Campeões
+
+O modelo de aplicativo da Plataforma de Gerenciamento de Campeões (CMP) ajuda você a gerenciar, dimensionar e inspirar seus defensores do trabalho em equipe a obter mais. Este modelo de aplicativo é criado na Estrutura do SharePoint e carregado em uma guia dentro de uma equipe. Os grupos podem aproveitar essa ferramenta para ajudar a gerenciar a associação ao programa, fornecer uma tabela de líderes e tipos de eventos para registro em log e ferramentas para sobrepor selos digitais aos participantes do programa.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+### <a name="get-started"></a>Introdução
+
+O modelo de aplicativo Get Started permite que você traga o poder dos caminhos de aprendizado do Microsoft 365 para dentro do Microsoft Teams. Este modelo de aplicativo permite que você conceda fácil acesso a páginas de treinamento específicas ou outros ativos de intranet e carregue o conteúdo diretamente no Teams. Você também pode alterar o nome do aplicativo ou o logotipo para corresponder à identidade visual da sua empresa.
+
+[Obter no GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## <a name="appointment-manager"></a>Gerenciador de Compromissos 
 
 O Gerenciador de Compromissos é um modelo de aplicativo do Teams para ajudar as empresas a criar, gerenciar e conduzir compromissos virtuais com os consumidores por meio do Teams. As novas solicitações de compromisso dos consumidores ficam visíveis nos canais do Teams, onde eles podem ser atribuídos e reatribuídos rapidamente à equipe em uma equipe. As solicitações de compromisso podem ser exibidas em níveis de equipe ou pessoal por meio de guias personalizadas. Cada compromisso é associado a uma reunião online do Teams, portanto, a equipe e os consumidores podem participar facilmente da reunião no horário agendado.
 
@@ -125,7 +141,7 @@ Lista de verificação é um aplicativo de extensão de mensagens personalizado 
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Lista de ida e &#9734;
+## <a name="classroom-drop-in"></a>Drop-in de sala de aula 
 
 O Drop-in de sala de aula é um aplicativo baseado na Plataforma [Microsoft Power](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)que permite que os líderes do sistema encontrem equipes de classe (salas de aula virtuais) e adicionem a si mesmos ou outras pessoas a essas equipes de classe por um período de entrega especificado, conforme necessário. O aplicativo criado usando o Microsoft [Power Apps](/powerapps/powerapps-overview) e o [Power Automate](/power-automate/getting-started), integra-se profundamente ao Microsoft Teams para garantir que os institutos educacionais possam otimizar suas operações em um ambiente de aprendizado híbrido, fornecendo acesso a participantes relevantes para equipes de classe por requisitos comerciais.
 
@@ -162,7 +178,7 @@ O aplicativo de Pesquisa de Grupo de Contatos fornece uma abordagem conveniente 
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>Co-worker Appreciation &#9734;
+## <a name="co-worker-appreciation"></a>Reconhecimento de colegas de trabalho 
 
 Usando o modelo de reconhecimento de colegas de trabalho no Microsoft Teams, os usuários podem reconhecer as conquistas de seus colegas no contexto do Teams. Quando os colegas de trabalho selecionam recompensar um colega, os destinatários e outros membros da equipe são marcados em uma conversa de canal e recebem uma notificação sobre os detalhes do prêmio do canal. Os prêmios são registrados no aplicativo teams, que é seguro, portátil e facilmente compartilhável. Isso pode ser considerado como a versão baseada no PowerApps do modelo de aplicativo Open Badges, com uma tabela de classificação.
 
@@ -268,7 +284,7 @@ Conversational Q&Um bots é uma maneira fácil de fornecer respostas para pergun
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="get-support-app-9734"></a>Obter suporte de aplicativos &#9734;
+## <a name="get-support-app"></a>Obter aplicativo de suporte
 
 O aplicativo Obter Suporte pode ser usado por organizações que estão usando o Microsoft Teams para permitir que qualquer conjunto de usuários solicite assistência de supervisores. Este aplicativo inclui vários recursos, como:
 -   Solicitando assistência em diferentes categorias de um Power App
@@ -391,7 +407,7 @@ Incident Reporter é um [bot do Microsoft Teams](../bots/what-are-bots.md)  que 
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>Inspeção &#9734;
+## <a name="inspection"></a>Inspeção 
 
  A inspeção é um aplicativo do Microsoft Teams que permite que os funcionários de linha de frente inspecionem qualquer coisa de locais para ativos e equipamentos. Por exemplo, uma loja de varejo, uma fábrica de manufatura ou veículos e máquinas. Há dois aplicativos nesta solução, cada um destinado a tipos diferentes de usuários.
 
@@ -601,7 +617,7 @@ A pesquisa é um aplicativo de extensão de mensagens personalizado do Microsoft
 :::column-end:::
 :::row-end:::
 
-## <a name="time-tally-9734"></a>Time Tally &#9734;
+## <a name="time-tally"></a>Time Tally 
 
 Um projeto pode incluir várias tarefas e vários projetos podem ser atribuídos aos funcionários. Os gerentes são obrigados a entender o andamento do projeto pelo tempo gasto pelos funcionários nessas tarefas. Isso pode ser uma atividade complicada, pois os funcionários precisam preencher os quadro de horários. O aplicativo Time Tally permite que os funcionários preencham seus quadro de horários rapidamente, usando o dispositivo móvel, e os gerentes não têm que acompanhar os funcionários na entrada do quadro de horários. Os gerentes podem exibir a utilização do projeto com base em recursos e podem aprovar ou rejeitar as entradas. As notificações de lembrete são enviadas para garantir a conformidade do quadro de horários. Além disso, dados históricos e utilizações estão disponíveis para análise.
 

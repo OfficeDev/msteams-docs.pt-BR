@@ -1,20 +1,20 @@
 ---
-title: Integrar recursos de localização
+title: Integrar os recursos de localização
 description: Como usar o SDK do cliente JavaScript do Teams para aproveitar os recursos de localização
 keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.author: lajanuar
-ms.openlocfilehash: fccf39c37c785be716bfff26907f9184c0d9beec
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449600"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596193"
 ---
-# <a name="integrate-location-capabilities"></a>Integrar recursos de localização 
+# <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
 
 Este documento orienta você sobre como integrar os recursos de localização do dispositivo nativo ao seu aplicativo do Teams.  
 
-Você pode usar o [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript do Microsoft Teams, que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use as APIs de local, como [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) e [showLocation,](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_) para integrar os recursos ao seu aplicativo. 
+Você pode usar o [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript do Microsoft Teams, que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use as APIs de local, como [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) e [showLocation,](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) para integrar os recursos ao seu aplicativo. 
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Vantagens da integração de recursos de localização
 
@@ -48,12 +48,13 @@ Você deve usar o seguinte conjunto de APIs para habilitar os recursos de locali
 
 | API      | Descrição   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) | Fornece o local do dispositivo atual do usuário ou abre o se picker de localização nativo e retorna o local escolhido pelo usuário. |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation) | Mostra o local no mapa |
+|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Fornece o local do dispositivo atual do usuário ou abre o se picker de localização nativo e retorna o local escolhido pelo usuário. |
+|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | Mostra o local no mapa |
 
 > [!NOTE]
 
-> A `getLocation()` API acompanha as seguintes configurações de [entrada](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest)e `allowChooseLocation` `showMap` . <br/> Se o valor for `allowChooseLocation` *verdadeiro,* os usuários poderão escolher qualquer local de sua escolha.<br/>  Se o valor for *falso,* os usuários não poderão alterar o local atual.<br/> Se o valor for `showMap` *false*, o local atual será buscado sem exibir o mapa. `showMap` será ignorado se `allowChooseLocation` estiver definido como *true*. 
+> A `getLocation()` API acompanha as seguintes configurações de [entrada](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)e `allowChooseLocation` `showMap` . <br/> Se o valor for `allowChooseLocation` *verdadeiro,* os usuários poderão escolher qualquer local de sua escolha.<br/>  Se o valor for *falso,* os usuários não poderão alterar o local atual.<br/> Se o valor for `showMap` *false*, o local atual será buscado sem exibir o mapa. `showMap` será ignorado se `allowChooseLocation` estiver definido como *true*. 
+
 
 **Experiência do aplicativo Web para recursos de localização** 
  ![ experiência do aplicativo web para recursos de localização](../../assets/images/tabs/location-capability.png)

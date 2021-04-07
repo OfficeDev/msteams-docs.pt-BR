@@ -4,12 +4,12 @@ description: descreve maneiras de ter uma conversa com um bot do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585852"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596671"
 ---
 # <a name="conversation-basics"></a>Noções básicas sobre conversas
 
@@ -282,6 +282,9 @@ Você também pode adicionar notificações à sua mensagem usando a `Notificati
 ## <a name="notifications-to-your-message"></a>Notificações à sua mensagem
 
 As notificações alertam os usuários sobre novas tarefas, menções e comentários. Esses alertas estão relacionados ao que os usuários estão trabalhando ou ao que devem observar inserindo um aviso no feed de atividades. Para que as notificações acionem de sua mensagem bot, de definir a propriedade `TeamsChannelData` `Notification.Alert` objects como true. A ativação ou não de uma notificação depende das configurações do Teams do usuário individual e você não pode substituir essas configurações. O tipo de notificação é um banner ou um banner e um email.
+
+> [!NOTE]
+> O **campo** Resumo exibe qualquer texto do usuário como uma mensagem de notificação no feed.
 
 O código a seguir mostra um exemplo de adição de notificações à sua mensagem:
 

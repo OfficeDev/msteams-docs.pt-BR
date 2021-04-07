@@ -3,12 +3,12 @@ title: Suporte de login único para guias
 description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: e5f79aaf62d195144dd9b34cfbce601c94478191
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753536"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596678"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -85,8 +85,8 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams qu
 9. Insira os detalhes nas caixas para configurar os prompts de consentimento do administrador e do usuário com valores apropriados para o `access_as_user` escopo:
     * **Título de consentimento do administrador:** O Teams pode acessar o perfil do usuário.
     * **Descrição do** consentimento do administrador: o Teams pode chamar as APIs da Web do aplicativo como o usuário atual.
-    * **Título de consentimento do** usuário : o Teams pode acessar o perfil de usuário e fazer solicitações em nome do usuário.
-    * **Descrição do consentimento do usuário:** O Teams pode chamar as APIs desse aplicativo com os mesmos direitos do usuário.
+    * **Título de consentimento do** usuário : o Teams pode acessar seu perfil e fazer solicitações em seu nome.
+    * **Descrição do consentimento do usuário:** O Teams pode chamar as APIs desse aplicativo com os mesmos direitos que você.
 10. Verifique se o **Estado** está definido como **Habilitado**.
 11. Selecione **Adicionar escopo** para salvar os detalhes. A parte de domínio do nome **escopo** exibida abaixo do campo de texto deve corresponder automaticamente ao conjunto de URI **de ID** do aplicativo na etapa anterior, com anexado `/access_as_user` ao final `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` .
 12. Na seção **Aplicativos cliente autorizados,** identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Selecione **Adicionar um aplicativo cliente**. Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado criado na etapa anterior:

@@ -5,12 +5,12 @@ keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
-ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
+ms.openlocfilehash: 99a0982a0fa453c6eb7ffeea25ba8a2607cf2d5e
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "51403973"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596256"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>Crie seu primeiro aplicativo do Teams usando C# ou .NET
 
@@ -117,9 +117,9 @@ Visual Studio tem suporte integrado para implantação de aplicativos para difer
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Atualizar as credenciais do aplicativo hospedado
 
-O aplicativo de exemplo exige que as variáveis de ambiente sejam definidas como os valores salvos no arquivo [de texto](~/includes/get-started/get-started-use-app-studio.md#bots).
+O aplicativo de exemplo exige que as variáveis de ambiente sejam definidas para os valores salvos no arquivo de texto.
 
-Abra o appsettings.jsno arquivo. Atualize o **valor do MicrosoftAppId** com sua ID de bot que você salvou no arquivo de texto. Atualize **o MicrosoftAppPassword** com a senha de bot salva.
+Abra o arquivo `appsettings.json`. Atualize o **valor do MicrosoftAppId** com sua ID de bot que você salvou no arquivo de texto. Atualize **o MicrosoftAppPassword** com a senha de bot salva.
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 

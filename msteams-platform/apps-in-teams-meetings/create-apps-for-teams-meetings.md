@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585845"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596228"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -350,10 +350,10 @@ As configurações pós-reunião e pré-reunião são equivalentes.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | C# |
-|----------------|-----------------|--------------|
-| Extensibilidade de reuniões | Exemplo de extensibilidade de reunião do Microsoft Teams para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
-| Bot de bolha de conteúdo de reunião | Exemplo de extensibilidade de reunião do Microsoft Teams para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|Exemplo de nome | Descrição | .NET | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Extensibilidade de reuniões | Exemplo de extensibilidade de reunião do Microsoft Teams para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| Bot de bolha de conteúdo de reunião | Exemplo de extensibilidade de reunião do Microsoft Teams para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 

@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Saiba como projetar aplicativos em reuniões do Teams e obter o Microsoft Teams UI Kit.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827946"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596249"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
@@ -152,11 +152,10 @@ Há duas variantes de header. Quando possível, use a variante com o avatar para
 
 As caixas de diálogo na reunião podem variar de tamanho para levar em conta cenários diferentes. Certifique-se de manter tamanhos de preenchimento e componentes.
 
-* **Largura**: A largura do iframe da caixa de diálogo é um valor absoluto dentro do intervalo especificado.
-* **Altura**: a altura do iframe da caixa de diálogo é um valor absoluto dentro do intervalo especificado.
+* **Largura**: Você pode especificar a largura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado.
+* **Altura**: Você pode especificar a altura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado. Você também pode permitir que os usuários rolem verticalmente se o conteúdo do aplicativo exceder a altura máxima.
 
-> [!NOTE]
-> Os valores que você define para a largura e a altura são usados na `externalResourceURL` caixa de diálogo na reunião.
+Para implementar, especifique a largura e a altura usando a [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) chave.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemplo mostra a caixa de diálogo na reunião. Largura: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Altura: 300 pixels (iframe)." border="false":::
 
@@ -164,7 +163,7 @@ As caixas de diálogo na reunião podem variar de tamanho para levar em conta ce
 
 Você pode voltar para uma reunião depois que ela terminar e exibir o conteúdo do aplicativo. Neste exemplo, o organizador da reunião pode ver os resultados da sondagem na guia **Contoso.** (Observação: Do ponto de vista de design, não há diferença entre uma experiência de guia pré e pós-reunião.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Exemplo mostra uma guia pós-reunião." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="A ilustração de exemplo mostra uma guia pós-reunião." border="false":::
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
