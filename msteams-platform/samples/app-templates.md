@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
+ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596685"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51612645"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -34,17 +34,13 @@ O Bot de Adoção é um bot de chat de cuidado do usuário criado com o Power Vi
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="adoption-tool-9734"></a>Ferramenta de adoção &#9734;
-
-A Ferramenta de Adoção consiste nos dois modelos de aplicativo a seguir:
-
-### <a name="champion-management-platform"></a>Plataforma de Gerenciamento de Campeões
+## <a name="adoption-tool--champion-management-platform-9734"></a>Ferramenta de Adoção - Plataforma de Gerenciamento de Campeões &#9734;
 
 O modelo de aplicativo da Plataforma de Gerenciamento de Campeões (CMP) ajuda você a gerenciar, dimensionar e inspirar seus defensores do trabalho em equipe a obter mais. Este modelo de aplicativo é criado na Estrutura do SharePoint e carregado em uma guia dentro de uma equipe. Os grupos podem aproveitar essa ferramenta para ajudar a gerenciar a associação ao programa, fornecer uma tabela de líderes e tipos de eventos para registro em log e ferramentas para sobrepor selos digitais aos participantes do programa.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### <a name="get-started"></a>Introdução
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Ferramenta de Adoção - Microsoft 365 Learning Pathways (Get Started) &#9734;
 
 O modelo de aplicativo Get Started permite que você traga o poder dos caminhos de aprendizado do Microsoft 365 para dentro do Microsoft Teams. Este modelo de aplicativo permite que você conceda fácil acesso a páginas de treinamento específicas ou outros ativos de intranet e carregue o conteúdo diretamente no Teams. Você também pode alterar o nome do aplicativo ou o logotipo para corresponder à identidade visual da sua empresa.
 
