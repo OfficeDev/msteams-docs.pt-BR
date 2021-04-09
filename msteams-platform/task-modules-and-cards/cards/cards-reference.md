@@ -3,28 +3,28 @@ title: Referência de cartões
 description: Descreve todas as ações de cartões e cartões disponíveis para bots no Teams
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: 5cb289738f379dedf53f3a96a7dcff61b908e901
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: b9e11a6a6cb6de370323a3b07e2451a3abc41f12
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827932"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634534"
 ---
 # <a name="cards-reference"></a>Referência de cartões
 
-Os cartões listados nesta seção são suportados em bots para o Microsoft Teams. Eles se baseiam em cartões definidos pela Estrutura de Bot, mas o Teams não dá suporte a todos os cartões da Estrutura de Bot e adicionou alguns de seus próprios. As diferenças são chamadas nas referências neste documento.
+Os cartões listados neste documento têm suporte em bots para o Microsoft Teams. Eles se baseiam em cartões definidos pela Estrutura de Bot, mas o Teams não dá suporte a todos os cartões da Estrutura de Bot e, em vez disso, alguns cartões do Teams foram adicionados. As diferenças são chamadas nas referências neste documento.
 
 ## <a name="card-examples"></a>Exemplos de cartão
 
-Você pode encontrar informações adicionais sobre como usar cartões na documentação do SDK do Construtor de Bots (v3). Exemplos de código também estão disponíveis no repositório Microsoft/BotBuilder-Samples no GitHub.
+Você pode encontrar informações adicionais sobre como usar cartões na documentação do SDK do Construtor de Bots v3. Exemplos de código também estão disponíveis no repositório Microsoft/BotBuilder-Samples no GitHub.
 
 * .NET
   * [Adicionar cartões como anexos a mensagens](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
-  * [Código de exemplo de cartões (Construtor de Bots v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+  * [Código de exemplo de cartões Construtor de Bots v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
 
 * Node.js
   * [Adicionar cartões como anexos a mensagens](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-  * [Código de exemplo de cartões (Construtor de Bots v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
+  * [Código de exemplo de cartões Construtor de Bots v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## <a name="types-of-cards"></a>Tipos de cartões
 
@@ -32,14 +32,14 @@ Esta tabela mostra os tipos de cartões disponíveis para você:
 
 | Tipo de cartão | Descrição |
 | --- | --- |
-| [Cartão adaptável](#adaptive-card) | Cartão altamente personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. |
-| [Cartão de herói](#hero-card) | Normalmente contém uma única imagem grande, um ou mais botões e uma pequena quantidade de texto. |
-| [Cartão de listagem](#list-card) | Uma lista de rolagem de itens. |
-| [Cartão de conector do Office 365](#office-365-connector-card) | Layout flexível com várias seções, campos, imagens e ações. |
-| [Cartão de recebimento](#receipt-card) | Fornece um recibo para o usuário. |
-| [Cartão de signin](#signin-card) | Permite que um bot solicite que um usuário entre. |
-| [Cartão de miniatura](#thumbnail-card) | Normalmente contém uma única imagem em miniatura, algum texto curto e um ou mais botões. |
-| [Coleções de cartões](#card-collections) | Usado para retornar vários itens em uma única resposta. |
+| [Cartão adaptável](#adaptive-card) | Esse cartão é um cartão altamente personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. |
+| [Cartão de herói](#hero-card) | Esse cartão normalmente contém uma única imagem grande, um ou mais botões e uma pequena quantidade de texto. |
+| [Cartão de listagem](#list-card) | Este cartão é uma lista de rolagem de itens. |
+| [Cartão de conector do Office 365](#office-365-connector-card) | Esse cartão tem um layout flexível com várias seções, campos, imagens e ações. |
+| [Cartão de recebimento](#receipt-card) | Este cartão fornece um recibo para o usuário. |
+| [Cartão de signin](#signin-card) | Esse cartão permite que um bot solicite que um usuário entre. |
+| [Cartão de miniatura](#thumbnail-card) | Esse cartão normalmente contém uma única imagem em miniatura, algum texto curto e um ou mais botões. |
+| [Coleções de cartões](#card-collections) | Esses cartões são usados para retornar vários itens em uma única resposta. |
 
 ## <a name="common-properties-for-all-cards"></a>Propriedades comuns para todos os cartões
 
@@ -47,28 +47,31 @@ Esta tabela mostra os tipos de cartões disponíveis para você:
 
 O cartão pode conter uma imagem em linha incluindo um link para a imagem disponível publicamente. Para fins de desempenho, é altamente recomendável hospedar a imagem em uma CDN (rede pública de distribuição de conteúdo).
 
-As imagens são dimensionados para cima ou para baixo em tamanho, mantendo a taxa de proporção para cobrir a área da imagem e, em seguida, cortadas do centro para obter a proporção apropriada para o cartão.
+As imagens são dimensionados para cima ou para baixo em tamanho, mantendo a proporção para cobrir a área da imagem. Em seguida, as imagens são cortadas do centro para atingir a proporção apropriada para o cartão.
 
-As imagens devem ter no máximo 1024×1024, no formato PNG, JPEG ou GIF e GIF animado não são suportados.
+As imagens devem ter, no máximo, 1024×1024, no formato PNG, JPEG ou GIF e não suportam GIF animado.
 
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
-| url | URL | URL HTTPS para a imagem |
-| alt | String | Descrição acessível da imagem |
+| url | URL | URL HTTPS para a imagem. |
+| alt | String | Descrição acessível da imagem. |
+
+> [!NOTE]
+> Se um cartão incluir uma URL de imagem que passa por um redirecionamento antes da imagem final, não há suporte para o redirecionamento na URL da imagem. Isso ocorre para imagens compartilhadas na nuvem pública.
 
 ### <a name="buttons"></a>Botões
 
-Os botões são mostrados empilhados na parte inferior do cartão. O texto do botão está sempre em uma única linha e será truncado se o texto exceder a largura do botão. Quaisquer botões adicionais além do número máximo suportado pelo cartão não serão mostrados.
+Os botões são mostrados empilhados na parte inferior do cartão. O texto do botão está sempre em uma única linha e é truncado se o texto exceder a largura do botão. Quaisquer botões adicionais além do número máximo suportado pelo cartão não são mostrados.
 
-Consulte [Ações de Cartão](~/task-modules-and-cards/cards/cards-actions.md) para obter mais informações.
+Para obter mais informações, consulte [ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
 
 ### <a name="card-formatting"></a>Formatação de cartão
 
-Consulte [Formatação de Cartão](~/task-modules-and-cards/cards/cards-format.md) para obter mais informações sobre formatação de texto em cartões.
+Para obter mais informações sobre formatação de texto em cartões, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md).
 
 ## <a name="adaptive-card"></a>Cartão adaptável
 
-Um cartão adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Consulte [Cartões Adaptáveis v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+Um cartão adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Consulte [cartões adaptáveis v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Suporte para cartões adaptáveis
 
@@ -221,7 +224,7 @@ Um cartão adaptável é um cartão personalizável que pode conter qualquer com
 
 Referência da Estrutura de Bot:
 
-* [Nó de cartões adaptáveis](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Cartões adaptáveis Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Cartão adaptável C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## <a name="hero-card"></a>Cartão de herói
@@ -230,7 +233,7 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 
 ### <a name="support-for-hero-cards"></a>Suporte para cartões de herói
 
-| Bots no Teams | Extensões de Mensagens  | Conectores | Bot Framework |
+| Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -240,10 +243,10 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas. |
 | subtitle | Rich text  | Legenda do cartão. Máximo de 2 linhas.|
-| texto | Rich text  | O texto é exibido sob o subtítulo; consulte [Formatação de cartão](~/task-modules-and-cards/cards/cards-format.md) para opções de formatação. |
+| texto | Rich text  | O texto aparece sob o subtítulo. Para opções de formatação, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Matriz de imagens | Imagem exibida na parte superior do cartão. Taxa de proporção 16:9. |
 | botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
-| tap | Objeto Action | Essa ação será ativada quando o usuário tocar no próprio cartão. |
+| tap | Objeto Action | Ativado quando o usuário toca no próprio cartão. |
 
 ### <a name="example-of-a-hero-card"></a>Exemplo de um cartão de herói
 
@@ -282,7 +285,7 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 
 Referência da Estrutura de Bot:
 
-* [Nó de cartão de herói](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Cartão de herói Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [Cartão de herói C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Cartão de listagem
@@ -300,7 +303,7 @@ O cartão de listagem foi adicionado pelo Teams para fornecer funções além do
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas.|
-| items | Matriz de itens de lista  ||
+| items | Matriz de itens de lista ||
 | botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
 
 ### <a name="example-of-a-list-card"></a>Exemplo de um cartão de lista
@@ -359,7 +362,7 @@ O cartão de listagem foi adicionado pelo Teams para fornecer funções além do
 
 ## <a name="office-365-connector-card"></a>Cartão de conector do Office 365
 
-O cartão conector do Office 365 tem suporte no Teams, não na Estrutura de Bots. Este cartão fornece um layout flexível com várias seções, campos, imagens e ações. Esse cartão encapsula um cartão de conector para que ele possa ser usado por bots. Consulte a seção anotações para saber as diferenças entre cartões de conector e o cartão O365.
+O cartão de conector do Office 365 tem suporte no Teams, não na Estrutura de Bots. Este cartão fornece um layout flexível com várias seções, campos, imagens e ações. Esse cartão encapsula um cartão de conector para que ele possa ser usado por bots. Para diferenças entre cartões de conector e o cartão O365, consulte [Notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).
 
 ### <a name="support-for-office-365-connector-cards"></a>Suporte para cartões de conector do Office 365
 
@@ -373,7 +376,7 @@ O cartão conector do Office 365 tem suporte no Teams, não na Estrutura de Bots
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas. |
 | summary | Rich text  | Resumo do cartão. Máximo de 2 linhas. |
-| texto | Rich text  | O texto é exibido sob o subtítulo; consulte [Formatação de cartão](~/task-modules-and-cards/cards/cards-format.md) para opções de formatação. |
+| texto | Rich text  | O texto aparece sob o subtítulo. Para opções de formatação, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | Cadeia de caracteres HEX | Cor que substitui o accentColor fornecido do manifesto do aplicativo. |
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Observações sobre o cartão de conector do Office 365
@@ -385,12 +388,12 @@ Uma diferença importante entre o uso de cartões conectores de um conector e o 
 * Para um conector, o ponto de extremidade recebe a carga de cartão por meio de HTTP POST.
 * Para um bot, a ação dispara uma atividade que envia apenas a ID de ação `HttpPOST` e o corpo para o `invoke` bot.
 
-Cada cartão de conector pode exibir no máximo 10 seções, e cada seção pode conter no máximo 5 imagens e 5 ações.
+Cada cartão de conector pode exibir no máximo dez seções, e cada seção pode conter no máximo cinco imagens e cinco ações.
 
 > [!NOTE]
-> Quaisquer seções, imagens ou ações adicionais em uma mensagem não serão exibidas.
+> Quaisquer seções, imagens ou ações adicionais em uma mensagem não são exibidas.
 
-Todos os campos de texto suportam Markdown e HTML. Você pode controlar quais seções usam Markdown ou HTML definindo `markdown` a propriedade em uma mensagem. Por padrão, é definido como ; se você quiser usar HTML em vez `markdown` `true` disso, de definida `markdown` como `false` .
+Todos os campos de texto suportam marcação e HTML. Você pode controlar quais seções usam markdown ou HTML definindo `markdown` a propriedade em uma mensagem. Por padrão, `markdown` é definido como `true` . Se você quiser usar HTML em vez disso, de definir `markdown` como `false` .
 
 Se você especificar a `themeColor` propriedade, ela substituirá `accentColor` a propriedade no manifesto do aplicativo.
 
@@ -398,14 +401,14 @@ Para especificar o estilo de renderização `activityImage` para , você pode de
 
 | Valor | Descrição |
 | --- | --- |
-| `avatar` | Padrão; `activityImage` será cortada como um círculo. |
-| `article` | `activityImage` será exibido como um retângulo e manterá sua taxa de proporção. |
+| `avatar` | Padrão; `activityImage` é cortada como um círculo. |
+| `article` | `activityImage` é exibido como um retângulo e mantém sua taxa de proporção. |
 
-Para obter todos os outros detalhes sobre as propriedades do cartão do conector, consulte a referência de cartão de mensagem a [actionable](/outlook/actionable-messages/card-reference). As únicas propriedades de cartão de conector que o Microsoft Teams não dá suporte no momento são as seguinte:
+Para obter todos os outros detalhes sobre as propriedades do cartão do conector, consulte referência de cartão de mensagem a [ação.](/outlook/actionable-messages/card-reference) As únicas propriedades de cartão de conector que o Microsoft Teams não dá suporte no momento são as seguinte:
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup` (sempre tratado como `true` no Teams)
+* `startGroup` sempre tratado como `true` no Teams
 * `originator`
 * `correlationId`
 
@@ -537,16 +540,16 @@ O Teams dá suporte ao cartão de confirmação. É um cartão que permite que u
 
 Referência da Estrutura de Bot:
 
-* [Nó do cartão de recebimento](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Cartão de Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Cartão de recebimento C #](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="signin-card"></a>Cartão de signin
 
-O cartão de login permite que um bot solicite que um usuário entre. Suportado no Teams de uma forma ligeiramente diferente da encontrada na Estrutura de Bot. O cartão de signin no Teams é semelhante ao cartão de assinatura na Estrutura de Bot, exceto pelo fato de o cartão de inscrição no Teams dar suporte apenas a duas ações: `signin` e `openUrl` .
+O cartão de login permite que um bot solicite que um usuário entre. Ele é suportado no Teams de uma forma ligeiramente diferente da encontrada na Estrutura de Bots. O cartão de signin no Teams é semelhante ao cartão de assinatura na Estrutura de Bot, exceto pelo fato de o cartão de inscrição no Teams dar suporte apenas a duas ações: `signin` e `openUrl` .
 
-A **ação de signin** pode ser usada de qualquer cartão no Teams, não apenas o cartão de assinatura. Para obter mais detalhes sobre autenticação, consulte Fluxo de [autenticação do Microsoft Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
+A ação de signin pode ser usada de qualquer cartão no Teams, não apenas o cartão de assinatura. Para obter mais informações sobre autenticação, consulte Fluxo de [autenticação do Microsoft Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Suporte para cartões Signin
+### <a name="support-for-signin-cards"></a>Suporte para cartões de assinatura
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
@@ -556,7 +559,7 @@ A **ação de signin** pode ser usada de qualquer cartão no Teams, não apenas 
 
 Referência da Estrutura de Bot:
 
-* [Nó de cartão de signin](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Cartão de Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [Signin card C #](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Cartão de miniatura
@@ -577,10 +580,10 @@ Um cartão que normalmente contém uma única imagem em miniatura, um ou mais bo
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas.|
 | subtitle | Rich text  | Legenda do cartão. Máximo de 2 linhas.|
-| texto | Rich text  | O texto é exibido sob o subtítulo; consulte [Formatação de cartão](~/task-modules-and-cards/cards/cards-format.md) para opções de formatação. |
-| images | Matriz de imagens | Imagem exibida na parte superior do cartão. Taxa de proporção 1:1 (quadrado). |
+| texto | Rich text  | O texto aparece sob o subtítulo. Para opções de formatação, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). |
+| images | Matriz de imagens | Imagem exibida na parte superior do cartão. Taxa de proporção 1:1 quadrado. |
 | botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
-| tap | Objeto Action | Essa ação será ativada quando o usuário tocar no próprio cartão. |
+| tap | Objeto Action | Ativado quando o usuário toca no próprio cartão. |
 
 ### <a name="example-of-a-thumbnail-card"></a>Exemplo de um cartão de miniatura
 
@@ -629,14 +632,14 @@ Um cartão que normalmente contém uma única imagem em miniatura, um ou mais bo
 
 Referência da Estrutura de Bot:
 
-* [Nó do cartão thumbnail](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Cartão de miniatura Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Cartão de miniatura C #](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="card-collections"></a>Coleções de cartões
 
 O Teams dá suporte a coleções card.
 
-Coleções de cartões: `builder.AttachmentLayout.carousel` e `builder.AttachmentLayout.list` . Essas coleções contêm cartões adaptáveis, herois ou miniaturas.
+As coleções de cartões `builder.AttachmentLayout.carousel` incluem `builder.AttachmentLayout.list` e . Essas coleções contêm cartões adaptáveis, herois ou miniaturas.
 
 ## <a name="carousel-collection"></a>Coleção Carousel
 
@@ -649,11 +652,11 @@ O [layout do carrossel](/azure/bot-service/bot-builder-howto-add-media-attachmen
 | ✔ | ✖ | ✖ | ✔ |
 
 > [!NOTE]
-> Um carrossel pode exibir no máximo 10 cartões por mensagem.
+> Um carrossel pode exibir no máximo dez cartões por mensagem.
 
 ### <a name="properties-of-a-carousel-card"></a>Propriedades de um cartão de carrossel
 
-As propriedades de um cartão Carrossel são as mesmas das cartas Hero e Thumbnail.
+As propriedades de um cartão de carrossel são as mesmas dos cartões de herói e miniatura.
 
 ### <a name="example-of-a-carousel-collection"></a>Exemplo de uma coleção de carrossel
 
@@ -826,7 +829,7 @@ As propriedades de um cartão Carrossel são as mesmas das cartas Hero e Thumbna
 
 ### <a name="syntax-for-carousel-collections"></a>Sintaxe para coleções de carrossel
 
-`builder.AttachmentLayoutTypes.Carousel`
+`builder.AttachmentLayoutTypes.Carousel` é a sintaxe para coleções de carrossel.
 
 ## <a name="list-collection"></a>Coleção List
 
@@ -844,18 +847,18 @@ O layout da lista mostra uma lista verticalmente empilhada de cartões, opcional
 
 As propriedades são as mesmas do cartão herói ou miniatura.
 
-Uma lista pode exibir no máximo 10 cartões por mensagem.
+Uma lista pode exibir no máximo dez cartões por mensagem.
 
 > [!NOTE]
 > Algumas combinações de cartões de lista ainda não são suportadas no iOS e no Android.
 
 ### <a name="syntax-for-list-collections"></a>Sintaxe para coleções de lista
 
-`builder.AttachmentLayout.list`
+`builder.AttachmentLayout.list` é a sintaxe para coleções de lista.
 
 ## <a name="cards-not-supported-in-teams"></a>Cartões não suportados no Teams
 
-Os cartões a seguir são implementados pela Estrutura de Bot, mas NÃO são suportados pelo Teams.
+Os cartões a seguir são implementados pela Estrutura de Bot, mas não são suportados pelo Teams:
 
 * Cartões de animação
 * Cartões de áudio

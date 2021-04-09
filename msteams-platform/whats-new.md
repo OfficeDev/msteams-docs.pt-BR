@@ -3,12 +3,12 @@ title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 ms.topic: reference
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034723"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634527"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -21,6 +21,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|04/08/2021| O recurso de personalização do aplicativo agora está disponível na visualização do desenvolvedor.|[Visão geral do aplicativo de equipes](concepts/design/design-teams-app-overview.md#app-customization)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: atualize para a versão **4.10** ou acima do SDK da Estrutura de Bots conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |03/05/2021 | O escopo de instalação padrão e a funcionalidade de grupo estão na visualização do desenvolvedor.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
@@ -56,7 +57,7 @@ O log de alterações lista as alterações na plataforma do Microsoft Teams e n
 | 10/31/2019 | Bots de conversa e documentação de extensão de mensagens atualizada para refletir o SDK da Estrutura de Bots 4.6. A documentação do SDK v3 está disponível na seção Recursos. | Toda a documentação de bot e extensão de mensagens. |
 | 10/31/2019 | Nova estrutura de documentação e refatoria de artigos principais. Informe quaisquer links mortos ou 404s criando um Problema do GitHub. | Todos eles! |
 | 9/13/2019 | O bot de solicitação é instalado a partir da extensão de mensagens baseada em ação. | [Iniciar ações com extensões de mensagens](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 8/28/2019 | Suporte para canais privados em guias e conectores. | [Obtenha contexto para sua guia](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 8/28/2019 | Suporte para canais privados em guias e conectores. | [Obter contexto para sua guia](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Compartilhe um site externo, de um site externo, em um canal do Teams. | [Compartilhar com o Teams](~/share-to-teams.md) |
 | 05/25/2019 | Responder com a mensagem bot do módulo de tarefa. | [Responder com mensagem bot do módulo de tarefa](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots em chats de grupo. | [Interagir com um bot no chat de grupo ou canal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |

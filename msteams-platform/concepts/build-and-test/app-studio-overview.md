@@ -3,12 +3,12 @@ title: Introdução ao App Studio para Microsoft Teams
 description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App Studio
 keywords: introdução ao app studio teams
 ms.topic: overview
-ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713393"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634506"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolva aplicativos rapidamente com o App Studio para Microsoft Teams
 
@@ -34,6 +34,8 @@ Quando estiver no App Studio, clique na guia *Editor de manifesto*, na qual voc�
 
 ## <a name="app-studio-features"></a>Recursos do App Studio
 
+Esta seção abrange recursos, como conversa, editor de manifesto, detalhes e recursos. Você pode personalizar seus recursos usando a personalização do aplicativo.
+
 ### <a name="conversation"></a>Conversa
 
 É aqui que você pode ver como estão os [cartões que cria no App Studio](#card-editor) no Teams quando os testa enviando para si mesmo.
@@ -52,6 +54,12 @@ A seção de detalhes do Editor de Manifesto define a descrição de alto nível
 
 A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo são definidos e onde os detalhes de cada um desses recursos são listados.
 
+> [!NOTE]
+> O recurso de personalização do aplicativo está disponível apenas na visualização do desenvolvedor.
+> 
+> Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos no Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+
 ##### <a name="tabs"></a>Guias
 
 * **Guias da Equipe.** Uma guia de equipe torna-se parte de um canal e fornece acesso rápido a informações e recursos da equipe. Por exemplo, a guia Planner para um canal contém um único plano. A guia Power BI mapeia para um relatório específico. Os usuários podem fazer uma busca detalhada pelo contexto relevante, mas eles não devem ser capazes de navegar fora da guia. Por exemplo, a guia Power BI não habilita a navegação para outros relatórios do Power BI, mas habilita o botão *Ir para o site* que inicia o relatório no site principal do Power BI.
@@ -68,13 +76,17 @@ Esta seção permite que você adicione um [bot de conversação](~/bots/what-ar
 
 Se você ainda não registrou um bot com o Bot Framework, clique em *Register* para criar um novo. Depois de terminar de registrar seu bot, volte a esta seção do Editor de Manifesto para inserir seu nome e a ID do Bot Framework.
 
-Depois de fornecer as informações do seu bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando que indica sua sintaxe e argumentos, e o(s) escopo(s) ao qual este comando deve ser aplicado.
+Depois de fornecer as informações do bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando que indica sua sintaxe e argumentos, e o(s) escopo(s) ao qual este comando deve ser aplicado.
 
 Observe que se você tiver definido seu bot para dar suporte apenas a um escopo, os comandos especificados para o escopo sem suporte serão ignorados. Você pode editar os escopos que seu bot oferece suporte a qualquer momento.
 
 ##### <a name="connectors"></a>Conectores
 
 Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha *Configurar* e insira o nome e a ID do conector. Se quiser um novo conector clique em *Registrar* para ser levado até o Painel do Desenvolvedor do Conector em seu navegador.
+
+> [!NOTE]
+> A personalização do aplicativo permite que os administradores alterem a aparência dos aplicativos carregados por meio de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador do Teams personalizar o nome de um aplicativo da *Contoso* para o Agente *contoso,* o aplicativo aparecerá com o novo nome Agente *contoso* para usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como *Contoso*.
+
 
 ##### <a name="messaging-extensions"></a>Extensões de Mensagens
 

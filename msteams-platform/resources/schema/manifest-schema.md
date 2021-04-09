@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto do Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585838"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634520"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -277,7 +277,11 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -658,5 +662,5 @@ Defina as propriedades que seu aplicativo usa para postar um feed de atividade d
 ```
 
 ***
->
->
+
+
