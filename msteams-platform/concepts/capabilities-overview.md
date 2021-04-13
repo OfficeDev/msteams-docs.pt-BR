@@ -1,22 +1,24 @@
 ---
-title: Noções básicas sobre os recursos do aplicativo teams
+title: Compreender os recursos do aplicativo
 author: heath-hamilton
 description: Recursos de aplicativo do Teams explicados
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034702"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654430"
 ---
-# <a name="understanding-teams-app-capabilities"></a>Noções básicas sobre os recursos do aplicativo teams
+# <a name="understand-microsoft-teams-app-capabilities"></a>Entender os recursos do aplicativo do Microsoft Teams
 
-*Os* recursos são os pontos de extensão para a criação de aplicativos na plataforma do Microsoft Teams.
+Extensibilidade ou pontos de entrada são maneiras diferentes nas quais um aplicativo pode se manifesto para um usuário. Por exemplo, um usuário pode interagir com um aplicativo em uma guia de tela para fazer uma atividade ou pode optar por fazer o mesmo usando um bot de conversa. Os vários recursos usados para criar seu aplicativo do Teams permitem que você aumente seu escopo de uso.
 
-Há várias maneiras de estender o Teams, portanto, cada aplicativo é exclusivo: Alguns têm apenas um recurso (como um webhook), enquanto outras têm algumas para dar opções aos usuários. Por exemplo, seu aplicativo pode exibir dados em um local central (guia) e apresentar essas mesmas informações por meio de uma interface de conversa (bot).
+Há várias maneiras de estender o Teams, portanto, cada aplicativo é exclusivo. Alguns têm apenas um recurso, como um webhook, enquanto outros têm mais de um recurso para dar aos usuários várias opções. Por exemplo, seu aplicativo pode exibir dados em  um local central, ou seja, a guia e apresentar essas mesmas informações por meio de uma interface de conversa, ou seja, o **bot**.
+
+## <a name="app-capabilities"></a>Recursos do aplicativo
 
 Seu aplicativo do Teams tem um ou todos os seguintes recursos principais:
 
@@ -27,12 +29,20 @@ Seu aplicativo do Teams tem um ou todos os seguintes recursos principais:
 
 Seu aplicativo também pode tirar proveito dos recursos avançados, como a [API do Microsoft Graph para o Teams.](https://docs.microsoft.com/graph/teams-concept-overview)
 
-Confira a ilustração a seguir para obter uma ideia de quais recursos forneceriam os recursos que você deseja em seu aplicativo.
+A ilustração a seguir fornece uma ideia de quais recursos fornecerão os recursos que você deseja em seu aplicativo.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mapeie ilustrando quais são os recursos do aplicativo do Teams.":::
 
-## <a name="doing-whats-best-for-your-users"></a>Fazendo o que é melhor para seus usuários
+## <a name="always-consider-your-user"></a>Sempre considere seu usuário
 
-Ao se familiarizar com o desenvolvimento de aplicativos do Teams, você começará a entender suas sutilezas. Há mais de uma maneira de criar determinados recursos (como coletar entrada do usuário). Por exemplo, você pode inserir um formulário baseado na Web em uma guia usando um `<iframe>` . Você também pode fazer isso em uma guia usando um módulo de tarefa, uma convenção de interface do usuário do Teams, para uma experiência mais nativa que seus usuários podem preferir.
+À medida que você se familiariza com o desenvolvimento de aplicativos do Teams, você compreende seus principais fundamentos. Você entende que há mais de uma maneira de criar determinados recursos. Nesses cenários, considere como você pode fornecer uma experiência mais nativa ao usuário.
+Por exemplo, você pode coletar a entrada do usuário em um formulário criado como uma guia no aplicativo. Você também pode fazer isso usando um módulo de tarefa sem alternar exibições e interromper o fluxo de trabalho do usuário. É importante escolher pontos de extensão que forneçam menor desvio do fluxo regular de trabalho de um usuário.
 
-Escolher os recursos e o design certos se resume a entender primeiro os casos de uso [do seu público.](../concepts/design/understand-use-cases.md)
+## <a name="see-also"></a>Confira também
+
+> [!div class="nextstepaction"]
+> [Criar aplicativos para o Teams](../overview.md)
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Pontos de entrada do aplicativo Teams](../concepts/extensibility-points.md)

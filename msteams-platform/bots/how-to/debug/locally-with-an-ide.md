@@ -4,12 +4,12 @@ author: clearab
 description: Testando e depurando seu bot localmente com um IDE
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634766"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654447"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 
@@ -20,7 +20,7 @@ Ao testar seu bot, você precisa levar em consideração os contextos em que des
 A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o no Teams. Este é o único método para testar a funcionalidade completa disponível para o bot, em todos os escopos.
 
 Há dois métodos para carregar seu aplicativo:
-* Usar [o App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* Use [o App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crie um pacote de aplicativo](~/concepts/build-and-test/apps-package.md) manualmente e carregue seu [aplicativo](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]

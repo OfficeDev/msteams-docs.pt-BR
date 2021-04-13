@@ -4,12 +4,12 @@ description: Saiba como você também pode usar o ngrok para desenvolver chamada
 ms.topic: how-to
 keywords: túnel ngrok de desenvolvimento local
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634724"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654283"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desenvolver bots de reunião online e de chamada no computador local
 
@@ -19,7 +19,7 @@ Bots de mensagens usam HTTP, mas chamadas e bots de reunião online usam o TCP d
 
 ## <a name="configure-ngrokyml"></a>Configurar ngrok.yml
 
-Vá para [o ngrok](https://ngrok.com) e inscreva-se em uma conta gratuita ou faça logon em sua conta existente. Depois de entrar, vá para o [painel e](https://dashboard.ngrok.com) receba seu authtoken.
+Vá para [o ngrok](https://ngrok.com) e inscreva-se em uma conta gratuita ou faça logon em sua conta existente. Depois de entrar, vá para o [painel e](https://dashboard.ngrok.com) receba seu token de auth.
 
 Crie um arquivo de configuração ngrok `ngrok.yml` e adicione a seguinte linha. Para obter mais informações sobre onde o arquivo pode ser localizado, consulte [ngrok](https://ngrok.com/docs#config):
 
@@ -29,7 +29,7 @@ Crie um arquivo de configuração ngrok `ngrok.yml` e adicione a seguinte linha.
 
 Em [Bots de](./calls-meetings-bots-overview.md)chamadas e reuniões online, abordamos a sinalização de chamada sobre como os bots detectam e respondem a novas chamadas e eventos durante uma chamada. Os eventos de sinalização de chamada são enviados por HTTP POST para o ponto de extremidade de chamada do bot.
 
-Assim como com a API de mensagens do bot, para que a Plataforma de Mídia em tempo real fale com seu bot, seu bot deve estar acessível pela Internet. O Ngrok torna isso simples. Adicione as seguintes linhas ao ngrok.yml:
+Assim como com a API de mensagens do bot, para que a Plataforma de Mídia em tempo real fale com seu bot, seu bot deve ser acessível pela Internet. O Ngrok torna isso simples. Adicione as seguintes linhas ao ngrok.yml:
 
 ```yaml
 tunnels:
@@ -47,7 +47,7 @@ A mídia hospedada por aplicativo usa certificados e tuneis TCP. As etapas a seg
 
 1. Os pontos de extremidade TCP públicos do Ngrok têm URLs fixas. Eles são `0.tcp.ngrok.io` , e assim por `1.tcp.ngrok.io` diante. Você deve ter uma entrada CNAME DNS para seu serviço que aponta para essas URLs. Por exemplo, digamos que se refere `0.bot.contoso.com` `0.tcp.ngrok.io` a , `1.bot.contoso.com` refere-se `1.tcp.ngrok.io` a e assim por diante.
 2. Um certificado SSL é necessário para suas URLs. Para facilitar, use um certificado SSL emitido para um domínio de curinga. Nesse caso, seria `*.bot.contoso.com` . Esse certificado SSL é validado pelo SDK de mídia, portanto, deve corresponder à URL pública do bot. Anote a impressão digital e instale-a nos certificados do computador.
-3. Agora, configure um túnel TCP para encaminhar o tráfego para o localhost. Escreva as seguintes linhas em seu ngrok.yml:
+3. Agora, configurar um túnel TCP para encaminhar o tráfego para o localhost. Escreva as seguintes linhas em seu ngrok.yml:
 
     ```yaml
     media:

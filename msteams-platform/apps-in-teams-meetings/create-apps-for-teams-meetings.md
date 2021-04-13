@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596228"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654367"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -335,12 +335,35 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 #### <a name="share-to-stage"></a>Compartilhar em estágio 
 
 > [!NOTE]
-> Esse recurso só pode ser aproveitado na visualização do dev insider
+> * Esse recurso está disponível apenas na visualização do desenvolvedor.
+> * Para usar esse recurso, o aplicativo deve dar suporte a um sidepanel na reunião.
 
 
 Esse recurso oferece aos desenvolvedores a capacidade de compartilhar um aplicativo no estágio de reunião. Habilitando o compartilhamento para o estágio de reunião, os participantes da reunião podem colaborar em tempo real. 
 
-O contexto necessário é meetingStage no manifesto do aplicativo. Um pré-requisito para isso é ter o contexto meetingSidePanel. Isso habilita o botão "Compartilhar" no sidepanel conforme solicitado abaixo
+O contexto necessário está `meetingStage` no manifesto do aplicativo. Um pré-requisito para isso é ter o `meetingSidePanel` contexto. Isso habilita **o botão Compartilhar** no sidepanel conforme solicitado na imagem a seguir:
+
+  ![share_to_stage_during_meeting experiência](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+A alteração de manifesto necessária para habilitar esse recurso é a seguinte: 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 
