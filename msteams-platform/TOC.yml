@@ -350,7 +350,9 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Testar seu aplicativo
   items:
-    - name: Preparar seu locatário do Microsoft 365
+    - name: Visão Geral
+      href: concepts/build-and-test/test-app-overview.md
+    - name: Preparar o locatário do Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: Escolher uma configuração de teste
       href: concepts/build-and-test/debug.md
