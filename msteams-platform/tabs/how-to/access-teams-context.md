@@ -4,7 +4,7 @@ description: Descrever como obter o contexto do usuário para suas guias
 keywords: Contexto do usuário das guias equipes
 ms.openlocfilehash: 18c8541e948f206fcdddc3a942325e2f5d6e3e5c
 ms.sourcegitcommit: 309823e6911b4e8e307493cbd59880fe69a4dca3
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/22/2020
 ms.locfileid: "49727160"
@@ -36,22 +36,22 @@ Você pode acessar informações de contexto de duas maneiras:
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado para URL
 
-Usar espaços reservados em sua configuração ou URLs de conteúdo. Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os marcadores disponíveis incluem todos os campos no [Contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)objeto. Os marcadores de posição comuns incluem o seguinte:
+Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os marcadores disponíveis incluem todos os campos no objeto [Contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Os marcadores de posição comuns incluem o seguinte:
 
-* {entityId}: O ID fornecida para o item nesta guia quando pela primeira vez [configurando a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). 
-* {subEntityId}: O ID que você forneceu ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico _dentro de_ esta guia. Isso deve ser usado para restaurar a um estado específico dentro de uma entidade; por exemplo, rolar ou ativar uma parte específica do conteúdo.
-* {loginHint}: Um valor adequado como uma dica de login para o Azure AD. Geralmente é o nome de login do usuário atual, na página inicial do locatário.
-* {userPrincipalName}: O nome principal do usuário do usuário atual, no locatário atual.
-* {userObjectId}: A ID de objeto do Azure AD do usuário atual, no locatário atual.
-* {theme}: O tema atual da interface do usuário como `default`, `dark`, ou `contrast`.
-* {groupId}: O ID do Grupo Office 365 no qual a guia reside
-* {tid}: A ID do locatário do Azure AD do usuário atual.
-* {locale}: A localidade atual do usuário formatada como languageId-countryId (por exemplo, en-us).
+* {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
+* {subEntityId}: ID que você forneceu ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico _dentro de_ esta guia. Isso deve ser usado para restaurar a um estado específico dentro de uma entidade; por exemplo, rolar ou ativar uma parte específica do conteúdo.
+* {loginHint}: um valor adequado como uma dica de login para o Azure AD. Geralmente é o nome de login do usuário atual, na página inicial do locatário.
+* {userPrincipalName}: nome principal do usuário do usuário atual, no locatário atual.
+* {userObjectId}: ID de objeto do Azure AD do usuário atual, no locatário atual.
+* {theme}: tema atual da interface do usuário como `default`, `dark`, ou `contrast`.
+* {groupId}: ID do Grupo Office 365 no qual a guia reside
+* {tid}: ID do locatário do Azure AD do usuário atual.
+* {locale}: localidade atual do usuário formatada como languageId-countryId (por exemplo, en-us).
 
 >[!NOTE]
->O anterior `{upn}` espaço reservado agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
+>O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
 
-Por exemplo, suponha que no manifesto de sua guia você defina o `configURL` atribuir a
+Por exemplo, suponha que no manifesto de sua guia você defina o atributo `configURL` como
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
@@ -117,7 +117,7 @@ A variável de contexto será semelhante ao exemplo a seguir.
 > [!Note]
 > Canais privados estão atualmente na visualização do desenvolvedor privado.
 
-Quando sua página de conteúdo é carregada em um canal privado, os dados que você recebe do `getContext` a chamada será ofuscada para proteger a privacidade do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado. Se sua página fizer uso de qualquer um dos valores abaixo, você precisará verificar o `channelType` para determinar se sua página está carregada em um canal privado e responder de forma adequada.
+Quando sua página de conteúdo é carregada em um canal privado, os dados que você recebe da chamada a `getContext` será ofuscada para proteger a privacidade do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado. Se sua página fizer uso de qualquer um dos valores abaixo, você precisará verificar o `channelType` para determinar se sua página está carregada em um canal privado e responder de forma adequada.
 
 * `groupId` - Indefinido para canais privados
 * `teamId` - Definir como o threadId do canal privado
@@ -133,4 +133,4 @@ Quando sua página de conteúdo é carregada em um canal privado, os dados que v
 
 Você pode registrar seu aplicativo para ser informado se o tema muda chamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-O `theme` argumento na função será uma string com um valor de `default`, `dark`, ou `contrast`.
+O argumento `theme` na função será uma string com um valor de `default`, `dark`, ou `contrast`.
