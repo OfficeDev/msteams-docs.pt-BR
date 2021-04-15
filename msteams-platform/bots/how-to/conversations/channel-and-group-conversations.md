@@ -1,50 +1,54 @@
 ---
-title: Conversas em grupo e canal com um bot
+title: Conversas de canal e grupo com um bot
 author: clearab
-description: Como enviar, receber e manipular mensagens para um bot em um canal ou chat de grupo.
-ms.topic: overview
+description: Como enviar, receber e manipular mensagens para um bot em um chat de canal ou grupo.
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8a9a58208fff5cc2fe376fcb9932bad6ac2bf36f
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797838"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696364"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a><span data-ttu-id="92a62-103">Conversas de canal e chat em grupo com um bot do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="92a62-103">Channel and group chat conversations with a Microsoft Teams bot</span></span>
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a><span data-ttu-id="64130-103">Conversas de chat de canal e grupo com um bot</span><span class="sxs-lookup"><span data-stu-id="64130-103">Channel and group chat conversations with a bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="92a62-104">Ao adicionar o ou escopo ao seu bot, ele pode estar disponível para ser instalado em um chat de equipe `teams` `groupchat` ou grupo.</span><span class="sxs-lookup"><span data-stu-id="92a62-104">By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat.</span></span> <span data-ttu-id="92a62-105">Isso permite que todos os membros da conversa interajam com seu bot.</span><span class="sxs-lookup"><span data-stu-id="92a62-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="92a62-106">Uma vez instalado, ele também terá acesso a metadados sobre a conversa, como a lista de membros da conversa e quando instalado em detalhes de uma equipe sobre essa equipe e a lista completa de canais.</span><span class="sxs-lookup"><span data-stu-id="92a62-106">Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.</span></span>
+<span data-ttu-id="64130-104">Para instalar o bot do Microsoft Teams em um chat de equipe ou grupo, adicione `teams` o escopo ou ao `groupchat` bot.</span><span class="sxs-lookup"><span data-stu-id="64130-104">To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot.</span></span> <span data-ttu-id="64130-105">Isso permite que todos os membros da conversa interajam com o seu bot.</span><span class="sxs-lookup"><span data-stu-id="64130-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="64130-106">Depois que o bot é instalado, ele tem acesso a metadados sobre a conversa, como a lista de membros da conversa.</span><span class="sxs-lookup"><span data-stu-id="64130-106">After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members.</span></span> <span data-ttu-id="64130-107">Além disso, quando ele é instalado em uma equipe, o bot tem acesso a detalhes sobre essa equipe e a lista completa de canais.</span><span class="sxs-lookup"><span data-stu-id="64130-107">Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.</span></span>
 
-<span data-ttu-id="92a62-107">Os bots em um grupo ou canal só recebem mensagens quando são mencionados (@botname), eles não recebem nenhuma outra mensagem enviada para a conversa.</span><span class="sxs-lookup"><span data-stu-id="92a62-107">Bots in a group or channel only receive messages when they are mentioned (@botname), they do not receive any other messages sent to the conversation.</span></span>
+<span data-ttu-id="64130-108">Os bots em um grupo ou canal só recebem mensagens quando são mencionados `@botname` .</span><span class="sxs-lookup"><span data-stu-id="64130-108">Bots in a group or channel only receive messages when they are mentioned `@botname`.</span></span> <span data-ttu-id="64130-109">Eles não recebem outras mensagens enviadas para a conversa.</span><span class="sxs-lookup"><span data-stu-id="64130-109">They do not receive any other messages sent to the conversation.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="92a62-108">O bot deve ser @mentioned diretamente.</span><span class="sxs-lookup"><span data-stu-id="92a62-108">The bot must be @mentioned directly.</span></span> <span data-ttu-id="92a62-109">Seu bot não receberá uma mensagem quando a equipe ou o canal for mencionado, ou quando alguém responder a uma mensagem do seu bot sem @mentioning-la.</span><span class="sxs-lookup"><span data-stu-id="92a62-109">Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
+> <span data-ttu-id="64130-110">O bot deve estar `@mentioned` diretamente.</span><span class="sxs-lookup"><span data-stu-id="64130-110">The bot must be `@mentioned` directly.</span></span> <span data-ttu-id="64130-111">Seu bot não recebe uma mensagem quando a equipe ou canal é mencionado ou quando alguém responde a uma mensagem de seu bot sem @mentioning-la.</span><span class="sxs-lookup"><span data-stu-id="64130-111">Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
 
-## <a name="design-guidelines"></a><span data-ttu-id="92a62-110">Diretrizes de design</span><span class="sxs-lookup"><span data-stu-id="92a62-110">Design guidelines</span></span>
+## <a name="design-guidelines"></a><span data-ttu-id="64130-112">Diretrizes de design</span><span class="sxs-lookup"><span data-stu-id="64130-112">Design guidelines</span></span>
 
-<span data-ttu-id="92a62-111">Veja como projetar [conversas de bot em canais e chats.](~/bots/design/bots.md)</span><span class="sxs-lookup"><span data-stu-id="92a62-111">See how to [design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
+<span data-ttu-id="64130-113">Ao contrário de chats pessoais, em chats em grupo e canais, seu bot deve fornecer uma introdução rápida.</span><span class="sxs-lookup"><span data-stu-id="64130-113">Unlike personal chats, in group chats and channels, your bot must provide a quick introduction.</span></span> <span data-ttu-id="64130-114">Você deve seguir essas e mais diretrizes de design de bot.</span><span class="sxs-lookup"><span data-stu-id="64130-114">You must follow these and more bot design guidelines.</span></span> <span data-ttu-id="64130-115">Para obter mais informações sobre como projetar bots no Teams, consulte como projetar conversas [de bot em canais e chats.](~/bots/design/bots.md)</span><span class="sxs-lookup"><span data-stu-id="64130-115">For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
 
-## <a name="creating-new-conversation-threads"></a><span data-ttu-id="92a62-112">Criando novos threads de conversa</span><span class="sxs-lookup"><span data-stu-id="92a62-112">Creating new conversation threads</span></span>
+<span data-ttu-id="64130-116">Agora, você pode criar novos threads de conversa e gerenciar facilmente diferentes conversas em canais.</span><span class="sxs-lookup"><span data-stu-id="64130-116">Now, you can create new conversation threads and easily manage different conversations in channels.</span></span>
 
-<span data-ttu-id="92a62-113">Quando o bot é instalado em uma equipe, às vezes pode ser necessário criar um novo thread de conversa em vez de responder a um já existente.</span><span class="sxs-lookup"><span data-stu-id="92a62-113">When your bot is installed in a team, it can sometimes be necessary to create a new conversation thread rather than replying to an existing one.</span></span> <span data-ttu-id="92a62-114">Essa é uma forma de mensagens [proativas.](~/bots/how-to/conversations/send-proactive-messages.md)</span><span class="sxs-lookup"><span data-stu-id="92a62-114">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+## <a name="create-new-conversation-threads"></a><span data-ttu-id="64130-117">Criar novos threads de conversa</span><span class="sxs-lookup"><span data-stu-id="64130-117">Create new conversation threads</span></span>
 
-## <a name="working-with-mentions"></a><span data-ttu-id="92a62-115">Trabalhar com menções</span><span class="sxs-lookup"><span data-stu-id="92a62-115">Working with mentions</span></span>
+<span data-ttu-id="64130-118">Quando o bot é instalado em uma equipe, você deve criar um novo thread de conversa em vez de responder a um existente.</span><span class="sxs-lookup"><span data-stu-id="64130-118">When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one.</span></span> <span data-ttu-id="64130-119">Às vezes, é difícil diferenciar entre duas conversas.</span><span class="sxs-lookup"><span data-stu-id="64130-119">At times it is difficult to differentiate between two conversations.</span></span> <span data-ttu-id="64130-120">Se a conversa for encadeada, é mais fácil organizar e gerenciar diferentes conversas em canais.</span><span class="sxs-lookup"><span data-stu-id="64130-120">If the conversation is threaded, it is easier to organize and manage different conversations in channels.</span></span> <span data-ttu-id="64130-121">Essa é uma forma de mensagens [proativas.](~/bots/how-to/conversations/send-proactive-messages.md)</span><span class="sxs-lookup"><span data-stu-id="64130-121">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="92a62-116">Cada mensagem para o bot de um grupo ou canal conterá um @mention com seu próprio nome no texto da mensagem, portanto, você precisará garantir que a análise de mensagens lidará com isso.</span><span class="sxs-lookup"><span data-stu-id="92a62-116">Every message to your bot from a group or channel will contain an @mention with its own name in the message text, so you'll need to ensure your message parsing handles that.</span></span> <span data-ttu-id="92a62-117">Seu bot também pode recuperar outros usuários mencionados em uma mensagem e adicionar menções a qualquer mensagem enviada.</span><span class="sxs-lookup"><span data-stu-id="92a62-117">Your bot can also retrieve other users mentioned in a message, and add mentions to any messages it sends.</span></span>
+<span data-ttu-id="64130-122">Em seguida, você pode recuperar menções usando o objeto e adicionar menções às `entities` suas mensagens usando o `Mention` objeto.</span><span class="sxs-lookup"><span data-stu-id="64130-122">Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.</span></span>
 
-### <a name="stripping-mentions-from-message-text"></a><span data-ttu-id="92a62-118">Menções de remoção do texto da mensagem</span><span class="sxs-lookup"><span data-stu-id="92a62-118">Stripping mentions from message text</span></span>
+## <a name="work-with-mentions"></a><span data-ttu-id="64130-123">Trabalhar com menções</span><span class="sxs-lookup"><span data-stu-id="64130-123">Work with mentions</span></span>
 
-<span data-ttu-id="92a62-119">Você pode achar necessário retirar a @mentions do texto da mensagem que seu bot recebe.</span><span class="sxs-lookup"><span data-stu-id="92a62-119">You may find it necessary to strip out the @mentions from the text of the message your bot receives.</span></span>
+<span data-ttu-id="64130-124">Cada mensagem para seu bot de um grupo ou canal contém um @mention com seu nome no texto da mensagem.</span><span class="sxs-lookup"><span data-stu-id="64130-124">Every message to your bot from a group or channel contains an @mention with its name in the message text.</span></span> <span data-ttu-id="64130-125">Verifique se a análise de mensagens lida com @mention.</span><span class="sxs-lookup"><span data-stu-id="64130-125">Ensure that your message parsing handles @mention.</span></span> <span data-ttu-id="64130-126">Seu bot também pode recuperar outros usuários mencionados em uma mensagem e adicionar menções a todas as mensagens enviadas.</span><span class="sxs-lookup"><span data-stu-id="64130-126">Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.</span></span>
 
-### <a name="retrieving-mentions"></a><span data-ttu-id="92a62-120">Recuperando menções</span><span class="sxs-lookup"><span data-stu-id="92a62-120">Retrieving mentions</span></span>
+<span data-ttu-id="64130-127">Você também deve retirar o @mentions do conteúdo da mensagem que seu bot recebe.</span><span class="sxs-lookup"><span data-stu-id="64130-127">You must also strip out the @mentions from the content of the message your bot receives.</span></span>
 
-<span data-ttu-id="92a62-121">As menções são retornadas no objeto na carga e contêm a ID exclusiva do usuário e, na maioria dos casos, o nome `entities` do usuário mencionado.</span><span class="sxs-lookup"><span data-stu-id="92a62-121">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and, in most cases, the name of user mentioned.</span></span> <span data-ttu-id="92a62-122">O texto da mensagem também incluirá a menção como `<at>@John Smith<at>` .</span><span class="sxs-lookup"><span data-stu-id="92a62-122">The text of the message will also include the mention like `<at>@John Smith<at>`.</span></span> <span data-ttu-id="92a62-123">No entanto, você não deve confiar no texto na mensagem para recuperar qualquer informação sobre o usuário; é possível para a pessoa que está enviando a mensagem alterá-la.</span><span class="sxs-lookup"><span data-stu-id="92a62-123">However, you should not rely on the text in the message to retrieve any information about the user; it is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="92a62-124">Em vez disso, use o `entities` objeto.</span><span class="sxs-lookup"><span data-stu-id="92a62-124">Instead, use the `entities` object.</span></span>
+### <a name="retrieve-mentions"></a><span data-ttu-id="64130-128">Recuperar menções</span><span class="sxs-lookup"><span data-stu-id="64130-128">Retrieve mentions</span></span>
 
-<span data-ttu-id="92a62-125">Você pode recuperar todas as menções na mensagem chamando a função no SDK do Construtor de `GetMentions` Bots, que retorna uma matriz de `Mention` objetos.</span><span class="sxs-lookup"><span data-stu-id="92a62-125">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK which returns an array of `Mention` objects.</span></span>
+<span data-ttu-id="64130-129">As menções são retornadas no objeto em carga e contêm a ID exclusiva do usuário e o `entities` nome do usuário mencionado.</span><span class="sxs-lookup"><span data-stu-id="64130-129">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned.</span></span> <span data-ttu-id="64130-130">O texto da mensagem também inclui a menção, como `<at>@John Smith<at>` .</span><span class="sxs-lookup"><span data-stu-id="64130-130">The text of the message also includes the mention, such as `<at>@John Smith<at>`.</span></span> <span data-ttu-id="64130-131">No entanto, não confie no texto na mensagem para recuperar qualquer informação sobre o usuário.</span><span class="sxs-lookup"><span data-stu-id="64130-131">However, do not rely on the text in the message to retrieve any information about the user.</span></span> <span data-ttu-id="64130-132">É possível que a pessoa que envia a mensagem a altere.</span><span class="sxs-lookup"><span data-stu-id="64130-132">It is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="64130-133">Portanto, use o `entities` objeto.</span><span class="sxs-lookup"><span data-stu-id="64130-133">Therefore, use the `entities` object.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="92a62-126">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="92a62-126">C#/.NET</span></span>](#tab/dotnet)
+<span data-ttu-id="64130-134">Você pode recuperar todas as menções na mensagem chamando a função no SDK do Construtor de `GetMentions` Bots, que retorna uma matriz de `Mention` objetos.</span><span class="sxs-lookup"><span data-stu-id="64130-134">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.</span></span>
+
+<span data-ttu-id="64130-135">O código a seguir mostra um exemplo de recuperação de menções:</span><span class="sxs-lookup"><span data-stu-id="64130-135">The following code shows an example of retrieving mentions:</span></span>
+
+# <a name="c"></a>[<span data-ttu-id="64130-136">C#</span><span class="sxs-lookup"><span data-stu-id="64130-136">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +66,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="92a62-127">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="92a62-127">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="64130-137">TypeScript</span><span class="sxs-lookup"><span data-stu-id="64130-137">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +82,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="92a62-128">JSON</span><span class="sxs-lookup"><span data-stu-id="92a62-128">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="64130-138">JSON</span><span class="sxs-lookup"><span data-stu-id="64130-138">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -120,7 +124,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="92a62-129">Python</span><span class="sxs-lookup"><span data-stu-id="92a62-129">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="64130-139">Python</span><span class="sxs-lookup"><span data-stu-id="64130-139">Python</span></span>](#tab/python)
 
 ```python
 @staticmethod
@@ -135,18 +139,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="adding-mentions-to-your-messages"></a><span data-ttu-id="92a62-130">Adicionando menções às suas mensagens</span><span class="sxs-lookup"><span data-stu-id="92a62-130">Adding mentions to your messages</span></span>
+### <a name="add-mentions-to-your-messages"></a><span data-ttu-id="64130-140">Adicionar menções às suas mensagens</span><span class="sxs-lookup"><span data-stu-id="64130-140">Add mentions to your messages</span></span>
 
-<span data-ttu-id="92a62-131">Seu bot pode mencionar outros usuários em mensagens postadas em canais.</span><span class="sxs-lookup"><span data-stu-id="92a62-131">Your bot can mention other users in messages posted into channels.</span></span> <span data-ttu-id="92a62-132">Para fazer isso, sua mensagem deve fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="92a62-132">To do this, your message must do the following:</span></span>
+<span data-ttu-id="64130-141">Seu bot pode mencionar outros usuários em mensagens postadas em canais.</span><span class="sxs-lookup"><span data-stu-id="64130-141">Your bot can mention other users in messages posted into channels.</span></span>
 
-<span data-ttu-id="92a62-133">O `Mention` objeto tem duas propriedades que você precisará definir:</span><span class="sxs-lookup"><span data-stu-id="92a62-133">The `Mention` object has two properties that you will need to set:</span></span>
+<span data-ttu-id="64130-142">O `Mention` objeto tem duas propriedades que você deve definir usando o seguinte:</span><span class="sxs-lookup"><span data-stu-id="64130-142">The `Mention` object has two properties that you must set using the following:</span></span>
 
-* <span data-ttu-id="92a62-134">Incluir <at>@username</at> no texto da mensagem</span><span class="sxs-lookup"><span data-stu-id="92a62-134">Include <at>@username</at> in the message text</span></span>
-* <span data-ttu-id="92a62-135">Incluir o objeto mention dentro da coleção de entidades</span><span class="sxs-lookup"><span data-stu-id="92a62-135">Include the mention object inside the entities collection</span></span>
+* <span data-ttu-id="64130-143">Inclua <at>@username</at> no texto da mensagem.</span><span class="sxs-lookup"><span data-stu-id="64130-143">Include <at>@username</at> in the message text.</span></span>
+* <span data-ttu-id="64130-144">Inclua o objeto mention dentro da coleção de entidades.</span><span class="sxs-lookup"><span data-stu-id="64130-144">Include the mention object inside the entities collection.</span></span>
 
-<span data-ttu-id="92a62-136">O SDK da Estrutura do Bot fornece métodos e objetos auxiliares para facilitar a construção da menção.</span><span class="sxs-lookup"><span data-stu-id="92a62-136">The Bot Framework SDK provides helper methods and objects to make constructing the mention easier.</span></span>
+<span data-ttu-id="64130-145">O SDK da Estrutura de Bot fornece métodos e objetos auxiliares para criar menções.</span><span class="sxs-lookup"><span data-stu-id="64130-145">The Bot Framework SDK provides helper methods and objects to create mentions.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="92a62-137">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="92a62-137">C#/.NET</span></span>](#tab/dotnet)
+<span data-ttu-id="64130-146">O código a seguir mostra um exemplo de adição de menções às suas mensagens:</span><span class="sxs-lookup"><span data-stu-id="64130-146">The following code shows an example of adding mentions to your messages:</span></span>
+
+# <a name="c"></a>[<span data-ttu-id="64130-147">C#</span><span class="sxs-lookup"><span data-stu-id="64130-147">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +170,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="92a62-138">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="92a62-138">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="64130-148">TypeScript</span><span class="sxs-lookup"><span data-stu-id="64130-148">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +189,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="92a62-139">JSON</span><span class="sxs-lookup"><span data-stu-id="92a62-139">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="64130-149">JSON</span><span class="sxs-lookup"><span data-stu-id="64130-149">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="92a62-140">O campo no objeto na matriz deve corresponder `text` exatamente a uma parte do campo de `entities`  `text` mensagem.</span><span class="sxs-lookup"><span data-stu-id="92a62-140">The `text` field in the object in the `entities` array must *exactly* match a portion of the message `text` field.</span></span> <span data-ttu-id="92a62-141">Se não o fizer, a menção será ignorada.</span><span class="sxs-lookup"><span data-stu-id="92a62-141">If it does not, the mention will be ignored.</span></span>
+<span data-ttu-id="64130-150">O `text` campo no objeto na matriz deve corresponder a uma parte do campo de `entities` `text` mensagem.</span><span class="sxs-lookup"><span data-stu-id="64130-150">The `text` field in the object in the `entities` array must match a portion of the message `text` field.</span></span> <span data-ttu-id="64130-151">Se isso não acontecer, a menção será ignorada.</span><span class="sxs-lookup"><span data-stu-id="64130-151">If it does not, the mention is ignored.</span></span>
 
 ```json
 {
@@ -227,7 +233,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="92a62-142">Python</span><span class="sxs-lookup"><span data-stu-id="92a62-142">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="64130-152">Python</span><span class="sxs-lookup"><span data-stu-id="64130-152">Python</span></span>](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -244,23 +250,29 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-## <a name="sending-a-message-on-installation"></a><span data-ttu-id="92a62-143">Enviar uma mensagem na instalação</span><span class="sxs-lookup"><span data-stu-id="92a62-143">Sending a message on installation</span></span>
+<span data-ttu-id="64130-153">Agora você pode enviar uma mensagem de introdução quando o bot for instalado pela primeira vez ou adicionado a um grupo ou equipe.</span><span class="sxs-lookup"><span data-stu-id="64130-153">Now you can send an introduction message when your bot is first installed or added to a group or team.</span></span>
 
-<span data-ttu-id="92a62-144">Quando seu bot é adicionado pela primeira vez ao grupo ou equipe, pode ser útil enviar uma mensagem apresentando-o.</span><span class="sxs-lookup"><span data-stu-id="92a62-144">When your bot is first added to the group or team, it may be useful to send a message introducing it.</span></span> <span data-ttu-id="92a62-145">A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los.</span><span class="sxs-lookup"><span data-stu-id="92a62-145">The message should provide a brief description of the bot's features, and how to use them.</span></span> <span data-ttu-id="92a62-146">Você vai querer se inscrever no `conversationUpdate` evento, com `teamMemberAdded` o eventType.</span><span class="sxs-lookup"><span data-stu-id="92a62-146">You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="92a62-147">Como o evento é enviado quando um novo membro da equipe é adicionado, você precisa verificar se o novo membro adicionado é o bot.</span><span class="sxs-lookup"><span data-stu-id="92a62-147">Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot.</span></span> <span data-ttu-id="92a62-148">Confira [Enviar uma mensagem de boas-vindas para um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md) para obter mais detalhes.</span><span class="sxs-lookup"><span data-stu-id="92a62-148">See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.</span></span>
+## <a name="send-a-message-on-installation"></a><span data-ttu-id="64130-154">Enviar uma mensagem na instalação</span><span class="sxs-lookup"><span data-stu-id="64130-154">Send a message on installation</span></span>
 
-<span data-ttu-id="92a62-149">Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado.</span><span class="sxs-lookup"><span data-stu-id="92a62-149">You might also want to send a personal message to each member of the team when the bot is added.</span></span> <span data-ttu-id="92a62-150">Para fazer isso, você pode obter a lista de participação da equipe e enviar uma mensagem direta a cada usuário.</span><span class="sxs-lookup"><span data-stu-id="92a62-150">To do this, you could get the team roster and send each user a direct message.</span></span>
+<span data-ttu-id="64130-155">Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, uma mensagem de introdução deve ser enviada.</span><span class="sxs-lookup"><span data-stu-id="64130-155">When your bot is first added to the group or team, an introduction message must be sent.</span></span> <span data-ttu-id="64130-156">A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los.</span><span class="sxs-lookup"><span data-stu-id="64130-156">The message must provide a brief description of the bot's features and how to use them.</span></span> <span data-ttu-id="64130-157">Você deve se inscrever no `conversationUpdate` evento com `teamMemberAdded` o eventType.</span><span class="sxs-lookup"><span data-stu-id="64130-157">You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="64130-158">O evento é enviado quando qualquer novo membro da equipe é adicionado.</span><span class="sxs-lookup"><span data-stu-id="64130-158">The event is sent when any new team member is added.</span></span> <span data-ttu-id="64130-159">Verifique se o novo membro adicionado é o bot.</span><span class="sxs-lookup"><span data-stu-id="64130-159">Check if the new member added is the bot.</span></span> <span data-ttu-id="64130-160">Para obter mais informações, consulte [enviando uma mensagem de boas-vindas a um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md).</span><span class="sxs-lookup"><span data-stu-id="64130-160">For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="92a62-151">Não é recomendável enviar uma mensagem nas seguintes situações:</span><span class="sxs-lookup"><span data-stu-id="92a62-151">It is not recommended to send a message in the following situations:</span></span>
+<span data-ttu-id="64130-161">Envie uma mensagem pessoal para cada membro da equipe quando o bot for adicionado.</span><span class="sxs-lookup"><span data-stu-id="64130-161">Send a personal message to each team member when the bot is added.</span></span> <span data-ttu-id="64130-162">Para fazer isso, receba a lista de equipe e envie uma mensagem direta a cada usuário.</span><span class="sxs-lookup"><span data-stu-id="64130-162">To do this, get the team roster and send each user a direct message.</span></span>
 
-* <span data-ttu-id="92a62-152">A equipe é grande (obviamente inentente, mas, por exemplo, maior do que 100 membros).</span><span class="sxs-lookup"><span data-stu-id="92a62-152">The team is large (obviously subjective, but for example larger than 100 members).</span></span> <span data-ttu-id="92a62-153">Seu bot pode ser visto como "spammy" e a pessoa que o adicionou poderá receber reclamações, a menos que você comunique claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.</span><span class="sxs-lookup"><span data-stu-id="92a62-153">Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
-* <span data-ttu-id="92a62-154">Seu bot é mencionado pela primeira vez em um grupo ou canal (em vez de ser adicionado pela primeira vez a uma equipe)</span><span class="sxs-lookup"><span data-stu-id="92a62-154">Your bot is first mentioned in a group or channel (versus being first added to a team)</span></span>
-* <span data-ttu-id="92a62-155">Um grupo ou canal é renomeado</span><span class="sxs-lookup"><span data-stu-id="92a62-155">A group or channel is renamed</span></span>
-* <span data-ttu-id="92a62-156">Um membro da equipe é adicionado a um grupo ou canal</span><span class="sxs-lookup"><span data-stu-id="92a62-156">A team member is added to a group or channel</span></span>
+<span data-ttu-id="64130-163">Não envie uma mensagem nos seguintes casos:</span><span class="sxs-lookup"><span data-stu-id="64130-163">Do not send a message in the following cases:</span></span>
 
-## <a name="learn-more"></a><span data-ttu-id="92a62-157">Saiba mais</span><span class="sxs-lookup"><span data-stu-id="92a62-157">Learn more</span></span>
-
-<span data-ttu-id="92a62-158">Seu bot tem acesso a informações adicionais sobre o chat em grupo ou a equipe em que está instalado.</span><span class="sxs-lookup"><span data-stu-id="92a62-158">Your bot has access to additional information about the group chat or team it is installed in.</span></span> <span data-ttu-id="92a62-159">Confira [o contexto de equipes](~/bots/how-to/get-teams-context.md) para APIs adicionais disponíveis para seu bot.</span><span class="sxs-lookup"><span data-stu-id="92a62-159">See [get teams context](~/bots/how-to/get-teams-context.md) for additional APIs available for your bot.</span></span>
-
-<span data-ttu-id="92a62-160">Também há eventos adicionais que seu bot pode se inscrever e responder.</span><span class="sxs-lookup"><span data-stu-id="92a62-160">There are also additional events that your bot can subscribe and respond to.</span></span> <span data-ttu-id="92a62-161">Confira [se inscrever em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md) para saber como.</span><span class="sxs-lookup"><span data-stu-id="92a62-161">See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) to learn how.</span></span>
+* <span data-ttu-id="64130-164">A equipe é grande, por exemplo, maior do que 100 membros.</span><span class="sxs-lookup"><span data-stu-id="64130-164">The team is large, for example, larger than 100 members.</span></span> <span data-ttu-id="64130-165">Seu bot pode ser visto como spam e a pessoa que o adicionou pode receber reclamações.</span><span class="sxs-lookup"><span data-stu-id="64130-165">Your bot can be seen as spam and the person who added it can get complaints.</span></span> <span data-ttu-id="64130-166">Você deve comunicar claramente a proposta de valor do bot a todos que veem a mensagem de boas-vindas.</span><span class="sxs-lookup"><span data-stu-id="64130-166">You must clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
+* <span data-ttu-id="64130-167">Seu bot é mencionado pela primeira vez em um grupo ou canal em vez de ser adicionado pela primeira vez a uma equipe.</span><span class="sxs-lookup"><span data-stu-id="64130-167">Your bot is first mentioned in a group or channel instead of being first added to a team.</span></span>
+* <span data-ttu-id="64130-168">Um grupo ou canal é renomeado.</span><span class="sxs-lookup"><span data-stu-id="64130-168">A group or channel is renamed.</span></span>
+* <span data-ttu-id="64130-169">Um membro da equipe é adicionado a um grupo ou canal.</span><span class="sxs-lookup"><span data-stu-id="64130-169">A team member is added to a group or channel.</span></span>
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="see-also"></a><span data-ttu-id="64130-170">Confira também</span><span class="sxs-lookup"><span data-stu-id="64130-170">See also</span></span>
+
+> [!div class="nextstepaction"]
+> <span data-ttu-id="64130-171">[Obter contexto de equipes](~/bots/how-to/get-teams-context.md).</span><span class="sxs-lookup"><span data-stu-id="64130-171">[Get teams context](~/bots/how-to/get-teams-context.md).</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="64130-172">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="64130-172">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="64130-173">Inscreva-se em eventos de conversa</span><span class="sxs-lookup"><span data-stu-id="64130-173">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
