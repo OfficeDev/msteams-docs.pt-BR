@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto do Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634520"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696042"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -313,7 +313,7 @@ Esta cadeia de caracteres de versão deve seguir o padrão [de semver](http://se
 
 **Obrigatório** — ID do aplicativo Microsoft
 
-A ID é um identificador exclusivo gerado pela Microsoft para o aplicativo. Você tem uma ID se o bot estiver registrado por meio da Estrutura do Microsoft Bot ou do aplicativo Web da guia já entrar com a Microsoft. Você deve inserir a ID aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus Aplicativos).](https://apps.dev.microsoft.com) Use a mesma ID se você adicionar um bot.
+A ID é um identificador exclusivo gerado pela Microsoft para o aplicativo. Você tem uma ID se o bot estiver registrado por meio da Estrutura do Microsoft Bot ou do aplicativo Web da guia já entrar com a Microsoft. Você deve inserir a ID aqui. Caso contrário, você deve gerar uma nova ID no Portal de [Registro de Aplicativos da Microsoft.](https://aka.ms/appregistrations) Use a mesma ID se você adicionar um bot.
 
 > [!NOTE]
 > Se você estiver enviando uma atualização para seu aplicativo existente no AppSource, a ID em seu manifesto não deve ser modificada.

@@ -1,64 +1,70 @@
 ---
-title: Criar um menu de comando para o bot
+title: Criar um menu de comando para seu bot
 author: clearab
-description: Como criar um menu de comando para o bot do Microsoft Teams
-ms.topic: overview, command menu
+description: Como criar um menu de comando para seu bot do Microsoft Teams
+ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552483"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697015"
 ---
-# <a name="bot-command-menus"></a>Menus de comando do bot
+# <a name="bot-command-menus"></a>Menus de comando bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 > [!Note]
-> Menus de bot não aparecerão em clientes móveis.
+> Os menus bot não aparecem em clientes móveis.
 
-Adicionar menu de comando para seu bot permite que você defina um conjunto de comandos principais que seu bot possa sempre responder. A lista de comandos é apresentada ao usuário acima da área de mensagem de redação quando está convertida com o bot. A seleção de um comando na lista inserirá a cadeia de caracteres de comando na caixa de mensagem de redação, todos os usuários precisarão ser selecionados **Enviar**.
+Para definir um conjunto de comandos principais aos quais o bot pode responder, você pode adicionar um menu de comando com uma lista lista de comandos suspensos para seu bot. A lista de comandos é apresentada aos usuários na área de mensagem de composição quando eles estão em conversa com seu bot. Selecione um comando na lista para inserir a cadeia de caracteres de comando na caixa de mensagem de composição e selecione **Enviar**.
 
-![Menu de comando do bot](./conversations/media/bot-menu-sample.png)
+![Menu de comando bot](./conversations/media/bot-menu-sample.png)
 
-## <a name="create-a-command-menu-for-your-bot"></a>Criar um menu de comando para o bot
+## <a name="create-a-command-menu-for-your-bot"></a>Criar um menu de comando para seu bot
 
-Menus de comando são definidos no manifesto do aplicativo. Você pode usar o app Studio para ajudá-lo a criá-los ou adicioná-los manualmente.
+Os menus de comando são definidos no manifesto do aplicativo. Você pode usar o **App Studio para** criar ou adicioná-los manualmente no manifesto do aplicativo.
 
-### <a name="creating-a-command-menu-for-your-bot-using-app-studio"></a>Criando um menu de comando para o bot usando o app Studio
+### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>Criar um menu de comando para seu bot usando o App Studio
 
-As instruções aqui presumem que você esteja editando um manifesto de aplicativo existente. As etapas para adicionar um menu de comando são as mesmas, se você está criando um novo manifesto ou editando um existente.
+Um pré-requisito para criar um menu de comando para seu bot é que você deve editar um manifesto de aplicativo existente. As etapas para adicionar um menu de comando são as mesmas, se você criar um novo manifesto ou editar um existente.
 
-1. Abra o app Studio no... menu de estouro no trilho esquerdo de navegação. Se você não tiver o app Studio disponível, você pode baixá-lo. Consulte [Installing app Studio](https://aka.ms/teams-app-studio#installing-app-studio) para obter mais informações sobre como usar o app Studio.
+**Para criar um menu de comando para seu bot usando o App Studio**
+
+1. Abra o Teams e selecione **Aplicativos** no painel esquerdo. Na página **Aplicativos,** pesquise **App Studio** e selecione **Abrir**. 
+   > [!NOTE]
+   > Se você não tiver o **App Studio,** poderá baixá-lo. Para obter mais informações, [consulte installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. Uma vez no app Studio, selecione a guia **Editor do manifesto** .
+2. No **App Studio,** selecione a **guia Editor de** manifesto. Se você não tiver um pacote de aplicativos existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, [consulte atualizar um pacote de aplicativos](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
 
-3. Na coluna à esquerda do modo de exibição editor de manifesto na seção **recursos** , selecione **bots**.
+3. No painel esquerdo do editor **de manifesto** e na seção **Recursos,** selecione **Bots**.
 
-4. Na coluna à direita do modo de exibição editor de manifesto na seção **comandos** , selecione o botão **Adicionar** .
+4. No painel direito do editor **de manifesto** e na seção **Comandos,** selecione **Adicionar**. A **tela Novo Comando** é exibida.
 
-    ![Botão Adicionar menu de comando do App Studio](./conversations/media/AppStudio-CommandMenu-Add.png)
+    ![Menu Comandos do App Studio Adicionar botão](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-5. A **nova** tela de comando será exibida. Insira o **texto do comando** que você deseja que apareça como o comando de menu e o **texto de ajuda** que você deseja que apareçam diretamente sob o texto do comando no menu. Isso deve ser uma breve explicação da finalidade do comando.
+5. Insira o **texto Comando** que deve aparecer como o menu de comando do bot.
 
-6. Em seguida, selecione o (s) escopo (s) onde deseja que este menu de comando apareça e, em seguida, selecione o botão **salvar** .
+6. Insira o **texto da Ajuda** que deve aparecer sob o texto do comando no menu. **O texto da** ajuda deve ser uma breve explicação sobre a finalidade do comando.
 
-    ![Botão Adicionar menu de comando do App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
+7. Selecione as **caixas de** seleção Escopo para selecionar onde esse menu de comando deve aparecer e selecione **Salvar**.
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Criar um menu de comando para o bot editando **Manifest.jsem**
+    ![Botão de menu novos comandos do App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-Outra abordagem válida para a criação de um menu de comando é criá-lo diretamente no arquivo de manifesto ao desenvolver o código-fonte do bot. Aqui estão algumas coisas que você deve ter em mente ao usar essa abordagem:
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Criar um menu de comando para seu bot editando Manifest.json
 
-1. Cada menu oferece suporte a até 10 comandos.
+Outra maneira de criar um menu de comando é cria-lo diretamente no arquivo de manifesto enquanto desenvolve o código-fonte do bot. Para usar esse método, siga estes pontos:
 
-2. Você pode criar um único menu de comando que funcionará em todos os escopos.
+* Cada menu dá suporte a até dez comandos.
+* Crie um único menu de comando que funcione em todos os escopos.
+* Crie um menu de comando diferente para cada escopo.
 
-3. Você pode criar um menu de comando diferente para cada escopo
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a>Exemplo de manifesto para menu único para ambos os escopos
 
-#### <a name="manifest-example---single-menu-for-both-scopes"></a>Exemplo de manifesto – menu único para ambos os escopos
+O código de exemplo de manifesto para menu único para ambos os escopos é o seguinte:
 
 ```json
 {
@@ -102,7 +108,9 @@ Outra abordagem válida para a criação de um menu de comando é criá-lo diret
 }
 ```
 
-#### <a name="manifest-example---menu-for-each-scope"></a>Exemplo de manifesto-menu para cada escopo
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a>Exemplo de manifesto para o menu para cada escopo
+
+O código de exemplo de manifesto para o menu para cada escopo é o seguinte:
 
 ```json
 {
@@ -144,23 +152,30 @@ Outra abordagem válida para a criação de um menu de comando é criá-lo diret
 }
 ```
 
-## <a name="handling-menu-commands-in-your-bot-code"></a>Manipular comandos de menu no seu código de bot
+Você deve manipular comandos de menu em seu código de bot à medida que lida com qualquer mensagem dos usuários. Você pode manipular comandos de menu em seu código de bot ao analisar a parte **\@ Menção** do texto da mensagem.
 
-Os bots em um grupo ou canal respondem apenas quando são mencionados ("@botname") em uma mensagem. Como resultado, todas as mensagens recebidas por um bot quando em um escopo de grupo ou canal conterão seu próprio nome no texto da mensagem retornado. Você precisa garantir que as alças de análise da mensagem antes de manipular o comando retornado.
+## <a name="handle-menu-commands-in-your-bot-code"></a>Manipular comandos de menu em seu código de bot
 
-> **Observação** Para manipular os comandos no código, eles são enviados ao bot como uma mensagem regular. Portanto, você precisa tratá-los como faria para qualquer outra mensagem de seus usuários. Eles são puramente um tratamento de interface do usuário que insere texto pré-configurado na caixa de texto. O usuário deve então enviar esse texto como faria para qualquer outra mensagem.
+Os bots em um grupo ou canal respondem somente quando são mencionados `@botname` em uma mensagem. Cada mensagem recebida por um bot quando em um escopo de grupo ou canal contém seu nome no texto da mensagem retornado. Antes de manipular o comando que está sendo retornado, a análise da mensagem deve manipular a mensagem recebida por um bot com seu nome.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+> [!NOTE]
+> Para manipular os comandos em código, eles são enviados para o bot como uma mensagem regular. Você deve lidar com eles como faria com qualquer outra mensagem de seus usuários. Os comandos no código inseram texto pré-configurado na caixa de texto. Em seguida, o usuário deve enviar esse texto como faz para qualquer outra mensagem.
 
-Você pode analisar a parte de **\@ menção** do texto da mensagem usando um método estático fornecido com o Microsoft bot Framework — um método da `Activity` classe chamado `RemoveRecipientMention` .
+# <a name="c"></a>[C#](#tab/dotnet)
+
+Você pode analisar a parte **\@ Menção** do texto da mensagem usando um método estático fornecido com a Estrutura do Microsoft Bot. É um método da classe `Activity` chamada `RemoveRecipientMention` .
+
+O C# código para analisar a parte **\@ Menção** do texto da mensagem é o seguinte:
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Você pode analisar a parte de **\@ menção** do texto da mensagem usando um método estático fornecido com o Microsoft bot Framework — um método da `TurnContext` classe chamado `removeMentionText` .
+Você pode analisar a parte **\@ Menção** do texto da mensagem usando um método estático fornecido com a Estrutura de Bot. É um método da classe `TurnContext` chamada `removeMentionText` .
+
+O código JavaScript para analisar a parte **\@ Menção** do texto da mensagem é o seguinte:
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -168,8 +183,9 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
+Você pode analisar a parte **@Mention** do texto da mensagem usando um método estático fornecido com a Estrutura de Bot. É um método da classe `TurnContext` chamada `remove_recipient_mention` .
 
-Você pode analisar a parte **@Mention** do texto da mensagem usando um método estático fornecido com o Microsoft bot Framework — um método da `TurnContext` classe chamado `remove_recipient_mention` .
+O código Python para analisar a parte **\@ Menção** do texto da mensagem é o seguinte:
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -177,10 +193,20 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
-## <a name="command-menu-best-practices"></a>Práticas recomendadas do menu de comandos
+Para habilitar o funcionamento suave do código do bot, há poucas práticas recomendadas que você deve seguir.
 
-* **Mantenha-o simples**: o menu bot é destinado a apresentar os principais recursos do bot.
-* **Mantenha-** o em breve: as opções de menu não devem ser extremamente longas e instruções de linguagem natural complexas, que devem ser comandos simples.
-* **Mantenha-o em invocação**: as ações/comandos do menu do bot devem estar sempre disponíveis, independentemente do estado da conversa ou da caixa de diálogo em que o bot está.
+## <a name="command-menu-best-practices"></a>Práticas recomendadas do menu de comando
 
-> **Observação** Se você remover qualquer comando do manifesto, será necessário reimplantar seu aplicativo para que as alterações entrem em vigor. Em geral, qualquer alteração no manifesto exige isso.
+A seguir estão as práticas recomendadas do menu de comando:
+
+* Mantenha-o simples: o menu bot deve apresentar os principais recursos do bot.
+* Mantenha-o curto: as opções de menu não devem ser longas e não devem ser instruções de idioma natural complexas. Eles devem ser comandos simples.
+* Mantenha-o invocavel: ações ou comandos de menu bot devem estar sempre disponíveis, independentemente do estado da conversa ou da caixa de diálogo em que o bot está.
+
+> [!NOTE]
+> Se você remover quaisquer comandos do manifesto, reimplante seu aplicativo para implementar as alterações. Em geral, quaisquer alterações no manifesto exigem que você reimplante seu aplicativo.
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Conversas em canal e em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)

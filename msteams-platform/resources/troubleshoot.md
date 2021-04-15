@@ -1,95 +1,96 @@
 ---
 title: Solucionar problemas de seu aplicativo
-description: Solucionar problemas ou erros durante a criação de aplicativos para o Microsoft Teams
-keywords: solução de problemas de desenvolvimento de aplicativos do teams
+description: Solucionar problemas ou erros ao criar aplicativos para o Microsoft Teams
+keywords: Solução de problemas de desenvolvimento de aplicativos do teams
+ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 5f6c8b2d5496d1c49ea35b069c16f4ede507f5e1
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: a870a19eac9295f841b44b3b0364c46ffbc2d1d5
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210705"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696504"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas do aplicativo Microsoft Teams
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas do seu aplicativo do Microsoft Teams
 
 ## <a name="troubleshooting-tabs"></a>Guias de solução de problemas
 
-### <a name="accessing-the-devtools"></a>Acessar o DevTools
+### <a name="accessing-the-devtools"></a>Acessando o DevTools
 
-Você pode abrir [o devtools no cliente do Microsoft Teams](~/tabs/how-to/developer-tools.md) para obter uma experiência semelhante à medida que pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
+Você pode abrir [o DevTools](~/tabs/how-to/developer-tools.md) no cliente do Teams para uma experiência semelhante a pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
 
-### <a name="blank-tab-screen"></a>Tela em branco
+### <a name="blank-tab-screen"></a>Tela de guia em branco
 
-Se você não estiver vendo o conteúdo no modo de exibição de tabulação, pode ser:
+Se você não estiver vendo seu conteúdo na exibição de tabulação, pode ser:
 
-* o conteúdo não pode ser exibido em um `<iframe>` .
-* o domínio de conteúdo não está na lista [validDomains](~/resources/schema/manifest-schema.md#validdomains) no manifesto.
+* seu conteúdo não pode ser exibido em `<iframe>` um .
+* o domínio de conteúdo não está na [lista validDomains](~/resources/schema/manifest-schema.md#validdomains) no manifesto.
 
-### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>O botão salvar não está habilitado na caixa de diálogo de configurações
+### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>O botão Salvar não está habilitado na caixa de diálogo configurações
 
-Não se esqueça de chamar `microsoftTeams.settings.setValidityState(true)` uma vez que o usuário tenha inserido ou selecionado todos os dados necessários na página de configurações para habilitar o botão salvar.
+Certifique-se de chamar depois que o usuário tiver entrada ou selecionado todos os dados necessários na página de configurações `microsoftTeams.settings.setValidityState(true)` para habilitar o botão salvar.
 
-### <a name="after-selecting-the-save-button-the-tab-settings-cannot-be-saved"></a>Após selecionar o botão salvar, as configurações da guia não poderão ser salvas
+### <a name="after-selecting-the-save-button-the-tab-settings-cannot-be-saved"></a>Depois de selecionar o botão Salvar, as configurações de tabulação não podem ser salvas
 
-Ao adicionar uma guia, se você clicar nos botões salvar, mas receber uma mensagem de erro indicando que as configurações não podem ser salvas, o problema pode ser uma das duas classes de problemas:
+Ao adicionar uma guia, se você clicar nos botões salvar, mas for apresentado com uma mensagem de erro indicando que as configurações não podem ser salvas, o problema pode ser uma das duas classes de problemas:
 
-* A mensagem de êxito na gravação nunca foi recebida. Se um manipulador de gravação tiver sido registrado usando `microsoftTeams.settings.registerOnSaveHandler(handler)` o, o retorno de chamada deverá chamar `saveEvent.notifySuccess()` . Se o retorno de chamada não chamá-lo em 30 segundos ou chamadas `saveEvent.notifyFailure(reason)` , esse erro será exibido.
+* A mensagem de sucesso salvar nunca foi recebida. Se um manipulador de salvar foi registrado usando `microsoftTeams.settings.registerOnSaveHandler(handler)` , o retorno de chamada deve chamar `saveEvent.notifySuccess()` . Se o retorno de chamada não chamar isso dentro de 30 segundos ou chamar em vez disso, esse `saveEvent.notifyFailure(reason)` erro será mostrado.
 
-* Se nenhum manipulador de salvamento foi registrado, a `saveEvent.notifySuccess()` chamada é automaticamente feita imediatamente após o usuário selecionando o botão salvar.
+* Se nenhum manipulador de salvar foi registrado, a chamada será automaticamente feita imediatamente após o `saveEvent.notifySuccess()` usuário selecionar o botão salvar.
 
-* As configurações fornecidas eram inválidas. O outro motivo pelo qual as configurações não podem ser salvas é se a chamada para `microsoftTeams.setSettings(settings)` fornecer um objeto de configurações inválido ou a chamada não foi feita. Consulte a próxima seção, problemas comuns com o objeto Settings.
+* As configurações fornecidas eram inválidas. O outro motivo pelo qual as configurações podem não ser salvas é se a chamada para um objeto de configuração inválido foi fornecida ou se a chamada não `microsoftTeams.setSettings(settings)` foi feita. Consulte a próxima seção, Problemas comuns com o objeto settings.
 
-### <a name="common-problems-with-the-settings-object"></a>Problemas comuns com o objeto Settings
+### <a name="common-problems-with-the-settings-object"></a>Problemas comuns com o objeto settings
 
-* `settings.entityId`está ausente. O campo é obrigatório.
-* `settings.contentUrl`está ausente. O campo é obrigatório.
-* `settings.contentUrl`ou o opcional `settings.removeUrl` , ou `settings.websiteUrl` é fornecido, mas não é válido. As URLs devem usar HTTPS e também devem ser o mesmo domínio que a página de configurações ou especificado na lista do manifesto `validDomains` .
+* `settings.entityId` está faltando. O campo é obrigatório.
+* `settings.contentUrl` está faltando. O campo é obrigatório.
+* `settings.contentUrl` ou opcional `settings.removeUrl` , ou são `settings.websiteUrl` fornecidos, mas não válidos. As URLs devem usar HTTPS e também devem ser o mesmo domínio da página de configurações ou especificado na lista do `validDomains` manifesto.
 
-### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Não é possível autenticar o usuário ou exibir seu provedor de autenticação na sua guia
+### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Não é possível autenticar o usuário ou exibir seu provedor de autenticação em sua guia
 
-A menos que você esteja realizando uma autenticação silenciosa, deverá seguir o processo de autenticação fornecido pelo [SDK do cliente Microsoft Teams JavaScript](/javascript/api/overview/msteams-client.md).
+A menos que você esteja fazendo autenticação silenciosa, você deve seguir o processo de autenticação fornecido pelo [SDK](/javascript/api/overview/msteams-client.md)do cliente JavaScript do Microsoft Teams.
 
 > [!NOTE]
->Exigimos que todo o fluxo de autenticação inicie e termine em seu domínio, que deve ser listado no `validDomains` objeto no seu manifesto.
+>Exigimos que todo o fluxo de autenticação inicie e termine em seu domínio, que deve estar listado no `validDomains` objeto em seu manifesto.
 
-Para obter mais informações sobre autenticação, confira [autenticar um usuário](~/concepts/authentication/authentication.md).
+Para obter mais informações sobre autenticação, consulte [Authenticate a user](~/concepts/authentication/authentication.md).
 
-### <a name="static-tabs-not-showing-up"></a>Guias estáticas não aparecem
+### <a name="static-tabs-not-showing-up"></a>Guias estáticas não aparecendo
 
-Há um problema conhecido em que atualizar um aplicativo bot existente com uma guia estática nova ou atualizada não mostrará essa alteração de guia ao acessar o aplicativo de uma conversa de chat pessoal.  Para ver a alteração, você deve testar um novo usuário ou instância de teste ou acessar o bot do submenu aplicativos.
+Há um problema conhecido em que a atualização de um aplicativo bot existente com uma guia estática nova ou atualizada não mostrará essa alteração de tabulação ao acessar o aplicativo de uma conversa de chat pessoal.  Para ver a alteração, você deve testar em um novo usuário ou instância de teste ou acessar o bot do flyout Apps.
 
-## <a name="troubleshooting-bots"></a>Solucionando problemas de bots
+## <a name="troubleshooting-bots"></a>Solução de problemas de bots
 
 ### <a name="cant-add-my-bot"></a>Não é possível adicionar meu bot
 
-Os aplicativos devem ser habilitados pelo administrador de locatários do Office 365 para serem carregados por usuários finais. Observe que, em alguns casos, o locatário do Office 365 pode ter vários SKUs associados a ele e para que os bots funcionem em qualquer um, eles devem ser habilitados em todos os SKUs. Consulte [Prepare Your Office 365 locatário](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obter mais informações.
+Os aplicativos devem ser habilitados pelo administrador de locatários do Office 365 para que eles sejam carregados pelos usuários finais. Observe que, em alguns casos, o locatário do Office 365 pode ter várias SKUs associadas a ele e, para que os bots funcionem em qualquer, eles devem estar habilitados em todas as SKUs. Confira Preparar seu locatário do [Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obter mais informações.
 
-### <a name="cant-add-bot-as-a-member-of-a-team"></a>Não é possível adicionar bot como um membro de uma equipe
+### <a name="cant-add-bot-as-a-member-of-a-team"></a>Não é possível adicionar bot como membro de uma equipe
 
-Os bots devem ser carregados primeiro em uma equipe antes que eles possam ser acessados em qualquer canal da equipe. Examine [o carregamento do aplicativo em uma equipe](~/concepts/deploy-and-publish/apps-upload.md) para obter mais informações sobre esse processo.
+Os bots devem primeiro ser carregados em uma equipe antes de serem acessíveis em qualquer canal dessa equipe. Confira [Carregar seu aplicativo em uma equipe para](~/concepts/deploy-and-publish/apps-upload.md) obter mais informações sobre esse processo.
 
-### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>Meu bot não recebe minha mensagem em um canal
+### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>Meu bot não consegue receber minha mensagem em um canal
 
-Os bots nos canais recebem mensagens somente quando são explicitamente @mentioned, mesmo que você esteja respondendo a uma mensagem de bot anterior. A única exceção em que você pode não ver o nome do bot em uma mensagem é se o bot receber uma `imBack` ação como resultado de um cartão remetido originalmente.
+Os bots nos canais recebem mensagens somente quando estão explicitamente @mentioned, mesmo se você estiver respondendo a uma mensagem de bot anterior. A única exceção em que você pode não ver o nome do bot em uma mensagem é se o bot receber uma ação como resultado de um `imBack` CardAction que ele enviou originalmente.
 
 ### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>Meu bot não entende meus comandos quando em um canal
 
-Como os bots nos canais só recebem mensagens quando são @mentioned, todas as mensagens que seu bot recebe em um canal incluem que @mention no campo de texto. É uma prática recomendada remover o próprio nome de bot de todas as mensagens de texto de entrada antes de passar à sua lógica de análise. A revisão [menciona](../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions) dicas sobre como lidar com esse caso.
+Como os bots nos canais só recebem mensagens quando @mentioned, todas as mensagens que seu bot recebe em um canal incluem esse @mention no campo de texto. É uma prática prática tirar o nome do bot em si de todas as mensagens de texto de entrada antes de passar para sua lógica de análise. Revise [as menções](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) para saber como lidar com esse caso.
 
-## <a name="issues-with-packaging-and-uploading"></a>Problemas com o empacotamento e carregamento
+## <a name="issues-with-packaging-and-uploading"></a>Problemas com empacotamento e carregamento
 
-### <a name="error-while-reading-manifestjson"></a>Erro ao ler manifest. JSON
+### <a name="error-while-reading-manifestjson"></a>Erro ao ler manifest.json
 
-A maioria dos erros de manifesto fornecerá uma dica em qual campo específico está ausente ou inválido. No entanto, se o arquivo JSON não puder ser lido como JSON, esta mensagem de erro genérica será usada.
+A maioria dos erros de manifesto fornecerá uma dica sobre qual campo específico está ausente ou inválido. No entanto, se o arquivo JSON não puder ser lido como JSON, essa mensagem de erro genérica será usada.
 
 Motivos comuns para erros de leitura de manifesto:
 
-* JSON inválido. Use um IDE como o [Visual Studio Code](https://code.visualstudio.com) ou o [Visual Studio](https://www.visualstudio.com/vs/) que valida automaticamente a sintaxe JSON.
-* Problemas de codificação. Use UTF-8 para o arquivo *manifest. JSON* . Outras codificações, especificamente com a BOM, podem não ser legíveis.
-* Pacote. zip malformado. O arquivo *manifest. JSON* deve estar no nível superior do arquivo. zip. Observe que a compactação de arquivo Mac padrão pode colocar o *manifest. JSON* em um subdiretório, que não será carregado corretamente no Microsoft Teams.
+* JSON inválido. Use um IDE, como [Visual Studio Código](https://code.visualstudio.com) [ou Visual Studio](https://www.visualstudio.com/vs/) que valida automaticamente a sintaxe JSON.
+* Problemas de codificação. Use UTF-8 para o *arquivomanifest.json.* Outras codificações, especificamente com o BOM, podem não ser acessível.
+* Pacote .zip malformado. O *manifest.jsno* arquivo on deve estar no nível superior do arquivo .zip. Observe que a compactação  de arquivo mac padrão pode colocar amanifest.jsem um subdiretório, que não carregará corretamente no Microsoft Teams.
 
-### <a name="another-extension-with-same-id-exists"></a>Outra extensão com a mesma ID existe
+### <a name="another-extension-with-same-id-exists"></a>Existe outra extensão com a mesma ID
 
-Se você estiver tentando carregar novamente um pacote atualizado com a mesma ID, escolha o ícone **substituir** no final da linha da tabela da guia, em vez do botão **carregar** .
+Se você estiver tentando carregar um pacote atualizado com a  mesma ID, escolha o ícone Substituir no final da linha de tabela da guia em vez do **botão Carregar.**
 
-Se você não estiver carregando um pacote atualizado, verifique se o ID é exclusivo.
+Se você não estiver carregando um pacote atualizado, verifique se a ID é exclusiva.

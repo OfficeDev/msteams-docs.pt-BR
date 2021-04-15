@@ -2,13 +2,14 @@
 title: Formatação de texto em cartões
 description: Descreve a formatação de texto de cartão no Microsoft Teams
 keywords: formato de cartões de bots do teams
+ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
-ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
+ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51474996"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696532"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -111,7 +112,7 @@ No Android, a formatação adaptável de Marcação de Cartão aparece assim:
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>Mencionar suporte em cartões adaptáveis v1.2
 
-As menções baseadas em cartão são suportadas em clientes Web, Desktop e móveis. Você pode adicionar @ menções em um corpo de cartão adaptável para bots e respostas de extensão de mensagens.  Para adicionar @ menções em cartões, siga a mesma lógica de notificação e renderização das menções baseadas em mensagens em conversas de chat de canal [e grupo.](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )
+As menções baseadas em cartão são suportadas em clientes web, desktop e móveis. Você pode adicionar @ menções em um corpo de cartão adaptável para bots e respostas de extensão de mensagens. Para adicionar @ menções em cartões, siga a mesma lógica de notificação e renderização das menções baseadas em mensagens em conversas de chat de canal [e grupo.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
 Bots e extensões de mensagens podem incluir menções no conteúdo do cartão nos [elementos TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
@@ -285,7 +286,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. O supor
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| header (níveis 1 &ndash; 3) | **Texto** | `### Text`|
+| header (níveis 1 &ndash; 3) | **Text** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -374,7 +375,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. Markdow
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -462,7 +463,7 @@ As marcas HTML são suportadas para cartões simples, como o herói e o cartão 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

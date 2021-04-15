@@ -1,13 +1,14 @@
 ---
 title: Usando módulos de tarefas nas guias do Microsoft Teams
-description: Explica como invocar módulos de tarefas das guias do Teams usando o SDK de cliente do Microsoft Teams.
+description: Explica como invocar módulos de tarefas das guias do Teams usando o SDK do cliente do Microsoft Teams.
+ms.topic: how-to
 keywords: task modules teams tabs client sdk
-ms.openlocfilehash: 3f1da4d5eec31638d69adc01a45831534d015f41
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dbcc6ce0ba31bae43335334dfb1c354acc33a2a0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449553"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696028"
 ---
 # <a name="using-task-modules-in-tabs"></a>Usando módulos de tarefas em guias
 
@@ -106,7 +107,7 @@ function validateForm() {
 }
 ```
 
-## <a name="task-module-invocation-errors"></a>Erros de invocação de módulo de tarefa
+## <a name="task-module-invocation-errors"></a>Erros de invocação do módulo de tarefa
 
 Aqui estão os valores possíveis `err` dos que podem ser recebidos pelo seu `submitHandler` :
 

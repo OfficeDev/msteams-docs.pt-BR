@@ -1,77 +1,78 @@
 ---
 title: Conversas de chat de canal e grupo com bots
 description: Descreve o cenário de ponta a ponta de ter uma conversa com um bot em um canal no Microsoft Teams
-keywords: bot de conversa de canais de cenários de equipes
+keywords: teams scenarios channels conversation bot
+ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e556eb006257a83ddf93adb62f79857201d6a9ad
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: be4610f45ab5891edcc6a9683ec994d2ba5c505c
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231628"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696175"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversas de chat de canal e grupo com um bot do Microsoft Teams
+# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-O Microsoft Teams permite que os usuários traga bots para suas conversas de chat em grupo ou canal. Ao adicionar um bot a uma equipe ou chat, todos os usuários da conversa podem tirar proveito da funcionalidade do bot na conversa. Você também pode acessar a funcionalidade específica do Teams no seu bot, como consultar informações da equipe e @mentioning usuários.
+O Microsoft Teams permite que os usuários tragam bots para seus canais ou conversas de chat em grupo. Ao adicionar um bot a uma equipe ou chat, todos os usuários da conversa podem tirar proveito da funcionalidade do bot logo na conversa. Você também pode acessar a funcionalidade específica do Teams em seu bot, como consultar informações da equipe e @mentioning usuários.
 
-Os chats em canais e chats em grupo diferem do chat pessoal, já que o usuário precisa @mention o bot. Se um bot for usado em vários escopos (pessoal, chat em grupo ou canal), você precisará detectar de qual escopo as mensagens de bot vieram e processá-las de acordo.
+O chat em canais e chats de grupo difere do chat pessoal, já que o usuário precisa @mention o bot. Se um bot for usado em vários escopos (pessoal, groupchat ou canal), você precisará detectar de que escopo as mensagens bot vieram e processá-las de acordo.
 
-## <a name="designing-a-great-bot-for-channels-or-groups"></a>Projetando um ótimo bot para canais ou grupos
+## <a name="designing-a-great-bot-for-channels-or-groups"></a>Criar um ótimo bot para canais ou grupos
 
-Os bots adicionados a uma equipe se tornam outro membro da equipe e podem ser @mentioned como parte da conversa. Na verdade, os bots só recebem mensagens quando estão @mentioned, portanto, outras conversas no canal não são enviadas para o bot.
+Os bots adicionados a uma equipe se tornam outro membro da equipe e podem ser @mentioned como parte da conversa. Na verdade, os bots só recebem mensagens quando @mentioned, portanto, outras conversas no canal não são enviadas para o bot.
 
-Um bot em um grupo ou canal deve fornecer informações relevantes e apropriadas para todos os membros. Embora seu bot certamente possa fornecer informações relevantes para a experiência, tenha em mente que as conversas com ele ficam visíveis para todos. Portanto, um ótimo bot em um grupo ou canal deve agregar valor a todos os usuários e, certamente, não compartilhar inadvertidamente informações mais apropriadas para uma conversa um-para-um.
+Um bot em um grupo ou canal deve fornecer informações relevantes e apropriadas para todos os membros. Embora o bot certamente possa fornecer informações relevantes para a experiência, tenha em mente que as conversas com ele são visíveis para todos. Portanto, um ótimo bot em um grupo ou canal deve adicionar valor a todos os usuários e, certamente, não compartilhar inadvertidamente informações mais apropriadas a uma conversa um para um.
 
-Seu bot, assim como está, pode ser inteiramente relevante em todos os escopos sem exigir trabalho adicional. No Microsoft Teams, não há expectativas de que seu bot funcione em todos os escopos, mas você deve garantir que seu bot fornece valor ao usuário em qualquer escopo que você escolher suportar. Para obter mais informações sobre escopos, consulte [Aplicativos no Microsoft Teams.](~/concepts/build-and-test/app-studio-overview.md)
+Seu bot, assim como está, pode ser totalmente relevante em todos os escopos sem exigir trabalho adicional. No Microsoft Teams, não há expectativa de que seu bot funcione em todos os escopos, mas você deve garantir que o bot fornece valor ao usuário em qualquer escopo que você escolher dar suporte. Para obter mais informações sobre escopos, consulte [Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-Desenvolver um bot que funciona em grupos ou canais usa grande parte da mesma funcionalidade que as conversas pessoais. Eventos e dados adicionais na carga fornecem informações de grupo e canal do Teams. Essas diferenças, bem como as principais diferenças na funcionalidade comum, são descritas nas seções a seguir.
+O desenvolvimento de um bot que funciona em grupos ou canais usa grande parte da mesma funcionalidade que conversas pessoais. Eventos e dados adicionais na carga fornecem informações de grupo e canal do Teams. Essas diferenças, bem como as principais diferenças na funcionalidade comum são descritas nas seções a seguir.
 
 ### <a name="creating-messages"></a>Criando mensagens
 
-For more information on bots creating messages in channels see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md), and specifically [Creating a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
+Para obter mais informações sobre bots que criam mensagens em canais, consulte [Mensagens proativas](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)para bots e, [especificamente, Criando uma conversa de canal.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)
 
-### <a name="receiving-messages"></a>Receber mensagens
+### <a name="receiving-messages"></a>Recebimento de mensagens
 
-Para um bot em um grupo ou canal, além do esquema de mensagens [regular,](https://docs.botframework.com/core-concepts/reference/#activity)seu bot também recebe as seguintes propriedades:
+Para um bot em um grupo ou canal, além do esquema de mensagens [regular,](https://docs.botframework.com/core-concepts/reference/#activity)o bot também recebe as seguintes propriedades:
 
-* `channelData`Confira os [dados do canal do Teams.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Em um chat de grupo, contém informações específicas para esse chat.
-* `conversation.id` A ID da cadeia de resposta, consistindo na ID do canal mais a ID da primeira mensagem na cadeia de resposta
-* `conversation.isGroup` É `true` para mensagens de bot em canais ou chats de grupo
-* `conversation.conversationType` Uma `groupChat` ou outra `channel`
-* `entities`Pode conter uma ou mais menções (consulte [Menções)](#-mentions)
+* `channelData` Consulte [Dados do canal do Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Em um chat em grupo, contém informações específicas para esse chat.
+* `conversation.id` A ID da cadeia de resposta, que consiste na ID do canal mais a ID da primeira mensagem na cadeia de resposta
+* `conversation.isGroup` É `true` para mensagens bot em canais ou chats de grupo
+* `conversation.conversationType`Ou `groupChat``channel`
+* `entities` Pode conter uma ou mais menções (consulte [Menções](#-mentions))
 
-### <a name="replying-to-messages"></a>Respondendo a mensagens
+### <a name="replying-to-messages"></a>Responder a mensagens
 
-Para responder a uma mensagem existente, chame [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) no .NET ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) no Node.js. O SDK do Construtor de Bots lida com todos os detalhes.
+Para responder a uma mensagem existente, chame [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) o .NET ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) Node.js. O SDK do Construtor de Bots lida com todos os detalhes.
 
 Se você optar por usar a API REST, também poderá chamar o [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) ponto de extremidade.
 
-Em um canal, responder a uma mensagem é uma resposta à cadeia de resposta inicial. Contém `conversation.id` o canal e a ID da mensagem de nível superior. Embora o Bot Framework se encadee dos detalhes, você pode armazenar em cache isso para respostas futuras a `conversation.id` esse thread de conversa, conforme necessário.
+Em um canal, responder a uma mensagem mostra como uma resposta à cadeia de resposta de inicialização. O `conversation.id` contém o canal e a ID da mensagem de nível superior. Embora a Estrutura de Bots cuide dos detalhes, você pode armazenar em cache isso para respostas futuras a `conversation.id` esse thread de conversa, conforme necessário.
 
-### <a name="best-practice-welcome-messages-in-teams"></a>Práticas práticas: Mensagens de boas-vindas no Teams
+### <a name="best-practice-welcome-messages-in-teams"></a>Prática prática: mensagens de boas-vindas no Teams
 
-Quando seu bot é adicionado pela primeira vez ao grupo ou equipe, geralmente é útil enviar uma mensagem de boas-vindas apresentando o bot para todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade do bot e dos benefícios do usuário. O ideal é que a mensagem também inclua comandos para que o usuário interaja com o aplicativo. Para fazer isso, certifique-se de que seu bot responda à `conversationUpdate` mensagem, com `teamsAddMembers` o eventType no `channelData` objeto. Certifique-se de que a ID seja a própria ID do aplicativo do bot, pois o mesmo evento é enviado quando um usuário `memberAdded` é adicionado a uma equipe. Consulte [o membro da equipe ou a adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obter mais detalhes.
+Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, geralmente é útil enviar uma mensagem de boas-vindas apresentando o bot para todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade e dos benefícios do usuário do bot. O ideal é que a mensagem também inclua comandos para o usuário interagir com o aplicativo. Para fazer isso, verifique se o bot responde à `conversationUpdate` mensagem, com `teamsAddMembers` o eventType no `channelData` objeto. Certifique-se de que a ID seja a própria ID do aplicativo do bot, pois o mesmo evento é enviado quando um usuário é `memberAdded` adicionado a uma equipe. Consulte [Membro da equipe ou adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obter mais detalhes.
 
-Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, você pode [buscar a lista de participação da](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) equipe e enviar uma mensagem direta a cada [usuário.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, você pode [buscar a lista de](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) equipe e enviar a cada usuário uma mensagem [direta](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
-Recomendamos que seu bot *não envie* uma mensagem de boas-vindas nas seguintes situações:
+Recomendamos que seu bot *não* envie uma mensagem de boas-vindas nas seguintes situações:
 
-* A equipe é grande (obviamente inentente, mas, por exemplo, maior do que 100 membros). Seu bot pode ser visto como "spammy" e a pessoa que o adicionou poderá receber reclamações, a menos que você comunique claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.
+* A equipe é grande (obviamente subjetivo, mas, por exemplo, maior do que 100 membros). Seu bot pode ser visto como "spammy" e a pessoa que o adicionou pode receber reclamações, a menos que você comunique claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.
 * Seu bot é mencionado pela primeira vez em um grupo ou canal (em vez de ser adicionado pela primeira vez a uma equipe)
 * Um grupo ou canal é renomeado
 * Um membro da equipe é adicionado a um grupo ou canal
 
 ## <a name="-mentions"></a>@ Menções
 
-Como os bots em um grupo ou canal respondem somente quando são mencionados ("@_botname_") em uma mensagem, cada mensagem recebida por um bot em um canal de grupo contém seu próprio nome, e você deve garantir que a análise de mensagens lida com isso. Além disso, os bots podem analisar outros usuários mencionados e mencionar usuários como parte de suas mensagens.
+Como os bots em um grupo ou canal respondem somente quando eles são mencionados ("@_botname_") em uma mensagem, cada mensagem recebida por um bot em um canal de grupo contém seu próprio nome e você deve garantir que a análise da mensagem lida com isso. Além disso, os bots podem analisar outros usuários mencionados e mencionar usuários como parte de suas mensagens.
 
-### <a name="retrieving-mentions"></a>Recuperar menções
+### <a name="retrieving-mentions"></a>Recuperando menções
 
-As menções são retornadas no objeto na carga e contêm a ID exclusiva do usuário e, na maioria dos casos, o nome `entities` do usuário mencionado. Você pode recuperar todas as menções na mensagem chamando a função no SDK do Construtor de Bots para .NET, que retorna uma `GetMentions` matriz de `Mentioned` objetos.
+As menções são retornadas no objeto em carga e contêm a ID exclusiva do usuário e, na maioria dos casos, o `entities` nome do usuário mencionado. Você pode recuperar todas as menções na mensagem chamando a função no SDK do Construtor de Bots para .NET, que retorna uma `GetMentions` matriz de `Mentioned` objetos.
 
-#### <a name="net-example-code-check-for-and-strip-bot-mention"></a>Código de exemplo do .NET: verificar e retirar @bot menção
+#### <a name="net-example-code-check-for-and-strip-bot-mention"></a>Código de exemplo do .NET: verifique e @bot menção
 
 ```csharp
 Mention[] m = sourceMessage.GetMentions();
@@ -90,9 +91,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Você também pode usar a função de extensão do Teams `GetTextWithoutMentions` , que retira todas as menções, incluindo o bot.
+> Você também pode usar a função de extensão do Teams , que retira todas `GetTextWithoutMentions` as menções, incluindo o bot.
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js exemplo de código: verificar e retirar @bot menção
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js código de exemplo: verifique e @bot menção
 
 ```javascript
 var text = message.text;
@@ -106,16 +107,16 @@ if (message.entities) {
 }
 ```
 
-Você também pode usar a função de extensão do Teams `getTextWithoutMentions` , que retira todas as menções, incluindo o bot.
+Você também pode usar a função de extensão do Teams , que retira todas `getTextWithoutMentions` as menções, incluindo o bot.
 
-### <a name="constructing-mentions"></a>Construir menções
+### <a name="constructing-mentions"></a>Criar menções
 
 Seu bot pode mencionar outros usuários em mensagens postadas em canais. Para fazer isso, sua mensagem deve fazer o seguinte:
 
 * Incluir `<at>@username</at>` no texto da mensagem
-* Incluir o `mention` objeto dentro da coleção de entidades
+* Incluir o `mention` objeto dentro da coleção entities
 
-#### <a name="net-example"></a>Exemplo de .NET
+#### <a name="net-example"></a>Exemplo do .NET
 
 Este exemplo usa o [pacote NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
@@ -149,7 +150,7 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemplo: Mensagem de saída com o usuário mencionado
+#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemplo: mensagem de saída com o usuário mencionado
 
 ```json
 {
@@ -191,8 +192,8 @@ session.send(generalMessage);
 }
 ```
 
-## <a name="accessing-groupchat-or-channel-scope"></a>Acessando o escopo de groupChat ou canal
+## <a name="accessing-groupchat-or-channel-scope"></a>Acessando groupChat ou escopo de canal
 
-Seu bot pode fazer mais do que enviar e receber mensagens em grupos e equipes. Por exemplo, ele também pode buscar a lista de membros, incluindo suas informações de perfil, bem como a lista de canais. Confira [Obter contexto para seu bot do Microsoft Teams](~/resources/bot-v3/bots-context.md) para saber mais.
+Seu bot pode fazer mais do que enviar e receber mensagens em grupos e equipes. Por exemplo, ele também pode buscar a lista de membros, incluindo suas informações de perfil, bem como a lista de canais. Confira [Obter contexto para que seu bot do Microsoft Teams](~/resources/bot-v3/bots-context.md) saiba mais.
 
-*Consulte também exemplos* [de Estrutura de Bot.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+*Consulte também Exemplos* [da Estrutura de Bot.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -1,59 +1,67 @@
 ---
-title: Inscrever-se para eventos de conversa
+title: Eventos de conversa
 author: WashingtonKayaker
-description: Como assinar eventos de conversa do bot do Microsoft Teams.
-ms.topic: overview
+description: Como trabalhar com eventos de conversa do seu bot do Microsoft Teams.
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: bc4ae36d8cffe5b19ee778a71e1c7b1c00c5e88c
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634499"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696343"
 ---
-# <a name="subscribe-to-conversation-events"></a>Inscrever-se para eventos de conversa
+# <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa no bot do Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Microsoft Teams envia notificações ao seu bot para eventos que acontecem em escopos onde o seu bot está ativo. Você pode capturar esses eventos em seu código e agir sobre eles, como o seguinte:
+Ao criar seus bots de conversa para o Microsoft Teams, você pode trabalhar com eventos de conversa. O Teams envia notificações ao bot para eventos de conversa que ocorrem em escopos onde o bot está ativo. Você pode capturar esses eventos em seu código e tomar as seguintes ações:
 
-* Disparar uma mensagem de boas-vindas quando seu bot é adicionado a uma equipe
-* Disparar uma mensagem de boas-vindas quando um novo membro da equipe é adicionado ou removido
-* Disparar uma notificação quando um canal é criado, renomeado ou excluído
-* Quando uma mensagem de bot é curtida por um usuário
+* Acionar uma mensagem de boas-vindas quando seu bot for adicionado a uma equipe.
+* Acionar uma mensagem de boas-vindas quando um novo membro da equipe for adicionado ou removido.
+* Acionar uma notificação quando um canal for criado, renomeado ou excluído.
+* Quando uma mensagem bot é curtida por um usuário.
 
 ## <a name="conversation-update-events"></a>Eventos de atualização de conversa
 
-> [!Important]
-> Novos eventos podem ser adicionados a qualquer momento e seu bot começará a recebê-los.
-> Você deve projetar para a possibilidade de receber eventos inesperados.
-> Se você estiver usando o SDK da Estrutura de Bots, seu bot responderá automaticamente com um a quaisquer eventos `200 - OK` que você não escolher manipular.
+Você pode usar eventos de atualização de conversa para fornecer notificações melhores e ações de bot mais eficazes.
 
-Um bot recebe um evento `conversationUpdate` quando é adicionado a uma conversa, outros membros são adicionados ou removidos de uma conversa ou os metadados da conversa são alterados.
+> [!IMPORTANT]
+> * Você pode adicionar novos eventos a qualquer momento e seu bot começa a recebê-los.
+> * Você deve projetar seu bot para receber eventos inesperados.
+> * Se você estiver usando o SDK da Estrutura de Bots, seu bot responderá automaticamente com um a quaisquer `200 - OK` eventos que você escolher não manipular.
 
-O evento `conversationUpdate` é enviado ao seu bot quando ele recebe informações sobre atualizações de membros para as equipes onde foi adicionado. Ele também recebe uma atualização quando é adicionado pela primeira vez, especificamente para conversas pessoais.
+Um bot recebe um `conversationUpdate` evento em um dos seguintes casos:
 
-A tabela a seguir mostra uma lista de eventos de atualização de conversa do Teams, com links para mais detalhes.
+* Quando o bot foi adicionado a uma conversa.
+* Outros membros são adicionados ou removidos de uma conversa.
+* Os metadados de conversa foram alterados.
 
-| Ação tomada        | EventType         | Método Chamado              | Descrição                | Escopo |
+O evento `conversationUpdate` é enviado ao seu bot quando ele recebe informações sobre atualizações de membros para as equipes onde foi adicionado. Ele também recebe uma atualização quando foi adicionada pela primeira vez para conversas pessoais.
+
+A tabela a seguir mostra uma lista de eventos de atualização de conversa do Teams com mais detalhes:
+
+| Ação tomada        | EventType         | Método chamado              | Descrição                | Escopo |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| canal criado     | channelCreated    | OnTeamsChannelCreatedAsync | [Um canal foi criado](#channel-created) | Equipe |
-| canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal foi renomeado](#channel-renamed) | Equipe |
-| canal excluído     | channelDeleted    | OnTeamsChannelDeletedAsync | [Um canal foi excluído](#channel-deleted) | Equipe |
-| canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Um canal foi restaurado](#channel-deleted) | Equipe |
-| membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro adicionado](#team-members-added)   | Todos |
-| membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro foi removido](#team-members-removed) | groupChat & equipe |
-| equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe foi renomeada](#team-renamed)       | Equipe |
-| equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe foi excluída](#team-deleted)       | Equipe |
-| equipe arquivada        | teamArchived       | OnTeamsTeamArchivedAsync    | [Uma equipe foi arquivada](#team-archived)       | Equipe |
-| team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Uma equipe foi desarquivada](#team-unarchived)       | Equipe |
-| equipe restaurada        | teamRestored      | OnTeamsTeamRestoredAsync    | [Uma equipe foi restaurada](#team-restored)       | Equipe |
+| Canal criado     | channelCreated    | OnTeamsChannelCreatedAsync | [Um canal é criado](#channel-created). | Equipe |
+| Canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal é renomeado](#channel-renamed). | Equipe |
+| Canal excluído     | channelDeleted    | OnTeamsChannelDeletedAsync | [Um canal é excluído](#channel-deleted). | Equipe |
+| Canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Um canal é restaurado](#channel-deleted). | Equipe |
+| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Todos |
+| Membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro é removido](#team-members-removed). | groupChat e team |
+| Equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe é renomeada](#team-renamed).       | Equipe |
+| Equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe é excluída](#team-deleted).       | Equipe |
+| Equipe arquivada        | teamArchived       | OnTeamsTeamArchivedAsync    | [Uma equipe é arquivada](#team-archived).       | Equipe |
+| Equipe desarquivada        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Uma equipe é desarquivada.](#team-unarchived)       | Equipe |
+| Equipe restaurada        | teamRestored      | OnTeamsTeamRestoredAsync    | [Uma equipe é restaurada](#team-restored)       | Equipe |
 
 ### <a name="channel-created"></a>Canal criado
 
-O evento criado pelo canal é enviado para o bot sempre que um novo canal é criado em uma equipe em que seu bot está instalado.
+O evento criado pelo canal é enviado para seu bot sempre que um novo canal é criado em uma equipe onde o bot está instalado.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento criado por canal:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -63,7 +71,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -138,9 +146,11 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>Canal renomeado
 
-O evento renomeado de canal é enviado para o bot sempre que um canal é renomeado em uma equipe em que seu bot está instalado.
+O evento renomeado de canal é enviado para seu bot sempre que um canal é renomeado em uma equipe onde seu bot está instalado.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento renomeado de canal:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -150,7 +160,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -216,11 +226,13 @@ async def on_teams_channel_renamed(
 
 * * *
 
-### <a name="channel-deleted"></a>Canal Excluído
+### <a name="channel-deleted"></a>Canal excluído
 
-O evento excluído do canal é enviado ao bot sempre que um canal é excluído em uma equipe em que seu bot está instalado.
+O evento excluído do canal é enviado para o bot sempre que um canal é excluído em uma equipe onde o bot está instalado.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento excluído do canal:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -230,7 +242,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -300,9 +312,11 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Canal restaurado
 
-O evento restaurado do canal é enviado para o bot sempre que um canal excluído anteriormente é restaurado em uma equipe em que o bot já está instalado.
+O evento restaurado do canal é enviado para o bot sempre que um canal que foi excluído anteriormente é restaurado em uma equipe em que o bot já está instalado.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento restaurado do canal:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -312,7 +326,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -387,9 +401,11 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
-O evento é enviado ao bot na primeira vez em que é adicionado a uma conversa e sempre que um novo usuário é adicionado a uma equipe ou chat de grupo em que seu bot está `teamMemberAdded` instalado. As informações do usuário (ID) são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo serviço (como o envio de uma mensagem para um usuário específico).
+O `teamMemberAdded` evento é enviado ao seu bot na primeira vez em que é adicionado a uma conversa. O evento é enviado para seu bot sempre que um novo usuário é adicionado a uma equipe ou chat de grupo onde seu bot está instalado. As informações do usuário que são ID são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo seu serviço, como o envio de uma mensagem para um usuário específico.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento adicionado aos membros da equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -411,7 +427,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -436,7 +452,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Esta é a mensagem que seu bot receberá quando o bot for adicionado **a uma equipe**.
+Esta é a mensagem que seu bot recebe quando o bot é adicionado a uma equipe.
 
 ```json
 {
@@ -475,7 +491,7 @@ Esta é a mensagem que seu bot receberá quando o bot for adicionado **a uma equ
 }
 ```
 
-Esta é a mensagem que seu bot receberá quando o bot for adicionado * a um *chat um para um.*
+Esta é a mensagem que seu bot recebe quando o bot é adicionado a um chat um para um.
 
 ```json
 {
@@ -529,11 +545,14 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>Membros da equipe removidos
 
-O evento é enviado para o bot se ele for removido de uma equipe e sempre que qualquer usuário for removido de uma equipe da que seu bot é `teamMemberRemoved` membro. Você pode determinar se o novo membro removido foi o próprio bot ou um usuário olhando para o `Activity` objeto do `turnContext` .  Se o campo do objeto for igual ao campo do objeto, o membro removido será o bot, caso `Id` `MembersRemoved` `Id` `Recipient` contrário, será um usuário.  Geralmente, o bot `Id` será: `28:<MicrosoftAppId>`
+O `teamMemberRemoved` evento é enviado para seu bot se for removido de uma equipe. O evento é enviado ao bot sempre que qualquer usuário é removido de uma equipe em que o bot é membro. Para determinar se o novo membro removido foi o próprio bot ou um usuário, verifique o `Activity` objeto do `turnContext` .  Se o campo do objeto for o mesmo que o campo do objeto, o membro removido será o bot, senão `Id` será `MembersRemoved` um `Id` `Recipient` usuário. Geralmente, o bot `Id` é `28:<MicrosoftAppId>` .
 
-[!Note] Quando um usuário é excluído permanentemente de um locatário, `membersRemoved conversationUpdate` o evento é acionado.
+> [!NOTE]
+> Quando um usuário é excluído permanentemente de um locatário, `membersRemoved conversationUpdate` o evento é acionado.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento removido pelos membros da equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -554,7 +573,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 
@@ -640,7 +659,9 @@ async def on_teams_members_removed(
 
 Seu bot é notificado quando a equipe em que está foi renomeada. Ele recebe um `conversationUpdate` evento `eventType.teamRenamed` com no `channelData` objeto.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento renomeado para equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -650,7 +671,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -718,7 +739,9 @@ async def on_teams_team_renamed(
 
 Seu bot é notificado quando a equipe em que está foi excluída. Ele recebe um `conversationUpdate` evento `eventType.teamDeleted` com no `channelData` objeto.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento excluído da equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -727,7 +750,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -790,9 +813,11 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>Equipe restaurada
 
-O bot recebe uma notificação quando a equipe é restaurada da exclusão. O bot recebe `conversationUpdate` um evento com no `eventType.teamrestored` `channelData` objeto.
+O bot recebe uma notificação quando uma equipe é restaurada após ser excluída. Ele recebe um `conversationUpdate` evento `eventType.teamrestored` com no `channelData` objeto.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento restaurado pela equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -802,7 +827,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -870,7 +895,9 @@ async def on_teams_team_restored(
 
 O bot recebe uma notificação quando a equipe em que está instalada é arquivada. Ele recebe um `conversationUpdate` evento `eventType.teamarchived` com no `channelData` objeto.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento arquivado pela equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -880,7 +907,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -949,7 +976,9 @@ async def on_teams_team_archived(
 
 O bot recebe uma notificação quando a equipe em que ele está instalado é desarquivada. Ele recebe um `conversationUpdate` evento `eventType.teamUnarchived` com no `channelData` objeto.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de evento não pesquisado da equipe:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -959,7 +988,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1023,18 +1052,22 @@ async def on_teams_team_unarchived(
 
 * * *
 
+Agora que você trabalhou com os eventos de atualização de conversa, você pode entender os eventos de reação de mensagem que ocorrem para diferentes reações a uma mensagem.
+
 ## <a name="message-reaction-events"></a>Eventos de reação de mensagens
 
-O `messageReaction` evento é enviado quando um usuário adiciona ou remove reações a uma mensagem que foi enviada pelo bot. O `replyToId` contém a ID da mensagem específica e o `Type` é o tipo de reação no formato de texto.  Os tipos de reações incluem: "irado", "coração", "riso", "like", "Triste", "surpresa". Esse evento não contém o conteúdo da mensagem original, portanto, se processar reações às suas mensagens é importante para o bot, você precisará armazenar as mensagens quando enviá-las.
+O `messageReaction` evento é enviado quando um usuário adiciona ou remove reações a uma mensagem que foi enviada pelo bot. O `replyToId` contém a ID da mensagem e o `Type` é o tipo de reação no formato de texto. Os tipos de reações incluem raiva, coração, riso, como, triste e surpresa. Esse evento não contém o conteúdo da mensagem original. Se o processamento de reações às suas mensagens for importante para o bot, você deve armazenar as mensagens ao enviá-las. A tabela a seguir fornece mais informações sobre o tipo de evento e objetos de carga:
 
 | EventType       | Objeto Payload   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reação à mensagem bot](#reactions-to-a-bot-message)                   | Todos   |
-| messageReaction | reactionsRemoved | [Reação removida da mensagem bot](#reactions-removed-from-bot-message) | Todos   |
+| messageReaction | reactionsAdded   | [Reações a uma mensagem de bot](#reactions-to-a-bot-message)                   | Todos   |
+| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message) | Todos   |
 
 ### <a name="reactions-to-a-bot-message"></a>Reações a uma mensagem de bot
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de reações a uma mensagem de bot:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1048,7 +1081,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1143,7 +1176,9 @@ async def on_reactions_added(
 
 ### <a name="reactions-removed-from-bot-message"></a>Reações removidas da mensagem bot
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de reações removidas da mensagem bot:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1157,7 +1192,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1248,11 +1283,15 @@ async def on_reactions_removed(
 
 * * *
 
-## <a name="samples"></a>Exemplos
+## <a name="code-sample"></a>Exemplo de código
 
-Para um código de exemplo mostrando os eventos de conversa de bots, consulte:
+A tabela a seguir fornece um exemplo de código simples que incorpora eventos de conversa de bots em um aplicativo do Teams:
 
-[Exemplo de eventos de conversa de bots do Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+| Amostra | Descrição | .NET Core |
+|--------|------------- |---|
+| Exemplo de eventos de conversa de bots do Teams | Exemplo de bot de conversa do Bot Framework v4 para o Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
 
+## <a name="next-step"></a>Próxima etapa
 
-
+> [!div class="nextstepaction"]
+> [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)

@@ -2,13 +2,14 @@
 title: Integrar os recursos de localização
 description: Como usar o SDK do cliente JavaScript do Teams para aproveitar os recursos de localização
 keywords: permissões de dispositivo nativo de recursos de mapa de localização
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596193"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696854"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
 

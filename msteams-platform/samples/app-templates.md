@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demonstração de exemplos de modelos do Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
-ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
+ms.openlocfilehash: 58e7e1711ef4075841d1c3c41d184ad0e861b194
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51612645"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696280"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -480,6 +480,17 @@ Respostas Rápidas é um aplicativo do Microsoft Teams que oferece uma solução
 
 ![Exemplo de exibição de respostas](../assets/images/quick-responses.png)
 
+## <a name="quiz--9734"></a>Teste &#9734;
+
+Quiz é um aplicativo de extensão de mensagens personalizado do [Teams](../messaging-extensions/what-are-messaging-extensions.md) que permite que você crie um teste em um chat ou um canal para verificação de conhecimento e resultados instantâneos. Você pode usar Quiz para, exames em classe e offline, Verificação de conhecimento dentro da equipe e testes divertidos em uma equipe. O aplicativo quiz tem suporte em várias plataformas, como clientes da área de trabalho, navegador, iOS e Android do Teams. Este aplicativo está pronto para implantação como parte da assinatura existente do Microsoft 365.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Criar Quiz no exibição do Teams](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="rapid-assist"></a>Assistência Rápida
 
@@ -620,6 +631,18 @@ Um projeto pode incluir várias tarefas e vários projetos podem ser atribuídos
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
 
 ![Time Tally](../assets/images/11zon_gif.gif)
+
+## <a name="training--9734"></a>Treinamento &#9734;
+
+O treinamento é um aplicativo de extensão de mensagens do [Teams](../messaging-extensions/what-are-messaging-extensions.md) personalizado que permite que os usuários publiquem um treinamento em um chat ou um canal para compartilhamento de conhecimento offline e upskilling. O aplicativo tem suporte em vários clientes de plataforma do Teams, como desktop, navegador, iOS e Android. Este aplicativo está pronto para implantação como parte da sua assinatura do Microsoft 365.
+
+[Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Criar Treinamento no exibição do Teams](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Arredondamento Virtual
 

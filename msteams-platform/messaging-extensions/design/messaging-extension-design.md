@@ -5,30 +5,30 @@ keywords: Práticas práticas práticas de referência de extensões de mensagen
 author: heath-hamilton
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 747b48e3aeb803f91cfb8d4412c98cb6d52c1fd1
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176974"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697008"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Projetando sua extensão de mensagens do Microsoft Teams
 
 Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou agir em uma mensagem sem sair da conversa.
 Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar extensões de mensagens no Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Você pode encontrar diretrizes abrangentes de design de extensão de mensagens, incluindo elementos que você pode pegar e modificar conforme necessário, no Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Obter o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Adicionar uma extensão de mensagens
 
 Você pode adicionar uma extensão de mensagens nos seguintes contextos do Teams:
 
-* Na loja do Teams (AppSource).
+* A partir da loja do Microsoft Teams (AppSource).
 * Em um canal, chat ou reunião (antes, durante e depois) perto da caixa de composição. Vale a pena notar se você adicionar uma extensão de mensagens em um desses locais, somente você poderá usá-la nesse contexto.
 
 O exemplo a seguir mostra como você adiciona uma extensão de mensagens em um canal.
@@ -55,7 +55,7 @@ Com comandos de pesquisa, as pessoas podem usar sua extensão de mensagens para 
 
 #### <a name="compose-box-layout-options"></a>Opções de layout de caixa de redação
 
-Você tem algumas opções para exibir resultados de pesquisa de extensão de mensagens, incluindo [exibições de lista e grade.](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
+Você tem algumas opções para exibir resultados de pesquisa de extensão de mensagens, incluindo [exibições de lista e grade.](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Ilustrações mostrando opções de layout para resultados de pesquisa de extensão de mensagens." border="false":::
 
@@ -112,7 +112,7 @@ Os cenários a seguir mostram as principais maneiras pelas quais as pessoas usam
 
 **2. Conclua a ação**. Seu aplicativo pode receber e processar qualquer conteúdo ou dados enviados pela ação da mensagem. Isso permite que os usuários permaneçam em suas conversas e, no exemplo a seguir, não se preocupe em inserir informações diretamente em seu aplicativo.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Exemplo mostra um usuário procurando conteúdo para inserir na caixa de redação." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Exemplo sobre como agir em uma mensagem." border="false":::
 
 ### <a name="preview-links"></a>Links de visualização
 
@@ -164,7 +164,7 @@ O exemplo a seguir é uma extensão de mensagens aberta na caixa de redação.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Exemplo de configuração e uso geral." border="false":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Fazer: Integrar com o single-sign on
 
@@ -172,7 +172,7 @@ O SSO torna o processo de login mais fácil, rápido e seguro. Além disso, se u
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Exemplo de integração com o single-sign on." border="false":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Não: tire os usuários da conversa
 
@@ -189,7 +189,7 @@ Extensões de mensagens nem sempre são fáceis de encontrar. Inclua capturas de
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemplo de templating." border="false":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Fazer: permitir que o Teams manipular parte do design funcione, se possível
 
@@ -197,7 +197,7 @@ Se fizer sentido para seus casos de uso, considere a criação de uma extensão 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemplo sobre como manipular o trabalho de design." border="false":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Não: incorporar seu aplicativo inteiro em um módulo de tarefa
 
@@ -210,7 +210,7 @@ Se a extensão de mensagens exigir comandos de ação, mantenha o módulo de tar
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemplo sobre temas." border="false":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Fazer: tirar proveito dos tokens de cores do Teams
 
@@ -218,7 +218,7 @@ Cada tema do Teams tem seu próprio esquema de cores. Para lidar com alteraçõe
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Exemplo em tokens de cores." border="false":::
 
 #### <a name="dont-hard-code-color-values"></a>Não: Valores de cor de código rígidos
 
@@ -227,11 +227,11 @@ Se você não usar tokens de cores do Teams, seus designs serão menos escaloná
    :::column-end:::
 :::row-end:::
 
-### <a name="actions"></a>Ações
+### <a name="actions"></a>Actions
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Exemplo de ações." border="false":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Do: Incluir comandos de ação que fazem sentido no contexto
 
@@ -239,7 +239,7 @@ As ações de mensagem devem estar relacionadas ao que um usuário está olhando
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Exemplo mostrando uma prática prática de extensão de mensagens." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Exemplo em comandos de ação." border="false":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>Não: inclua comandos de ações que não sejam contextuais
 
@@ -262,9 +262,9 @@ Você pode fazer com que os usuários pressionem uma tecla ou selecionem um bot�
 
 Por exemplo, antes de um usuário escrever qualquer coisa na caixa de pesquisa, exempli-lo pela última vez em seu aplicativo. É possível que eles queiram inserir esse conteúdo em suas conversas.
 
-## <a name="validate-your-design"></a>Validar seu design
+## <a name="validate-your-design"></a>Valide o seu design
 
-Se você planeja publicar seu aplicativo no AppSource, deve entender os problemas de design que normalmente causam falha nos aplicativos durante o envio.
+Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
 
 > [!div class="nextstepaction"]
-> [Verificar diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

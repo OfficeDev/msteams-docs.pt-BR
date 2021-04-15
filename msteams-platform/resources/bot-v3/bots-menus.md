@@ -1,34 +1,35 @@
 ---
-title: Adicionar um menu de bot
+title: Adicionar um menu bot
 description: Descreve como criar menus para bots no Microsoft Teams
-keywords: criação de menus de bots do teams
+keywords: Criação de menus de bots do teams
+ms.topic: how-to
 ms.date: 05/20/2019
-ms.openlocfilehash: 36a224dc21cccc5fcd1047e45e3d749e7ca19ea7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3623d85c1531b9942633af940c5e41ac1c574441
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672490"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696140"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Adicionar um menu de bot no Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Para ajudar a descoberta e a treinar os usuários sobre a funcionalidade de seu bot, agora você pode adicionar menus que surgem sempre que o usuário interage com seu bot. O menu mostrará o texto do comando e também fornecerá texto de ajuda, como um exemplo de uso ou uma descrição do objetivo do comando.
+Para ajudar a descoberta e ajudar a instruir os usuários sobre a funcionalidade do bot, agora você pode adicionar menus que aparecerão sempre que o usuário interagir com seu bot. O menu mostrará o texto do comando e também fornecerá texto de ajuda, como um exemplo de uso ou descrição da finalidade do comando.
 
 ![Captura de tela do menu bot](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-Quando um usuário seleciona um item de menu, a sequência de comandos é inserida na caixa de texto para auxiliar na conclusão do usuário da mensagem do bot.
+Quando um usuário seleciona um item de menu, a cadeia de caracteres de comando é inserida na caixa de texto para ajudar na conclusão do usuário da mensagem bot.
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>Suporte ao menu do bot no aplicativo móvel do teams
+## <a name="bot-menu-support-on-teams-mobile-app"></a>Suporte ao menu bot no aplicativo móvel do Teams
 > [!NOTE] 
-> Menus de bot não são exibidos em dispositivos móveis
+> Os menus bot não são exibidos em dispositivos móveis
 
 ## <a name="app-manifest"></a>Manifesto do aplicativo
 
-Para criar um menu de bot, adicione um [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) novo objeto ao manifesto do seu aplicativo na seção bot. Você pode declarar menus individuais com comandos separados para cada escopo que seu bot suporta`personal`( `groupChat` ou `team`) cada menu oferece suporte para até 10 comandos.
+Para criar um menu bot, adicione um novo objeto ao [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) manifesto do aplicativo na seção bot. Você pode declarar menus individuais com comandos separados para cada escopo que seu bot oferece suporte ( , ou ) Cada menu dá suporte `personal` `groupChat` a até `team` 10 comandos.
 
-### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Trecho de manifesto-menu único para ambos os escopos
+### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Trecho de manifesto - menu único para ambos os escopos
 
 ```json
 {
@@ -72,7 +73,7 @@ Para criar um menu de bot, adicione um [`commandLists`](~/resources/schema/manif
 }
 ```
 
-### <a name="manifest-excerpt---separate-menu-per-scope"></a>Trecho de manifesto-menu separado por escopo
+### <a name="manifest-excerpt---separate-menu-per-scope"></a>Trecho de manifesto - menu separado por escopo
 
 ```json
 {
@@ -116,6 +117,6 @@ Para criar um menu de bot, adicione um [`commandLists`](~/resources/schema/manif
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
-* Mantenha-o simples: o menu bot é destinado a apresentar os principais recursos do bot.
-* Mantenha-o em breve: as opções de menu não devem ser extremamente longas e instruções de linguagem natural complexas-elas devem ser comandos simples.
-* Sempre disponível: as ações/comandos do menu do bot devem ser sempre invocados, independentemente do estado da conversa ou da caixa de diálogo em que o bot está.
+* Mantenha-o simples: o menu bot deve apresentar os principais recursos do bot.
+* Resumindo: as opções de menu não devem ser instruções de linguagem natural extremamente longas e complexas - devem ser comandos simples.
+* Sempre disponível: ações/comandos de menu bot devem ser sempre invocados, independentemente do estado da conversa ou da caixa de diálogo em que o bot está.

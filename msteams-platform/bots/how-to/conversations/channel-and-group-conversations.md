@@ -1,50 +1,54 @@
 ---
-title: Conversas em grupo e canal com um bot
+title: Conversas de canal e grupo com um bot
 author: clearab
-description: Como enviar, receber e manipular mensagens para um bot em um canal ou chat de grupo.
-ms.topic: overview
+description: Como enviar, receber e manipular mensagens para um bot em um chat de canal ou grupo.
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8a9a58208fff5cc2fe376fcb9932bad6ac2bf36f
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797838"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696364"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversas de canal e chat em grupo com um bot do Microsoft Teams
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversas de chat de canal e grupo com um bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Ao adicionar o ou escopo ao seu bot, ele pode estar disponível para ser instalado em um chat de equipe `teams` `groupchat` ou grupo. Isso permite que todos os membros da conversa interajam com seu bot. Uma vez instalado, ele também terá acesso a metadados sobre a conversa, como a lista de membros da conversa e quando instalado em detalhes de uma equipe sobre essa equipe e a lista completa de canais.
+Para instalar o bot do Microsoft Teams em um chat de equipe ou grupo, adicione `teams` o escopo ou ao `groupchat` bot. Isso permite que todos os membros da conversa interajam com o seu bot. Depois que o bot é instalado, ele tem acesso a metadados sobre a conversa, como a lista de membros da conversa. Além disso, quando ele é instalado em uma equipe, o bot tem acesso a detalhes sobre essa equipe e a lista completa de canais.
 
-Os bots em um grupo ou canal só recebem mensagens quando são mencionados (@botname), eles não recebem nenhuma outra mensagem enviada para a conversa.
+Os bots em um grupo ou canal só recebem mensagens quando são mencionados `@botname` . Eles não recebem outras mensagens enviadas para a conversa.
 
 > [!NOTE]
-> O bot deve ser @mentioned diretamente. Seu bot não receberá uma mensagem quando a equipe ou o canal for mencionado, ou quando alguém responder a uma mensagem do seu bot sem @mentioning-la.
+> O bot deve estar `@mentioned` diretamente. Seu bot não recebe uma mensagem quando a equipe ou canal é mencionado ou quando alguém responde a uma mensagem de seu bot sem @mentioning-la.
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
-Veja como projetar [conversas de bot em canais e chats.](~/bots/design/bots.md)
+Ao contrário de chats pessoais, em chats em grupo e canais, seu bot deve fornecer uma introdução rápida. Você deve seguir essas e mais diretrizes de design de bot. Para obter mais informações sobre como projetar bots no Teams, consulte como projetar conversas [de bot em canais e chats.](~/bots/design/bots.md)
 
-## <a name="creating-new-conversation-threads"></a>Criando novos threads de conversa
+Agora, você pode criar novos threads de conversa e gerenciar facilmente diferentes conversas em canais.
 
-Quando o bot é instalado em uma equipe, às vezes pode ser necessário criar um novo thread de conversa em vez de responder a um já existente. Essa é uma forma de mensagens [proativas.](~/bots/how-to/conversations/send-proactive-messages.md)
+## <a name="create-new-conversation-threads"></a>Criar novos threads de conversa
 
-## <a name="working-with-mentions"></a>Trabalhar com menções
+Quando o bot é instalado em uma equipe, você deve criar um novo thread de conversa em vez de responder a um existente. Às vezes, é difícil diferenciar entre duas conversas. Se a conversa for encadeada, é mais fácil organizar e gerenciar diferentes conversas em canais. Essa é uma forma de mensagens [proativas.](~/bots/how-to/conversations/send-proactive-messages.md)
 
-Cada mensagem para o bot de um grupo ou canal conterá um @mention com seu próprio nome no texto da mensagem, portanto, você precisará garantir que a análise de mensagens lidará com isso. Seu bot também pode recuperar outros usuários mencionados em uma mensagem e adicionar menções a qualquer mensagem enviada.
+Em seguida, você pode recuperar menções usando o objeto e adicionar menções às `entities` suas mensagens usando o `Mention` objeto.
 
-### <a name="stripping-mentions-from-message-text"></a>Menções de remoção do texto da mensagem
+## <a name="work-with-mentions"></a>Trabalhar com menções
 
-Você pode achar necessário retirar a @mentions do texto da mensagem que seu bot recebe.
+Cada mensagem para seu bot de um grupo ou canal contém um @mention com seu nome no texto da mensagem. Verifique se a análise de mensagens lida com @mention. Seu bot também pode recuperar outros usuários mencionados em uma mensagem e adicionar menções a todas as mensagens enviadas.
 
-### <a name="retrieving-mentions"></a>Recuperando menções
+Você também deve retirar o @mentions do conteúdo da mensagem que seu bot recebe.
 
-As menções são retornadas no objeto na carga e contêm a ID exclusiva do usuário e, na maioria dos casos, o nome `entities` do usuário mencionado. O texto da mensagem também incluirá a menção como `<at>@John Smith<at>` . No entanto, você não deve confiar no texto na mensagem para recuperar qualquer informação sobre o usuário; é possível para a pessoa que está enviando a mensagem alterá-la. Em vez disso, use o `entities` objeto.
+### <a name="retrieve-mentions"></a>Recuperar menções
+
+As menções são retornadas no objeto em carga e contêm a ID exclusiva do usuário e o `entities` nome do usuário mencionado. O texto da mensagem também inclui a menção, como `<at>@John Smith<at>` . No entanto, não confie no texto na mensagem para recuperar qualquer informação sobre o usuário. É possível que a pessoa que envia a mensagem a altere. Portanto, use o `entities` objeto.
 
 Você pode recuperar todas as menções na mensagem chamando a função no SDK do Construtor de `GetMentions` Bots, que retorna uma matriz de `Mention` objetos.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de recuperação de menções:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +66,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -135,18 +139,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="adding-mentions-to-your-messages"></a>Adicionando menções às suas mensagens
+### <a name="add-mentions-to-your-messages"></a>Adicionar menções às suas mensagens
 
-Seu bot pode mencionar outros usuários em mensagens postadas em canais. Para fazer isso, sua mensagem deve fazer o seguinte:
+Seu bot pode mencionar outros usuários em mensagens postadas em canais.
 
-O `Mention` objeto tem duas propriedades que você precisará definir:
+O `Mention` objeto tem duas propriedades que você deve definir usando o seguinte:
 
-* Incluir <at>@username</at> no texto da mensagem
-* Incluir o objeto mention dentro da coleção de entidades
+* Inclua <at>@username</at> no texto da mensagem.
+* Inclua o objeto mention dentro da coleção de entidades.
 
-O SDK da Estrutura do Bot fornece métodos e objetos auxiliares para facilitar a construção da menção.
+O SDK da Estrutura de Bot fornece métodos e objetos auxiliares para criar menções.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+O código a seguir mostra um exemplo de adição de menções às suas mensagens:
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +170,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -185,7 +191,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-O campo no objeto na matriz deve corresponder `text` exatamente a uma parte do campo de `entities`  `text` mensagem. Se não o fizer, a menção será ignorada.
+O `text` campo no objeto na matriz deve corresponder a uma parte do campo de `entities` `text` mensagem. Se isso não acontecer, a menção será ignorada.
 
 ```json
 {
@@ -244,23 +250,29 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-## <a name="sending-a-message-on-installation"></a>Enviar uma mensagem na instalação
+Agora você pode enviar uma mensagem de introdução quando o bot for instalado pela primeira vez ou adicionado a um grupo ou equipe.
 
-Quando seu bot é adicionado pela primeira vez ao grupo ou equipe, pode ser útil enviar uma mensagem apresentando-o. A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los. Você vai querer se inscrever no `conversationUpdate` evento, com `teamMemberAdded` o eventType.  Como o evento é enviado quando um novo membro da equipe é adicionado, você precisa verificar se o novo membro adicionado é o bot. Confira [Enviar uma mensagem de boas-vindas para um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md) para obter mais detalhes.
+## <a name="send-a-message-on-installation"></a>Enviar uma mensagem na instalação
 
-Você também pode querer enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, você pode obter a lista de participação da equipe e enviar uma mensagem direta a cada usuário.
+Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, uma mensagem de introdução deve ser enviada. A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los. Você deve se inscrever no `conversationUpdate` evento com `teamMemberAdded` o eventType.  O evento é enviado quando qualquer novo membro da equipe é adicionado. Verifique se o novo membro adicionado é o bot. Para obter mais informações, consulte [enviando uma mensagem de boas-vindas a um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Não é recomendável enviar uma mensagem nas seguintes situações:
+Envie uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, receba a lista de equipe e envie uma mensagem direta a cada usuário.
 
-* A equipe é grande (obviamente inentente, mas, por exemplo, maior do que 100 membros). Seu bot pode ser visto como "spammy" e a pessoa que o adicionou poderá receber reclamações, a menos que você comunique claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.
-* Seu bot é mencionado pela primeira vez em um grupo ou canal (em vez de ser adicionado pela primeira vez a uma equipe)
-* Um grupo ou canal é renomeado
-* Um membro da equipe é adicionado a um grupo ou canal
+Não envie uma mensagem nos seguintes casos:
 
-## <a name="learn-more"></a>Saiba mais
-
-Seu bot tem acesso a informações adicionais sobre o chat em grupo ou a equipe em que está instalado. Confira [o contexto de equipes](~/bots/how-to/get-teams-context.md) para APIs adicionais disponíveis para seu bot.
-
-Também há eventos adicionais que seu bot pode se inscrever e responder. Confira [se inscrever em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md) para saber como.
+* A equipe é grande, por exemplo, maior do que 100 membros. Seu bot pode ser visto como spam e a pessoa que o adicionou pode receber reclamações. Você deve comunicar claramente a proposta de valor do bot a todos que veem a mensagem de boas-vindas.
+* Seu bot é mencionado pela primeira vez em um grupo ou canal em vez de ser adicionado pela primeira vez a uma equipe.
+* Um grupo ou canal é renomeado.
+* Um membro da equipe é adicionado a um grupo ou canal.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="see-also"></a>Confira também
+
+> [!div class="nextstepaction"]
+> [Obter contexto de equipes](~/bots/how-to/get-teams-context.md).
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

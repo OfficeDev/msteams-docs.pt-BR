@@ -1,77 +1,78 @@
 ---
-title: Formato de mensagem do bot
-description: Descreve os detalhes da formatação das mensagens de bot
-keywords: canais de cenários de equipe mensagem de bot de conversa
+title: Formato de mensagem bot
+description: Descreve os detalhes da formatação para mensagens bot
+keywords: teams scenarios channels conversation bot message
+ms.topic: reference
 ms.date: 05/20/2019
-ms.openlocfilehash: eb0d0303d2b414ff84beab73055be5f057fff11c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672934"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696616"
 ---
 # <a name="message-formatting-for-bots"></a>Formatação de mensagens para bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Você pode definir a propriedade [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) opcional para controlar como o conteúdo de texto da mensagem é renderizado.
+Você pode definir a propriedade opcional para controlar como o conteúdo de texto da mensagem [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) é renderizado.
 
-O Microsoft Teams suporta as seguintes opções de formatação:
+O Microsoft Teams dá suporte às seguintes opções de formatação:
 
 | Valor TextFormat | Descrição |
 | --- | --- |
-| comuns | O texto deve ser tratado como um texto bruto sem formatação aplicada |
-| redução | O texto deve ser tratado como formatação de redução e renderizado no canal, conforme apropriado; consulte [Formatando o conteúdo de texto](#formatting-text-content) para estilos suportados |
-| XML | O texto é marcação XML simples; consulte [Formatando o conteúdo de texto](#formatting-text-content) para estilos suportados |
+| plain | O texto deve ser tratado como texto bruto sem formatação aplicada. |
+| Markdown | O texto deve ser tratado como formatação markdown e renderizado no canal conforme apropriado; consulte [Formatando conteúdo de texto](#formatting-text-content) para estilos com suporte |
+| xml | O texto é uma marcação XML simples; consulte [Formatando conteúdo de texto](#formatting-text-content) para estilos com suporte |
 
-## <a name="formatting-text-content"></a>Formatando conteúdo de texto
+## <a name="formatting-text-content"></a>Formatação de conteúdo de texto
 
-O Microsoft Teams oferece suporte a um subconjunto de marcas de formatação de redução e XML (HTML).
+O Microsoft Teams dá suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
 
 Atualmente, as seguintes limitações se aplicam:
 
-* As mensagens somente texto não oferecem suporte à formatação de tabela
-* Os cartões ricos dão suporte à formatação somente na propriedade Text, e não nas propriedades Title ou subtítulo
-* Os cartões ricos não oferecem suporte à redução ou formatação de tabela
+* Mensagens somente texto não suportam formatação de tabela
+* Os cartões rich suportam formatação somente na propriedade text, não nas propriedades title ou subtitle
+* Os cartões rich não suportam formatação de tabela ou markdown
 
-## <a name="cross-platform-support"></a>Suporte a várias plataformas
+## <a name="cross-platform-support"></a>Suporte entre plataformas
 
-Para garantir que a formatação funcione em todas as plataformas compatíveis com o Microsoft Teams, lembre-se de que alguns estilos não são suportados atualmente em todas as plataformas.
+Para garantir que sua formatação funcione em todas as plataformas com suporte do Microsoft Teams, esteja ciente de que alguns estilos atualmente não têm suporte em todas as plataformas.
 
-| Estilo                     | Mensagens somente de texto | Cartões avançados (somente XML) |
+| Style                     | Mensagens somente texto | Rich cards (somente XML) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
-| cabeçalho (níveis 1&ndash;3) | ✖ | ✔ |
-| tachado             | ✖ | ✔ |
-| régua horizontal           | ✖ | ✖ |
-| lista não ordenada            | ✖ | ✔ |
+| header (níveis 1 &ndash; 3) | ✖ | ✔ |
+| strikethrough             | ✖ | ✔ |
+| regra horizontal           | ✖ | ✖ |
+| lista semordenagem            | ✖ | ✔ |
 | lista ordenada              | ✖ | ✔ |
 | texto pré-formatado         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
+| hiperlink                 | ✔ | ✔ |
 | link de imagem                | ✔ | ✖ |
 
 ## <a name="support-by-individual-platform"></a>Suporte por plataforma individual
 
 O suporte para formatação de texto varia de acordo com o tipo de mensagem e por plataforma.
 
-### <a name="text-only-messages"></a>Mensagens somente de texto
+### <a name="text-only-messages"></a>Mensagens somente texto
 
-| Estilo                     | Desktop | iOS | Android |
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |
-| cabeçalho (níveis 1&ndash;3) | ✖ | ✖ | ✖ |
-| tachado             | ✔ | ✔ | ✖ |
-| régua horizontal           | ✖ | ✖ | ✖ |
-| lista não ordenada            | ✔ | ✖ | ✖ |
+| header (níveis 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| strikethrough             | ✔ | ✔ | ✖ |
+| regra horizontal           | ✖ | ✖ | ✖ |
+| lista semordenagem            | ✔ | ✖ | ✖ |
 | lista ordenada              | ✔ | ✖ | ✖ |
 | texto pré-formatado         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
+| hiperlink                 | ✔ | ✔ | ✔ |
 | link de imagem                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>Placa
+### <a name="cards"></a>Cartões
 
-Veja [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md) para suporte em cartões.
+Consulte [Formatação de Cartão para](~/task-modules-and-cards/cards/cards-format.md) suporte em cartões.

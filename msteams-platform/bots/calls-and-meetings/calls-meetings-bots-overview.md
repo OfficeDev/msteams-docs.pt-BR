@@ -1,47 +1,109 @@
 ---
-title: Bots de Chamadas e Reuniões Online
+title: Bots de chamadas e reuniões online
 description: Saiba como seus aplicativos do Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online.
+ms.topic: conceptual
 keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: 0fcf420ba8d698404d00bb2cab3d61cab2245f40
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: cac9e31c39f35aeb3ea72e5e8964441f0a1c38f5
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034639"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697100"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
-Com a adição de APIs do Microsoft Graph para chamadas e reuniões [online,](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)os aplicativos do Microsoft Teams agora podem interagir com os usuários de maneiras ricas usando voz e vídeo. Essas APIs permitem adicionar novos recursos, como ivr (resposta de voz interativa), controle de chamada e acesso a fluxos de áudio e/ou vídeo em tempo real para chamadas e reuniões, incluindo o compartilhamento de área de trabalho e aplicativos.
+> [!NOTE]
+> Atualmente, o suporte para chamadas e bots de reunião online não é suportado na plataforma móvel do Microsoft Teams.
 
-Para usar essas APIs do Microsoft Graph em um aplicativo do Microsoft Teams, crie um bot e especifique algumas informações adicionais e permissões que descreveremos em outro lugar, mas primeiro, é importante compreender alguns conceitos, terminologia e convenções principais:
+Os bots podem interagir com chamadas e reuniões do Teams usando compartilhamento de voz, vídeo e tela em tempo real. Com [APIs do Microsoft Graph para](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)chamadas e reuniões online, os aplicativos do Teams agora podem interagir com os usuários usando voz e vídeo para aprimorar a experiência. Essas APIs permitem adicionar os seguintes novos recursos:
 
-* **Chamadas de áudio/vídeo.** As chamadas no Teams podem ser puramente áudio ou áudio+vídeo. Por uma questão de brevidade, não dizemos "chamada de áudio/vídeo" em todos os lugares; apenas dizemos "chamada".
-* **Tipos de chamada.** As chamadas são ponto a ponto (entre uma pessoa e seu bot) ou multiparte (seu bot e duas ou mais pessoas em uma chamada de grupo).
-  ![CallingTypes ](~/assets/images/calls-and-meetings/call-types.png) :
-  * Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multipartidária existente (embora a última ainda não tenha habilitada na interface do usuário do Microsoft Teams).
-  
-  > [!NOTE]
-  > No momento, as chamadas iniciadas pelo usuário para um bot não são suportadas na plataforma móvel do Microsoft Teams. 
-  
-  * As permissões do Microsoft Graph não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot, mas são necessárias permissões adicionais para o bot participar de uma chamada de várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
-  * Uma chamada pode começar como ponto a ponto e escalonar para várias partes. Seu bot pode iniciar essa escalada convidando outras pessoas, desde que o bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas de grupo e um participante adiciona outra parte, seu bot será descartado da chamada.
-* **Sinalização.** Há dois tipos de sinais : chamada de entrada e chamada:
-  * Para receber uma chamada de entrada, especifique um ponto de extremidade nas configurações do bot; esse ponto de extremidade recebe uma notificação quando uma chamada de entrada chega. Você pode atender a chamada, rejeitá-la ou redirecioná-la para algum lugar ou outra pessoa.
-  ![Tipos de chamada](~/assets/images/calls-and-meetings/call-handling.png)
-  * Quando um bot está em uma chamada, há APIs para muting e unmuting si mesmo e para iniciar/parar o compartilhamento de conteúdo de vídeo/área de trabalho com os outros participantes.
-  * O bot também pode acessar a lista de participantes, convidar novos participantes e silenciá-los.
-* **Chamadas e reuniões online.** Na perspectiva de um usuário do Teams, há dois tipos de reuniões online — ad hoc e agendadas. No entanto, da perspectiva de um bot, ambos são os mesmos. Para um bot, uma reunião online é apenas uma chamada multipartidário (o conjunto de participantes) mais "coordenadas de reunião", que você pode pensar como os metadados da reunião: , associados à reunião, , e muito `botId` `chatId` `joinUrl` `startTime` / `endTime` mais.
-* **Mídia em tempo real.** Quando um bot está participando de uma chamada ou reunião online, ele deve lidar com fluxos de áudio e vídeo. Quando os usuários conversam em uma chamada, mostram a si mesmos em uma webcam ou apresentam suas telas em uma reunião, um bot "vê" isso como fluxos de áudio e/ou vídeo. Se um bot quiser dizer algo ou apresentar conteúdo de tela, isso requer um fluxo de áudio ou vídeo. Mesmo algo tão simples quanto o bot dizendo, "pressione 0 para alcançar o operador" em um cenário ivr (resposta de voz interativa) significa a reprodução de um . Arquivo WAV. Coletivamente, nos referimos a isso como mídia ou mídia em tempo _real_ (quando se refere a cenários em que a mídia deve ser processada em tempo real, em vez da reprodução de áudio/vídeo gravado anteriormente).  Historicamente, lidar com fluxos de mídia, particularmente fluxos de mídia em tempo real, tem sido extremamente complexo para desenvolvedores. A Microsoft criou a Plataforma de Mídia em tempo _real_ para lidar com esses casos de uso e para descarregar o máximo possível da "elevação pesada" tradicional do processamento de mídia em tempo real.  Quando o bot responde a uma chamada recebida, ou se junta a uma chamada nova ou existente, ele precisa informar o RealTime Media Platform como a mídia será tratada. Se você estiver criando um aplicativo IVR, poderá descarregar o processamento de áudio caro para a Microsoft. Como alternativa, se o bot exigir acesso direto a fluxos de mídia, também podemos dar suporte a esse cenário. Há os dois tipos de processamento de mídia:
-  * **Mídia hospedada pelo serviço.** Os bots se concentram no gerenciamento do fluxo de trabalho do aplicativo (por exemplo, chamadas de roteamento) e descarregam o processamento de áudio para a Plataforma de Mídia em tempo real da Microsoft. Com a mídia hospedada pelo serviço, você tem várias opções para implementar e hospedar seu bot. Um bot de mídia hospedado pelo serviço pode ser implementado como um serviço sem estado, pois ele não processa mídia localmente. Os bots de mídia hospedados pelo serviço podem usar APIs como para reprodução de um clipe de áudio, para gravar clipes de áudio ou para assinar tons `PlayPrompt` `Record` DTMF (por exemplo, saber quando um usuário pressionou 0 para alcançar o `SubscribeToTone` operador).
-  * **Mídia hospedada pelo aplicativo.** Para que um bot tenha acesso direto à mídia, ele precisa de uma permissão específica do Graph, mas depois que o bot a tiver, a Biblioteca de Mídia em tempo [real](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) e o [SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) de Chamada de Gráfico ajudam você a criar mídia rica e em tempo real, chamando bots. Um bot hospedado pelo aplicativo deve ser hospedado em um ambiente do Windows, conforme descrito em mais detalhes [aqui](./requirements-considerations-application-hosted-media-bots.md).
+* Resposta de voz interativa (IVR).
+* Controle de chamada.
+* Acesso a fluxos de áudio e vídeo em tempo real, incluindo o compartilhamento de aplicativos e área de trabalho.
 
-## <a name="further-reading"></a>Leitura posterior
+Para usar essas APIs do Graph em um aplicativo do Teams, crie um bot e especifique algumas informações e permissões adicionais.
 
-Veja mais informações sobre como criar e testar chamadas e bots de reuniões online:
+Além disso, a Plataforma de Mídia em tempo real permite que os bots interajam com chamadas e reuniões do Teams usando compartilhamento de voz, vídeo e tela em tempo real. Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot regular do Microsoft Teams com poucos recursos extras usados para registrar o bot.
 
-* [Referência da API do Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-* [Aplicativos de exemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md) e permissões do Microsoft Graph para [bots de](./registering-calling-bot.md#add-microsoft-graph-permissions) chamadas e reuniões online
-* [Como desenvolver bots de reunião online e de chamada no computador local](./debugging-local-testing-calling-meeting-bots.md)
-* [Mais informações sobre o processamento](./real-time-media-concepts.md)de mídia em tempo real e o que é necessário para dar suporte à [mídia hospedada pelo aplicativo](./requirements-considerations-application-hosted-media-bots.md)
-* [Informações técnicas sobre como lidar com notificações de chamadas de entrada](./call-notifications.md)
+O manifesto do aplicativo do Teams com duas configurações adicionais e as permissões do Graph para a ID do Microsoft App do bot e o consentimento do administrador do locatário permitem que você `supportsCalling` `supportsVideo` registre o bot. Ao registrar um bot de chamadas e reuniões para o Teams, a URL do Webhook é mencionada, que é o ponto de extremidade de webhook para todas as chamadas de entrada para seu bot. Um bot de mídia hospedado por aplicativo requer a biblioteca Microsoft.Graph.Communications.Calls.Media .NET para acessar os fluxos de mídia de áudio e vídeo, e o bot deve ser implantado em uma máquina do Windows Server ou no Sistema Operacional convidado do Windows Server (SISTEMA Operacional convidado) no Azure. Bots no Teams suportam apenas um conjunto específico de formatos de mídia para conteúdo de áudio e vídeo.
+
+Agora, você deve entender alguns conceitos principais, terminologia e convenções.
+
+## <a name="terminologies"></a>Terminologias
+
+Os principais conceitos, terminologia e convenções a seguir orientam você pelo uso de chamadas e bots de reuniões online:
+
+* Chamadas de áudio ou vídeo
+* Tipos de chamadas
+* Sinais
+* Chamadas e reuniões online
+* Mídia em tempo real
+
+### <a name="audio-or-video-calls"></a>Chamadas de áudio ou vídeo
+
+As chamadas no Teams podem ser somente áudio ou áudio e vídeo. Em vez de chamada de áudio ou vídeo, a chamada de termo é usada.
+
+### <a name="call-types"></a>Tipos de chamadas
+
+As chamadas são ponto a ponto entre uma pessoa e seu bot ou várias partes entre seu bot e duas ou mais pessoas em uma chamada de grupo.
+
+![Tipos de chamada](~/assets/images/calls-and-meetings/call-types.png)
+
+A seguir estão os diferentes tipos de chamada e permissões necessárias para a chamada:
+
+* Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multipartidária existente. A chamada de várias partes ainda não está habilitada na interface do usuário do Teams.
+* As permissões de gráfico não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada de várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
+* Uma chamada pode começar como ponto a ponto e, eventualmente, se tornar uma chamada de várias partes. Seu bot pode iniciar chamadas de várias partes convidando outras pessoas, desde que seu bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas de grupo e se um participante adiciona outro participante à chamada, seu bot será descartado da chamada.
+
+### <a name="signals"></a>Sinais
+
+Há dois tipos de sinais, chamada de entrada e chamada. A seguir estão os diferentes recursos de sinais:
+
+* Para receber uma chamada de entrada, insira um ponto de extremidade nas configurações do bot. Esse ponto de extremidade recebe uma notificação quando uma chamada de entrada é iniciada. Você pode atender a chamada, rejeitá-la ou redirecioná-la para outra pessoa.
+
+    ![Tratamento de chamada](~/assets/images/calls-and-meetings/call-handling.png)
+
+* Quando um bot está em uma chamada, há APIs para muting e desmuting do bot e para iniciar ou parar de compartilhar conteúdo de vídeo ou área de trabalho com outros participantes.
+* O bot também pode acessar a lista de participantes, convidar novos participantes e silenciá-los.
+
+### <a name="calls-and-online-meetings"></a>Chamadas e reuniões online
+
+Na perspectiva de um usuário do Teams, há dois tipos de reuniões online, ad hoc e agendadas. Na perspectiva de um bot, ambas as reuniões online são as mesmas. Para um bot, uma reunião online é uma chamada de várias partes entre um conjunto de participantes e inclui coordenadas de reunião. As coordenadas de reunião são os metadados da reunião, incluindo , associados à `botId` `chatId` `joinUrl` reunião, ou `startTime` , e assim `endTime` por diante.
+
+### <a name="real-time-media"></a>Mídia em tempo real
+
+Quando um bot está participando de uma chamada ou reunião online, ele deve lidar com fluxos de áudio e vídeo. Quando os usuários falam em uma chamada, mostram a si mesmos em uma webcam ou apresentam suas telas em uma reunião para um bot que é mostrado como fluxos de áudio e vídeo. Se um bot quiser dizer algo tão simples quanto, pressione **0** para alcançar o operador em um cenário de resposta de voz interativa (IVR), ele requer a reprodução de um . Arquivo WAV. Coletivamente, isso é conhecido como mídia ou mídia em tempo real.
+
+A mídia em tempo real refere-se a cenários em que a mídia deve ser processada em tempo real, em vez da reprodução de áudio ou vídeo gravado anteriormente. Lidar com fluxos de mídia, particularmente fluxos de mídia em tempo real, é extremamente complexo. A Microsoft criou a Plataforma de Mídia em tempo real para lidar com esses cenários e para descarregar o máximo possível da tradicional elevação pesada do processamento de mídia em tempo real. Quando o bot atende uma chamada de entrada ou instala uma chamada nova ou existente, ele precisa dizer à Plataforma de Mídia em tempo real como a mídia é manipulada. Se você estiver criando um aplicativo IVR, poderá descarregar o processamento de áudio caro para a Microsoft. Como alternativa, se o bot exigir acesso direto a fluxos de mídia, esse cenário também será suportado. Há dois tipos de processamento de mídia:
+
+* **Mídia hospedada** pelo serviço : Os bots se concentram no gerenciamento do fluxo de trabalho do aplicativo, como roteamento de chamadas e descarregamento de processamento de áudio para a Plataforma de Mídia em tempo real da Microsoft. Com a mídia hospedada pelo serviço, você tem várias opções para implementar e hospedar seu bot. Um bot mídia hospedada pelo serviço pode ser implementado como um serviço sem estado já que não processa mídia localmente. Os bots de mídia hospedados pelo serviço podem usar as seguintes APIs:
+
+    * `PlayPrompt` para reprodução de um clipe de áudio.
+    * `Record` para gravar clipes de áudio.
+    * `SubscribeToTone` para assinar tons DTMF (dual tone multiple frequency).
+
+    Por exemplo, saber quando um usuário pressionou **0** para alcançar o operador.
+
+* **Mídia hospedada por aplicativo**: para que um bot tenha acesso direto à mídia, ele precisa de uma permissão específica do Graph. Depois que o bot tiver a permissão, a Biblioteca de Mídia em tempo [real](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)e o [SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) de chamada do Graph ajudam você a criar mídia rica e em tempo real e chamar bots. Um bot hospedado pelo aplicativo deve estar hospedado em um ambiente Windows. Para obter mais informações, consulte [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
+
+## <a name="see-also"></a>Confira também
+
+> [!div class="nextstepaction"]
+> [Referência da API do Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+> [!div class="nextstepaction"]
+> [Aplicativos de exemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+> [!div class="nextstepaction"]
+> [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md)
+> [!div class="nextstepaction"]
+> [Permissões de gráfico para chamadas e bots de reuniões online](./registering-calling-bot.md#add-graph-permissions)
+> [!div class="nextstepaction"]
+> [Como desenvolver bots de reunião online e de chamada em seu computador](./debugging-local-testing-calling-meeting-bots.md)
+> [!div class="nextstepaction"]
+> [Requisitos e considerações para bots de mídia hospedados pelo aplicativo](./requirements-considerations-application-hosted-media-bots.md)
+> [!div class="nextstepaction"]
+> [Informações técnicas sobre como lidar com notificações de chamadas de entrada](./call-notifications.md)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Chamadas e reuniões de mídia em tempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)

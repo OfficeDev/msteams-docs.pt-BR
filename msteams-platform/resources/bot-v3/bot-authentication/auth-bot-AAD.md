@@ -1,38 +1,39 @@
 ---
 title: Autenticação para bots usando o Azure Active Directory
-description: Descreve a autenticação do Azure AD no Microsoft Teams e como usá-la em seus bots
-keywords: AAD de bots de autenticação de equipes
+description: Descreve a autenticação do Azure AD no Teams e como usá-la em seus bots
+keywords: bots de autenticação do teams AAD
+ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 268af02c51b21b65214bce4673b54ac564a125ae
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f772ef84282c3b8e1ee3e6aa96b47bf12caaa4dd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672758"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696679"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar um usuário em um bot do Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Há muitos serviços que você pode desejar usar dentro do seu aplicativo do Microsoft Teams e a maioria desses serviços requer autenticação e autorização para obter acesso ao serviço. Os serviços incluem o Facebook, o Twitter e o Microsoft Teams. Os usuários de Teams têm informações de perfil de usuário armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph. Este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
+Há muitos serviços que você pode querer consumir dentro do seu aplicativo do Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e, claro, o Teams. Os usuários do Teams têm informações de perfil de usuário armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph. Este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
 
-O OAuth 2,0 é um padrão aberto para autenticação usada pelo Azure AD e muitos outros provedores de serviços. A compreensão do OAuth 2,0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos abaixo usam o fluxo de concessão implícita do OAuth 2,0 com o objetivo de eventualmente ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
+OAuth 2.0 é um padrão aberto para autenticação usado pelo Azure AD e muitos outros provedores de serviços. Noções básicas sobre o OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos a seguir usam o fluxo de Concessão Implícita OAuth 2.0 com o objetivo de, eventualmente, ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
 
-O fluxo de autenticação descrito neste artigo é muito semelhante ao das guias, exceto pelo fato de que as guias podem usar o fluxo de autenticação baseado na Web, e os bots exigem que a autenticação seja conduzida a partir do código. Os conceitos neste artigo também serão úteis na implementação da autenticação da plataforma móvel.
+O fluxo de autenticação descrito neste artigo é muito semelhante ao das guias, exceto que as guias podem usar o fluxo de autenticação baseado na Web, e os bots exigem que a autenticação seja controlada do código. Os conceitos neste artigo também serão úteis ao implementar a autenticação da plataforma móvel.
 
-Para obter uma visão geral do fluxo de autenticação para bots, consulte o tópico [fluxo de autenticação em bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
+Para uma visão geral do fluxo de autenticação para bots, consulte o tópico [Fluxo de autenticação em bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
 ## <a name="configuring-identity-providers"></a>Configurando provedores de identidade
 
-Consulte o tópico [Configure Identity Providers](~/concepts/authentication/configure-identity-provider.md) para obter etapas detalhadas sobre como configurar URLs de redirecionamento de retorno de chamada OAuth 2,0 ao usar o Azure Active Directory como um provedor de identidade.
+Consulte o tópico [Configure identity providers for](~/concepts/authentication/configure-identity-provider.md) detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
-## <a name="initiate-authentication-flow"></a>Iniciar o fluxo de autenticação
+## <a name="initiate-authentication-flow"></a>Iniciar fluxo de autenticação
 
-O fluxo de autenticação deve ser acionado por uma ação do usuário. Você não deve abrir o pop-up de autenticação automaticamente porque isso provavelmente disparará o bloqueador de pop-ups do navegador, além de confundir o usuário.
+O fluxo de autenticação deve ser disparado por uma ação do usuário. Você não deve abrir o pop-up de autenticação automaticamente porque isso provavelmente disparará o bloqueador pop-up do navegador, bem como confundirá o usuário.
 
 ## <a name="add-ui-to-start-authentication"></a>Adicionar interface do usuário para iniciar a autenticação
 
-Adicione interface do usuário ao bot para permitir que o usuário entre quando necessário. Isso é feito a partir de um cartão de miniatura, no TypeScript:
+Adicione a interface do usuário ao bot para permitir que o usuário entre quando necessário. Aqui, ele é feito a partir de um cartão Thumbnail, em TypeScript:
 
 ```typescript
 // Show prompt of options
@@ -55,19 +56,19 @@ protected async promptForAction(session: builder.Session): Promise<void> {
 }
 ```
 
-Três botões foram adicionados ao cartão herói: entrar, mostrar perfil e sair.
+Três botões foram adicionados ao Cartão de Herói: Entrar, Mostrar Perfil e Sair.
 
-## <a name="sign-the-user-in"></a>Inscrever o usuário em
+## <a name="sign-the-user-in"></a>Entrar no usuário
 
-Por causa da validação que deve ser executada por motivos de segurança e o suporte para as versões móveis do Teams, o código não é mostrado aqui, mas [aqui está um exemplo de código que inicia o processo quando o usuário pressiona o botão entrar.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195)..
+Devido à validação que deve ser executada por motivos de segurança e o suporte para as versões móveis do Teams, o código não é mostrado aqui, mas aqui está um exemplo do código que inicia o processo quando o usuário pressiona o botão [Entrar.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195).
 
-A validação e o suporte móvel são explicados no [fluxo de autenticação do tópico em bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
+A validação e o suporte móvel são explicados no tópico [Fluxo de autenticação em bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
-Certifique-se de adicionar o domínio de sua URL de redirecionamento de autenticação à [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) seção do manifesto. Caso contrário, o pop-up de logon não será exibido.
+Certifique-se de adicionar o domínio da URL de redirecionamento de autenticação à [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) seção do manifesto. Caso não o faça, o pop-up de logon não aparecerá.
 
 ## <a name="showing-user-profile-information"></a>Mostrando informações de perfil de usuário
 
-Embora obter um token de acesso seja difícil devido a todas as transições de frente e para trás em diferentes sites e os problemas de segurança que devem ser resolvidos, quando você tiver um token, obter informações do Azure Active Directory é simples. O bot faz uma chamada para o `me` ponto de extremidade do gráfico com o token de acesso. O Graph responde com as informações do usuário para a pessoa que fez logon. As informações da resposta são usadas para criar um cartão de bot e enviados.
+Embora a obtenção de um token de acesso seja difícil devido a todas as transições de ida e volta em diferentes sites e os problemas de segurança que devem ser resolvidos, depois de ter um token, obter informações do Azure Active Directory é simples. O bot faz uma chamada para o `me` ponto de extremidade graph com o token de acesso. O Graph responde com as informações do usuário para a pessoa que fez logor. As informações da resposta são usadas para construir um cartão de bot e enviadas.
 
 ```typescript
 // Show user profile
@@ -102,7 +103,7 @@ public async getProfileAsync(accessToken: string): Promise<any> {
 }
 ```
 
-Se o usuário não estiver conectado, ele será solicitado a fazê-lo.
+Se o usuário não estiver assinado, ele será solicitado a fazer isso.
 
 ## <a name="sign-the-user-out"></a>Cancelar a inscrição do usuário
 
@@ -122,6 +123,6 @@ private async handleLogout(session: builder.Session): Promise<void> {
 
 ## <a name="other-samples"></a>Outros exemplos
 
-Para ver o código de exemplo que mostra o processo de autenticação do bot, confira:
+Para um código de exemplo que mostra o processo de autenticação do bot, consulte:
 
 * [Exemplo de autenticação de bot do Microsoft Teams](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)

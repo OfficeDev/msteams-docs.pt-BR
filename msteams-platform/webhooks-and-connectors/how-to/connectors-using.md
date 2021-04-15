@@ -4,12 +4,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Priority
 keywords: conector do o365 no teams
-ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382328"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696014"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -307,7 +307,7 @@ Os limites de taxa de aplicativos controlam o tráfego que um conector ou um web
 
 *Confira também* [Conectores do Office 365 — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
-Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Siga as [práticas recomendadas](../../bots/how-to/rate-limit.md#best-practices) para evitar atingir os limites de taxa.
+Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Referir [Respostas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar atingir os limites da taxa.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

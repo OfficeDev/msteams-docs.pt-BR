@@ -1,76 +1,89 @@
 ---
-title: Formatar suas mensagens de bot
+title: Formatar suas mensagens bot
 author: clearab
-description: Adicionar formatação avançada às suas mensagens de bot
-ms.topic: overview
+description: Adicionar formatação rica às mensagens de bot
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a11d01233481371c66562e0fa27ab805b06e9391
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672597"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697001"
 ---
-# <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
+# <a name="format-your-bot-messages"></a>Formatar suas mensagens bot
 
-Você pode definir a propriedade [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) opcional para controlar como o conteúdo de texto da mensagem é renderizado.
+A formatação de mensagens permite que você traga o melhor em mensagens bot. Você pode formatar suas mensagens bot para incluir cartões rich que são anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
 
-O Microsoft Teams suporta as seguintes opções de formatação:
+## <a name="format-text-content"></a>Formatar conteúdo de texto
 
-| Valor TextFormat | Descrição |
+Para formatar suas mensagens bot, você pode definir a propriedade opcional para controlar como o conteúdo de texto da mensagem bot [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) é renderizado.
+
+O Microsoft Teams dá suporte às seguintes opções de formatação:
+
+| `TextFormat` value | Descrição |
 | --- | --- |
-| comuns | O texto deve ser tratado como um texto bruto sem formatação aplicada.|
-| redução | O texto deve ser tratado como formatação de redução e renderizado no canal, conforme apropriado. *Confira* [Formatando o conteúdo de texto](#formatting-text-content) para os estilos com suporte. |
-| XML | O texto é marcação XML simples. *Confira* [Formatando o conteúdo de texto](#formatting-text-content) para os estilos com suporte. |
+| plain | O texto deve ser tratado como texto bruto sem formatação aplicada.|
+| Markdown | O texto deve ser tratado como formatação de marcação e renderizado no canal conforme apropriado. |
+| xml | O texto é uma marcação XML simples. |
 
-## <a name="formatting-text-content"></a>Formatando conteúdo de texto
+O Teams dá suporte a um subconjunto de marcas de marcação e XML ou formatação HTML.
 
-O Microsoft Teams oferece suporte a um subconjunto de marcas de formatação de redução e XML (HTML).
+Atualmente, as seguintes limitações se aplicam à formatação:
 
-Atualmente, as seguintes limitações se aplicam:
+* As mensagens somente texto não suportam formatação de tabela.
+* Os cartões rich suportam a formatação somente na propriedade text, não nas propriedades title ou subtitle.
+* Os cartões rich não suportam marcação ou formatação de tabela.
 
-* As mensagens somente texto não oferecem suporte à formatação de tabela.
-* Os cartões ricos dão suporte à formatação somente na propriedade Text, e não nas propriedades Title ou subtítulo.
-* Os cartões avançados não oferecem suporte para redução ou formatação de tabela.
+Depois de formatar o conteúdo de texto, certifique-se de que sua formatação funcione em todas as plataformas com suporte do Microsoft Teams.
 
-## <a name="cross-platform-support"></a>Suporte a várias plataformas
+## <a name="cross-platform-support"></a>Suporte entre plataformas
 
-Para garantir que a formatação funcione em todas as plataformas compatíveis com o Microsoft Teams, lembre-se de que alguns estilos não são suportados atualmente em todas as plataformas.
+Atualmente, alguns estilos não têm suporte em todas as plataformas. A tabela a seguir fornece uma lista de estilos e quais desses estilos são suportados em mensagens somente texto e cartões rich:
 
-| Estilo                     | Mensagens somente de texto | Cartões avançados (somente XML) |
+| Style                     | Mensagens somente texto | Rich cards - somente XML |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| cabeçalho (níveis 1&ndash;3) | ✖ | ✔ |
-| tachado             | ✖ | ✔ |
-| régua horizontal           | ✖ | ✖ |
-| lista não ordenada            | ✖ | ✔ |
-| lista ordenada              | ✖ | ✔ |
-| texto pré-formatado         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
-| link de imagem                | ✔ | ✖ |
+| Negrito                      | ✔ | ✖ |
+| Itálico                    | ✔ | ✔ |
+| Header (níveis 1 &ndash; 3) | ✖ | ✔ |
+| Tachado             | ✖ | ✔ |
+| Régua horizontal           | ✖ | ✖ |
+| Lista não ordenada            | ✖ | ✔ |
+| Lista ordenada              | ✖ | ✔ |
+| Texto pré-formatado         | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ |
+| Hiperlink                 | ✔ | ✔ |
+| Link de imagem                | ✔ | ✖ |
+
+Depois de verificar o suporte entre plataformas, verifique se o suporte por plataformas individuais também está disponível.
 
 ## <a name="support-by-individual-platform"></a>Suporte por plataforma individual
 
-O suporte para formatação de texto varia de acordo com o tipo de mensagem e por plataforma.
+O suporte para formatação de texto varia de acordo com o tipo de mensagem e plataforma.
 
-### <a name="text-only-messages"></a>Mensagens somente de texto
+### <a name="text-only-messages"></a>Mensagens somente texto
 
-| Estilo                     | Desktop | iOS | Android |
+A tabela a seguir fornece uma lista de estilos e quais desses estilos são suportados na área de trabalho, iOS e Android:
+
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| cabeçalho (níveis 1&ndash;3) | ✖ | ✖ | ✖ |
-| tachado             | ✔ | ✔ | ✖ |
-| régua horizontal           | ✖ | ✖ | ✖ |
-| lista não ordenada            | ✔ | ✖ | ✖ |
-| lista ordenada              | ✔ | ✖ | ✖ |
-| texto pré-formatado         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
-| link de imagem                | ✔ | ✔ | ✔ |
+| Negrito                      | ✔ | ✔ | ✔ |
+| Itálico                    | ✔ | ✔ | ✔ |
+| Header (níveis 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| Tachado             | ✔ | ✔ | ✖ |
+| Régua horizontal           | ✖ | ✖ | ✖ |
+| Lista não ordenada            | ✔ | ✖ | ✖ |
+| Lista ordenada              | ✔ | ✖ | ✖ |
+| Texto pré-formatado         | ✔ | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ | ✔ |
+| Hiperlink                 | ✔ | ✔ | ✔ |
+| Link de imagem                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>Placa
+### <a name="cards"></a>Cartões
 
-Veja [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md) para suporte em cartões.
+Para suporte a cartão, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md).
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Atualizar e excluir mensagens de bot](~/bots/how-to/update-and-delete-bot-messages.md)

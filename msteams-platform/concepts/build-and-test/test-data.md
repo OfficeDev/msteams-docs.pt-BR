@@ -4,12 +4,12 @@ description: Configurar sua assinatura de programa de desenvolvedor do Office 36
 ms.topic: how-to
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634717"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696861"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao locatário de teste do Microsoft 365
 
@@ -26,7 +26,15 @@ Com uma assinatura de desenvolvedor do Microsoft 365, você pode usar seu aplica
 > [!NOTE]
 > Para qualquer locatário que você usa, você deve obter as permissões de administrador global para executar os scripts.
 
-## <a name="enable-custom-app-sideloading"></a>Habilitar o sideload de aplicativo personalizado
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>Etapa opcional para permitir o carregamento de aplicativos personalizados
+
+Por padrão, somente administradores globais ou administradores de serviço de equipes podem carregar aplicativos personalizados no catálogo de aplicativos de locatário. Você também pode permitir que todos os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste.
+
+Para habilitar essa configuração, você precisará atualizar a Política de Configuração de Aplicativo global no Portal de Administração do Teams.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>Etapa opcional para habilitar o sideload de aplicativo personalizado
 
 Habilenciar o sideload de aplicativo personalizado é opcional. Por padrão, somente administradores globais ou administradores de serviço do Teams podem carregar aplicativos personalizados no catálogo de aplicativos de locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados no Teams. Para obter mais informações, consulte [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
