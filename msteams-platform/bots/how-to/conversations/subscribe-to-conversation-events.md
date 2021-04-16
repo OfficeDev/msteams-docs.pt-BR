@@ -4,14 +4,14 @@ author: WashingtonKayaker
 description: Como trabalhar com eventos de conversa do seu bot do Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696343"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762029"
 ---
-# <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa no bot do Teams
+# <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -1060,10 +1060,10 @@ O `messageReaction` evento é enviado quando um usuário adiciona ou remove rea�
 
 | EventType       | Objeto Payload   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reações a uma mensagem de bot](#reactions-to-a-bot-message)                   | Todos   |
-| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message) | Todos   |
+| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Todos   |
+| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Todos |
 
-### <a name="reactions-to-a-bot-message"></a>Reações a uma mensagem de bot
+### <a name="reactions-added-to-bot-message"></a>Reações adicionadas à mensagem bot
 
 O código a seguir mostra um exemplo de reações a uma mensagem de bot:
 
@@ -1283,13 +1283,104 @@ async def on_reactions_removed(
 
 * * *
 
+## <a name="installation-update-event"></a>Evento de atualização de instalação
+
+O bot recebe um `installationUpdate` evento quando você instala um bot em um thread de conversa. A desinstalação do bot do thread também dispara o evento. Ao instalar um bot, o campo de ação no evento é definido para  adicionar *e,* quando o bot é desinstalado, o campo de ação é definido para  *remover*.
+ 
+> [!NOTE]
+> Quando você atualiza um aplicativo e adiciona ou remove um bot, a ação também dispara o `installationUpdate` evento. O **campo** de ação será definido como *add-upgrade* se você adicionar um bot *ou remover a atualização* se você remover um bot. 
+
+> [!IMPORTANT]
+> Os eventos de atualização de instalação estão na visualização do desenvolvedor hoje e estarão geralmente disponíveis (GA) em março de 2021. Para ver os eventos de atualização de instalação, você pode mover seu cliente do Teams para a visualização do desenvolvedor público e adicionar seu aplicativo pessoalmente ou a uma equipe ou um chat.
+
+### <a name="install-update-event"></a>Instalar evento de atualização
+Use o `installationUpdate` evento para enviar uma mensagem introdutiva do bot na instalação. Esse evento ajuda você a atender aos requisitos de privacidade e retenção de dados. Você também pode limpar e excluir dados de usuário ou thread quando o bot for desinstalado.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+
+Você também pode usar um manipulador dedicado para *adicionar* ou *remover* cenários como um método alternativo para capturar um evento.
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+* * *
+
 ## <a name="code-sample"></a>Exemplo de código
 
-A tabela a seguir fornece um exemplo de código simples que incorpora eventos de conversa de bots em um aplicativo do Teams:
-
-| Amostra | Descrição | .NET Core |
-|--------|------------- |---|
-| Exemplo de eventos de conversa de bots do Teams | Exemplo de bot de conversa do Bot Framework v4 para o Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| **Exemplo de nome** | **Descrição** | **.NET** |
+|-----------------|-----------------|---------|
+|Eventos de conversa de bots do Microsoft Teams | Exemplo de eventos de bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 

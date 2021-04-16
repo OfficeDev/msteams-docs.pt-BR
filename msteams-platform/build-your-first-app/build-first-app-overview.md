@@ -5,12 +5,12 @@ description: Saiba como começar com o desenvolvimento de aplicativos do Microso
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 11bc263fae28866338abf37456ccf483d9f0a9fd
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585859"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762036"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo do Microsoft Teams
 
@@ -87,7 +87,7 @@ Você pode criar aplicativos do Teams com suas ferramentas preferenciais, mas es
 O Teams exibe o conteúdo do aplicativo somente por meio de conexões HTTPS. Para depurar determinados tipos de aplicativos localmente, como um bot, você aprenderá a usar [o ngrok](../concepts/build-and-test/debug.md#locally-hosted) para configurar um túnel seguro entre o Teams e seu aplicativo. (Os aplicativos do Production Teams são hospedados na nuvem.)
 
 1. Instale o [Node.js](https://nodejs.org/en/).
-1. Instale [o ngrok](https://ngrok.com/download) se você planeja criar um bot ou extensão de mensagens.
+1. Instale [ngrok](https://ngrok.com/download) se você estiver criando um bot ou extensão de mensagens e crie um [túnel usando ngrok](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok).
 1. Instale a versão mais recente do [Visual Studio Code](https://code.visualstudio.com/download). (As versões anteriores podem não funcionar com o kit de ferramentas.)
 1. Em Visual Studio Código, selecione **Extensões** na Barra de Atividades à esquerda e instale o :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: Microsoft Teams **Toolkit**.
 
