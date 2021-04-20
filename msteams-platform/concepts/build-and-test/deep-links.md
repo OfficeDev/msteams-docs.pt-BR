@@ -3,12 +3,12 @@ title: Criar links profundos para conteúdo
 description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378326"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885056"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Criar links profundos para conteúdo e recursos no Microsoft Teams
 
@@ -25,13 +25,13 @@ Você pode criar links para informações e recursos no Teams. Exemplos em que a
 > ✔ navega diretamente para a url do deeplink.
 >
 > **Bot**:  
-> ✔ Deeplink no corpo do cartão - abre primeiro no navegador.  
-> ✔ Deeplink adicionado à ação OpenURL no Cartão Adaptável - navega diretamente para a url do deeplink.  
-> ✔ texto de marcação de hiperlink no cartão - Abre primeiro no navegador.  
+> ✔ Deeplink no corpo do cartão: abre primeiro no navegador.  
+> ✔ Deeplink adicionado à ação OpenURL no Cartão Adaptável: navega diretamente para a url do deeplink.  
+> ✔ texto de marcação de hiperlink no cartão: abre primeiro no navegador.  
 >
 > **Chat**:  
-> ✔ Marcação de hiperlink de mensagem de texto : navega diretamente para a URL do deeplink.  
-> ✔ link passado na conversa de chat geral - navega diretamente para a URL do deeplink.
+> ✔ Marcação de hiperlink de mensagem de texto: navega diretamente para a URL do deeplink.  
+> ✔ link passado na conversa de chat geral: navega diretamente para a URL do deeplink.
 
 ## <a name="deep-linking-to-your-tab"></a>Vinculação profunda à sua guia
 
@@ -126,7 +126,7 @@ Você pode criar links profundos para chats privados entre usuários especifican
 
 Como exemplo de caso de uso, se você estiver retornando um perfil de usuário do Office 365 do bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
 
-### <a name="generating-a-deep-link-to-a-chat"></a>Gerando um link profundo para um chat
+### <a name="generate-a-deep-link-to-a-chat"></a>Gerar um link profundo para um chat
 
 Use esse formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens:
 
@@ -142,6 +142,38 @@ Os parâmetros de consulta são:
 
 Para usar esse link profundo com seu bot, você pode especificar isso como o destino da URL no botão do cartão ou tocar em ação por meio do tipo `openUrl` de ação.
 
+## <a name="generate-deep-links-to-file-in-channel"></a>Gerar links profundos para o arquivo no canal
+
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens:
+
+`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+Os parâmetros de consulta são:
+
+* `tenantId`: Exemplo de ID de locatário, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
+* `fileType`: Tipo de arquivo com suporte, como docx, pptx, xlsx e pdf
+* `objectUrl`: URL do objeto do arquivo, https://microsoft.sharepoint.com/teams/(filepath)
+* `baseUrl`: URL base do arquivo, https://microsoft.sharepoint.com/teams
+* `serviceName`: Nome do serviço, ID do aplicativo
+* `threadId`: o threadId é a ID de equipe da equipe onde o arquivo está armazenado. Ele é opcional e não pode ser definido para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `groupId`: ID de grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
+
+A seguir está o formato de exemplo de deeplink para arquivos:
+
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+
+### <a name="serialization-of-this-object"></a>Serialização deste objeto:
+```
+{
+tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
+filetype: = "pptx",
+objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
+baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
+serviceName: "teams",
+threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
+groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
+}
+```
 ## <a name="deep-links-for-sharepoint-framework-tabs"></a>Links profundos para guias da Estrutura do SharePoint
 
 O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -152,10 +184,10 @@ O seguinte formato de link profundo pode ser usado em um bot, conector ou cartã
 
 Os parâmetros de consulta são:
 
-* `appID` - Sua ID de manifesto **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
-* `entityID` - A ID do item que você forneceu [ao configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, **tasklist123**.
-* `entityWebUrl` - Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar a renderização da guia - https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 .
-* `entityName` - Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, a Lista de Tarefas 123 ou a Tarefa 456.
+* `appID`: Sua ID de manifesto fe4a8eba-2a31-4737-8e33-e5fae6fee194.
+* `entityID`: A ID do item que você forneceu [ao configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, **tasklist123**.
+* `entityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar a renderização da guia - https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 .
+* `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, a Lista de Tarefas 123 ou a Tarefa 456.
 
 Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
@@ -175,7 +207,7 @@ Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 Os parâmetros de consulta são:
 
 * `attendees`: a lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. O campo ID do usuário atualmente só dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email.
-* `startTime`: A hora de início opcional do evento. Isso deve estar no [formato ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)longo , por exemplo "2018-03-12T23:55:25+02:00".
+* `startTime`: A hora de início opcional do evento. Isso deve estar no [formato ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)longo , por *exemplo, 2018-03-12T23:55:25+02:00*.
 * `endTime`: A hora de término opcional do evento, também no formato ISO 8601.
 * `subject`: Um campo opcional para o assunto da reunião.
 * `content`: Um campo opcional para o campo de detalhes da reunião.

@@ -5,12 +5,12 @@ description: visão geral dos aplicativos em reuniões do Teams com base na fun�
 ms.topic: overview
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: ac4e270090dd89d370d37de88b8cba552b77a5cb
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382335"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885077"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicativos em reuniões do Teams
 
@@ -74,11 +74,11 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 
 ✔ usuários com permissão podem adicionar aplicativos durante a reunião.
 
-✔ Quando carregado no contexto de uma reunião, os aplicativos podem aproveitar o SDK do Cliente do Teams para acessar o , e renderizar adequadamente `meetingId` `userMri` a `frameContext` experiência.
+✔ Quando carregado no contexto de uma reunião, os aplicativos podem aproveitar o SDK do cliente do Teams para acessar o , e renderizar adequadamente `meetingId` `userMri` a `frameContext` experiência.
 
 ✔ Exportar um resultado de uma pesquisa ou sondagem notifica os usuários que os resultados foram baixados com êxito.
 
-✔ Um aplicativo fica visível em uma reunião do Teams no painel lateral ou na caixa de diálogo na reunião. Use a caixa de diálogo na reunião para mostrar conteúdo a actionable para os participantes da reunião. *Consulte* [Criar aplicativos para reuniões do Teams.](create-apps-for-teams-meetings.md)
+✔ Um aplicativo fica visível em uma reunião do Teams no painel lateral ou na caixa de diálogo na reunião. Use a caixa de diálogo na reunião para mostrar conteúdo a actionable para os participantes da reunião. Para obter mais informações, consulte [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
    > [!NOTE]
    > O manifesto do aplicativo especifica que sua guia é [otimizada](create-apps-for-teams-meetings.md#during-a-meeting)para o painel lateral , que é onde ele é exibido. Ele também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeito a diretrizes de design especificadas.
@@ -145,7 +145,18 @@ Os seguintes tipos de usuário identificam o que cada usuário pode fazer e o qu
 * **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais no Azure Active Directory (AAD) para o locatário. Eles geralmente são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
 * **Convidado**: um convidado é um participante de outra organização convidado para acessar o Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da sua organização e têm os mesmos recursos do Teams como um membro nativo da equipe com acesso a chats, reuniões e arquivos de equipe. Um usuário convidado pode ser organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados no Teams](/microsoftteams/guest-access).
 * **Federado ou externo**: um usuário federado é um usuário externo do Teams em outra organização que foi convidado a participar de uma reunião. Esses usuários têm credenciais válidas com parceiros federados e são autorizados pelo Teams. Eles não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. O acesso de convidados é uma opção melhor para usuários externos ter acesso a equipes e canais. Para obter mais informações, consulte [manage external access in Teams](/microsoftteams/manage-external-access).
-* **Anônimo**: os usuários anônimos não têm uma identidade AAD e não são federados com um locatário. O participante anônimo é como um usuário externo, mas sua identidade não é projetada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião. Um usuário anônimo não pode ser organizador, mas pode ser apresentador ou participante.
+* **Anônimo**: os usuários anônimos não têm uma identidade AAD e não são federados com um locatário. O participante anônimo é como um usuário externo, mas sua identidade não é projetada na reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou um participante.
+
+> [!NOTE]
+> Os usuários anônimos herdam a política de permissão de aplicativo padrão global no nível do usuário. Para obter mais informações, consulte [Manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+
+A tabela a seguir fornece os tipos de usuário e quais recursos cada usuário pode acessar:
+
+| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
+| Convidado que faz parte do locatário AAD | A interação é permitida. Não é permitido criar, atualizar e excluir. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível |
+| Federado | Não disponível | Não disponível | Não disponível | Não disponível | Não disponível | Não disponível |
 
 ## <a name="see-also"></a>Confira também
 

@@ -3,12 +3,12 @@ title: Suporte de login único para guias
 description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596678"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885063"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -66,7 +66,6 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams qu
 > * Somente as permissões da API graph no nível do usuário têm suporte, ou seja, email, perfil, offline_access, OpenId. Se você deve ter acesso a outros escopos do Graph, `User.Read` como ou , consulte a solução alternativa `Mail.Read` [recomendada](#apps-that-require-additional-graph-scopes).
 > * É importante que o nome de domínio do aplicativo seja o mesmo que o nome de domínio que você registrou para seu aplicativo AAD.
 > * Atualmente, não há suporte para vários domínios por aplicativo.
-> * Os aplicativos que usam o domínio não têm `azurewebsites.net` suporte, pois ele é muito comum e pode ser um risco de segurança.
 
 **Para registrar seu aplicativo por meio do portal do AAD**
 

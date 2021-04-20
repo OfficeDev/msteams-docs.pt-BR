@@ -5,12 +5,12 @@ description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654367"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885070"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -321,6 +321,9 @@ Com o sidePanel, você pode personalizar experiências em uma reunião que permi
 Para usar a `userContext` API para rotear solicitações de acordo, consulte [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Consulte [Fluxo de autenticação do Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é muito semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Consulte a plataforma de identidade da Microsoft e o fluxo de código de autorização do [OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
 A extensão de mensagens funciona conforme o esperado quando um usuário está em uma exibição em reunião e o usuário pode postar cartões de extensão de mensagem de composição. AppName in-meeting é uma dica de ferramenta que informa o nome do aplicativo na U-bar de reunião.
+
+> [!NOTE]
+> Use a versão 1.9.0 do [SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do Teams para carregar o painel lateral, pois as versões anteriores a ele não suportam o painel lateral.
 
 #### <a name="in-meeting-dialog"></a>Caixa de diálogo na reunião
 
