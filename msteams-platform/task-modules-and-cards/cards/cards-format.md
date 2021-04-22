@@ -2,14 +2,15 @@
 title: Formatação de texto em cartões
 description: Descreve a formatação de texto de cartão no Microsoft Teams
 keywords: formato de cartões de bots do teams
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696532"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922514"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -122,10 +123,11 @@ Bots e extensões de mensagens podem incluir menções no conteúdo do cartão n
 
 #### <a name="constructing-mentions"></a>Criar menções
 
-Para incluir uma menção em um cartão Adaptável, seu aplicativo precisa incluir os seguintes elementos
+Para incluir uma menção em um Cartão Adaptável, seu aplicativo precisa incluir os seguintes elementos:
 
-* `<at>username</at>` nos elementos de cartão adaptáveis com suporte
-* O objeto dentro de uma propriedade no conteúdo do cartão, que inclui a id de usuário do `mention` Teams do usuário que está sendo `msteams` mencionado
+* `<at>username</at>` nos elementos de cartão adaptáveis com suporte.
+* O objeto dentro de uma propriedade no conteúdo do cartão, que inclui a id de usuário do `mention` Teams do usuário que está sendo `msteams` mencionado.
+* O `userId` é exclusivo da ID do bot e de um usuário específico. Ele pode ser usado para @mention um usuário específico. O `userId` pode ser recuperado usando uma das opções mencionadas em obter a [ID do usuário](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Exemplo de cartão adaptável com uma menção
 
@@ -157,7 +159,6 @@ Para incluir uma menção em um cartão Adaptável, seu aplicativo precisa inclu
   }
 }
 ```
-
 
 ### <a name="information-masking-in-adaptive-cards"></a>Mascaramento de informações em cartões adaptáveis
 Use a propriedade mascarar informações para mascarar informações específicas, como senha ou informações confidenciais de usuários dentro do elemento de entrada de cartão [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptável. 

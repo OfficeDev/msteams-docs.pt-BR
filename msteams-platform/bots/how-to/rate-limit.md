@@ -1,16 +1,16 @@
 ---
-title: Otimizar seu bot com limitação de taxa no Teams
+title: Otimizar seu bot com limitação de fluxo no Teams
 description: Limitação de taxas e práticas recomendadas no Microsoft Teams
 ms.topic: conceptual
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696994"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922500"
 ---
-# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de taxa no Teams
+# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
 Limitação de taxa é um método para limitar as mensagens a uma determinada frequência máxima. Como um princípio geral, seu aplicativo deve limitar o número de mensagens que ele posta em um chat individual ou conversa de canal. Isso garante uma experiência ideal e as mensagens não aparecem como spam para seus usuários.
 
@@ -113,10 +113,12 @@ Você também pode manipular o limite de taxa usando o bot por limite de thread.
 
 ## <a name="per-bot-per-thread-limit"></a>Por bot por limite de thread
 
->[!NOTE]
-> A divisão de mensagens no nível de serviço resulta em solicitações mais altas do que as esperadas por segundo (RPS). Se estiver preocupado com a abordagem dos limites, implemente a [estratégia de backoff](#backoff-example). Os valores fornecidos nesta seção são apenas para estimativa.
+O limite por bot por thread controla o tráfego que um bot tem permissão para gerar em uma única conversa. Uma conversa é 1:1 entre bot e usuário, um chat em grupo ou um canal em uma equipe. Portanto, se o aplicativo enviar uma mensagem bot para cada usuário, o limite de thread não será limitado.
 
-O limite por bot por thread controla o tráfego que um bot tem permissão para gerar em uma única conversa. Uma conversa aqui é 1:1 entre bot e usuário, um chat em grupo ou um canal em uma equipe.
+>[!NOTE]
+> * O limite de thread de 3600 segundos e 1800 operações só se aplica se várias mensagens de bot são enviadas a um único usuário. 
+> * O limite global por aplicativo por locatário é de 30 solicitações por segundo (RPS). Portanto, o número total de mensagens bot por segundo não deve cruzar o limite de thread.
+> * A divisão de mensagens no nível de serviço resulta em RPS maior do que o esperado. Se estiver preocupado com a abordagem dos limites, implemente a [estratégia de backoff](#backoff-example). Os valores fornecidos nesta seção são apenas para estimativa.
 
 A tabela a seguir fornece os limites por bot por thread:
 
