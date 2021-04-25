@@ -1,16 +1,16 @@
 ---
-title: Registrar um bot de chamadas e reuniões para o Microsoft Teams
+title: Registrar chamadas e reuniões bot do Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams
 ms.topic: conceptual
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 6cbba3f63a97e47fd9cca6dbeea6595cc3bdc9d7
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4f4f1fdf0c33685e146081085aa7ff8e07f1a87d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696350"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995859"
 ---
-# <a name="register-a-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar um bot de chamadas e reuniões para o Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões bot do Microsoft Teams
 
 Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot regular do Microsoft Teams com os seguintes recursos extras usados para registrar o bot:
 

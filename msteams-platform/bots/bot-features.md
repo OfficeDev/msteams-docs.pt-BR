@@ -4,19 +4,19 @@ author: clearab
 description: Bots e SDKs no Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c76a3300229e038e0d6a93d2701b3b3c5a1286da
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697222"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995971"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
 Para criar um bot que funcione no Microsoft Teams, você pode usar um dos seguintes:
-* Um bot existente criado no SDK da Estrutura do Microsoft Bot
-* Serviço de chatbot do Power Virtual Agents
-* Webhooks e conectores
+* Um bot existente criado no SDK da Estrutura do Microsoft Bot.
+* Serviço de chatbot do Power Virtual Agents.
+* Webhooks e conectores.
 
 ## <a name="bots-and-the-microsoft-bot-framework"></a>Bots e a Estrutura do Microsoft Bot
 
@@ -114,4 +114,4 @@ Uma das desvantagens dos bots é que é difícil manter uma grande base de dados
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Manipuladores de atividades bot](~/bots/bot-basics.md)
+> [Manipuladores de atividade de bot](~/bots/bot-basics.md)

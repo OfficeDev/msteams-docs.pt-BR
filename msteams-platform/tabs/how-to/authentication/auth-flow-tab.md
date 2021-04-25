@@ -3,12 +3,12 @@ title: Fluxo de autenticação para guias
 description: Descreve o fluxo de autenticação em guias
 ms.topic: conceptual
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: ddd9ea1ee907b154005445613fd3d09de2158766
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449560"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995845"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Fluxo de autenticação do Microsoft Teams para guias
 
@@ -27,7 +27,7 @@ Para um exemplo de fluxo de autenticação para guias e bots usando Node e o tip
 
 1. O usuário interage com o conteúdo na configuração da guia ou na página de conteúdo, normalmente um botão Entrar **ou** **Entrar.**
 2. A guia constrói a URL para sua página inicial de autenticação. Opcionalmente, ele usa informações de placeholders de URL ou chama o método SDK do cliente do Teams para simplificar a experiência de autenticação `microsoftTeams.getContext()` para o usuário. Por exemplo, ao autenticar com o AAD, se o parâmetro estiver definido para o endereço de email do usuário, o usuário não precisa entrar se tiver feito `login_hint` isso recentemente. Isso porque o AAD usa as credenciais armazenadas em cache do usuário. A janela pop-up é mostrada brevemente e desaparece.
-3. Em seguida, a guia chama `microsoftTeams.authentication.authenticate()` o método e registra as funções `successCallback` `failureCallback` e.
+3. Em seguida, a guia chama o `microsoftTeams.authentication.authenticate()` geral e registra as `successCallback` e `failureCallback` funções.
 4. O Teams abre a página inicial em um iframe em uma janela pop-up. A página inicial gera dados aleatórios, salva-os para validação futura e redireciona para o ponto de extremidade do provedor de identidade, como para o `state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` Azure AD. Substitua `<tenant id>` por sua própria id de locatário que seja context.tid.
 Semelhante a outros fluxos de auth de aplicativos no Teams, a página inicial deve estar em um domínio que está em sua lista e no mesmo domínio que a página de redirecionamento de entrada `validDomains` de postagem.
 
@@ -44,12 +44,13 @@ Semelhante a outros fluxos de auth de aplicativos no Teams, a página inicial de
 
 Embora o contexto da guia fornece informações úteis sobre o usuário, não use essas informações para autenticar o usuário. Faça a autenticação do usuário mesmo que você receba as informações como parâmetros de URL para a URL de conteúdo da guia ou chamando a função no SDK do cliente do `microsoftTeams.getContext()` Microsoft Teams. Um ator mal-intencionado pode invocar sua URL de conteúdo de tabulação com seus próprios parâmetros. O ator também pode invocar uma página da Web que representa o Microsoft Teams para carregar sua URL de conteúdo de tabulação em um iframe e retornar seus próprios dados para a `getContext()` função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usá-las. Consulte as anotações em [navegar até a página de autorização da página pop-up](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
-## <a name="samples"></a>Exemplos
+## <a name="code-sample"></a>Exemplo de código
 
-Para um código de exemplo mostrando o processo de autenticação de tabulação, consulte:
+Código de exemplo mostrando o processo de autenticação de tabulação.
 
-* [Exemplo de autenticação de guia do Teams (Nó)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Exemplo de autenticação de guia do Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+| **Exemplo de nome** | **Descrição** | **C#** | **Node.js** |
+|-----------------|-----------------|-------------|------------|
+| Autenticação de tabulação do Teams | Processo de autenticação para guias usando a AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>Mais detalhes
 

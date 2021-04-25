@@ -3,12 +3,12 @@ title: Otimizar seu bot com limitação de fluxo no Teams
 description: Limitação de taxas e práticas recomendadas no Microsoft Teams
 ms.topic: conceptual
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922500"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995852"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -48,6 +48,9 @@ Em geral, você deve tomar precauções simples para evitar receber `HTTP 429` r
 Usar um backoff exponencial com um tremeamento aleatório é a maneira recomendada de lidar com 429s. Isso garante que várias solicitações não introduzam colisões em recuperações.
 
 Depois de lidar `HTTP 429` com as respostas, você pode passar pelo exemplo para detectar exceções transitórias.
+
+> [!NOTE]
+> Além de retyring error code **429**, os códigos de erro **412**, **502** e **504** também devem ser retridados.
 
 ## <a name="detect-transient-exceptions-example"></a>Exemplo de exceções transitórias
 

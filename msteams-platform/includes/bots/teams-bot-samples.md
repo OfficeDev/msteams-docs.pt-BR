@@ -1,8 +1,8 @@
-## <a name="teams-bot-samples"></a>Exemplos de bot do Teams
+## <a name="code-sample"></a>Exemplo de código
 
 Para amostras de trabalho completas que demonstram a funcionalidade, consulte os seguintes exemplos do Teams para Bot Framework:
 
-| Amostra | Descrição | .NET Core | Node.js | Python |
+| **Amostra** | **Descrição** | **.NET** | **JavaScript** | **Python** |
 |--------|------------- |---|---|---|
 | Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | Autenticação com OAuthPrompt| Autenticação e mensagens básicas no Bot Framework v4. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |

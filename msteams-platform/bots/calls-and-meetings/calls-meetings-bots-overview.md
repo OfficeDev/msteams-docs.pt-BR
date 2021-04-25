@@ -3,12 +3,12 @@ title: Bots de chamadas e reuniões online
 description: Saiba como seus aplicativos do Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online.
 ms.topic: conceptual
 keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: cac9e31c39f35aeb3ea72e5e8964441f0a1c38f5
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697100"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995978"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -86,6 +86,12 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 
 * **Mídia hospedada por aplicativo**: para que um bot tenha acesso direto à mídia, ele precisa de uma permissão específica do Graph. Depois que o bot tiver a permissão, a Biblioteca de Mídia em tempo [real](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)e o [SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) de chamada do Graph ajudam você a criar mídia rica e em tempo real e chamar bots. Um bot hospedado pelo aplicativo deve estar hospedado em um ambiente Windows. Para obter mais informações, consulte [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
 
+## <a name="code-sample"></a>Exemplo de código
+
+| **Exemplo de nome** | **Descrição** | **Graph** |
+|---------------|----------|--------|
+| Comunicação do Graph | Gráfico de comunicações para interagir com a plataforma de comunicações da Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+
 ## <a name="see-also"></a>Confira também
 
 > [!div class="nextstepaction"]
@@ -106,4 +112,4 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Chamadas e reuniões de mídia em tempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)
+> [Chamadas de mídia e reuniões em tempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)

@@ -4,12 +4,12 @@ author: clearab
 description: Uma visão geral das extensões de mensagens na plataforma do Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2d82202c72584927fc705813151d91510a7f12c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a6d4f478541724cd2643068d9e1615a15b03fd13
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696729"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995880"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -67,11 +67,18 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 
 ![link desfraldamento](../assets/images/messaging-extension/link-unfurl.gif)
 
+## <a name="code-sample"></a>Exemplo de código
+
+| **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
+|------------|-------------|----------------|------------|
+| Extensão de mensagens com comandos baseados em ação | Este exemplo ilustra como criar uma extensão de mensagens baseada em ação. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Extensão de mensagens com comandos baseados em pesquisa | Este exemplo ilustra como criar uma Extensão de Mensagens baseada em Pesquisa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="see-also"></a>Confira também
 
 > [!div class="nextstepaction"]
 > [Criar uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
+
 
 ## <a name="next-step"></a>Próxima etapa
 
