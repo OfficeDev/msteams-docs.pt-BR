@@ -4,12 +4,12 @@ description: Descreve como carregar seu aplicativo no Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
 keywords: carregamento de aplicativos do teams
-ms.openlocfilehash: 3ca086cf8dbb992de84b22b7499f739d7c80b9d6
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479876"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946477"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
 
@@ -116,21 +116,6 @@ Um aplicativo carregado com uma extensão de mensagens aparece automaticamente n
 
 ![Extensões de mensagens](../../assets/images/compose-extensions/cesampleapp.png)
 
-## <a name="add-a-default-install-scope-and-group-capability"></a>Adicionar um escopo de instalação padrão e funcionalidade de grupo
-
-> [!NOTE]
-> O escopo de instalação padrão e a funcionalidade de grupo estão disponíveis apenas na visualização do desenvolvedor.
-
-Embora a instalação de um aplicativo no escopo pessoal funcione para a maioria dos aplicativos, alguns dos aplicativos na Loja do Teams suportam escopos pessoais e de equipe.
-Alguns desses aplicativos se destinam a trabalhar em uma equipe, reuniões ou uma conversa de grupo, com a experiência de aplicativo pessoal sendo secundária.
-A seleção de escopo de instalação padrão ajuda você a especificar `defaultInstallScope` os aplicativos que você publica. A experiência de instalação do aplicativo disponibiliza as opções padrão para o usuário, enquanto o restante é movido sob a divisa conforme realçado na imagem.
-
-![Adicionar um aplicativo](../../assets/images/compose-extensions/addanapp.png)
-
-A `defaultInstallScope` propriedade dá suporte a valores, como pessoal, equipe, groupchat ou reuniões.
-
-> [!NOTE]
->`defaultGroupCapability` fornece o recurso padrão adicionado à equipe, groupchat ou reuniões. Escolha uma guia, bot ou conector como o recurso padrão para seu aplicativo, mas você deve garantir que tenha fornecido o recurso selecionado na definição do aplicativo.
 
 ## <a name="remove-or-update-your-app"></a>Remover ou atualizar seu aplicativo
 
