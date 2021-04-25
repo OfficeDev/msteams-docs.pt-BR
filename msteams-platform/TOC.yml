@@ -384,6 +384,8 @@
           href: graph-api/rsc/test-rsc-json-file.md
 - name: Publicar seu aplicativo
   items:
+    - name: Configurar opções de instalação padrão
+      href: concepts/deploy-and-publish/add-default-install-scope.md
     - name: Escolha como distribuir o aplicativo
       href: concepts/deploy-and-publish/overview.md
     - name: Criar seu pacote de aplicativos
