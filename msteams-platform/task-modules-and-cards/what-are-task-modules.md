@@ -1,26 +1,27 @@
 ---
 title: O que são os módulos de tarefas?
 author: clearab
-description: Adicione experiências pop-up modais para coletar ou exibir informações aos usuários de seus aplicativos do Microsoft Teams.
+description: Adicionar experiências pop-up modais para coletar ou exibir informações aos usuários de seus aplicativos do Microsoft Teams
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 5472f07a8183e6f06ce6cb4fa2a9c048e083dcca
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449546"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019514"
 ---
 # <a name="what-are-task-modules"></a>O que são os módulos de tarefas?
 
-Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo do Teams. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado como um vídeo do YouTube ou do Microsoft Stream ou exibir um `<iframe>` [cartão Adaptável](/adaptive-cards/). Eles são especialmente úteis para iniciar e concluir tarefas ou exibir informações ricas, como vídeos ou painéis do Power BI. Uma experiência pop-up geralmente é mais natural para usuários iniciando e concluindo tarefas em comparação com uma guia ou uma experiência de bot baseada em conversa.
+Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo Teams. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado como um vídeo do YouTube ou do Microsoft Stream ou exibir um `<iframe>` [cartão Adaptável](/adaptive-cards/). Eles são especialmente úteis para iniciar e concluir tarefas ou exibir informações ricas, como vídeos ou painéis do Power BI. Uma experiência pop-up geralmente é mais natural para usuários iniciando e concluindo tarefas em comparação com uma guia ou uma experiência de bot baseada em conversa.
 
 Os módulos de tarefas são construídos com base nas guias do Microsoft Teams; eles são essencialmente uma guia dentro de uma janela pop-up. Eles usam o mesmo SDK, portanto, se você criou uma guia, já é 90% do caminho para poder criar um módulo de tarefa.
 
-Os módulos de tarefa podem ser invocados de três maneiras:
+Módulos de tarefa podem ser invocados de três maneiras:
 
 * **Guias de canal ou pessoal.** Usando o SDK de Guias do Microsoft Teams, você pode invocar módulos de tarefas de botões, links ou menus em sua guia. Isso é abordado [em detalhes aqui.](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
-* **Bots.** Botões nos [cartões enviados](~/task-modules-and-cards/cards/cards-reference.md) do bot. Isso é particularmente útil quando você não precisa de todos em um canal para ver o que está fazendo com um bot. Por exemplo, ao fazer com que os usuários respondam a uma sondagem em um canal, não é muito útil ver um registro dessa sondagem sendo criada. [Isso é abordado em detalhes aqui.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* **Bots.** Botões nos [cartões enviados](~/task-modules-and-cards/cards/cards-reference.md) do bot. Isso é particularmente útil quando você não precisa de todos em um canal para ver o que está fazendo com um bot. Por exemplo, ao fazer com que os usuários respondam a uma votação em um canal, não é útil ver um registro da votação que está sendo criada. [Isso é abordado em detalhes aqui.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * **Fora do Teams de um link profundo.** Você também pode criar URLs para invocar um módulo de tarefa de qualquer lugar. [Isso é abordado em detalhes aqui.](#task-module-deep-link-syntax)
 
 ## <a name="what-a-task-module-looks-like"></a>Com a aparência de um módulo de tarefa
@@ -61,10 +62,10 @@ O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição 
 | `title` | string | Aparece abaixo do nome do aplicativo e à direita do ícone do aplicativo |
 | `height` | número ou cadeia de caracteres | Pode ser um número que representa a altura do módulo de tarefas em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
 | `width` | número ou cadeia de caracteres | Pode ser um número que representa a largura do módulo de tarefa em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
-| `url` | string | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
+| `url` | cadeia de caracteres | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
 | `card` | Cartão adaptável ou um anexo de cartão de bot de cartão adaptável | O JSON do cartão Adaptável a ser exibido no módulo de tarefa. Se você estiver invocando de um bot, precisará usar o JSON de cartão adaptável em um objeto Bot `attachment` Framework. Em uma guia, você usará apenas um Cartão Adaptável. [Veja um exemplo.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
-| `completionBotId` | string | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
+| `fallbackUrl` | cadeia de caracteres | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
+| `completionBotId` | cadeia de caracteres | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
 
 > [!NOTE]
 > O recurso de módulo de tarefa exige que os domínios de todas as URLs que você deseja carregar sejam incluídos na matriz no manifesto `validDomains` do aplicativo.

@@ -1,14 +1,15 @@
 ---
 title: Suporte e comentários de desenvolvedores do Microsoft Teams
 description: A equipe de produtos do Microsoft Teams responde à comunidade de desenvolvedores em vários canais de feedback e suporte.
+localization_priority: Normal
 ms.topic: reference
 keywords: perguntas do desenvolvedor de feedback do teams problemas de suporte de contato solicitação de bugs discussões da comunidade
-ms.openlocfilehash: 49dfe06dd1e343b04e8c15c7cc3bdb6957946706
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 08fb6908eeb4a79e5da622e7bc698111e2eba46a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034716"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020727"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Canais da comunidade de desenvolvedores do Microsoft Teams
 

@@ -1,16 +1,19 @@
 ---
-title: Visão geral dos recursos do dispositivo
+title: Recursos do dispositivo - Visão geral
+author: Rajeshwari-v
 description: Visão geral dos recursos de dispositivo nativo.
+ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449588"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020748"
 ---
-# <a name="device-capabilities"></a>Funcionalidades de dispositivo 
+# <a name="device-capabilities---overview"></a>Recursos do dispositivo - Visão geral
 
 A plataforma do Microsoft Teams está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma do Teams aprimorada permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local com seus aplicativos Web. Essa integração reduz a barreira ao desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
 
@@ -22,7 +25,7 @@ Um dispositivo móvel ou desktop tem dispositivos integrados, como uma câmera e
     * Microfone
     * Galeria
     * QR ou scanner de código de barras
-* Localização
+* Local
 
 Depois de obter acesso aos recursos do dispositivo, você pode integrá-los à plataforma do Teams para aprimorar a experiência colaborativa. 
 

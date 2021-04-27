@@ -3,13 +3,14 @@ title: Adicionar autenticação ao bot do Teams
 author: clearab
 description: Como adicionar autenticação OAuth a um bot no Microsoft Teams.
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 71a24dad47b3686d207df3f4e3521bbe46508cb9
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585866"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020945"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao bot do Teams
 
@@ -119,7 +120,7 @@ Neste procedimento, você usará um provedor do Azure AD; outros provedores de i
    1. Em **Segredos do cliente,** selecione &#x2795; **Novo segredo do cliente.**
    1. Adicione uma descrição para identificar esse segredo de outras pessoas que você pode precisar criar para este aplicativo, como *o aplicativo de identidade bot no Teams*.
    1. Set **Expires** to your selection.
-   1. Clique em **Adicionar**.
+   1. Selecione **Adicionar**.
    1. Antes de sair desta página, **grave o segredo**. Você usará esse valor posteriormente como o _segredo do cliente_ ao registrar seu aplicativo do Azure AD com seu bot.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar a conexão do provedor de identidade e registrá-la com o bot

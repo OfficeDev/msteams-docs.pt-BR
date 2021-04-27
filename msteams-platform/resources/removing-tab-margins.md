@@ -4,13 +4,14 @@ author: laujan
 description: Descreve como a remoção das margens de tabulação melhorará a experiência do desenvolvedor.
 keywords: guia removendo preenchimento de margens
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585817"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019710"
 ---
 # <a name="tab-margin-changes"></a>Mudanças na margem da guia
 
@@ -33,7 +34,7 @@ Os aplicativos do Microsoft Teams que usam guias serão afetados por essa altera
 
 Os desenvolvedores de guias não devem confiar no Teams para fornecer margens ao redor de suas guias. Os desenvolvedores são incentivados a adicionar margens ao redor de seus designs de tabulação onde é necessário. Designs de aplicativos em produção podem parecer que há preenchimento extra, ou seja, margens fornecidas pelo Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e desaparecerá em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
 
-## <a name="faq"></a>Perguntas frequentes
+## <a name="faq"></a>PERGUNTAS FREQÜENTES
 
 **Tudo bem para o aplicativo cromado, como barra de header ou barra de tarefas, tocar nas bordas de nossos designs?**
 

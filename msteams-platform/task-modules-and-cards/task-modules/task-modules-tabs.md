@@ -1,14 +1,15 @@
 ---
 title: Usando módulos de tarefas nas guias do Microsoft Teams
-description: Explica como invocar módulos de tarefas das guias do Teams usando o SDK do cliente do Microsoft Teams.
+description: Explica como invocar módulos de tarefas a partir de guias do Teams usando o SDK de cliente do Microsoft Teams
+localization_priority: Normal
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
-ms.openlocfilehash: dbcc6ce0ba31bae43335334dfb1c354acc33a2a0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5e85fd0662b8a15d6b98d9c2d2dfa5137b05fa39
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696028"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019521"
 ---
 # <a name="using-task-modules-in-tabs"></a>Usando módulos de tarefas em guias
 

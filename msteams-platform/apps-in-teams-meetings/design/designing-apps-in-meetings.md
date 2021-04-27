@@ -3,24 +3,25 @@ title: Projetando sua extensão de reunião
 author: heath-hamilton
 description: Saiba como projetar aplicativos em reuniões do Teams e obter o Microsoft Teams UI Kit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596249"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018471"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
 Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemplo, peça que as pessoas concluam uma pesquisa durante uma chamada ou enviem um lembrete rápido que não interrompa o fluxo da reunião.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que você pode obter e modificar conforme necessário, no Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Obter o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Adicionar uma extensão de reunião
 
@@ -346,9 +347,9 @@ Modais (também conhecidos como módulos de tarefa) na guia já estreita da reun
    :::column-end:::
 :::row-end:::
 
-## <a name="validate-your-design"></a>Validar seu design
+## <a name="validate-your-design"></a>Valide o seu design
 
-Se você planeja publicar seu aplicativo no AppSource, deve entender os problemas de design que normalmente causam falha nos aplicativos durante o envio.
+Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
 
 > [!div class="nextstepaction"]
-> [Verificar diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

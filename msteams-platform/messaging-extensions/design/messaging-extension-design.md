@@ -3,14 +3,15 @@ title: Projetando sua extensão de mensagens
 description: Saiba como projetar uma extensão de mensagens do Teams e obter o Kit de interface do usuário do Microsoft Teams.
 keywords: Práticas práticas práticas de referência de extensões de mensagens de referência de diretrizes de design do teams
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697008"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020720"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Projetando sua extensão de mensagens do Microsoft Teams
 
@@ -227,7 +228,7 @@ Se você não usar tokens de cores do Teams, seus designs serão menos escaloná
    :::column-end:::
 :::row-end:::
 
-### <a name="actions"></a>Actions
+### <a name="actions"></a>Ações
 
 :::row:::
    :::column span="":::

@@ -2,13 +2,14 @@
 title: Bots de chamadas e reuniões online
 description: Saiba como seus aplicativos do Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995978"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020166"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 

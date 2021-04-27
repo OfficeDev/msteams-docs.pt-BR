@@ -2,14 +2,15 @@
 title: Extensões de mensagens
 author: clearab
 description: Uma visão geral das extensões de mensagens na plataforma do Microsoft Teams
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a6d4f478541724cd2643068d9e1615a15b03fd13
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: fcd5661a2e0b601579fc5af843935d64ab487cef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995880"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020692"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 

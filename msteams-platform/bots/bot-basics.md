@@ -1,17 +1,18 @@
 ---
-title: Manipuladores de atividades bot
+title: Manipuladores de atividade de bot
 author: clearab
 description: Entenda os manipuladores de atividades do bot no Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 22f4c3f3addcf87b3fb34a1b7b3d40d2092b8a44
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: da770d930ca6d00503c0102f1e683a60161636fd
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696427"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020187"
 ---
-# <a name="bot-activity-handlers"></a>Manipuladores de atividades bot
+# <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
 Este documento se baseia no artigo sobre como [os bots funcionam](https://aka.ms/how-bots-work) na documentação principal [da Estrutura de Bots.](https://aka.ms/azure-bot-service-docs) A principal diferença entre bots desenvolvidos para o Microsoft Teams e a Estrutura de Bot principal está nos recursos fornecidos no Teams.
 
@@ -64,7 +65,7 @@ Manipuladores de atividades são diferentes no contexto de uma equipe, onde um n
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `OnTurnAsync` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `OnMessageActivityAsync` | Esse método pode ser substituído para manipular uma `Message` atividade. |
@@ -80,7 +81,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 O estende a lista de manipuladores na seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -117,7 +118,7 @@ Os manipuladores de atividades são diferentes no contexto de uma equipe, onde o
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `onTurn` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `onMessage` | Esse método ajuda a manipular uma `Message` atividade. |
@@ -132,7 +133,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 O estende a lista de manipuladores na seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -169,7 +170,7 @@ Os manipuladores de atividades são diferentes no contexto de uma equipe, onde o
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `on_turn` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `on_message_activity` | Esse método pode ser substituído para manipular uma `Message` atividade. |
@@ -185,7 +186,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 A estende a lista de manipuladores da seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Evento | Manipulador | Descrição |
+| Event | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `on_teams_channel_deleted` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|

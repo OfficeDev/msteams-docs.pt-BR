@@ -3,14 +3,15 @@ title: Criar uma página de conteúdo
 author: laujan
 description: como criar uma página de conteúdo
 keywords: teams tabs group channel configurble static
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9dc6c73d877d9355c5d4a9653e0d8ed669fb347e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034695"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020377"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 

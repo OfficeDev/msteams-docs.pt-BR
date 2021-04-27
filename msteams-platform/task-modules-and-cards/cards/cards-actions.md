@@ -1,20 +1,21 @@
 ---
 title: Adicionar ações de cartão em um bot
 description: Descreve ações de cartão no Microsoft Teams e como usá-las em seus bots
+localization_priority: Normal
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: f02e195f619fdfa2ebbc4b2ef00669a1cb5b38f6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696021"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019535"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
 Os cartões usados por bots e extensões de mensagens no Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) Observe que essas ações diferem dos cartões do `potentialActions` Conector do Office 365 quando usados de Conectores.
 
-| Tipo | Action |
+| Tipo | Ação |
 | --- | --- |
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e uma carga para o bot (do usuário que clicou no botão ou tocou no cartão) e envia uma mensagem separada para o fluxo de chat. |

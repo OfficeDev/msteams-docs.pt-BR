@@ -2,13 +2,14 @@
 title: Suporte de login único para guias
 description: Descreve o SSO (sign-on único)
 ms.topic: how-to
+localization_priority: Normal
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885063"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019605"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 

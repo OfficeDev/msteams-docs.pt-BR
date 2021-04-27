@@ -3,13 +3,14 @@ title: Bots no Microsoft Teams
 author: clearab
 description: Uma visão geral dos bots no Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 08777e6d678bd75b56072412af46e3eb974c3678
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 70240b7396fc5e7a77749dc4e7326bfb30ea4415
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696882"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020888"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 

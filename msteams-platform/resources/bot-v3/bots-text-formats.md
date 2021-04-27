@@ -3,13 +3,14 @@ title: Formatação de texto com suporte em conversas
 description: Descreve o suporte à formatação de texto em conversas de bot
 keywords: bots mensagens de conversas
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696056"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019745"
 ---
 # <a name="formatting-bot-messages"></a>Formatar mensagens de bot
 

@@ -2,13 +2,14 @@
 title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
 keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 452840c5809da32a79c231f85cd1de9f8746367a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449433"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019850"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
 
@@ -80,7 +81,7 @@ Cada propriedade permite solicitar que o usuário peça seu consentimento:
 
 | Propriedade      | Descrição   |
 | --- | --- |
-| mídia         | Permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso. |
+| media         | Permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso. |
 | geolocalização   | Permissão para retornar a localização do usuário.      |
 | notificações | Permissão para enviar as notificações do usuário.      |
 | midi          | Permissão para enviar e receber informações de MIDI (Interface Digital de Instrumento Musical) de um instrumento digital.   |

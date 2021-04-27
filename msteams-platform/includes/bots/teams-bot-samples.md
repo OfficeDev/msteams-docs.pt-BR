@@ -1,3 +1,18 @@
+---
+title: Exemplos de bot do Teams
+description: descreve exemplos do Teams para a Estrutura de Bots
+localization_priority: Normal
+ms.topic: overview
+ms.author: surbhigupta12
+ms.openlocfilehash: 663d676b636711b42a4bf07bac7ff9a83b70a3d4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020004"
+---
+## <a name="teams-bot-samples"></a>Exemplos de bot do Teams
+
 ## <a name="code-sample"></a>Exemplo de código
 
 Para amostras de trabalho completas que demonstram a funcionalidade, consulte os seguintes exemplos do Teams para Bot Framework:

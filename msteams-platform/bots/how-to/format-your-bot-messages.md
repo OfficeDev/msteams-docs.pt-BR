@@ -1,17 +1,18 @@
 ---
-title: Formatar suas mensagens bot
+title: Formatar suas mensagens de bot
 author: clearab
 description: Adicionar formatação rica às mensagens de bot
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697001"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020902"
 ---
-# <a name="format-your-bot-messages"></a>Formatar suas mensagens bot
+# <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
 A formatação de mensagens permite que você traga o melhor em mensagens bot. Você pode formatar suas mensagens bot para incluir cartões rich que são anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
 

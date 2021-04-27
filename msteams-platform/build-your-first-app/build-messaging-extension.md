@@ -3,14 +3,15 @@ title: Começar - Criar uma extensão de mensagens
 author: heath-hamilton
 description: Crie rapidamente uma extensão de mensagens do Microsoft Teams usando o microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 09e851820314efd3dc114b926a0111603cac18a4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f3b5bc9c749d5e5276c0c7af7ff92f4ff5a00d0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696875"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020867"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Criar uma extensão de mensagens para o Microsoft Teams
 
@@ -130,7 +131,7 @@ Consulte as páginas a seguir para continuar e criar uma extensão de mensagens 
 1. [Defina comandos de](../messaging-extensions/how-to/search-commands/define-search-command.md) pesquisa relevantes ao seu serviço.
 1. Configure seu serviço [para responder às pesquisas dos usuários.](../messaging-extensions/how-to/search-commands/respond-to-search.md)
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>Solução de Problemas
 
 As informações a seguir podem ajudar se você tiver problemas ao concluir este tutorial.
 

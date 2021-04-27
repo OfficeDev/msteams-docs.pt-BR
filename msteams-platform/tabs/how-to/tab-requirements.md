@@ -3,14 +3,15 @@ title: Noções básicas sobre os requisitos da guia
 author: laujan
 description: Todas as guias do Microsoft Teams devem cumprir esses requisitos.
 keywords: canal de grupo de guias do teams configurável
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 087f894bd2a0a2c7a79e683f504e2c2f5a50c287
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 8013c10050ae81ada0f2a27576cd43077eafe1e0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034660"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019577"
 ---
 # <a name="tab-requirements"></a>Requisitos de tabulação
 

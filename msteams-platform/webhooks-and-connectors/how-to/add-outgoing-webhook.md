@@ -3,13 +3,14 @@ title: Adicionar bots personalizados ao Microsoft Teams com webhooks de saída
 description: descreve como adicionar um webhook de saída
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: guias do teams webhook de saída mensagem ativas verificar webhook
-ms.openlocfilehash: b7c587816a32e650009cdbfcd4dcf9028fb87392
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: cfa8bd550eaf1f198b83cdcc1ee699c75ac1d34d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449539"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020208"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Adicionar bots personalizados ao Teams com webhooks de saída
 

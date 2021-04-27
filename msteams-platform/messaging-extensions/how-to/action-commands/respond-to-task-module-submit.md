@@ -2,14 +2,15 @@
 title: Responder à ação de envio do módulo de tarefas
 author: clearab
 description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af2bbbbe6ffff224f5b74c9b1472ba3cb21effc0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696210"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019829"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 

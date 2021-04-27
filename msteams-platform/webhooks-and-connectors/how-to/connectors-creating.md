@@ -2,14 +2,15 @@
 title: Conectores de Office 365
 description: Descreve como começar a usar os Conectores do Office 365 no Microsoft Teams
 keywords: conector do o365 no teams
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827918"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018394"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Criando conectores do Office 365 para o Microsoft Teams
 
@@ -36,7 +37,7 @@ Seus usuários concluirão toda a experiência de configuração do Conector sem
 
 Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente no Teams. Seu código deve:
 
-1. Inclua o SDK JavaScript do Microsoft Teams. Isso fornece acesso de código a APIs para executar operações comuns, como obter o contexto atual de usuário/canal/equipe e iniciar fluxos de autenticação. Inicializar o SDK chamando `microsoftTeams.initialize()` .
+1. Inclua o SDK JavaScript do Microsoft Teams. Isso fornece acesso de código a APIs para executar operações comuns, como obter o contexto atual de usuário/canal/equipe e iniciar fluxos de autenticação. Inicializar o SDK chamando `microsoftTeams.initialize()`.
 2. Chame `microsoftTeams.settings.setValidityState(true)` quando quiser habilitar o botão Salvar. Você deve fazer isso como uma resposta à entrada de usuário válida, como uma seleção ou uma atualização de campo.
 3. Registre `microsoftTeams.settings.registerOnSaveHandler()` um manipulador de eventos, que é chamado quando o usuário clica em Salvar.
 4. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. O que é salvo aqui também é o que será mostrado na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
@@ -121,7 +122,7 @@ Se você precisar autenticar o usuário como parte do carregamento de sua págin
 
 #### <a name="handling-edits"></a>Manipulando edições
 
-Seu código deve manipular os usuários que retornam para editar uma configuração de conector existente. Para fazer isso, chame `microsoftTeams.settings.setSettings()` durante a configuração inicial com os seguintes parâmetros:
+O código deve lidar com o retorno de usuários para editar uma configuração de conector existente. Para fazer isso, chame `microsoftTeams.settings.setSettings()` durante a configuração inicial com os seguintes parâmetros:
 
 - `entityId` é a ID personalizada que é compreendida pelo seu serviço e representa o que o usuário configurou.
 - `configName` é um nome amigável que seu código de configuração pode recuperar

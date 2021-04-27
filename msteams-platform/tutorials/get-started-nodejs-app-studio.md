@@ -3,13 +3,14 @@ title: Tutorial - Crie seu primeiro aplicativo usando Node.js
 description: Saiba como começar a criar aplicativos do Microsoft Teams com Node.js.
 keywords: getting started node.js nodejs App Studio
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294758"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020958"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>Crie seu primeiro aplicativo do Microsoft Teams usando Node.js
 
@@ -205,7 +206,7 @@ Depois de instalar o aplicativo em uma equipe, você precisará configurá-lo pa
 
 ### <a name="test-your-bot-in-teams"></a>Testar seu bot no Teams
 
-Agora você pode interagir com o bot no Teams. Escolha um canal na equipe em que você registrou seu aplicativo e digite `@your-bot-name` , seguido de sua mensagem. Isso é chamado de **\@ menção**. Qualquer mensagem que você enviar para o bot será enviada de volta como uma resposta.
+Agora você pode interagir com o bot no Teams. Escolha um canal na equipe onde você registrou seu aplicativo e digite `@your-bot-name` , seguido de sua mensagem. Isso é chamado de **\@ menção**. Qualquer mensagem que você enviar para o bot será enviada de volta como uma resposta.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 

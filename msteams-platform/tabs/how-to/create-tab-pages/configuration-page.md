@@ -3,14 +3,15 @@ title: Criar uma página de configuração
 author: laujan
 description: como criar uma página de configuração
 keywords: canal de grupo de guias do teams configurável
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382358"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019591"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 

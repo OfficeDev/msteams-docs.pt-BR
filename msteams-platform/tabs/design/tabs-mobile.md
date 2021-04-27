@@ -2,13 +2,14 @@
 title: Guias em dispositivos móveis
 description: Descreve as diretrizes para projetar guias que funcionam em dispositivos móveis.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: guias móveis da estrutura de referência de diretrizes de design do teams
-ms.openlocfilehash: 72d1cf4623a9f4c1b5c993f1477f755b51d9fe64
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762022"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020405"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 

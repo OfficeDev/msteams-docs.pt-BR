@@ -2,13 +2,14 @@
 title: Recursos na Visualização do Desenvolvedor Público
 description: Detalhes dos recursos na Visualização de Desenvolvedor Público do Microsoft Teams
 ms.topic: reference
+localization_priority: Normal
 keywords: Recursos de desenvolvedor de visualização do teams
-ms.openlocfilehash: 05954383931444cd0fb53dc37d9f790257f7dd39
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 38acccedacb86437f5e6c949b674c0a62bbbd63c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634513"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020615"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Recursos na Visualização de Desenvolvedor Público do Microsoft Teams
 

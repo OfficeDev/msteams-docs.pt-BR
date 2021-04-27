@@ -1,14 +1,15 @@
 ---
 title: Usando módulos de tarefa em bots do Microsoft Teams
-description: Como usar módulos de tarefa com bots do Microsoft Teams, incluindo cartões da Estrutura de Bot, cartões adaptáveis e links profundos.
+description: Como usar módulos de tarefa com bots do Microsoft Teams, incluindo cartões da Estrutura de Bot, cartões adaptáveis e links profundos
+localization_priority: Normal
 ms.topic: how-to
 keywords: bots de equipes de módulos de tarefa
-ms.openlocfilehash: d87b55bf202184f315abf69dfc34fc4db9125c4f
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 948af0c71acb20f4d84fa25ba79618045dad9da7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696469"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020272"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>Usando módulos de tarefas de bots do Microsoft Teams
 

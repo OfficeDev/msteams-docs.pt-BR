@@ -1,138 +1,139 @@
 ---
-title: Criar seu aplicativo com componentes de interface do usuário do Fluent básicos
+title: Projetar seu aplicativo com componentes básicos da interface do usuário do Fluent
 author: heath-hamilton
-description: Saiba mais sobre os componentes de interface do usuário primitivos comumente usados para compilar os aplicativos do Microsoft Teams e obter o Microsoft Teams UI Kit.
+description: Saiba mais sobre os componentes primitivos da interface do usuário comumente usados para criar aplicativos do Microsoft Teams e obter o Microsoft Teams UI Kit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: d7f5a5448e20ede0ea5a9b030a6676bd03de089d
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: fd6053b28bd56231d49c5830a00d40868a36509a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605738"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019885"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo do Microsoft Teams com componentes de interface do usuário Fluent básicos
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo do Microsoft Teams com componentes básicos da interface do usuário do Fluent
 
-Os aplicativos do teams normalmente são criados com os seguintes componentes de interface do usuário do Fluent básicos. Projetado para ser tão simples, esses componentes podem funcionar em diferentes casos de uso, temas e tamanhos de tela.
+Os aplicativos do Teams geralmente são construídos com os seguintes componentes básicos da interface do usuário do Fluent. Projetados o mais simples possível, esses componentes podem funcionar em diferentes casos de uso, temas e tamanhos de tela.
 
-As ilustrações desta página mostram como os componentes procuram nos temas padrão do Microsoft Teams (claro) e escuro.
+As ilustrações nesta página mostram como os componentes são nos temas padrão (claro) e escuro do Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interface do usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
-Com base na <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">interface do usuário fluente</a>, o kit de interface do usuário do Microsoft Teams inclui componentes e padrões projetados especificamente para criar aplicativos do teams. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente no seu design e ver mais exemplos de como usar cada componente.
+Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">na interface do usuário fluente,</a>o Kit de interface do usuário do Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de aplicativos do Teams. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obter o kit de interface do usuário do Microsoft Teams (figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="alert"></a>Avisar
+## <a name="alert"></a>Alerta
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="O exemplo mostra um componente de UI de alerta." border="false":::
+:::image type="content" source="../../assets/images/components/alert.png" alt-text="Exemplo mostra um componente de interface do usuário de alerta." border="false":::
 
 ## <a name="button"></a>Botão
 
-:::image type="content" source="../../assets/images/components/button.png" alt-text="O exemplo mostra um componente de interface do usuário de botão." border="false":::
+:::image type="content" source="../../assets/images/components/button.png" alt-text="Exemplo mostra um componente de interface do usuário de botão." border="false":::
 
-## <a name="breadcrumb"></a>Navegação estrutural
+## <a name="breadcrumb"></a>Trilha
 
-:::image type="content" source="../../assets/images/components/breadcrumb.png" alt-text="O exemplo mostra um componente de interface do usuário estrutural." border="false":::
+:::image type="content" source="../../assets/images/components/breadcrumb.png" alt-text="Exemplo mostra um componente de interface do usuário do breadcrumb." border="false":::
 
 ## <a name="card"></a>Cartão
 
-:::image type="content" source="../../assets/images/components/card.png" alt-text="O exemplo mostra um componente de interface do usuário do cartão." border="false":::
+:::image type="content" source="../../assets/images/components/card.png" alt-text="Exemplo mostra um componente de interface do usuário de cartão." border="false":::
 
 ## <a name="carousel"></a>Carrossel
 
-:::image type="content" source="../../assets/images/components/carousel.png" alt-text="O exemplo mostra um componente da interface do usuário do carrossel." border="false":::
+:::image type="content" source="../../assets/images/components/carousel.png" alt-text="Exemplo mostra um componente de interface do usuário de carrossel." border="false":::
 
 ## <a name="checkbox"></a>Caixa de seleção
 
-:::image type="content" source="../../assets/images/components/checkbox.png" alt-text="O exemplo mostra um componente da interface do usuário CheckBox." border="false":::
+:::image type="content" source="../../assets/images/components/checkbox.png" alt-text="Exemplo mostra um componente de interface do usuário da caixa de seleção." border="false":::
 
 ## <a name="coachmark"></a>Coachmark
 
-:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="O exemplo mostra um componente da interface do usuário do coachmark." border="false":::
+:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="Exemplo mostra um componente de interface do usuário de marca de técnico." border="false":::
 
 ## <a name="contextual-menu"></a>Menu contextual
 
-:::image type="content" source="../../assets/images/components/contextual-menu.png" alt-text="O exemplo mostra um componente de IU de menu contextual." border="false":::
+:::image type="content" source="../../assets/images/components/contextual-menu.png" alt-text="Exemplo mostra um componente de interface do usuário de menu contextual." border="false":::
 
-## <a name="dialog"></a>Caixa de Diálogo
+## <a name="dialog"></a>Dialog
 
-:::image type="content" source="../../assets/images/components/dialog.png" alt-text="O exemplo mostra um componente da interface do usuário da caixa de diálogo." border="false":::
+:::image type="content" source="../../assets/images/components/dialog.png" alt-text="Exemplo mostra um componente de interface do usuário de caixa de diálogo." border="false":::
 
 ## <a name="dropdown"></a>Lista suspensa
 
-:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="O exemplo mostra um componente de interface do usuário suspensa." border="false":::
+:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="Exemplo mostra um componente de interface do usuário suspenso." border="false":::
 
 ## <a name="group-list"></a>Lista de grupos
 
-:::image type="content" source="../../assets/images/components/group-list.png" alt-text="O exemplo mostra um componente da interface do usuário da lista de grupos." border="false":::
+:::image type="content" source="../../assets/images/components/group-list.png" alt-text="Exemplo mostra um componente de interface do usuário de lista de grupos." border="false":::
 
 ## <a name="hyperlink"></a>Hiperlink
 
-:::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="O exemplo mostra um componente de interface do usuário do hiperlink." border="false":::
+:::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Exemplo mostra um componente da interface do usuário do hiperlink." border="false":::
 
 ## <a name="input"></a>Input
 
-:::image type="content" source="../../assets/images/components/input.png" alt-text="O exemplo mostra um componente de interface do usuário de entrada." border="false":::
+:::image type="content" source="../../assets/images/components/input.png" alt-text="Exemplo mostra um componente de interface do usuário de entrada." border="false":::
 
-## <a name="key-value-pair"></a>Par chave-valor
+## <a name="key-value-pair"></a>Par de valores principais
 
-:::image type="content" source="../../assets/images/components/key-value-pair.png" alt-text="O exemplo mostra um componente da interface do usuário do par valor chave." border="false":::
+:::image type="content" source="../../assets/images/components/key-value-pair.png" alt-text="Exemplo mostra um componente de interface do usuário do par de valores principais." border="false":::
 
-## <a name="paragraph"></a>Parágrafo
+## <a name="paragraph"></a>Paragraph
 
-:::image type="content" source="../../assets/images/components/paragraph.png" alt-text="O exemplo mostra um componente de interface do usuário do parágrafo." border="false":::
+:::image type="content" source="../../assets/images/components/paragraph.png" alt-text="Exemplo mostra um componente de interface do usuário de parágrafo." border="false":::
 
-## <a name="picker"></a>Selecionado
+## <a name="picker"></a>Se picker
 
-:::image type="content" source="../../assets/images/components/picker.png" alt-text="O exemplo mostra um componente de interface do usuário do seletor." border="false":::
+:::image type="content" source="../../assets/images/components/picker.png" alt-text="Exemplo mostra um componente de interface do usuário do selador." border="false":::
 
-## <a name="pivot"></a>Navegação dinâmica
+## <a name="pivot"></a>Pivot
 
-:::image type="content" source="../../assets/images/components/pivot.png" alt-text="O exemplo mostra um componente da interface do usuário dinâmica." border="false":::
+:::image type="content" source="../../assets/images/components/pivot.png" alt-text="Exemplo mostra um componente de interface do usuário dinâmica." border="false":::
 
 ## <a name="progress-indicator"></a>Indicador de progresso
 
-:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="O exemplo mostra um componente de interface do usuário do indicador de progresso." border="false":::
+:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="Exemplo mostra um componente de interface do usuário do indicador de progresso." border="false":::
 
 ## <a name="radio"></a>Radio
 
-:::image type="content" source="../../assets/images/components/radio.png" alt-text="O exemplo mostra um componente da interface do usuário do rádio." border="false":::
+:::image type="content" source="../../assets/images/components/radio.png" alt-text="Exemplo mostra um componente de interface do usuário de rádio." border="false":::
 
-## <a name="scrollbar"></a>Rolamento
+## <a name="scrollbar"></a>Scrollbar
 
-:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="O exemplo mostra um componente da interface do usuário ScrollBar." border="false":::
+:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Exemplo mostra um componente de interface do usuário da barra de rolagem." border="false":::
 
-## <a name="searchbox"></a>Caixa de Pesquisa
+## <a name="search-box"></a>Caixa de pesquisa
 
-:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="O exemplo mostra um componente da interface do usuário do SearchBox." border="false":::
+:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="Exemplo mostra um componente de interface do usuário da caixa de pesquisa." border="false":::
 
 ## <a name="side-panel"></a>Painel lateral
 
-:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="O exemplo mostra um componente da interface do usuário do painel lateral." border="false":::
+:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="Exemplo mostra um componente de interface do usuário do painel lateral." border="false":::
 
 ## <a name="status-label"></a>Rótulo de status
 
-:::image type="content" source="../../assets/images/components/status-label.png" alt-text="O exemplo mostra um componente de interface do usuário do rótulo de status." border="false":::
+:::image type="content" source="../../assets/images/components/status-label.png" alt-text="Exemplo mostra um componente de interface do usuário do rótulo de status." border="false":::
 
 ## <a name="toast"></a>Notificação do sistema
 
-:::image type="content" source="../../assets/images/components/toast.png" alt-text="O exemplo mostra um componente da interface do usuário da notificação." border="false":::
+:::image type="content" source="../../assets/images/components/toast.png" alt-text="Exemplo mostra um componente de interface do usuário do sistema." border="false":::
 
 ## <a name="toggle"></a>Alternância
 
-Observação: em IU fluente, alternar é um tipo de caixa de seleção.
+Observação: na interface do usuário fluente, alternar é um tipo de caixa de seleção.
 
-:::image type="content" source="../../assets/images/components/toggle.png" alt-text="O exemplo mostra um componente de interface do usuário de alternância." border="false":::
+:::image type="content" source="../../assets/images/components/toggle.png" alt-text="Exemplo mostra um componente de interface do usuário de alternância." border="false":::
 
 ## <a name="tooltip"></a>Dica de ferramenta
 
-:::image type="content" source="../../assets/images/components/tooltip.png" alt-text="O exemplo mostra um componente da interface do usuário da dica de ferramenta." border="false":::
+:::image type="content" source="../../assets/images/components/tooltip.png" alt-text="Exemplo mostra um componente da interface do usuário da dica de ferramenta." border="false":::
 
 ## <a name="other-resources"></a>Outros recursos
 
-Obtenha exemplos de código e detalhes de implementação para alguns dos componentes listados aqui e no kit de interface do usuário do Microsoft Teams.
+Obter exemplos de código e detalhes de implementação para alguns dos componentes listados aqui e no Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Experimente os componentes (IU fluente)](https://fluentsite.z22.web.core.windows.net/)
+> [Experimente os componentes (Interface do Usuário Fluente)](https://fluentsite.z22.web.core.windows.net/)

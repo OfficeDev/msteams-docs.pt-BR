@@ -3,14 +3,15 @@ title: Começar - Criar sua primeira visão geral do aplicativo e pré-requisito
 author: heath-hamilton
 description: Saiba como começar com o desenvolvimento de aplicativos do Microsoft Teams e configurar seu ambiente.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762036"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019990"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Criar sua primeira visão geral do aplicativo do Microsoft Teams
 

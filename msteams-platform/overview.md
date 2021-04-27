@@ -3,14 +3,15 @@ title: Criar aplicativos para a plataforma Microsoft Teams
 author: heath-hamilton
 description: Obter uma visão geral de como os desenvolvedores podem estender os recursos do Microsoft Teams com aplicativos personalizados.
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596207"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019808"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
@@ -42,7 +43,7 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 
 ### <a name="bots"></a>Bots
 
-**Transformar palavras em ações**: as conversas geralmente resultam na necessidade de fazer algo (gerar um pedido, revisar meu código, verificar o status do tíquete, etc.). Um [bot](bots/what-are-bots.md) pode dar início a esses tipos de fluxos de trabalho dentro do Teams.
+**Transformar palavras em ações**: as conversas geralmente resultam na necessidade de fazer algo (gerar um pedido, revisar meu código, verificar o status do tíquete e assim por diante). Um [bot](bots/what-are-bots.md) pode dar início a esses tipos de fluxos de trabalho dentro do Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Representação conceitual de como os bots são no cliente do Teams." border="false":::
 

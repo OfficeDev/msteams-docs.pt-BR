@@ -4,13 +4,14 @@ author: laujan
 description: criar aplicativos para reuniões do teams
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885070"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018373"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 

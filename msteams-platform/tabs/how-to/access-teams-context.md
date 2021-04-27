@@ -1,14 +1,15 @@
 ---
 title: Obter contexto para sua guia
 description: Descrever como obter o contexto do usuário para suas guias
+localization_priority: Normal
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 88a9c8ac5b2bca539b931147e6f6feb1483a3b6c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696476"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020398"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obter contexto para a guia Microsoft Teams
 

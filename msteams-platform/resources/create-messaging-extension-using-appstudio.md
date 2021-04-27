@@ -3,13 +3,14 @@ title: Criar uma extensão de mensagem usando o App Studio
 author: clearab
 description: Saiba como criar uma extensão de mensagens do Microsoft Teams usando o App Studio.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 25086d959004046e8227de46b31d840c0b3fd228
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697218"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019738"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 

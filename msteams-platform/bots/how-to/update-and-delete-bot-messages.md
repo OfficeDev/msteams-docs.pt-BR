@@ -3,13 +3,14 @@ title: Atualizar e excluir mensagens enviadas do bot
 author: WashingtonKayaker
 description: Como atualizar e excluir mensagens enviadas do bot do Microsoft Teams
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995999"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019983"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Atualizar e excluir mensagens enviadas do bot
 
