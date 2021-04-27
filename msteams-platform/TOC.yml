@@ -46,15 +46,17 @@
       href: concepts/design/map-use-cases.md
 - name: Integrar com o Teams
   items:
+    - name: Visão Geral
+      href: samples/integrate-web-apps-overview.md
     - name: Aplicativos Web
       href: samples/integrating-web-apps.md
     - name: Administrador da plataforma de alimentação
       items:
         - name: Visão Geral
           href: samples/teams-low-code-solutions.md
-        - name: Adicionar um chatbot de agentes virtuais de energia
+        - name: Adicionar um chatbot de Agentes Virtuais de Energia
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Criar um assistente virtual
+        - name: Criar um Assistente Virtual
           href: samples/virtual-assistant.md
     - name: Modelos de aplicativos para o Teams
       href: samples/app-templates.md
@@ -62,7 +64,7 @@
       href: samples/shifts-wfm-connectors.md
     - name: Instalar o Moodle LMS
       href: resources/moodleInstructions.md
-    - name: Criar um botão compartilhar para o Teams
+    - name: Criar um botão Compartilhar para o Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Adicionar uma guia do Teams ao SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
