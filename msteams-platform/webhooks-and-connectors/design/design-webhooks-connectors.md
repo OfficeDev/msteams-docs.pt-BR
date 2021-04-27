@@ -1,16 +1,17 @@
 ---
 title: Projetar webhooks e conectores do Microsoft Teams
 author: heath-hamilton
-description: Diretrizes e práticas recomendadas para a criação de webhooks e conectores para o Microsoft Teams.
+description: Diretrizes e práticas recomendadas para projetar webhooks e conectores para o Microsoft Teams.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34d7f5dd993dfb8a4de32d49d58ed47be09d92e2
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: cdf52398626f726ccd908ee5e2bf0861a81e5757
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797903"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020215"
 ---
-# <a name="design-webhooks-and-connectors"></a><span data-ttu-id="856e4-103">Projetar webhooks e conectores</span><span class="sxs-lookup"><span data-stu-id="856e4-103">Design webhooks and connectors</span></span>
+# <a name="design-webhooks-and-connectors"></a><span data-ttu-id="d2f2e-103">Projetar webhooks e conectores</span><span class="sxs-lookup"><span data-stu-id="d2f2e-103">Design webhooks and connectors</span></span>
 
-<span data-ttu-id="856e4-104">Em breve...</span><span class="sxs-lookup"><span data-stu-id="856e4-104">Coming soon ...</span></span>
+<span data-ttu-id="d2f2e-104">Em breve...</span><span class="sxs-lookup"><span data-stu-id="d2f2e-104">Coming soon ...</span></span>

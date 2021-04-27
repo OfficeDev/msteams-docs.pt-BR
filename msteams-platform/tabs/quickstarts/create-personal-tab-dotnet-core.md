@@ -1,44 +1,45 @@
 ---
-title: Criar uma guia pessoal com o ASP.NET Core
+title: Criar uma guia pessoal com ASP.NET Core
 author: laujan
-description: Um guia de início rápido para criar uma guia pessoal personalizada com o ASP.NET Core.
+description: Um guia de início rápido para criar uma guia pessoal personalizada com ASP.NET Core.
 ms.topic: quickstart
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: 858175c5afa742d7f2d818204fe1a6f09f6e2245
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49476934"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020293"
 ---
-# <a name="create-a-personal-tab-with-aspnet-core"></a><span data-ttu-id="31414-103">Criar uma guia pessoal com o ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="31414-103">Create a personal tab with ASP.NET Core</span></span>
+# <a name="create-a-personal-tab-with-aspnet-core"></a><span data-ttu-id="d23f7-103">Criar uma guia pessoal com ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="d23f7-103">Create a personal tab with ASP.NET Core</span></span>
 
-<span data-ttu-id="31414-104">Neste QuickStart, abordaremos a criação de uma guia pessoal personalizada com as páginas do Razor do core e do ASP.Net C#.</span><span class="sxs-lookup"><span data-stu-id="31414-104">In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages.</span></span> <span data-ttu-id="31414-105">Também usaremos o [app Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.</span><span class="sxs-lookup"><span data-stu-id="31414-105">We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.</span></span>
+<span data-ttu-id="d23f7-104">Neste início rápido, vamos passo a passo criando uma guia pessoal personalizada com C# e ASP.Net Principais Páginas de Lâmina de Corte.</span><span class="sxs-lookup"><span data-stu-id="d23f7-104">In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages.</span></span> <span data-ttu-id="d23f7-105">Também vamos usar o [App Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.</span><span class="sxs-lookup"><span data-stu-id="d23f7-105">We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.</span></span>
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a><span data-ttu-id="31414-106">Obter o código-fonte</span><span class="sxs-lookup"><span data-stu-id="31414-106">Get the source code</span></span>
+## <a name="get-the-source-code"></a><span data-ttu-id="d23f7-106">Obter o código-fonte</span><span class="sxs-lookup"><span data-stu-id="d23f7-106">Get the source code</span></span>
 
-<span data-ttu-id="31414-107">Abra um prompt de comando e crie um novo diretório para o projeto de tabulação.</span><span class="sxs-lookup"><span data-stu-id="31414-107">Open a command prompt and create a new directory for your tab project.</span></span> <span data-ttu-id="31414-108">Fornecemos um projeto simples para ajudá-lo a começar.</span><span class="sxs-lookup"><span data-stu-id="31414-108">We have provided a simple project to get you started.</span></span> <span data-ttu-id="31414-109">Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de exemplo no novo diretório:</span><span class="sxs-lookup"><span data-stu-id="31414-109">To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:</span></span>
+<span data-ttu-id="d23f7-107">Abra um prompt de comando e crie um novo diretório para seu projeto de guia.</span><span class="sxs-lookup"><span data-stu-id="d23f7-107">Open a command prompt and create a new directory for your tab project.</span></span> <span data-ttu-id="d23f7-108">Fornecemos um projeto simples para você começar.</span><span class="sxs-lookup"><span data-stu-id="d23f7-108">We have provided a simple project to get you started.</span></span> <span data-ttu-id="d23f7-109">Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de exemplo em seu novo diretório:</span><span class="sxs-lookup"><span data-stu-id="d23f7-109">To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:</span></span>
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-<span data-ttu-id="31414-110">Depois de ter o código-fonte, abra o Visual Studio e selecione **abrir um projeto ou solução**.</span><span class="sxs-lookup"><span data-stu-id="31414-110">Once you have the source code, open Visual Studio and select **Open a project or solution**.</span></span> <span data-ttu-id="31414-111">Navegue até o diretório do aplicativo guia e abra **PersonalTab. sln**.</span><span class="sxs-lookup"><span data-stu-id="31414-111">Navigate to the tab application directory and open **PersonalTab.sln**.</span></span>
+<span data-ttu-id="d23f7-110">Depois de ter o código-fonte, abra Visual Studio e selecione **Abrir um projeto ou solução**.</span><span class="sxs-lookup"><span data-stu-id="d23f7-110">Once you have the source code, open Visual Studio and select **Open a project or solution**.</span></span> <span data-ttu-id="d23f7-111">Navegue até o diretório de aplicativos de tabulação e abra **PersonalTab.sln**.</span><span class="sxs-lookup"><span data-stu-id="d23f7-111">Navigate to the tab application directory and open **PersonalTab.sln**.</span></span>
 
-<span data-ttu-id="31414-112">Para compilar e executar o aplicativo, pressione **F5** ou escolha **Iniciar Depuração** no menu **depurar** .</span><span class="sxs-lookup"><span data-stu-id="31414-112">To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="31414-113">Em um navegador, navegue até as URLs abaixo para verificar se o aplicativo foi carregado corretamente:</span><span class="sxs-lookup"><span data-stu-id="31414-113">In a browser navigate to the URLs below to verify the application loaded properly:</span></span>
+<span data-ttu-id="d23f7-112">Para criar e executar seu aplicativo pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar.**</span><span class="sxs-lookup"><span data-stu-id="d23f7-112">To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="d23f7-113">Em um navegador, navegue até as URLs abaixo para verificar se o aplicativo foi carregado corretamente:</span><span class="sxs-lookup"><span data-stu-id="d23f7-113">In a browser navigate to the URLs below to verify the application loaded properly:</span></span>
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
 - `http://localhost:44325/privacy`
 - `http://localhost:44325/tou`
 
-## <a name="review-the-source-code"></a><span data-ttu-id="31414-114">Examinar o código-fonte</span><span class="sxs-lookup"><span data-stu-id="31414-114">Review the source code</span></span>
+## <a name="review-the-source-code"></a><span data-ttu-id="d23f7-114">Revisar o código-fonte</span><span class="sxs-lookup"><span data-stu-id="d23f7-114">Review the source code</span></span>
 
-### <a name="startupcs"></a><span data-ttu-id="31414-115">Startup.cs</span><span class="sxs-lookup"><span data-stu-id="31414-115">Startup.cs</span></span>
+### <a name="startupcs"></a><span data-ttu-id="d23f7-115">Startup.cs</span><span class="sxs-lookup"><span data-stu-id="d23f7-115">Startup.cs</span></span>
 
-<span data-ttu-id="31414-116">Este projeto foi criado a partir de um modelo vazio do aplicativo Web do ASP.NET Core 2,2 com a caixa de seleção *avançado-configurar para https* selecionada na instalação.</span><span class="sxs-lookup"><span data-stu-id="31414-116">This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup.</span></span> <span data-ttu-id="31414-117">Os serviços do MVC são registrados pelo método da estrutura de injeção de dependência `ConfigureServices()` .</span><span class="sxs-lookup"><span data-stu-id="31414-117">The MVC services are registered by the dependency injection framework's `ConfigureServices()` method.</span></span> <span data-ttu-id="31414-118">Além disso, o modelo vazio não habilita o fornecimento de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:</span><span class="sxs-lookup"><span data-stu-id="31414-118">Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:</span></span>
+<span data-ttu-id="d23f7-116">Este projeto foi criado ASP.NET modelo vazio do Aplicativo Web do Núcleo 2.2 com a caixa de seleção Avançado - Configurar para *HTTPS* selecionada na instalação.</span><span class="sxs-lookup"><span data-stu-id="d23f7-116">This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup.</span></span> <span data-ttu-id="d23f7-117">Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência.</span><span class="sxs-lookup"><span data-stu-id="d23f7-117">The MVC services are registered by the dependency injection framework's `ConfigureServices()` method.</span></span> <span data-ttu-id="d23f7-118">Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:</span><span class="sxs-lookup"><span data-stu-id="d23f7-118">Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:</span></span>
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -52,27 +53,27 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-### <a name="wwwroot-folder"></a><span data-ttu-id="31414-119">pasta wwwroot</span><span class="sxs-lookup"><span data-stu-id="31414-119">wwwroot folder</span></span>
+### <a name="wwwroot-folder"></a><span data-ttu-id="d23f7-119">pasta wwwroot</span><span class="sxs-lookup"><span data-stu-id="d23f7-119">wwwroot folder</span></span>
 
-<span data-ttu-id="31414-120">No ASP.NET Core, a pasta raiz da Web é onde o aplicativo procura arquivos estáticos.</span><span class="sxs-lookup"><span data-stu-id="31414-120">In ASP.NET Core, the web root folder is where the application looks for static files.</span></span>
+<span data-ttu-id="d23f7-120">No ASP.NET Core, a pasta raiz da Web é onde o aplicativo procura arquivos estáticos.</span><span class="sxs-lookup"><span data-stu-id="d23f7-120">In ASP.NET Core, the web root folder is where the application looks for static files.</span></span>
 
-### <a name="indexcshtml"></a><span data-ttu-id="31414-121">Index. cshtml</span><span class="sxs-lookup"><span data-stu-id="31414-121">Index.cshtml</span></span>
+### <a name="indexcshtml"></a><span data-ttu-id="d23f7-121">Index.cshtml</span><span class="sxs-lookup"><span data-stu-id="d23f7-121">Index.cshtml</span></span>
 
-<span data-ttu-id="31414-122">ASP.NET Core trata os arquivos denominados *index* como o padrão/home page do site.</span><span class="sxs-lookup"><span data-stu-id="31414-122">ASP.NET Core treats files called *Index* as the default/home page for the site.</span></span> <span data-ttu-id="31414-123">Quando a URL do navegador apontar para a raiz do site, **index. cshtml** será exibido como a home page do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="31414-123">When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.</span></span>
+<span data-ttu-id="d23f7-122">ASP.NET Core trata arquivos chamados *Index* como a home page padrão do site.</span><span class="sxs-lookup"><span data-stu-id="d23f7-122">ASP.NET Core treats files called *Index* as the default/home page for the site.</span></span> <span data-ttu-id="d23f7-123">Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** será exibida como a home page do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d23f7-123">When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.</span></span>
 
-### <a name="appmanifest-folder"></a><span data-ttu-id="31414-124">Pasta arquivo AppManifest</span><span class="sxs-lookup"><span data-stu-id="31414-124">AppManifest folder</span></span>
+### <a name="appmanifest-folder"></a><span data-ttu-id="d23f7-124">Pasta AppManifest</span><span class="sxs-lookup"><span data-stu-id="d23f7-124">AppManifest folder</span></span>
 
-<span data-ttu-id="31414-125">Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:</span><span class="sxs-lookup"><span data-stu-id="31414-125">This folder contains the following required app package files:</span></span>
+<span data-ttu-id="d23f7-125">Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:</span><span class="sxs-lookup"><span data-stu-id="d23f7-125">This folder contains the following required app package files:</span></span>
 
-- <span data-ttu-id="31414-126">Um **ícone de cor completa** medindo 192 x 192 pixels.</span><span class="sxs-lookup"><span data-stu-id="31414-126">A **full color icon** measuring 192 x 192 pixels.</span></span>
-- <span data-ttu-id="31414-127">Um **ícone de contorno transparente** medindo 32 x 32 pixels.</span><span class="sxs-lookup"><span data-stu-id="31414-127">A **transparent outline icon** measuring 32 x 32 pixels.</span></span>
-- <span data-ttu-id="31414-128">Um **manifest.jsno** arquivo que especifica os atributos do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="31414-128">A **manifest.json** file that specifies the attributes of your app.</span></span>
+- <span data-ttu-id="d23f7-126">Um **ícone de cor completo** medindo 192 x 192 pixels.</span><span class="sxs-lookup"><span data-stu-id="d23f7-126">A **full color icon** measuring 192 x 192 pixels.</span></span>
+- <span data-ttu-id="d23f7-127">Um **ícone de contorno transparente** medindo 32 x 32 pixels.</span><span class="sxs-lookup"><span data-stu-id="d23f7-127">A **transparent outline icon** measuring 32 x 32 pixels.</span></span>
+- <span data-ttu-id="d23f7-128">Um **manifest.json** que especifica os atributos do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d23f7-128">A **manifest.json** file that specifies the attributes of your app.</span></span>
 
-<span data-ttu-id="31414-129">Esses arquivos precisam ser zipados em um pacote de aplicativos para uso no carregamento de sua guia para o Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="31414-129">These files need to be zipped in an app package for use in uploading your tab to Teams.</span></span> <span data-ttu-id="31414-130">O Microsoft Teams carregará o `contentUrl` especificado no manifesto, o incorporará em um <iframe \> e o renderizará na sua guia.</span><span class="sxs-lookup"><span data-stu-id="31414-130">Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.</span></span>
+<span data-ttu-id="d23f7-129">Esses arquivos precisam ser cortados em um pacote de aplicativos para uso no carregamento da guia para o Teams.</span><span class="sxs-lookup"><span data-stu-id="d23f7-129">These files need to be zipped in an app package for use in uploading your tab to Teams.</span></span> <span data-ttu-id="d23f7-130">O Microsoft Teams carregará o especificado em seu manifesto, o inserirá em um <iframe e o `contentUrl` renderizará em sua \> guia.</span><span class="sxs-lookup"><span data-stu-id="d23f7-130">Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.</span></span>
 
-### <a name="csproj"></a><span data-ttu-id="31414-131">. csproj</span><span class="sxs-lookup"><span data-stu-id="31414-131">.csproj</span></span>
+### <a name="csproj"></a><span data-ttu-id="d23f7-131">.csproj</span><span class="sxs-lookup"><span data-stu-id="d23f7-131">.csproj</span></span>
 
-<span data-ttu-id="31414-132">Na janela do Visual Studio Solution Explorer, clique com o botão direito do mouse no projeto e selecione **Editar arquivo de projeto**.</span><span class="sxs-lookup"><span data-stu-id="31414-132">In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**.</span></span> <span data-ttu-id="31414-133">Na parte inferior do arquivo, você verá o código que cria e atualiza sua pasta zip quando o aplicativo é criado:</span><span class="sxs-lookup"><span data-stu-id="31414-133">At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:</span></span>
+<span data-ttu-id="d23f7-132">Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**.</span><span class="sxs-lookup"><span data-stu-id="d23f7-132">In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**.</span></span> <span data-ttu-id="d23f7-133">Na parte inferior do arquivo, você verá o código que cria e atualiza sua pasta zip quando o aplicativo é construído:</span><span class="sxs-lookup"><span data-stu-id="d23f7-133">At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -96,23 +97,23 @@ public void Configure(IApplicationBuilder app)
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
-- <span data-ttu-id="31414-134">Abra um prompt de comando na raiz do diretório do projeto e execute o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="31414-134">Open a command prompt in the root of your project directory and run the following command:</span></span>
+- <span data-ttu-id="d23f7-134">Abra um prompt de comando na raiz do diretório do projeto e execute o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="d23f7-134">Open a command prompt in the root of your project directory and run the following command:</span></span>
 
 ```bash
 ngrok http https://localhost:44325 -host-header="localhost:44325"
 ```
 
-- <span data-ttu-id="31414-135">O Ngrok ouvirá as solicitações da Internet e as roteará para seu aplicativo quando estiver em execução na porta 44325.</span><span class="sxs-lookup"><span data-stu-id="31414-135">Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.</span></span>  <span data-ttu-id="31414-136">Deve ser parecido `https://y8rPrT2b.ngrok.io/` com o local em que o *y8rPrT2b* é substituído pela URL https do ngrok alfanumérico.</span><span class="sxs-lookup"><span data-stu-id="31414-136">It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.</span></span>
+- <span data-ttu-id="d23f7-135">O Ngrok ouvirá as solicitações da Internet e as encaminhará para seu aplicativo quando estiver sendo executado na porta 44325.</span><span class="sxs-lookup"><span data-stu-id="d23f7-135">Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.</span></span>  <span data-ttu-id="d23f7-136">Deve parecer `https://y8rPrT2b.ngrok.io/` onde *y8rPrT2b* é substituído pela URL HTTPS alfanumérico ngrok.</span><span class="sxs-lookup"><span data-stu-id="d23f7-136">It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.</span></span>
 
-- <span data-ttu-id="31414-137">Certifique-se de manter o prompt de comando com o ngrok em execução e tome nota da URL — você precisará dela mais tarde.</span><span class="sxs-lookup"><span data-stu-id="31414-137">Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.</span></span>
+- <span data-ttu-id="d23f7-137">Certifique-se de manter o prompt de comando com o ngrok em execução e para anotar a URL , você precisará dele mais tarde.</span><span class="sxs-lookup"><span data-stu-id="d23f7-137">Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.</span></span>
 
-- <span data-ttu-id="31414-138">Verifique se o *ngrok* está em execução e funcionando corretamente abrindo o navegador e acessando a página de conteúdo por meio da URL https do ngrok que foi fornecida na janela de prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="31414-138">Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.</span></span>
+- <span data-ttu-id="d23f7-138">Verifique se *o ngrok* está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="d23f7-138">Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.</span></span>
 
 >[!TIP]
-><span data-ttu-id="31414-139">Você precisa ter o aplicativo no Visual Studio e o ngrok em execução para concluir este QuickStart.</span><span class="sxs-lookup"><span data-stu-id="31414-139">You need to have both your application in Visual Studio and ngrok running to complete this quickstart.</span></span> <span data-ttu-id="31414-140">Se você precisar parar a execução do aplicativo no Visual Studio para trabalhar nele, **Mantenha o ngrok em execução**.</span><span class="sxs-lookup"><span data-stu-id="31414-140">If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**.</span></span> <span data-ttu-id="31414-141">Ele continuará a escutar e retomará o roteamento da solicitação do aplicativo quando ele for reiniciado no Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="31414-141">It will continue to listen and will resume routing your application's request when it restarts in Visual Studio.</span></span> <span data-ttu-id="31414-142">Se for necessário reiniciar o serviço do ngrok, ele retornará uma nova URL e você terá que atualizar todos os locais que usam essa URL.</span><span class="sxs-lookup"><span data-stu-id="31414-142">If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.</span></span>
+><span data-ttu-id="d23f7-139">Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir esse início rápido.</span><span class="sxs-lookup"><span data-stu-id="d23f7-139">You need to have both your application in Visual Studio and ngrok running to complete this quickstart.</span></span> <span data-ttu-id="d23f7-140">Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**.</span><span class="sxs-lookup"><span data-stu-id="d23f7-140">If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**.</span></span> <span data-ttu-id="d23f7-141">Ele continuará a ouvir e retomará o roteamento da solicitação do aplicativo quando ele for reiniciado no Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d23f7-141">It will continue to listen and will resume routing your application's request when it restarts in Visual Studio.</span></span> <span data-ttu-id="d23f7-142">Se você precisar reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.</span><span class="sxs-lookup"><span data-stu-id="d23f7-142">If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.</span></span>
 
-### <a name="run-your-application"></a><span data-ttu-id="31414-143">Executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="31414-143">Run your application</span></span>
+### <a name="run-your-application"></a><span data-ttu-id="d23f7-143">Executar seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="d23f7-143">Run your application</span></span>
 
-- <span data-ttu-id="31414-144">No Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **depurar** do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="31414-144">In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.</span></span>
+- <span data-ttu-id="d23f7-144">Em Visual Studio pressione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d23f7-144">In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.</span></span>
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
