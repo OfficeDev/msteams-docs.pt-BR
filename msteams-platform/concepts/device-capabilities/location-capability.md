@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019857"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058366"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
 
@@ -105,8 +105,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
+- [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrar a QR ou o recurso de scanner de código de barras no Teams](qr-barcode-scanner-capability.md)
+- [Integrar a QR ou o recurso de scanner de código de barras no Teams](qr-barcode-scanner-capability.md)

@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020811"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058464"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao locatário de teste do Microsoft 365
 
@@ -256,12 +256,9 @@ Habilenciar o sideload de aplicativo personalizado é opcional. Por padrão, som
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Depurar sua guia](~/tabs/how-to/developer-tools.md)
+- [Depurar sua guia](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 

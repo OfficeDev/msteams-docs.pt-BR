@@ -1,19 +1,19 @@
 ---
-title: Adicionar guia do Teams ao SharePoint
+title: Adicionar uma guia do Teams ao SharePoint
 author: laujan
 description: Como implantar sua guia do Teams existente no SharePoint como uma Web Part da Estrutura do SharePoint.
 keywords: teams tabs sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020314"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058478"
 ---
-# <a name="add-teams-tab-to-sharepoint"></a>Adicionar guia do Teams ao SharePoint 
+# <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint 
 
 Você pode obter uma experiência de integração rica entre o Microsoft Teams e o SharePoint adicionando uma guia do Microsoft Teams no SharePoint como uma Web Part SPFx. Este documento orienta você sobre como você deve pegar uma guia de um aplicativo de exemplo do Microsoft Teams e usá-lo no SharePoint. 
 
@@ -143,11 +143,8 @@ A imagem a seguir exibe a experiência completa do aplicativo teams no Sharepoin
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Criando guias do Microsoft Teams usando a Estrutura do SharePoint – Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Criando guias do Microsoft Teams usando a Estrutura do SharePoint – Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [Usar páginas de aplicativos de parte única no SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Usar páginas de aplicativos de parte única no SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

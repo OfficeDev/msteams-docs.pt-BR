@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Uma visão geral da integração de aplicativos Web e recursos de dispositivo com o aplicativo Microsoft Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020236"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058653"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -45,7 +45,7 @@ Com o Power Apps, você pode criar aplicativos de negócios que se conectam aos 
 
 O Power Virtual Agent é uma solução de interface gráfica sem código e guiada. Ele é criado na Plataforma do Microsoft Power e na Estrutura de Bots. Ele capacita todos os membros da sua equipe a criar e manter chatbots de conversação ricos que se integram facilmente à plataforma do Teams. Você pode projetar, desenvolver e publicar agentes virtuais inteligentes para o Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou se registrar diretamente com a Estrutura de Bots.
 
-### <a name="create-virtual-assistant"></a>Criar Assistente Virtual
+### <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
 O Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. 
 
@@ -79,41 +79,28 @@ A plataforma do Microsoft Teams está aprimorando continuamente os recursos de d
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Mapear os casos de uso do aplicativo para os recursos da plataforma Teams](~/concepts/design/map-use-cases.md)
+- [Mapear os casos de uso do aplicativo para os recursos da plataforma Teams](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [Determinar os pontos de entrada do aplicativo](~/concepts/extensibility-points.md)
+- [Determinar os pontos de entrada do aplicativo](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrating-web-apps.md)
+- [Integrar aplicativos Web](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Criar aplicativos personalizados de baixo código para o Microsoft Teams](~/samples/teams-low-code-solutions.md)
+- [Criar aplicativos personalizados de baixo código para o Microsoft Teams](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [Adicionar um chatbot de agentes virtuais de energia](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [Adicionar um chatbot de agentes virtuais de energia](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Criar assistente virtual](~/samples/virtual-assistant.md)
+- [Criar assistente virtual](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [Modelos de aplicativos para o Teams](~/samples/app-templates.md)
+- [Modelos de aplicativos para o Teams](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [Conectores de Turno prontos para produção](~/samples/shifts-wfm-connectors.md)
+- [Conectores de Turno prontos para produção](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [Instalar o Moodle LMS](~/resources/moodleinstructions.md)
+- [Instalar o Moodle LMS](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [Criar um botão compartilhar para o Teams](~/concepts/build-and-test/share-to-teams.md)
+- [Criar um botão compartilhar para o Teams](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Adicionar uma guia do Teams ao SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+- [Adicionar uma guia do Teams ao SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [Criar links detalhados](~/concepts/build-and-test/deep-links.md)
+- [Criar links detalhados](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [Funcionalidades de dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [Funcionalidades de dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)

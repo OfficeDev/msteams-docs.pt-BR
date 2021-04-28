@@ -4,12 +4,12 @@ description: Descreve como especificar as opções de instalação padrão do ap
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: a4b70df70c7b9442e29953dae8a8c4e892cb72c1
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946484"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058611"
 ---
 # <a name="add-a-default-install-scope-and-group-capability"></a>Adicionar um escopo de instalação padrão e funcionalidade de grupo
 
@@ -17,7 +17,7 @@ ms.locfileid: "51946484"
 
 ![Adicionar um aplicativo](../../assets/images/compose-extensions/addanapp.png)
 
-Se o recurso principal do aplicativo for um bot, você também poderá tornar o bot o recurso padrão quando um usuário instala seu aplicativo em uma equipe. 
+Se o recurso principal do aplicativo for um bot, você também poderá tornar o bot o recurso padrão quando um usuário instala seu aplicativo em uma equipe.
 
 ## <a name="configure-your-apps-default-install-scope"></a>Configurar o escopo de instalação padrão do aplicativo
 
@@ -26,7 +26,7 @@ Configure o escopo de instalação padrão para seu aplicativo. Você pode defin
 **Para configurar o escopo de instalação padrão no manifesto do aplicativo**
 
 1. Abra o manifesto do aplicativo e adicione a `defaultInstallScope` propriedade.
-2. De definir um valor `personal` de , , ou `team` `groupchat` `meetings` (consulte um exemplo abaixo).
+2. Definir o valor de escopo de instalação padrão como `personal` , `team` , ou `groupchat` `meetings` .
 
     ```json
     "defaultInstallScope": "meetings",
@@ -37,14 +37,19 @@ Configure o escopo de instalação padrão para seu aplicativo. Você pode defin
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>Configurar o recurso padrão para escopos compartilhados
 
-Configure o recurso padrão quando seu aplicativo estiver instalado para uma equipe, reunião ou chat.
+Configure o recurso padrão quando seu aplicativo estiver instalado para uma equipe, reunião ou groupchat.
+
+> [!NOTE]
+> `defaultGroupCapability` fornece o recurso padrão que será adicionado à equipe, groupchat ou reunião. Selecione uma guia, bot ou conector como o recurso padrão para seu aplicativo, mas você deve garantir que tenha fornecido o recurso selecionado na definição do aplicativo.
 
 **Para configurar detalhes no manifesto do aplicativo**
 
 1. Abra o manifesto do aplicativo e adicione `defaultGroupCapability` a propriedade a ele.
-2. Salve as atualizações.
+2. Definir um valor `team` de `groupchat` , ou `meetings` .
+3. Para a funcionalidade de grupo selecionada, os recursos de grupo disponíveis `bot` são, `tab` , ou `connector` . 
 
-    A seguir está um exemplo JSON:
+    > [!NOTE]
+    > Você pode selecionar apenas um recurso `bot` padrão, , `tab` ou para o recurso de grupo `connector` selecionado.
 
     ```json
     "defaultGroupCapability": {
@@ -53,8 +58,9 @@ Configure o recurso padrão quando seu aplicativo estiver instalado para uma equ
         "meetings": "tab"
     }
     ```
+
 > [!NOTE]
-> Para obter informações sobre o esquema completo, consulte [esquema de manifesto](~/resources/schema/manifest-schema.md).
+> Para obter mais informações, consulte o esquema [de manifesto do aplicativo](~/resources/schema/manifest-schema.md).
 
 ## <a name="next-step"></a>Próxima etapa
 

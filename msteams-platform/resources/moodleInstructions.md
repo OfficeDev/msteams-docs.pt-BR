@@ -6,12 +6,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 091192054c5add7cfbdc1e7baabc86e34cef7631
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 2a99acbe9bc618ea940af3bbe898b30d342ad0cf
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020582"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058352"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -251,11 +251,8 @@ Para compartilhar qualquer solicitação de recurso ou comentários conosco, vis
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Moodle](https://moodle.org/)
+- [Moodle](https://moodle.org/)
 
-> [!div class="nextstepaction"]
-> [Documentação de miojo](https://docs.moodle.org/34/en/Installing_plugins).
+- [Documentação de miojo](https://docs.moodle.org/34/en/Installing_plugins).

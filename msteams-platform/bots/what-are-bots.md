@@ -5,12 +5,12 @@ description: Uma visão geral dos bots no Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 70240b7396fc5e7a77749dc4e7326bfb30ea4415
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9ba7b6b96a8cbd55fac968975794d7c41d57f514
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020888"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058492"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -48,8 +48,7 @@ Você pode usar as APIs de bot do Teams para obter informações para um ou mais
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
+- [Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

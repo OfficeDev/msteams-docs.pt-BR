@@ -5,12 +5,12 @@ description: Escolha o escopo correto do aplicativo
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019871"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058450"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para recursos de aplicativo do Teams
 
@@ -105,7 +105,6 @@ Dito isso, os melhores aplicativos geralmente combinam vários recursos, criando
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Crie aplicativos para o Microsoft Teams](../../overview.md)
+- [Crie aplicativos para o Microsoft Teams](../../overview.md)
  
 

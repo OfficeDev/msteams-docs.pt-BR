@@ -1,17 +1,17 @@
 ---
-title: Botão Criar Share-to-Teams
+title: Criar um botão Compartilhar para o Teams
 description: Como adicionar o botão Compartilhar ao Teams inserido em seu site
 ms.topic: reference
 localization_priority: Normal
 keywords: Compartilhar o Teams Share-to-Teams
-ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020818"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058471"
 ---
-# <a name="create-share-to-teams-button"></a>Botão Criar Share-to-Teams
+# <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
 Sites de terceiros podem usar o script do launcher para incorporar botões do Share-to-Teams em suas páginas da Web. Quando você seleciona, ele inicia a experiência do Share-to-Teams em uma janela pop-up. Isso permite compartilhar um link diretamente com qualquer pessoa ou canal do Microsoft Teams sem alternar o contexto. Este documento orienta você sobre como criar e inserir um botão Compartilhar para o Teams para seu site, criar a visualização do site e estender o Share-to-Teams para Educação.
 
@@ -94,12 +94,12 @@ Para professores que usam o botão Compartilhar com o Teams, há uma opção adi
 
 | Propriedade | Atributo HTML | Tipo | Padrão | Descrição |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | cadeia de caracteres | n/d | O href do conteúdo a ser compartilhá-lo. |
+| href | `data-href` | string | n/d | O href do conteúdo a ser compartilhá-lo. |
 | visualização | `data-preview` | booleano (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
 | iconPxSize | `data-icon-px-size` | number (como uma cadeia de caracteres) | `32` | O tamanho em pixels do botão Compartilhar para Equipes a ser render. |
-| msgText | `data-msg-text` | cadeia de caracteres | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
-| assignInstr | `data-assign-instr` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
-| assignTitle | `data-assign-title` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Título" de atribuições. O número máximo de caracteres é 50. |
+| msgText | `data-msg-text` | string | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
+| assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
+| assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" de atribuições. O número máximo de caracteres é 50. |
 
 ### <a name="methods"></a>Métodos
 
@@ -133,5 +133,4 @@ Você pode selecionar para definir valores padrão para os seguintes campos no f
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

@@ -5,12 +5,12 @@ description: Detalhar as soluções de código disponíveis da Microsoft baixa e
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: c3fa4fb1792579a344596cbb080d96015292f7c4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020412"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058681"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Criar aplicativos personalizados de baixo código para o Microsoft Teams
 
@@ -83,5 +83,4 @@ O Assistente Virtual é um modelo de código aberto da Microsoft que permite que
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

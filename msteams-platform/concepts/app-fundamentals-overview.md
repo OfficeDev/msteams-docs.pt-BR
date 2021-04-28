@@ -5,12 +5,12 @@ description: Descreva os conceitos fundamentais do desenvolvimento da plataforma
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b52eebf2b8e0884cd225298ae557bb7ac65d4a68
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6d0c22049e828426cfe963da6631b4c289566bf0
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020860"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058457"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Fundamentos do desenvolvimento de aplicativos do Microsoft Teams
 
@@ -35,11 +35,9 @@ Você pode reconhecer problemas do usuário e identificar as respostas a alguns 
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web com o Teams](../samples/integrating-web-apps.md)
+- [Integrar aplicativos Web com o Teams](../samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Criar seu primeiro aplicativo do Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
+- [Criar seu primeiro aplicativo do Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

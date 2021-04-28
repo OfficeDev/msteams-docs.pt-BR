@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020832"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058331"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -224,5 +224,4 @@ Para usar esse link profundo com seu bot, você pode especificar isso como o des
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
