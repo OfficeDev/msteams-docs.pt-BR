@@ -5,12 +5,12 @@ description: Como enviar, receber e manipular mensagens para um bot em um chat d
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058590"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075749"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversas de chat de canal e grupo com um bot
 
@@ -270,7 +270,7 @@ Não envie uma mensagem nos seguintes casos:
 
 ## <a name="see-also"></a>Confira também
 
-- [Obter contexto de equipes](~/bots/how-to/get-teams-context.md).
+[Obter contexto do Teams](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

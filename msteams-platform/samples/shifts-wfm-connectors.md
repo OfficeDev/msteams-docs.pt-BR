@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Kronos dos conectores do Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 459797dd3f8425223c0dcbedc335955bf106ae37
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058695"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075735"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 
@@ -72,4 +72,4 @@ Para obter mais informações sobre contribuição e sugestão, consulte [Get it
 
 ## <a name="see-also"></a>Confira também
 
-- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+[Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

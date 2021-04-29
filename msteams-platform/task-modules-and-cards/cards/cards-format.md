@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922514"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068819"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões no Teams
 
@@ -164,7 +164,7 @@ Para incluir uma menção em um Cartão Adaptável, seu aplicativo precisa inclu
 Use a propriedade mascarar informações para mascarar informações específicas, como senha ou informações confidenciais de usuários dentro do elemento de entrada de cartão [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptável. 
 
 > [!NOTE]
-> O recurso só dá suporte ao mascaramento de informações do lado do cliente, o texto de entrada mascarada é enviado como texto claro para o endereço de ponto de extremidade https especificado durante a configuração [do bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
+> O recurso só dá suporte ao mascaramento de informações do lado do cliente, o texto de entrada mascarada é enviado como texto claro para o endereço de ponto de extremidade https especificado durante a configuração [do bot.](../../build-your-first-app/build-bot.md) 
 
 > [!NOTE]
 > A propriedade de mascaramento de informações está disponível apenas na visualização do desenvolvedor.

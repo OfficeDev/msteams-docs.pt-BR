@@ -5,12 +5,12 @@ description: Uma visão geral das extensões de mensagens na plataforma do Micro
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a5d30912d5cc580b6e85e19178c49d91811bc11f
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058534"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075665"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -77,7 +77,7 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 
 ## <a name="see-also"></a>Confira também
 
-- [Criar uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
+[Criar uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>Próxima etapa

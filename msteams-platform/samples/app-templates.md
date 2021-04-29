@@ -6,12 +6,12 @@ keywords: Demonstração de exemplos de modelos do Microsoft Teams
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: ceec7e05ae08ff147fb87005403ec8264e0ec313
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 04f32e7f35863d7c4b3e8744984eb6e27ec63396
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058667"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075756"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -693,4 +693,4 @@ Para obter mais informações sobre o modelo de aplicativo, consulte [Modelo de 
 
 ## <a name="see-also"></a>Confira também
 
-- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+[Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

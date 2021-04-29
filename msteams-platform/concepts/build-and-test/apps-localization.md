@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 8490230ad0b268d402a9ad7deb5f8b1e3f420f9d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6c63bd5c71934d0a3342b31bc10feda38b8ae0d1
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020846"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075742"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localização para aplicativos do Microsoft Teams
 
@@ -132,3 +132,11 @@ Portanto, é altamente recomendável fornecer traduções de nível superior e s
 ## <a name="handling-localized-text-submissions-from-your-users"></a>Manipulando envios de texto localizados de seus usuários
 
 Se o seu fornecer versões localizadas do aplicativo, é muito provável que os usuários respondam com o mesmo idioma. O Teams não converte os envios de usuário de volta para o idioma padrão, portanto, seu aplicativo precisará lidar com isso. Por exemplo, se você fornecer uma localização , as respostas ao bot serão o texto localizado do comando, não `commandList` o idioma padrão. Seu aplicativo precisará responder adequadamente.
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Exemplo de nome | Descrição | .NET |
+|-------------|-------------|------|
+| Localização de aplicativos | Localização de aplicativos do Microsoft Teams usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+
+

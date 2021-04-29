@@ -4,33 +4,26 @@ description: Descreve as diretrizes para projetar guias que funcionam em disposi
 ms.topic: conceptual
 localization_priority: Normal
 keywords: guias móveis da estrutura de referência de diretrizes de design do teams
-ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: cdcaddf5ba0fb18537e87daa4b459c7377225f76
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020405"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075693"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
-> [!NOTE]
-> Se você optar por ter sua guia canal/grupo exibida em clientes móveis do Teams, a configuração deve ter um valor para `setSettings()` a `websiteUrl` propriedade (consulte abaixo).
-
-Guias personalizadas podem fazer parte de um canal, chat de grupo ou aplicativo pessoal (aplicativos que contêm guias estáticas e/ou um bot um para um).
-
-Aplicativos pessoais estão disponíveis em clientes móveis na gaveta do aplicativo. O aplicativo só pode ser instalado de uma área de trabalho ou cliente Web e pode levar até 24 horas para aparecer em clientes móveis. Como alternativa, você pode impor uma recarga no cliente móvel ao entrar e sair. Isso deve disponibilizar imediatamente o aplicativo móvel.
-
-As guias de canal também estão disponíveis no celular. O comportamento padrão atualmente é usar o seu `websiteUrl` para iniciar sua guia em uma janela do navegador. No entanto, eles podem ser carregados em um cliente móvel clicando no menu estouro ao lado da guia e escolhendo Abrir , que usará a guia para carregar a guia dentro do cliente móvel `...` do  `contentUrl` Teams.
+Você pode incluir guias em canais móveis do Teams, chats e aplicativos pessoais.
 
 ## <a name="accessing-personal-tabs"></a>Acessando guias pessoais
 
-A ilustração a seguir mostra como você acessa uma guia pessoal no celular.
+Você pode acessar guias pessoais na gaveta do aplicativo.
 
 :::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Ilustração mostrando a gaveta de aplicativos móveis do Teams." border="false":::
 
 ## <a name="accessing-channel-tabs"></a>Acessando guias de canal
 
-A ilustração a seguir mostra como você acessa uma guia de canal no celular.
+Você pode acessar guias de canal e grupo selecionando o botão **Mais** no canal ou chat no qual eles foram adicionados.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Ilustração mostrando uma guia móvel do Teams." border="false":::
 
@@ -126,10 +119,6 @@ Campos são áreas onde os usuários podem inserir texto. Os flyouts são mais l
 
 Ao criar um aplicativo que inclua uma guia, você precisa considerar (e testar) como sua guia funcionará nos clientes Android e iOS do Microsoft Teams. As seções abaixo delineam alguns dos principais cenários que você precisa considerar.
 
-### <a name="testing-on-mobile-clients"></a>Testes em clientes móveis
-
-Você precisa validar que sua guia funciona corretamente em dispositivos móveis de vários tamanhos e qualidades. Para dispositivos Android, você pode usar [o DevTools](~/tabs/how-to/developer-tools.md) para depurar sua guia enquanto ela estiver em execução. Recomendamos que você teste em dispositivos de alto e baixo desempenho, bem como em um tablet.
-
 ### <a name="authentication"></a>Autenticação
 
 Para que a autenticação funcione em clientes móveis, você deve atualizar o SDK JavaScript do Teams para pelo menos a versão 1.4.1.
@@ -139,4 +128,26 @@ Para que a autenticação funcione em clientes móveis, você deve atualizar o S
 Clientes móveis regularmente precisam funcionar com baixa largura de banda e conexões intermitentes. Seu aplicativo deve lidar com quaisquer tempos de tempo apropriados fornecendo uma mensagem contextual ao usuário. Você também deve ter indicadores de progresso do usuário para fornecer comentários aos usuários sobre processos de longa duração.
 
 > [!NOTE]
-> As guias são habilitadas no celular somente depois que o aplicativo é adicionado a uma lista de permitir, com base na entrada da equipe de aprovação. Para verificar a capacidade de resposta móvel, entre em contato com teamsubm@microsoft.com. 
+> As guias são habilitadas no celular somente depois que o aplicativo é adicionado a uma lista de permitir, com base na entrada da equipe de aprovação. Para verificar a capacidade de resposta móvel, entre em contato com teamsubm@microsoft.com.
+
+### <a name="testing-on-mobile-clients"></a>Testes em clientes móveis
+
+Você precisa validar que sua guia funciona corretamente em dispositivos móveis de vários tamanhos e qualidades. Para dispositivos Android, você pode usar [o DevTools](~/tabs/how-to/developer-tools.md) para depurar sua guia enquanto ela estiver em execução. Recomendamos que você teste em dispositivos de alto e baixo desempenho, bem como em um tablet.
+
+### <a name="distribution"></a>Distribuição
+
+Os aplicativos listados no armazenamento do Teams devem ser aprovados para que o uso móvel funcione corretamente no cliente móvel do Teams. O comportamento das guias depende da aprovação do aplicativo.
+
+#### <a name="channel-and-group-tab-behavior"></a>Comportamento da guia canal e grupo
+
+* **Comportamento quando aprovado**: abre no cliente móvel do Teams usando a configuração do `contentUrl` aplicativo.
+* **Comportamento quando não aprovado**: abre no navegador padrão do dispositivo usando a configuração do aplicativo (que também deve ser incluído na função `websiteUrl` do `setSettings()` código-fonte). No entanto, os usuários ainda podem carregar a guia no cliente móvel do Teams selecionando **Mais** ao lado do aplicativo e escolhendo **Abrir**, o que dispara a configuração do `contentUrl` aplicativo.
+
+#### <a name="personal-app-behavior"></a>Comportamento do aplicativo pessoal
+
+* **Comportamento quando aprovado**: Cada guia no aplicativo pessoal é exibida no cliente móvel do Teams usando suas respectivas `contentUrl` configurações.
+* **Comportamento quando não aprovado**: o aplicativo pessoal não está disponível no cliente móvel do Teams.
+
+#### <a name="non-teams-store-app-behavior"></a>Comportamento de aplicativo que não é do Teams store
+
+Se você estiver fazendo sideload do aplicativo ou publicação no catálogo de aplicativos de uma organização, o comportamento da guia será o mesmo que os aplicativos da loja do Teams aprovados pela Microsoft para dispositivos móveis.
