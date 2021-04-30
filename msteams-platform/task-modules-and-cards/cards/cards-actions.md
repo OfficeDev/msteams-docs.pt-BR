@@ -1,21 +1,21 @@
 ---
 title: Adicionar ações de cartão em um bot
-description: Descreve ações de cartão no Microsoft Teams e como usá-las em seus bots
+description: Descreve ações de cartão em Microsoft Teams e como usá-las em seus bots
 localization_priority: Normal
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019535"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088791"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
-Os cartões usados por bots e extensões de mensagens no Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) Observe que essas ações diferem dos cartões do `potentialActions` Conector do Office 365 quando usados de Conectores.
+Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) Observe que essas ações diferem das `potentialActions` Office 365 conectores quando usadas de Conectores.
 
-| Tipo | Ação |
+| Tipo | Action |
 | --- | --- |
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e uma carga para o bot (do usuário que clicou no botão ou tocou no cartão) e envia uma mensagem separada para o fluxo de chat. |
@@ -24,12 +24,12 @@ Os cartões usados por bots e extensões de mensagens no Teams suportam os segui
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
->* O Teams não dá suporte `CardAction` a tipos não listados na tabela anterior.
->* O Teams não dá suporte à `potentialActions` propriedade.
->* As ações de cartão são diferentes [das ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Serviço bot framework/bot do Azure. Ações sugeridas não são suportadas no Microsoft Teams: se você quiser que os botões apareçam em uma mensagem de bot do Teams, use um cartão.
+>* Teams não dá suporte a `CardAction` tipos não listados na tabela anterior.
+>* Teams não dá suporte à `potentialActions` propriedade.
+>* As ações de cartão são diferentes [das ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Serviço bot framework/bot do Azure. As ações sugeridas não são suportadas Microsoft Teams: se você quiser que os botões apareçam em uma mensagem Teams bot, use um cartão.
 >* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado ao canal (eles não funcionarão enquanto o cartão estiver na caixa de mensagem de redação).
 
-O Teams também dá [suporte a ações de Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usadas apenas por Cartões Adaptáveis. Essas ações são listadas em sua própria seção no final desta referência.
+Teams também oferece suporte [a ações de Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usadas apenas por Cartões Adaptáveis. Essas ações são listadas em sua própria seção no final desta referência.
 
 ## <a name="openurl"></a>openUrl
 
@@ -223,11 +223,12 @@ Inicia um fluxo OAuth, permitindo que os bots se conectem com serviços seguros,
 
 ## <a name="adaptive-cards-actions"></a>Ações de Cartões Adaptáveis
 
-Os Cartões Adaptáveis suportam três tipos de ação:
+Os Cartões Adaptáveis suportam quatro tipos de ação:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Exebonito](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 Além das ações mencionadas acima, você pode modificar a carga do Cartão Adaptável para dar suporte a ações existentes da Estrutura de Bot usando uma propriedade no `Action.Submit` `msteams` objeto de `data` `Action.Submit` . As seções a seguir detalham como usar ações da Estrutura de Bot existentes com Cartões Adaptáveis.
 

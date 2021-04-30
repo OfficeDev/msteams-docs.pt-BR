@@ -8,17 +8,17 @@
 - name: Introdução
   expanded: true
   items:
-    - name: Visão geral e pré-requisitos
+    - name: Visão Geral
       href: build-your-first-app/build-first-app-overview.md
-    - name: 'Criar um "Olá, mundo!" aplicativo'
+    - name: 'Crie um "Olá, mundo!" aplicativo'
       href: build-your-first-app/build-and-run.md
-    - name: Criar uma guia pessoal
+    - name: Construir uma guia pessoal básica
       href: build-your-first-app/build-personal-tab.md
-    - name: Criar uma guia de canal e grupo
+    - name: Construir seu primeiro canal e guia de grupo
       href: build-your-first-app/build-channel-tab.md
-    - name: Criar um bot
+    - name: Construir seu primeiro bot
       href: build-your-first-app/build-bot.md
-    - name: Criar uma extensão de mensagens
+    - name: Construir sua primeira extensão de mensagens
       href: build-your-first-app/build-messaging-extension.md
 - name: Amostras de códigos e tutoriais
   items:
