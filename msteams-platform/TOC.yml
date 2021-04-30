@@ -10,7 +10,7 @@
   items:
     - name: Visão Geral
       href: build-your-first-app/build-first-app-overview.md
-    - name: 'Crie um "Olá, mundo!" aplicativo'
+    - name: 'Construir um aplicativo "Olá, mundo!"'
       href: build-your-first-app/build-and-run.md
     - name: Construir uma guia pessoal básica
       href: build-your-first-app/build-personal-tab.md
@@ -302,6 +302,18 @@
           href: task-modules-and-cards/cards/cards-actions.md
         - name: Referência de cartões
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Ações Universais para Cartões Adaptáveis
+          items:
+            - name: Visão Geral
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+            - name: Trabalhar com Ações Universais para Cartões Adaptáveis
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+            - name: Exibições Específicas do Usuário
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+            - name: Fluxos de Trabalho Sequenciais
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+            - name: Cartões atualizados
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: Construir módulos de tarefa
       items:
         - name: Visão Geral
