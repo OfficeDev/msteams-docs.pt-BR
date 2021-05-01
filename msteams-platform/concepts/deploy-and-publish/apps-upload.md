@@ -1,130 +1,64 @@
 ---
-title: Carregar seu aplicativo personalizado
-description: Descreve como carregar seu aplicativo no Microsoft Teams
+title: Upload seu aplicativo personalizado
+description: Saiba como fazer sideload do aplicativo Microsoft Teams. O sideload é comum ao testar e depurar um aplicativo durante o desenvolvimento.
 ms.topic: how-to
-localization_priority: Normal
-ms.author: lajanuar
-keywords: carregamento de aplicativos do teams
-ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: KirtiPereira
+ms.author: surbhigupta
+ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020804"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101566"
 ---
-# <a name="upload-an-app-package-to-microsoft-teams"></a>Carregar um pacote do aplicativo para o Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Upload seu aplicativo no Microsoft Teams
 
-Para testar sua experiência de aplicativo no Microsoft Teams, você precisa carregar seu aplicativo no Teams. O carregamento adiciona o aplicativo à equipe selecionada e todos os membros da equipe podem interagir com ele como usuários finais.
+Você pode fazer sideload Microsoft Teams aplicativos sem precisar publicar na sua organização ou no Teams store. Isso faz sentido nos seguintes cenários:
 
-> [!NOTE]
-> Carregar um pacote atualizado para um aplicativo existente com um bot pode não mostrar alterações na guia quando exibido pela janela de conversas. Você pode acessar o aplicativo por meio do sub-uso ou teste de aplicativos em um ambiente limpo.
+* Você deseja testar e depurar um aplicativo localmente ou com outros desenvolvedores.
+* Você criou um aplicativo apenas para si mesmo (por exemplo, para automatizar um fluxo de trabalho).
+* Você criou um aplicativo para um pequeno conjunto de usuários (como seu grupo de trabalho).
 
-## <a name="create-your-upload-package"></a>Criar seu pacote de carregamento
+## <a name="prerequisites"></a>Pré-requisitos
 
-Para desenvolvimento e envio do AppSource, você deve criar um pacote que você pode carregar. O pacote deve conter as informações para descrever sua experiência. O pacote é um arquivo .zip que contém o manifesto do aplicativo e ícones que definem sua experiência com exclusividade.
+* Crie seu [pacote de aplicativos](~/concepts/build-and-test/apps-package.md) [e valide-o](https://dev.teams.microsoft.com/appvalidation.html) para erros.
+* [Habilitar o carregamento personalizado de aplicativos](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) Teams.
+* Certifique-se de que seu aplicativo está em execução e acessível por meio de HTTPs.
 
-Para criar um pacote de carregamento, consulte [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
+## <a name="upload-your-app"></a>Upload seu aplicativo
 
-Depois de criar o pacote, carregue-o em uma equipe. O pacote carregado só está disponível para os usuários da equipe selecionada.
+Você pode fazer sideload do aplicativo em uma equipe, chat, reunião ou para uso pessoal, dependendo de como você configurou o escopo do aplicativo.
 
-## <a name="load-your-package-into-teams"></a>Carregar seu pacote no Teams
+1. Faça logoff no cliente Teams com sua [conta Microsoft 365 de desenvolvimento.](~/build-your-first-app/build-and-run.md#prerequisites)
+1. Selecione **Aplicativos** e escolha **Upload um aplicativo personalizado.**
+1. Selecione o arquivo .zip pacote do aplicativo. Uma caixa de diálogo de instalação é exibida.
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando um exemplo de uma caixa de diálogo Teams instalação do aplicativo.":::
+1. Adicione seu aplicativo ao Teams.
 
-Você pode testar seu pacote carregando-o no Teams.
+## <a name="troubleshoot-upload-issues"></a>Solução de problemas de carregamento
 
-> [!NOTE]
-> Para carregar para funcionar, o administrador do locatário deve primeiro [habilitar o carregamento de aplicativos.](/microsoftteams/admin-settings)
+Se o aplicativo não fizer sideload, faça o seguinte até que o problema seja resolvido:
 
-Há duas maneiras de carregar seu aplicativo no Teams:
+1. Volte pelas instruções para criar [seu pacote de aplicativos.](../../concepts/build-and-test/apps-package.md)
+1. [Valide seu pacote de aplicativo novamente.](https://dev.teams.microsoft.com/appvalidation.html)
+1. Certifique-se de que o manifesto do aplicativo corresponde ao [esquema mais recente.](../../resources/schema/manifest-schema.md)
 
-* Usando a Loja
-* Usando a guia Aplicativos
+## <a name="access-your-app"></a>Acessar seu aplicativo
 
-## <a name="upload-your-package-into-a-team-or-conversation-using-the-store"></a>Carregar seu pacote em uma equipe ou conversa usando a Loja
+Teams fornece várias maneiras de abrir aplicativos. Para obter mais informações, [consulte access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-1. No canto inferior esquerdo do Teams, escolha o **ícone da** Loja. Na página Da Loja, escolha **Carregar um aplicativo personalizado.**
+## <a name="update-your-app"></a>Atualizar seu aplicativo
 
-  ![Exibir equipe](../../assets/images/store-upload-a-custom-app2.png)
+Você não precisa fazer sideload do aplicativo novamente se fizer alterações de código (elas são refletidas em Teams em tempo real). No entanto, você deve reinstalar se alterar qualquer configuração de aplicativo.
 
-2. Na caixa **de diálogo Abrir,** navegue até o pacote que você deseja carregar e escolha Abrir.
+## <a name="remove-your-app"></a>Remover seu aplicativo
 
-   ![Adicionar menu](../../assets/images/NewappAddmenudropdown.png)
-
-O pacote carregado deve estar disponível para uso na equipe ou na conversa especificada na caixa de diálogo de consentimento. Se seu aplicativo não aparecer, o motivo mais comum será um erro no manifesto, especialmente as IDs do aplicativo, bot e extensões de mensagens. Se o aplicativo não tiver escopo para conversas, essa opção não aparecerá.
-
->[!NOTE]
-> Os aplicativos em conversas estão atualmente [na](../../resources/dev-preview/developer-preview-intro.md)Visualização do Desenvolvedor e a opção não aparece se o Teams não estiver sendo executado nesse modo.
-
-![Exemplo de bot na lista de bots carregados](../../assets/images/botinlist.jpg)
-
-## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Carregar seu pacote em uma equipe usando a guia Aplicativos
-
-1. Na equipe de destino, escolha **Mais opções** (**&#8943;**) e selecione **Gerenciar equipe**.
-
-   > [!NOTE]
-   > Você deve ser o proprietário da equipe ou o proprietário deve dar acesso aos usuários para adicionar os tipos de aplicativo apropriados para que essa funcionalidade apareça.
-
-2. Selecione a **guia Aplicativos** e escolha **Carregar um aplicativo personalizado** no canto inferior direito.
-
-   ![Ponto de entrada de carregamento](../../assets/images/UploadACustomApp.png)
-
-3. Selecione seu pacote .zip no computador.
-
-4. Você pode ver seu aplicativo carregado na lista.
-
-   ![Exemplo de bot na lista de bots carregados](../../assets/images/botinlist.jpg)
-
-Se o aplicativo não for carregado, o motivo mais comum será um erro no manifesto, especialmente as IDs do aplicativo, bot e extensões de mensagens.
-
-## <a name="access-your-uploaded-configurable-tab"></a>Acessar sua guia configurável carregada
-
-Se o aplicativo contiver guias, os usuários poderão fixá-las em qualquer conversa ou canal de equipe usando o fluxo de galeria de guias padrão:
-
-1. Vá para um canal na equipe. Escolha **+** adicionar uma guia à direita das guias existentes.
-
-2. Selecione sua guia na galeria exibida.
-
-3. Aceite o prompt de consentimento.
-
-4. Configure sua guia por meio de sua [página de configuração](../../tabs/how-to/create-tab-pages/configuration-page.md) e selecione **Salvar**.
-
-  ![A caixa de diálogo Adicionar uma guia, com uma galeria de guias disponíveis](../../assets/images/tab_gallery.png)
-
-## <a name="access-your-uploaded-bot"></a>Acessar seu bot carregado
-
-Depois de adicionar o bot a uma equipe, ele deve ser usável por qualquer pessoa nessa equipe, dentro e fora dos canais de equipe, dependendo da definição do escopo do bot. Todos os membros da equipe podem ver uma postagem no **canal Geral** indicando que o bot foi adicionado à equipe.
-
-Para um bot do Teams, você pode começar invocando seu bot @mentioning o nome do bot.
-
-Para testar chats diretos com seu bot, você pode acessá-lo por meio da página @mention app em um canal ou pesquisá-lo na janela **Novo Chat.**
-
-Você pode @mention o bot em uma conversa ou pesquisá-lo na janela **Novo Chat** para testar chats diretos com seu bot.
-
-## <a name="access-your-uploaded-connector"></a>Acessar o conector carregado
-
-Com o aplicativo carregado na equipe ou na conversa, os usuários podem configurar um Conector usando o fluxo de galeria de Conectores padrão:
-
-1. Vá para um canal na equipe. Escolha **Mais opções** (*&#8943;*) e escolha **Conectores**.
-
-2. Selecione seu Conector na **seção Sideloaded** na parte inferior.
-
-3. Configure seu conector por meio de sua [página de configuração](../../webhooks-and-connectors/how-to/connectors-creating.md) e selecione **Salvar**.
-
-  ![A caixa de diálogo Adicionar uma guia, com uma galeria de guias disponíveis.](../../assets/images/connector_gallery.png)
-
-## <a name="access-your-uploaded-messaging-extension"></a>Acessar sua extensão de mensagens carregada
-
-Um aplicativo carregado com uma extensão de mensagens aparece automaticamente no menu **Mais** opções (*&#8943;*) na caixa de redação.
-
-![Extensões de mensagens](../../assets/images/compose-extensions/cesampleapp.png)
-
-
-## <a name="remove-or-update-your-app"></a>Remover ou atualizar seu aplicativo
-
-Para remover seu aplicativo, selecione o ícone de exclusão ao lado do nome do aplicativo na lista Exibir bots **do Teams.** Se você alterar as informações do manifesto, primeiro remova o aplicativo e adicione o pacote atualizado, consulte [Carregar seu pacote em uma equipe](#load-your-package-into-teams). As alterações de código em seu serviço não exigem que você carregue seu manifesto novamente. No entanto, se as alterações de código exigirem atualizações de manifesto, como alterações na URL ou na ID do aplicativo microsoft para seu bot, você deve carregar o manifesto novamente.
+Para remover seu aplicativo, clique com o botão direito do mouse no ícone do aplicativo no Teams e selecione **Desinstalar**.
 
 > [!NOTE]
-> Não é possível remover um bot de um contexto pessoal inteiramente. Se o bot for removido e adicionado novamente, a comunicação adicional com o bot será acrescentada à conversa anterior.
+> Não é possível remover totalmente a atividade de bot pessoal. Se você remover o aplicativo e adicioná-lo novamente, a nova comunicação com o bot acrescenta à conversa anterior com ele.
 
-## <a name="troubleshooting-notes"></a>Anotações de solução de problemas
+## <a name="next-step"></a>Próxima etapa
 
-Se o manifesto não for carregado, verifique se você seguiu todas as instruções em [Criar](../../concepts/build-and-test/apps-package.md) o pacote e validou seu manifesto em relação ao [esquema](../../resources/schema/manifest-schema.md).
+> [!div class="nextstepaction"]
+> [Usar seu Teams aplicativo](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

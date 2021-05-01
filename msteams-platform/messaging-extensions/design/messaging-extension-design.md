@@ -1,33 +1,33 @@
 ---
 title: Projetando sua extensão de mensagens
-description: Saiba como projetar uma extensão de mensagens do Teams e obter o Kit de interface do usuário do Microsoft Teams.
+description: Saiba como projetar uma extensão Teams de mensagens e obter o kit Microsoft Teams interface do usuário.
 keywords: Práticas práticas práticas de referência de extensões de mensagens de referência de diretrizes de design do teams
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020720"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101573"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Projetando sua extensão de mensagens do Microsoft Teams
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>Projetando sua extensão Microsoft Teams de mensagens
 
 Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou agir em uma mensagem sem sair da conversa.
-Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar extensões de mensagens no Teams.
+Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar extensões de mensagens em Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
-Você pode encontrar diretrizes abrangentes de design de extensão de mensagens, incluindo elementos que você pode pegar e modificar conforme necessário, no Microsoft Teams UI Kit.
+Você pode encontrar diretrizes abrangentes de design de extensão de mensagens, incluindo elementos que você pode pegar e modificar conforme necessário, no Kit de interface do usuário Microsoft Teams usuário.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Adicionar uma extensão de mensagens
 
-Você pode adicionar uma extensão de mensagens nos seguintes contextos do Teams:
+Você pode adicionar uma extensão de mensagens nos seguintes Teams contextos:
 
 * A partir da loja do Microsoft Teams (AppSource).
 * Em um canal, chat ou reunião (antes, durante e depois) perto da caixa de composição. Vale a pena notar se você adicionar uma extensão de mensagens em um desses locais, somente você poderá usá-la nesse contexto.
@@ -40,17 +40,17 @@ O exemplo a seguir mostra como você adiciona uma extensão de mensagens em um c
 
 A autenticação não é obrigatória, mas se seu aplicativo for algo como uma ferramenta de controle de tíquetes, talvez seja necessário que as pessoas entre para usar a extensão de mensagens.
 
-Para ter consistência nos aplicativos do Teams, você não pode personalizar a tela de login. Se você usar a autenticação de logom único (SSO), os usuários serão automaticamente assinados.
+Para ter consistência Teams aplicativos, você não pode personalizar a tela de login. Se você usar a autenticação de logom único (SSO), os usuários serão automaticamente assinados.
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Exemplo mostra a tela de instalação de extensão de mensagens com um botão de login." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Tipos de extensões de mensagens
 
-As extensões de mensagens podem ter comandos de pesquisa, comandos de ação ou ambos. Seus comandos dependem dos recursos do aplicativo e de como eles se ajustam aos casos de uso do Teams.
+As extensões de mensagens podem ter comandos de pesquisa, comandos de ação ou ambos. Seus comandos dependem dos recursos do aplicativo e de como eles se ajustam Teams casos de uso.
 
 ### <a name="search-commands"></a>Comandos de pesquisa
 
-Com comandos de pesquisa, as pessoas podem usar sua extensão de mensagens para encontrar rapidamente conteúdo externo e inserir em uma mensagem. Comandos de pesquisa são comumente disponibilizados na caixa de redação. Por exemplo, você pode iniciar ou adicionar a uma discussão compartilhando um pouco de conteúdo sem sair do Teams.
+Com comandos de pesquisa, as pessoas podem usar sua extensão de mensagens para encontrar rapidamente conteúdo externo e inserir em uma mensagem. Comandos de pesquisa são comumente disponibilizados na caixa de redação. Por exemplo, você pode iniciar ou adicionar a uma discussão compartilhando um conteúdo sem sair Teams.
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Exemplo mostra uma extensão de mensagens baseada em pesquisa lançada na caixa de redação." border="false":::
 
@@ -62,7 +62,7 @@ Você tem algumas opções para exibir resultados de pesquisa de extensão de me
 
 ### <a name="action-commands"></a>Comandos de ação
 
-Comandos de ação permitem que as pessoas acionem ações e solicitações de processo em serviços externos no Teams. Por exemplo, se seu aplicativo rastreia pedidos, um usuário pode criar uma nova ordem usando o conteúdo da mensagem de um colega de dentro do chat.
+Comandos de ação permitem que as pessoas acionem ações e solicitações de processo em serviços externos Teams. Por exemplo, se seu aplicativo rastreia pedidos, um usuário pode criar uma nova ordem usando o conteúdo da mensagem de um colega de dentro do chat.
 
 Extensões de mensagens baseadas em ação frequentemente exigem que os usuários concluam um formulário ou algum outro tipo de configuração dentro de um modal. Você pode criar essas experiências com [módulos de tarefa.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
@@ -81,7 +81,7 @@ Depois de adicionado, os usuários podem abrir sua extensão de mensagens seleci
 Depois de adicionado, os usuários podem selecionar o ícone **Mais** na mensagem de chat ou na postagem do :::image type="icon" source="../../assets/icons/teams-client-more.png"::: canal para encontrar os comandos de ação da extensão. Sua extensão pode estar listada em **Mais ações** com base no uso.
 
 > [!NOTE]
-> O suporte para mais ações de uma mensagem de chat ou postagem de canal não está disponível na plataforma móvel do Microsoft Teams. 
+> O suporte para mais ações de uma mensagem de chat ou postagem de canal não está disponível Microsoft Teams plataforma móvel. 
 
 #### <a name="chat-message"></a>Mensagem de chat
 
@@ -161,6 +161,8 @@ O exemplo a seguir é uma extensão de mensagens aberta na caixa de redação.
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
+Use essas recomendações para criar uma experiência de aplicativo de qualidade.
+
 ### <a name="setup-and-general-usage"></a>Instalação e uso geral
 
 :::row:::
@@ -177,7 +179,7 @@ O SSO torna o processo de login mais fácil, rápido e seguro. Além disso, se u
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Não: tire os usuários da conversa
 
-Extensões de mensagens são atalhos que devem reduzir a alternção de contexto. Sua extensão não deve, por exemplo, direcionar usuários para uma página da Web fora do Teams.
+Extensões de mensagens são atalhos que devem reduzir a alternção de contexto. Sua extensão não deve, por exemplo, direcionar usuários para uma página da Web fora Teams.
 
    :::column-end:::
 :::row-end:::
@@ -192,9 +194,9 @@ Extensões de mensagens nem sempre são fáceis de encontrar. Inclua capturas de
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemplo de templating." border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Fazer: permitir que o Teams manipular parte do design funcione, se possível
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Fazer: deixe Teams lidar com alguns dos trabalhos de design, se possível
 
-Se fizer sentido para seus casos de uso, considere a criação de uma extensão de mensagens baseada em pesquisa. O Teams renderiza esses tipos de extensões com temas e acessibilidade integrados.
+Se fizer sentido para seus casos de uso, considere a criação de uma extensão de mensagens baseada em pesquisa. Teams renderiza esses tipos de extensões com temas e acessibilidade integrados.
 
    :::column-end:::
    :::column span="":::
@@ -213,9 +215,9 @@ Se a extensão de mensagens exigir comandos de ação, mantenha o módulo de tar
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemplo sobre temas." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Fazer: tirar proveito dos tokens de cores do Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: tire proveito de Teams de cores
 
-Cada tema do Teams tem seu próprio esquema de cores. Para lidar com alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (interface do usuário fluente)</a> em seu design.
+Cada Teams tem seu próprio esquema de cores. Para lidar com alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (interface do usuário fluente)</a> em seu design.
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ Cada tema do Teams tem seu próprio esquema de cores. Para lidar com alteraçõe
 
 #### <a name="dont-hard-code-color-values"></a>Não: Valores de cor de código rígidos
 
-Se você não usar tokens de cores do Teams, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
+Se você não usar tokens Teams cores, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ Você pode fazer com que os usuários pressionem uma tecla ou selecionem um bot�
 #### <a name="do-consider-zero-term-queries"></a>Do: considere consultas de termo zero
 
 Por exemplo, antes de um usuário escrever qualquer coisa na caixa de pesquisa, exempli-lo pela última vez em seu aplicativo. É possível que eles queiram inserir esse conteúdo em suas conversas.
-
-## <a name="validate-your-design"></a>Valide o seu design
-
-Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
-
-> [!div class="nextstepaction"]
-> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

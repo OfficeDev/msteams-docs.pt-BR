@@ -5,12 +5,12 @@ keywords: bots mensagens de conversas
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019745"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101818"
 ---
 # <a name="formatting-bot-messages"></a>Formatar mensagens de bot
 
@@ -18,7 +18,7 @@ ms.locfileid: "52019745"
 
 Você pode definir a propriedade opcional para controlar como o conteúdo de texto da mensagem [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) é renderizado.
 
-O Microsoft Teams dá suporte às seguintes opções de formatação:
+Microsoft Teams oferece suporte às seguintes opções de formatação:
 
 | Valor TextFormat | Descrição |
 | --- | --- |
@@ -28,17 +28,17 @@ O Microsoft Teams dá suporte às seguintes opções de formatação:
 
 ## <a name="formatting-text-content"></a>Formatação de conteúdo de texto
 
-O Microsoft Teams dá suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
+Microsoft Teams oferece suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
 
 Atualmente, as seguintes limitações se aplicam:
 
 * Mensagens somente texto não suportam formatação de tabela
 
-Para obter informações sobre formatação em cartões, consulte a [Referência de Cartão do Teams](~/task-modules-and-cards/cards/cards-reference.md).
+Para obter informações sobre formatação em cartões, consulte [o Teams Referência de Cartão](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### <a name="cross-platform-support"></a>Suporte entre plataformas
 
-Para garantir que sua formatação funcione em todas as plataformas com suporte do Microsoft Teams, esteja ciente de que alguns estilos atualmente não têm suporte em todas as plataformas.
+Para garantir que sua formatação funcione em todas as plataformas suportadas pelo Microsoft Teams, esteja ciente de que alguns estilos não são suportados atualmente em todas as plataformas.
 
 | Style                     | Mensagens somente texto | Cartões (somente XML) |
 |---------------------------|--------------------|------------------|
@@ -80,11 +80,11 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e po
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `### Text` | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | texto pré-formatado | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hiperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| link de imagem | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| link de imagem | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

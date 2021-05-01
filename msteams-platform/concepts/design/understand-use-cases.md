@@ -1,28 +1,28 @@
 ---
-title: Compreender os casos de uso
-author: clearab
-description: Compreender os casos de uso
+title: Noções básicas sobre os casos de uso do aplicativo
+author: heath-hamilton
+description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro entender quais problemas seu aplicativo está tentando resolver.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058660"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101783"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
-A plataforma do Microsoft Teams oferece uma grande variedade de pontos de entrada e elementos [de interface](../../concepts/extensibility-points.md) do usuário que seu aplicativo pode aproveitar.
+A Microsoft Teams plataforma oferece uma grande variedade de pontos de entrada e elementos [de interface](../../concepts/extensibility-points.md) do usuário que seu aplicativo pode aproveitar.
 > [!NOTE]
-> Antes de começar a criar seus casos de uso, você deve ter uma boa compreensão dos recursos do Teams e do que é possível na plataforma do Teams usá-los.
+> Antes de começar a criar seus casos de uso, você deve ter uma boa compreensão dos recursos Teams e o que é possível na plataforma Teams usá-los.
 
-Cada método de interação com seus usuários tem seus pontos fortes e fracos. Criar um aplicativo do Teams incrível é encontrar a combinação certa para atender às necessidades do usuário. Se você vai atender a essas necessidades, primeiro você precisa entender.
+Cada método de interação com seus usuários tem seus pontos fortes e fracos. Criar um aplicativo Teams é encontrar a combinação certa para atender às necessidades do usuário. Se você vai atender a essas necessidades, primeiro você precisa entender.
 
 ## <a name="understand-the-problem"></a>Entender o problema
 
-Cada aplicativo bom tem um problema principal ou uma necessidade que está tentando resolver. Antes de começar a criar um aplicativo, você precisa articular qual é esse problema. No fundo, o Teams é uma plataforma de colaboração, portanto, os aplicativos que fazem pontes na conquista de uma colaboração eficaz são um ótimo ajuste. Também é uma plataforma social, é nativamente entre plataformas, fica no centro do Office 365 e oferece uma tela pessoal para você criar aplicativos. Nesta plataforma social, há uma ampla variedade de necessidades que podem ser resolvidas com um aplicativo do Teams. Você pode resolver uma ampla variedade de problemas, desde que entenda qual está tentando resolver. Antes de começar a criar um aplicativo, faça perguntas relevantes, como:
+Cada aplicativo bom tem um problema principal ou uma necessidade que está tentando resolver. Antes de começar a criar um aplicativo, você precisa articular qual é esse problema. No fundo, Teams é uma plataforma de colaboração, portanto, os aplicativos que fazem a ponte lacunas para obter uma colaboração eficaz são um ótimo ajuste. Também é uma plataforma social, é nativamente entre plataformas, fica no centro da Office 365 e oferece uma tela pessoal para você criar aplicativos. Nesta plataforma social, há uma ampla variedade de necessidades que podem ser resolvidas com um Teams app. Você pode resolver uma ampla variedade de problemas, desde que entenda qual está tentando resolver. Antes de começar a criar um aplicativo, faça perguntas relevantes, como:
 
 * Quais são os prós e contras do sistema de estado atual usados pelos usuários?
 * Quais são os pontos de dor que seus usuários enfrentam a partir de hoje que você deseja resolver?
@@ -30,7 +30,7 @@ Cada aplicativo bom tem um problema principal ou uma necessidade que está tenta
 
 ## <a name="understand-your-user"></a>Entender seu usuário
 
-Entenda quem é seu usuário e você pode identificar o modelo de distribuição correto, mas, mais importante, ele ajuda você a identificar como os usuários usam o Teams. Faça perguntas relevantes, como:
+Entenda quem é seu usuário e você pode identificar o modelo de distribuição certo, mas, mais importante, ele ajuda você a identificar como os usuários usam Teams. Faça perguntas relevantes, como:
 
 * Os usuários são principalmente trabalhadores de linha de frente em clientes móveis?
 * Você espera que muitos usuários convidados precisem de acesso ao seu aplicativo?
@@ -38,30 +38,30 @@ Entenda quem é seu usuário e você pode identificar o modelo de distribuição
 * Quão tecnicamente sofisticados são seus usuários principais?
 * Você precisa de uma experiência de integração completa ou alguns ponteiros podem fazer?
 
-Às vezes, a resposta *é: queremos resolver esse problema para todos os usuários do Teams* em todos os lugares. Se esse for o caso para você, passe algum tempo compreendendo o que é necessário [para ser publicado no AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+Às vezes, a resposta *é: queremos resolver esse problema para todos os Teams em todos os lugares.* Se esse for o caso para você, passe algum tempo compreendendo o que é necessário [para ser publicado no AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 ## <a name="understand-the-limitations-of-the-app"></a>Compreender as limitações do aplicativo
 
 Conhecer as limitações dos aplicativos em termos de acessibilidade de dados e requisitos de residência de dados ajudará você a projetar aplicativos melhores. Isso é importante, pois ter informações sobre quem é o proprietário dos dados e a disponibilidade de APIs afeta a arquitetura da solução. Novamente, faça perguntas relevantes, como:
 
 * Quais são os desafios com a integração de back-end do aplicativo atual?
-* Quem é o proprietário dos dados de back-end? In-house ou third-party.
+* Who possui os dados de back-end? In-house ou third-party.
 * Há firewalls que impactam o funcionamento do aplicativo?
 * Há APIs para acessar os dados necessários para o funcionamento do seu aplicativo? 
 
 ## <a name="provide-authentication"></a>Fornecer autenticação
 
-Você deve identificar desde o início se precisar proteger os serviços que está expondo e em que nível. Lembre-se de que os serviços Web expostos em seu aplicativo do Teams estão disponíveis publicamente pela Internet. Portanto, se você precisar proteger eles, comece a pensar sobre isso agora. Se você precisar de uma solução que exija que você forneça acesso de convidados para usuários fora do locatário, as restrições e permissões de acesso precisam ser colocadas para proteger informações confidenciais. Você precisará projetar aplicativos considerando as limitações que vêm com o acesso do usuário convidado. Portanto, faça perguntas, como: 
+Você deve identificar desde o início se precisar proteger os serviços que está expondo e em que nível. Lembre-se de que os serviços Web expostos em seu Teams app estão disponíveis publicamente pela Internet. Portanto, se você precisar proteger eles, comece a pensar sobre isso agora. Se você precisar de uma solução que exija que você forneça acesso de convidados para usuários fora do locatário, as restrições e permissões de acesso precisam ser colocadas para proteger informações confidenciais. Você precisará projetar aplicativos considerando as limitações que vêm com o acesso do usuário convidado. Portanto, faça perguntas, como: 
 
 * Os usuários acessarão diferentes exibições de dados com base em suas funções?
 * Há PII envolvido?
 * As interações também serão baseadas nas funções do usuário?
 * Os usuários externos acessarão o aplicativo?
 
-## <a name="decide-what-goes-in-teams"></a>Decidir o que acontece no Teams
+## <a name="decide-what-goes-in-teams"></a>Decida o que entra Teams
 
-Se você está criando algo novo ou trazendo uma solução existente para o Teams, é importante decidir se o aplicativo inteiro estará dentro do cliente do Teams. Verifique se faz sentido trazer apenas uma parte da experiência. Com uma combinação de guias, extensões de mensagens, módulos de tarefas, Cartões Adaptáveis e bots de conversação, você pode criar aplicativos complexos completamente no Teams.
-Lembre-se de quem são seus usuários e do problema que você está tentando resolver. Eles já têm um sistema para resolver a maioria do problema ou você só precisa estender um subconjunto da funcionalidade para o Teams? Normalmente, se você vai trazer uma parte da solução, deve se concentrar em compartilhar, colaborar, iniciar e monitorar fluxos de trabalho.
+Se você está criando algo novo ou trazendo uma solução existente para Teams, é importante decidir se o aplicativo inteiro estará dentro do cliente Teams. Verifique se faz sentido trazer apenas uma parte da experiência. Com uma combinação de guias, extensões de mensagens, módulos de tarefas, Cartões Adaptáveis e bots de conversação, você pode criar aplicativos complexos completamente Teams.
+Lembre-se de quem são seus usuários e do problema que você está tentando resolver. Eles já têm um sistema para resolver a maioria do problema ou você só precisa estender um subconjunto da funcionalidade para Teams? Normalmente, se você vai trazer uma parte da solução, deve se concentrar em compartilhar, colaborar, iniciar e monitorar fluxos de trabalho.
 
 ## <a name="plan-the-onboarding-experience"></a>Planejar a experiência de integração
 
@@ -79,11 +79,9 @@ Identifique quais novos recursos o usuário preferirá ter na solução atual. S
 
 ## <a name="see-also"></a>Confira também
 
-- [Escolha como distribuir o aplicativo](../deploy-and-publish/overview.md)
-
-- [Projetar guias efetivas](../../tabs/design/tabs.md)
-
-- [Projetar bots incríveis](../../bots/design/bots.md)
+* [Escolha como distribuir o aplicativo](../deploy-and-publish/overview.md)
+* [Guias de design](../../tabs/design/tabs.md)
+* [Bots de design](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

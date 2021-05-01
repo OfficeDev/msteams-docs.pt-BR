@@ -1,47 +1,39 @@
 ---
-title: Adicionar dados de teste ao locatário de teste do Microsoft 365
-description: Configurar sua assinatura de programa de desenvolvedor do Office 365 para testes bem-sucedidos do Microsoft Teams Apps
+title: Adicionar dados de teste ao seu locatário Microsoft 365 teste
+description: Configurar sua assinatura de programa Office 365 desenvolvedor para testes bem-sucedidos de Microsoft Teams Apps
 ms.topic: how-to
 localization_priority: Normal
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 9dcbd8f31c6ff68f0401e9fbb77297e8eebcf520
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058464"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101741"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao locatário de teste do Microsoft 365
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
-Com uma assinatura de desenvolvedor do Microsoft 365, você pode usar seu aplicativo do Microsoft Teams com equipes de teste, canais e usuários.
+Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma assinatura Microsoft 365 desenvolvedor.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. Participe do Programa de Desenvolvedores do [Microsoft 365](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
-2. [Configurar uma Assinatura de Desenvolvedor do Microsoft 365.](/office/developer-program/office-365-developer-program-get-started)
-3. Use pacotes de dados de exemplo com sua assinatura de desenvolvedor do [Microsoft 365 para instalar o pacote de conteúdo Usuários.](/office/developer-program/install-sample-packs)
-4. [Instale o módulo do Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+1. [Participe do Microsoft 365 programa](/office/developer-program/office-365-developer-program)de desenvolvedores , se você não tiver um locatário de teste.
+2. [Configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
+3. [Use pacotes de dados de exemplo com sua assinatura Microsoft 365 desenvolvedor para instalar o pacote de conteúdo Usuários.](/office/developer-program/install-sample-packs)
+4. [Instale o Teams do PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
 5. [Instale o módulo do PowerShell do Azure AD.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 > [!NOTE]
-> Para qualquer locatário que você usa, você deve obter as permissões de administrador global para executar os scripts.
+> Você deve ter permissões de administrador global no locatário para executar os scripts.
 
-### <a name="optional-step-to-allow-upload-of-custom-apps"></a>Etapa opcional para permitir o carregamento de aplicativos personalizados
+## <a name="allow-users-to-upload-apps"></a>Permitir que os usuários carreguem aplicativos
 
-Por padrão, somente administradores globais ou administradores de serviço de equipes podem carregar aplicativos personalizados no catálogo de aplicativos de locatário. Você também pode permitir que todos os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste.
+Por padrão, somente administradores globais ou Teams de serviço podem carregar aplicativos (sideload) em um locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste. Para obter mais informações, consulte [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
 
-Para habilitar essa configuração, você precisará atualizar a Política de Configuração de Aplicativo global no Portal de Administração do Teams.
+## <a name="create-teams-and-channels-for-testing"></a>Criar equipes e canais para teste
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
-
-## <a name="optional-step-to-enable-custom-app-sideloading"></a>Etapa opcional para habilitar o sideload de aplicativo personalizado
-
-Habilenciar o sideload de aplicativo personalizado é opcional. Por padrão, somente administradores globais ou administradores de serviço do Teams podem carregar aplicativos personalizados no catálogo de aplicativos de locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados no Teams. Para obter mais informações, consulte [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
-
-## <a name="create-teams-and-channels"></a>Criar equipes e canais
-
-1. Salve o trecho a seguir como um **arquivo .xml** e anote o caminho do arquivo. Este XML define a estrutura da equipe e do canal criado juntamente com seus membros:
+1. Salve o trecho a seguir como um **arquivo.xml** e anote o caminho do arquivo. Este XML define a estrutura da equipe e do canal criado juntamente com seus membros:
 
     ```xml
     <?xml version="1.0"?>
@@ -252,13 +244,10 @@ Habilenciar o sideload de aplicativo personalizado é opcional. Por padrão, som
     > [!Note]
     > Não feche sua sessão do PowerShell, pois o script leva vários minutos para ser executado. Se você modificou os usuários em sua assinatura do que é criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados ao Teams. À medida que o script é executado, ele exibe ações bem-sucedidas ou com falha.
 
-5. Após a execução do script, você pode entrar no cliente do Teams com uma das contas de usuário e exibir as equipes recém-criadas.
+5. Após a execução do script, você pode entrar no cliente Teams com uma das contas de usuário e exibir as equipes recém-criadas.
 
 ## <a name="see-also"></a>Confira também
 
-- [Depurar sua guia](~/tabs/how-to/developer-tools.md)
- 
-- [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
-
+* [Depurar sua guia](~/tabs/how-to/developer-tools.md) 
+* [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)

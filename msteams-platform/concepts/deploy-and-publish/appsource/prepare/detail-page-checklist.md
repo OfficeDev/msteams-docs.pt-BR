@@ -1,234 +1,194 @@
 ---
-title: Criar uma página de detalhes do aplicativo excelente
-description: Descreve os requisitos para a página de detalhes do aplicativo
-ms.topic: reference
+title: Criar uma listagem de loja para seu aplicativo
+description: Descreve como criar uma listagem de loja para seu Microsoft Teams app.
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams publish store office publishing policy AppSource content Metadata screenshot screenshot logo description app name icons short description
-ms.openlocfilehash: 6b763180cc2beb1cef6095110af0f37169e1f7c8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 270936ca967c17caaa8a56f85057b20ca3d6a409
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020790"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101426"
 ---
-# <a name="build-a-great-app-details-page"></a>Criar uma página de detalhes do aplicativo excelente
+# <a name="create-a-store-listing-for-your-microsoft-teams-app"></a>Criar uma listagem da loja para seu Microsoft Teams app
 
-A página de detalhes apresenta a primeira impressão do seu aplicativo aos usuários. Cada elemento da sua página de detalhes pode ser usado para transmitir sua visão e downloads de unidade — considere como você deseja mostrar seu aplicativo em um espaço limitado. Aqui estão algumas dicas e truques para ajudar você a envolver seus usuários antes mesmo de instalar seu aplicativo.
+As informações que você envia ao [Partner Center](https://partner.microsoft.com)&#8212;incluindo seu nome, descrições, ícones e imagens&#8212;se tornam o Microsoft Teams store e a listagem do Microsoft AppSource para seu aplicativo.
 
-> [!NOTE]
-> Certifique-se de que as informações do aplicativo seguem nossas diretrizes do [AppSource para criar uma listagem de loja eficaz.](/office/dev/store/create-effective-office-store-listings)
+Uma listagem da loja pode ser a primeira impressão de alguém do seu aplicativo. Aumente suas instalações com uma listagem que transmite efetivamente os benefícios, a funcionalidade e a marca do seu aplicativo.
 
-## <a name="app-name"></a>Nome do aplicativo
+## <a name="specify-a-short-name"></a>Especificar um nome curto
 
-> [!div class="checklist"]
->
-> * O nome de um aplicativo desempenha uma função crítica na forma como os usuários o descobrem na loja de aplicativos AppSource. O nome curto do aplicativo é exibido na página de detalhes.
->* O nome do aplicativo deve refletir seu aplicativo sem qualquer referência aos produtos Microsoft ou Microsoft.
->
+O nome do seu aplicativo (especificamente, seu [*nome*](~/resources/schema/manifest-schema.md#name)curto ) desempenha uma função crucial na forma como os usuários o descobrem na loja.
 
-> **Observação**: se seu aplicativo for uma parceria oficial com a Microsoft, o nome do aplicativo de terceiros precisará ser primeiro, por exemplo, *Conector do Salesforce para o Microsoft Teams.*
+O exemplo a seguir destaca onde o nome curto de um aplicativo é exibido em uma listagem da loja.
 
-> [!div class="checklist"]
->
->* Use esses recursos para orientação:
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemplo de captura de tela realça onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
 
-* [Guia de nome do aplicativo](#app-name)
-* [Diretrizes de marca e marca da Microsoft](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+### <a name="best-practices-for-names"></a>Práticas recomendadas para nomes
 
-**Do's:**
+**Faça:**
 
 * Escolha um nome simples e memorável que indica o que seu aplicativo faz.
 * Seja distinto.
-* Se necessário, use referências do Microsoft 365 em vez do Office 365.
+* Evite erros de digitação e gramatical.
 
-**Não:**
+**Não faça:**
 
-* Não omita espaços, tenha uma ocorrência incorreta ou contenha erros de idioma no nome do aplicativo.
-* Não use termos genéricos ou nomes semelhantes aos aplicativos existentes.
-* Não use "Teams", "Microsoft", nomes de produtos da Microsoft existentes/futuros ou "aplicativo" no nome do aplicativo.
-* Não use parênteses para incluir produtos da Microsoft, por exemplo, Seu Nome do Aplicativo *(para o Microsoft Teams)*.
+* Use termos profano ou depreciativo.
+* Use linguagem racial ou culturalmente insensível.
+* Use termos genéricos ou nomes semelhantes aos aplicativos existentes.
+* Inclua "Teams", "Microsoft", nomes de produtos da Microsoft existentes/futuros ou "aplicativo" no nome.
 
-![Exibição da loja de nomes de aplicativo](../../../../assets/images/store-detail-page/AppName-02.png)
+> [!NOTE]
+> Se seu aplicativo faz parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro (por exemplo, *Salesforce Connector para* Microsoft Teams ).
 
-![App name App Studio view](../../../../assets/images/store-detail-page/AppName-01.png)
+## <a name="write-descriptions"></a>Descrições de gravação
 
-## <a name="color-icon"></a>Ícone de cor
+Você precisa de uma descrição curta e longa do seu aplicativo.
 
-Este é um dos primeiros elementos que os usuários veem. Ele deve ser atraente e atraente ao rolar pela loja de aplicativos. Certifique-se de que ele dá uma boa primeira impressão e também comunica a imagem e a finalidade da sua marca. AppSource tem mais dicas sobre [como criar uma identidade visual consistente.](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)
+### <a name="short-description"></a>Descrição breve
 
-![Exibição do armazenamento de ícones de aplicativo](~/assets/images/store-detail-page/AppIcon-02.png)
+Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcionado para seu público-alvo. O ideal é manter a descrição curta em uma frase.
 
-![Ícone do aplicativo Exibição do App Studio](~/assets/images/store-detail-page/AppIcon-01.png)
+O exemplo a seguir destaca onde a descrição curta de um aplicativo é exibida em uma listagem da loja:
 
-**Não:**
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemplo de captura de tela realça onde a descrição curta de um aplicativo é exibida em uma listagem da loja.":::
 
-* Seu ícone não deve imitar produtos protegidos por direitos autorais que você não possui.
-* Seu ícone não deve ser semelhante a qualquer produto/marca da Microsoft.
+#### <a name="best-practices-for-short-descriptions"></a>Práticas recomendadas para descrições curtas
 
-## <a name="outline-icon"></a>Ícone de contorno
-
-Esse ícone é usado para extensões de mensagens fixadas e quando seu aplicativo é exibido à esquerda do Teams. Consulte [diretrizes de design para o ícone de estrutura de estrutura de estrutura.](../../../../concepts/build-and-test/apps-package.md#outline-icon)
-
-![Exibição do armazenamento de contornos do ícone do aplicativo ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
- ![ Exibição de ícone do aplicativo App Studio](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
-
-**Não:**
-
-* Seu ícone não deve imitar produtos protegidos por direitos autorais que você não possui.
-* Seu ícone não deve ser semelhante a qualquer produto/marca da Microsoft.
-
-## <a name="short-description"></a>Descrição breve
-
-Este é um resumo conciso do seu aplicativo. Ela deve ser original, interessante e direcionada ao seu público-alvo. O ideal é tentar descrever sua solução e seu valor para seus usuários em uma frase.
-
-**Do's:**
+**Faça:**
 
 * Fale primeiro as informações mais importantes.
 * Inclua palavras-chave que os clientes provavelmente procurarão.
-* Se você precisar mencionar o Microsoft Teams, a primeira menção do Microsoft Teams deve ser escrita na íntegra como *Microsoft Teams*. Se o Teams for mencionado novamente na mesma descrição, o nome poderá ser reduzido para *Teams*.
-* Quaisquer referências à Microsoft ou ao Microsoft Teams podem fazer parte da descrição e devem seguir os padrões e diretrizes de marca da Microsoft.
-* Todas as descrições devem ser gramaticalmente corretas sem erros de idioma.
-* Evite o uso desnecessário de maiúsculas, por exemplo, informando "Usuários" em vez de "usuários".
 
-**Não:**
+**Não faça:**
 
-* Não repita o título.
-* Não abreviar a Microsoft para "MS" ou "MSFT".
-* Não use jargão ou terminologia especializada — você não pode supor que os usuários saibam o que procurar.
-* Evite referências desnecessárias aos nomes de produtos da Microsoft, a menos que seja absolutamente necessário.
-* Não indique ou insinue que o aplicativo é uma oferta da Microsoft.
-* Não use nomes de marca protegidos por direitos autorais que você não possui.
-* Não use "para o Teams" em um nome curto.
+* Repita o nome do aplicativo.
+* Conte com jargão ou terminologia especializada. (Não é possível supor que os usuários saibam o que procurar.)
 
-![Exibição de armazenamento de Descrição Curta](~/assets/images/store-detail-page/ShortDescription-02.png)
+### <a name="long-description"></a>Descrição longa
 
-Aqui está uma exibição no [App Studio:](https://aka.ms/InstallTeamsAppStudio)
+A descrição longa pode fornecer uma narração envolvente que realça os principais recursos do seu aplicativo, os problemas que ele resolve e seu público-alvo. Embora essa descrição possa ter até 4.000 caracteres, a maioria dos usuários lerá apenas entre 300 e 500 palavras.
 
-![Exibição do App Studio de Descrição Curta](~/assets/images/store-detail-page/ShortDescription-01.png)
+O exemplo a seguir destaca onde a descrição longa de um aplicativo é exibida em uma listagem da loja:
 
-## <a name="long-description"></a>Descrição longa
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemplo de captura de tela realça onde a descrição longa de um aplicativo é exibida em uma listagem da loja.":::
 
-> [!div class="checklist"]
->
->* Isso fornece uma interessante narração realçando os principais recursos da sua solução, os problemas que ela resolve e o público-alvo. Desenhe em sua audiência com a primeira frase comunicando os recursos exclusivos do aplicativo. Sua descrição deve ter menos de 4.000 caracteres; a maioria dos usuários só lerá entre 300 e 500 palavras.
->* O que é permitido?
+#### <a name="usage-examples"></a>Exemplos de uso
 
-* `<your_app>`  "funciona com o Microsoft Teams"
-* `<for users>`  "trabalhando com o Microsoft Teams"
-* `<for tasks>`  "dentro do Microsoft Teams"
-* `<an app>`  "para o Microsoft Teams"
-* `<your_app>`  "integra-se ao Microsoft Teams"
+As frases a seguir são exemplos do que é permitido ao escrever descrições longas:
+
+* "<seu *nome de aplicativo*> funciona com Microsoft Teams"
+* "... um <*tipo de aplicativo>* para Microsoft Teams"
+* "<seu *nome de aplicativo*> se integra ao Microsoft Teams"
 * "... integrado ao Microsoft Teams"
-* "... built on..."
-* "... é executado em..."
-* "... habilitado por..."
-* "... desenvolvido para..."
-* "... projetado para..."
+* "... para usuários que trabalham com Microsoft Teams"
+* "... para <*tarefa específica>* dentro Microsoft Teams"
+* "... built on ..."
+* "... é executado em ..."
+* "... habilitado por ..."
+* "... desenvolvido para ..."
+* "... projetado para ..."
 
-> **Observação**: Os termos acima também se aplicam ao uso do Microsoft 365. O Office 365 agora é chamado de Microsoft 365. Atualize as descrições do aplicativo para refletir isso.
+#### <a name="best-practices-for-long-descriptions"></a>Práticas recomendadas para descrições longas
 
->[!IMPORTANT]
-> Copie com precisão as descrições que você escreveu na entrada do AppSource para o manifesto do aplicativo — os valores devem corresponder. O Microsoft Teams usará apenas as descrições fornecidas no manifesto do aplicativo.
+**Faça:**
 
-**Do's:**
+* Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) para formatar sua descrição.
+* List features with bullet points so it's easier to scan the description.
+* Use voz ativa e fale diretamente com os usuários (por exemplo, *você pode ...*).
+* Inclua uma ajuda ou um link de suporte.
+* Identifique o seguinte, se aplicável: limitações, configurar informações, dependências de conta e atualizações de versão.
 
-* Use [a formatação Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) para iluminar sua descrição.  
-* List features to aid readers in scanning your description.
-* Use voz ativa e fale diretamente com os usuários.
-* Use pontos de marcador para listar seus recursos.
-* Inclua uma ajuda ou um link de suporte para que os usuários saibam como falar com você se eles têm dúvidas.
-* Certifique-se de que a primeira menção do Microsoft Teams seja escrita na íntegra como "*Microsoft Teams*". Se o Teams for mencionado novamente posteriormente na mesma descrição, o nome poderá ser reduzido para "*Teams*".
-* Quaisquer referências à Microsoft ou ao Microsoft Teams (somente se necessário) podem fazer parte da descrição longa e devem seguir os padrões de marca e diretrizes da Microsoft.
-* Todas as descrições devem ser gramaticalmente corretas sem erros de idioma.
-* Evite o uso desnecessário de maiúsculas para termos em sua descrição (exemplo: informando "Usuários" em vez de "usuários".
+**Não faça:**
+
+* Exceder 500 palavras.
+* Inclua muitas palavras-chave. (Isso distrai e não ajuda as pessoas a encontrar seu aplicativo.)
+* Use o seguinte idioma, a menos que o aplicativo tenha passado por um processo de certificação oficial:
+  * "... certificado para ..."
+  * " ... alimentado por ..."
+
+### <a name="best-practices-for-all-descriptions"></a>Práticas recomendadas para todas as descrições
+
+**Faça:**
+
+* Fazer referência a nomes de produtos da Microsoft somente quando necessário. Para obter mais informações sobre as diretrizes, consulte [Diretrizes de Marca](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)e Marca da Microsoft.
+* Se você precisar fazer referência **Teams,** escreva a primeira referência como **Microsoft Teams**. Referências subsequentes podem ser reduzidas **para Teams**.
+* Consulte **Microsoft 365** em vez de **Office 365**.
+* Evite erros de digitação e gramatical.
+* Evite maiúsculas desnecessárias (por exemplo, **Usuários** em vez de **usuários**).
 * Evite acrônimos.
-* Certifique-se de chamar limitações, dependência da conta, configuração configurada, atualizações futuras em versões ou quaisquer restrições de uso
 
->[!NOTE]
-> O Microsoft Teams dá suporte à seguinte sintaxe markdown:  
-> **Links**. `[title](url/address/here)`.  
->**Imagens** `![alt text](url/address/here)` . .  
-> **Negrito**. `**bold text**`   `__bold text__`.  
-> **Itálico**. `*italicized text*`  `_italicized text`.  
->**[Listas ordenadas](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
->`1. first` 
-<br>` 1. second ` 
-<br>`1.third`<br>
->**[Lista semordenagem](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
-` - short` <br>`- bulleted` <br>`- list`<br>
->**Newline**. Use um `\n` caractere para designar uma linha nova.
- >**Escape.** Use uma invertida em linha para escapar de caracteres especiais. `\*asterisk`.
+**Não faça:**
 
-**Exemplo no formato Markdown**
+* Abreviar a Microsoft como **MS** ou **MSFT**.
+* Indique que o aplicativo é uma oferta da Microsoft, incluindo o uso de lemas ou linhas de marcação da Microsoft.
+* Use nomes de marca protegidos por direitos autorais que você não possui.
 
-|Formato de markdown para |Formato markdown |Texto exibido|
-|:---------|:---------------|:-------------|
-|Link  |` [App name guide](#app-name)`| [Guia de nome do aplicativo](#app-name) |
-|Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![Exibição do armazenamento de descrição longa do aplicativo](~/assets/images/store-detail-page/LongDescription-02.png)|
-|Negrito |` **HR Tools**` | **Ferramentas de RH**  |
-|Itálico |`*HR Tools*` |*Ferramentas de RH*|
-|Newline |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br> No more flipping through paper records or juggling among 5 different apps.` |As Ferramentas de RH fornecem uma ampla variedade de soluções que ajudam sua organização a gerenciar as atividades diárias de RH de forma eficaz. <br>  Não mais passar pelos registros de papel ou fazer malabarismo entre 5 aplicativos diferentes.|
-|Escape|`\*Payroll tools that help you manage your payroll and tax documents.` |\*Ferramentas de folha de pagamento que ajudam você a gerenciar sua folha de pagamento e documentos fiscais. 
+## <a name="adhere-to-icon-design-guidelines"></a>Seguir as diretrizes de design de ícones
 
-**Não:**
+Os ícones são um dos principais elementos que os usuários veem ao navegar na loja. Seus ícones devem comunicar a finalidade da marca do seu aplicativo enquanto também aderem aos Teams requisitos.
 
-* Não coloque muitas palavras-chave em sua descrição — isso distrai e não ajuda na descoberta do aplicativo.
-* Não use "*Teams*" ou "*Microsoft Teams*" em um nome curto.
-* Evite referências desnecessárias aos nomes de produtos da Microsoft, a menos que seja absolutamente necessário.
-* Não indique que o aplicativo é uma oferta da Microsoft.
-* Não use nomes de marca protegidos por direitos autorais que você não possui.
-* Não use o seguinte idioma, a menos que o aplicativo tenha passado por um processo de certificação oficial:
+Para obter mais informações, [consulte orientações específicas sobre como projetar Teams ícones do aplicativo.](~/concepts/build-and-test/apps-package.md#app-icons)
 
-  * "... certificado para..."
-  * "... powered by..."
+## <a name="capture-screenshots"></a>Capturar capturas de tela
 
-* Não abreviar "Microsoft" para "MS" ou "MSFT" — escreva a Microsoft na íntegra.
-* Nenhuma parte da descrição ou metadados pode indicar o aplicativo como uma oferta oficial da Microsoft.
-* Os parceiros não podem usar ou imitar qualquer marca da Microsoft ou usar o nome de qualquer produto ou serviço da Microsoft no lema ou no tagline.
-* O logotipo não deve representar o aplicativo incorretamente como um recurso/produto oficial da Microsoft ou imitar qualquer um dos produtos Da Microsoft existentes ou futuros.
+As capturas de tela fornecem uma visualização visual proeminente do seu aplicativo para complementar o nome, o ícone e as descrições do aplicativo.
 
-![Exibição do armazenamento de descrição longa do aplicativo](~/assets/images/store-detail-page/LongDescription-02.png)
+### <a name="requirements-for-screenshots"></a>Requisitos para capturas de tela
 
-Aqui está uma exibição no [App Studio:](https://aka.ms/InstallTeamsAppStudio)
+* Até cinco capturas de tela por listagem.
+* Os tipos de arquivo com suporte incluem PNG, JPEG e GIF.
+* As dimensões devem ter 1366 x 768 pixels.
+* Tamanho máximo de 1.024 KB.
 
-![App long description App Studio view](~/assets/images/store-detail-page/LongDescription-01.png)
+### <a name="best-practices-for-screenshots"></a>Práticas recomendadas para capturas de tela
 
-## <a name="screenshots"></a>Capturas de tela
+**Faça:**
 
-As capturas de tela carregadas no [Partner Center](https://partner.microsoft.com) são exibidas no [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) e na listagem do aplicativo no cliente do Teams. Eles fornecem uma visualização visual do seu aplicativo juntamente com a descrição do aplicativo.
-Você pode fornecer de uma a cinco capturas de tela formatadas como arquivos .png, .jpg ou .gif. Screenshots should be 1366 x 768 pixels with a maximum size of 1024 KB.
+* Concentre-se nos recursos do seu aplicativo (por exemplo, como as pessoas podem se comunicar com seu bot).
+* Inclua conteúdo que represente com precisão seu aplicativo.
+* Use texto criteriosamente.
+* Capturas de tela de quadro com uma cor que reflete sua marca e incluem conteúdo de marketing, semelhante ao exemplo do [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) a seguir (requisitos de dimensão se aplicam a toda a imagem e não apenas à captura de tela): Exemplo de captura de tela do aplicativo de terceiros   :::image type="content" source="../../../../assets/images/freshdesk.png" alt-text="Freshdesk":::
 
-**Do's:**
+**Não faça:**
 
-* Concentre-se em realçar todos os recursos do aplicativo.
-* O conteúdo deve representar com precisão seu aplicativo.
-* O texto deve ser bem preenchido sem ser excessivo.
-* Você pode cercar suas capturas de tela com uma cor de plano de fundo e adicionar conteúdo de marketing semelhante ao [exemplo do Freshdesk;](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) no entanto, as dimensões não serão apenas da captura de tela, mas incluirão a imagem geral.
+* Mostrar dispositivos específicos, como telefones ou laptops.
+* Exibe o cromado ou a interface do usuário que não está em seu aplicativo.
+* Capture qualquer Teams ou interface do usuário do navegador em suas capturas de tela.
+* Inclua simulações que refletem imprecisamente a interface do usuário real do aplicativo, como mostrar seu aplicativo em um navegador em vez de uma guia Teams.
 
-<img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
+Para obter mais práticas recomendadas, consulte [craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images).
 
-**Não:**
+## <a name="create-a-video"></a>Criar um vídeo
 
-* Não mostre dispositivos específicos, como telefones ou laptops.
-* Não mostre nenhum cromado/interface do usuário de fora do aplicativo.
-* Não capture nenhuma interface do usuário do Teams ou navegador em suas capturas de tela.
-* Não inclua mock-ups que reflitam imprecisamente a interface do usuário real de seus aplicativos, como mostrar seu site em vez da guia Do Teams.
+Um vídeo pode ser a maneira mais eficaz de comunicar por que as pessoas devem usar seu aplicativo. Você deve resolver as seguintes perguntas em um vídeo:
 
-Para obter mais práticas recomendadas, *consulte*: Criar imagens efetivas do Armazenamento do [AppSource.](/office/dev/store/craft-effective-appsource-store-images)
+* Who seu aplicativo é para?
+* Quais problemas seu aplicativo pode resolver?
+* Como seu aplicativo funciona?
+* Quais outros benefícios você obter com o uso do aplicativo?
 
-## <a name="videos"></a>Vídeos
+Se você incluir um vídeo, ele aparecerá antes das capturas de tela na listagem.
 
-Se uma imagem vale mil palavras, então um vídeo vale milhares de imagens. Os vídeos são a maneira mais eficaz de comunicar os benefícios de usar seu aplicativo. Ele será colocado na frente de todas as capturas de tela na página de detalhes do aplicativo. Certifique-se de mencionar o seguinte:
+### <a name="best-practices-for-videos"></a>Práticas recomendadas para vídeos
 
-* Como seu aplicativo funciona.
-* O que pode ser feito com seu aplicativo.
-* Os benefícios de usar seu aplicativo.
-* Para quem você é.
+* Mantenha seu vídeo entre 30 e 90 segundos.
+* Aponte para a qualidade. Em uma listagem, os usuários verão seu vídeo antes das capturas de tela.
 
-Lembre-se de manter sua apresentação curta e doce — em algum lugar entre 30 e 90 segundos.
+## <a name="localize-your-store-listing"></a>Localize sua listagem da loja
 
-## <a name="learn-more"></a>Saiba mais
+O Partner Center dá [suporte a listagens de armazenamento localizado.](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions) Para obter mais informações, [consulte como localizar sua Teams de aplicativos](../../../../concepts/build-and-test/apps-localization.md).
 
-[Lista de verificação para envio de aplicativo.](~/concepts/deploy-and-publish/appsource/publish.md)  
-[Crie um pacote de aplicativos para seu aplicativo do Microsoft Teams.](~/concepts/build-and-test/apps-package.md)  
-[Use o Partner Center para enviar sua solução para AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource).
+## <a name="see-also"></a>Confira também
+
+* [Criar listagens Microsoft 365 Stores eficazes](/office/dev/store/create-effective-office-store-listings)
+* Teams de design de aplicativos para [cópia e conteúdo e](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) expressão de [marca](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)
+* [Diretrizes de marca e marca da Microsoft](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Preparar o envio da loja](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

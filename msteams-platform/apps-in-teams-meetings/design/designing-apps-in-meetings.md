@@ -1,31 +1,31 @@
 ---
 title: Projetando sua extensão de reunião
 author: heath-hamilton
-description: Saiba como projetar aplicativos em reuniões do Teams e obter o Microsoft Teams UI Kit.
+description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Microsoft Teams interface do usuário.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018471"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101447"
 ---
-# <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
+# <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
 Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemplo, peça que as pessoas concluam uma pesquisa durante uma chamada ou enviem um lembrete rápido que não interrompa o fluxo da reunião.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
-Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que você pode obter e modificar conforme necessário, no Microsoft Teams UI Kit.
+Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que você pode obter e modificar conforme necessário, no Kit de interface do usuário Microsoft Teams usuário.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Adicionar uma extensão de reunião
 
-Você pode adicionar uma extensão de reunião antes e durante as reuniões. Você também pode adicionar um aplicativo para uma reunião específica diretamente da loja do Teams (AppSource).
+Você pode adicionar uma extensão de reunião antes e durante as reuniões. Você também pode adicionar um aplicativo para uma reunião específica diretamente do Teams store (AppSource).
 
 ### <a name="add-before-a-meeting"></a>Adicionar antes de uma reunião
 
@@ -57,7 +57,7 @@ Antes da reunião, você pode adicionar conteúdo na guia. O exemplo a seguir mo
 
 ### <a name="designing-with-ui-templates"></a>Projetando com modelos de interface do usuário
 
-Use um dos seguintes modelos de interface do usuário do Teams para ajudar a projetar sua guia de reunião:
+Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua guia de reunião:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 * [Quadro de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tarefas : um quadro de tarefas, às vezes chamado de quadro kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes.
@@ -113,7 +113,7 @@ Para cenários com camadas de navegação ou conteúdo pesado, recomendamos perm
 
 ## <a name="use-an-in-meeting-dialog"></a>Usar uma caixa de diálogo na reunião
 
-As caixas de diálogo na reunião são exibidas no estágio de reunião do Teams. Eles exigem a atenção, confirmação ou interação de um usuário, mas são sutis e não interrompem a reunião. Você deve usá-los com moderação e para cenários que são leves e orientados a tarefas.
+As caixas de diálogo na reunião são exibidas no Teams de reunião. Eles exigem a atenção, confirmação ou interação de um usuário, mas são sutis e não interrompem a reunião. Você deve usá-los com moderação e para cenários que são leves e orientados a tarefas.
 
 ### <a name="use-cases"></a>Casos de uso
 
@@ -167,6 +167,8 @@ Você pode voltar para uma reunião depois que ela terminar e exibir o conteúdo
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="A ilustração de exemplo mostra uma guia pós-reunião." border="false":::
 
 ## <a name="best-practices"></a>Práticas recomendadas
+
+Use essas recomendações para criar uma experiência de aplicativo de qualidade.
 
 ### <a name="interactions"></a>Interações
 
@@ -245,7 +247,7 @@ Recomendamos posicionar a ação mais pesada visualmente para o local mais à di
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: ações de alinhamento à esquerda ou central
 
-Isso se desvia do padrão do Teams para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
+Isso se desvia do padrão Teams padrão para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
 
    :::column-end:::
 :::row-end:::
@@ -258,7 +260,7 @@ Isso se desvia do padrão do Teams para o posicionamento do controle em uma caix
 
 #### <a name="do-scroll-vertically"></a>Do: role verticalmente
 
-Os usuários esperam rolagem vertical no Teams (e em outros lugares).
+Os usuários esperam rolagem vertical em Teams (e em outros lugares).
 
    :::column-end:::
    :::column span="":::
@@ -298,9 +300,9 @@ As caixas de diálogo na reunião destinam-se a interações breves.
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Exemplo mostrando uma extensão de reunião com o tema escuro." border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>Fazer: usar tokens de cores do Teams
+#### <a name="do-use-teams-color-tokens"></a>Do: use Teams tokens de cores
 
-As reuniões do Teams são otimizadas para o modo escuro para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Saiba mais sobre como <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">usar tokens de cores (UI fluente)</a>.
+Teams reuniões são otimizadas para o modo escuro para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Saiba mais sobre como <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">usar tokens de cores (UI fluente)</a>.
 
    :::column-end:::
    :::column span="":::
@@ -308,7 +310,7 @@ As reuniões do Teams são otimizadas para o modo escuro para ajudar a reduzir o
 
 #### <a name="dont-hard-code-hex-values"></a>Não: Valores de hexaxa de código rígido
 
-Se você não usar tokens de cores do Teams, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
+Se você não usar tokens Teams cores, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
 
    :::column-end:::
 :::row-end:::
@@ -346,10 +348,3 @@ Modais (também conhecidos como módulos de tarefa) na guia já estreita da reun
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Valide o seu design
-
-Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
-
-> [!div class="nextstepaction"]
-> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

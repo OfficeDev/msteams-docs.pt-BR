@@ -1,26 +1,26 @@
 ---
 title: Criar módulos de tarefa
 author: heath-hamilton
-description: Saiba como projetar módulos de tarefa para aplicativos do Teams e obter o Kit de interface do usuário do Microsoft Teams.
+description: Saiba como projetar módulos de tarefa para Teams aplicativos e obter o kit Microsoft Teams interface do usuário.
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019542"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101727"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Projetando módulos de tarefas para seu aplicativo do Microsoft Teams
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Projetando módulos de tarefas para seu Microsoft Teams app
 
-Você pode criar experiências pop-up modais em seu aplicativo do Teams com módulos de tarefa. Use esse recurso para exibir mídia e informações ricas ou concluir uma tarefa complexa.
+Você pode criar experiências pop-up modais em seu aplicativo Teams com módulos de tarefa. Use esse recurso para exibir mídia e informações ricas ou concluir uma tarefa complexa.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Exemplo mostra um módulo de tarefa." border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
-Você pode encontrar diretrizes de design de módulo de tarefa mais abrangentes, incluindo elementos que você pode obter e modificar conforme necessário, no Kit de interface do usuário do Microsoft Teams.
+Você pode encontrar diretrizes de design de módulo de tarefa mais abrangentes, incluindo elementos que você pode obter e modificar conforme necessário, no Kit de interface do usuário Microsoft Teams usuário.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -106,11 +106,13 @@ Este exemplo mostra os resultados da sondagem lançados de um Cartão Adaptável
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
+Use essas recomendações para criar uma experiência de aplicativo de qualidade.
+
 ### <a name="usability"></a>Usabilidade
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (um módulo de tarefa por vez)." border="false":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Fazer: usar um módulo de tarefa por vez
 
@@ -118,7 +120,7 @@ O objetivo é concentrar o usuário na conclusão de uma tarefa, afinal!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemplo mostra uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (pop a dialog on top of a task module)." border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Não: pop uma caixa de diálogo em cima de um módulo de tarefa
 
@@ -131,7 +133,7 @@ Isso cria uma experiência de usuário confusa e sem foco.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemplo mostra as práticas práticas práticas do módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (certifique-se de que o conteúdo seja responsivo)." border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Fazer: certifique-se de que o conteúdo seja responsivo
 
@@ -139,7 +141,7 @@ Embora os Cartões Adaptáveis hospedados em um módulo de tarefa renderizarão 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="O exemplo exibe uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (não use barras de rolagem horizontal)." border="false":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>Não: use barras de rolagem horizontal
 
@@ -152,7 +154,7 @@ Embora os Cartões Adaptáveis hospedados em um módulo de tarefa renderizarão 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="O exemplo exibe as práticas práticas práticas do módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (mantenha-o curto)." border="false":::
 
 #### <a name="do-keep-it-short"></a>Do: mantenha-o curto
 
@@ -160,9 +162,9 @@ Você pode criar facilmente um assistente de várias etapas, mas isso não signi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Ilustração mostrando uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (não há interações longas)." border="false":::
 
-#### <a name="dont-do-long-interactions"></a>Não: Fazer interações longas
+#### <a name="dont-have-long-interactions"></a>Não: ter interações longas
 
 Tente manter suas interações curtas e diretas.
 
@@ -173,7 +175,7 @@ Tente manter suas interações curtas e diretas.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="A ilustração mostra uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemplo mostrando a prática prática de um módulo de tarefa (use mensagens de erro em linha)." border="false":::
 
 #### <a name="do-use-inline-error-messages"></a>Fazer: usar mensagens de erro em linha
 
@@ -181,7 +183,7 @@ Consulte o modelo de interface do usuário de formulários para ver diretrizes s
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="A ilustração exibe uma prática prática de módulo de tarefa." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemplo mostrando uma prática prática de módulo de tarefa (colocar mensagens de erro em caixas de diálogo)." border="false":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>Não: colocar mensagens de erro em caixas de diálogo
 

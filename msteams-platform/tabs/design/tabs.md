@@ -1,31 +1,31 @@
 ---
 title: Projetando sua guia para área de trabalho e Web
-description: Saiba como projetar uma guia do Teams (área de trabalho e Web) e obter o Microsoft Teams UI Kit.
+description: Saiba como projetar uma guia Teams (área de trabalho e Web) e obter o Microsoft Teams de interface do usuário.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019682"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101846"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Projetando sua guia para a área de trabalho e a Web do Microsoft Teams
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Projetando sua guia para Microsoft Teams desktop e web
 
 Uma guia é uma tela grande para seu conteúdo. Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar guias no Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
-Você pode encontrar diretrizes abrangentes de design de tabulação, incluindo elementos que você pode pegar e modificar conforme necessário, no Microsoft Teams UI Kit. O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e tamanho responsivo que não são abordados aqui.
+Você pode encontrar diretrizes abrangentes de design de guia, incluindo elementos que você pode pegar e modificar conforme necessário, no Kit Microsoft Teams interface do usuário. O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e tamanho responsivo que não são abordados aqui.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Adicionar uma guia
 
-Você pode adicionar uma guia do Armazenamento do Teams (AppSource) ou em um dos seguintes contextos:
+Você pode adicionar uma guia do Teams (AppSource) ou em um dos seguintes contextos:
 
 * Chat
 * Canal
@@ -66,7 +66,7 @@ Você pode adicionar uma etapa na qual os usuários devem entrar primeiro com su
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>Projetando uma configuração de tabulação com modelos de interface do usuário
 
-Use um dos seguintes modelos de interface do usuário do Teams para ajudar a projetar sua experiência de configuração de tabulação:
+Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua experiência de configuração de tabulação:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 * [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): Os formulários são para coletar, validar e enviar entrada do usuário de forma estruturada.
@@ -74,7 +74,7 @@ Use um dos seguintes modelos de interface do usuário do Teams para ajudar a pro
 
 ## <a name="view-a-tab"></a>Exibir uma guia
 
-As guias fornecem uma experiência da Web de tela inteira no Teams, onde você pode exibir conteúdo colaborativo, tais painéis e painéis de tarefas, e informações importantes.
+As guias fornecem uma experiência da Web de tela inteira em Teams onde você pode exibir conteúdo colaborativo, como painéis e painéis de tarefas, e informações importantes.
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um quadro de tarefas." border="false":::
 
@@ -91,7 +91,7 @@ As guias fornecem uma experiência da Web de tela inteira no Teams, onde você p
 
 ### <a name="designing-a-tab-with-ui-templates"></a>Criar uma guia com modelos de interface do usuário
 
-Use um dos seguintes modelos de interface do usuário do Teams para ajudar a projetar sua experiência de tabulação:
+Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua experiência de guia:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 * [Quadro de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tarefas : um quadro de tarefas, às vezes chamado de quadro kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes.
@@ -144,6 +144,8 @@ Notificar os usuários da atividade de tabulação uma das seguintes maneiras:
 * **Mensagem**: uma mensagem aparece no feed de atividade do usuário com um [link profundo para a guia](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## <a name="best-practices"></a>Práticas recomendadas
+
+Use essas recomendações para criar uma experiência de aplicativo de qualidade.
 
 ### <a name="collaboration"></a>Colaboração
 
@@ -214,9 +216,9 @@ Remova todas as etapas desnecessárias para adicionar uma guia.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustração mostrando o que fazer com temas de tabulação." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Fazer: tirar proveito dos tokens de cores do Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: tire proveito de Teams de cores
 
-Cada tema do Teams tem seu próprio esquema de cores. Para lidar com alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (interface do usuário fluente)</a> em seu design.
+Cada Teams tem seu próprio esquema de cores. Para lidar com alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (interface do usuário fluente)</a> em seu design.
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ Cada tema do Teams tem seu próprio esquema de cores. Para lidar com alteraçõe
 
 #### <a name="dont-hard-code-color-values"></a>Não: Valores de cor de código rígidos
 
-Se você não usar tokens de cores do Teams, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
+Se você não usar tokens Teams cores, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Valide o seu design
-
-Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
-
-> [!div class="nextstepaction"]
-> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

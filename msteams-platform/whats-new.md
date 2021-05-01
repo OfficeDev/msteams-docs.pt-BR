@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 5193c77a33ea53007c5292af7c7c3c343a48be36
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 94e8e573ac806fdfce0933129708be9bcdc82c45
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088784"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101391"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,8 +22,9 @@ O log de alterações lista as alterações na plataforma Microsoft Teams e nest
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-| 04/29/2021 | Novo: Ações universais para cartões adaptáveis. | [Ações universais para cartões adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| O recurso de personalização do aplicativo agora está disponível na visualização do desenvolvedor.|[Visão geral do aplicativo de equipes](concepts/design/design-teams-app-overview.md#app-customization)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
+|04/30/2021|Novas diretrizes sobre como publicar aplicativos no Teams store.|[Publique seu aplicativo no Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [de validação da loja](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+| 04/29/2021 | Novo: Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| O recurso de personalização do aplicativo agora está disponível na visualização do desenvolvedor.|[Design Teams visão geral do aplicativo,](concepts/design/design-teams-app-overview.md#app-customization) [visão geral do App Studio](concepts/build-and-test/app-studio-overview.md#connectors)e esquema de [manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |03/05/2021|O escopo de instalação padrão e a funcionalidade de grupo estão na visualização do desenvolvedor.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -44,7 +45,7 @@ O log de alterações lista as alterações na plataforma Microsoft Teams e nest
 |08/06/2020|Suporte para autenticação SSO de guias|[Desenvolver uma guia de Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph bots e mensagens proativas (Visualização Pública)|[Habilitar a instalação proativa de bots e mensagens proativas Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Atualizações de funcionalidade de dispositivo móvel.|[Solicitar permissões de dispositivo para sua guia Microsoft Teams de usuário](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams Ferramenta de Validação de Aplicativos](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams de validação de pacote de aplicativos](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|Criar um assistente virtual para Teams|[Assistente Virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Navegando em uma documentação de indicador de carregamento nativo|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Começar a criar Teams aplicativos com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e Visual Studio Code](toolkit/visual-studio-code-overview.md) |

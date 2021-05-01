@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020130"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101692"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -197,9 +197,11 @@ Os usuários devem ser capazes de alterar as configurações de um bot. Você po
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
+Use essas recomendações para criar uma experiência de aplicativo de qualidade.
+
 ### <a name="content"></a>Conteúdo
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemplo mostrando uma prática recomendada para bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemplo mostrando uma prática prática de bot para estabelecer uma persona clara." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Estabeleça uma personalidade bem definida
 
@@ -209,7 +211,7 @@ Saiba mais sobre como escrever para bots no <a href="https://www.figma.com/commu
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemplo mostrando práticas práticas de bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemplo mostrando para transmitir claramente o que seu bot pode fazer." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Transmita claramente o que o bot pode fazer
 
@@ -217,7 +219,7 @@ Mensagens de boas-vindas e tours ajudam as pessoas a entender o que elas podem f
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemplo é mostrar uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemplo mostrando para não obscurecer os recursos do bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Não oculte os recursos do bot
 
@@ -228,7 +230,7 @@ A primeira impressão é importante. As pessoas provavelmente ficarão confusas 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemplo de mostrar uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemplo mostrando que seu bot deve reconhecer não perguntas." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Reconheça mensagens que não são perguntas
 
@@ -236,7 +238,7 @@ Seu bot deve ser capaz de responder a mensagens como "Olá", "Ajuda" e "Obrigado
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemplo mostra uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemplo mostrando que você deve evitar respostas desastradas a mensagens de bot simples." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Não perca oportunidades de agradar
 
@@ -249,7 +251,7 @@ Algumas pessoas esperam que as conversas fluam naturalmente, como com uma pessoa
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemplo de prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemplo mostrando bots deve ajudar os usuários a entender como usar bots." border="false":::
 
 #### <a name="do-provide-help"></a>Forneça ajuda
 
@@ -257,7 +259,7 @@ Se o bot não puder atender a uma solicitação, forneça maneiras de o usuário
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="O exemplo exibe uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemplo mostrando que seu bot não deve deixar os usuários encalhados." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Não deixe os usuários desamparados
 
@@ -270,7 +272,7 @@ As pessoas abandonarão o bot rapidamente se não puderem solucionar problemas.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemplo exibindo uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemplo mostrando que você pode usar módulos de tarefa ou guias com seu bot para interações complexas." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Use guias ou módulos de tarefa
 
@@ -278,7 +280,7 @@ Se o bot fornece uma resposta que exige algumas etapas adicionais, você pode in
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Consulte o exemplo de uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemplo mostrando como seu bot deve evitar interações de várias voltas." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Não torne as interações em várias etapas entediantes
 
@@ -291,7 +293,7 @@ Ter uma longa conversa para concluir uma única tarefa é algo lento e complexo 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemplo exibe uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemplo mostrando como os bots só devem mostrar informações privadas em um contexto pessoal." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Somente mostre informações confidenciais em um contexto pessoal
 
@@ -299,7 +301,7 @@ Se o bot estiver em um chat em grupo ou canal, recomendamos direcionar os usuár
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ilustração mostrando uma prática prática de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemplo mostrando como os bots não devem revelar informações confidenciais para um grupo ou pessoas." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Alguns conteúdos não devem ser vistos por todos
 
@@ -308,17 +310,10 @@ O bot não deve revelar informações confidenciais para um grupo de pessoas.
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>Saiba mais
+## <a name="see-also"></a>Confira também
 
 Estas outras diretrizes podem ajudar com a criação do seu bot:
 
 * [Criar seu aplicativo pessoal](../../concepts/design/personal-apps.md)
 * [Criar Cartões Adaptáveis](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Criar módulos de tarefa](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>Valide o seu design
-
-Se você planeja publicar seu aplicativo no AppSource, deve compreender os problemas de design que normalmente causam falha dos aplicativos durante o envio.
-
-> [!div class="nextstepaction"]
-> [Verifique as diretrizes de validação de design](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
