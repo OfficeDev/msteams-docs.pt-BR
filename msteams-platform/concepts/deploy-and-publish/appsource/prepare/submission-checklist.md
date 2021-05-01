@@ -1,97 +1,197 @@
 ---
-title: Lista de verificação de envio da Loja
-description: A lista de verificação a ser usada antes de publicar seu aplicativo do Microsoft Teams no AppSource
-ms.topic: reference
+title: Preparar o envio da loja
+description: Descreve as etapas finais antes de enviar seu Microsoft Teams aplicativo para ser listado na loja.
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020783"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101678"
 ---
-# <a name="prepare-for-appsource-submission"></a><span data-ttu-id="96838-104">Preparar para envio do AppSource</span><span class="sxs-lookup"><span data-stu-id="96838-104">Prepare for AppSource submission</span></span>  
+# <a name="prepare-your-microsoft-teams-store-submission"></a><span data-ttu-id="3491e-103">Preparar seu envio Microsoft Teams de armazenamento de dados</span><span class="sxs-lookup"><span data-stu-id="3491e-103">Prepare your Microsoft Teams store submission</span></span>
 
-<span data-ttu-id="96838-105">Para ser listado no AppSource, seu aplicativo deve passar por um processo de aprovação.</span><span class="sxs-lookup"><span data-stu-id="96838-105">To be listed on AppSource, your app must go through an approval process.</span></span> <span data-ttu-id="96838-106">Este é um serviço gratuito fornecido pelo grupo do Microsoft Teams que verifica se seu aplicativo funciona conforme descrito, contém todos os metadados apropriados e fornece conteúdo que seria valioso para um usuário final.</span><span class="sxs-lookup"><span data-stu-id="96838-106">This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.</span></span> <span data-ttu-id="96838-107">Para ajudá-lo a obter aprovação rápida, certifique-se de que seu aplicativo atenda aos seguintes requisitos e diretrizes:</span><span class="sxs-lookup"><span data-stu-id="96838-107">To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:</span></span>
+<span data-ttu-id="3491e-104">Você projetou, criou e testou seu Microsoft Teams aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-104">You've designed, built, and tested your Microsoft Teams app.</span></span> <span data-ttu-id="3491e-105">Agora você está pronto para listá-lo para que as pessoas possam descobrir e começar a usar seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-105">Now you're ready to list it so people can discover and start using your app.</span></span>
 
-* <span data-ttu-id="96838-108">**Método de distribuição:** Certifique-se de que seu aplicativo seja destinado à publicação em uma plataforma da loja.</span><span class="sxs-lookup"><span data-stu-id="96838-108">**Distribution method:** Make sure your app is meant for publication on a store platform.</span></span> <span data-ttu-id="96838-109">Há outras [opções para](../../overview.md) distribuir seu aplicativo sem publicar no AppSource.</span><span class="sxs-lookup"><span data-stu-id="96838-109">There are [other options](../../overview.md) to distribute your app without publishing to AppSource.</span></span>
-* <span data-ttu-id="96838-110">**Políticas de validação:** Seu aplicativo deve passar todas as políticas atuais de validação do [AppSource antes](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) do envio.</span><span class="sxs-lookup"><span data-stu-id="96838-110">**Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission.</span></span> 
-  > [!NOTE] 
-  > <span data-ttu-id="96838-111">As políticas de validação do Appsource estão sujeitas a alterações.</span><span class="sxs-lookup"><span data-stu-id="96838-111">The Appsource validation policies are subject to change.</span></span>
-* <span data-ttu-id="96838-112">**Preparação para dispositivos móveis:** Seu aplicativo deve ser responsivo móvel.</span><span class="sxs-lookup"><span data-stu-id="96838-112">**Mobile readiness:** Your app must be mobile responsive.</span></span> <span data-ttu-id="96838-113">Se seu aplicativo contiver guias, eles devem seguir as diretrizes de [design](~/tabs/design/tabs-mobile.md) móvel e seu aplicativo deve estar em conformidade com nenhum requisito [de](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) venda em sistema operacional móvel (iOS e Android).</span><span class="sxs-lookup"><span data-stu-id="96838-113">If your app contains tabs, they must follow the [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app must comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).</span></span>
-* <span data-ttu-id="96838-114">**Auto teste seu aplicativo:** Teste seu aplicativo usando a [ferramenta de validação de manifesto](#teams-app-validation-tool).</span><span class="sxs-lookup"><span data-stu-id="96838-114">**Self test your app:** Test your app using the [Manifest validation tool](#teams-app-validation-tool).</span></span>
-* <span data-ttu-id="96838-115">**Página de detalhes do aplicativo:** Seu aplicativo deve se alinhar à lista de verificação [de detalhes do aplicativo.](detail-page-checklist.md)</span><span class="sxs-lookup"><span data-stu-id="96838-115">**App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).</span></span>
-* <span data-ttu-id="96838-116">**Dicas e casos com falha frequente:** Preste atenção extra às Dicas listadas e [frequentemente a](frequently-failed-cases.md)  casos com falha para melhorar o tempo de envio e aprovação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96838-116">**Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.</span></span>
-* <span data-ttu-id="96838-117">**Manifesto do aplicativo:** Verifique o manifesto do aplicativo na lista de verificação [de manifesto do aplicativo](app-manifest-checklist.md).</span><span class="sxs-lookup"><span data-stu-id="96838-117">**App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).</span></span>
-* <span data-ttu-id="96838-118">**Teste e depuração:** Certifique-se de que você [testou totalmente e depurou seu aplicativo.](../../../build-and-test/debug.md)</span><span class="sxs-lookup"><span data-stu-id="96838-118">**Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).</span></span>
-* <span data-ttu-id="96838-119">**Notas de teste:** Incluir suas [anotações de teste para validação](#test-notes-for-validation)</span><span class="sxs-lookup"><span data-stu-id="96838-119">**Testing notes:** Include your [test notes for validation](#test-notes-for-validation)</span></span>
-* <span data-ttu-id="96838-120">**Políticas de privacidade:** Verifique se [sua política de privacidade, termos de uso e URLs de suporte](#privacy-policy-terms-of-use-and-support-urls) seguem nossas diretrizes.</span><span class="sxs-lookup"><span data-stu-id="96838-120">**Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.</span></span>
+<span data-ttu-id="3491e-106">Antes de enviar seu aplicativo para [o Partner Center,](/office/dev/store/use-partner-center-to-submit-to-appsource)certifique-se de ter feito o seguinte.</span><span class="sxs-lookup"><span data-stu-id="3491e-106">Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.</span></span>
 
-<span data-ttu-id="96838-121">Depois de concluir todos os requisitos acima, envie seu pacote para o AppSource por meio [do Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span><span class="sxs-lookup"><span data-stu-id="96838-121">Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
+## <a name="validate-your-app-package"></a><span data-ttu-id="3491e-107">Validar seu pacote de aplicativos</span><span class="sxs-lookup"><span data-stu-id="3491e-107">Validate your app package</span></span>
 
-## <a name="teams-app-validation-tool"></a><span data-ttu-id="96838-122">Ferramenta de Validação de Aplicativos do Teams</span><span class="sxs-lookup"><span data-stu-id="96838-122">Teams App Validation Tool</span></span>
+<span data-ttu-id="3491e-108">Embora seu aplicativo possa estar funcionando em um ambiente de teste, você deve verificar o pacote do aplicativo para evitar problemas durante o processo de envio.</span><span class="sxs-lookup"><span data-stu-id="3491e-108">While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.</span></span>
 
-<span data-ttu-id="96838-123">A ferramenta de validação de aplicativo consiste em um [validador de](#teams-app-validator) aplicativo e uma [lista de verificação preliminar.](#preliminary-checklist)</span><span class="sxs-lookup"><span data-stu-id="96838-123">The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist).</span></span> <span data-ttu-id="96838-124">A ferramenta replica os mesmos casos de teste usados pelo [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) para avaliar o envio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96838-124">The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission.</span></span> <span data-ttu-id="96838-125">Portanto, é fundamental passar todos os casos de teste antes de enviar sua solução ao AppSource para aprovação. A ferramenta pode ser encontrada em várias áreas dentro da plataforma teams:</span><span class="sxs-lookup"><span data-stu-id="96838-125">Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:</span></span>
+<span data-ttu-id="3491e-109">A Microsoft Teams de validação de aplicativo ajuda você a identificar e corrigir problemas antes de enviar ao Partner Center.</span><span class="sxs-lookup"><span data-stu-id="3491e-109">The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center.</span></span> <span data-ttu-id="3491e-110">A ferramenta verifica automaticamente as configurações do aplicativo em relação aos mesmos casos de teste usados durante a validação do armazenamento.</span><span class="sxs-lookup"><span data-stu-id="3491e-110">The tool automatically checks your app's configurations against the same test cases used during store validation.</span></span>
 
-> [!div class="checklist"]
->
-> * [<span data-ttu-id="96838-126">**Página inicial do Validador de Aplicativos**</span><span class="sxs-lookup"><span data-stu-id="96838-126">**App Validator homepage**</span></span>](https://dev.teams.microsoft.com/appvalidation.html)
-> * [<span data-ttu-id="96838-127">**Teams Visual Studio kit de ferramentas de código**</span><span class="sxs-lookup"><span data-stu-id="96838-127">**Teams Visual Studio Code toolkit**</span></span>](/toolkit/visual-studio-code-overview.md)
-> * [<span data-ttu-id="96838-128">**App Studio**</span><span class="sxs-lookup"><span data-stu-id="96838-128">**App Studio**</span></span>](../../../build-and-test/app-studio-overview.md)
+1. <span data-ttu-id="3491e-111">Vá para a ferramenta [Microsoft Teams de validação de aplicativos](https://dev.teams.microsoft.com/appvalidation.html).</span><span class="sxs-lookup"><span data-stu-id="3491e-111">Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).</span></span> <span data-ttu-id="3491e-112">(Observação: a ferramenta também está disponível no [App Studio](../../../build-and-test/app-studio-overview.md).)</span><span class="sxs-lookup"><span data-stu-id="3491e-112">(Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)</span></span>
+1. <span data-ttu-id="3491e-113">Upload pacote do aplicativo para executar os testes automatizados.</span><span class="sxs-lookup"><span data-stu-id="3491e-113">Upload your app package to run the automated tests.</span></span>
+1. <span data-ttu-id="3491e-114">Vá para **a lista de verificação Preliminar** e revise os casos de teste difíceis de automatizar.</span><span class="sxs-lookup"><span data-stu-id="3491e-114">Go to the **Preliminary checklist** and review the test cases that are difficult to automate.</span></span>
+1. <span data-ttu-id="3491e-115">[Correção de problemas](~/resources/schema/manifest-schema.md) com suas configurações ou aplicativos em geral se os testes automatizados lhe deem erros ou se você não tiver atendido a todos os critérios na lista de verificação.</span><span class="sxs-lookup"><span data-stu-id="3491e-115">[Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.</span></span>
 
-### <a name="teams-app-validator"></a><span data-ttu-id="96838-129">Validador de aplicativos do Teams</span><span class="sxs-lookup"><span data-stu-id="96838-129">Teams app validator</span></span>
+## <a name="compile-testing-instructions"></a><span data-ttu-id="3491e-116">Compilar instruções de teste</span><span class="sxs-lookup"><span data-stu-id="3491e-116">Compile testing instructions</span></span>
 
-<span data-ttu-id="96838-130">A **página Validar** permite que você verifique o pacote do aplicativo antes de ser envio para o AppSource.</span><span class="sxs-lookup"><span data-stu-id="96838-130">The **Validate** page allows you to check your app package before submission to AppSource.</span></span> <span data-ttu-id="96838-131">Basta carregar o pacote do aplicativo e a ferramenta de validação verificará seu aplicativo em relação a todos os casos de teste relacionados ao manifesto.</span><span class="sxs-lookup"><span data-stu-id="96838-131">Simply upload your app package and the validation tool will check your app against all manifest-related test cases.</span></span> <span data-ttu-id="96838-132">Para cada teste com falha, a descrição fornece um link de documentação para ajudá-lo a corrigir o erro.</span><span class="sxs-lookup"><span data-stu-id="96838-132">For each failed test, the description provides a documentation link to help you fix the error.</span></span>
+<span data-ttu-id="3491e-117">Forneça instruções e recursos para ajudar os revisadores a testar seu aplicativo, incluindo contas de teste, credenciais e chaves de licença.</span><span class="sxs-lookup"><span data-stu-id="3491e-117">Provide instructions and resources to help the reviewers test your app, including test accounts, credentials, and license keys.</span></span> <span data-ttu-id="3491e-118">Você pode adicionar instruções no Partner Center ou enviá-las para um local disponível publicamente SharePoint.</span><span class="sxs-lookup"><span data-stu-id="3491e-118">You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.</span></span>
 
-![Ferramenta de validação](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a><span data-ttu-id="3491e-119">Lista de recursos</span><span class="sxs-lookup"><span data-stu-id="3491e-119">Feature list</span></span>
 
-### <a name="preliminary-checklist"></a><span data-ttu-id="96838-134">Lista de verificação preliminar</span><span class="sxs-lookup"><span data-stu-id="96838-134">Preliminary checklist</span></span>
+<span data-ttu-id="3491e-120">Forneça detalhes sobre os recursos do seu aplicativo em Teams e etapas para testar cada um deles.</span><span class="sxs-lookup"><span data-stu-id="3491e-120">Provide details about your app's capabilities in Teams and steps for testing each one.</span></span>
 
-<span data-ttu-id="96838-135">Para cenários de teste difíceis de automatizar, a lista de verificação preliminar superfície sete dos casos de teste mais comumente com falha.</span><span class="sxs-lookup"><span data-stu-id="96838-135">For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.</span></span>
+### <a name="accounts"></a><span data-ttu-id="3491e-121">Contas</span><span class="sxs-lookup"><span data-stu-id="3491e-121">Accounts</span></span>
 
-![Lista de verificação preliminar](../../../../assets/images/validation-tool/preliminary-checklist.png)
+<span data-ttu-id="3491e-122">Você deve fornecer contas de teste se seu aplicativo exigir uma licença ou uma lista segura de back-end.</span><span class="sxs-lookup"><span data-stu-id="3491e-122">You must provide test accounts if your app requires a license or backend safelisting.</span></span> <span data-ttu-id="3491e-123">Todas as contas fornecidas devem incluir dados pré-preenchidos para facilitar o teste.</span><span class="sxs-lookup"><span data-stu-id="3491e-123">All accounts you provide must include pre-populated data to facilitate testing.</span></span>
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a><span data-ttu-id="96838-137">Política de privacidade, termos de uso e URLs de suporte</span><span class="sxs-lookup"><span data-stu-id="96838-137">Privacy policy, terms of use and support URLs</span></span>
+<span data-ttu-id="3491e-124">Dependendo dos recursos do seu aplicativo, talvez seja necessário fornecer todos os seguintes:</span><span class="sxs-lookup"><span data-stu-id="3491e-124">Depending on your app's features, you may need to provide all of the following:</span></span>
 
-### <a name="privacy-policy"></a><span data-ttu-id="96838-138">Política de privacidade</span><span class="sxs-lookup"><span data-stu-id="96838-138">Privacy policy</span></span>
+* <span data-ttu-id="3491e-125">Conta de administrador (necessária)</span><span class="sxs-lookup"><span data-stu-id="3491e-125">Admin account (required)</span></span>
+* <span data-ttu-id="3491e-126">Conta não administrativa (necessária)</span><span class="sxs-lookup"><span data-stu-id="3491e-126">Non-admin account (required)</span></span>
+* <span data-ttu-id="3491e-127">Uma conta que não está pré-configurada para testar corretamente a experiência de login da primeira vez (necessária)</span><span class="sxs-lookup"><span data-stu-id="3491e-127">An account that isn't pre-configured in order to properly test the first-run sign-in experience (required)</span></span>
+* <span data-ttu-id="3491e-128">Uma conta com acesso a recursos premium ou atualizados (se aplicável)</span><span class="sxs-lookup"><span data-stu-id="3491e-128">An account with access to premium or upgraded features (if applicable)</span></span>
+* <span data-ttu-id="3491e-129">Duas contas no mesmo locatário para testar a experiência de colaboração para aplicativos que funcionam em contextos compartilhados (se aplicável)</span><span class="sxs-lookup"><span data-stu-id="3491e-129">Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)</span></span>
 
-<span data-ttu-id="96838-139">Diretrizes de política de privacidade:</span><span class="sxs-lookup"><span data-stu-id="96838-139">Privacy policy guidelines:</span></span>
+### <a name="tenant-configurations"></a><span data-ttu-id="3491e-130">Configurações de locatário</span><span class="sxs-lookup"><span data-stu-id="3491e-130">Tenant configurations</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="96838-140">A política de privacidade pode ser específica para seu aplicativo e/ou uma política geral para todos os seus serviços.</span><span class="sxs-lookup"><span data-stu-id="96838-140">The privacy policy can be specific to your app and/or an overall policy for all of your services.</span></span>
-> * <span data-ttu-id="96838-141">Se você usar uma política de privacidade genérica, ela deverá fazer referência a "serviços", "aplicativos" e "plataformas" para incluir seu aplicativo do Teams, bem como seu site.</span><span class="sxs-lookup"><span data-stu-id="96838-141">If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.</span></span>
-> * <span data-ttu-id="96838-142">Ele deve incluir como você lida com o armazenamento de dados do usuário, retenção de dados do usuário, exclusão e controles de segurança.</span><span class="sxs-lookup"><span data-stu-id="96838-142">It must include how you handle user data storage, user data retention, deletion, and security controls.</span></span>
-> * <span data-ttu-id="96838-143">Ele deve incluir suas informações de contato.</span><span class="sxs-lookup"><span data-stu-id="96838-143">It must include your contact information.</span></span>
-> * <span data-ttu-id="96838-144">Ele não deve conter links quebrados, URLs beta ou URLs de preparação.</span><span class="sxs-lookup"><span data-stu-id="96838-144">It should not contain broken links, beta URLs, or staging URLs.</span></span>
+<span data-ttu-id="3491e-131">Se você deve configurar um locatário Teams usar seu aplicativo, inclua essas instruções e contas de administrador e não administrador para validação.</span><span class="sxs-lookup"><span data-stu-id="3491e-131">If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.</span></span>
 
-### <a name="terms-of-use"></a><span data-ttu-id="96838-145">Termos de uso</span><span class="sxs-lookup"><span data-stu-id="96838-145">Terms of use</span></span>
+### <a name="video-optional"></a><span data-ttu-id="3491e-132">Vídeo (opcional)</span><span class="sxs-lookup"><span data-stu-id="3491e-132">Video (optional)</span></span>
 
-<span data-ttu-id="96838-146">Sua instrução de termos de uso deve ser específica e aplicável ao seu aplicativo e/ou oferta de complemento.</span><span class="sxs-lookup"><span data-stu-id="96838-146">Your terms of use statement should be specific and applicable to your app and/or add-in offering.</span></span>
+<span data-ttu-id="3491e-133">Forneça uma gravação do seu aplicativo para que a Microsoft possa entender totalmente sua funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="3491e-133">Provide a recording of your app so that Microsoft can fully understand its functionality.</span></span>
 
-### <a name="support-urls"></a><span data-ttu-id="96838-147">Dar suporte a URLs</span><span class="sxs-lookup"><span data-stu-id="96838-147">Support URLs</span></span>
+## <a name="create-your-store-listing-details"></a><span data-ttu-id="3491e-134">Criar detalhes de listagem da loja</span><span class="sxs-lookup"><span data-stu-id="3491e-134">Create your store listing details</span></span>
 
-<span data-ttu-id="96838-148">Suas URLs de suporte não devem exigir autenticação ou credencial de logon para entrar em contato com você para quaisquer problemas com seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96838-148">Your support URLs should not require authentication or login credential to contact you for any issues with your app.</span></span>
+<span data-ttu-id="3491e-135">As informações que você envia ao [Partner Center](https://partner.microsoft.com)&#8212;incluindo seu nome, descrições, ícones e imagens&#8212;se tornam a Teams store e a listagem do Microsoft AppSource para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-135">The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and Microsoft AppSource listing for your app.</span></span>
 
-## <a name="test-notes-for-validation"></a><span data-ttu-id="96838-149">Notas de teste para validação</span><span class="sxs-lookup"><span data-stu-id="96838-149">Test notes for validation</span></span>
+<span data-ttu-id="3491e-136">Uma listagem da loja pode ser a primeira impressão de alguém do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-136">A store listing may be someone's first impression of your app.</span></span> <span data-ttu-id="3491e-137">Aumente as instalações com uma listagem que transmite efetivamente os benefícios, a funcionalidade e a marca do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-137">Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.</span></span>
 
-<span data-ttu-id="96838-150">Inclua o seguinte:</span><span class="sxs-lookup"><span data-stu-id="96838-150">Please include the following:</span></span>
+### <a name="specify-a-short-name"></a><span data-ttu-id="3491e-138">Especificar um nome curto</span><span class="sxs-lookup"><span data-stu-id="3491e-138">Specify a short name</span></span>
 
-* <span data-ttu-id="96838-151">Você deve fornecer pelo menos duas credenciais de logon, um administrador e um não administrador.</span><span class="sxs-lookup"><span data-stu-id="96838-151">You must provide at least two login credentials, one admin and one non-admin.</span></span>
+<span data-ttu-id="3491e-139">O nome do seu aplicativo (especificamente, seu [*nome*](~/resources/schema/manifest-schema.md#name)curto ) desempenha uma função crucial na forma como os usuários o descobrem na loja.</span><span class="sxs-lookup"><span data-stu-id="3491e-139">Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.</span></span>
 
-* <span data-ttu-id="96838-152">Para fins de verificação, as contas fornecidas devem ter dados pré-preenchidos suficientes.</span><span class="sxs-lookup"><span data-stu-id="96838-152">For verification purposes, the accounts you provide should have sufficient pre-populated data.</span></span>
+:::row:::
 
-* <span data-ttu-id="96838-153">Para aplicativos corporativos, aplicativos em que uma assinatura é necessária ou aplicativos em que há uma dependência de locatário/domínio do Office 365, você deve fornecer uma terceira conta no mesmo domínio que não está pré-configurada para seu aplicativo para que possamos validar a experiência do usuário em primeira fase.</span><span class="sxs-lookup"><span data-stu-id="96838-153">For enterprise apps, apps where a subscription is required, or apps where there is an Office 365 tenant/domain dependency, you must provide a third account in the same domain that is not pre-configured for your app so that we can validate the first-run user experience.</span></span>
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemplo de captura de tela realça onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* <span data-ttu-id="96838-154">Se seu aplicativo tiver recursos premium/atualizados, uma conta com o acesso necessário deve ser fornecida para testar essa experiência.</span><span class="sxs-lookup"><span data-stu-id="96838-154">If your app has premium/upgraded features, an account with the necessary access must be provided to test that experience.</span></span>
+:::row-end:::
 
-* <span data-ttu-id="96838-155">Você pode optar por carregar suas anotações de teste no SharePoint.</span><span class="sxs-lookup"><span data-stu-id="96838-155">You may choose to upload your test notes to SharePoint.</span></span> <span data-ttu-id="96838-156">Em caso afirmado, forneça um link público para o arquivo.</span><span class="sxs-lookup"><span data-stu-id="96838-156">If so, please provide a public link to the file.</span></span>
+<span data-ttu-id="3491e-141">Certifique-se de que seu nome curto adera às diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)</span><span class="sxs-lookup"><span data-stu-id="3491e-141">Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).</span></span>
 
-* <span data-ttu-id="96838-157">**Contas de teste**.</span><span class="sxs-lookup"><span data-stu-id="96838-157">**Test Accounts**.</span></span> <span data-ttu-id="96838-158">Uma conta de teste será necessária se seu aplicativo permitir apenas contas licenciadas ou lista segura do back-end.</span><span class="sxs-lookup"><span data-stu-id="96838-158">A test account is required if your app only allows licensed accounts or safelisting from the backend.</span></span> <span data-ttu-id="96838-159">Além disso, se houver um escopo de chat de equipe/grupo permitido em seu aplicativo, duas contas de teste no mesmo locatário serão necessárias para validar o cenário de colaboração de equipe.</span><span class="sxs-lookup"><span data-stu-id="96838-159">Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.</span></span>
+### <a name="write-descriptions"></a><span data-ttu-id="3491e-142">Descrições de gravação</span><span class="sxs-lookup"><span data-stu-id="3491e-142">Write descriptions</span></span>
 
-* <span data-ttu-id="96838-160">**Etapas de integração**.</span><span class="sxs-lookup"><span data-stu-id="96838-160">**Integration steps**.</span></span> <span data-ttu-id="96838-161">Se a pré-configuração de um administrador de locatário for necessária para usar o aplicativo, inclua as etapas e/ou forneça contas de administrador e não administrador configuradas para validação.</span><span class="sxs-lookup"><span data-stu-id="96838-161">If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation.</span></span> <span data-ttu-id="96838-162">Observação: você pode se inscrever para uma assinatura do Programa de Desenvolvedor do [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program)</span><span class="sxs-lookup"><span data-stu-id="96838-162">Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription.</span></span> <span data-ttu-id="96838-163">Ele é gratuito *por* 90 dias e será continuamente renovado, desde que você esteja usando-o para atividades de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="96838-163">It's *free* for 90 days and will continually renew as long as you're using it for development activity.</span></span>
+<span data-ttu-id="3491e-143">Você deve ter uma descrição curta e longa do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-143">You must have a short and long description of your app.</span></span>
 
-* <span data-ttu-id="96838-164">**Observações sobre os recursos do aplicativo no Teams**: Detalhar todos os recursos que o aplicativo oferece no Teams e etapas para testar cada recurso.</span><span class="sxs-lookup"><span data-stu-id="96838-164">**Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.</span></span>
+#### <a name="short-description"></a><span data-ttu-id="3491e-144">Descrição breve</span><span class="sxs-lookup"><span data-stu-id="3491e-144">Short description</span></span>
 
-* <span data-ttu-id="96838-165">Vídeo mostrando a funcionalidade **do aplicativo (Opcional)**: Você pode fornecer uma gravação em vídeo do produto para que possamos entender totalmente a funcionalidade do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="96838-165">**Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.</span></span>
+<span data-ttu-id="3491e-145">Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcionado para seu público-alvo.</span><span class="sxs-lookup"><span data-stu-id="3491e-145">A concise summary of your app that should be original, engaging, and directed at your target audience.</span></span> <span data-ttu-id="3491e-146">Mantenha a descrição curta em uma frase.</span><span class="sxs-lookup"><span data-stu-id="3491e-146">Keep the short description to one sentence.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemplo de captura de tela realça onde a descrição curta de um aplicativo é exibida em uma listagem da loja.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="3491e-148">Certifique-se de que sua breve descrição segue as diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)</span><span class="sxs-lookup"><span data-stu-id="3491e-148">Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).</span></span>
+
+#### <a name="long-description"></a><span data-ttu-id="3491e-149">Descrição longa</span><span class="sxs-lookup"><span data-stu-id="3491e-149">Long description</span></span>
+
+<span data-ttu-id="3491e-150">A descrição longa pode fornecer uma narração que realça os principais recursos do aplicativo, os problemas que ele resolve e seu público-alvo.</span><span class="sxs-lookup"><span data-stu-id="3491e-150">The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience.</span></span> <span data-ttu-id="3491e-151">Embora essa descrição possa ter até 4.000 caracteres, a maioria dos usuários lerá apenas entre 300 e 500 palavras.</span><span class="sxs-lookup"><span data-stu-id="3491e-151">While this description can be as long as 4,000 characters, most users will only read between 300-500 words.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Exemplo de captura de tela realça onde a descrição longa de um aplicativo é exibida em uma listagem da loja.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="3491e-153">Certifique-se de que sua descrição longa segue as diretrizes de validação [da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)</span><span class="sxs-lookup"><span data-stu-id="3491e-153">Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).</span></span>
+
+### <a name="adhere-to-icon-design-guidelines"></a><span data-ttu-id="3491e-154">Seguir as diretrizes de design de ícones</span><span class="sxs-lookup"><span data-stu-id="3491e-154">Adhere to icon design guidelines</span></span>
+
+<span data-ttu-id="3491e-155">Os ícones são um dos principais elementos que os usuários veem ao navegar na loja.</span><span class="sxs-lookup"><span data-stu-id="3491e-155">Icons are one of the main elements users see when browsing the store.</span></span> <span data-ttu-id="3491e-156">Seus ícones devem comunicar a marca e a finalidade do seu aplicativo enquanto também aderem aos requisitos Teams.</span><span class="sxs-lookup"><span data-stu-id="3491e-156">Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.</span></span>
+
+<span data-ttu-id="3491e-157">Para obter mais informações, consulte [diretrizes sobre como criar Teams ícones de aplicativo.](~/concepts/build-and-test/apps-package.md#app-icons)</span><span class="sxs-lookup"><span data-stu-id="3491e-157">For more information, see [guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).</span></span>
+
+### <a name="capture-screenshots"></a><span data-ttu-id="3491e-158">Capturar capturas de tela</span><span class="sxs-lookup"><span data-stu-id="3491e-158">Capture screenshots</span></span>
+
+<span data-ttu-id="3491e-159">As capturas de tela fornecem uma visualização visual proeminente do seu aplicativo para complementar o nome, o ícone e as descrições do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-159">Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Exemplo de realçamentos de captura de tela onde as capturas de tela do aplicativo são exibidas em uma listagem da loja.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="3491e-161">Lembre-se do seguinte sobre capturas de tela:</span><span class="sxs-lookup"><span data-stu-id="3491e-161">Remember the following about screenshots:</span></span>
+
+* <span data-ttu-id="3491e-162">Você pode ter até cinco capturas de tela por listagem.</span><span class="sxs-lookup"><span data-stu-id="3491e-162">You can have up to five screenshots per listing.</span></span>
+* <span data-ttu-id="3491e-163">Os tipos de arquivo com suporte incluem PNG, JPEG e GIF.</span><span class="sxs-lookup"><span data-stu-id="3491e-163">Supported file types include PNG, JPEG, and GIF.</span></span>
+* <span data-ttu-id="3491e-164">As dimensões devem ter 1366 x 768 pixels.</span><span class="sxs-lookup"><span data-stu-id="3491e-164">Dimensions should be 1366x768 pixels.</span></span>
+* <span data-ttu-id="3491e-165">Tamanho máximo de 1.024 KB.</span><span class="sxs-lookup"><span data-stu-id="3491e-165">Maximum size of 1,024 KB.</span></span>
+
+<span data-ttu-id="3491e-166">Para ver as práticas recomendadas, consulte os seguintes recursos:</span><span class="sxs-lookup"><span data-stu-id="3491e-166">For best practices, see the following resources:</span></span>
+
+* [<span data-ttu-id="3491e-167">Teams de validação do armazenamento</span><span class="sxs-lookup"><span data-stu-id="3491e-167">Teams store validation guidelines</span></span>](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [<span data-ttu-id="3491e-168">Criar imagens efetivas para os armazenamentos de aplicativos da Microsoft</span><span class="sxs-lookup"><span data-stu-id="3491e-168">Craft effective images for Microsoft app stores</span></span>](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a><span data-ttu-id="3491e-169">Criar um vídeo</span><span class="sxs-lookup"><span data-stu-id="3491e-169">Create a video</span></span>
+
+<span data-ttu-id="3491e-170">Um vídeo em sua listagem pode ser a maneira mais eficaz de comunicar por que as pessoas devem usar seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-170">A video in your listing can be the most effective way to communicate why people should use your app.</span></span> <span data-ttu-id="3491e-171">Você deve resolver as seguintes perguntas em um vídeo:</span><span class="sxs-lookup"><span data-stu-id="3491e-171">You should address the following questions in a video:</span></span>
+
+* <span data-ttu-id="3491e-172">Who seu aplicativo é para?</span><span class="sxs-lookup"><span data-stu-id="3491e-172">Who is your app for?</span></span>
+* <span data-ttu-id="3491e-173">Quais problemas seu aplicativo pode resolver?</span><span class="sxs-lookup"><span data-stu-id="3491e-173">What problems can your app solve?</span></span>
+* <span data-ttu-id="3491e-174">Como seu aplicativo funciona?</span><span class="sxs-lookup"><span data-stu-id="3491e-174">How does your app work?</span></span>
+* <span data-ttu-id="3491e-175">Quais outros benefícios você obter com o uso do aplicativo?</span><span class="sxs-lookup"><span data-stu-id="3491e-175">What other benefits do you get from using your app?</span></span>
+
+#### <a name="best-practices-for-videos"></a><span data-ttu-id="3491e-176">Práticas recomendadas para vídeos</span><span class="sxs-lookup"><span data-stu-id="3491e-176">Best practices for videos</span></span>
+
+* <span data-ttu-id="3491e-177">Mantenha seu vídeo entre 30 e 90 segundos.</span><span class="sxs-lookup"><span data-stu-id="3491e-177">Keep your video between 30-90 seconds.</span></span>
+* <span data-ttu-id="3491e-178">Aponte para a qualidade.</span><span class="sxs-lookup"><span data-stu-id="3491e-178">Aim for quality.</span></span> <span data-ttu-id="3491e-179">Em uma listagem, os usuários verão seu vídeo antes das capturas de tela.</span><span class="sxs-lookup"><span data-stu-id="3491e-179">In a listing, users will see your video before screenshots.</span></span>
+
+### <a name="select-a-category-for-your-app"></a><span data-ttu-id="3491e-180">Selecione uma categoria para seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="3491e-180">Select a category for your app</span></span>
+
+<span data-ttu-id="3491e-181">Durante o envio, você é solicitado a categorizar seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-181">During submission, you're asked to categorize your app.</span></span> <span data-ttu-id="3491e-182">A tabela a seguir mapeia Teams categorias de armazenamento para as categorias listadas no [Partner Center](https://aka.ms/PartnerCenterHomePage).</span><span class="sxs-lookup"><span data-stu-id="3491e-182">The following table maps Teams store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).</span></span>
+
+| <span data-ttu-id="3491e-183">Teams categorias</span><span class="sxs-lookup"><span data-stu-id="3491e-183">Teams categories</span></span>       | <span data-ttu-id="3491e-184">Categorias do Partner Center</span><span class="sxs-lookup"><span data-stu-id="3491e-184">Partner Center categories</span></span>  |
+|:---------------------|:---------------|
+| <span data-ttu-id="3491e-185">Análise e BI</span><span class="sxs-lookup"><span data-stu-id="3491e-185">Analytics and BI</span></span> | <span data-ttu-id="3491e-186">Análise, Visualização de Dados e BI</span><span class="sxs-lookup"><span data-stu-id="3491e-186">Analytics, Data Visualization and BI</span></span> |
+| <span data-ttu-id="3491e-187">Desenvolvedor e IT</span><span class="sxs-lookup"><span data-stu-id="3491e-187">Developer and IT</span></span> | <span data-ttu-id="3491e-188">Ferramentas de Desenvolvedor, Administrador de IT</span><span class="sxs-lookup"><span data-stu-id="3491e-188">Developer Tools, IT Admin</span></span> |
+| <span data-ttu-id="3491e-189">Educação</span><span class="sxs-lookup"><span data-stu-id="3491e-189">Education</span></span> | <span data-ttu-id="3491e-190">Educação</span><span class="sxs-lookup"><span data-stu-id="3491e-190">Education</span></span> |
+| <span data-ttu-id="3491e-191">Recursos humanos</span><span class="sxs-lookup"><span data-stu-id="3491e-191">Human resources</span></span> | <span data-ttu-id="3491e-192">Recursos Humanos e Recrutamento</span><span class="sxs-lookup"><span data-stu-id="3491e-192">Human Resources and Recruiting</span></span> |
+| <span data-ttu-id="3491e-193">Produtividade</span><span class="sxs-lookup"><span data-stu-id="3491e-193">Productivity</span></span> | <span data-ttu-id="3491e-194">Gerenciamento de Conteúdo, Arquivos e documentos, Produtividade, Treinamento e Tutoriais e Utilitários</span><span class="sxs-lookup"><span data-stu-id="3491e-194">Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities</span></span> |
+| <span data-ttu-id="3491e-195">Gerenciamento de projeto</span><span class="sxs-lookup"><span data-stu-id="3491e-195">Project management</span></span> | <span data-ttu-id="3491e-196">Comunicação, Project Gerenciamento, Fluxo de Trabalho e Gerenciamento de Negócios</span><span class="sxs-lookup"><span data-stu-id="3491e-196">Communication, Project Management, Workflow, and Business Management</span></span> |
+| <span data-ttu-id="3491e-197">Vendas e suporte</span><span class="sxs-lookup"><span data-stu-id="3491e-197">Sales and support</span></span> | <span data-ttu-id="3491e-198">Gerenciamento de Clientes e Contatos, Suporte ao Cliente, Gerenciamento Financeiro, Vendas e Marketing</span><span class="sxs-lookup"><span data-stu-id="3491e-198">Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing</span></span> |
+| <span data-ttu-id="3491e-199">Social e divertido</span><span class="sxs-lookup"><span data-stu-id="3491e-199">Social and fun</span></span> | <span data-ttu-id="3491e-200">Galerias de imagem e vídeo, estilo de vida, notícias e clima, social, viagem e navegação</span><span class="sxs-lookup"><span data-stu-id="3491e-200">Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation</span></span> |
+
+### <a name="localize-your-store-listing"></a><span data-ttu-id="3491e-201">Localize sua listagem da loja</span><span class="sxs-lookup"><span data-stu-id="3491e-201">Localize your store listing</span></span>
+
+<span data-ttu-id="3491e-202">O Partner Center dá [suporte a listagens de armazenamento localizado.](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)</span><span class="sxs-lookup"><span data-stu-id="3491e-202">Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).</span></span> <span data-ttu-id="3491e-203">Para obter mais informações, [consulte como localizar sua Teams de aplicativos](../../../../concepts/build-and-test/apps-localization.md).</span><span class="sxs-lookup"><span data-stu-id="3491e-203">For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).</span></span>
+
+## <a name="complete-publisher-verification"></a><span data-ttu-id="3491e-204">Concluir Publisher Verificação</span><span class="sxs-lookup"><span data-stu-id="3491e-204">Complete Publisher Verification</span></span>
+
+<span data-ttu-id="3491e-205">[Publisher Verificação](/azure/active-directory/develop/publisher-verification-overview) é necessária para Teams aplicativos listados na loja. Para obter mais informações, [consulte perguntas frequentes](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), como marcar seu aplicativo como [editor verificado](/azure/active-directory/develop/mark-app-as-publisher-verified)e solucionar problemas de verificação [do editor.](/azure/active-directory/develop/troubleshoot-publisher-verification)</span><span class="sxs-lookup"><span data-stu-id="3491e-205">[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store.For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).</span></span>
+
+## <a name="complete-publisher-attestation"></a><span data-ttu-id="3491e-206">Concluir Publisher Atestado</span><span class="sxs-lookup"><span data-stu-id="3491e-206">Complete Publisher Attestation</span></span>
+
+<span data-ttu-id="3491e-207">[Publisher Atestado](/microsoft-365-app-certification/docs/attestation) também é necessário para Teams aplicativos listados na loja.</span><span class="sxs-lookup"><span data-stu-id="3491e-207">[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store.</span></span> <span data-ttu-id="3491e-208">O processo inclui a conclusão de uma autoavaliação das práticas de segurança, tratamento de dados e conformidade do seu aplicativo que podem ajudar os clientes em potencial a tomar decisões informadas sobre o uso do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3491e-208">The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="3491e-209">Se você estiver enviando um novo aplicativo, não poderá concluir oficialmente Publisher Atestado até que seu aplicativo seja listado na Teams store.</span><span class="sxs-lookup"><span data-stu-id="3491e-209">If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store.</span></span> <span data-ttu-id="3491e-210">Se você estiver atualizando um aplicativo listado, conclua Publisher Atestado antes de enviar a versão mais recente do aplicativo para validação.</span><span class="sxs-lookup"><span data-stu-id="3491e-210">If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="3491e-211">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="3491e-211">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3491e-212">Enviar seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="3491e-212">Submit your app</span></span>](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
