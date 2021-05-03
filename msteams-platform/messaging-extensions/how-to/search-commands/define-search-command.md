@@ -1,7 +1,7 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagens
 author: clearab
-description: Definir comandos de pesquisa de extensão de mensagens para aplicativos do Microsoft Teams.
+description: Defina comandos de pesquisa de extensão de mensagens para Microsoft Teams aplicativos.
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
@@ -43,7 +43,7 @@ O pré-requisito para criar um comando de pesquisa é que você já deve ter cri
 
 **Para criar um comando de pesquisa**
 
-1. Abra **o App Studio** do cliente do Microsoft Teams e selecione a guia Editor **de** Manifesto.
+1. Abra **o App Studio** no cliente Microsoft Teams e selecione a guia Editor **de** Manifesto.
 1.  Se você já criou seu pacote de aplicativos **no App Studio**, selecione na lista. Se você não tiver criado um pacote de aplicativos, importe um existente.
 1. Depois de importar o pacote de aplicativos, selecione **Extensões de mensagens** em **Recursos**. Você tem uma janela pop-up para configurar a extensão de mensagens.
 1. Selecione **Configurar na** janela para incluir a extensão de mensagens na experiência do aplicativo. A imagem a seguir exibe a página de configuração de extensão de mensagens: 
@@ -80,9 +80,9 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao ma
 | `description` | Essa propriedade é um texto de ajuda que indica o que esse comando faz. Esse valor aparece na interface do usuário. | Sim | 1.0 |
 | `type` | Essa propriedade deve ser `query` um . | Não | 1.4 |
 |`initialRun` | Se essa propriedade for definida como **true**, ele indicará que esse comando deve ser executado assim que o usuário selecionar esse comando na interface do usuário. | Não | 1.0 |
-| `context` | Essa propriedade é uma matriz opcional de valores que define o contexto em que a ação de pesquisa está disponível. Os valores possíveis são `message`, `compose` ou `commandBox`. O padrão é `["compose", "commandBox"]` . | Não | 1,5 |
+| `context` | Essa propriedade é uma matriz opcional de valores que define o contexto em que a ação de pesquisa está disponível. Os valores possíveis são `message`, `compose` ou `commandBox`. O padrão é `["compose", "commandBox"]`. | Não | 1,5 |
 
-Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no cliente do Teams.
+Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
 
 | Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
@@ -126,8 +126,8 @@ Para o manifesto completo do aplicativo, consulte [Esquema de manifesto do aplic
 
 | Exemplo de nome           | Descrição | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Ação de extensão de mensagens do Teams| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Pesquisa de extensão de mensagens do Teams   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Próxima etapa
 

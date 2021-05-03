@@ -18,7 +18,7 @@ ms.locfileid: "52019822"
 
 ## <a name="code-sample"></a>Exemplo de código
 
-O Teams Search Auth Config para projetos de exemplo no GitHub, demonstra como criar extensões de mensagens que incluem uma página de configuração e a autenticação do Serviço bot. Os exemplos também demonstram como criar extensões de mensagem que aceitam solicitações de pesquisa e retornam os resultados depois que o usuário se inscreveu.
+O Teams Config do Auth de Pesquisa para projetos de exemplo no GitHub, demonstre como criar extensões de mensagens que incluem uma página de configuração e a autenticação do Serviço bot. Os exemplos também demonstram como criar extensões de mensagem que aceitam solicitações de pesquisa e retornam os resultados depois que o usuário se inscreveu.
 
 | **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|
@@ -27,4 +27,4 @@ O Teams Search Auth Config para projetos de exemplo no GitHub, demonstra como cr
 ## <a name="additional-code-sample"></a>Exemplo de código adicional
 
 > [!div class="nextstepaction"]
-> [Exibir mais exemplos de estrutura de bots no GitHub](https://github.com/microsoft/BotBuilder-Samples)
+> [Exibir mais Exemplos de Estrutura de Bots em GitHub](https://github.com/microsoft/BotBuilder-Samples)

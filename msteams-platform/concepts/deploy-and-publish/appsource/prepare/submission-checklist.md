@@ -1,5 +1,5 @@
 ---
-title: Preparar o envio da loja
+title: Preparar o envio para a Microsoft Store
 description: Descreve as etapas finais antes de enviar seu Microsoft Teams aplicativo para ser listado na loja.
 ms.topic: how-to
 localization_priority: Normal

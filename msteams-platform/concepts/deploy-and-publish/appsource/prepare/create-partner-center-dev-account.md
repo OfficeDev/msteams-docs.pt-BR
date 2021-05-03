@@ -220,4 +220,4 @@ Os seguintes recursos também podem ajudar:
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Preparar o envio da loja](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Preparar o envio para a Microsoft Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

@@ -1,7 +1,7 @@
 ---
 title: Começar - Criar uma extensão de mensagens
 author: girliemac
-description: Crie rapidamente uma extensão de mensagens do Microsoft Teams usando o microsoft Teams Toolkit.
+description: Crie rapidamente uma extensão Microsoft Teams de mensagens usando a Microsoft Teams Toolkit.
 ms.author: timura
 ms.date: 03/25/2021
 ms.topic: tutorial
@@ -12,11 +12,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068756"
 ---
-# <a name="build-your-first-messaging-extension-for-microsoft-teams"></a>Criar sua primeira extensão de mensagens para o Microsoft Teams
+# <a name="build-your-first-messaging-extension-for-microsoft-teams"></a>Crie sua primeira extensão de mensagens para Microsoft Teams
 
-Há dois tipos de extensões de mensagens *do* Teams: comandos [de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) e comandos de [ação.](../messaging-extensions/how-to/action-commands/define-action-command.md)
+Há dois tipos de extensões Teams *de mensagens:* comandos [de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) e comandos [de ação.](../messaging-extensions/how-to/action-commands/define-action-command.md)
 
-Este tutorial ensina a criar um comando de pesquisa *(também* conhecido como extensão de mensagens baseada em *pesquisa),* que é um atalho para localizar conteúdo externo e compartilhamento no Teams. Os usuários podem acessar comandos de pesquisa na caixa de comando ou composição do Teams.
+Este tutorial ensina a criar um comando de pesquisa *(também* conhecido como extensão de mensagens baseada em pesquisa *),* que é um atalho para localizar conteúdo externo e compartilhamento no Teams. Os usuários podem acessar comandos de pesquisa Teams caixa de comando ou composição.
 
 ## <a name="what-youll-learn"></a>O que você aprenderá
 
@@ -24,52 +24,52 @@ Este tutorial ensina a criar um comando de pesquisa *(também* conhecido como ex
 * Entenda as configurações do aplicativo e os scaffolding relevantes para extensões de mensagens.
 * Hospedar um aplicativo localmente.
 * Configure o bot para sua extensão de mensagens.
-* Fazer sideload e testar uma extensão de mensagens no Teams.
+* Fazer sideload e testar uma extensão de mensagens Teams.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Certifique-se de entender como configurar e criar um aplicativo simples do Teams. Para obter mais informações, [consulte criar seu primeiro aplicativo do Microsoft Teams "Hello, World!".](../build-your-first-app/build-and-run.md)
+Certifique-se de entender como configurar e criar um aplicativo Teams simples. Para obter mais informações, [consulte create your first Microsoft Teams aplicativo "Hello, World!".](../build-your-first-app/build-and-run.md)
 
 ## <a name="1-create-your-app-project"></a>1. Crie seu projeto de aplicativo
 
-A Toolkit do Microsoft Teams ajuda você a configurar os seguintes componentes para a extensão de mensagens:
+A Microsoft Teams Toolkit ajuda a configurar os seguintes componentes para a extensão de mensagens:
 
 * **Configurações de aplicativo e scaffolding relevantes** para extensões de mensagens
-* **Bot** para a extensão de mensagens que é registrada automaticamente com o Serviço de Bot do Microsoft Azure
+* **Bot** para sua extensão de mensagens que é registrada automaticamente com o serviço Microsoft Azure Bot
 
 **Para criar seu projeto de aplicativo**
 
-1. Em Visual Studio Código, selecione **Microsoft Teams** na Barra de Atividades à esquerda e escolha Criar um novo aplicativo do :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Teams.**
-1. Quando solicitado, entre com sua conta de desenvolvimento do Microsoft 365.
+1. Em Visual Studio Code, selecione **Microsoft Teams** barra de atividades à esquerda e escolha Criar um novo Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
+1. Quando solicitado, entre com sua conta Microsoft 365 de desenvolvimento.
 1. Na tela **Selecionar projeto,** em **Pesquisa de Extensões de**  >  **Mensagens,** clique em **JS (JavaScript)**. 
-1. Insira um nome para seu aplicativo do Teams. Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto do aplicativo em sua máquina local.
-1. Selecione **Criar um novo Bot** e clique em Criar Registro **de** Bot. Se tiver êxito, seu novo bot terá um status *Registrado.* Agora seu bot é registrado automaticamente no Serviço de Bot do Microsoft Azure. 
+1. Insira um nome para seu Teams app. Esse é o nome padrão para seu aplicativo e também o nome do diretório do projeto do aplicativo em sua máquina local.
+1. Selecione **Criar um novo Bot** e clique em Criar Registro **de** Bot. Se tiver êxito, seu novo bot terá um status *Registrado.* Agora, seu bot é registrado automaticamente com o serviço Microsoft Azure Bot. 
 1. Selecione **Concluir** na parte inferior da tela para configurar seu projeto e salvar seu projeto em seu computador local.
 
 ## <a name="2-understand-your-app-project-components"></a>2. Entenda os componentes do projeto do aplicativo
 
-Grande parte das configurações e scaffolding do aplicativo são configuradas automaticamente quando você cria seu projeto com o teams Toolkit.
+Grande parte das configurações e scaffolding do aplicativo são configuradas automaticamente quando você cria seu projeto com o Teams Toolkit.
 
 * Configurações do aplicativo: para exibir ou atualizar as configurações da extensão de mensagens, selecione **App Studio** no kit de ferramentas e acesse **Extensões de mensagens.**
 * Estrutura de aplicativos: o scaffolding de aplicativo fornece um arquivo, localizado no diretório raiz do seu projeto, para manipular como sua extensão de mensagens (ou tecnicamente, o bot da extensão de mensagens ) responde às consultas de pesquisa no `botActivityHandler.js` Teams. [](#4-configure-the-bot-for-your-messaging-extension)
 
 ## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. Configurar um túnel seguro para seu aplicativo
 
-Para fins de teste, vamos hospedar sua extensão de mensagens em um servidor Web local (porta 3978). Você usará o [ngrok](https://ngrok.com/download) para configurar um túnel seguro para localhost. Confira [criar seu primeiro bot para o Microsoft Teams](../build-your-first-app/build-bot.md#3-securely-expose-your-localhost-to-the-internet) para obter detalhes. 
+Para fins de teste, vamos hospedar sua extensão de mensagens em um servidor Web local (porta 3978). Você usará o [ngrok](https://ngrok.com/download) para configurar um túnel seguro para localhost. Consulte [build your first bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-securely-expose-your-localhost-to-the-internet) for details. 
 
 1. Caso ainda não tenha feito isso, instale [ngrok](https://ngrok.com/download).
 1. Em um terminal, execute `ngrok http -host-header=rewrite 3978` .
-1. Copie a URL HTTPS na saída (por exemplo, ) já que o `https://468b9ab725e9.ngrok.io` Teams requer conexões HTTPS.
+1. Copie a URL HTTPS na saída (por exemplo, ) já que Teams `https://468b9ab725e9.ngrok.io` requer conexões HTTPS.
 
-   Com essa URL, o Teams (que requer conexões HTTPS) poderá túnel para onde você está hospedando seu aplicativo ( `localhost` na porta 3978).
+   Com essa URL, Teams (que requer conexões HTTPS) poderá túnel para onde você está hospedando seu aplicativo ( `localhost` na porta 3978).
 
 ## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. Configure o bot para sua extensão de mensagens
 
-As extensões de mensagens dependem de bots para enviar e processar solicitações de usuário do Teams para seu serviço hospedado. O bot deve ser registrado com o Serviço bot do Azure, que foi feito quando você configura seu aplicativo usando o teams Toolkit.
+As extensões de mensagens dependem de bots para enviar e processar solicitações de usuários Teams para seu serviço hospedado. O bot deve ser registrado no Serviço bot do Azure, que foi feito quando você configura seu aplicativo usando o Teams Toolkit.
 
 Você ainda deve especificar uma URL de ponto de extremidade de bot para receber e processar consultas de pesquisa em sua extensão de mensagens. Normalmente, a URL se parece com `https://HOST_URL/api/messages` . Você pode configurar isso rapidamente no kit de ferramentas.
 
-1. Em Visual Studio Código, selecione **Microsoft Teams** na Barra de Atividades à esquerda e escolha Abrir o Microsoft Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Toolkit**.
+1. Em Visual Studio Code, selecione **Microsoft Teams** à esquerda da Barra de Atividades :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: e escolha Abrir **Microsoft Teams Toolkit**.
 1. Vá para **Bots > registros de bot existentes** e selecione o bot que você criou durante a instalação.
 1. No campo **Endereço do ponto** de extremidade bot, insira a URL do ngrok (por exemplo, ) onde você está hospedando o bot e `https://468b9ab725e9.ngrok.io` adeque `/api/messages` a ele.
 
@@ -89,22 +89,22 @@ Você configurou uma URL para hospedar sua extensão de mensagens e configurá-l
 
 ## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. Fazer sideload da extensão de mensagens no Teams
 
-Com a extensão de mensagens em execução, você pode instalá-la no Teams.
+Com a extensão de mensagens em execução, você pode instalá-la Teams.
 
 > [!TIP]
-> Se você ainda não fez sideload de um aplicativo do Teams antes e correu para problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
+> Se você não tiver sideloaded de um aplicativo Teams antes e tiver problemas, siga estas [instruções](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
 
-1. Em Visual Studio Código, selecione a **chave F5** para iniciar um cliente Web do Teams.
+1. Em Visual Studio Code, selecione a **tecla F5** para iniciar um cliente Teams Web.
 1. Na caixa de diálogo de instalação do aplicativo, selecione **Adicionar para mim**.
 
 ## <a name="7-test-your-messaging-extension"></a>7. Teste sua extensão de mensagens
 
-Saiba como as extensões de mensagens funcionam em um chat do Teams.
+Saiba como as extensões de mensagens funcionam em um Teams chat.
 
 1. Inicie um novo chat. Na caixa de redação, selecione **Mais** e selecione o aplicativo de extensão de mensagens :::image type="icon" source="../assets/icons/teams-client-more.png"::: que você acabou de fazer sideload.
 1. Tente pesquisar algo (por exemplo, **Tíquetes).** Se seu aplicativo estiver funcionando, você verá resultados de pesquisa de exemplo (você pode adicionar seus próprios posteriormente).
 
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Uma captura de tela mostrando como uma extensão de mensagens baseada em pesquisa é usada na caixa de redação do Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Uma captura de tela mostrando como uma extensão de mensagens baseada em pesquisa é usada na caixa de Teams de composição.":::
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -112,13 +112,13 @@ As informações a seguir podem ajudar se você tiver problemas ao concluir este
 
 **Bot não está conectado ao Teams**
 
-Se você instalou seu aplicativo, mas ele não está funcionando, certifique-se de que o bot da extensão de mensagens esteja conectado ao canal do Teams do Serviço de Bot do [Azure. ](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
+Se você instalou seu aplicativo, mas ele não está funcionando, certifique-se de que o bot da extensão de mensagens esteja conectado ao canal de Teams do Serviço de Bot [do Azure. ](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
 
-É importante entender que isso não é o mesmo que um canal no Teams. Nesse caso, um canal é como o Serviço bot do Azure conecta seu bot ao Teams ou a outro aplicativo de comunicações da Microsoft ou de terceiros com [suporte.](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
+É importante entender que isso não é o mesmo que um canal no Teams. Nesse caso, um canal é como o Serviço de Bot do Azure conecta seu bot ao Teams ou outro aplicativo de comunicações da Microsoft ou de terceiros com [suporte.](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
 
 ## <a name="see-also"></a>Confira também
 
-* [Caixa de comando ou composição do Teams](../messaging-extensions/what-are-messaging-extensions.md) 
+* [Teams caixa de comando ou composição](../messaging-extensions/what-are-messaging-extensions.md) 
 * [Incluir um recurso de desfralização de link](../messaging-extensions/how-to/link-unfurling.md)
 * [Diretrizes de design](../messaging-extensions/design/messaging-extension-design.md) 
 * [Modelos de interface do usuário prontos para produção](../concepts/design/design-teams-app-ui-templates.md) 

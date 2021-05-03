@@ -42,7 +42,7 @@ Durante o envio, você é solicitado a categorizar seu aplicativo. A tabela a se
 
 Se o aplicativo falhar no envio, você receberá um relatório de falha para saber o que corrigir e reabrir. A Microsoft também fornece um serviço de white-glove para ajudar a listar seu aplicativo.
 
-## <a name="faqs"></a>Perguntas frequentes
+## <a name="faqs"></a>Perguntas Frequentes
 
 ### <a name="how-do-i-create-a-partner-center-account"></a>Como criar uma conta do Partner Center?
 

@@ -1,7 +1,7 @@
 ---
 title: Desenrolamento de link
 author: clearab
-description: Como executar o link desfraldamento com a extensão de mensagens em um aplicativo do Microsoft Teams.
+description: Como executar o link desfraldamento com a extensão de mensagens em um Microsoft Teams aplicativo.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ Este documento orienta você sobre como adicionar link desfraldado ao manifesto 
 > [!NOTE]
 > Atualmente, não há suporte para a desalinização de link em clientes Móveis.
 
-A extensão de mensagens do Azure DevOps usa o link desfraldamento para procurar URLs passadas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário pastou uma URL para um item de trabalho no Azure DevOps, que a extensão de mensagens resolveu em um cartão:
+A Azure DevOps de mensagens usa o link desfraldamento para procurar URLs colaram na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário pastou uma URL para um item de trabalho no Azure DevOps, que a extensão de mensagens resolveu em um cartão:
 
 ![Exemplo de desfraldamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Para adicionar a desaplicação de link ao manifesto do aplicativo, adicione uma
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Adicionar link desfraldamento usando o App Studio
 
-1. Abra **o App Studio** do cliente do Microsoft Teams e selecione a guia Editor **de** Manifesto.
+1. Abra **o App Studio** no cliente Microsoft Teams e selecione a guia Editor **de** Manifesto.
 1. Carregue o manifesto do aplicativo.
 1. Na página **Extensão de Mensagens,** adicione o domínio que você deseja procurar na seção **Manipuladores de** mensagens. A imagem a seguir explica o processo:
 
@@ -75,7 +75,7 @@ Os seguintes tipos de cartão são suportados:
 
 * [Cartão de miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Cartão de herói](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Cartão do Conector do Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Cartão conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão Adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>Exemplo
