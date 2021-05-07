@@ -4,18 +4,26 @@ description: Descreve como especificar as opções de instalação padrão do ap
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058611"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230929"
 ---
-# <a name="add-a-default-install-scope-and-group-capability"></a>Adicionar um escopo de instalação padrão e funcionalidade de grupo
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurar opções de instalação padrão para seu Microsoft Teams app
 
 É comum um aplicativo dar suporte a vários cenários no Teams, mas você pode ter projetado com um escopo e funcionalidade específicos em mente. Por exemplo, se seu aplicativo for principalmente para uso de equipe ou canal, você pode garantir que a primeira opção de instalação que os usuários vejam na loja seja **Adicionar a uma equipe.**
 
-![Adicionar um aplicativo](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![Adicionar um exemplo suspenso de aplicativo](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 Se o recurso principal do aplicativo for um bot, você também poderá tornar o bot o recurso padrão quando um usuário instala seu aplicativo em uma equipe.
 
@@ -65,4 +73,4 @@ Configure o recurso padrão quando seu aplicativo estiver instalado para uma equ
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Escolha como distribuir o aplicativo](overview.md)
+> [Criar um pacote do aplicativo](~/concepts/build-and-test/apps-package.md)

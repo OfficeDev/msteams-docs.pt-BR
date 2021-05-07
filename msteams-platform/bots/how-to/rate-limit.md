@@ -1,21 +1,21 @@
 ---
 title: Otimizar seu bot com limitação de fluxo no Teams
-description: Limitação de taxas e práticas recomendadas no Microsoft Teams
+description: Limitação de taxas e práticas recomendadas Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020895"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230957"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
 Limitação de taxa é um método para limitar as mensagens a uma determinada frequência máxima. Como um princípio geral, seu aplicativo deve limitar o número de mensagens que ele posta em um chat individual ou conversa de canal. Isso garante uma experiência ideal e as mensagens não aparecem como spam para seus usuários.
 
-Para proteger o Microsoft Teams e seus usuários, as APIs de bot fornecem um limite de taxa para solicitações de entrada. Os aplicativos que passar por esse limite recebem um `HTTP 429 Too Many Requests` status de erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo o envio de mensagens, enumerações de canal e buscas de lista.
+Para proteger Microsoft Teams e seus usuários, as APIs de bot fornecem um limite de taxa para solicitações de entrada. Os aplicativos que passar por esse limite recebem um `HTTP 429 Too Many Requests` status de erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo o envio de mensagens, enumerações de canal e buscas de lista.
 
 Como os valores exatos dos limites de taxa estão sujeitos a alterações, seu aplicativo deve implementar o comportamento de backoff apropriado quando a API retornar `HTTP 429 Too Many Requests` .
 
@@ -80,7 +80,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Você pode executar o backoff e as recuperações usando o tratamento [transitório de falhas](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obter e instalar o pacote NuGet, consulte [adding the transient fault handling application block to your solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Consulte também o [tratamento transitório de falhas](/azure/architecture/best-practices/transient-faults).
+Você pode executar o backoff e as recuperações usando o tratamento [transitório de falhas](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obter e instalar o pacote de NuGet, consulte adicionar o bloco de aplicativos de tratamento de falhas [transitórios à sua solução.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Consulte também o [tratamento transitório de falhas](/azure/architecture/best-practices/transient-faults).
 
 Depois de passar pelo exemplo para detectar exceções transitórias, vá pelo exemplo de backoff exponencial. Você pode usar o backoff exponencial em vez de repetir falhas.
 
@@ -121,7 +121,7 @@ O limite por bot por thread controla o tráfego que um bot tem permissão para g
 
 >[!NOTE]
 > * O limite de thread de 3600 segundos e 1800 operações só se aplica se várias mensagens de bot são enviadas a um único usuário. 
-> * O limite global por aplicativo por locatário é de 30 solicitações por segundo (RPS). Portanto, o número total de mensagens bot por segundo não deve cruzar o limite de thread.
+> * O limite global por aplicativo por locatário é de 50 solicitações por segundo (RPS). Portanto, o número total de mensagens bot por segundo não deve cruzar o limite de thread.
 > * A divisão de mensagens no nível de serviço resulta em RPS maior do que o esperado. Se estiver preocupado com a abordagem dos limites, implemente a [estratégia de backoff](#backoff-example). Os valores fornecidos nesta seção são apenas para estimativa.
 
 A tabela a seguir fornece os limites por bot por thread:

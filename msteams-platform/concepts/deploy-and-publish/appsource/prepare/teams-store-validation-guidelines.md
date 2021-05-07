@@ -4,12 +4,12 @@ description: Descreve as diretrizes que todos os aplicativos enviados ao Teams (
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: b4b9260be2a92c3a9029acf89b2eadae60a8fc7a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101875"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230922"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 
@@ -31,6 +31,7 @@ O nome de um aplicativo desempenha uma função crítica na forma como os usuár
 * Se seu aplicativo faz parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro (por exemplo, **Conector contoso para** Microsoft Teams ).
 * Não é necessário copiar o nome de um aplicativo listado na loja ou outra oferta no marketplace comercial.
 * Não deve conter termos profano ou depreciativo. O nome também não deve incluir linguagem racial ou culturalmente insensível.
+* Deve ser exclusivo. Por exemplo, você não pode listar vários aplicativos para regiões diferentes com o mesmo nome e funcionalidade.
 
 Consulte também: [pacote de aplicativos 4.0 e listagem da loja](#40-app-package-and-store-listing)
 

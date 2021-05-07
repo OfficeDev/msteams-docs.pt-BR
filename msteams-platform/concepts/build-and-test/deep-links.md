@@ -4,23 +4,23 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075595"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230950"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
-Você pode criar links para informações e recursos no Teams. Os cenários em que a criação de links profundos são úteis são:
+Você pode criar links para informações e recursos dentro Teams. Os cenários em que a criação de links profundos são úteis são:
 
 * Navegando o usuário para conteúdo dentro de uma das guias do aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário de uma atividade importante. Quando o usuário toca na notificação, o link profundo navega até a guia para que o usuário possa exibir mais detalhes sobre a atividade.
 * Seu aplicativo automatiza ou simplifica determinadas tarefas do usuário, como criar um chat ou agendar uma reunião, preenchendo previamente os links profundos com parâmetros necessários. Isso evita a necessidade de os usuários inserirem manualmente informações.
 
 > [!NOTE]
 >
-> Um deeplink inicia o navegador primeiro antes de navegar para o conteúdo. O comportamento de links profundos em entidades do Teams é o seguinte:
+> Um deeplink inicia o navegador primeiro antes de navegar para o conteúdo. O comportamento dos links profundos Teams entidades são os seguinte:
 >
 > **Guia**:  
 > ✔ navega diretamente para a url do deeplink.
@@ -36,7 +36,7 @@ Você pode criar links para informações e recursos no Teams. Os cenários em q
 
 ## <a name="deep-linking-to-your-tab"></a>Vinculação profunda à sua guia
 
-Você pode criar links profundos para entidades no Teams. Isso é usado para criar links que navegam até conteúdo e informações em sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Quando você seleciona o link, ele navega até sua guia que se concentra no item específico. Para implementar isso, adicione uma ação de **link** de cópia a cada item, da maneira que melhor se adequar à interface do usuário. Quando o usuário toma essa ação, você chama para exibir uma caixa de diálogo contendo um link que o usuário `shareDeepLink()` pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para [](~/tabs/how-to/access-teams-context.md) seu item, que você volta ao contexto quando o link é seguido e sua guia é recarregada.
+Você pode criar links profundos para entidades Teams. Isso é usado para criar links que navegam até conteúdo e informações em sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Quando você seleciona o link, ele navega até sua guia que se concentra no item específico. Para implementar isso, adicione uma ação de **link** de cópia a cada item, da maneira que melhor se adequar à interface do usuário. Quando o usuário toma essa ação, você chama para exibir uma caixa de diálogo contendo um link que o usuário `shareDeepLink()` pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para [](~/tabs/how-to/access-teams-context.md) seu item, que você volta ao contexto quando o link é seguido e sua guia é recarregada.
 
 Como alternativa, você também pode gerar links profundos programaticamente, usando o formato especificado posteriormente neste tópico. Você pode usar links profundos em [mensagens bot](~/bots/what-are-bots.md) e [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informam os usuários sobre alterações na guia ou itens dentro dela.
 
@@ -69,8 +69,8 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Se o bot enviar uma mensagem contendo um com um link profundo, uma nova guia do navegador será aberta quando o usuário `TextBlock` selecionar o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams, ambos em execução no Linux.
-> Se o bot enviar a mesma URL de link profundo para um , a guia Teams será aberta na guia navegador atual quando o usuário `Action.OpenUrl` selecionar o link. Uma nova guia do navegador não é aberta.
+> Se o bot enviar uma mensagem contendo um com um link profundo, uma nova guia do navegador será aberta quando o usuário `TextBlock` selecionar o link. Isso acontece no Chrome e no Microsoft Teams da área de trabalho, ambos em execução no Linux.
+> Se o bot enviar a mesma URL de link profundo para um , a guia Teams é aberta na guia navegador atual quando o usuário `Action.OpenUrl` seleciona o link. Uma nova guia do navegador não é aberta.
 
 Os parâmetros de consulta são:
 
@@ -80,9 +80,9 @@ Os parâmetros de consulta são:
 | `entityId`&emsp; | A ID do item na guia, que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
 | `entityWebUrl` ou `subEntityWebUrl`&emsp; | Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar renderizar a guia. | https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 |
 | `entityLabel` ou `subEntityLabel`&emsp; | Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo. | Lista de tarefas 123 ou "Tarefa 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Um objeto JSON contendo os campos a seguir</br></br> * Uma ID do item na guia. </br></br> * A ID do canal do Microsoft Teams que está disponível no contexto da [guia](~/tabs/how-to/access-teams-context.md). | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Um objeto JSON contendo os campos a seguir</br></br> * Uma ID do item na guia. </br></br> * A Microsoft Teams de canal que está disponível no contexto da [guia](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | Uma ID do item na guia. |Task456 |
-| `channelId`&emsp; | A ID do canal do Microsoft Teams que está disponível no contexto da [guia](~/tabs/how-to/access-teams-context.md). Essa propriedade só está disponível em guias configuráveis com um escopo de **equipe**. Ele não está disponível em guias estáticas, que têm um escopo **de pessoal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `channelId`&emsp; | A Microsoft Teams ID do canal que está disponível no contexto da [guia](~/tabs/how-to/access-teams-context.md). Essa propriedade só está disponível em guias configuráveis com um escopo de **equipe**. Ele não está disponível em guias estáticas, que têm um escopo **de pessoal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 Exemplos:
 
@@ -102,13 +102,13 @@ Exemplos:
 
 ### <a name="consuming-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
 
-Ao navegar para um link profundo, o Microsoft Teams simplesmente navega até a guia e fornece um mecanismo por meio da biblioteca JavaScript do Microsoft Teams para recuperar a ID da sub-entidade se ela existir.
+Ao navegar para um link profundo, o Microsoft Teams simplesmente navega até a guia e fornece um mecanismo por meio da biblioteca javaScript Microsoft Teams para recuperar a ID da sub-entidade se ela existir.
 
 A [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) chamada retorna um contexto que inclui o campo se a guia for `subEntityId` navegada por um link profundo.
 
 ## <a name="deep-linking-from-your-tab"></a>Vinculação profunda de sua guia
 
-Você pode se enroscar no conteúdo no Teams a partir de sua guia. Isso será útil se sua guia precisar vincular a outro conteúdo no Teams, como um canal, uma mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Para disparar um deeplink de sua guia, você deve chamar:
+Você pode se enroscar no conteúdo Teams de sua guia. Isso será útil se sua guia precisar vincular a outro conteúdo no Teams, como a um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Para disparar um deeplink de sua guia, você deve chamar:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -128,7 +128,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 Você pode criar links profundos para chats privados entre usuários especificando o conjunto de participantes. Se um chat não existir com os participantes especificados, o link navegará para um novo chat vazio. Novos chats são criados em estado de rascunho até que o usuário envie a primeira mensagem. Caso contrário, você poderá especificar o nome do chat se ele ainda não existir, juntamente com o texto que deve ser inserido na caixa de redação do usuário. Você pode pensar nesse recurso como um atalho para o usuário tomar a ação manual de navegar para ou criar o chat e, em seguida, digitar a mensagem.
 
-Como exemplo de caso de uso, se você estiver retornando um perfil de usuário do Office 365 do bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
+Como exemplo de caso de uso, se você estiver retornando um perfil de usuário Office 365 de seu bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>Gerar um link profundo para um chat
 
@@ -159,7 +159,7 @@ Os parâmetros de consulta são:
 * `objectUrl`: URL do objeto do arquivo, https://microsoft.sharepoint.com/teams/(filepath)
 * `baseUrl`: URL base do arquivo, https://microsoft.sharepoint.com/teams
 * `serviceName`: Nome do serviço, ID do aplicativo
-* `threadId`: o threadId é a ID de equipe da equipe onde o arquivo está armazenado. Ele é opcional e não pode ser definido para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`: o threadId é a ID de equipe da equipe onde o arquivo está armazenado. Ele é opcional e não pode ser definido para arquivos armazenados na pasta OneDrive usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ID de grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
 
 A seguir está o formato de exemplo de deeplink para arquivos:
@@ -178,12 +178,12 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>Links profundos para guias da Estrutura do SharePoint
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>Links profundos para Estrutura do SharePoint guias
 
 O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
-> Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no aplicativo de área de trabalho do Chrome e do Microsoft Teams em execução no Linux.
+> Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no Chrome e no Microsoft Teams da área de trabalho em execução no Linux.
 > Se o bot enviar a mesma URL de link profundo para um , a guia Teams será aberta no navegador atual quando o usuário `Action.OpenUrl` selecionar o link. Nenhuma nova guia do navegador é aberta.
 
 Os parâmetros de consulta são:
@@ -201,7 +201,7 @@ Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee1
 > [!NOTE]
 > Esse recurso está atualmente na visualização do desenvolvedor.
 
-Você pode criar links profundos para a caixa de diálogo de agendamento interno do Teams. Isso é especialmente útil se seu aplicativo ajudar o usuário a concluir o calendário ou agendar tarefas relacionadas.
+Você pode criar links profundos para a caixa de diálogo Teams agendamento interno. Isso é especialmente útil se seu aplicativo ajudar o usuário a concluir o calendário ou agendar tarefas relacionadas.
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Gerando um link profundo para a caixa de diálogo de agendamento
 
@@ -224,10 +224,11 @@ Para usar esse link profundo com seu bot, você pode especificar isso como o des
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Exemplo de nome | Descrição | .NET |
-|-------------|-------------|------|
-| ID de subentência de consumo de link profundo | Aplicativo de exemplo do Microsoft Teams para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+| Exemplo de nome | Descrição | C # |Node.js|
+|-------------|-------------|------|----|
+|ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 
 [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+

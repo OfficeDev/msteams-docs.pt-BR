@@ -380,7 +380,7 @@
       href: concepts/build-and-test/test-data.md
     - name: Guias
       items:
-        - name: Depurar a guia com DevTools
+        - name: Guias do DevTools para o Microsoft Teams
           href: tabs/how-to/developer-tools.md
     - name: Bots
       items:
@@ -400,6 +400,8 @@
   items:
     - name: Visão Geral
       href: concepts/deploy-and-publish/apps-publish-overview.md
+    - name: Configurar opções de instalação padrão
+      href: concepts/deploy-and-publish/add-default-install-scope.md
     - name: Criar um pacote do aplicativo
       href: concepts/build-and-test/apps-package.md
     - name: Carregar seu aplicativo
@@ -422,16 +424,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Manter seu aplicativo publicado
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: Recursos
+- name: Manifesto
   items:
     - name: Esquema de manifesto do aplicativo
       href: resources/schema/manifest-schema.md
-    - name: Localização
-      items:
-        - name: Localizar o aplicativo
-          href: concepts/build-and-test/apps-localization.md
-        - name: Esquema JSON de localização
-          href: resources/schema/localization-schema.md
     - name: Pré-visualização do desenvolvedor público
       items:
         - name: Visão Geral
@@ -440,6 +436,14 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Recursos
           href: resources/dev-preview/developer-preview-features.md
+- name: Recursos
+  items:
+    - name: Localização
+      items:
+        - name: Localizar o aplicativo
+          href: concepts/build-and-test/apps-localization.md
+        - name: Esquema JSON de localização
+          href: resources/schema/localization-schema.md
     - name: Mudanças na margem da guia
       href: resources/removing-tab-margins.md
     - name: Atributo de cookie SameSite (atualização de 2020)
