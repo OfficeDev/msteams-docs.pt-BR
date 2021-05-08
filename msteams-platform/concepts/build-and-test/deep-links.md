@@ -4,18 +4,18 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
+ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230950"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52278149"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
 Você pode criar links para informações e recursos dentro Teams. Os cenários em que a criação de links profundos são úteis são:
 
-* Navegando o usuário para conteúdo dentro de uma das guias do aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário de uma atividade importante. Quando o usuário toca na notificação, o link profundo navega até a guia para que o usuário possa exibir mais detalhes sobre a atividade.
+* Navegando o usuário para o conteúdo dentro de uma das guias do aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário de uma atividade importante. Quando o usuário toca na notificação, o link profundo navega até a guia para que o usuário possa exibir mais detalhes sobre a atividade.
 * Seu aplicativo automatiza ou simplifica determinadas tarefas do usuário, como criar um chat ou agendar uma reunião, preenchendo previamente os links profundos com parâmetros necessários. Isso evita a necessidade de os usuários inserirem manualmente informações.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Como alternativa, você também pode gerar links profundos programaticamente, us
 >[!NOTE]
 > Atualmente, o shareDeepLink não funciona em plataformas móveis.
 
-### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Mostrando um link profundo para um item em sua guia
+### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Mostrar um link profundo para um item em sua guia
 
 Para mostrar uma caixa de diálogo que contém um link profundo para um item em sua guia, chame `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -56,7 +56,7 @@ Forneça os seguintes campos:
 * `subEntityLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
 * `subEntityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não dá suporte à renderização da guia.
 
-### <a name="generating-a-deep-link-to-your-tab"></a>Gerando um link profundo para sua guia
+### <a name="generate-a-deep-link-to-your-tab"></a>Gerar um link profundo para sua guia
 
 > [!NOTE]
 > As guias pessoais têm um escopo, enquanto guias de canal e `personal` grupo usam ou `team` `group` escopos. Os dois tipos de tabulação têm uma sintaxe ligeiramente diferente, pois somente a guia configurável tem uma propriedade `channel` associada ao objeto de contexto. Consulte a [referência de](~/resources/schema/manifest-schema.md) manifesto para obter mais informações sobre escopos de tabulação.
@@ -100,7 +100,7 @@ Exemplos:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consuming-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
+### <a name="consume-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
 
 Ao navegar para um link profundo, o Microsoft Teams simplesmente navega até a guia e fornece um mecanismo por meio da biblioteca javaScript Microsoft Teams para recuperar a ID da sub-entidade se ela existir.
 
@@ -196,14 +196,14 @@ Os parâmetros de consulta são:
 
 Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="linking-to-the-scheduling-dialog"></a>Vinculando à caixa de diálogo de agendamento
+## <a name="deep-link-to-the-scheduling-dialog"></a>Link profundo para a caixa de diálogo de agendamento
 
 > [!NOTE]
 > Esse recurso está atualmente na visualização do desenvolvedor.
 
 Você pode criar links profundos para a caixa de diálogo Teams agendamento interno. Isso é especialmente útil se seu aplicativo ajudar o usuário a concluir o calendário ou agendar tarefas relacionadas.
 
-### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Gerando um link profundo para a caixa de diálogo de agendamento
+### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Gerar um link profundo para a caixa de diálogo de agendamento
 
 Use o seguinte formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
@@ -222,9 +222,32 @@ Os parâmetros de consulta são:
 
 Para usar esse link profundo com seu bot, você pode especificar isso como o destino da URL no botão do cartão ou tocar em ação por meio do tipo `openUrl` de ação.
 
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Vinculação profunda a uma chamada de áudio ou áudio-vídeo
+
+Você pode criar links profundos para invocar chamadas de áudio ou áudio-vídeo para um único usuário ou grupo de usuários, especificando o tipo de chamada, como *áudio* ou *av*, e os participantes. Depois que o link profundo é invocado e antes de fazer a chamada, Teams cliente da área de trabalho solicita uma confirmação para fazer a chamada. Em caso de chamada de grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de deeplink. 
+
+No caso de uma chamada de vídeo, o cliente solicitará a confirmação e ativará o vídeo do chamador para a chamada. O receptor da chamada tem a opção de responder somente áudio ou áudio e vídeo, por meio da janela Teams de notificação de chamada.
+
+> [!NOTE]
+> Esse deeplink não pode ser usado para invocar uma reunião.
+
+### <a name="generate-a-deep-link-to-a-chat"></a>Gerar um link profundo para um chat
+
+| Link profundo | Formatar | Exemplo |
+|-----------|--------|---------|
+| Fazer uma chamada de áudio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| Fazer uma chamada de áudio e vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Fazer uma chamada de áudio e vídeo com uma fonte de parâmetro opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; número de telefone&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+A seguir estão os parâmetros de consulta:
+* `users`: a lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID do Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4: &lt; phonenumber &gt; .
+* `Withvideo`: Este é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. A configuração desse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela Teams de notificação de chamada. 
+* `Source`: Este é um parâmetro opcional, que informa sobre a origem do deeplink.
+
 ## <a name="code-sample"></a>Exemplo de código
 
-| Exemplo de nome | Descrição | C # |Node.js|
+| Exemplo de nome | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
 |ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
