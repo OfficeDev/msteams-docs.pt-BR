@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
-ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
+ms.openlocfilehash: ccad5c6cc8daa513b12185efa2ed57e02438fd89
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "52278149"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300553"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -178,7 +178,7 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>Links profundos para Estrutura do SharePoint guias
+## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para Estrutura do SharePoint guias
 
 O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
@@ -196,7 +196,7 @@ Os parâmetros de consulta são:
 
 Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="deep-link-to-the-scheduling-dialog"></a>Link profundo para a caixa de diálogo de agendamento
+## <a name="deep-linking-to-the-scheduling-dialog"></a>Vinculação profunda à caixa de diálogo de agendamento
 
 > [!NOTE]
 > Esse recurso está atualmente na visualização do desenvolvedor.
@@ -251,7 +251,7 @@ A seguir estão os parâmetros de consulta:
 |-------------|-------------|------|----|
 |ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
 

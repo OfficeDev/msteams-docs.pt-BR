@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101804"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304009"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
-O Teams descreve como o aplicativo se integra ao Microsoft Teams produto. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) . Versões anteriores 1.0-1.4 também são suportadas (usando "v1.x" na URL).
+O Teams descreve como o aplicativo se integra ao Microsoft Teams produto. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . Versões anteriores 1.0-1.4 também são suportadas (usando "v1.x" na URL).
 
 O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
 
@@ -22,8 +22,8 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.9",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.10",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -282,7 +282,18 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade.
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-  }
+  },
+  "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -298,7 +309,7 @@ A https:// URL de referência do Esquema JSON para o manifesto.
 
 **Obrigatório —** cadeia de caracteres
 
-A versão do esquema de manifesto que este manifesto está usando. Deve ser 1,9.
+A versão do esquema de manifesto que este manifesto está usando. Deve ser 1,10.
 
 ## <a name="version"></a>versão
 
@@ -344,7 +355,7 @@ O nome da experiência do aplicativo, exibido para os usuários na Teams experi�
 |`short`|30 caracteres|✔|O nome de exibição curto do aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, usado se o nome completo do aplicativo exceder 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descrição
 
 **Obrigatório —** objeto
 
@@ -689,5 +700,26 @@ Quando um escopo de instalação de grupo é selecionado, ele define o recurso p
 |`team`|string|||Quando o escopo de instalação selecionado for `team` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
 |`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado for `groupchat` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
 |`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado for `meetings` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
+
+## <a name="configurableproperties"></a>configurableProperties
+
+**Opcional** - matriz
+
+O `configurableProperties` bloco define as propriedades do aplicativo que Teams administrador pode personalizar. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+> [!NOTE]
+> Um mínimo de uma propriedade deve ser definido. Você pode definir um máximo de nove propriedades neste bloco.
+> Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo.
+
+Você pode definir qualquer uma das seguintes propriedades:
+* `name`: Permite que o administrador altere o nome de exibição do aplicativo.
+* `shortDescription`: Permite que o administrador altere a descrição curta do aplicativo.
+* `longDescription`: Permite que o administrador altere a descrição detalhada do aplicativo.
+* `smallImageUrl`: É a `outline` propriedade no bloco do `icons` manifesto.
+* `largeImageUrl`: É a `color` propriedade no bloco do `icons` manifesto.
+* `accentColor`: É a cor a ser usada em conjunto com e como plano de fundo para seus ícones de contorno.
+* `websiteUrl`: É a URL https:// para o site do desenvolvedor.
+* `privacyUrl`: É a URL https:// da política de privacidade do desenvolvedor.
+* `termsOfUseUrl`: É a URL https:// para os termos de uso do desenvolvedor.
 
 

@@ -4,12 +4,12 @@ description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App 
 keywords: introdução ao app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019962"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304030"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolva aplicativos rapidamente com o App Studio para Microsoft Teams
 
@@ -56,9 +56,7 @@ A seção de detalhes do Editor de Manifesto define a descrição de alto nível
 A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo são definidos e onde os detalhes de cada um desses recursos são listados.
 
 > [!NOTE]
-> O recurso de personalização do aplicativo está disponível apenas na visualização do desenvolvedor.
-> 
-> Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos no Microsoft Teams](/MicrosoftTeams/customize-apps).
+> Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
 ##### <a name="tabs"></a>Guias
@@ -86,7 +84,7 @@ Observe que se você tiver definido seu bot para dar suporte apenas a um escopo,
 Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha *Configurar* e insira o nome e a ID do conector. Se quiser um novo conector clique em *Registrar* para ser levado até o Painel do Desenvolvedor do Conector em seu navegador.
 
 > [!NOTE]
-> A personalização do aplicativo permite que os administradores alterem a aparência dos aplicativos carregados por meio de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador do Teams personalizar o nome de um aplicativo da *Contoso* para o Agente *contoso,* o aplicativo aparecerá com o novo nome Agente *contoso* para usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como *Contoso*.
+> A personalização do aplicativo permite que os administradores alterem a aparência dos aplicativos carregados por meio de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador Teams personalizar o nome de um aplicativo da *Contoso* para o Agente *contoso,* o aplicativo aparecerá com o novo nome Agente *contoso* para usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como *Contoso*.
 
 
 ##### <a name="messaging-extensions"></a>Extensões de Mensagens

@@ -1,26 +1,26 @@
 ---
 title: Referência do esquema de Manifesto de Visualização do Desenvolvedor
-description: Descreve o esquema suportado pelo manifesto do Microsoft Teams
+description: Descreve o esquema suportado pelo manifesto para Microsoft Teams
 ms.topic: reference
 keywords: Teams manifest schema Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 05a1becbd021a67e2a843a8ddb5f58ea76cf444e
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019696"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304016"
 ---
-# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifesto de visualização do desenvolvedor para o Microsoft Teams
+# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifesto de visualização do desenvolvedor para Microsoft Teams
 
 > [!NOTE]
 > Consulte [Visualização do](~/resources/dev-preview/developer-preview-intro.md) Desenvolvedor para obter informações sobre o programa e como você pode participar.
-> Se você não estiver usando a visualização do desenvolvedor, não deverá usar essa versão do manifesto. Consulte [Referência: Esquema de manifesto do Microsoft Teams](~/resources/schema/manifest-schema.md) para a versão pública do manifesto.
+> Se você não estiver usando a visualização do desenvolvedor, não deverá usar essa versão do manifesto. Consulte [Referência: esquema de manifesto para Microsoft Teams](~/resources/schema/manifest-schema.md) para a versão pública do manifesto.
 
-O manifesto do Microsoft Teams descreve como o aplicativo se integra ao produto do Microsoft Teams. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
+O Microsoft Teams descreve como o aplicativo se integra ao Microsoft Teams produto. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
-Para obter mais informações sobre os recursos disponíveis, consulte: [Recursos na Visualização](~/resources/dev-preview/developer-preview-features.md)de Desenvolvedor Público do Microsoft Teams .
+Para obter mais informações sobre os recursos disponíveis, consulte: [Recursos na Visualização](~/resources/dev-preview/developer-preview-features.md)do Desenvolvedor Público para Microsoft Teams .
 
 ## <a name="sample-full-manifest"></a>Exemplo de manifesto completo
 
@@ -234,7 +234,7 @@ Esta cadeia de caracteres de versão deve seguir o padrão [de semver](http://se
 
 **Obrigatório** &ndash; ID do aplicativo Microsoft
 
-O identificador exclusivo gerado pela Microsoft para este aplicativo. Se você registrou um bot por meio da Estrutura do Microsoft Bot, ou o aplicativo Web da sua guia já entra com a Microsoft, você já deve ter uma ID e deve insira-a aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus](https://apps.dev.microsoft.com)Aplicativos ), insira-o aqui e, em seguida, reutiliza-o quando você [adiciona um bot](~/bots/how-to/create-a-bot-for-teams.md).
+O identificador exclusivo gerado pela Microsoft para este aplicativo. Se você tiver registrado um bot por meio do Microsoft Bot Framework, ou o aplicativo Web da guia já estiver entrando com a Microsoft, você já deve ter uma ID e deve insira-a aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus](https://apps.dev.microsoft.com)Aplicativos ), insira-o aqui e, em seguida, reutiliza-o quando você [adiciona um bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -246,7 +246,7 @@ Um identificador exclusivo para este aplicativo na notação de domínio reverso
 
 **Required**
 
-Especifica informações sobre sua empresa. Para aplicativos enviados ao AppSource (antigo Office Store), esses valores devem corresponder às informações em sua entrada appSource.
+Especifica informações sobre sua empresa. Para aplicativos enviados ao AppSource (anteriormente Office Store), esses valores devem corresponder às informações em sua entrada appSource.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -279,14 +279,14 @@ Uma matriz de objetos que especifica traduções de idioma adicionais.
 
 **Required**
 
-O nome da experiência do aplicativo, exibido para os usuários na experiência do Teams. Para aplicativos enviados ao AppSource, esses valores devem corresponder às informações em sua entrada appSource. Os valores de `short` e não devem ser os `full` mesmos.
+O nome da experiência do aplicativo, exibido para os usuários na Teams experiência. Para aplicativos enviados ao AppSource, esses valores devem corresponder às informações em sua entrada appSource. Os valores de `short` e não devem ser os `full` mesmos.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`short`|30 caracteres|✔|O nome de exibição curto do aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, usado se o nome completo do aplicativo exceder 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descrição
 
 **Required**
 
@@ -303,7 +303,7 @@ Verifique se sua descrição descreve com precisão sua experiência e fornece i
 
 **Required**
 
-Ícones usados no aplicativo teams. Os arquivos de ícone devem ser incluídos como parte do pacote de carregamento.
+Ícones usados no aplicativo Teams. Os arquivos de ícone devem ser incluídos como parte do pacote de carregamento.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -329,9 +329,9 @@ O objeto é uma matriz com todos os elementos do tipo `object` . Esse bloco é n
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|A https:// URL a ser usada ao configurar a guia.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias configuráveis suportam apenas `team` os `groupchat` escopos e. |
-|`sharePointPreviewImage`|String|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso no SharePoint. Tamanho 1024x768. |
+|`sharePointPreviewImage`|String|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opções `sharePointFullPage` são e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -346,7 +346,7 @@ O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo 
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
 |`name`|String|128 caracteres|✔|O nome de exibição da guia na interface do canal.|
-|`contentUrl`|String|2048 caracteres|✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
+|`contentUrl`|String|2048 caracteres|✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela Teams.|
 |`websiteUrl`|String|2048 caracteres||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias estáticas suportam apenas o escopo, o que significa que ele só pode ser `personal` provisionado como parte da experiência pessoal.|
 
@@ -379,7 +379,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 **Opcional**
 
-O `connectors` bloco define um Conector do Office 365 para o aplicativo.
+O `connectors` bloco define um conector Office 365 para o aplicativo.
 
 O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `object` . Esse bloco só é necessário para soluções que fornecem um Conector.
 
@@ -403,7 +403,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|String|64|✔|A ID de aplicativo exclusiva da Microsoft para o bot que é o suporte à extensão de mensagens, conforme registrado na Estrutura de Bot. Isso pode ser o mesmo da ID geral [do aplicativo.](#id)|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
 |`commands`|Matriz de objeto|10 |✔|Matriz de comandos com suporte da extensão de mensagens|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -418,9 +418,9 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|String|64 caracteres||Tipo do comando. Um dos `query` ou `action` . Padrão: `query`|
 |`title`|String|32 caracteres|✔|O nome de comando amigável|
 |`description`|String|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando|
-|`initialRun`|Boolean|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
+|`initialRun`|Booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
 |`context`|Matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação `compose` de , , `commandBox` `message` . O padrão é `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Um valor booleano que indica se ele deve buscar o módulo de tarefa dinamicamente|
+|`fetchTask`|Booliano|||Um valor booleano que indica se ele deve buscar o módulo de tarefa dinamicamente|
 |`taskInfo`|Objeto|||Especificar o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens|
 |`taskInfo.title`|String|64||Título da caixa de diálogo inicial|
 |`taskInfo.width`|String|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'|
@@ -478,7 +478,7 @@ O objeto é uma matriz com todos os elementos do tipo `string` .
 
 **Opcional**
 
-Especifique suas informações do AAD App ID e do Graph para ajudar os usuários a entrar perfeitamente em seu aplicativo AAD.
+Especifique sua ID do Aplicativo AAD e Graph informações para ajudar os usuários a entrar perfeitamente em seu aplicativo AAD.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -489,7 +489,7 @@ Especifique suas informações do AAD App ID e do Graph para ajudar os usuários
 
 **Opcional** - matriz
 
-O `configurableProperties` bloco define as propriedades do aplicativo que o administrador do Teams pode personalizar. Para obter mais informações, consulte [personalizar aplicativos no Microsoft Teams](/MicrosoftTeams/customize-apps).
+O `configurableProperties` bloco define as propriedades do aplicativo que Teams administrador pode personalizar. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > Um mínimo de uma propriedade deve ser definido. Você pode definir um máximo de nove propriedades neste bloco.
@@ -499,10 +499,10 @@ Você pode definir qualquer uma das seguintes propriedades:
 * `name`: Permite que o administrador altere o nome de exibição do aplicativo.
 * `shortDescription`: Permite que o administrador altere a descrição curta do aplicativo.
 * `longDescription`: Permite que o administrador altere a descrição detalhada do aplicativo.
-* `smallImageUrl`: É `outline` a propriedade no bloco do `icons` manifesto.
+* `smallImageUrl`: É a `outline` propriedade no bloco do `icons` manifesto.
 * `largeImageUrl`: É a `color` propriedade no bloco do `icons` manifesto.
 * `accentColor`: É a cor a ser usada em conjunto com e como plano de fundo para seus ícones de contorno.
-* `developerUrl`: É a URL https:// para o site do desenvolvedor.
+* `websiteUrl`: É a URL https:// para o site do desenvolvedor.
 * `privacyUrl`: É a URL https:// da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: É a URL https:// para os termos de uso do desenvolvedor.
 
