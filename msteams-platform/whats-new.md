@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 449df27aaa28b0ba15c98efa78f93f74b8446920
-ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
+ms.openlocfilehash: 5f159d68a9a10da2737e627ad630be6a1725d334
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52300567"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336507"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -27,7 +27,9 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
+|05/10/2021| O manifesto v1.10 é lançado.|[Esquema de manifesto](resources/schema/manifest-schema.md) |
+|05/10/2021| Recurso de personalização de aplicativos.| [Projetando seu Microsoft Teams aplicativo](~/concepts/design/design-teams-app-overview.md#app-customization) |
+|05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Novas diretrizes sobre como publicar aplicativos no Teams store.|[Publique seu aplicativo no Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [de validação da loja](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Novo: Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
@@ -97,7 +99,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 05/20/2019 | Localização do manifesto do aplicativo. | [Localização de aplicativos](~/publishing/apps-localization.md) |
 | 05/20/2019 | Ações de mensagem. | [Ações de mensagem](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Link desfraldado (visualizações de URL personalizadas). | [Desenrolamento de link](messaging-extensions/how-to/link-unfurling.md)|
-| 05/06/2019 | Programa de certificação de aplicativos para aplicativos da loja. | [Certificação de Aplicativos](~/publishing/application-certification.md) |
+| 05/06/2019 | Programa de certificação de aplicativos para aplicativos da loja. | [Certificação de Aplicativos](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | Modelos de aplicativo agora estão disponíveis. | [Modelos de aplicativo](~/samples/app-templates.md) |
 | 04/23/2019 | Extensões de Mensagens baseadas em ação agora estão disponíveis. | [Extensões de Mensagens baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | A criação de links profundos para chat privado está fora da visualização do desenvolvedor e disponível. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -119,7 +121,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 11/11/2018 | O início do Nó JS e do .NET/C# foi atualizado para usar o App Studio no Teams, e uma nova seção foi adicionada para hospedar aplicativos Teams baseados em nó no Azure. | Começar Microsoft Teams plataforma Microsoft Teams com [o C#/.NET](~/get-started/get-started-dotnet-app-studio.md)e o App Studio , Iniciar na plataforma Microsoft Teams com [o Node JS](~/get-started/get-started-nodejs-app-studio.md)e o App Studio, hospedar seu aplicativo node Teams no [Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | Estrutura do SharePoint 1.7 enviou e com ele um novo recurso para usar Microsoft Teams guia como uma web part Estrutura do SharePoint web part. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | O recurso "módulo de tarefa" foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo Teams, a partir de bots e guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado como um vídeo do YouTube ou do Microsoft Stream ou exibir um cartão `<iframe>` [Adaptável](https://docs.microsoft.com/adaptive-cards/). | [Visão geral do](~/concepts/task-modules/task-modules-overview.md)módulo de tarefas , [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md), módulo de tarefa em  [bots](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | O **recurso de módulo de** tarefa foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo Teams, a partir de bots e guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado como um vídeo do YouTube ou do Microsoft Stream ou exibir um cartão `<iframe>` [Adaptável](/adaptive-cards/). | [Visão geral do](~/concepts/task-modules/task-modules-overview.md)módulo de tarefas , [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md), módulo de tarefa em  [bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | As informações de formatação para cartões foram atualizadas e testadas nos clientes desktop, iOS e Android para Teams. | [Cartões,](~/concepts/cards/cards.md) [formatação de cartão](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | As APIs de chamadas e reuniões online da Microsoft Graph foram lançadas para a versão beta, e Teams aplicativos agora podem interagir com os usuários de maneiras ricas usando voz e vídeo. | [Bots de](~/concepts/calls-and-meetings/registering-calling-bot.md)chamadas e reuniões online, conceitos de mídia em tempo [real,](~/concepts/calls-and-meetings/real-time-media-concepts.md)Registro de um [bot](~/concepts/calls-and-meetings/registering-calling-bot.md)de chamada, [Depuração](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)e teste local, mídia hospedada por [aplicativo,](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)Manipulação de notificações de chamada [de entrada](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | As páginas de configuração de tabulação agora são significativamente mais altas. | [Design de tabulação](tabs/design/tabs.md) |
@@ -127,10 +129,10 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 08/10/2018 | Suporte para cliente para DevTools.| [DevTools para o cliente Microsoft Teams desktop](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | As extensões de mensagens agora suportam vários comandos. Esse recurso foi lançado no Developer Preview e agora é lançado para todos os usuários.| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | A configuração em linha agora é suportada em Conectores. A documentação conectores também foi revisada e expandida para maior clareza.| [Conectores](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | Seu bot agora pode enviar e receber arquivos.| [Enviar e receber arquivos por meio de seu bot](~/concepts/bots/bots-files.md)|
+| 08/06/2018 | Seu bot agora pode enviar e receber arquivos.| [Enviar e receber arquivos por meio de seu bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Informações sobre a re-certificação de aplicativos foram adicionadas à seção Publicação. |[Permissões de manifesto](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | Mais espaço foi alocado para a página de configuração de tabulação. | [A página de configuração de tabulação é significativamente mais alta](tabs/design/tabs.md)|
-| 07/12/2018 | Informações sobre o acesso de convidados. | [Acesso para convidado no Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
+| 07/12/2018 | Informações sobre o acesso de convidados. | [Acesso para convidado no Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Foram adicionadas informações Microsoft Teams catálogo de aplicativos de locatários. | [Publicar seu Microsoft Teams app](~/publishing/apps-publish.md)|
 | 05/29/2018 | Os cartões adaptáveis são suportados em Teams. | [Ações de cartão adaptáveis em Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID foi adicionado à carga para as `Invoke` ações `MessageBack` de cartão e. Isso é especialmente útil se você precisar atualizar a mensagem de onde a ação do cartão veio. | [Ações de cartão](~/concepts/cards/cards-actions.md)|
@@ -154,7 +156,6 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|04/08/2021| O recurso de personalização do aplicativo agora está disponível na visualização do desenvolvedor.|[Design Teams visão geral do aplicativo,](concepts/design/design-teams-app-overview.md#app-customization) [visão geral do App Studio](concepts/build-and-test/app-studio-overview.md#connectors)e esquema de [manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| As guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 
 Para obter mais informações, consulte [visualização do desenvolvedor público para Teams](~/resources/dev-preview/developer-preview-intro.md).
