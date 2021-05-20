@@ -4,27 +4,27 @@ description: Descrever como obter o contexto do usuário para suas guias
 localization_priority: Normal
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020398"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566863"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obter contexto para a guia Microsoft Teams
 
-Sua guia pode exigir informações contextuais para exibir conteúdo relevante.
+Sua guia deve exigir informações contextuais para exibir conteúdo relevante:
 
-* Sua guia talvez precise de informações básicas sobre o usuário, equipe ou empresa.
-* Sua guia talvez precise de informações de local e tema.
-* Sua guia talvez precise ler o `entityId` ou `subEntityId` que identifica o que está nesta guia.
+* Informações básicas sobre o usuário, equipe ou empresa.
+* Localidade e informações sobre temas.
+* Leia o `entityId` ou que identifica o que está nesta `subEntityId` guia.
 
 ## <a name="user-context"></a>Contexto do usuário
 
-O contexto sobre o usuário, equipe ou empresa pode ser especialmente útil quando
+O contexto sobre o usuário, equipe ou empresa pode ser especialmente útil quando:
 
-* Você precisa criar ou associar recursos em seu aplicativo ao usuário ou equipe especificada.
-* Você deseja iniciar um fluxo de autenticação no Azure Active Directory ou outro provedor de identidade e não deseja exigir que o usuário insira seu nome de usuário novamente. (Para mais informações sobre a autenticação na guia Microsoft Teams, veja [Autenticar um usuário na guia Microsoft Teams](~/concepts/authentication/authentication.md).)
+* Você cria ou associa recursos em seu aplicativo com o usuário ou equipe especificados.
+* Você inicia um fluxo de autenticação contra Azure Active Directory ou outro provedor de identidade, e não quer exigir que o usuário digite seu nome de usuário novamente. Para obter mais informações sobre autenticação na guia Microsoft Teams, consulte [Autenticar um usuário em sua guia Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Embora essas informações do usuário possam ajudar a fornecer uma experiência tranquila ao usuário, você deve *não* usá-lo como prova de identidade. Por exemplo, um invasor pode carregar sua página em um "navegador ruim" e processar informações ou solicitações prejudiciais.
@@ -33,8 +33,8 @@ O contexto sobre o usuário, equipe ou empresa pode ser especialmente útil quan
 
 Você pode acessar informações de contexto de duas maneiras:
 
-* Inserir valores de espaço reservado para URL
-* Usar o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client)
+* Insira valores de espaço reservado para URL.
+* Use o [Microsoft Teams Cliente JavaScript SDK](/javascript/api/overview/msteams-client).
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado para URL
 
@@ -48,23 +48,19 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 * {theme}: tema atual da interface do usuário como `default`, `dark`, ou `contrast`.
 * {groupId}: ID do Grupo Office 365 no qual a guia reside
 * {tid}: ID do locatário do Azure AD do usuário atual.
-* {locale}: localidade atual do usuário formatada como languageId-countryId (por exemplo, en-us).
+* {locale}: A localização atual do usuário formatado como languageId-countryId. Por exemplo, en-nós.
 
 >[!NOTE]
 >O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
 
-Por exemplo, suponha que no manifesto de sua guia você defina o atributo `configURL` como
+Por exemplo, suponha que no manifesto da guia você defina o `configURL` atributo para , o usuário de assinatura tem os `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` seguintes atributos:
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* Seu nome de usuário é "user@example.com".
+* O ID do inquilino da empresa é 'e2653c-etc'.
+* Eles são membros do grupo Office 365 com id '00209384-etc'.
+* O usuário definiu seu tema Teams como "escuro".
 
-E o usuário conectado tem os seguintes atributos:
-
-* O nome de usuário é 'user@example.com'
-* O ID do locatário da empresa é 'e2653c-etc'
-* Eles são membros do grupo Office 365 com id '00209384-etc'
-* O usuário definiu o tema das equipes como 'escuro'
-
-Quando configuram sua guia, o Teams chama este URL:
+Quando eles configuram sua guia, Teams chama a seguinte URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -72,7 +68,7 @@ Quando configuram sua guia, o Teams chama este URL:
 
 Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-A variável de contexto será semelhante ao exemplo a seguir.
+A variável de contexto se parece com o seguinte exemplo:
 
 ```json
 {
@@ -102,7 +98,7 @@ A variável de contexto será semelhante ao exemplo a seguir.
     "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
@@ -121,12 +117,12 @@ A variável de contexto será semelhante ao exemplo a seguir.
 
 Quando sua página de conteúdo é carregada em um canal privado, os dados que você recebe da chamada a `getContext` será ofuscada para proteger a privacidade do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado. Se sua página fizer uso de qualquer um dos valores abaixo, você precisará verificar o `channelType` para determinar se sua página está carregada em um canal privado e responder de forma adequada.
 
-* `groupId` - Indefinido para canais privados
-* `teamId` - Definir como o threadId do canal privado
-* `teamName` - Definir como o nome do canal privado
-* `teamSiteUrl` - Definir como a URL de um site distinto e exclusivo do SharePoint para o canal privado
-* `teamSitePath` - Definir o caminho de um site distinto e exclusivo do SharePoint para o canal privado
-* `teamSiteDomain` - Definir como o domínio de um domínio de site do SharePoint distinto e exclusivo para o canal privado
+* `groupId`: Indefinido para canais privados
+* `teamId`: Definido para o threadId do canal privado
+* `teamName`: Definido para o nome do canal privado
+* `teamSiteUrl`: Definido para a URL de um site de SharePoint distinto e único para o canal privado
+* `teamSitePath`: Definir o caminho de um site de SharePoint distinto e único para o canal privado
+* `teamSiteDomain`: Definido para o domínio de um domínio de site SharePoint distinto e único para o canal privado
 
 > [!Note]
 >  teamSiteUrl também funciona bem para canais padrão.

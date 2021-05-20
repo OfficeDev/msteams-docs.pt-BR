@@ -1,41 +1,41 @@
 ---
-title: Criar aplicativos para a Microsoft Teams plataforma
+title: Crie aplicativos para a plataforma Microsoft Teams
 author: heath-hamilton
-description: Obter uma visão geral de como os desenvolvedores podem estender Microsoft Teams recursos com aplicativos personalizados.
+description: Obtenha uma visão geral de como os desenvolvedores podem estender Microsoft Teams recursos com aplicativos personalizados.
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 69c36cf5f925bdb9802e7ec081a7765187a06128
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8724b669476b11aa8cb1aca6d9586fc7ea42587d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101839"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566506"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
-Microsoft Teams aplicativos trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas coletam, aprendem e trabalham cada vez mais.
+Microsoft Teams aplicativos trazem informações-chave, ferramentas comuns e processos confiáveis para onde as pessoas cada vez mais se reúnem, aprendem e trabalham.
 
-Aplicativos são como você estende Teams para se ajustar às suas necessidades. Crie algo novo para Teams ou integre um aplicativo existente.
+Aplicativos são como você estende Teams para atender às suas necessidades. Crie algo novo para Teams ou integre um aplicativo existente.
 
 > [!div class="nextstepaction"]
 > [Iniciar aqui](build-your-first-app/build-first-app-overview.md)
 
-## <a name="what-are-teams-apps"></a>O que Teams aplicativos?
+## <a name="what-are-teams-apps"></a>O que são aplicativos Teams?
 
-Teams aplicativos são uma combinação de [recursos e](concepts/capabilities-overview.md) pontos [de entrada.](concepts/extensibility-points.md) Por exemplo, as pessoas podem conversar com o bot (recurso) do seu *aplicativo* em um *canal* (ponto de entrada).
+Teams aplicativos são uma combinação de [recursos](concepts/capabilities-overview.md) e pontos de [entrada.](concepts/extensibility-points.md) Por exemplo, as pessoas podem conversar com *o bot* (capability) do seu aplicativo em um *canal* (ponto de entrada).
 
-Alguns aplicativos são simples (notificações de envio), enquanto outros são complexos (gerenciar registros de pacientes). Ao planejar seu aplicativo, lembre-se de que Teams é um hub de colaboração. A melhor Teams aplicativos ajudam as pessoas a se expressarem e trabalharem melhor juntas.
+Alguns aplicativos são simples (enviar notificações), enquanto outros são complexos (gerenciar registros de pacientes). Ao planejar seu aplicativo, lembre-se que Teams é um hub de colaboração. Os melhores aplicativos Teams ajudam as pessoas a se expressarem e trabalharem melhor juntas.
 
 :::row:::
    :::column span="":::
 
 ### <a name="tabs"></a>Guias
 
-**Obter informações de forma mais conveniente:** às vezes, você só precisa tornar as coisas mais fáceis de encontrar. Exibe uma página da Web importante em uma [guia](tabs/what-are-tabs.md), que fornece uma experiência da Web de tela inteira para conteúdo estático e dinâmico Teams.
+**Obtenha informações mais convenientemente**: Às vezes você só precisa tornar as coisas mais fáceis de encontrar. Exibir uma página importante da web em uma [guia](tabs/what-are-tabs.md), que fornece uma experiência web em tela cheia para conteúdo estático e dinâmico em Teams.
 
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="Representação conceitual de como as guias são no cliente Teams cliente." border="false":::
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Representação conceitual de como são as guias no Teams cliente." border="false":::
 
    :::column-end:::
 
@@ -43,9 +43,9 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 
 ### <a name="bots"></a>Bots
 
-**Transformar palavras em ações**: as conversas geralmente resultam na necessidade de fazer algo (gerar um pedido, revisar meu código, verificar o status do tíquete e assim por diante). Um [bot](bots/what-are-bots.md) pode dar início a esses tipos de fluxos de trabalho dentro Teams.
+**Transforme palavras em ações**: Muitas vezes as conversas resultam na necessidade de fazer algo (gerar um pedido, revisar meu código, verificar o status do bilhete e assim por diante). Um [bot](bots/what-are-bots.md) pode iniciar esse tipo de fluxos de trabalho dentro Teams.
 
-:::image type="content" source="assets/images/overview-bots.png" alt-text="Representação conceitual de como os bots são no Teams cliente." border="false":::
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Representação conceitual de como os bots se parecem no Teams cliente." border="false":::
 
    :::column-end:::
 
@@ -57,9 +57,9 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 
 ### <a name="messaging-extensions"></a>Extensões de mensagens
 
-**Facilita a multitarefa**: Com extensões de mensagens, você pode compartilhar rapidamente informações [externas](messaging-extensions/what-are-messaging-extensions.md)em uma conversa. Você também pode agir em uma mensagem, como criar um tíquete de ajuda com base no conteúdo de uma postagem de canal.
+**Facilite a multitarefa**: Com [extensões de mensagens,](messaging-extensions/what-are-messaging-extensions.md)você pode compartilhar rapidamente informações externas em uma conversa. Você também pode agir em uma mensagem, como criar um bilhete de ajuda com base no conteúdo de um post de canal.
 
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="Representação conceitual de como são as extensões de mensagens no cliente Teams de mensagens." border="false":::
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Representação conceitual de como são as extensões de mensagens no Teams cliente." border="false":::
 
    :::column-end:::
 
@@ -67,9 +67,9 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 
 ### <a name="webhooks"></a>Webhooks
 
-**Comunicar-se com aplicativos** [externos: os webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) de entrada são uma maneira simples de enviar notificações automaticamente de outro aplicativo para um Teams canal. Com [webhooks de saída](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), mensagem seu serviço Web com um @mention.
+**Comunique-se com aplicativos externos**: [Webhooks recebidos](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) são uma maneira simples de enviar automaticamente notificações de outro aplicativo para um canal Teams. Com [webhooks de saída,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envie uma mensagem ao seu serviço web com um @mention.
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="Representação conceitual de como os conectores são no Teams cliente." border="false":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Representação conceitual de como os conectores se parecem no Teams cliente." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -80,9 +80,9 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
 
-**Utilize Teams** dados : [a API](https://docs.microsoft.com/graph/teams-concept-overview) do Microsoft Graph para Teams fornece acesso a informações sobre equipes, canais, usuários e mensagens que podem ajudá-lo a criar ou aprimorar recursos para seu aplicativo.
+**Utilize dados Teams**: A [API de Graph microsoft para Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que podem ajudá-lo a criar ou aprimorar recursos para o seu aplicativo.
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Representação conceitual da API Graph microsoft para Teams." border="false":::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Representação conceitual da API microsoft Graph para Teams." border="false":::
 
    :::column-end:::
 
@@ -93,9 +93,9 @@ Alguns aplicativos são simples (notificações de envio), enquanto outros são 
 :::row:::
    :::column span="2":::
 
-## <a name="start-building"></a>Iniciar a criação
+## <a name="start-building"></a>Comece a construir
 
-Familiarize-se rapidamente com a criação para Teams configurando seu ambiente e criando um aplicativo simples.
+Familiarize-se rapidamente com a construção de Teams, configurando seu ambiente e criando um aplicativo simples.
 
 > [!div class="nextstepaction"]
 > [Desenvolver seu primeiro aplicativo](build-your-first-app/build-first-app-overview.md)
@@ -111,10 +111,10 @@ Familiarize-se rapidamente com a criação para Teams configurando seu ambiente 
 
 ## <a name="integrate-with-teams"></a>Integrar com o Teams
 
-Mesclar os recursos que os usuários adoram sobre um aplicativo Web, serviço ou sistema existente com os recursos colaborativos Teams.
+Misture os recursos que os usuários adoram sobre um aplicativo, serviço ou sistema web existente com os recursos colaborativos de Teams.
 
 > [!div class="nextstepaction"]
-> [Integrar um aplicativo existente](samples/integrating-web-apps.md)
+> [Integre um aplicativo existente](samples/integrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -125,12 +125,12 @@ Mesclar os recursos que os usuários adoram sobre um aplicativo Web, serviço ou
 :::row:::
    :::column span="2":::
 
-## <a name="a-little-code-goes-a-long-way"></a>Um pouco de código é muito longo
+## <a name="a-little-code-goes-a-long-way"></a>Um pequeno código vai longe
 
-Você não precisa ser um programador especialista para criar um aplicativo Teams excelente. Experimente uma das várias soluções de código baixo.
+Você não precisa ser um programador especialista para construir um ótimo aplicativo de Teams. Experimente uma das várias soluções de código baixo.
 
 > [!div class="nextstepaction"]
-> [Criar um aplicativo de código baixo](samples/teams-low-code-solutions.md)
+> [Crie um aplicativo de código baixo](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::
@@ -141,12 +141,12 @@ Você não precisa ser um programador especialista para criar um aplicativo Team
 :::row:::
    :::column span="2":::
 
-## <a name="get-ideas-for-your-app"></a>Obter ideias para seu aplicativo
+## <a name="get-ideas-for-your-app"></a>Obtenha ideias para o seu aplicativo
 
-Procurando inspiração para desenvolvimento de aplicativos? Navegue pela nossa lista de cenários reais e soluções do setor com simulações de conceito de alta fidelidade para entender as várias maneiras Teams aplicativos podem ajudar seus usuários.
+Procurando inspiração para desenvolvimento de aplicativos? Navegue pela nossa lista de cenários do mundo real e soluções do setor com conceito de alta fidelidade simula para entender as várias maneiras Teams aplicativos podem ajudar seus usuários.
 
 > [!div class="nextstepaction"]
-> [Consulte cenários de aplicativo](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+> [Veja cenários de aplicativos](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
 
    :::column-end:::
    :::column span="":::
@@ -156,8 +156,8 @@ Procurando inspiração para desenvolvimento de aplicativos? Navegue pela nossa 
 
 ## <a name="see-also"></a>Confira também
 
-* [Adicionar um botão Compartilhar para Teams seu site](concepts/build-and-test/share-to-teams.md)
-* [Projetar seu Teams aplicativo](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams SDK do cliente JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* SDK da Estrutura de Bots para [JavaScript](https://github.com/Microsoft/botbuilder-js) e [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Distribuir seu Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
+* [Adicione um botão Compartilhar a Teams ao seu site](concepts/build-and-test/share-to-teams.md)
+* [Projete seu aplicativo de Teams](concepts/design/design-teams-app-overview.md)
+* [Microsoft Teams Cliente JavaScript SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* Bot Framework SDK para [JavaScript](https://github.com/Microsoft/botbuilder-js) e [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Distribua seu aplicativo de Teams](concepts/deploy-and-publish/apps-publish-overview.md)

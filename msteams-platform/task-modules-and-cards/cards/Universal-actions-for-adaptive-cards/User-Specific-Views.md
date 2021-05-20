@@ -1,27 +1,27 @@
 ---
-title: Exibições específicas do usuário
-description: Exemplo de exibições específicas do usuário usando ações universais
+title: Exibições Específicas do Usuário
+description: Amostra para visualizações específicas do usuário usando ações universais
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 984b32511dda544942df11f7c5d8a25cca8e9a8a
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
+ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088806"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52555441"
 ---
-# <a name="user-specific-views"></a>Exibições específicas do usuário
+# <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
-Anteriormente, se cartões adaptáveis foram enviados em uma conversa Teams, todos os usuários verão exatamente o mesmo conteúdo do cartão. Com a introdução do modelo de Ações Universais e para Cartões Adaptáveis, os desenvolvedores de bot agora podem fornecer exibições específicas do usuário de cartões `refresh` adaptáveis aos usuários. O mesmo Cartão Adaptável agora pode atualizar para um Cartão Adaptável Específico do Usuário.
+Mais cedo, se o Adaptive Cards foi enviado em uma conversa Teams, todos os usuários vêem exatamente o mesmo conteúdo do cartão. Com a introdução do modelo Universal Actions e `refresh` para Cartões Adaptativos, os desenvolvedores de bots agora podem fornecer visualizações específicas do usuário de cartões adaptativos aos usuários. O mesmo Cartão Adaptável agora pode atualizar para um cartão adaptativo específico do usuário.
 
-Por exemplo, Megan, uma inspetora de segurança da Contoso, deseja criar um incidente e atribuí-lo a Alex. Ela também quer que todos na equipe sejam cientes sobre o incidente. Megan usa a extensão de mensagem de relatório de incidentes da Contoso alimentada por Ações Universais para Cartões Adaptáveis.
+Por exemplo, Megan, uma inspetora de segurança em Contoso, quer criar um incidente e atribuí-lo a Alex. Ela também quer que todos da equipe estejam cientes sobre o incidente. Megan usa a extensão de mensagens de relatórios de incidentes contoso alimentada pela Universal Actions for Adaptive Cards.
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Exibições específicas do usuário":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Exibições Específicas do Usuário":::
 
-## <a name="user-specific-views-for-adaptive-cards"></a>Exibições específicas do usuário para cartões adaptáveis
+## <a name="user-specific-views-for-adaptive-cards"></a>Visualizações específicas do usuário para cartões adaptativos
 
-O código a seguir fornece um exemplo de Cartões Adaptáveis:
+O código a seguir fornece um exemplo de Cartões Adaptativos:
 
 ```JSON
 {
@@ -52,16 +52,16 @@ O código a seguir fornece um exemplo de Cartões Adaptáveis:
 }
 ```
 
-**Para enviar cartões adaptáveis, atualize exibições específicas do usuário e invoque solicitações ao bot**
+**Para enviar cartões adaptativos, atualize visualizações específicas do usuário e invoque solicitações ao bot**
 
-1. Quando Megan cria um novo incidente, o bot envia o Cartão Adaptável ou o cartão comum com detalhes de incidentes na Teams conversa.
-2. Agora, esse cartão é atualizado automaticamente para o User Specific View para Megan e Alex. Os MRIs de usuário de Alex e Megan são adicionados na propriedade da propriedade `userIds` `refresh` JSON do Cartão Adaptável. O cartão permanece o mesmo para outros usuários na conversa.
-3. Para Megan, a atualização automática dispara uma `adaptiveCard/action` solicitação de invocação para o bot. O bot pode retornar um cartão de criador de incidentes com `Edit` um botão como resposta a essa solicitação de invocação.
-4. Da mesma forma para Alex, a atualização automática dispara outra `adaptiveCard/action` solicitação de invocação para o bot. O bot pode retornar um botão de cartão de proprietário `Resolve` de incidente como resposta a essa solicitação de invocação.
+1. Quando Megan cria um novo incidente, o bot envia o Cartão Adaptável ou cartão comum com detalhes de incidentes na Teams conversa.
+2. Agora, este cartão atualiza automaticamente para a visualização específica do usuário para Megan e Alex. As Ressonâncias Magnéticas usuárias de Alex e Megan são adicionadas em `userIds` propriedade de propriedade do Cartão `refresh` Adaptativo JSON. O cartão permanece o mesmo para outros usuários na conversa.
+3. Para Megan, a atualização automática aciona um `adaptiveCard/action` pedido de invocação para o bot. O bot pode devolver um cartão criador de incidentes com `Edit` botão como resposta a este pedido de invocação.
+4. Da mesma forma para Alex, a atualização automática aciona outro `adaptiveCard/action` pedido de invocação para o bot. O bot pode retornar um botão de cartão do proprietário do incidente `Resolve` como resposta a este pedido de invocação.
 
-## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Invocar solicitação enviada Teams cliente para o bot
+## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Solicitar solicitação enviada de Teams cliente para o bot
 
-O código a seguir fornece um exemplo de uma solicitação de invocação enviada do cliente Teams Alex e Megan para o bot:
+O código a seguir fornece um exemplo de uma solicitação de invocação enviada do cliente Teams de Alex e Megan para o bot:
 
 ```JSON
 { 
@@ -84,9 +84,9 @@ O código a seguir fornece um exemplo de uma solicitação de invocação enviad
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/action invoca o cartão de resposta
+## <a name="adaptivecardaction-invoke-response-card"></a>cartão de resposta adaptiveCard/action invocar
 
-O código a seguir fornece um exemplo de um cartão de resposta de invocação adaptiveCard/action para Megan:
+O código a seguir fornece um exemplo de um cartão de resposta adaptávelcard/action invoke para Megan:
 
 ```JSON
 {
@@ -126,9 +126,9 @@ O código a seguir fornece um exemplo de um cartão de resposta de invocação a
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/action invocam o cartão de resposta para Alex
+## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>cartão de resposta adaptiveCard/action invocar para Alex
 
-O código a seguir fornece um exemplo de um cartão de resposta de invocação adaptiveCard/action para Alex:
+O código a seguir fornece um exemplo de um cartão de resposta adaptávelcard/action invoke para Alex:
 
 ```JSON
 {
@@ -168,9 +168,9 @@ O código a seguir fornece um exemplo de um cartão de resposta de invocação a
 }
 ```
 
-## <a name="invoke-response-to-return-adaptive-cards"></a>Invocar resposta para retornar cartões adaptáveis
+## <a name="invoke-response-to-return-adaptive-cards"></a>Invoque a resposta para retornar cartões adaptativos
 
-O código a seguir fornece um exemplo de uma resposta de invocação para retornar Cartões Adaptáveis:
+O código a seguir fornece um exemplo de uma resposta de invocação para retornar cartões adaptativos:
 
 ```C#
 string cardJson = "<adaptive card json>";
@@ -179,18 +179,18 @@ var card = JsonConvert.DeserializeObject(cardJson);
 var adaptiveCardResponse = JObject.FromObject(new
  {
     statusCode = 200,
-    type = "application/vnd.microsoft.card.adaptive",
+    type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
 ```
 
-Diretrizes de design de cartão para ter em mente ao projetar exibições específicas do usuário:
+Diretrizes de design de cartão para ter em mente ao projetar visualizações específicas do usuário:
 
-* Você pode criar no máximo **60** Exibições Específicas do Usuário para um cartão específico que está sendo enviado para um chat ou canal especificando-os `userIds` na `refresh` seção.
-* **Cartão Base:** A versão base do cartão que o desenvolvedor de bot envia para o chat. Esta é a versão do Cartão Adaptável para todos os usuários que não são especificados na `userIds` seção.
-* Uma atualização ou edição de mensagem pode ser usada para atualizar o cartão base e atualizar simultaneamente o Cartão Específico do Usuário.
+* Você pode criar um máximo de **60 visualizações específicas** do usuário para um determinado cartão sendo enviado para um chat ou canal especificando o seu `userIds` na `refresh` seção.
+* **Cartão base:** A versão base do cartão que o desenvolvedor de bot envia para o chat. Esta é a versão do Cartão Adaptável para todos os usuários que não estão especificados na `userIds` seção.
+* Uma atualização ou edição de mensagens pode ser usada para atualizar o cartão base e atualizar simultaneamente o Cartão Específico do Usuário.
 
 ## <a name="see-also"></a>Confira também
 
-* [Trabalhar com ações universais para cartões adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
-* [Exibições atualizadas](Up-To-Date-Views.md)
+* [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
+* [Vistas atualizadas](Up-To-Date-Views.md)

@@ -1,45 +1,45 @@
 ---
-title: Criar uma guia pessoal com ASP.NET Core
+title: Crie uma guia pessoal com ASP.NET Core
 author: laujan
 description: Um guia de início rápido para criar uma guia pessoal personalizada com ASP.NET Core.
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 858175c5afa742d7f2d818204fe1a6f09f6e2245
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 41aa916f4c69d50e48254d0f4934109429dab83c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020293"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566891"
 ---
-# <a name="create-a-personal-tab-with-aspnet-core"></a>Criar uma guia pessoal com ASP.NET Core
+# <a name="create-a-personal-tab-using-aspnetcore"></a>Crie uma guia pessoal usando o ASP.NETCore
 
-Neste início rápido, vamos passo a passo criando uma guia pessoal personalizada com C# e ASP.Net Principais Páginas de Lâmina de Corte. Também vamos usar o [App Studio para o Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar o manifesto do aplicativo e implantar sua guia no Teams.
+Nesta partida rápida, vamos caminhar criando uma guia pessoal personalizada com páginas C# e ASP.Net Core Razor. Também usaremos [o App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar seu manifesto de aplicativo e implantar sua guia para Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a>Obter o código-fonte
+## <a name="get-the-source-code"></a>Obtenha o código fonte
 
-Abra um prompt de comando e crie um novo diretório para seu projeto de guia. Fornecemos um projeto simples para você começar. Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de exemplo em seu novo diretório:
+Abra um prompt de comando e crie um novo diretório para o seu projeto de guia. Nós fornecemos um projeto simples para começar você. Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de amostras em seu novo diretório:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Depois de ter o código-fonte, abra Visual Studio e selecione **Abrir um projeto ou solução**. Navegue até o diretório de aplicativos de tabulação e abra **PersonalTab.sln**.
+Depois de ter o código-fonte, abra Visual Studio e selecione **Abrir um projeto ou solução**. Navegue até o diretório de aplicativos da guia e abra **o PersonalTab.sln**.
 
-Para criar e executar seu aplicativo pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar.** Em um navegador, navegue até as URLs abaixo para verificar se o aplicativo foi carregado corretamente:
+Para construir e executar seu aplicativo pressione **F5** ou escolha Iniciar a **depuração** no menu **Debug.** Em um navegador navegue até os URLs abaixo para verificar o aplicativo carregado corretamente:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
 - `http://localhost:44325/privacy`
 - `http://localhost:44325/tou`
 
-## <a name="review-the-source-code"></a>Revisar o código-fonte
+## <a name="review-the-source-code"></a>Revise o código-fonte
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este projeto foi criado ASP.NET modelo vazio do Aplicativo Web do Núcleo 2.2 com a caixa de seleção Avançado - Configurar para *HTTPS* selecionada na instalação. Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware de arquivos estáticos é adicionado ao `Configure()` método:
+Este projeto foi criado a partir de um modelo vazio de ASP.NET Core 2.2 Web Application com a caixa de seleção **Advanced - Configure for HTTPS** selecionada na configuração. Os serviços de MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não permite servir conteúdo estático por padrão, de modo que o middleware de arquivos estáticos é adicionado ao `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -53,27 +53,27 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-### <a name="wwwroot-folder"></a>pasta wwwroot
+### <a name="wwwroot-folder"></a>wwwroot pasta
 
-No ASP.NET Core, a pasta raiz da Web é onde o aplicativo procura arquivos estáticos.
+Em ASP.NET Core, a pasta raiz da Web é onde o aplicativo procura arquivos estáticos.
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Core trata arquivos chamados *Index* como a home page padrão do site. Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** será exibida como a home page do aplicativo.
+ASP.NET Core trata arquivos chamados *Índice* como a página padrão/inicial para o site. Quando a URL do seu navegador aponta para a raiz do site, **o Index.cshtml** será exibido como a página inicial do seu aplicativo.
 
 ### <a name="appmanifest-folder"></a>Pasta AppManifest
 
 Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
-- Um **ícone de cor completo** medindo 192 x 192 pixels.
+- Um **ícone de cores completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **manifest.jsno** arquivo que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser cortados em um pacote de aplicativos para uso no carregamento da guia para o Teams. O Microsoft Teams carregará o especificado em seu manifesto, o inserirá em um <iframe e o `contentUrl` renderizará em sua \> guia.
+Esses arquivos precisam ser fechados em um pacote de aplicativo para uso no upload de sua guia para Teams. Microsoft Teams carregará o `contentUrl` especificado em seu manifesto, incorporará-no em um <iframe \> e renderizará-no em sua guia.
 
 ### <a name="csproj"></a>.csproj
 
-Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**. Na parte inferior do arquivo, você verá o código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Na janela Visual Studio Solution Explorer, clique com o botão direito do mouse no projeto e selecione **Editar arquivo Project**. Na parte inferior do arquivo você verá o código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ```xml
 <PropertyGroup>
@@ -99,21 +99,26 @@ Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito
 
 - Abra um prompt de comando na raiz do diretório do projeto e execute o seguinte comando:
 
-```bash
-ngrok http https://localhost:44325 -host-header="localhost:44325"
-```
+    ```bash
+    ngrok http https://localhost:44325 -host-header="localhost:44325"
+    ```
 
-- O Ngrok ouvirá as solicitações da Internet e as encaminhará para seu aplicativo quando estiver sendo executado na porta 44325.  Deve parecer `https://y8rPrT2b.ngrok.io/` onde *y8rPrT2b* é substituído pela URL HTTPS alfanumérico ngrok.
+- A Ngrok ouvirá os pedidos da internet e os encaminhará para o seu aplicativo quando estiver sendo executado na porta 44325.  Ele deve se assemelhar `https://y8rPrT2b.ngrok.io/` onde *y8rPrT2b* é substituído por sua URL HTTPS alfa-numérica ngrok.
 
-- Certifique-se de manter o prompt de comando com o ngrok em execução e para anotar a URL , você precisará dele mais tarde.
+- Certifique-se de manter o prompt de comando com ngrok em execução e para anotar a URL — você precisará dele mais tarde.
 
-- Verifique se *o ngrok* está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
+- Verifique se **o ngrok** está executando e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo através da URL ngrok HTTPS que foi fornecida na janela do prompt de comando.
 
 >[!TIP]
->Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir esse início rápido. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele continuará a ouvir e retomará o roteamento da solicitação do aplicativo quando ele for reiniciado no Visual Studio. Se você precisar reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.
+>Você precisa ter sua aplicação em Visual Studio e ngrok correndo para completar este quickstart. Se você precisar parar de executar seu aplicativo em Visual Studio para trabalhar nele, **mantenha ngrok funcionando**. Ele continuará ouvindo e retomará o encaminhamento da solicitação do seu aplicativo quando ele for reiniciado em Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e você terá que atualizar todos os lugares que usarem essa URL.
 
-### <a name="run-your-application"></a>Executar seu aplicativo
+### <a name="run-your-application"></a>Execute sua aplicação
 
-- Em Visual Studio pressione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.
+- Em Visual Studio **pressione F5** ou escolha Iniciar a **depuração** no menu **Depuração** do seu aplicativo.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Crie uma guia pessoal personalizada com o ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)

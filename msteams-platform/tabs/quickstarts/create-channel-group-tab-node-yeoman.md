@@ -1,50 +1,50 @@
 ---
-title: Criar um canal personalizado e uma guia de grupo com Node.js e o Gerador Yeoman para o Microsoft Teams
+title: Crie um canal personalizado e tab em grupo com Node.js e o Gerador Yeoman para Microsoft Teams
 author: laujan
-description: Um guia de início rápido para criar um canal e uma guia de grupo com o Gerador Yeoman para o Microsoft Teams.
+description: Um guia rápido para criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 559393884e3b8a4aad1787ea4ca8f9f4de54d151
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020300"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566639"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Criar um canal personalizado e uma guia de grupo com Node.js e o Gerador Yeoman para o Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crie uma guia personalizada de canal e grupo usando Node.js e o Gerador Yeoman para Microsoft Teams
 
 >[!NOTE]
->Esse início rápido segue as etapas descritas no [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki encontrado no repositório do GitHub do Microsoft OfficeDev.
+>Esta rápida partida segue os passos descritos no [Aplicativo Build Your First Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki encontrado no repositório de GitHub Microsoft OfficeDev.
 
-Neste início rápido, vamos passo a passo criando um canal personalizado e uma guia de grupo usando o [gerador Yeoman do Teams.](https://github.com/OfficeDev/generator-teams/)
+Nesta partida rápida, vamos caminhar criando um canal personalizado e uma guia de grupo usando o [gerador Teams Yeoman](https://github.com/OfficeDev/generator-teams/).
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Você deseja criar uma guia configurável ou estática?**
+**Deseja criar uma guia configurável ou estática?**
 
 Use as teclas de seta para selecionar a guia configurável.
 
-**Quais escopos você pretende usar para sua Guia?**
+**Quais escopos você pretende usar para o seu Tab?**
 
-Você pode selecionar uma equipe e/ou um chat em grupo
+Você pode selecionar uma equipe e/ou um bate-papo em grupo
 
-**Deseja que essa guia seja disponibilizada no SharePoint Online? (Y/n)** 
+**Você deseja que esta guia esteja disponível em SharePoint Online? (Y/n)** 
 
 Selecione **n**.
 
 >[!IMPORTANT]
->O componente de **caminho que seuDefaultTabNameTab**, referenciado neste início rápido, é o valor que você inscrevia no gerador para **Nome** da Guia Padrão mais a **palavra Tab**.
+>O componente de caminho **que o seuDefaultTabNameTab,** referenciado nesta partida rápida, é o valor inserido no gerador para **nome de guia padrão** mais a palavra **Guia**.
 >
 >Por exemplo: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
-No diretório do projeto, navegue até o seguinte:
+Em seu diretório de projetos, navegue até o seguinte:
 
 ```bash
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-É aí que você encontrará sua lógica de tabulação. Localize `render()` o método e adicione a seguinte marca e conteúdo à parte superior do código do `<div>` `<PanelBody>` contêiner:
+É aí que você encontrará sua lógica de guia. Localize o `render()` método e adicione a seguinte tag e conteúdo à parte superior do código do `<div>` `<PanelBody>` contêiner:
 
 ```html
     <PanelBody>
@@ -56,37 +56,42 @@ No diretório do projeto, navegue até o seguinte:
 
 Certifique-se de salvar o arquivo atualizado.
 
-## <a name="build-and-run-your-application"></a>Criar e executar seu aplicativo
+## <a name="build-and-run-your-application"></a>Construa e execute sua aplicação
 
-Abra um prompt de comando no diretório do projeto para concluir as próximas tarefas.
+Abra uma solicitação de comando em seu diretório de projetos para concluir as próximas tarefas.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Para exibir sua página de configuração de tabulação, vá para `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Você verá o seguinte:
+Para exibir sua página de configuração de guia vá para `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Você verá o seguinte:
 
 ![captura de tela da página de configuração](~/assets/images/tab-images/configurationPage.png)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabeleça um túnel seguro para sua guia
 
-O Microsoft Teams é um produto totalmente baseado em nuvem e exige que o conteúdo da guia seja disponibilizado na nuvem usando pontos de extremidade HTTPS. O Teams não permite a hospedagem local, portanto, você precisa publicar sua guia em uma URL pública ou usar um proxy que exponha sua porta local a uma URL voltada para a Internet.
+Microsoft Teams é um produto inteiramente baseado em nuvem e exige que seu conteúdo de guia esteja disponível na nuvem usando pontos finais HTTPS. Teams não permite hospedagem local, portanto, você precisa publicar sua guia em uma URL pública ou usar um proxy que exporá sua porta local a uma URL voltada para a Internet.
 
-Para testar sua extensão de tabulação, você usará [ngrok](https://ngrok.com/docs), que é integrado a esse aplicativo. O Ngrok é uma ferramenta de software de proxy reverso que criará um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Os pontos de extremidade da Web do seu servidor estarão disponíveis durante a sessão atual no computador local. Quando o computador é desligado ou vai para o sono, o serviço não estará mais disponível.
+Para testar a extensão da guia, você usará [o ngrok](https://ngrok.com/docs), que é incorporado neste aplicativo. O Ngrok é uma ferramenta de software proxy reversa que criará um túnel para os pontos finais HTTPS disponíveis publicamente do servidor web. Os pontos finais da web do servidor estarão disponíveis durante a sessão atual na sua máquina local. Quando a máquina estiver desligada ou dormir, o serviço não estará mais disponível.
 
-No prompt de comando, saia do localhost e insira o seguinte:
+Em seu prompt de comando, saia do localhost e digite o seguinte:
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Depois que sua guia for carregada para as equipes da Microsoft e salva com êxito, você poderá exibi-la na galeria de guias, adicioná-la à barra de guias e interagir com ela até que sua sessão de túnel de ngrok termine. Se você reiniciar sua sessão de ngrok, precisará atualizar seu aplicativo com a nova URL.
+> Depois que sua guia for enviada para equipes da Microsoft e salva com sucesso, você pode visualizá-la na galeria de guias, adicioná-la à barra de guias e interagir com ela até que a sessão do túnel ngrok termine. Se você reiniciar sua sessão ngrok, você precisará atualizar seu aplicativo com a nova URL.
 
-## <a name="upload-your-application-to-teams"></a>Carregar seu aplicativo no Teams
+## <a name="upload-your-application-to-teams"></a>Upload sua inscrição para Teams
 
-- Abra o cliente do Microsoft Teams. Se você usar a [versão baseada na Web,](https://teams.microsoft.com) poderá inspecionar seu código front-end usando as ferramentas de [desenvolvedor do navegador.](~/tabs/how-to/developer-tools.md)
-- No painel *YourTeams* à esquerda, selecione o menu ao lado da equipe que você está usando para testar sua guia e `...` escolha Gerenciar **equipe**.
-- No painel principal, selecione **Aplicativos** na barra de guias e escolha **Carregar** um aplicativo personalizado localizado no canto inferior direito da página.
-- Abra o diretório do projeto, navegue até a pasta **./package,** selecione a pasta zip do pacote do aplicativo e escolha **Abrir**. Sua guia será carregada no Teams.
-- Retorne à sua equipe, escolha o canal onde você gostaria de exibir a guia, selecione ➕ na barra de guias e escolha sua guia na galeria.
+- Abra o cliente Microsoft Teams. Se você usar a [versão baseada na Web,](https://teams.microsoft.com) você pode inspecionar seu código frontal usando [as ferramentas](~/tabs/how-to/developer-tools.md)de desenvolvedor do seu navegador .
+- No painel *Suas Equipes* à esquerda, selecione o `...` menu ao lado da equipe que você está usando para testar sua guia e escolher Gerenciar **equipe**.
+- No painel principal selecione **Aplicativos** na barra de guia e escolha **Upload um aplicativo personalizado** localizado no canto inferior direito da página.
+- Abra o diretório do projeto, navegue até a pasta **./package,** selecione a pasta zip do pacote do aplicativo e escolha **Abrir**. Sua guia será enviada para Teams.
+- Retorne à sua equipe, escolha o canal onde deseja exibir a guia, selecione ➕ na barra de guia e escolha sua guia na galeria.
 - Siga as instruções para adicionar uma guia. Observe que há uma caixa de diálogo de configuração personalizada para sua guia canal/grupo.
 - Selecione **Salvar** e sua guia será adicionada à barra de guias do canal.
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Crie uma guia de canal e grupo personalizada com ASP.NETCore](~/tabs/quickstarts/create-channel-group-tab-dotnet-core.md)

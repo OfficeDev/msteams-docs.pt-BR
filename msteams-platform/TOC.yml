@@ -61,8 +61,12 @@
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
       href: samples/shifts-wfm-connectors.md
-    - name: Instalar o Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Moodle LMS
+      items:
+        - name: Visão Geral
+          href: resources/moodle-overview.md
+        - name: Instalar o Moodle LMS
+          href: resources/moodleInstructions.md
     - name: Criar um botão Compartilhar para o Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Adicionar uma guia do Teams ao SharePoint

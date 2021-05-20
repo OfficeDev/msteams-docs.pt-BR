@@ -3,39 +3,39 @@ title: Adicionar ações de cartão em um bot
 description: Descreve ações de cartão em Microsoft Teams e como usá-las em seus bots
 localization_priority: Normal
 ms.topic: conceptual
-keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+keywords: equipes bots ações cartões
+ms.openlocfilehash: b9276c7197070df43ba447707e6fa4d3d4098591
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088791"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566849"
 ---
 # <a name="card-actions"></a>Ações de cartão
 
-Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) Observe que essas ações diferem das `potentialActions` Office 365 conectores quando usadas de Conectores.
+Cartões usados por bots e extensões de mensagens em Teams suportam os [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) seguintes tipos de atividade () . Observe que essas ações diferem de `potentialActions` Office 365 cartões Connector quando usadas a partir de Conectores.
 
 | Tipo | Action |
 | --- | --- |
 | `openUrl` | Abre uma URL no navegador padrão. |
-| `messageBack` | Envia uma mensagem e uma carga para o bot (do usuário que clicou no botão ou tocou no cartão) e envia uma mensagem separada para o fluxo de chat. |
-| `imBack`| Envia uma mensagem para o bot (do usuário que clicou no botão ou tocou no cartão). Essa mensagem (de usuário para bot) é visível para todos os participantes da conversa. |
-| `invoke` | Envia uma mensagem e uma carga para o bot (do usuário que clicou no botão ou tocou no cartão). Esta mensagem não está visível. |
+| `messageBack` | Envia uma mensagem e carga para o bot do usuário que clicou no botão ou tocou no cartão e envia uma mensagem separada para o fluxo de bate-papo. |
+| `imBack`| Envia uma mensagem para o bot do usuário que clicou no botão ou tocou no cartão. Esta mensagem (de usuário para bot) é visível para todos os participantes da conversa. |
+| `invoke` | Envia uma mensagem e carga para o bot do usuário que clicou no botão ou tocou no cartão. Esta mensagem não é visível. |
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
->* Teams não dá suporte a `CardAction` tipos não listados na tabela anterior.
->* Teams não dá suporte à `potentialActions` propriedade.
->* As ações de cartão são diferentes [das ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Serviço bot framework/bot do Azure. As ações sugeridas não são suportadas Microsoft Teams: se você quiser que os botões apareçam em uma mensagem Teams bot, use um cartão.
->* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado ao canal (eles não funcionarão enquanto o cartão estiver na caixa de mensagem de redação).
+>* Teams não suporta `CardAction` tipos não listados na tabela anterior.
+>* Teams não suporta a `potentialActions` propriedade.
+>* As ações do cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework/Azure Bot Service. As ações sugeridas não são suportadas em Microsoft Teams: se você quiser que os botões apareçam em uma mensagem de bot Teams, use um cartão.
+>* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionam até que a carteira seja enviada ao canal. Eles não funcionam enquanto o cartão está na caixa de mensagens de composição.
 
-Teams também oferece suporte [a ações de Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usadas apenas por Cartões Adaptáveis. Essas ações são listadas em sua própria seção no final desta referência.
+Teams também suporta [ações de Cartões Adaptativos,](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)que são usadas apenas por Cartões Adaptativos. Essas ações estão listadas em sua própria seção no final desta referência.
 
 ## <a name="openurl"></a>openUrl
 
-Esse tipo de ação especifica uma URL a ser lançada no navegador padrão. Observe que o bot não recebe nenhum aviso sobre qual botão foi clicado.
+Esse tipo de ação especifica uma URL para ser lançada no navegador padrão. Observe que seu bot não recebe nenhum aviso sobre qual botão foi clicado.
 
-O `value` campo deve conter uma URL completa e corretamente formada.
+O `value` campo deve conter uma URL completa e devidamente formada.
 
 ```json
 {
@@ -45,18 +45,18 @@ O `value` campo deve conter uma URL completa e corretamente formada.
 }
 ```
 
-## <a name="messageback"></a>messageBack
+## <a name="messageback"></a>mensagemBack
 
 Com `messageBack` , você pode criar uma ação totalmente personalizada com as seguintes propriedades:
 
 | Propriedade | Descrição |
 | --- | --- |
-| `title` | Aparece como o rótulo do botão. |
-| `displayText` | Opcional. Ecoado pelo usuário no fluxo de chat quando a ação é executada. Este texto não *é* enviado para seu bot. |
-| `value` | Enviado ao bot quando a ação é executada. Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
-| `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot. |
+| `title` | Aparece como a etiqueta do botão. |
+| `displayText` | Opcional. Ecoado pelo usuário no fluxo de bate-papo quando a ação é realizada. Este texto *não* é enviado para o seu bot. |
+| `value` | Enviado para o seu bot quando a ação é realizada. Você pode codificar o contexto da ação, como identificadores exclusivos ou um objeto JSON. |
+| `text` | Enviado para o seu bot quando a ação é realizada. Use esta propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de alto nível para despachar a lógica do bot. |
 
-A flexibilidade de meios que seu código pode optar por não deixar uma mensagem de usuário visível no `messageBack` histórico simplesmente não usando `displayText` .
+A flexibilidade de `messageBack` meios que seu código pode optar por não deixar uma mensagem de usuário visível no histórico simplesmente não usando `displayText` .
 
 ```json
 {
@@ -72,11 +72,11 @@ A flexibilidade de meios que seu código pode optar por não deixar uma mensagem
 }
 ```
 
-A `value` propriedade pode ser uma cadeia de caracteres JSON serializada ou um objeto JSON.
+A `value` propriedade pode ser uma sequência JSON serializada ou um objeto JSON.
 
 ### <a name="inbound-message-example"></a>Exemplo de mensagem de entrada
 
-`replyToId` contém a ID da mensagem de onde veio a ação do cartão. Use-o se quiser atualizar a mensagem.
+`replyToId` contém a identificação da mensagem de onde veio a ação do cartão. Use-o se quiser atualizar a mensagem.
 
 ```json
 {
@@ -126,9 +126,9 @@ A `value` propriedade pode ser uma cadeia de caracteres JSON serializada ou um o
 
 ## <a name="imback"></a>imBack
 
-Essa ação aciona uma mensagem de retorno para seu bot, como se o usuário a digitou em uma mensagem de chat normal. Seu usuário e todos os outros usuários, se em um canal, verão a resposta do botão.
+Essa ação aciona uma mensagem de retorno ao seu bot, como se o usuário digitasse em uma mensagem de chat normal. Seu usuário, e todos os outros usuários se em um canal, verão essa resposta ao botão.
 
-O campo deve conter a cadeia de caracteres de texto `value` ecoada no chat e, portanto, enviada de volta para o bot. Este é o texto da mensagem que você processará em seu bot para executar a lógica desejada. Observação: este campo é uma cadeia de caracteres simples - não há suporte para formatação ou caracteres ocultos.
+O `value` campo deve conter a sequência de texto ecoada no chat e, portanto, enviada de volta para o bot. Este é o texto de mensagem que você processará em seu bot para executar a lógica desejada. Nota: este campo é uma sequência simples - não há suporte para formatação ou caracteres ocultos.
 
 ```json
 {
@@ -138,11 +138,11 @@ O campo deve conter a cadeia de caracteres de texto `value` ecoada no chat e, po
 }
 ```
 
-## <a name="invoke"></a>invoke
+## <a name="invoke"></a>invocar
 
-A `invoke` ação é usada para invocar [módulos de tarefa](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+A `invoke` ação é usada para invocar [módulos de tarefas.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 
-A `invoke` ação contém três propriedades: , e `type` `title` `value` . A `value` propriedade pode conter uma cadeia de caracteres, um objeto JSON stringified ou um objeto JSON.
+A `invoke` ação contém três propriedades: `type` , , e `title` `value` . A `value` propriedade pode conter uma sequência, um objeto JSON stringified ou um objeto JSON.
 
 ```json
 {
@@ -154,7 +154,7 @@ A `invoke` ação contém três propriedades: , e `type` `title` `value` . A `va
 }
 ```
 
-Quando um usuário clica no botão, seu bot receberá o `value` objeto com algumas informações adicionais. Observe que o tipo de atividade será `invoke` em vez de ( `message` `activity.Type == "invoke"` ).
+Quando um usuário clica no botão, o bot receberá o `value` objeto com algumas informações adicionais. Por favor, note que o tipo de atividade será `invoke` em vez de ( `message` `activity.Type == "invoke"` .
 
 ### <a name="example-invoke-button-definition-net"></a>Exemplo: Invocar definição de botão (.NET)
 
@@ -167,9 +167,9 @@ var button = new CardAction()
 };
 ```
 
-### <a name="example-incoming-invoke-message"></a>Exemplo: Mensagem de invocação de entrada
+### <a name="example-incoming-invoke-message"></a>Exemplo: Mensagem de invocação recebida
 
-A propriedade de nível superior contém a ID da mensagem de onde a `replyToId` ação do cartão veio. Use-o se quiser atualizar a mensagem.
+A propriedade de alto nível `replyToId` contém a identificação da mensagem de onde a ação do cartão veio. Use-o se quiser atualizar a mensagem.
 
 ```json
 {
@@ -219,32 +219,32 @@ A propriedade de nível superior contém a ID da mensagem de onde a `replyToId` 
 
 ## <a name="signin"></a>signin
 
-Inicia um fluxo OAuth, permitindo que os bots se conectem com serviços seguros, conforme descrito em mais detalhes aqui: Fluxo de autenticação [em bots](~/bots/how-to/authentication/auth-flow-bot.md).
+Inicia um fluxo OAuth, permitindo que os bots se conectem com serviços seguros, conforme descrito em mais detalhes aqui: [Fluxo de autenticação em bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-## <a name="adaptive-cards-actions"></a>Ações de Cartões Adaptáveis
+## <a name="adaptive-cards-actions"></a>Ações de Cartões Adaptativos
 
-Os Cartões Adaptáveis suportam quatro tipos de ação:
+Cartões adaptativos suportam quatro tipos de ação:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
-* [Action.Exebonito](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+* [Action.Exefofo](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-Além das ações mencionadas acima, você pode modificar a carga do Cartão Adaptável para dar suporte a ações existentes da Estrutura de Bot usando uma propriedade no `Action.Submit` `msteams` objeto de `data` `Action.Submit` . As seções a seguir detalham como usar ações da Estrutura de Bot existentes com Cartões Adaptáveis.
+Além das ações mencionadas acima, você pode modificar a carga de cartão adaptável `Action.Submit` para apoiar as ações existentes do Bot Framework usando uma propriedade no objeto de `msteams` `data` `Action.Submit` . As seções abaixo detalham como usar as ações existentes do Bot Framework com cartões adaptativos.
 
 > [!NOTE]
-> Adicionar `msteams` aos dados, com uma ação da Estrutura de Bot, não funciona com um módulo de tarefa cartão adaptável.
+> Adicionar `msteams` dados, com uma ação do Bot Framework, não funciona com um módulo de tarefa de cartão adaptável.
 
-### <a name="adaptive-cards-with-messageback-action"></a>Cartões Adaptáveis com ação messageBack
+### <a name="adaptive-cards-with-messageback-action"></a>Cartões adaptativos com ação messageBack
 
-Para incluir uma `messageBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
+Para incluir uma `messageBack` ação com uma placa adaptativa inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definir como `messageBack` |
-| `displayText` | Opcional. Ecoado pelo usuário no fluxo de chat quando a ação é executada. Este texto não *é* enviado para seu bot. |
-| `value` | Enviado ao bot quando a ação é executada. Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
-| `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot. |
+| `type` | Definido para `messageBack` |
+| `displayText` | Opcional. Ecoado pelo usuário no fluxo de bate-papo quando a ação é realizada. Este texto *não* é enviado para o seu bot. |
+| `value` | Enviado para o seu bot quando a ação é realizada. Você pode codificar o contexto da ação, como identificadores exclusivos ou um objeto JSON. |
+| `text` | Enviado para o seu bot quando a ação é realizada. Use esta propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de alto nível para despachar a lógica do bot. |
 
 #### <a name="example"></a>Exemplo
 
@@ -263,14 +263,14 @@ Para incluir uma `messageBack` ação com um Cartão Adaptável, inclua os segui
 }
 ```
 
-### <a name="adaptive-cards-with-imback-action"></a>Cartões Adaptáveis com ação imBack
+### <a name="adaptive-cards-with-imback-action"></a>Cartões adaptativos com ação imBack
 
-Para incluir uma `imBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
+Para incluir uma `imBack` ação com uma placa adaptativa inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definir como `imBack` |
-| `value` | Cadeia de caracteres que precisa ser ecoada no chat |
+| `type` | Definido para `imBack` |
+| `value` | String que precisa ser ecoado de volta no bate-papo |
 
 #### <a name="example"></a>Exemplo
 
@@ -287,14 +287,14 @@ Para incluir uma `imBack` ação com um Cartão Adaptável, inclua os seguintes 
 }
 ```
 
-### <a name="adaptive-cards-with-signin-action"></a>Cartões Adaptáveis com ação de signin
+### <a name="adaptive-cards-with-signin-action"></a>Cartões Adaptativos com ação signin
 
-Para incluir uma `signin` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
+Para incluir uma `signin` ação com uma placa adaptativa inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definir como `signin` |
-| `value` | Definir para a URL para a que você deseja redirecionar  |
+| `type` | Pronto para `signin` . |
+| `value` | Defina para a URL para a que você deseja redirecionar.  |
 
 #### <a name="example"></a>Exemplo
 
@@ -311,14 +311,14 @@ Para incluir uma `signin` ação com um Cartão Adaptável, inclua os seguintes 
 }
 ```
 
-### <a name="adaptive-cards-with-invoke-action"></a>Cartões Adaptáveis com ação de invocação
+### <a name="adaptive-cards-with-invoke-action"></a>Cartões Adaptativos com ação de invocação
  
-Para incluir uma `invoke` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
+Para incluir uma `invoke` ação com uma placa adaptativa inclua os seguintes detalhes no `msteams` objeto. Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | Definir como `task/fetch` |
-| `data` | Definir o valor  |
+| `type` | Definido para `task/fetch` |
+| `data` | Defina o valor  |
 
 #### <a name="example"></a>Exemplo
 
@@ -334,7 +334,7 @@ Para incluir uma `invoke` ação com um Cartão Adaptável, inclua os seguintes 
 }
 ```
 
-#### <a name="example-2-with-additional-payload-data"></a>Exemplo 2 (com dados de carga adicionais)
+#### <a name="example-2-with-additional-payload-data"></a>Exemplo 2 (com dados adicionais de carga)
 
 ```json
 {

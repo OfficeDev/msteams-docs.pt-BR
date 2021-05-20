@@ -4,12 +4,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: conector do o365 no teams
-ms.openlocfilehash: 1a625524f4c0bd278bd19b3adecdf6a59bd818a6
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020201"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566520"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -103,7 +103,7 @@ Também é possível usar esse JSON para criar cartões contendo entradas avanç
 }
 ```
 
-Essa mensagem produz o seguinte cartão no canal.
+Esta mensagem produz o seguinte cartão no canal:
 
 ![Captura de tela de um Cartão do conector](~/assets/images/connectors/connector_message.png)
 
@@ -141,13 +141,13 @@ Para obter mais informações sobre as ações do cartão de conector, consulte 
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configurando um webhook de entrada personalizado
 
-Siga estas etapas para ver como enviar um cartão simples para um Conector.
+Siga estas etapas para ver como enviar um cartão simples para um Conector:
 
 1. No Microsoft Teams, escolha **Mais opções** (**&#8943;**) ao lado do nome do canal e escolha **Conectores**.
-2. Role pela lista de Conectores para o **Webhook de entrada** e escolha **Adicionar**.
-3. Digite um nome para o Webhook, carregue uma imagem para associar aos dados dele e escolha **Criar**.
-4. Copie o Webhook para a área de transferência e salve-o. Será necessário a URL do Webhook para enviar informações ao Microsoft Teams.
-5. Escolha **Concluído**.
+1. Role pela lista de Conectores para o **Webhook de entrada** e escolha **Adicionar**.
+1. Digite um nome para o Webhook, carregue uma imagem para associar aos dados dele e escolha **Criar**.
+1. Copie o Webhook para a área de transferência e salve-o. Será necessário a URL do Webhook para enviar informações ao Microsoft Teams.
+1. Escolha **Concluído**.
 
 ### <a name="post-a-message-to-the-webhook-using-curl"></a>Postar uma mensagem no Webhook usando cURL
 
@@ -165,8 +165,8 @@ As etapas a seguir usam [cURL](https://curl.haxx.se/). Iremos supor que você o 
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. Se o POST tiver êxito, você verá uma saída **1** simples por `curl`.
-3. Verifique o cliente do Microsoft Team. Você deverá ver o novo cartão postado na equipe.
+1. Se o POST tiver êxito, você verá uma saída **1** simples por `curl`.
+1. Verifique o cliente do Microsoft Team. Você deverá ver o novo cartão postado na equipe.
 
 ### <a name="post-a-message-to-the-webhook-using-powershell"></a>Postar uma mensagem no Webhook usando PowerShell
 
@@ -178,13 +178,13 @@ As etapas a seguir usam o PowerShell. Iremos supor que você o tenha instalado e
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. Se o POST tiver êxito, você verá uma saída **1** simples por `Invoke-RestMethod`.
-3. Verifique o canal do Microsoft Teams associado à URL do Webhook. Você deverá ver o novo cartão postado no canal.
+1. Se o POST tiver êxito, você verá uma saída **1** simples por `Invoke-RestMethod`.
+1. Verifique o canal do Microsoft Teams associado à URL do Webhook. Você deverá ver o novo cartão postado no canal.
 
 - [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
 
-O seguinte arquivo manifest.json contém os elementos básicos necessários para testar e enviar seu aplicativo.
+A seguinte manifest.jsno arquivo contém os elementos básicos necessários para testar e enviar seu aplicativo:
 
 > [!NOTE]
 > Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do Conector.
@@ -239,40 +239,40 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>O fluxo para o envio de [cartões adaptáveis](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) por meio de um webhook de entrada é o seguinte:
 
-**1.** [Configure um webhook personalizado](#setting-up-a-custom-incoming-webhook) no Teams.</br></br>
-**2.** Crie seu arquivo JSON de cartão adaptável:
+1. [Configure um webhook personalizado](#setting-up-a-custom-incoming-webhook) em Teams.</br></br>
+1. Crie seu arquivo JSON de cartão adaptativo:
 
-```json
-{
-   "type":"message",
-   "attachments":[
-      {
-         "contentType":"application/vnd.microsoft.card.adaptive",
-         "contentUrl":null,
-         "content":{
-            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-            "type":"AdaptiveCard",
-            "version":"1.2",
-            "body":[
-                {
-                "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
-                }
-            ]
-         }
-      }
-   ]
-}
-```
+    ```json
+    {
+       "type":"message",
+       "attachments":[
+          {
+             "contentType":"application/vnd.microsoft.card.adaptive",
+             "contentUrl":null,
+             "content":{
+                "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+                "type":"AdaptiveCard",
+                "version":"1.2",
+                "body":[
+                    {
+                    "type": "TextBlock",
+                    "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
+                    }
+                ]
+             }
+          }
+       ]
+    }
+    ```
 
-> [!div class="checklist"]
->
-> - O campo `"type"` deve ser `"message"`.
-> - A matriz `"attachments"` contém um conjunto de objetos de cartão.
-> - O campo `"contentType"` deve ser definido para o tipo de cartão adaptável.
-> - O objeto `"content"` é o cartão formatado em JSON.
+    > [!div class="checklist"]
+    >
+    > - O campo `"type"` deve ser `"message"`.
+    > - A matriz `"attachments"` contém um conjunto de objetos de cartão.
+    > - O campo `"contentType"` deve ser definido para o tipo de cartão adaptável.
+    > - O objeto `"content"` é o cartão formatado em JSON.
 
-**3.** Teste seu cartão adaptável com o Postman
+1. Teste seu cartão adaptativo com Carteiro.
 
 Você pode testar seu cartão adaptável usando o [Postman](https://www.postman.com) para enviar uma solicitação POST para o URL que você criou ao configurar o webhook de entrada. Cole seu arquivo JSON no corpo da solicitação e visualize sua mensagem de cartão adaptável no Teams.
 
@@ -281,9 +281,9 @@ Você pode testar seu cartão adaptável usando o [Postman](https://www.postman.
 
 ## <a name="testing-your-connector"></a>Testar o conector
 
-Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto do Painel do Desenvolvedor do Connectors (modificado conforme indicado na seção anterior) e os dois arquivos de ícone.
+Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo manifesto do Painel de Desenvolvedor de Conectores que foi modificado conforme indicado na seção anterior e nos dois arquivos de ícones.
 
-Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver o aplicativo na seção **Carregado**.
+Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver seu aplicativo na **seção Upload:**
 
 ![Captura de tela da seção carregada na caixa de diálogo do Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -305,8 +305,6 @@ Os limites de taxa de aplicativos controlam o tráfego que um conector ou um web
 | 7200 | 150  |
 | 86400  | 1800  |
 
-*Confira também* [Conectores do Office 365 — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
 Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Referir [Respostas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar atingir os limites da taxa.
 
 ```csharp
@@ -326,3 +324,7 @@ try
 ```
  
 Esses limites existem para reduzir o spam em um canal por um conector e garantem uma experiência ideal para os usuários finais.
+
+## <a name="see-also"></a>Confira também
+
+[Office 365 Conectores — Microsoft Teams](/connectors/teams/)
