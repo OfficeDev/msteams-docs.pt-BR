@@ -1,6 +1,6 @@
 ---
-title: Formatação de texto suportada em conversas
-description: Descreve o suporte de formatação de texto em conversas de bot
+title: Formatação de texto com suporte em conversas
+description: Descreve o suporte à formatação de texto em conversas de bot
 keywords: bots mensagens de conversas
 ms.topic: how-to
 localization_priority: Normal
@@ -16,40 +16,40 @@ ms.locfileid: "52566744"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Você pode definir a propriedade opcional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) para controlar como o conteúdo de texto da sua mensagem é renderizado.
+Você pode definir a propriedade opcional para controlar como o conteúdo de texto da mensagem [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) é renderizado.
 
-Microsoft Teams suporta as seguintes opções de formatação:
+Microsoft Teams oferece suporte às seguintes opções de formatação:
 
 | Valor TextFormat | Descrição |
 | --- | --- |
-| planície | O texto deve ser tratado como texto bruto sem nenhuma formatação aplicada. |
-| Markdown | O texto deve ser tratado como formatação de Markdown e prestado no canal conforme apropriado; consulte [Formatação de conteúdo de texto](#formatting-text-content) para estilos suportados. |
-| XML | O texto é uma marcação XML simples; consulte [Formatação de conteúdo de texto](#formatting-text-content) para estilos suportados. |
+| plain | O texto deve ser tratado como texto bruto sem nenhuma formatação aplicada. |
+| Markdown | O texto deve ser tratado como formatação markdown e renderizado no canal conforme apropriado; consulte [Formatando conteúdo de texto](#formatting-text-content) para estilos com suporte. |
+| xml | O texto é uma marcação XML simples; consulte [Formatando conteúdo de texto](#formatting-text-content) para estilos com suporte. |
 
 ## <a name="formatting-text-content"></a>Formatação de conteúdo de texto
 
-Microsoft Teams suporta um subconjunto de tags de formatação de Markdown e XML (HTML).
+Microsoft Teams oferece suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
 
-Atualmente, aplicam-se as seguintes limitações:
+Atualmente, as seguintes limitações se aplicam:
 
-* Mensagens somente de texto não suportam formatação de tabela
+* Mensagens somente texto não suportam formatação de tabela
 
-Para obter informações sobre a formatação em cartões, consulte [Teams Referência de Cartão](~/task-modules-and-cards/cards/cards-reference.md).
+Para obter informações sobre formatação em cartões, [consulte Teams Referência de Cartão](~/task-modules-and-cards/cards/cards-reference.md).
 
-### <a name="cross-platform-support"></a>Suporte multiplataforma
+### <a name="cross-platform-support"></a>Suporte entre plataformas
 
-Para garantir que sua formatação funcione em todas as plataformas suportadas por Microsoft Teams, esteja ciente de que alguns estilos não são suportados no momento em todas as plataformas.
+Para garantir que sua formatação funcione em todas as plataformas suportadas pelo Microsoft Teams, esteja ciente de que alguns estilos não são suportados atualmente em todas as plataformas.
 
-| Style                     | Mensagens somente de texto | Cartões (somente XML) |
+| Style                     | Mensagens somente texto | Cartões (somente XML) |
 |---------------------------|--------------------|------------------|
 | bold                      | ✔                  | ✖                |
 | italic                    | ✔                  | ✔                |
-| cabeçalho (níveis &ndash; 13) | ✖                  | ✔                |
+| header (níveis 1 &ndash; 3) | ✖                  | ✔                |
 | strikethrough             | ✖                  | ✔                |
 | regra horizontal           | ✖                  | ✖                |
-| lista não rdenada            | ✖                  | ✔                |
+| lista semordenagem            | ✖                  | ✔                |
 | lista ordenada              | ✖                  | ✔                |
-| texto pré-formado         | ✔                  | ✔                |
+| texto pré-formatado         | ✔                  | ✔                |
 | blockquote                | ✔                  | ✔                |
 | hiperlink                 | ✔                  | ✔                |
 | link de imagem                | ✔                  | ✖                |
@@ -58,18 +58,18 @@ Para garantir que sua formatação funcione em todas as plataformas suportadas p
 
 O suporte para formatação de texto varia de acordo com o tipo de mensagem e por plataforma.
 
-#### <a name="text-only-messages"></a>Mensagens somente de texto
+#### <a name="text-only-messages"></a>Mensagens somente texto
 
 | Style                     | Desktop | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |
-| cabeçalho (níveis &ndash; 13) | ✖       | ✖   | ✖       |
+| header (níveis 1 &ndash; 3) | ✖       | ✖   | ✖       |
 | strikethrough             | ✔       | ✔   | ✖       |
 | regra horizontal           | ✖       | ✖   | ✖       |
-| lista não rdenada            | ✔       | ✖   | ✖       |
+| lista semordenagem            | ✔       | ✖   | ✖       |
 | lista ordenada              | ✔       | ✖   | ✖       |
-| texto pré-formado         | ✔       | ✔   | ✔       |
+| texto pré-formatado         | ✔       | ✔   | ✔       |
 | blockquote                | ✔       | ✔   | ✔       |
 | hiperlink                 | ✔       | ✔   | ✔       |
 | link de imagem                | ✔       | ✔   | ✔       |
@@ -80,11 +80,11 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e po
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
-| cabeçalho (níveis &ndash; 13) | **Texto** | `### Text` | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `### Text` | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| lista não rdenada | <ul><li>texto</li><li>texto</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
+| lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
-| texto pré-formado | `text` | `` `text` `` | `<pre>text</pre>` |
+| texto pré-formatado | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>texto</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hiperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
 | link de imagem | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

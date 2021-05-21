@@ -17,7 +17,7 @@ O App Studio torna fácil começar a criar ou integrar seus próprios aplicativo
 
 ## <a name="installing-app-studio"></a>Instalando o App Studio
 
-O App Studio é um aplicativo do Teams que pode ser encontrado na loja do Teams. Siga este link para download direto [App Studio](https://aka.ms/InstallTeamsAppStudio). Você também pode encontrar o aplicativo na loja de aplicativos.
+O App Studio é um aplicativo do Teams que pode ser encontrado na loja do Teams. Siga este link para baixar diretamente [o App Studio](https://aka.ms/InstallTeamsAppStudio). Você também pode encontrar o aplicativo na loja de aplicativos.
 
 Na loja, procure pelo App Studio.
 
@@ -35,7 +35,7 @@ Quando estiver no App Studio, clique na guia **Editor de manifesto**, na qual vo
 
 ## <a name="app-studio-features"></a>Recursos do App Studio
 
-Esta seção abrange recursos, como conversação, editor manifesto, detalhes e recursos. Você pode personalizar seus recursos usando a personalização de aplicativos.
+Esta seção abrange recursos, como conversa, editor de manifesto, detalhes e recursos. Você pode personalizar seus recursos usando a personalização do aplicativo.
 
 ### <a name="conversation"></a>Conversa
 
@@ -56,7 +56,7 @@ A seção de detalhes do Editor de Manifesto define a descrição de alto nível
 A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo são definidos e onde os detalhes de cada um desses recursos são listados.
 
 > [!NOTE]
-> Como uma prática recomendada, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes seguirem ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
+> Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
 ##### <a name="tabs"></a>Guias
@@ -67,7 +67,7 @@ A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo s
 
   Você também deve fornecer outros domínios a partir dos quais a guia espera carregar ou se vincular. 
 
-* **Guias pessoais.** Esta seção permite definir um conjunto de guias que são apresentadas por padrão na experiência de aplicativo pessoal (experiência que um usuário tem com seu aplicativo fora do contexto de uma equipe ou canal). Nesta seção, forneça o nome da guia, um identificador exclusivo, a URL que aponta para a interface do usuário a ser exibida no Teams e, opcionalmente, a URL a ser usada se um usuário optar por exibir a guia em um navegador. Com Teams guias, forneça quaisquer domínios adicionais dos quais a guia espera carregar ou vincular.
+* **Guias pessoais.** Esta seção permite definir um conjunto de guias que são apresentadas por padrão na experiência do aplicativo pessoal (experiência que um usuário tem com seu aplicativo fora do contexto de uma equipe ou canal). Nesta seção, forneça o nome da guia, um identificador exclusivo, a URL que aponta para a interface do usuário a ser exibida no Teams e, opcionalmente, a URL a ser usada se um usuário optar por exibir a guia em um navegador. Com Teams guias, forneça quaisquer domínios adicionais dos quais a guia espera carregar ou vincular.
 
 ##### <a name="bots"></a>Bots
 
@@ -75,17 +75,17 @@ Esta seção permite que você adicione um [bot de conversação](~/bots/what-ar
 
 Se você ainda não registrou um bot com o Bot Framework, clique em **Register** para criar um novo. Depois de terminar de registrar seu bot, volte a esta seção do Editor de Manifesto para inserir seu nome e a ID do Bot Framework.
 
-Depois de fornecer as informações do seu bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando que indica sua sintaxe e argumentos, e o(s) escopo(s) ao qual este comando deve ser aplicado.
+Depois de fornecer as informações do bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando que indica sua sintaxe e argumentos, e o(s) escopo(s) ao qual este comando deve ser aplicado.
 
 > [!NOTE]
-> Se você definiu seu bot para suportar apenas um escopo, os comandos especificados para o escopo sem suporte passaram a ser ignorados. Você pode editar os escopos que seu bot oferece suporte a qualquer momento.
+> Se você tiver definido seu bot para dar suporte a apenas um escopo, os comandos especificados para o escopo sem suporte serão ignorados. Você pode editar os escopos que seu bot oferece suporte a qualquer momento.
 
 ##### <a name="connectors"></a>Conectores
 
 Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha **Configurar** e insira o nome e a ID do conector. Se quiser um novo conector clique em **Registrar** para ser levado até o Painel do Desenvolvedor do Conector em seu navegador.
 
 > [!NOTE]
-> A personalização de aplicativos permite que os administradores alterem a aparência dos aplicativos carregados através de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador Teams personalizar o nome de um aplicativo de **Contoso** para **Agente Contoso,** então o aplicativo aparecerá com o novo nome **Agente Contoso** para os usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como **Contoso**.
+> A personalização do aplicativo permite que os administradores alterem a aparência dos aplicativos carregados por meio de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador Teams personalizar o nome de um aplicativo da **Contoso** para o Agente **contoso,** o aplicativo aparecerá com o novo nome Agente **contoso** para usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como **Contoso**.
 
 
 ##### <a name="messaging-extensions"></a>Extensões de Mensagens
@@ -98,12 +98,12 @@ Depois de configurar o bot subjacente, defina os comandos e os parâmetros que a
 
 Cada comando requer um título e uma ID. O comando pode conter, opcionalmente, uma descrição para o usuário. Cada comando pode dar suporte a até cinco parâmetros, cada um dos quais requer:
 
-* O nome do parâmetro como aparece no Teams cliente e está incluído na solicitação do usuário.
-* Um título fácil de usar.
+* O nome do parâmetro como ele aparece no cliente Teams e está incluído na solicitação do usuário.
+* Um título amigável.
 * Uma descrição opcional.
 
 > [!NOTE]
-> Para criar extensão de mensagens usando o estúdio de aplicativos, consulte [criar extensão de mensagens usando o estúdio de aplicativos](~/resources/create-messaging-extension-using-appstudio.md).
+> Para criar extensão de mensagens usando o app studio, consulte [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Testar e Distribuir
 
@@ -116,14 +116,14 @@ Na página inicial do seu projeto, você pode carregar seu aplicativo em uma equ
 
 Um cartão é um contêiner para informações curtas ou relacionadas. O Microsoft Teams dá suporte a cartões, que podem ter várias propriedades e anexos. Os cartões são uma maneira fundamental para que bots e conectores retransmitam informações ativas para os usuários. 
 
-Para tornar esse processo mais fácil e menos propenso a erros, a guia Editor de cartões permite que você construa Cartões heróis ou cartões de miniatura usando um formulário e verifique e teste a placa resultante (exatamente como um usuário o veria) através de um bot. Ele também fornece o código JSON, C# ou Node.js correspondente para o cartão que você pode copiar/colar no código-fonte do aplicativo.
+Para tornar esse processo mais fácil e menos propenso a erros, a guia Editor de Cartões permite que você crie Cartões Hero ou Cartões de Miniatura usando um formulário e verifique e teste o cartão resultante (exatamente como um usuário o verá) por meio de um bot. Ele também fornece o código JSON, C# ou Node.js correspondente para o cartão que você pode copiar/colar no código-fonte do aplicativo.
 
 Se você já tiver um cartão que gostaria de verificar no Teams, poderá colar o JSON desse cartão na guia JSON em *Adicionar informações do cartão* e enviá-lo para si mesmo para ver como ele fica em um chat.
 
 ### <a name="react-control-library"></a>Biblioteca de Controle de Reação
 
 >[!Note]
-> Esta biblioteca de controle React é preterida no futuro. Considere usar os [controles de reação Fluent-UI como uma alternativa](https://microsoft.github.io/fluent-ui-react/) anteriormente Stardust UI.
+> Essa React de controle é preterida no futuro. Considere usar os [controles de reação fluent-UI como uma interface do](https://microsoft.github.io/fluent-ui-react/) usuário stardust alternativa anteriormente.
 
 Criar um aplicativo que acompanhe as práticas recomendadas do Teams é uma ótima maneira de dar ao seu aplicativo uma aparência e sensação que se encaixem  perfeitamente com a experiência do cliente do Teams. Os controles da interface do usuário que você usa são essenciais para alcançar esse fim. Para facilitar a criação de uma interface de usuário consistente, o App Studio fornece várias categorias de controles de interface do usuário que seguem princípios de design do Teams.
 

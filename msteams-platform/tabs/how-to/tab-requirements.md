@@ -1,8 +1,8 @@
 ---
-title: Entendendo os requisitos da guia
+title: Noções básicas sobre os requisitos da guia
 author: laujan
-description: Todas as guias Microsoft Teams devem aderir a esses requisitos.
-keywords: equipes guias canal grupo configurável
+description: Todas as guias Microsoft Teams devem seguir esses requisitos.
+keywords: canal de grupo de guias do teams configurável
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
@@ -15,26 +15,26 @@ ms.locfileid: "52566660"
 ---
 # <a name="tab-requirements"></a>Requisitos de tabulação
 
-Teams guias devem ser respeitadas aos seguintes requisitos:
+Teams guias devem seguir os seguintes requisitos:
 
-* Você deve permitir que suas páginas de guia sejam servidas em um iFrame, através de cabeçalhos de resposta HTTP X-Frame-Options e/ou Content-Security-Policy..
-  * Definir cabeçalho: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
-  * Para compatibilidade com o Internet Explorer 11, também `X-Content-Security-Policy` seja.
-  * Alternativamente, definir cabeçalho `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Este cabeçalho é preterido, mas ainda respeitado pela maioria dos navegadores.
-* Normalmente, como uma proteção contra o jacking de cliques, as páginas de login não são renderizadas em iFrames. Portanto, sua lógica de autenticação precisa usar um método diferente do redirecionamento. Por exemplo, use autenticação baseada em tokens ou cookie.
+* Você deve permitir que suas páginas de tabulação sejam atendidas em um iFrame, por meio de cabeçalhos de resposta HTTP X-Frame-Options e/ou Content-Security-Policy.
+  * Definir o header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
+  * Para compatibilidade com o Internet Explorer 11, de definir `X-Content-Security-Policy` também.
+  * Como alternativa, de definir o header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Esse header é preterido, mas ainda é respeitado pela maioria dos navegadores.
+* Normalmente, como uma proteção contra o uso de cliques, as páginas de logon não são renderizações em iFrames. Portanto, sua lógica de autenticação precisa usar um método diferente de redirecionamento. Por exemplo, use autenticação baseada em token ou cookie.
 
 > [!NOTE]
-> O Chrome 80, com lançamento previsto para o início de 2020, introduz novos valores de cookies e impõe políticas de cookies por padrão. Recomenda-se que você defina o uso pretendido para seus cookies em vez de confiar no comportamento padrão do navegador. Para obter mais informações, consulte [o atributo cookie SameSite (atualização 2020)](../../resources/samesite-cookie-update.md).
+> O Chrome 80, agendado para lançamento no início de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. É recomendável definir o uso pretendido para seus cookies em vez de depender do comportamento padrão do navegador. Para obter mais informações, consulte [Atributo de cookie sameSite (atualização 2020)](../../resources/samesite-cookie-update.md).
 
-* Os navegadores aderem a uma restrição de política de mesma origem que impede uma página da Web de fazer solicitações para um domínio diferente daquele que serviu uma página da Web. No entanto, você pode precisar redirecionar a configuração ou a página de conteúdo para um outro domínio ou subdomínio. Sua lógica de navegação entre domínios deve permitir que o cliente Teams valide a origem contra uma lista de códigos de validação estática no manifesto do aplicativo ao carregar ou se comunicar com a guia.
+* Os navegadores aderem a uma restrição de política de mesma origem que impede uma página da Web de fazer solicitações para um domínio diferente do que aquele que atendeu a uma página da Web. No entanto, talvez seja necessário redirecionar a página de configuração ou conteúdo para outro domínio ou subdomínio. Sua lógica de navegação entre domínios deve permitir que o cliente Teams valide a origem em relação a uma lista validDomains estática no manifesto do aplicativo ao carregar ou se comunicar com a guia.
 
-* Para criar uma experiência perfeita, você deve estilizar suas guias com base no tema, design e intenção do Teams cliente. Normalmente, as guias funcionam melhor quando são construídas para atender a uma necessidade específica e se concentrar em um pequeno conjunto de tarefas ou um subconjunto de dados relevantes para a localização do canal da guia.
+* Para criar uma experiência perfeita, você deve projetar suas guias com base Teams tema, design e intenção do cliente. Normalmente, as guias funcionam melhor quando são criadas para atender a uma necessidade específica e se concentrar em um pequeno conjunto de tarefas ou em um subconjunto de dados relevante para o local do canal da guia.
 
-* Na sua página de conteúdo, adicione uma referência ao [Microsoft Teams cliente JavaScript SDK](/javascript/api/overview/msteams-client) usando tags de script. Seguindo a carga da página, faça uma chamada para `microsoftTeams.initialize()` . Sua página não será exibida se você não fizer isso.
+* Em sua página de conteúdo, adicione uma referência ao [Microsoft Teams SDK](/javascript/api/overview/msteams-client) do cliente JavaScript usando marcas de script. Após o carregamento da página, faça uma chamada para `microsoftTeams.initialize()` . Sua página não será exibida se você não o fizer.
 
-* Para que a autenticação funcione em clientes móveis, você deve atualizá-lo Teams JavaScript SDK para pelo menos a versão 1.4.1.
+* Para que a autenticação funcione em clientes móveis, você deve atualizar Teams SDK JavaScript para pelo menos a versão 1.4.1.
 
-* Se você optar por ter seu canal ou aba de grupo aparecendo em Teams clientes móveis, a `setSettings()` configuração deve ter um valor para o `websiteUrl` imóvel.
+* Se você optar por fazer com que seu canal ou guia de grupo apareça Teams clientes móveis, a configuração deve ter um `setSettings()` valor para a `websiteUrl` propriedade.
 
 ## <a name="next-step"></a>Próxima etapa
 

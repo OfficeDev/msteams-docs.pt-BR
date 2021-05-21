@@ -4,12 +4,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: conector do o365 no teams
-ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566520"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583733"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Enviar mensagens a conectores e webhooks
 
@@ -184,7 +184,7 @@ As etapas a seguir usam o PowerShell. Iremos supor que você o tenha instalado e
 - [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
 
-A seguinte manifest.jsno arquivo contém os elementos básicos necessários para testar e enviar seu aplicativo:
+O seguinte manifest.jsno arquivo contém os elementos básicos necessários para testar e enviar seu aplicativo:
 
 > [!NOTE]
 > Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do Conector.
@@ -239,8 +239,8 @@ A seguinte manifest.jsno arquivo contém os elementos básicos necessários para
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>O fluxo para o envio de [cartões adaptáveis](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) por meio de um webhook de entrada é o seguinte:
 
-1. [Configure um webhook personalizado](#setting-up-a-custom-incoming-webhook) em Teams.</br></br>
-1. Crie seu arquivo JSON de cartão adaptativo:
+1. [Configurar um webhook personalizado](#setting-up-a-custom-incoming-webhook) Teams.
+1. Crie seu arquivo JSON de cartão adaptável:
 
     ```json
     {
@@ -272,7 +272,7 @@ A seguinte manifest.jsno arquivo contém os elementos básicos necessários para
     > - O campo `"contentType"` deve ser definido para o tipo de cartão adaptável.
     > - O objeto `"content"` é o cartão formatado em JSON.
 
-1. Teste seu cartão adaptativo com Carteiro.
+1. Teste seu cartão adaptável com Postman.
 
 Você pode testar seu cartão adaptável usando o [Postman](https://www.postman.com) para enviar uma solicitação POST para o URL que você criou ao configurar o webhook de entrada. Cole seu arquivo JSON no corpo da solicitação e visualize sua mensagem de cartão adaptável no Teams.
 
@@ -281,9 +281,9 @@ Você pode testar seu cartão adaptável usando o [Postman](https://www.postman.
 
 ## <a name="testing-your-connector"></a>Testar o conector
 
-Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo manifesto do Painel de Desenvolvedor de Conectores que foi modificado conforme indicado na seção anterior e nos dois arquivos de ícones.
+Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto do Painel de Desenvolvedores de Conectores que foi modificado conforme direcionado na seção anterior e os dois arquivos de ícone.
 
-Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver seu aplicativo na **seção Upload:**
+Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver seu aplicativo na **seção Carregado:**
 
 ![Captura de tela da seção carregada na caixa de diálogo do Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
