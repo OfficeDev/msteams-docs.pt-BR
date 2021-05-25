@@ -1,145 +1,148 @@
 ---
-title: Projetar seu aplicativo - Noções básicas
-description: Saiba mais sobre as noções básicas sobre como projetar seu aplicativo do Microsoft Teams, incluindo layout, esquema de cores e muito mais.
+title: Projetar seu aplicativo - Compreender o sistema de design
+description: Saiba mais sobre as noções básicas sobre como projetar seu aplicativo Microsoft Teams, incluindo layout, esquema de cores e muito mais.
 author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: c0edfe7ac538fc27b7f255cdd09d2853f6f4cebc
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0af2a22200e62be9289f167b0306c9769366e46a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020769"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630835"
 ---
-# <a name="microsoft-teams-app-design-fundamentals"></a><span data-ttu-id="e6ed3-103">Fundamentos do design de aplicativos do Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="e6ed3-103">Microsoft Teams app design fundamentals</span></span>
+# <a name="microsoft-teams-app-design-system"></a><span data-ttu-id="b6128-103">Microsoft Teams de design de aplicativo</span><span class="sxs-lookup"><span data-stu-id="b6128-103">Microsoft Teams app design system</span></span>
 
-<span data-ttu-id="e6ed3-104">Aprenda rapidamente sobre os fundamentos do design de aplicativos do Teams.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-104">Quickly learn about the fundamentals of Teams app design.</span></span> <span data-ttu-id="e6ed3-105">Você pode encontrar orientações e exemplos abrangentes no Kit de Interface do Usuário do <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams (Figma)</a>.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-105">You can find comprehensive guidance and examples in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma)</a>.</span></span>
+<span data-ttu-id="b6128-104">Aprenda rapidamente sobre os fundamentos do design Teams aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b6128-104">Quickly learn about the fundamentals of Teams app design.</span></span> <span data-ttu-id="b6128-105">Você pode encontrar orientações e exemplos abrangentes no kit Microsoft Teams de interface do usuário <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">(Figma)</a>.</span><span class="sxs-lookup"><span data-stu-id="b6128-105">You can find comprehensive guidance and examples in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma)</a>.</span></span>
 
-## <a name="layout"></a><span data-ttu-id="e6ed3-106">Layout</span><span class="sxs-lookup"><span data-stu-id="e6ed3-106">Layout</span></span>
+## <a name="layout"></a><span data-ttu-id="b6128-106">Layout</span><span class="sxs-lookup"><span data-stu-id="b6128-106">Layout</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-107">O Teams depende de um layout de grade para garantir relações consistentes e elegantes entre componentes de design.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-107">Teams relies on a grid layout to ensure consistent and elegant relationships between design components.</span></span> <span data-ttu-id="e6ed3-108">A unidade base de 4 pixels da grade permite que os componentes sejam dimensionados de forma consistente em todos os tamanhos de exibição no Teams.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-108">The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.</span></span>
+      <span data-ttu-id="b6128-107">Teams depende de um layout de grade para garantir relações consistentes e elegantes entre componentes de design.</span><span class="sxs-lookup"><span data-stu-id="b6128-107">Teams relies on a grid layout to ensure consistent and elegant relationships between design components.</span></span> <span data-ttu-id="b6128-108">A unidade base de 4 pixels da grade permite que os componentes sejam dimensionados consistentemente em todos os tamanhos de exibição em Teams.</span><span class="sxs-lookup"><span data-stu-id="b6128-108">The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.</span></span>
 
-      <span data-ttu-id="e6ed3-109"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de layout completo (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-109"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full layout guidelines (Figma)</a></span></span>
+      * [<span data-ttu-id="b6128-109">Consulte diretrizes de layout completo (Figma)</span><span class="sxs-lookup"><span data-stu-id="b6128-109">See full layout guidelines (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
+      * [<span data-ttu-id="b6128-110">Implementar layout (interface do usuário fluente)</span><span class="sxs-lookup"><span data-stu-id="b6128-110">Implement layout (Fluent UI)</span></span>](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Imagem conceitual do Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Imagem conceitual do Teams layout." border="false":::
    :::column-end:::
 
 :::row-end:::
 
-## <a name="avatars"></a><span data-ttu-id="e6ed3-111">Avatares</span><span class="sxs-lookup"><span data-stu-id="e6ed3-111">Avatars</span></span>
+## <a name="avatars"></a><span data-ttu-id="b6128-112">Avatares</span><span class="sxs-lookup"><span data-stu-id="b6128-112">Avatars</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-112">Um avatar é uma representação gráfica de uma pessoa, equipe, bot ou entidade no Teams.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-112">An avatar is a graphical representation of a person, team, bot, or entity in Teams.</span></span> <span data-ttu-id="e6ed3-113">Um grupo de avatares é frequentemente usado para transmitir atividade ao vivo ou representar uma lista de uma forma que preserva o espaço vertical.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-113">An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space.</span></span> 
+      <span data-ttu-id="b6128-113">Um avatar é uma representação gráfica de uma pessoa, equipe, bot ou entidade em Teams.</span><span class="sxs-lookup"><span data-stu-id="b6128-113">An avatar is a graphical representation of a person, team, bot, or entity in Teams.</span></span> <span data-ttu-id="b6128-114">Um grupo de avatares é frequentemente usado para transmitir atividade ao vivo ou representar uma lista de uma forma que preserva o espaço vertical.</span><span class="sxs-lookup"><span data-stu-id="b6128-114">An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space.</span></span> 
 
-      <span data-ttu-id="e6ed3-114"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de avatar completas (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-114"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full avatar guidelines (Figma)</a></span></span>
+      * <span data-ttu-id="b6128-115"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de avatar completas (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-115"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full avatar guidelines (Figma)</a></span></span>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Imagem conceitual para o Kit de Interface do Usuário do Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Imagem conceitual de Teams avatares." border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="colors"></a><span data-ttu-id="e6ed3-116">Cores</span><span class="sxs-lookup"><span data-stu-id="e6ed3-116">Colors</span></span>
+## <a name="icons"></a><span data-ttu-id="b6128-117">Ícones</span><span class="sxs-lookup"><span data-stu-id="b6128-117">Icons</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-117">A Web e a área de trabalho do Teams suportam temas padrão (claro), escuro e de alto contraste, enquanto o Teams mobile dá suporte a temas claros e escuros.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-117">Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes.</span></span> <span data-ttu-id="e6ed3-118">Cada tema tem seu próprio esquema de cores.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-118">Each theme has its own color scheme.</span></span>
+      <span data-ttu-id="b6128-118">O ícone principal do seu aplicativo pode ser muito longo ao transmitir sua marca para Teams usuários.</span><span class="sxs-lookup"><span data-stu-id="b6128-118">Your app's primary icon can go a long way in conveying your brand to Teams users.</span></span> <span data-ttu-id="b6128-119">Ter o design de ícone correto também é importante [para publicar seu aplicativo](../../concepts/build-and-test/apps-package.md) no Teams store.</span><span class="sxs-lookup"><span data-stu-id="b6128-119">Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Teams store.</span></span>
 
-      <span data-ttu-id="e6ed3-119"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de cores completas e tokens de cores disponíveis (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-119"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full color guidelines and available color tokens (Figma)</a></span></span>
+      <span data-ttu-id="b6128-120">Você também pode usar ícones de interface do usuário fluente em todo o seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="b6128-120">You also can use Fluent UI icons throughout your app:</span></span>
 
-   :::column-end:::
-   :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Imagem de conceito para o Microsoft Teams UI Kit." border="false":::
-   :::column-end:::
-
-:::row-end:::
-
-## <a name="iconography"></a><span data-ttu-id="e6ed3-121">Iconografia</span><span class="sxs-lookup"><span data-stu-id="e6ed3-121">Iconography</span></span>
-
-:::row:::
-
-   :::column span="3":::
-
-      <span data-ttu-id="e6ed3-122">Os aplicativos do Teams usam ícones fornecidos pela interface do usuário fluente.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-122">Teams apps use icons provided by Fluent UI.</span></span>
-
-### <a name="resources"></a><span data-ttu-id="e6ed3-123">Recursos</span><span class="sxs-lookup"><span data-stu-id="e6ed3-123">Resources</span></span>
-
-      * <span data-ttu-id="e6ed3-124"><a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Consulte os ícones mais recentes do Fluent (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-124"><a href="https://www.figma.com/community/file/836835755999342788" target="_blank">See the latest Fluent icons (Figma)</a></span></span>
-      * <span data-ttu-id="e6ed3-125"><a href="https://aka.ms/fluent-ui-icons" target="_blank">Experimente ícones fluentes (interface do usuário fluente)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-125"><a href="https://aka.ms/fluent-ui-icons" target="_blank">Try out Fluent icons (Fluent UI)</a></span></span>
-      * <span data-ttu-id="e6ed3-126"><a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Obter a biblioteca de ícones fluent (GitHub)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-126"><a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Get the Fluent icon library (GitHub)</a></span></span>
+      * <span data-ttu-id="b6128-121"><a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obter o conjunto de ícones fluent mais recente (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-121"><a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Get the latest Fluent icon set (Figma)</a></span></span>
+      * [<span data-ttu-id="b6128-122">Implementar os ícones (Interface do Usuário Fluente)</span><span class="sxs-lookup"><span data-stu-id="b6128-122">Implement the icons (Fluent UI)</span></span>](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Ilustração conceitual do Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Imagem conceitual de Teams ícones." border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="typography"></a><span data-ttu-id="e6ed3-128">Tipografia</span><span class="sxs-lookup"><span data-stu-id="e6ed3-128">Typography</span></span>
+## <a name="type"></a><span data-ttu-id="b6128-124">Tipo</span><span class="sxs-lookup"><span data-stu-id="b6128-124">Type</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-129">O Teams usa a interface do usuário segoe para sua rampa de tipos e tamanhos e pesos de fontes diferentes para ajudar a criar hierarquia e garantir a capacidade de leitura.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-129">Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.</span></span>
+      <span data-ttu-id="b6128-125">Teams usa a interface do usuário segoe para sua rampa de tipos e tamanhos e pesos de fontes diferentes para ajudar a criar hierarquia e garantir a capacidade de leitura.</span><span class="sxs-lookup"><span data-stu-id="b6128-125">Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.</span></span>
 
-      <span data-ttu-id="e6ed3-130"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de tipografia completas (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-130"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full typography guidelines (Figma)</a></span></span>
+      * <span data-ttu-id="b6128-126"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de tipo completo (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-126"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full type guidelines (Figma)</a></span></span>
+      * [<span data-ttu-id="b6128-127">Implementar tipografia (interface do usuário fluente)</span><span class="sxs-lookup"><span data-stu-id="b6128-127">Implement typography (Fluent UI)</span></span>](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Figura conceitual do Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Imagem conceitual da Teams tipografia." border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="copy-and-content"></a><span data-ttu-id="e6ed3-132">Copiar e conteúdo</span><span class="sxs-lookup"><span data-stu-id="e6ed3-132">Copy and content</span></span>
+## <a name="colors"></a><span data-ttu-id="b6128-129">Cores</span><span class="sxs-lookup"><span data-stu-id="b6128-129">Colors</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-133">Para fazer parte do Teams, a cópia do aplicativo em geral deve seguir estes princípios de voz da [Microsoft:](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human)quentes e relaxados, nítidos e claros e prontos para dar as mãos.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-133">To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.</span></span>
+      <span data-ttu-id="b6128-130">Teams web e desktop suportam temas padrão (claro), escuro e de alto contraste, enquanto Teams móveis suportam temas claros e escuros.</span><span class="sxs-lookup"><span data-stu-id="b6128-130">Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes.</span></span> <span data-ttu-id="b6128-131">Cada tema tem seu próprio esquema de cores.</span><span class="sxs-lookup"><span data-stu-id="b6128-131">Each theme has its own color scheme.</span></span>
 
-      <span data-ttu-id="e6ed3-134"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte as diretrizes de conteúdo e cópia completas, incluindo a escrita para bots (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-134"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a></span></span>
+      * <span data-ttu-id="b6128-132"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de cores completas e tokens de cores disponíveis (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-132"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full color guidelines and available color tokens (Figma)</a></span></span>
+      * [<span data-ttu-id="b6128-133">Implementar cores (interface do usuário fluente)</span><span class="sxs-lookup"><span data-stu-id="b6128-133">Implement colors (Fluent UI)</span></span>](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+
+   :::column-end:::
+   :::column span="1":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Imagem de conceito de Teams cores." border="false":::
+   :::column-end:::
+
+:::row-end:::
+
+## <a name="shape-and-elevation"></a><span data-ttu-id="b6128-135">Forma e elevação</span><span class="sxs-lookup"><span data-stu-id="b6128-135">Shape and elevation</span></span>
+
+:::row:::
+
+   :::column span="3":::
+
+      <span data-ttu-id="b6128-136">Você pode usar a forma e a elevação para criar hierarquia adicional em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b6128-136">You can use shape and elevation to create additional hierarchy in your app.</span></span> 
+
+      * <span data-ttu-id="b6128-137"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de forma e elevação completas (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-137"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full shape and elevation guidelines (Figma)</a></span></span>
+      * [<span data-ttu-id="b6128-138">Implementar forma e elevação (Interface do Usuário Fluente)</span><span class="sxs-lookup"><span data-stu-id="b6128-138">Implement shape and elevation (Fluent UI)</span></span>](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Imagem conceitual do Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceitual da forma e da elevação." border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="brand-expression"></a><span data-ttu-id="e6ed3-136">Expressão da marca</span><span class="sxs-lookup"><span data-stu-id="e6ed3-136">Brand expression</span></span>
+## <a name="copy-and-content"></a><span data-ttu-id="b6128-140">Copiar e conteúdo</span><span class="sxs-lookup"><span data-stu-id="b6128-140">Copy and content</span></span>
 
 :::row:::
 
    :::column span="3":::
 
-      <span data-ttu-id="e6ed3-137">O ícone do aplicativo pode ser muito longo para transmitir sua marca aos usuários do Teams.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-137">Your app icon can go a long way in conveying your brand to Teams users.</span></span> <span data-ttu-id="e6ed3-138">Fazer com que o design do ícone seja correto também é importante [para publicar seu aplicativo](../../concepts/build-and-test/apps-package.md) no AppSource.</span><span class="sxs-lookup"><span data-stu-id="e6ed3-138">Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to AppSource.</span></span>
+      <span data-ttu-id="b6128-141">Para se sentir parte da Teams, a cópia do aplicativo em geral deve seguir estes princípios de voz da [Microsoft:](/style-guide/brand-voice-above-all-simple-human)quentes e relaxados, nítidos e claros e prontos para dar as mãos.</span><span class="sxs-lookup"><span data-stu-id="b6128-141">To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.</span></span>
 
-      <span data-ttu-id="e6ed3-139"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de expressão de marca completa (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="e6ed3-139"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full brand expression guidelines (Figma)</a></span></span>
+      * <span data-ttu-id="b6128-142"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte as diretrizes de conteúdo e cópia completas, incluindo a escrita para bots (Figma)</a></span><span class="sxs-lookup"><span data-stu-id="b6128-142"><a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a></span></span>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Formulário conceitual para o Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Imagem conceitual de cópia e conteúdo." border="false":::
 
    :::column-end:::
 :::row-end:::
