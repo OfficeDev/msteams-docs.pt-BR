@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: mensagens de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566492"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630457"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa com um Microsoft Teams bot
 
@@ -88,7 +88,7 @@ Dependendo de quais escopos são declarados, seu bot pode receber mensagens nos 
 * **chat pessoal** Os usuários podem interagir em uma conversa privada com um bot simplesmente selecionando o bot adicionado no histórico do chat ou digitando seu nome ou ID do aplicativo na caixa Para: em um novo chat.
 * **Canais** Um bot pode ser mencionado (&quot;@_botname_") em um canal se tiver sido adicionado à equipe. Observe que respostas adicionais a um bot em um canal exigem a menção ao bot. Ele não responderá às respostas onde não é mencionada.
 
-Para mensagens de entrada, seu bot recebe um [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) objeto do tipo `messageType: message` . Embora o objeto possa conter outros tipos de informações, como atualizações de canal enviadas ao bot, o tipo representa a comunicação `Activity` entre bot e [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuário.
+Para mensagens de entrada, seu bot recebe um [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) do tipo `messageType: message` . Embora o objeto possa conter outros tipos de informações, como atualizações de canal enviadas ao bot, o tipo representa a comunicação `Activity` entre bot e [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuário.
 
 Seu bot recebe uma carga que contém a mensagem do usuário, bem como outras informações sobre o usuário, a origem da mensagem e Teams `Text` informações. Observação:
 

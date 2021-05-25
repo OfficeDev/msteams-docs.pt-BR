@@ -5,12 +5,12 @@ description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Mi
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566023"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644596"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -25,23 +25,33 @@ Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos 
 
 ## <a name="add-a-meeting-extension"></a>Adicionar uma extensão de reunião
 
-Você pode adicionar uma extensão de reunião antes e durante as reuniões. Você também pode adicionar um aplicativo para uma reunião específica diretamente do Teams store (AppSource).
+Os usuários podem adicionar uma extensão de reunião antes e durante as reuniões. Eles também podem adicionar um aplicativo para uma reunião específica diretamente do Teams store.
 
 ### <a name="add-before-a-meeting"></a>Adicionar antes de uma reunião
 
-Nos detalhes da reunião, selecione **Adicionar uma guia +** para abrir o flyout do aplicativo e encontrar aplicativos otimizados para reuniões.
+Nos detalhes da reunião, os usuários podem selecionar **Adicionar uma guia +** para abrir o flyout do aplicativo e encontrar aplicativos otimizados para reuniões.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião antes de uma reunião." border="false":::
 
 ### <a name="add-during-a-meeting"></a>Adicionar durante uma reunião
 
-Em uma reunião, selecione **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e escolha o aplicativo que você deseja.
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e escolher o aplicativo que eles querem.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião." border="false":::
 
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: e escolher o aplicativo que eles querem.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
+
+---
+
 ## <a name="before-a-meeting"></a>Antes de uma reunião
 
-Antes da reunião, você pode adicionar conteúdo na guia. O exemplo a seguir mostra uma pergunta de rascunho de pesquisa que as pessoas responderão durante a chamada.
+Antes de uma reunião, os usuários podem adicionar conteúdo na guia. O exemplo a seguir mostra uma pergunta de rascunho de pesquisa que as pessoas responderão durante a chamada.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Exemplo mostra como o conteúdo do aplicativo nos detalhes da reunião antes de uma chamada." border="false":::
 
@@ -64,7 +74,7 @@ Use um dos seguintes modelos Teams de interface do usuário para ajudar a projet
 * [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou conteúdo.
 * [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): Os formulários são para coletar, validar e enviar entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais.
-* [Navegação à esquerda](../../concepts/design/design-teams-app-ui-templates.md#left-nav): O modelo de navegação à esquerda pode ajudar se sua guia exigir alguma navegação. Em geral, você deve manter a navegação de tabulação no mínimo.
+* [Navegação à esquerda](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): O componente de navegação esquerdo pode ajudar se sua guia exigir alguma navegação. Em geral, você deve manter a navegação no mínimo.
 
 ## <a name="use-an-in-meeting-tab"></a>Usar uma guia em reunião
 
@@ -78,7 +88,15 @@ As pessoas podem usar a guia na reunião para:
 * Crie uma sondagem, uma pesquisa ou um item de tarefa para os participantes da reunião.
 * Exibir anotações relevantes para a reunião. Por exemplo, informações sobre um líder de vendas.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar o conteúdo da sondagem em uma guia na reunião." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar conteúdo de sondagem em uma guia em reunião no celular." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomia: guia In-meeting
 
@@ -124,7 +142,15 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 * Enviar aprovações
 * Receber lembretes
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião no celular." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomia: caixa de diálogo na reunião
 

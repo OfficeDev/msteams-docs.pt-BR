@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: dabe0c33013fbb398eee7bf00ac2881cd86e6bc5
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d751e5dba22b19edfe6ffda3eb6a73a37375f92b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566121"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630674"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimento específico do recurso (RSC)
 
@@ -56,7 +56,7 @@ Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory
 
 > [!div class="checklist"]
 >
->- Entre no [portal do Azure](https://portal.azure.com) como administrador [global/administrador da empresa.](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)  
+>- Entre no [portal do Azure](https://portal.azure.com) como administrador [global/administrador da empresa.](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)  
  > - [Selecione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise**  =>  **aplicativos Consentimento e permissões** Configurações de consentimento  =>  **do usuário.**
 > - Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado consentimento do proprietário do grupo para aplicativos que acessam dados **(O** padrão é Permitir o consentimento do proprietário do grupo para todos os proprietários **do grupo**). Para que o proprietário da equipe instale um aplicativo usando o RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
 

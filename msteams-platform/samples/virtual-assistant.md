@@ -4,12 +4,12 @@ description: Como criar bot e habilidades do Assistente Virtual para uso no Micr
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de assistente virtual do teams
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566870"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630730"
 ---
 # <a name="create-virtual-assistant"></a>Criar um Assistente Virtual 
 
@@ -411,7 +411,7 @@ O bot book-a-room tem dois comandos principais para os usuários:
 - `Book room`
 - `Manage Favorites`
 
-Construímos um modelo DEAD compreendendo esses dois comandos. Os segredos correspondentes devem ser preenchidos em `cognitivemodels.json` . O arquivo JSON DO LUIS correspondente é encontrado [aqui](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
+Construímos um modelo DEAD compreendendo esses dois comandos. Os segredos correspondentes devem ser preenchidos em `cognitivemodels.json` . O arquivo JSON DO LUIS correspondente é encontrado [aqui](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 O arquivo `.lu` correspondente é mostrado na seção a seguir:
 
 ```
@@ -534,7 +534,7 @@ A atualização da atividade, como a atualização do cartão, ainda não é sup
 Para encaminhar atividades de ação de cartão ou módulo de tarefa a uma habilidade associada, a habilidade deve incorporar `skillId` a ela.
 `Book-a-room` ação de cartão de bot, busca de módulo de tarefa e envio de cargas de ação são modificadas para conter `skillId` como um parâmetro. 
 
-Para obter mais [informações, consulte esta](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) seção nesta documentação.
+Para obter mais [informações, consulte esta](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) seção nesta documentação.
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Manipular atividades do chat de grupo ou do escopo do canal
 
@@ -555,7 +555,7 @@ Para obter mais [informações, consulte esta](https://msteams-captain.visualstu
     }
 ```
 
-Você também pode aproveitar as habilidades existentes do repositório [de Soluções](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) da Estrutura de Bot ou criar uma nova habilidade completamente do zero. Para criar uma nova habilidade, consulte [tutoriais para criar uma nova habilidade.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para a documentação do Assistente Virtual e arquitetura de habilidades, consulte[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+Você também pode aproveitar as habilidades existentes do repositório [de Soluções](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) da Estrutura de Bot ou criar uma nova habilidade completamente do zero. Para criar uma nova habilidade, consulte [tutoriais para criar uma nova habilidade.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para a documentação do Assistente Virtual e arquitetura de habilidades, consulte[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitações do Assistente Virtual 
 
@@ -566,7 +566,7 @@ Você também pode aproveitar as habilidades existentes do repositório [de Solu
   * A configuração de extensões de mensagens não tem escopo para comandos individuais, mas para toda a extensão em si. Isso limita a configuração para cada habilidade individual por meio do Assistente Virtual.
   * As IDs de comando de extensões de mensagens têm um comprimento máximo de [64](../resources/schema/manifest-schema.md#composeextensions) caracteres e 37 caracteres são usados para incorporar informações de habilidades. Assim, as restrições atualizadas para a ID de comando são limitadas a 27 caracteres.
 
-Você também pode aproveitar as habilidades existentes do repositório [de Soluções](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) da Estrutura de Bot ou criar uma nova habilidade completamente do zero. Tutoriais para o posterior podem ser [encontrados aqui](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte a [documentação para](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) Assistente Virtual e arquitetura de habilidades.
+Você também pode aproveitar as habilidades existentes do repositório [de Soluções](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) da Estrutura de Bot ou criar uma nova habilidade completamente do zero. Tutoriais para o posterior podem ser [encontrados aqui](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte a [documentação para](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) Assistente Virtual e arquitetura de habilidades.
 
 ## <a name="code-sample"></a>Exemplo de código
 
@@ -578,8 +578,6 @@ Você também pode aproveitar as habilidades existentes do repositório [de Solu
 
 ## <a name="see-also"></a>Confira também
 
-- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
-
-- [Book-a-room](app-templates.md#book-a-room)
-
-- [Microsoft Teams bot](../bots/what-are-bots.md)
+* [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+* [Book-a-room](app-templates.md#book-a-room)
+* [Microsoft Teams bot](../bots/what-are-bots.md)

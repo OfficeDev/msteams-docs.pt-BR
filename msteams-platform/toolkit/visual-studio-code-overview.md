@@ -5,12 +5,12 @@ keywords: kit de ferramentas de código do visual studio do teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566555"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629834"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Teams Toolkit e Visual Studio Code
 
@@ -45,7 +45,7 @@ O Microsoft Teams Toolkit para Visual Studio Code está disponível para downloa
 
 1. Em Visual Studio Code, selecione o Teams ícone ![Ícone do Teams](../assets/icons/favicon-16x16.png) da barra de atividades no lado esquerdo da janela.
 1. Selecione **Importar pacote de aplicativos** no menu de comando.
-1. Escolha o arquivo zip do [pacote Teams aplicativo](../concepts/build-and-test/apps-package.md) existente.
+1. Escolha o arquivo zip do pacote Teams [aplicativo](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) existente.
 1. Escolha o **botão Selecionar pacote de publicação.** A guia de configuração do kit de ferramentas agora deve ser preenchida com os detalhes do aplicativo.
 1. Em Visual Studio Code, selecione **Adicionar** Pasta de Arquivo ao Espaço de Trabalho para adicionar seu diretório de código-fonte  ->   ao Visual Studio Code de trabalho.
 
@@ -55,7 +55,7 @@ No seu núcleo, o Teams aplicativo abrange três componentes:
 
   1. O Microsoft Teams cliente (Web, desktop ou móvel) onde os usuários interagem com seu aplicativo.
   1. Um servidor que responde a solicitações de conteúdo que serão exibidas em Teams. Por exemplo, conteúdo de guia HTML ou um cartão adaptável de bot.
-  1. Um Teams [de aplicativos](/concepts/build-and-test/apps-package.md) que consiste em três arquivos:
+  1. Um Teams de aplicativo consiste em três arquivos:
 
       > [!div class="checklist"]
       >
@@ -83,7 +83,7 @@ Consulte a **página inicial criar e** executar conteúdo em seu projeto para ob
 
 ### <a name="enable-development-from-localhost"></a>Habilitar o desenvolvimento do localhost
 
-Se você deseja depurar seu aplicativo baseado em guia em localhost usando HTTPS, você precisará dizer ao navegador para confiar no aplicativo que está sendo servido de <https://localhost> . Navegue até <https://localhost:3000/tab>. Se você vir um aviso indicando que o site não é confiável, escolha a opção para prosseguir de qualquer maneira. Seu aplicativo agora deve estar acessível a partir do Teams cliente.
+Se você deseja depurar seu aplicativo baseado em guia em localhost usando HTTPS, você precisará dizer ao navegador para confiar no aplicativo que está sendo servido de `<https://localhost>` . Navegue até `<https://localhost:3000/tab>`. Se você vir um aviso indicando que o site não é confiável, escolha a opção para prosseguir de qualquer maneira. Seu aplicativo agora deve estar acessível a partir do Teams cliente.
 
 ### <a name="run-your-app-in-teams"></a>Execute seu aplicativo em Teams
 

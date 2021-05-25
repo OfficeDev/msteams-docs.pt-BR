@@ -5,12 +5,12 @@ description: integrando um Power Virtual Agents chatbot na Teams plataforma
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2a8f9c23eaa1acf2555b91cc4caf8d0f3298c114
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a38b2447bba42e70d8a1c3c9dca5d92e41cfb77c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566114"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630590"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia 
 
@@ -101,15 +101,11 @@ O processo de configuração para adicionar seu Power Virtual Agents de chat ao 
 
 ## <a name="see-also"></a>Confira também
 
-- [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-
-- [Crie um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
-
-- [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-
-- [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-
-- [Segurança e conformidade em Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+* [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Crie um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+* [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Segurança e conformidade em Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## <a name="next-step"></a>Próxima etapa
 

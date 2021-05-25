@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 84d0f5564d7e8e6e34dde1f3d59cc6e7a68d3332
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3bfbcd0eed1bd287303315ae57cd2f0db039890c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565911"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630177"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crie aplicativos para reuniões do Teams
 
@@ -316,8 +316,7 @@ Em um chat de reunião, insira **@** a chave e selecione Obter **bots**.
 
 #### <a name="sidepanel"></a>sidePanel
 
-Com o sidePanel, você pode personalizar experiências em uma reunião que permitem que organizadores e apresentadores tenham diferentes tipos de exibição e ações. No manifesto do aplicativo, você deve adicionar sidePanel à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
-).
+Com o sidePanel, você pode personalizar experiências em uma reunião que permitem que organizadores e apresentadores tenham diferentes tipos de exibição e ações. No manifesto do aplicativo, você deve adicionar sidePanel à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
 Para usar a `userContext` API para rotear solicitações de acordo, [consulte Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Consulte [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é muito semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Consulte, plataforma de identidade da Microsoft fluxo de código de autorização [do OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
@@ -333,7 +332,7 @@ A caixa de diálogo na reunião pode ser usada para envolver os participantes du
 A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
 
 > [!NOTE]
-> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no web-view. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
+> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no web-view. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest&preserve-view=true)
 > * Se você quiser que seu aplicativo suporte usuários anônimos, sua carga inicial de solicitação de invocação deve depender dos metadados de solicitação no objeto, não `from.id` `from` nos `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a ID Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="share-to-stage"></a>Compartilhar em estágio 

@@ -5,12 +5,12 @@ description: Um guia de início rápido para criar um canal personalizado e uma 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580459"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630352"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Criar uma guia Canal Personalizado e Grupo com ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ Neste início rápido, vamos passo a passo criando uma guia de canal/grupo perso
 
 ## <a name="get-the-source-code"></a>Obter o código-fonte
 
-Abra um prompt de comando e crie um novo diretório para seu projeto de guia. Fornecemos um projeto simples [de Guia de Grupo](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) de Canal para você começar. Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de exemplo em seu novo diretório:
+Abra um prompt de comando e crie um novo diretório para seu projeto de guia. Fornecemos um projeto simples [de Guia de Grupo](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) de Canal para você começar. Para recuperar o código-fonte, você pode baixar a pasta zip e extrair os arquivos ou clonar o repositório de exemplo em seu novo diretório:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git

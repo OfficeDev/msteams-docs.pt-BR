@@ -4,18 +4,18 @@ description: Saiba como projetar Cartões Adaptáveis para Teams e obter o kit M
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 14ffff1264e716e04a1ffb5549b71a8b7ec5fc14
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b4d5f43268c7bd5afecb56d26eb0d49ed6c9002b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101734"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630255"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando cartões adaptáveis para seu Microsoft Teams app
 
 Um Cartão Adaptável contém um corpo de forma livre de elementos de cartão e um conjunto opcional de ações. Cartões adaptáveis são trechos acionáveis de conteúdo que você pode adicionar a uma conversa por meio de um bot ou extensão de mensagens. Usando texto, gráficos e botões, essas placas fornecem uma comunicação rica para o público-alvo.
 
-A estrutura cartão adaptável é usada em muitos produtos Microsoft, incluindo Teams. Você pode enviar cartões dentro de mensagens para os usuários por meio de bots ou extensões de mensagens. Os usuários podem tomar ações em cartões quando presentes.
+A estrutura cartão adaptável é usada em muitos produtos Microsoft, incluindo Teams. Você pode enviar cartões dentro de mensagens para os usuários por meio de bots ou extensões de mensagens. Os usuários também podem tomar ações em cartões quando presentes.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemplo de visão geral de um Cartão Adaptável." border="false":::
 
@@ -39,73 +39,151 @@ Você também pode começar a projetar seus Cartões Adaptáveis diretamente no 
 
 Nosso maior cartão. Use para compartilhar artigos ou cenários em que uma imagem conta a maior parte da história.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Exemplo mostra um cartão de herói do Cartão Adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Exemplo mostra um cartão de herói do Cartão Adaptável no celular." border="false":::
+
+---
 
 ### <a name="thumbnail"></a>Miniatura
 
 Use para enviar uma mensagem simples a actionable.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Exemplo mostra um cartão de miniatura do Cartão Adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Exemplo mostra um cartão de miniatura do Cartão Adaptável no celular." border="false":::
+
+---
 
 ### <a name="list"></a>List
 
 Use em cenários em que você deseja que o usuário escolha um item de uma lista, mas os itens não precisam de muita explicação.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Exemplo mostra um cartão de lista cartão adaptável." border="false":::
 
-### <a name="digest"></a>Digest
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Use para resumos de notícias e postagens arredonddas. Observação: recomendamos o cartão de miniatura para uma única atualização ou item de notícias.
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemplo mostra um cartão de lista cartão adaptável no celular." border="false":::
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Exemplo mostra um cartão digest do Cartão Adaptável." border="false":::
+---
+Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+---
 
 ### <a name="media"></a>Mídia
 
 Use quando quiser combinar texto e mídia, como áudio ou vídeo.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Exemplo mostra um cartão de mídia cartão adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Exemplo mostra um cartão de mídia cartão adaptável no celular." border="false":::
+
+---
 
 ### <a name="people"></a>Pessoas
 
 Melhor usado quando você transmite com eficiência quem está envolvido com uma tarefa.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Exemplo mostra um cartão de pessoas do Cartão Adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Exemplo mostra um cartão de pessoas do Cartão Adaptável no celular." border="false":::
+
+---
 
 ### <a name="request-ticket"></a>Tíquete de solicitação
 
 Use para obter entradas rápidas de um usuário para criar automaticamente uma tarefa ou tíquete.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Exemplo mostra um cartão de tíquete de solicitação de Cartão Adaptável." border="false":::
 
-### <a name="imageset"></a>ImageSet
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Exemplo mostra um cartão de tíquete de solicitação de Cartão Adaptável no celular." border="false":::
+
+---
+
+### <a name="image-set"></a>Conjunto de imagens
 
 Use para enviar várias miniaturas de imagem.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável." border="false":::
 
-### <a name="actionset"></a>ActionSet
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável no celular." border="false":::
+
+---
+
+### <a name="action-set"></a>Conjunto de ações
 
 Use quando quiser que o usuário selecione um botão e, em seguida, reúna a entrada do usuário de adição do mesmo cartão.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de ações cartão adaptável." border="false":::
 
-### <a name="choiceset"></a>ChoiceSet
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de ações do Cartão Adaptável no celular." border="false":::
+
+---
+
+### <a name="choice-set"></a>Conjunto de opções
 
 Use para coletar várias entradas do usuário.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de opções do Cartão Adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Exemplo mostra um cartão de conjunto de opções de Cartão Adaptável no celular." border="false":::
+
+---
 
 ## <a name="anatomy"></a>Anatomia
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Exemplo mostra um cartão de anatomia do Cartão Adaptável." border="false":::
+Cartões adaptáveis têm muita flexibilidade. No mínimo, sugerimos incluir os seguintes componentes em cada cartão.
 
-Cartões adaptáveis têm muita flexibilidade. No mínimo, sugerimos incluir os seguintes componentes em cada cartão:
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample mostra a anatomia do Cartão Adaptável." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Exemplo mostra a anatomia do Cartão Adaptável no celular." border="false":::
+
+---
 
 |Contador|Descrição|
 |----------|-----------|
-|A|**Header**: Tornar os headers claros e concisos, mas descritivos.|
-|B|**Cópia do** corpo : use para transmitir detalhes que são muito longos ou não importantes o suficiente para incluir no header.|
-|C|**Ações primárias**: Como prática prática, inclua ações primárias de 1 a 3. No máximo seis são permitidos.|
+|A|**Header**: tornar seus headers claros e concisos.|
+|B|**Cópia do** corpo : transmita detalhes que são muito longos ou não importantes o suficiente para incluir no header.|
+|C|**Ações primárias**: Como prática prática, inclua ações primárias de 1 a 3. Você pode ter até seis.|
 
 ## <a name="best-practices"></a>Práticas recomendadas
 

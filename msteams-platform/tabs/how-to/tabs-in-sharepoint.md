@@ -1,25 +1,25 @@
 ---
 title: Adicionar uma guia do Teams ao SharePoint
 author: laujan
-description: Como implantar sua guia do Teams existente no SharePoint como uma Web Part da Estrutura do SharePoint.
+description: Como implantar sua guia de Teams existente para SharePoint como uma web part Estrutura do SharePoint web part.
 keywords: teams tabs sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058478"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630408"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint 
 
-Você pode obter uma experiência de integração rica entre o Microsoft Teams e o SharePoint adicionando uma guia do Microsoft Teams no SharePoint como uma Web Part SPFx. Este documento orienta você sobre como você deve pegar uma guia de um aplicativo de exemplo do Microsoft Teams e usá-lo no SharePoint. 
+Você pode obter uma experiência de integração rica entre Microsoft Teams e SharePoint adicionando uma guia Microsoft Teams no SharePoint como uma web part SPFx web part. Este documento orienta você sobre como você deve pegar uma guia de um aplicativo de exemplo Microsoft Teams e usá-lo em SharePoint. 
 
-## <a name="rich-integration-between-teams-and-sharepoint"></a>Integração rica entre o Teams e o SharePoint
+## <a name="rich-integration-between-teams-and-sharepoint"></a>Integração rica entre Teams e SharePoint
 
-Com a versão de novembro do Teams e da Estrutura do SharePoint v.1.7, os desenvolvedores têm dois recursos poderosos:
+Com a versão de novembro do Teams e Estrutura do SharePoint v.1.7, os desenvolvedores têm dois recursos avançados:
 
 <ul  class="panelContent cardsC">
 <li>
@@ -33,8 +33,8 @@ Com a versão de novembro do Teams e da Estrutura do SharePoint v.1.7, os desenv
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Guias do Teams no SharePoint</h3>
-                        <p>Crie experiências de aplicativos rich no SharePoint trazendo seu aplicativo do Teams para o Sharepoint (este artigo).</p>
+                        <h3>Teams Guias no SharePoint</h3>
+                        <p>Crie experiências de aplicativos rich SharePoint trazendo seu aplicativo Teams para o Sharepoint (este artigo).</p>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ Com a versão de novembro do Teams e da Estrutura do SharePoint v.1.7, os desenv
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -53,7 +53,7 @@ Com a versão de novembro do Teams e da Estrutura do SharePoint v.1.7, os desenv
                     </div>
                     <div class="cardText">
                         <h3>Estrutura do SharePoint no Teams</h3>
-                        <p>Traga suas Web Parts do SharePoint para o Teams e deixe o SharePoint gerenciar a hospedagem para você.</p>
+                        <p>Traga suas SharePoint web parts para Teams e deixe SharePoint gerenciar a hospedagem para você.</p>
                     </div>
                 </div>
             </div>
@@ -62,30 +62,30 @@ Com a versão de novembro do Teams e da Estrutura do SharePoint v.1.7, os desenv
 </li>
 </ul>
 
-### <a name="teams-tabs-in-sharepoint"></a>Guias do Teams no SharePoint
+### <a name="teams-tabs-in-sharepoint"></a>Teams guias no SharePoint
 
-Com a Estrutura do SharePoint v.1.7, você pode hospedar suas guias do Teams no SharePoint. À medida que as guias hospedadas no SharePoint recebem uma experiência de página inteira semelhante, expondo todos os recursos das guias do Teams enquanto mantém o contexto e a familiaridade de um site do SharePoint. 
+Com Estrutura do SharePoint v.1.7, você pode hospedar suas Teams de SharePoint. À medida que as guias hospedadas  no SharePoint obter uma experiência de página inteira semelhante, expondo todos os recursos das guias Teams enquanto mantém o contexto e a familiaridade de um site SharePoint.
 
 ### <a name="sharepoint-framework-in-teams"></a>Estrutura do SharePoint no Teams
 
-Você também pode implementar suas guias do Microsoft Teams usando a Estrutura do SharePoint. As Web Parts da Estrutura do SharePoint são hospedadas no SharePoint sem a necessidade de serviços externos, como o Azure. Para desenvolvedores do SharePoint, isso simplifica significativamente o processo de desenvolvimento das guias do Teams. Para obter mais informações sobre a Estrutura do SharePoint no Teams, consulte [como usar a Estrutura do SharePoint no Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Você também pode implementar suas guias Microsoft Teams usando Estrutura do SharePoint. Estrutura do SharePoint web parts são hospedadas em SharePoint sem qualquer necessidade de serviços externos, como o Azure. Para SharePoint desenvolvedores, isso simplifica significativamente o processo de desenvolvimento para Teams guias. Para obter mais informações sobre Estrutura do SharePoint em Teams, consulte como usar o Estrutura do SharePoint [em Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Introdução
 
 A guia usada aqui já está hospedada no Azure, para se concentrar no trabalho de integração necessário.
 
-O aplicativo de exemplo que está sendo usado é um aplicativo de Gerenciamento de Talentos. Ele gerencia o processo de contratação de candidatos para posições abertas em uma equipe. Crie um aplicativo do Teams de exemplo e carregue-o no Teams. Não crie um aplicativo de gerenciamento de talentos real.
+O aplicativo de exemplo que está sendo usado é um aplicativo de Gerenciamento de Talentos. Ele gerencia o processo de contratação de candidatos para posições abertas em uma equipe. Crie um aplicativo Teams exemplo e carregue-o em Teams. Não crie um aplicativo de gerenciamento de talentos real.
 
 ### <a name="benefits-of-this-approach"></a>Benefícios dessa abordagem
 
-* Alcançar usuários do SharePoint com sua guia existente do Teams.
-* Carregue o manifesto do aplicativo diretamente no catálogo de aplicativos do SharePoint. [Os pacotes de aplicativos](~/concepts/build-and-test/apps-package.md) do Teams agora são suportados pelo SharePoint.
-* Os usuários configuram a guia em uma página como qualquer outra Web Part do SharePoint.
-* Sua guia pode acessar seu [contexto](~/tabs/how-to/access-teams-context.md) da mesma forma que pode, ao executar dentro do Teams.
+* Entre SharePoint usuários com sua guia Teams existente.
+* Upload seu manifesto do aplicativo diretamente para seu catálogo SharePoint aplicativo. [Teams pacotes de aplicativos](~/concepts/build-and-test/apps-package.md) agora são suportados por SharePoint.
+* Os usuários configuram a guia em uma página como qualquer outra web part SharePoint web part.
+* Sua guia pode acessar seu [contexto](~/tabs/how-to/access-teams-context.md) da mesma forma que pode, ao executar dentro Teams.
 
-**Para adicionar a guia Teams ao SharePoint**
+**Para adicionar Teams guia SharePoint**
 
-Execute as seguintes etapas para adicionar a guia Teams ao SharePoint:
+Execute as seguintes etapas para adicionar Teams guia SharePoint:
 
 ## <a name="1-test-the-sample-app"></a>1. Teste o aplicativo de exemplo
 
@@ -93,7 +93,7 @@ Baixe o [manifesto do aplicativo de exemplo](https://github.com/MicrosoftDocs/ms
 
 1. Abra o Microsoft Teams.
 1. Selecione o **ícone Appstore** no canto inferior esquerdo da guia lateral.
-1. Selecione **Carregar um aplicativo personalizado** no canto inferior esquerdo. A imagem a seguir exibe a tela correspondente:  
+1. Selecione **Upload um aplicativo personalizado** no canto inferior esquerdo. A imagem a seguir exibe a tela correspondente:  
 
     ![carregar um aplicativo personalizado](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
@@ -104,9 +104,9 @@ Baixe o [manifesto do aplicativo de exemplo](https://github.com/MicrosoftDocs/ms
 1. Você pode ver a tela de instalação ou consentimento do aplicativo de gerenciamento de talentos. Selecione a equipe que deseja instalar. 
 1. Selecione Instalar **e** comece a experimentar com o aplicativo.
 
-## <a name="2-use-teams-tab-in-sharepoint"></a>2. Use a guia Teams no SharePoint
+## <a name="2-use-teams-tab-in-sharepoint"></a>2. Use Teams guia no SharePoint
 
-1. Carregue e implante seu pacote de aplicativos do Teams no catálogo de aplicativos do SharePoint visitando `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` . Por exemplo, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
+1. Upload e implante seu pacote de aplicativos Teams no catálogo de aplicativos SharePoint, visitando `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` . Por exemplo, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
 1. Quando solicitado, **habilitar Tornar essa solução disponível para todos os sites da organização**.
 A imagem a seguir exibe a tela correspondente:
@@ -118,9 +118,9 @@ A imagem a seguir exibe a tela correspondente:
 
    ![Exibição do Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-1. Você pode ver a experiência de autoria de páginas do SharePoint. Nomeia sua página como **Guia Minhas Equipes.**
+1. Você pode ver a experiência de SharePoint de autoria de páginas. Nomeia sua página como **My Teams Tab.**
 
-1. Abra a caixa de ferramentas da Web Part pressionando o `+` botão e selecione sua Guia do Teams, chamada **Contoso HR**. As Web Parts são classificação alfabética. Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso cria uma Web Part na tela que contém a guia Teams. A imagem a seguir exibe o visor de tabulação:
+1. Abra a caixa de ferramentas da Web Part pressionando o botão e selecione `+` sua guia Teams, chamada **Contoso HR**. As Web Parts são classificação alfabética. Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso cria uma Web Part na tela que contém sua guia Teams. A imagem a seguir exibe o visor de tabulação:
 
    ![Exibição de tabulação](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
@@ -130,21 +130,19 @@ A imagem a seguir exibe a tela correspondente:
 
    ![Guia na imagem do Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
-## <a name="3-explore-app-pages-in-sharepoint"></a>3. Explorar páginas de aplicativos no SharePoint
+## <a name="3-explore-app-pages-in-sharepoint"></a>3. Explorar páginas de aplicativo no SharePoint
 
-Depois que sua página for publicada, você poderá explorar transformar seu aplicativo do Teams em uma experiência mais [completa dentro do SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Isso converte a página atual em uma Página do Aplicativo, mostrando o layout normal da página do SharePoint com uma experiência de página completa para a guia Teams. 
+Depois que sua página for publicada, você poderá explorar transformar seu aplicativo Teams em uma experiência mais [completa dentro SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Isso converte a página atual em uma Página do Aplicativo, mostrando o layout de página SharePoint normal com uma experiência de página inteira para a guia Teams. 
 
-A imagem a seguir exibe a experiência completa do aplicativo teams no Sharepoint: ![ Imagem de guias no Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+A imagem a seguir exibe a experiência completa do aplicativo Teams sharepoint: ![ imagem de guias no Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>Exemplo de código
 | **Exemplo de nome** | **Descrição** | **SPFx** |
 |-----------------|-----------------|----------|
-| Web Part SPFx | Exemplos de Web Part SPFx para guias, canais e grupos. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| SPFx Web Part | SPFx exemplos de Web Part para guias, canais e grupos. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
 ## <a name="see-also"></a>Confira também
 
-- [Criando guias do Microsoft Teams usando a Estrutura do SharePoint – Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-
-- [Usar páginas de aplicativos de parte única no SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-
-- [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+* [Criando guias do Microsoft Teams usando a Estrutura do SharePoint – Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+* [Usar páginas de aplicativos de parte única no SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+* [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

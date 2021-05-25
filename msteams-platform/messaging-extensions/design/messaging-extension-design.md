@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: ed1f0f2eb2ce8d429a8a780bd2c4c4eb421d6d54
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fd870d8e10ef74c36f8f6d145d48980f53e9303c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566212"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631017"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Projetando sua extensão Microsoft Teams de mensagens
 
@@ -29,12 +29,20 @@ Você pode encontrar diretrizes abrangentes de design de extensão de mensagens,
 
 Você pode adicionar uma extensão de mensagens nos seguintes Teams contextos:
 
-* A partir da loja do Microsoft Teams (AppSource).
+* No Teams store.
 * Em um canal, chat ou reunião (antes, durante e depois) perto da caixa de composição. Vale a pena notar se você adicionar uma extensão de mensagens em um desses locais, somente você poderá usá-la nesse contexto.
 
 O exemplo a seguir mostra como você adiciona uma extensão de mensagens em um canal:
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Exemplo mostra como adicionar uma extensão de mensagens perto da caixa de redação em um canal." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Exemplo mostra como adicionar uma extensão de mensagens perto da caixa de redação em um canal no celular." border="false":::
+
+---
 
 ## <a name="set-up-a-messaging-extension"></a>Configurar uma extensão de mensagens
 
@@ -42,7 +50,15 @@ A autenticação não é obrigatória, mas se seu aplicativo for algo como uma f
 
 Para ter consistência Teams aplicativos, você não pode personalizar a tela de login. Se você usar a autenticação de logom único (SSO), os usuários serão automaticamente assinados.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Exemplo mostra a tela de instalação de extensão de mensagens com um botão de login." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Exemplo mostra a tela de configuração de extensão de mensagens com um botão de login no celular." border="false":::
+
+---
 
 ## <a name="types-of-messaging-extensions"></a>Tipos de extensões de mensagens
 
@@ -52,7 +68,15 @@ As extensões de mensagens podem ter comandos de pesquisa, comandos de ação ou
 
 Com comandos de pesquisa, as pessoas podem usar sua extensão de mensagens para encontrar rapidamente conteúdo externo e inserir em uma mensagem. Comandos de pesquisa são comumente disponibilizados na caixa de redação. Por exemplo, você pode iniciar ou adicionar a uma discussão compartilhando um conteúdo sem sair Teams.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Exemplo mostra uma extensão de mensagens baseada em pesquisa lançada na caixa de redação." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Exemplo mostra uma extensão de mensagens baseada em pesquisa lançada na caixa de redação no celular." border="false":::
+
+---
 
 #### <a name="compose-box-layout-options"></a>Opções de layout de caixa de redação
 
@@ -72,9 +96,17 @@ A caixa de redação e mensagens ou postagens são os principais contextos em qu
 
 ### <a name="from-the-compose-box"></a>Na caixa de redação
 
-Depois de adicionado, os usuários podem abrir sua extensão de mensagens selecionando o ícone do aplicativo abaixo da caixa de redação. Neste exemplo, a extensão tem comandos de pesquisa e ação:
+Depois de adicionado, os usuários podem abrir sua extensão de mensagens selecionando o ícone do aplicativo abaixo da caixa de redação. Nesses exemplos, a extensão tem comandos de pesquisa e ação.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Exemplo mostra como abrir uma extensão de mensagens da caixa de redação." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Exemplo mostra como abrir uma extensão de mensagens da caixa de redação no celular." border="false":::
+
+---
 
 ### <a name="from-a-chat-message-or-channel-post"></a>De uma mensagem de chat ou postagem de canal
 
@@ -85,11 +117,18 @@ Depois de adicionado, os usuários podem selecionar o ícone **Mais** na mensage
 
 #### <a name="chat-message"></a>Mensagem de chat
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Exemplo mostra como abrir uma extensão de mensagens de uma mensagem de chat." border="false":::
 
-#### <a name="channel-post"></a>Postagem de canal
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Exemplo mostra como abrir uma extensão de mensagens de uma postagem de canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Exemplo mostra como abrir uma extensão de mensagens de uma postagem de chat no celular." border="false":::
+
+---
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+---
 
 ## <a name="use-a-messaging-extension"></a>Usar uma extensão de mensagens
 
@@ -99,21 +138,53 @@ Os cenários a seguir mostram as principais maneiras pelas quais as pessoas usam
 
 **1. Selecione uma extensão de mensagens**. Os usuários podem pesquisar o conteúdo que eles querem compartilhar na caixa de redação.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Exemplo mostra um usuário procurando conteúdo para inserir na caixa de redação." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Exemplo mostra um usuário procurando conteúdo para inserir na caixa de redação no celular." border="false":::
+
+---
 
 **2. Insira conteúdo**. Depois de postado, outras pessoas podem responder ou selecionar o conteúdo para ver mais informações em seu aplicativo.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Exemplo mostra um usuário postando conteúdo em uma conversa de canal." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Exemplo mostra um usuário postando conteúdo em uma conversa de canal no celular." border="false":::
+
+---
 
 ### <a name="take-action-on-a-message"></a>Tomar medidas em uma mensagem
 
 **1. Selecione uma extensão de mensagens**. Seu aplicativo pode incluir um ou mais comandos de ação.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Exemplo mostra um usuário selecionando um comando de ação de extensão de mensagens." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="Exemplo mostra um usuário selecionando um comando de ação de extensão de mensagens no celular." border="false":::
+
+---
 
 **2. Conclua a ação**. Seu aplicativo pode receber e processar qualquer conteúdo ou dados enviados pela ação da mensagem. Isso permite que os usuários permaneçam em suas conversas e, no exemplo a seguir, não se preocupe em inserir informações diretamente em seu aplicativo.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Exemplo sobre como agir em uma mensagem." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="Exemplo de como agir em uma mensagem no celular." border="false":::
+
+---
 
 ### <a name="preview-links"></a>Links de visualização
 
@@ -121,11 +192,27 @@ As extensões de mensagens também permitem inserir links ricos de uma URL recon
 
 **1. Colar um link reconhecido** na caixa de redação.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Exemplo mostra um usuário colar um link na caixa de compostagem." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Exemplo mostra um usuário colar um link na caixa de compostagem no celular." border="false":::
+
+---
 
 **2. Insira conteúdo**. Se seu aplicativo reconhecer a URL na caixa de redação, ele renderizará o link como um cartão que fornece uma visualização rica em conteúdo do conteúdo da Web. (Consulte [Diretrizes de design de Cartões Adaptáveis](../../task-modules-and-cards/cards/design-effective-cards.md) para obter mais informações.)
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Exemplo mostra como a URL, já que é reconhecida pelo seu aplicativo, inclui algum conteúdo rico na caixa de redação." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Exemplo mostra como a URL, já que é reconhecida pelo seu aplicativo, inclui algum conteúdo rico na caixa de composição no celular." border="false":::
+
+---
 
 ## <a name="manage-a-messaging-extension"></a>Gerenciar uma extensão de mensagens
 
@@ -136,6 +223,8 @@ Clicando com o botão direito do mouse no ícone, os usuários podem fixar, remo
 ### <a name="messaging-extension-in-the-compose-box"></a>Extensão de mensagens na caixa de redação
 
 O exemplo a seguir é uma extensão de mensagens aberta na caixa de redação.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma extensão de mensagens na caixa de redação." border="false":::
 
@@ -149,6 +238,21 @@ O exemplo a seguir é uma extensão de mensagens aberta na caixa de redação.
 |6 |**Menu comandos de ação (opcional)**: exibe a lista de comandos de ação (se você especificar algum).|
 |7 |**Conteúdo do** aplicativo : principalmente para exibir os resultados da pesquisa. O exemplo aqui está usando o layout da lista (layout de grade é outra opção).|
 |8 |**Logotipo do aplicativo**: Ícone de contorno do logotipo do aplicativo.|
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma extensão de mensagens na caixa de redação no celular." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|1|**Nome do** aplicativo : Nome completo do seu aplicativo.|
+|2|**Ícone de menu comandos de ação (opcional)**: abre uma lista de comandos de ação para sua extensão de mensagens (se você especificar algum).
+|3|**Caixa de** pesquisa : Permite que os usuários encontrem o conteúdo do aplicativo que eles querem inserir.|
+|4 |**Menu Guia (opcional)**: Fornece várias categorias de conteúdo.|
+|5 |**Menu comandos de ação (opcional)**: exibe a lista de comandos de ação (se você especificar algum).|
+|6 |**Conteúdo do** aplicativo : principalmente para exibir os resultados da pesquisa.|
+
+---
 
 ### <a name="messaging-extension-management-menu"></a>Menu de gerenciamento de extensão de mensagens
 

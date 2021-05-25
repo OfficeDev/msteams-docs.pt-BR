@@ -5,12 +5,12 @@ description: Como executar o link desfraldamento com a extensão de mensagens em
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 405b320b887300837d51332a9548ff60aff450d0
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075714"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630681"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -178,4 +178,5 @@ A seguir está um exemplo da resposta:
 
 ## <a name="see-also"></a>Confira também 
 
-[Cartões](~/task-modules-and-cards/what-are-cards.md)
+* [Cartões](~/task-modules-and-cards/what-are-cards.md)
+* [Guias vinculam desfraldamento e exibição de estágio](~/tabs/tabs-link-unfurling.md)

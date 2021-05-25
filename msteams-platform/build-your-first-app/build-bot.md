@@ -5,12 +5,12 @@ description: Crie rapidamente um Microsoft Teams usando o Microsoft Teams Toolki
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d54766d739ceaf585ab4a1e026f4a6e1150e3a2e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565883"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630975"
 ---
 # <a name="create-your-first-bot-for-teams"></a>Crie seu primeiro bot para Teams
 
@@ -64,7 +64,7 @@ Grande parte das configurações e scaffolding do aplicativo são configuradas a
 
 Se você criou uma guia em outro tutorial, o scaffolding do aplicativo para o bot é diferente. Ao contrário das guias, o desenvolvimento de bots não exige que você crie nenhum componente web front-end ou use o SDK do cliente JavaScript Teams.  Em vez disso, o scaffolding usa o [Microsoft Bot Framework](https://dev.botframework.com/), que é um SDK de código aberto para criar bots inteligentes de nível empresarial que podem funcionar na Web, em dispositivos móveis e, claro, Teams! 
 
-O arquivo, localizado no diretório raiz do seu projeto, é o manipulador específico Teams que lida com atividades de bot, como como o bot responde a mensagens `botActivityHandler.js` específicas. O scaffolding de aplicativo fornece um arquivo localizado no diretório raiz do seu projeto, é o manipulador Teams específico que lida com atividades de bot, como como o bot responde a mensagens `botActivityHandler.js` específicas.
+O scaffolding de aplicativo fornece um arquivo, localizado no diretório raiz do seu projeto, é o manipulador específico Teams que lida com atividades de bot, como, como o bot responde a mensagens `botActivityHandler.js` específicas.
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. Expor seu localhost com segurança à Internet
 

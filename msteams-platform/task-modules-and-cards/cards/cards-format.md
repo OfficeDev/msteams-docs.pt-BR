@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566576"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630205"
 ---
 # <a name="format-cards-in-teams"></a>Formatar cartões em Teams
 
@@ -169,8 +169,6 @@ Use a propriedade mascarar informações para mascarar informações específica
 > [!NOTE]
 > A propriedade de mascaramento de informações está disponível apenas na visualização do desenvolvedor.
 
-Para mascarar informações em cartões adaptáveis, adicione a propriedade para `isMasked` **digitar** e de definir seu valor `Input.Text` como *true*.
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>Cartão adaptável de exemplo com a propriedade mascaramento
 
 ```json
@@ -178,8 +176,7 @@ Para mascarar informações em cartões adaptáveis, adicione a propriedade para
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 A imagem a seguir é um exemplo de informações de mascaramento em cartões adaptáveis:
@@ -218,7 +215,7 @@ Além disso, seu aplicativo deve incluir os seguintes elementos:
 
 Um Cartão Adaptável de largura total aparece da seguinte forma: Exibição de Cartão Adaptável de largura ![ total](../../assets/images/cards/full-width-adaptive-card.png)
 
-Se você não tiver definido a propriedade como Full , o modo de exibição padrão do Cartão Adaptável será o seguinte: Modo de exibição cartão adaptável de largura `width`  ![ pequena](../../assets/images/cards/small-width-adaptive-card.png)
+Se você não tiver definido a propriedade como Full , o modo de exibição padrão do Cartão Adaptável aparecerá da seguinte forma: Modo de exibição cartão adaptável de largura `width`  ![ pequena](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Suporte a Typeahead
 
@@ -287,7 +284,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. O supor
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| header (níveis 1 &ndash; 3) | **Texto** | `### Text`|
+| header (níveis 1 &ndash; 3) | **Text** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -376,7 +373,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. Markdow
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -464,7 +461,7 @@ As marcas HTML são suportadas para cartões simples, como o herói e o cartão 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

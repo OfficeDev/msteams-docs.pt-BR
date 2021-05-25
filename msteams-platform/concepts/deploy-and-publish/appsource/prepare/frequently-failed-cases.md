@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: dicas de envio de aplicativo com frequência diretrizes de validação de casos com falha
-ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565228"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629995"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Dicas para um envio de aplicativo de Microsoft Teams bem-sucedido
 
@@ -157,8 +157,7 @@ Seu bot deve estar respondendo a qualquer comando e não in-locar o usuário. Aq
 
   ![Exemplo de comando de ajuda](../../../../assets/images/faq/helpcommand.png)
 
-* **Use cartões adaptáveis e módulos de tarefa para tornar a resposta do bot clara e a actionable** 
- [Cartões adaptáveis com botões invocando módulos](/task-modules-and-cards/task-modules/task-modules-bots.md) de tarefa aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em vez do usuário digitar os comandos. Além disso, as respostas de bot não devem ser textuais com texto longo. Os bots devem usar cartões adaptáveis e módulos de tarefa em vez de interfaces de usuário baseadas em chat de conversa e respostas de texto longas.
+* **Use cartões adaptáveis e módulos de tarefa para tornar a resposta do bot clara e a actionable** Cartões adaptáveis com botões invocando módulos de tarefa aprimoram a experiência do usuário do bot. Esses cartões e botões são mais fáceis de usar em um dispositivo móvel, em vez do usuário digitar os comandos. Além disso, as respostas de bot não devem ser textuais com texto longo. Os bots devem usar cartões adaptáveis e módulos de tarefa em vez de interfaces de usuário baseadas em chat de conversa e respostas de texto longas.
 
 * **Pense em todos os escopos.** Certifique-se de que seu bot fornece respostas apropriadas quando mencionado ( `@*botname*` ) em um canal e em conversas pessoais. Se o bot não fornecer contexto significativo no escopo pessoal ou de equipes, desabilite esse escopo por meio do manifesto. (Consulte o bloco na referência de esquema de `bots` [manifesto Microsoft Teams](../../../../resources/schema/manifest-schema.md#bots).)
 

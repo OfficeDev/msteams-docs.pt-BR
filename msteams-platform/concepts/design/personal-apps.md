@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101552"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644880"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetar seu aplicativo pessoal para Microsoft Teams
 
@@ -39,14 +39,16 @@ Com um espaço de trabalho privado, você pode exibir o conteúdo do aplicativo 
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomia: aplicativo pessoal (espaço de trabalho privado)
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
 |A|**Atribuição do aplicativo**: o logotipo e o nome do aplicativo.|
-|B|**Guias**: fornece navegação para seu aplicativo pessoal. Por exemplo, inclua uma **guia Sobre** **ou Ajuda.**|
+|B|**Guias**: fornece navegação para seu aplicativo pessoal.|
 |C|**Exibição pop-out**: empurra o conteúdo do aplicativo de uma janela pai para uma janela filha autônoma.|
-|D|**Mais menu**: inclui informações e opções adicionais do aplicativo. (Você poderia, alternativamente, **Configurações** uma guia.)|
+|D|**Mais menu**: inclui opções e informações adicionais do aplicativo. (Você poderia, alternativamente, **Configurações** uma guia.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
 
@@ -55,22 +57,44 @@ Com um espaço de trabalho privado, você pode exibir o conteúdo do aplicativo 
 |A|**Guias**: fornece navegação para seu aplicativo pessoal.|
 |1|**iframe**: exibe o conteúdo do aplicativo.|
 
-### <a name="designing-with-ui-templates"></a>Projetando com modelos de interface do usuário
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua guia pessoal:
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Atribuição de aplicativo**: Seu nome do aplicativo.|
+|B|**Guias**: fornece navegação para seu aplicativo pessoal.|
+|C|**Mais menu**: inclui opções e informações adicionais do aplicativo.|
+|D|**Navegação primária**: fornece navegação para seu aplicativo outros recursos Teams principais.|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Guias**: fornece navegação para seu aplicativo pessoal.|
+|1|**webview**: exibe o conteúdo do aplicativo.|
+
+---
+
+### <a name="designing-with-ui-templates-and-advanced-components"></a>Projetando com modelos de interface do usuário e componentes avançados
+
+Use um dos seguintes Teams e componentes para ajudar a projetar sua guia pessoal:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 * [Quadro de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tarefas : um quadro de tarefas, às vezes chamado de quadro kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes.
 * [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou conteúdo.
 * [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): Os formulários são para coletar, validar e enviar entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais.
-* [Navegação à esquerda](../../concepts/design/design-teams-app-ui-templates.md#left-nav): O modelo de navegação à esquerda pode ajudar se sua guia exigir alguma navegação. Em geral, você deve manter a navegação de tabulação no mínimo.
+* [Navegação à esquerda](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav): O componente de navegação esquerdo pode ajudar se seu aplicativo pessoal exigir alguma navegação. Em geral, você deve manter a navegação no mínimo.
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
 
 Aplicativos pessoais podem incluir um bot para conversas um-a-um e notificações privadas (por exemplo, quando um colega posta um comentário em sua prancheta). O bot está disponível em uma guia especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 
@@ -79,6 +103,19 @@ Aplicativos pessoais podem incluir um bot para conversas um-a-um e notificaçõe
 |A|**Guia Bot**: Por exemplo, inclua uma guia **Chat** para acessar as conversas de bot e notificações.|
 |B|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
 |C|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Ponto de entrada do bot**: Ponto de entrada para os usuários acessarem o recurso bot em seu aplicativo pessoal.|
+|B|**Botão Voltar**: leva os usuários de volta para o espaço de trabalho privado.|
+|C|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
+|D|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
+
+---
 
 ## <a name="manage-a-personal-tab"></a>Gerenciar uma guia pessoal
 

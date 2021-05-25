@@ -5,12 +5,12 @@ description: Um guia de início rápido para criar um canal personalizado e uma 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: f748335b621e9bc93272aaeb8d7e12ecc3ebbee0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 1004e40e28875524ea1f38a3f6b3c2c53330fec1
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580445"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630360"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>Criar um Canal Personalizado e Uma Guia de Grupo com ASP.NETCore
 

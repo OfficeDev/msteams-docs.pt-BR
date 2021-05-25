@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566051"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630142"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -78,7 +78,7 @@ Os parâmetros de consulta são:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | A ID do manifesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | A ID do item na guia, que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` ou `subEntityWebUrl`&emsp; | Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar renderizar a guia. | https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` ou `subEntityWebUrl`&emsp; | Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar renderizar a guia. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo. | Lista de tarefas 123 ou "Tarefa 456 |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Um objeto JSON contendo os seguintes campos:</br></br> * Uma ID do item na guia. </br></br> * A Microsoft Teams de canal que está disponível no contexto da [guia](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | Uma ID do item na guia. |Task456 |
@@ -156,8 +156,8 @@ Os parâmetros de consulta são:
 
 * `tenantId`: Exemplo de ID de locatário, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Tipo de arquivo com suporte, como docx, pptx, xlsx e pdf
-* `objectUrl`: URL do objeto do arquivo, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: URL base do arquivo, https://microsoft.sharepoint.com/teams
+* `objectUrl`: URL do objeto do arquivo, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: URL base do arquivo, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Nome do serviço, ID do aplicativo
 * `threadId`: o threadId é a ID de equipe da equipe onde o arquivo está armazenado. Ele é opcional e não pode ser definido para arquivos armazenados na pasta OneDrive usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ID de grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -191,7 +191,7 @@ Os parâmetros de consulta são:
 * `appID`: Sua ID de manifesto **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: A ID do item que você forneceu [ao configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, **tasklist123**.
-* `entityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar a renderização da guia - https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 .
+* `entityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não suportar a renderização da guia - `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` .
 * `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, a Lista de Tarefas 123 ou a Tarefa 456.
 
 Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList

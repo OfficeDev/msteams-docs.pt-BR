@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 0cd5c6c4525e340f9aa53a78749211783880225a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566016"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644790"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -46,22 +46,9 @@ Instale um aplicativo de exemplo para ver como os modelos de interface do usuár
 > [!div class="nextstepaction"]
 > [Obter o aplicativo de exemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="list"></a>List
-
-Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista." border="false":::
-
-### <a name="top-use-cases"></a>Principais casos de uso
-
-* Exibir dados
-* Ações contextuais no conteúdo do aplicativo
-
 ## <a name="dashboard"></a>Painel
 
 Um painel exibe diferentes tipos de conteúdo em um local central (Teams aplicativo pessoal ou guia). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -69,69 +56,38 @@ Um painel exibe diferentes tipos de conteúdo em um local central (Teams aplicat
 * Métricas de relatório
 * Organizar informações diferentes em um só lugar
 
-## <a name="form"></a>Formulário
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Os formulários são usados para coletar, validar e enviar entrada do usuário de forma estruturada. A rotulagem limpa e os agrupamentos lógicos de campos de entrada são essenciais para uma boa experiência do usuário.
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel na área de trabalho." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário." border="false":::
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-### <a name="top-use-cases"></a>Principais casos de uso
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel no celular." border="false":::
 
-* Entrar
-* Perfis de usuário
-* Configurações
-* Coleção de entrada do usuário
-
-## <a name="sign-in"></a>Entrar
-
-Você pode projetar fluxos de entrada de aplicativos para diferentes Teams contextos e provedores de identidade. O exemplo a seguir inclui o logom único (SSO), que recomendamos para a experiência de autenticação mais simples.
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login." border="false":::
-
-### <a name="top-use-case"></a>Caso de uso superior
-
-* Autenticar usuários
-
-## <a name="task-board"></a>Quadro de Tarefas
-
-Um quadro de tarefas, às vezes chamado de quadro de kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes. Ele também pode ser usado para classificar qualquer tipo de conteúdo em categorias. Você pode editar e mover os cartões entre colunas.
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas." border="false":::
-
-### <a name="top-use-cases"></a>Principais casos de uso
-
-* Project gerenciamento: atribuindo tarefas e status de controle.
-* Brainstorming: Adicionando ideias em categorias diferentes.
-* Exercícios de classificação: organizar qualquer tipo de informação em buckets.
+---
 
 ## <a name="data-visualization"></a>Visualização de dados
 
 Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para empilhar e organizar visualizações de dados na mesma página. A escala de cartões para ajustar o layout da coluna e preencher espaços em branco.
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Exibir informações complexas
 * Criar um painel
 
-## <a name="wizard"></a>Assistente
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Um assistente orienta um usuário por várias telas para concluir uma tarefa (como um processo de instalação).
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente." border="false":::
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-### <a name="top-use-cases"></a>Principais casos de uso
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados no celular." border="false":::
 
-* Configurar
-* Integração
-* Experiências de primeira
+---
 
 ## <a name="empty-state"></a>Estado vazio
 
 O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais. É altamente flexível, adaptá-lo para usar um, alguns ou todos os componentes no design a seguir.
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio." border="false":::
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -140,61 +96,135 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar,
 * Mensagens de sucesso
 * Mensagens de erro
 
-## <a name="notification-bar"></a>Notification bar
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Uma barra de notificação é uma área dedicada para exibir uma mensagem breve e importante que não exige que o usuário tome medidas imediatas. Cores e ícones específicos de plano de fundo estão associados a tipos específicos de mensagens (consulte abaixo).
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos de barra de notificação." border="false":::
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-### <a name="top-use-cases"></a>Principais casos de uso
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio no celular." border="false":::
 
-* Mensagens críticas, erros e avisos
-* Mensagens de sucesso
-* Mensagens informativas ou promocionais
+---
 
-## <a name="left-nav"></a>Nav esquerdo
+## <a name="filter"></a>Filter
 
-Use a navegação esquerda para navegar por várias páginas na guia Teams. No exemplo a seguir, a navegação à esquerda está entre a lista de canais e o conteúdo da guia.
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo." border="false":::
+Um filtro permite reduzir as informações que você vê com base nos critérios selecionados. Você pode incluir filtros com tabelas, listas, cartões e outros componentes que organizam o conteúdo.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Navegue por várias páginas em uma Teams guia.
-* Separar aplicativos complexos em várias páginas.
+Organizar conteúdo em:
 
-## <a name="breadcrumb"></a>Trilha
+* Listas
+* Tabelas
+* Painéis
+* Visualização de dados
 
-Os breadcrumbs são um auxílio de navegação que transmitem a hierarquia do aplicativo. Eles ajudam os usuários a entender como a página que estão exibindo se encaixa na experiência geral e proporcionam acesso de um clique a níveis mais altos nessa hierarquia.
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Exemplo mostra um modelo de filtro." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb." border="false":::
+## <a name="form"></a>Formulário
 
-### <a name="top-use-cases"></a>Principais casos de uso
-
-* Hierarquia de comunicações
-* Navegação
-
-## <a name="toolbar"></a>Barra de ferramentas
-
-Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas." border="false":::
+Os formulários são usados para coletar, validar e enviar entrada do usuário de forma estruturada. A rotulagem limpa e os agrupamentos lógicos de campos de entrada são essenciais para uma boa experiência do usuário.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
+* Entrar
+* Perfis de usuário
+* Configurações
+* Coleção de entrada do usuário
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário no celular." border="false":::
+
+---
+
+## <a name="list"></a>List
+
+Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
+
+### <a name="top-use-cases"></a>Principais casos de uso
+
+* Exibir dados
 * Ações contextuais no conteúdo do aplicativo
-* Filtro contextual e local
-* Navegação e controles de navegação
 
-## <a name="stage"></a>Estágio
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-O estágio oferece uma maneira de os usuários abrirem uma entidade, como uma imagem, arquivo ou site, em Teams em vez de abri-la em outro aplicativo ou navegador. O principal caso de uso do estágio é exibição; a superfície não deve ser usada para interações complexas.
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista na área de trabalho." border="false":::
 
-(Observação de implementação: crie seu estágio usando um módulo [de tarefa grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
+# <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Exemplo mostra um modelo de estágio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista no celular." border="false":::
+
+---
+
+## <a name="sign-in"></a>Entrar
+
+Você pode projetar fluxos de entrada de aplicativos para diferentes Teams contextos e provedores de identidade. O exemplo a seguir inclui o logom único (SSO), que recomendamos para a experiência de autenticação mais simples.
+
+### <a name="top-use-case"></a>Caso de uso superior
+
+* Autenticar usuários
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login na área de trabalho." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login no celular." border="false":::
+
+---
+
+## <a name="settings"></a>Configurações
+
+Configurações telas são onde os usuários podem configurar suas preferências com seu aplicativo. (Observação: Configurações é um contêiner para [componentes básicos da interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md).)
+
+### <a name="top-use-case"></a>Caso de uso superior
+
+* Gerenciar recursos do aplicativo
+
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Exemplo mostra um modelo de configurações." border="false":::
+
+## <a name="task-board"></a>Quadro de Tarefas
+
+Um quadro de tarefas, às vezes chamado de quadro de kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes. Ele também pode ser usado para classificar qualquer tipo de conteúdo em categorias. Você pode editar e mover os cartões entre colunas.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Abra uma entidade no Teams em vez de outro aplicativo ou navegador.
-* Mídia de destaque ou outro conteúdo.
+* Gerenciamento de projetos. Atribuindo tarefas e status de controle
+* Brainstorming. Adicionar ideias em categorias diferentes
+* Exercícios de classificação. Organizar qualquer tipo de informação em buckets
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas no celular." border="false":::
+
+---
+
+## <a name="wizard"></a>Assistente
+
+Um assistente orienta um usuário por várias telas para concluir uma tarefa (como um processo de instalação).
+
+### <a name="top-use-cases"></a>Principais casos de uso
+
+* Configurar
+* Integração
+* Experiências de primeira
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente no celular." border="false":::
+
+---

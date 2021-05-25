@@ -78,7 +78,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Você gostaria de usar o Azure Applications Insights para telemetria? (y/N)**
 
-    Escolha **não incluir** o [Azure Application Insights.](/azure-docs/articles/azure-monitor/app/app-insights-overview.md) O padrão é não; enter **n**.
+    Escolha **não incluir** o [Azure Application Insights.](/azure/azure-monitor/app/app-insights-overview) O padrão é não; enter **n**.
 
     **Nome da guia padrão (máx. 16 caracteres)?**
 

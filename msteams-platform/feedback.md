@@ -4,12 +4,12 @@ description: A Microsoft Teams do produto responde à comunidade de desenvolvedo
 localization_priority: Normal
 ms.topic: reference
 keywords: perguntas do desenvolvedor de feedback do teams problemas de suporte de contato solicitação de bugs discussões da comunidade
-ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b052b50bdafd542904bf3a9dfc6ee9d1ad5cf769
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566163"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630478"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams da comunidade de desenvolvedores
 
@@ -24,7 +24,7 @@ Microsoft Teams comunidade de desenvolvedores usam Stack Overflow para se conect
 |  **Atualizações de documentação**           |     Selecione **Editar** no artigo que você deseja atualizar e envie uma solicitação pull para a documentação Microsoft Teams [GitHub](https://github.com/MicrosoftDocs/msteams-docs) repositório.                                                                                                                                                           |
 |       **Sugestões de recursos**       |                                                                                                                                                                      Poste sugestões de recursos [Microsoft Teams portal de comentários no UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).                                                                                                                                                                      |
 |       **Questões gerais**         |Envie perguntas gerais sobre a plataforma Microsoft Teams desenvolvedor para [Microsoft Teams Community Ajuda.](mailto:microsoftteamsdev@microsoft.com) Incentivamos a postagem de perguntas nos canais mencionados aqui e usamos email somente se nenhum outro modo de comunicação for aplicável.                                                                                                                                                                      |
-|        **Exemplos**         | Envie problemas com exemplos para o repositório [de exemplos Microsoft Teams exemplos.](/microsoftteams/platform/tutorials/code-samples)|
+|        **Exemplos**         | Envie problemas com exemplos para o repositório [de exemplos Microsoft Teams exemplos.](https://github.com/OfficeDev/Microsoft-Teams-Samples)|
 |           **Tab SDK issues or suggestions**          |         Enviar problemas e solicitações de recursos para o repositório SDK [para Microsoft Teams Biblioteca JavaScript.](https://github.com/OfficeDev/microsoft-teams-library-js/issues) Use a `microsoft-teams` marca para postar perguntas sobre o SDK em Stack [Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams).                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>Canais de suporte a produtos

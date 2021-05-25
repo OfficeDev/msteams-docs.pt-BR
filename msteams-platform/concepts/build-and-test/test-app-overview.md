@@ -4,12 +4,12 @@ description: Descreve o processo para testar seu aplicativo Teams personalizado 
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar Microsoft 365 de Teams de teste de carregamento
-ms.openlocfilehash: 2c9f23a5c6ae286ff4b7d911f370bd45b854a647
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565181"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631003"
 ---
 # <a name="test-your-app"></a>Testar seu aplicativo
 
@@ -37,11 +37,9 @@ Adicione os dados de teste Microsoft 365 locatário de teste. Para obter mais in
 
 ## <a name="see-also"></a>Confira também
 
-- [Depurar sua guia](~/tabs/how-to/developer-tools.md)
- 
-- [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+* [Depurar sua guia](~/tabs/how-to/developer-tools.md)
+* [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

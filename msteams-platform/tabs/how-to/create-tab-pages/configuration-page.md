@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566681"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629960"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -104,7 +104,7 @@ Escolher o botão relativo dispara `saveGray()` ou , e invoca o `saveRed()` segu
 1. O `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos é acionado.
 1. O **botão Salvar** na página de configuração do aplicativo, carregado Teams, está habilitado.
 
-O código da página de configuração informa ao Teams que os requisitos de configuração estão satisfeitos e que a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface. Para obter mais informações, [consulte Configurações interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Na última etapa, é `saveEvent.notifySuccess()` chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+O código da página de configuração informa ao Teams que os requisitos de configuração estão satisfeitos e que a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela `Settings` interface. Para obter mais informações, [consulte Configurações interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). Na última etapa, é `saveEvent.notifySuccess()` chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ O código da página de configuração informa ao Teams que os requisitos de con
 
 Sua guia pode exigir informações contextuais para exibir conteúdo relevante. As informações contextuais aprimora ainda mais o apelo da guia, fornecendo uma experiência de usuário mais personalizada.
 
-Para obter mais informações sobre as propriedades usadas para a configuração de tabulação, consulte [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Colete os valores das variáveis de dados de contexto das duas seguintes maneiras:
+Para obter mais informações sobre as propriedades usadas para a configuração de tabulação, consulte [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Colete os valores das variáveis de dados de contexto das duas seguintes maneiras:
 
 1. Inserir os espaço reservados da cadeia de caracteres de consulta de URL no `configurationURL` seu manifesto.
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar a `getContext()` função para recuperar o contexto
 
-A `microsoftTeams.getContext((context) => {})` função recupera a interface context [quando](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) invocada. Adicione essa função à página de configuração para recuperar valores de contexto:
+A `microsoftTeams.getContext((context) => {})` função recupera a interface context [quando](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) invocada. Adicione essa função à página de configuração para recuperar valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por fazer com que seu canal ou guia de grupo apareça no Teams clientes móveis, a configuração deve ter um `setSettings()` valor para a `websiteUrl` propriedade. Para obter mais informações, [consulte diretrizes para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md).
+Se você optar por fazer com que seu canal ou guia de grupo apareça no Teams clientes móveis, a configuração deve ter `setSettings()` um valor para `websiteUrl` . Para obter mais informações, [consulte diretrizes para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md).

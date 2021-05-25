@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 19c51d5c30f938dc5368b28b69ffeb29330887b4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566590"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629967"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 

@@ -1,22 +1,22 @@
 ---
 title: Eventos de conversa
 author: WashingtonKayaker
-description: Como trabalhar com eventos de conversa do seu bot do Microsoft Teams.
+description: Como trabalhar com eventos de conversa do Microsoft Teams bot.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020025"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630702"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Ao criar seus bots de conversa para o Microsoft Teams, você pode trabalhar com eventos de conversa. O Teams envia notificações ao bot para eventos de conversa que ocorrem em escopos onde o bot está ativo. Você pode capturar esses eventos em seu código e tomar as seguintes ações:
+Ao criar seus bots de conversa para Microsoft Teams, você pode trabalhar com eventos de conversa. Teams envia notificações ao bot para eventos de conversa que ocorrem em escopos onde o bot está ativo. Você pode capturar esses eventos em seu código e tomar as seguintes ações:
 
 * Acionar uma mensagem de boas-vindas quando seu bot for adicionado a uma equipe.
 * Acionar uma mensagem de boas-vindas quando um novo membro da equipe for adicionado ou removido.
@@ -40,7 +40,7 @@ Um bot recebe um `conversationUpdate` evento em um dos seguintes casos:
 
 O evento `conversationUpdate` é enviado ao seu bot quando ele recebe informações sobre atualizações de membros para as equipes onde foi adicionado. Ele também recebe uma atualização quando foi adicionada pela primeira vez para conversas pessoais.
 
-A tabela a seguir mostra uma lista de eventos de atualização de conversa do Teams com mais detalhes:
+A tabela a seguir mostra uma lista de eventos Teams de atualização de conversa com mais detalhes:
 
 | Ação tomada        | EventType         | Método chamado              | Descrição                | Escopo |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -143,7 +143,7 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-renamed"></a>Canal renomeado
 
@@ -225,7 +225,7 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-deleted"></a>Canal excluído
 
@@ -309,7 +309,7 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-restored"></a>Canal restaurado
 
@@ -398,7 +398,7 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
@@ -542,7 +542,7 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-members-removed"></a>Membros da equipe removidos
 
@@ -654,7 +654,7 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-renamed"></a>Equipe renomeada
 
@@ -734,7 +734,7 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-deleted"></a>Equipe excluída
 
@@ -810,7 +810,7 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-restored"></a>Equipe restaurada
 
@@ -890,7 +890,7 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-archived"></a>Equipe arquivada
 
@@ -970,7 +970,7 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
 ### <a name="team-unarchived"></a>Equipe desarquivada
@@ -1051,7 +1051,7 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
 Agora que você trabalhou com os eventos de atualização de conversa, você pode entender os eventos de reação de mensagem que ocorrem para diferentes reações a uma mensagem.
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="reactions-removed-from-bot-message"></a>Reações removidas da mensagem bot
 
@@ -1282,7 +1282,7 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
 ## <a name="installation-update-event"></a>Evento de atualização de instalação
 
@@ -1292,7 +1292,7 @@ O bot recebe um `installationUpdate` evento quando você instala um bot em um th
 > Quando você atualiza um aplicativo e adiciona ou remove um bot, a ação também dispara o `installationUpdate` evento. O **campo** de ação será definido como *add-upgrade* se você adicionar um bot *ou remover a atualização* se você remover um bot. 
 
 > [!IMPORTANT]
-> Os eventos de atualização de instalação estão na visualização do desenvolvedor hoje e estarão geralmente disponíveis (GA) em março de 2021. Para ver os eventos de atualização de instalação, você pode mover seu cliente do Teams para a visualização do desenvolvedor público e adicionar seu aplicativo pessoalmente ou a uma equipe ou um chat.
+> Os eventos de atualização de instalação estão na visualização do desenvolvedor hoje e estarão geralmente disponíveis (GA) em março de 2021. Para ver os eventos de atualização de instalação, você pode mover seu cliente Teams para a visualização do desenvolvedor público e adicionar seu aplicativo pessoalmente ou a uma equipe ou um chat.
 
 ### <a name="install-update-event"></a>Instalar evento de atualização
 Use o `installationUpdate` evento para enviar uma mensagem introdutiva do bot na instalação. Esse evento ajuda você a atender aos requisitos de privacidade e retenção de dados. Você também pode limpar e excluir dados de usuário ou thread quando o bot for desinstalado.
@@ -1320,6 +1320,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
+
+Não disponível
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1375,7 +1379,12 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# <a name="python"></a>[Python](#tab/python)
+
+Não disponível
+
+---
 
 ## <a name="code-sample"></a>Exemplo de código
 

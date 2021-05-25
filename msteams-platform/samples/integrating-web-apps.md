@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Aplicativos Web
-ms.openlocfilehash: 6783a05079f876cf3c2475a0ad5ca0e1f6687fc4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566219"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630429"
 ---
 # <a name="web-apps"></a>Aplicativos Web 
 
@@ -110,7 +110,7 @@ Use um [bot](../bots/what-are-bots.md) em seu aplicativo Teams para conversas co
 
 Os bots também permitem que você envie mensagens **proativas** para usuários ou canais individuais. As mensagens proativas são mensagens não proativas disparadas por um evento externo e não uma mensagem enviada a um bot. Por exemplo, seu bot envia uma mensagem de boas-vindas quando ele é instalado ou um novo usuário ins junta um canal. 
 
-O envio de mensagens proativas requer Teams identificadores específicos. Você pode capturar as informações [buscando](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)dados de lista ou perfil de usuário, [assinando](../bots/how-to/conversations/subscribe-to-conversation-events.md)eventos de conversa ou usando [o Microsoft Graph](/graph/teams-proactive-messaging).
+O envio de mensagens proativas requer Teams identificadores específicos. Você pode capturar as informações [buscando](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)dados de lista ou perfil de usuário, [assinando](../bots/how-to/conversations/subscribe-to-conversation-events.md)eventos de conversa ou usando [o Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
 Não spam usuários com mensagens excessivas. Se a Teams a funcionalidade for compatível, os usuários poderão definir as configurações de notificação para seu aplicativo.   
 A seguir está um exemplo de uma mensagem de notificação: Não me envie mensagens **não prompadas.**
