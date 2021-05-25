@@ -89,30 +89,40 @@
   items:
     - name: Visão Geral
       href: concepts/design/design-teams-app-overview.md
-    - name: Conceitos básicos de design
+    - name: Compreenda o processo de design
+      href: concepts/design/design-teams-app-process.md
+    - name: Sistema de design
       href: concepts/design/design-teams-app-fundamentals.md
-    - name: Componentes básicos da interface de usuário
-      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Recursos do aplicativo
+      items:
+        - name: Entender a estrutura do aplicativo
+          href: concepts/design/app-structure.md
+        - name: Aplicativos pessoais
+          href: concepts/design/personal-apps.md
+        - name: Guias
+          href: tabs/design/tabs.md
+        - name: Bots
+          href: bots/design/bots.md
+        - name: Extensões de mensagens
+          href: messaging-extensions/design/messaging-extension-design.md
+        - name: Extensões de reunião
+          href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
     - name: 'Modelos de Interface de Usuário '
       href: concepts/design/design-teams-app-ui-templates.md
-    - name: Aplicativos pessoais
-      href: concepts/design/personal-apps.md
-    - name: Guias
+    - name: Componentes da Interface de Usuário
       items:
-        - name: Área de trabalho e Web
-          href: tabs/design/tabs.md
-        - name: Celular
-          href: tabs/design/tabs-mobile.md
-    - name: Extensões de mensagens
-      href: messaging-extensions/design/messaging-extension-design.md
-    - name: Bots
-      href: bots/design/bots.md
-    - name: Extensões de reunião
-      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-    - name: Cartões Adaptáveis
-      href: task-modules-and-cards/cards/design-effective-cards.md
-    - name: Módulos de tarefas
-      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: Componentes básicos da Interface de Usuário
+          href: concepts/design/design-teams-app-basic-ui-components.md
+        - name: Componentes Avançados da Interface de Usuário
+          href: concepts/design/design-teams-app-advanced-ui-components.md
+        - name: Cartões Adaptáveis
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: Módulos de tarefas
+          href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: Notificações de feed de atividades
+          href: concepts/design/activity-feed-notifications.md
+    - name: Habilitar personalização de aplicativo
+      href: concepts/design/enable-app-customization.md
 - name: Ferramentas e SDKs
   items:
     - name: Kit de ferramentas do Teams para Visual Studio Code
@@ -123,6 +133,8 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Portal do Desenvolvedor do Teams
+      href: concepts/build-and-test/teams-developer-portal.md
     - name: SDK do cliente JavaScript do Teams
       href: tabs/how-to/using-teams-client-sdk.md
     - name: Bot Framework do Node.js para bots e extensões de mensagens (GitHub)
@@ -179,6 +191,8 @@
   items:
     - name: Visão Geral
       href: tabs/what-are-tabs.md
+    - name: Link de tabulação descarada e Exibição de Estágio
+      href: tabs/tabs-link-unfurling.md
     - name: Requisitos de tabulação
       href: tabs/how-to/tab-requirements.md
     - name: Guias de início rápido
@@ -201,6 +215,8 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Criar uma página de remoção
       href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Guias em dispositivos móveis
+      href: tabs/design/tabs-mobile.md
     - name: Obtenha contexto para sua guia
       href: tabs/how-to/access-teams-context.md
 - name: Criar bots
@@ -217,6 +233,9 @@
           href: bots/how-to/conversations/conversation-basics.md
         - name: Mensagens em conversas de bot
           href: bots/how-to/conversations/conversation-messages.md
+          items:
+            - name: Receber todas as mensagens do canal com RSC
+              href: bots/how-to/conversations/channel-messages-with-rsc.md
         - name: Criar um menu de comandos para o seu bot
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Conversas em canal e em grupo
