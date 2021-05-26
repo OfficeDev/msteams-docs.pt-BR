@@ -4,12 +4,12 @@ description: Exemplo de fluxos de trabalho sequenciais usando ações universais
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555399"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649640"
 ---
 # <a name="sequential-workflows"></a>Fluxos de Trabalho Sequenciais
 
@@ -122,6 +122,12 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+## <a name="code-sample"></a>Exemplo de código
+
+|Exemplo de nome | Descrição | . NETCore |
+|----------------|-----------------|--------------|
+| Teams de bufê | Crie um bot simples que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>Confira também
 

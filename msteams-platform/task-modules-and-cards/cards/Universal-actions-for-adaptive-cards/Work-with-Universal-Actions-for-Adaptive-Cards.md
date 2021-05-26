@@ -1,16 +1,16 @@
 ---
-title: Trabalhar com ações universais para cartões adaptáveis
+title: Trabalhar com Ações Universais para Cartões Adaptáveis
 description: Trabalhe com as Ações Universais para Cartões Adaptáveis.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8c260a4893d38ad365cbb3bdd5a7613a1b42654f
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088807"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649696"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com ações universais para cartões adaptáveis
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
 Ações universais para cartões adaptáveis fornece uma maneira de implementar cenários baseados em Cartão Adaptável para ambos, Teams e Outlook. Este documento aborda o seguinte:
 
@@ -42,7 +42,7 @@ Ações universais para cartões adaptáveis é introduzido no esquema cartões 
 
 Se você definir a versão do cartão como menor que 1,4 e usar ambas as propriedades e `refresh` `Action.Execute` , o seguinte ocorrerá:
 
-| Client | Comportamento |
+| Cliente | Comportamento |
 | :-- | :-- |
 | Teams | Seu cartão para de funcionar. O cartão não é atualizado `Action.Execute` e não é renderizada dependendo da versão do Teams cliente. Para garantir a máxima compatibilidade Teams, defina `Action.Execute` com um na propriedade `Action.Submit` fallback. |
 
@@ -52,7 +52,7 @@ Para obter mais informações sobre como dar suporte a clientes mais antigos, co
 
 Ao ser autor de Cartões Adaptáveis, substitua `Action.Submit` e `Action.Http` por `Action.Execute` . O esquema para `Action.Execute` é semelhante ao de `Action.Submit` .
 
-Para obter mais informações, [consulteAction.Exeesquema e propriedades atraentes.](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+Para obter mais informações, [consulteAction.Exeesquema e propriedades atraentes.](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 Agora, você pode usar o modelo de atualização para permitir que cartões adaptáveis atualizem automaticamente.
 
@@ -60,7 +60,7 @@ Agora, você pode usar o modelo de atualização para permitir que cartões adap
 
 Para atualizar automaticamente seu Cartão Adaptável, defina sua propriedade, que incorpora uma `refresh` ação de tipo e uma `Action.Execute` `userIds` matriz.
 
-Para obter mais informações, [consulte refresh schema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
+Para obter mais informações, [consulte refresh schema and properties](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
 ## <a name="user-ids-in-refresh"></a>IDs de usuário na atualização
 
@@ -72,7 +72,7 @@ Veja a seguir os recursos de UserIds na atualização:
 
 * A propriedade UserIds é adicionada porque os canais Teams podem incluir um grande número de membros. Se todos os membros estão exibindo o canal ao mesmo tempo, uma atualização automática incondicional resulta em muitas chamadas simultâneas para o bot. Para evitar isso, a propriedade sempre deve ser incluída para identificar quais usuários devem obter uma atualização automática com um máximo de `userIds` *60 (60) MRIs* de usuário.
 
-* Para obter mais informações sobre como você pode buscar Teams MRIs de usuário do membro da conversa para adicionar na lista userIds na seção de atualização do Cartão Adaptável, consulte [fetch roster](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)or user profile .
+* Para obter mais informações sobre como você pode buscar Teams MRIs de usuário do membro da conversa para adicionar na lista userIds na seção de atualização do Cartão Adaptável, consulte [fetch roster](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)or user profile .
 
 * Exemplo Teams MRI do usuário é`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -85,9 +85,9 @@ A próxima etapa é usar a atividade `adaptiveCard/action` de invocação para e
 
 Quando `Action.Execute` é executado no cliente, um novo tipo de atividade Invoke é feito no `adaptiveCard/action` bot.
 
-Para obter mais informações, consulte [request format and properties for a typical invoke `adaptiveCard/action` activity](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format).
+Para obter mais informações, consulte [request format and properties for a typical invoke `adaptiveCard/action` activity](/adaptive-cards/authoring-cards/universal-action-model#request-format).
 
-Para obter mais informações, consulte [formato de resposta e propriedades para uma atividade de `adaptiveCard/action` invocação típica com tipos de resposta com suporte.](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format)
+Para obter mais informações, consulte [formato de resposta e propriedades para uma atividade de `adaptiveCard/action` invocação típica com tipos de resposta com suporte.](/adaptive-cards/authoring-cards/universal-action-model#response-format)
 
 Em seguida, você pode aplicar compatibilidade com versões anteriores a clientes mais antigos em diferentes plataformas e tornar seu Cartão Adaptável compatível.
 
@@ -99,7 +99,13 @@ Ações universais para cartões adaptáveis permite definir propriedades que pe
 
 Para garantir a compatibilidade com versões anteriores dos Cartões Adaptáveis com versões mais antigas Teams, você deve incluir a propriedade e definir seu `fallback` valor como `Action.Submit` . Além disso, seu código de bot deve processar `Action.Execute` tanto quanto `Action.Submit` .
 
-Para obter mais informações, consulte [backward compatibility on Teams](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams).
+Para obter mais informações, consulte [backward compatibility on Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
+
+## <a name="code-sample"></a>Exemplo de código
+
+|Exemplo de nome | Descrição | . NETCore |
+|----------------|-----------------|--------------|
+| Teams de bufê | Crie um bot simples que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>Confira também
 

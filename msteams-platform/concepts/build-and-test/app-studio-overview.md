@@ -4,16 +4,23 @@ description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App 
 keywords: introdução ao app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 391086b85f0e68e1a864c3d4254bdbe62b5eaa1a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565197"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651709"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolva aplicativos rapidamente com o App Studio para Microsoft Teams
 
 O App Studio torna fácil começar a criar ou integrar seus próprios aplicativos Microsoft Teams, quer você desenvolva aplicativos personalizados para sua empresa ou aplicativos SaaS para equipes em todo o mundo, fornecendo um fluxo de criação do manifesto e do pacote para seu aplicativo e fornecendo ferramentas úteis como o Editor de Cartões e uma biblioteca de controle de Reação.
+
+> [!IMPORTANT]
+> No momento, o App Studio não está disponível nos seguintes tipos de Teams orgs:
+>
+> * Nuvem Comunitária Governamental (GCC)
+> * CCG Alto
+> * DoD
 
 ## <a name="installing-app-studio"></a>Instalando o App Studio
 
