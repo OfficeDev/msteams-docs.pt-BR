@@ -6,12 +6,12 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2bd5c5c1cfaab4e2f03423f078c04b133331de1a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630527"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646556"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
 
@@ -19,7 +19,7 @@ Este documento orienta você sobre como integrar o recurso de QR ou scanner de c
 
 Código de barras é um método de representação de dados em um formulário visual e acessível por máquina. O código de barras contém informações sobre um produto, como um tipo, tamanho, fabricante e País de origem na forma de barras e espaços. O código é lido usando o scanner óptico em sua câmera de dispositivo nativa. Para uma experiência colaborativa mais rica, você pode integrar o recurso de QR ou scanner de código de barras fornecido na plataforma Teams com seu aplicativo Teams de código de barras.   
 
-Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use a `scanBarCode` API para integrar o recurso de scanner ao seu aplicativo. 
+Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use a API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) para integrar o recurso de scanner ao seu aplicativo. 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Vantagem de integrar a QR ou o recurso de scanner de código de barras
 
@@ -28,7 +28,7 @@ A seguir estão as vantagens da integração dos recursos de QR ou scanner de c�
 * A integração permite que os desenvolvedores de aplicativo web na plataforma Teams aproveitem a funcionalidade de verificação de QR ou código de barras com Teams SDK do cliente JavaScript.
 * Com esse recurso, o usuário só precisa alinhar uma QR ou código de barras em um quadro no centro da interface do usuário do scanner e o código é verificado automaticamente. Os dados armazenados são compartilhados de volta com o aplicativo Web de chamada. Isso evita o inconveniente e os erros humanos de inserir códigos de produto longos ou outras informações relevantes manualmente.
 
-Para integrar a QR ou o recurso de scanner de código de barras, você deve atualizar o arquivo de manifesto do aplicativo e chamar a `scanBarCode` API. Para uma integração eficaz, você [](#code-snippet) deve ter uma boa compreensão do trecho de código para chamar a API, o que permite que você use a QR nativa ou a funcionalidade de `scanBarCode` scanner de código de barras. A API fornece um erro para um padrão de código de barras sem suporte.
+Para integrar a QR ou o recurso de scanner de código de barras, você deve atualizar o arquivo de manifesto do aplicativo e chamar a API [scanBarCode.](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) Para uma integração eficaz, você [](#code-snippet) deve ter uma boa compreensão do trecho de código para chamar a API [scanBarCode,](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) que permite usar a QR nativa ou a funcionalidade de scanner de código de barras. A API fornece um erro para um padrão de código de barras sem suporte.
 É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams app.
 
 > [!NOTE] 
@@ -49,9 +49,9 @@ Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-sc
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
-A API invoca o controle de scanner que permite ao usuário examinar diferentes tipos de código de `ScanBarCode` barras e retorna o resultado como uma cadeia de caracteres.
+A API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) invoca o controle de scanner que permite ao usuário examinar diferentes tipos de código de barras e retorna o resultado como uma cadeia de caracteres.
 
-Para personalizar a experiência de verificação de código de barras, a configuração opcional do código de barras é passada como entrada para a `ScanBarCode` API. Você pode especificar o intervalo de tempo de verificação em segundos usando `timeOutIntervalInSec` . Seu valor padrão é 30 segundos e o valor máximo é 60 segundos.
+Para personalizar a experiência de verificação de código de barras, a configuração [opcional do código de barras](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) é passada como entrada para a API [scanBarCode.](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) Você pode especificar o intervalo de tempo de verificação em segundos usando `timeOutIntervalInSec` . Seu valor padrão é 30 segundos e o valor máximo é 60 segundos.
 
 A **API scanBarCode()** dá suporte aos seguintes tipos de código de barras:
 

@@ -5,12 +5,12 @@ keywords: iniciando equipes do portal do desenvolvedor
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635061"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646330"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerenciar seus aplicativos com o Portal do Desenvolvedor para Microsoft Teams
 
@@ -79,8 +79,8 @@ Na página **Visão** geral, você pode ver o número total de usuários ativos 
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensal* | A métrica de uso padrão. Ele mostra a contagem de usuários ativos exclusivos que usaram seu aplicativo nessa janela de 30 dias de rolagem em UTC. |
 | *Diariamente* | Mostra a contagem de usuários ativos exclusivos que usaram seu aplicativo em um determinado dia em UTC. |
-| *Histórico* | O uso mensal e diário é mostrado nos últimos sete, 30 dias e 60 dias. |
-| *Latência* | Você deve ver o uso refletido para um determinado dia dentro de 24 a 48 horas. O uso de novos aplicativos pode levar de 3 a 5 dias para ser exibido.|
+
+O uso mensal e diário é mostrado nos últimos sete, 30 dias e 60 dias. Você deve ver o uso refletido para um determinado dia dentro de 24 a 48 horas. O uso de novos aplicativos pode levar de 3 a 5 dias para ser exibido.
 
 ## <a name="use-tools-to-create-app-features"></a>Usar ferramentas para criar recursos de aplicativo
 

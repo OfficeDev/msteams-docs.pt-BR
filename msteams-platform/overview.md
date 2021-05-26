@@ -5,13 +5,13 @@ description: Obter uma visão geral de como os desenvolvedores podem estender Mi
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630485"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646492"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams aplicativos trazem informações importantes, ferramentas comuns
 Aplicativos são como você estende Teams para se ajustar às suas necessidades. Crie algo novo para Teams ou integre um aplicativo existente.
 
 > [!div class="nextstepaction"]
-> [Iniciar aqui](build-your-first-app/build-first-app-overview.md)
+> [Iniciar aqui](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>O que Teams aplicativos?
 
@@ -153,7 +153,7 @@ Teams aplicativos são uma combinação de [recursos.](concepts/capabilities-ove
 Familiarize-se rapidamente com a criação para Teams configurando seu ambiente e criando um aplicativo simples.
 
 > [!div class="nextstepaction"]
-> [Desenvolver seu primeiro aplicativo](build-your-first-app/build-first-app-overview.md)
+> [Desenvolver seu primeiro aplicativo](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::
