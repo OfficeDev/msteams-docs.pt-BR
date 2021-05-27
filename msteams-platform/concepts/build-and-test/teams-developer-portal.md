@@ -5,19 +5,19 @@ keywords: iniciando equipes do portal do desenvolvedor
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
-ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
+ms.openlocfilehash: 950ca7e09f5b87647cb62b66a545a0b1cec33a7d
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646330"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667437"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerenciar seus aplicativos com o Portal do Desenvolvedor para Microsoft Teams
 
 > [!NOTE]
 > O Portal do Desenvolvedor para Teams está atualmente em [visualização de desenvolvedor público.](~/resources/dev-preview/developer-preview-intro.md)
 
-O Portal do Desenvolvedor para Teams é a principal ferramenta para configurar, distribuir e gerenciar seus Microsoft Teams aplicativos. Com o Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de tempo de execução e muito mais.
+O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolvedor para Teams</a> é a principal ferramenta para configurar, distribuir e gerenciar seus Microsoft Teams aplicativos. Com o Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de tempo de execução e muito mais.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a home page do Portal do Desenvolvedor para Teams.":::
 

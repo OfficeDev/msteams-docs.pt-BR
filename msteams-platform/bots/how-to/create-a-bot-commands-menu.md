@@ -1,27 +1,32 @@
 ---
 title: Criar um menu de comando para seu bot
 author: clearab
-description: Como criar um menu de comando para seu bot do Microsoft Teams
+description: Como criar um menu de comando para seu Microsoft Teams bot
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: da87725fca6b4eeacd43f48f6946920251d772e9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020909"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668831"
 ---
 # <a name="bot-command-menus"></a>Menus de comando bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-> [!Note]
-> Os menus bot não aparecem em clientes móveis.
-
 Para definir um conjunto de comandos principais aos quais o bot pode responder, você pode adicionar um menu de comando com uma lista lista de comandos suspensos para seu bot. A lista de comandos é apresentada aos usuários na área de mensagem de composição quando eles estão em conversa com seu bot. Selecione um comando na lista para inserir a cadeia de caracteres de comando na caixa de mensagem de composição e selecione **Enviar**.
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 ![Menu de comando bot](./conversations/media/bot-menu-sample.png)
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+![Menu de comando de bot móvel](./conversations/media/mobile-bot-menu-sample.png)
+
+* * *
 
 ## <a name="create-a-command-menu-for-your-bot"></a>Criar um menu de comando para seu bot
 
@@ -33,7 +38,7 @@ Um pré-requisito para criar um menu de comando para seu bot é que você deve e
 
 **Para criar um menu de comando para seu bot usando o App Studio**
 
-1. Abra o Teams e selecione **Aplicativos** no painel esquerdo. Na página **Aplicativos,** procure o **App Studio** e selecione **Abrir**. 
+1. Abra Teams e selecione **Aplicativos** no painel esquerdo. Na página **Aplicativos,** procure o **App Studio** e selecione **Abrir**. 
    > [!NOTE]
    > Se você não tiver o **App Studio,** poderá baixá-lo. Para obter mais informações, [consulte installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
@@ -164,7 +169,7 @@ Os bots em um grupo ou canal respondem somente quando são mencionados `@botname
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Você pode analisar a parte **\@ Menção** do texto da mensagem usando um método estático fornecido com a Estrutura do Microsoft Bot. É um método da classe `Activity` chamada `RemoveRecipientMention` .
+Você pode analisar a parte **\@ Menção** do texto da mensagem usando um método estático fornecido com o Microsoft Bot Framework. É um método da classe `Activity` chamada `RemoveRecipientMention` .
 
 O C# código para analisar a parte **\@ Menção** do texto da mensagem é o seguinte:
 

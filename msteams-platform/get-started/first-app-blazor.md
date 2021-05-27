@@ -5,12 +5,12 @@ description: Crie rapidamente um Microsoft Teams que exibe um "Hello, World!" us
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 861b6921d7a2092a746ea7dc1399f8aaa523e207
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646612"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667451"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor
 
@@ -53,10 +53,10 @@ Use o Teams Toolkit para criar seu primeiro projeto:
 1. Execute `dotnet new -i` para instalar o modelo de NuGet:
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   Você só precisa fazer isso na primeira vez ou ao atualizar o modelo.
+   Você só precisa fazer isso na primeira vez ou ao atualizar o modelo. Verifique [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) a versão mais recente deste pacote.
 
 1. Criar um diretório:
 

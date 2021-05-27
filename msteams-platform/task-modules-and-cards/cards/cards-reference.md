@@ -4,16 +4,16 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 localization_priority: Normal
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566856"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668859"
 ---
 # <a name="cards-reference"></a>Referência de cartões
 
-Os cartões listados neste documento são suportados em bots para Microsoft Teams. Eles são baseados em cartões definidos pela Estrutura de Bot, mas Teams não suporta todos os cartões da Estrutura de Bot e, em vez disso, alguns cartões Teams foram adicionados. As diferenças são chamadas nas referências neste documento.
+Os cartões listados neste documento são suportados em bots para Microsoft Teams. Eles se baseiam em cartões definidos pela Estrutura de Bot (BF), mas Teams não suporta todos os cartões da Estrutura de Bot e, em vez disso, alguns cartões Teams foram adicionados. As diferenças são chamadas nas referências neste documento.
 
 ## <a name="card-examples"></a>Exemplos de cartão
 
@@ -55,7 +55,7 @@ As imagens devem ter, no máximo, 1024×1024, no formato PNG, JPEG ou GIF e não
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | Cadeia de caracteres | Descrição acessível da imagem. |
+| alt | String | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem que passa por um redirecionamento antes da imagem final, não há suporte para o redirecionamento na URL da imagem. Isso ocorre para imagens compartilhadas na nuvem pública.

@@ -4,16 +4,44 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651716"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668852"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
-Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e na visualização do desenvolvedor.
+Descubra Microsoft Teams da plataforma que são introduzidos no Microsoft Build 2021, geralmente disponíveis (GA) e na visualização do desenvolvedor.
+
+## <a name="microsoft-build-2021"></a>Microsoft Build 2021
+
+# <a name="features-in-developer-preview"></a>[Recursos na visualização do desenvolvedor](#tab/devpreview)
+
+| **Date** | **Recursos** | **Tópicos alterados** |
+| -------- | --------- | ------------------ |
+|05/26/2021| Criar guias com Cartões Adaptáveis. |[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
+|05/25/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
+|05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| O recurso Modo juntos combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021| Guias vinculam desfraldamento e exibição de estágio. |[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
+
+> [!NOTE]
+> Para obter mais informações sobre os recursos disponíveis na visualização do desenvolvedor, consulte [visualização do](~/resources/dev-preview/developer-preview-intro.md)desenvolvedor público para Teams .
+
+# <a name="features-in-ga"></a>[Recursos em GA](#tab/GA)
+
+| **Date** | **Recursos** | **Tópicos alterados** |
+| -------- | --------- | ------------------ |
+|04/29/2021 | Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Personalização do aplicativo.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/29/2021 | Formatar cartões Teams. | [Formatar cartões em Teams](task-modules-and-cards/cards/cards-format.md) |
+|02/19/2021|Recursos de localização adicionados. <br/> As informações de recursos de localização são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas, integração de recursos de mídia e arquivos de recursos de QR ou scanner de código de barras.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar](concepts/device-capabilities/mobile-camera-image-permissions.md)recursos de mídia, [Integrar a QR](concepts/device-capabilities/qr-barcode-scanner-capability.md)ou o recurso de scanner de código de barras, [Integrar recursos de localização](concepts/device-capabilities/location-capability.md) |
+
+---
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -33,11 +61,11 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |05/10/2021| Novo recurso de personalização de aplicativo.| [Habilitar organizações para personalizar seu aplicativo](concepts/design/enable-app-customization.md) |
 |05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Novas diretrizes sobre como publicar aplicativos no Teams store.|[Publique seu aplicativo no Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [de validação da loja](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Novo: Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| O recurso de personalização do aplicativo agora está disponível na visualização do desenvolvedor.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
+|04/29/2021 | Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Recurso de personalização de aplicativos.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
-|03/05/2021|O escopo de instalação padrão e a funcionalidade de grupo estão na visualização do desenvolvedor.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|Escopo de instalação padrão e funcionalidade de grupo.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reordenar guias de aplicativo pessoal.|[Reordenar a guia de chat em aplicativos pessoais](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Mascaramento de informações em cartões adaptáveis.| [Mascaramento de informações em cartões adaptáveis](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Recursos de localização adicionados. <br/> As informações de recursos de localização são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas, integração de recursos de mídia e arquivos de recursos de QR ou scanner de código de barras.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar](concepts/device-capabilities/mobile-camera-image-permissions.md)recursos de mídia, [Integrar a QR](concepts/device-capabilities/qr-barcode-scanner-capability.md)ou o recurso de scanner de código de barras, [Integrar recursos de localização](concepts/device-capabilities/location-capability.md) |
@@ -105,7 +133,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 05/06/2019 | Programa de certificação de aplicativos para aplicativos da loja. | [Certificação de Aplicativos](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | Modelos de aplicativo agora estão disponíveis. | [Modelos de aplicativo](~/samples/app-templates.md) |
 | 04/23/2019 | Extensões de Mensagens baseadas em ação agora estão disponíveis. | [Extensões de Mensagens baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | A criação de links profundos para chat privado está fora da visualização do desenvolvedor e disponível. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | Criando links profundos para chat privado. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Contexto de tabulação](~/concepts/tabs/tabs-context.md) |
 
 <br>
@@ -120,7 +148,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-| 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams e foram movidas para fora da visualização do desenvolvedor. Como parte desse trabalho, a seção guias foi reformulada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
+| 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams. Como parte desse trabalho, a seção guias foi reformulada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | O início do Nó JS e do .NET/C# foi atualizado para usar o App Studio no Teams, e uma nova seção foi adicionada para hospedar aplicativos Teams baseados em nó no Azure. | Começar Microsoft Teams plataforma Microsoft Teams com [o C#/.NET](~/get-started/get-started-dotnet-app-studio.md)e o App Studio , Iniciar na plataforma Microsoft Teams com [o Node JS](~/get-started/get-started-nodejs-app-studio.md)e o App Studio, hospedar seu aplicativo node Teams no [Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | Estrutura do SharePoint 1.7 enviou e com ele um novo recurso para usar Microsoft Teams guia como uma web part Estrutura do SharePoint web part. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
@@ -130,7 +158,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 09/11/2018 | As páginas de configuração de tabulação agora são significativamente mais altas. | [Design de tabulação](tabs/design/tabs.md) |
 | 08/15/2018 | Cartões adaptáveis agora são suportados em Teams.|[Ações de cartão adaptáveis em Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Suporte para cliente para DevTools.| [DevTools para o cliente Microsoft Teams desktop](~/resources/dev-preview/developer-preview-tools.md)|
-| 08/08/2018 | As extensões de mensagens agora suportam vários comandos. Esse recurso foi lançado no Developer Preview e agora é lançado para todos os usuários.| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08/08/2018 | As extensões de mensagens agora suportam vários comandos. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | A configuração em linha agora é suportada em Conectores. A documentação conectores também foi revisada e expandida para maior clareza.| [Conectores](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Seu bot agora pode enviar e receber arquivos.| [Enviar e receber arquivos por meio de seu bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Informações sobre a re-certificação de aplicativos foram adicionadas à seção Publicação. |[Permissões de manifesto](resources/schema/manifest-schema.md#permissions)|
@@ -159,6 +187,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |

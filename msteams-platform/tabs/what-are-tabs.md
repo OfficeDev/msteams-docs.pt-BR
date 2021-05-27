@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629967"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667409"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -43,6 +43,12 @@ Há dois tipos de guias disponíveis no Teams — canal/grupo e pessoal. As guia
 
 ## <a name="understand-how-tabs-work"></a>Entender como as guias funcionam
 
+Você pode usar um dos seguintes métodos para criar guias:
+* [Declarar guia personalizada no manifesto do aplicativo](#declare-custom-tab-in-app-manifest)
+* [Usar Cartão Adaptável para criar guias](#use-adaptive-card-to-build-tabs)
+
+### <a name="declare-custom-tab-in-app-manifest"></a>Declarar guia personalizada no manifesto do aplicativo
+
 Uma guia personalizada é declarada no manifesto do aplicativo do pacote do aplicativo. Para cada página da Web que você deseja incluir como uma guia em seu aplicativo, você define uma URL e um escopo. Além disso, você precisa adicionar o [Teams SDK](/javascript/api/overview/msteams-client) do cliente JavaScript à sua página e chamar depois que `microsoftTeams.initialize()` a página é carregada. Fazer isso dirá Teams exibir sua página, lhe dará acesso Teams informações específicas (por exemplo, se o cliente Teams estiver executando o tema escuro *)* e permitirá que você tome medidas com base nos resultados.
 
 Se você optar por expor sua guia no escopo de canal/grupo ou pessoal, você precisará apresentar uma página de conteúdo HTML <iframe \> em sua guia. [](~/tabs/how-to/create-tab-pages/content-page.md) Para guias pessoais, a URL de conteúdo é definida diretamente no manifesto do aplicativo Teams pela `contentUrl` propriedade na `staticTabs` matriz. O conteúdo da guia será o mesmo para todos os usuários.
@@ -51,7 +57,12 @@ Para guias de canal/grupo, você também precisa criar uma página de configura�
 
 Você pode ter vários canais ou guias de grupo e até dezesseis guias pessoais por aplicativo.
 
-## <a name="mobile-considerations"></a>Considerações sobre dispositivos móveis
+
+### <a name="use-adaptive-card-to-build-tabs"></a>Usar Cartão Adaptável para criar guias
+
+Ao desenvolver uma guia usando o método tradicional, você precisa considerar coisas, como HTML, considerações CSS para se sentirem nativos, tempos de carga lentas, restrições de iFrame, manutenção e custos do servidor, e assim por diante. Guias de cartão adaptáveis é uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um iframe, você pode renderizar Cartão Adaptável em uma guia. Embora o front-end seja renderizado como Cartão Adaptável, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável a ser render.
+
+## <a name="mobile-clients"></a>Clientes móveis
 
 Se você optar por fazer com que seu canal ou guia de grupo apareça Teams clientes móveis, a configuração deve ter um `setSettings()` valor para a `websiteUrl` propriedade. Para garantir a experiência ideal do usuário, você deve seguir as [diretrizes](~/tabs/design/tabs-mobile.md) para guias no celular ao criar suas guias. Os [aplicativos distribuídos pelo Teams têm](~/concepts/deploy-and-publish/appsource/publish.md) um processo de aprovação separado para clientes móveis. O comportamento padrão desses aplicativos é o seguinte:
 
@@ -61,7 +72,9 @@ Se você optar por fazer com que seu canal ou guia de grupo apareça Teams clien
 | **Guias de canal e grupo** | A guia é aberta no cliente Teams usando `contentUrl` . | A guia é aberta em um navegador fora do Teams cliente usando `websiteUrl` . |
 
 > [!NOTE]
->
+> [Os aplicativos enviados ao AppSource para publicação](../concepts/deploy-and-publish/overview.md#publish-to-appsource) no Teams são avaliados automaticamente para a capacidade de resposta móvel. Para qualquer consulta, entre em contato com teamsubm@microsoft.com.
+> Para todos os aplicativos que não são distribuídos por meio do [AppSource](../concepts/deploy-and-publish/overview.md), as guias abrem em uma webview no aplicativo dentro dos clientes Teams por padrão e não há um processo de aprovação separado necessário.
+> 
 > O comportamento padrão dos aplicativos só será aplicável se for distribuído por meio do Teams store. Por padrão, todas as guias são abertas no Teams cliente.
 > Para iniciar uma avaliação do seu aplicativo para dispositivos móveis, entre em contato com teamsubm@microsoft.com com os detalhes do aplicativo.
 
@@ -75,4 +88,4 @@ Se você optar por fazer com que seu canal ou guia de grupo apareça Teams clien
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Requisitos de tabulação](~/tabs/how-to/tab-requirements.md)
+> [Requisitos de guia](~/tabs/how-to/tab-requirements.md)
