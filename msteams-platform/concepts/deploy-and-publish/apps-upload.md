@@ -4,12 +4,12 @@ description: Saiba como fazer sideload do aplicativo Microsoft Teams. O sideload
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 39e94317ceb615ecd7d5481276ffafed5afe5cde
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
+ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565190"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "52684646"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload seu aplicativo no Microsoft Teams
 
@@ -41,7 +41,7 @@ Se o aplicativo não fizer sideload, faça o seguinte até que o problema seja r
 
 1. Volte pelas instruções para criar [seu pacote de aplicativos.](../../concepts/build-and-test/apps-package.md)
 1. [Valide seu pacote de aplicativo novamente.](https://dev.teams.microsoft.com/appvalidation.html)
-1. Certifique-se de que o manifesto do aplicativo corresponde ao [esquema mais recente.](../../resources/schema/manifest-schema.md)
+1. Verifique se o manifesto do aplicativo corresponde ao [esquema mais recente.](../../resources/schema/manifest-schema.md)
 
 ## <a name="access-your-app"></a>Acessar seu aplicativo
 
