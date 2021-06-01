@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668852"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709632"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -55,8 +55,9 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|05/24/2021|Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021|Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)
+|05/31/2021| Guias de conversa | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021| Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)
 |05/10/2021| O manifesto v1.10 é lançado.|[Esquema de manifesto](resources/schema/manifest-schema.md) |
 |05/10/2021| Novo recurso de personalização de aplicativo.| [Habilitar organizações para personalizar seu aplicativo](concepts/design/enable-app-customization.md) |
 |05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
@@ -91,11 +92,11 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |09/22/2020|Novas informações para começar a Teams desenvolvimento.|[Criar sua primeira visão geral Teams aplicativo](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|Suporte para aplicativos de Teams de reunião (Visualização de Versão).|[Criar aplicativos para Teams reuniões e](apps-in-teams-meetings/create-apps-for-teams-meetings.md) [aplicativos em Teams reuniões](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|Importe Teams mensagens com o Microsoft Graph.|[Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
-| 08/12/2020 |Suporte a Cartões Adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/12/2020 |Suporte a Cartões Adaptáveis no webhook de entrada movido para GA.|[Envie cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Começar a criar Teams aplicativos com o Visual Studio Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Suporte para autenticação SSO de guias.|[Desenvolver uma guia de Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph bots e mensagens proativos (Visualização Pública).|[Habilitar a instalação proativa de bots e mensagens proativas Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |Atualizações de funcionalidade de dispositivo móvel.|[Solicitar permissões de dispositivo para sua guia Microsoft Teams de usuário](concepts/device-capabilities/native-device-permissions.md) |
+|07/22/2020 |Atualizações de funcionalidade de dispositivo móvel.|[Solicitar permissões de dispositivo para sua guia Microsoft Teams de usuário](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams Ferramenta de Validação de Aplicativos](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Crie um assistente virtual para Teams.|[Assistente Virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Navegando em uma documentação de indicador de carregamento nativo.|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
@@ -104,7 +105,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |06/05/2020| Esquema de manifesto atualizado para a versão 1.7.| [Referência: esquema de manifesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integre Power Virtual Agents com Teams.|[Integrar um Power Virtual Agents chatbot com Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrar sistemas WFM com o Conector de Turnos para Teams.|[Microsoft Teams Desloca conectores WFM](samples/shifts-wfm-connectors.md)
-| 03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar membros pagedos. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md) |
+|03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar membros pagedos. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md) |
 
 <br>
 
