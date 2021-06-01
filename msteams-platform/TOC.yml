@@ -208,6 +208,8 @@
           href: tabs/how-to/build-adaptive-card-tabs.md
         - name: Link de guias desdobradas e Exibição de Estágio
           href: tabs/tabs-link-unfurling.md
+        - name: Criar abas para conversação
+          href: tabs/how-to/conversational-tabs.md
     - name: Guias de início rápido
       items:
         - name: Guia pessoal com Node.js
@@ -289,8 +291,6 @@
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: Comandos de pesquisa
       items:
-        - name: Adicionar uma página de configuração
-          href: messaging-extensions/how-to/add-configuration-page.md
         - name: Definir comandos de pesquisa
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: Responder aos comandos de pesquisa
