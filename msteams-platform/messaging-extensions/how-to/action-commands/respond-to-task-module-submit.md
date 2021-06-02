@@ -5,12 +5,12 @@ description: Descreve como responder à ação de envio do módulo de tarefa de 
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019829"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710638"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -26,7 +26,7 @@ Você tem as seguintes opções para responder:
 * [Resposta ao](#respond-with-a-card-inserted-into-the-compose-message-area)cartão : você pode responder com um cartão com o que o usuário pode interagir ou inserir em uma mensagem.
 * [Cartão Adaptável do bot](#bot-response-with-adaptive-card): Insira um Cartão Adaptável diretamente na conversa.
 * [Solicitar que o usuário autenture](~/messaging-extensions/how-to/add-authentication.md).
-* [Solicite que o usuário forneça configuração adicional.](~/messaging-extensions/how-to/add-configuration-page.md)
+* [Solicite que o usuário forneça configuração adicional]~/get-started/first-message-extension.md).
 
 Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original se ressente ao seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis com base no local de `commandContext` invocação da extensão de mensagens: 
 
@@ -587,9 +587,9 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
-|`mentionType`|String|Descreve a menção de uma "pessoa".|
-|`mri`|String|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|String|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`mentionType`|Cadeia de caracteres|Descreve a menção de uma "pessoa".|
+|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
+|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 
