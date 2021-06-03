@@ -1,18 +1,18 @@
 ---
-title: Projetando sua guia para área de trabalho e Web
-description: Saiba como projetar uma guia Teams (área de trabalho e Web) e obter o Microsoft Teams de interface do usuário.
+title: Guias de design para desktop, web e mobile
+description: Saiba como projetar uma guia Teams para desktop, web e celular e obter o Microsoft Teams de interface do usuário.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644684"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721840"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>Projetando sua guia para Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para Microsoft Teams
 
 Uma guia é uma tela grande para o conteúdo do aplicativo. Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar guias no Teams.
 
@@ -74,7 +74,7 @@ Você pode adicionar uma etapa na qual os usuários devem entrar primeiro com su
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemplo mostra uma tela de autenticação de tabulação." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Projetando uma configuração de tabulação com modelos de interface do usuário
+### <a name="design-a-tab-setup-with-ui-templates"></a>Projetar uma configuração de tabulação com modelos de interface do usuário
 
 Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua experiência de configuração de tabulação:
 
@@ -166,7 +166,7 @@ Os usuários podem ter uma conversa ao lado do conteúdo da guia que estão exib
 
 ### <a name="permissions-and-role-based-views"></a>Permissões e exibições baseadas em função
 
-A experiência de tabulação pode ser diferente para os usuários, dependendo de suas permissões. Por exemplo, um usuário pode acessar a guia sem precisar entrar. Outro usuário, no entanto, deve assinar e ver conteúdo ligeiramente diferente.
+A experiência de tabulação pode ser diferente para os usuários, dependendo de suas permissões. Por exemplo, um usuário pode acessar a guia sem precisar entrar. Outro usuário, no entanto, deve entrar e ver conteúdo ligeiramente diferente.
 
 ## <a name="manage-a-tab"></a>Gerenciar uma guia
 

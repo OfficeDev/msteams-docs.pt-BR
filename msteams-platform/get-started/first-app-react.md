@@ -3,14 +3,14 @@ title: 'Iniciar: Compilar seu primeiro aplicativo do Teams com React'
 author: adrianhall
 description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma mensagem "Olá, Mundo!" usando o Kit de ferramentas do Microsoft Teams e o React.
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4560e332834fec7b681a6b2babf3e881b5e472f7
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698128"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721833"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Compilar e executar seu primeiro aplicativo do Microsoft Teams com React
 
@@ -124,8 +124,6 @@ O Kit de ferramentas do Teams permite que você execute seu aplicativo localment
 
 Depois de fazer isso, o aplicativo pode ser carregado dentro do cliente do Teams.  Usamos o cliente Web do Teams para que possamos ver o código HTML, CSS e JavaScript dentro de um ambiente de desenvolvimento web padrão.
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Compilar e executar seu aplicativo localmente em Visual Studio Code
 
 Para compilar e executar seu aplicativo localmente:
@@ -138,7 +136,7 @@ Para compilar e executar seu aplicativo localmente:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de tela mostrando como a solicitação de instalação de um certificado SSL para permitir que o Teams carregue seu aplicativo a partir do localhost.":::
 
-1. O seu navegador da web é iniciado para executar o aplicativo. Se for solicitado a abrir o Microsoft Teams, selecione Cancelar para permanecer no navegador. Quando solicitado, selecione **Usar o aplicativo da web em vez disso**.
+1. O navegador da Web começa a executar o aplicativo. Se for solicitado a abrir Teams área de trabalho, selecione **Cancelar** para permanecer no navegador. Você também pode ser solicitado a alternar para a área de trabalho Teams outras vezes; selecione o Teams web quando isso acontecer.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Captura de tela mostrando como escolher a versão da web das equipes quando lançadas":::
 

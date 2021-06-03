@@ -3,14 +3,14 @@ title: Introdução - Construa o seu primeiro bot de conversação
 author: adrianhall
 description: Crie um bot de conversação para o Microsoft Teams usando o Kit de ferramentas do Teams.
 ms.author: adhal
-ms.date: 05/20/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3084020000cf53fbb33ffc25d141b41ffff83160
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697935"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721847"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Criar o seu primeiro bot de conversação para o Microsoft Teams
 
@@ -52,36 +52,36 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
 1. Na etapa **Linguagem de Programação**, selecione **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de tela que mostra como selecionar a linguagem de programação.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação.":::
 
-1. Selecione uma pasta do espaço de trabalho.  Uma pasta será criada dentro da pasta do seu espaço de trabalho para o projeto que você está criando.
+1. Selecione uma pasta do espaço de trabalho.  Uma pasta será criada dentro de sua pasta do espaço de trabalho para o projeto que você está criando.
 
-1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas em caracteres alfanuméricos.  Pressione **Inserir** para continuar.
+1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.  Pressione **Inserir** para continuar.
 
 O seu aplicativo do Teams será criado em alguns segundos.
 
 # <a name="command-line"></a>[Linha de comando](#tab/cli)
 
-Use a `teamsfx` CLI para criar o seu primeiro projeto.  Inicie pela pasta onde deseja criar a pasta do projeto.
+Use a CLI `teamsfx` para criar o seu primeiro projeto.  Inicie pela pasta onde deseja criar a pasta do projeto.
 
 ``` bash
 teamsfx new
 ```
 
-O CLI percorre algumas questões para criar o projeto.  Cada pergunta dirá como respondê-la (por exemplo, usar as teclas de seta para selecionar uma opção).  Depois de responder à pergunta, confirme sua escolha pressionando **Inserir**.
+A CLI lhe guiará através de algumas perguntas para criar o projeto.  Cada pergunta lhe dirá como respondê-la (por exemplo, usar as teclas de seta para selecionar uma opção).  Depois de responder à pergunta, confirme sua escolha pressionando **Inserir**.
 
 1. Selecione **Criar um novo aplicativo do Teams**.
 1. Selecione o recurso **Bot** e anule a seleção o recurso da **Guia**.
 1. Selecione **Criar um novo registro de bot**.
 1. Selecione **JavaScript** como linguagem de programação.
-1. Pressione **Inserir** para selecionar a pasta padrão da área de trabalho.
-1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas em caracteres alfanuméricos.
+1. Pressione **Inserir** para selecionar a pasta padrão do espaço de trabalho.
+1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.
 
 Assim que todas as perguntas forem respondidas, o seu projeto será criado.
 
 ---
 
-## <a name="take-a-tour-of-the-source-code"></a>Fazer um tour pelo código-fonte
+## <a name="take-a-tour-of-the-source-code"></a>Faça um tour pelo código-fonte
 
 Se desejar pular esta seção por enquanto, você pode [executar seu aplicativo localmente](#run-your-app-locally).
 
@@ -107,9 +107,9 @@ Para compilar e executar o seu aplicativo localmente:
 
 1. No Visual Studio Code, pressione **F5** para executar seu aplicativo no modo de depuração.
 
-   > Quando você executa o aplicativo pela primeira vez, todas as dependências são baixadas e o aplicativo é compilado.  Uma janela do navegador é aberta automaticamente quando a compilação é concluída.  Isso pode levar de 3 a 5 minutos para ser concluído.
+   > Quando você executa o aplicativo pela primeira vez, todas as dependências são baixadas e o aplicativo é compilado.  Uma janela do navegador é aberta automaticamente quando a compilação é concluída.  Isto pode levar de 3 a 5 minutos para ser concluído.
 
-1. O seu navegador da web é iniciado para executar o aplicativo. Se for solicitado a abrir o Microsoft Teams, selecione Cancelar para permanecer no navegador. Quando solicitado, selecione **Usar o aplicativo da web em vez disso**.
+1. O navegador da Web começa a executar o aplicativo. Se for solicitado a abrir Teams área de trabalho, selecione **Cancelar** para permanecer no navegador. Você também pode ser solicitado a alternar para a área de trabalho Teams outras vezes; selecione o Teams web quando isso acontecer.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Captura de tela mostrando como escolher a versão da web das equipes quando lançadas":::
 
@@ -136,7 +136,7 @@ Quando você pressionou F5, o Kit de ferramentas do Teams:
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Saiba como solucionar problemas comuns ao executar o seu aplicativo localmente.</summary>
+<summary>Saiba como solucionar problemas comuns ao executar seu aplicativo localmente.</summary>
 
 Para executar com êxito seu aplicativo no Teams, você deve ter uma conta de desenvolvimento do Microsoft 365 que permite o sideload do aplicativo. Para obter mais informações sobre abertura de conta, confira [Pré-requisitos](prerequisites.md#enable-sideloading).
 
@@ -160,11 +160,11 @@ A implantação envolve o provisionamento de recursos em uma assinatura ativa do
 
 </details>
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre outros métodos de criação de aplicativos Teams:
+Saiba mais sobre outros métodos para criar aplicativos do Teams:
 
 - [Criar um aplicativo do Teams com o React](first-app-react.md)
-- [Crie um aplicativo do Teams com o Blazor](first-app-blazor.md)
+- [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)
 - [Crie um aplicativo do Teams como uma Web Part do Microsoft Office SharePoint Online](first-app-spfx.md) (Azure não é necessário)
 - [Crie uma extensão de mensagem](first-message-extension.md)
