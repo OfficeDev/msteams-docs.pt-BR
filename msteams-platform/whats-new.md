@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709632"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736765"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -37,6 +37,9 @@ Descubra Microsoft Teams da plataforma que são introduzidos no Microsoft Build 
 | **Date** | **Recursos** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
 |04/29/2021 | Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Exibições específicas do usuário para cartões adaptáveis. | [Exibições Específicas do Usuário](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | Fluxos de trabalho sequenciais para cartões adaptáveis. | [Fluxos de Trabalho Sequenciais](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | Cartões atualizados. | [Cartões atualizados](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| Personalização do aplicativo.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/29/2021 | Formatar cartões Teams. | [Formatar cartões em Teams](task-modules-and-cards/cards/cards-format.md) |
 |02/19/2021|Recursos de localização adicionados. <br/> As informações de recursos de localização são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas, integração de recursos de mídia e arquivos de recursos de QR ou scanner de código de barras.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar](concepts/device-capabilities/mobile-camera-image-permissions.md)recursos de mídia, [Integrar a QR](concepts/device-capabilities/qr-barcode-scanner-capability.md)ou o recurso de scanner de código de barras, [Integrar recursos de localização](concepts/device-capabilities/location-capability.md) |
@@ -55,7 +58,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|05/31/2021| Guias de conversa | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
+|05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)
 |05/10/2021| O manifesto v1.10 é lançado.|[Esquema de manifesto](resources/schema/manifest-schema.md) |
@@ -63,6 +66,9 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Novas diretrizes sobre como publicar aplicativos no Teams store.|[Publique seu aplicativo no Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [de validação da loja](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Exibições específicas do usuário. | [Exibições Específicas do Usuário](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | Fluxos de trabalho sequenciais. | [Fluxos de Trabalho Sequenciais](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | Cartões atualizados. | [Cartões atualizados](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| Recurso de personalização de aplicativos.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |

@@ -5,11 +5,11 @@ author: heath-hamilton
 ms.author: lajanuar
 ms.topic: how-to
 ms.openlocfilehash: 732e283bffc253743e890b0c45dc7b0689108716
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101867"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52760885"
 ---
 # <a name="submit-your-microsoft-teams-app-to-partner-center"></a>Enviar seu Microsoft Teams para o Partner Center
 

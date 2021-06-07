@@ -5,11 +5,11 @@ keywords: iniciando equipes do portal do desenvolvedor
 localization_priority: Normal
 ms.topic: conceptual
 ms.openlocfilehash: ce290bd7daa46467be279aae7c608321e75e2d57
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635069"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763121"
 ---
 # <a name="app-configuration"></a>Configuração do aplicativo
 

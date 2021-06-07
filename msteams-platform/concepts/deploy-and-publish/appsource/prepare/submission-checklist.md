@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 975d3ef8fc8bdc8d6d7c336cf3a61a3a42ef5315
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566030"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763105"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -77,7 +77,7 @@ O nome do seu aplicativo (especificamente, seu [*nome*](~/resources/schema/manif
 
 :::row-end:::
 
-Certifique-se de que seu nome curto adera às diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)
+Certifique-se de que seu nome curto adera às diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)
 
 ### <a name="write-descriptions"></a>Descrições de gravação
 
@@ -97,7 +97,7 @@ Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcion
 
 :::row-end:::
 
-Certifique-se de que sua breve descrição segue as diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)
+Certifique-se de que sua breve descrição segue as diretrizes [de validação da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)
 
 #### <a name="long-description"></a>Descrição longa
 
@@ -113,7 +113,7 @@ A descrição longa pode fornecer uma narração que realça os principais recur
 
 :::row-end:::
 
-Certifique-se de que sua descrição longa segue as diretrizes de validação [da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)
+Certifique-se de que sua descrição longa segue as diretrizes de validação [da loja.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)
 
 ### <a name="adhere-to-icon-design-guidelines"></a>Seguir as diretrizes de design de ícones
 
@@ -144,7 +144,7 @@ Lembre-se do seguinte sobre capturas de tela:
 
 Para ver as práticas recomendadas, consulte os seguintes recursos:
 
-* [Teams de validação do armazenamento](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Teams de validação do armazenamento](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Criar imagens efetivas para os armazenamentos de aplicativos da Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Criar um vídeo

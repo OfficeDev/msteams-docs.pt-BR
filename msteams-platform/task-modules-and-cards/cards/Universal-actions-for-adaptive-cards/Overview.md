@@ -3,12 +3,12 @@ title: Visão geral das ações universais para cartões adaptáveis
 description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
+ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649703"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "52781615"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
@@ -109,7 +109,7 @@ Agora, você pode entender como os Cartões Adaptáveis podem ser transformados 
 
 Cartões adaptáveis são uma combinação de conteúdo, como texto e elementos gráficos, e ações que podem ser executadas por um usuário. Para obter mais informações, consulte [Adaptive Cards](http://adaptivecards.io/). As novas Ações Universais para Cartões Adaptáveis permitem uma manipulação comum das ações do Cartão Adaptável em plataformas e aplicativos. Para obter mais informações, consulte [Modelo de Ação Universal](/adaptive-cards/authoring-cards/universal-action-model).
 
-[Trabalhar com ações universais para cartões adaptáveis](Work-with-universal-actions-for-adaptive-cards.md) o documento leva você pelas etapas para usar os recursos de Ações Universais para Cartões Adaptáveis para sua solução.
+Você pode começar atualizando cenários usando o [guia](Work-with-universal-actions-for-adaptive-cards.md) de início rápido e aproveitar ações universais.
 
 ## <a name="see-also"></a>Confira também
 

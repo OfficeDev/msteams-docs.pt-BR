@@ -3,12 +3,12 @@ title: Extensibilidade do aplicativo de reunião
 author: laujan
 description: Compreender a extensibilidade do aplicativo de reunião
 ms.topic: conceptual
-ms.openlocfilehash: 96770a6a06d7a4478d8a00a7928c74b38d7b4b2c
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649756"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736751"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
 
@@ -141,7 +141,7 @@ A tabela a seguir fornece os tipos de usuário e quais recursos cada usuário po
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
 | Convidado que faz parte do locatário AAD | A interação é permitida. Não é permitido criar, atualizar e excluir. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível |
-| Federado | Não disponível | Não disponível | Não disponível | Não disponível | Não disponível | Não disponível |
+| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Não é permitido criar, atualizar e excluir. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
 
 ## <a name="see-also"></a>Confira também
 
@@ -153,4 +153,4 @@ A tabela a seguir fornece os tipos de usuário e quais recursos cada usuário po
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Pré-requisitos e referências de API para aplicativos em Teams reuniões](create-apps-for-teams-meetings.md)
+> [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](create-apps-for-teams-meetings.md)

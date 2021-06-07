@@ -4,12 +4,12 @@ description: Descreve as diretrizes que todos os aplicativos enviados ao Teams (
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 4daa8b027d7525f0fb3223c2000eee301043398a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565134"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763112"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 
@@ -18,9 +18,9 @@ Seguir essas diretrizes aumenta a probabilidade de seu aplicativo passar no proc
 > [!NOTE]
 > Algumas diretrizes podem não ser aplicáveis ao seu aplicativo. Por exemplo, se seu aplicativo não incluir um bot, você poderá ignorar as diretrizes relacionadas ao bot.
 
-## <a name="10-value-proposition"></a>1.0 Proposta de valor
+## <a name="value-proposition"></a>Proposta de valor
 
-### <a name="11-app-name"></a>1.1 Nome do aplicativo
+### <a name="app-name"></a>Nome do aplicativo
 
 O nome de um aplicativo desempenha uma função crítica na forma como os usuários o descobrem na loja. Lembre-se do seguinte sobre nomes de aplicativo:
 
@@ -33,23 +33,23 @@ O nome de um aplicativo desempenha uma função crítica na forma como os usuár
 * Não deve conter termos profano ou depreciativo. O nome também não deve incluir linguagem racial ou culturalmente insensível.
 * Deve ser exclusivo. Por exemplo, você não pode listar vários aplicativos para regiões diferentes com o mesmo nome e funcionalidade.
 
-### <a name="12-suitable-for-workplace-consumption"></a>1.2 Adequado para consumo no local de trabalho
+### <a name="suitable-for-workplace-consumption"></a>Adequado para consumo no local de trabalho
 
 O conteúdo do aplicativo deve ser adequado para o consumo geral do local de trabalho e respeitar todas as restrições listadas nas políticas de certificação do marketplace comercial. O conteúdo relacionado à política, à política, ao jogo e ao entretenimento prolongado é proibido. Para obter mais informações, consulte as políticas [de certificação do marketplace comercial.](/legal/marketplace/certification-policies#10010-inappropriate-content)
 
 Seu aplicativo deve facilitar a colaboração em grupo, melhorar a produtividade de um indivíduo ou ambos. Os aplicativos destinados à união de equipe e à socialização devem ser colaborativos e projetados para vários participantes. Esses tipos de aplicativos também não devem exigir um investimento de tempo substancial ou afetar perceptivamente a produtividade.
 
-### <a name="13-similar-platforms-and-services"></a>1.3 Plataformas e serviços semelhantes
+### <a name="similar-platforms-and-services"></a>Plataformas e serviços semelhantes
 
 Os aplicativos devem se concentrar na experiência Teams e não incluir os nomes, ícones ou imagens de outras plataformas ou serviços semelhantes de colaboração baseadas em chat, a menos que seu aplicativo fornece interoperabilidade específica.
 
-### <a name="14-feature-names"></a>1.4 Nomes de recursos
+### <a name="feature-names"></a>Nomes de recursos
 
 Os nomes de recursos do aplicativo em botões e outros textos da interface do usuário não devem entrar em conflito com a terminologia reservada para Teams e outros produtos Microsoft. Por exemplo, **Iniciar reunião,** **Fazer chamada** ou **Iniciar chat**. Inclua seu nome de aplicativo se você não puder evitar completamente isso, como Iniciar reunião **da Contoso** em vez de **Iniciar reunião**.
 
-## <a name="20-security"></a>Segurança 2.0
+## <a name="security"></a>Segurança
 
-### <a name="21-microsoft-365-app-compliance-program"></a>2.1 Microsoft 365 De conformidade de aplicativos
+### <a name="microsoft-365-app-compliance-program"></a>Programa de Conformidade de Aplicativos do Microsoft 365
 
 O [Microsoft 365 de Conformidade](/microsoft-365-app-certification/overview) de Aplicativos destina-se a ajudar as organizações a avaliar e gerenciar riscos avaliando informações de segurança e conformidade sobre seu aplicativo. Se você estiver publicando um aplicativo na Teams, deverá concluir as seguintes camadas do programa:
 
@@ -59,24 +59,24 @@ O [Microsoft 365 de Conformidade](/microsoft-365-app-certification/overview) de 
 > [!NOTE]
 > Se você estiver enviando um aplicativo que não tenha sido listado anteriormente, não poderá concluir oficialmente Publisher Atestado até que seu aplicativo esteja no Teams store. Se você estiver atualizando um aplicativo listado, conclua Publisher Atestado antes de enviar a versão mais recente do aplicativo.
 
-### <a name="22-bots"></a>2.2 Bots
+### <a name="bots"></a>Bots
 
 Para aplicativos que usam o serviço Microsoft Azure Bot (como bots e extensões de mensagens), você deve seguir todos os requisitos definidos nos Termos do Microsoft [Online Services](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Os bots sempre devem pedir permissão para carregar um arquivo e exibir uma mensagem de confirmação após o carregamento do arquivo.
 
-### <a name="23-external-domains"></a>2.3 Domínios externos
+### <a name="external-domains"></a>Domínios externos
 
 Na maioria dos casos, você não deve incluir domínios fora do controle da sua organização (incluindo curingas) e serviços de túnel nas configurações de domínio do seu aplicativo. As seguintes exceções incluem:
 
 * Se seu aplicativo usar o OAuthCard do Serviço de Bot do Azure, você deverá incluir como um domínio válido ou o botão Entrar `token.botframework.com` não funcionará. 
 * Se seu aplicativo se baseia em SharePoint, você pode incluir o site raiz associado SharePoint como um domínio válido usando a `{teamSiteDomain}` propriedade context.
 
-### <a name="24-authentication"></a>Autenticação 2.4
+### <a name="authentication"></a>Autenticação
 
 Para obter informações sobre como implementar a autenticação de aplicativos, consulte [authentication in Teams](~/concepts/authentication/authentication.md).
 
-#### <a name="241-authenticating-with-external-services"></a>2.4.1 Autenticação com serviços externos
+#### <a name="authenticating-with-external-services"></a>Autenticação com serviços externos
 
 Lembre-se do seguinte se seu aplicativo autentica usuários com um serviço externo.
 
@@ -85,17 +85,17 @@ Lembre-se do seguinte se seu aplicativo autentica usuários com um serviço exte
   * Quando um usuário sai, ele deve sair apenas do aplicativo e permanecer Teams.
 * Experiências **de compartilhamento** de conteúdo : os aplicativos que exigem autenticação com um serviço externo para compartilhar conteúdo em canais Teams devem apresentar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou desconectar conteúdo se esse recurso tiver suporte no serviço externo. Isso não significa que a capacidade de desahar o conteúdo deve estar presente em seu Teams app.
 
-#### <a name="242-government-community-cloud-listings"></a>2.4.2 Nuvem da Comunidade Governamental listagem
+#### <a name="government-community-cloud-listings"></a>Nuvem da Comunidade Governamental listagem
 
 Para distribuir seu aplicativo para usuários Nuvem da Comunidade Governamental (GCC) enquanto evita listagens duplicadas no armazenamento Teams, o processo de autenticação deve identificar e encaminhar os usuários para uma URL específica ou esperada do GCC.
 
-### <a name="25-sensitive-content"></a>2.5 Conteúdo sensível
+### <a name="sensitive-content"></a>Conteúdo sensível
 
 Seu aplicativo não deve postar dados confidenciais, como cartão de crédito ou dados de instrumento de pagamento financeiro. O aplicativo também não deve exibir a saúde, o rastreamento de contatos ou outras informações de identificação pessoal (PII) para uma audiência que não se destina a exibir esse conteúdo.
 
 Avisar os usuários antes que seu aplicativo baixe arquivos ou executáveis (.exe) no computador ou ambiente do usuário.
 
-### <a name="26-financial-information"></a>2.6 Informações financeiras
+### <a name="financial-information"></a>Informações financeiras
 
 Os aplicativos não devem solicitar que os usuários façam pagamentos na Teams interface. Os detalhes do instrumento financeiro não devem ser transmitidos aos usuários por meio de uma interface bot.
 
@@ -108,15 +108,15 @@ Os aplicativos em execução na versão para iOS ou Android do Teams devem segui
 * Você pode determinar se uma conta está ativa indefinidamente ou por um tempo limitado, mas se a conta expirar, nenhuma interface do usuário, texto ou links indicando a necessidade de pagamento pode ser mostrado.
 * A política de privacidade e os termos de uso do seu aplicativo devem estar livres de qualquer interface do usuário ou links relacionados ao comércio.
 
-## <a name="30-general-functionality-and-performance"></a>3.0 Funcionalidade geral e desempenho
+## <a name="general-functionality-and-performance"></a>Funcionalidade geral e desempenho
 
-### <a name="31-launching-external-functionality"></a>3.1 Iniciar funcionalidade externa
+### <a name="launching-external-functionality"></a>Iniciar funcionalidade externa
 
 Os aplicativos não devem tirar os usuários Teams cenários principais do usuário. O conteúdo e as interações do aplicativo podem ocorrer Teams recursos, como bots, cartões e módulos de tarefa.
 
 Você deve vincular usuários em algum lugar Teams e não a um site ou aplicativo externo. Para cenários que exigem funcionalidade externa, seu aplicativo deve ter permissão explícita do usuário para iniciar essa funcionalidade.
 
-### <a name="32-compatibility"></a>Compatibilidade 3.2
+### <a name="compatibility"></a>Compatibilidade
 
 Os aplicativos devem estar totalmente funcionais nos seguintes sistemas operacionais e navegadores:
 
@@ -128,7 +128,7 @@ Os aplicativos devem estar totalmente funcionais nos seguintes sistemas operacio
 * iOS 9.0 e posterior
 * Android 4.4 e posterior
 
-### <a name="33-response-time"></a>3.3 Tempo de resposta
+### <a name="response-time"></a>Hora da resposta
 
 Teams aplicativos devem responder dentro de um prazo razoável, que varia dependendo da funcionalidade.
 
@@ -137,11 +137,11 @@ Teams aplicativos devem responder dentro de um prazo razoável, que varia depend
 * As extensões de mensagens devem responder aos comandos do usuário em cinco segundos.
 * As notificações devem ser exibidas dentro de cinco segundos após a ação do usuário.
 
-## <a name="40-app-package-and-store-listing"></a>4.0 Pacote de aplicativos e listagem da loja
+## <a name="app-package-and-store-listing"></a>Listagem do pacote de aplicativos e da loja
 
 Os pacotes de aplicativos devem ser formatados corretamente e incluir todas as informações e componentes necessários.
 
-### <a name="41-app-manifest"></a>Manifesto do aplicativo 4.1
+### <a name="app-manifest"></a>Manifesto do aplicativo
 
 O Teams de aplicativo define as configurações do aplicativo.
 
@@ -149,7 +149,7 @@ O Teams de aplicativo define as configurações do aplicativo.
 * Se seu aplicativo incluir um bot ou uma extensão de mensagens, seu manifesto deve ser consistente com metadados da Estrutura de Bot, incluindo nome de bot, logotipo, link de política de privacidade e termos de link de serviço.
 * Se seu aplicativo usa Azure Active Directory (Azure AD) para autenticação, inclua a ID do Aplicativo do Azure AD (cliente) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-### <a name="42-app-icons"></a>Ícones do aplicativo 4.2
+### <a name="app-icons"></a>Ícones de aplicativo
 
 Os ícones são um dos principais elementos que as pessoas veem ao navegar no Teams store. Seus ícones devem comunicar a marca e a finalidade do aplicativo, ao mesmo tempo que aderem aos seguintes requisitos:
 
@@ -160,13 +160,13 @@ Os ícones são um dos principais elementos que as pessoas veem ao navegar no Te
 
 Para obter mais informações, práticas recomendadas e exemplos, consulte as diretrizes Teams [ícones do](~/concepts/build-and-test/apps-package.md#app-icons)aplicativo.
 
-### <a name="43-app-descriptions"></a>4.3 Descrições do aplicativo
+### <a name="app-descriptions"></a>Descrições do aplicativo
 
 Você deve ter uma descrição curta e longa do seu aplicativo. As descrições nas configurações do aplicativo e no Partner Center devem ser as mesmas.
 
 As descrições não devem ser diretamente ou por meio da insinuação menosprezem outra marca (propriedade da Microsoft ou de outra forma). Certifique-se de que sua descrição não inclua declarações que não podem ser fundamentadas (por exemplo, "Aumento garantido de 200% na eficiência").
 
-#### <a name="431-short-description"></a>4.3.1 Descrição curta
+#### <a name="short-description"></a>Descrição breve
 
 Uma breve descrição é um resumo conciso do seu aplicativo que realça sua proposta de valor e é direcionado para seu público-alvo.
 
@@ -181,7 +181,7 @@ Uma breve descrição é um resumo conciso do seu aplicativo que realça sua pro
 * Repita o nome do aplicativo.
 * Use o aplicativo **word** na descrição curta.
 
-#### <a name="432-long-description"></a>4.3.2 Descrição longa
+#### <a name="long-description"></a>Descrição longa
 
 A descrição longa pode fornecer uma narração envolvente que realça a proposta de valor do aplicativo, o público principal e o setor de destino. Embora essa descrição possa ter até 4.000 caracteres, a maioria dos usuários lerá apenas entre 300 e 500 palavras.
 
@@ -219,7 +219,7 @@ A descrição longa pode fornecer uma narração envolvente que realça a propos
   * "... desenvolvido para ..."
   * "... projetado para ..."
 
-### <a name="44-screenshots"></a>4.4 Capturas de tela
+### <a name="screenshots"></a>Capturas de tela
 
 As capturas de tela fornecem uma visualização visual proeminente do seu aplicativo para complementar o nome, o ícone e as descrições do aplicativo. Lembre-se do seguinte sobre capturas de tela:
 
@@ -245,7 +245,7 @@ As capturas de tela fornecem uma visualização visual proeminente do seu aplica
 > [!TIP]
 > Um vídeo pode ser a maneira mais eficaz de comunicar por que as pessoas devem usar seu aplicativo. Um vídeo também é a primeira coisa que os usuários veem em sua listagem (por padrão, um vídeo é exibido antes das capturas de tela). Para obter mais informações, [consulte create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
-### <a name="45-privacy-policy"></a>4.5 Política de privacidade
+### <a name="privacy-policy"></a>Política de privacidade
 
 A política de privacidade pode ser específica para seu aplicativo Teams ou uma política geral para todos os seus serviços.
 
@@ -255,37 +255,37 @@ A política de privacidade pode ser específica para seu aplicativo Teams ou uma
 * Não deve conter URLs que estão quebradas ou para fins beta ou de preparação.
 * Não deve incluir links para AppSource.
 
-### <a name="46-terms-of-use"></a>4.6 Termos de uso
+### <a name="terms-of-use"></a>Termos de uso
 
 Seus termos de uso devem ser específicos e aplicáveis à sua oferta.
 
-### <a name="47-support-links"></a>4.7 Links de suporte
+### <a name="support-links"></a>Links de suporte
 
 As URLs de suporte do aplicativo não devem exigir autenticação. Por exemplo, os usuários não devem ter que fazer logoff para entrar em contato com você.
 
-### <a name="48-localization"></a>Localização 4.8
+### <a name="localization"></a>Localização
 
 Se seu aplicativo oferece suporte à localização, seu pacote de aplicativos deve incluir um arquivo com traduções de idioma que são exibidas com base na configuração Teams idioma. O arquivo deve estar em conformidade com o Teams de localização. Para obter mais informações, consulte o [Teams de localização](~/concepts/build-and-test/apps-localization.md).
 
-## <a name="50-tabs"></a>Guias 5.0
+## <a name="tabs"></a>Guias
 
 Se seu aplicativo incluir uma guia, certifique-se de que ele adere a essas diretrizes.
 
 > [!TIP]
 > Para obter informações sobre como criar uma experiência de aplicativo de alta qualidade, consulte Teams diretrizes de [design de guia.](~/tabs/design/tabs.md)
 
-### <a name="51-setup"></a>Configuração 5.1
+### <a name="setup"></a>Configurar
 
 * A configuração de tabulação não deve encerrar um novo usuário. Forneça uma mensagem sobre como concluir a ação ou o fluxo de trabalho.
 * A autenticação deve acontecer durante a configuração da guia e não depois.
 
-### <a name="52-views"></a>5.2 Views
+### <a name="views"></a>Exibições
 
 * A área de tela de login não deve usar logotipos grandes ou exibir uma página da Web inteira.
 * O conteúdo pode ser simplificado quebrando-o entre várias guias.
 * As guias não devem ter um header duplicado. Remova o logotipo do iframe já que a estrutura de tabulação já exibe o ícone e o nome do aplicativo.
 
-### <a name="53-navigation"></a>Navegação 5.3
+### <a name="navigation"></a>Navegação
 
 * As guias não devem ter mais de três níveis de navegação.
 * As guias não devem fornecer navegação que conflita com a navegação Teams principal.
@@ -297,7 +297,7 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele adere a essas diret
 * Links profundos em guias não devem se vincular a uma página da Web externa, mas em algum lugar dentro Teams. Por exemplo, módulos de tarefa ou outras guias.
 * As guias não devem permitir que os usuários naveguem fora Teams para a experiência principal do aplicativo.
 
-### <a name="54-usability"></a>Usabilidade 5.4
+### <a name="usability"></a>Usabilidade
 
 * As guias devem fornecer valor além de apenas hospedar um site existente.
 * Os usuários devem ser capazes de desfazer sua última ação na guia.
@@ -313,14 +313,14 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele adere a essas diret
 > * Inclua um bot pessoal junto com uma guia pessoal.
 > * Permitir que os usuários compartilhem conteúdo de sua guia pessoal.
 
-## <a name="60-bots"></a>Bots 6.0
+## <a name="bots"></a>Bots
 
 Se seu aplicativo incluir um bot, certifique-se de que ele adere a essas diretrizes.
 
 > [!TIP]
 > Para obter informações sobre como criar uma experiência de aplicativo de alta qualidade, consulte as [diretrizes Teams de design de bot.](~/bots/design/bots.md)
 
-### <a name="61-bot-commands"></a>Comandos bot 6.1
+### <a name="bot-commands"></a>Comandos bot
 
 Analisar a entrada do usuário e prever a intenção do usuário é difícil. Os comandos bot fornecem aos usuários um conjunto de palavras ou frases que seu bot entende para que eles (e seu bot) não tenham que adivinhar.
 
@@ -330,16 +330,16 @@ Analisar a entrada do usuário e prever a intenção do usuário é difícil. Os
 > [!TIP]
 > Para bots pessoais, inclua uma **guia Ajuda** que descreve ainda mais o que seu bot pode fazer.
 
-### <a name="62-bot-welcome-messages"></a>6.2 Mensagens de boas-vindas do Bot
+### <a name="bot-welcome-messages"></a>Mensagens de boas-vindas de bot
 
 * Os bots quase sempre devem enviar uma mensagem de boas-vindas durante a primeira executar. Para a melhor experiência, a mensagem deve incluir a proposta de valor do bot, como configurar o bot e descrever brevemente todos os comandos de bot com suporte. Você pode exibir a mensagem usando um Cartão Adaptável com botões para melhor usabilidade. Para obter mais informações, consulte como disparar uma mensagem de [boas-vindas do bot.](~/bots/how-to/conversations/send-proactive-messages.md)
-* As mensagens de boas-vindas do bot em canais e chats são opcionais durante a primeira execução, especialmente se o bot estiver disponível para uso pessoal e executar ações semelhantes. Se o bot enviar mensagens de boas-vindas, ele não deverá enviá-los para os usuários individualmente (isso é considerado [spam](#63-bot-message-spamming)). A mensagem também deve mencionar a pessoa que adicionou o bot.
+* As mensagens de boas-vindas do bot em canais e chats são opcionais durante a primeira execução, especialmente se o bot estiver disponível para uso pessoal e executar ações semelhantes. Se o bot enviar mensagens de boas-vindas, ele não deverá enviá-los para os usuários individualmente (isso é considerado [spam](#bot-message-spamming)). A mensagem também deve mencionar a pessoa que adicionou o bot.
 * Os bots somente notificação devem enviar uma mensagem de boas-vindas que transmite que ela não responderá às mensagens dos usuários.
 
 > [!TIP]
 > Em mensagens de boas-vindas a usuários individuais, um tour de carrossel pode fornecer uma visão geral eficaz do bot e de todos os outros recursos do aplicativo. Incluindo botões, os comandos de bot permitem que os usuários experimentem são incentivados. Por exemplo, **Criar uma tarefa**.
 
-### <a name="63-bot-message-spamming"></a>6.3 Spam de mensagens bot
+### <a name="bot-message-spamming"></a>Spam de mensagens bot
 
 Os bots não devem spam de usuários enviando várias mensagens em breve.
 
@@ -347,11 +347,11 @@ Os bots não devem spam de usuários enviando várias mensagens em breve.
 * **Mensagens bot em aplicativos pessoais**: Não envie várias mensagens em sucessão rápida. Envie uma mensagem com informações completas. Evite conversas multi-turn para concluir um único fluxo de trabalho. Em vez disso, considere usar um formulário (ou módulo de tarefa) para coletar todas as entradas de um usuário de uma só vez.
 * **Mensagens de boas-vindas**: Repetir a mesma mensagem de boas-vindas em intervalos regulares não é permitido e considerado spam. Por exemplo, quando um novo membro é adicionado a uma equipe, não spam os outros membros com uma mensagem de boas-vindas. Em vez disso, mensagem ao novo membro pessoalmente.
 
-### <a name="64-bot-notifications"></a>6.4 Notificações de Bot
+### <a name="bot-notifications"></a>Notificações de bot
 
 As notificações de bot devem incluir conteúdo relevante para o escopo definido para o bot (equipe, chat ou pessoal).
 
-### <a name="65-bots-and-adaptive-cards"></a>6.5 Bots e Cartões Adaptáveis
+### <a name="bots-and-adaptive-cards"></a>Bots e Cartões Adaptáveis
 
 Cartões adaptáveis são uma maneira altamente recomendada de exibir mensagens bot. Seus cartões devem ser leves e incluir apenas ações de 1 a 3. Se você precisar exibir mais conteúdo, considere usar um módulo de tarefa ou uma guia.
 
@@ -360,64 +360,64 @@ Veja os seguintes recursos para obter mais informações:
 * [Criar Cartões Adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Referência de cartões](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
-## <a name="70-messaging-extensions"></a>Extensões de mensagens 7.0
+## <a name="messaging-extensions"></a>Extensões de mensagens
 
 Se seu aplicativo incluir uma extensão de mensagens, certifique-se de que ele adere a essas diretrizes.
 
 > [!TIP]
 > Para obter informações sobre como criar uma experiência de aplicativo de alta qualidade, consulte as diretrizes Teams de design de [extensão de mensagens.](~/messaging-extensions/design/messaging-extension-design.md)
 
-### <a name="71-action-commands"></a>Comandos de ação 7.1
+### <a name="action-commands"></a>Comandos de ação
 
 As extensões de mensagens baseadas em ação devem fazer o seguinte:
 
 * Permitir que os usuários acionem ações em uma mensagem sem concluir etapas intermediárias, como entrar.
 * Passe o contexto da mensagem para o próximo estado de trabalho.
 
-### <a name="72-preview-links-link-unfurling"></a>7.2 Links de visualização (link sem se enroscar)
+### <a name="preview-links-link-unfurling"></a>Links de visualização (link desfraldamento)
 
 As extensões de mensagens devem visualizar links reconhecidos na caixa Teams de redação. Não adicione domínios que estão fora do seu controle (URLs absolutas ou curingas). Por exemplo, `yourapp.onmicrosoft.com` é válido, `*.onmicrosoft.com` mas não é válido. Domínios de nível superior também são proibidos (por exemplo, `*.com` ou `*.org` ).
 
-### <a name="73-search-commands"></a>Comandos de pesquisa 7.3
+### <a name="search-commands"></a>Comandos de pesquisa
 
 * As extensões de mensagens baseadas em pesquisa devem fornecer texto que ajude os usuários a pesquisar efetivamente.
 * @mention executáveis devem ser claros, fáceis de entender e acessível.
 
-## <a name="80-task-modules"></a>Módulos de tarefa 8.0
+## <a name="task-modules"></a>Módulos de tarefas
 
 Um módulo de tarefa deve incluir um ícone e o nome curto do aplicativo ao seu associado.
 
 > [!TIP]
 > Para obter informações sobre como criar uma experiência de aplicativo de alta qualidade, consulte Teams diretrizes de design do [módulo de tarefa.](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
-## <a name="90-meeting-extensions"></a>Extensões de reunião 9.0
+## <a name="meeting-extensions"></a>Extensões de reunião
 
 Se seu aplicativo incluir uma extensão de reunião, certifique-se de que ele adere a essas diretrizes.
 
 > [!TIP]
 > Para obter informações sobre como criar uma experiência de aplicativo de alta qualidade, consulte as diretrizes Teams de design de [extensão de reunião.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-### <a name="91-pre--and-post-meeting-experience"></a>9.1 Experiência pré e pós-reunião
+### <a name="pre--and-post-meeting-experience"></a>Experiência pré e pós-reunião
 
 * As telas pré e pós-reunião devem seguir as diretrizes gerais de design de guias. Para obter mais informações, consulte as [diretrizes Teams design.](~/tabs/design/tabs.md)
 * As guias não devem ter rolagem horizontal.
 * As guias devem ter um layout organizado ao exibir vários itens. Por exemplo, mais de 10 pesquisas ou pesquisas. Consulte um [exemplo de layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Seu aplicativo deve notificar os usuários quando os resultados de uma pesquisa ou sondagem são exportados informando: "Resultados baixados com êxito".
 
-### <a name="92-in-meeting-experience"></a>9.2 Experiência de reunião
+### <a name="in-meeting-experience"></a>Experiência na reunião
 
 * Os aplicativos só devem usar um tema escuro durante as reuniões. Para obter mais informações, consulte as [diretrizes Teams design.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming)
 * Uma dica de ferramenta deve exibir o nome do aplicativo ao passar o mouse sobre o ícone do aplicativo durante as reuniões.
 * As extensões de mensagens devem funcionar da mesma forma durante as reuniões que fazem fora das reuniões.
 
-### <a name="93-in-meeting-tabs"></a>9.3 Guias de reunião
+### <a name="in-meeting-tabs"></a>Guias na reunião
 
 * Deve ser responsivo. Certifique-se de manter tamanhos de preenchimento e componentes.
 * Deve ter um botão voltar se houver mais de uma camada de navegação.
 * Não deve incluir mais de um botão de demissão ou fechamento. Isso pode confundir os usuários, já que já há um botão de header integrado para descartar a guia.
 * Não deve ter rolagem horizontal.
 
-### <a name="94-in-meeting-dialogs"></a>9.4 Caixas de diálogo em reunião
+### <a name="in-meeting-dialogs"></a>Caixas de diálogo na reunião
 
 * Deve ser usado com moderação e para cenários que são leves e orientados a tarefas.
 * Deve exibir conteúdo em uma única coluna e não ter vários níveis de navegação.
@@ -425,39 +425,35 @@ Se seu aplicativo incluir uma extensão de reunião, certifique-se de que ele ad
 * Deve alinhar-se ao centro do estágio de reunião.
 * Deve ser ignorado quando um usuário seleciona um botão ou executa uma ação.
 
-## <a name="100-notifications"></a>10.0 Notificações
+## <a name="notifications"></a>Notificações
 
 Se seu aplicativo usa as [APIs](/graph/teams-send-activityfeednotifications)de feed de atividade fornecidas pela Microsoft Graph , certifique-se de que ele adere às seguintes diretrizes.
 
-### <a name="101-general"></a>10.1 Geral
+### <a name="general"></a>Geral
 
 * Todos os gatilhos de notificação especificados em suas configurações de aplicativo devem receber uma notificação no aplicativo.
 * As notificações devem ser localizadas de acordo com os idiomas com suporte configurados para seu aplicativo.
 * As notificações devem ser exibidas dentro de cinco segundos após a ação do usuário.
 
-### <a name="102-avatars"></a>10.2 Avatares
+### <a name="avatars"></a>Avatares
 
 * O avatar de notificação deve corresponder ao ícone de cor do aplicativo.
 * As notificações disparadas por um usuário devem incluir o avatar do usuário.
 
-### <a name="103-spamming"></a>10.3 Spamming
+### <a name="spamming"></a>Spam
 
 * Os aplicativos não devem enviar mais de 10 notificações por minuto para um usuário.
 * Os bots e o feed de atividade não devem disparar notificações duplicadas.
 * As notificações devem fornecer algum valor aos usuários e não serem usadas para eventos triviais ou irrelevantes.
 
-### <a name="104-navigation-and-layout"></a>10.4 Navegação e layout
+### <a name="navigation-and-layout"></a>Navegação e layout
 
 * As notificações devem seguir o layout e a experiência do feed de Teams atividade.
 * Ao selecionar uma notificação, o usuário deve ser direcionado para conteúdo relevante dentro Teams e não retirado da experiência Teams.
 
-## <a name="110-advertising"></a>11.0 Publicidade
+## <a name="advertising"></a>Publicidade
 
 Os aplicativos não devem exibir publicidade, incluindo anúncios dinâmicos, anúncios em faixa e anúncios em mensagens.
-
-## <a name="see-also"></a>Confira também
-
-[4.0 Pacote de aplicativos e listagem da loja](#40-app-package-and-store-listing)
 
 ## <a name="next-step"></a>Próxima etapa
 

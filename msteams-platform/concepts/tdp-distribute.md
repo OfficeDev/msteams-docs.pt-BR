@@ -5,11 +5,11 @@ keywords: iniciando equipes do portal do desenvolvedor
 localization_priority: Normal
 ms.topic: Conceptual
 ms.openlocfilehash: d1d098b295492a7dc3b691db4625307b6c3170ce
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635060"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763123"
 ---
 # <a name="distribute-your-apps"></a>Distribuir seus aplicativos
 
