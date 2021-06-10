@@ -76,9 +76,19 @@ ms.locfileid: "52630255"
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemplo mostra um cartão de lista cartão adaptável no celular." border="false":::
 
 ---
+
+### Digest
+
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
-':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
+
 ---
 
 ### <a name="media"></a><span data-ttu-id="33b81-138">Mídia</span><span class="sxs-lookup"><span data-stu-id="33b81-138">Media</span></span>
