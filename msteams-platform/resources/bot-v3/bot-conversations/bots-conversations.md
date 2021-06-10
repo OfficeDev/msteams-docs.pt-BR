@@ -81,7 +81,7 @@ Recomendamos que você especifique a altura e a largura de cada imagem usando XM
 * Usar o `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Não use `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="receiving-messages&quot;></a>Recebimento de mensagens
+## <a name="receiving-messages"></a>Recebimento de mensagens
 
 Dependendo de quais escopos são declarados, seu bot pode receber mensagens nos seguintes contextos:
 
