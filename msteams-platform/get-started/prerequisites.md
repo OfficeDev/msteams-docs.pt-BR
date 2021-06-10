@@ -34,7 +34,7 @@ O Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramenta
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Abra Visual Studio Code.
+1. Abra o Visual Studio Code.
 1. Selecione o exibição Extensões (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Exibir > Extensões).**
 1. Na caixa de pesquisa, digite _Teams Toolkit_.
 1. Selecione no botão de instalação verde ao lado do Teams Toolkit.
@@ -156,7 +156,7 @@ Você precisará de acesso a duas contas:
 1. Abra Visual Studio Code
 1. Selecione o Teams na barra lateral:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="O Teams ícone na barra Visual Studio Code lateral.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="O ícone do Teams na barra lateral do Visual Studio Code":::
 
 1. Selecione **Entrar no M365**.
 
@@ -206,5 +206,5 @@ Agora que seu ambiente de desenvolvimento está configurado, você pode criar, c
 - [Crie seu primeiro Teams usando React](first-app-react.md)
 - [Criar seu primeiro Teams com o Blazor](first-app-blazor.md)
 - [Crie seu primeiro Teams usando Estrutura do SharePoint (SPFx)](first-app-spfx.md)
-- [Criar um aplicativo bot de conversação](first-app-bot.md)
-- [Criar uma extensão de mensagens](first-message-extension.md)
+- [Criar um programa bot de conversação](first-app-bot.md)
+- [Criar uma extensão de mensagem](first-message-extension.md)

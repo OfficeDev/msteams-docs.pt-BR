@@ -1,6 +1,6 @@
 ---
 title: Solucionar problemas de seu aplicativo
-description: Solucionar problemas ou erros ao criar aplicativos para o Microsoft Teams
+description: Solucionar problemas ou erros durante a criação de aplicativos para Microsoft Teams
 keywords: Solução de problemas de desenvolvimento de aplicativos do teams
 localization_priority: Normal
 ms.topic: troubleshooting
@@ -12,13 +12,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020426"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas do seu aplicativo do Microsoft Teams
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas do Microsoft Teams aplicativo
 
 ## <a name="troubleshooting-tabs"></a>Guias de solução de problemas
 
 ### <a name="accessing-the-devtools"></a>Acessando o DevTools
 
-Você pode abrir [o DevTools](~/tabs/how-to/developer-tools.md) no cliente do Teams para uma experiência semelhante a pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
+Você pode abrir [o DevTools](~/tabs/how-to/developer-tools.md) no cliente Teams para uma experiência semelhante como pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
 
 ### <a name="blank-tab-screen"></a>Tela de guia em branco
 
@@ -49,7 +49,7 @@ Ao adicionar uma guia, se você clicar nos botões salvar, mas for apresentado c
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Não é possível autenticar o usuário ou exibir seu provedor de autenticação em sua guia
 
-A menos que você esteja fazendo autenticação silenciosa, você deve seguir o processo de autenticação fornecido pelo [SDK](/javascript/api/overview/msteams-client.md)do cliente JavaScript do Microsoft Teams.
+A menos que você esteja fazendo autenticação silenciosa, você deve seguir o processo de autenticação fornecido pelo [SDK](/javascript/api/overview/msteams-client.md)do cliente JavaScript Microsoft Teams.
 
 > [!NOTE]
 >Exigimos que todo o fluxo de autenticação inicie e termine em seu domínio, que deve estar listado no `validDomains` objeto em seu manifesto.
@@ -64,7 +64,7 @@ Há um problema conhecido em que a atualização de um aplicativo bot existente 
 
 ### <a name="cant-add-my-bot"></a>Não é possível adicionar meu bot
 
-Os aplicativos devem ser habilitados pelo administrador de locatários do Office 365 para que eles sejam carregados pelos usuários finais. Observe que, em alguns casos, o locatário do Office 365 pode ter várias SKUs associadas a ele e, para que os bots funcionem em qualquer, eles devem estar habilitados em todas as SKUs. Confira Preparar seu locatário do [Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obter mais informações.
+Os aplicativos devem ser habilitados pelo administrador Office 365 locatários para que eles sejam carregados pelos usuários finais. Observe que, em alguns casos, o Office 365 locatário pode ter vários SKUs associados a ele e, para que os bots funcionem em qualquer, eles devem estar habilitados em todas as SKUs. Consulte [Preparar seu Office 365 locatário para](~/concepts/build-and-test/prepare-your-o365-tenant.md) obter mais informações.
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>Não é possível adicionar bot como membro de uma equipe
 
@@ -86,12 +86,12 @@ A maioria dos erros de manifesto fornecerá uma dica sobre qual campo específic
 
 Motivos comuns para erros de leitura de manifesto:
 
-* JSON inválido. Use um IDE, como [Visual Studio Código](https://code.visualstudio.com) [ou Visual Studio](https://www.visualstudio.com/vs/) que valida automaticamente a sintaxe JSON.
+* JSON inválido. Use um IDE, como [Visual Studio Code](https://code.visualstudio.com) ou [Visual Studio](https://www.visualstudio.com/vs/) que valida automaticamente a sintaxe JSON.
 * Problemas de codificação. Use UTF-8 para o *arquivomanifest.json.* Outras codificações, especificamente com o BOM, podem não ser acessível.
-* Pacote .zip malformado. O *manifest.jsno* arquivo on deve estar no nível superior do arquivo .zip. Observe que a compactação  de arquivo mac padrão pode colocar amanifest.jsem um subdiretório, que não carregará corretamente no Microsoft Teams.
+* Pacote de .zip malformado. O *manifest.jsno* arquivo on deve estar no nível superior do arquivo .zip. Observe que a compactação  de arquivo mac padrão pode colocar omanifest.jsem um subdiretório, que não será carregado corretamente no Microsoft Teams.
 
 ### <a name="another-extension-with-same-id-exists"></a>Existe outra extensão com a mesma ID
 
-Se você estiver tentando carregar um pacote atualizado com a  mesma ID, escolha o ícone Substituir no final da linha de tabela da guia em vez do **botão Carregar.**
+Se você estiver tentando carregar um pacote atualizado com a  mesma ID, escolha o ícone Substituir no final da linha de tabela da guia em vez do botão **Upload.**
 
 Se você não estiver carregando um pacote atualizado, verifique se a ID é exclusiva.

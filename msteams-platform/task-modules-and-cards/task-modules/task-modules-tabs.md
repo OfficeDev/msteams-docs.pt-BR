@@ -1,6 +1,6 @@
 ---
-title: Usando módulos de tarefas nas guias do Microsoft Teams
-description: Explica como invocar módulos de tarefas a partir de guias do Teams usando o SDK de cliente do Microsoft Teams
+title: Usando módulos de tarefa em Microsoft Teams guias
+description: Explica como invocar módulos de tarefas Teams guias usando o SDK do cliente Microsoft Teams cliente
 localization_priority: Normal
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
@@ -13,9 +13,9 @@ ms.locfileid: "52019521"
 ---
 # <a name="using-task-modules-in-tabs"></a>Usando módulos de tarefas em guias
 
-Adicionar um módulo de tarefa à sua guia pode simplificar muito a experiência do usuário para todos os fluxos de trabalho que exigem entrada de dados. Os módulos de tarefas permitem coletar suas entradas em um pop-up com conhecimento do Teams. Um bom exemplo disso é editar cartões do Planner; você pode usar módulos de tarefa para criar uma experiência semelhante.
+Adicionar um módulo de tarefa à sua guia pode simplificar muito a experiência do usuário para todos os fluxos de trabalho que exigem entrada de dados. Os módulos de tarefa permitem coletar suas entradas em um pop-up Teams com conhecimento de Teams. Um bom exemplo disso é editar cartões do Planner; você pode usar módulos de tarefa para criar uma experiência semelhante.
 
-Para dar suporte ao recurso de módulo de tarefa, duas novas funções foram adicionadas ao [SDK do cliente do Microsoft Teams:](/javascript/api/overview/msteams-client)
+Para dar suporte ao recurso de módulo de tarefa, duas novas funções foram adicionadas [ao SDK do](/javascript/api/overview/msteams-client)cliente Microsoft Teams :
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -76,9 +76,9 @@ Se não houver nenhum erro de invocação e o usuário não pressionar X para de
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-Depois de validar o que o usuário instalou, você chama a função SDK (conhecida a seguir como para fins de capacidade `microsoftTeams.tasks.submitTask()` `submitTask()` de leitura). Você pode chamar sem qualquer parâmetro se quiser que o Teams feche o módulo de tarefa, mas na maioria das vezes você vai querer passar um objeto ou uma cadeia de caracteres para `submitTask()` seu `submitHandler` .
+Depois de validar o que o usuário instalou, você chama a função SDK (conhecida a seguir como para fins de capacidade `microsoftTeams.tasks.submitTask()` `submitTask()` de leitura). Você pode chamar sem qualquer parâmetro se quiser apenas Teams fechar o módulo de tarefa, mas na maioria das vezes você vai querer passar um objeto ou uma cadeia de caracteres para seu `submitTask()` `submitHandler` .
 
-Passe o resultado como o primeiro parâmetro. O Teams `submitHandler` invocará onde `err` estará e será o `null` `result` objeto/cadeia de caracteres que você passou para `submitTask()` . Se você fizer uma chamada com um parâmetro, deverá passar uma ou uma matriz de cadeias de `submitTask()` `result`  `appId` caracteres: isso permite ao Teams validar que o aplicativo que está enviando o resultado é o mesmo que invocou o módulo `appId` de tarefa.
+Passe o resultado como o primeiro parâmetro. Teams `submitHandler` invocará onde `err` estará e será o `null` objeto/cadeia de `result` caracteres que você passou para `submitTask()` . Se você fizer uma chamada com um parâmetro, deverá passar uma ou uma matriz de cadeias de `submitTask()` `result` caracteres:  isso permite Teams validar que o aplicativo que está enviando o resultado é o mesmo que invocou o módulo de `appId` `appId` tarefa.
 
 ### <a name="adaptive-card-taskinfocard"></a>Cartão adaptável ( `TaskInfo.card` )
 

@@ -1,7 +1,7 @@
 ---
-title: Projetar webhooks e conectores do Microsoft Teams
+title: Criar Microsoft Teams webhooks e conectores
 author: heath-hamilton
-description: Diretrizes e práticas recomendadas para projetar webhooks e conectores para o Microsoft Teams.
+description: Diretrizes e práticas recomendadas para projetar webhooks e conectores para Microsoft Teams.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar

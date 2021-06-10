@@ -1,11 +1,11 @@
 ---
-title: Testar permissões de consentimento específicas do recurso no Teams
-description: Detalhes do teste de consentimento específico do recurso no Teams usando Postman
+title: Testar permissões de consentimento específicas do recurso Teams
+description: Detalhes do teste de consentimento específico do recurso em Teams usando Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: Autorização do teams OAuth SSO AAD rsc Postman Graph
+keywords: autorização do teams OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: 328be5b4f1e3597457afb9ce1413eb35aa2df71e
 ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
@@ -13,15 +13,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52075616"
 ---
-# <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso no Teams
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso Teams
 
-O RSC (consentimento específico de recursos) é uma integração da API do Microsoft Teams e do Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar equipes específicas dentro de uma organização. Para obter mais informações, consulte Consentimento específico do recurso [(RSC) — API do Microsoft Teams Graph](resource-specific-consent.md).
+O RSC (consentimento específico do recurso) é uma integração de API Microsoft Teams e Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar equipes específicas dentro de uma organização. Para obter mais informações, consulte [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
-> Para testar as permissões RSC, o arquivo de manifesto do aplicativo teams deve incluir uma chave **webApplicationInfo** preenchida com os seguintes campos:
+> Para testar as permissões RSC, seu arquivo de manifesto do aplicativo Teams deve incluir uma chave **webApplicationInfo** preenchida com os seguintes campos:
 >
 > - **id**: Sua ID do aplicativo do Azure AD, consulte [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**: Qualquer cadeia de caracteres, consulte a nota em  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
+> - **resource**: Qualquer cadeia de caracteres, consulte a nota em [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **permissões de aplicativo**: permissões RSC para seu aplicativo, consulte [Permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -57,9 +57,9 @@ Para verificar se as permissões RSC estão sendo acodadas pela carga de solicit
 * `azureADAppId`: ID do aplicativo do Azure AD do seu aplicativo.
 * `azureADAppSecret`: Sua senha do aplicativo do Azure AD.
 * `token_scope`: O escopo é necessário para obter um token. definir o valor como https://graph.microsoft.com/.default .
-* `teamGroupId`: Você pode obter a ID do grupo de equipe do cliente do Teams da seguinte forma:
+* `teamGroupId`: Você pode obter a ID do grupo de equipe do cliente Teams da seguinte forma:
 
-    1. No cliente do Teams, selecione **Teams** na barra de navegação à extrema esquerda.
+    1. No cliente Teams, selecione **Teams** na barra de navegação à esquerda.
     2. Selecione a equipe onde o aplicativo está instalado no menu suspenso.
     3. Selecione o **ícone Mais opções** (&#8943;).
     4. Selecione **Obter link para a equipe**. 
@@ -85,5 +85,5 @@ Execute toda a coleção de permissões para cada chamada de API. As permissões
 
 ## <a name="see-also"></a>Confira também
 
-[API e Teams do Microsoft Graph](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+[API Graph Microsoft e Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

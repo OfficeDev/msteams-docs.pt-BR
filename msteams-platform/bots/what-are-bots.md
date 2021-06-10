@@ -1,7 +1,7 @@
 ---
 title: Bots no Microsoft Teams
 author: clearab
-description: Uma visão geral dos bots no Microsoft Teams.
+description: Uma visão geral dos bots Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
@@ -36,15 +36,15 @@ Cada interação entre o usuário e o bot é representada como uma atividade. Qu
 
 Além disso, os bots são aplicativos que têm uma interface de conversa. Você pode interagir com um bot usando texto, cartões interativos e fala. Um bot se comporta de forma diferente, dependendo se a conversa é um canal ou conversa de chat de grupo, ou é uma conversa um para um. As conversas são manipuladas por meio do conector da Estrutura do Bot. Para obter mais informações, consulte [noções básicas de conversa.](~/bots/how-to/conversations/conversation-basics.md)
 
-Seu bot exige informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Para obter mais informações, consulte [get Teams context](~/bots/how-to/get-teams-context.md). 
+Seu bot exige informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Para obter mais informações, [consulte obter Teams contexto](~/bots/how-to/get-teams-context.md). 
 
-Você também pode enviar e receber arquivos por meio do bot usando APIs do Graph ou APIs de bot do Teams. Para obter mais informações, [consulte enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md).
+Você também pode enviar e receber arquivos por meio do bot usando GRAPH APIs ou apIs Teams bot. Para obter mais informações, [consulte enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md).
 
-Além disso, o limite de taxas é usado para otimizar bots usados para seu aplicativo do Teams. Para proteger o Microsoft Teams e seus usuários, as APIs de bot fornecem um limite de taxa para solicitações de entrada. Para obter mais informações, consulte [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
+Além disso, o limite de taxa é usado para otimizar bots usados para seu Teams aplicativo. Para proteger Microsoft Teams e seus usuários, as APIs de bot fornecem um limite de taxa para solicitações de entrada. Para obter mais informações, consulte [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
 
-Com APIs do Microsoft Graph para chamadas e reuniões online, os aplicativos do Microsoft Teams agora podem interagir com os usuários usando voz e vídeo. Para obter mais informações, consulte [chamadas e reuniões bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
+Com as APIs Graph Microsoft para chamadas e reuniões online, Microsoft Teams aplicativos agora podem interagir com os usuários usando voz e vídeo. Para obter mais informações, consulte [chamadas e reuniões bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
 
-Você pode usar as APIs de bot do Teams para obter informações para um ou mais membros de um chat ou equipe. Para obter mais informações, consulte [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Você pode usar as APIs Teams bot para obter informações para um ou mais membros de um chat ou equipe. Para obter mais informações, consulte [alterações nas APIs Teams bot para buscar](~/resources/team-chat-member-api-changes.md)membros de equipe ou chat.
 
 ## <a name="see-also"></a>Confira também
 

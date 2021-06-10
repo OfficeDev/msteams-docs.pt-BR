@@ -131,7 +131,7 @@ Entenda como as pessoas adicionam, usam e gerenciam Teams aplicativos para aprov
 
 Crie rapidamente designs complexos e de alta fidelidade com modelos para Teams casos de uso e [fluxos de trabalho](design-teams-app-ui-templates.md)comuns.
 
-## <a name="basic-ui-components"></a>Componentes básicos da interface de usuário
+## <a name="basic-ui-components"></a>Componentes básicos da Interface de Usuário
 
 Com base na interface do usuário fluente, esses são os [elementos principais que](design-teams-app-basic-ui-components.md) você pode usar para criar Teams experiências do zero.
 

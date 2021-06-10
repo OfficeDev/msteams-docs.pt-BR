@@ -172,7 +172,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 | **Solicitação e resposta** | **Descrição** |
 |----|----|
-| N/D | Um código de status HTTP que indica o resultado da operação. Nada é especificado no corpo da resposta. |
+| N/A | Um código de status HTTP que indica o resultado da operação. Nada é especificado no corpo da resposta. |
 
 ---
 

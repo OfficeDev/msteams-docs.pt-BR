@@ -1,6 +1,6 @@
 ---
 title: Formatos de mídia com suporte para bots
-description: Bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo.
+description: Os bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo.
 ms.topic: reference
 localization_priority: Normal
 keywords: formatos de mídia de bots do teams
@@ -13,9 +13,9 @@ ms.locfileid: "52020608"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formatos de mídia com suporte para bots
 
-Bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo:
+Os bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo:
 
-| Formatar | Mais informações |
+| Formatar | Mais Informações |
 | --- | --- |
 | Vorbis | http://www.vorbis.com/ |
 | PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |
@@ -31,4 +31,4 @@ Bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para con
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Alterações nas APIs de bot do Teams para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md)
+> [Alterações nas APIs Teams bot para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md)

@@ -1,7 +1,7 @@
 ---
-title: Opções de com build para o desenvolvimento de aplicativos do Microsoft Teams
+title: Opções de com build para Microsoft Teams desenvolvimento de aplicativos
 author: heath-hamilton
-description: Descreva os SDKs, ferramentas e APIs que você pode usar para criar todos os tipos de aplicativos do Teams.
+description: Descreva os SDKs, ferramentas e APIs que você pode usar para criar todos os tipos de Teams aplicativos.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020839"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a>Opções de com build para o desenvolvimento de aplicativos do Microsoft Teams
+# <a name="build-options-for-microsoft-teams-app-development"></a>Opções de com build para Microsoft Teams desenvolvimento de aplicativos
 
 Em breve...

@@ -20,7 +20,7 @@ A formatação de mensagens permite que você traga o melhor em mensagens bot. V
 
 Para formatar suas mensagens bot, você pode definir a propriedade opcional para controlar como o conteúdo de texto da mensagem bot [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) é renderizado.
 
-O Microsoft Teams dá suporte às seguintes opções de formatação:
+Microsoft Teams oferece suporte às seguintes opções de formatação:
 
 | `TextFormat` value | Descrição |
 | --- | --- |
@@ -28,7 +28,7 @@ O Microsoft Teams dá suporte às seguintes opções de formatação:
 | Markdown | O texto deve ser tratado como formatação de marcação e renderizado no canal conforme apropriado. |
 | xml | O texto é uma marcação XML simples. |
 
-O Teams dá suporte a um subconjunto de marcas de marcação e XML ou formatação HTML.
+Teams oferece suporte a um subconjunto de marcas de marcação e xml ou formatação HTML.
 
 Atualmente, as seguintes limitações se aplicam à formatação:
 
@@ -36,7 +36,7 @@ Atualmente, as seguintes limitações se aplicam à formatação:
 * Os cartões rich suportam a formatação somente na propriedade text, não nas propriedades title ou subtitle.
 * Os cartões rich não suportam marcação ou formatação de tabela.
 
-Depois de formatar o conteúdo de texto, certifique-se de que sua formatação funcione em todas as plataformas com suporte do Microsoft Teams.
+Depois de formatar o conteúdo de texto, certifique-se de que sua formatação funcione em todas as plataformas com suporte Microsoft Teams.
 
 ## <a name="cross-platform-support"></a>Suporte entre plataformas
 

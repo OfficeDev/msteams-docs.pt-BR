@@ -1,6 +1,6 @@
 ---
 title: Referência de esquema JSON do arquivo de localização
-description: Descreve o esquema de localização suportado pelo arquivo de localização do Microsoft Teams
+description: Descreve o esquema de localização suportado pelo arquivo de localização para Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Localização de esquema de manifesto do teams
@@ -14,7 +14,7 @@ ms.locfileid: "52019703"
 ---
 # <a name="reference-localization-file-json-schema"></a>Referência: esquema JSON do arquivo de localização
 
-O arquivo de localização do Microsoft Teams descreve traduções de idioma que serão atendidas com base nas configurações de idioma do cliente. Seu arquivo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obter informações adicionais, [consulte localização do aplicativo](~/concepts/build-and-test/apps-localization.md).
+O Microsoft Teams de localização descreve traduções de idioma que serão atendidas com base nas configurações de idioma do cliente. Seu arquivo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obter informações adicionais, [consulte localização do aplicativo](~/concepts/build-and-test/apps-localization.md).
 
 ## <a name="sample"></a>Amostra
 
@@ -42,7 +42,7 @@ O esquema define as seguintes propriedades:
 A https:// URL de referência do Esquema JSON para o manifesto.
 
 > [!TIP]
-> Especifique o esquema no início do manifesto para habilitar IntelliSense suporte semelhante do editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Especifique o esquema no início do manifesto para habilitar IntelliSense suporte semelhante do editor de código:`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 

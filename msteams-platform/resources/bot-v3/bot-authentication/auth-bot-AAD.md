@@ -1,5 +1,5 @@
 ---
-title: Autenticação para bots usando o Azure Active Directory
+title: Autenticação para bots usando Azure Active Directory
 description: Descreve a autenticação do Azure AD no Teams e como usá-la em seus bots
 keywords: bots de autenticação do teams AAD
 localization_priority: Normal
@@ -12,11 +12,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020685"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar um usuário em um bot do Microsoft Teams
+# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar um usuário em um Microsoft Teams bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Há muitos serviços que você pode querer consumir dentro do seu aplicativo do Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e, claro, o Teams. Os usuários do Teams têm informações de perfil de usuário armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph. Este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
+Há muitos serviços que você pode querer consumir dentro do seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e, claro, Teams. Os usuários de Teams têm informações de perfil de usuário armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph. Este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
 
 OAuth 2.0 é um padrão aberto para autenticação usado pelo Azure AD e muitos outros provedores de serviços. Noções básicas sobre o OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos a seguir usam o fluxo de Concessão Implícita OAuth 2.0 com o objetivo de, eventualmente, ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
 
@@ -26,7 +26,7 @@ Para uma visão geral do fluxo de autenticação para bots, consulte o tópico [
 
 ## <a name="configuring-identity-providers"></a>Configurando provedores de identidade
 
-Consulte o tópico [Configure identity providers for](~/concepts/authentication/configure-identity-provider.md) detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+Consulte o tópico [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## <a name="initiate-authentication-flow"></a>Iniciar fluxo de autenticação
 
@@ -69,7 +69,7 @@ Certifique-se de adicionar o domínio da URL de redirecionamento de autenticaç�
 
 ## <a name="showing-user-profile-information"></a>Mostrando informações de perfil de usuário
 
-Embora a obtenção de um token de acesso seja difícil devido a todas as transições de ida e volta em diferentes sites e os problemas de segurança que devem ser resolvidos, depois de ter um token, obter informações do Azure Active Directory é simples. O bot faz uma chamada para o `me` ponto de extremidade graph com o token de acesso. O Graph responde com as informações do usuário para a pessoa que fez logor. As informações da resposta são usadas para construir um cartão de bot e enviadas.
+Embora a obtenção de um token de acesso seja difícil devido a todas as transições de ida e volta em diferentes sites e os problemas de segurança que devem ser resolvidos, depois de ter um token, obter informações do Azure Active Directory é simples. O bot faz uma chamada para o `me` ponto de extremidade Graph com o token de acesso. Graph responde com as informações do usuário para a pessoa que fez logor. As informações da resposta são usadas para construir um cartão de bot e enviadas.
 
 ```typescript
 // Show user profile
@@ -126,4 +126,4 @@ private async handleLogout(session: builder.Session): Promise<void> {
 
 Para um código de exemplo que mostra o processo de autenticação do bot, consulte:
 
-* [Exemplo de autenticação de bot do Microsoft Teams](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams exemplo de autenticação de bot](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)

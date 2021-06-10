@@ -14,17 +14,17 @@ ms.locfileid: "52020173"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
-Ao registrar um bot de chamadas e reuniões para [o Microsoft Teams,](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)o Webhook para a URL de chamada é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot.
+Ao [registrar um bot de chamadas e](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)reuniões para Microsoft Teams , o Webhook para chamar URL é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot.
 
 ## <a name="protocol-determination"></a>Determinação do protocolo
 
-A notificação de entrada é fornecida em um formato herdado para compatibilidade com o protocolo [anterior do Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para converter a chamada no protocolo Microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
+A notificação de entrada é fornecida em um formato herdado para compatibilidade com o protocolo [Skype anterior.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Para converter a chamada para o protocolo microsoft Graph, seu bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Seu bot recebe a notificação novamente, mas desta vez no protocolo do Microsoft Graph.
+Seu bot recebe a notificação novamente, mas desta vez no protocolo microsoft Graph.
 
 Em uma versão futura da Plataforma de Mídia em tempo real, você pode configurar o protocolo compatível com o aplicativo para evitar receber o retorno de chamada inicial no formato herddo.
 
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-O token OAuth tem os seguintes valores e é assinado pelo Skype:
+O token OAuth tem os seguintes valores e é assinado por Skype:
 
 ```json
 {

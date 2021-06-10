@@ -121,7 +121,7 @@ A seguir estão as duas funções mostradas aos usuários, dependendo do envolvi
 2. Bot envia o cartão base de aprovação na conversa.
 3. Todos os outros usuários na conversa veem o cartão enviado pelo bot. A atualização automática é disparada para Megan e Nestor, que  agora veem o cartão específico do usuário com os botões **Aprovar** ou Rejeitar como seus MRIs de usuário são adicionados à lista na propriedade do `userIds` Cartão `refresh` Adaptável.
 
-    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Exibições específicas do usuário":::
+    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Exibições Específicas do Usuário":::
 
 4. Nestor seleciona o botão **Aprovar** que é alimentado com `Action.Execute` . O bot recebe uma `adaptiveCard/action` solicitação de invocação à qual ele pode retornar um Cartão Adaptável em resposta.
 5. O bot dispara uma edição de mensagem com um cartão atualizado que diz que Nestor aprovou a solicitação enquanto a aprovação de Megan está pendente.
@@ -261,5 +261,5 @@ O código a seguir fornece um exemplo de Cartões Adaptáveis enviados como resp
 
 ## <a name="see-also"></a>Confira também
 
-* [Trabalhar com ações universais para cartões adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
-* [Exibições específicas do usuário](User-Specific-Views.md)
+* [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
+* [Exibições Específicas do Usuário](User-Specific-Views.md)

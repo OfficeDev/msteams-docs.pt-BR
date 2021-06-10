@@ -1,6 +1,6 @@
 ---
 title: Visualização do desenvolvedor
-description: Descreve os recursos na Visualização de Desenvolvedor Público do Microsoft Teams
+description: Descreve os recursos na Visualização pública do desenvolvedor Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Recursos de desenvolvedor de visualização do teams
@@ -11,12 +11,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019717"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Visualização de desenvolvedor público para o Microsoft Teams
+# <a name="public-developer-preview-for-microsoft-teams"></a>Visualização do desenvolvedor público para Microsoft Teams
 
 >[!NOTE]
 >Os recursos incluídos na visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis na versão pública. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
-O Developer Preview é um programa público para desenvolvedores que fornece acesso antecipado a recursos não lançados no Microsoft Teams. Isso permite que você explore e teste os recursos futuros para inclusão potencial em seu aplicativo do Microsoft Teams. Também damos [boas-vindas aos comentários](~/feedback.md) sobre qualquer recurso na visualização do desenvolvedor. A visualização do desenvolvedor está habilitada por cliente do Microsoft Teams, portanto, você não precisa se preocupar em afetar toda a sua organização.
+O Developer Preview é um programa público para desenvolvedores que fornece acesso antecipado a recursos não lançados no Microsoft Teams. Isso permite que você explore e teste os recursos futuros para inclusão potencial em seu Microsoft Teams app. Também damos [boas-vindas aos comentários](~/feedback.md) sobre qualquer recurso na visualização do desenvolvedor. A visualização do desenvolvedor está habilitada por cliente Microsoft Teams, portanto, você não precisa se preocupar em afetar toda a sua organização.
 
 ## <a name="developer-preview-app-manifest"></a>Manifesto do aplicativo de visualização do desenvolvedor
 
@@ -35,7 +35,7 @@ O uso de um aplicativo que contém recursos de visualização do desenvolvedor p
 Para habilitar a visualização do desenvolvedor público em uma área de trabalho ou cliente Web, você precisa fazer o seguinte:
 
 1. Habilitando o carregamento de aplicativos no console de administração do locatário, conforme descrito [aqui](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Clique em seu perfil (no canto superior direito ou inferior esquerdo da interface do Teams) para exibir o menu Do Teams.
+1. Clique em seu perfil (no canto superior direito ou inferior esquerdo da interface Teams) para exibir o menu Teams.
 1. Selecione Sobre → visualização do desenvolvedor.
 1. Selecione **Alternar para Visualização do Desenvolvedor.**
 

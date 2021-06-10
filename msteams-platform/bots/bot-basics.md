@@ -14,58 +14,58 @@ ms.locfileid: "52020187"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
-Este documento se baseia no artigo sobre como [os bots funcionam](https://aka.ms/how-bots-work) na documentação principal [da Estrutura de Bots.](https://aka.ms/azure-bot-service-docs) A principal diferença entre bots desenvolvidos para o Microsoft Teams e a Estrutura de Bot principal está nos recursos fornecidos no Teams.
+Este documento se baseia no artigo sobre como [os bots funcionam](https://aka.ms/how-bots-work) na documentação principal [da Estrutura de Bots.](https://aka.ms/azure-bot-service-docs) A principal diferença entre bots desenvolvidos para Microsoft Teams e a Estrutura de Bot principal está nos recursos fornecidos no Teams.
 
-Para organizar a lógica de conversa para o bot, um manipulador de atividades é usado. As atividades são manipuladas de duas maneiras usando manipuladores de atividades do Teams e lógica de bot. O manipulador de atividades do Teams adiciona suporte a eventos e interações específicos do Microsoft Teams. O objeto bot contém o raciocínio ou a lógica de conversa para uma curva e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
+Para organizar a lógica de conversa para o bot, um manipulador de atividades é usado. As atividades são manipuladas de duas maneiras usando Teams manipuladores de atividade e lógica de bot. O Teams de atividades adiciona suporte Microsoft Teams eventos e interações específicos. O objeto bot contém o raciocínio ou a lógica de conversa para uma curva e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
 
-## <a name="teams-activity-handlers"></a>Manipuladores de atividades do Teams
+## <a name="teams-activity-handlers"></a>Teams manipuladores de atividades
 
-O manipulador de atividades do Teams é derivado do manipulador de atividades do Microsoft Bot Framework. Ele encaminha todas as atividades do Teams antes de permitir que atividades específicas que não sejam do Teams sejam manipuladas.
+Teams manipulador de atividades é derivado do manipulador de Microsoft Bot Framework de atividade do Microsoft Bot Framework. Ele encaminha todas as Teams antes de permitir que qualquer atividade não Teams específicas seja manipulada.
 
-Quando um bot para o Teams recebe uma atividade, ele é roteado para os manipuladores de atividades. Todas as atividades são roteados por um manipulador base chamado manipulador de turno. O manipulador de turno chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da `TeamsActivityHandler` classe, que é derivada da classe da Estrutura de `ActivityHandler` Bot.
+Quando um bot para Teams recebe uma atividade, ele é roteado para os manipuladores de atividade. Todas as atividades são roteados por um manipulador base chamado manipulador de turno. O manipulador de turno chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O Teams bot é derivado da `TeamsActivityHandler` classe, que é derivada da classe da Estrutura de `ActivityHandler` Bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `OnMessageActivityAsync` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `OnConversationUpdateActivityAsync` . O manipulador de atividades do Teams primeiro verifica se há eventos específicos do Teams. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `OnMessageActivityAsync` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `OnConversationUpdateActivityAsync` . O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
-Na classe manipulador de atividades do Teams, há dois manipuladores de atividades primários do Teams `OnConversationUpdateActivityAsync` e `OnInvokeActivityAsync` . `OnConversationUpdateActivityAsync` encaminha todas as atividades de atualização de conversa e `OnInvokeActivityAsync` encaminha todas as atividades de invocação do Teams.
+Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `OnConversationUpdateActivityAsync` e `OnInvokeActivityAsync` . `OnConversationUpdateActivityAsync`encaminha todas as atividades de atualização de conversa `OnInvokeActivityAsync` e encaminha todas as Teams atividades de invocação.
 
-Para implementar sua lógica para manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Não há implementação base para esses manipuladores, portanto, você deve adicionar a lógica que deseja em sua substituição.
+Para implementar sua lógica para Teams de atividades específicas, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Não há implementação base para esses manipuladores, portanto, você deve adicionar a lógica que deseja em sua substituição.
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `onMessage` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `dispatchConversationUpdateActivity` . O manipulador de atividades do Teams primeiro verifica se há eventos específicos do Teams. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `onMessage` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `dispatchConversationUpdateActivity` . O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
-Na classe manipulador de atividades do Teams, há dois manipuladores de atividades primários do Teams `dispatchConversationUpdateActivity` e `onInvokeActivity` . `dispatchConversationUpdateActivity` encaminha todas as atividades de atualização de conversa e `onInvokeActivity` encaminha todas as atividades de invocação do Teams.
+Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `dispatchConversationUpdateActivity` e `onInvokeActivity` . `dispatchConversationUpdateActivity`encaminha todas as atividades de atualização de conversa `onInvokeActivity` e encaminha todas as Teams atividades de invocação.
 
-Para implementar sua lógica para manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Defina sua lógica de bot para esses manipuladores e, em seguida, certifique-se de `next()` chamar no final. Ao chamar `next()` você, certifique-se de que o próximo manipulador seja executado.
+Para implementar sua lógica para Teams de atividades específicas, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Defina sua lógica de bot para esses manipuladores e, em seguida, certifique-se de `next()` chamar no final. Ao chamar `next()` você, certifique-se de que o próximo manipulador seja executado.
 
 # <a name="python"></a>[Python](#tab/python)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `on_message_activity` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `on_conversation_update_activity` . O manipulador de atividades do Teams primeiro verifica se há eventos específicos do Teams. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `on_message_activity` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `on_conversation_update_activity` . O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
-Na classe manipulador de atividades do Teams, há dois manipuladores de atividades primários do Teams `on_conversation_update_activity` e `on_invoke_activity` . `on_conversation_update_activity` encaminha todas as atividades de atualização de conversa e `on_invoke_activity` encaminha todas as atividades de invocação do Teams.
+Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `on_conversation_update_activity` e `on_invoke_activity` . `on_conversation_update_activity`encaminha todas as atividades de atualização de conversa `on_invoke_activity` e encaminha todas as Teams atividades de invocação.
 
-Para implementar sua lógica para manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Não há implementação base para esses manipuladores, portanto, você deve adicionar a lógica que deseja em sua substituição.
+Para implementar sua lógica para Teams de atividades específicas, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Não há implementação base para esses manipuladores, portanto, você deve adicionar a lógica que deseja em sua substituição.
 
 ---
 
 ## <a name="bot-logic"></a>Lógica bot
 
-A lógica do bot processa as atividades de entrada de um ou mais de seus canais bot e, em resposta, gera atividades de saída. Isso ainda é verdadeiro para bots derivados da classe manipulador de atividades do Teams, que primeiro verifica as atividades do Teams. Depois de verificar as atividades do Teams, ele passa todas as outras atividades para o manipulador de atividades da Estrutura de Bot.
+A lógica do bot processa as atividades de entrada de um ou mais de seus canais bot e, em resposta, gera atividades de saída. Isso ainda é verdadeiro para bots derivados da classe Teams manipulador de atividades, que primeiro verifica Teams atividades. Depois de verificar Teams atividades, ele passa todas as outras atividades para o manipulador de atividades da Estrutura de Bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
 #### <a name="core-bot-framework-handlers"></a>Manipuladores da Estrutura de Bots Principais
 
 >[!NOTE]
-> Com exceção  **das** atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não seja do Teams.
+> Com **exceção**  das atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não Teams.
 
 Manipuladores de atividades são diferentes no contexto de uma equipe, onde um novo membro é adicionado à equipe em vez de um thread de mensagem.
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `OnTurnAsync` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `OnMessageActivityAsync` | Esse método pode ser substituído para manipular uma `Message` atividade. |
@@ -77,22 +77,22 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 | Atividade de evento não-token-response recebida | `OnEventAsync` | Esse método pode ser substituído para lidar com outros tipos de eventos. |
 | Outro tipo de atividade recebido | `OnUnrecognizedActivityTypeAsync` | Esse método pode ser substituído para lidar com qualquer tipo de atividade de outra forma não manuseado. |
 
-#### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
+#### <a name="teams-specific-activity-handlers"></a>Teams manipuladores de atividades específicos
 
 O estende a lista de manipuladores na seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` Esse método pode ser substituído para manipular uma equipe do Teams que está sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`Esse método pode ser substituído para manipular uma equipe Teams sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersAdded | `OnTeamsMembersAddedAsync` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) em eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 
-#### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
+#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `OnInvokeActivityAsync` de atividades do Teams inclui o seguinte:
+A lista de Teams de atividades chamadas do manipulador de Teams `OnInvokeActivityAsync` de atividade inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -112,13 +112,13 @@ As atividades de invocação listadas nesta seção são para bots de conversa n
 #### <a name="core-bot-framework-handlers"></a>Manipuladores da Estrutura de Bots Principais
 
 >[!NOTE]
-> Com exceção  **das** atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não seja do Teams.
+> Com **exceção**  das atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não Teams.
 
 Os manipuladores de atividades são diferentes no contexto de uma equipe, onde o novo membro é adicionado à equipe em vez de um thread de mensagem.
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `onTurn` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `onMessage` | Esse método ajuda a manipular uma `Message` atividade. |
@@ -129,22 +129,22 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 | Atividade de evento de resposta de token recebida | `onTokenResponseEvent` | Este método ajuda a lidar com eventos de resposta de token. |
 | Outro tipo de atividade recebido | `onUnrecognizedActivityType` | Este método ajuda a lidar com qualquer tipo de atividade, caso contrário, não é manuseado. |
 
-#### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
+#### <a name="teams-specific-activity-handlers"></a>Teams manipuladores de atividades específicos
 
 O estende a lista de manipuladores na seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | Esse método pode ser substituído para manipular um canal do Teams que está sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` Esse método pode ser substituído para manipular uma equipe do Teams que está sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelCreated | `OnTeamsChannelCreatedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelDeleted | `OnTeamsChannelDeletedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | Esse método pode ser substituído para manipular um canal Teams sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`Esse método pode ser substituído para manipular uma equipe Teams sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersAdded | `OnTeamsMembersAddedAsync` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) em eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 
-#### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
+#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `onInvokeActivity` de atividades do Teams inclui o seguinte:
+A lista de Teams de atividades chamadas do manipulador de Teams `onInvokeActivity` de atividade inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -164,13 +164,13 @@ As atividades de invocação listadas nesta seção são para bots de conversa n
 #### <a name="core-bot-framework-handlers"></a>Manipuladores da Estrutura de Bots Principais
 
 >[!NOTE]
-> Com exceção  **das** atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não seja do Teams.
+> Com **exceção**  das atividades dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não Teams.
 
 Os manipuladores de atividades são diferentes no contexto de uma equipe, onde o novo membro é adicionado à equipe em vez de um thread de mensagem.
 
 A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
 | Qualquer tipo de atividade recebida | `on_turn` | Este método chama um dos outros manipuladores, com base no tipo de atividade recebida. |
 | Atividade de mensagem recebida | `on_message_activity` | Esse método pode ser substituído para manipular uma `Message` atividade. |
@@ -182,22 +182,22 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 | Atividade de evento não-token-response recebida | `on_event` | Esse método pode ser substituído para lidar com outros tipos de eventos. |
 | Outros tipos de atividade recebidos | `on_unrecognized_activity_type` | Esse método pode ser substituído para manipular qualquer tipo de atividade que não seja manipulada. |
 
-#### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
+#### <a name="teams-specific-activity-handlers"></a>Teams manipuladores de atividades específicos
 
 A estende a lista de manipuladores da seção principais manipuladores da Estrutura de `TeamsActivityHandler` Bots para incluir o seguinte:
 
-| Event | Manipulador | Descrição |
+| Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
-| channelCreated | `on_teams_channel_created` | Esse método pode ser substituído para manipular um canal do Teams que está sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| channelDeleted | `on_teams_channel_deleted` | Esse método pode ser substituído para manipular um canal do Teams que está sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| channelRenamed | `on_teams_channel_renamed` | Esse método pode ser substituído para manipular um canal do Teams que está sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;` Esse método pode ser substituído para manipular uma equipe do Teams que está sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelCreated | `on_teams_channel_created` | Esse método pode ser substituído para manipular um canal Teams sendo criado. Para obter mais informações, consulte [canal criado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos de atualização de [conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelDeleted | `on_teams_channel_deleted` | Esse método pode ser substituído para manipular um canal Teams sendo excluído. Para obter mais informações, [consulte channel deleted in](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) conversation update [events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelRenamed | `on_teams_channel_renamed` | Esse método pode ser substituído para manipular um canal Teams sendo renomeado. Para obter mais informações, consulte [canal renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`Esse método pode ser substituído para manipular uma equipe Teams sendo renomeada. Para obter mais informações, consulte [team renomeado em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersAdded | `on_teams_members_added` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `on_teams_members_removed` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler` . O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) em eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 
-#### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
+#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `on_invoke_activity` de atividades do Teams inclui o seguinte:
+A lista de Teams de atividades chamadas do manipulador de Teams `on_invoke_activity` de atividade inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |

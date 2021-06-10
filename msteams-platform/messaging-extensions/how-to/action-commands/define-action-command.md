@@ -121,7 +121,7 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 Para adicionar manualmente o comando de extensão de mensagens baseada em ação ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` matriz de objetos:
 
-| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui a este comando. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário. | Sim | 1.0 |
@@ -131,7 +131,7 @@ Para adicionar manualmente o comando de extensão de mensagens baseada em ação
 
 Se você estiver usando uma lista estática de parâmetros, também deverá adicionar os seguintes parâmetros:
 
-| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade descreve a lista estática de parâmetros do comando. Use somente quando `fetchTask` for `false` . | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
@@ -141,7 +141,7 @@ Se você estiver usando uma lista estática de parâmetros, também deverá adic
 
 Se você estiver usando uma exibição da Web incorporada, você pode, opcionalmente, adicionar o objeto para buscar sua `taskInfo` exibição da Web sem chamar seu bot diretamente. Se você selecionar essa opção, o comportamento será semelhante ao de usar uma lista estática de parâmetros. Na medida em que a primeira interação com seu bot está [respondendo à ação](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)de envio do módulo de tarefas . Se você estiver usando um `taskInfo` objeto, deverá definir o `fetchTask` parâmetro como `false` .
 
-| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 |`taskInfo`|Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens. | Não | 1.4 |
 |`taskInfo.title`|Título inicial do módulo de tarefa. |Não | 1.4 |

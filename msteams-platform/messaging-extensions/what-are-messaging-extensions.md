@@ -1,7 +1,7 @@
 ---
 title: Extensões de mensagens
 author: clearab
-description: Uma visão geral das extensões de mensagens na plataforma do Microsoft Teams
+description: Uma visão geral das extensões de mensagens na plataforma Microsoft Teams de mensagens
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
@@ -14,7 +14,7 @@ ms.locfileid: "52075665"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
-As extensões de mensagens permitem que os usuários interajam com seu serviço Web por meio de botões e formulários no cliente do Microsoft Teams. Eles podem pesquisar ou iniciar ações em um sistema externo a partir da área de mensagem de composição, da caixa de comando ou diretamente de uma mensagem. Você pode enviar de volta os resultados dessa interação para o cliente do Microsoft Teams na forma de um cartão ricamente formatado. Este documento fornece uma visão geral da extensão de mensagens, tarefas executadas em diferentes cenários, trabalho de extensão de mensagens, comandos de ação e pesquisa e desfraldamento de link.
+As extensões de mensagens permitem que os usuários interajam com seu serviço Web por meio de botões e formulários no Microsoft Teams cliente. Eles podem pesquisar ou iniciar ações em um sistema externo a partir da área de mensagem de composição, da caixa de comando ou diretamente de uma mensagem. Você pode enviar de volta os resultados dessa interação para o cliente Microsoft Teams na forma de um cartão ricamente formatado. Este documento fornece uma visão geral da extensão de mensagens, tarefas executadas em diferentes cenários, trabalho de extensão de mensagens, comandos de ação e pesquisa e desfraldamento de link.
 
 A imagem a seguir exibe os locais de onde as extensões de mensagens são invocadas:
 
@@ -26,16 +26,16 @@ A imagem a seguir exibe os locais de onde as extensões de mensagens são invoca
 |:-----------------|:-----------------|
 |Você deseja que algum sistema externo faça uma ação e o resultado da ação seja enviado de volta para sua conversa.|Reserve um recurso e permita que o canal saiba o intervalo de tempo reservado.|
 |Você deseja encontrar algo em um sistema externo e compartilhar os resultados com a conversa.|Pesquise um item de trabalho no Azure DevOps e compartilhe-o com o grupo como um Cartão Adaptável.|
-|Você deseja concluir uma tarefa complexa envolvendo várias etapas ou muitas informações em um sistema externo e compartilhar os resultados com uma conversa.|Crie um bug em seu sistema de controle com base em uma mensagem do Teams, atribua esse bug a Bob e envie um cartão para o thread de conversa com os detalhes do bug.|
+|Você deseja concluir uma tarefa complexa envolvendo várias etapas ou muitas informações em um sistema externo e compartilhar os resultados com uma conversa.|Crie um bug em seu sistema de controle com base em uma mensagem Teams, atribua esse bug a Bob e envie um cartão para o thread de conversa com os detalhes do bug.|
 
 ## <a name="understand-how-messaging-extensions-work"></a>Entender como funcionam as extensões de mensagens
 
-Uma extensão de mensagens consiste em um serviço Web que você hospeda e um manifesto de aplicativo, que define de onde seu serviço Web é invocado no cliente do Microsoft Teams. O serviço Web aproveita o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação segura, portanto, você deve registrar seu serviço Web como um bot na Estrutura de Bots. 
+Uma extensão de mensagens consiste em um serviço Web que você hospeda e um manifesto de aplicativo, que define de onde seu serviço Web é invocado no cliente Microsoft Teams. O serviço Web aproveita o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação segura, portanto, você deve registrar seu serviço Web como um bot na Estrutura de Bots. 
 
 > [!NOTE]
 > Embora você possa criar o serviço Web manualmente, use [o SDK da Estrutura de Bots](https://github.com/microsoft/botframework) para trabalhar com o protocolo.
 
-No manifesto do aplicativo do Microsoft Teams, uma única extensão de mensagens é definida com até dez comandos diferentes. Cada comando define um tipo, como ação ou pesquisa e os locais no cliente de onde ele é invocado. Os locais de invocação são área de composição de mensagem, barra de comandos e mensagem. Ao chamar, o serviço Web recebe uma mensagem HTTPS com uma carga JSON, incluindo todas as informações relevantes. Responda com uma carga JSON, permitindo que o cliente do Teams saiba a próxima interação a ser habilitada. 
+No manifesto do aplicativo para Microsoft Teams aplicativo, uma única extensão de mensagens é definida com até dez comandos diferentes. Cada comando define um tipo, como ação ou pesquisa e os locais no cliente de onde ele é invocado. Os locais de invocação são área de composição de mensagem, barra de comandos e mensagem. Ao chamar, o serviço Web recebe uma mensagem HTTPS com uma carga JSON, incluindo todas as informações relevantes. Responda com uma carga JSON, permitindo que o cliente Teams saiba a próxima interação a ser habilitada. 
 
 ## <a name="types-of-messaging-extension-commands"></a>Tipos de comandos de extensão de mensagens
 
@@ -49,7 +49,7 @@ Os comandos de ação são disparados da área de mensagem de composição, da c
 
 ### <a name="search-commands"></a>Comandos de pesquisa
 
-Os comandos de pesquisa permitem que os usuários pesquisem informações em um sistema externo manualmente por meio de uma caixa de pesquisa ou colar um link a um domínio monitorado na área de mensagem de composição e inserir os resultados da pesquisa em uma mensagem. No fluxo de comando de pesquisa mais básico, a mensagem de invocação inicial inclui a cadeia de caracteres de pesquisa que o usuário enviou. Você responde com uma lista de visualizações de cartões e cartões. O cliente do Teams renderiza uma lista de visualizações de cartão para o usuário. Quando o usuário seleciona um cartão na lista, o cartão de tamanho completo é inserido na área de mensagem de composição.
+Os comandos de pesquisa permitem que os usuários pesquisem informações em um sistema externo manualmente por meio de uma caixa de pesquisa ou colar um link a um domínio monitorado na área de mensagem de composição e inserir os resultados da pesquisa em uma mensagem. No fluxo de comando de pesquisa mais básico, a mensagem de invocação inicial inclui a cadeia de caracteres de pesquisa que o usuário enviou. Você responde com uma lista de visualizações de cartões e cartões. O Teams cliente renderiza uma lista de visualizações de cartão para o usuário. Quando o usuário seleciona um cartão na lista, o cartão de tamanho completo é inserido na área de mensagem de composição.
 
 Os cartões são disparados da área de mensagem de redação ou da caixa de comando e não disparados de uma mensagem. Eles não podem ser disparados de uma mensagem.
 A imagem a seguir exibe o módulo de tarefa de comando de pesquisa de extensão de mensagens:
@@ -61,7 +61,7 @@ A imagem a seguir exibe o módulo de tarefa de comando de pesquisa de extensão 
 
 ## <a name="link-unfurling"></a>Desenrolamento de link
 
-Um serviço Web é chamado quando uma URL é colar na área de mensagem de redação. Essa funcionalidade é conhecida como desarmamento de link. Você pode se inscrever para receber uma invocação quando URLs que contêm um determinado domínio são colar na área de mensagem de redação. Seu serviço Web pode "desafraldar" a URL em um cartão detalhado, fornecendo mais informações do que o cartão de visualização do site padrão. Você pode adicionar botões para permitir que os usuários tomem medidas imediatamente sem sair do cliente do Microsoft Teams.
+Um serviço Web é chamado quando uma URL é colar na área de mensagem de redação. Essa funcionalidade é conhecida como desarmamento de link. Você pode se inscrever para receber uma invocação quando URLs que contêm um determinado domínio são colar na área de mensagem de redação. Seu serviço Web pode "desafraldar" a URL em um cartão detalhado, fornecendo mais informações do que o cartão de visualização do site padrão. Você pode adicionar botões para permitir que os usuários tomem medidas imediatamente sem sair do Microsoft Teams cliente.
 As imagens a seguir exibem o recurso de desfralização de link quando um link é passado na extensão de mensagens:
  
 ![link unfurl](../assets/images/messaging-extension/unfurl-link.png)
@@ -77,7 +77,7 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 
 ## <a name="see-also"></a>Confira também
 
-[Criar uma extensão de mensagens](../build-your-first-app/build-messaging-extension.md)
+[Criar uma extensão de mensagem](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>Próxima etapa

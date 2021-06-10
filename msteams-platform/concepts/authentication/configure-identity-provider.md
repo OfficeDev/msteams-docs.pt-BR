@@ -13,7 +13,7 @@ ms.locfileid: "52020853"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
-## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Configurando um aplicativo para usar o Azure Active Directory como um provedor de identidade
+## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Configurando um aplicativo para usar Azure Active Directory como um provedor de identidade
 
 Os provedores de identidade que suportam o OAuth 2.0 não autenticam solicitações de aplicativos desconhecidos; os aplicativos devem ser registrados com antecedência. Para fazer isso com o Azure AD, siga estas etapas:
 

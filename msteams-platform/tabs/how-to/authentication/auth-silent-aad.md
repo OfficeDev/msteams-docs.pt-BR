@@ -14,7 +14,7 @@ ms.locfileid: "52019598"
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
 > [!NOTE]
-> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando pelo menos a versão 1.4.1 do SDK JavaScript do Teams.
+> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando pelo menos a versão 1.4.1 do SDK do Teams JavaScript.
 
 A autenticação silenciosa no Azure Active Directory (AAD) minimiza o número de vezes que um usuário inssinge suas credenciais de entrada atualize silenciosamente o token de autenticação. Para ver o suporte verdadeiro ao login único, consulte [documentação do SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -31,7 +31,7 @@ A ADAL.js cria um iframe oculto para o fluxo implícito de concessão do OAuth 2
 
 ## <a name="how-to-do-silent-authentication"></a>Como fazer autenticação silenciosa
 
-O código neste artigo vem do aplicativo de exemplo do Teams que é o nó de exemplo [de autenticação do Teams.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
+O código neste artigo vem do aplicativo de exemplo Teams que é [Teams de autenticação.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
 [Inicie a guia configurável de autenticação silenciosa](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) e simples usando o AAD e siga as instruções para executar o exemplo em seu computador local.
 
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 Use o código a seguir para manipular o fluxo de saída no AAD Auth:
 
 > [!NOTE]
-> Embora o logout para a guia ou bot do Teams seja feito, a sessão atual também está desmarcada.
+> Embora o logout para Teams guia ou bot seja feito, a sessão atual também está desmarcada.
 
 ```javascript
 function logout() {

@@ -52,4 +52,4 @@ Quando você acha que seu aplicativo está pronto para produção, você pode co
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Revisar diretrizes de validação do armazenamento](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> [Revisar as diretrizes de validação da Microsoft Store ](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

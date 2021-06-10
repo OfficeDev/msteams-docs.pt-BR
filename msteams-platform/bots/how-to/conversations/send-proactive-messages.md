@@ -1,6 +1,6 @@
 ---
 title: Enviar mensagens proativas
-description: Descreve como enviar mensagens proativas com seu bot do Microsoft Teams.
+description: Descreve como enviar mensagens proativas com seu Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
@@ -22,7 +22,7 @@ Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde 
 * Notificações
 * Mensagens agendadas
 
-Para que o bot envie uma mensagem proativa para um usuário, chat em grupo ou equipe, ele deve ter acesso para enviar a mensagem. Para um chat em grupo ou equipe, o aplicativo que contém seu bot deve ser instalado primeiro nesse local. Você pode [instalar proativamente](#proactively-install-your-app-using-graph) seu aplicativo usando o Microsoft Graph [](/microsoftteams/teams-custom-app-policies-and-settings) em uma equipe, se necessário, ou usar uma política de aplicativo para empurrar aplicativos para equipes e usuários em seu locatário. Para os usuários, seu aplicativo deve ser instalado para o usuário ou seu usuário deve fazer parte de uma equipe em que seu aplicativo está instalado.
+Para que o bot envie uma mensagem proativa para um usuário, chat em grupo ou equipe, ele deve ter acesso para enviar a mensagem. Para um chat em grupo ou equipe, o aplicativo que contém seu bot deve ser instalado primeiro nesse local. Você pode [instalar proativamente](#proactively-install-your-app-using-graph) seu aplicativo usando o Microsoft Graph em [](/microsoftteams/teams-custom-app-policies-and-settings) uma equipe, se necessário, ou usar uma política de aplicativo para empurrar aplicativos para equipes e usuários em seu locatário. Para os usuários, seu aplicativo deve ser instalado para o usuário ou seu usuário deve fazer parte de uma equipe em que seu aplicativo está instalado.
 
 Enviar uma mensagem proativa é diferente de enviar uma mensagem regular. Não há nenhum ativo `turnContext` a ser usado para uma resposta. Você deve criar a conversa antes de enviar a mensagem. Por exemplo, um novo chat um para um ou um novo thread de conversa em um canal. Não é possível criar um novo chat em grupo ou um novo canal em uma equipe com mensagens proativas.
 
@@ -93,11 +93,11 @@ Para enviar notificações usando mensagens proativas, certifique-se de que seus
 
 * O que aconteceu: uma indicação clara do que aconteceu para causar a notificação.
 * Qual foi o resultado: deve ser claro qual item foi atualizado para causar a notificação.
-* Quem ou o que a acionou: Quem ou o que fez com que a notificação fosse enviada.
+* Who ou o que a disparou: Who ou o que fez com que a notificação fosse enviada.
 * O que os usuários podem fazer em resposta: facilitar a ação dos usuários com base em suas notificações.
 * Como os usuários podem optar por não fazer isso: você deve fornecer um caminho para que os usuários optem por não receber notificações adicionais.
 
-Para enviar mensagens para um grande grupo de usuários, por exemplo, para sua organização, instale proativamente seu aplicativo usando o Graph.
+Para enviar mensagens para um grande grupo de usuários, por exemplo, para sua organização, instale proativamente seu aplicativo usando Graph.
 
 ### <a name="scheduled-messages"></a>Mensagens agendadas
 
@@ -106,20 +106,20 @@ Ao usar mensagens proativas para enviar mensagens agendadas aos usuários, verif
 * Por que o usuário está recebendo a mensagem: facilmente para os usuários entenderem o motivo pelo qual estão recebendo a mensagem.
 * O que o usuário pode fazer a seguir: os usuários podem tomar a ação necessária com base no conteúdo da mensagem.
 
-## <a name="proactively-install-your-app-using-graph"></a>Instalar proativamente seu aplicativo usando o Graph
+## <a name="proactively-install-your-app-using-graph"></a>Instalar proativamente seu aplicativo usando Graph
 
 > [!Note]
-> A instalação proativa de aplicativos usando o Graph está atualmente na versão beta.
+> A instalação proativa de aplicativos usando Graph está atualmente na versão beta.
 
-Mensagens proativas de usuários que anteriormente não instalaram ou interagiram com seu aplicativo. Por exemplo, você deseja usar o [comunicador da](~/samples/app-templates.md#company-communicator) empresa para enviar mensagens para toda a sua organização. Nesse caso, você pode usar a API do Graph para instalar proativamente seu aplicativo para seus usuários. Armazenar em cache os valores necessários `conversationUpdate` do evento que seu aplicativo recebe durante a instalação.
+Mensagens proativas de usuários que anteriormente não instalaram ou interagiram com seu aplicativo. Por exemplo, você deseja usar o [comunicador da](~/samples/app-templates.md#company-communicator) empresa para enviar mensagens para toda a sua organização. Nesse caso, você pode usar a API Graph para instalar proativamente seu aplicativo para seus usuários. Armazenar em cache os valores necessários `conversationUpdate` do evento que seu aplicativo recebe durante a instalação.
 
-Você só pode instalar aplicativos que estão no catálogo de aplicativos organizacionais ou na Loja de Aplicativos do Teams.
+Você só pode instalar aplicativos que estão no catálogo de aplicativos organizacionais ou no Teams App Store.
 
-Consulte [instalar aplicativos para usuários na](/graph/api/userteamwork-post-installedapps) documentação do Graph e instalação proativa de bots e mensagens no Teams com [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Também há um exemplo [de estrutura do Microsoft .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) na plataforma GitHub.
+Consulte [instalar aplicativos para usuários](/graph/api/userteamwork-post-installedapps) na documentação Graph e instalação e mensagens proativas de bot no Teams com [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Também há um exemplo [de estrutura do Microsoft .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) na plataforma GitHub.
 
 ## <a name="samples"></a>Exemplos
 
-O código a seguir mostra um exemplo de código simples que instala proativamente seu aplicativo usando o Graph:
+O código a seguir mostra um exemplo de código simples que instala proativamente seu aplicativo usando Graph:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -265,20 +265,20 @@ Você deve fornecer a ID do usuário e a ID do locatário. Se a chamada for bem-
 
 ## <a name="code-sample"></a>Exemplo de código
 
-A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo básico de conversa em um aplicativo do Teams e como criar um novo thread de conversa em um canal no Teams:
+A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo básico de conversa em um aplicativo Teams e como criar um novo thread de conversa em um canal em Teams:
 
 | **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Noções básicas de conversa do Teams  | Demonstra noções básicas de conversas no Teams, incluindo o envio de mensagens proativas um para um.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Teams Noções básicas de conversa  | Demonstra noções básicas de conversas Teams, incluindo o envio de mensagens proativas um para um.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar novo thread em um canal | Demonstra a criação de um novo thread em um canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### <a name="additional-code-sample"></a>Exemplo de código adicional
 
 > [!div class="nextstepaction"]
-> [Exemplos de código de mensagens proativas do Teams](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [Teams exemplos proativos de código de mensagens](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [**Exemplos de código de mensagens proativas**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
->  do Teams [Formatar suas mensagens bot](~/bots/how-to/format-your-bot-messages.md)
+> [**Teams exemplos proativos**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
+>  de código de mensagens [Formatar suas mensagens bot](~/bots/how-to/format-your-bot-messages.md)

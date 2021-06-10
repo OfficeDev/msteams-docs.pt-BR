@@ -1,5 +1,5 @@
 ---
-title: Usando o Serviço bot do Azure para autenticação no Teams
+title: Usando o Serviço bot do Azure para autenticação Teams
 description: Descreve o OAuthCard do Serviço de Bot do Azure e como ele é usado para autenticação
 ms.topic: conceptual
 localization_priority: Normal
@@ -11,44 +11,44 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020678"
 ---
-# <a name="using-azure-bot-service-for-authentication-in-teams"></a>Usando o Serviço bot do Azure para autenticação no Teams
+# <a name="using-azure-bot-service-for-authentication-in-teams"></a>Usando o Serviço bot do Azure para autenticação Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 Sem o OAuthCard do Serviço de Bot do Azure, é complicado implementar a autenticação em um bot. É um desafio de pilha completa que envolve a criação de uma experiência da Web, a integração com provedores OAuth externos, o gerenciamento de tokens e o tratamento das chamadas de API de servidor para servidor corretas para concluir o fluxo de autenticação com segurança. Isso pode resultar em experiências descaradas que exigem a entrada de "números mágicos".
 
-Com o OAuthCard do Serviço de Bot do Azure, é mais fácil para o bot do Teams entrar em seus usuários e acessar provedores de dados externos. Se você já implementou a autenticação e deseja alternar para algo mais simples ou se deseja adicionar autenticação ao serviço de bot pela primeira vez, o OAuthCard pode facilitar.
+Com o OAuthCard do Serviço de Bot do Azure, é mais fácil para seu bot Teams entrar em seus usuários e acessar provedores de dados externos. Se você já implementou a autenticação e deseja alternar para algo mais simples ou se deseja adicionar autenticação ao serviço de bot pela primeira vez, o OAuthCard pode facilitar.
 
-Outros tópicos [](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) em Autenticação descrevem a autenticação sem usar o OAuthCard, portanto, se você deseja entender mais profundamente a autenticação no Teams ou tem uma situação em que não é possível usar o OAuthCard, você ainda pode se referir a esses tópicos.
+Outros tópicos [](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) em Autenticação descrevem a autenticação sem usar o OAuthCard, portanto, se você quiser entender a autenticação no Teams mais profundamente ou se tiver uma situação em que não possa usar o OAuthCard, ainda poderá se referir a esses tópicos.
 
 ## <a name="support-for-the-oauthcard"></a>Suporte para o OAuthCard
 
 Atualmente, há algumas restrições para onde você pode usar o OAuthCard. Entre eles:
 
 * O cartão não funcionará com o [acesso de convidados](/MicrosoftTeams/guest-access)
-* Ele não funcionará com o [Microsoft Teams gratuitamente](https://products.office.com/microsoft-teams/free)
+* Ele não funcionará com [Microsoft Teams gratuito](https://products.office.com/microsoft-teams/free)
 * Ele só pode ser usado para autenticação de bot
 * Ele só funciona para bots registrados no [Serviço bot do Azure](https://azure.microsoft.com/services/bot-service/)
 
 ## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Como o Serviço bot do Azure me ajuda a fazer autenticação?
 
-A documentação completa usando o OAuthCard está disponível no tópico: Adicionar autenticação ao bot por meio do [Serviço de Bot do Azure.](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true) Observe que este tópico está no conjunto de documentação da Estrutura de Bots do Azure e não é específico do Teams.
+A documentação completa usando o OAuthCard está disponível no tópico: Adicionar autenticação ao bot por meio do [Serviço de Bot do Azure.](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true) Observe que este tópico está no conjunto de documentação da Estrutura de Bots do Azure e não é específico para Teams.
 
 As seções a seguir dizem como usar o OAuthCard no Teams.
 
-## <a name="main-benefits-for-teams-developers"></a>Principais benefícios para desenvolvedores do Teams
+## <a name="main-benefits-for-teams-developers"></a>Principais benefícios para Teams desenvolvedores
 
 O OAuthCard ajuda na autenticação das seguintes maneiras:
 
 * Fornece um fluxo de autenticação baseado na Web de forma in-loco: você não precisa mais gravar e hospedar uma página da Web para direcionar para experiências de logon externos ou fornecer um redirecionamento.
-* É perfeita para usuários finais: conclua a experiência de logon completa dentro do Teams.
+* É perfeita para os usuários finais: conclua a experiência de logon completa dentro Teams.
 * Inclui o gerenciamento fácil de tokens: você não precisa mais implementar um sistema de armazenamento de tokens – em vez disso, o Serviço bot cuida do cache de token e fornece um mecanismo seguro para buscar esses tokens.
 * É suportado por SDKs completos: fácil de integrar e consumir do seu serviço de bot.
 * Tem suporte pronto para muitos provedores OAuth populares, como o Azure AD/MSA, o Facebook e o Google.
 
 ## <a name="when-should-i-implement-my-own-solution"></a>Quando devo implementar minha própria solução?
 
-Como os tokens de acesso são informações confidenciais, talvez você não queira que eles sejam armazenados em um serviço externo. Nesse caso, você pode optar por ainda implementar seu próprio sistema de gerenciamento de tokens e experiência de logon no Teams, conforme descrito no restante dos tópicos [de](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) Autenticação do Teams.
+Como os tokens de acesso são informações confidenciais, talvez você não queira que eles sejam armazenados em um serviço externo. Nesse caso, você pode optar por ainda implementar seu próprio sistema de gerenciamento de tokens e experiência de logon no Teams, conforme descrito no restante dos tópicos Teams [Autenticação.](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)
 
 ## <a name="getting-started-with-oauthcard-in-teams"></a>Iniciando com o OAuthCard no Teams
 
@@ -59,7 +59,7 @@ Primeiro, você precisará configurar seu serviço de bot do Azure para configur
 
 Para habilitar a autenticação usando o Serviço bot do Azure, você precisa fazer essas adições ao seu código:
 
-1. Inclua token.botframework.com na seção do manifesto do aplicativo porque o Teams incorporará a página de `validDomains` logon do Serviço bot.
+1. Inclua token.botframework.com na seção do manifesto do aplicativo porque Teams inserirá a página de logon do Serviço `validDomains` bot.
 2. Busque o token do Serviço bot sempre que o bot precisar acessar recursos autenticados. Se nenhum token estiver disponível, envie uma mensagem com um OAuthCard para o usuário solicitando que ele faça logon no serviço externo.
 3. Manipular a atividade de conclusão de logon. Isso garante que a solicitação de autenticação e o token estão associados ao usuário que está interagindo com seu bot no momento.
 4. Recupere o token sempre que o bot precisar executar ações autenticadas, como chamar APIs REST externas.
