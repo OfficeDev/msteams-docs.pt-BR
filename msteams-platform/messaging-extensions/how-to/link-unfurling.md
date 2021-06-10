@@ -5,12 +5,12 @@ description: Como executar o link desfraldamento com a extensão de mensagens em
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 405b320b887300837d51332a9548ff60aff450d0
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 726ba47d1290b4dc38bb2b90e5ce9fc8a3c5fb6b
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630681"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853547"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -19,7 +19,8 @@ ms.locfileid: "52630681"
 Este documento orienta você sobre como adicionar link desfraldado ao manifesto do aplicativo usando o App studio e manualmente. Com o desenrolamento do link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando URLs com um domínio específico são coladas na área de composição de mensagem. O contém a URL completa que foi colar na área de mensagem de composição e você pode responder com um cartão que o usuário pode desafraldar, fornecendo informações ou `invoke` ações adicionais. Isso funciona de forma semelhante a um comando de pesquisa com a URL servindo como o termo de pesquisa.
 
 > [!NOTE]
-> Atualmente, não há suporte para a desalinização de link em clientes Móveis.
+> * Atualmente, não há suporte para a desalinização de link em clientes Móveis.
+> * O resultado de desfralização do link é armazenado em cache por 30 minutos.
 
 A Azure DevOps de mensagens usa o link desfraldamento para procurar URLs colaram na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário pastou uma URL para um item de trabalho no Azure DevOps, que a extensão de mensagens resolveu em um cartão:
 
@@ -179,4 +180,4 @@ A seguir está um exemplo da resposta:
 ## <a name="see-also"></a>Confira também 
 
 * [Cartões](~/task-modules-and-cards/what-are-cards.md)
-* [Guias vinculam desfraldamento e exibição de estágio](~/tabs/tabs-link-unfurling.md)
+* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)

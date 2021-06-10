@@ -39,7 +39,7 @@ O novo recurso Modo Juntos permite que os usuários colaborem em uma reunião co
 * [Bot](../bots/what-are-bots.md)
 * [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md)
 * [Criar seu aplicativo](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Pré-requisitos e referências de API para aplicativos em Teams reuniões](create-apps-for-teams-meetings.md)
+* [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](create-apps-for-teams-meetings.md)
 * [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="next-step"></a>Próxima etapa
