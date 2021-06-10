@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736765"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853519"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -23,7 +23,6 @@ Descubra Microsoft Teams da plataforma que são introduzidos no Microsoft Build 
 | -------- | --------- | ------------------ |
 |05/26/2021| Criar guias com Cartões Adaptáveis. |[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
-|05/25/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| O recurso Modo juntos combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
@@ -196,7 +195,6 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 | -------- | --------- | ------------------ |
 |05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
-|05/25/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| O recurso Modo juntos combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |

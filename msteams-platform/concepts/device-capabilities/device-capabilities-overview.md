@@ -25,7 +25,7 @@ Um dispositivo móvel ou desktop tem dispositivos integrados, como uma câmera e
     * Microfone
     * Galeria
     * QR ou scanner de código de barras
-* Local
+* Localização
 
 Depois de obter acesso aos recursos do dispositivo, você pode integrá-los Teams plataforma para aprimorar a experiência colaborativa. 
 

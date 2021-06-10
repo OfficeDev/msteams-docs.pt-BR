@@ -284,7 +284,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. O supor
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| header (níveis 1 &ndash; 3) | **Text** | `### Text`|
+| header (níveis 1 &ndash; 3) | **Texto** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -373,7 +373,7 @@ Os cartões conectores suportam a formatação limitada markdown e HTML. Markdow
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -461,7 +461,7 @@ As marcas HTML são suportadas para cartões simples, como o herói e o cartão 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| header (níveis 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| header (níveis 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista semordenagem | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>texto</li><li>texto</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

@@ -24,7 +24,7 @@ Este documento orienta você sobre como responder a solicitações de usuário n
 
 Os parâmetros de solicitação são encontrados no objeto na `value` solicitação, que inclui as seguintes propriedades:
 
-| Nome da propriedade | Objetivo |
+| Nome da propriedade | Finalidade |
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
 | `parameters` | Matriz de parâmetros. Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
@@ -82,7 +82,7 @@ Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação 
 
 Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um aplicativo ou objeto JSON válido com as seguintes propriedades:
 
-|Nome da propriedade|Objetivo|
+|Nome da propriedade|Finalidade|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
 |`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: Exibe uma lista de resultados da pesquisa <br>`auth`: Pede ao usuário para autenticar <br>`config`: Pede ao usuário para configurar a extensão de mensagens <br>`message`: Exibe uma mensagem de texto sem texto |

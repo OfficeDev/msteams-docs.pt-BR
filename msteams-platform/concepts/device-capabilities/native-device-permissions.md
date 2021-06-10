@@ -81,7 +81,7 @@ Cada propriedade permite solicitar que o usuário peça seu consentimento:
 
 | Propriedade      | Descrição   |
 | --- | --- |
-| mídia         | Permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso. |
+| media         | Permissão para usar a câmera, o microfone, os alto-falantes e a galeria de mídia de acesso. |
 | geolocalização   | Permissão para retornar a localização do usuário.      |
 | notificações | Permissão para enviar as notificações do usuário.      |
 | midi          | Permissão para enviar e receber informações de MIDI (Interface Digital de Instrumento Musical) de um instrumento digital.   |

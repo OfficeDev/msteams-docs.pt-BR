@@ -1,5 +1,5 @@
 ---
-title: Receber todas as mensagens de canal com RSC
+title: Receber todas as mensagens do canal com RSC
 author: surbhigupta12
 description: Receber todas as mensagens de canal com permissões RSC
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2021
 ms.locfileid: "52631239"
 ---
-# <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens de canal com RSC
+# <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 
 > [!NOTE]
 > Esse recurso está disponível apenas na [visualização de desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md) público.

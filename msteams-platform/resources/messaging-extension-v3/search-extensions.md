@@ -127,7 +127,7 @@ Quando um usuário executa uma consulta, o Microsoft Teams envia ao seu serviço
 
 Além das propriedades de atividade de bot padrão, a carga contém os seguintes metadados de solicitação:
 
-|Nome da propriedade|Objetivo|
+|Nome da propriedade|Finalidade|
 |---|---|
 |`type`| Tipo de solicitação; deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Atualmente, os seguintes tipos são suportados: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -141,7 +141,7 @@ Além das propriedades de atividade de bot padrão, a carga contém os seguintes
 
 Os parâmetros de solicitação em si são encontrados no objeto value, que inclui as seguintes propriedades:
 
-| Nome da propriedade | Objetivo |
+| Nome da propriedade | Finalidade |
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
 | `parameters` | Matriz de parâmetros: Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
@@ -239,7 +239,7 @@ Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação 
 
 Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e um `200 OK` objeto application/json válido com o seguinte corpo:
 
-|Nome da propriedade|Objetivo|
+|Nome da propriedade|Finalidade|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
 |`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: exibe uma lista de resultados da pesquisa <br>`auth`: pede ao usuário para autenticar <br>`config`: pede ao usuário para configurar a extensão de mensagens <br>`message`: exibe uma mensagem de texto simples |

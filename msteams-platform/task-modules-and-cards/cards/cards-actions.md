@@ -15,7 +15,7 @@ ms.locfileid: "52566849"
 
 Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) Observe que essas ações diferem das `potentialActions` Office 365 conectores quando usadas de Conectores.
 
-| Tipo | Ação |
+| Tipo | Action |
 | --- | --- |
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e uma carga para o bot do usuário que clicou no botão ou tocou no cartão e envia uma mensagem separada para o fluxo de chat. |

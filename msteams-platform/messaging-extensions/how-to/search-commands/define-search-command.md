@@ -73,7 +73,7 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` sua matriz de objetos:
 
-| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui ao comando de pesquisa. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário (interface do usuário). | Sim | 1.0 |
@@ -84,7 +84,7 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao ma
 
 Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
 
-| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade define uma lista estática de parâmetros para o comando. | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |

@@ -39,7 +39,7 @@ Os desenvolvedores podem optar por não adicionar o atributo cookie SameSite ao 
 
 O Chrome 80, agendado para lançamento em fevereiro de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. Três valores podem ser passados para o atributo SameSite atualizado: *Strict*, *Lax* ou *None*. Cookies que não especificam o atributo SameSite serão padrão para `SameSite=Lax` .
 
-|Setting | Imposição | Valor |Especificação de Atributo |
+|Configuração | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Os cookies serão enviados automaticamente somente em um *contexto de primeira* parte e com solicitações HTTP GET. Os cookies sameSite serão retidos em sub-solicitações entre sites, como chamadas para carregar imagens ou iframes, mas serão enviados quando um usuário navegar para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador só enviará cookies para solicitações de contexto de primeira parte (solicitações provenientes do site que definiram o cookie). Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|

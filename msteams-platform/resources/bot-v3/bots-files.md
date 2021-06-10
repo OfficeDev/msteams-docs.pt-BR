@@ -68,7 +68,7 @@ Quando um usuário envia um arquivo para o bot, o arquivo é carregado pela prim
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Objetivo |
+| Propriedade | Finalidade |
 | --- | --- |
 | `downloadUrl` | OneDrive URL para buscar o conteúdo do arquivo. Você pode emitir um `HTTP GET` diretamente a partir dessa URL. |
 | `uniqueId` | ID de arquivo exclusivo. Essa será a OneDrive ID do item da unidade, no caso do usuário enviar um arquivo para o bot. |
@@ -114,7 +114,7 @@ Esta mensagem móvel contém um objeto attachment solicitando permissão do usu�
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Objetivo |
+| Propriedade | Finalidade |
 | --- | --- |
 | `description` | Descrição do arquivo. Pode ser mostrado ao usuário para descrever sua finalidade ou resumir seu conteúdo. |
 | `sizeInBytes` | Fornece ao usuário uma estimativa do tamanho do arquivo e da quantidade de espaço que ele levará em OneDrive. |
@@ -183,7 +183,7 @@ Depois de carregar um arquivo no OneDrive do usuário, se você usar o mecanismo
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Objetivo |
+| Propriedade | Finalidade |
 | --- | --- |
 | `uniqueId` | OneDrive/SharePoint ID do item da unidade. |
 | `fileType` | Tipo de arquivo, como pdf ou docx. |

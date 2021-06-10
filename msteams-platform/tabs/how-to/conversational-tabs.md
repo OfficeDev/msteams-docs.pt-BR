@@ -1,5 +1,5 @@
 ---
-title: Criar guias de conversa
+title: Criar abas para conversação
 author: laujan
 description: Criar chat de sub entidade conversacional para suas guias de canal
 keywords: canal de guias do teams configurável
@@ -12,7 +12,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/31/2021
 ms.locfileid: "52709639"
 ---
-# <a name="create-conversational-tabs"></a>Criar guias de conversa
+# <a name="create-conversational-tabs"></a>Criar abas para conversação
 
 As sub-entidades de conversação proporcionam uma maneira de permitir que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira, também conhecida como entidade. Um canal tradicional ou uma guia configurável permite que o usuário tenha uma conversa sobre uma guia, mas o usuário pode querer uma conversa mais focada. O requisito para uma conversa mais focada pode surgir, se houver muito conteúdo para ter uma discussão centralizada ou o conteúdo alterado com o tempo, tornando a conversa irrelevante para o conteúdo que está sendo mostrado. As sub-entidades de conversa proporcionam uma experiência de conversa muito mais focada para guias dinâmicas.
 

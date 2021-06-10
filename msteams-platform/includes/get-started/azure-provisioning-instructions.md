@@ -4,7 +4,7 @@ A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necess�
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Abra Visual Studio Code.
+1. Abra o Visual Studio Code.
 1. Selecione a Teams Toolkit na barra lateral selecionando o ícone Teams.
 1. Selecione **Provisionamento na Nuvem**.
 

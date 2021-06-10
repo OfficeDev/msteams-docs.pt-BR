@@ -23,7 +23,7 @@ Para adicionar uma extensão de mensagens, inclua uma nova estrutura JSON de ní
 
 A definição de extensão é um objeto que tem a seguinte estrutura:
 
-| Nome da propriedade | Objetivo | Obrigatório? |
+| Nome da propriedade | Finalidade | Obrigatório? |
 |---|---|---|
 | `botId` | O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Normalmente, isso deve ser o mesmo que a ID do seu aplicativo Teams geral. | Sim |
 | `scopes` | Matriz declarando se essa extensão pode ser adicionada `personal` ou `team` escopos (ou ambos). | Sim |
@@ -38,7 +38,7 @@ Sua extensão de mensagens deve declarar um comando, que aparece quando o usuár
 
 No manifesto do aplicativo, o item de comando é um objeto com a seguinte estrutura:
 
-| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | ID exclusiva que você atribui a esse comando. A solicitação do usuário incluirá essa ID. | Sim | 1.0 |
 | `title` | Nome do comando. Esse valor aparece na interface do usuário. | Sim | 1.0 |

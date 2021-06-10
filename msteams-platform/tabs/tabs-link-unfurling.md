@@ -1,5 +1,5 @@
 ---
-title: Guias vinculam desfraldamento e exibição de estágio
+title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
 description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2021
 ms.locfileid: "52631216"
 ---
-# <a name="tabs-link-unfurling-and-stage-view"></a>Guias vinculam desfraldamento e exibição de estágio
+# <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
 > [!NOTE]
 > Esse recurso está disponível somente na [visualização do desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.

@@ -55,7 +55,7 @@ As imagens devem ter, no máximo, 1024×1024, no formato PNG, JPEG ou GIF e não
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | String | Descrição acessível da imagem. |
+| alt | Cadeia de caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem que passa por um redirecionamento antes da imagem final, não há suporte para o redirecionamento na URL da imagem. Isso ocorre para imagens compartilhadas na nuvem pública.

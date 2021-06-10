@@ -55,7 +55,7 @@ Como os dados existentes estão sendo migrados, a manutenção dos datas de data
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissões
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs cobertas|
 |-|-|-|-|-|-|
@@ -99,7 +99,7 @@ A criação de um canal para as mensagens importadas é semelhante ao cenário d
 
 > [Crie um novo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso `createdDateTime` channel. Coloque o novo canal em , um estado especial que barra os usuários da maioria das atividades de chat dentro do canal até que o processo `migration mode` de migração seja concluído.  Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `channelCreationMode` nova equipe como sendo criada para `migration` migração.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissões
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs cobertas|
 |-|-|-|-|-|-|

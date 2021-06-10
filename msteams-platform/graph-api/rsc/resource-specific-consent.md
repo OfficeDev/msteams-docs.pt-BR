@@ -19,7 +19,7 @@ O RSC (consentimento específico de recurso) é uma integração Microsoft Teams
 
 ## <a name="resource-specific-permissions"></a>Permissões específicas de recursos
 
-|Permissão de aplicativo| Ação |
+|Permissão de aplicativo| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obter as configurações dessa equipe.|
 |TeamSettings.ReadWrite.Group|Atualizar as configurações para esta equipe.|

@@ -70,7 +70,7 @@ Você pode usar qualquer serviço enderecável externamente para hospedar seu c�
 
 ## <a name="load-and-run-your-experience"></a>Carregar e executar sua experiência
 
-Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para mais informações, confira:
+Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para saber mais, confira:
 
 * [Crie o pacote para seu Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload seu aplicativo em Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
