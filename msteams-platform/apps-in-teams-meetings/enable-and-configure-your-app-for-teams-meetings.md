@@ -3,12 +3,12 @@ title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: laujan
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
-ms.openlocfilehash: 3484e82f3f51a9a92da6588234744c42a86b5730
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651730"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871836"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -130,7 +130,7 @@ A extensão de mensagens funciona conforme o esperado quando um usuário está e
 
 #### <a name="in-meeting-dialog-box"></a>Caixa de diálogo na reunião
 
-A caixa de diálogo na reunião pode ser usada para envolver os participantes durante a reunião e coletar informações ou comentários durante a reunião. Use a [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API para sinalizar que uma notificação de bolha deve ser disparada. Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser mostrado está hospedado.
+A caixa de diálogo na reunião pode ser usada para envolver os participantes durante a reunião e coletar informações ou comentários durante a reunião. Use a [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) API para sinalizar que uma notificação de bolha deve ser disparada. Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser mostrado está hospedado.
 
 A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
 
