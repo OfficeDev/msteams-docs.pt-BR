@@ -4,12 +4,12 @@ description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App 
 keywords: introdução ao app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651709"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915094"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolva aplicativos rapidamente com o App Studio para Microsoft Teams
 
@@ -65,7 +65,6 @@ A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo s
 > [!NOTE]
 > Como prática prática prática, você deve fornecer diretrizes de personalização para usuários de aplicativos e clientes a seguir ao personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
 
-
 ##### <a name="tabs"></a>Guias
 
 * **Guias da Equipe.** Uma guia de equipe torna-se parte de um canal e fornece acesso rápido a informações e recursos da equipe. Por exemplo, a guia Planner para um canal contém um único plano. A guia Power BI mapeia para um relatório específico. Os usuários podem fazer uma busca detalhada pelo contexto relevante, mas eles não devem ser capazes de navegar fora da guia. Por exemplo, a guia Power BI não habilita a navegação para outros relatórios do Power BI, mas habilita o botão *Ir para o site* que inicia o relatório no site principal do Power BI.
@@ -90,10 +89,6 @@ Depois de fornecer as informações do bot, agora você pode definir opcionalmen
 ##### <a name="connectors"></a>Conectores
 
 Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha **Configurar** e insira o nome e a ID do conector. Se quiser um novo conector clique em **Registrar** para ser levado até o Painel do Desenvolvedor do Conector em seu navegador.
-
-> [!NOTE]
-> A personalização do aplicativo permite que os administradores alterem a aparência dos aplicativos carregados por meio de bots, extensões de mensagens, guias e conectores. Por exemplo, se o administrador Teams personalizar o nome de um aplicativo da **Contoso** para o Agente **contoso,** o aplicativo aparecerá com o novo nome Agente **contoso** para usuários. No entanto, ao adicionar um conector a um chat, na lista os conectores ainda mostrarão o nome do aplicativo como **Contoso**.
-
 
 ##### <a name="messaging-extensions"></a>Extensões de Mensagens
 

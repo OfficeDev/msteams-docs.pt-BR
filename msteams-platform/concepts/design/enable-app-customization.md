@@ -5,22 +5,34 @@ description: Entenda como Teams administradores podem personalizar seu aplicativ
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1b5e2670cdabc139ea945f3d0c5705d9262b5832
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: bf1b43629c87dd4123520c634772e5dea14e0bb5
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853540"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915080"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Permitir que seu Microsoft Teams aplicativo seja personalizado
 
-Você pode permitir que as organizações (especificamente Teams administradores) personalizem alguns aspectos do seu Microsoft Teams app. Alguns exemplos possíveis incluem:
+Você pode permitir que os clientes personalizem alguns aspectos do seu aplicativo Microsoft Teams no centro de Teams de administração. Esse recurso só é suportado para aplicativos publicados no Teams store. Aplicativos e aplicativos com sideload publicados para uma organização não podem ser personalizados.
 
-* Alterar a cor de destaque do aplicativo para corresponder à marca da organização.
-* Atualizando o nome do aplicativo da *Contoso* para *o Agente Contoso*, que é o nome que os usuários da organização verão. (Observação: os usuários que adicionam um conector a um chat ainda verão o nome original do aplicativo, *Contoso*).
+Alguns exemplos possíveis desse recurso incluem:
 
-Você pode habilitar esse recurso no Portal do [Desenvolvedor para Teams](https://dev.teams.microsoft.com/home). (Isso configura `configurableProperties` no manifesto do aplicativo.) Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
+* Alterar a cor de destaque do aplicativo para corresponder à marca de uma organização.
+* Atualizando o nome do aplicativo da *Contoso* para *o Agente Contoso*, que é o nome que os usuários da organização verão. (Observação: os usuários adicionando um conector a um chat ou canal ainda verão o nome original do aplicativo, *Contoso*.)
 
-## <a name="best-practices"></a>Práticas recomendadas
+Você pode habilitar esse recurso no Portal do [Desenvolvedor para Teams](https://dev.teams.microsoft.com/home). Isso configura , que não estão disponíveis em versões anteriores `configurableProperties` a 1,10 do manifesto Teams aplicativo.
 
-Forneça diretrizes para os clientes que querem personalizar seu aplicativo. Para obter mais informações, consulte [personalizar aplicativos em Microsoft Teams](/MicrosoftTeams/customize-apps).
+## <a name="test-your-app"></a>Testar seu aplicativo
+
+Não é possível testar esse recurso durante o desenvolvimento. A personalização do aplicativo não é suportada para sideload ou publicação no catálogo de aplicativos de uma organização.
+
+## <a name="user-considerations"></a>Considerações do usuário
+
+Como o editor de aplicativos, forneça as seguintes informações aos clientes em Teams administradores:
+* Inclua uma observação recomendando testar alterações de personalização em um Teams de teste antes de fazer alterações em seu ambiente de produção. 
+* Forneça práticas recomendadas para personalizar seu aplicativo.
+
+## <a name="see-also"></a>Confira também
+
+* [Personalizar aplicativos no Teams de administração](/MicrosoftTeams/customize-apps)
