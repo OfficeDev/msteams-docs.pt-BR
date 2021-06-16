@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 86a39bc771873afb25d401534569498241b2daf1
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853519"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949655"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -24,7 +24,7 @@ Descubra Microsoft Teams da plataforma que são introduzidos no Microsoft Build 
 |05/26/2021| Criar guias com Cartões Adaptáveis. |[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| O recurso Modo juntos combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021| Guias vinculam desfraldamento e exibição de estágio. |[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
 
@@ -57,6 +57,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)
@@ -196,7 +197,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 |05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| O recurso Modo juntos combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
 |03/05/2021| As guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |

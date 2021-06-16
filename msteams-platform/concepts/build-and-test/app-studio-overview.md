@@ -4,14 +4,17 @@ description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App 
 keywords: introdução ao app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915094"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949767"
 ---
-# <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desenvolva aplicativos rapidamente com o App Studio para Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gerenciar seus aplicativos com o App Studio para Microsoft Teams
+
+> [!TIP]
+> **Experimente o Portal do Desenvolvedor**: o App Studio evoluiu. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
 
 O App Studio torna fácil começar a criar ou integrar seus próprios aplicativos Microsoft Teams, quer você desenvolva aplicativos personalizados para sua empresa ou aplicativos SaaS para equipes em todo o mundo, fornecendo um fluxo de criação do manifesto e do pacote para seu aplicativo e fornecendo ferramentas úteis como o Editor de Cartões e uma biblioteca de controle de Reação.
 
@@ -125,7 +128,7 @@ Se você já tiver um cartão que gostaria de verificar no Teams, poderá colar 
 ### <a name="react-control-library"></a>Biblioteca de Controle de Reação
 
 >[!Note]
-> Essa React de controle é preterida no futuro. Considere usar os [controles de reação fluent-UI como uma interface do](https://microsoft.github.io/fluent-ui-react/) usuário stardust alternativa anteriormente.
+> Essa React de controle é preterida no futuro. Considere usar os [controles de Fluent-interface](https://microsoft.github.io/fluent-ui-react/) do usuário como uma interface do usuário stardust alternativa anteriormente.
 
 Criar um aplicativo que acompanhe as práticas recomendadas do Teams é uma ótima maneira de dar ao seu aplicativo uma aparência e sensação que se encaixem  perfeitamente com a experiência do cliente do Teams. Os controles da interface do usuário que você usa são essenciais para alcançar esse fim. Para facilitar a criação de uma interface de usuário consistente, o App Studio fornece várias categorias de controles de interface do usuário que seguem princípios de design do Teams.
 

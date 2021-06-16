@@ -1,24 +1,24 @@
 ---
-title: Modo Juntos no Teams
-description: Trabalhar com o modo Juntos
+title: Custom Together Mode Scenes
+description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651737"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949746"
 ---
-# <a name="together-mode-in-teams"></a>Modo Juntos no Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Cenas do modo Juntos Personalizados Teams
 
 > [!NOTE]
 > Esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.
 
-Microsoft Teams O modo Juntos fornece um ambiente de reunião imersivo e envolvente que reúne as pessoas e as incentiva a ativar seu vídeo. Ele combina digitalmente os participantes em uma única cena virtual e coloca seus fluxos de vídeo em bancos pré-determinados projetados e corrigidos pelo criador da cena.
+As cenas do modo Personalizado Em Conjunto Microsoft Teams fornece um ambiente de reunião imersivo e envolvente que reúne as pessoas e as incentiva a ativar seu vídeo. Ele combina digitalmente os participantes em uma única cena virtual e coloca seus fluxos de vídeo em bancos pré-determinados projetados e corrigidos pelo criador da cena.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Uma cena no modo Juntos é um artefato criado pelo desenvolvedor de cena usando o estúdio do Microsoft Scene. Em uma configuração de cena concebida, os participantes têm assentos designados com fluxos de vídeo renderizados nesses bancos.
+Uma cena em cenas personalizadas do Modo Juntos é um artefato criado pelo desenvolvedor de cena usando o microsoft scene studio. Em uma configuração de cena concebida, os participantes têm assentos designados com fluxos de vídeo renderizados nesses bancos.
 
 > [!NOTE]
 > Somente aplicativos de cena são recomendados, pois a experiência de aquisição para esses aplicativos é mais perfeita.
@@ -33,7 +33,7 @@ O processo a seguir fornece uma visão geral para criar um aplicativo somente de
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve ter uma compreensão básica do seguinte para usar o modo Juntos:
+Você deve ter uma compreensão básica do seguinte para usar cenas personalizadas do modo Juntos:
 
 * Definição de cena e bancos em uma cena.
 * Tenha uma conta do Desenvolvedor da Microsoft e conheça o Microsoft Teams Portal do [Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md) e o App Studio.
@@ -145,14 +145,14 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
 1. Na caixa **de diálogo Exibir Teams,** selecione **Visualizar em Teams**.
 1. Na caixa de diálogo exibida, selecione **Adicionar**.
 
-    A cena pode ser testada ou acessada criando uma reunião de teste e iniciando o modo Juntos. Para obter mais informações, consulte [activate the Together Mode](#activate-the-together-mode).
+    A cena pode ser testada ou acessada criando uma reunião de teste e iniciando cenas personalizadas do modo Juntos. Para obter mais informações, consulte [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
 
-    ![Iniciar o modo Juntos](../assets/images/apps-in-meetings/launchtogethermode.png)
+    ![Iniciar cenas personalizadas do modo Juntos](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
     > * Selecionar **Visualização** cria automaticamente um Microsoft Teams que pode ser exibido na página **Aplicativos** no Teams Portal do Desenvolvedor.
     > * Selecionar **Visualização** cria automaticamente um pacote de aplicativos que appmanifest.jspor trás da cena. Como dito anteriormente, isso é abstraído, mas você pode acessar o pacote de aplicativos criado automaticamente navegando para **Aplicativos** no menu.
-    > * Em seguida, a cena pode ser exibida na galeria de cena Modo Conjunto.
+    > * Em seguida, a cena pode ser exibida na galeria de cenas do Modo Juntos personalizada.
 
 1. Opcionalmente, você pode selecionar  **Compartilhar** no menu suspenso Salvar para criar um link compartilhável para distribuir facilmente suas cenas para outras pessoas usarem. Abrir esse link instala a cena para o usuário e eles podem começar a usá-la.
 
@@ -172,7 +172,7 @@ Uma cena mais complexa que aproveita o eixo Z é demonstrada no exemplo passo a 
 
 ## <a name="sample-scenejson"></a>Exemplo scene.json
 
-Scene.jsem junto com as imagens indicam a posição exata dos bancos. Uma cena consiste em imagens bitmap, sprites e retângulos para colocar vídeos de participantes. Esses sprites e caixas de participantes são definidos em um sistema de coordenadas do mundo com o eixo X apontando para a direita e o eixo Y apontando para baixo. O modo juntos dá suporte ao zoom nos participantes atuais. Isso é útil para pequenas reuniões em uma cena grande. Um sprite é uma imagem de bitmap estática posicionada no mundo. O valor Z do sprite determina a posição do sprite. A renderização começa com o sprite com o menor valor Z, portanto, o valor Z mais alto significa que ele está mais próximo da câmera. Cada participante tem seu próprio feed de vídeo, que é segmentado para que apenas o primeiro plano seja renderizado.
+Scene.jsem junto com as imagens indicam a posição exata dos bancos. Uma cena consiste em imagens bitmap, sprites e retângulos para colocar vídeos de participantes. Esses sprites e caixas de participantes são definidos em um sistema de coordenadas do mundo com o eixo X apontando para a direita e o eixo Y apontando para baixo. As cenas do Modo Personalizado em Conjunto suportam o zoom nos participantes atuais. Isso é útil para pequenas reuniões em uma cena grande. Um sprite é uma imagem de bitmap estática posicionada no mundo. O valor Z do sprite determina a posição do sprite. A renderização começa com o sprite com o menor valor Z, portanto, o valor Z mais alto significa que ele está mais próximo da câmera. Cada participante tem seu próprio feed de vídeo, que é segmentado para que apenas o primeiro plano seja renderizado.
 
 Veja a seguir o scene.jsexemplo:
 
@@ -246,13 +246,13 @@ Cada cena tem uma ID e um nome exclusivos. A cena JSON também contém informaç
 
 O zOrder representa a ordem de colocação de imagens e bancos ao longo do eixo Z. Em muitos casos, ele dá uma noção de profundidade ou partição, se necessário. Para obter mais informações, consulte o exemplo passo a passo sobre como começar. O exemplo aproveita o zOrder.
 
-Agora que você passou pelo exemplo de scene.jsativado, você pode ativar o modo Juntos para participar de cenas.
+Agora que você passou pelo exemplo de scene.jsativado, você pode ativar as cenas personalizadas do modo Juntos para participar de cenas.
 
-## <a name="activate-the-together-mode"></a>Ativar o modo Juntos
+## <a name="activate-custom-together-mode-scenes"></a>Ativar cenas personalizadas do modo Juntos
 
-Obter informações de ponta a ponta de como um usuário final se envolve com cenas no modo Juntos.
+Obter informações de ponta a ponta de como um usuário final se envolve com cenas em cenas personalizadas do modo Juntos.
 
-**Para escolher cenas e ativar o modo Juntos**
+**Para escolher cenas e ativar cenas personalizadas do modo Juntos**
 
 1. Crie uma nova reunião de teste.
 
@@ -265,14 +265,14 @@ Obter informações de ponta a ponta de como um usuário final se envolve com ce
 
 1. Na Galeria **de Cena,** selecione a cena que você deseja usar para sua reunião.
 
-1. Opcionalmente, o organizador da reunião e o apresentador podem escolher **Alternar todos** os participantes para o modo de reunião.
+1. Opcionalmente, o organizador da reunião e o apresentador podem alterar a cena **de todos** os participantes da reunião.
 
     >[!NOTE]
-    > A qualquer momento, apenas uma cena pode ser usada de forma homogênea para a reunião. Se um apresentador ou organizador altera uma cena, ela muda para todos. Alternar para dentro ou para fora do modo Juntos é com participantes individuais, mas enquanto estiver no Modo Juntos, todos os participantes têm a mesma cena.
+    > A qualquer momento, apenas uma cena pode ser usada de forma homogênea para a reunião. Se um apresentador ou organizador altera uma cena, ela muda para todos. Alternar para dentro ou fora de cenas personalizadas do Modo Juntos é com participantes individuais, mas enquanto em cenas do modo Juntos personalizadas, todos os participantes têm a mesma cena.
 
 1. Selecione **Aplicar**. Teams instala o aplicativo para o usuário e aplica a cena.
 
-## <a name="open-a-together-mode-scene-package"></a>Abrir um pacote de cena de modo conjunto
+## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Abrir um pacote de cenas do modo juntos personalizado
 
 Você pode compartilhar o Pacote de Cena que é um arquivo .zip recuperado do estúdio scene para outros criadores para aprimorar ainda mais a cena. A **funcionalidade Importar uma Cena** pode ser aproveitada. Essa ferramenta ajuda a desembrulhar um pacote de cena para permitir que o criador continue criando a cena.
 

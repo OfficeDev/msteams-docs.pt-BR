@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630142"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949676"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -178,6 +178,11 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
+
+## <a name="deep-linking-to-an-app"></a>Vinculação profunda a um aplicativo
+
+Crie deeplinks para o aplicativo depois que o aplicativo for listado no Teams store. Para criar um link para iniciar Teams, adendo a seguinte URL à ID do seu aplicativo: `https://teams.microsoft.com/l/app/<your-app-id>` . Uma caixa de diálogo parece instalar o aplicativo. 
+  
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para Estrutura do SharePoint guias
 
 O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`

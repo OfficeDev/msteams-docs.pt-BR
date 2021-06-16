@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566149"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949662"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Instalação proativa de aplicativos usando a API do Graph e enviar mensagens
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
 >[!IMPORTANT]
 > O Microsoft Graph e Microsoft Teams visualizações públicas estão disponíveis para acesso antecipado e comentários. Embora essa versão tenha passado por testes abrangentes, ela não se destina a ser usada na produção.
@@ -31,7 +31,7 @@ As mensagens proativas são iniciadas por bots para iniciar conversas com um usu
 
 Antes que o bot possa enviar mensagens proativas a um usuário, ele deve ser instalado como um aplicativo pessoal ou em uma equipe em que o usuário seja membro. Às vezes, você precisa enviar mensagens proativas aos usuários que não tenham instalado ou interagido anteriormente com seu aplicativo. Por exemplo, a necessidade de enviar informações vitais para todos em sua organização. Para esses cenários, você pode usar a API do Microsoft Graph para instalar proativamente seu bot para seus usuários.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permissões
 
 Permissões de tipo de recurso do Microsoft Graph [TeamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) ajudam você a gerenciar o ciclo de vida de instalação do aplicativo para todos os escopos de usuário (pessoal) ou equipe (canal) na plataforma Microsoft Teams:
 
