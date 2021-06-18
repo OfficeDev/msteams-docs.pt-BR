@@ -5,12 +5,12 @@ description: Tenha uma ideia geral de como e quando você pode usar ferramentas 
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 533d386db2aa784fc7de955f92f64d07789f0553
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 225859da18cb50741ab49c68d89bc318c6c9034c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631230"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994207"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processo de design para Microsoft Teams aplicativos
 
@@ -70,7 +70,7 @@ O kit de interface do usuário tem designs pré-construídos que mostram como as
 
 ## <a name="design-your-ux-flow"></a>Projetar seu fluxo deux
 
-Depois de ter um design de aplicativo básico, você pode modificá-lo e refiná-lo o quanto quiser (e rapidamente) copiando modelos de interface do usuário Teams e componentes básicos do kit de interface do usuário.
+Depois de ter um design de aplicativo básico Teams, você pode modificá-lo e refiná-lo o quanto quiser, copiando modelos de interface do usuário e componentes básicos do kit de interface do usuário.
 
 ### <a name="design-with-ui-templates"></a>Projetar com modelos de interface do usuário
 
@@ -82,7 +82,7 @@ Os modelos de interface do usuário são designs complexos e de alta fidelidade 
 
 ### <a name="design-with-basic-ui-components"></a>Projetar com componentes básicos da interface do usuário
 
-Com base na interface do usuário fluente, esses são os elementos principais para a criação de interfaces Teams familiares. Use esses componentes se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja projetar seu aplicativo do zero.
+Com base Fluent interface do usuário, esses são os elementos principais para criar interfaces Teams familiares. Use esses componentes se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja projetar seu aplicativo do zero.
 
 1. Na interface do usuário do kit de interface do usuário à esquerda, vá para **Componentes básicos da interface do usuário**.
 1. Copie os componentes necessários para o design do aplicativo (por exemplo, um botão ou alternância).
@@ -93,7 +93,7 @@ O design foi feito e você está pronto para começar a construir. As ferramenta
 
 ### <a name="build-with-ui-templates"></a>Criar com modelos de interface do usuário
 
-Se você usou modelos de interface do usuário em seu design, poderá implementar esses modelos com a biblioteca de interface do usuário Microsoft Teams (uma biblioteca de componentes React baseada na interface do usuário fluente).
+Se você usou modelos de interface do usuário em seu design, poderá implementar esses modelos com a biblioteca de interface do usuário Microsoft Teams (uma biblioteca de componentes React com base em Fluent interface do usuário).
 
 Atualmente, nem todos os modelos listados no kit de interface do usuário estão disponíveis na biblioteca.
 
@@ -102,16 +102,17 @@ Atualmente, nem todos os modelos listados no kit de interface do usuário estão
 
 ### <a name="build-with-basic-ui-components"></a>Criar com componentes básicos da interface do usuário
 
-Diferentemente da fase de design, você pode usar esses componentes de interface do usuário fluente no projeto do aplicativo se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja criar o aplicativo do zero. 
+Diferentemente da fase de design, você pode usar esses Fluent de interface do usuário em seu projeto de aplicativo se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja criar o aplicativo do zero. 
 
 (Observação: se você notar algo faltando ou tiver uma ideia para um modelo, considere contribuir para o Teams de biblioteca de interface do usuário.)
 
 > [!div class="nextstepaction"]
-> [Obter a biblioteca (Interface do Usuário Fluente)](https://fluentsite.z22.web.core.windows.net/)
+> [Obter a biblioteca (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)
 
 ## <a name="review-design-resources"></a>Revisar recursos de design
 
 Se você está apenas começando em seu aplicativo ou perto de um aplicativo pronto para produção, recomendamos que você revise periodicamente os seguintes recursos:
 
-* Microsoft Teams de validação da loja : fornece padrões que todos os Teams aplicativos devem se esforçar (não apenas **aplicativos listados** na loja). Para obter mais informações, consulte as [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* Microsoft Teams diretrizes de validação da loja : fornece padrões que todos os Teams aplicativos devem se esforçar e não apenas os **aplicativos** listados na loja. Para obter mais informações, consulte as [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Práticas recomendadas de** design: esses documentos e o kit de interface do usuário fornecem práticas recomendadas para projetar aplicativos de alta qualidade. Por exemplo, consulte as [práticas recomendadas para projetar bots](~/bots/design/bots.md#best-practices).
+

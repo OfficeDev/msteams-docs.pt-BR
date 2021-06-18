@@ -16,7 +16,11 @@ Conclua as etapas a seguir para atualizar o pacote do aplicativo:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    O exemplo vem com seu próprio manifesto e foi projetado para criar um pacote de aplicativos quando o projeto é criado. No .NET, isso é feito Visual Studio e no Node.js isso é feito digitando na linha de comando no `gulp` diretório raiz do projeto.
+    O exemplo vem com seu próprio manifesto e foi projetado para criar um pacote de aplicativos quando o projeto é criado. Você pode criar o pacote de aplicativos no .NET com Visual Studio. Em Visual Studio, o arquivo manifest.json está localizado em **em Manifesto** em `Microsoft.Teams.Samples.HelloWorld.Web` . Esta etapa é descrita pela imagem a seguir:  
+    
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    
+    Você pode criar o pacote do aplicativo Node.js digitando na linha de comando no `gulp` diretório raiz do projeto.
 
     ```bash
     $ gulp

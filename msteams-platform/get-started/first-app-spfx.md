@@ -5,12 +5,12 @@ description: Saiba como criar uma guia personalizada com a Estrutura do SharePoi
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 54886b47bbe70fed5dd1f010517e6c91d8d5a50d
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 23df721a28225a8c453274e6e77efa8f756e84f3
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646608"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994368"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Crie e execute seu primeiro aplicativo Microsoft Teams com Estrutura do SharePoint (SPFx)
 
@@ -236,11 +236,13 @@ Abra o Teams aplicativo (ou entre `https://teams.microsoft.com` em ).  Pressione
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Captura de tela mostrando o aplicativo dentro Teams":::
 
-## <a name="next-steps"></a>Próximas etapas
-
-Saiba mais sobre outros métodos para criar aplicativos do Teams:
+## <a name="see-also"></a>Confira também
 
 - [Criar um aplicativo do Teams com o React](first-app-react.md)
 - [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)
-- [Criar um programa bot de conversação](first-app-bot.md)
 - [Criar uma extensão de mensagem](first-message-extension.md)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar um programa bot de conversação](first-app-bot.md)

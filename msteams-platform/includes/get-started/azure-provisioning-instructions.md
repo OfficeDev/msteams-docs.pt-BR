@@ -19,7 +19,7 @@ A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necess�
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Captura de tela da caixa de diálogo de provisionamento.":::
 
-   O processo de provisionamento criará recursos na nuvem do Azure.  Isso levará algum tempo.  Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito.  Após alguns minutos, você verá o seguinte aviso:
+   O processo de provisionamento cria recursos na nuvem do Azure. Isso leva algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Captura de tela mostrando a caixa de diálogo completa de provisionamento.":::
 
@@ -35,7 +35,7 @@ Em sua janela de terminal:
    teamsfx provision
    ```
 
-   Você pode ser solicitado a fazer logoff na sua assinatura do Azure.  Se necessário, você será solicitado a selecionar uma assinatura do Azure a ser usada para os recursos do Azure.
+   Você pode ser solicitado a fazer logoff na sua assinatura do Azure. Se necessário, você será solicitado a selecionar uma assinatura do Azure a ser usada para os recursos do Azure.
 
    > [!NOTE]
    > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
@@ -51,7 +51,7 @@ Em sua janela de terminal:
 > [!NOTE]
 > **Qual é a diferença entre Provisionar e Implantar?**
 >
-> A **etapa Provision** criará recursos no Azure e no M365 para seu aplicativo, mas nenhum código (HTML, CSS, JavaScript, etc.) é copiado para os recursos.  A **etapa Implantar** copiará o código do aplicativo para os recursos criados durante a etapa de provisionamento.  É comum implantar várias vezes sem provisionar novos recursos. Como a etapa de provisionamento pode levar algum tempo para ser concluída, ela é separada da etapa de implantação.
+> A **etapa Provision** cria recursos no Azure e no M365 para seu aplicativo, mas nenhum código (HTML, CSS, JavaScript, etc.) é copiado para os recursos. A **etapa Implantar** copia o código do aplicativo para os recursos criados durante a etapa de provisionamento. É comum implantar várias vezes sem provisionar novos recursos. Como a etapa de provisionamento pode levar algum tempo para ser concluída, ela é separada da etapa de implantação.
 
 Depois que as etapas de provisionamento e implantação são concluídas:
 

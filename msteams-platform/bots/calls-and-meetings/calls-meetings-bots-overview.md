@@ -4,17 +4,14 @@ description: Saiba como seus aplicativos Microsoft Teams podem interagir com usu
 ms.topic: conceptual
 localization_priority: Normal
 keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058310"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994228"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
-
-> [!NOTE]
-> Atualmente, o suporte para chamadas e bots de reunião online não é suportado Microsoft Teams plataforma móvel.
 
 Os bots podem interagir com Teams e reuniões usando o compartilhamento de voz, vídeo e tela em tempo real. Com [as APIs Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)microsoft para chamadas e reuniões online, Teams aplicativos agora podem interagir com os usuários usando voz e vídeo para aprimorar a experiência. Essas APIs permitem adicionar os seguintes novos recursos:
 
@@ -53,6 +50,10 @@ As chamadas são ponto a ponto entre uma pessoa e seu bot ou várias partes entr
 A seguir estão os diferentes tipos de chamada e permissões necessárias para a chamada:
 
 * Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multipartidária existente. A chamada de várias partes ainda não está habilitada na interface Teams usuário.
+
+    > [!NOTE]
+    > Atualmente, as chamadas iniciadas pelo usuário para um bot não são suportadas Microsoft Teams plataforma móvel.
+
 * Graph permissões não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada de várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
 * Uma chamada pode começar como ponto a ponto e, eventualmente, se tornar uma chamada de várias partes. Seu bot pode iniciar chamadas de várias partes convidando outras pessoas, desde que seu bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas de grupo e se um participante adiciona outro participante à chamada, seu bot será descartado da chamada.
 

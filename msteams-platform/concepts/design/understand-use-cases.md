@@ -5,12 +5,12 @@ description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro ent
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630758"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994095"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 

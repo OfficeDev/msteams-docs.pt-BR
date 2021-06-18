@@ -6,12 +6,12 @@ keywords: mídia de permissões nativas de dispositivo de recursos de microfone 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 48566c6301141d8c7755482a1f5f5daec33449f3
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630562"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994375"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
@@ -29,7 +29,8 @@ Para uma integração eficaz, você deve ter uma boa compreensão dos trechos de
 É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams app.
 
 > [!NOTE] 
-> Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.
+> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.    
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião. 
 
 ## <a name="update-manifest"></a>Manifesto de atualização
 

@@ -5,18 +5,18 @@ description: Detalhar as soluções de código disponíveis da Microsoft para Te
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630660"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994081"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Criar aplicativos personalizados de baixo código para Microsoft Teams
 
 Microsoft Teams é extensível e adaptável. Isso significa que você pode criar aplicativos personalizados para Teams que atendem às necessidades distintas de seus usuários. Os aplicativos personalizados de código baixo economizam tempo, fornecem soluções rápidas e atendem à demanda do que os aplicativos criados do zero. Este documento fornece uma visão geral do Microsoft Power Platform, Power Virtual Agents chatbot e Assistente Virtual.
 
-As plataformas de código baixo fornecem uma abordagem intuitiva para o desenvolvimento de software e exigem pouca ou nenhuma codificação para criar aplicativos e processos. Eles permitem que os desenvolvedores sem experiência criem aplicativos personalizados facilmente com pouca ou nenhuma codificação e desenvolvedores profissionais desenvolvam e implantem o aplicativo rapidamente. Essas plataformas consistem em uma interface visual, conectores para serviços de back-end e um sistema de gerenciamento de ciclo de vida de aplicativos integrado para criar, depurar, implantar e manter aplicativos. A Plataforma do Microsoft Power é o gateway inovador para criar rapidamente Teams aplicativos compatíveis usando atributos de código baixos.
+As plataformas de código baixo fornecem uma abordagem intuitiva para o desenvolvimento de software com o mínimo ou nenhuma codificação para criar aplicativos e processos. Eles permitem que os desenvolvedores sem experiência criem aplicativos personalizados facilmente com pouca ou nenhuma codificação e desenvolvedores profissionais desenvolvam e implantem o aplicativo rapidamente. Essas plataformas consistem em uma interface visual, conectores para serviços de back-end e um sistema de gerenciamento de ciclo de vida de aplicativos integrado para criar, depurar, implantar e manter aplicativos. A Plataforma do Microsoft Power é o gateway inovador para criar rapidamente Teams aplicativos compatíveis usando atributos de código baixos.
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams Microsoft Power Platform
 
@@ -49,7 +49,7 @@ Use o novo [Power Virtual Agents no Teams,](https://aka.ms/pva-teams-docs) para 
 
 ### <a name="-virtual-assistant-for-teams"></a>✔ Assistente Virtual para Teams
 
-O Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. Você pode configurar seu assistente virtual para [integração com o Teams ambiente](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
+Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. Você pode configurar seu assistente virtual para [integração com o Teams ambiente](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
 
 ### <a name="-power-platform-learn-modules"></a>✔ módulos do Power Platform Learn
 

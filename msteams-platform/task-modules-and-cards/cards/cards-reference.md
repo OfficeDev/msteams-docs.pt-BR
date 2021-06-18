@@ -4,12 +4,12 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 localization_priority: Normal
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668859"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994382"
 ---
 # <a name="cards-reference"></a>Referência de cartões
 
@@ -82,7 +82,8 @@ Um cartão adaptável é um cartão personalizável que pode conter qualquer com
 
 > [!NOTE]
 > * Teams plataforma suporta v1.2 ou anterior de recursos de cartão adaptáveis.
-> * Atualmente, os elementos de mídia não têm suporte no cartão adaptável v1.2 na plataforma Teams adaptável.
+> * O estilo de ação positivo ou destrutivo não é suportado em Cartões Adaptáveis na Teams plataforma.
+> * Atualmente, os elementos de mídia não têm suporte em Cartões Adaptáveis na plataforma Teams.
 
 ### <a name="example-of-an-adaptive-card"></a>Exemplo de um cartão adaptável
 

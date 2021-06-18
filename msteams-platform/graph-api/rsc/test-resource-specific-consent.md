@@ -6,16 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorização do teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 328be5b4f1e3597457afb9ce1413eb35aa2df71e
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 29dc0241bfd5b42cb1853de3e89e43344c223c24
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075616"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994264"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso Teams
 
-O RSC (consentimento específico do recurso) é uma integração de API Microsoft Teams e Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar equipes específicas dentro de uma organização. Para obter mais informações, consulte [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+> [!NOTE]
+> O consentimento específico do recurso para o escopo de chat está disponível apenas na [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público.
+
+O RSC (consentimento específico de recursos) é uma integração de API Microsoft Teams e Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar recursos específicos, equipes ou chats, dentro de uma organização. Para obter mais informações, consulte [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
 > Para testar as permissões RSC, seu arquivo de manifesto do aplicativo Teams deve incluir uma chave **webApplicationInfo** preenchida com os seguintes campos:
@@ -24,6 +27,7 @@ O RSC (consentimento específico do recurso) é uma integração de API Microsof
 > - **resource**: Qualquer cadeia de caracteres, consulte a nota em [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **permissões de aplicativo**: permissões RSC para seu aplicativo, consulte [Permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).
 
+## <a name="example-for-a-team"></a>Exemplo para uma equipe
 ```json
 "webApplicationInfo":{
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
@@ -47,12 +51,36 @@ O RSC (consentimento específico do recurso) é uma integração de API Microsof
    }
 ```
 
+## <a name="example-for-a-chat"></a>Exemplo para um chat
+```json
+"webApplicationInfo":{
+      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+      "resource":"https://AnyString",
+      "applicationPermissions":[
+          "ChatSettings.Read.Chat",
+          "ChatSettings.ReadWrite.Chat",
+          "ChatMessage.Read.Chat",
+          "ChatMember.Read.Chat",
+          "Chat.Manage.Chat",
+          "TeamsTab.Read.Chat",
+          "TeamsTab.Create.Chat",
+          "TeamsTab.Delete.Chat",
+          "TeamsTab.ReadWrite.Chat",
+          "TeamsAppInstallation.Read.Chat",
+          "OnlineMeeting.ReadBasic.Chat"
+      ]
+   }
+```
+
 > [!IMPORTANT]
 > No manifesto do aplicativo, inclua apenas as permissões RSC que você deseja que seu aplicativo tenha.
 
-## <a name="test-added-rsc-permissions-using-the-postman-app"></a>Test added RSC permissions using the Postman app
+>[!NOTE]
+>Se o aplicativo tiver o objetivo de dar suporte à instalação em escopos de equipe e chat, as permissões de equipe e de chat poderão ser especificadas no mesmo manifesto em `applicationPermissions` .
 
-Para verificar se as permissões RSC estão sendo acodadas pela carga de solicitação de API, você precisa copiar o código de teste [JSON RSC](test-rsc-json-file.md) para seu ambiente local e atualizar os seguintes valores:
+## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test added RSC permissions to a team using the Postman app
+
+Para verificar se as permissões RSC estão sendo acodadas pela carga de solicitação de API, você precisa copiar o código de teste [JSON RSC](test-team-rsc-json-file.md) para a equipe em seu ambiente local e atualizar os seguintes valores:
 
 * `azureADAppId`: ID do aplicativo do Azure AD do seu aplicativo.
 * `azureADAppSecret`: Sua senha do aplicativo do Azure AD.
@@ -64,6 +92,21 @@ Para verificar se as permissões RSC estão sendo acodadas pela carga de solicit
     3. Selecione o **ícone Mais opções** (&#8943;).
     4. Selecione **Obter link para a equipe**. 
     5. Copie e salve o **valor groupId** da cadeia de caracteres.
+
+## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Test added RSC permissions to a chat using the Postman app
+
+Para verificar se as permissões RSC estão sendo acodadas pela carga de solicitação de API, você precisa copiar o código de teste [JSON RSC](test-chat-rsc-json-file.md) para chats em seu ambiente local e atualizar os seguintes valores:
+
+* `azureADAppId`: ID do aplicativo do Azure AD do seu aplicativo.
+* `azureADAppSecret`: Sua senha do aplicativo do Azure AD.
+* `token_scope`: O escopo é necessário para obter um token. definir o valor como https://graph.microsoft.com/.default .
+* `tenantId`: O nome ou a ID do objeto AAD do locatário.
+* `chatId`: Você pode obter a ID do thread de chat do cliente *Teams Web* da seguinte forma:
+
+    1. No cliente Teams Web, selecione **Chat** na barra de navegação à extrema esquerda.
+    2. Selecione o chat em que o aplicativo está instalado no menu suspenso.
+    3. Copie a URL da Web e salve a ID do thread de chat da cadeia de caracteres.
+![ID do thread de chat da URL da Web.](../../assets/images/chat-thread-id.png)
 
 ### <a name="use-postman"></a>Usar o Postman
 
@@ -79,9 +122,11 @@ Execute toda a coleção de permissões para cada chamada de API. As permissões
 
 ## <a name="test-revoked-rsc-permissions-using-postman"></a>Testar permissões RSC revogadas usando [Postman](https://www.postman.com/)
 
-1. Desinstale o aplicativo da equipe específica.
-2. Siga as etapas para [Testar as permissões RSC adicionadas usando Postman](#test-added-rsc-permissions-using-the-postman-app).
-3. Verifique todos os códigos de status de resposta para confirmar se as chamadas de API específicas, bem-sucedidas, falharam com um **código de status HTTP 403**.
+1. Desinstale o aplicativo do recurso específico.
+2. Siga as etapas para chat ou equipe: 
+    1. [Test added RSC permissions to a team using Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
+    2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
+3. Verifique todos os códigos de status de resposta para confirmar se as chamadas de API **específicas falharam com um código de status HTTP 403.**
 
 ## <a name="see-also"></a>Confira também
 

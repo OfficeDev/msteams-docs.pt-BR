@@ -5,12 +5,12 @@ description: Crie um bot de conversação para o Microsoft Teams usando o Kit de
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721847"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994256"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Criar o seu primeiro bot de conversação para o Microsoft Teams
 
@@ -160,11 +160,13 @@ A implantação envolve o provisionamento de recursos em uma assinatura ativa do
 
 </details>
 
-## <a name="next-steps"></a>Próximas etapas
-
-Saiba mais sobre outros métodos para criar aplicativos do Teams:
+## <a name="see-also"></a>Confira também
 
 - [Criar um aplicativo do Teams com o React](first-app-react.md)
 - [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)
-- [Crie um aplicativo do Teams como uma Web Part do Microsoft Office SharePoint Online](first-app-spfx.md) (Azure não é necessário)
-- [Crie uma extensão de mensagem](first-message-extension.md)
+- [Criar um aplicativo do Teams como uma Web Part do SharePoint](first-app-spfx.md) (Azure não é necessário)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar uma extensão de mensagem](first-message-extension.md)

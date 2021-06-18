@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630534"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994347"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -30,6 +30,9 @@ Ao acessar os recursos do dispositivo, você pode criar experiências mais ricas
 * Grave memorandos de áudio e salve-os para uso posterior.
 * Use as informações de local do usuário para exibir informações relevantes.
 
+> [!NOTE]
+> Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião. 
+
 ## <a name="access-device-permissions"></a>Permissões de dispositivo de acesso
 
 O [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) do cliente JavaScript fornece as ferramentas necessárias para seu aplicativo móvel Teams acessar as permissões de dispositivo [do](#manage-permissions) usuário e criar uma experiência mais rica.
@@ -43,7 +46,7 @@ Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, vo
 
 Um usuário pode gerenciar permissões de dispositivo em Teams configurações selecionando **Permitir** ou **Negar** permissões para aplicativos específicos.
  
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Área de trabalho](#tab/desktop)
 
 1. Abra seu Teams aplicativo.
 1. Selecione seu ícone de perfil no canto superior direito da janela.
@@ -170,7 +173,7 @@ Por exemplo:
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Área de trabalho](#tab/desktop)
 
    ![Guia solicitação de permissões do dispositivo da área de trabalho](~/assets/images/tabs/device-permissions-prompt.png)
 

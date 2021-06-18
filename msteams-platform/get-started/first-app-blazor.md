@@ -5,12 +5,12 @@ description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma men
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667451"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994389"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor
 
@@ -104,7 +104,7 @@ Você pode adicionar funcionalidade de back-end adicionando ASP.NET Core control
 O Kit de ferramentas do Teams permite que você execute seu aplicativo localmente.  Isto consiste de várias partes que são necessárias para fornecer a infraestrutura correta que o Teams espera:
 
 - Um aplicativo está registrado no Azure Active Directory.  Este aplicativo tem permissões associadas ao local de onde o aplicativo é carregado e a quaisquer recursos de back-end que ele acesse.
-- Uma API da Web é hospedada (por meio IIS Express) para ajudar com tarefas de autenticação, atuando como um proxy entre o aplicativo e Azure Active Directory.  
+- Uma API da Web é hospedada (por meio IIS Express) para ajudar com tarefas de autenticação, atuando como um proxy entre o aplicativo e Active Directory do Azure.  
 - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams.  O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.
 
 Depois de fazer isso, o aplicativo pode ser carregado dentro do cliente do Teams.  Usamos o cliente Web do Teams para que possamos ver o código HTML, CSS e JavaScript dentro de um ambiente de desenvolvimento web padrão.
@@ -269,11 +269,14 @@ O manifesto do aplicativo está carregando a guia de uma `localhost` URL.  Nesta
 
 Agora você pode usar o **botão Visualizar Teams** na parte superior da página para iniciar seu aplicativo em Teams.
 
-## <a name="next-steps"></a>Próximas etapas
-
-Saiba mais sobre outros métodos para criar aplicativos do Teams:
+## <a name="see-also"></a>Confira também
 
 - [Criar um aplicativo do Teams com o React](first-app-react.md)
-- [Criar um aplicativo do Teams como uma Web Part do SharePoint](first-app-spfx.md) (Azure não é necessário)
+- [Criar um Teams como uma Web Part SharePoint web part](first-app-spfx.md)
 - [Criar um programa bot de conversação](first-app-bot.md)
 - [Criar uma extensão de mensagem](first-message-extension.md)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar um Teams como uma Web Part SharePoint web part](first-app-spfx.md)

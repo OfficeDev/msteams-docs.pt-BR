@@ -5,22 +5,22 @@ description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma men
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: edd7cf8048dd89156b4b91afecb329d91baf3f53
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721833"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994109"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Compilar e executar seu primeiro aplicativo do Microsoft Teams com React
 
-Neste tutorial, você criará um novo aplicativo Microsoft Teams no React que implementa um aplicativo pessoal simples para extrair informações do Microsoft Graph. (Um *aplicativo pessoal* inclui um conjunto de guias com escopo para uso individual.) Durante o tutorial, você aprenderá sobre a estrutura de um aplicativo do Teams, como executar um aplicativo localmente e como implantar o aplicativo no Azure.
+Neste tutorial, você criará um novo aplicativo Microsoft Teams no React que implementa um aplicativo pessoal simples para extrair informações do Microsoft Graph. Por exemplo, um *aplicativo pessoal* inclui um conjunto de guias com escopo para uso individual. Durante o tutorial, você aprenderá sobre a estrutura de um aplicativo Teams, como executar um aplicativo localmente e como implantar o aplicativo no Azure.
 
-O aplicativo que é compilado exibe informações básicas para o usuário atual.  Quando a permissão é concedida, o aplicativo se conectará ao Microsoft Graph como o usuário atual para obter o perfil completo.
+O aplicativo que é compilado exibe informações básicas para o usuário atual. Quando a permissão é concedida, o aplicativo se conectará ao Microsoft Graph como o usuário atual para obter o perfil completo.
 
 ## <a name="before-you-begin"></a>Antes de você começar
 
-Certifique-se de que o seu ambiente de desenvolvimento esteja configurado, instalando os [pré-requisitos](prerequisites.md)
+Certifique-se de que seu ambiente de desenvolvimento está definido instalando os [pré-requisitos](prerequisites.md).
 
 > [!div class="nextstepaction"]
 > [Instalar pré-requisitos](prerequisites.md)
@@ -44,7 +44,7 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Início do assistente para Criar Novo Projeto":::
 
-1. Na etapa **Selecionar capacidades**, a capacidade da **Guia** já será selecionada.  Pressione **OK**.
+1. Na etapa **Selecionar recursos,** o recurso **Tab** já está selecionado. Pressione **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo.":::
 
@@ -60,11 +60,11 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação.":::
 
-1. Selecione uma pasta do espaço de trabalho.  Uma pasta será criada dentro de sua pasta do espaço de trabalho para o projeto que você está criando.
+1. Selecione uma pasta do espaço de trabalho. Uma pasta é criada em sua pasta de espaço de trabalho para o projeto que você está criando.
 
-1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.  Pressione **Inserir** para continuar.
+1. Insira um nome adequado para seu aplicativo, como `helloworld`. O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.  Pressione **Inserir** para continuar.
 
-O seu aplicativo do Teams será criado em alguns segundos.
+Seu Teams app é criado em alguns segundos.
 
 # <a name="command-line"></a>[Linha de comando](#tab/cli)
 
@@ -74,7 +74,7 @@ Use a CLI `teamsfx` para criar o seu primeiro projeto.  Inicie pela pasta onde d
 teamsfx new
 ```
 
-A CLI lhe guiará através de algumas perguntas para criar o projeto.  Cada pergunta lhe dirá como respondê-la (por exemplo, usar as teclas de seta para selecionar uma opção).  Depois de responder à pergunta, confirme sua escolha pressionando **Inserir**.
+A CLI lhe guiará através de algumas perguntas para criar o projeto. Cada pergunta lhe dirá como respondê-la, por exemplo, use teclas de seta para selecionar uma opção. Depois de responder à pergunta, confirme sua escolha pressionando **Inserir**.
 
 1. Selecione **Criar um novo aplicativo do Teams**.
 1. Escolha a capacidade **Guia**.
@@ -84,7 +84,7 @@ A CLI lhe guiará através de algumas perguntas para criar o projeto.  Cada perg
 1. Pressione **Inserir** para selecionar a pasta padrão do espaço de trabalho.
 1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.
 
-Assim que todas as perguntas forem respondidas, o seu projeto será criado.
+Depois que todas as perguntas foram respondidas, seu projeto é criado.
 
 ---
 
@@ -132,22 +132,22 @@ Para compilar e executar seu aplicativo localmente:
 
    > Quando você executa o aplicativo pela primeira vez, todas as dependências são baixadas e o aplicativo é compilado.  Uma janela do navegador é aberta automaticamente quando a compilação é concluída.  Isto pode levar de 3 a 5 minutos para ser concluído.
 
-   O Kit de ferramentas lhe solicitará a instalação de um certificado local, se necessário. Esse certificado permite que o Teams carregue seu aplicativo a partir de `https://localhost`. Selecione Sim quando aparecer a seguinte caixa de diálogo:
+   A Toolkit solicita que você instale um certificado local, se necessário. Esse certificado permite que o Teams carregue seu aplicativo a partir de `https://localhost`. Selecione Sim quando aparecer a seguinte caixa de diálogo:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de tela mostrando como a solicitação de instalação de um certificado SSL para permitir que o Teams carregue seu aplicativo a partir do localhost.":::
 
-1. O navegador da Web começa a executar o aplicativo. Se for solicitado a abrir Teams área de trabalho, selecione **Cancelar** para permanecer no navegador. Você também pode ser solicitado a alternar para a área de trabalho Teams outras vezes; selecione o Teams web quando isso acontecer.
+1. O navegador da Web começa a executar o aplicativo. Se for solicitado a abrir a área de trabalho do Teams, selecione **Cancelar** para permanecer no navegador. Você também pode ser solicitado a mudar para a área de trabalho do Teams em outras ocasiões; selecione o aplicativo Web do Teams quando isso acontecer.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Captura de tela mostrando como escolher a versão da web das equipes quando lançadas":::
 
 1. Você pode ser solicitado a entrar.  Em caso afirmativo, entre com sua conta M365.
 1. Quando solicitado a instalar o aplicativo no Teams, pressione **Adicionar**.
 
-Seu aplicativo agora será exibido:
+Seu aplicativo agora é exibido:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Captura de tela do aplicativo concluído":::
 
-Você pode fazer atividades normais de depuração como se isso fosse qualquer outro aplicativo Web (como a configuração de pontos de interrupção). O aplicativo dá suporte à recarga dinâmica.  Se você alterar qualquer arquivo dentro do projeto, a página será recarregada.
+Você pode fazer atividades normais de depuração como se fosse qualquer outro aplicativo Web, como a configuração de pontos de interrupção. O aplicativo dá suporte à recarga dinâmica. Se você alterar qualquer arquivo dentro do projeto, a página será recarregada.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -159,7 +159,7 @@ Quando você pressionou F5, o Kit de ferramentas do Teams:
 1. *Fez o sideload* de seu aplicativo no Teams.
 1. Iniciou a execução do back-end de seu aplicativo localmente usando o [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Iniciou a hospedagem local do front-end de seu aplicativo.
-1. Iniciou o Microsoft Teams em um navegador da Web com um comando para instruir o Teams a fazer o sideload a partir de `https://localhost:3000/tab` (a URL está registrada dentro do manifesto do aplicativo).
+1. Iniciado o Microsoft Teams em um navegador da Web com um comando para instruir o Teams a carregar o aplicativo de lado de `https://localhost:3000/tab` . Essa é a URL registrada no manifesto do aplicativo.
 
 </details>
 
@@ -179,21 +179,24 @@ Para executar com êxito seu aplicativo no Teams, você deve ter uma conta do Te
 
 Antes da implantação, o aplicativo era executado localmente:
 
-1. O back-end é executado usando o _Azure Functions Core Tools_.
+1. O back-end é executado usando o **Azure Functions Core Tools**.
 1. O ponto de extremidade HTTP do aplicativo, onde o Microsoft Teams carrega o aplicativo, é executado localmente.
 
-A implantação envolve o provisionamento de recursos em uma assinatura ativa do Azure e a implantação (upload) do código de back-end e front-end do aplicativo para o Azure.
+A implantação envolve o provisionamento de recursos em uma assinatura ativa do Azure e a implantação ou carregamento do código back-end e front-end do aplicativo para o Azure.
 
-1. O back-end (se configurado) usa uma variedade de serviços do Azure, incluindo o Serviço de Aplicativo do Azure e o Armazenamento do Microsoft Azure.
+1. O back-end, se configurado, usa uma variedade de serviços do Azure, incluindo o Serviço de Aplicativo do Azure e o Armazenamento do Azure.
 1. O front-end do aplicativo será implantado em uma conta de Armazenamento do Microsoft Azure configurada para hospedagem Web estática.
 
 </details>
 
-## <a name="next-steps"></a>Próximas etapas
-
-Saiba mais sobre outros métodos para criar aplicativos do Teams:
+## <a name="see-also"></a>Confira também
 
 - [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)
 - [Criar um aplicativo do Teams como uma Web Part do SharePoint](first-app-spfx.md) (Azure não é necessário)
 - [Criar um programa bot de conversação](first-app-bot.md)
 - [Criar uma extensão de mensagem](first-message-extension.md)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)

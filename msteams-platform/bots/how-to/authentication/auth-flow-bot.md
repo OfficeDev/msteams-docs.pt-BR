@@ -4,12 +4,12 @@ description: Descreve Microsoft Teams fluxo de autenticação em bots
 keywords: bots de fluxo de autenticação do teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: f3bf73c105dc38e1cea515bfa7bb7d5324b02ce4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565897"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994221"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Fluxo de autenticação para bots Microsoft Teams
 
@@ -28,7 +28,7 @@ Consulte o GitHub de Microsoft Teams [de](https://github.com/OfficeDev/Microsoft
     > O código de autorização OAuth 2.0 concede chamadas de fluxo para um parâmetro na solicitação de autenticação que contém um token de sessão exclusivo para evitar um ataque de falsificação de solicitação entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) O exemplo usa um GUID gerado aleatoriamente.
 4. Quando o usuário seleciona o botão *de* Teams abre uma janela pop-up e navega até a página inicial.
    > [!NOTE]
-   > O tamanho da janela pop-up pode ser controlado por meio de parâmetros de cadeia de caracteres de consulta de largura e altura na URL. Por exemplo, se você adicionar width=500 e height=500, o tamanho da janela pop-up será 500x500 pixels. Teams exibe a janela pop-up com o tamanho de pixel determinado, até um máximo que é uma porcentagem do tamanho da janela principal.
+   > O tamanho da janela pop-up pode ser controlado por meio de parâmetros de cadeia de caracteres de consulta de largura e altura na URL. Por exemplo, se você adicionar width=600 e height=600, o tamanho da janela pop-up será 600x600 pixels. O tamanho real da janela pop-up é limitado como uma porcentagem do tamanho da janela Teams principal. Se a Teams for pequena, a janela pop-up será menor do que as dimensões especificadas.
 
 5. A página inicial redireciona o usuário para o ponto de extremidade do provedor `authorize` de identidade. ([Código de exibição](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. No site do provedor, o usuário faz o acesso e concede acesso ao bot.
