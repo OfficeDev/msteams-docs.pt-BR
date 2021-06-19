@@ -6,19 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 215b528310137da331b0aef6ab004e0448dbfadf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
+ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994306"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "53022975"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimento específico do recurso (RSC)
 
 > [!NOTE]
 > O consentimento específico do recurso para o escopo de chat está disponível apenas na [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público.
 
-O RSC (consentimento específico de recurso) é uma integração da API Microsoft Teams e do Microsoft Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar recursos específicos, equipes ou chats, dentro de uma organização. O modelo de permissões de consentimento específico do recurso (RSC) permite que *proprietários* de equipe e proprietários de *chat* concedam consentimento para que um aplicativo acesse e/ou modifique os dados de uma equipe e os dados de um chat, respectivamente. As permissões RSC granulares, Teams específicas do RSC definem o que um aplicativo pode fazer em um recurso específico:
+O RSC (consentimento específico de recurso) é uma integração da API Microsoft Teams e do Microsoft Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar recursos específicos, equipes ou chats, dentro de uma organização. O modelo de permissões de consentimento específico do recurso (RSC) permite que *proprietários* de equipe e proprietários de *chat* concedam consentimento para que um aplicativo acesse e/ou modifique os dados de uma equipe e os dados de um chat, respectivamente. As permissões RSC granulares definem o que um aplicativo pode fazer em um recurso específico:
 
 ## <a name="resource-specific-permissions"></a>Permissões específicas de recursos
 
@@ -29,17 +29,17 @@ O RSC (consentimento específico de recurso) é uma integração da API Microsof
 |TeamSettings.ReadWrite.Group|Atualize as configurações dessa equipe.|
 |ChannelSettings.Read.Group|Obter nomes de canal dessa equipe, descrições de canal e configurações de canal.|
 |ChannelSettings.ReadWrite.Group|Atualize os nomes de canal dessa equipe, descrições de canal e configurações de canal.|
-|Channel.Create.Group|Criar canais nesta equipe.|
-|Channel.Delete.Group|Exclua canais nesta equipe.|
-|ChannelMessage.Read.Group |Receba as mensagens de canal dessa equipe.|
+|Channel.Create.Group|Criar canais nesta equipe. |
+|Channel.Delete.Group|Exclua canais nesta equipe. |
+|ChannelMessage.Read.Group |Receba as mensagens de canal dessa equipe. |
 |TeamsAppInstallation.Read.Group|Obter uma lista dos aplicativos instalados dessa equipe.|
 |TeamsTab.Read.Group|Obter uma lista das guias dessa equipe.|
-|TeamsTab.Create.Group|Criar guias nesta equipe.|
-|TeamsTab.ReadWrite.Group|Atualize as guias desta equipe.|
-|TeamsTab.Delete.Group|Excluir as guias dessa equipe.|
-|TeamMember.Read.Group|Obter os membros dessa equipe.|
+|TeamsTab.Create.Group|Criar guias nesta equipe. |
+|TeamsTab.ReadWrite.Group|Atualize as guias desta equipe. |
+|TeamsTab.Delete.Group|Excluir as guias dessa equipe. |
+|TeamMember.Read.Group|Obter os membros dessa equipe. |
 
-Para obter mais detalhes, [consulte Teams permissões de consentimento específicas do recurso](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+Para obter mais detalhes, consulte Permissões de consentimento [específicas do](/graph/permissions-reference#team-resource-specific-consent-permissions)recurso de equipe .
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Permissões específicas de recursos para um chat
 |Permissão de aplicativo| Ação |
