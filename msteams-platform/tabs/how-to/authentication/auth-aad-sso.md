@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 localization_priority: Normal
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760878"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049033"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -120,7 +120,7 @@ Parabéns! Você concluiu os pré-requisitos de registro do aplicativo para cont
 >
 > * ¹ Se seu aplicativo AAD estiver registrado no mesmo locatário onde você está fazendo uma solicitação de autenticação no Teams, o usuário não poderá ser solicitado a consentir e terá um token de acesso imediatamente. Os usuários só consentem com essas permissões se o aplicativo AAD estiver registrado em um locatário diferente.
 > * ² Se o domínio personalizado não for adicionado ao AAD, você receberá um erro informando que o nome do host não deve ser baseado em um domínio já pertencente. Para adicionar domínio personalizado ao AAD e registrá-lo, siga o procedimento adicionar um nome de domínio personalizado ao [procedimento AAD](/azure/active-directory/fundamentals/add-custom-domain) e repita a etapa 5. Você também poderá obter esse erro se não estiver se inscreveu com credenciais de administrador no Office 365 de adoção.
-> * Se você não estiver recebendo o nome principal do usuário (UPN)) no token de acesso retornado, você poderá adicioná-lo como uma declaração [opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD.
+> * Se você não estiver recebendo o nome principal do usuário (UPN) no token de acesso retornado, você poderá adicioná-lo como uma declaração [opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD.
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. Atualize seu manifesto Teams aplicativo
 

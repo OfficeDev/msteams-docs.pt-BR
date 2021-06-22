@@ -5,12 +5,12 @@ description: Saiba como criar uma guia personalizada com a Estrutura do SharePoi
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 23df721a28225a8c453274e6e77efa8f756e84f3
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 7bbbf7ae1d74a9094af5bc6ca4b3ac797ba05d5d
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994368"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037660"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Crie e execute seu primeiro aplicativo Microsoft Teams com Estrutura do SharePoint (SPFx)
 
@@ -178,7 +178,7 @@ Verifique se existe SharePoint catálogo de aplicativos em sua implantação.  S
 
 Em sua janela de terminal:
 
-1. Executar `teamsfx provision` .
+1. Execute `teamsfx provision`.
 
    ``` bash
    teamsfx provision
@@ -189,7 +189,7 @@ Em sua janela de terminal:
    > [!NOTE]
    > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
 
-1. Executar `teamsfx deploy` .
+1. Execute `teamsfx deploy`.
 
    ``` bash
    teamsfx deploy

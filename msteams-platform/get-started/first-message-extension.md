@@ -5,12 +5,12 @@ description: Crie uma extensão de mensagens para o Microsoft Teams usando o Kit
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994200"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037632"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crie e execute sua primeira extensão de mensagens para o Microsoft Teams
 
@@ -97,7 +97,7 @@ Uma extensão de mensagem usa o [Bot Framework](https://docs.botframework.com) p
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="Layout de arquivo de um projeto de bot.":::
 
-O código do bot é armazenado no diretório `bot`.  O `bots/messageExtensionBot.js` é o ponto de entrada principal da extensão de mensagens.
+O código do bot é armazenado no diretório `bot`.  O `bot/messageExtensionBot.js` é o ponto de entrada principal da extensão de mensagens.
 
 > [!Tip]
 > Familiarize-se com bots fora do Teams antes de integrar seu primeiro bot no Teams.  Você pode localizar mais informações sobre os bots analisando os tutoriais do [Serviço de Bot do Azure](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
