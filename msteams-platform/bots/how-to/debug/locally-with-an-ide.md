@@ -1,16 +1,16 @@
 ---
 title: Testar e depurar seu bot localmente
-author: clearab
+author: surbhigupta
 description: Testando e depurando seu bot localmente com um IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: af4b8d38b763d2266ec64fef0fe8c487b9120773
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631010"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068993"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 
@@ -44,7 +44,7 @@ Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo
 
 Ocasionalmente, pode ser necessário testar seu bot sem instalá-lo como um aplicativo Teams. Fornecemos dois métodos para testar o bot. Testar seu bot sem instalá-lo como um aplicativo pode ser útil para garantir que o bot está disponível e respondendo, no entanto, ele não permitirá que você teste a amplitude completa da funcionalidade Microsoft Teams que você pode ter adicionado ao bot. Se você precisar testar totalmente seu bot, consulte [testando carregando](#test-by-uploading-to-teams).
 
-### <a name="use-the-bot-emulator"></a>Usar o Emulador de Bot
+### <a name="use-the-bot-emulator"></a>Use o bot Emulator
 
 O Bot Framework Emulator é um aplicativo de área de trabalho que permite aos desenvolvedores de bot testar e depurar seus bots localmente ou remotamente. O emulador ajuda você a conversar com seu bot e inspecionar as mensagens que seu bot envia e recebe. Isso pode ser útil para verificar se o bot está disponível e respondendo. No entanto, o emulador não permite que você teste nenhuma funcionalidade específica Teams que você adicionou ao bot, nem as respostas do bot são uma representação visual precisa de como elas são renderizadas Teams. Se você precisar testar qualquer uma dessas coisas, é melhor [carregar seu bot](#test-by-uploading-to-teams).
 

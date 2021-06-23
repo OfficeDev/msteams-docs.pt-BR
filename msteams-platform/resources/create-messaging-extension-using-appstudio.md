@@ -1,16 +1,16 @@
 ---
 title: Criar uma extensão de mensagem usando o App Studio
-author: clearab
+author: surbhigupta
 description: Saiba como criar uma extensão Microsoft Teams de mensagens usando o App Studio.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019738"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069219"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 
@@ -82,7 +82,7 @@ Para adicionar uma extensão de mensagens, inclua uma nova estrutura JSON de ní
 
 A definição de extensão é um objeto que tem a seguinte estrutura:
 
-| Nome da propriedade | Finalidade | Obrigatório? |
+| Nome da propriedade | Objetivo | Obrigatório? |
 |---|---|---|
 | `botId` | O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Normalmente, isso deve ser o mesmo que a ID do seu aplicativo Teams geral. | Sim |
 | `canUpdateConfiguration` | Habilita **Configurações** item de menu. | Não |

@@ -1,16 +1,16 @@
 ---
 title: O que são os módulos de tarefas?
-author: clearab
+author: surbhigupta
 description: Adicionar experiências pop-up modais para coletar ou exibir informações aos usuários de seus Microsoft Teams aplicativos
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 23157e30ce25c2dfa1c21e7f5c4ddd4f735b660f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e4937fc4909535506c61b4ac353283322d5f3631
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566835"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068609"
 ---
 # <a name="task-modules"></a>Módulos de tarefas
 
@@ -61,10 +61,10 @@ O `TaskInfo` objeto contém os metadados de um módulo de tarefa. A definição 
 | `title` | string | Aparece abaixo do nome do aplicativo e à direita do ícone do aplicativo. |
 | `height` | número ou cadeia de caracteres | Pode ser um número que representa a altura do módulo de tarefas em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
 | `width` | número ou cadeia de caracteres | Pode ser um número que representa a largura do módulo de tarefa em pixels `small` ou `medium` , ou `large` . [Confira abaixo como a altura e a largura são manipuladas.](#task-module-sizing) |
-| `url` | cadeia de caracteres | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
+| `url` | string | A URL da página carregada como um `<iframe>` dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
 | `card` | Cartão adaptável ou um anexo de cartão de bot de cartão adaptável | O JSON do cartão Adaptável a ser exibido no módulo de tarefa. Se você estiver invocando de um bot, precisará usar o JSON de cartão adaptável em um objeto Bot `attachment` Framework. Em uma guia, você usará apenas um Cartão Adaptável. [Veja um exemplo.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | cadeia de caracteres | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
-| `completionBotId` | cadeia de caracteres | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
+| `fallbackUrl` | string | Se um cliente não suportar o recurso de módulo de tarefa, essa URL será aberta em uma guia do navegador. |
+| `completionBotId` | string | Especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa para. Se especificado, o bot receberá um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
 
 > [!NOTE]
 > O recurso de módulo de tarefa exige que os domínios de todas as URLs que você deseja carregar sejam incluídos na matriz no manifesto `validDomains` do aplicativo.

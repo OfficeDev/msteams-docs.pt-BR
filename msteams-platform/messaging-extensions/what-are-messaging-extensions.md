@@ -1,16 +1,16 @@
 ---
 title: Extensões de mensagens
-author: clearab
+author: surbhigupta
 description: Uma visão geral das extensões de mensagens na plataforma Microsoft Teams de mensagens
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075665"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069094"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -33,7 +33,7 @@ A imagem a seguir exibe os locais de onde as extensões de mensagens são invoca
 Uma extensão de mensagens consiste em um serviço Web que você hospeda e um manifesto de aplicativo, que define de onde seu serviço Web é invocado no cliente Microsoft Teams. O serviço Web aproveita o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação segura, portanto, você deve registrar seu serviço Web como um bot na Estrutura de Bots. 
 
 > [!NOTE]
-> Embora você possa criar o serviço Web manualmente, use [o SDK da Estrutura de Bots](https://github.com/microsoft/botframework) para trabalhar com o protocolo.
+> Embora você possa criar o serviço Web manualmente, use [o SDK da Estrutura de Bots](https://github.com/microsoft/botframework-sdk) para trabalhar com o protocolo.
 
 No manifesto do aplicativo para Microsoft Teams aplicativo, uma única extensão de mensagens é definida com até dez comandos diferentes. Cada comando define um tipo, como ação ou pesquisa e os locais no cliente de onde ele é invocado. Os locais de invocação são área de composição de mensagem, barra de comandos e mensagem. Ao chamar, o serviço Web recebe uma mensagem HTTPS com uma carga JSON, incluindo todas as informações relevantes. Responda com uma carga JSON, permitindo que o cliente Teams saiba a próxima interação a ser habilitada. 
 

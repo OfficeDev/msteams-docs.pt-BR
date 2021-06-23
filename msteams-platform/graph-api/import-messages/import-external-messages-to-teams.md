@@ -2,16 +2,16 @@
 title: Use o Microsoft Graph para importar mensagens de plataforma externa para Teams
 description: Descreve como usar o Microsoft Graph para importar mensagens de uma plataforma externa para Teams
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: 5ea06e8b490bae0595abb31086848d0b050bded0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ad4e494264a72a3fdb1d926323bc2878d10cf44d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566156"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069139"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -55,7 +55,7 @@ Como os dados existentes estão sendo migrados, a manutenção dos datas de data
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permissões
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs cobertas|
 |-|-|-|-|-|-|
@@ -99,7 +99,7 @@ A criação de um canal para as mensagens importadas é semelhante ao cenário d
 
 > [Crie um novo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso `createdDateTime` channel. Coloque o novo canal em , um estado especial que barra os usuários da maioria das atividades de chat dentro do canal até que o processo `migration mode` de migração seja concluído.  Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `channelCreationMode` nova equipe como sendo criada para `migration` migração.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permissões
 
 |ScopeName|DisplayName|Descrição|Tipo|Consentimento do administrador?|Entidades/APIs cobertas|
 |-|-|-|-|-|-|

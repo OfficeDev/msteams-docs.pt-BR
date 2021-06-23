@@ -1,17 +1,17 @@
 ---
 title: Aplicativos para Teams reuniões
-author: laujan
+author: surbhigupta
 description: visão geral dos aplicativos Teams reuniões com base na função de usuário e participante
 ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 69016f818a333cb4f7cecc252539e076838a0735
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949648"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068572"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para Teams reuniões
 

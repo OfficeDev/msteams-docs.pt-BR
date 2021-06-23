@@ -1,16 +1,16 @@
 ---
 title: Mapear seus casos de uso para Teams de aplicativos
-author: clearab
+author: surbhigupta
 description: Identifique como os casos de uso do seu aplicativo podem funcionar dentro da experiência Teams experiência.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 179d0a37d72577c36f2cc44a11a8217cb9f016b2
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566107"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068557"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
 

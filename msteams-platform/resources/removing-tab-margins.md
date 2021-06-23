@@ -1,19 +1,19 @@
 ---
 title: Removendo margens de tabulação em Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Descreve como a remoção das margens de tabulação melhorará a experiência do desenvolvedor.
 keywords: guia removendo preenchimento de margens
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019710"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069167"
 ---
-# <a name="tab-margin-changes"></a>Mudanças na margem da guia
+# <a name="tab-margin-changes"></a>Alterações na margem da guia
 
 Este documento descreve como a remoção de margens ao redor de todas as guias no Microsoft Teams melhorará a experiência do desenvolvedor ao criar aplicativos. Este é um aprimoramento introduzido no Microsoft Teams em 2021.
 Remover as margens ao redor de todas as guias permitirá que os desenvolvedores criem aplicativos que pareçam mais nativos Teams. Isso também se alinhará com nossos designs [de kit de interface do usuário.](~/tabs/design/tabs.md) A maioria dos aplicativos já fica melhor sem as margens ao redor de suas experiências. No entanto, algumas guias são afetadas visualmente por essa alteração, e os desenvolvedores devem fazer as alterações necessárias.
@@ -34,7 +34,7 @@ Microsoft Teams aplicativos que usam guias serão afetados por essa alteração.
 
 Os desenvolvedores de guias não devem depender Teams para fornecer margens ao redor de suas guias. Os desenvolvedores são incentivados a adicionar margens ao redor de seus designs de tabulação onde é necessário. Designs de aplicativos em produção podem parecer que há preenchimento extra, ou seja, margens fornecidas por Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e desaparecerá em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
 
-## <a name="faq"></a>Perguntas frequentes
+## <a name="faq"></a>Perguntas Frequentes
 
 **Tudo bem para o aplicativo cromado, como barra de header ou barra de tarefas, tocar nas bordas de nossos designs?**
 

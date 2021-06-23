@@ -2,17 +2,17 @@
 title: Conectores de Turnos prontos para produção
 description: Conectores de turnos de gerenciamento de força de trabalho para Teams
 ms.topic: reference
-author: laujan
+author: surbhigupta
 ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams conectores kronos
 ms.author: lajanuar
-ms.openlocfilehash: 459797dd3f8425223c0dcbedc335955bf106ae37
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 088c049342c36b4f126b4a9d2f788601378b7db4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075735"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069142"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 

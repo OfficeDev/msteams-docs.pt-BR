@@ -1,16 +1,16 @@
 ---
 title: Criar uma guia Canal e Grupo com ASP.NET Core
-author: laujan
+author: surbhigupta
 description: Um guia de início rápido para criar um canal personalizado e uma guia de grupo com ASP.NET Core.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 1004e40e28875524ea1f38a3f6b3c2c53330fec1
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 2f7906f1fb9874503cecabdeb607251daf863e97
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630360"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069119"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>Criar um Canal Personalizado e Uma Guia de Grupo com ASP.NETCore
 

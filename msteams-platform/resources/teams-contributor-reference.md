@@ -1,20 +1,20 @@
 ---
 title: Contribuir para Microsoft Teams documentação
 description: etapas para criar e publicar Teams documentação
-author: laujan
+author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 52253bb096857e2cb883295c8ae6b58518506d9a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33296219b9d42b2ca26eb3c44df5c6429f5259ce
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566226"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069159"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir para Microsoft Teams documentação
 
-[Teams documentação](/microsoftteams/platform/overview) faz parte da biblioteca de documentação técnica do [Microsoft Docs.](https://docs.microsoft.com/) O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Os artigos no mesmo docset têm a mesma extensão de caminho de URL após *os documentos <span></span> .microsoft.com*.  Por exemplo, `/docs.microsoft.com/microsoftteams/...` é o início do caminho do arquivo Teams docset. Teams artigos são escritos na [sintaxe MarkDown](#markdown-reference) e hospedados [em GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+[Teams documentação](/microsoftteams/platform/overview) faz parte da biblioteca de documentação técnica do [Microsoft Docs.](https://docs.microsoft.com) O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Os artigos no mesmo docset têm a mesma extensão de caminho de URL após *os documentos <span></span> .microsoft.com*.  Por exemplo, `/docs.microsoft.com/microsoftteams/...` é o início do caminho do arquivo Teams docset. Teams artigos são escritos na [sintaxe MarkDown](#markdown-reference) e hospedados [em GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## <a name="set-up-your-workspace"></a>Configurar seu espaço de trabalho
 

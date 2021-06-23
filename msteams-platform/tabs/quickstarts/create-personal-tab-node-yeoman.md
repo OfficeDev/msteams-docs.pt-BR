@@ -1,16 +1,16 @@
 ---
 title: 'Início rápido: crie uma guia pessoal personalizada com Node.js e o Gerador Yeoman para Microsoft Teams'
-author: laujan
+author: surbhigupta
 description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman para Microsoft Teams.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 88ad05aacaed69d695bc918e3e8a44ec18e560ae
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 220d1018f174fc935a10311723a730ebc74ccc33
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566597"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069203"
 ---
 # <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crie uma guia pessoal personalizada usando Node.js e o Gerador Yeoman para Microsoft Teams
 

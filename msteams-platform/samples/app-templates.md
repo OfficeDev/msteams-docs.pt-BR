@@ -5,13 +5,13 @@ ms.topic: reference
 keywords: Microsoft Teams exemplos de modelos
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566237"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069189"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -42,7 +42,7 @@ O modelo de aplicativo da Plataforma de Gerenciamento de Campeões (CMP) ajuda v
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Ferramenta de Adoção- Microsoft 365 caminhos de aprendizagem (Introdução) &#9734;
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Ferramenta de Adoção- Microsoft 365 Learning caminhos (Introdução) &#9734;
 
 O Introdução de aplicativo permite que você traga o poder de Microsoft 365 de aprendizado dentro do Microsoft Teams. Este modelo de aplicativo permite que você conceda fácil acesso a páginas de treinamento específicas ou a outros ativos de intranet e carregue o conteúdo diretamente no Teams. Você também pode alterar o nome do aplicativo ou o logotipo para corresponder à identidade visual da sua empresa.
 
@@ -73,7 +73,7 @@ Ask Away é um [Microsoft Teams que](../bots/what-are-bots.md) permite que os us
 
 ## <a name="associate-insights"></a>Informações associadas
 
-Associate Insights é um [modelo Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) que capacita os funcionários de primeira linha a capturar e enviar diretamente a opinião, o sentimento e a percepção do cliente. Os funcionários de primeira linha geralmente são o primeiro representante da empresa a se envolver com os clientes em um ponto de contato de um para um. Os dados coletados são compartilhados e usados de forma colaborativa por equipes de negócios, como por meio de uma guia Power BI Teams, para melhorar o produto e melhorar a experiência do cliente.
+Associar Insights é um [modelo Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) que capacita os funcionários de primeira linha a capturar e enviar diretamente a opinião, o sentimento e a percepção do cliente. Os funcionários de primeira linha geralmente são o primeiro representante da empresa a se envolver com os clientes em um ponto de contato de um para um. Os dados coletados são compartilhados e usados de forma colaborativa por equipes de negócios, como por meio de uma guia Power BI Teams, para melhorar o produto e melhorar a experiência do cliente.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -386,7 +386,7 @@ Além de incentivar conexões pessoais em toda a sua equipe, o aplicativo Icebre
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Aplicativo quebra-gelo](../assets/images/icebreaker.png)
+![Icebreaker app](../assets/images/icebreaker.png)
 
 ## <a name="incentives"></a>Incentivos
 

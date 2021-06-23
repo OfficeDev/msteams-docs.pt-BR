@@ -1,17 +1,17 @@
 ---
 title: Criar uma página de remoção de guias
-author: laujan
+author: surbhigupta
 description: Como criar uma página de remoção de tabulação
 keywords: teams tabs group channel configurble remove delete
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1a1f38a2bcb3b5bc4bc54f469c8727e44d8695e
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 9f4e10bd8fd5b5c4caf8f5349e0952732821dd85
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566667"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069056"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar ou remover uma guia grupo de canais
 
@@ -27,7 +27,7 @@ Seu **manifest.json** define os recursos e recursos da guia. A propriedade da in
 
 Quando sua guia é carregada em um canal ou chat de grupo, Teams adicionará um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração:
 
-| `canUpdateConfiguration`| verdadeiro   | falso | descrição |
+| `canUpdateConfiguration`| verdadeiro   | falso | description |
 | ----------------------- | :----: | ----- | ----------- |
 |     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia.  |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme aparece na barra de guias.          |

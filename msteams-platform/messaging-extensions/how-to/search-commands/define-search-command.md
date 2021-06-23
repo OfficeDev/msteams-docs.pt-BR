@@ -1,15 +1,15 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagens
-author: clearab
+author: surbhigupta
 description: Defina comandos de pesquisa de extensão de mensagens para Microsoft Teams aplicativos.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696780"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068913"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -73,7 +73,7 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` sua matriz de objetos:
 
-| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui ao comando de pesquisa. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário (interface do usuário). | Sim | 1.0 |
@@ -84,7 +84,7 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao ma
 
 Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
 
-| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade define uma lista estática de parâmetros para o comando. | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |

@@ -1,16 +1,16 @@
 ---
 title: Formatar suas mensagens de bot
-author: clearab
+author: surbhigupta
 description: Adicionar formatação rica às mensagens de bot
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020902"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068985"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
@@ -66,7 +66,7 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e pl
 
 A tabela a seguir fornece uma lista de estilos e quais desses estilos são suportados na área de trabalho, iOS e Android:
 
-| Style                     | Desktop | iOS | Android |
+| Style                     | Área de trabalho | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Negrito                      | ✔ | ✔ | ✔ |
 | Itálico                    | ✔ | ✔ | ✔ |

@@ -2,16 +2,16 @@
 title: Criar uma oferta de SaaS para o seu aplicativo Microsoft Teams
 description: Descreve as etapas necessárias para fazer um SaaS oferecer parte de uma experiência de aplicativo de Teams de terceiros
 keywords: O aplicativo do teams SaaS oferece serviço de software de marketplace do partner center
-author: laujan
+author: surbhigupta
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: b588dc9df46fb47830c8e88fed4b0646206201f4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c2cff522c0089657c6a33a4e4c3b4dd176abda11
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019918"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068965"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>Criar uma oferta de SaaS para o seu aplicativo Microsoft Teams
 

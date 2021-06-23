@@ -1,16 +1,16 @@
 ---
 title: Criar um canal personalizado e uma guia de grupo com Node.js e o Gerador Yeoman para Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Um guia de início rápido para criar um canal e uma guia de grupo com o Gerador Yeoman para Microsoft Teams.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 70b1dbe5a5abafa44ddbdf9045c55a33cf8fcb20
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6b3b5e513f91afae47364c37eb2b037a13438d35
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630234"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069110"
 ---
 # <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crie um canal personalizado e uma guia de grupo usando Node.js e o Gerador Yeoman para Microsoft Teams
 

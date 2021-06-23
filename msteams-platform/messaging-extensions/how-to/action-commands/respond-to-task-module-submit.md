@@ -1,16 +1,16 @@
 ---
 title: Responder à ação de envio do módulo de tarefas
-author: clearab
+author: surbhigupta
 description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710638"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068959"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -587,9 +587,9 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
-|`mentionType`|Cadeia de caracteres|Descreve a menção de uma "pessoa".|
-|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`mentionType`|String|Descreve a menção de uma "pessoa".|
+|`mri`|String|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
+|`displayName`|String|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

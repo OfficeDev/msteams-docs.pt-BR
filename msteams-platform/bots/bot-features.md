@@ -1,16 +1,16 @@
 ---
 title: Bots e SDKs
-author: clearab
+author: surbhigupta
 description: Bots e SDKs em Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020180"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069028"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -41,7 +41,7 @@ A [Estrutura de Bot](https://dev.botframework.com/) é um SDK rico usado para cr
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots e o microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) é um serviço de chatbot criado na plataforma do Microsoft Power e no Bot Framework. O processo de desenvolvimento do Power Virtual Agent usa uma abordagem guiada, sem código e interface gráfica que permite aos membros da equipe criar e manter facilmente um agente virtual inteligente. Depois de criar seu chatbot no portal Power Virtual Agents [,](https://powervirtualagents.microsoft.com)você pode [integrá-lo](how-to/add-power-virtual-agents-bot-to-teams.md)facilmente com Teams . Para obter mais informações sobre como começar, [consulte Power Virtual Agents documentação](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) é um serviço de chatbot criado na plataforma do Microsoft Power e no Bot Framework. O processo de desenvolvimento do Power Virtual Agent usa uma abordagem guiada, sem código e interface gráfica que permite aos membros da equipe criar e manter facilmente um agente virtual inteligente. Depois de criar seu chatbot no portal Power Virtual Agents [,](https://powervirtualagents.microsoft.com)você pode [integrá-lo](how-to/add-power-virtual-agents-bot-to-teams.md)facilmente com Teams . Para obter mais informações sobre como começar, [consulte Power Virtual Agents documentação](/power-virtual-agents).
 
 ## <a name="bots-and-webhooks-and-connectors"></a>Bots e webhooks e conectores
 

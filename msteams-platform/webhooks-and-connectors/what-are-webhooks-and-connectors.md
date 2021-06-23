@@ -1,20 +1,20 @@
 ---
 title: O que são webhooks e conectores?
-author: clearab
+author: surbhigupta
 description: Entenda como webhooks e conectores podem conectar seus serviços Web ao Teams cliente.
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e36b73c0eaed5068311dae6c1ef8fdc073432334
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e8105c9f069428bf93fb9bc2533895878f5ded1
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566800"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069039"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>O que são webhooks e conectores?
 
-Os ganchos e conectores da Web são uma maneira simples de conectar seus serviços da Web aos canais e equipes no Microsoft Teams. 
+Os ganchos e conectores da web são uma maneira simples de conectar os seus serviços da web aos canais e equipes no Microsoft Teams. 
 
 ## <a name="outgoing-webhooks"></a>Webhooks de saída
 

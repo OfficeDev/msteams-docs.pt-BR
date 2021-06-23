@@ -1,16 +1,16 @@
 ---
 title: Adicionar autenticação ao seu Teams bot
-author: clearab
+author: surbhigupta
 description: Como adicionar autenticação OAuth a um bot Microsoft Teams.
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565941"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069011"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
 
@@ -278,24 +278,24 @@ Como alternativa, enquanto estiver Visual Studio, você pode seguir estas etapas
 1. Na caixa **Ponto de extremidade Mensagens,** insira a URL obtida acima seguida de `api/messages` . Este é um exemplo: `https://botteamsauth.azurewebsites.net/api/messages` .
 1. Selecione o **botão Salvar** no canto superior esquerdo.
 
-## <a name="test-the-bot-using-the-emulator"></a>Testar o bot usando o Emulador
+## <a name="test-the-bot-using-the-emulator"></a>Teste o bot usando o Emulator
 
-Se você ainda não fez isso, instale o [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Consulte também [Depurar com o Emulador](https://aka.ms/bot-framework-emulator-debug-with-emulator).
+Se você ainda não fez isso, instale o [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Consulte também [Depurar com o Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-Para que o logon de exemplo de bot funcione, você deve configurar o Emulador.
+Para que o logon de exemplo de bot funcione, você deve configurar o Emulator.
 
-### <a name="configure-the-emulator-for-authentication"></a>Configurar o Emulador para autenticação
+### <a name="configure-the-emulator-for-authentication"></a>Configurar o Emulator para autenticação
 
-Se um bot exigir autenticação, você deve configurar o Emulador. Para configurar:
+Se um bot exigir autenticação, você deve configurar o Emulator. Para configurar:
 
-1. Inicie o Emulador.
-1. No Emulador, selecione o ícone de engrenagem &#9881; na parte inferior esquerda ou a guia **Emulador Configurações** no canto superior direito.
+1. Inicie a Emulator.
+1. Na Emulator, selecione o ícone de engrenagem &#9881; na parte  inferior esquerda ou a guia Emulator Configurações no canto superior direito.
 1. Marque a caixa por **Usar tokens de autenticação versão 1.0**.
 1. Insira o caminho local para a **ferramenta ngrok.** *Consulte* a integração Bot Framework Emulator /ngrok tunneling [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). Para obter mais informações sobre a ferramenta, consulte [ngrok](https://ngrok.com/).
-1. Marque a caixa por **Executar ngrok quando o Emulador for iniciado**.
+1. Marque a caixa **por Executar ngrok quando o** Emulator for iniciado .
 1. Selecione o **botão Salvar.**
 
-Quando o bot exibe um cartão de login e o usuário seleciona o botão de login, o Emulador abre uma página que o usuário pode usar para entrar com o provedor de autenticação.
+Quando o bot exibe um cartão de login e o usuário seleciona o botão de login, o Emulator abre uma página que o usuário pode usar para entrar com o provedor de autenticação.
 Depois que o usuário faz isso, o provedor gera um token de usuário e o envia para o bot. Depois disso, o bot pode agir em nome do usuário.
 
 ### <a name="test-the-bot-locally"></a>Testar o bot localmente
@@ -303,7 +303,7 @@ Depois que o usuário faz isso, o provedor gera um token de usuário e o envia p
 Depois de configurar o mecanismo de autenticação, você poderá executar o teste de bot real.  
 
 1. Execute o exemplo de bot localmente em seu computador, por Visual Studio por exemplo.
-1. Inicie o Emulador.
+1. Inicie a Emulator.
 1. Selecione o **botão Abrir bot.**
 1. Na **URL do Bot,** insira a URL local do bot. Normalmente, `http://localhost:3978/api/messages` .
 1. Na **ID do Microsoft App,** insira a ID do aplicativo do bot de `appsettings.json` .
@@ -314,7 +314,7 @@ Depois de configurar o mecanismo de autenticação, você poderá executar o tes
 1. Uma caixa de diálogo pop-up é exibida para **Confirmar URL aberta**. Isso é para permitir que o usuário do bot (você) seja autenticado.  
 1. Selecione **Confirmar**.
 1. Se solicitado, selecione a conta do usuário aplicável.
-1. Dependendo da configuração usada para o Emulador, você obterá um dos seguintes:
+1. Dependendo da configuração usada para o Emulator, você obterá um dos seguintes:
     1. **Usando o código de verificação de login**  
       &#x2713; Uma janela é aberta exibindo o código de validação.  
       &#x2713; copie e insira o código de validação na caixa de chat para concluir a entrada.
@@ -405,7 +405,7 @@ Isso inicia o ngrok para ouvir a porta especificada. Em troca, ele fornece uma U
     1. No painel esquerdo, selecione **Configurações**.
     1. No painel direito, na caixa Ponto de extremidade **Mensagens,** insira a URL ngrok, em nosso exemplo, `https://dea822bf.ngrok.io/api/messages` .
 1. Inicie seu bot localmente, por exemplo, Visual Studio modo de depuração.
-1. Teste o bot durante a execução local usando o chat da Web de Teste do portal da Estrutura de **Bot.** Assim como o Emulador, esse teste não permite que você acesse Teams funcionalidade específica.
+1. Teste o bot durante a execução local usando o chat da Web de Teste do portal da Estrutura de **Bot.** Como o Emulator, esse teste não permite que você acesse Teams funcionalidade específica.
 1. Na janela do terminal onde `ngrok` está sendo executado, você pode ver o tráfego HTTP entre o bot e o cliente de chat da Web. Se você quiser uma exibição mais detalhada, em uma janela do navegador insira `http://127.0.0.1:4040` você obtido na janela do terminal anterior. A imagem a seguir é um exemplo:
 
     ![Teste de ngrok de equipes de bot de auth](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).

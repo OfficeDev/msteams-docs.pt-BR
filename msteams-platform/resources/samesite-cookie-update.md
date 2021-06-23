@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams e o atributo cookie SameSite (atualização 2020)
-author: laujan
+author: surbhigupta
 description: descreve os atributos do cookie SameSite
 keywords: atributos de cookie samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629848"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068628"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams e o atributo cookie SameSite (atualização 2020)
 
@@ -39,7 +39,7 @@ Os desenvolvedores podem optar por não adicionar o atributo cookie SameSite ao 
 
 O Chrome 80, agendado para lançamento em fevereiro de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. Três valores podem ser passados para o atributo SameSite atualizado: *Strict*, *Lax* ou *None*. Cookies que não especificam o atributo SameSite serão padrão para `SameSite=Lax` .
 
-|Configuração | Imposição | Valor |Especificação de Atributo |
+|Setting | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Os cookies serão enviados automaticamente somente em um *contexto de primeira* parte e com solicitações HTTP GET. Os cookies sameSite serão retidos em sub-solicitações entre sites, como chamadas para carregar imagens ou iframes, mas serão enviados quando um usuário navegar para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador só enviará cookies para solicitações de contexto de primeira parte (solicitações provenientes do site que definiram o cookie). Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -57,7 +57,7 @@ O Chrome 80, agendado para lançamento em fevereiro de 2020, introduz novos valo
 ### <a name="tabs-task-modules-and-message-extensions"></a>Guias, módulos de tarefa e extensões de mensagem
 
 * Teams guias usam para incorporar conteúdo que é exibido em um contexto de nível superior `<iframes>` ou de primeira parte.
-* Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
+* Módulos de tarefa permitem criar experiências pop-up modais no aplicativo do Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
 * As extensões de mensagem permitem inserir conteúdo enriquecido na mensagem de chat de recursos externos.
 
 Todos os cookies usados pelo conteúdo incorporado serão considerados de terceiros quando o site for exibido em `<iframe>` um . Além disso, se qualquer recurso remoto em uma página depender de cookies que estão sendo enviados com uma solicitação e marcas, fontes externas e conteúdo personalizado, você deve garantir que eles sejam marcados para uso entre sites, como ou garantir que um fallback está `<img>` `<script>` no `SameSite=None; Secure` local.

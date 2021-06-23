@@ -1,17 +1,17 @@
 ---
 title: Postar solicitações externas para Microsoft Teams com webhooks de entrada
-author: laujan
+author: surbhigupta
 description: como adicionar webhook de entrada ao Teams app
 keywords: teams tabs outgoing webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566814"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068935"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Postar solicitações externas para Teams com webhooks de entrada
 
