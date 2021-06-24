@@ -6,78 +6,83 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: e6d1c442f77f4d271c43d866c819d65697262b6b
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6a773720f55f2b4e0aeb3a61bfdbde63a775abb8
+ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068564"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53095504"
 ---
-# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a><span data-ttu-id="2e138-104">Pré-requisitos e referências de API para aplicativos de reuniões do Teams</span><span class="sxs-lookup"><span data-stu-id="2e138-104">Prerequisites and API references for apps in Teams meetings</span></span>
+# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a><span data-ttu-id="12fa1-104">Pré-requisitos e referências de API para aplicativos de reuniões do Teams</span><span class="sxs-lookup"><span data-stu-id="12fa1-104">Prerequisites and API references for apps in Teams meetings</span></span>
 
-<span data-ttu-id="2e138-105">Para expandir os recursos de seus aplicativos no ciclo de vida da reunião, Teams permite que você trabalhe com aplicativos para Teams reuniões.</span><span class="sxs-lookup"><span data-stu-id="2e138-105">To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings.</span></span> <span data-ttu-id="2e138-106">Você deve passar pelos pré-requisitos e usar as referências da API de aplicativos de reunião para aprimorar a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-106">You must  go through the prerequisites and you can use the meeting apps API references to enhance the meeting experience.</span></span>
+<span data-ttu-id="12fa1-105">Para expandir os recursos de seus aplicativos no ciclo de vida da reunião, Teams permite que você trabalhe com aplicativos para Teams reuniões.</span><span class="sxs-lookup"><span data-stu-id="12fa1-105">To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings.</span></span> <span data-ttu-id="12fa1-106">Você deve passar pelos pré-requisitos e usar as referências da API de aplicativos de reunião para aprimorar a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-106">You must  go through the prerequisites and you can use the meeting apps API references to enhance the meeting experience.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2e138-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="2e138-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="12fa1-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="12fa1-107">Prerequisites</span></span>
 
-<span data-ttu-id="2e138-108">Antes de trabalhar com aplicativos para Teams reuniões, você deve ter uma compreensão do seguinte:</span><span class="sxs-lookup"><span data-stu-id="2e138-108">Before you work with apps for Teams meetings, you must have an understanding of the following:</span></span>
+<span data-ttu-id="12fa1-108">Antes de trabalhar com aplicativos para Teams reuniões, você deve ter uma compreensão do seguinte:</span><span class="sxs-lookup"><span data-stu-id="12fa1-108">Before you work with apps for Teams meetings, you must have an understanding of the following:</span></span>
 
-* <span data-ttu-id="2e138-109">Você deve ter conhecimento de como desenvolver Teams aplicativos.</span><span class="sxs-lookup"><span data-stu-id="2e138-109">You must have knowledge of how to develop Teams apps.</span></span> <span data-ttu-id="2e138-110">Para obter mais informações, [consulte Teams desenvolvimento de aplicativos](../overview.md).</span><span class="sxs-lookup"><span data-stu-id="2e138-110">For more information, see [Teams app development](../overview.md).</span></span>
+* <span data-ttu-id="12fa1-109">Você deve ter conhecimento de como desenvolver Teams aplicativos.</span><span class="sxs-lookup"><span data-stu-id="12fa1-109">You must have knowledge of how to develop Teams apps.</span></span> <span data-ttu-id="12fa1-110">Para obter mais informações, [consulte Teams desenvolvimento de aplicativos](../overview.md).</span><span class="sxs-lookup"><span data-stu-id="12fa1-110">For more information, see [Teams app development](../overview.md).</span></span>
 
-* <span data-ttu-id="2e138-111">Você deve atualizar o manifesto Teams aplicativo para indicar que o aplicativo está disponível para reuniões.</span><span class="sxs-lookup"><span data-stu-id="2e138-111">You must update the Teams app manifest to indicate that the app is available for meetings.</span></span> <span data-ttu-id="2e138-112">Para obter mais informações, consulte [manifesto do aplicativo](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).</span><span class="sxs-lookup"><span data-stu-id="2e138-112">For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).</span></span>
+* <span data-ttu-id="12fa1-111">Você deve atualizar o manifesto Teams aplicativo para indicar que o aplicativo está disponível para reuniões.</span><span class="sxs-lookup"><span data-stu-id="12fa1-111">You must update the Teams app manifest to indicate that the app is available for meetings.</span></span> <span data-ttu-id="12fa1-112">Para obter mais informações, consulte [manifesto do aplicativo](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).</span><span class="sxs-lookup"><span data-stu-id="12fa1-112">For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).</span></span>
 
-* <span data-ttu-id="2e138-113">Seu aplicativo deve dar suporte a guias configuráveis no escopo de groupchat, para que seu aplicativo funcione no ciclo de vida da reunião como uma guia. Para obter mais informações, consulte [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).</span><span class="sxs-lookup"><span data-stu-id="2e138-113">Your app must support configurable tabs in the groupchat scope, for your app to function in the meeting lifecycle as a tab. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).</span></span>
+* <span data-ttu-id="12fa1-113">Seu aplicativo deve dar suporte a guias configuráveis no escopo de groupchat, para que seu aplicativo funcione no ciclo de vida da reunião como uma guia. Para obter mais informações, consulte [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).</span><span class="sxs-lookup"><span data-stu-id="12fa1-113">Your app must support configurable tabs in the groupchat scope, for your app to function in the meeting lifecycle as a tab. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).</span></span>
 
-* <span data-ttu-id="2e138-114">Você deve seguir as diretrizes gerais Teams de design de guia para cenários pré e pós-reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-114">You must adhere to general Teams tab design guidelines for pre and post-meeting scenarios.</span></span> <span data-ttu-id="2e138-115">Para experiências durante as reuniões, consulte a guia na reunião e as diretrizes de design da caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-115">For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines.</span></span> <span data-ttu-id="2e138-116">Para obter mais informações, [consulte Teams](../tabs/design/tabs.md)diretrizes de design de guia, diretrizes de [design](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)de guia na reunião e diretrizes de design de caixa de diálogo [na reunião.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)</span><span class="sxs-lookup"><span data-stu-id="2e138-116">For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab), and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).</span></span>
+* <span data-ttu-id="12fa1-114">Você deve seguir as diretrizes gerais Teams de design de guia para cenários pré e pós-reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-114">You must adhere to general Teams tab design guidelines for pre and post-meeting scenarios.</span></span> <span data-ttu-id="12fa1-115">Para experiências durante as reuniões, consulte a guia na reunião e as diretrizes de design da caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-115">For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines.</span></span> <span data-ttu-id="12fa1-116">Para obter mais informações, [consulte Teams](../tabs/design/tabs.md)diretrizes de design de guia, diretrizes de [design](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)de guia na reunião e diretrizes de design de caixa de diálogo [na reunião.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)</span><span class="sxs-lookup"><span data-stu-id="12fa1-116">For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab), and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).</span></span>
 
-* <span data-ttu-id="2e138-117">Você deve dar suporte ao escopo para habilitar seu aplicativo em chats de `groupchat` pré-reunião e pós-reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-117">You must support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats.</span></span> <span data-ttu-id="2e138-118">Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicionar aplicativos de reunião e realizar tarefas de pré-reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-118">With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks.</span></span> <span data-ttu-id="2e138-119">Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários.</span><span class="sxs-lookup"><span data-stu-id="2e138-119">With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.</span></span>
+* <span data-ttu-id="12fa1-117">Você deve dar suporte ao escopo para habilitar seu aplicativo em chats de `groupchat` pré-reunião e pós-reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-117">You must support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats.</span></span> <span data-ttu-id="12fa1-118">Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicionar aplicativos de reunião e realizar tarefas de pré-reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-118">With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks.</span></span> <span data-ttu-id="12fa1-119">Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários.</span><span class="sxs-lookup"><span data-stu-id="12fa1-119">With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.</span></span>
 
-* <span data-ttu-id="2e138-120">Os parâmetros de URL da API de reunião `meetingId` devem ter , e `userId` `tenantId` .</span><span class="sxs-lookup"><span data-stu-id="2e138-120">Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`.</span></span> <span data-ttu-id="2e138-121">Eles estão disponíveis como parte do SDK do cliente Teams atividade de bot.</span><span class="sxs-lookup"><span data-stu-id="2e138-121">These are available as part of the Teams Client SDK and bot activity.</span></span> <span data-ttu-id="2e138-122">Além disso, você pode recuperar informações confiáveis para a ID do usuário e a ID do locatário usando [a autenticação SSO da guia](../tabs/how-to/authentication/auth-aad-sso.md).</span><span class="sxs-lookup"><span data-stu-id="2e138-122">In addition, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).</span></span>
+* <span data-ttu-id="12fa1-120">Os parâmetros de URL da API de reunião `meetingId` devem ter , e `userId` `tenantId` .</span><span class="sxs-lookup"><span data-stu-id="12fa1-120">Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`.</span></span> <span data-ttu-id="12fa1-121">Eles estão disponíveis como parte do SDK do cliente Teams atividade de bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-121">These are available as part of the Teams Client SDK and bot activity.</span></span> <span data-ttu-id="12fa1-122">Além disso, você pode recuperar informações confiáveis para a ID do usuário e a ID do locatário usando [a autenticação SSO da guia](../tabs/how-to/authentication/auth-aad-sso.md).</span><span class="sxs-lookup"><span data-stu-id="12fa1-122">In addition, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).</span></span>
 
-* <span data-ttu-id="2e138-123">A `GetParticipant` API deve ter um registro de bot e uma ID para gerar tokens de auth.</span><span class="sxs-lookup"><span data-stu-id="2e138-123">The `GetParticipant` API must have a bot registration and ID to generate auth tokens.</span></span> <span data-ttu-id="2e138-124">Para obter mais informações, [consulte registro de bot e ID](../build-your-first-app/build-bot.md).</span><span class="sxs-lookup"><span data-stu-id="2e138-124">For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).</span></span>
+* <span data-ttu-id="12fa1-123">A `GetParticipant` API deve ter um registro de bot e uma ID para gerar tokens de auth.</span><span class="sxs-lookup"><span data-stu-id="12fa1-123">The `GetParticipant` API must have a bot registration and ID to generate auth tokens.</span></span> <span data-ttu-id="12fa1-124">Para obter mais informações, [consulte registro de bot e ID](../build-your-first-app/build-bot.md).</span><span class="sxs-lookup"><span data-stu-id="12fa1-124">For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).</span></span>
 
-* <span data-ttu-id="2e138-125">Para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades do evento na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-125">For your app to update in real time, it must be up-to-date based on event activities in the meeting.</span></span> <span data-ttu-id="2e138-126">Esses eventos podem estar dentro da caixa de diálogo na reunião e em outros estágios no ciclo de vida da reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-126">These events can be within the in-meeting dialog box and other stages across the meeting lifecycle.</span></span> <span data-ttu-id="2e138-127">Para a caixa de diálogo na reunião, consulte o parâmetro completion `bot Id` na `NotificationSignal` API.</span><span class="sxs-lookup"><span data-stu-id="2e138-127">For the in-meeting dialog box, see completion `bot Id` parameter in `NotificationSignal` API.</span></span>
+* <span data-ttu-id="12fa1-125">Para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades do evento na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-125">For your app to update in real time, it must be up-to-date based on event activities in the meeting.</span></span> <span data-ttu-id="12fa1-126">Esses eventos podem estar dentro da caixa de diálogo na reunião e em outros estágios no ciclo de vida da reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-126">These events can be within the in-meeting dialog box and other stages across the meeting lifecycle.</span></span> <span data-ttu-id="12fa1-127">Para a caixa de diálogo na reunião, consulte o parâmetro completion `bot Id` na `NotificationSignal` API.</span><span class="sxs-lookup"><span data-stu-id="12fa1-127">For the in-meeting dialog box, see completion `bot Id` parameter in `NotificationSignal` API.</span></span>
 
-<span data-ttu-id="2e138-128">Depois de passar pelos pré-requisitos, você pode usar as referências de API de aplicativos de reunião e isso permite acessar informações usando atributos e exibir `GetUserContext` `GetParticipant` conteúdo `NotificationSignal` relevante.</span><span class="sxs-lookup"><span data-stu-id="2e138-128">After you have gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, and `NotificationSignal` that enable you to access information using attributes and display relevant content.</span></span>
+* <span data-ttu-id="12fa1-128">A API de Detalhes da Reunião deve ter um registro de bot e uma ID de bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-128">Meeting Details API must have a bot registration and bot ID.</span></span> <span data-ttu-id="12fa1-129">Requer o SDK de Bot para `TurnContext` obter .</span><span class="sxs-lookup"><span data-stu-id="12fa1-129">It requires Bot SDK to get `TurnContext`.</span></span>
 
-## <a name="meeting-apps-api-references"></a><span data-ttu-id="2e138-129">Referências à API de aplicativos de reunião</span><span class="sxs-lookup"><span data-stu-id="2e138-129">Meeting apps API references</span></span>
+* <span data-ttu-id="12fa1-130">Para eventos de reunião em tempo real, você deve estar familiarizado com o objeto disponível por meio `TurnContext` do SDK bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-130">For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK.</span></span> <span data-ttu-id="12fa1-131">O objeto em contém a carga com o início e a `Activity` `TurnContext` hora de término reais.</span><span class="sxs-lookup"><span data-stu-id="12fa1-131">The `Activity` object in `TurnContext` contains the payload with the actual start and end time.</span></span> <span data-ttu-id="12fa1-132">Eventos de reunião em tempo real exigem uma ID de bot registrada na plataforma Teams.</span><span class="sxs-lookup"><span data-stu-id="12fa1-132">Real-time meeting events require a registered bot ID from the Teams platform.</span></span>
 
-<span data-ttu-id="2e138-130">As novas extensibilidades de reunião fornecem APIs que transformam a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-130">The new meeting extensibilities provide you with APIs that transform the meeting experience.</span></span> <span data-ttu-id="2e138-131">Com esse novo recurso, você pode criar aplicativos ou integrar aplicativos existentes no ciclo de vida da reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-131">With this new capability, you can build apps or integrate existing apps within the meeting lifecycle.</span></span> <span data-ttu-id="2e138-132">Você pode usar as APIs para tornar seu aplicativo ciente da reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-132">You can use the APIs to make your app aware of the meeting.</span></span> <span data-ttu-id="2e138-133">Você pode escolher quais APIs deseja usar para aprimorar a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-133">You can choose which APIs you want to use to enhance the meeting experience.</span></span>
+<span data-ttu-id="12fa1-133">Depois de passar pelos pré-requisitos, você pode usar as referências de API de aplicativos de reunião , , e a API de Detalhes da Reunião que permitem que você acesse informações usando atributos e exibir conteúdo `GetUserContext` `GetParticipant` `NotificationSignal` relevante.</span><span class="sxs-lookup"><span data-stu-id="12fa1-133">After you have gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and Meeting Details API that enable you to access information using attributes and display relevant content.</span></span>
 
-<span data-ttu-id="2e138-134">A tabela a seguir fornece uma lista dessas APIs:</span><span class="sxs-lookup"><span data-stu-id="2e138-134">The following table provides a list of these APIs:</span></span>
+## <a name="meeting-apps-api-references"></a><span data-ttu-id="12fa1-134">Referências à API de aplicativos de reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-134">Meeting apps API references</span></span>
 
-|<span data-ttu-id="2e138-135">API</span><span class="sxs-lookup"><span data-stu-id="2e138-135">API</span></span>|<span data-ttu-id="2e138-136">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-136">Description</span></span>|<span data-ttu-id="2e138-137">Solicitação</span><span class="sxs-lookup"><span data-stu-id="2e138-137">Request</span></span>|<span data-ttu-id="2e138-138">Origem</span><span class="sxs-lookup"><span data-stu-id="2e138-138">Source</span></span>|
+<span data-ttu-id="12fa1-135">As novas extensibilidades de reunião fornecem APIs que transformam a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-135">The new meeting extensibilities provide you with APIs that transform the meeting experience.</span></span> <span data-ttu-id="12fa1-136">Com esse novo recurso, você pode criar aplicativos ou integrar aplicativos existentes no ciclo de vida da reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-136">With this new capability, you can build apps or integrate existing apps within the meeting lifecycle.</span></span> <span data-ttu-id="12fa1-137">Você pode usar as APIs para tornar seu aplicativo ciente da reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-137">You can use the APIs to make your app aware of the meeting.</span></span> <span data-ttu-id="12fa1-138">Você pode escolher quais APIs deseja usar para aprimorar a experiência de reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-138">You can choose which APIs you want to use to enhance the meeting experience.</span></span>
+
+<span data-ttu-id="12fa1-139">A tabela a seguir fornece uma lista dessas APIs:</span><span class="sxs-lookup"><span data-stu-id="12fa1-139">The following table provides a list of these APIs:</span></span>
+
+|<span data-ttu-id="12fa1-140">API</span><span class="sxs-lookup"><span data-stu-id="12fa1-140">API</span></span>|<span data-ttu-id="12fa1-141">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-141">Description</span></span>|<span data-ttu-id="12fa1-142">Solicitação</span><span class="sxs-lookup"><span data-stu-id="12fa1-142">Request</span></span>|<span data-ttu-id="12fa1-143">Origem</span><span class="sxs-lookup"><span data-stu-id="12fa1-143">Source</span></span>|
 |---|---|----|---|
-|<span data-ttu-id="2e138-139">**GetUserContext**</span><span class="sxs-lookup"><span data-stu-id="2e138-139">**GetUserContext**</span></span>| <span data-ttu-id="2e138-140">Essa API permite que você receba informações contextuais para exibir conteúdo relevante em Teams guia.</span><span class="sxs-lookup"><span data-stu-id="2e138-140">This API enables you to get contextual information to display relevant content in a Teams tab.</span></span> |<span data-ttu-id="2e138-141">_**microsoftTeams.getContext( ( ) => { /*...\* / } )*\*_</span><span class="sxs-lookup"><span data-stu-id="2e138-141">_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_</span></span>|<span data-ttu-id="2e138-142">Microsoft Teams SDK do cliente</span><span class="sxs-lookup"><span data-stu-id="2e138-142">Microsoft Teams Client SDK</span></span>|
-|<span data-ttu-id="2e138-143">**GetParticipant**</span><span class="sxs-lookup"><span data-stu-id="2e138-143">**GetParticipant**</span></span>| <span data-ttu-id="2e138-144">Essa API permite que um bot busque informações dos participantes por meio da ID da reunião e da ID do participante.</span><span class="sxs-lookup"><span data-stu-id="2e138-144">This API allows a bot to fetch participant information by meeting ID and participant ID.</span></span> |<span data-ttu-id="2e138-145">**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_</span><span class="sxs-lookup"><span data-stu-id="2e138-145">**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_</span></span> |<span data-ttu-id="2e138-146">Microsoft Bot Framework SDK</span><span class="sxs-lookup"><span data-stu-id="2e138-146">Microsoft Bot Framework SDK</span></span>|
-|<span data-ttu-id="2e138-147">**NotificationSignal**</span><span class="sxs-lookup"><span data-stu-id="2e138-147">**NotificationSignal**</span></span> | <span data-ttu-id="2e138-148">Essa API permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat de usuário-bot.</span><span class="sxs-lookup"><span data-stu-id="2e138-148">This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat.</span></span> <span data-ttu-id="2e138-149">Ele permite sinalizar com base na ação do usuário que mostra uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-149">It allows you to signal based on user action that shows an in-meeting dialog box.</span></span> |<span data-ttu-id="2e138-150">**POST** _**/v3/conversations/{conversationId}/activities**_</span><span class="sxs-lookup"><span data-stu-id="2e138-150">**POST** _**/v3/conversations/{conversationId}/activities**_</span></span>|<span data-ttu-id="2e138-151">Microsoft Bot Framework SDK</span><span class="sxs-lookup"><span data-stu-id="2e138-151">Microsoft Bot Framework SDK</span></span>|
+|<span data-ttu-id="12fa1-144">**GetUserContext**</span><span class="sxs-lookup"><span data-stu-id="12fa1-144">**GetUserContext**</span></span>| <span data-ttu-id="12fa1-145">Essa API permite que você receba informações contextuais para exibir conteúdo relevante em Teams guia.</span><span class="sxs-lookup"><span data-stu-id="12fa1-145">This API enables you to get contextual information to display relevant content in a Teams tab.</span></span> |<span data-ttu-id="12fa1-146">_**microsoftTeams.getContext( ( ) => { /*...\* / } )*\*_</span><span class="sxs-lookup"><span data-stu-id="12fa1-146">_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_</span></span>|<span data-ttu-id="12fa1-147">Microsoft Teams SDK do cliente</span><span class="sxs-lookup"><span data-stu-id="12fa1-147">Microsoft Teams Client SDK</span></span>|
+|<span data-ttu-id="12fa1-148">**GetParticipant**</span><span class="sxs-lookup"><span data-stu-id="12fa1-148">**GetParticipant**</span></span>| <span data-ttu-id="12fa1-149">Essa API permite que um bot busque informações dos participantes por meio da ID da reunião e da ID do participante.</span><span class="sxs-lookup"><span data-stu-id="12fa1-149">This API allows a bot to fetch participant information by meeting ID and participant ID.</span></span> |<span data-ttu-id="12fa1-150">**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_</span><span class="sxs-lookup"><span data-stu-id="12fa1-150">**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_</span></span> |<span data-ttu-id="12fa1-151">Microsoft Bot Framework SDK</span><span class="sxs-lookup"><span data-stu-id="12fa1-151">Microsoft Bot Framework SDK</span></span>|
+|<span data-ttu-id="12fa1-152">**NotificationSignal**</span><span class="sxs-lookup"><span data-stu-id="12fa1-152">**NotificationSignal**</span></span> | <span data-ttu-id="12fa1-153">Essa API permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat de usuário-bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-153">This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat.</span></span> <span data-ttu-id="12fa1-154">Ele permite sinalizar com base na ação do usuário que mostra uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-154">It allows you to signal based on user action that shows an in-meeting dialog box.</span></span> |<span data-ttu-id="12fa1-155">**POST** _**/v3/conversations/{conversationId}/activities**_</span><span class="sxs-lookup"><span data-stu-id="12fa1-155">**POST** _**/v3/conversations/{conversationId}/activities**_</span></span>|<span data-ttu-id="12fa1-156">Microsoft Bot Framework SDK</span><span class="sxs-lookup"><span data-stu-id="12fa1-156">Microsoft Bot Framework SDK</span></span>|
+|<span data-ttu-id="12fa1-157">**Detalhes da reunião**</span><span class="sxs-lookup"><span data-stu-id="12fa1-157">**Meeting Details**</span></span> | <span data-ttu-id="12fa1-158">Essa API permite que você receba metadados de reunião estáticos.</span><span class="sxs-lookup"><span data-stu-id="12fa1-158">This API enables you to get static meeting metadata.</span></span> |<span data-ttu-id="12fa1-159">**GET** _**/v1/meetings/{meetingId}**_</span><span class="sxs-lookup"><span data-stu-id="12fa1-159">**GET** _**/v1/meetings/{meetingId}**_</span></span>| <span data-ttu-id="12fa1-160">Bot SDK</span><span class="sxs-lookup"><span data-stu-id="12fa1-160">Bot SDK</span></span> |
 
-### <a name="getusercontext-api"></a><span data-ttu-id="2e138-152">GetUserContext API</span><span class="sxs-lookup"><span data-stu-id="2e138-152">GetUserContext API</span></span>
+### <a name="getusercontext-api"></a><span data-ttu-id="12fa1-161">GetUserContext API</span><span class="sxs-lookup"><span data-stu-id="12fa1-161">GetUserContext API</span></span>
 
-<span data-ttu-id="2e138-153">Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte [obter contexto para](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library)sua Teams guia . `meetingId`é usado por uma guia ao ser executado no contexto da reunião e é adicionado para a carga de resposta.</span><span class="sxs-lookup"><span data-stu-id="2e138-153">To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.</span></span>
+<span data-ttu-id="12fa1-162">Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte [obter contexto para](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library)sua Teams guia . `meetingId`é usado por uma guia ao ser executado no contexto da reunião e é adicionado para a carga de resposta.</span><span class="sxs-lookup"><span data-stu-id="12fa1-162">To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.</span></span>
 
-### <a name="getparticipant-api"></a><span data-ttu-id="2e138-154">GetParticipant API</span><span class="sxs-lookup"><span data-stu-id="2e138-154">GetParticipant API</span></span>
+### <a name="getparticipant-api"></a><span data-ttu-id="12fa1-163">GetParticipant API</span><span class="sxs-lookup"><span data-stu-id="12fa1-163">GetParticipant API</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="2e138-155">Não armazenar em cache as funções do participante, pois o organizador da reunião pode alterar as funções a qualquer momento.</span><span class="sxs-lookup"><span data-stu-id="2e138-155">Do not cache participant roles since the meeting organizer can change the roles any time.</span></span>
-> * <span data-ttu-id="2e138-156">Teams atualmente não dá suporte a grandes listas de distribuição ou tamanhos de lista de mais de 350 participantes para a `GetParticipant` API.</span><span class="sxs-lookup"><span data-stu-id="2e138-156">Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.</span></span>
+> * <span data-ttu-id="12fa1-164">Não armazenar em cache as funções do participante, pois o organizador da reunião pode alterar as funções a qualquer momento.</span><span class="sxs-lookup"><span data-stu-id="12fa1-164">Do not cache participant roles since the meeting organizer can change the roles any time.</span></span>
+> * <span data-ttu-id="12fa1-165">Teams atualmente não dá suporte a grandes listas de distribuição ou tamanhos de lista de mais de 350 participantes para a `GetParticipant` API.</span><span class="sxs-lookup"><span data-stu-id="12fa1-165">Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.</span></span>
 
-<span data-ttu-id="2e138-157">A `GetParticipant` API permite que um bot busque informações do participante por meio da ID da reunião e da ID do participante.</span><span class="sxs-lookup"><span data-stu-id="2e138-157">The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID.</span></span> <span data-ttu-id="2e138-158">A API inclui parâmetros de consulta, exemplos e códigos de resposta.</span><span class="sxs-lookup"><span data-stu-id="2e138-158">The API includes query parameters, examples, and response codes.</span></span>
+<span data-ttu-id="12fa1-166">A `GetParticipant` API permite que um bot busque informações do participante por meio da ID da reunião e da ID do participante.</span><span class="sxs-lookup"><span data-stu-id="12fa1-166">The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID.</span></span> <span data-ttu-id="12fa1-167">A API inclui parâmetros de consulta, exemplos e códigos de resposta.</span><span class="sxs-lookup"><span data-stu-id="12fa1-167">The API includes query parameters, examples, and response codes.</span></span>
 
-#### <a name="query-parameters"></a><span data-ttu-id="2e138-159">Parâmetros de consulta</span><span class="sxs-lookup"><span data-stu-id="2e138-159">Query parameters</span></span>
+#### <a name="query-parameters"></a><span data-ttu-id="12fa1-168">Parâmetros de consulta</span><span class="sxs-lookup"><span data-stu-id="12fa1-168">Query parameters</span></span>
 
-<span data-ttu-id="2e138-160">A `GetParticipant` API inclui os seguintes parâmetros de consulta:</span><span class="sxs-lookup"><span data-stu-id="2e138-160">The `GetParticipant` API includes the following query parameters:</span></span>
+<span data-ttu-id="12fa1-169">A `GetParticipant` API inclui os seguintes parâmetros de consulta:</span><span class="sxs-lookup"><span data-stu-id="12fa1-169">The `GetParticipant` API includes the following query parameters:</span></span>
 
-|<span data-ttu-id="2e138-161">Valor</span><span class="sxs-lookup"><span data-stu-id="2e138-161">Value</span></span>|<span data-ttu-id="2e138-162">Tipo</span><span class="sxs-lookup"><span data-stu-id="2e138-162">Type</span></span>|<span data-ttu-id="2e138-163">Obrigatório</span><span class="sxs-lookup"><span data-stu-id="2e138-163">Required</span></span>|<span data-ttu-id="2e138-164">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-164">Description</span></span>|
+|<span data-ttu-id="12fa1-170">Valor</span><span class="sxs-lookup"><span data-stu-id="12fa1-170">Value</span></span>|<span data-ttu-id="12fa1-171">Tipo</span><span class="sxs-lookup"><span data-stu-id="12fa1-171">Type</span></span>|<span data-ttu-id="12fa1-172">Obrigatório</span><span class="sxs-lookup"><span data-stu-id="12fa1-172">Required</span></span>|<span data-ttu-id="12fa1-173">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-173">Description</span></span>|
 |---|---|----|---|
-|<span data-ttu-id="2e138-165">**meetingId**</span><span class="sxs-lookup"><span data-stu-id="2e138-165">**meetingId**</span></span>| <span data-ttu-id="2e138-166">String</span><span class="sxs-lookup"><span data-stu-id="2e138-166">String</span></span> | <span data-ttu-id="2e138-167">Sim</span><span class="sxs-lookup"><span data-stu-id="2e138-167">Yes</span></span> | <span data-ttu-id="2e138-168">O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="2e138-168">The meeting identifier is available through Bot Invoke and Teams Client SDK.</span></span>|
-|<span data-ttu-id="2e138-169">**participantId**</span><span class="sxs-lookup"><span data-stu-id="2e138-169">**participantId**</span></span>| <span data-ttu-id="2e138-170">String</span><span class="sxs-lookup"><span data-stu-id="2e138-170">String</span></span> | <span data-ttu-id="2e138-171">Sim</span><span class="sxs-lookup"><span data-stu-id="2e138-171">Yes</span></span> | <span data-ttu-id="2e138-172">A ID do participante é a ID do usuário.</span><span class="sxs-lookup"><span data-stu-id="2e138-172">The participant ID is the user ID.</span></span> <span data-ttu-id="2e138-173">Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="2e138-173">It is available in Tab SSO, Bot Invoke, and Teams Client SDK.</span></span> <span data-ttu-id="2e138-174">É recomendável obter uma ID do participante no SSO da guia.</span><span class="sxs-lookup"><span data-stu-id="2e138-174">It is recommended to get a participant ID from the Tab SSO.</span></span> |
-|<span data-ttu-id="2e138-175">**tenantId**</span><span class="sxs-lookup"><span data-stu-id="2e138-175">**tenantId**</span></span>| <span data-ttu-id="2e138-176">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="2e138-176">String</span></span> | <span data-ttu-id="2e138-177">Sim</span><span class="sxs-lookup"><span data-stu-id="2e138-177">Yes</span></span> | <span data-ttu-id="2e138-178">A ID do locatário é necessária para os usuários do locatário.</span><span class="sxs-lookup"><span data-stu-id="2e138-178">The tenant ID is required for the tenant users.</span></span> <span data-ttu-id="2e138-179">Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="2e138-179">It is available in Tab SSO, Bot Invoke, and Teams Client SDK.</span></span> <span data-ttu-id="2e138-180">É recomendável obter uma ID de locatário do SSO de tabulação.</span><span class="sxs-lookup"><span data-stu-id="2e138-180">It is recommended to get a tenant ID from the Tab SSO.</span></span> |
+|<span data-ttu-id="12fa1-174">**meetingId**</span><span class="sxs-lookup"><span data-stu-id="12fa1-174">**meetingId**</span></span>| <span data-ttu-id="12fa1-175">String</span><span class="sxs-lookup"><span data-stu-id="12fa1-175">String</span></span> | <span data-ttu-id="12fa1-176">Sim</span><span class="sxs-lookup"><span data-stu-id="12fa1-176">Yes</span></span> | <span data-ttu-id="12fa1-177">O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="12fa1-177">The meeting identifier is available through Bot Invoke and Teams Client SDK.</span></span>|
+|<span data-ttu-id="12fa1-178">**participantId**</span><span class="sxs-lookup"><span data-stu-id="12fa1-178">**participantId**</span></span>| <span data-ttu-id="12fa1-179">String</span><span class="sxs-lookup"><span data-stu-id="12fa1-179">String</span></span> | <span data-ttu-id="12fa1-180">Sim</span><span class="sxs-lookup"><span data-stu-id="12fa1-180">Yes</span></span> | <span data-ttu-id="12fa1-181">A ID do participante é a ID do usuário.</span><span class="sxs-lookup"><span data-stu-id="12fa1-181">The participant ID is the user ID.</span></span> <span data-ttu-id="12fa1-182">Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="12fa1-182">It is available in Tab SSO, Bot Invoke, and Teams Client SDK.</span></span> <span data-ttu-id="12fa1-183">É recomendável obter uma ID do participante no SSO da guia.</span><span class="sxs-lookup"><span data-stu-id="12fa1-183">It is recommended to get a participant ID from the Tab SSO.</span></span> |
+|<span data-ttu-id="12fa1-184">**tenantId**</span><span class="sxs-lookup"><span data-stu-id="12fa1-184">**tenantId**</span></span>| <span data-ttu-id="12fa1-185">Cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="12fa1-185">String</span></span> | <span data-ttu-id="12fa1-186">Sim</span><span class="sxs-lookup"><span data-stu-id="12fa1-186">Yes</span></span> | <span data-ttu-id="12fa1-187">A ID do locatário é necessária para os usuários do locatário.</span><span class="sxs-lookup"><span data-stu-id="12fa1-187">The tenant ID is required for the tenant users.</span></span> <span data-ttu-id="12fa1-188">Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="12fa1-188">It is available in Tab SSO, Bot Invoke, and Teams Client SDK.</span></span> <span data-ttu-id="12fa1-189">É recomendável obter uma ID de locatário do SSO de tabulação.</span><span class="sxs-lookup"><span data-stu-id="12fa1-189">It is recommended to get a tenant ID from the Tab SSO.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="2e138-181">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2e138-181">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="12fa1-190">Exemplo</span><span class="sxs-lookup"><span data-stu-id="12fa1-190">Example</span></span>
 
-<span data-ttu-id="2e138-182">A `GetParticipant` API inclui os seguintes exemplos:</span><span class="sxs-lookup"><span data-stu-id="2e138-182">The `GetParticipant` API includes the following examples:</span></span>
+<span data-ttu-id="12fa1-191">A `GetParticipant` API inclui os seguintes exemplos:</span><span class="sxs-lookup"><span data-stu-id="12fa1-191">The `GetParticipant` API includes the following examples:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="2e138-183">C#</span><span class="sxs-lookup"><span data-stu-id="2e138-183">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="12fa1-192">C#</span><span class="sxs-lookup"><span data-stu-id="12fa1-192">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -92,7 +97,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="javascript"></a>[<span data-ttu-id="2e138-184">JavaScript</span><span class="sxs-lookup"><span data-stu-id="2e138-184">JavaScript</span></span>](#tab/javascript)
+# <a name="javascript"></a>[<span data-ttu-id="12fa1-193">JavaScript</span><span class="sxs-lookup"><span data-stu-id="12fa1-193">JavaScript</span></span>](#tab/javascript)
 
 ```typescript
 
@@ -113,7 +118,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="2e138-185">JSON</span><span class="sxs-lookup"><span data-stu-id="2e138-185">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="12fa1-194">JSON</span><span class="sxs-lookup"><span data-stu-id="12fa1-194">JSON</span></span>](#tab/json)
 
 ```http
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
@@ -121,7 +126,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 * * *
 
-<span data-ttu-id="2e138-186">O corpo de resposta JSON para `GetParticipant` API é:</span><span class="sxs-lookup"><span data-stu-id="2e138-186">The JSON response body for `GetParticipant` API is:</span></span>
+<span data-ttu-id="12fa1-195">O corpo de resposta JSON para `GetParticipant` API é:</span><span class="sxs-lookup"><span data-stu-id="12fa1-195">The JSON response body for `GetParticipant` API is:</span></span>
 
 ```json
 {
@@ -147,48 +152,48 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
-#### <a name="response-codes"></a><span data-ttu-id="2e138-187">Códigos de resposta</span><span class="sxs-lookup"><span data-stu-id="2e138-187">Response codes</span></span>
+#### <a name="response-codes"></a><span data-ttu-id="12fa1-196">Códigos de resposta</span><span class="sxs-lookup"><span data-stu-id="12fa1-196">Response codes</span></span>
 
-<span data-ttu-id="2e138-188">A `GetParticipant` API inclui os seguintes códigos de resposta:</span><span class="sxs-lookup"><span data-stu-id="2e138-188">The `GetParticipant` API includes the following response codes:</span></span>
+<span data-ttu-id="12fa1-197">A `GetParticipant` API inclui os seguintes códigos de resposta:</span><span class="sxs-lookup"><span data-stu-id="12fa1-197">The `GetParticipant` API includes the following response codes:</span></span>
 
-|<span data-ttu-id="2e138-189">Código da resposta</span><span class="sxs-lookup"><span data-stu-id="2e138-189">Response code</span></span>|<span data-ttu-id="2e138-190">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-190">Description</span></span>|
+|<span data-ttu-id="12fa1-198">Código da resposta</span><span class="sxs-lookup"><span data-stu-id="12fa1-198">Response code</span></span>|<span data-ttu-id="12fa1-199">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-199">Description</span></span>|
 |---|---|
-| <span data-ttu-id="2e138-191">**403**</span><span class="sxs-lookup"><span data-stu-id="2e138-191">**403**</span></span> | <span data-ttu-id="2e138-192">O aplicativo não tem permissão para obter informações do participante.</span><span class="sxs-lookup"><span data-stu-id="2e138-192">The app is not allowed to get participant information.</span></span> <span data-ttu-id="2e138-193">Essa é a resposta de erro mais comum e é disparada se o aplicativo não estiver instalado na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-193">This is the most common error response and is triggered if the app is not installed in the meeting.</span></span> <span data-ttu-id="2e138-194">Por exemplo, se o aplicativo for desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ao vivo.</span><span class="sxs-lookup"><span data-stu-id="2e138-194">For example, if the app is disabled by tenant admin or blocked during live site migration.</span></span>|
-| <span data-ttu-id="2e138-195">**200**</span><span class="sxs-lookup"><span data-stu-id="2e138-195">**200**</span></span> | <span data-ttu-id="2e138-196">As informações do participante são recuperadas com êxito.</span><span class="sxs-lookup"><span data-stu-id="2e138-196">The participant information is successfully retrieved.</span></span>|
-| <span data-ttu-id="2e138-197">**401**</span><span class="sxs-lookup"><span data-stu-id="2e138-197">**401**</span></span> | <span data-ttu-id="2e138-198">O aplicativo responde com um token inválido.</span><span class="sxs-lookup"><span data-stu-id="2e138-198">The app responds with an invalid token.</span></span>|
-| <span data-ttu-id="2e138-199">**404**</span><span class="sxs-lookup"><span data-stu-id="2e138-199">**404**</span></span> | <span data-ttu-id="2e138-200">A reunião expirou ou o participante não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="2e138-200">The meeting has either expired or participant cannot be found.</span></span>|
-| <span data-ttu-id="2e138-201">**500**</span><span class="sxs-lookup"><span data-stu-id="2e138-201">**500**</span></span> | <span data-ttu-id="2e138-202">A reunião expirou (mais de 60 dias) desde que a reunião terminou ou os participantes não têm permissões com base em suas funções.</span><span class="sxs-lookup"><span data-stu-id="2e138-202">The meeting has either expired (more than 60 days) since the meeting ended or the participants do not have permissions based on their role.</span></span>|
+| <span data-ttu-id="12fa1-200">**403**</span><span class="sxs-lookup"><span data-stu-id="12fa1-200">**403**</span></span> | <span data-ttu-id="12fa1-201">O aplicativo não tem permissão para obter informações do participante.</span><span class="sxs-lookup"><span data-stu-id="12fa1-201">The app is not allowed to get participant information.</span></span> <span data-ttu-id="12fa1-202">Essa é a resposta de erro mais comum e é disparada se o aplicativo não estiver instalado na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-202">This is the most common error response and is triggered if the app is not installed in the meeting.</span></span> <span data-ttu-id="12fa1-203">Por exemplo, se o aplicativo for desabilitado pelo administrador do locatário ou bloqueado durante a migração do site ao vivo.</span><span class="sxs-lookup"><span data-stu-id="12fa1-203">For example, if the app is disabled by tenant admin or blocked during live site migration.</span></span>|
+| <span data-ttu-id="12fa1-204">**200**</span><span class="sxs-lookup"><span data-stu-id="12fa1-204">**200**</span></span> | <span data-ttu-id="12fa1-205">As informações do participante são recuperadas com êxito.</span><span class="sxs-lookup"><span data-stu-id="12fa1-205">The participant information is successfully retrieved.</span></span>|
+| <span data-ttu-id="12fa1-206">**401**</span><span class="sxs-lookup"><span data-stu-id="12fa1-206">**401**</span></span> | <span data-ttu-id="12fa1-207">O aplicativo responde com um token inválido.</span><span class="sxs-lookup"><span data-stu-id="12fa1-207">The app responds with an invalid token.</span></span>|
+| <span data-ttu-id="12fa1-208">**404**</span><span class="sxs-lookup"><span data-stu-id="12fa1-208">**404**</span></span> | <span data-ttu-id="12fa1-209">A reunião expirou ou o participante não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="12fa1-209">The meeting has either expired or participant cannot be found.</span></span>|
+| <span data-ttu-id="12fa1-210">**500**</span><span class="sxs-lookup"><span data-stu-id="12fa1-210">**500**</span></span> | <span data-ttu-id="12fa1-211">A reunião expirou (mais de 60 dias) desde que a reunião terminou ou os participantes não têm permissões com base em suas funções.</span><span class="sxs-lookup"><span data-stu-id="12fa1-211">The meeting has either expired (more than 60 days) since the meeting ended or the participants do not have permissions based on their role.</span></span>|
 
-### <a name="notificationsignal-api"></a><span data-ttu-id="2e138-203">NotificationSignal API</span><span class="sxs-lookup"><span data-stu-id="2e138-203">NotificationSignal API</span></span>
+### <a name="notificationsignal-api"></a><span data-ttu-id="12fa1-212">NotificationSignal API</span><span class="sxs-lookup"><span data-stu-id="12fa1-212">NotificationSignal API</span></span>
 
-<span data-ttu-id="2e138-204">Todos os usuários em uma reunião recebem as notificações enviadas por meio da `NotificationSignal` API.</span><span class="sxs-lookup"><span data-stu-id="2e138-204">All users in a meeting receive the notifications sent through the `NotificationSignal` API.</span></span>
+<span data-ttu-id="12fa1-213">Todos os usuários em uma reunião recebem as notificações enviadas por meio da `NotificationSignal` API.</span><span class="sxs-lookup"><span data-stu-id="12fa1-213">All users in a meeting receive the notifications sent through the `NotificationSignal` API.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="2e138-205">Quando uma caixa de diálogo na reunião é invocada, o conteúdo é apresentado como uma mensagem de chat.</span><span class="sxs-lookup"><span data-stu-id="2e138-205">When an in-meeting dialog box is invoked, the content is presented as a chat message.</span></span>
-> * <span data-ttu-id="2e138-206">Atualmente, não há suporte para o envio de notificações direcionadas.</span><span class="sxs-lookup"><span data-stu-id="2e138-206">Currently, sending targeted notifications is not supported.</span></span>
+> * <span data-ttu-id="12fa1-214">Quando uma caixa de diálogo na reunião é invocada, o conteúdo é apresentado como uma mensagem de chat.</span><span class="sxs-lookup"><span data-stu-id="12fa1-214">When an in-meeting dialog box is invoked, the content is presented as a chat message.</span></span>
+> * <span data-ttu-id="12fa1-215">Atualmente, não há suporte para o envio de notificações direcionadas.</span><span class="sxs-lookup"><span data-stu-id="12fa1-215">Currently, sending targeted notifications is not supported.</span></span>
 
-<span data-ttu-id="2e138-207">`NotificationSignal` A API permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat usuário-bot.</span><span class="sxs-lookup"><span data-stu-id="2e138-207">`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat.</span></span> <span data-ttu-id="2e138-208">Essa API permite sinalizar com base na ação do usuário que mostra uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-208">This API allows you to signal based on user action that shows an in-meeting dialog box.</span></span> <span data-ttu-id="2e138-209">A API inclui parâmetros de consulta, exemplos e códigos de resposta.</span><span class="sxs-lookup"><span data-stu-id="2e138-209">The API includes query parameter, examples, and response codes.</span></span>
+<span data-ttu-id="12fa1-216">`NotificationSignal` A API permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat usuário-bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-216">`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat.</span></span> <span data-ttu-id="12fa1-217">Essa API permite sinalizar com base na ação do usuário que mostra uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-217">This API allows you to signal based on user action that shows an in-meeting dialog box.</span></span> <span data-ttu-id="12fa1-218">A API inclui parâmetros de consulta, exemplos e códigos de resposta.</span><span class="sxs-lookup"><span data-stu-id="12fa1-218">The API includes query parameter, examples, and response codes.</span></span>
 
-#### <a name="query-parameter"></a><span data-ttu-id="2e138-210">Parâmetro de consulta</span><span class="sxs-lookup"><span data-stu-id="2e138-210">Query parameter</span></span>
+#### <a name="query-parameter"></a><span data-ttu-id="12fa1-219">Parâmetro de consulta</span><span class="sxs-lookup"><span data-stu-id="12fa1-219">Query parameter</span></span>
 
-<span data-ttu-id="2e138-211">A `NotificationSignal` API inclui o seguinte parâmetro de consulta:</span><span class="sxs-lookup"><span data-stu-id="2e138-211">The `NotificationSignal` API includes the following query parameter:</span></span>
+<span data-ttu-id="12fa1-220">A `NotificationSignal` API inclui o seguinte parâmetro de consulta:</span><span class="sxs-lookup"><span data-stu-id="12fa1-220">The `NotificationSignal` API includes the following query parameter:</span></span>
 
-|<span data-ttu-id="2e138-212">Valor</span><span class="sxs-lookup"><span data-stu-id="2e138-212">Value</span></span>|<span data-ttu-id="2e138-213">Tipo</span><span class="sxs-lookup"><span data-stu-id="2e138-213">Type</span></span>|<span data-ttu-id="2e138-214">Obrigatório</span><span class="sxs-lookup"><span data-stu-id="2e138-214">Required</span></span>|<span data-ttu-id="2e138-215">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-215">Description</span></span>|
+|<span data-ttu-id="12fa1-221">Valor</span><span class="sxs-lookup"><span data-stu-id="12fa1-221">Value</span></span>|<span data-ttu-id="12fa1-222">Tipo</span><span class="sxs-lookup"><span data-stu-id="12fa1-222">Type</span></span>|<span data-ttu-id="12fa1-223">Obrigatório</span><span class="sxs-lookup"><span data-stu-id="12fa1-223">Required</span></span>|<span data-ttu-id="12fa1-224">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-224">Description</span></span>|
 |---|---|----|---|
-|<span data-ttu-id="2e138-216">**conversationId**</span><span class="sxs-lookup"><span data-stu-id="2e138-216">**conversationId**</span></span>| <span data-ttu-id="2e138-217">String</span><span class="sxs-lookup"><span data-stu-id="2e138-217">String</span></span> | <span data-ttu-id="2e138-218">Sim</span><span class="sxs-lookup"><span data-stu-id="2e138-218">Yes</span></span> | <span data-ttu-id="2e138-219">O identificador de conversa está disponível como parte de Bot Invoke.</span><span class="sxs-lookup"><span data-stu-id="2e138-219">The conversation identifier is available as part of Bot Invoke.</span></span> |
+|<span data-ttu-id="12fa1-225">**conversationId**</span><span class="sxs-lookup"><span data-stu-id="12fa1-225">**conversationId**</span></span>| <span data-ttu-id="12fa1-226">String</span><span class="sxs-lookup"><span data-stu-id="12fa1-226">String</span></span> | <span data-ttu-id="12fa1-227">Sim</span><span class="sxs-lookup"><span data-stu-id="12fa1-227">Yes</span></span> | <span data-ttu-id="12fa1-228">O identificador de conversa está disponível como parte de Bot Invoke.</span><span class="sxs-lookup"><span data-stu-id="12fa1-228">The conversation identifier is available as part of Bot Invoke.</span></span> |
 
-#### <a name="examples"></a><span data-ttu-id="2e138-220">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2e138-220">Examples</span></span>
+#### <a name="examples"></a><span data-ttu-id="12fa1-229">Exemplos</span><span class="sxs-lookup"><span data-stu-id="12fa1-229">Examples</span></span>
 
-<span data-ttu-id="2e138-221">O `Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.</span><span class="sxs-lookup"><span data-stu-id="2e138-221">The `Bot ID` is declared in the manifest and the bot receives a result object.</span></span>
+<span data-ttu-id="12fa1-230">O `Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.</span><span class="sxs-lookup"><span data-stu-id="12fa1-230">The `Bot ID` is declared in the manifest and the bot receives a result object.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="2e138-222">O `completionBotId` parâmetro do é opcional no exemplo de carga `externalResourceUrl` solicitada.</span><span class="sxs-lookup"><span data-stu-id="2e138-222">The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.</span></span> <span data-ttu-id="2e138-223">`Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.</span><span class="sxs-lookup"><span data-stu-id="2e138-223">`Bot ID` is declared in the manifest and the bot receives a result object.</span></span>
-> * <span data-ttu-id="2e138-224">Os `externalResourceUrl` parâmetros de largura e altura devem estar em pixels.</span><span class="sxs-lookup"><span data-stu-id="2e138-224">The `externalResourceUrl` width and height parameters must be in pixels.</span></span> <span data-ttu-id="2e138-225">Para garantir que as dimensões estão dentro dos limites permitidos, consulte [diretrizes de design](design/designing-apps-in-meetings.md).</span><span class="sxs-lookup"><span data-stu-id="2e138-225">To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).</span></span>
-> * <span data-ttu-id="2e138-226">A URL é a página carregada como `<iframe>` uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-226">The URL is the page loaded as an `<iframe>` in the in-meeting dialog box.</span></span> <span data-ttu-id="2e138-227">O domínio deve estar na matriz do aplicativo `validDomains` no manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2e138-227">The domain must be in the app's `validDomains` array in your app manifest.</span></span>
+> * <span data-ttu-id="12fa1-231">O `completionBotId` parâmetro do é opcional no exemplo de carga `externalResourceUrl` solicitada.</span><span class="sxs-lookup"><span data-stu-id="12fa1-231">The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.</span></span> <span data-ttu-id="12fa1-232">`Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.</span><span class="sxs-lookup"><span data-stu-id="12fa1-232">`Bot ID` is declared in the manifest and the bot receives a result object.</span></span>
+> * <span data-ttu-id="12fa1-233">Os `externalResourceUrl` parâmetros de largura e altura devem estar em pixels.</span><span class="sxs-lookup"><span data-stu-id="12fa1-233">The `externalResourceUrl` width and height parameters must be in pixels.</span></span> <span data-ttu-id="12fa1-234">Para garantir que as dimensões estão dentro dos limites permitidos, consulte [diretrizes de design](design/designing-apps-in-meetings.md).</span><span class="sxs-lookup"><span data-stu-id="12fa1-234">To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).</span></span>
+> * <span data-ttu-id="12fa1-235">A URL é a página carregada como `<iframe>` uma caixa de diálogo na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-235">The URL is the page loaded as an `<iframe>` in the in-meeting dialog box.</span></span> <span data-ttu-id="12fa1-236">O domínio deve estar na matriz do aplicativo `validDomains` no manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="12fa1-236">The domain must be in the app's `validDomains` array in your app manifest.</span></span>
 
-<span data-ttu-id="2e138-228">A `NotificationSignal` API inclui os seguintes exemplos:</span><span class="sxs-lookup"><span data-stu-id="2e138-228">The `NotificationSignal` API includes the following examples:</span></span>
+<span data-ttu-id="12fa1-237">A `NotificationSignal` API inclui os seguintes exemplos:</span><span class="sxs-lookup"><span data-stu-id="12fa1-237">The `NotificationSignal` API includes the following examples:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="2e138-229">C#</span><span class="sxs-lookup"><span data-stu-id="2e138-229">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="12fa1-238">C#</span><span class="sxs-lookup"><span data-stu-id="12fa1-238">C#</span></span>](#tab/dotnet)
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
@@ -204,7 +209,7 @@ activity.ChannelData = new TeamsChannelData
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
-# <a name="javascript"></a>[<span data-ttu-id="2e138-230">JavaScript</span><span class="sxs-lookup"><span data-stu-id="2e138-230">JavaScript</span></span>](#tab/javascript)
+# <a name="javascript"></a>[<span data-ttu-id="12fa1-239">JavaScript</span><span class="sxs-lookup"><span data-stu-id="12fa1-239">JavaScript</span></span>](#tab/javascript)
 
 ```javascript
 
@@ -218,7 +223,7 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-# <a name="json"></a>[<span data-ttu-id="2e138-231">JSON</span><span class="sxs-lookup"><span data-stu-id="2e138-231">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="12fa1-240">JSON</span><span class="sxs-lookup"><span data-stu-id="12fa1-240">JSON</span></span>](#tab/json)
 
 ```http
 POST /v3/conversations/{conversationId}/activities
@@ -239,32 +244,258 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-#### <a name="response-codes"></a><span data-ttu-id="2e138-232">Códigos de resposta</span><span class="sxs-lookup"><span data-stu-id="2e138-232">Response codes</span></span>
+#### <a name="response-codes"></a><span data-ttu-id="12fa1-241">Códigos de resposta</span><span class="sxs-lookup"><span data-stu-id="12fa1-241">Response codes</span></span>
 
-<span data-ttu-id="2e138-233">A `NotificationSignal` API inclui os seguintes códigos de resposta:</span><span class="sxs-lookup"><span data-stu-id="2e138-233">The `NotificationSignal` API includes the following response codes:</span></span>
+<span data-ttu-id="12fa1-242">A `NotificationSignal` API inclui os seguintes códigos de resposta:</span><span class="sxs-lookup"><span data-stu-id="12fa1-242">The `NotificationSignal` API includes the following response codes:</span></span>
 
-|<span data-ttu-id="2e138-234">Código da resposta</span><span class="sxs-lookup"><span data-stu-id="2e138-234">Response code</span></span>|<span data-ttu-id="2e138-235">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-235">Description</span></span>|
+|<span data-ttu-id="12fa1-243">Código da resposta</span><span class="sxs-lookup"><span data-stu-id="12fa1-243">Response code</span></span>|<span data-ttu-id="12fa1-244">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-244">Description</span></span>|
 |---|---|
-| <span data-ttu-id="2e138-236">**201**</span><span class="sxs-lookup"><span data-stu-id="2e138-236">**201**</span></span> | <span data-ttu-id="2e138-237">A atividade com sinal é enviada com êxito.</span><span class="sxs-lookup"><span data-stu-id="2e138-237">The activity with signal is successfully sent.</span></span> |
-| <span data-ttu-id="2e138-238">**401**</span><span class="sxs-lookup"><span data-stu-id="2e138-238">**401**</span></span> | <span data-ttu-id="2e138-239">O aplicativo responde com um token inválido.</span><span class="sxs-lookup"><span data-stu-id="2e138-239">The app responds with an invalid token.</span></span> |
-| <span data-ttu-id="2e138-240">**403**</span><span class="sxs-lookup"><span data-stu-id="2e138-240">**403**</span></span> | <span data-ttu-id="2e138-241">O aplicativo não consegue enviar o sinal.</span><span class="sxs-lookup"><span data-stu-id="2e138-241">The app is unable to send the signal.</span></span> <span data-ttu-id="2e138-242">Isso pode acontecer devido a vários motivos, como o administrador de locatários desabilita o aplicativo, o aplicativo é bloqueado durante a migração de site ao vivo e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="2e138-242">This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on.</span></span> <span data-ttu-id="2e138-243">Nesse caso, a carga contém uma mensagem de erro detalhada.</span><span class="sxs-lookup"><span data-stu-id="2e138-243">In this case, the payload contains a detailed error message.</span></span> |
-| <span data-ttu-id="2e138-244">**404**</span><span class="sxs-lookup"><span data-stu-id="2e138-244">**404**</span></span> | <span data-ttu-id="2e138-245">O chat de reunião não existe.</span><span class="sxs-lookup"><span data-stu-id="2e138-245">The meeting chat does not exist.</span></span> |
+| <span data-ttu-id="12fa1-245">**201**</span><span class="sxs-lookup"><span data-stu-id="12fa1-245">**201**</span></span> | <span data-ttu-id="12fa1-246">A atividade com sinal é enviada com êxito.</span><span class="sxs-lookup"><span data-stu-id="12fa1-246">The activity with signal is successfully sent.</span></span> |
+| <span data-ttu-id="12fa1-247">**401**</span><span class="sxs-lookup"><span data-stu-id="12fa1-247">**401**</span></span> | <span data-ttu-id="12fa1-248">O aplicativo responde com um token inválido.</span><span class="sxs-lookup"><span data-stu-id="12fa1-248">The app responds with an invalid token.</span></span> |
+| <span data-ttu-id="12fa1-249">**403**</span><span class="sxs-lookup"><span data-stu-id="12fa1-249">**403**</span></span> | <span data-ttu-id="12fa1-250">O aplicativo não consegue enviar o sinal.</span><span class="sxs-lookup"><span data-stu-id="12fa1-250">The app is unable to send the signal.</span></span> <span data-ttu-id="12fa1-251">Isso pode acontecer devido a vários motivos, como o administrador de locatários desabilita o aplicativo, o aplicativo é bloqueado durante a migração de site ao vivo e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="12fa1-251">This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on.</span></span> <span data-ttu-id="12fa1-252">Nesse caso, a carga contém uma mensagem de erro detalhada.</span><span class="sxs-lookup"><span data-stu-id="12fa1-252">In this case, the payload contains a detailed error message.</span></span> |
+| <span data-ttu-id="12fa1-253">**404**</span><span class="sxs-lookup"><span data-stu-id="12fa1-253">**404**</span></span> | <span data-ttu-id="12fa1-254">O chat de reunião não existe.</span><span class="sxs-lookup"><span data-stu-id="12fa1-254">The meeting chat does not exist.</span></span> |
 
-## <a name="code-sample"></a><span data-ttu-id="2e138-246">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="2e138-246">Code sample</span></span>
+### <a name="meeting-details-api"></a><span data-ttu-id="12fa1-255">API de Detalhes da Reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-255">Meeting Details API</span></span>
 
-|<span data-ttu-id="2e138-247">Exemplo de nome</span><span class="sxs-lookup"><span data-stu-id="2e138-247">Sample name</span></span> | <span data-ttu-id="2e138-248">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e138-248">Description</span></span> | <span data-ttu-id="2e138-249">.NET</span><span class="sxs-lookup"><span data-stu-id="2e138-249">.NET</span></span> | <span data-ttu-id="2e138-250">Node.js</span><span class="sxs-lookup"><span data-stu-id="2e138-250">Node.js</span></span> |
+> [!NOTE]
+> <span data-ttu-id="12fa1-256">Esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.</span><span class="sxs-lookup"><span data-stu-id="12fa1-256">This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.</span></span>
+
+<span data-ttu-id="12fa1-257">A API Detalhes da Reunião permite que seu aplicativo receba metadados de reunião estáticos.</span><span class="sxs-lookup"><span data-stu-id="12fa1-257">The Meeting Details API enables your app to get static meeting metadata.</span></span> <span data-ttu-id="12fa1-258">Esses são pontos de dados que não mudam dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="12fa1-258">These are data points that do not change dynamically.</span></span>
+<span data-ttu-id="12fa1-259">A API está disponível por meio dos Serviços bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-259">The API is available through Bot Services.</span></span>
+
+#### <a name="query-parameter"></a><span data-ttu-id="12fa1-260">Parâmetro de consulta</span><span class="sxs-lookup"><span data-stu-id="12fa1-260">Query parameter</span></span>
+
+<span data-ttu-id="12fa1-261">A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:</span><span class="sxs-lookup"><span data-stu-id="12fa1-261">The Meeting Details API includes the following query parameter:</span></span>
+
+|<span data-ttu-id="12fa1-262">Valor</span><span class="sxs-lookup"><span data-stu-id="12fa1-262">Value</span></span>|<span data-ttu-id="12fa1-263">Tipo</span><span class="sxs-lookup"><span data-stu-id="12fa1-263">Type</span></span>|<span data-ttu-id="12fa1-264">Obrigatório</span><span class="sxs-lookup"><span data-stu-id="12fa1-264">Required</span></span>|<span data-ttu-id="12fa1-265">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-265">Description</span></span>|
+|---|---|----|---|
+|<span data-ttu-id="12fa1-266">**meetingId**</span><span class="sxs-lookup"><span data-stu-id="12fa1-266">**meetingId**</span></span>| <span data-ttu-id="12fa1-267">String</span><span class="sxs-lookup"><span data-stu-id="12fa1-267">String</span></span> | <span data-ttu-id="12fa1-268">Sim</span><span class="sxs-lookup"><span data-stu-id="12fa1-268">Yes</span></span> | <span data-ttu-id="12fa1-269">O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.</span><span class="sxs-lookup"><span data-stu-id="12fa1-269">The meeting identifier is available through Bot Invoke and Teams Client SDK.</span></span> |
+
+#### <a name="example"></a><span data-ttu-id="12fa1-270">Exemplo</span><span class="sxs-lookup"><span data-stu-id="12fa1-270">Example</span></span>
+
+<span data-ttu-id="12fa1-271">A API De Detalhes da Reunião inclui os seguintes exemplos:</span><span class="sxs-lookup"><span data-stu-id="12fa1-271">The Meeting Details API includes the following examples:</span></span>
+
+# <a name="c"></a>[<span data-ttu-id="12fa1-272">C#</span><span class="sxs-lookup"><span data-stu-id="12fa1-272">C#</span></span>](#tab/dotnet)
+
+```csharp
+var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var creds = connectorClient.Credentials as AppCredentials;
+var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
+var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
+request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
+string content;
+if (response.Content != null)
+{
+    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+}
+```
+
+# <a name="javascript"></a>[<span data-ttu-id="12fa1-273">JavaScript</span><span class="sxs-lookup"><span data-stu-id="12fa1-273">JavaScript</span></span>](#tab/javascript)
+
+<span data-ttu-id="12fa1-274">Não disponível</span><span class="sxs-lookup"><span data-stu-id="12fa1-274">Not available</span></span>
+
+# <a name="json"></a>[<span data-ttu-id="12fa1-275">JSON</span><span class="sxs-lookup"><span data-stu-id="12fa1-275">JSON</span></span>](#tab/json)
+
+```http
+GET /v1/meetings/{meetingId}
+```
+
+---
+
+<span data-ttu-id="12fa1-276">O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:</span><span class="sxs-lookup"><span data-stu-id="12fa1-276">The JSON response body for Meeting Details API is as follows:</span></span>
+
+```json
+{ 
+   "details": { 
+        "id": "meeting ID", 
+        "msGraphResourceId": "", 
+        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+        "joinUrl": "https://teams.microsoft.com/l/xx", 
+        "title": "All Hands", 
+        "type": "Scheduled" 
+    }, 
+    "conversation": { 
+            "isGroup": true, 
+            “conversationType”: “groupchat”, 
+            "id": "meeting chat ID" 
+    }, 
+    "organizer": { 
+        "id": "<organizer user ID>", 
+        "aadObjectId": "<AAD ID>", 
+        "tenantId": "<Tenant ID>" 
+    }
+} 
+```
+
+## <a name="real-time-teams-meeting-events"></a><span data-ttu-id="12fa1-277">Eventos de reunião Teams em tempo real</span><span class="sxs-lookup"><span data-stu-id="12fa1-277">Real-time Teams meeting events</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="12fa1-278">Esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.</span><span class="sxs-lookup"><span data-stu-id="12fa1-278">This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.</span></span>
+
+<span data-ttu-id="12fa1-279">O usuário pode receber eventos de reunião em tempo real.</span><span class="sxs-lookup"><span data-stu-id="12fa1-279">The user can receive real-time meeting events.</span></span> <span data-ttu-id="12fa1-280">Assim que qualquer aplicativo é associado a uma reunião, o início real da reunião e a hora de término da reunião são compartilhados com o bot.</span><span class="sxs-lookup"><span data-stu-id="12fa1-280">As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.</span></span>
+
+<span data-ttu-id="12fa1-281">A hora real de início e término de uma reunião é diferente da hora de início e término agendada.</span><span class="sxs-lookup"><span data-stu-id="12fa1-281">Actual start and end time of a meeting are different from the scheduled start and end time.</span></span> <span data-ttu-id="12fa1-282">A API de detalhes da reunião fornece a hora de início e término agendada enquanto o evento fornece a hora real de início e término.</span><span class="sxs-lookup"><span data-stu-id="12fa1-282">The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.</span></span>
+
+### <a name="example-of-meeting-start-event-payload"></a><span data-ttu-id="12fa1-283">Exemplo de carga do evento de início da reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-283">Example of meeting start event payload</span></span>
+
+<span data-ttu-id="12fa1-284">O código a seguir fornece um exemplo de carga de evento de início de reunião:</span><span class="sxs-lookup"><span data-stu-id="12fa1-284">The following code provides an example of meeting start event payload:</span></span>
+
+```json
+{ 
+    "name": "application/vnd.microsoft.meetingStart", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:10:41.1252256Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "userID", 
+        "aadObjectId": "aadOnjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user Id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event", 
+        "Id":"meeting id", 
+        "JoinUrl": "url" 
+        "StartTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-meeting-end-event-payload"></a><span data-ttu-id="12fa1-285">Exemplo de carga de evento final de reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-285">Example of meeting end event payload</span></span>
+
+<span data-ttu-id="12fa1-286">O código a seguir fornece um exemplo de carga de evento final de reunião:</span><span class="sxs-lookup"><span data-stu-id="12fa1-286">The following code provides an example of meeting end event payload:</span></span>
+
+```json
+{ 
+    "name": "application/vnd.microsoft.meetingEnd", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:17:17.4388966Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "user id", 
+        "aadObjectId": "aadObjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting Id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event in Canary", 
+        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
+        "JoinUrl": "url", 
+        "EndTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-getting-metadata-of-a-meeting"></a><span data-ttu-id="12fa1-287">Exemplo de obter metadados de uma reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-287">Example of getting metadata of a meeting</span></span>
+
+<span data-ttu-id="12fa1-288">Seu bot recebe o evento por meio do `OnEventActivityAsync` manipulador.</span><span class="sxs-lookup"><span data-stu-id="12fa1-288">Your bot receives the event through the `OnEventActivityAsync` handler.</span></span>
+
+<span data-ttu-id="12fa1-289">Para desserializar a carga json, um objeto modelo é introduzido para obter os metadados de uma reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-289">To deserialize the json payload, a model object is introduced to get the metadata of a meeting.</span></span> <span data-ttu-id="12fa1-290">Os metadados de uma reunião residem na `value` propriedade na carga do evento.</span><span class="sxs-lookup"><span data-stu-id="12fa1-290">The metadata of a meeting resides in the `value` property in the event payload.</span></span> <span data-ttu-id="12fa1-291">O `MeetingStartEndEventvalue` objeto model é criado, cujas variáveis de membro correspondem às chaves sob a propriedade na carga do `value` evento.</span><span class="sxs-lookup"><span data-stu-id="12fa1-291">The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.</span></span>
+
+<span data-ttu-id="12fa1-292">O código a seguir mostra como capturar os metadados de uma reunião que é , , , , e de um evento de início e fim de `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` reunião:</span><span class="sxs-lookup"><span data-stu-id="12fa1-292">The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start and end event:</span></span>
+
+```csharp
+protected override async Task OnEventActivityAsync(
+ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
+    var meetingEventName = turnContext.Activity.Name;
+    // Value contains meeting information (ex: meeting type, start time, etc).
+    var meetingEventInfo = turnContext.Activity.Value as JObject; 
+    var meetingEventInfoObject =
+meetingEventInfo.ToObject<MeetingStartEndEventValue>();
+    // Create a very simple adaptive card with meeting information
+var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
+meetingEventInfoObject);
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+}
+```
+
+<span data-ttu-id="12fa1-293">MeetingStartEndEventvalue.cs inclui o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="12fa1-293">The MeetingStartEndEventvalue.cs includes the following code:</span></span>
+
+```csharp
+public class MeetingStartEndEventValue
+{
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string MeetingType { get; set; }
+    public string JoinUrl { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
+}
+```
+
+## <a name="code-sample"></a><span data-ttu-id="12fa1-294">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="12fa1-294">Code sample</span></span>
+
+|<span data-ttu-id="12fa1-295">Exemplo de nome</span><span class="sxs-lookup"><span data-stu-id="12fa1-295">Sample name</span></span> | <span data-ttu-id="12fa1-296">Descrição</span><span class="sxs-lookup"><span data-stu-id="12fa1-296">Description</span></span> | <span data-ttu-id="12fa1-297">.NET</span><span class="sxs-lookup"><span data-stu-id="12fa1-297">.NET</span></span> | <span data-ttu-id="12fa1-298">Node.js</span><span class="sxs-lookup"><span data-stu-id="12fa1-298">Node.js</span></span> |
 |----------------|-----------------|--------------|--------------|
-| <span data-ttu-id="2e138-251">Extensibilidade de reuniões</span><span class="sxs-lookup"><span data-stu-id="2e138-251">Meetings extensibility</span></span> | <span data-ttu-id="2e138-252">Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem.</span><span class="sxs-lookup"><span data-stu-id="2e138-252">Microsoft Teams meeting extensibility sample for passing tokens.</span></span> | [<span data-ttu-id="2e138-253">View</span><span class="sxs-lookup"><span data-stu-id="2e138-253">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [<span data-ttu-id="2e138-254">View</span><span class="sxs-lookup"><span data-stu-id="2e138-254">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| <span data-ttu-id="2e138-255">Bot de bolha de conteúdo de reunião</span><span class="sxs-lookup"><span data-stu-id="2e138-255">Meeting content bubble bot</span></span> | <span data-ttu-id="2e138-256">Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-256">Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting.</span></span> | [<span data-ttu-id="2e138-257">View</span><span class="sxs-lookup"><span data-stu-id="2e138-257">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [<span data-ttu-id="2e138-258">View</span><span class="sxs-lookup"><span data-stu-id="2e138-258">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| <span data-ttu-id="2e138-259">Meeting meetingSidePanel</span><span class="sxs-lookup"><span data-stu-id="2e138-259">Meeting meetingSidePanel</span></span> | <span data-ttu-id="2e138-260">Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião.</span><span class="sxs-lookup"><span data-stu-id="2e138-260">Microsoft Teams meeting extensibility sample for interacting with the side panel in-meeting.</span></span> | [<span data-ttu-id="2e138-261">View</span><span class="sxs-lookup"><span data-stu-id="2e138-261">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [<span data-ttu-id="2e138-262">View</span><span class="sxs-lookup"><span data-stu-id="2e138-262">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| <span data-ttu-id="12fa1-299">Extensibilidade de reuniões</span><span class="sxs-lookup"><span data-stu-id="12fa1-299">Meetings extensibility</span></span> | <span data-ttu-id="12fa1-300">Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem.</span><span class="sxs-lookup"><span data-stu-id="12fa1-300">Microsoft Teams meeting extensibility sample for passing tokens.</span></span> | [<span data-ttu-id="12fa1-301">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-301">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [<span data-ttu-id="12fa1-302">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-302">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| <span data-ttu-id="12fa1-303">Bot de bolha de conteúdo de reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-303">Meeting content bubble bot</span></span> | <span data-ttu-id="12fa1-304">Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-304">Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting.</span></span> | [<span data-ttu-id="12fa1-305">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-305">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [<span data-ttu-id="12fa1-306">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-306">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| <span data-ttu-id="12fa1-307">Meeting meetingSidePanel</span><span class="sxs-lookup"><span data-stu-id="12fa1-307">Meeting meetingSidePanel</span></span> | <span data-ttu-id="12fa1-308">Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião.</span><span class="sxs-lookup"><span data-stu-id="12fa1-308">Microsoft Teams meeting extensibility sample for interacting with the side panel in-meeting.</span></span> | [<span data-ttu-id="12fa1-309">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-309">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [<span data-ttu-id="12fa1-310">View</span><span class="sxs-lookup"><span data-stu-id="12fa1-310">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 
-## <a name="see-also"></a><span data-ttu-id="2e138-263">Confira também</span><span class="sxs-lookup"><span data-stu-id="2e138-263">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12fa1-311">Confira também</span><span class="sxs-lookup"><span data-stu-id="12fa1-311">See also</span></span>
 
-* [<span data-ttu-id="2e138-264">Diretrizes de design de caixa de diálogo na reunião</span><span class="sxs-lookup"><span data-stu-id="2e138-264">In-meeting dialog design guidelines</span></span>](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-* [<span data-ttu-id="2e138-265">Teams fluxo de autenticação para guias</span><span class="sxs-lookup"><span data-stu-id="2e138-265">Teams authentication flow for tabs</span></span>](../tabs/how-to/authentication/auth-flow-tab.md)
-* [<span data-ttu-id="2e138-266">Aplicativos para Teams reuniões</span><span class="sxs-lookup"><span data-stu-id="2e138-266">Apps for Teams meetings</span></span>](teams-apps-in-meetings.md)
+* [<span data-ttu-id="12fa1-312">Diretrizes de design de caixa de diálogo na reunião</span><span class="sxs-lookup"><span data-stu-id="12fa1-312">In-meeting dialog design guidelines</span></span>](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [<span data-ttu-id="12fa1-313">Teams fluxo de autenticação para guias</span><span class="sxs-lookup"><span data-stu-id="12fa1-313">Teams authentication flow for tabs</span></span>](../tabs/how-to/authentication/auth-flow-tab.md)
+* [<span data-ttu-id="12fa1-314">Aplicativos para Teams reuniões</span><span class="sxs-lookup"><span data-stu-id="12fa1-314">Apps for Teams meetings</span></span>](teams-apps-in-meetings.md)
 
-## <a name="next-step"></a><span data-ttu-id="2e138-267">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="2e138-267">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="12fa1-315">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="12fa1-315">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="2e138-268">Habilitar e configurar seus aplicativos para Teams reuniões</span><span class="sxs-lookup"><span data-stu-id="2e138-268">Enable and configure your apps for Teams meetings</span></span>](enable-and-configure-your-app-for-teams-meetings.md)
+> [<span data-ttu-id="12fa1-316">Habilitar e configurar seus aplicativos para Teams reuniões</span><span class="sxs-lookup"><span data-stu-id="12fa1-316">Enable and configure your apps for Teams meetings</span></span>](enable-and-configure-your-app-for-teams-meetings.md)
