@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: b5253c1769ebaac5548c779b3f66a87abb195ed8
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
+ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049054"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53095518"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -195,6 +195,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|06/23/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas de resouce em Teams](graph-api/rsc/test-resource-specific-consent.md)|  
 |05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
