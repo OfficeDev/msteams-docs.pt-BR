@@ -3,12 +3,12 @@ title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
-ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068640"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114173"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -79,11 +79,12 @@ Depois de habilitar seu aplicativo para Teams reuniões, você deve configurar s
 > * As experiências na reunião que estão na caixa de diálogo e na guia da reunião atualmente não são suportadas em clientes móveis. Para obter mais informações, consulte [diretrizes para guias em dispositivos móveis](../tabs/design/tabs-mobile.md) ao criar suas guias para dispositivos móveis.
 
 Teams reuniões fornece uma experiência colaborativa exclusiva para sua organização. Ele oferece a oportunidade de configurar seu aplicativo para diferentes cenários de reunião. Você pode configurar seus aplicativos para aprimorar a experiência de reunião com base na função de participante ou no tipo de usuário. Agora você pode identificar quais ações podem ser tomadas nos seguintes cenários de reunião:
-* [Pré-reunião](#pre-meeting)
-* [In-meeting](#in-meeting)
-* [Pós-reunião](#post-meeting)
 
-### <a name="pre-meeting"></a>Pré-reunião
+* [Antes de uma reunião](#before-a-meeting)
+* [Durante uma reunião](#during-a-meeting)
+* [Após uma reunião](#after-a-meeting)
+
+### <a name="before-a-meeting"></a>Antes de uma reunião
 
 Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de mensagens. Os usuários com funções de organizador e apresentador podem adicionar guias a uma reunião.
 
@@ -113,7 +114,7 @@ Em um chat de reunião, insira a **@** chave e selecione Obter **bots**.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova sondagem.
 > * As atribuições de função podem ser alteradas enquanto uma reunião está em andamento. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-### <a name="in-meeting"></a>In-meeting
+### <a name="during-a-meeting"></a>Durante uma reunião
 
 Durante uma reunião, você pode usar a caixa de diálogo meetingSidePanel ou in-meeting para criar experiências exclusivas para seus aplicativos.
 
@@ -138,19 +139,18 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
 > * Se você quiser que seu aplicativo suporte usuários anônimos, sua carga inicial de solicitação de invocação deve depender dos metadados de solicitação no objeto, não `from.id` `from` nos `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a ID Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### <a name="share-to-stage"></a>Compartilhar em estágio
+#### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
 
 > [!NOTE]
 > * Esse recurso está disponível apenas na visualização [do](../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
-> * Para usar esse recurso, o aplicativo deve dar suporte a uma reunião em reuniãoSidePanel.
 
-Esse recurso oferece aos desenvolvedores a capacidade de compartilhar um aplicativo no estágio de reunião. Habilitando o compartilhamento para o estágio de reunião, os participantes da reunião podem colaborar em tempo real.
+O estágio de reunião compartilhado permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real.
 
 O contexto necessário está `meetingStage` no manifesto do aplicativo. Um pré-requisito para isso é ter o `meetingSidePanel` contexto. Isso habilita **o Compartilhamento** no meetingSidePanel.
 
 ![Compartilhar em estágios durante a experiência de reunião](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-A alteração de manifesto necessária para habilitar esse recurso é a seguinte:
+Para habilitar o estágio de reunião compartilhada, configure o manifesto do aplicativo desta forma:
 
 ```json
 "configurableTabs": [
@@ -168,15 +168,17 @@ A alteração de manifesto necessária para habilitar esse recurso é a seguinte
   ]
 ```
 
-### <a name="post-meeting"></a>Pós-reunião
+Veja como projetar [uma experiência de estágio de reunião compartilhada.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-As configurações pós-reunião [e pré-reunião](#pre-meeting) são as mesmas.
+### <a name="after-a-meeting"></a>Após uma reunião
+
+As configurações após e [antes das reuniões](#before-a-meeting) são as mesmas.
 
 ## <a name="code-sample"></a>Exemplo de código
 
 |Exemplo de nome | Descrição | Amostra |
 |----------------|-----------------|--------------|----------------|-----------|
-| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de interagir. Isso pode ser útil em situações como reuniões scrum,&A e assim por diante. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Tokens de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. Isso pode ser útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Confira também
 

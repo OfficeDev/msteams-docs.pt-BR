@@ -1,5 +1,8 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Usar o App Studio para atualizar o pacote de aplicativos
 
+> [!TIP]
+> **Experimente o Portal do Desenvolvedor**: o App Studio em breve será preterido. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
+
 O App Studio é um Teams que você pode instalar na Teams store. Simplifica a criação e o registro de um aplicativo.
 
 Conclua as etapas a seguir para atualizar o pacote do aplicativo:
@@ -16,11 +19,15 @@ Conclua as etapas a seguir para atualizar o pacote do aplicativo:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    O exemplo vem com seu próprio manifesto e foi projetado para criar um pacote de aplicativos quando o projeto é criado. Você pode criar o pacote de aplicativos no .NET com Visual Studio. Em Visual Studio, o arquivo manifest.json está localizado em **em Manifesto** em `Microsoft.Teams.Samples.HelloWorld.Web` . Esta etapa é descrita pela imagem a seguir:  
+
+    O exemplo vem com seu próprio manifesto e foi projetado para criar um pacote de aplicativos quando o projeto é criado. No .NET, o arquivo manifest.json pode estar localizado Visual Studio em Manifesto em ```Microsoft.Teams.Samples.HelloWorld.Web``` . No Node.js, isso é feito digitando na linha de comando no `gulp` diretório raiz do projeto.
+
+     Em Visual Studio, o arquivo manifest.json está localizado em **em Manifesto** em `Microsoft.Teams.Samples.HelloWorld.Web` . Esta etapa é descrita pela imagem a seguir:  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
     Você pode criar o pacote do aplicativo Node.js digitando na linha de comando no `gulp` diretório raiz do projeto.
+
 
     ```bash
     $ gulp
@@ -44,11 +51,11 @@ Conclua as etapas a seguir para atualizar o pacote do aplicativo:
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-A imagem a seguir mostra o pacote de aplicativos importado no App Studio:
+    A imagem a seguir mostra o pacote de aplicativos importado no App Studio:
 
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
+    <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-No lado esquerdo do editor de Manifesto há uma lista de etapas. No lado direito, há uma lista de propriedades que precisam ser preenchidas para cada etapa. Conforme você começou com um aplicativo de exemplo, grande parte das informações já foi concluída. As próximas etapas permitem que você atualize as propriedades do aplicativo Hello World.
+    No lado esquerdo do editor de Manifesto há uma lista de etapas. No lado direito, há uma lista de propriedades que precisam ser preenchidas para cada etapa. Conforme você começou com um aplicativo de exemplo, grande parte das informações já foi concluída. As próximas etapas permitem que você atualize as propriedades do aplicativo Hello World.
 
 #### <a name="app-details"></a>Detalhes do aplicativo
 
@@ -68,7 +75,7 @@ Seu aplicativo só pode ter uma guia Equipe:
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-Neste exemplo, a guia Equipe é onde sua página de configuração é exibida. Selecione o **símbolo ...** da url de configuração **de tabulação** e escolha **Editar** no menu suspenso. Altere a URL para onde deve ser substituída pela URL que `https://yourteamsapp.ngrok.io/configure` você usou ao hospedar seu `yourteamsapp.ngrok.io` [aplicativo](#host-the-sample-app).
+Neste exemplo, a guia Equipe é onde sua página de configuração é exibida. Selecione o **símbolo ...** da url de configuração **de tabulação** e escolha **Editar** no menu suspenso. Altere a URL `https://yourteamsapp.ngrok.io/configure` para onde deve ser substituída pela URL que você usou ao hospedar seu `yourteamsapp.ngrok.io` aplicativo.
 
 ##### <a name="personal-tabs"></a>Guias pessoais
 
@@ -159,6 +166,6 @@ Depois de inserir os detalhes do seu aplicativo, conclua as seguintes etapas par
 1. Selecione a **caixa Pesquisar** na seção Adicionar a **uma equipe** e selecione uma equipe para adicionar o aplicativo de exemplo. Você pode configurar uma equipe especial para teste.
 1. Selecione o **botão Instalar** na parte inferior da caixa de diálogo.
 
-Seu aplicativo agora está disponível no Teams. No entanto, o bot e a extensão de mensagens não funcionarão até que você atualize o ambiente de aplicativos hospedados com as IDs de aplicativo e senhas.
+    Seu aplicativo agora está disponível no Teams. No entanto, o bot e a extensão de mensagens não funcionarão até que você atualize o ambiente de aplicativos hospedados com as IDs de aplicativo e senhas.
 
-<img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
+    <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

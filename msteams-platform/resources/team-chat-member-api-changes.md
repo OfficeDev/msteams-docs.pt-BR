@@ -6,12 +6,12 @@ keywords: lista de membros da equipe de apis de estrutura de bot
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 333a29664f0d60e89039f906fce77e71054d486f
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555434"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114242"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams da API de bot para buscar membros de equipe ou chat
 
@@ -72,4 +72,4 @@ A seguir estão as próximas alterações na API:
     > `objectId` é alterado para `aadObjectId` corresponder ao que é chamado no objeto de uma mensagem da Estrutura de `Activity` Bot. A nova API está disponível com a versão 4.8 ou posterior do SDK da Estrutura de Bots. Ele também está disponível no Teams de extensão SDK Bot Framework 3.x. Enquanto isso, você pode usar o ponto de extremidade [REST.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details)
 
 * `TeamsInfo.GetMembersAsync` no C# e `TeamsInfo.getMembers` em TypeScript ou Node.js está formalmente preterido. Depois que a nova API está disponível, você deve atualizar seus bots para usá-la. Isso também se aplica à [API REST subjacente que essas APIs usam](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
-* Até o final de 2021, os bots não podem recuperar proativamente as propriedades ou para membros de um `userPrincipalName` `email` chat ou equipe. Os bots devem usar Graph para recuperá-los. As `userPrincipalName` propriedades e não são `email` retornadas da nova API a partir do `GetConversationPagedMembers` final de 2021. Os bots têm que usar Graph com um token de acesso para recuperar informações. Deve ser mais fácil para os bots obterem um token de acesso e simplificarem e simplificarem o processo de consentimento do usuário final.
+* Até o final de 2022, os bots não podem recuperar proativamente as propriedades ou para membros de um `userPrincipalName` `email` chat ou equipe. Os bots devem usar Graph para recuperá-los. As `userPrincipalName` propriedades e não são `email` retornadas da nova API a partir do `GetConversationPagedMembers` final de 2022. Os bots têm que usar Graph com um token de acesso para recuperar informações. Deve ser mais fácil para os bots obterem um token de acesso e simplificarem e simplificarem o processo de consentimento do usuário final.

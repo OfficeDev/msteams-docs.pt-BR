@@ -6,12 +6,12 @@ keywords: Microsoft Teams exemplos de modelos
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069189"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111146"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -679,6 +679,40 @@ O aplicativo de Gerenciamento de Visitantes permite que sua organização e func
     ![Notificação de chegada do visitante](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="water-cooler-9734"></a>Water &#9734;
+
+Water Cool é um aplicativo Teams personalizado que permite que as equipes corporativas criem, convidem e participem de conversas casuais entre colegas de equipe, como aquelas que ocorrem pelo Water Cool ou pela sala de pausa. Use este modelo para vários cenários, como novos comunicados não relacionados ao projeto, tópicos de interesse, eventos atuais ou conversas sobre hobbies. O aplicativo fornece uma interface fácil para qualquer pessoa encontrar uma conversa existente ou iniciar uma nova. É uma base para a criação de recursos de comunicação personalizados direcionados, promovendo a interação entre colegas de trabalho que podem não ter a chance de socializar durante as pausas.    
+
+[Obter no GitHub](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![Filtros do Water Cool](../assets/images/appScreens.gif)    
+
+### <a name="key-features"></a>Principais recursos
+
+**Home Page do Water Cool**: Você pode navegar em salas existentes onde os membros da equipe estão interagindo em conversas existentes com determinadas pessoas ou tópicos de interesse. As conversas ativas na **Home Page** mostram um nome de sala, descrição curta, duração da chamada e imagem de sala. 
+
+![Página Inicial do Water Cool](../assets/images/home-page.png)
+
+**Sala de participação**: Use o recurso **Da sala** De ingressar para participar de uma conversa contínua imediatamente. Selecione **Participar de** conversas ativas para ingressar na sala.
+
+![Sala de junção](../assets/images/joinRoom.gif)
+
+**Criação de** sala : use o **recurso de** criação de sala para criar uma chamada Teams ou chat para todos os participantes interagirem. Crie salas facilmente especificando o nome da sala, a descrição curta, até cinco colegas como um grupo inicial e selecionando no conjunto fornecido de imagens de sala. 
+
+![Criação de Sala](../assets/images/createRoom.gif)
+
+**Sala de busca**: Use o **recurso Encontrar sala** para pesquisar a palavra-chave que corresponde ao tópico ou às breves descrições de conversas em andamento.
+
+![Encontrar conversa](../assets/images/findConversation.gif)
+
+**Convite do participante**: use o **recurso de convite do Participante** para convidar usuários adicionais após a criação da sala. Isso é semelhante ao Teams chamada.
+
+![Convite do participante](../assets/images/attendeeInvitation.gif)
+
+**Selo do** aplicativo : O ícone **do Water Cool** no menu esquerdo mostra um selo com o número de conversas ativas visíveis do Teams ao usar qualquer aplicativo. 
+
+![Selo do aplicativo](../assets/images/badge.gif)
 
 ## <a name="workplace-awards"></a>Workplace Awards
 
