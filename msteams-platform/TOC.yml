@@ -22,13 +22,13 @@
       href: get-started/first-message-extension.md
 - name: Amostras de códigos e tutoriais
   items:
-    - name: Tutoriais
+    - name: Visão Geral
       href: tutorials/code-samples.md
-    - name: Criar um aplicativo usando C# ou .NET
+    - name: Criar seu primeiro aplicativo usando C# ou .NET
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: Criar um aplicativo usando o Node.js
+    - name: Criar seu primeiro aplicativo usando o Node.js
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Criar um aplicativo usando o gerador Yeoman
+    - name: Criar seu primeiro aplicativo usando o gerador Yeoman
       href: tutorials/get-started-yeoman.md
     - name: Exemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
@@ -395,9 +395,9 @@
       href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Introdução
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
-    - name: Habilitar o consentimento específico do recurso
+    - name: Consentimento específico do recurso
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Instalação proativa de aplicativos usando a API do Graph e enviar mensagens
+    - name: Instalação proativa de aplicativos usando Graph API para enviar mensagens
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importar mensagens de terceiros
       href: graph-api/import-messages/import-external-messages-to-teams.md
