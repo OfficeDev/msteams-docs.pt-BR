@@ -4,12 +4,12 @@ description: Criar extensões de mensagens baseadas em ação para permitir que 
 localization_priority: Normal
 ms.topic: how-to
 keywords: Pesquisa de extensões de mensagens de mensagens do teams
-ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566737"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140366"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar ações com extensões de mensagens
 
@@ -244,7 +244,7 @@ Quando um usuário escolhe um comando com parâmetros estáticos, Teams gerará 
 
 Neste método, seu serviço pode definir um cartão adaptável personalizado para coletar a entrada do usuário final. Para essa abordagem, de `fetchTask` definir o parâmetro como no `true` manifesto. Observe que se você definir `fetchTask` para `true` quaisquer parâmetros estáticos definidos para o comando será ignorado.
 
-Neste método, seu serviço receberá um evento e precisará responder com uma resposta de módulo de tarefa baseada em cartão `composeExtension/fetchTask` [adaptável.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) A seguir está uma resposta de exemplo com um cartão adaptável:
+Neste método, seu serviço recebe um evento e responde com uma resposta de módulo de tarefa baseada em cartão `composeExtension/fetchTask` [adaptável.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) A seguir está uma resposta de exemplo com um cartão adaptável:
 
 ```json
 {
@@ -295,7 +295,7 @@ O bot também pode responder com uma resposta auth/config se o usuário precisar
 
 Neste método, seu serviço pode mostrar um widget baseado para mostrar qualquer interface do usuário `<iframe>` personalizada e coletar a entrada do usuário. Para essa abordagem, de `fetchTask` definir o parâmetro como no `true` manifesto.
 
-Assim como no fluxo de cartão adaptável, seu serviço enviará um evento e precisará responder com uma resposta de módulo de tarefa `fetchTask` [baseada em](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)URL. A seguir está uma resposta de exemplo com um cartão Adaptável:
+Assim como no fluxo de cartão adaptável, seu serviço envia um evento e responde com uma resposta de módulo de tarefa `fetchTask` [baseada em](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)URL. A seguir está uma resposta de exemplo com um cartão Adaptável:
 
 ```json
 {
@@ -712,6 +712,6 @@ public class MessagesController : ApiController
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 [Exemplos de Estrutura de Bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -1,50 +1,65 @@
 ---
-title: Conectores de Office 365
+title: Criar Office 365 conectores
+author: laujan
 description: Descreve como começar a usar Office 365 conectores no Microsoft Teams
 keywords: conector do o365 no teams
 localization_priority: Normal
 ms.topic: conceptual
-ms.date: 04/19/2019
-ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
-ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
+ms.date: 06/16/2021
+ms.openlocfilehash: 95e3c9f2f7e188c158ae8c9161b2306c5e7f27e5
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646317"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140415"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Criando Office 365 conectores para Microsoft Teams
+# <a name="create-office-365-connectors"></a>Criar Office 365 conectores
 
-Com Microsoft Teams aplicativos, você pode adicionar seu conector de Office 365 existente ou criar um novo para incluir no Microsoft Teams. Confira [Criar seu próprio Conector para](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) obter mais informações.
+Com Microsoft Teams aplicativos, você pode adicionar seu conector de Office 365 existente ou criar um novo dentro Teams. Para obter mais informações, consulte [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-## <a name="adding-a-connector-to-your-teams-app"></a>Adicionando um Conector ao seu Teams App
+## <a name="add-a-connector-to-teams-app"></a>Adicionar um conector ao Teams app
 
-Você pode distribuir seu Conector registrado como parte do pacote de aplicativos do Teams. Seja como uma solução autônoma ou [](~/concepts/extensibility-points.md) um dos vários recursos que sua experiência [](~/concepts/build-and-test/apps-package.md) habilita no Teams, você pode empacotar e publicar seu Conector como parte do envio do AppSource ou você pode fornecer aos usuários diretamente para carregar no Teams. [](~/concepts/deploy-and-publish/apps-publish.md)
+Você pode [empacotá-lo](~/concepts/build-and-test/apps-package.md) [e publicar](~/concepts/deploy-and-publish/apps-publish.md) seu conector como parte do envio do AppSource. Você pode distribuir seu conector registrado como parte do pacote Teams aplicativo. Para obter informações sobre pontos de entrada para Teams aplicativo, consulte [capabilities](~/concepts/extensibility-points.md). Você também pode fornecer o pacote aos usuários diretamente para carregar no Teams.
 
-Para distribuir seu Conector, você precisa se registrar usando o Painel do Desenvolvedor [de Conectores.](https://outlook.office.com/connectors/home/login/#/publish) Por padrão, uma vez que um Conector é registrado, presume-se que o conector funcionará em todos os produtos Office 365 que os suportam, incluindo Outlook e Teams. Se esse não _for_ o caso e você precisar criar um Conector que funcione apenas no Microsoft Teams, entre em contato conosco diretamente [Microsoft Teams Envios de Aplicativo.](mailto:teamsubm@microsoft.com)
+Para distribuir seu conector, você deve se registrar por [meio do Painel de Desenvolvedores conectores.](https://outlook.office.com/connectors/home/login/#/publish) Quando um conector é registrado, presume-se que ele funcione em todos os produtos Office 365 que suportam aplicativos, incluindo Outlook e Teams. Se esse não for o caso e você deve criar um conector que funcione apenas no Microsoft Teams, entre em contato: Microsoft Teams [email envios de aplicativo.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
-> Depois de escolher **Salvar** no Painel do Desenvolvedor de Conectores, seu Conector será registrado. Se você quiser publicar seu Conector no AppSource, siga as instruções em Publicar seu aplicativo Microsoft Teams [no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource e, em vez disso, simplesmente distribuí-lo diretamente para sua organização, você pode fazer isso publicando em [sua organização.](#publish-connectors-for-your-organization) Se você quiser apenas publicar em sua organização, nenhuma ação será necessária no painel conector.
+> Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em publicar seu aplicativo Microsoft Teams [no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após [a publicação de conectores para sua](/connectors-creating.md)organização, nenhuma ação é necessária no Painel do Conector.
 
-### <a name="integrating-the-configuration-experience"></a>Integrando a experiência de configuração
+### <a name="integrate-the-configuration-experience"></a>Integrar a experiência de configuração
 
-Seus usuários concluirão toda a experiência de configuração do Conector sem precisar sair do cliente Teams cliente. Para obter essa experiência, Teams inserirá sua página de configuração diretamente em um iframe. A sequência de operações é a seguinte:
+Os usuários podem concluir toda a experiência de configuração do conector sem precisar sair do Teams cliente. Para obter a experiência, Teams pode incorporar sua página de configuração diretamente em um iframe. A sequência de operações é a seguinte:
 
-1. O usuário clica no conector para iniciar o processo de configuração.
-2. Teams carregará sua experiência de configuração em linha.
-3. O usuário interage com sua experiência da Web para concluir a configuração.
-4. O usuário pressiona "Salvar", que dispara um retorno de chamada em seu código.
-5. Seu código processará o evento save recuperando as configurações de webhook (documentadas abaixo). Em seguida, seu código deve armazenar o webhook para postar eventos posteriormente.
+1. O usuário seleciona o conector para iniciar o processo de configuração.
+1. O usuário interage com a experiência da Web para concluir a configuração.
+1. O usuário seleciona **Salvar**, que dispara um retorno de chamada no código.
 
-Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente em Teams. Seu código deve:
+    > [!NOTE]
+    > * O código pode processar o evento save recuperando as configurações de webhook. Seu código armazena o webhook para postar eventos mais tarde.
+    > * A experiência de configuração é carregada em linha Teams.
 
-1. Inclua o Microsoft Teams JavaScript SDK. Isso fornece acesso de código a APIs para executar operações comuns, como obter o contexto atual de usuário/canal/equipe e iniciar fluxos de autenticação. Inicializar o SDK chamando `microsoftTeams.initialize()`.
-2. Chame `microsoftTeams.settings.setValidityState(true)` quando quiser habilitar o botão Salvar. Você deve fazer isso como uma resposta à entrada de usuário válida, como uma seleção ou uma atualização de campo.
-3. Registre `microsoftTeams.settings.registerOnSaveHandler()` um manipulador de eventos, que é chamado quando o usuário clica em Salvar.
-4. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. O que é salvo aqui também é o que será mostrado na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
-5. Chame `microsoftTeams.settings.getSettings()` para buscar propriedades de webhook, incluindo a PRÓPRIA URL. Você deve chamar isso Além de durante o evento save, você também deve chamar isso quando sua página for carregada pela primeira vez no caso de uma nova configuração.
-6. (Opcional) Registre `microsoftTeams.settings.registerOnRemoveHandler()` um manipulador de eventos, que é chamado quando o usuário remove o conector. Esse evento oferece ao seu serviço a oportunidade de executar qualquer ação de limpeza.
+Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente em Teams. Seu código deve incluir o Microsoft Teams JavaScript SDK. Isso fornece acesso de código a APIs para executar operações comuns, como obter o usuário, canal ou contexto de equipe atual e iniciar fluxos de autenticação.
 
-Aqui está um HTML de exemplo para criar uma página de configuração do Conector sem o CSS:
+**Para integrar a experiência de configuração**
+
+1. Inicializar o SDK chamando `microsoftTeams.initialize()`.
+1. Chamada `microsoftTeams.settings.setValidityState(true)` para habilitar **Salvar**.
+
+    > [!NOTE]
+    > Você deve chamar `microsoftTeams.settings.setValidityState(true)` como uma resposta à seleção do usuário ou à atualização de campo.
+
+1. Registrar  `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos, que é chamado quando o usuário seleciona **Salvar**.
+1. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. As configurações salvas também serão mostradas na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
+1. Chame `microsoftTeams.settings.getSettings()` para buscar propriedades de webhook, incluindo a URL.
+
+    > [!NOTE]
+    > Você deve chamar `microsoftTeams.settings.getSettings()` quando sua página for carregada pela primeira vez em caso de reconfiguração.
+
+1. Registre `microsoftTeams.settings.registerOnRemoveHandler()` o manipulador de eventos, que é chamado quando o usuário remove o conector.
+
+Esse evento oferece ao seu serviço a oportunidade de executar qualquer ação de limpeza.
+
+O código a seguir fornece um HTML de exemplo para criar uma página de configuração do conector sem o serviço e o suporte ao cliente:
 
 ```html
 <h2>Send notifications when tasks are:</h2>
@@ -101,52 +116,54 @@ Aqui está um HTML de exemplo para criar uma página de configuração do Conect
 </script>
 ```
 
-#### <a name="getsettings-response-properties"></a>`GetSettings()` propriedades de resposta
+Para autenticar o usuário como parte [](~/tabs/how-to/authentication/auth-flow-tab.md) do carregamento de sua página, consulte fluxo de autenticação para que as guias se integrem ao entrar quando sua página for incorporada.
 
->[!Note]
->Os parâmetros retornados pela chamada aqui são diferentes do que se você fosse invocar esse método de uma guia e diferir daqueles `getSettings` documentados [aqui](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true).
+> [!NOTE]
+> Devido a motivos de compatibilidade entre clientes, seu código deve chamar com a URL e métodos de retorno de chamada de sucesso ou falha `microsoftTeams.authentication.registerAuthenticationHandlers()` antes de chamar `authenticate()` .
 
-| Parâmetro   | Detalhes |
+#### <a name="getsettings-response-properties"></a>`GetSettings` propriedades de resposta
+
+>[!NOTE]
+>Os parâmetros retornados pela chamada são diferentes quando você invoca esse método de uma guia e difere daqueles `getSettings` documentados nas [configurações js](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+
+A tabela a seguir fornece os parâmetros e os detalhes das propriedades `GetSetting` de resposta:
+
+| Parâmetros   | Detalhes |
 |-------------|---------|
 | `entityId`       | A ID da entidade, conforme definido pelo código ao chamar `setSettings()` . |
 | `configName`  | O nome da configuração, conforme definido pelo código ao chamar `setSettings()` . |
 | `contentUrl` | A URL da página de configuração, conforme definido pelo código ao chamar `setSettings()` . |
-| `webhookUrl` | A URL de webhook criada para esse conector. Persista a URL do webhook e use-a para POSTAR JSON estruturado para enviar cartões para o canal. A `webhookUrl` é retornada quando o aplicativo retorna com êxito. |
-| `appType` | Os valores retornados podem ser `mail`, `groups` ou `teams` correspondente ao Email do Office 365, Grupos do Office 365 ou Microsoft Teams respectivamente. |
-| `userObjectId` | Esta é a ID exclusiva correspondente ao usuário Office 365 que iniciou a instalação do conector. Ela deve ser protegida. Este valor pode ser usado para associar o usuário no Office 365 que realizou a configuração para o usuário no seu serviço. |
+| `webhookUrl` | A URL de webhook criada para o conector. Use a URL do webhook para POST JSON estruturado para enviar cartões para o canal. O `webhookUrl` é retornado somente quando o aplicativo retorna dados com êxito. |
+| `appType` | Os valores retornados podem ser , ou correspondentes ao `mail` Office 365 `groups` `teams` Mail, Office 365 Grupos ou Microsoft Teams respectivamente. |
+| `userObjectId` | A ID exclusiva correspondente ao usuário Office 365 que iniciou a configuração do conector. Ele deve ser protegido. Esse valor pode ser usado para associar o usuário Office 365, que definiu a configuração em seu serviço. |
 
-Se você precisar autenticar o usuário como parte do carregamento de sua página na etapa 2 acima, consulte este [link](~/tabs/how-to/authentication/auth-flow-tab.md) para obter detalhes sobre como você pode integrar o logon quando sua página é incorporada.
+#### <a name="handle-edits"></a>Manipular edições
 
-> [!NOTE]
-> Devido a motivos de compatibilidade entre clientes, seu código precisará chamar com a URL e os métodos de retorno de chamada de `microsoftTeams.authentication.registerAuthenticationHandlers()` sucesso/falha antes de chamar `authenticate()` .
+Seu código deve manipular os usuários que retornam para editar uma configuração de conector existente. Para fazer isso, chame `microsoftTeams.settings.setSettings()` durante a configuração inicial com os seguintes parâmetros:
 
-#### <a name="handling-edits"></a>Manipulando edições
+- `entityId` é a ID personalizada que representa o que o usuário configurou e entendeu pelo seu serviço.
+- `configName` é um nome que o código de configuração pode recuperar.
+- `contentUrl` é uma URL personalizada que é carregada quando um usuário edita uma configuração de conector existente.
 
-O código deve lidar com o retorno de usuários para editar uma configuração de conector existente. Para fazer isso, chame `microsoftTeams.settings.setSettings()` durante a configuração inicial com os seguintes parâmetros:
+Essa chamada é feita como parte do manipulador de eventos save. Em seguida, quando o é carregado, seu código deve chamar para preencher previamente quaisquer `contentUrl` `getSettings()` configurações ou formulários em sua interface de usuário de configuração.
 
-- `entityId` é a ID personalizada que é compreendida pelo seu serviço e representa o que o usuário configurou.
-- `configName` é um nome amigável que seu código de configuração pode recuperar
-- `contentUrl` é uma URL personalizada que é carregada quando um usuário edita uma configuração de conector existente. Você pode usar essa URL para facilitar o seu código lidar com o caso de edição.
+#### <a name="handle-removals"></a>Manipular remoções
 
-Normalmente, essa chamada é feita como parte do manipulador de eventos save. Em seguida, quando o acima for carregado, seu código deverá chamar para pré-estipular quaisquer configurações ou formulários na interface do usuário `contentUrl` `getSettings()` de configuração.
+Você pode executar um manipulador de eventos quando o usuário remover uma configuração de conector existente. Você registra esse manipulador chamando `microsoftTeams.settings.registerOnRemoveHandler()` . Esse manipulador é usado para executar operações de limpeza, como a remoção de entradas de um banco de dados.
 
-#### <a name="handling-removals"></a>Manipulando remoções
+### <a name="include-the-connector-in-your-manifest"></a>Incluir o conector em seu Manifesto
 
-Opcionalmente, você pode executar um manipulador de eventos quando o usuário remover uma configuração de conector existente. Você registra esse manipulador chamando `microsoftTeams.settings.registerOnRemoveHandler()` . Esse manipulador pode ser usado para executar operações de limpeza, como a remoção de entradas de um banco de dados.
+Baixe o auto gerado `Teams app manifest` do portal. Execute as etapas a seguir, antes de testar ou publicar o aplicativo:
 
-### <a name="including-the-connector-in-your-manifest"></a>Incluindo o Conector em seu Manifesto
+1. [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
+1. Modifique `icons` a parte do manifesto para incluir os nomes de arquivo dos ícones em vez de URLs.
 
-Você pode baixar o manifesto do aplicativo gerado automaticamente Teams no portal. Antes de usá-lo para testar ou publicar seu aplicativo, você deve fazer o seguinte:
-
-- [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
-- Modifique a parte dos `icons` do manifesto para se referir aos nomes de arquivo dos ícones em vez das URLs.
-
-O seguinte arquivo manifest.json contém os elementos básicos necessários para testar e enviar seu aplicativo.
+O seguinte manifest.jsno arquivo contém os elementos necessários para testar e enviar o aplicativo:
 
 > [!NOTE]
-> Substitua `id` e `connectorId` no exemplo a seguir pelo GUID do Conector.
+> Substitua `id` `connectorId` e, no exemplo a seguir, pelo GUID do conector.
 
-#### <a name="example-manifestjson-with-connector"></a>Exemplo de manifest.json com o Conector
+#### <a name="example-of-manifestjson-with-connector"></a>Exemplo de manifest.jscom conector
 
 ```json
 {
@@ -162,8 +179,8 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
     "termsOfUseUrl": "https://www.microsoft.com"
   },
   "description": {
-    "full": "This is a sample manifest for an app with a connector with an inline configuration experience.",
-    "short": "This is a sample manifest for an app with a connector."
+    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
+    "short": "This is a small sample app we made for you!"
   },
   "icons": {
     "outline": "sampleapp-outline.png",
@@ -172,7 +189,6 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
   "connectors": [
     {
       "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "configurationUrl": "https://teamstodoappconnectorwithinlineconfig.azurewebsites.net/Connector/Setup",
       "scopes": [
         "team"
       ]
@@ -180,60 +196,79 @@ O seguinte arquivo manifest.json contém os elementos básicos necessários para
   ],
   "name": {
     "short": "Sample App",
-    "full": "Sample App Long Name"
+    "full": "Sample App"
   },
-  "accentColor": "#FFFFFF"
+  "accentColor": "#FFFFFF",
+  "needsIdentity": "true"
 }
 ```
 
-## <a name="disable-or-enable-connectors-in-teams"></a>Desabilitar ou habilitar conectores Teams
+## <a name="enable-or-disable-connectors-in-teams"></a>Habilitar ou desabilitar conectores Teams
 
-O módulo Exchange Online PowerShell V2 usa autenticação moderna e funciona com autenticação multifatória (MFA) para se conectar Exchange todos os ambientes do PowerShell relacionados Exchange no Microsoft 365. Os administradores podem usar Exchange Online PowerShell para desabilitar conectores para um locatário inteiro ou uma caixa de correio de grupo específica, afetando todos os usuários nesse locatário ou caixa de correio. Não é possível desabilitar para alguns e não para outros. Além disso, os conectores são desabilitados por padrão para GCC locatários.
+O módulo Exchange Online PowerShell V2 usa autenticação moderna e funciona com autenticação multifatória, chamada MFA para se conectar Exchange todos os ambientes relacionados ao PowerShell no Microsoft 365. Os administradores podem usar Exchange Online PowerShell para desabilitar conectores para um locatário inteiro ou uma caixa de correio de grupo específica, afetando todos os usuários nesse locatário ou caixa de correio. Não é possível desabilitar para alguns e não para outros. Além disso, os conectores são desabilitados por padrão para Nuvem da Comunidade Governamental, chamados GCC locatários.
 
-A configuração no nível do locatário substitui a configuração de nível de grupo. Por exemplo, se um administrador habilitar conectores para o grupo e desabilitá-los no locatário, os conectores do grupo serão desabilitados. Para habilitar um conector Teams, conecte-se [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) usando autenticação moderna com ou sem MFA.
+A configuração de nível de locatário substitui a configuração de nível de grupo. Por exemplo, se um administrador habilitar conectores para o grupo e desabilitá-los no locatário, os conectores do grupo são desabilitados. Para habilitar um conector Teams, conecte-se [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) usando autenticação moderna com ou sem MFA.
 
-### <a name="commands-to-disable-or-enable-connectors"></a>Comandos para desabilitar ou habilitar conectores
+### <a name="commands-to-enable-or-disable-connectors"></a>Comandos para habilitar ou desabilitar conectores
 
-**Execute o comando no Exchange Online PowerShell**
+Execute os seguintes comandos no PowerShell do Exchange Online:
 
 * Para desabilitar conectores para o locatário: `Set-OrganizationConfig -ConnectorsEnabled:$false` .
 * Para desabilitar mensagens ativas para o locatário: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false` .
 * Para habilitar conectores para Teams, execute os seguintes comandos:
-    * `Set-OrganizationConfig -ConnectorsEnabled:$true `
-    * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-    * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
+  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
 Para obter mais informações sobre a troca de módulos do PowerShell, consulte [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar ou desabilitar Outlook conectores, [conecte aplicativos aos seus grupos em Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
 
-## <a name="testing-your-connector"></a>Testar o Conector
+## <a name="test-your-connector"></a>Testar seu conector
 
-Para testar o Conector, carregue-o em uma equipe, como em qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto do Painel do Desenvolvedor do Connectors (modificado conforme indicado na seção anterior) e os dois arquivos de ícone.
+Para testar seu conector, carregue-o em uma equipe com qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto dos dois arquivos de ícone e conectores do Painel do Desenvolvedor, modificados conforme direcionado em Incluir o conector [em seu Manifesto](#include-the-connector-in-your-manifest).
 
-Depois de carregar o aplicativo, abra a lista de conectores em qualquer canal. Role até a parte inferior para ver o aplicativo na seção **Carregado**.
+Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. Role até a parte inferior para ver seu aplicativo na **seção Carregado:**
 
-![Captura de tela da seção carregada na caixa de diálogo do Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
+![Captura de tela de uma seção carregada na caixa de diálogo conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-Agora você pode iniciar a experiência de configuração. Esteja ciente de que esse fluxo ocorre inteiramente dentro Microsoft Teams como uma experiência hospedada.
+> [!NOTE]
+> O fluxo ocorre inteiramente dentro Microsoft Teams como uma experiência hospedada.
 
-Para verificar se uma `HttpPOST` ação está funcionando corretamente, [envie mensagens para seu conector](~/webhooks-and-connectors/how-to/connectors-using.md).
+Para verificar se a `HttpPOST` ação está funcionando corretamente, [envie mensagens para seu conector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-## <a name="publish-connectors-for-your-organization"></a>Publicar Conectores para sua organização
+## <a name="publish-connectors-for-the-organization"></a>Publicar conectores para a organização
 
-Às vezes, talvez você não queira publicar seu aplicativo conector na AppSource/Store pública, mas gostaria que ele fosse disponibilizado apenas para os usuários em sua organização. Nesses casos, você pode carregar seu aplicativo de conector personalizado no Catálogo de [Aplicativos da sua organização.](~/concepts/deploy-and-publish/apps-publish.md) Dessa forma, seu aplicativo conector estará disponível apenas para essa organização e você não precisará publicar seu conector no armazenamento público.
+Se você quiser que o conector seja disponibilizado apenas para os usuários em sua organização, você pode carregar seu aplicativo de conector personalizado no catálogo de aplicativos [da sua organização.](~/concepts/deploy-and-publish/apps-publish.md)
 
-Depois de carregar seu pacote de aplicativos, para configurar e usar o conector em uma Equipe, ele pode ser instalado no catálogo de aplicativos da organização seguindo estas etapas:
+Depois de carregar o pacote de aplicativos para configurar e usar o conector em uma equipe, instale o conector do catálogo de aplicativos da organização.
 
-1. Selecione o ícone de aplicativos na barra de navegação vertical extrema esquerda.
-1. Na janela **Aplicativos,** selecione **Conectores**.
-1. Selecione o conector que você deseja adicionar e uma janela de diálogo pop-up será exibida.
-1. Selecione a **barra Adicionar a uma equipe.**
-1. Na próxima janela de diálogo, digite um nome de equipe ou canal.
-1. Selecione a **barra Configurar um conector** no canto inferior direito da janela de diálogo.
-1. O conector estará disponível na seção &#9679;&#9679;&#9679; => *Mais* opções Conectores Todos os Conectores para você  =>    =>    =>  *equipe* para essa equipe. Você pode navegar rolando até esta seção ou pesquisar o aplicativo do conector.
-1. Para configurar ou modificar o conector, selecione a **barra Configurar.**
+**Para configurar um conector**
+
+1. Selecione **Aplicativos** na barra de navegação esquerda.
+1. Na seção **Aplicativos,** selecione **Conectores**.
+1. Selecione o conector que você deseja adicionar. Uma janela de diálogo pop-up é exibida.
+1. No menu suspenso, selecione **Adicionar a uma equipe**.
+1. Na caixa de pesquisa, digite um nome de equipe ou canal.
+1. Selecione **Configurar um Conector no** menu suspenso no canto inferior direito da janela de diálogo.
+
+O conector está disponível na seção &#9679;&#9679;&#9679; > **Mais opções** Conectores Todos os Conectores  >    >    >  **para sua equipe** para essa equipe. Você pode navegar rolando até esta seção ou pesquisar o aplicativo do conector. Para configurar ou modificar o conector, selecione **Configurar**.
+
+## <a name="distribute-webhook-and-connector"></a>Distribuir webhook e conector
+
+1. [Configurar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) diretamente para sua equipe.
+1. Adicione uma [página de configuração](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) e [publique seu Webhook de Entrada](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) em um Conector O365.
+1. Empacote e publique seu conector como parte do envio [do AppSource.](~/concepts/deploy-and-publish/office-store-guidance.md)
 
 ## <a name="code-sample"></a>Exemplo de código
+
+A tabela a seguir fornece o nome de exemplo e sua descrição:
+
 |**Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Conectores    | Exemplo Office 365 conector gerando notificações para o canal de equipes.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Exemplo de conectores genéricos |Exemplo de código para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Conectores    | Exemplo Office 365 conector gerando notificações para Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
+## <a name="see-also"></a>Também consulte
+
+* [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

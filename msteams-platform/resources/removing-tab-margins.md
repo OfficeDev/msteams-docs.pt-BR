@@ -6,12 +6,12 @@ keywords: guia removendo preenchimento de margens
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069167"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140569"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 
@@ -34,7 +34,7 @@ Microsoft Teams aplicativos que usam guias serão afetados por essa alteração.
 
 Os desenvolvedores de guias não devem depender Teams para fornecer margens ao redor de suas guias. Os desenvolvedores são incentivados a adicionar margens ao redor de seus designs de tabulação onde é necessário. Designs de aplicativos em produção podem parecer que há preenchimento extra, ou seja, margens fornecidas por Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e desaparecerá em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
 
-## <a name="faq"></a>Perguntas Frequentes
+## <a name="faq"></a>Perguntas frequentes
 
 **Tudo bem para o aplicativo cromado, como barra de header ou barra de tarefas, tocar nas bordas de nossos designs?**
 
@@ -54,3 +54,18 @@ Não, você deve fornecer seu próprio preenchimento ou margens à esquerda e à
 > * Todas as guias têm suas margens removidas: guias pessoais, guias de chat (grupo), guias de reunião e guias de canal.
 > * Não há como optar ou não por essa alteração. Ela se aplicará a todas as guias.
 > * Essa alteração pode afetar guias que dependem de Microsoft Teams para fornecer margens ao redor da interface do usuário.
+
+## <a name="see-also"></a>Também consulte
+
+* [Teams guias](~/tabs/what-are-tabs.md)
+* [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
+* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
+* [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
+* [Obtenha contexto para sua guia](~/tabs/how-to/access-teams-context.md)
+* [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
+* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)

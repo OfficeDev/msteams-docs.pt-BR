@@ -3,12 +3,12 @@ title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
-ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114173"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53139967"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -136,7 +136,7 @@ A caixa de diálogo na reunião pode ser usada para envolver os participantes du
 A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
 
 > [!NOTE]
-> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
+> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
 > * Se você quiser que seu aplicativo suporte usuários anônimos, sua carga inicial de solicitação de invocação deve depender dos metadados de solicitação no objeto, não `from.id` `from` nos `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a ID Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
@@ -180,7 +180,7 @@ As configurações após e [antes das reuniões](#before-a-meeting) são as mesm
 |----------------|-----------------|--------------|----------------|-----------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Tokens de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. Isso pode ser útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)

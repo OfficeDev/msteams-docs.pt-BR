@@ -4,19 +4,19 @@ description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Autenticação do teams OAuth SSO AAD
-ms.openlocfilehash: c48f58c9d6f22b406a94e8370bab4b6a908fb2c8
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3a6967fcd026f5c87684df81c713af4abb27ac04
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994074"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140044"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
 > [!Note]
 > A autenticação baseada na Web em clientes móveis requer a versão 1.4.1 ou posterior do SDK do cliente JavaScript do Teams JavaScript.
 
-Para acessar informações do usuário protegidas pelo Active Directory do Azure (AAD) e acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usa APIs Graph Microsoft no escopo do usuário, autenture o usuário para recuperar os tokens de autenticação apropriados.
+Para acessar informações do usuário protegidas pelo Azure Active Directory (AAD) e para acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usa APIs Graph Microsoft no escopo do usuário, autenture o usuário para recuperar os tokens de autenticação apropriados.
 
 No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execute um fluxo de autenticação baseado na Web tradicional em uma página [de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) inserida em uma guia, uma página de configuração ou um módulo de tarefa. Se o aplicativo contiver um bot de conversa, use o fluxo OAuthPrompt e, opcionalmente, o serviço de token do Azure Bot Framework para autenticar um usuário como parte de uma conversa.
 

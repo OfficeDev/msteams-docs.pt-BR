@@ -4,16 +4,16 @@ description: Descrever como obter o contexto do usuário para suas guias
 localization_priority: Normal
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566863"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140275"
 ---
-# <a name="get-context-for-your-microsoft-teams-tab"></a>Obter contexto para a guia Microsoft Teams
+# <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
-Sua guia deve exigir informações contextuais para exibir conteúdo relevante:
+Sua guia requer informações contextuais para exibir conteúdo relevante:
 
 * Informações básicas sobre o usuário, equipe ou empresa.
 * Informações de localidade e tema.
@@ -24,51 +24,51 @@ Sua guia deve exigir informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo com o usuário ou a equipe especificado.
-* Você inicia um fluxo de autenticação Azure Active Directory ou outro provedor de identidade e não deseja exigir que o usuário insira seu nome de usuário novamente. Para obter mais informações sobre a autenticação em sua guia Microsoft Teams, consulte Autenticar um usuário [em sua guia Microsoft Teams.](~/concepts/authentication/authentication.md)
+* Você inicia um fluxo de autenticação Azure Active Directory (AAD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. Para obter mais informações, [consulte authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
-> Embora essas informações do usuário possam ajudar a fornecer uma experiência tranquila ao usuário, você deve *não* usá-lo como prova de identidade. Por exemplo, um invasor pode carregar sua página em um "navegador ruim" e processar informações ou solicitações prejudiciais.
+> Embora essas informações do usuário possam ajudar a fornecer uma experiência de usuário suave, você não deve usá-la como prova de identidade. Por exemplo, um invasor pode carregar sua página em um navegador e renderizar informações ou solicitações prejudiciais.
 
-## <a name="accessing-context"></a>Acessando o contexto
+## <a name="access-context-information"></a>Informações de contexto de acesso
 
 Você pode acessar informações de contexto de duas maneiras:
 
 * Inserir valores de espaço reservado de URL.
 * Use o [Microsoft Teams SDK do](/javascript/api/overview/msteams-client)cliente JavaScript .
 
-### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado para URL
+### <a name="get-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado de URL
 
-Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os marcadores disponíveis incluem todos os campos no objeto [Contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Os marcadores de posição comuns incluem o seguinte:
+Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os espaço reservados disponíveis incluem todos os campos no [objeto de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) contexto. Os marcadores de posição comuns incluem o seguinte:
 
 * {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
-* {subEntityId}: ID que você forneceu ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico _dentro de_ esta guia. Isso deve ser usado para restaurar a um estado específico dentro de uma entidade; por exemplo, rolar ou ativar uma parte específica do conteúdo.
-* {loginHint}: um valor adequado como uma dica de login para o Azure AD. Geralmente é o nome de login do usuário atual, na página inicial do locatário.
-* {userPrincipalName}: nome principal do usuário do usuário atual, no locatário atual.
-* {userObjectId}: ID de objeto do Azure AD do usuário atual, no locatário atual.
-* {theme}: tema atual da interface do usuário como `default`, `dark`, ou `contrast`.
-* {groupId}: ID do Grupo Office 365 no qual a guia reside
-* {tid}: ID do locatário do Azure AD do usuário atual.
+* {subEntityId}: A ID fornecida ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico nesta guia. Isso deve ser usado para restaurar para um estado específico dentro de uma entidade; por exemplo, rolar para ou ativar uma parte específica do conteúdo.
+* {loginHint}: Um valor adequado como uma dica de logon para a AAD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
+* {userPrincipalName}: o Nome principal do usuário atual no locatário atual.
+* {userObjectId}: A ID do objeto AAD do usuário atual no locatário atual.
+* {theme}: O tema atual da interface do usuário (UI), como `default` , `dark` ou `contrast` .
+* {groupId}: A ID do grupo Office 365 no qual a guia reside.
+* {tid}: A ID do locatário do AAD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como languageId-countryId. Por exemplo, en-us.
 
->[!NOTE]
->O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
+> [!NOTE]
+> O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
 
-Por exemplo, suponha que, no manifesto de tabulação, você de definir o atributo como , o usuário inscreveu `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` tenha os seguintes atributos:
+Por exemplo, em seu manifesto de tabulação, você definiu o atributo como , o usuário in-lo como `configURL` , tem os seguintes `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` atributos:
 
-* Seu nome de usuário é 'user@example.com'.
-* A ID do locatário da empresa é 'e2653c-etc'.
-* Eles são membros do grupo Office 365 com id '00209384-etc'.
-* O usuário definiu seu Teams como "escuro".
+* Seu nome de usuário **é user@example.com**.
+* A ID do locatário da empresa é **e2653c-etc.**
+* Eles são membros do grupo Office 365 id **00209384-etc.**
+* O usuário definiu seu Teams como **escuro**.
 
-Quando eles configuram sua guia, Teams chama a seguinte URL:
+Quando eles configuram a guia, Teams chama a seguinte URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca JavaScript do Microsoft Teams
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca Microsoft Teams JavaScript
 
 Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-A variável de contexto se parece com o exemplo a seguir:
+O código a seguir fornece um exemplo de variável de contexto:
 
 ```json
 {
@@ -110,12 +110,12 @@ A variável de contexto se parece com o exemplo a seguir:
 }
 ```
 
-## <a name="retrieving-context-in-private-channels"></a>Recuperando contexto em canais privados
+## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
 > [!Note]
 > Canais privados estão atualmente na visualização do desenvolvedor privado.
 
-Quando sua página de conteúdo é carregada em um canal privado, os dados que você recebe da chamada a `getContext` será ofuscada para proteger a privacidade do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado. Se sua página fizer uso de qualquer um dos valores abaixo, você precisará verificar o `channelType` para determinar se sua página está carregada em um canal privado e responder de forma adequada.
+Quando sua página de conteúdo é carregada em um canal privado, os dados recebidos da chamada são ofuscados para proteger a privacidade `getContext` do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
 
 * `groupId`: Indefinido para canais privados
 * `teamId`: De acordo com o threadId do canal privado
@@ -124,11 +124,33 @@ Quando sua página de conteúdo é carregada em um canal privado, os dados que v
 * `teamSitePath`: De acordo com o caminho de um site SharePoint exclusivo para o canal privado
 * `teamSiteDomain`: Definir para o domínio de um domínio de site SharePoint exclusivo para o canal privado
 
+Se sua página fizer uso de qualquer um desses valores, você deverá verificar o campo para determinar se sua página está carregada em um canal privado e `channelType` responder adequadamente.
+
 > [!Note]
->  teamSiteUrl também funciona bem para canais padrão.
+> `teamSiteUrl` também funciona bem para canais padrão.
 
-## <a name="theme-change-handling"></a>Tratamento de alteração de tema
+## <a name="handle-theme-change"></a>Manipular a alteração de tema
 
-Você pode registrar seu aplicativo para ser informado se o tema muda chamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
+Você pode registrar seu aplicativo para ser informado se o tema mudar chamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
 
-O argumento `theme` na função será uma string com um valor de `default`, `dark`, ou `contrast`.
+O argumento na função é uma cadeia de caracteres com `theme` um valor de , ou `default` `dark` `contrast` .
+
+## <a name="see-also"></a>Também consulte
+
+* [Diretrizes de design de tabulação](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Teams guias](~/tabs/what-are-tabs.md)
+* [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
+* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
+* [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
+* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
+* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
+* [Alterações na margem da guia](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)

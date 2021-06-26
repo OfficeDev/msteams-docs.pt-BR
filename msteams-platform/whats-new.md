@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095518"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140296"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
 |06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
@@ -74,8 +75,8 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |03/05/2021|Escopo de instalação padrão e funcionalidade de grupo.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|Reordenar guias de aplicativo pessoal.|[Reordenar a guia de chat em aplicativos pessoais](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
-|03/04/2021|Mascaramento de informações em Cartões Adaptáveis.| [Mascaramento de informações em Cartões Adaptáveis](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
+|03/05/2021|Reordenar guias de aplicativo pessoal.|[Reordenar a guia de chat em aplicativos pessoais](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
+|03/04/2021|Mascaramento de informações em cartões adaptáveis.| [Mascaramento de informações em cartões adaptáveis](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Recursos de localização adicionados. <br/> As informações de recursos de localização são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas, integração de recursos de mídia e arquivos de recursos de QR ou scanner de código de barras.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar](concepts/device-capabilities/mobile-camera-image-permissions.md)recursos de mídia, [Integrar a QR](concepts/device-capabilities/qr-barcode-scanner-capability.md)ou o recurso de scanner de código de barras, [Integrar recursos de localização](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Adicionado o recurso de QR ou scanner de código de barras. <br/> As informações de recurso de QR ou scanner de código de barras são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas e arquivos de recursos de mídia de integração.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar recursos de mídia,](concepts/device-capabilities/mobile-camera-image-permissions.md) [Integrar a QR ou o](concepts/device-capabilities/qr-barcode-scanner-capability.md) recurso de scanner de código de barras |
 |02/09/2021|Visão geral dos recursos do dispositivo adicionado. <br/> As informações de funcionalidade do microfone são adicionadas às permissões do dispositivo nativo e integram arquivos de recursos de mídia.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar recursos de mídia](concepts/device-capabilities/mobile-camera-image-permissions.md)|
@@ -131,7 +132,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 10/31/2019 | Bots de conversa e documentação de extensão de mensagens atualizada para refletir o SDK da Estrutura de Bots 4.6. A documentação do SDK v3 está disponível na seção Recursos. | Toda a documentação de bot e extensão de mensagens. |
 | 10/31/2019 | Nova estrutura de documentação e refatoria de artigos principais. Informe quaisquer links mortos ou 404s criando um problema GitHub. | Todos eles! |
 | 09/13/2019 | O bot de solicitação é instalado a partir da extensão de mensagens baseada em ação. | [Iniciar ações com extensões de mensagens](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 08/28/2019 | Suporte para canais privados em guias e conectores. | [Obtenha contexto para sua guia](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 08/28/2019 | Suporte para canais privados em guias e conectores. | [Obtenha contexto para sua guia](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | Compartilhe um site externo, de um site externo, em um Teams canal. | [Compartilhar com Teams](~/share-to-teams.md) |
 | 05/25/2019 | Responder com a mensagem bot do módulo de tarefa. | [Responder com mensagem bot do módulo de tarefa](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots em chats de grupo. | [Interagir com um bot no chat de grupo ou canal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
