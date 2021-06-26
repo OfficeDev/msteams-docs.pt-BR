@@ -4,38 +4,51 @@ description: Descreve ações de cartão em Microsoft Teams e como usá-las em s
 localization_priority: Normal
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: b9276c7197070df43ba447707e6fa4d3d4098591
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566849"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140086"
 ---
-# <a name="card-actions"></a><span data-ttu-id="e18e0-104">Ações de cartão</span><span class="sxs-lookup"><span data-stu-id="e18e0-104">Card actions</span></span>
+# <a name="card-actions"></a><span data-ttu-id="867a8-104">Ações de cartão</span><span class="sxs-lookup"><span data-stu-id="867a8-104">Card actions</span></span>
 
-<span data-ttu-id="e18e0-105">Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de atividade ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) )</span><span class="sxs-lookup"><span data-stu-id="e18e0-105">Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types.</span></span> <span data-ttu-id="e18e0-106">Observe que essas ações diferem das `potentialActions` Office 365 conectores quando usadas de Conectores.</span><span class="sxs-lookup"><span data-stu-id="e18e0-106">Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.</span></span>
-
-| <span data-ttu-id="e18e0-107">Tipo</span><span class="sxs-lookup"><span data-stu-id="e18e0-107">Type</span></span> | <span data-ttu-id="e18e0-108">Action</span><span class="sxs-lookup"><span data-stu-id="e18e0-108">Action</span></span> |
-| --- | --- |
-| `openUrl` | <span data-ttu-id="e18e0-109">Abre uma URL no navegador padrão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-109">Opens a URL in the default browser.</span></span> |
-| `messageBack` | <span data-ttu-id="e18e0-110">Envia uma mensagem e uma carga para o bot do usuário que clicou no botão ou tocou no cartão e envia uma mensagem separada para o fluxo de chat.</span><span class="sxs-lookup"><span data-stu-id="e18e0-110">Sends a message and payload to the bot from the user who clicked the button or tapped the card and sends a separate message to the chat stream.</span></span> |
-| `imBack`| <span data-ttu-id="e18e0-111">Envia uma mensagem para o bot do usuário que clicou no botão ou tocou no cartão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-111">Sends a message to the bot from the user who clicked the button or tapped the card.</span></span> <span data-ttu-id="e18e0-112">Essa mensagem (de usuário para bot) é visível para todos os participantes da conversa.</span><span class="sxs-lookup"><span data-stu-id="e18e0-112">This message (from user to bot) is visible to all conversation participants.</span></span> |
-| `invoke` | <span data-ttu-id="e18e0-113">Envia uma mensagem e uma carga para o bot do usuário que clicou no botão ou tocou no cartão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-113">Sends a message and payload to the bot from the user who clicked the button or tapped the card.</span></span> <span data-ttu-id="e18e0-114">Esta mensagem não está visível.</span><span class="sxs-lookup"><span data-stu-id="e18e0-114">This message is not visible.</span></span> |
-| `signin` | <span data-ttu-id="e18e0-115">Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros.</span><span class="sxs-lookup"><span data-stu-id="e18e0-115">Initiates OAuth flow, allowing bots to connect with secure services.</span></span> |
+<span data-ttu-id="867a8-105">Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) atividade:</span><span class="sxs-lookup"><span data-stu-id="867a8-105">Cards used by bots and messaging extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:</span></span>
 
 > [!NOTE]
->* <span data-ttu-id="e18e0-116">Teams não dá suporte a `CardAction` tipos não listados na tabela anterior.</span><span class="sxs-lookup"><span data-stu-id="e18e0-116">Teams does not support `CardAction` types not listed in the preceding table.</span></span>
->* <span data-ttu-id="e18e0-117">Teams não dá suporte à `potentialActions` propriedade.</span><span class="sxs-lookup"><span data-stu-id="e18e0-117">Teams does not support the `potentialActions` property.</span></span>
->* <span data-ttu-id="e18e0-118">As ações de cartão são diferentes [das ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Serviço bot framework/bot do Azure.</span><span class="sxs-lookup"><span data-stu-id="e18e0-118">Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service.</span></span> <span data-ttu-id="e18e0-119">As ações sugeridas não são suportadas Microsoft Teams: se você quiser que os botões apareçam em uma mensagem Teams bot, use um cartão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-119">Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.</span></span>
->* <span data-ttu-id="e18e0-120">Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado ao canal.</span><span class="sxs-lookup"><span data-stu-id="e18e0-120">If you are using a card action as part of a messaging extension, the actions do not work until the card is submitted to the channel.</span></span> <span data-ttu-id="e18e0-121">Eles não funcionam enquanto o cartão está na caixa de mensagem de composição.</span><span class="sxs-lookup"><span data-stu-id="e18e0-121">They do not work while the card is in the compose message box.</span></span>
+> <span data-ttu-id="867a8-106">As `CardAction` ações diferem `potentialActions` das Office 365 conectores quando usadas de conectores.</span><span class="sxs-lookup"><span data-stu-id="867a8-106">The `CardAction` actions differ from `potentialActions` for Office 365 Connector cards when used from connectors.</span></span>
 
-<span data-ttu-id="e18e0-122">Teams também oferece suporte [a ações de Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que são usadas apenas por Cartões Adaptáveis.</span><span class="sxs-lookup"><span data-stu-id="e18e0-122">Teams also supports [Adaptive Cards actions](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), which are only used by Adaptive Cards.</span></span> <span data-ttu-id="e18e0-123">Essas ações são listadas em sua própria seção no final desta referência.</span><span class="sxs-lookup"><span data-stu-id="e18e0-123">These actions are listed in their own section at the end of this reference.</span></span>
+| <span data-ttu-id="867a8-107">Tipo</span><span class="sxs-lookup"><span data-stu-id="867a8-107">Type</span></span> | <span data-ttu-id="867a8-108">Ação</span><span class="sxs-lookup"><span data-stu-id="867a8-108">Action</span></span> |
+| --- | --- |
+| `openUrl` | <span data-ttu-id="867a8-109">Abre uma URL no navegador padrão.</span><span class="sxs-lookup"><span data-stu-id="867a8-109">Opens a URL in the default browser.</span></span> |
+| `messageBack` | <span data-ttu-id="867a8-110">Envia uma mensagem e uma carga para o bot do usuário que selecionou o botão ou tocou no cartão.</span><span class="sxs-lookup"><span data-stu-id="867a8-110">Sends a message and payload to the bot from the user who selected the button or tapped the card.</span></span> <span data-ttu-id="867a8-111">Envia uma mensagem separada para o fluxo de chat.</span><span class="sxs-lookup"><span data-stu-id="867a8-111">Sends a separate message to the chat stream.</span></span> |
+| `imBack`| <span data-ttu-id="867a8-112">Envia uma mensagem para o bot do usuário que selecionou o botão ou tapped o cartão.</span><span class="sxs-lookup"><span data-stu-id="867a8-112">Sends a message to the bot from the user who selected the button or tapped the card.</span></span> <span data-ttu-id="867a8-113">Essa mensagem de usuário para bot é visível para todos os participantes da conversa.</span><span class="sxs-lookup"><span data-stu-id="867a8-113">This message from user to bot is visible to all conversation participants.</span></span> |
+| `invoke` | <span data-ttu-id="867a8-114">Envia uma mensagem e uma carga para o bot do usuário que selecionou o botão ou tocou no cartão.</span><span class="sxs-lookup"><span data-stu-id="867a8-114">Sends a message and payload to the bot from the user who selected the button or tapped the card.</span></span> <span data-ttu-id="867a8-115">Esta mensagem não está visível.</span><span class="sxs-lookup"><span data-stu-id="867a8-115">This message is not visible.</span></span> |
+| `signin` | <span data-ttu-id="867a8-116">Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros.</span><span class="sxs-lookup"><span data-stu-id="867a8-116">Initiates OAuth flow, allowing bots to connect with secure services.</span></span> |
 
-## <a name="openurl"></a><span data-ttu-id="e18e0-124">openUrl</span><span class="sxs-lookup"><span data-stu-id="e18e0-124">openUrl</span></span>
+> [!NOTE]
+>* <span data-ttu-id="867a8-117">Teams não dá suporte a `CardAction` tipos não listados na tabela anterior.</span><span class="sxs-lookup"><span data-stu-id="867a8-117">Teams does not support `CardAction` types not listed in the previous table.</span></span>
+>* <span data-ttu-id="867a8-118">Teams não dá suporte à `potentialActions` propriedade.</span><span class="sxs-lookup"><span data-stu-id="867a8-118">Teams does not support the `potentialActions` property.</span></span>
+>* <span data-ttu-id="867a8-119">As ações de cartão são diferentes [das ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou no Serviço de Bot do Azure.</span><span class="sxs-lookup"><span data-stu-id="867a8-119">Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service.</span></span> <span data-ttu-id="867a8-120">Ações sugeridas não são suportadas Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="867a8-120">Suggested actions are not supported in Microsoft Teams.</span></span> <span data-ttu-id="867a8-121">Se quiser que os botões apareçam em uma mensagem Teams bot, use um cartão.</span><span class="sxs-lookup"><span data-stu-id="867a8-121">If you want buttons to appear on a Teams bot message, use a card.</span></span>
+>* <span data-ttu-id="867a8-122">Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado ao canal.</span><span class="sxs-lookup"><span data-stu-id="867a8-122">If you are using a card action as part of a messaging extension, the actions do not work until the card is submitted to the channel.</span></span> <span data-ttu-id="867a8-123">As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.</span><span class="sxs-lookup"><span data-stu-id="867a8-123">The actions do not work while the card is in the compose message box.</span></span>
 
-<span data-ttu-id="e18e0-125">Esse tipo de ação especifica uma URL a ser lançada no navegador padrão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-125">This action type specifies a URL to launch in the default browser.</span></span> <span data-ttu-id="e18e0-126">Observe que o bot não recebe nenhum aviso sobre qual botão foi clicado.</span><span class="sxs-lookup"><span data-stu-id="e18e0-126">Note that your bot does not receive any notice on which button was clicked.</span></span>
+## <a name="action-type-openurl"></a><span data-ttu-id="867a8-124">Tipo de ação openUrl</span><span class="sxs-lookup"><span data-stu-id="867a8-124">Action type openUrl</span></span>
 
-<span data-ttu-id="e18e0-127">O `value` campo deve conter uma URL completa e corretamente formada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-127">The `value` field must contain a full and properly formed URL.</span></span>
+<span data-ttu-id="867a8-125">`openUrl` tipo de ação especifica uma URL a ser lançada no navegador padrão.</span><span class="sxs-lookup"><span data-stu-id="867a8-125">`openUrl` action type specifies a URL to launch in the default browser.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="867a8-126">Seu bot não recebe nenhum aviso sobre qual botão foi selecionado.</span><span class="sxs-lookup"><span data-stu-id="867a8-126">Your bot does not receive any notice on which button was selected.</span></span>
+
+<span data-ttu-id="867a8-127">Com `openUrl` , você pode criar uma ação com as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="867a8-127">With `openUrl`, you can create an action with the following properties:</span></span>
+
+| <span data-ttu-id="867a8-128">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-128">Property</span></span> | <span data-ttu-id="867a8-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-129">Description</span></span> |
+| --- | --- |
+| `title` | <span data-ttu-id="867a8-130">Aparece como o rótulo do botão.</span><span class="sxs-lookup"><span data-stu-id="867a8-130">Appears as the button label.</span></span> |
+| `value` | <span data-ttu-id="867a8-131">Esse campo deve conter uma URL completa e corretamente formada.</span><span class="sxs-lookup"><span data-stu-id="867a8-131">This field must contain a full and properly formed URL.</span></span> |
+
+# <a name="json"></a>[<span data-ttu-id="867a8-132">JSON</span><span class="sxs-lookup"><span data-stu-id="867a8-132">JSON</span></span>](#tab/json)
+
+<span data-ttu-id="867a8-133">O código a seguir mostra um exemplo de `openUrl` tipo de ação em JSON:</span><span class="sxs-lookup"><span data-stu-id="867a8-133">The following code shows an example of `openUrl` action type in JSON:</span></span>
 
 ```json
 {
@@ -45,18 +58,50 @@ ms.locfileid: "52566849"
 }
 ```
 
-## <a name="messageback"></a><span data-ttu-id="e18e0-128">messageBack</span><span class="sxs-lookup"><span data-stu-id="e18e0-128">messageBack</span></span>
+# <a name="c"></a>[<span data-ttu-id="867a8-134">C#</span><span class="sxs-lookup"><span data-stu-id="867a8-134">C#</span></span>](#tab/csharp)
 
-<span data-ttu-id="e18e0-129">Com `messageBack` , você pode criar uma ação totalmente personalizada com as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="e18e0-129">With `messageBack`, you can create a fully customized action with the following properties:</span></span>
+<span data-ttu-id="867a8-135">O código a seguir mostra um exemplo de `openUrl` tipo de ação C#:</span><span class="sxs-lookup"><span data-stu-id="867a8-135">The following code shows an example of `openUrl` action type in C#:</span></span>
 
-| <span data-ttu-id="e18e0-130">Propriedade</span><span class="sxs-lookup"><span data-stu-id="e18e0-130">Property</span></span> | <span data-ttu-id="e18e0-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="e18e0-131">Description</span></span> |
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.OpenUrl,
+    Title = "Tabs in Teams",
+    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+};
+```
+
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="867a8-136">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="867a8-136">JavaScript/Node.js</span></span>](#tab/javascript)
+
+<span data-ttu-id="867a8-137">O código a seguir mostra um exemplo de `openUrl` tipo de ação em JavaScript:</span><span class="sxs-lookup"><span data-stu-id="867a8-137">The following code shows an example of `openUrl` action type in JavaScript:</span></span>
+
+```javascript
+CardFactory.actions([
+{
+    type: 'openUrl',
+    title: 'Tabs in Teams',
+    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+}])
+```
+
+---
+
+## <a name="action-type-messageback"></a><span data-ttu-id="867a8-138">Tipo de ação messageBack</span><span class="sxs-lookup"><span data-stu-id="867a8-138">Action type messageBack</span></span>
+
+<span data-ttu-id="867a8-139">Com `messageBack` , você pode criar uma ação totalmente personalizada com as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="867a8-139">With `messageBack`, you can create a fully customized action with the following properties:</span></span>
+
+| <span data-ttu-id="867a8-140">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-140">Property</span></span> | <span data-ttu-id="867a8-141">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-141">Description</span></span> |
 | --- | --- |
-| `title` | <span data-ttu-id="e18e0-132">Aparece como o rótulo do botão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-132">Appears as the button label.</span></span> |
-| `displayText` | <span data-ttu-id="e18e0-133">Opcional.</span><span class="sxs-lookup"><span data-stu-id="e18e0-133">Optional.</span></span> <span data-ttu-id="e18e0-134">Ecoado pelo usuário no fluxo de chat quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-134">Echoed by the user into the chat stream when the action is performed.</span></span> <span data-ttu-id="e18e0-135">Este texto não *é* enviado para seu bot.</span><span class="sxs-lookup"><span data-stu-id="e18e0-135">This text is *not* sent to your bot.</span></span> |
-| `value` | <span data-ttu-id="e18e0-136">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-136">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="e18e0-137">Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="e18e0-137">You can encode context for the action, such as unique identifiers or a JSON object.</span></span> |
-| `text` | <span data-ttu-id="e18e0-138">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-138">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="e18e0-139">Use essa propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot.</span><span class="sxs-lookup"><span data-stu-id="e18e0-139">Use this property to simplify bot development: Your code can check a single top-level property to dispatch bot logic.</span></span> |
+| `title` | <span data-ttu-id="867a8-142">Aparece como o rótulo do botão.</span><span class="sxs-lookup"><span data-stu-id="867a8-142">Appears as the button label.</span></span> |
+| `displayText` | <span data-ttu-id="867a8-143">Opcional.</span><span class="sxs-lookup"><span data-stu-id="867a8-143">Optional.</span></span> <span data-ttu-id="867a8-144">Usado pelo usuário no fluxo de chat quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-144">Used by the user in the chat stream when the action is performed.</span></span> <span data-ttu-id="867a8-145">Este texto não é enviado para seu bot.</span><span class="sxs-lookup"><span data-stu-id="867a8-145">This text is not sent to your bot.</span></span> |
+| `value` | <span data-ttu-id="867a8-146">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-146">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="867a8-147">Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="867a8-147">You can encode context for the action, such as unique identifiers or a JSON object.</span></span> |
+| `text` | <span data-ttu-id="867a8-148">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-148">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="867a8-149">Use essa propriedade para simplificar o desenvolvimento de bots.</span><span class="sxs-lookup"><span data-stu-id="867a8-149">Use this property to simplify bot development.</span></span> <span data-ttu-id="867a8-150">Seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot.</span><span class="sxs-lookup"><span data-stu-id="867a8-150">Your code can check a single top-level property to dispatch bot logic.</span></span> |
 
-<span data-ttu-id="e18e0-140">A flexibilidade de meios que seu código pode optar por não deixar uma mensagem de usuário visível no `messageBack` histórico simplesmente não usando `displayText` .</span><span class="sxs-lookup"><span data-stu-id="e18e0-140">The flexibility of `messageBack` means that your code can choose not to leave a visible user message in the history simply by not using `displayText`.</span></span>
+<span data-ttu-id="867a8-151">A flexibilidade de meios de que seu código não pode deixar uma mensagem de usuário visível no `messageBack` histórico simplesmente não usando `displayText` .</span><span class="sxs-lookup"><span data-stu-id="867a8-151">The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.</span></span>
+
+# <a name="json"></a>[<span data-ttu-id="867a8-152">JSON</span><span class="sxs-lookup"><span data-stu-id="867a8-152">JSON</span></span>](#tab/json)
+
+<span data-ttu-id="867a8-153">O código a seguir mostra um exemplo de `messageBack` tipo de ação em JSON:</span><span class="sxs-lookup"><span data-stu-id="867a8-153">The following code shows an example of `messageBack` action type in JSON:</span></span>
 
 ```json
 {
@@ -72,11 +117,45 @@ ms.locfileid: "52566849"
 }
 ```
 
-<span data-ttu-id="e18e0-141">A `value` propriedade pode ser uma cadeia de caracteres JSON serializada ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="e18e0-141">The `value` property can be either a serialized JSON string or a JSON object.</span></span>
+<span data-ttu-id="867a8-154">A `value` propriedade pode ser uma cadeia de caracteres JSON serializada ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="867a8-154">The `value` property can be either a serialized JSON string or a JSON object.</span></span>
 
-### <a name="inbound-message-example"></a><span data-ttu-id="e18e0-142">Exemplo de mensagem de entrada</span><span class="sxs-lookup"><span data-stu-id="e18e0-142">Inbound message example</span></span>
+# <a name="c"></a>[<span data-ttu-id="867a8-155">C#</span><span class="sxs-lookup"><span data-stu-id="867a8-155">C#</span></span>](#tab/csharp)
 
-<span data-ttu-id="e18e0-143">`replyToId` contém a ID da mensagem de onde veio a ação do cartão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-143">`replyToId` contains the ID of the message that the card action came from.</span></span> <span data-ttu-id="e18e0-144">Use-o se quiser atualizar a mensagem.</span><span class="sxs-lookup"><span data-stu-id="e18e0-144">Use it if you want to update the message.</span></span>
+<span data-ttu-id="867a8-156">O código a seguir mostra um exemplo de `messageBack` tipo de ação C#:</span><span class="sxs-lookup"><span data-stu-id="867a8-156">The following code shows an example of `messageBack` action type in C#:</span></span>
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.MessageBack,
+    Title = "My MessageBack button",
+    DisplayText = "I clicked this button",
+    Text = "User just clicked the MessageBack button",
+    Value = "{\"property\": \"propertyValue\" }"
+};
+```
+
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="867a8-157">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="867a8-157">JavaScript/Node.js</span></span>](#tab/javascript)
+
+<span data-ttu-id="867a8-158">O código a seguir mostra um exemplo de `messageBack` tipo de ação em JavaScript:</span><span class="sxs-lookup"><span data-stu-id="867a8-158">The following code shows an example of `messageBack` action type in JavaScript:</span></span>
+
+```javascript
+CardFactory.actions([
+{
+    type: 'messageBack',
+    title: "My MessageBack button",
+    displayText: "I clicked this button",
+    text: "User just clicked the MessageBack button",
+    value: {property: "propertyValue" }
+}])
+```
+
+---
+
+### <a name="inbound-message-example"></a><span data-ttu-id="867a8-159">Exemplo de mensagem de entrada</span><span class="sxs-lookup"><span data-stu-id="867a8-159">Inbound message example</span></span>
+
+<span data-ttu-id="867a8-160">`replyToId` contém a ID da mensagem de onde veio a ação do cartão.</span><span class="sxs-lookup"><span data-stu-id="867a8-160">`replyToId` contains the ID of the message that the card action came from.</span></span> <span data-ttu-id="867a8-161">Use-o se quiser atualizar a mensagem.</span><span class="sxs-lookup"><span data-stu-id="867a8-161">Use it if you want to update the message.</span></span>
+
+<span data-ttu-id="867a8-162">O código a seguir mostra um exemplo de mensagem de entrada:</span><span class="sxs-lookup"><span data-stu-id="867a8-162">The following code shows an example of inbound message:</span></span>
 
 ```json
 {
@@ -124,11 +203,23 @@ ms.locfileid: "52566849"
 }
 ```
 
-## <a name="imback"></a><span data-ttu-id="e18e0-145">imBack</span><span class="sxs-lookup"><span data-stu-id="e18e0-145">imBack</span></span>
+## <a name="action-type-imback"></a><span data-ttu-id="867a8-163">Tipo de ação imBack</span><span class="sxs-lookup"><span data-stu-id="867a8-163">Action type imBack</span></span>
 
-<span data-ttu-id="e18e0-146">Essa ação aciona uma mensagem de retorno para seu bot, como se o usuário a digitou em uma mensagem de chat normal.</span><span class="sxs-lookup"><span data-stu-id="e18e0-146">This action triggers a return message to your bot, as if the user typed it in a normal chat message.</span></span> <span data-ttu-id="e18e0-147">Seu usuário e todos os outros usuários, se em um canal, verão a resposta do botão.</span><span class="sxs-lookup"><span data-stu-id="e18e0-147">Your user, and all other users if in a channel, will see that button response.</span></span>
+<span data-ttu-id="867a8-164">A ação dispara uma mensagem de retorno para seu bot, como se o usuário a digitou `imBack` em uma mensagem de chat normal.</span><span class="sxs-lookup"><span data-stu-id="867a8-164">The `imBack` action triggers a return message to your bot, as if the user typed it in a normal chat message.</span></span> <span data-ttu-id="867a8-165">Seu usuário e todos os outros usuários em um canal podem ver a resposta do botão.</span><span class="sxs-lookup"><span data-stu-id="867a8-165">Your user and all other users in a channel can see the button response.</span></span>
 
-<span data-ttu-id="e18e0-148">O campo deve conter a cadeia de caracteres de texto `value` ecoada no chat e, portanto, enviada de volta para o bot.</span><span class="sxs-lookup"><span data-stu-id="e18e0-148">The `value` field should contain the text string echoed in the chat and therefore sent back to the bot.</span></span> <span data-ttu-id="e18e0-149">Este é o texto da mensagem que você processará em seu bot para executar a lógica desejada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-149">This is the message text you will process in your bot to perform the desired logic.</span></span> <span data-ttu-id="e18e0-150">Observação: este campo é uma cadeia de caracteres simples - não há suporte para formatação ou caracteres ocultos.</span><span class="sxs-lookup"><span data-stu-id="e18e0-150">Note: this field is a simple string - there is no support for formatting or hidden characters.</span></span>
+<span data-ttu-id="867a8-166">Com `imBack` , você pode criar uma ação com as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="867a8-166">With `imBack`, you can create an action with the following properties:</span></span>
+
+| <span data-ttu-id="867a8-167">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-167">Property</span></span> | <span data-ttu-id="867a8-168">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-168">Description</span></span> |
+| --- | --- |
+| `title` | <span data-ttu-id="867a8-169">Aparece como o rótulo do botão.</span><span class="sxs-lookup"><span data-stu-id="867a8-169">Appears as the button label.</span></span> |
+| `value` | <span data-ttu-id="867a8-170">Esse campo deve conter a cadeia de caracteres de texto usada no chat e, portanto, enviada de volta para o bot.</span><span class="sxs-lookup"><span data-stu-id="867a8-170">This field must contain the text string used in the chat and therefore sent back to the bot.</span></span> <span data-ttu-id="867a8-171">Este é o texto da mensagem que você processa em seu bot para executar a lógica desejada.</span><span class="sxs-lookup"><span data-stu-id="867a8-171">This is the message text you process in your bot to perform the desired logic.</span></span> |
+
+> [!NOTE]
+> <span data-ttu-id="867a8-172">O `value` campo é uma cadeia de caracteres simples.</span><span class="sxs-lookup"><span data-stu-id="867a8-172">The `value` field is a simple string.</span></span> <span data-ttu-id="867a8-173">Não há suporte para formatação ou caracteres ocultos.</span><span class="sxs-lookup"><span data-stu-id="867a8-173">There is no support for formatting or hidden characters.</span></span>
+
+# <a name="json"></a>[<span data-ttu-id="867a8-174">JSON</span><span class="sxs-lookup"><span data-stu-id="867a8-174">JSON</span></span>](#tab/json)
+
+<span data-ttu-id="867a8-175">O código a seguir mostra um exemplo de `imBack` tipo de ação em JSON:</span><span class="sxs-lookup"><span data-stu-id="867a8-175">The following code shows an example of `imBack` action type in JSON:</span></span>
 
 ```json
 {
@@ -138,11 +229,50 @@ ms.locfileid: "52566849"
 }
 ```
 
-## <a name="invoke"></a><span data-ttu-id="e18e0-151">invoke</span><span class="sxs-lookup"><span data-stu-id="e18e0-151">invoke</span></span>
+# <a name="c"></a>[<span data-ttu-id="867a8-176">C#</span><span class="sxs-lookup"><span data-stu-id="867a8-176">C#</span></span>](#tab/csharp)
 
-<span data-ttu-id="e18e0-152">A `invoke` ação é usada para invocar [módulos de tarefa](~/task-modules-and-cards/task-modules/task-modules-bots.md).</span><span class="sxs-lookup"><span data-stu-id="e18e0-152">The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).</span></span>
+<span data-ttu-id="867a8-177">O código a seguir mostra um exemplo de `imBack` tipo de ação C#:</span><span class="sxs-lookup"><span data-stu-id="867a8-177">The following code shows an example of `imBack` action type in C#:</span></span>
 
-<span data-ttu-id="e18e0-153">A `invoke` ação contém três propriedades: , e `type` `title` `value` .</span><span class="sxs-lookup"><span data-stu-id="e18e0-153">The `invoke` action contains three properties: `type`, `title`, and `value`.</span></span> <span data-ttu-id="e18e0-154">A `value` propriedade pode conter uma cadeia de caracteres, um objeto JSON stringified ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="e18e0-154">The `value` property can contain a string, a stringified JSON object, or a JSON object.</span></span>
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.ImBack,
+    Title = "More",
+    Value = "Show me more"
+};
+```
+
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="867a8-178">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="867a8-178">JavaScript/Node.js</span></span>](#tab/javascript)
+
+<span data-ttu-id="867a8-179">O código a seguir mostra um exemplo de `imBack` tipo de ação em JavaScript:</span><span class="sxs-lookup"><span data-stu-id="867a8-179">The following code shows an example of `imBack` action type in JavaScript:</span></span>
+
+```javascript
+CardFactory.actions([
+{
+    type: "imBack",
+    title: "More",
+    value: "Show me more"
+}])
+```
+
+---
+
+## <a name="action-type-invoke"></a><span data-ttu-id="867a8-180">Tipo de ação invocar</span><span class="sxs-lookup"><span data-stu-id="867a8-180">Action type invoke</span></span>
+
+<span data-ttu-id="867a8-181">A `invoke` ação é usada para invocar [módulos de tarefa](~/task-modules-and-cards/task-modules/task-modules-bots.md).</span><span class="sxs-lookup"><span data-stu-id="867a8-181">The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).</span></span>
+
+<span data-ttu-id="867a8-182">A `invoke` ação contém três `type` propriedades, , e `title` `value` .</span><span class="sxs-lookup"><span data-stu-id="867a8-182">The `invoke` action contains three properties, `type`, `title`, and `value`.</span></span>
+
+<span data-ttu-id="867a8-183">Com `invoke` , você pode criar uma ação com as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="867a8-183">With `invoke`, you can create an action with the following properties:</span></span>
+
+| <span data-ttu-id="867a8-184">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-184">Property</span></span> | <span data-ttu-id="867a8-185">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-185">Description</span></span> |
+| --- | --- |
+| `title` | <span data-ttu-id="867a8-186">Aparece como o rótulo do botão.</span><span class="sxs-lookup"><span data-stu-id="867a8-186">Appears as the button label.</span></span> |
+| `value` | <span data-ttu-id="867a8-187">Essa propriedade pode conter uma cadeia de caracteres, um objeto JSON stringified ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="867a8-187">This property can contain a string, a stringified JSON object, or a JSON object.</span></span> |
+
+# <a name="json"></a>[<span data-ttu-id="867a8-188">JSON</span><span class="sxs-lookup"><span data-stu-id="867a8-188">JSON</span></span>](#tab/json)
+
+<span data-ttu-id="867a8-189">O código a seguir mostra um exemplo de `invoke` tipo de ação em JSON:</span><span class="sxs-lookup"><span data-stu-id="867a8-189">The following code shows an example of `invoke` action type in JSON:</span></span>
 
 ```json
 {
@@ -154,9 +284,14 @@ ms.locfileid: "52566849"
 }
 ```
 
-<span data-ttu-id="e18e0-155">Quando um usuário clica no botão, seu bot receberá o `value` objeto com algumas informações adicionais.</span><span class="sxs-lookup"><span data-stu-id="e18e0-155">When a user clicks the button, your bot will receive the `value` object with some additional info.</span></span> <span data-ttu-id="e18e0-156">Observe que o tipo de atividade será `invoke` em vez de ( `message` `activity.Type == "invoke"` ).</span><span class="sxs-lookup"><span data-stu-id="e18e0-156">Please note that the activity type will be `invoke` instead of `message` (`activity.Type == "invoke"`).</span></span>
+<span data-ttu-id="867a8-190">Quando um usuário seleciona o botão, seu bot recebe o `value` objeto com algumas informações adicionais.</span><span class="sxs-lookup"><span data-stu-id="867a8-190">When a user selects the button, your bot receives the `value` object with some additional information.</span></span>
 
-### <a name="example-invoke-button-definition-net"></a><span data-ttu-id="e18e0-157">Exemplo: Invocar definição de botão (.NET)</span><span class="sxs-lookup"><span data-stu-id="e18e0-157">Example: Invoke button definition (.NET)</span></span>
+> [!NOTE]
+> <span data-ttu-id="867a8-191">O tipo de atividade `invoke` é, em vez `message` disso, `activity.Type == "invoke"` é .</span><span class="sxs-lookup"><span data-stu-id="867a8-191">The activity type is `invoke` instead of `message` that is `activity.Type == "invoke"`.</span></span>
+
+# <a name="c"></a>[<span data-ttu-id="867a8-192">C#</span><span class="sxs-lookup"><span data-stu-id="867a8-192">C#</span></span>](#tab/csharp)
+
+<span data-ttu-id="867a8-193">O código a seguir mostra um exemplo de `invoke` tipo de ação C#:</span><span class="sxs-lookup"><span data-stu-id="867a8-193">The following code shows an example of `invoke` action type in C#:</span></span>
 
 ```csharp
 var button = new CardAction()
@@ -167,9 +302,28 @@ var button = new CardAction()
 };
 ```
 
-### <a name="example-incoming-invoke-message"></a><span data-ttu-id="e18e0-158">Exemplo: Mensagem de invocação de entrada</span><span class="sxs-lookup"><span data-stu-id="e18e0-158">Example: Incoming invoke message</span></span>
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="867a8-194">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="867a8-194">JavaScript/Node.js</span></span>](#tab/javascript)
 
-<span data-ttu-id="e18e0-159">A propriedade de nível superior contém a ID da mensagem de onde a `replyToId` ação do cartão veio.</span><span class="sxs-lookup"><span data-stu-id="e18e0-159">The top-level `replyToId` property contains the ID of the message that the card action came from.</span></span> <span data-ttu-id="e18e0-160">Use-o se quiser atualizar a mensagem.</span><span class="sxs-lookup"><span data-stu-id="e18e0-160">Use it if you want to update the message.</span></span>
+<span data-ttu-id="867a8-195">O código a seguir mostra um exemplo de `invoke` tipo de ação Node.js:</span><span class="sxs-lookup"><span data-stu-id="867a8-195">The following code shows an example of `invoke` action type in Node.js:</span></span>
+
+```javascript
+CardFactory.actions([
+{
+    type: "invoke",
+    title: "Option 1",
+    value: {
+        option: "opt1"
+    }
+}])
+```
+
+---
+
+### <a name="example-of-incoming-invoke-message"></a><span data-ttu-id="867a8-196">Exemplo de mensagem de invocação de entrada</span><span class="sxs-lookup"><span data-stu-id="867a8-196">Example of incoming invoke message</span></span>
+
+<span data-ttu-id="867a8-197">A propriedade de nível superior contém a ID da mensagem de onde a `replyToId` ação do cartão veio.</span><span class="sxs-lookup"><span data-stu-id="867a8-197">The top-level `replyToId` property contains the ID of the message that the card action came from.</span></span> <span data-ttu-id="867a8-198">Use-o se quiser atualizar a mensagem.</span><span class="sxs-lookup"><span data-stu-id="867a8-198">Use it if you want to update the message.</span></span>
+
+<span data-ttu-id="867a8-199">O código a seguir mostra um exemplo de mensagem de chamada de entrada:</span><span class="sxs-lookup"><span data-stu-id="867a8-199">The following code shows an example of incoming invoke message:</span></span>
 
 ```json
 {
@@ -217,36 +371,81 @@ var button = new CardAction()
 }
 ```
 
-## <a name="signin"></a><span data-ttu-id="e18e0-161">signin</span><span class="sxs-lookup"><span data-stu-id="e18e0-161">signin</span></span>
+## <a name="action-type-signin"></a><span data-ttu-id="867a8-200">Signin do tipo de ação</span><span class="sxs-lookup"><span data-stu-id="867a8-200">Action type signin</span></span>
 
-<span data-ttu-id="e18e0-162">Inicia um fluxo OAuth, permitindo que os bots se conectem com serviços seguros, conforme descrito em mais detalhes aqui: Fluxo de autenticação [em bots](~/bots/how-to/authentication/auth-flow-bot.md).</span><span class="sxs-lookup"><span data-stu-id="e18e0-162">Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).</span></span>
+<span data-ttu-id="867a8-201">`signin` tipo de ação inicia um fluxo OAuth que permite que os bots se conectem com serviços seguros.</span><span class="sxs-lookup"><span data-stu-id="867a8-201">`signin` action type initiates an OAuth flow that permits bots to connect with secure services.</span></span> <span data-ttu-id="867a8-202">Para obter mais informações, consulte [fluxo de autenticação em bots](~/bots/how-to/authentication/auth-flow-bot.md).</span><span class="sxs-lookup"><span data-stu-id="867a8-202">For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).</span></span>
 
-## <a name="adaptive-cards-actions"></a><span data-ttu-id="e18e0-163">Ações de Cartões Adaptáveis</span><span class="sxs-lookup"><span data-stu-id="e18e0-163">Adaptive Cards actions</span></span>
+<span data-ttu-id="867a8-203">Teams também oferece suporte [a ações de Cartões Adaptáveis](#adaptive-cards-actions) que são usadas apenas por Cartões Adaptáveis.</span><span class="sxs-lookup"><span data-stu-id="867a8-203">Teams also supports [Adaptive Cards actions](#adaptive-cards-actions) that are only used by Adaptive Cards.</span></span>
 
-<span data-ttu-id="e18e0-164">Os Cartões Adaptáveis suportam quatro tipos de ação:</span><span class="sxs-lookup"><span data-stu-id="e18e0-164">Adaptive Cards support four action types:</span></span>
+# <a name="json"></a>[<span data-ttu-id="867a8-204">JSON</span><span class="sxs-lookup"><span data-stu-id="867a8-204">JSON</span></span>](#tab/json)
 
-* [<span data-ttu-id="e18e0-165">Action.OpenUrl</span><span class="sxs-lookup"><span data-stu-id="e18e0-165">Action.OpenUrl</span></span>](http://adaptivecards.io/explorer/Action.OpenUrl.html)
-* [<span data-ttu-id="e18e0-166">Action.Submit</span><span class="sxs-lookup"><span data-stu-id="e18e0-166">Action.Submit</span></span>](http://adaptivecards.io/explorer/Action.Submit.html)
-* [<span data-ttu-id="e18e0-167">Action.ShowCard</span><span class="sxs-lookup"><span data-stu-id="e18e0-167">Action.ShowCard</span></span>](http://adaptivecards.io/explorer/Action.ShowCard.html)
-* [<span data-ttu-id="e18e0-168">Action.Exebonito</span><span class="sxs-lookup"><span data-stu-id="e18e0-168">Action.Execute</span></span>](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+<span data-ttu-id="867a8-205">O código a seguir mostra um exemplo de `signin` tipo de ação em JSON:</span><span class="sxs-lookup"><span data-stu-id="867a8-205">The following code shows an example of `signin` action type in JSON:</span></span>
 
-<span data-ttu-id="e18e0-169">Além das ações mencionadas acima, você pode modificar a carga do Cartão Adaptável para dar suporte a ações existentes da Estrutura de Bot usando uma propriedade no `Action.Submit` `msteams` objeto de `data` `Action.Submit` .</span><span class="sxs-lookup"><span data-stu-id="e18e0-169">In addition to the actions mentioned above, you can modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`.</span></span> <span data-ttu-id="e18e0-170">As seções a seguir detalham como usar ações da Estrutura de Bot existentes com Cartões Adaptáveis.</span><span class="sxs-lookup"><span data-stu-id="e18e0-170">The below sections detail how to use existing Bot Framework actions with Adaptive Cards.</span></span>
+```json
+{
+"type": "signin",
+"title": "Click me for signin",
+"value": "https://signin.com"
+}
+```
+
+# <a name="c"></a>[<span data-ttu-id="867a8-206">C#</span><span class="sxs-lookup"><span data-stu-id="867a8-206">C#</span></span>](#tab/csharp)
+
+<span data-ttu-id="867a8-207">O código a seguir mostra um exemplo de `signin` tipo de ação C#:</span><span class="sxs-lookup"><span data-stu-id="867a8-207">The following code shows an example of `signin` action type in C#:</span></span>
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.Signin,
+    Title = "Click me for signin",
+    Value = "https://signin.com"
+};
+```
+
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="867a8-208">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="867a8-208">JavaScript/Node.js</span></span>](#tab/javascript)
+
+<span data-ttu-id="867a8-209">O código a seguir mostra um exemplo de `signin` tipo de ação em JavaScript:</span><span class="sxs-lookup"><span data-stu-id="867a8-209">The following code shows an example of `signin` action type in JavaScript:</span></span>
+
+```javascript
+CardFactory.actions([
+{
+    type: "signin",
+    title: "Click me for signin",
+    value: "https://signin.com"
+}])
+```
+
+---
+
+## <a name="adaptive-cards-actions"></a><span data-ttu-id="867a8-210">Ações de Cartões Adaptáveis</span><span class="sxs-lookup"><span data-stu-id="867a8-210">Adaptive Cards actions</span></span>
+
+<span data-ttu-id="867a8-211">Os Cartões Adaptáveis suportam quatro tipos de ação:</span><span class="sxs-lookup"><span data-stu-id="867a8-211">Adaptive Cards support four action types:</span></span>
+
+* [<span data-ttu-id="867a8-212">Action.OpenUrl</span><span class="sxs-lookup"><span data-stu-id="867a8-212">Action.OpenUrl</span></span>](http://adaptivecards.io/explorer/Action.OpenUrl.html)
+* [<span data-ttu-id="867a8-213">Action.Submit</span><span class="sxs-lookup"><span data-stu-id="867a8-213">Action.Submit</span></span>](http://adaptivecards.io/explorer/Action.Submit.html)
+* [<span data-ttu-id="867a8-214">Action.ShowCard</span><span class="sxs-lookup"><span data-stu-id="867a8-214">Action.ShowCard</span></span>](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [<span data-ttu-id="867a8-215">Action.Exebonito</span><span class="sxs-lookup"><span data-stu-id="867a8-215">Action.Execute</span></span>](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+
+<span data-ttu-id="867a8-216">Você também pode modificar a carga cartão adaptável para dar suporte a ações existentes da Estrutura de Bot usando uma propriedade `Action.Submit` `msteams` no objeto de `data` `Action.Submit` .</span><span class="sxs-lookup"><span data-stu-id="867a8-216">You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`.</span></span> <span data-ttu-id="867a8-217">A próxima seção fornece detalhes sobre como usar ações da Estrutura de Bot existentes com Cartões Adaptáveis.</span><span class="sxs-lookup"><span data-stu-id="867a8-217">The next section provide details on how to use existing Bot Framework actions with Adaptive Cards.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e18e0-171">Adicionar `msteams` aos dados, com uma ação da Estrutura de Bot, não funciona com um módulo de tarefa cartão adaptável.</span><span class="sxs-lookup"><span data-stu-id="e18e0-171">Adding `msteams` to data, with a Bot Framework action, does not work with an Adaptive Card task module.</span></span>
+> <span data-ttu-id="867a8-218">Adicionar aos dados com uma ação da Estrutura de Bot não funciona com um módulo de tarefa `msteams` cartão adaptável.</span><span class="sxs-lookup"><span data-stu-id="867a8-218">Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.</span></span>
 
-### <a name="adaptive-cards-with-messageback-action"></a><span data-ttu-id="e18e0-172">Cartões Adaptáveis com ação messageBack</span><span class="sxs-lookup"><span data-stu-id="e18e0-172">Adaptive Cards with messageBack action</span></span>
+### <a name="adaptive-cards-with-messageback-action"></a><span data-ttu-id="867a8-219">Cartões Adaptáveis com ação messageBack</span><span class="sxs-lookup"><span data-stu-id="867a8-219">Adaptive Cards with messageBack action</span></span>
 
-<span data-ttu-id="e18e0-173">Para incluir uma `messageBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto.</span><span class="sxs-lookup"><span data-stu-id="e18e0-173">To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object.</span></span> <span data-ttu-id="e18e0-174">Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="e18e0-174">Note that you can include additional hidden properties in the `data` object if needed.</span></span>
+<span data-ttu-id="867a8-220">Para incluir uma `messageBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto:</span><span class="sxs-lookup"><span data-stu-id="867a8-220">To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object:</span></span>
 
-| <span data-ttu-id="e18e0-175">Propriedade</span><span class="sxs-lookup"><span data-stu-id="e18e0-175">Property</span></span> | <span data-ttu-id="e18e0-176">Descrição</span><span class="sxs-lookup"><span data-stu-id="e18e0-176">Description</span></span> |
+> [!NOTE]
+> <span data-ttu-id="867a8-221">Você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="867a8-221">You can include additional hidden properties in the `data` object, if required.</span></span>
+
+| <span data-ttu-id="867a8-222">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-222">Property</span></span> | <span data-ttu-id="867a8-223">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-223">Description</span></span> |
 | --- | --- |
-| `type` | <span data-ttu-id="e18e0-177">Definir como `messageBack`</span><span class="sxs-lookup"><span data-stu-id="e18e0-177">Set to `messageBack`</span></span> |
-| `displayText` | <span data-ttu-id="e18e0-178">Opcional.</span><span class="sxs-lookup"><span data-stu-id="e18e0-178">Optional.</span></span> <span data-ttu-id="e18e0-179">Ecoado pelo usuário no fluxo de chat quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-179">Echoed by the user into the chat stream when the action is performed.</span></span> <span data-ttu-id="e18e0-180">Este texto não *é* enviado para seu bot.</span><span class="sxs-lookup"><span data-stu-id="e18e0-180">This text is *not* sent to your bot.</span></span> |
-| `value` | <span data-ttu-id="e18e0-181">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-181">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="e18e0-182">Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="e18e0-182">You can encode context for the action, such as unique identifiers or a JSON object.</span></span> |
-| `text` | <span data-ttu-id="e18e0-183">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="e18e0-183">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="e18e0-184">Use essa propriedade para simplificar o desenvolvimento de bots: seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot.</span><span class="sxs-lookup"><span data-stu-id="e18e0-184">Use this property to simplify bot development: Your code can check a single top-level property to dispatch bot logic.</span></span> |
+| `type` | <span data-ttu-id="867a8-224">Definir como `messageBack` .</span><span class="sxs-lookup"><span data-stu-id="867a8-224">Set to `messageBack`.</span></span> |
+| `displayText` | <span data-ttu-id="867a8-225">Opcional.</span><span class="sxs-lookup"><span data-stu-id="867a8-225">Optional.</span></span> <span data-ttu-id="867a8-226">Usado pelo usuário no fluxo de chat quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-226">Used by the user in the chat stream when the action is performed.</span></span> <span data-ttu-id="867a8-227">Este texto não é enviado para seu bot.</span><span class="sxs-lookup"><span data-stu-id="867a8-227">This text is not sent to your bot.</span></span> |
+| `value` | <span data-ttu-id="867a8-228">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-228">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="867a8-229">Você pode codificar contexto para a ação, como identificadores exclusivos ou um objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="867a8-229">You can encode context for the action, such as unique identifiers or a JSON object.</span></span> |
+| `text` | <span data-ttu-id="867a8-230">Enviado ao bot quando a ação é executada.</span><span class="sxs-lookup"><span data-stu-id="867a8-230">Sent to your bot when the action is performed.</span></span> <span data-ttu-id="867a8-231">Use essa propriedade para simplificar o desenvolvimento de bots.</span><span class="sxs-lookup"><span data-stu-id="867a8-231">Use this property to simplify bot development.</span></span> <span data-ttu-id="867a8-232">Seu código pode verificar uma única propriedade de nível superior para despachar a lógica do bot.</span><span class="sxs-lookup"><span data-stu-id="867a8-232">Your code can check a single top-level property to dispatch bot logic.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="e18e0-185">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e18e0-185">Example</span></span>
+<span data-ttu-id="867a8-233">O código a seguir mostra um exemplo de Cartões Adaptáveis com `messageBack` ação:</span><span class="sxs-lookup"><span data-stu-id="867a8-233">The following code shows an example of Adaptive Cards with `messageBack` action:</span></span>
 
 ```json
 {
@@ -263,16 +462,19 @@ var button = new CardAction()
 }
 ```
 
-### <a name="adaptive-cards-with-imback-action"></a><span data-ttu-id="e18e0-186">Cartões Adaptáveis com ação imBack</span><span class="sxs-lookup"><span data-stu-id="e18e0-186">Adaptive Cards with imBack action</span></span>
+### <a name="adaptive-cards-with-imback-action"></a><span data-ttu-id="867a8-234">Cartões Adaptáveis com ação imBack</span><span class="sxs-lookup"><span data-stu-id="867a8-234">Adaptive Cards with imBack action</span></span>
 
-<span data-ttu-id="e18e0-187">Para incluir uma `imBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto.</span><span class="sxs-lookup"><span data-stu-id="e18e0-187">To include a `imBack` action with an Adaptive Card include the following details in the `msteams` object.</span></span> <span data-ttu-id="e18e0-188">Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="e18e0-188">Note that you can include additional hidden properties in the `data` object if needed.</span></span>
+<span data-ttu-id="867a8-235">Para incluir uma `imBack` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto:</span><span class="sxs-lookup"><span data-stu-id="867a8-235">To include an `imBack` action with an Adaptive Card include the following details in the `msteams` object:</span></span>
 
-| <span data-ttu-id="e18e0-189">Propriedade</span><span class="sxs-lookup"><span data-stu-id="e18e0-189">Property</span></span> | <span data-ttu-id="e18e0-190">Descrição</span><span class="sxs-lookup"><span data-stu-id="e18e0-190">Description</span></span> |
+> [!NOTE]
+> <span data-ttu-id="867a8-236">Você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="867a8-236">You can include additional hidden properties in the `data` object, if required.</span></span>
+
+| <span data-ttu-id="867a8-237">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-237">Property</span></span> | <span data-ttu-id="867a8-238">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-238">Description</span></span> |
 | --- | --- |
-| `type` | <span data-ttu-id="e18e0-191">Definir como `imBack`</span><span class="sxs-lookup"><span data-stu-id="e18e0-191">Set to `imBack`</span></span> |
-| `value` | <span data-ttu-id="e18e0-192">Cadeia de caracteres que precisa ser ecoada no chat</span><span class="sxs-lookup"><span data-stu-id="e18e0-192">String that needs to be echoed back in the chat</span></span> |
+| `type` | <span data-ttu-id="867a8-239">Definir como `imBack` .</span><span class="sxs-lookup"><span data-stu-id="867a8-239">Set to `imBack`.</span></span> |
+| `value` | <span data-ttu-id="867a8-240">Cadeia de caracteres que precisa ser ecoada novamente no chat.</span><span class="sxs-lookup"><span data-stu-id="867a8-240">String that needs to be echoed back in the chat.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="e18e0-193">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e18e0-193">Example</span></span>
+<span data-ttu-id="867a8-241">O código a seguir mostra um exemplo de Cartões Adaptáveis com `imBack` ação:</span><span class="sxs-lookup"><span data-stu-id="867a8-241">The following code shows an example of Adaptive Cards with `imBack` action:</span></span>
 
 ```json
 {
@@ -287,16 +489,19 @@ var button = new CardAction()
 }
 ```
 
-### <a name="adaptive-cards-with-signin-action"></a><span data-ttu-id="e18e0-194">Cartões Adaptáveis com ação de signin</span><span class="sxs-lookup"><span data-stu-id="e18e0-194">Adaptive Cards with signin action</span></span>
+### <a name="adaptive-cards-with-signin-action"></a><span data-ttu-id="867a8-242">Cartões Adaptáveis com ação de signin</span><span class="sxs-lookup"><span data-stu-id="867a8-242">Adaptive Cards with signin action</span></span>
 
-<span data-ttu-id="e18e0-195">Para incluir uma `signin` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto.</span><span class="sxs-lookup"><span data-stu-id="e18e0-195">To include a `signin` action with an Adaptive Card include the following details in the `msteams` object.</span></span> <span data-ttu-id="e18e0-196">Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="e18e0-196">Note that you can include additional hidden properties in the `data` object if needed.</span></span>
+<span data-ttu-id="867a8-243">Para incluir uma `signin` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto:</span><span class="sxs-lookup"><span data-stu-id="867a8-243">To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:</span></span>
 
-| <span data-ttu-id="e18e0-197">Propriedade</span><span class="sxs-lookup"><span data-stu-id="e18e0-197">Property</span></span> | <span data-ttu-id="e18e0-198">Descrição</span><span class="sxs-lookup"><span data-stu-id="e18e0-198">Description</span></span> |
+> [!NOTE]
+> <span data-ttu-id="867a8-244">Você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="867a8-244">You can include additional hidden properties in the `data` object, if required.</span></span>
+
+| <span data-ttu-id="867a8-245">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-245">Property</span></span> | <span data-ttu-id="867a8-246">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-246">Description</span></span> |
 | --- | --- |
-| `type` | <span data-ttu-id="e18e0-199">Definir como `signin` .</span><span class="sxs-lookup"><span data-stu-id="e18e0-199">Set to `signin`.</span></span> |
-| `value` | <span data-ttu-id="e18e0-200">De acordo com a URL para a que você deseja redirecionar.</span><span class="sxs-lookup"><span data-stu-id="e18e0-200">Set to the URL that you want to redirect to.</span></span>  |
+| `type` | <span data-ttu-id="867a8-247">Definir como `signin` .</span><span class="sxs-lookup"><span data-stu-id="867a8-247">Set to `signin`.</span></span> |
+| `value` | <span data-ttu-id="867a8-248">De acordo com a URL para a qual você deseja redirecionar.</span><span class="sxs-lookup"><span data-stu-id="867a8-248">Set to the URL where you want to redirect.</span></span>  |
 
-#### <a name="example"></a><span data-ttu-id="e18e0-201">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e18e0-201">Example</span></span>
+<span data-ttu-id="867a8-249">O código a seguir mostra um exemplo de Cartões Adaptáveis com `signin` ação:</span><span class="sxs-lookup"><span data-stu-id="867a8-249">The following code shows an example of Adaptive Cards with `signin` action:</span></span>
 
 ```json
 {
@@ -311,16 +516,19 @@ var button = new CardAction()
 }
 ```
 
-### <a name="adaptive-cards-with-invoke-action"></a><span data-ttu-id="e18e0-202">Cartões Adaptáveis com ação de invocação</span><span class="sxs-lookup"><span data-stu-id="e18e0-202">Adaptive Cards with invoke action</span></span>
- 
-<span data-ttu-id="e18e0-203">Para incluir uma `invoke` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto.</span><span class="sxs-lookup"><span data-stu-id="e18e0-203">To include a `invoke` action with an Adaptive Card include the following details in the `msteams` object.</span></span> <span data-ttu-id="e18e0-204">Observe que você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="e18e0-204">Note that you can include additional hidden properties in the `data` object if needed.</span></span>
+### <a name="adaptive-cards-with-invoke-action"></a><span data-ttu-id="867a8-250">Cartões Adaptáveis com ação de invocação</span><span class="sxs-lookup"><span data-stu-id="867a8-250">Adaptive Cards with invoke action</span></span>
 
-| <span data-ttu-id="e18e0-205">Propriedade</span><span class="sxs-lookup"><span data-stu-id="e18e0-205">Property</span></span> | <span data-ttu-id="e18e0-206">Descrição</span><span class="sxs-lookup"><span data-stu-id="e18e0-206">Description</span></span> |
+<span data-ttu-id="867a8-251">Para incluir uma `invoke` ação com um Cartão Adaptável, inclua os seguintes detalhes no `msteams` objeto:</span><span class="sxs-lookup"><span data-stu-id="867a8-251">To include an `invoke` action with an Adaptive Card include the following details in the `msteams` object:</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="867a8-252">Você pode incluir propriedades ocultas adicionais no `data` objeto, se necessário.</span><span class="sxs-lookup"><span data-stu-id="867a8-252">You can include additional hidden properties in the `data` object, if required.</span></span>
+
+| <span data-ttu-id="867a8-253">Propriedade</span><span class="sxs-lookup"><span data-stu-id="867a8-253">Property</span></span> | <span data-ttu-id="867a8-254">Descrição</span><span class="sxs-lookup"><span data-stu-id="867a8-254">Description</span></span> |
 | --- | --- |
-| `type` | <span data-ttu-id="e18e0-207">Definir como `task/fetch`</span><span class="sxs-lookup"><span data-stu-id="e18e0-207">Set to `task/fetch`</span></span> |
-| `data` | <span data-ttu-id="e18e0-208">Definir o valor</span><span class="sxs-lookup"><span data-stu-id="e18e0-208">Set the value</span></span>  |
+| `type` | <span data-ttu-id="867a8-255">Definir como `task/fetch` .</span><span class="sxs-lookup"><span data-stu-id="867a8-255">Set to `task/fetch`.</span></span> |
+| `data` | <span data-ttu-id="867a8-256">De definir o valor.</span><span class="sxs-lookup"><span data-stu-id="867a8-256">Set the value.</span></span>  |
 
-#### <a name="example"></a><span data-ttu-id="e18e0-209">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e18e0-209">Example</span></span>
+<span data-ttu-id="867a8-257">O código a seguir mostra um exemplo de Cartões Adaptáveis com `invoke` ação:</span><span class="sxs-lookup"><span data-stu-id="867a8-257">The following code shows an example of Adaptive Cards with `invoke` action:</span></span>
 
 ```json
 {
@@ -334,7 +542,7 @@ var button = new CardAction()
 }
 ```
 
-#### <a name="example-2-with-additional-payload-data"></a><span data-ttu-id="e18e0-210">Exemplo 2 (com dados de carga adicionais)</span><span class="sxs-lookup"><span data-stu-id="e18e0-210">Example 2 (with additional payload data)</span></span>
+<span data-ttu-id="867a8-258">O código a seguir mostra um exemplo de Cartões Adaptáveis com `invoke` ação com dados de carga adicionais:</span><span class="sxs-lookup"><span data-stu-id="867a8-258">The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:</span></span>
 
 ```json
 {
@@ -348,3 +556,12 @@ var button = new CardAction()
   }
 }
 ```
+
+## <a name="see-also"></a><span data-ttu-id="867a8-259">Também consulte</span><span class="sxs-lookup"><span data-stu-id="867a8-259">See also</span></span>
+
+[<span data-ttu-id="867a8-260">Referência de cartões</span><span class="sxs-lookup"><span data-stu-id="867a8-260">Cards reference</span></span>](./cards-reference.md)
+
+## <a name="next-step"></a><span data-ttu-id="867a8-261">Próxima etapa</span><span class="sxs-lookup"><span data-stu-id="867a8-261">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="867a8-262">Ações Universais para Cartões Adaptáveis</span><span class="sxs-lookup"><span data-stu-id="867a8-262">Universal Actions for Adaptive Cards</span></span>](../cards/Universal-actions-for-adaptive-cards/Overview.md)
