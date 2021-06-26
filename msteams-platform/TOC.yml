@@ -192,42 +192,30 @@
   items:
     - name: Visão Geral
       href: tabs/what-are-tabs.md
-    - name: Criar uma guia
-      items:
-        - name: Requisitos de guia
-          href: tabs/how-to/tab-requirements.md
-        - name: Criar uma página de conteúdo
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: Criar uma página de configuração
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: Criar uma página de remoção
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Guias em dispositivos móveis
-          href: tabs/design/tabs-mobile.md
-        - name: Obtenha contexto para sua guia
-          href: tabs/how-to/access-teams-context.md
-        - name: Criar guias com Cartões Adaptáveis
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: Link de guias desdobradas e Exibição de Estágio
-          href: tabs/tabs-link-unfurling.md
-        - name: Criar abas para conversação
-          href: tabs/how-to/conversational-tabs.md
-        - name: Alterações na margem da guia
-          href: resources/removing-tab-margins.md
-    - name: Guias de início rápido
-      items:
-        - name: Guia pessoal com Node.js
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: Guia pessoal com C# /ASP.NET Core
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Guia pessoal com C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Guia do canal com Node.js
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Guia canal com C# /ASP.net Core
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Guia do canal com C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: Pré-requisitos
+      href: tabs/how-to/tab-requirements.md
+    - name: Criar uma guia pessoal
+      href: tabs/how-to/create-personal-tab.md
+    - name: Criar uma guia de canal
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: Criar uma página de conteúdo
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Criar uma página de configuração
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Criar uma página de remoção
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Guias em dispositivos móveis
+      href: tabs/design/tabs-mobile.md
+    - name: Obtenha contexto para sua guia
+      href: tabs/how-to/access-teams-context.md
+    - name: Criar guias com Cartões Adaptáveis
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Link de guias desdobradas e Exibição de Estágio
+      href: tabs/tabs-link-unfurling.md
+    - name: Criar abas para conversação
+      href: tabs/how-to/conversational-tabs.md
+    - name: Alterações na margem da guia
+      href: resources/removing-tab-margins.md
 - name: Criar bots
   items:
     - name: Visão Geral
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Eventos de conversa em seu bot do Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Enviar mensagens proativas
+        - name: Mensagens proativas
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: Guias passo a passo
+              href: sbs-send-proactive.yml
         - name: Formatar suas mensagens de bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Atualizar e excluir mensagens de bot
@@ -317,26 +308,28 @@
   items:
     - name: Visão Geral
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Criar um webhook de entrada
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Criar um webhook de saída
+    - name: Criar Webhooks de saída
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Criar um conector do Office 365
+    - name: Criar Webhooks de entrada
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Criar Conectores do Office 365
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Enviar mensagens a conectores e webhooks
+    - name: Criar e enviar mensagens
       href: webhooks-and-connectors/how-to/connectors-using.md
-- name: Módulos de tarefas e cartões de compilação
+- name: Criar módulos de cartões e de tarefas
   items:
+    - name: Visão Geral
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: Cartões de compilação
       items:
         - name: Visão Geral
           href: task-modules-and-cards/what-are-cards.md
-        - name: Formatar texto de cartão
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Adicionar e responder às ações do cartão
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Referência de cartões
+        - name: Tipos de cartões
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Formatar cartões no Microsoft Teams
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Ações do cartão
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: Ações Universais para Cartões Adaptáveis
           items:
             - name: Visão Geral
@@ -353,9 +346,11 @@
       items:
         - name: Visão Geral
           href: task-modules-and-cards/what-are-task-modules.md
-        - name: Usando módulos de tarefas em guias
+        - name: Invocar e ignorar módulos de tarefas
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
+        - name: Usar módulos de tarefas nas guias
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: Usando módulos de tarefas em bots
+        - name: Usar módulos de tarefas dos bots
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Adicionar autenticação
   items:
@@ -477,13 +472,13 @@
       items:
         - name: Localizar o aplicativo
           href: concepts/build-and-test/apps-localization.md
-        - name: Esquema JSON de localização
+        - name: Localizar referências do esquema JSON
           href: resources/schema/localization-schema.md
-    - name: Atributo de cookie SameSite (atualização de 2020)
+    - name: Atributo de cookie SameSite
       href: resources/samesite-cookie-update.md
-    - name: Casos com frequência com falha para envios para a Microsoft Store
+    - name: Casos com erros frequentes de envios de repositório
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Contribuindo para os documentos do Teams
+    - name: Contribuir com a documentação do Teams
       href: resources/teams-contributor-reference.md
 - name: Suporte e comentários
   href: feedback.md
