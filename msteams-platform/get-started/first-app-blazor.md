@@ -5,12 +5,12 @@ description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma men
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994389"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179948"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor
 
@@ -104,14 +104,14 @@ Você pode adicionar funcionalidade de back-end adicionando ASP.NET Core control
 O Kit de ferramentas do Teams permite que você execute seu aplicativo localmente.  Isto consiste de várias partes que são necessárias para fornecer a infraestrutura correta que o Teams espera:
 
 - Um aplicativo está registrado no Azure Active Directory.  Este aplicativo tem permissões associadas ao local de onde o aplicativo é carregado e a quaisquer recursos de back-end que ele acesse.
-- Uma API da Web é hospedada (por meio IIS Express) para ajudar com tarefas de autenticação, atuando como um proxy entre o aplicativo e Active Directory do Azure.  
+- Uma API da Web é hospedada (por meio IIS Express) para ajudar com tarefas de autenticação, atuando como um proxy entre o aplicativo e Azure Active Directory.  
 - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams.  O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.
 
 Depois de fazer isso, o aplicativo pode ser carregado dentro do cliente do Teams.  Usamos o cliente Web do Teams para que possamos ver o código HTML, CSS e JavaScript dentro de um ambiente de desenvolvimento web padrão.
 
 Para compilar e executar seu aplicativo localmente:
 
-1. No Visual Studio Code, pressione **F5** para executar seu aplicativo no modo de depuração.
+1. No Visual Studio, pressione **F5** para executar seu aplicativo no modo de depuração.
 
 1. Se solicitado, instale o certificado SSL auto-assinado para depuração local.
 
@@ -228,7 +228,7 @@ O manifesto do aplicativo está carregando a guia de uma `localhost` URL.  Nesta
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Selecionar informações básicas":::
 
-1. Há vários locais dentro do manifesto que listam uma `locahost:XXXXX` como parte de uma URL.  Substitua todas as ocorrências `{{azure_app_url}}` por (incluindo as chaves).
+1. Há vários locais dentro do manifesto que listam uma `localhost:XXXXX` como parte de uma URL.  Substitua todas as ocorrências `{{azure_app_url}}` por (incluindo as chaves).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajustar informações básicas para o ambiente":::
 
@@ -249,7 +249,7 @@ O manifesto do aplicativo está carregando a guia de uma `localhost` URL.  Nesta
 
 1. Pressione **Update**.
 
-1. Clique em **Salvar**.
+1. Pressione **Salvar**.
 
 1. Na barra lateral, selecione **Single Sign-On**.
 
@@ -257,7 +257,7 @@ O manifesto do aplicativo está carregando a guia de uma `localhost` URL.  Nesta
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Editar URI de ID de aplicativo de login único":::
 
-1. Clique em **Salvar**.
+1. Pressione **Salvar**.
 
 1. Na barra lateral, pressione **Domínios**.
 

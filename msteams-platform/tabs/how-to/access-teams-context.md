@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 localization_priority: Normal
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140275"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179724"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -135,20 +135,12 @@ Você pode registrar seu aplicativo para ser informado se o tema mudar chamando 
 
 O argumento na função é uma cadeia de caracteres com `theme` um valor de , ou `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de tabulação](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Teams guias](~/tabs/what-are-tabs.md)
-* [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
-* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
-* [Alterações na margem da guia](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

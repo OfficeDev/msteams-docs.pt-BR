@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b54fc7235132a9253f6eecc62417f786bf4aa45c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140184"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179934"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,19 +39,11 @@ Teams guias devem seguir os seguintes pré-requisitos:
 
 * A guia Teams MS não dá suporte à capacidade de carregar sites da intranet que usam certificados auto-assinados.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-* [Obtenha contexto para sua guia](~/tabs/how-to/access-teams-context.md)
-* [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
-* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
-* [Alterações na margem da guia](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

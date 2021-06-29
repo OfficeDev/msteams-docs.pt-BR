@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: conector do o365 no teams
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140521"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179892"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -200,7 +200,7 @@ Esta mensagem fornece o seguinte cartão no canal:
 
 **Para enviar cartões adaptáveis por meio de um Webhook de entrada**
 
-1. [Configurar um webhook personalizado](/add-incoming-webhook.md) Teams.
+1. [Configurar um webhook personalizado](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) Teams.
 1. Criar arquivo JSON de cartão adaptável usando o seguinte código:
 
     ```json
@@ -280,7 +280,7 @@ try
 
 Esses limites estão no local para reduzir a spam de um canal por um conector e garante uma experiência ideal para os usuários.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Office 365 Conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)

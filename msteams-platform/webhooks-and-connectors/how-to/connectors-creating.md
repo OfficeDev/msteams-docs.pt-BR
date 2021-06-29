@@ -1,19 +1,19 @@
 ---
-title: Criar Office 365 conectores
+title: Criar Conectores do Office 365
 author: laujan
 description: Descreve como começar a usar Office 365 conectores no Microsoft Teams
 keywords: conector do o365 no teams
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 95e3c9f2f7e188c158ae8c9161b2306c5e7f27e5
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140415"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179752"
 ---
-# <a name="create-office-365-connectors"></a>Criar Office 365 conectores
+# <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
 Com Microsoft Teams aplicativos, você pode adicionar seu conector de Office 365 existente ou criar um novo dentro Teams. Para obter mais informações, consulte [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
@@ -24,7 +24,7 @@ Você pode [empacotá-lo](~/concepts/build-and-test/apps-package.md) [e publicar
 Para distribuir seu conector, você deve se registrar por [meio do Painel de Desenvolvedores conectores.](https://outlook.office.com/connectors/home/login/#/publish) Quando um conector é registrado, presume-se que ele funcione em todos os produtos Office 365 que suportam aplicativos, incluindo Outlook e Teams. Se esse não for o caso e você deve criar um conector que funcione apenas no Microsoft Teams, entre em contato: Microsoft Teams [email envios de aplicativo.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
-> Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em publicar seu aplicativo Microsoft Teams [no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após [a publicação de conectores para sua](/connectors-creating.md)organização, nenhuma ação é necessária no Painel do Conector.
+> Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em publicar seu aplicativo Microsoft Teams [no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após [a publicação de conectores para sua](#publish-connectors-for-the-organization)organização, nenhuma ação é necessária no Painel do Conector.
 
 ### <a name="integrate-the-configuration-experience"></a>Integrar a experiência de configuração
 
@@ -267,7 +267,7 @@ A tabela a seguir fornece o nome de exemplo e sua descrição:
 | Conectores    | Exemplo Office 365 conector gerando notificações para Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)

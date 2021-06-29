@@ -5,20 +5,24 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1564d7410cd0ce18d27afbbb3729cc30cfcfc4f6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140156"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179913"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
 As guias são Teams web com conhecimento de Microsoft Teams. Eles são marcas html simples <iframe que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat de grupo ou aplicativo pessoal para um usuário \> individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web Teams ou adicionar uma funcionalidade específica Teams ao conteúdo da Web. Para obter mais informações, [consulte Teams SDK do cliente JavaScript.](/javascript/api/overview/msteams-client)
 
+A imagem a seguir mostra guias pessoais:
+
+![Guias pessoais](../assets/images/tabs/personaltab.png)
+
 A imagem a seguir mostra as guias de canal contoso:
 
-![Canal ou grupo e guias pessoais](../assets/images/tabs/tabs.png)
+![Guias de canal ou grupo](../assets/images/tabs/tabs.png)
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 
@@ -73,7 +77,7 @@ Para guias de canal ou grupo, você também pode criar uma página de configura�
 
 Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por aplicativo.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Solicitar permissões do dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar recursos de mídia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

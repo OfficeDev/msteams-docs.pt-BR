@@ -4,12 +4,12 @@ description: Saiba como seus aplicativos Microsoft Teams podem interagir com usu
 ms.topic: conceptual
 localization_priority: Normal
 keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d23b069d1f728cc54941f90e531d01acae6ab989
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994228"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179906"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -93,6 +93,7 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 | **Exemplo de nome** | **Descrição** | **Graph** |
 |---------------|----------|--------|
 | Graph comunicação | Graph comunicações para interagir com a plataforma de comunicações da Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Bot de chamada e reunião | O exemplo de app demonesco começa como o Bot pode criar chamada, ingressar em reunião e transferir chamada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: da67b447644242caccf5f3a7cfe8d9435286787c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139988"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179696"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Pré-requisitos e referências de API para aplicativos de reuniões do Teams
 
@@ -49,7 +49,7 @@ As novas extensibilidades de reunião fornecem APIs que transformam a experiênc
 
 A tabela a seguir fornece uma lista dessas APIs:
 
-|API|Descrição|Solicitação|Origem|
+|API|Descrição|Solicitação|Source|
 |---|---|----|---|
 |**GetUserContext**| Essa API permite que você receba informações contextuais para exibir conteúdo relevante em Teams guia. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK do cliente|
 |**GetParticipant**| Essa API permite que um bot busque informações dos participantes por meio da ID da reunião e da ID do participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -262,6 +262,19 @@ A `NotificationSignal` API inclui os seguintes códigos de resposta:
 
 A API Detalhes da Reunião permite que seu aplicativo receba metadados de reunião estáticos. Esses são pontos de dados que não mudam dinamicamente.
 A API está disponível por meio dos Serviços bot.
+#### <a name="pre-requisite"></a>Pré-requisito
+Antes de usar a API de Detalhes da Reunião, as permissões RSC necessárias devem ser obtidas. O manifesto do aplicativo deve ter o seguinte webApplicationInfo:
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 #### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -337,6 +350,20 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 O usuário pode receber eventos de reunião em tempo real. Assim que qualquer aplicativo é associado a uma reunião, o início real da reunião e a hora de término da reunião são compartilhados com o bot.
 
 A hora real de início e término de uma reunião é diferente da hora de início e término agendada. A API de detalhes da reunião fornece a hora de início e término agendada enquanto o evento fornece a hora real de início e término.
+
+#### <a name="pre-requisite"></a>Pré-requisito
+O manifesto do aplicativo deve ter o seguinte webApplicationInfo para receber com êxito os eventos de início e término da reunião.
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Exemplo de carga do evento de início da reunião
 
@@ -488,8 +515,9 @@ public class MeetingStartEndEventValue
 | Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Guia Detalhes na Reunião | Microsoft Teams exemplo de extensibilidade de reunião para a iteração com a Guia Detalhes em reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)

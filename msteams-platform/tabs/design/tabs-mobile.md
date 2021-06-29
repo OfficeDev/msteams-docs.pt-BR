@@ -3,12 +3,12 @@ title: Guias em dispositivos móveis
 description: Descreve considerações do desenvolvedor para implementar guias em Microsoft Teams celular.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 612084a1ff4258da16dc00f9b5a6844eead57f54
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140289"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179717"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -67,20 +67,12 @@ A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o 
 
 Se você estiver fazendo sideload do aplicativo ou publicação no catálogo de aplicativos de uma organização, o comportamento da guia será o mesmo Teams aplicativos da loja aprovados pela Microsoft para dispositivos móveis.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de tabulação](~/tabs/design/tabs.md)
 * [Teams guias](~/tabs/what-are-tabs.md)
-* [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
-* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
-* [Alterações na margem da guia](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

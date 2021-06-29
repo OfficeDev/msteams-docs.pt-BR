@@ -1,79 +1,79 @@
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Upload sua guia para Teams com o App Studio
+## <a name="upload-your-tab-with-app-studio"></a>Upload sua guia com o App Studio
 
 >[!NOTE]
-> Usamos o App Studio para editar seu **manifest.jsno** arquivo e carregar o pacote concluído para Teams. Você também pode editar manualmente **manifest.jsem,** se preferir. Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **Tab.zip** para carregar.
+> Usamos **o App Studio** para editar seumanifest.js **no** arquivo e carregar o pacote concluído para Teams. Você também pode editar manualmente **manifest.jsem**. Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **Tab.zip** para carregar.
 
-- Abra o Microsoft Teams cliente. Se você usar a [versão baseada na Web,](https://teams.microsoft.com) poderá inspecionar seu código front-end usando as ferramentas de [desenvolvedor do navegador.](~/tabs/how-to/developer-tools.md)
+**Para carregar sua guia com o App Studio**
 
-- Abra o studio app e selecione a **guia Editor de manifesto.**
+1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web,](https://teams.microsoft.com) poderá inspecionar seu código front-end usando as ferramentas de [desenvolvedor do navegador.](~/tabs/how-to/developer-tools.md)
 
-- Selecione o **pacote Importar um aplicativo existente** no editor de Manifesto para começar a atualizar o pacote de aplicativos para sua guia. O código-fonte vem com seu próprio manifesto parcialmente completo. O nome do pacote do aplicativo é **tab.zip**. Ele deve ser encontrado aqui:
+1. Vá para **o App Studio** e selecione a guia Editor **de** manifesto.
+
+1. Selecione **Importar um aplicativo existente** no editor de **Manifesto** para começar a atualizar o pacote de aplicativos para sua guia. O código-fonte vem com seu próprio manifesto parcialmente completo. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
 
     ```bash
-    /bin/Debug/netcoreapp2.2/Tab.zip
+    /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-- Upload **Tab.zip** App Studio.
+1. Upload **tab.zip** App **Studio.**
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Atualizar seu pacote de aplicativos com o editor de manifesto
 
-Depois de carregar seu pacote de aplicativos no App Studio, você precisará terminar de configurá-lo.
+Depois de carregar seu pacote de aplicativos no App Studio, você deve configurá-lo.
 
-- Selecione o azulejo para sua guia recém-importada no painel direito da página de boas-vindas do editor de manifesto.
+Selecione o azulejo para sua guia recém-importada no painel direito da página de boas-vindas do editor de manifesto.
 
-Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que precisam ter valores para cada uma dessas etapas. Grande parte das informações foram fornecidas pelo seumanifest.js *on,* mas há alguns campos que você precisará atualizar:
+Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foi fornecida pelo seumanifest.js **em,** mas há campos que você deve atualizar.
 
 #### <a name="details-app-details"></a>Detalhes: Detalhes do aplicativo
 
 Na seção **Detalhes do** aplicativo:
 
-- Em **Identificação,** **selecione Gerar** para gerar uma nova ID do aplicativo.
+1. Em **Identificação**, selecione **Gerar** para gerar uma nova ID do aplicativo.
 
-- Em **Informações do desenvolvedor** atualize a URL do **site** com sua URL HTTPS **ngrok.**
+1. Em **Informações do desenvolvedor,** atualize o **Site** com sua URL HTTPS **ngrok.**
 
-- Em **URLs do aplicativo,** atualize a **instrução Privacy** para `https://<yourngrokurl>/privacy` e Os Termos de **uso** para `https://<yourngrokurl>/tou`>.
+1. Em **URLs do aplicativo,** atualize a **instrução Privacy** para `https://<yourngrokurl>/privacy` e Termos de **uso** para `https://<yourngrokurl>/tou`>.
 
 #### <a name="capabilities-tabs"></a>Recursos: guias
 
-Na seção *Guias:*
+Na seção **Guias:**
 
-- Em **Adicionar uma guia pessoal,** selecione **Adicionar**. Você receberá uma janela de diálogo pop-up.
+1. Em **Adicionar uma guia pessoal,** selecione **Adicionar**. Uma caixa de diálogo pop-up é exibida.
 
-- Conclua **o campo Nome.**
+1. Insira um nome para a guia pessoal em **Nome**.
 
-- Conclua **o campo ID da** entidade.
+1. Insira a **ID da entidade**.
 
-- Atualize o **campo URL** de conteúdo com `https://<yourngrokurl>/personalTab` para .
+1. Atualizar **a URL de conteúdo** com `https://<yourngrokurl>/personalTab` .
 
-- Deixe o **campo URL do site** em branco.
+    Deixe o **campo URL do site** em branco.
 
-- Selecione **Salvar**.
+1. Selecione **Salvar**.
 
 #### <a name="finish-domains-and-permissions"></a>Concluir: domínios e permissões
 
-Na seção **Domínios e** permissões, o **campo Domínios** de suas guias deve conter sua URL ngrok sem o prefixo HTTPS - `<yourngrokurl>.ngrok.io/` .
+Na seção **Domínios e** permissões, o **campo Domínios** de suas guias deve conter sua URL ngrok sem o prefixo HTTPS `<yourngrokurl>.ngrok.io/` .
 
 ##### <a name="finish-test-and-distribute"></a>Concluir: Testar e distribuir
 
 >[!IMPORTANT]
->No campo **Descrição** à direita, você verá o seguinte aviso:
+> À direita, em **Descrição,** você verá o seguinte aviso:
 >
->&#9888; "**A matriz 'validDomains' não pode conter um site de tunelamento...**"
+> &#9888; A **matriz 'validDomains' não pode conter um site de tunelamento...**
 >
 >Esse aviso pode ser ignorado durante o teste da guia.
 
-Na seção **Testar e distribuir:**
+1. Na seção **Testar e Distribuir,** selecione **Instalar**.
 
-- Selecionar **Instalar**.
+1. Na caixa de diálogo pop-up, selecione **Adicionar** e sua guia é exibida com duas opções.
 
-- Na janela pop-up, certifique-se de que **Add for you** está definido como **Sim** e Adicionar a uma equipe ou **chat** está definido como **Não**.
-
-- Selecionar **Instalar**.
-
-- Na próxima janela pop-up, selecione **Abrir** e sua guia será exibida.
+1. Nas opções na guia, escolha **Selecionar Cinza** ou **Selecionar Vermelho**. A guia é exibida de acordo com a cor selecionada.
+ 
+    ![Guia pessoal ASPNETMVC carregada](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
 
 ## <a name="view-your-personal-tab"></a>Exibir sua guia pessoal
 
-- Na barra de navegação localizada à extrema esquerda do Teams App, selecione o `...` menu. Você será apresentado com uma lista de aplicativos pessoais.
+1. Na barra de navegação localizada à extrema esquerda do aplicativo Teams, selecione as releições &#x25CF;&#x25CF;&#x25CF;. Uma lista de aplicativos pessoais é mostrada.
 
-- Selecione sua guia na lista a ser visualizada.
+1. Selecione sua guia na lista para exibi-la.
