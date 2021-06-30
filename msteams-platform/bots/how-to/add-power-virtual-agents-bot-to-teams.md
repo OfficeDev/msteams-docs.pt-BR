@@ -5,12 +5,12 @@ description: integrando um Power Virtual Agents chatbot na Teams plataforma
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069021"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196247"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia 
 
@@ -102,7 +102,7 @@ O processo de configuração para adicionar seu Power Virtual Agents de chat ao 
 ## <a name="see-also"></a>Confira também
 
 * [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Crie um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Crie um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents).  
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 * [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Segurança e conformidade em Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
@@ -110,5 +110,4 @@ O processo de configuração para adicionar seu Power Virtual Agents de chat ao 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Criar assistente virtual](~/samples/virtual-assistant.md)
-
+> [Criar um assistente virtual](~/samples/virtual-assistant.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179696"
+ms.locfileid: "53196233"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Pré-requisitos e referências de API para aplicativos de reuniões do Teams
 
@@ -262,18 +262,19 @@ A `NotificationSignal` API inclui os seguintes códigos de resposta:
 
 A API Detalhes da Reunião permite que seu aplicativo receba metadados de reunião estáticos. Esses são pontos de dados que não mudam dinamicamente.
 A API está disponível por meio dos Serviços bot.
-#### <a name="pre-requisite"></a>Pré-requisito
-Antes de usar a API de Detalhes da Reunião, as permissões RSC necessárias devem ser obtidas. O manifesto do aplicativo deve ter o seguinte webApplicationInfo:
 
-# <a name="json"></a>[JSON](#tab/json)
+#### <a name="prerequisite"></a>Pré-requisito
 
-```"webApplicationInfo": {
+Para usar a API de Detalhes da Reunião, você deve obter permissões RSC. Use o exemplo a seguir para configurar a propriedade do manifesto do `webApplicationInfo` aplicativo:
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>Parâmetro de consulta
@@ -351,18 +352,18 @@ O usuário pode receber eventos de reunião em tempo real. Assim que qualquer ap
 
 A hora real de início e término de uma reunião é diferente da hora de início e término agendada. A API de detalhes da reunião fornece a hora de início e término agendada enquanto o evento fornece a hora real de início e término.
 
-#### <a name="pre-requisite"></a>Pré-requisito
-O manifesto do aplicativo deve ter o seguinte webApplicationInfo para receber com êxito os eventos de início e término da reunião.
+### <a name="prerequisite"></a>Pré-requisito
 
-# <a name="json"></a>[JSON](#tab/json)
+O manifesto do aplicativo deve ter a `webApplicationInfo` propriedade para receber os eventos de início e término da reunião. Use o exemplo a seguir para configurar seu manifesto:
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Exemplo de carga do evento de início da reunião
