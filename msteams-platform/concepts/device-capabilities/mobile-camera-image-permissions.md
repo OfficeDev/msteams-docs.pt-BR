@@ -6,18 +6,16 @@ keywords: mídia de permissões nativas de dispositivo de recursos de microfone 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 22d4a791e83cf36f18b75a3846865835b0ee024f
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994375"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211622"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
-Este documento orienta você sobre como integrar recursos de mídia. Essa integração combina os recursos de dispositivo nativo, como a **câmera** e **o microfone** com a Teams plataforma.  
-
-Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para que seu aplicativo acesse as permissões de dispositivo [de um usuário.](native-device-permissions.md) Use APIs de funcionalidade de mídia adequadas para  integrar  os recursos de dispositivo nativo, como a câmera e o microfone com a plataforma Teams em seu aplicativo móvel Microsoft Teams, e crie uma experiência mais rica. 
+Você pode integrar recursos de dispositivo nativo, como a **câmera** e o **microfone** com seu Teams app. Para integração, você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de dispositivo [de um usuário.](native-device-permissions.md) Use APIs de funcionalidade de mídia adequadas  para  integrar os recursos do dispositivo, como câmera e microfone com a plataforma Teams no seu aplicativo móvel Microsoft Teams, e crie uma experiência mais rica. 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Vantagem da integração de recursos de mídia
 
@@ -29,12 +27,12 @@ Para uma integração eficaz, você deve ter uma boa compreensão dos trechos de
 É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams app.
 
 > [!NOTE] 
-> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.    
-> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião. 
+> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.   
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião.    
 
 ## <a name="update-manifest"></a>Manifesto de atualização
 
-Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-schema.md#devicepermissions) arquivo adicionando a propriedade `devicePermissions` e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos  usuários antes de começar a usar a câmera para capturar a  imagem, abra a galeria para selecionar uma imagem para enviar como um anexo ou use o microfone para gravar a conversa.
+Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-schema.md#devicepermissions) arquivo adicionando a propriedade `devicePermissions` e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos  usuários antes de começar a usar a câmera para capturar a  imagem, abra a galeria para selecionar uma imagem para enviar como um anexo ou use o microfone para gravar a conversa. A atualização do manifesto do aplicativo é a seguinte:
 
 ``` json
 "devicePermissions": [
@@ -70,30 +68,26 @@ Você deve usar o seguinte conjunto de APIs para habilitar os recursos de mídia
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| Essa API recupera a mídia capturada pela API em `selectMedia` partes, independentemente do tamanho da mídia. Essas partes são montadas e enviadas de volta para o aplicativo Web como um arquivo ou blob. A quebra de mídia em partes menores facilita a transferência de arquivos grandes. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| Essa API permite que o usuário veja imagens no modo de tela inteira como uma lista rolável.|
 
+A imagem a seguir mostra a experiência do aplicativo Web da `selectMedia` API para funcionalidade de imagem:
 
-**Experiência do aplicativo Web para a API SelectMedia para funcionalidade de imagem** 
- ![ câmera de dispositivo e experiência de imagem Teams](../../assets/images/tabs/image-capability.png)
+![câmera de dispositivo e experiência de imagem Teams](../../assets/images/tabs/image-capability.png)
 
-**Experiência do aplicativo Web para a API selectMedia para funcionalidade de microfone** 
- ![ experiência do aplicativo web para funcionalidade de microfone](../../assets/images/tabs/microphone-capability.png)
+A imagem a seguir mostra a experiência do aplicativo Web da `selectMedia` API para funcionalidade de microfone:
+
+![experiência do aplicativo web para funcionalidade de microfone](../../assets/images/tabs/microphone-capability.png)
 
 ## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-
-|Código de erro |  Nome do erro     | Condição|
+|Código de erro |  Nome do erro     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **404** | FILE_NOT_FOUND | O arquivo especificado não é encontrado no local determinado.|
 | **500** | INTERNAL_ERROR | Erro interno é encontrado durante a execução da operação necessária.|
 | **1000** | PERMISSION_DENIED |A permissão é negada pelo usuário.|
-| **2000** |NETWORK_ERROR | Problema de rede.|
 | **3000** | NO_HW_SUPPORT | O hardware subjacente não dá suporte à funcionalidade.|
 | **4000**| INVALID_ARGUMENTS | Um ou mais argumentos são inválidos.|
-| **5000** | UNAUTHORIZED_USER_OPERATION | O usuário não está autorizado a concluir essa operação.|
-| **6000** |INSUFFICIENT_RESOURCES | A operação não pôde ser concluída devido a recursos insuficientes.|
-|**7000** | THROTTLE | A plataforma acelerou a solicitação à medida que a API era invocada com frequência.|
 |  **8000** | USER_ABORT |O usuário aborta a operação.|
 | **9000**| OLD_PLATFORM | O código da plataforma está desatualizado e não implementa essa API.|
 | **10000**| SIZE_EXCEEDED |  O valor de retorno é muito grande e excedeu os limites de tamanho da plataforma.|
@@ -260,3 +254,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](location-capability.md)
+* [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)
+

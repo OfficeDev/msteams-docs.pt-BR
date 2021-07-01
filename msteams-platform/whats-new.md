@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140296"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211594"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Integrar a funcionalidade do Se picker de pessoas](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
 |06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
@@ -175,7 +176,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 | 07/12/2018 | Informações sobre o acesso de convidados. | [Acesso para convidado no Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Foram adicionadas informações Microsoft Teams catálogo de aplicativos de locatários. | [Publicar seu Microsoft Teams app](~/publishing/apps-publish.md)|
 | 05/29/2018 | Os cartões adaptáveis são suportados em Teams. | [Ações de cartão adaptáveis em Teams](task-modules-and-cards/cards/cards-reference.md) |
-| 04/17/2018 | replyToID foi adicionado à carga para as `Invoke` ações `MessageBack` de cartão e. Isso é especialmente útil se você precisar atualizar a mensagem de onde a ação do cartão veio. | [Ações de cartão](~/concepts/cards/cards-actions.md)|
+| 04/17/2018 | replyToID foi adicionado à carga para as `Invoke` ações `MessageBack` de cartão e. Isso é especialmente útil se você precisar atualizar a mensagem de onde a ação do cartão veio. | [Ações do cartão](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Este tópico foi adicionado para acompanhar as alterações na interface Teams de programação e neste conjunto de documentação. | [Novidades](~/whats-new.md)|
 | 04/10/2018 | As URLs de autenticação alteradas para usar consistentemente a ID do locatário no caminho. | [Fluxo de autenticação para guias,](~/concepts/authentication/auth-flow-tab.md) [autenticação de guia AAD](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Foram adicionadas diretrizes de design para usar a Caixa de Comando. |[Caixa de comando](~/resources/design/framework/command-box.md)|

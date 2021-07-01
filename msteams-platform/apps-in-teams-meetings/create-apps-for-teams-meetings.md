@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196233"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211587"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Pré-requisitos e referências de API para aplicativos de reuniões do Teams
 
@@ -49,7 +49,7 @@ As novas extensibilidades de reunião fornecem APIs que transformam a experiênc
 
 A tabela a seguir fornece uma lista dessas APIs:
 
-|API|Descrição|Solicitação|Source|
+|API|Descrição|Solicitação|Origem|
 |---|---|----|---|
 |**GetUserContext**| Essa API permite que você receba informações contextuais para exibir conteúdo relevante em Teams guia. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK do cliente|
 |**GetParticipant**| Essa API permite que um bot busque informações dos participantes por meio da ID da reunião e da ID do participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -124,7 +124,7 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-* * *
+---
 
 O corpo de resposta JSON para `GetParticipant` API é:
 
@@ -276,7 +276,7 @@ Para usar a API de Detalhes da Reunião, você deve obter permissões RSC. Use o
     ]
 }
  ```
-
+ 
 #### <a name="query-parameter"></a>Parâmetro de consulta
 
 A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:

@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994347"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211615"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -19,6 +19,7 @@ Você pode enriquecer seu Teams com recursos de dispositivo nativos, como câmer
 > * Para integrar recursos de mídia ao seu Microsoft Teams aplicativo móvel, consulte [Integrar recursos de mídia.](mobile-camera-image-permissions.md)
 > * Para integrar a QR ou o recurso de scanner de código de barras ao seu aplicativo móvel Microsoft Teams, consulte Integrar a funcionalidade de [QR](qr-barcode-scanner-capability.md)ou scanner de código de barras no Teams .
 > * Para integrar recursos de localização ao Microsoft Teams aplicativo móvel, consulte [Integrar recursos de localização.](location-capability.md)
+> * Para integrar a funcionalidade do Se picker de pessoas ao seu aplicativo móvel Microsoft Teams, consulte Integrar o recurso Se [picker](people-picker-capability.md)de pessoas em Teams .
 
 ## <a name="native-device-permissions"></a>Permissões de dispositivo nativo
 
@@ -46,7 +47,7 @@ Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, vo
 
 Um usuário pode gerenciar permissões de dispositivo em Teams configurações selecionando **Permitir** ou **Negar** permissões para aplicativos específicos.
  
-# <a name="desktop"></a>[Área de trabalho](#tab/desktop)
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 1. Abra seu Teams aplicativo.
 1. Selecione seu ícone de perfil no canto superior direito da janela.
@@ -55,7 +56,7 @@ Um usuário pode gerenciar permissões de dispositivo em Teams configurações s
 
    ![Tela de configurações da área de trabalho de permissões do dispositivo](../../assets/images/tabs/device-permissions.png)
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 1. Abra Teams.
 1. Vá para **Configurações**  >  **Permissões do Aplicativo.**
@@ -68,7 +69,7 @@ Um usuário pode gerenciar permissões de dispositivo em Teams configurações s
 
 ## <a name="specify-permissions"></a>Especificar permissões
 
-Atualize o aplicativo adicionando e especificando qual das cinco propriedades `manifest.json` que você usa em seu `devicePermissions` aplicativo:
+Atualize o aplicativo adicionando e especificando qual das cinco propriedades a seguir `manifest.json` você usa em seu `devicePermissions` aplicativo:
 
 ``` json
 "devicePermissions": [
@@ -173,11 +174,11 @@ Por exemplo:
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[Área de trabalho](#tab/desktop)
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
    ![Guia solicitação de permissões do dispositivo da área de trabalho](~/assets/images/tabs/device-permissions-prompt.png)
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
    ![Guia solicitação de permissões de dispositivo móvel](../../assets/images/tabs/MobileLocationPermission.png)
 
@@ -200,3 +201,6 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 > [!div class="nextstepaction"]
 > [Integrar recursos de localização Teams](location-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)

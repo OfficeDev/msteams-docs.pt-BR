@@ -6,16 +6,14 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646556"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211573"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
-
-Este documento orienta você sobre como integrar o recurso de QR ou scanner de código de barras. 
 
 Código de barras é um método de representação de dados em um formulário visual e acessível por máquina. O código de barras contém informações sobre um produto, como um tipo, tamanho, fabricante e País de origem na forma de barras e espaços. O código é lido usando o scanner óptico em sua câmera de dispositivo nativa. Para uma experiência colaborativa mais rica, você pode integrar o recurso de QR ou scanner de código de barras fornecido na plataforma Teams com seu aplicativo Teams de código de barras.   
 
@@ -36,7 +34,7 @@ Para integrar a QR ou o recurso de scanner de código de barras, você deve atua
 
 ## <a name="update-manifest"></a>Manifesto de atualização
 
-Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-schema.md#devicepermissions) arquivo adicionando a propriedade `devicePermissions` e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar o recurso de QR ou scanner de código de barras.
+Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-schema.md#devicepermissions) arquivo adicionando a propriedade `devicePermissions` e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar o recurso de QR ou scanner de código de barras. A atualização do manifesto do aplicativo é a seguinte:
 
 ``` json
 "devicePermissions": [
@@ -70,14 +68,15 @@ A **API scanBarCode()** dá suporte aos seguintes tipos de código de barras:
 | UPC-A | Sim | Sim |
 | UPC-E | Sim | Sim |
 
-**Experiência do aplicativo Web para `ScanBarCode` API para QR ou experiência de aplicativo** web de recurso de scanner de código de barras para o recurso de scanner de código de barras ou 
- ![ qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+A imagem a seguir mostra a experiência do aplicativo Web da capacidade de QR ou scanner de código de barras:
+
+![experiência do aplicativo web para o recurso de scanner de código de barras ou qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condição|
+|Código de erro |  Nome do erro     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno é encontrado durante a execução da operação necessária.|
@@ -112,3 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar recursos de localização Teams](location-capability.md)
+* [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)
+
