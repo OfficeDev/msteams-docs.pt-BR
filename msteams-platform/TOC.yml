@@ -8,28 +8,26 @@
 - name: Introdução
   expanded: true
   items:
+    - name: Visão Geral
+      href: get-started/code-samples.md
     - name: Pré-requisitos
       href: get-started/prerequisites.md
-    - name: Criar um aplicativo pessoal (React)
-      href: get-started/first-app-react.md
-    - name: Criar um aplicativo pessoal (Blazor)
-      href: get-started/first-app-blazor.md
-    - name: Criar um aplicativo pessoal (SPFx)
-      href: get-started/first-app-spfx.md
-    - name: Criar um bot de conversação
-      href: get-started/first-app-bot.md
-    - name: Criar uma extensão de mensagens
-      href: get-started/first-message-extension.md
-- name: Amostras de códigos e tutoriais
-  items:
-    - name: Visão Geral
-      href: tutorials/code-samples.md
-    - name: Criar seu primeiro aplicativo usando C# ou .NET
-      href: tutorials/get-started-dotnet-app-studio.md
     - name: Criar seu primeiro aplicativo usando o Node.js
-      href: tutorials/get-started-nodejs-app-studio.md
+      href: get-started/first-app-react.md
+    - name: Criar seu primeiro aplicativo usando o Blazor
+      href: get-started/first-app-blazor.md
+    - name: Criar seu primeiro aplicativo usando o SPFx
+      href: get-started/first-app-spfx.md
+    - name: Criar seu primeiro aplicativo usando C# ou .NET
+      href: get-started/get-started-dotnet-app-studio.md
+    - name: Criar seu primeiro aplicativo usando o Node.js
+      href: get-started/get-started-nodejs-app-studio.md
     - name: Criar seu primeiro aplicativo usando o gerador Yeoman
-      href: tutorials/get-started-yeoman.md
+      href: get-started/get-started-yeoman.md
+    - name: Criar o seu primeiro bot de conversação para o Microsoft Teams
+      href: get-started/first-app-bot.md
+    - name: Criar sua primeira extensão de mensagens
+      href: get-started/first-message-extension.md
     - name: Exemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Aplicativos básicos
@@ -44,36 +42,6 @@
       href: concepts/design/understand-use-cases.md
     - name: Mapeamento dos casos de uso para os recursos do aplicativo Teams
       href: concepts/design/map-use-cases.md
-- name: Integrar com o Teams
-  items:
-    - name: Visão Geral
-      href: samples/integrate-web-apps-overview.md
-    - name: Aplicativos Web
-      href: samples/integrating-web-apps.md
-    - name: Administrador da plataforma de alimentação
-      items:
-        - name: Visão Geral
-          href: samples/teams-low-code-solutions.md
-        - name: Adicionar um chatbot de Agentes Virtuais de Energia
-          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Criar um Assistente Virtual
-          href: samples/virtual-assistant.md
-    - name: Modelos de aplicativos para o Teams
-      href: samples/app-templates.md
-    - name: Conectores de Turnos prontos para produção
-      href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS
-      items:
-        - name: Visão Geral
-          href: resources/moodle-overview.md
-        - name: Instalar o Moodle LMS
-          href: resources/moodleInstructions.md
-    - name: Criar um botão Compartilhar para o Teams
-      href: concepts/build-and-test/share-to-teams.md
-    - name: Adicionar uma guia do Teams ao SharePoint
-      href: tabs/how-to/tabs-in-sharepoint.md
-    - name: Criar links detalhados
-      href: concepts/build-and-test/deep-links.md
     - name: Funcionalidades de dispositivo
       items:
         - name: Visão Geral
@@ -468,6 +436,36 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Recursos
           href: resources/dev-preview/developer-preview-features.md
+- name: Integrar com o Teams
+  items:
+    - name: Visão Geral
+      href: samples/integrate-web-apps-overview.md
+    - name: Aplicativos Web
+      href: samples/integrating-web-apps.md
+    - name: Administrador da plataforma de alimentação
+      items:
+        - name: Visão Geral
+          href: samples/teams-low-code-solutions.md
+        - name: Adicionar um chatbot de Agentes Virtuais de Energia
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+        - name: Criar um Assistente Virtual
+          href: samples/virtual-assistant.md
+    - name: Modelos de aplicativos para o Teams
+      href: samples/app-templates.md
+    - name: Conectores de Turnos prontos para produção
+      href: samples/shifts-wfm-connectors.md
+    - name: Moodle LMS
+      items:
+        - name: Visão Geral
+          href: resources/moodle-overview.md
+        - name: Instalar o Moodle LMS
+          href: resources/moodleInstructions.md
+    - name: Criar um botão Compartilhar para o Teams
+      href: concepts/build-and-test/share-to-teams.md
+    - name: Adicionar uma guia do Teams ao SharePoint
+      href: tabs/how-to/tabs-in-sharepoint.md
+    - name: Criar links detalhados
+      href: concepts/build-and-test/deep-links.md
 - name: Recursos
   items:
     - name: Localização
