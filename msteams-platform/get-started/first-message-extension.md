@@ -5,25 +5,25 @@ description: Crie uma extensão de mensagens para o Microsoft Teams usando o Kit
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037632"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254283"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crie e execute sua primeira extensão de mensagens para o Microsoft Teams
+
+Neste tutorial, você aprenderá *a* criar um comando de pesquisa para pesquisar dados externos e inserir os resultados em uma mensagem. 
 
 Há dois tipos de **extensões de mensagens** do Teams:
 
 - [Comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) permitem pesquisar sistemas externos e inserir os resultados dessa pesquisa em uma mensagem em forma de cartão.
 - [Comandos de ação](../messaging-extensions/how-to/action-commands/define-action-command.md) permitem que você apresente aos usuários um pop-up modal para coletar ou exibir informações e, em seguida, processar sua interação e enviar informações de volta para o Teams.
 
-Neste tutorial, você criará um *comando de pesquisa* para pesquisar dados externos e inserir os resultados em uma mensagem.  
-
 ## <a name="before-you-begin"></a>Antes de começar
 
-Certificar-se de que o seu ambiente de desenvolvimento esteja configurado instalando os [Pré-requisitos](prerequisites.md)
+Certifique-se de que seu ambiente de desenvolvimento está definido instalando os Pré-requisitos.
 
 > [!div class="nextstepaction"]
 > [Instalar Pré-requisitos](prerequisites.md)
@@ -35,7 +35,7 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Abra o Visual Studio Code.
-1. Abra o Kit de Ferramentas do Teams selecionando o ícone do Teams na barra lateral:
+1. Selecione o Teams na barra lateral para abrir o Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="O ícone do Teams na barra lateral do Visual Studio Code":::
 
@@ -45,20 +45,20 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
 1. Selecione **Criar um novo aplicativo do Teams**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Início do Assistente para Criar Novo Projeto":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Início do assistente para Criar Novo Projeto":::
 
-1. Na etapa **Selecionar recursos**, selecione **Extensão de Mensagem** e desmarque **Guia**. Pressione **OK**.
+1. Na seção **Selecionar recursos,** selecione **Extensão de Mensagem**, desmarque **Tab** e selecione **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Captura de tela mostrando como adicionar recursos ao seu novo aplicativo.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo.":::
 
-1. Na etapa **Registro de bot**, selecione **Criar um novo registro de bot**.
+1. Na seção **Registro bot,** selecione **Criar um novo registro de bot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Selecione criar um novo registro de bot":::
 
    > [!NOTE]
    > As extensões de mensagens dependem dos bots para fornecer uma caixa de diálogo entre o usuário e seu código.
 
-1. Na etapa **Linguagem de Programação**, selecione **JavaScript**.
+1. Na seção **Linguagem de Programação,** selecione **JavaScript**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação.":::
 
@@ -66,7 +66,7 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
 1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.  Pressione **Inserir** para continuar.
 
-O seu aplicativo do Teams será criado em alguns segundos.
+   O seu aplicativo do Teams será criado em alguns segundos.
 
 # <a name="command-line"></a>[Linha de comando](#tab/cli)
 
@@ -79,13 +79,13 @@ teamsfx new
 A CLI lhe guiará através de algumas perguntas para criar o projeto.  Cada pergunta lhe dirá como respondê-la (por exemplo, usar as teclas de seta para selecionar uma opção).  Depois de responder à pergunta, confirme sua escolha pressionando **Inserir**.
 
 1. Selecione **Criar um novo aplicativo do Teams**.
-1. Selecione o **de Extensão de** mensagem e desmarque o **guia** recurso.
+1. Selecione a **Extensão da Mensagem** e desmarque a **Guia**.
 1. Selecione **Criar um novo registro de bot**.
 1. Selecione **JavaScript** como linguagem de programação.
 1. Pressione **Inserir** para selecionar a pasta padrão do espaço de trabalho.
 1. Insira um nome adequado para seu aplicativo, como `helloworld`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.
 
-Assim que todas as perguntas forem respondidas, o seu projeto será criado.
+   Depois que todas as perguntas foram respondidas, seu projeto é criado.
 
 ---
 
@@ -113,31 +113,31 @@ O Kit de ferramentas do Teams permite hospedar o seu aplicativo localmente.  Par
 
 Para criar e executar o aplicativo localmente:
 
-1. No Visual Studio Code, pressione **F5** para executar seu aplicativo no modo de depuração.
+1. Na Visual Studio Code, pressione a **tecla F5** para executar seu aplicativo no modo de depuração.
 
    > Quando você executa o aplicativo pela primeira vez, todas as dependências são baixadas e o aplicativo é compilado.  Uma janela do navegador é aberta automaticamente quando a compilação é concluída.  Isso pode levar de 3 a 5 minutos para ser concluído.
 
 1. O Teams é carregado em um navegador da Web e você será solicitado a entrar. Se for solicitado a abrir o Microsoft Teams, selecione Cancelar para permanecer no navegador. Entre com sua conta do M365.
 
-1. Pressione **Adicionar** para adicionar o aplicativo à sua conta.
+1. Selecione **Adicionar** para adicionar o aplicativo à sua conta.
 
-Depois que o aplicativo for carregado, você será levado diretamente para uma caixa de diálogo de pesquisa:
+   Depois que o aplicativo for carregado, você será levado diretamente para uma caixa de diálogo de pesquisa:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
 
-Digite algum texto na caixa de pesquisa e selecione uma das opções.  Um cartão adaptativo será adicionado à sua caixa de entrada.
+   Digite algum texto na caixa de pesquisa e selecione uma das opções.  Um cartão adaptativo será adicionado à sua caixa de entrada.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Saiba o que acontece quando você executar seu aplicativo localmente no depurador.</summary>
 
-Quando você pressionou F5, o Kit de ferramentas do Teams:
+Quando você pressiona a **tecla F5,** o Teams Toolkit:
 
-1. Registrou seu aplicativo no Azure Active Directory.
-1. Registrou seu aplicativo para "carregamento lateral" no Microsoft Teams.
-1. Iniciou o back-end do aplicativo em execução localmente usando as [Ferramentas do Azure Function Core](/azure/azure-functions/functions-run-local?#start).
-1. Iniciou um túnel ngrok para que o Teams possa se comunicar com o seu aplicativo.
-1. Iniciou o Microsoft Teams com um comando para instruir o Teams a fazer o sideload do aplicativo.
+1. Registra seu aplicativo com Azure Active Directory.
+1. Registra seu aplicativo para "side loading" no Microsoft Teams.
+1. Inicia o back-end do aplicativo em execução localmente usando as Ferramentas Principais da [Função do Azure.](/azure/azure-functions/functions-run-local?#start)
+1. Inicia um túnel ngrok para que Teams possa se comunicar com seu aplicativo.
+1. Inicia Microsoft Teams com um comando para instruir Teams fazer sideload do aplicativo.
 
 </details>
 
@@ -186,7 +186,12 @@ O Teams Config do Auth de Pesquisa para projetos de exemplo no GitHub, demonstre
 
 ## <a name="see-also"></a>Confira também
 
-- [Criar um aplicativo do Teams com o React](first-app-react.md)
-- [Criar um aplicativo do Teams com o Blazor](first-app-blazor.md)
-- [Criar um aplicativo do Teams como uma Web Part do Microsoft Office SharePoint Online](first-app-spfx.md) (Azure não necessário)
-- [Criar um bot de conversa](first-app-bot.md)
+* [Visão geral dos tutoriais](code-samples.md) 
+* [Criar um aplicativo usando React](first-app-react.md)
+* [Criar um aplicativo usando o Blazor](first-app-blazor.md)
+* [Criar um aplicativo usando SPFx](first-app-spfx.md)
+* [Criar um aplicativo usando C# ou .NET](get-started-dotnet-app-studio.md)
+* [Criar um aplicativo usando o Node.js](get-started-nodejs-app-studio.md)
+* [Criar um aplicativo usando o gerador Yeoman](get-started-yeoman.md)
+* [Criar um programa bot de conversação](first-app-bot.md)
+* [Exemplos de código](https://github.com/OfficeDev/Microsoft-Teams-Samples)

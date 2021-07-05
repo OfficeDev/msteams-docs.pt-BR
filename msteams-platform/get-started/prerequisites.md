@@ -5,23 +5,23 @@ description: Saiba como começar com o desenvolvimento Microsoft Teams aplicativ
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037639"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254255"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Pré-requisitos: começar a Microsoft Teams desenvolvimento de aplicativos
 
-Antes de criar seu primeiro Teams, você deve instalar algumas ferramentas e configurar seu ambiente de desenvolvimento.
+Antes de começar a criar seu primeiro Teams, você deve instalar algumas ferramentas e configurar seu ambiente de desenvolvimento.
 
 ## <a name="install-required-tools"></a>Instalar ferramentas necessárias
 
 Algumas das ferramentas de que você precisa dependem de como você prefere criar seu Teams aplicativo:
 
 - [Node.js](https://nodejs.org/en/download/) (use a versão mais recente do v14 LTS)
-- Um navegador com ferramentas de desenvolvedor - como [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/)
+- Um navegador com ferramentas de desenvolvedor, como, [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/)
 - Se você estiver desenvolvendo com JavaScript, TypeScript ou o Estrutura do SharePoint (SPFx), instale Visual Studio Code [versão](https://code.visualstudio.com/download)1.55 ou posterior.  
 - Se você estiver desenvolvendo com o .NET, [instale Visual Studio 2019](https://visualstudio.com/download). Certifique-se de instalar o **ASP.NET e desenvolvimento da Web** ou a carga de trabalho de desenvolvimento entre **plataformas do .NET Core.**
 
@@ -35,9 +35,9 @@ O Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramenta
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Abra o Visual Studio Code.
-1. Selecione o exibição Extensões (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Exibir > Extensões).**
+1. Selecione o **exibição Extensões** (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Exibir > Extensões).**
 1. Na caixa de pesquisa, digite **Teams Toolkit**.
-1. Selecione o botão de instalação verde ao lado da Teams Toolkit.
+1. Selecione **Instalar** ao lado do Teams Toolkit.
 
 Você também pode encontrar o Teams Toolkit no [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -64,9 +64,8 @@ Para instalar a extensão Teams Toolkit:
 1. Abra Visual Studio 2019.
 1. Selecione **Extensões**  >  **Gerenciar Extensões**.
 1. Na caixa de pesquisa, digite **Teams Toolkit**.
-1. Selecione a Teams Toolkit e selecione **Baixar**.
-
-A extensão pode ser baixada. Feche Visual Studio 2019 para instalar a extensão.
+1. Selecione a Teams Toolkit e selecione **Baixar**. A extensão é baixada.
+1. Feche Visual Studio 2019 para instalar a extensão.
 
 # <a name="command-line"></a>[Linha de comando](#tab/cli)
 
@@ -114,12 +113,12 @@ Com o Portal do Desenvolvedor para Teams, você pode configurar, gerenciar e dis
 
 ## <a name="enable-sideloading"></a>Habilitar o sideload
 
-Durante o desenvolvimento, você deve carregar seu aplicativo dentro Teams sem distribuí-lo. Isso é conhecido como "sideloading".
+Durante o desenvolvimento, você deve carregar seu aplicativo dentro Teams sem distribuí-lo. Isso é conhecido como sideload.
 
-1. Se você tiver uma Teams, verifique se pode fazer sideload de aplicativos Teams:
+Se você tiver uma Teams, verifique se pode fazer sideload de aplicativos Teams:
 
-    1. No cliente Teams, selecione **Aplicativos**.
-    1. Procure uma opção para Upload **um aplicativo personalizado.**
+1. No cliente Teams, selecione **Aplicativos**.
+1. Selecione **Upload um aplicativo personalizado.**
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Ilustração mostrando onde Teams você pode carregar um aplicativo personalizado.":::
 
@@ -132,13 +131,12 @@ Se você não puder ver a opção de sideload ou não tiver uma conta Teams, voc
 
 1. Vá para o programa [Microsoft 365 desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program)
 1. Selecione **Ingressar agora** e siga as instruções na tela.
-1. Quando você chegar à tela de boas-vindas, selecione **Configurar assinatura do E5**.
+1. Na tela de boas-vindas, selecione **Configurar assinatura do E5**.
 1. Configurar sua conta de administrador. Depois de concluir, você deverá ver uma tela como esta.
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê depois de se inscrever no programa Microsoft 365 desenvolvedor.":::
 
-1. Entre no Teams usando a conta de administrador que você acabou de configurar.
-1. Verifique se você agora tem a opção **Upload aplicativo** personalizado.
+1. Entre no Teams usando a conta de administrador que você acabou de configurar. Verifique se você tem a opção **Upload aplicativo** personalizado.
 
 ## <a name="get-a-free-azure-account"></a>Obter uma conta gratuita do Azure
 
@@ -149,7 +147,7 @@ Se você deseja hospedar seu aplicativo ou acessar recursos no Azure, deve ter u
 Você deve ter acesso a duas contas:
 
 - Suas Microsoft 365 de conta. Essa é a conta que você usa para entrar Teams. Se você estiver usando um locatário Microsoft 365 programa de desenvolvedor, essa é a conta de administrador que você configura quando se registrou no programa.
-- - Suas credenciais do Azure. Essa é a conta que você usa para acessar o Portal do Azure e para provisionar novos recursos de nuvem para dar suporte ao aplicativo.
+- Suas credenciais do Azure. Essa é a conta que você usa para acessar o Portal do Azure e para provisionar novos recursos de nuvem para dar suporte ao aplicativo.
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -162,16 +160,16 @@ Você deve ter acesso a duas contas:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Local da seção Contas usada para entrar.":::
 
-1. O processo de login começa usando seu navegador da Web normal. Conclua o processo de login da sua conta M365. Você é solicitado quando pode fechar o navegador e retornar ao Visual Studio Code.
+    O processo de login começa usando seu navegador da Web normal. Conclua o processo de login da sua conta M365. Quando você é solicitado, você pode fechar o navegador e retornar ao Visual Studio Code.
 1. Retorne ao Teams Toolkit dentro Visual Studio Code.
 1. Selecione **Entrar no Azure**.
 
     > [!TIP]
     > Se você tiver a extensão da Conta do Azure instalada e estiver usando a mesma conta, ignore esta etapa. Use a mesma conta que você está usando em outras extensões.
 
-1. O processo de login começa usando seu navegador da Web normal.  Conclua o processo de login da sua conta do Azure. Você é solicitado quando pode fechar o navegador e retornar ao Visual Studio Code.
+1. O processo de login começa usando seu navegador da Web normal.  Conclua o processo de login da sua conta do Azure. Quando for solicitado, você poderá fechar o navegador e retornar ao Visual Studio Code.
 
-Quando concluída, a **seção ACCOUNTS** da barra lateral mostra as duas contas separadamente, juntamente com o número de assinaturas usáveis do Azure disponíveis para você. Certifique-se de ter pelo menos uma assinatura do Azure acessível disponível. Caso não, saia e use uma conta diferente.
+    Quando concluída, a **seção ACCOUNTS** da barra lateral mostra as duas contas separadamente, juntamente com o número de assinaturas usáveis do Azure disponíveis para você. Certifique-se de ter pelo menos uma assinatura do Azure acessível disponível. Caso não, saia e use uma conta diferente.
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -195,20 +193,21 @@ Visual Studio 2019 solicita que você faça logoff em cada serviço conforme nec
 
     O processo de login começa usando seu navegador da Web normal. Conclua o processo de login da sua conta do Azure. Você é solicitado quando pode fechar o navegador.
 
-Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
+    Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
 
----
 
-Agora que seu ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
+
+    Agora que seu ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
 
 ## <a name="see-also"></a>Confira também
 
-- [Criar seu primeiro Teams com o Blazor](first-app-blazor.md)
-- [Crie seu primeiro Teams usando Estrutura do SharePoint (SPFx)](first-app-spfx.md)
-- [Criar um programa bot de conversação](first-app-bot.md)
-- [Criar uma extensão de mensagem](first-message-extension.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Crie seu primeiro Teams usando React](first-app-react.md)
+* [Visão geral dos tutoriais](code-samples.md) 
+* [Criar um aplicativo usando React](first-app-react.md)
+* [Criar um aplicativo usando o Blazor](first-app-blazor.md)
+* [Criar um aplicativo usando SPFx](first-app-spfx.md)
+* [Criar um aplicativo usando C# ou .NET](get-started-dotnet-app-studio.md)
+* [Criar um aplicativo usando o Node.js](get-started-nodejs-app-studio.md)
+* [Criar um aplicativo usando o gerador Yeoman](get-started-yeoman.md)
+* [Criar um programa bot de conversação](first-app-bot.md)
+* [Criar uma extensão de mensagem](first-message-extension.md)
+* [Exemplos de código](https://github.com/OfficeDev/Microsoft-Teams-Samples)

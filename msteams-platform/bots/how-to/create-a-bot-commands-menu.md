@@ -5,12 +5,12 @@ description: Como criar um menu de comando para seu Microsoft Teams bot
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4ee8c48b2f3b10c8924b0e81dae0a0c1f6014414
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068996"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254311"
 ---
 # <a name="bot-command-menus"></a>Menus de comando bot
 
@@ -44,7 +44,7 @@ Um pré-requisito para criar um menu de comando para seu bot é que você deve e
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. No **App Studio,** selecione a **guia Editor de** manifesto. Se você não tiver um pacote de aplicativos existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, [consulte atualizar um pacote de aplicativos](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. No **App Studio,** selecione a **guia Editor de** manifesto. Se você não tiver um pacote de aplicativos existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, [consulte atualizar um pacote de aplicativos](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
 
 3. No painel esquerdo do editor **de manifesto** e na seção **Recursos,** selecione **Bots**.
 

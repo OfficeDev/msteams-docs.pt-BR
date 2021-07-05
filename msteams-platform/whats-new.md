@@ -4,47 +4,16 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211594"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254192"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
-Descubra Microsoft Teams da plataforma que são introduzidos no Microsoft Build 2021, geralmente disponíveis (GA) e na visualização do desenvolvedor.
-
-## <a name="microsoft-build-2021"></a>Microsoft Build 2021
-
-# <a name="features-in-developer-preview"></a>[Recursos na visualização do desenvolvedor](#tab/devpreview)
-
-| **Date** | **Recursos** | **Tópicos alterados** |
-| -------- | --------- | ------------------ |
-|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas de resouce em Teams](graph-api/rsc/test-resource-specific-consent.md)|
-|05/26/2021| Criar guias com Cartões Adaptáveis. |[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
-|05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021| Guias vinculam desfraldamento e exibição de estágio. |[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
-
-> [!NOTE]
-> Para obter mais informações sobre os recursos disponíveis na visualização do desenvolvedor, consulte [visualização do](~/resources/dev-preview/developer-preview-intro.md)desenvolvedor público para Teams .
-
-# <a name="features-in-ga"></a>[Recursos em GA](#tab/GA)
-
-| **Date** | **Recursos** | **Tópicos alterados** |
-| -------- | --------- | ------------------ |
-|04/29/2021 | Ações universais para cartões adaptáveis. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | Exibições específicas do usuário para cartões adaptáveis. | [Exibições Específicas do Usuário](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | Fluxos de trabalho sequenciais para cartões adaptáveis. | [Fluxos de Trabalho Sequenciais](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | Cartões atualizados. | [Cartões atualizados](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| Personalização do aplicativo.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | Formatar cartões Teams. | [Formatar cartões em Teams](task-modules-and-cards/cards/cards-format.md) |
-|02/19/2021|Recursos de localização adicionados. <br/> As informações de recursos de localização são adicionadas na visão geral dos recursos do dispositivo, permissões de dispositivo nativas, integração de recursos de mídia e arquivos de recursos de QR ou scanner de código de barras.|[Visão](concepts/device-capabilities/device-capabilities-overview.md)geral , [Solicitar permissões de dispositivo,](concepts/device-capabilities/native-device-permissions.md) [Integrar](concepts/device-capabilities/mobile-camera-image-permissions.md)recursos de mídia, [Integrar a QR](concepts/device-capabilities/qr-barcode-scanner-capability.md)ou o recurso de scanner de código de barras, [Integrar recursos de localização](concepts/device-capabilities/location-capability.md) |
-
----
+Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e na visualização do desenvolvedor.
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -58,7 +27,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Integrar a funcionalidade do Se picker de pessoas](concepts/device-capabilities/people-picker-capability.md)|  
+|06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Funcionalidade Integrar Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
 |06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |

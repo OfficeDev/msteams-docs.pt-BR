@@ -4,21 +4,21 @@ description: Descreve ações de cartão em Microsoft Teams e como usá-las em s
 localization_priority: Normal
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140086"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254199"
 ---
-# <a name="card-actions"></a>Ações de cartão
+# <a name="card-actions"></a>Ações do cartão
 
 Os cartões usados por bots e extensões de mensagens em Teams suportam os seguintes tipos de [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) atividade:
 
 > [!NOTE]
 > As `CardAction` ações diferem `potentialActions` das Office 365 conectores quando usadas de conectores.
 
-| Tipo | Ação |
+| Tipo | Action |
 | --- | --- |
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e uma carga para o bot do usuário que selecionou o botão ou tocou no cartão. Envia uma mensagem separada para o fluxo de chat. |
@@ -533,7 +533,7 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com `invoke` ação
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"
@@ -557,7 +557,7 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com `invoke` ação
 }
 ```
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 [Referência de cartões](./cards-reference.md)
 
