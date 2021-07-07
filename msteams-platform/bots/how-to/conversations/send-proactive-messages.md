@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: enviar uma mensagem obter iD de conversa de canal de ID do usuário
-ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 5c169e8ef7735b42233bef9992de3540a6fbbee1
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130192"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300295"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -117,7 +117,7 @@ Consulte [instalar aplicativos para usuários](/graph/api/userteamwork-post-inst
 
 ## <a name="samples"></a>Exemplos
 
-O código a seguir mostra um exemplo de código simples que instala proativamente seu aplicativo usando Graph:
+O código a seguir mostra como enviar mensagens proativas:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -272,13 +272,14 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 |---------------|--------------|--------|-------------|--------|
 | Teams Noções básicas de conversa  | Demonstra noções básicas de conversas Teams, incluindo o envio de mensagens proativas um para um.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar novo thread em um canal | Demonstra a criação de um novo thread em um canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>Exemplo de código adicional
 
 > [!div class="nextstepaction"]
 > [Teams exemplos proativos de código de mensagens](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 [**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 

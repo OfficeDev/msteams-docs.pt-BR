@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: 222c69f6349177a72f4b8599068ea1ebacbf6d16
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114235"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300302"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
@@ -190,6 +190,12 @@ Quando seu aplicativo é instalado para o usuário, o bot recebe uma notificaç�
 
 Seu bot pode [enviar mensagens proativas](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) depois que o bot foi adicionado para um usuário ou uma equipe e recebeu todas as informações do usuário.
 
+## <a name="code-sample"></a>Exemplo de código
+
+| **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
+|---------------|--------------|--------|-------------|--------|
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+
 ## <a name="see-also"></a>Confira também
 
 * [**Gerenciar políticas de configuração de aplicativos Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
@@ -198,4 +204,4 @@ Seu bot pode [enviar mensagens proativas](/azure/bot-service/bot-builder-howto-p
 ## <a name="additional-code-samples"></a>Exemplos de código adicionais
 >
 > [!div class="nextstepaction"]
-> [**Teams exemplos proativos de código de mensagens**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
