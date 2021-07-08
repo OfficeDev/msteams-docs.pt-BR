@@ -6,22 +6,22 @@ keywords: lista de membros da equipe de apis de estrutura de bot
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 9c6444967d330d27a415ac596a3858c05c49236e
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114242"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328062"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams da API de bot para buscar membros de equipe ou chat
 
 >[!NOTE]
 > O processo de deprecation para `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` e APIs foi iniciado. Inicialmente, elas são fortemente aceleradas para cinco solicitações por minuto e retornam um máximo de 10 mil membros por equipe. Isso resulta na lista completa não sendo retornada à medida que o tamanho da equipe aumenta.
-> Você deve atualizar para a versão 4.10 ou superior do SDK da Estrutura de Bot e alternar para os pontos de extremidade da API paginada ou para a API de usuário `TeamsInfo.GetMemberAsync` único. Isso também se aplica ao bot mesmo que você não use essas APIs diretamente, pois os SDKs mais antigos chamam essas APIs durante [eventos membersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Para exibir a lista de alterações futuras, consulte [ALTERAÇÕES da API](team-chat-member-api-changes.md#api-changes). 
+> Você deve atualizar para a versão 4.10 ou superior do SDK da Estrutura de Bot e alternar para os pontos de extremidade da API paginada ou para a API de usuário `TeamsInfo.GetMemberAsync` único. Isso também se aplica ao bot mesmo que você não use essas APIs diretamente, pois os SDKs mais antigos chamam essas APIs durante [eventos membersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Para exibir a lista de alterações futuras, consulte [ALTERAÇÕES da API](team-chat-member-api-changes.md#api-changes).
 
-Atualmente, os desenvolvedores de bot que querem recuperar informações para um ou mais membros de um chat ou equipe usam as APIs de bot Microsoft Teams para C# ou para `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` APIs TypeScript ou Node.js. Para obter mais informações, consulte [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Essas APIs têm várias deficiências.
+Atualmente, se você deseja recuperar informações para um ou mais membros de um chat ou equipe, pode usar [as APIs](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) de bot Microsoft Teams para C# ou para `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` APIs TypeScript ou Node.js. Para obter mais informações, consulte [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-Atualmente, se você deseja recuperar informações para um ou mais membros de um chat ou equipe, pode usar [as APIs](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) de bot Microsoft Teams para C# ou para `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` APIs TypeScript ou Node.js. Essas APIs têm as seguintes deficiências:
+Essas APIs têm as seguintes deficiências:
 
 * Para equipes grandes, o desempenho é ruim e os tempos limite são mais prováveis: o tamanho máximo da equipe aumentou consideravelmente desde Teams foi lançado no início de 2017. Como ou retorna toda a lista de membros, leva muito tempo para a chamada da API retornar para equipes grandes, e é comum que a chamada tenha tempo de espera e você precisa `GetMembersAsync` `getMembers` tentar novamente.
 * Obter detalhes de perfil para um único usuário é difícil: para obter as informações de perfil de um único usuário, você precisa recuperar toda a lista de membros e, em seguida, pesquisar o que você deseja. Há uma função auxiliar no SDK da Estrutura de Bots para torná-lo mais simples, mas não é eficiente.

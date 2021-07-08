@@ -5,23 +5,23 @@ description: Saiba mais sobre os componentes da interface do usuário usados em 
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: ae1c2793586dc638d56051e105482aac92e01091
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644914"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328076"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
 Os componentes a seguir são uma combinação de [componentes](~/concepts/design/design-teams-app-basic-ui-components.md) básicos da interface do usuário que você pode usar para situações Teams de design comuns, como a navegação.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Com base na interface do usuário <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluente,</a>o Microsoft Teams de interface do usuário inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
+Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface do</a>usuário, o kit de interface do usuário Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Trilha
 
@@ -36,7 +36,7 @@ Os breadcrumbs são um auxílio de navegação que transmitem a hierarquia do ap
 
 :::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb no celular." border="false":::
 
@@ -55,7 +55,7 @@ Use a navegação esquerda para navegar por várias páginas na guia Teams. No e
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo no celular." border="false":::
 
@@ -75,7 +75,7 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos de interface do usuário da barra de notificação na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
 
@@ -83,20 +83,20 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 
 ## <a name="stage"></a>Estágio
 
-O estágio oferece uma maneira de os usuários abrirem uma entidade, como uma imagem, arquivo ou site, em Teams em vez de abri-la em outro aplicativo ou navegador. O principal caso de uso do estágio é exibição; a superfície não deve ser usada para interações complexas.
+O estágio permite que os usuários exibirem conteúdo, como uma imagem, arquivo ou site, em uma grande superfície no Teams sem alternar contexto. O estágio é principalmente para exibir conteúdo. Não use estágio para interações complexas.
 
-(Observação de implementação: crie seu estágio usando um módulo [de tarefa grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
+Saiba como implementar o [estágio](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Abra uma entidade no Teams em vez de outro aplicativo ou navegador
-* Mídia em destaque ou outro conteúdo
+* Exibir conteúdo em uma superfície grande dentro Teams em vez de outro aplicativo ou navegador
+* Mídia em destaque ou outro conteúdo rico
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Exemplo mostra um modelo de estágio na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, um link compartilhado ou componentes visuais (como um gráfico).
 
@@ -118,7 +118,7 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 
 :::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
 

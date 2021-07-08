@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Criar guias usando Cartões Adaptáveis
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179899"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328055"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -98,6 +98,9 @@ A seguir está um manifesto de guia cartão adaptável de exemplo:
 ## <a name="invoke-activities"></a>Invocar atividades
 
 A comunicação entre sua guia Cartão Adaptável e seu bot é feita por meio de `invoke` atividades. Cada `invoke` atividade tem um nome **correspondente**. Use o nome de cada atividade para diferenciar cada solicitação. `tab/fetch` e `tab/submit` são as atividades abordadas nesta seção.
+
+> [!NOTE]
+> Os bots precisam enviar todas as respostas para [a URL do serviço.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) A URL do serviço é recebida como parte `activity` da carga de entrada.
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Buscar Cartão Adaptável para renderizar em uma guia
 

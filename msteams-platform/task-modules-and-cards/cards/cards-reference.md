@@ -4,12 +4,12 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 localization_priority: Normal
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140456"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328069"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -57,6 +57,21 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 | [Cartão de miniatura](#thumbnail-card) | Esse cartão normalmente contém uma única imagem em miniatura, algum texto curto e um ou mais botões. |
 | [Coleções de cartões](#card-collections) | Essa coleção de cartões é usada para retornar vários itens em uma única resposta. |
 
+## <a name="features-that-support-different-card-types"></a>Recursos que suportam diferentes tipos de cartão
+
+| Tipo de cartão | Bots | Visualizações de extensão de mensagem | Resultados da extensão de mensagem | Módulos de tarefas | Webhooks de saída | Webhooks de entrada | Conectores O365 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Cartão Adaptável | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
+| Cartão conector O365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Cartão de herói | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Cartão de miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Cartão de listagem | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| Cartão de recebimento | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
+| Cartão de signin | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+
+> [!NOTE]
+> Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit` , são totalmente suportados. As ações suportadas são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+
 ## <a name="common-properties-for-all-cards"></a>Propriedades comuns para todos os cartões
 
 Você pode passar por algumas propriedades comuns que são aplicáveis a todos os cartões.
@@ -74,7 +89,7 @@ A tabela a seguir fornece as propriedades das imagens de cartão em linha:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | String | Descrição acessível da imagem. |
+| alt | Cadeia de caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, o redirecionamento na URL da imagem não será suportado. Isso ocorre para imagens compartilhadas na nuvem pública.
@@ -432,7 +447,7 @@ Office 365 Os cartões conectores funcionam corretamente Microsoft Teams, inclui
 
 A diferença importante entre o uso de cartões de conector de um conector e o uso de cartões de conector no bot é o tratamento de ações de cartão. A tabela a seguir lista a diferença:
 
-| Conector | Bot |
+| Connector | Bot |
 | --- | --- |
 | O ponto de extremidade recebe a carga de cartão por meio de HTTP POST. | A ação dispara uma atividade que envia apenas a ID de ação `HttpPOST` e o corpo para o `invoke` bot.|
 
@@ -930,7 +945,7 @@ Os cartões a seguir são implementados pela Estrutura de Bot, mas não são sup
 * Cartões de áudio
 * Cartões de vídeo
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Formatar cartões](~/task-modules-and-cards/cards/cards-format.md)

@@ -6,12 +6,12 @@ keywords: Microsoft Teams exemplos de modelos
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
-ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
+ms.openlocfilehash: 72bb5506e552dfa3d35426e99a7ee74088ef41f6
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53111146"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333691"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -288,7 +288,7 @@ O aplicativo Obter Suporte é usado por organizações que estão usando Microso
 * Solicitando assistência em diferentes categorias de um Power App.
 * Notificações enviadas aos solicitadores informando quem foi atribuído.
 * Notificações enviadas a supervisores atribuídos informando quem precisa de assistência. 
-* Analisando escalonamentos e padrões em SharePoint e PowerBI.S.
+* Analisando escalonamentos e padrões em SharePoint e Power BI.
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
