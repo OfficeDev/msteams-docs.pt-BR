@@ -2,14 +2,14 @@
 title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949746"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335372"
 ---
-# <a name="custom-together-mode-scenes-in-teams"></a>Cenas do modo Juntos Personalizados Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
 > [!NOTE]
 > Esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.
@@ -128,7 +128,7 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
     > * Depois que a cena é enviada, os posicionamentos de avatar são substituídos pelos fluxos de vídeo reais do participante.
     > * Você pode arrastar as imagens do participante ao redor da cena e posicioná-las na posição necessária e ressize-las usando a seta de ressize.
 
-1. Selecione qualquer imagem de participante e escolha a caixa de seleção **Atribuir Ponto** para atribuir o local ao participante.
+1. Selecione qualquer imagem de participante e marque a caixa de seleção **Atribuir Ponto** para atribuir o local ao participante.
 
 1. Selecione **Organizador da Reunião** ou Função **de** Apresentador para o participante.
 
@@ -252,7 +252,7 @@ Agora que você passou pelo exemplo de scene.jsativado, você pode ativar as cen
 
 Obter informações de ponta a ponta de como um usuário final se envolve com cenas em cenas personalizadas do modo Juntos.
 
-**Para escolher cenas e ativar cenas personalizadas do modo Juntos**
+**Para selecionar cenas e ativar cenas personalizadas do modo Juntos**
 
 1. Crie uma nova reunião de teste.
 

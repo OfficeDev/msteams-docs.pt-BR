@@ -3,12 +3,12 @@ title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139967"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335365"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -61,22 +61,17 @@ A propriedade determina o que deve ser mostrado quando um usuário invoca um apl
 |---|---|
 | **channelTab** | Uma guia no header de um canal de equipe. |
 | **privateChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários, não no contexto de uma equipe ou reunião. |
-| **meetingChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários no contexto de uma reunião agendada. |
-| **meetingDetailsTab** | Uma guia no header da exibição de detalhes da reunião do calendário. |
+| **meetingChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários no contexto de uma reunião agendada. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
+| **meetingDetailsTab** | Uma guia no header da exibição de detalhes da reunião do calendário. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingSidePanel** | Um painel na reunião foi aberto por meio da barra unificada (U-bar). |
-| **meetingStage** | Um aplicativo do meetingSidePanel pode ser compartilhado no estágio de reunião. |
-
-> [!NOTE]
-> `Context` atualmente, não há suporte para clientes móveis.
+| **meetingStage** | Um aplicativo do meetingSidePanel pode ser compartilhado no estágio de reunião. Essa guia não é suportada no celular. |
 
 Depois de habilitar seu aplicativo para Teams reuniões, você deve configurar seu aplicativo antes de uma reunião, durante uma reunião e após uma reunião.
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar seu aplicativo para cenários de reunião
 
 > [!NOTE]
-> * Para que seu aplicativo seja visível na galeria de guias, ele deve dar suporte a guias configuráveis e ao escopo de chat de grupo.
-> * Os clientes móveis suportam guias somente em estágios pré e pós-reunião.
-> * As experiências na reunião que estão na caixa de diálogo e na guia da reunião atualmente não são suportadas em clientes móveis. Para obter mais informações, consulte [diretrizes para guias em dispositivos móveis](../tabs/design/tabs-mobile.md) ao criar suas guias para dispositivos móveis.
+> Para que seu aplicativo seja visível na galeria de guias, ele deve dar suporte a guias configuráveis e ao escopo de chat de grupo.
 
 Teams reuniões fornece uma experiência colaborativa exclusiva para sua organização. Ele oferece a oportunidade de configurar seu aplicativo para diferentes cenários de reunião. Você pode configurar seus aplicativos para aprimorar a experiência de reunião com base na função de participante ou no tipo de usuário. Agora você pode identificar quais ações podem ser tomadas nos seguintes cenários de reunião:
 
@@ -180,7 +175,7 @@ As configurações após e [antes das reuniões](#before-a-meeting) são as mesm
 |----------------|-----------------|--------------|----------------|-----------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Tokens de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. Isso pode ser útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)

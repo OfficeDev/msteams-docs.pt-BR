@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: vm do windows server do windows server hospedado pelo aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020053"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335358"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 
@@ -59,7 +59,10 @@ A próxima seção fornece detalhes sobre escalabilidade e considerações de de
 
 ## <a name="scalability-and-performance-considerations"></a>Considerações sobre escalabilidade e desempenho
 
-Os bots de mídia hospedados por aplicativo exigem as seguintes considerações de escalabilidade e desempenho:
+Os bots de mídia hospedados pelo aplicativo exigem as seguintes considerações de escalabilidade e desempenho:
+- Os bots de mídia hospedados pelo aplicativo exigem mais capacidade de computação e rede (largura de banda) do que bots de mensagens e podem incorrer em custos operacionais significativamente maiores. Um desenvolvedor de bot de mídia em tempo real deve medir cuidadosamente a escalabilidade do bot e garantir que o bot não aceite mais chamadas simultâneas do que pode gerenciar. Um bot habilitado para vídeo pode ser capaz de sustentar apenas uma ou duas sessões de mídia simultâneas por núcleo de CPU (se usar os formatos de vídeo RGB24 ou NV12 "brutos").
+- No momento, a Plataforma de Mídia em Tempo Real não tira proveito de qualquer GPU (Unidades de Processamento de Elementos Gráficos) disponível na VM para descarramento/decodificação de vídeo H.264. Em vez disso, a codificação de vídeo e a decodificar são feitas em software na CPU. Se uma GPU estiver disponível, o bot poderá tirar proveito dela para sua própria renderização gráfica, por exemplo, se o bot estiver usando um mecanismo gráfico 3D.
+- A instância da VM que hospeda o bot de mídia em tempo real deve ter pelo menos 2 núcleos de CPU. Para o Azure, uma máquina virtual da série Dv2 é recomendada. Para outros tipos de VM do Azure, um sistema com quatro CPUs virtuais (vCPU) é o tamanho mínimo necessário. Informações detalhadas sobre tipos de VM do Azure estão disponíveis na documentação [do Azure.](/azure/virtual-machines/windows/sizes-general) 
 
 ## <a name="code-sample"></a>Exemplo de código
 

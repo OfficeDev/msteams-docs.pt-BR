@@ -5,12 +5,12 @@ description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Mi
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114255"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335407"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -37,13 +37,13 @@ Nos detalhes da reunião, os usuários podem selecionar **Adicionar uma guia +**
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e escolher o aplicativo que eles querem.
+Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e selecionar o aplicativo que eles querem.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião." border="false":::
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: e escolher o aplicativo que eles querem.
+Depois de adicionar o aplicativo na área de trabalho, você pode selecionar o aplicativo e usar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
 
@@ -62,8 +62,8 @@ Antes de uma reunião, os usuários podem adicionar conteúdo na guia. O exemplo
 |Contador|Descrição|
 |----------|-----------|
 |1|**Nome da guia**: Rótulo de navegação para sua guia.|
-|2 |**Estouro da** guia : abre ações de guia, como renomear e remover.|
-|3 |**iframe**: exibe o conteúdo do aplicativo.|
+|2|**Estouro da** guia : abre ações de guia, como renomear e remover.|
+|3|**iframe**: exibe o conteúdo do aplicativo.|
 
 ### <a name="designing-with-ui-templates"></a>Projetando com modelos de interface do usuário
 
@@ -105,8 +105,8 @@ As pessoas podem usar a guia na reunião para:
 |Contador|Descrição|
 |----------|-----------|
 |1|**Ícone do aplicativo (selecionado)**: logotipo de aplicativo transparente de 16 pixels.|
-|2 |**Nome do aplicativo**|
-|3 |**Header**: Inclui o nome do aplicativo.|
+|2|**Nome do aplicativo**|
+|3|**Header**: Inclui o nome do aplicativo.|
 |4 |**Botão Fechar**: descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.|
 |5 |**Barra de** notificações : Os alertas de erro são exibidos diretamente abaixo do header e pressionam o conteúdo do iframe para baixo em 20 pixels.|
 |6 |**iframe**: exibe o conteúdo do aplicativo.|
@@ -163,7 +163,7 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 |Contador|Descrição|
 |----------|-----------|
 |1|**Header**: Inclui ícone de aplicativo, nome, cadeia de caracteres de ação e ícone de fechamento.|
-|2 |**iframe**: exibe o conteúdo do aplicativo.|
+|2|**iframe**: exibe o conteúdo do aplicativo.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomia: header de caixa de diálogo na reunião
 
@@ -174,8 +174,8 @@ Há duas variantes de header. Quando possível, use a variante com o avatar para
 |Contador|Descrição|
 |----------|-----------|
 |1|**Avatar**: Pessoa que inicia a caixa de diálogo na reunião.|
-|2 |**ícone de aplicativo**|
-|3 |**Nome do aplicativo**|
+|2|**ícone de aplicativo**|
+|3|**Nome do aplicativo**|
 |4 |**Botão Fechar**: descarta a caixa de diálogo.|
 |5 |**Cadeia de caracteres** de ação : normalmente descreve quem iniciou a caixa de diálogo.|
 
@@ -246,8 +246,8 @@ O estágio de reunião compartilhada tem a ver com colaboração e participaçã
 |Contador|Descrição|
 |----------|-----------|
 |1|**Ícone do** aplicativo : O ícone realçado indica que a guia de reunião do aplicativo está aberta.|
-|2 |**Botão Compartilhar para estágio de reunião**: O ponto de entrada para compartilhar o aplicativo no estágio de reunião. Exibe se você configurar seu aplicativo para usar o estágio de reunião compartilhado.|
-|3 |**iframe**: exibe o conteúdo do aplicativo.|
+|2|**Botão Compartilhar para estágio de reunião**: O ponto de entrada para compartilhar o aplicativo no estágio de reunião. Exibe se você configurar seu aplicativo para usar o estágio de reunião compartilhado.|
+|3|**iframe**: exibe o conteúdo do aplicativo.|
 |4 |**Botão Parar de compartilhar**: para de compartilhar o aplicativo no estágio de reunião. Exibe somente para o participante que iniciou o compartilhamento.|
 |5 |**Atribuição do apresentador**: exibe o nome do participante que compartilhou o aplicativo.|
 

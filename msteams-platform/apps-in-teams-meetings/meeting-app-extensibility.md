@@ -3,12 +3,12 @@ title: Extensibilidade do aplicativo de reunião
 author: surbhigupta
 description: Compreender a extensibilidade do aplicativo de reunião
 ms.topic: conceptual
-ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068633"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335379"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
 
@@ -32,8 +32,7 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 > Se você tiver integrado uma guia à sua reunião Teams, seu aplicativo deverá seguir o fluxo de autenticação de logom único [(SSO)](../tabs/how-to/authentication/auth-aad-sso.md)para guias .
 
 > [!NOTE]
-> * Os clientes móveis suportam guias somente em estágios pré e pós-reunião. As experiências em reunião que estão na caixa de diálogo e no painel da reunião não estão disponíveis no momento em dispositivos móveis.
-> * Os aplicativos têm suporte apenas em reuniões agendadas privadas.
+> Os aplicativos têm suporte apenas em reuniões agendadas privadas.
 
 #### <a name="pre-meeting-app-experience"></a>Experiência do aplicativo de pré-reunião
 
@@ -48,42 +47,86 @@ Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicio
 
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
-    ![Exibição de guia de pré-reunião](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * Você também pode adicionar uma guia usando a guia **Chat de** reunião em uma reunião existente.
     > * O layout da guia deve estar em um estado organizado, se houver mais de dez pesquisas ou pesquisas.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+![Exibição de guia de pré-reunião](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+
+Depois que as guias são adicionadas a uma reunião existente na área de trabalho  ou na Web, você pode ver os mesmos aplicativos na experiência de pré-reunião em Mais seção dos detalhes da reunião.
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### <a name="in-meeting-app-experience"></a>Experiência do aplicativo na reunião
 
 Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra superior superior da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para mostrar conteúdo a actionable para os participantes da reunião. Para obter mais informações, [consulte create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
+Para dispositivos móveis, os  aplicativos de reunião estão disponíveis > aplicativos &#x25CF;&#x25CF;&#x25CF; na reunião. Selecione **Aplicativos** para exibir todos os aplicativos disponíveis na reunião.
+
 **Para usar guias durante uma reunião**
 
-1. Depois de inserir a reunião, na barra superior superior da janela de chat, selecione o aplicativo que você deseja usar. Um aplicativo fica visível em uma reunião Teams no painel lateral ou na caixa de diálogo na reunião.
+1. Vá para Teams.
+1. Em seu calendário, selecione uma reunião em que você deseja usar uma guia.
+1. Depois de inserir a reunião, na barra superior superior da janela de chat, selecione o aplicativo necessário.
+    Um aplicativo fica visível em uma reunião Teams no painel lateral ou na caixa de diálogo na reunião.
 1. Na caixa de diálogo na reunião, insira sua resposta como um feedback.
 
-    ![Exibição da caixa de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
-    > [!NOTE]
-    > * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
-    > * Se a caixa de diálogo na reunião for renderizada com êxito, você será notificado de que os resultados foram baixados com êxito.
-    > * O manifesto do aplicativo especifica os locais onde você deseja que eles apareçam. O campo de contexto é usado para essa finalidade. Ele também pode fazer parte de uma experiência de bandeja de compartilhamento, sujeito a diretrizes de design especificadas.
+![Exibição da caixa de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    A imagem a seguir ilustra o painel do lado da reunião:
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-    ![Painel do lado da reunião](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+Depois de inserir a reunião e adicionar o aplicativo da área de trabalho ou da Web, o aplicativo fica visível na reunião de Teams móvel na **seção Aplicativos.** Selecione **Aplicativos** para mostrar a lista de aplicativos. O usuário pode iniciar qualquer um dos aplicativos como um painel do lado da reunião do aplicativo.
+
+A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta como um feedback.
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> Você não precisa alterar o manifesto do aplicativo para que os aplicativos funcionem em dispositivos móveis.
+
+---
+
+> [!NOTE]
+> * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
+> * Se a caixa de diálogo na reunião for renderizada com êxito, você receberá uma notificação de que os resultados foram baixados com êxito.
+> * O manifesto do aplicativo especifica os locais que você deseja que eles apareçam. O campo de contexto é usado para essa finalidade. Também faz parte de uma experiência de bandeja de compartilhamento, sujeita a diretrizes de design especificadas.
+
+A imagem a seguir ilustra o painel do lado da reunião:
+
+![Painel do lado da reunião](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+A tabela a seguir descreve o comportamento do aplicativo quando ele é aprovado e não aprovado:
+
+|Funcionalidade do aplicativo | Aplicativo aprovado | O aplicativo não foi aprovado |
+|---|---|---|
+| Extensibilidade da reunião | O aplicativo aparecerá em reuniões. | O aplicativo não aparecerá em reuniões para os clientes móveis. |
 
 #### <a name="post-meeting-app-experience"></a>Experiência de aplicativo pós-reunião
 
-Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários. Selecionar <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para adicionar uma guia e obter notas de reunião e resultados sobre quais organizadores e participantes devem tomar medidas.
+Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários. Selecionar <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para adicionar uma guia, obter notas de reunião e resultados nos quais organizadores e participantes devem tomar medidas.
 
 A imagem a seguir exibe a **guia Contoso** com resultados da sondagem e comentários recebidos dos participantes da reunião:
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 ![Exibição pós-reunião](../assets/images/apps-in-meetings/PostMeeting.png)
 
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
+
 > [!NOTE]
-> O layout da guia deve ser organizado quando houver mais de dez pesquisas ou pesquisas.
+> O layout da guia deve ser organizado quando houver mais de 10 pesquisas ou pesquisas.
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrar bots ao ciclo de vida da reunião
 

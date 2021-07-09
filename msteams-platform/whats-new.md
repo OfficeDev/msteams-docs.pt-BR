@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254192"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335351"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|07/08/2021|A extensibilidade do aplicativo de reunião está disponível no celular. Os clientes móveis suportam aplicativos durante a reunião. |[Extensibilidade do aplicativo de reunião](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Funcionalidade Integrar Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
 |06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |

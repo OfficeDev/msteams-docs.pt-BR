@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333684"
+ms.locfileid: "53335344"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Pré-requisitos e referências de API para aplicativos de reuniões do Teams
 
@@ -45,7 +45,7 @@ Depois de passar pelos pré-requisitos, você pode usar as referências de API d
 
 ## <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
-As novas extensibilidades de reunião fornecem APIs que transformam a experiência de reunião. Com esse novo recurso, você pode criar aplicativos ou integrar aplicativos existentes no ciclo de vida da reunião. Você pode usar as APIs para tornar seu aplicativo ciente da reunião. Você pode escolher quais APIs deseja usar para aprimorar a experiência de reunião.
+As novas extensibilidades de reunião fornecem APIs para transformar a experiência de reunião. Você pode criar aplicativos ou integrar aplicativos existentes no ciclo de vida da reunião. Você pode usar as APIs para tornar seu aplicativo ciente da reunião. Você pode selecionar as APIs que deseja usar para aprimorar a experiência de reunião.
 
 A tabela a seguir fornece uma lista dessas APIs:
 
