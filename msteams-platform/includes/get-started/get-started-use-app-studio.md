@@ -162,6 +162,9 @@ Depois de inserir os detalhes do seu aplicativo, conclua as seguintes etapas par
 1. Para carregar seu aplicativo no Teams, selecione o botão **Instalar** em **Testar e Distribuir:**
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    
+    > [!NOTE]
+    > Se você não conseguir fazer sideload do aplicativo, verifique se você [habilitar o carregamento personalizado de aplicativos](#prepare-your-development-environment).
 
 1. Selecione a **caixa Pesquisar** na seção Adicionar a **uma equipe** e selecione uma equipe para adicionar o aplicativo de exemplo. Você pode configurar uma equipe especial para teste.
 1. Selecione o **botão Instalar** na parte inferior da caixa de diálogo.
