@@ -4,12 +4,12 @@ description: Descreve Microsoft Teams fluxo de autenticação em bots
 keywords: bots de fluxo de autenticação do teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: fdce053ce837bb9a244712a63515194d05adb3a8
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994221"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428699"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Fluxo de autenticação para bots Microsoft Teams
 
@@ -52,10 +52,10 @@ Consulte o GitHub de Microsoft Teams [de](https://github.com/OfficeDev/Microsoft
 
 Código de exemplo mostrando o processo de autenticação de bot:
 
-| **Exemplo de nome** | **Descrição** | **Node.js** | **.NET** | **Python** |
+| **Nome do exemplo** | **Descrição** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
-| Teams autenticação | Este exemplo demonstra autenticação em Microsoft Teams aplicativos. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
-| Autenticação bot | Este exemplo de demonio começa a usar a autenticação para um processo de Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
+| Teams autenticação | Este exemplo demonstra autenticação em Microsoft Teams aplicativos. | [Exibir](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
+| Autenticação bot | Este exemplo demonstra como usar a autenticação para um bot em execução no Microsoft Teams | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## <a name="see-also"></a>Confira também
 

@@ -5,12 +5,12 @@ description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma men
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c14f55d014af120cab88044d31ee8600017e3c57
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254304"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428734"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor
 
@@ -41,7 +41,7 @@ Use o Kit de ferramentas do Teams para criar o seu primeiro projeto:
 
 1. Insira o nome do aplicativo e o nome da empresa.
 
-1. Selecione **Criar**.  O nome do aplicativo e o nome da empresa são exibidos para os usuários finais. O seu aplicativo do Teams será criado em alguns segundos.  Depois que o projeto for criado, configurar o logom único com o M365:
+1. Selecione **Criar**.   O nome do aplicativo e o nome da empresa são exibidos para os usuários finais. O seu aplicativo do Teams será criado em alguns segundos.  Depois que o projeto for criado, configurar o logom único com o M365:
 
    1. Selecione **Project**  >  **Configuração do TeamsFx**  >  **para SSO...**.
    1. Quando solicitado, entre em sua conta de administrador do M365.
@@ -236,7 +236,7 @@ O manifesto do aplicativo carrega a guia de uma `localhost` URL.  Nesta seção,
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Selecionar informações básicas":::
 
-1. Há vários locais dentro do manifesto que listam uma `locahost:XXXXX` como parte de uma URL.  Substitua todas as ocorrências `{{azure_app_url}}` por , incluindo as chaves.
+1. Há vários locais dentro do manifesto que listam uma `localhost:XXXXX` como parte de uma URL.  Substitua todas as ocorrências `{{azure_app_url}}` por , incluindo as chaves.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajustar informações básicas para o ambiente":::
 
@@ -257,7 +257,7 @@ O manifesto do aplicativo carrega a guia de uma `localhost` URL.  Nesta seção,
 
 1. Selecione **Atualizar**.
 
-1. Selecione **Salvar**.
+1. Clique em **Salvar**.
 
 1. Na barra lateral, selecione **Single Sign-On**.
 
@@ -265,7 +265,7 @@ O manifesto do aplicativo carrega a guia de uma `localhost` URL.  Nesta seção,
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Editar URI de ID de aplicativo de login único":::
 
-1. Selecione **Salvar**.
+1. Clique em **Salvar**.
 
 1. Na barra lateral, selecione **Domínios**.
 

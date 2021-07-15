@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 00b100ad634c1155446ab0b908c13b6b6eb3038c
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335351"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428706"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -169,7 +169,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 | -------- | --------- | ------------------ |
 |06/23/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas de resouce em Teams](graph-api/rsc/test-resource-specific-consent.md)|  
+|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|  
 |05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |

@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Criar guias usando Cartões Adaptáveis
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328055"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428713"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -19,7 +19,7 @@ ms.locfileid: "53328055"
 
 Ao desenvolver uma guia usando o método tradicional, você pode executar esses problemas, como considerações HTML e CSS, tempos de carga lentos, restrições de iFrame e manutenção e custos do servidor. As guias Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Enquanto o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
 
-Você pode criar suas guias com blocos de IU (interface do usuário) prontos que pareçam nativos na área de trabalho, na Web e no celular. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo, como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis e o impacto no fluxo de trabalho do módulo de tarefas.
+Você pode criar suas guias com blocos de construção da interface do usuário (interface do usuário) prontos que pareçam nativos na área de trabalho, na Web e no celular. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo, como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis e o impacto no fluxo de trabalho do módulo de tarefas.
 
 A imagem a seguir mostra guias de com build com Cartões Adaptáveis na área de trabalho e no celular:
 

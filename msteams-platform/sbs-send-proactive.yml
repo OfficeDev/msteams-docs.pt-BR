@@ -8,17 +8,17 @@ metadata:
   ms.date: 06/23/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
-  nextTutorialTitle: Enviar mensagens proativas
+  nextTutorialTitle: Ler mais sobre mensagens proativas
   ms.custom: mvc
-  ms.openlocfilehash: 844e4c0ed85159f8ae7b080dff073e0d70f38748
-  ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+  ms.openlocfilehash: 4a6a30bd038c5117024c67a7786995391351e0fe
+  ms.sourcegitcommit: 7f9b3c1654536a88015f1b11b6c8a0f612b111c4
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "53133448"
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "53434463"
 items:
 - durationInMinutes: 1
-  content: "Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Isso pode incluir mensagens, como:\n - Mensagem de boas-vindas\n - Notificações\n - Mensagens agendadas\n \nEste guia passo a passo ajuda você a enviar uma mensagem proativa de um bot. Você verá as seguintes saídas:\n\n* Mensagem de olá proativa no chat        \n![Olá proativo no chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensagem de saudação proativa no Cartão Adaptável    \n![hello proativo no Cartão Adaptável](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
+  content: "Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Isso pode incluir mensagens, como:\n - Mensagem de boas-vindas\n - Notificações\n - Mensagens agendadas\n \nEste guia passo a passo ajuda você a enviar uma mensagem proativa de um bot. Você verá as seguintes saídas:\n\n* Mensagem de olá proativa no chat        \n![Olá proativo no chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensagem hello proativa como um Cartão Adaptável    \n![hello proativo no Cartão Adaptável](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
 - title: Pré-requisitos
   durationInMinutes: 2
   content: "Certifique-se de instalar o seguinte:    \n\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).\n* [ASP.NET e desenvolvimento da Web](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)ou carga de trabalho de desenvolvimento entre plataformas do [.NET Core.](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer)\n* [ngrok](https://ngrok.com/download): um aplicativo entre plataformas que permite expor um servidor de desenvolvimento local à Internet com mínimo esforço.\n* [Obter um locatário Teams desenvolvedor gratuito.](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n"
