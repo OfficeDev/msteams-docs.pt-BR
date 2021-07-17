@@ -2,12 +2,12 @@
 title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
+ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335372"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53463321"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -38,7 +38,7 @@ Você deve ter uma compreensão básica do seguinte para usar cenas personalizad
 * Definição de cena e bancos em uma cena.
 * Tenha uma conta do Desenvolvedor da Microsoft e conheça o Microsoft Teams Portal do [Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md) e o App Studio.
 * [Conceito de sideload de aplicativo.](../concepts/deploy-and-publish/apps-upload.md)
-* Verifique se o Administrador concedeu permissão para Upload um aplicativo personalizado e selecionar todos os filtros como parte das políticas de Configuração de Aplicativo e Reunião, respectivamente. 
+* Verifique se o Administrador concedeu permissão para Upload um aplicativo personalizado e selecionar todos os filtros como parte das políticas de Configuração de Aplicativo e Reunião, respectivamente. [](../concepts/deploy-and-publish/apps-upload.md)
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
@@ -140,9 +140,10 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
 1. Selecione **Salvar** e selecione **Exibir em Teams** para testar rapidamente sua cena em Microsoft Teams.
 
     >[!NOTE]
-    > Para excluir uma cena criada, selecione **Excluir cena** na barra superior.
+    > * Selecionar **Exibir no Teams** cria automaticamente um aplicativo Microsoft Teams que pode ser exibido na página **Aplicativos** no portal Teams Desenvolvedor.
+    > * Selecionar **Exibir no Teams** cria automaticamente um pacote de aplicativos que appmanifest.jspor trás da cena. Como dito anteriormente, isso é abstraído, mas você pode acessar o pacote de aplicativos criado automaticamente navegando para **Aplicativos** no menu.
+    > * Para excluir uma cena criada, selecione **Excluir cena** na barra superior.
 
-1. Na caixa **de diálogo Exibir Teams,** selecione **Visualizar em Teams**.
 1. Na caixa de diálogo exibida, selecione **Adicionar**.
 
     A cena pode ser testada ou acessada criando uma reunião de teste e iniciando cenas personalizadas do modo Juntos. Para obter mais informações, consulte [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
@@ -150,9 +151,7 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
     ![Iniciar cenas personalizadas do modo Juntos](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * Selecionar **Visualização** cria automaticamente um Microsoft Teams que pode ser exibido na página **Aplicativos** no Teams Portal do Desenvolvedor.
-    > * Selecionar **Visualização** cria automaticamente um pacote de aplicativos que appmanifest.jspor trás da cena. Como dito anteriormente, isso é abstraído, mas você pode acessar o pacote de aplicativos criado automaticamente navegando para **Aplicativos** no menu.
-    > * Em seguida, a cena pode ser exibida na galeria de cenas do Modo Juntos personalizada.
+    > * A cena pode ser exibida na galeria de cenas do Modo Juntos personalizada.
 
 1. Opcionalmente, você pode selecionar  **Compartilhar** no menu suspenso Salvar para criar um link compartilhável para distribuir facilmente suas cenas para outras pessoas usarem. Abrir esse link instala a cena para o usuário e eles podem começar a usá-la.
 

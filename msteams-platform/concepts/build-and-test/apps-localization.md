@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: c73188bb24960b9ef0706955d09d23b618c04e5c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5410d6f829c3fec9b5d631452e459bd276df472e
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140037"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455210"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
@@ -22,7 +22,7 @@ Você deve considerar os seguintes fatores para localizar seu Microsoft Teams ap
 
 ## <a name="localize-your-appsource-listing"></a>Localize sua listagem do AppSource
 
-Se você estiver publicando o aplicativo na loja, você deve estar ciente de que ainda não há suporte para a localização da listagem do AppSource. Para dar suporte a listagens localizadas na loja de aplicativos, você pode adicionar idiomas adicionais à sua listagem. As informações de idioma padrão fornecidas no [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) para sua listagem são exibidas na listagem de site do [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) para seu aplicativo. Atualmente, o idioma padrão é inglês.
+Se você estiver publicando o aplicativo na loja, você deve estar ciente de que ainda não há suporte para a localização da listagem do AppSource. Para dar suporte a listagens localizadas na loja de aplicativos, você pode adicionar idiomas adicionais à sua listagem. As informações de idioma padrão fornecidas no [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) para sua listagem são exibidas na listagem de site do [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource é um local para todas as necessidades da sua equipe. reúne tudo, incluindo chats, reuniões, chamadas, arquivos e ferramentas para habilitar o trabalho em equipe mais produtivo.") para seu aplicativo. Atualmente, o idioma padrão é inglês.
 
 ### <a name="configure-localization"></a>Configurar localização
 
@@ -155,7 +155,7 @@ Se você fornecer versões localizadas do aplicativo, os usuários responderão 
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Exemplo de nome | Descrição | .NET | Node.js |
+| Nome do exemplo | Descrição | .NET | Node.js |
 |-------------|-------------|------|------|
-| Localização de aplicativos | Microsoft Teams localização de aplicativo usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| Localização de aplicativos | Microsoft Teams localização de aplicativo usando bot e guia. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
