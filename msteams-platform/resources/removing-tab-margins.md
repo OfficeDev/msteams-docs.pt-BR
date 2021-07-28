@@ -6,12 +6,12 @@ keywords: guia removendo preenchimento de margens
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 5fab0e0145288718adb7eb96f8f103f75527ec58
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179738"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534597"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 
@@ -26,7 +26,7 @@ Remover as margens ao redor de todas as guias permitirá que os desenvolvedores 
 ## <a name="timelines"></a>Linhas do tempo
 
 * 5 de março de 2021 - Margens removidas na [Visualização do Desenvolvedor Público.](~/resources/dev-preview/developer-preview-intro.md)
-* 15 de junho de 2021 - As margens serão removidas em produção.
+* 31 de julho de 2021 - As margens serão removidas em produção.
 
 ## <a name="guidelines"></a>Diretrizes
 
@@ -55,7 +55,7 @@ Não, você deve fornecer seu próprio preenchimento ou margens à esquerda e à
 > * Não há como optar ou não por essa alteração. Ela se aplicará a todas as guias.
 > * Essa alteração pode afetar guias que dependem de Microsoft Teams para fornecer margens ao redor da interface do usuário.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Confira também:
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
