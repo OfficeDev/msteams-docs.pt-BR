@@ -4,12 +4,12 @@ description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Autenticação do teams OAuth SSO AAD
-ms.openlocfilehash: 6511b1223e70d09ed2d158f6649a391999553ed1
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ed169e3cc5f9190571890cb891665a493bd052d1
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179885"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726940"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
@@ -18,11 +18,11 @@ ms.locfileid: "53179885"
 
 Para acessar informações do usuário protegidas pelo Azure Active Directory (AAD) e para acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usa APIs Graph Microsoft no escopo do usuário, autenture o usuário para recuperar os tokens de autenticação apropriados.
 
-No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execute um fluxo de autenticação baseado na Web tradicional em uma página [de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) inserida em uma guia, uma página de configuração ou um módulo de tarefa. Se o aplicativo contiver um bot de conversa, use o fluxo OAuthPrompt e, opcionalmente, o serviço de token do Azure Bot Framework para autenticar um usuário como parte de uma conversa.
+No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execute um fluxo de autenticação baseado na Web tradicional em uma página [de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) inserida em uma guia, uma página de configuração ou um módulo de tarefa. Se o aplicativo contiver um bot de conversação, use o fluxo OAuthPrompt e, opcionalmente, o serviço de token do Bot Framework do Azure para autenticar um usuário como parte de uma conversa.
 
 ## <a name="web-based-authentication-flow"></a>Fluxo de autenticação baseado na Web
 
-Use o fluxo de autenticação baseado na Web para [guias](~/tabs/what-are-tabs.md) e escolha usá-lo com [bots](~/bots/what-are-bots.md) de conversa ou extensões [de mensagens.](~/messaging-extensions/what-are-messaging-extensions.md) Use o [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client) em uma página de conteúdo da Web para habilitar a autenticação. Depois de habilite a autenticação, insiro a página de conteúdo em uma guia, uma página de configuração ou um módulo de tarefa. Para obter mais informações sobre o fluxo de autenticação baseado na Web, consulte:
+Use o fluxo de autenticação baseado na Web para [guias](~/tabs/what-are-tabs.md) e escolha usá-lo com [bots](~/bots/what-are-bots.md) de conversa ou extensões [de mensagens.](~/messaging-extensions/what-are-messaging-extensions.md) Use o [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client) em uma página de conteúdo da Web para habilitar a autenticação. Depois de habilitar a autenticação, insira a página de conteúdo em uma guia, uma página de configuração ou um módulo de tarefa. Para obter mais informações sobre o fluxo de autenticação baseado na Web, consulte:
 
 * [Adicionar autenticação ao bot Teams](~/bots/how-to/authentication/add-authentication.md) descreve como usar o fluxo de autenticação baseado na Web com um bot de conversa.
 * [O fluxo de autenticação nas guias](~/tabs/how-to/authentication/auth-flow-tab.md) descreve como a autenticação de tabulação funciona Teams. Isso mostra um fluxo de autenticação baseado na Web típico usado para guias.
@@ -32,7 +32,7 @@ Use o fluxo de autenticação baseado na Web para [guias](~/tabs/what-are-tabs.m
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>O fluxo OAuthPrompt para bots de conversa
 
-O OAuthPrompt da Estrutura de Bots do Azure facilita a autenticação para aplicativos que usam bots de conversa. Use o serviço de token do Azure Bot Framework para ajudar no cache de token.
+O OAuthPrompt do Bot Framework Azure facilita a autenticação para aplicativos que usam bots de conversa. Use o serviço Bot Framework token do Azure para auxiliar no cache de tokens.
 
 Para obter mais informações sobre como usar o OAuthPrompt, consulte:
 
@@ -43,10 +43,10 @@ Para obter mais informações sobre como usar o OAuthPrompt, consulte:
 
 fornece exemplo de SDK de autenticação de bot v3.
 
-| **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
+| **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Autenticação bot | Este exemplo mostra como começar a usar a autenticação em um bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Guia, Bot e Extensão de Mensagens (ME) SSO | Este exemplo mostra SSO para Tab, Bot e ME - pesquisa, ação, linkunfurl. | Não disponível | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
+| Autenticação bot | Este exemplo mostra como começar a usar a autenticação em um bot para Microsoft Teams. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Guia, Bot e Extensão de Mensagens (ME) SSO | Este exemplo mostra SSO para Tab, Bot e ME - pesquisa, ação, linkunfurl. |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
 
 
 ## <a name="configure-the-identity-provider"></a>Configurar o provedor de identidade

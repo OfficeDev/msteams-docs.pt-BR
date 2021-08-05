@@ -3,12 +3,12 @@ title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
-ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335365"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726863"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -113,7 +113,7 @@ Em um chat de reunião, insira a **@** chave e selecione Obter **bots**.
 
 Durante uma reunião, você pode usar a caixa de diálogo meetingSidePanel ou in-meeting para criar experiências exclusivas para seus aplicativos.
 
-#### <a name="meetingsidepanel"></a>meetingSidePanel
+#### <a name="meeting-sidepanel"></a>Sidepanel de reunião
 
 Com o meetingSidePanel, você pode personalizar experiências em uma reunião que permite que os organizadores e apresentadores tenham diferentes tipos de exibição e ações. No manifesto do aplicativo, você deve adicionar meetingSidePanel à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
@@ -171,9 +171,9 @@ As configurações após e [antes das reuniões](#before-a-meeting) são as mesm
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | Amostra |
+|Nome do exemplo | Descrição | Amostra |
 |----------------|-----------------|--------------|----------------|-----------|
-| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Tokens de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. Isso pode ser útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Tokens de Reunião para solicitar um token, que é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. Isso pode ser útil em situações como reuniões scrum e&A. | [Exibir](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Confira também
 

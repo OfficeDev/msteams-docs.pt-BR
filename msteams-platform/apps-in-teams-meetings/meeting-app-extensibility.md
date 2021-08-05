@@ -3,30 +3,30 @@ title: Extensibilidade do aplicativo de reunião
 author: surbhigupta
 description: Compreender a extensibilidade do aplicativo de reunião
 ms.topic: conceptual
-ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335379"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726877"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
 
 Teams extensibilidade do aplicativo de reunião baseia-se nos seguintes conceitos:
 
-* O ciclo de vida da reunião tem estágios diferentes, como pré-reunião, reunião e pós-reunião.  
+* Um ciclo de vida de reunião tem vários estágios, como pré-reunião, reunião e pós-reunião.  
 * Há três funções de participantes distintas em uma reunião: organizador, apresentador e participante. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Há vários tipos [de usuário](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) em uma reunião: no locatário, [convidado,](/microsoftteams/guest-access) [federado](/microsoftteams/manage-external-access)e usuários anônimos.
 
-Este artigo aborda informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens na reunião. Ele fornece informações para identificar diferentes funções de participante e diferentes tipos de usuário para executar tarefas.
+Este artigo aborda informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens em uma reunião. Ele fornece informações para identificar várias funções de participante e tipos de usuário para executar tarefas.
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida da reunião
 
-O ciclo de vida da reunião consiste na experiência do aplicativo de pré-reunião, na reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
+Um ciclo de vida de reunião consiste na experiência do aplicativo de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar guias ao ciclo de vida da reunião
 
-As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e dados disponíveis nas guias. Na Teams, os usuários podem adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e escolhendo o aplicativo que eles querem instalar.
+As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e dados disponíveis nas guias. Em uma Teams, os usuários podem adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e escolhendo o aplicativo que eles querem instalar.
 
 > [!IMPORTANT]
 > Se você tiver integrado uma guia à sua reunião Teams, seu aplicativo deverá seguir o fluxo de autenticação de logom único [(SSO)](../tabs/how-to/authentication/auth-aad-sso.md)para guias .
@@ -48,8 +48,8 @@ Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicio
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
     > [!NOTE]
-    > * Você também pode adicionar uma guia usando a guia **Chat de** reunião em uma reunião existente.
-    > * O layout da guia deve estar em um estado organizado, se houver mais de dez pesquisas ou pesquisas.
+    > * Você também pode adicionar uma guia a uma reunião existente usando a guia **Chat de** reunião.
+    > * O layout da guia deve estar em um estado organizado, se houver mais de 10 pesquisas ou pesquisas.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -65,15 +65,15 @@ Depois que as guias são adicionadas a uma reunião existente na área de trabal
 
 #### <a name="in-meeting-app-experience"></a>Experiência do aplicativo na reunião
 
-Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra superior superior da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para mostrar conteúdo a actionable para os participantes da reunião. Para obter mais informações, [consulte create apps for Teams meetings](create-apps-for-teams-meetings.md).
+Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra de ferramentas da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para mostrar conteúdo a actionable para os participantes da reunião. Para obter mais informações, [consulte create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
 Para dispositivos móveis, os  aplicativos de reunião estão disponíveis > aplicativos &#x25CF;&#x25CF;&#x25CF; na reunião. Selecione **Aplicativos** para exibir todos os aplicativos disponíveis na reunião.
 
 **Para usar guias durante uma reunião**
 
 1. Vá para Teams.
-1. Em seu calendário, selecione uma reunião em que você deseja usar uma guia.
-1. Depois de inserir a reunião, na barra superior superior da janela de chat, selecione o aplicativo necessário.
+1. Em seu calendário, selecione uma reunião na qual você deseja usar uma guia.
+1. Depois de inserir a reunião, na barra de ferramentas da janela de chat, selecione o aplicativo necessário.
     Um aplicativo fica visível em uma reunião Teams no painel lateral ou na caixa de diálogo na reunião.
 1. Na caixa de diálogo na reunião, insira sua resposta como um feedback.
 
@@ -97,7 +97,7 @@ A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta 
 > [!NOTE]
 > * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
 > * Se a caixa de diálogo na reunião for renderizada com êxito, você receberá uma notificação de que os resultados foram baixados com êxito.
-> * O manifesto do aplicativo especifica os locais que você deseja que eles apareçam. O campo de contexto é usado para essa finalidade. Também faz parte de uma experiência de bandeja de compartilhamento, sujeita a diretrizes de design especificadas.
+> * O manifesto do aplicativo especifica os locais nos quais você deseja que os aplicativos apareçam. O campo de contexto é usado para essa finalidade. Também faz parte de uma experiência de bandeja de compartilhamento, sujeita a diretrizes de design especificadas.
 
 A imagem a seguir ilustra o painel do lado da reunião:
 
@@ -111,7 +111,7 @@ A tabela a seguir descreve o comportamento do aplicativo quando ele é aprovado 
 
 #### <a name="post-meeting-app-experience"></a>Experiência de aplicativo pós-reunião
 
-Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários. Selecionar <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para adicionar uma guia, obter notas de reunião e resultados nos quais organizadores e participantes devem tomar medidas.
+Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou comentários. Selecionar <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para adicionar uma guia, obter notas de reunião e ver os resultados em que organizadores e participantes devem tomar medidas.
 
 A imagem a seguir exibe a **guia Contoso** com resultados da sondagem e comentários recebidos dos participantes da reunião:
 
@@ -162,7 +162,7 @@ Depois de projetar seu aplicativo com base nas funções de participantes em uma
 
 Tipos de usuário, como, organizador, apresentador ou participante em uma reunião podem executar uma das funções de [participante em uma reunião](#participant-roles-in-a-meeting).
 
-A lista a seguir detalha os diferentes tipos de usuário, juntamente com sua acessibilidade e desempenho:
+A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessibilidade e desempenho:
 
 * **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais Azure Active Directory (AAD) para o locatário. Eles geralmente são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
 * **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da organização e têm os mesmos Teams de um membro da equipe nativo com acesso a chats, reuniões e arquivos de equipe. Um usuário convidado pode ser organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados em Teams](/microsoftteams/guest-access).

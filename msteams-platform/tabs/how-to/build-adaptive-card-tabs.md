@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Criar guias usando Cartões Adaptáveis
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428713"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726849"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -17,9 +17,16 @@ ms.locfileid: "53428713"
 > * Esse recurso está na [Visualização do Desenvolvedor Público](~/resources/dev-preview/developer-preview-intro.md) e tem suporte na área de trabalho e em dispositivos móveis. O suporte no navegador da Web está chegando em breve.
 > * Atualmente, as guias com Cartões Adaptáveis têm suporte apenas como aplicativos pessoais.
 
-Ao desenvolver uma guia usando o método tradicional, você pode executar esses problemas, como considerações HTML e CSS, tempos de carga lentos, restrições de iFrame e manutenção e custos do servidor. As guias Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Enquanto o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
+Ao desenvolver uma guia usando o método tradicional, você pode executar esses problemas:
 
-Você pode criar suas guias com blocos de construção da interface do usuário (interface do usuário) prontos que pareçam nativos na área de trabalho, na Web e no celular. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo, como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis e o impacto no fluxo de trabalho do módulo de tarefas.
+* Considerações HTML e CSS
+* Tempos de carregamento lentos
+* Restrições iFrame
+* Manutenção e custos do servidor
+
+As guias Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Embora o front-end seja renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
+
+Você pode criar suas guias com blocos de construção de interface do usuário (interface do usuário) prontos nativos na área de trabalho, na Web e em dispositivos móveis. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo. O artigo também identifica como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis e seu efeito no fluxo de trabalho do módulo de tarefas.
 
 A imagem a seguir mostra guias de com build com Cartões Adaptáveis na área de trabalho e no celular:
 
@@ -160,7 +167,7 @@ O código a seguir fornece exemplos de `tab/fetch` solicitação e resposta:
 
 ### <a name="handle-submits-from-adaptive-card"></a>Manipular envios do Cartão Adaptável
 
-Depois que um Cartão Adaptável é renderizado na guia, ele deve ser capaz de responder às interações do usuário. Essa resposta é manipulada pela `tab/submit` solicitação de invocação.
+Depois que um Cartão Adaptável é renderizado na guia, ele pode responder às interações do usuário. Essa resposta é manipulada pela `tab/submit` solicitação de invocação.
 
 Quando um usuário seleciona um botão na guia Cartão Adaptável, a solicitação é disparada para o bot com os dados correspondentes por meio da função `tab/submit` `Action.Submit` de Cartão Adaptável. Os dados do Cartão Adaptável estão disponíveis por meio da propriedade data da `tab/submit` solicitação. Você recebe uma das seguintes respostas à sua solicitação:
 
@@ -220,7 +227,7 @@ O código a seguir fornece exemplos de `tab/submit` solicitação e resposta:
 
 O módulo de tarefa também usa Cartão Adaptável para invocar `task/fetch` e `task/submit` solicitações e respostas. Para obter mais informações, [consulte using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-Com a introdução da guia Cartão Adaptável, há uma alteração na forma como o bot responde a uma `task/submit` solicitação. Se você estiver usando uma guia Cartão Adaptável, o bot responderá à solicitação de invocação com a guia padrão continuará a resposta e `task/submit` fechará o módulo de tarefa.  A guia Cartão Adaptável é atualizada renderizando a nova lista de cartões fornecidos na guia continuar **o** corpo da resposta.
+Com a introdução da guia Cartão Adaptável, há uma alteração na forma como o bot responde a uma `task/submit` solicitação. Se você estiver usando uma guia Cartão Adaptável, o bot responderá à solicitação de invocação com a guia padrão continuar a resposta e `task/submit` fechará o módulo de tarefa.  A guia Cartão Adaptável é atualizada renderizando a nova lista de cartões fornecidos na guia continuar **o** corpo da resposta.
 
 ### <a name="invoke-taskfetch"></a>Invocar `task/fetch`
 
@@ -325,9 +332,9 @@ O código a seguir fornece exemplos de `task/submit` solicitação e resposta:
 
 ## <a name="authentication"></a>Autenticação
 
-Nas seções anteriores deste artigo, você viu que a maioria dos paradigmas de desenvolvimento pode ser estendida das solicitações e respostas do módulo de tarefas em solicitações e respostas de tabulação. Quando se trata de lidar com a autenticação, a guia fluxo de trabalho para Cartão Adaptável segue o padrão de autenticação para extensões de mensagens. Para obter mais informações, consulte [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+Nas seções anteriores, você viu que a maioria dos paradigmas de desenvolvimento pode ser estendida das solicitações e respostas do módulo de tarefas em solicitações e respostas de tabulação. Quando se trata de lidar com a autenticação, a guia fluxo de trabalho para Cartão Adaptável segue o padrão de autenticação para extensões de mensagens. Para obter mais informações, consulte [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
-`tab/fetch`solicitações podem ter uma **resposta continue** **ou auth.** Quando uma solicitação é acionada e recebe uma resposta `tab/fetch` **de tabulação,** a página de login é mostrada ao usuário.
+`tab/fetch`solicitações podem ter uma **resposta continue** **ou auth.** Quando uma solicitação é disparada e recebe uma resposta `tab/fetch` **de tabulação,** a página de login é mostrada para o usuário.
 
 **Para obter um código de autenticação por meio de `tab/fetch` invocação**
 
@@ -414,6 +421,12 @@ O código a seguir mostra um exemplo de solicitação reeditar:
     "localTimeZone": "America/Los_Angeles"
 }
 ```
+
+## <a name="code-sample"></a>Exemplo de código
+
+|**Nome do exemplo** | **Descrição** |**.NET** | **Node.js** |
+|----------------|-----------------|--------------|--------------|
+| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

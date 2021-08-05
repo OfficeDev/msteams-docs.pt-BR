@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179934"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726828"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,10 +39,18 @@ Teams guias devem seguir os seguintes pré-requisitos:
 
 * A guia Teams MS não dá suporte à capacidade de carregar sites da intranet que usam certificados auto-assinados.
 
+## <a name="tools-you-can-use-to-build-tabs"></a>Ferramentas que você pode usar para criar guias
+* [Kit de ferramentas do Teams para Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+* [Kit de ferramentas do Teams para Visual Studio](../../toolkit/visual-studio-overview.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
-* [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Criar seu primeiro aplicativo usando o Node.js](../../get-started/first-app-react.md)
+* [Criar seu primeiro aplicativo usando o Blazor](../../get-started/first-app-blazor.md)
+* [Criar seu primeiro aplicativo usando o SPFx](../../get-started/first-app-spfx.md)
+* [Criar o seu primeiro bot de conversação para o Microsoft Teams](../../get-started/first-app-bot.md)
+* [Criar sua primeira extensão de mensagem](../../get-started/first-message-extension.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>Próxima etapa

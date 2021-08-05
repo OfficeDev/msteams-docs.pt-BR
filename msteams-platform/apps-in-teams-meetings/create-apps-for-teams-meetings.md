@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 21189d09be19152f6580e4d3a75766c3bb6cbfcf
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335344"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726842"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Pré-requisitos e referências de API para aplicativos de reuniões do Teams
 
@@ -49,7 +49,7 @@ As novas extensibilidades de reunião fornecem APIs para transformar a experiên
 
 A tabela a seguir fornece uma lista dessas APIs:
 
-|API|Descrição|Solicitação|Origem|
+|API|Descrição|Solicitação|Source|
 |---|---|----|---|
 |**GetUserContext**| Essa API permite que você receba informações contextuais para exibir conteúdo relevante em Teams guia. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK do cliente|
 |**GetParticipant**| Essa API permite que um bot busque informações dos participantes por meio da ID da reunião e da ID do participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -74,8 +74,8 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| Cadeia de caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID do participante no SSO da guia. |
+|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID do participante no SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. |
 
 #### <a name="example"></a>Exemplo
@@ -274,7 +274,7 @@ A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 #### <a name="example"></a>Exemplo
 
@@ -401,7 +401,7 @@ O código a seguir fornece um exemplo de carga de evento de início de reunião:
     "value": { 
         "MeetingType": "Scheduled", 
         "Title": "Meeting Start/End Event", 
-        "Id":"meeting id", 
+        "Id": "meeting id", 
         "JoinUrl": "url" 
         "StartTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
@@ -465,7 +465,13 @@ O código a seguir fornece um exemplo de carga de evento final de reunião:
 
 Seu bot recebe o evento por meio do `OnEventActivityAsync` manipulador.
 
-Para desserializar a carga json, um objeto modelo é introduzido para obter os metadados de uma reunião. Os metadados de uma reunião residem na `value` propriedade na carga do evento. O `MeetingStartEndEventvalue` objeto model é criado, cujas variáveis de membro correspondem às chaves sob a propriedade na carga do `value` evento.
+Para desserializar a carga json, um objeto modelo é introduzido para obter os metadados de uma reunião. Os metadados de uma reunião residem na `value` propriedade na carga do evento. O `MeetingStartEndEventvalue` objeto model é criado, cujas variáveis de membro correspondem às chaves sob a propriedade na carga do `value` evento.     
+      
+> [!NOTE]      
+> * Obter a ID da reunião de `turnContext.ChannelData` .    
+> * Não use a ID da conversa como ID da reunião.     
+> * Não use a ID da reunião do carregamento de eventos de `turncontext.activity.value` reunião. 
+      
 
 O código a seguir mostra como capturar os metadados de uma reunião que é , , , , e de um evento de início e fim de `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` reunião:
 
@@ -502,12 +508,12 @@ public class MeetingStartEndEventValue
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | .NET | Node.js |
+|Nome do exemplo | Descrição | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Guia Detalhes na Reunião | Microsoft Teams exemplo de extensibilidade de reunião para a iteração com a Guia Detalhes em reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting meetingSidePanel | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Guia Detalhes na Reunião | Microsoft Teams exemplo de extensibilidade de reunião para a iteração com a Guia Detalhes em reunião. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 

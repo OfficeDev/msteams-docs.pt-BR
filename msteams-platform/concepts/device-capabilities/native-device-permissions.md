@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 420b874770a4ad506dbedd575600f333a51ad5c0
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211615"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726947"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -190,6 +190,12 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 > [!NOTE]
 > Quando você consente com as permissões de dispositivo nativo, ela é válida somente para a _sessão de_ logon atual.
+
+## <a name="code-sample"></a>Exemplo de código
+
+| **Exemplo de nome** | **Descrição** | **Node.js** |
+|---------------|--------------|--------|
+|Permissões de dispositivos | Usar Microsoft Teams de exemplo de guia para demonstrar permissões de dispositivo |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="next-steps"></a>Próximas etapas
 

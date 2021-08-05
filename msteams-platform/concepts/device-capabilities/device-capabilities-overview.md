@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211580"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726933"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
@@ -43,3 +43,4 @@ Depois de obter acesso aos recursos do dispositivo, use [](mobile-camera-image-p
 * Compartilhar local usando [o se picker de localização](location-capability.md).
 
 Além disso, você pode integrar [](people-picker-capability.md) o controle Teams seletor de pessoas nativas que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.
+

@@ -5,12 +5,12 @@ description: Como executar o link desfraldamento com a extensão de mensagens em
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068948"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726926"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -78,6 +78,8 @@ Os seguintes tipos de cartão são suportados:
 * [Cartão de herói](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Cartão conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão Adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+Você pode exibir uma visualização de um cartão adaptável ou Office 365 conector na lista de resultados usando sua propriedade de visualização. A propriedade preview não será necessária se os resultados já são cartões Hero ou Thumbnail. Se você usar o anexo de visualização, ele deve ser um cartão Hero ou Thumbnail. Se nenhuma propriedade preview for especificada, a visualização do cartão falhará e nada será exibido.
 
 ### <a name="example"></a>Exemplo
 

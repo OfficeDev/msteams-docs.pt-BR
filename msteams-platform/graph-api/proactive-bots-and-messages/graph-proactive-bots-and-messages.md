@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: a118d8aae91603dd4368ca644745b186a47a6176
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300302"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726835"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
@@ -35,7 +35,7 @@ Antes que o bot possa enviar mensagens proativas a um usuário, ele deve ser ins
 
 Permissões de tipo de recurso do Microsoft Graph [TeamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) ajudam você a gerenciar o ciclo de vida de instalação do aplicativo para todos os escopos de usuário (pessoal) ou equipe (canal) na plataforma Microsoft Teams:
 
-|Permissão de aplicativo | Descrição|
+|Permissão do aplicativo | Descrição|
 |------------------|---------------------|
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permite que um Teams aplicativo leia, instale, atualize e desinstale a si mesmo para qualquer usuário *,* sem entrar ou usar anteriormente.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Permite que um Teams aplicativo leia, instale, atualize e desinstale-se em qualquer equipe *,* sem entrar ou usar anteriormente.|
@@ -74,7 +74,7 @@ Você pode recuperar o `teamsAppId` das seguintes maneiras:
     **Solicitação GET HTTP:**
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     A solicitação deve retornar um objeto , que é a ID de aplicativo gerada pelo catálogo `teamsApp` `id` do aplicativo. Isso é diferente da ID fornecida no manifesto Teams aplicativo:
@@ -193,9 +193,8 @@ Seu bot pode [enviar mensagens proativas](/azure/bot-service/bot-builder-howto-p
 ## <a name="code-sample"></a>Exemplo de código
 
 | **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
-|---------------|--------------|--------|-------------|--------|
-| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-
+|---------------|--------------|--------|-------------|
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 ## <a name="see-also"></a>Confira também
 
 * [**Gerenciar políticas de configuração de aplicativos Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)

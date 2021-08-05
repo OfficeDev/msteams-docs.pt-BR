@@ -6,12 +6,12 @@ keywords: teams tabs sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6720cf3fdc8a02d325bf775f4bf319b9d07ec17c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6a9eead19685afb41c71e57cb44c7608973db1ad
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068645"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726912"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint 
 
@@ -34,7 +34,7 @@ Com a versão de novembro do Teams e Estrutura do SharePoint v.1.7, os desenvolv
                     </div>
                     <div class="cardText">
                         <h3>Teams Guias no SharePoint</h3>
-                        <p>Crie experiências de aplicativos rich SharePoint trazendo seu aplicativo Teams para o Sharepoint (este artigo).</p>
+                        <p>Crie experiências de aplicativos rich SharePoint trazendo seu aplicativo Teams para SharePoint (este artigo).</p>
                     </div>
                 </div>
             </div>
@@ -120,11 +120,11 @@ A imagem a seguir exibe a tela correspondente:
 
 1. Você pode ver a experiência de SharePoint de autoria de páginas. Nomeia sua página como **My Teams Tab.**
 
-1. Abra a caixa de ferramentas da Web Part pressionando o botão e selecione `+` sua guia Teams, chamada **Contoso HR**. As Web Parts são classificação alfabética. Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso cria uma Web Part na tela que contém sua guia Teams. A imagem a seguir exibe o visor de tabulação:
+1. Abra a caixa de ferramentas da Web Part selecionando o `+` botão e selecione sua guia Teams, chamada **Contoso HR**. As Web Parts são classificação alfabética. Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso cria uma Web Part na tela que contém sua guia Teams. A imagem a seguir exibe o visor de tabulação:
 
    ![Exibição de tabulação](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
-1. Pressione o **botão Publicar** depois de concluir a edição.
+1. Selecione o **botão Publicar** depois de concluir a edição.
 
 1. Selecione **Adicionar página à navegação** para ter uma referência rápida à sua página na barra de navegação esquerda. A imagem a seguir exibe a guia no Sharepoint: 
 
@@ -134,12 +134,12 @@ A imagem a seguir exibe a tela correspondente:
 
 Depois que sua página for publicada, você poderá explorar transformar seu aplicativo Teams em uma experiência mais [completa dentro SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Isso converte a página atual em uma Página do Aplicativo, mostrando o layout de página SharePoint normal com uma experiência de página inteira para a guia Teams. 
 
-A imagem a seguir exibe a experiência completa do aplicativo Teams sharepoint: ![ imagem de guias no Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+A imagem a seguir exibe a experiência completa do aplicativo Teams no SharePoint: ![ Imagem de guias no Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>Exemplo de código
-| **Exemplo de nome** | **Descrição** | **SPFx** |
+| **Nome do exemplo** | **Descrição** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx Web Part | SPFx exemplos de Web Part para guias, canais e grupos. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| SPFx Web Part | SPFx exemplos de Web Part para guias, canais e grupos. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
 ## <a name="see-also"></a>Confira também
 

@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179913"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726856"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -76,6 +76,10 @@ Se você optar por expor sua guia dentro do canal ou grupo ou escopo pessoal, vo
 Para guias de canal ou grupo, você também pode criar uma página de configuração adicional. Esta página permite configurar a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso porque seu canal ou guia de grupo pode ser adicionado a várias equipes ou chats de grupo. Em cada instalação subsequente, os usuários podem configurar a guia, permitindo que você adapte a experiência conforme necessário. Quando os usuários adicionam ou configuram uma guia, uma URL é associada à guia apresentada na interface do usuário Teams usuário (UI). Configurar uma guia simplesmente adiciona parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia Azure Boards, a página de configuração permite que você escolha, qual placa a guia carrega. A URL da página de configuração é especificada pela  `configurationUrl` propriedade na matriz no manifesto do `configurableTabs` aplicativo.
 
 Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por aplicativo.
+
+### <a name="tools-you-can-use-to-build-tabs"></a>Ferramentas que você pode usar para criar guias
+* [Teams Toolkit código visual stuido](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit visual stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>Confira também
 
