@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 keywords: guias do teams webhook de saída mensagem ativas verificar webhook
-ms.openlocfilehash: c02ff5388e47ba40056afcc1fcf5e8d7ad4437e8
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140317"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704288"
 ---
 # <a name="create-outgoing-webhook"></a>Criar Webhook de saída
 
@@ -215,11 +215,11 @@ var responseMsg = JSON.stringify({
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|**Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
+|**Nome do exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhooks de saída | Exemplos para criar bots personalizados a serem usados em Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhooks de saída | Exemplos para criar bots personalizados a serem usados em Microsoft Teams.| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)

@@ -5,18 +5,18 @@ description: Saiba como começar com o desenvolvimento Microsoft Teams aplicativ
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254255"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703138"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Pré-requisitos: começar a Microsoft Teams desenvolvimento de aplicativos
 
 Antes de começar a criar seu primeiro Teams, você deve instalar algumas ferramentas e configurar seu ambiente de desenvolvimento.
 
-## <a name="install-required-tools"></a>Instalar ferramentas necessárias
+## <a name="install-required-tools"></a>Instalar ferramentas obrigatórias
 
 Algumas das ferramentas de que você precisa dependem de como você prefere criar seu Teams aplicativo:
 
@@ -30,7 +30,7 @@ Algumas das ferramentas de que você precisa dependem de como você prefere cria
 
 ## <a name="install-the-teams-toolkit"></a>Instalar o Teams Toolkit
 
-O Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramentas para provisionar e implantar recursos de nuvem para seu aplicativo, publicar no Teams store e muito mais. Você pode usar o kit de ferramentas com Visual Studio Code, Visual Studio ou como uma CLI (chamada `teamsfx` ).
+O Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramentas para provisionar e implantar recursos de nuvem para seu aplicativo, publicar no Teams store e muito mais. Você pode usar o kit de ferramentas com Visual Studio Code, Visual Studio ou como uma CLI (chamada `teamsfx` ). Para obter mais informações, [consulte Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), Teams Toolkit for [Visual Studio](../toolkit/visual-studio-overview.md) [e Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 

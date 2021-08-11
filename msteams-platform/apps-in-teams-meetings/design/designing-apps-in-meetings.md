@@ -5,12 +5,12 @@ description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Mi
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335407"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702361"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -376,7 +376,7 @@ Recomendamos posicionar a ação mais pesada visualmente para o local mais à di
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: ações de alinhamento à esquerda ou central
 
-Isso se desvia do padrão Teams padrão para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
+Isso se desvia do padrão do Teams para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
 
    :::column-end:::
 :::row-end:::
@@ -392,7 +392,7 @@ Isso se desvia do padrão Teams padrão para o posicionamento do controle em uma
 
 #### <a name="do-scroll-vertically"></a>Do: role verticalmente
 
-Os usuários esperam rolagem vertical em Teams (e em outros lugares). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de whiteboard, que os usuários podem atravessar o eixo x e y.
+Os usuários esperam rolagem vertical no Teams (e em outros lugares). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de whiteboard, que os usuários podem atravessar o eixo x e y.
 
    :::column-end:::
    :::column span="":::
@@ -440,7 +440,7 @@ As caixas de diálogo na reunião destinam-se a interações breves.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Foco no tema escuro
 
-Teams reuniões são otimizadas para temas escuros para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de dados e edição de documentos) não precisam de uma tela escura.
+As reuniões do Teams são otimizadas para temas escuros para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de dados e edição de documentos) não precisam de uma tela escura.
 
    :::column-end:::
    :::column span="":::
@@ -451,7 +451,7 @@ Teams reuniões são otimizadas para temas escuros para ajudar a reduzir o ruíd
 
 #### <a name="dont-use-unfamiliar-colors"></a>Não: use cores desconhecidas
 
-As cores que se colidem com o ambiente de reunião podem ser distrativas e aparecerem menos nativas Teams. Saiba mais sobre a Teams [de cores](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluindo neutros do tema de chamada.
+As cores que se contraem com o ambiente de reunião podem ser distrativas e aparecem menos nativas do Teams. Saiba mais sobre a rampa [de cores do](https://developer.microsoft.com/fluentui#/styles/web/colors/products)Teams , incluindo neutros do tema de chamada.
 
    :::column-end:::
 :::row-end:::

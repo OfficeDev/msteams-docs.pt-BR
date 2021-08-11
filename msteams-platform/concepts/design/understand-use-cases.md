@@ -5,12 +5,12 @@ description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro ent
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994095"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703170"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -82,6 +82,7 @@ Identifique quais novos recursos o usuário preferirá ter na solução atual. S
 * [Escolha como distribuir o aplicativo](../deploy-and-publish/apps-publish-overview.md)
 * [Guias de design](../../tabs/design/tabs.md)
 * [Bots de design](../../bots/design/bots.md)
+* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

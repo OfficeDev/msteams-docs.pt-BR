@@ -5,22 +5,22 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644790"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702834"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
-Projete seu Microsoft Teams aplicativo mais rápido com modelos de interface do usuário. Os modelos são uma coleção de componentes baseados na interface do usuário fluente que funcionam em casos comuns Teams uso, dando mais tempo para descobrir a melhor experiência para seus usuários.
+Projete seu Microsoft Teams aplicativo mais rápido com modelos de interface do usuário. Os modelos são uma coleção de Fluent componentes baseados na interface do usuário que funcionam em casos comuns Teams uso, dando a você mais tempo para descobrir a melhor experiência para seus usuários.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Iniciando com ferramentas e exemplos
 
 Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usando modelos de interface do usuário.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Pegue modelos de interface do usuário para seu design de aplicativo no kit de interface do usuário Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
@@ -60,7 +60,7 @@ Um painel exibe diferentes tipos de conteúdo em um local central (Teams aplicat
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel no celular." border="false":::
 
@@ -79,7 +79,7 @@ Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para e
 
 :::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados no celular." border="false":::
 
@@ -100,7 +100,7 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar,
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio no celular." border="false":::
 
@@ -136,13 +136,13 @@ Os formulários são usados para coletar, validar e enviar entrada do usuário d
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário no celular." border="false":::
 
 ---
 
-## <a name="list"></a>List
+## <a name="list"></a>Lista
 
 Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 
@@ -155,7 +155,7 @@ Você pode usar uma lista para exibir itens relacionados em um formato digitaliz
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista no celular." border="false":::
 
@@ -173,7 +173,7 @@ Você pode projetar fluxos de entrada de aplicativos para diferentes Teams conte
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login no celular." border="false":::
 
@@ -203,7 +203,7 @@ Um quadro de tarefas, às vezes chamado de quadro de kanban ou faixas de nadador
 
 :::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas no celular." border="false":::
 
@@ -223,7 +223,7 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente no celular." border="false":::
 

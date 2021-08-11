@@ -6,12 +6,12 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: ab346c9bf3a2359ce33a5ec73b743d9b340a71b3c27b9555a6978a00c3ca1e8f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211573"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702764"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
 
@@ -72,11 +72,11 @@ A imagem a seguir mostra a experiência do aplicativo Web da capacidade de QR ou
 
 ![experiência do aplicativo web para o recurso de scanner de código de barras ou qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
-## <a name="error-handling"></a>Tratamento de erros
+## <a name="error-handling"></a>Tratamento de erro
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condition|
+|Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno é encontrado durante a execução da operação necessária.|

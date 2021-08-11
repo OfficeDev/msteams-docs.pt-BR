@@ -5,12 +5,12 @@ description: Saiba como projetar Microsoft Teams aplicativos. Os recursos inclue
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644872"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705028"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams aplicativo
 
@@ -133,13 +133,13 @@ Crie rapidamente designs complexos e de alta fidelidade com modelos para Teams c
 
 ## <a name="basic-ui-components"></a>Componentes básicos da Interface de Usuário
 
-Com base na interface do usuário fluente, esses são os [elementos principais que](design-teams-app-basic-ui-components.md) você pode usar para criar Teams experiências do zero.
+Com base Fluent interface do usuário, esses são os elementos [principais que](design-teams-app-basic-ui-components.md) você pode usar para criar Teams experiências do zero.
 
 ## <a name="tools-and-samples"></a>Tools and samples
 
 As ferramentas a seguir podem ajudar designers e desenvolvedores a começar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Projete um Teams com componentes da interface do usuário, modelos e exemplos que você pode arrastar, soltar e modificar conforme necessário. O kit de interface do usuário também inclui informações abrangentes sobre como os aplicativos devem ter aparência e comportamento em diferentes Teams cenários.
 
@@ -169,16 +169,16 @@ Você pode carregar um aplicativo de exemplo para ver como os aplicativos devem 
 
 Para saber mais, experimente um dos seguintes recursos:
 
-### <a name="fluent-ui-documentation"></a>Documentação da interface do usuário do Fluent
+### <a name="fluent-ui-documentation"></a>Fluent Documentação da interface do usuário
 
-Obter exemplos de código e detalhes de implementação para os componentes básicos da interface do usuário fluent usados para criar Teams experiências.
+Obter exemplos de código e detalhes de implementação para os componentes básicos Fluent da interface do usuário usados para criar Teams experiências.
 
 > [!div class="nextstepaction"]
-> [Experimente Teams da interface do usuário (interface do usuário fluente)](https://fluentsite.z22.web.core.windows.net/)
+> [Experimente Teams componentes da interface do usuário (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)
 
-### <a name="adaptive-cards-designer"></a>Designer de Cartões Adaptáveis
+### <a name="adaptive-cards-designer"></a>Designer de cartões adaptáveis
 
 Projete Cartões Adaptáveis em nossa ferramenta baseada na Web.
 
 > [!div class="nextstepaction"]
-> [Experimente o designer de Cartões Adaptáveis](https://adaptivecards.io/designer/)
+> [Experimente o designer de cartões adaptáveis ](https://adaptivecards.io/designer/)

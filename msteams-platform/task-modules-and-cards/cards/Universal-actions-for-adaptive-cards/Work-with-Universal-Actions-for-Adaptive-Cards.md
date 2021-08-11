@@ -3,39 +3,39 @@ title: Trabalhar com Ações Universais para Cartões Adaptáveis
 description: Trabalhar com Ações Universais para Cartões Adaptáveis.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
-ms.translationtype: HT
+ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649696"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701963"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
-As Ações Universais para Cartões Adaptáveis fornecem uma maneira de implementar cenários baseados no Cartão Adaptável para o Teams e o Outlook. Este documento aborda o seguinte:
+Ações universais para cartões adaptáveis fornecem uma maneira de implementar cenários baseados em Cartão Adaptável para ambos, Teams e Outlook. Este documento aborda os seguintes tópicos:
 
 * [Esquema usado em Ações Universais para Cartões Adaptáveis](#schema-for-universal-actions-for-adaptive-cards)
 * [Modelo de atualização](#refresh-model)
 * [`adaptiveCard/action` atividade de invocação](#adaptivecardaction-invoke-activity)
 * [Compatibilidade com versões anteriores](#backward-compatibility)
 
-## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>Guia de início rápido para aproveitar as Ações Universais para Cartões Adaptáveis no Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Guia de início rápido para usar Ações Universais para Cartões Adaptáveis Teams
 
 1. Substitua todas as instâncias de `Action.Submit` por `Action.Execute` para atualizar um cenário existente no Teams.
-2. Adicione uma cláusula `refresh` ao seu Cartão Adaptável, se você quiser aproveitar o modelo de atualização automática ou se seu cenário exigir Exibições Específicas do Usuário.
+2. Adicione uma cláusula ao seu Cartão Adaptável, se você quiser usar o modelo de atualização automática ou se seu cenário `refresh` exigir Exibições Específicas do Usuário.
 
     >[!NOTE]
     > Especifique a propriedade `userIds` para identificar quais usuários obtêm atualizações automáticas.
 
 3. Manipule solicitações de invocação `adaptiveCard/action` em seu bot.
-4. Use o contexto da solicitação de invocação para responder com cartões criados especificamente para um usuário.
+4. Use o contexto da solicitação de invocação para responder com cartões criados para um usuário.
 
     > [!NOTE]
     > Sempre que um bot retorna um novo cartão como resultado do processamento de um `Action.Execute`, a resposta deve estar de acordo com o formato de resposta.
 
 ## <a name="schema-for-universal-actions-for-adaptive-cards"></a>Esquema de Ações Universais para Cartões Adaptáveis
 
-As Ações Universais para Cartões Adaptáveis são introduzidas na versão 1.4 do esquema de Cartões Adaptáveis. Para usar o Cartão Adaptável com eficiência, a propriedade `version` do seu Cartão Adaptável deve ser definida como 1.4.
+Ações universais para cartões adaptáveis são introduzidas no esquema cartões adaptáveis versão 1.4. Para usar o Cartão Adaptável com eficiência, a propriedade `version` do seu Cartão Adaptável deve ser definida como 1.4.
 
 > [!NOTE]
 > Definir a propriedade `version` como 1.4 torna seu Cartão Adaptável incompatível com clientes mais antigos das plataformas ou aplicativos, como o Outlook e o Teams, pois eles não dão suporte às Ações Universais para Cartões Adaptáveis.
@@ -66,13 +66,13 @@ Para obter mais informações, consulte [atualizar esquema e propriedades](/adap
 
 Estes são os recursos de UserIds na atualização:
 
-* UserIds é uma matriz de MRIs de usuário que faz parte da propriedade `refresh` nos Cartões Adaptáveis.
+* UserIds é uma matriz de MRIs de usuário, que faz parte `refresh` da propriedade em Cartões Adaptáveis.
 
 * Se a propriedade de lista `userIds` for especificada como `userIds: []` na seção de atualização do cartão, o cartão não será atualizado automaticamente. Em vez disso, uma opção **Atualizar Cartão** é exibida para o usuário no menu de três pontos na Web ou área de trabalho e no menu de contexto de pressionamento longo no celular, ou seja, Android ou iOS para atualizar manualmente o cartão.
 
-* A propriedade userIds é adicionada porque os canais no Teams podem incluir um número grande de membros. Se todos os membros estão exibindo o canal ao mesmo tempo, uma atualização automática incondicional resultará em muitas chamadas simultâneas para o bot. Para evitar isso, a propriedade `userIds` deve sempre ser incluída para identificar quais usuários devem obter uma atualização automática com um máximo de *60 (sessenta) MRIs de usuário*.
+* A propriedade userIds é adicionada porque os canais no Teams podem incluir um número grande de membros. Se todos os membros estão exibindo o canal ao mesmo tempo, uma atualização automática incondicional resultará em muitas chamadas simultâneas para o bot. A propriedade sempre deve ser incluída para identificar quais usuários devem obter uma atualização automática com um máximo de `userIds` *60 (60) MRIs* de usuário.
 
-* Para obter mais informações sobre como você pode buscar as MRIs de usuário do membro da conversa do Teams para adicionar na lista userIds na seção de atualização do Cartão Adaptável, consulte [buscar lista de participantes ou perfil de usuário](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* Você pode buscar Teams MRIs de usuário do membro da conversa. Para obter mais informações sobre como adicionar na lista userIds na seção de atualização do Cartão Adaptável, consulte [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
 * Exemplo de MRI de usuário do Teams é `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -93,7 +93,7 @@ Em seguida, você pode aplicar a compatibilidade com versões anteriores a clien
 
 ## <a name="backward-compatibility"></a>Compatibilidade com versões anteriores
 
-As Ações Universais para Cartões Adaptáveis permitem definir propriedades que permitem a compatibilidade com versões anteriores do Outlook e do Teams.
+Ações universais para cartões adaptáveis permitem definir propriedades que permitem compatibilidade com versões anteriores de Outlook e Teams.
 
 ### <a name="teams"></a>Teams
 
@@ -101,11 +101,12 @@ Para garantir a compatibilidade com versões anteriores do Teams nos Cartões Ad
 
 Para obter mais informações, consulte [compatibilidade com versões anteriores no Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-samples"></a>Exemplos de código
 
-|Nome do exemplo | Descrição | .NETCore |
-|----------------|-----------------|--------------|
-| Bot de refeições do Teams | Crie um bot simples que aceita encomendas de comida usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Nome do exemplo | Descrição | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

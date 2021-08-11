@@ -3,12 +3,12 @@ title: Visão geral das ações universais para cartões adaptáveis
 description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
-ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
+ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52781615"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706334"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
@@ -51,7 +51,7 @@ Agora você pode enviar o mesmo cartão para ambos, Teams e Outlook e mantê-los
 
 A imagem a seguir mostra as Ações Universais para Cartões Adaptáveis para Teams e Outlook:
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Cartão do mesmo celular para Teams e Outlook":::
 
@@ -69,7 +69,7 @@ Por exemplo, se você enviar um cartão de relatório de incidentes em um chat o
 
 A imagem a seguir mostra um exemplo de uma extensão de mensagens de tíquete (ME) onde diferentes usuários no chat são mostrados diferentes ações com base no requisito:
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Exibições específicas do usuário móvel":::
 

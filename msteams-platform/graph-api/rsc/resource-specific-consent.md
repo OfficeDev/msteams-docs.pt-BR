@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
-ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
+ms.openlocfilehash: c2fd0a335d992eb026ae1b61c186830d25217d52491c997a9a2baf1dc58152e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455217"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707590"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
@@ -141,7 +141,7 @@ As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. A
 |Nome| Tipo | Descrição|
 |---|---|---|
 |`id` |String |Sua ID do aplicativo AAD. Para obter mais informações, [consulte register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
-|`resource`|String| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
+|`resource`|Cadeia de Caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
 |`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
 
 >

@@ -6,12 +6,12 @@ keywords: teams tabs outgoing webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 53fe9725148579325386fa4677bebb61fdb72c56
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140095"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705332"
 ---
 # <a name="create-incoming-webhook"></a>Criar Webhook de entrada
 
@@ -91,7 +91,7 @@ O webhook está disponível no canal Teams.
 
     O webhook é removido do Teams canal.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Criar um Webhook de Saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

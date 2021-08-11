@@ -4,12 +4,12 @@ description: Descreve ações de cartão no Microsoft Teams e como usá-las em s
 localization_priority: Normal
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
-ms.translationtype: HT
+ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254199"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705325"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -48,7 +48,7 @@ Com `openUrl`, você pode criar uma ação com as seguintes propriedades:
 
 # <a name="json"></a>[JSON](#tab/json)
 
-O código a seguir mostra um exemplo do tipo de ação`openUrl` em JSON:
+O código a seguir mostra um exemplo do tipo de ação `openUrl` em JSON:
 
 ```json
 {
@@ -60,7 +60,7 @@ O código a seguir mostra um exemplo do tipo de ação`openUrl` em JSON:
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-O código a seguir mostra um exemplo do tipo de ação `openUrl` em C#:
+O código a seguir mostra um exemplo do tipo de ação `openUrl` tipo em C#:
 
 ```csharp
 var button = new CardAction()
@@ -121,7 +121,7 @@ A propriedade `value` pode ser uma cadeia de caracteres JSON serializada ou um o
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-O código a seguir mostra um exemplo do tipo de ação `messageBack`  em C#:
+O código a seguir mostra um exemplo do tipo de ação `messageBack` tipo em C#:
 
 ```csharp
 var button = new CardAction()
@@ -231,7 +231,7 @@ O código a seguir mostra um exemplo do tipo de ação `imBack` em JSON:
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-O código a seguir mostra um exemplo do tipo de ação `imBack`em C#:
+O código a seguir mostra um exemplo do tipo de ação `imBack` tipo em C#:
 
 ```csharp
 var button = new CardAction()
@@ -291,7 +291,7 @@ Quando um usuário seleciona o botão, o bot recebe o objeto `value` com algumas
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-O código a seguir mostra um exemplo do tipo de ação `invoke`em C#:
+O código a seguir mostra um exemplo do tipo de ação `invoke` tipo em C#:
 
 ```csharp
 var button = new CardAction()

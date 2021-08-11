@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 00b100ad634c1155446ab0b908c13b6b6eb3038c
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: e2ab4728b765cf93f069f9a26679e5ea641a8ecafe0819666a0abacc1714572d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428706"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706886"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|08/04/2021| As guias não terão mais margens ao redor de suas experiências.  | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |07/08/2021|A extensibilidade do aplicativo de reunião está disponível no celular. Os clientes móveis suportam aplicativos durante a reunião. |[Extensibilidade do aplicativo de reunião](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Funcionalidade Integrar Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
@@ -44,7 +45,6 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |04/29/2021 | Cartões atualizados. | [Cartões atualizados](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| Recurso de personalização de aplicativos.|[Visão geral do aplicativo de equipes](concepts/design/enable-app-customization.md)de [design, visão geral](concepts/build-and-test/app-studio-overview.md#connectors)do estúdio do aplicativo e [esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: atualize para a versão 4.10 ou acima do SDK da Estrutura de Bots, conforme começamos com o processo de deprecação para `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` . | [Alterações na API de bot para membros da Equipe/Chat](resources/team-chat-member-api-changes.md) |
-|03/05/2021|Aviso: as guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |03/05/2021|Escopo de instalação padrão e funcionalidade de grupo.| [Escopo de instalação padrão e funcionalidade de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reordenar guias de aplicativo pessoal.|[Reordenar a guia de chat em aplicativos pessoais](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|Mascaramento de informações em cartões adaptáveis.| [Mascaramento de informações em cartões adaptáveis](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
@@ -176,7 +176,6 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 |05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
-|03/05/2021| As guias não terão mais margens ao redor de suas experiências. Os desenvolvedores de guias devem revisar e atualizar seus aplicativos. | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 
 Para obter mais informações, consulte [visualização do desenvolvedor público para Teams](~/resources/dev-preview/developer-preview-intro.md).
 

@@ -4,24 +4,24 @@ description: Exemplo de fluxos de trabalho sequenciais usando ações universais
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649640"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705514"
 ---
 # <a name="sequential-workflows"></a>Fluxos de Trabalho Sequenciais
 
-Os Cartões Adaptáveis agora suportam fluxos de trabalho sequenciais que são quando cartões adaptáveis são atualizados na ação do usuário e o usuário pode progredir por meio de uma série de cartões que exigem a entrada do usuário. Isso é suportado por meio de , que permite que os desenvolvedores de bot retornem Cartões `Action.Execute` Adaptáveis em resposta a uma ação do usuário.
+Os Cartões Adaptáveis agora suportam fluxos de trabalho sequenciais atualizados na ação do usuário. Usando fluxos de trabalho sequenciais, os Cartões Adaptáveis são atualizados na ação do usuário e o usuário pode progredir por meio de uma série de cartões que exigem a entrada do usuário. `Action.Execute` oferece suporte a Fluxos de Trabalho Sequenciais, o que permite que desenvolvedores de bot retornem Cartões Adaptáveis em resposta a uma ação do usuário.
 
-Por exemplo, veja um cenário em que o cafeteria deseja fazer um pedido para uma equipe ou canal. Com a escolha do usuário para vários itens, como alimentos, bebidas e assim por diante, pode ser gravado `Action.Execute` sequencialmente. O usuário também pode ir e voltar pelos cartões de acordo com a lógica definida pelo desenvolvedor do bot. <br/>
+Por exemplo, veja um cenário em que o cafeteria deseja fazer um pedido para uma equipe ou canal. Com a escolha do usuário para vários itens, como alimentos e bebidas, pode ser `Action.Execute` gravado sequencialmente. O usuário também pode ir e voltar pelos cartões de acordo com a lógica definida pelo desenvolvedor do bot. <br/>
 
 A imagem a seguir mostra o Fluxo de Trabalho Sequencial:
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-Um usuário pode progredir no fluxo de trabalho sem modificar o cartão para outros usuários. Isso também é útil para realizar testes usando Cartões Adaptáveis sequenciais. Conforme mostrado na imagem a seguir, diferentes usuários podem estar em diferentes estágios do fluxo de trabalho e ver estados diferentes do cartão:
+Um usuário pode progredir no fluxo de trabalho sem modificar o cartão para outros usuários. O fluxo de trabalho também é útil para realizar testes usando Cartões Adaptáveis sequenciais. A imagem a seguir mostra que diferentes usuários podem estar em diferentes estágios do fluxo de trabalho e estados do cartão:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Estados de bot de bufê":::
 
@@ -123,14 +123,16 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-samples"></a>Exemplos de código
 
-|Exemplo de nome | Descrição | . NETCore |
-|----------------|-----------------|--------------|
-| Teams de bufê | Crie um bot simples que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Nome do exemplo | Descrição | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+
 
 ## <a name="see-also"></a>Confira também
 
-* [Ações de Cartão Adaptável em Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Ações de Cartão Adaptável no Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Como os bots funcionam](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)

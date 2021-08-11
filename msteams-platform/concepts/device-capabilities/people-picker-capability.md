@@ -1,19 +1,19 @@
 ---
-title: Integrar a funcionalidade do Se picker de pessoas
+title: Funcionalidade Integrar Seletor de Pessoas
 author: Rajeshwari-v
 description: Como usar Teams SDK do cliente JavaScript para integrar o recurso de Selador de Pessoas
 keywords: controle do se picker de pessoas
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 8399eeb1a088e4b60c466d51c223b9405ebf1711
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211629"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702778"
 ---
-# <a name="integrate-people-picker-capability"></a>Integrar a funcionalidade do Se picker de pessoas 
+# <a name="integrate-people-picker-capability"></a>Funcionalidade Integrar Seletor de Pessoas 
 
 O Seletor de Pessoas é um controle para pesquisar e selecionar pessoas. Esse é um recurso nativo disponível na Teams plataforma. Você pode integrar Teams controle de entrada nativo do People Picker com seus aplicativos Web. Você pode selecionar entre uma seleção única ou várias e configurações, como limitar a pesquisa em um chat, canais ou em toda a organização.
 
@@ -44,10 +44,10 @@ A `selectPeople` API acompanha as seguintes configurações de entrada:
 
 |Parâmetro Configuration|Tipo|Descrição| Valor padrão|
 |-----|------|--------------|------|
-|`title`| String| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
-|`setSelected`|String| É um parâmetro opcional. Você deve passar as IDs do AAD das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
-|`openOrgWideSearchInChatOrChannel`|Booleano | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |Falso|
-|`singleSelect`|Booleano|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |Falso|
+|`title`| Cadeia de Caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
+|`setSelected`|Cadeia de Caracteres| É um parâmetro opcional. Você deve passar as IDs do AAD das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
+|`openOrgWideSearchInChatOrChannel`|Booliano | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |Falso|
+|`singleSelect`|Booliano|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |Falso|
 
 A imagem a seguir mostra a experiência do recurso People Picker em um aplicativo Web de exemplo:
 
@@ -78,11 +78,11 @@ A imagem a seguir mostra a experiência do recurso People Picker em um aplicativ
   });
 ```
 
-## <a name="error-handling"></a>Tratamento de erros
+## <a name="error-handling"></a>Tratamento de erro
 
 Certifique-se de lidar com os erros adequadamente em seu aplicativo Web. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condition|
+|Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno é encontrado ao iniciar o Selador de Pessoas.|

@@ -5,16 +5,19 @@ description: Crie um bot de conversação para o Microsoft Teams usando o Kit de
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 3c70db137bc61e2beef09b130269ca34838d40dd344858215fc8d71f583b315a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254248"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707017"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Criar o seu primeiro bot de conversação para o Microsoft Teams
 
-Neste tutorial, você aprenderá como construir, executar e implantar um aplicativo bot do Teams. Um bot atua como um intermediário entre um usuário do Teams e um serviço Web.  Os usuários podem bater papo com um bot para obter informações rapidamente, iniciar fluxos de trabalho ou qualquer outra coisa que seu serviço Web possa fazer. 
+Neste tutorial, você aprenderá como construir, executar e implantar um aplicativo bot do Teams. Um bot atua como um intermediário entre um usuário do Teams e um serviço Web. Os usuários podem bater papo com um bot para obter informações rapidamente, iniciar fluxos de trabalho ou qualquer outra coisa que seu serviço Web possa fazer. 
+
+> [!IMPORTANT]
+> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -139,6 +142,9 @@ Quando você pressiona a **tecla F5,** o Teams Toolkit:
 <summary>Saiba como solucionar problemas comuns ao executar seu aplicativo localmente.</summary>
 
 Para executar com êxito seu aplicativo no Teams, você deve ter uma conta de desenvolvimento do Microsoft 365 que permite o sideload do aplicativo. Para obter mais informações sobre abertura de conta, confira [Pré-requisitos](prerequisites.md#enable-sideloading).
+
+> [!IMPORTANT]
+> Atualmente, os aplicativos de sideload estão disponíveis em Nuvem da Comunidade Governamental (GCC), GCC-Alto e DOD.
 
 > [!TIP]
 > Verifique se há problemas antes de fazer o sideload de seu aplicativo, usando a [ferramenta de validação de aplicativo](https://dev.teams.microsoft.com/appvalidation.html), que está incluída no kit de ferramentas. Corrija os erros para fazer o sideload do aplicativo com êxito.

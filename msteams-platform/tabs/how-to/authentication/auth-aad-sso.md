@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 localization_priority: Normal
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049033"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701889"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -36,7 +36,7 @@ A imagem a seguir mostra como o processo de SSO funciona:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. Na guia, uma chamada JavaScript é feita para `getAuthToken()` . Isso Teams obter um token de autenticação para o aplicativo de tabulação.
+1. Na guia, uma chamada JavaScript é feita para `getAuthToken()`. Isso Teams obter um token de autenticação para o aplicativo de tabulação.
 2. Se essa for a primeira vez que o usuário atual usou seu aplicativo de tabulação, haverá um prompt de solicitação para consentir se o consentimento for necessário ou para lidar com a autenticação de etapa, como a autenticação de dois fatores.
 3. Teams solicita o token de aplicativo de tabulação do ponto de extremidade Azure Active Directory (AAD) para o usuário atual.
 4. O AAD envia o token de aplicativo de tabulação para o Teams aplicativo.
@@ -44,7 +44,8 @@ A imagem a seguir mostra como o processo de SSO funciona:
 6. O token é analisado no aplicativo de tabulação usando JavaScript, para extrair informações necessárias, como o endereço de email do usuário.
 
 > [!NOTE]
-> O é válido apenas para consentir um conjunto limitado de APIs no nível do usuário que são `getAuthToken()` email, perfil, offline_access e OpenId. Ele não é usado para escopos Graph como `User.Read` ou `Mail.Read` . Para soluções alternativas sugeridas, consulte [escopos Graph adicionais.](#apps-that-require-additional-graph-scopes)
+> O é válido apenas para consentir um conjunto limitado de APIs no nível do usuário que são `getAuthToken()` email, perfil, offline_access e OpenId. Ele não é usado para escopos Graph como `User.Read` ou `Mail.Read` . Para obter soluções alternativas sugeridas, consulte [Obter um token de acesso com Graph permissões](#get-an-access-token-with-graph-permissions).
+
 
 A API do SSO também funciona em [módulos de tarefas](../../../task-modules-and-cards/what-are-task-modules.md) que incorporam conteúdo da Web.
 
@@ -64,7 +65,7 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia Teams que u
 > [!NOTE]
 > Há algumas restrições importantes que você deve saber:
 >
-> * Há suporte apenas para Graph de API no nível do usuário, ou seja, email, perfil, offline_access, OpenId. Se você deve ter acesso a outros escopos Graph, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada](#apps-that-require-additional-graph-scopes).
+> * Há suporte apenas para Graph de API no nível do usuário, ou seja, email, perfil, offline_access, OpenId. Se você deve ter acesso a outros escopos Graph, como ou , consulte Obter um token de acesso com Graph `User.Read` `Mail.Read` [permissões](#get-an-access-token-with-graph-permissions).
 > * É importante que o nome de domínio do aplicativo seja o mesmo que o nome de domínio que você registrou para seu aplicativo AAD.
 > * Atualmente, não há suporte para vários domínios por aplicativo.
 
@@ -166,19 +167,17 @@ Depois de receber o token de acesso no retorno de chamada de sucesso, você pode
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|**Exemplo de nome**|**Descrição**|**C#**|**Node.js**|
+|**Nome do exemplo**|**Descrição**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Guia SSO |Microsoft Teams exemplo de aplicativo para guias do Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Guia SSO |Microsoft Teams exemplo de aplicativo para guias do Azure AD SSO| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-### <a name="apps-that-require-additional-graph-scopes"></a>Aplicativos que exigem escopos Graph adicionais
+### <a name="get-an-access-token-with-graph-permissions"></a>Obter um token de acesso com Graph permissões
 
-Nossa implementação atual para o SSO concede consentimento apenas para permissões no nível do usuário que são email, perfil, offline_access, OpenId e não para outras APIs, como User.Read ou Mail.Read. Se o aplicativo precisar de mais Graph escopos, a próxima seção fornece algumas soluções alternativas de habilitação.
+Nossa implementação atual para o SSO concede consentimento apenas para permissões no nível do usuário que não são usáveis para fazer Graph chamadas. Para obter as permissões (escopos) necessárias para fazer uma chamada Graph, as soluções de SSO devem implementar um serviço Web personalizado para trocar o token que recebeu do SDK javascript do Teams para um token que inclua os escopos necessários. Isso é feito usando o fluxo [on-behalf-of do](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)AAD.
 
 #### <a name="tenant-admin-consent"></a>Consentimento do administrador do locatário
-
-A abordagem mais simples é fazer com que um administrador de locatários consenta previamente em nome da organização. Isso significa que os usuários não têm que consentir com esses escopos e, em seguida, você pode ser livre para trocar o lado do servidor de token usando o fluxo [on-behalf-of do](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)AAD. Essa solução alternativa é aceitável para aplicativos internos de linha de negócios, mas não é suficiente para desenvolvedores de terceiros que não podem depender da aprovação do administrador de locatários.
 
 Uma maneira simples de consentir em nome de uma organização como administrador de locatário é fazer referência a `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` .
 

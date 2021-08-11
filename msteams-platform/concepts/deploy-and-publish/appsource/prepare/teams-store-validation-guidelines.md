@@ -4,12 +4,12 @@ description: Descreve as diretrizes que todos os aplicativos enviados ao Teams (
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763112"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703604"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 
@@ -279,7 +279,7 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele adere a essas diret
 * A configuração de tabulação não deve encerrar um novo usuário. Forneça uma mensagem sobre como concluir a ação ou o fluxo de trabalho.
 * A autenticação deve acontecer durante a configuração da guia e não depois.
 
-### <a name="views"></a>Exibições
+### <a name="views"></a>Modos de exibição
 
 * A área de tela de login não deve usar logotipos grandes ou exibir uma página da Web inteira.
 * O conteúdo pode ser simplificado quebrando-o entre várias guias.
@@ -355,7 +355,7 @@ As notificações de bot devem incluir conteúdo relevante para o escopo definid
 
 Cartões adaptáveis são uma maneira altamente recomendada de exibir mensagens bot. Seus cartões devem ser leves e incluir apenas ações de 1 a 3. Se você precisar exibir mais conteúdo, considere usar um módulo de tarefa ou uma guia.
 
-Veja os seguintes recursos para obter mais informações:
+Para obter mais informações, consulte os seguintes recursos:
 
 * [Criar Cartões Adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Referência de cartões](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)

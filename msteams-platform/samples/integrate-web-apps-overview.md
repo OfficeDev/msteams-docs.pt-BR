@@ -4,17 +4,17 @@ author: Rajeshwari-v
 description: Uma visão geral da integração de aplicativos Web e recursos de dispositivo com Microsoft Teams aplicativo.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630443"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707299"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
 Você pode fornecer uma experiência de usuário enriquecida integrando os recursos de um aplicativo Web existente Microsoft Teams plataforma. Certifique-se [de seguir Teams de design](~/concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo Teams.
-Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web com o Teams, plataforma Power para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, Conectores de Turno, LMS Moodle, criação de um botão Share-to-Teams para seu site, adicionando uma guia Microsoft Teams no SharePoint, criando links profundos e integrando recursos de dispositivo.
+Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web com o Teams, plataforma Power para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, conectores de turno, LMS Moodle, criação de um botão Share-to-Teams para seu site, adicionando uma guia Microsoft Teams no SharePoint, criando links profundos e integrando recursos de dispositivo.
 
 ## <a name="prerequisites"></a>Pré-requisitos   
 
@@ -37,7 +37,7 @@ As plataformas de código baixo fornecem uma abordagem intuitiva para o desenvol
 
 A plataforma Microsoft Power combina quatro tecnologias robustas da Microsoft, como Power BI, Power Apps, Power Automate e Power Virtual Agents em uma plataforma de aplicativos poderosa. Essas tecnologias capacitam você a criar soluções, automatizar processos, analisar dados e criar agentes virtuais em um ambiente unificado e integrado.
 
-### <a name="power-apps"></a>Aplicativos de energia
+### <a name="power-apps"></a>Power Apps
 
 Com Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados de negócios e são adaptados às necessidades da sua organização. Power Apps uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos de tela. Depois de criar o aplicativo, você pode exportá-lo do portal do criador Power Apps e incorporar no Microsoft Teams.
 
@@ -47,7 +47,7 @@ O Power Virtual Agent é uma solução de interface gráfica sem código e guiad
 
 ### <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
-O Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. 
+Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. 
 
 ## <a name="app-templates"></a>Modelos de aplicativo
 
@@ -59,7 +59,7 @@ Teams Os conectores de Gerenciamento de Força de Trabalho de Turnos são integr
 
 ## <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
-Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de código aberto popular. Ele agora está integrado ao Microsoft Teams. Essa integração ajuda educadores e professores a colaborarem em torno de cursos de miojo, fazer perguntas sobre notas e atribuições e manter-se atualizados com notificações diretamente no Teams.
+Moodle é um sistema de gerenciamento de Learning (LMS) popular. Ele agora está integrado ao Microsoft Teams. Essa integração ajuda educadores e professores a colaborarem em torno de cursos de miojo, fazer perguntas sobre notas e atribuições e manter-se atualizados com notificações diretamente no Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Criar um botão Compartilhar no Teams para o seu site
 

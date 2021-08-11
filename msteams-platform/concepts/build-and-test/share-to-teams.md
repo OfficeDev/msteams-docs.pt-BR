@@ -4,12 +4,12 @@ description: Como adicionar o botão Compartilhar ao Teams incorporado em seu si
 ms.topic: reference
 localization_priority: Normal
 keywords: Compartilhar Teams share-to-Teams
-ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075644"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707707"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
@@ -84,7 +84,7 @@ A tabela a seguir descreve as marcas necessárias:
 
 Você pode usar as versões padrão html ou a versão Graph Open.
 
-## <a name="share-to-teams-for-education"></a>Compartilhar com Teams educação
+## <a name="share-to-teams-for-education"></a>Compartilhar com Teams para Educação
 
 Para professores que usam o botão Compartilhar Teams, há uma opção adicional para `Create an Assignment` . Isso permite que você crie rapidamente uma atribuição na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe Share-to-Teams para educação: 
 
@@ -94,12 +94,12 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 
 | Propriedade | Atributo HTML | Tipo | Padrão | Descrição |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | cadeia de caracteres | n/d | O href do conteúdo a ser compartilhá-lo. |
+| href | `data-href` | string | n/d | O href do conteúdo a ser compartilhá-lo. |
 | visualização | `data-preview` | booleano (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
 | iconPxSize | `data-icon-px-size` | number (como uma cadeia de caracteres) | `32` | O tamanho em pixels do botão Compartilhar para Teams renderizar. |
-| msgText | `data-msg-text` | cadeia de caracteres | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
-| assignInstr | `data-assign-instr` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
-| assignTitle | `data-assign-title` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Título" de atribuições. O número máximo de caracteres é 50. |
+| msgText | `data-msg-text` | string | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
+| assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
+| assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" de atribuições. O número máximo de caracteres é 50. |
 
 ### <a name="methods"></a>Métodos
 

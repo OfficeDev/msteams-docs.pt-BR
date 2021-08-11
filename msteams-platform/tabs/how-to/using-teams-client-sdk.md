@@ -6,12 +6,12 @@ description: Visão geral do Microsoft Teams SDK do cliente JavaScript, que pode
 localization_priority: Normal
 keywords: teams tabs group channel configurble static SDK JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d1bcf9fd853d1b0e93c99ae62ad32f462fc98ed4eee1796e7ae5510ad02a8909
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994361"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704932"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript Microsoft Teams JavaScript
 

@@ -3,12 +3,12 @@ title: Extensibilidade do aplicativo de reunião
 author: surbhigupta
 description: Compreender a extensibilidade do aplicativo de reunião
 ms.topic: conceptual
-ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 44c7397d94d98af5cbc9df4f291bd7cc037b5df832715dcaa943edee543f3b09
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726877"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702233"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
 
@@ -170,6 +170,9 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
 
     > [!NOTE]
     > Os Teams podem adicionar aplicativos quando hospedam reuniões ou chats com outras organizações. Os usuários podem usar aplicativos compartilhados por usuários externos quando seus usuários ingressarem em reuniões ou chats hospedados por outras organizações. As políticas de dados da organização do usuário de hospedagem, bem como as práticas de compartilhamento de dados dos aplicativos de terceiros compartilhados pela organização desse usuário, estarão em vigor.
+
+    > [!IMPORTANT]
+    > Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and manage [apps](/microsoftteams/manage-apps).
 
 * **Anônimo**: os usuários anônimos não têm uma identidade AAD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é projetada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião. Um usuário anônimo não pode ser organizador, mas pode ser apresentador ou participante.
 

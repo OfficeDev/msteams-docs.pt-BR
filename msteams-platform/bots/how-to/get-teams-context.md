@@ -5,12 +5,12 @@ description: Como obter o contexto específico do Microsoft Team para seu bot, i
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4e3717b5931b673fa52c82b54d9c79380d9ae8d8907c8c2cf51f46499386cb28
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068978"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706264"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obter Teams contexto específico para seu bot
 

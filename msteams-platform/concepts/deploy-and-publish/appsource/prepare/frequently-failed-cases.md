@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: dicas de envio de aplicativo com frequência diretrizes de validação de casos com falha
-ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629995"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706509"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Dicas para um envio de aplicativo de Microsoft Teams bem-sucedido
 

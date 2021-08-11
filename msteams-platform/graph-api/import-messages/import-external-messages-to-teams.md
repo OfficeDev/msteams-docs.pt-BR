@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: 95cbf6bf2deac4ea71e60fe0fece06c1dd3ad24c
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130091"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704400"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -373,7 +373,7 @@ A tabela a seguir fornece o escopo de conteúdo:
 |Imagens em linha como parte da mensagem|At mentions|
 |Links para arquivos existentes no SPO ou OneDrive|Reações|
 |Mensagens com texto rico|Vídeos|
-|Cadeia de resposta de mensagens|Announcements|
+|Cadeia de resposta de mensagens|Comunicados|
 |Processamento de alta taxa de transferência|Trechos de código|
 ||Adesivos|
 ||Emojis|
@@ -381,6 +381,6 @@ A tabela a seguir fornece o escopo de conteúdo:
 ||Postagens entre canais|
 
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 [Integração Graph microsoft Teams](/graph/teams-concept-overview)

@@ -4,25 +4,25 @@ description: Exemplo de exibições atualizadas usando o Bot Universal
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 2027d07961929fb40e7afc3ee268e1267b235a02
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088811"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707411"
 ---
 # <a name="up-to-date-cards"></a>Cartões atualizados
 
-Agora você pode fornecer informações mais recentes aos usuários sobre Cartões Adaptáveis com uma combinação de edições de atualização e mensagens Teams. Com isso, você pode atualizar dinamicamente as Exibições Específicas do Usuário para seu estado mais recente, como e quando há uma alteração em seu serviço. Por exemplo, no caso de cartões de gerenciamento de projeto ou de tíquetes, você pode atualizar comentários e o status da tarefa. Em caso de aprovações, o estado mais recente é refletido, além de fornecer informações e ações diferenciadas.
+Agora você pode fornecer informações mais recentes para seus usuários em Cartões Adaptáveis. Inclua uma combinação de edições de atualização e mensagens Teams. Atualize dinamicamente as Exibições Específicas do Usuário para seu estado mais recente, como e quando há uma alteração em seu serviço. Por exemplo, para cartões de gerenciamento de projeto ou de tíquete, atualize comentários e o status da tarefa. Para aprovações, o estado mais recente é refletido, além de fornecer informações e ações diferenciadas.
 
 Por exemplo, um usuário pode criar uma solicitação de aprovação de ativo em uma Teams conversa. Alex cria uma solicitação de aprovação e a atribui a Megan e Nestor. Veja a seguir as duas partes para criar a solicitação de aprovação:
 
-* Os Exibições Específicas do Usuário podem ser aproveitados usando `refresh` a propriedade dos Cartões Adaptáveis.
+* Exibições Específicas do Usuário podem ser aplicadas usando `refresh` a propriedade dos Cartões Adaptáveis.
 Usar Exibições Específicas do Usuário  pode mostrar um cartão com botões **Aprovar** ou Rejeitar para um conjunto de usuários e mostrar um cartão sem esses botões para outros usuários.
 
-* Para manter o estado do cartão atualizado sempre, Teams mecanismo de edição de mensagens pode ser aproveitado. Por exemplo, sempre que houver uma aprovação, o bot pode disparar uma edição de mensagem para todos os usuários. Essa edição de mensagem bot dispara uma solicitação de invocação para todos os usuários de atualização automática, para os quais o bot pode responder com o cartão `adaptiveCard/action` específico do usuário atualizado.
+* Para manter o estado do cartão sempre atualizado, Teams mecanismo de edição de mensagem pode ser usado. Por exemplo, para cada aprovação, o bot pode disparar uma edição de mensagem para todos os usuários. Essa edição de mensagem bot dispara uma solicitação de invocação para todos os usuários de atualização automática, para os quais o bot pode responder com o cartão `adaptiveCard/action` específico do usuário atualizado.
 
-Para obter mais informações, [consulte como fazer uma edição de mensagem de bot](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+Para obter mais informações, [consulte como fazer uma edição de mensagem de bot](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Cartão base de aprovação
 
@@ -110,9 +110,9 @@ O código a seguir fornece um exemplo de cartão de aprovação com **botões Ap
 }
 ```
 
-A seguir estão as duas funções mostradas aos usuários, dependendo do envolvimento na solicitação de aprovação:
+A seguir estão as duas funções mostradas aos usuários, dependendo da solicitação de aprovação:
 
-* Cartão base de aprovação: mostrado para usuários que não fazem parte da lista de aprovadores e ainda não aprovaram ou rejeitaram a solicitação e não fazem parte da lista na propriedade do JSON do Cartão `userIds` `refresh` Adaptável.
+* Cartão base de aprovação: mostrado aos usuários que não fazem parte da lista de aprovadores e a solicitação ainda não foi aprovada ou rejeitada, e não faz parte da lista na propriedade do JSON de `userIds` `refresh` Cartão Adaptável.
 * Cartão de aprovação **com** botões Aprovar ou Rejeitar: mostrado para os usuários que fazem parte da lista de aprovadores e a lista na propriedade do JSON do Cartão  `userIds` `refresh` Adaptável.
 
 **Para enviar a solicitação de aprovação de ativos**
@@ -123,8 +123,8 @@ A seguir estão as duas funções mostradas aos usuários, dependendo do envolvi
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Exibições Específicas do Usuário":::
 
-4. Nestor seleciona o botão **Aprovar** que é alimentado com `Action.Execute` . O bot recebe uma `adaptiveCard/action` solicitação de invocação à qual ele pode retornar um Cartão Adaptável em resposta.
-5. O bot dispara uma edição de mensagem com um cartão atualizado que diz que Nestor aprovou a solicitação enquanto a aprovação de Megan está pendente.
+4. Nestor seleciona o **botão Aprovar,** que é alimentado com `Action.Execute` . O bot recebe uma `adaptiveCard/action` solicitação de invocação à qual ele pode retornar um Cartão Adaptável em resposta.
+5. O bot dispara uma edição de mensagem com um cartão atualizado, que diz que Nestor aprovou a solicitação enquanto a aprovação de Megan está pendente.
 6. A edição de mensagem bot dispara uma atualização automática para Megan e ela vê o cartão específico do  usuário atualizado, que diz que Nestor aprovou a solicitação, mas também vê os botões **Aprovar** ou Rejeitar. A MRI do usuário de Nestor é removida da lista na propriedade deste JSON de Cartão Adaptável nas etapas `userIds` `refresh` 4 e 5. Agora, a atualização automática só é disparada para Megan.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Exibições específicas do usuário atualizadas":::
@@ -258,6 +258,12 @@ O código a seguir fornece um exemplo de Cartões Adaptáveis enviados como resp
   ]
 }
 ```
+
+## <a name="code-sample"></a>Exemplo de código
+
+|Nome do exemplo | Descrição | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

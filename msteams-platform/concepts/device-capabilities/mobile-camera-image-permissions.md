@@ -6,12 +6,12 @@ keywords: mídia de permissões nativas de dispositivo de recursos de microfone 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 22d4a791e83cf36f18b75a3846865835b0ee024f
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211622"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704958"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
@@ -76,11 +76,11 @@ A imagem a seguir mostra a experiência do aplicativo Web da `selectMedia` API p
 
 ![experiência do aplicativo web para funcionalidade de microfone](../../assets/images/tabs/microphone-capability.png)
 
-## <a name="error-handling"></a>Tratamento de erros
+## <a name="error-handling"></a>Tratamento de erro
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condition|
+|Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **404** | FILE_NOT_FOUND | O arquivo especificado não é encontrado no local determinado.|

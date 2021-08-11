@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8e4656ea7ca9f373123026a50ecb837d1a64e3fa
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 80821eaad18998d087aeeb4f20db03ea02d9cab6d78d367add179b763e501249
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230914"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704278"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Manter seu aplicativo Microsoft Teams publicado
 

@@ -4,15 +4,15 @@ description: Descreve a formatação de texto do cartão em Microsoft Teams
 keywords: formato de cartões de bots do teams
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140581"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706102"
 ---
-# <a name="format-cards-in-microsoft-teams"></a>Formatar cartões em Microsoft Teams
+# <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
 A seguir estão as duas maneiras de adicionar formatação de texto rich aos cartões:
 * [Markdown](#format-cards-with-markdown)
@@ -524,7 +524,7 @@ Você pode testar a formatação em seus próprios cartões modificando esse có
 
 ---
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
-* [Ações de cartão](./cards-actions.md)
+* [Ações do cartão](./cards-actions.md)
 * [Módulos de tarefas](~/task-modules-and-cards/cards/cards-format.md)

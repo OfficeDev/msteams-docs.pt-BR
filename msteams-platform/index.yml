@@ -124,7 +124,7 @@ conceptualContent:
           text: Microsoft Teams da comunidade
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
-          text: Announcements
+          text: Comunicados
     - title: Community ajuda
       links:
         - url: /microsoftteams/platform/feedback

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Aplicativos Web
-ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630429"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708326"
 ---
 # <a name="web-apps"></a>Aplicativos Web 
 
@@ -86,6 +86,9 @@ Azure Active Directory (AD) é o provedor de identidade para Teams. Se seu aplic
 
 Teams tem mecanismos de SSO (login único) com o Azure AD para aplicativos de terceiros. Ele também fornece as diretrizes para fluxos de autenticação para outros provedores de identidade usando padrões como OAuth e Open ID Conexão, conhecidos como OIDC.
 
+> [!IMPORTANT]
+> Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and manage [apps](/microsoftteams/manage-apps).
+
 Para SharePoint páginas, você só pode usar o SSO e não pode adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo SharePoint.
 
 Saiba mais sobre [autenticação em Teams](../concepts/authentication/authentication.md).
@@ -94,7 +97,7 @@ Saiba mais sobre [autenticação em Teams](../concepts/authentication/authentica
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração*
 
-Certifique-se [de seguir Teams de design](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo Teams. Não é possível migrar um conteúdo de aplicativo existente para uma Teams guia. Para obter mais informações sobre o design do aplicativo, consulte [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Certifique-se [de seguir Teams de design](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo Teams. Não é possível migrar um conteúdo de aplicativo existente para uma Teams guia. Para obter mais informações sobre o design do aplicativo, [consulte Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar o vínculo profundo
 

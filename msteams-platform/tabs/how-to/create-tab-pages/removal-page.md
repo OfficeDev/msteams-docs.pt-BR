@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble remove delete
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 97f5dfdd8cd9e5e19ec26c345ac960a04a108ab3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179710"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706783"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -27,7 +27,7 @@ Seu **manifest.json** define os recursos e recursos da guia. A propriedade da in
 
 Quando sua guia é carregada em um chat de canal ou grupo, Teams adiciona um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração. A tabela a seguir fornece os detalhes da configuração:
 
-| `canUpdateConfiguration`| verdadeiro   | falso | description |
+| `canUpdateConfiguration`| verdadeiro   | falso | descrição |
 | ----------------------- | :----: | ----- | ----------- |
 |     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme aparece na barra de guias.          |

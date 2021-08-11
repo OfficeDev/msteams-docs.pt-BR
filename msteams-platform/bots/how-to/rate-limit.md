@@ -4,12 +4,12 @@ description: Limitação de taxas e práticas recomendadas Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428692"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705605"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 

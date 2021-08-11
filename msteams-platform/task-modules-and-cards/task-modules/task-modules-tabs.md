@@ -4,14 +4,14 @@ description: Explica como invocar módulos de tarefas Teams guias usando o SDK M
 localization_priority: Normal
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
-ms.openlocfilehash: 8afd2c93261f28aa7ced4c98d29be27dca35f8b1
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140548"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703576"
 ---
-# <a name="use-task-modules-in-tabs"></a>Usar módulos de tarefa em guias
+# <a name="use-task-modules-in-tabs"></a>Usar módulos de tarefas nas guias
 
 Adicione um módulo de tarefa à sua guia para simplificar a experiência do usuário para todos os fluxos de trabalho que exigem entrada de dados. Os módulos de tarefas permitem que você reúna suas entradas em um pop-up Teams-Aware Microsoft. Um bom exemplo disso é editar cartões do Planner. Você pode usar módulos de tarefa para criar uma experiência semelhante.
 
@@ -129,13 +129,13 @@ A tabela a seguir fornece os valores possíveis `err` que podem ser recebidos po
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | .NET | Node.js|
+|Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
-[Invocar e descartar módulos de tarefa](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+[Invocar e ignorar módulos de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

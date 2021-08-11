@@ -3,12 +3,12 @@ title: Guias em dispositivos móveis
 description: Descreve considerações do desenvolvedor para implementar guias em Microsoft Teams celular.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e63bfc6b88e77b4dc0f05916dbf13fd5e8c2e199764b78961426ff9601de37e6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179717"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704939"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -49,7 +49,7 @@ Os aplicativos listados no Teams devem ser aprovados para uso móvel para funcio
 
 A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o aplicativo é listado no Teams e aprovado para uso móvel:
 
-|Recursos   |Disponibilidade móvel?   |Comportamento móvel|
+|Funcionalidade   |Disponibilidade móvel?   |Comportamento móvel|
 |----------|-----------|------------|
 |Canal <br /> e guia grupo|Sim|A guia é aberta Teams cliente móvel usando a configuração do `contentUrl` aplicativo.|
 |Aplicativo pessoal|Sim|Cada guia na guia aplicativo pessoal é aberta no cliente Teams móvel usando sua respectiva `contentUrl` configuração.|
@@ -58,7 +58,7 @@ A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o 
 
 A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o aplicativo está listado no Teams, mas não aprovado para uso móvel:
 
-| Recursos | Disponibilidade móvel? | Comportamento móvel |
+| Funcionalidade | Disponibilidade móvel? | Comportamento móvel |
 |----------|-----------|------------|
 |Guia Canal e grupo|Sim|A guia é aberta no navegador padrão do dispositivo, em vez do cliente Teams móvel usando a configuração do aplicativo, que também deve ser incluído na função `websiteUrl` do código-fonte. `setSettings()` [](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true) No entanto, os usuários podem exibir a guia Teams cliente móvel selecionando **Mais** ao lado do aplicativo e escolhendo **Abrir**, o que dispara a configuração do `contentUrl` aplicativo.|
 |Aplicativo pessoal|Não|Não aplicável|

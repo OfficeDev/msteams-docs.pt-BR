@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 localization_priority: Normal
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: f895423e5755dd85a7618b8907c4c3b0acbc3cf4
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140541"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706629"
 ---
 # <a name="cards"></a>Cartões
 
@@ -62,7 +62,7 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 
 Cartões adaptáveis com Webhooks de entrada permite que você use os recursos avançados e flexíveis de Cartões Adaptáveis. Ele envia dados usando Webhooks de entrada Teams de seu serviço Web.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Formatar cartões em Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Projetar cartões adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)

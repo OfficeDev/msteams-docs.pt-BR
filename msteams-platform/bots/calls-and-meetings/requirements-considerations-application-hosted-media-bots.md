@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: vm do windows server do windows server hospedado pelo aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335358"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702827"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 
@@ -68,10 +68,10 @@ Os bots de mídia hospedados pelo aplicativo exigem as seguintes considerações
 
 Exemplos de bots de mídia hospedados pelo aplicativo são os seguinte:
 
-| **Exemplo de nome** | **Descrição** | **Graph** |
+| **Nome do exemplo** | **Descrição** | **Graph** |
 |------------|-------------|-----------|
-| Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="see-also"></a>Confira também
 

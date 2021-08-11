@@ -4,12 +4,12 @@ description: Descreve o processo para testar seu aplicativo Teams personalizado 
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar Microsoft 365 de Teams de teste de carregamento
-ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e33a1adb9ebc11f8bd1ece8f5fe43fc78e60b11883551fbd0ee3dfae237737cf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631003"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707686"
 ---
 # <a name="test-your-app"></a>Testar seu aplicativo
 

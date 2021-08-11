@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 9dcbd8f31c6ff68f0401e9fbb77297e8eebcf520
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101741"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707110"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 

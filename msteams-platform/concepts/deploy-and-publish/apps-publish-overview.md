@@ -4,12 +4,12 @@ description: Descreve as opções para publicar seu Microsoft Teams app.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230908"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701982"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir seu Microsoft Teams app
 
@@ -19,13 +19,16 @@ Você pode fornecer seu Microsoft Teams para uma pessoa, equipe, organização o
 
 Fazer sideload de um aplicativo para uso pessoal, colaborar com sua equipe ou testar e depurar. Esse tipo de distribuição não exige um processo de revisão formal.
 
+> [!IMPORTANT]
+> Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD).
+
 Para obter mais informações, [consulte upload your app in Teams](apps-upload.md).
 
 ## <a name="publish-your-app-to-your-org"></a>Publicar seu aplicativo em sua organização
 
 Disponibilizar seu aplicativo para as pessoas em sua organização. Esse tipo de distribuição requer Teams aprovação do administrador.
 
-Para obter mais informações, [consulte manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+Para obter mais informações, [consulte manage your apps in the Teams admin center](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### <a name="government-community-cloud-gcc-organizations"></a>Nuvem da Comunidade Governamental (GCC)
 

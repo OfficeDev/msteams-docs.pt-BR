@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: conector do o365 no teams
-ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179892"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703122"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -251,7 +251,7 @@ A tabela a seguir fornece os detalhes da transação baseada em hora:
 
 | Tempo em segundos  | Máximo de solicitações permitidas  |
 |---|---|
-| 1    | 4   |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

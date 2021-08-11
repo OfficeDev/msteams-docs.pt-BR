@@ -6,12 +6,12 @@ keywords: atributos de cookie samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140562"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708333"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite 
 
@@ -45,7 +45,7 @@ Os atributos de cookie sameSite são os seguinte:
 
 |Setting | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador envia apenas cookies para solicitações de contexto de primeira parte. São solicitações provenientes do site que definiram o cookie. Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
 | **Nenhum** | Os cookies são enviados no contexto de primeira parte e em solicitações de origem cruzada; no entanto, o valor deve ser definido explicitamente como e todas as solicitações de navegador devem seguir o protocolo HTTPS e incluir o atributo que exige uma **`None`** conexão  **`Secure`** criptografada. Cookies que não aderem a esse requisito são **rejeitados.** <br/>**Ambos os atributos são necessários juntos.** Se for especificado sem ou se o protocolo HTTPS não for usado, os cookies de terceiros  **`None`** serão **`Secure`**  rejeitados.| Opcional, mas, se definido, o protocolo HTTPS é necessário. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
@@ -84,11 +84,11 @@ O Android WebView é um componente do sistema Chrome que permite que aplicativos
 > * Você deve declarar cookies de primeira parte `SameSite=Lax` como ou , conforme `SameSite=Strict` apropriado.      
 > * Você deve declarar cookies de terceiros como `SameSite=None; Secure` .   
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Exemplos de SameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Receitas de cookie sameSite](https://web.dev/samesite-cookie-recipes/)
 * [Clientes incompatíveis conhecidos]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Desenvolvedores: Prepare-se para o novo SameSite=None; Cookies seguros Configurações](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [Alterações futuras do cookie samesite no ASP.NET e ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Desenvolvedores: Prepare-se para o Novo SameSite=None; Configurações Seguras de Cookies](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Próximas Alterações de Cookies do SameSite no ASP.NET e ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [Cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

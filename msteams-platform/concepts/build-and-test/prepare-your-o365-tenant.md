@@ -4,21 +4,21 @@ description: Como começar a usar Teams no Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar Microsoft 365 locatário Teams carregamento
-ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019941"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704410"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 
 Microsoft 365 assinantes podem desenvolver aplicativos para Microsoft Teams com um dos seguintes planos:
 
-* Básica
+* Básico
 * Padrão
 * Enterprise E1, E3 e E5
-* Desenvolvedor
+* Developer
 * Education, Education Plus e Education E5
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Enable Teams for your organization and for more information, see [enableing Team
 
 **Para ativar o carregamento ou sideload de aplicativos personalizados para seu locatário de desenvolvedor**
 
-1. Entre no centro [de administração Microsoft 365 com](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) suas credenciais de administrador.
+1. Entre [no](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) Centro de administração do Microsoft 365 com suas credenciais de administrador.
 
 2. Selecione **Mostrar todos os**  >  **Teams**.
 

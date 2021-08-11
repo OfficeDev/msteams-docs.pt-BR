@@ -1,29 +1,29 @@
 ---
-title: Projetar seu aplicativo com componentes básicos da interface do usuário do Fluent
+title: Projetar seu aplicativo com componentes básicos Fluent interface do usuário
 author: heath-hamilton
 description: Saiba mais sobre os componentes primitivos da interface do usuário comumente usados para criar Microsoft Teams aplicativos e obter o kit Microsoft Teams interface do usuário.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644907"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704110"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes básicos da interface do usuário do Fluent
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes básicos Fluent interface do usuário
 
-Você pode criar seu Teams do zero com os seguintes componentes básicos da interface do usuário fluent. Projetados o mais simples possível, esses componentes podem funcionar em diferentes casos de uso, temas e tamanhos de tela.
+Você pode criar seu Teams do zero com os seguintes componentes básicos Fluent interface do usuário. Projetados o mais simples possível, esses componentes podem funcionar em diferentes casos de uso, temas e tamanhos de tela.
 
 As ilustrações nesta página mostram como os componentes são Teams padrão (claro) e temas escuros.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Com base na interface do usuário <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluente,</a>o Microsoft Teams de interface do usuário inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
+Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface do</a>usuário, o kit de interface do usuário Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerta
 
@@ -57,7 +57,7 @@ Com base na interface do usuário <a href="https://fluentsite.z22.web.core.windo
 
 :::image type="content" source="../../assets/images/components/contextual-menu.png" alt-text="Exemplo mostra um componente de interface do usuário de menu contextual." border="false":::
 
-## <a name="dialog"></a>Dialog
+## <a name="dialog"></a>Caixa de Diálogo
 
 :::image type="content" source="../../assets/images/components/dialog.png" alt-text="Exemplo mostra um componente de interface do usuário de caixa de diálogo." border="false":::
 
@@ -123,7 +123,7 @@ Com base na interface do usuário <a href="https://fluentsite.z22.web.core.windo
 
 ## <a name="toggle"></a>Alternância
 
-Observação: na interface do usuário fluente, alternar é um tipo de caixa de seleção.
+Observação: Fluent interface do usuário, alternar é um tipo de caixa de seleção.
 
 :::image type="content" source="../../assets/images/components/toggle.png" alt-text="Exemplo mostra um componente de interface do usuário de alternância." border="false":::
 
@@ -136,4 +136,4 @@ Observação: na interface do usuário fluente, alternar é um tipo de caixa de 
 Obter exemplos de código e detalhes de implementação para alguns dos componentes listados aqui e no kit Microsoft Teams interface do usuário.
 
 > [!div class="nextstepaction"]
-> [Experimente os componentes (Interface do Usuário Fluente)](https://fluentsite.z22.web.core.windows.net/)
+> [Experimente os componentes (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)

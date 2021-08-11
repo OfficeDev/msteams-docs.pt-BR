@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0af2a22200e62be9289f167b0306c9769366e46a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 3c625f66912b9b45d820a663dfc6846aa1de7356cb77f5a800112fbedc615de1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630835"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703977"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de design de aplicativo
 
@@ -25,7 +25,7 @@ Aprenda rapidamente sobre os fundamentos do design Teams aplicativo. Você pode 
       Teams depende de um layout de grade para garantir relações consistentes e elegantes entre componentes de design. A unidade base de 4 pixels da grade permite que os componentes sejam dimensionados consistentemente em todos os tamanhos de exibição em Teams.
 
       * [Consulte diretrizes de layout completo (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implementar layout (interface do usuário fluente)](https://developer.microsoft.com/fluentui#/styles/web/layout)
+      * [Implementar layout (Fluent interface do usuário)](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
@@ -60,10 +60,10 @@ Aprenda rapidamente sobre os fundamentos do design Teams aplicativo. Você pode 
 
       O ícone principal do seu aplicativo pode ser muito longo ao transmitir sua marca para Teams usuários. Ter o design de ícone correto também é importante [para publicar seu aplicativo](../../concepts/build-and-test/apps-package.md) no Teams store.
 
-      Você também pode usar ícones de interface do usuário fluente em todo o seu aplicativo:
+      Você também pode usar Fluent ícones de interface do usuário em todo o aplicativo:
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obter o conjunto de ícones fluent mais recente (Figma)</a>
-      * [Implementar os ícones (Interface do Usuário Fluente)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obter o conjunto Fluent ícone mais recente (Figma)</a>
+      * [Implementar os ícones (Fluent interface do usuário)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
@@ -82,7 +82,7 @@ Aprenda rapidamente sobre os fundamentos do design Teams aplicativo. Você pode 
       Teams usa a interface do usuário segoe para sua rampa de tipos e tamanhos e pesos de fontes diferentes para ajudar a criar hierarquia e garantir a capacidade de leitura.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de tipo completo (Figma)</a>
-      * [Implementar tipografia (interface do usuário fluente)](https://developer.microsoft.com/fluentui#/styles/web/typography)
+      * [Implementar tipografia (Fluent interface do usuário)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
    :::column span="1":::
@@ -101,7 +101,7 @@ Aprenda rapidamente sobre os fundamentos do design Teams aplicativo. Você pode 
       Teams web e desktop suportam temas padrão (claro), escuro e de alto contraste, enquanto Teams móveis suportam temas claros e escuros. Cada tema tem seu próprio esquema de cores.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de cores completas e tokens de cores disponíveis (Figma)</a>
-      * [Implementar cores (interface do usuário fluente)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implementar cores (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
    :::column span="1":::
@@ -119,7 +119,7 @@ Aprenda rapidamente sobre os fundamentos do design Teams aplicativo. Você pode 
       Você pode usar a forma e a elevação para criar hierarquia adicional em seu aplicativo. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulte diretrizes de forma e elevação completas (Figma)</a>
-      * [Implementar forma e elevação (Interface do Usuário Fluente)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * [Implementar forma e elevação (Fluent interface do usuário)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::

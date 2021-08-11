@@ -4,14 +4,14 @@ description: Como usar módulos de tarefa com Microsoft Teams bots, incluindo ca
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de equipes de módulos de tarefa
-ms.openlocfilehash: 5d9aa2b651a4c99cee75aada62a4d1176a589d79
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 7a4c5b0a3986f5a6a59064a05bcbc68587955effca0ea7fab80a7097a9732b6f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140303"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701867"
 ---
-# <a name="use-task-modules-from-bots"></a>Usar módulos de tarefas de bots
+# <a name="use-task-modules-from-bots"></a>Usar módulos de tarefas dos bots
 
 Os módulos de tarefa podem ser invocados Microsoft Teams bots usando botões em Cartões Adaptáveis e cartões de Estrutura de Bot que são hero, miniatura e conector Office 365 Bot. Os módulos de tarefas geralmente são uma experiência de usuário melhor do que várias etapas de conversa. Acompanhe o estado do bot e permita que o usuário interrompa ou cancele a sequência.
 
@@ -207,11 +207,11 @@ O esquema para ações de cartão da Estrutura de Bot é diferente das ações d
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | .NET | Node.js|
+|Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Exemplo de módulo de tarefa bots-V4 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Exemplo de módulo de tarefa bots-V4 | Exemplos para a criação de módulos de tarefa. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Microsoft Teams exemplo de módulo de tarefa no Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
 * [Exemplos de Estrutura de Bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -4,12 +4,12 @@ description: A Microsoft Teams do produto responde à comunidade de desenvolvedo
 localization_priority: Normal
 ms.topic: reference
 keywords: perguntas do desenvolvedor de feedback do teams problemas de suporte de contato solicitação de bugs discussões da comunidade
-ms.openlocfilehash: a1a167dabbbf6d4bfe88e6407bb9cf359c1335fe
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: f0e00df1919a6949433c124dbea15ffa973f7439c46130202c7ba7b6bf750aea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726898"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705549"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams da comunidade de desenvolvedores
 

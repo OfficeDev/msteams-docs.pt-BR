@@ -5,12 +5,12 @@ description: Visão geral das ferramentas e SDKs para Microsoft Teams bots.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196240"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707096"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -110,9 +110,9 @@ Uma das desvantagens dos bots é que é difícil manter uma grande base de dados
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Exemplo de nome | Descrição | . NETCore | Node.js |
+|Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
 ## <a name="next-step"></a>Próxima etapa
 

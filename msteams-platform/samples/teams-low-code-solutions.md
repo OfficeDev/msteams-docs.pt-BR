@@ -5,12 +5,12 @@ description: Detalhar as soluções de código disponíveis da Microsoft para Te
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4c529a3f46ffb0a57bbd298c01570c4d05074b9bbd4207e20e2f9a8374bfed1d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069132"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707791"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Criar aplicativos personalizados de baixo código para Microsoft Teams
 

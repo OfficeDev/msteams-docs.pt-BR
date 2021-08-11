@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 90874dd1bfe7142e48e44a613cbe91d95b77d98b504dbbda47fd9c0e8678f937
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726933"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706358"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
