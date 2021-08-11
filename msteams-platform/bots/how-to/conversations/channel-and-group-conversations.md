@@ -5,12 +5,12 @@ description: Como enviar, receber e manipular mensagens para um bot em um chat d
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 399f7d7487b4992e70d4ee515b26101e2b253a62
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8ff89cf88bf56a905bdf507e1bc6e4ebbbd691f70d94289c8e206024c5657fa9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069007"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708410"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversas de chat de canal e grupo com um bot
 

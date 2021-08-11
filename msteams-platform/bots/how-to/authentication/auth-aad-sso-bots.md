@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a43c2a46561149ff97d039a3ba8fe9f4472e2073
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566074"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709598"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
@@ -24,16 +24,16 @@ A autenticação de entrada única no Azure Active Directory (AAD) minimiza o n�
 
 Conclua as etapas a seguir para obter tokens de aplicativo de bot e autenticação:
 
-1. O bot envia uma mensagem com um OAuthCard que contém a `tokenExchangeResource` propriedade. Ele diz Teams obter um token de autenticação para o aplicativo bot. O usuário recebe mensagens em todos os pontos de extremidade do usuário ativo.
+1. O bot envia uma mensagem com um OAuthCard que contém a propriedade `tokenExchangeResource`. Ele diz Teams obter um token de autenticação para o aplicativo bot. O usuário recebe mensagens em todos os pontos de extremidade dos usuário ativos.
 
     > [!NOTE]
     >* Um usuário pode ter mais de um ponto de extremidade ativo por vez.
-    >* O token de bot é recebido de cada ponto de extremidade do usuário ativo.
-    >* O aplicativo deve ser instalado em escopo pessoal para suporte a SSO.
+    >* O token do bot é recebido a partir de cada ponto de extremidade de usuário ativo.
+    >* O aplicativo deve ser instalado no escopo pessoal para suporte do SSO.
 
 1. Se o usuário atual estiver usando seu aplicativo bot pela primeira vez, um prompt de solicitação será exibido solicitando que o usuário faça um dos seguintes:
     * Forneça consentimento, se necessário.
-    * Manipular a autenticação de etapa, como a autenticação de dois fatores.
+    * Lidar com a autenticação avançada, como a autenticação de dois fatores.
 
 1. Teams solicita o token de aplicativo bot do ponto de extremidade do AAD para o usuário atual.
 
@@ -41,7 +41,7 @@ Conclua as etapas a seguir para obter tokens de aplicativo de bot e autenticaç�
 
 1. Teams envia o token para o bot como parte do objeto value retornado pela atividade de invocação com o nome **entrar/tokenExchange**.
   
-1. O token analisado no aplicativo bot fornece as informações necessárias, como o endereço de email do usuário.
+1. O token analisado no aplicativo bot fornece as informações necessárias, tais como o endereço de email do usuário.
   
 ## <a name="develop-an-sso-teams-bot"></a>Desenvolver um bot de Teams SSO
   
@@ -83,7 +83,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
     >
     > Você deve estar ciente das seguintes restrições importantes:
     >
-    > * Somente as permissões de API microsoft Graph nível do usuário, como email, perfil, offline_access e OpenId são suportadas. Se você precisar de acesso a outros escopos Graph microsoft, como `User.Read` ou , consulte a solução alternativa `Mail.Read` [recomendada](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes).
+    > * Somente as permissões de API microsoft Graph nível do usuário, como email, perfil, offline_access e OpenId são suportadas. Se você precisar de acesso a outros escopos Graph microsoft, como ou , consulte Obter um token de acesso com Graph `User.Read` `Mail.Read` [permissões](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
     > * O nome de domínio do aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD.
     > * No momento, não há suporte para vários domínios por aplicativo.
     > * Os aplicativos que usam `azurewebsites.net` o domínio não têm suporte porque é comum e pode ser um risco de segurança.
@@ -161,9 +161,9 @@ Se o usuário estiver usando o aplicativo pela primeira vez e o consentimento do
 
 ![Caixa de diálogo Consentimento](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-Quando o usuário seleciona **Continuar**, os seguintes eventos ocorrem:
+Quando o usuário seleciona **Continuar**, ocorrem os seguintes eventos:
 
-* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigem o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` de . Por exemplo, se você quiser trocar o token por recursos de gráfico.
+* Se o bot definir um botão de logon, o fluxo de logon para bots será disparado de forma semelhante ao fluxo de logon de um botão de cartão OAuth em um fluxo de mensagens. O desenvolvedor deve decidir quais permissões exigirão o consentimento do usuário. Essa abordagem é recomendada se você exigir um token com permissões além `openId` de . Por exemplo, se você quiser trocar o token por recursos de gráfico.
 
 * Se o bot não estiver fornecendo um botão de logon no cartão OAuth, o consentimento do usuário será necessário para um conjunto mínimo de permissões. Esse token é útil para autenticação básica e para obter o endereço de email do usuário.
 
@@ -301,6 +301,6 @@ Abra [Teams exemplo de auth](https://github.com/microsoft/BotBuilder-Samples/tre
 4. Feche o manifesto com as imagens de perfil e instale-o Teams.
 
 ## <a name="code-sample"></a>Exemplo de código
-|**Exemplo de nome** | **Descrição** |**.NET** | 
+|**Nome do exemplo** | **Descrição** |**.NET** | 
 |----------------|-----------------|--------------|
-|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

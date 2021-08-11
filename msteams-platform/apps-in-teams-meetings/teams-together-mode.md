@@ -2,12 +2,12 @@
 title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
-ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
+ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53463321"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823232"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -155,12 +155,12 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
 
 1. Opcionalmente, você pode selecionar  **Compartilhar** no menu suspenso Salvar para criar um link compartilhável para distribuir facilmente suas cenas para outras pessoas usarem. Abrir esse link instala a cena para o usuário e eles podem começar a usá-la.
 
-1. Após a visualização, a cena pode ser enviada como um aplicativo para Teams seguindo as etapas para envio do aplicativo.
+1. Após a visualização, a cena pode ser enviada como um aplicativo para Teams indo para a seção Aplicativos no Centro de Desenvolvedores Teams. A partir daí, você pode baixar o pacote de aplicativos ou publicar diretamente em sua organização.
 
     >[!NOTE]
     > Esta etapa requer o pacote de aplicativo que é diferente do pacote de cena, para a cena que foi projetada. O pacote de aplicativos criado automaticamente pode ser encontrado na seção **Aplicativos** no Teams Desenvolvedor.
 
-1. Opcionalmente, o pacote de cena pode ser  recuperado selecionando **Exportar** no menu suspenso Salvar. Um .zip, que é o pacote de cena, é baixado.
+1. Opcionalmente, o pacote de cena pode ser salvo **selecionando Exportar** no **menu** suspenso Salvar. Um .zip, que é o pacote de cena, é baixado.
 
     ![Exportar uma cena](../assets/images/apps-in-meetings/build-a-scene.png)
 

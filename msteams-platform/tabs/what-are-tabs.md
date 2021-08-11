@@ -5,16 +5,19 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 890b1fb71a7b139aedec6869a734611578a78ceaaaf1510661529430ee7b9f26
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726856"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823218"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
 As guias são Teams web com conhecimento de Microsoft Teams. Eles são marcas html simples <iframe que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat de grupo ou aplicativo pessoal para um usuário \> individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web Teams ou adicionar uma funcionalidade específica Teams ao conteúdo da Web. Para obter mais informações, [consulte Teams SDK do cliente JavaScript.](/javascript/api/overview/msteams-client)
+
+> [!IMPORTANT]
+> Atualmente, as guias personalizadas estão disponíveis em Nuvem da Comunidade Governamental (GCC), GCC-Alto e Departamento de Defesa (DOD).
 
 A imagem a seguir mostra guias pessoais:
 
@@ -78,7 +81,7 @@ Para guias de canal ou grupo, você também pode criar uma página de configura�
 Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por aplicativo.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Ferramentas que você pode usar para criar guias
-* [Teams Toolkit código visual stuido](../toolkit/visual-studio-code-overview.md)
+* [Kit de ferramentas do Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit visual stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>Confira também

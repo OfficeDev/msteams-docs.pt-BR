@@ -4,12 +4,12 @@ description: Saiba como fazer sideload do aplicativo Microsoft Teams. O sideload
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684646"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708703"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload seu aplicativo no Microsoft Teams
 
@@ -18,6 +18,9 @@ Você pode fazer sideload Microsoft Teams aplicativos sem precisar publicar na s
 * Você deseja testar e depurar um aplicativo localmente ou com outros desenvolvedores.
 * Você criou um aplicativo apenas para si mesmo. Por exemplo, para automatizar um fluxo de trabalho.
 * Você criou um aplicativo para um pequeno conjunto de usuários, como seu grupo de trabalho.
+
+> [!IMPORTANT]
+> Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

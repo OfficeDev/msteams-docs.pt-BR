@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179941"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708668"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -132,10 +132,10 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | String | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | String | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `name` | Cadeia de Caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `contentUrl` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
+| `websiteUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="see-also"></a>Confira também
 

@@ -5,12 +5,12 @@ keywords: getting started node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: a3519da1495dc51a811f4e95bc4ada9b11aa8292
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 2a75c5bfd24facb8be1897997fc94896e1f62990547da12d35c783d38be2e077
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254326"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823239"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crie seu primeiro aplicativo Microsoft Teams usando o gerador Yeoman
 
@@ -82,7 +82,7 @@ Esta seção orienta você pelas etapas para gerar seu projeto.
 
     ![seleção de item](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Responda ao próximo conjunto de perguntas de acompanhamento que aparecem com base nos itens selecionados na Etapa 2.
+1. Responda ao próximo conjunto de perguntas de acompanhamento que aparecem com base nos itens selecionados na Etapa 3.
 1. Insira uma URL para o local onde você hospedará sua solução. 
 
    > [!NOTE]
@@ -124,7 +124,7 @@ Agora você pode criar seu projeto. Isso é feito em duas etapas.
 1. Crie o Teams de manifesto do aplicativo para o aplicativo que você carregou no Microsoft Teams. Isso é feito pela tarefa `gulp manifest` Gulp. Isso validará o manifesto e criará um arquivo zip no `./package` diretório.
 1. Execute o `gulp build` comando para criar a solução. Isso transpile sua solução para a `./dist` pasta. 
 
-## <a name="run-your-app"></a>Executar seu aplicativo
+## <a name="run-your-app"></a>Execute seu aplicativo
 
 Para executar seu aplicativo, use o `gulp serve` comando. Isso criará e iniciará um servidor Web local para você testar seu aplicativo. O comando também reconstruirá o aplicativo sempre que você salvar um arquivo em seu projeto. 
 

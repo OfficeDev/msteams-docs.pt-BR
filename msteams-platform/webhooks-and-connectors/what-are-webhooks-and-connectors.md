@@ -5,12 +5,12 @@ description: Entenda como webhooks e conectores podem conectar seus serviços We
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2cb763a6637abd3faa500de871119f0b829871bf
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140051"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708633"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks e conectores
 
@@ -42,7 +42,7 @@ Office 365 Os conectores permitem que você crie uma página de configuração p
 
 As mensagens ativas permitem que os usuários adoeciem sem sair do cliente de email, aumentando o envolvimento do usuário. Com Office 365 e Webhooks de entrada, você pode enviar mensagens postando uma carga JSON na URL do webhook.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

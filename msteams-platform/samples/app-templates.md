@@ -6,12 +6,12 @@ keywords: Microsoft Teams exemplos de modelos
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 72bb5506e552dfa3d35426e99a7ee74088ef41f6
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 1820de7a7a2a46766fac646c7a7267e754b855bfb1ea549ba208663ef9cadcd0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333691"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708762"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -126,7 +126,7 @@ O aplicativo fornece uma interface fácil para todos os membros da equipe adicio
 
 [Obter no GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## <a name="checklist"></a>Lista de verificação
+## <a name="checklist"></a>Lista de Verificação
 
 Checklist é um aplicativo [](../messaging-extensions/what-are-messaging-extensions.md) de extensão Microsoft Teams mensagens personalizado que permite que você colabore com sua equipe criando uma lista de verificação compartilhada em um chat ou canal. O aplicativo tem suporte em todos os clientes Teams plataforma, como navegador de área de trabalho, iOS e Android. O aplicativo está pronto para implantação como parte de sua assinatura Microsoft 365 usuário.  
 

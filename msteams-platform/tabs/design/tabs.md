@@ -5,23 +5,23 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721840"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709378"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para Microsoft Teams
 
 Uma guia é uma tela grande para o conteúdo do aplicativo. Para orientar o design do aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar guias no Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Você pode encontrar diretrizes abrangentes de design de guia, incluindo elementos que você pode pegar e modificar conforme necessário, no Kit Microsoft Teams interface do usuário. O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e tamanho responsivo que não são abordados aqui.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Adicionar uma guia
 
@@ -37,7 +37,7 @@ O exemplo a seguir mostra como os usuários podem adicionar uma guia em um canal
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemplo mostra uma guia sendo adicionada a um canal." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 Os usuários podem acessar guias selecionando o botão **Mais** no canal (exemplo abaixo) ou o chat no qual foram adicionados.
 
@@ -60,7 +60,7 @@ Há um curto processo de instalação para adicionar um aplicativo como canal, c
 |Contador|Descrição|
 |----------|-----------|
 |1|**Logotipo do aplicativo**: logotipo completo do aplicativo de cores do seu aplicativo.|
-|2|**Nome do** aplicativo : Nome completo do seu aplicativo.|
+|2|**Nome do aplicativo**: nome completo do seu aplicativo.|
 |3|**iframe**: espaço responsivo para o conteúdo do aplicativo (por exemplo, configurações de tabulação ou autenticação).|
 |4 |**Sobre o link**: abre uma caixa de diálogo mostrando mais informações sobre o aplicativo, como uma descrição completa, permissões exigidas pelo aplicativo e links para sua política de privacidade e termos de serviço.|
 |5 |**Botão Fechar**: fecha a caixa de diálogo.|
@@ -90,7 +90,7 @@ As guias fornecem uma experiência da Web de tela inteira em Teams onde você po
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um quadro de tarefas." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Exemplo mostra uma guia móvel com um quadro de tarefas." border="false":::
 
@@ -109,7 +109,7 @@ As guias fornecem uma experiência da Web de tela inteira em Teams onde você po
 |3|**Chat de tabulação**: abre um chat à direita, permitindo que os usuários tenham uma conversa ao lado do conteúdo.|
 |4 |**iframe**: exibe o conteúdo do aplicativo.|
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
 
@@ -144,7 +144,7 @@ Os usuários podem postar automaticamente em um canal ou chat depois de adiciona
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em um thread de canal." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Exemplo mostra uma guia móvel sendo discutida em um thread de canal." border="false":::
 
@@ -158,7 +158,7 @@ Os usuários podem ter uma conversa ao lado do conteúdo da guia que estão exib
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia móvel com uma área de chat no contexto." border="false":::
 
@@ -184,7 +184,7 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 |2|**Renomear**: os usuários podem dar à guia um nome significativo para o canal, chat ou reunião.|
 |3|**Remover**: remove a guia do canal, chat ou reunião.|
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia móvel." border="false":::
 
@@ -280,15 +280,15 @@ Remova todas as etapas desnecessárias para adicionar uma guia.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustração mostrando o que fazer com temas de tabulação." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: tire proveito de Teams de cores
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Recomendamos: aproveitar os tokens de cor do Teams
 
-Cada Teams tem seu próprio esquema de cores. Para lidar com alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cor (interface do usuário fluente)</a> em seu design.
+Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cores (IU do Fluent)</a> em seu design.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustração mostrando o que não fazer com temas de tabulação." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>Não: Valores de cor de código rígidos
+#### <a name="dont-hard-code-color-values"></a>Não recomendamos: valores de cor de código rígido
 
 Se você não usar tokens Teams cores, seus designs serão menos escalonáveis e levarão mais tempo para gerenciar.
 

@@ -5,16 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98e36bf55e61ef59261959021409d9e60d8542f5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630051"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709633"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
 Bots são aplicativos de conversa que executam um conjunto específico de tarefas. Com base no <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, os bots se comunicam com os usuários, respondem às suas dúvidas e os notificam de forma proativa sobre alterações e outros eventos. Eles são uma ótima maneira de se comunicar.
+
+> [!IMPORTANT]
+> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).
 
 Para orientar a criação do seu aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar bots no Mirosoft Teams.
 
@@ -33,13 +36,13 @@ Os bots estão disponíveis em chats, canais e aplicativos pessoais.
 
 Os usuários podem adicionar um bot de uma das seguintes maneiras:
 
-* No Teams store.
+* Vá para a Teams Store.
 * Use o submenu do aplicativo selecionando o ícone **Mais** no lado esquerdo do Microsoft Teams.
 * Com uma @menção na nova caixa de chat ou de texto (o exemplo a seguir mostra como fazer isso em um chat em grupo).
 
     :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Exemplo mostrando como adicionar um bot em um chat em grupo usando uma @menção." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 Os usuários podem acessar bots que foram adicionados à área de trabalho com um @mention.
 
@@ -59,7 +62,7 @@ No contexto pessoal, as mensagens de boas-vindas definem o tom do bot. A mensage
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um aplicativo pessoal." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um aplicativo pessoal no celular." border="false":::
 
@@ -73,7 +76,7 @@ A introdução do bot deve ser um pouco diferente em canais e chats de grupo em 
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um contexto colaborativo." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um contexto colaborativo no celular." border="false":::
 
@@ -89,7 +92,7 @@ Não se esqueça: no menu de comandos do bot (**O que posso fazer?**), você tam
 
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Exemplo mostrando um bot com um botão de logon." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="Exemplo mostra um bot com um botão de login no celular." border="false":::
 
@@ -110,7 +113,7 @@ Em um aplicativo pessoal, um carrossel pode fornecer uma visão geral eficaz do 
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Exemplo mostrando um tour de bot em um chat entre duas pessoas." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="Exemplo mostra um tour de bot em um chat um-a-um no celular." border="false":::
 
@@ -124,7 +127,7 @@ Em canais e chats em grupo, o tour deve ser aberto em um modal (também conhecid
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Exemplo mostrando um tour de bot em um canal." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="Exemplo mostra um tour de bot em um canal móvel." border="false":::
 
@@ -159,7 +162,7 @@ Você pode usar bots nos seguintes contextos:
 |6 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
 |7 |**Menu de comando**: exibe os comandos padrão do bot (definidos por você).|
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de um bot móvel." border="false":::
 
@@ -233,7 +236,7 @@ Os bots podem fornecer uma correspondência exata de uma consulta ou um grupo de
 
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Exemplo mostrando uma interação de consulta simples com um bot." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="Exemplo mostra uma interação de consulta simples com um bot no celular." border="false":::
 
@@ -250,7 +253,7 @@ Nos exemplos a seguir, o bot responde a cada mensagem com opções para o que po
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Exemplo mostrando uma interação de várias etapas com um bot." border="false":::
 
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="Exemplo mostra uma interação de várias voltas com um bot no celular." border="false":::
 
@@ -271,7 +274,7 @@ Nesse canal, o usuário pode ler a mensagem por meio do bot.
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Exemplo mostrando o usuário observando a mensagem proativa do bot." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 No exemplo a seguir, o usuário recebe uma notificação de que um bot os recebeu em outro canal.
 
@@ -291,7 +294,7 @@ Em aplicativos pessoais, uma guia pode complementar o que seu bot pode fazer. Po
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Exemplo mostrando como uma guia pode ajudar a organizar o conteúdo do bot." border="false":::
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="Exemplo mostra como uma guia pode ajudar a organizar o conteúdo do bot no celular." border="false":::
 
