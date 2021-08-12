@@ -2,12 +2,12 @@
 title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823232"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702142"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -155,7 +155,7 @@ As dimensões de assento se tornam a tela para renderizar o fluxo de vídeo do p
 
 1. Opcionalmente, você pode selecionar  **Compartilhar** no menu suspenso Salvar para criar um link compartilhável para distribuir facilmente suas cenas para outras pessoas usarem. Abrir esse link instala a cena para o usuário e eles podem começar a usá-la.
 
-1. Após a visualização, a cena pode ser enviada como um aplicativo para Teams indo para a seção Aplicativos no Centro de Desenvolvedores Teams. A partir daí, você pode baixar o pacote de aplicativos ou publicar diretamente em sua organização.
+1. Após a visualização, a cena pode ser enviada como um aplicativo para Teams indo para a seção Aplicativos no Centro de Desenvolvedores Teams. A partir daí, você pode baixar o pacote do aplicativo ou publicar diretamente em sua organiation.
 
     >[!NOTE]
     > Esta etapa requer o pacote de aplicativo que é diferente do pacote de cena, para a cena que foi projetada. O pacote de aplicativos criado automaticamente pode ser encontrado na seção **Aplicativos** no Teams Desenvolvedor.

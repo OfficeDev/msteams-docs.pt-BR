@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28f6b0af0854d19826d8f3542bb11ba0e025cbe1
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709549"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586030"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
 
@@ -26,7 +26,7 @@ Ao escolher o escopo do aplicativo, considere o seguinte:
 * Um aplicativo pode existir entre escopos.
 * Os recursos do aplicativo, como extensões de mensagens, seguem os usuários em todos os escopos.
 * Os usuários geralmente não podem adicionar aplicativos a Teams ou canais.
-* Os convidados podem acessar o conteúdo exposto em Teams ou canais.
+* Os usuários convidados podem acessar o conteúdo exposto em Teams ou canais.
 
 Você pode escolher entre escopo pessoal e escopo de equipe ou canal para seu aplicativo, dependendo do seguinte:
 
@@ -104,4 +104,4 @@ Dito isso, os melhores aplicativos geralmente combinam vários recursos, criando
 
 ## <a name="see-also"></a>Confira também
 
-[Criar seu primeiro Microsoft Teams app](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
