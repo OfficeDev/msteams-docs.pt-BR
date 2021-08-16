@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708668"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345273"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -19,7 +19,7 @@ ms.locfileid: "57708668"
 O Stage View é um novo componente de interface do usuário (UI), que permite renderizar o conteúdo que é aberto em tela inteira em Teams e fixado como uma guia.
  
 > [!NOTE]
-> Atualmente, Teams clientes móveis não fazem nenhum link de guias de suporte para desfraldamento e Exibição de Estágio. Os clientes móveis usam `websiteUrl` o atributo fornecido pelo desenvolvedor para abrir a página no navegador da Web do dispositivo.
+> No momento, Teams clientes móveis não suportam guias link desfraldamento e Exibição de Estágio. Os clientes móveis usam `websiteUrl` o atributo fornecido pelo desenvolvedor para abrir a página no navegador da Web do dispositivo.
 
 ## <a name="stage-view"></a>Exibição de estágio
 
@@ -131,11 +131,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | Cadeia de Caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
+| `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
+| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="see-also"></a>Confira também
 

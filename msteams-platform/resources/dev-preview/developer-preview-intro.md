@@ -4,12 +4,12 @@ description: Descreve os recursos na Visualização pública do desenvolvedor Mi
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Recursos de desenvolvedor de visualização do teams
-ms.openlocfilehash: ddf935279d5298caa032df7f109369bdc4b798ef51206f5cc688846061fd6720
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1dc719ae9ead4ef7c7519925b79ca62859ada903
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703958"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345555"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Visualização do desenvolvedor público para Microsoft Teams
 
@@ -52,6 +52,5 @@ Para habilitar a visualização do desenvolvedor público em um cliente móvel, 
 
 Use o mesmo item de menu em Sobre → visualização do desenvolvedor e clique nele para a desativar.
 
-## <a name="features-available-in-developer-preview"></a>Recursos disponíveis na visualização do desenvolvedor
 
-Para ver uma lista completa dos recursos atualmente habilitados na visualização do desenvolvedor, consulte: [Recursos na visualização do desenvolvedor público.](../../resources/dev-preview/developer-preview-features.md)
+

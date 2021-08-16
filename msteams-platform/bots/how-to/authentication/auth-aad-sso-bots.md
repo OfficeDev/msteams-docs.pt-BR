@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f1d9a905ffb8239ecd3398e7db8ee593c6cbfba7
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709598"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345659"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
@@ -303,4 +303,4 @@ Abra [Teams exemplo de auth](https://github.com/microsoft/BotBuilder-Samples/tre
 ## <a name="code-sample"></a>Exemplo de código
 |**Nome do exemplo** | **Descrição** |**.NET** | 
 |----------------|-----------------|--------------|
-|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

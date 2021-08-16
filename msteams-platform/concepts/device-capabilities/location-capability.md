@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 94eb8735092f97f35a03b7b19eee9e20c75eaaac7463d1869c4c2718d55ef3bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345652"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
 
@@ -89,7 +89,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
@@ -106,4 +106,4 @@ Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela 
 
 * [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar o código de QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
-* [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)
+* [Integrar o Se picker de pessoas no Teams](people-picker-capability.md)

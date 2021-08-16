@@ -4,12 +4,12 @@ description: Limitação de taxas e práticas recomendadas Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705605"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345590"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -63,20 +63,23 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public bool IsTransient(Exception ex)
-        {
-            if (ex.Message.Contains("429"))
-                return true;
+        public static bool IsTransient(Exception ex)
+          {
+              if (ex.Message.Contains("429"))
+                  return true;
 
-            var httpOperationException = ex as HttpOperationException;
-            if (httpOperationException != null)
-            {
-                return httpOperationException.Response != null &&
-                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
-            }
-
-            return false;
-        }
+              HttpResponseMessageWrapper? response = null;
+              if (ex is HttpOperationException httpOperationException)
+              {
+                  response = httpOperationException.Response;
+              }
+              else
+              if (ex is ErrorResponseException errorResponseException)
+              {
+                  response = errorResponseException.Response;
+              }
+              return response != null && transientErrorStatusCodes.Contains((int)response.StatusCode);
+          }
     }
 ```
 
@@ -128,19 +131,19 @@ A tabela a seguir fornece os limites por bot por thread:
 
 | Cenário | Período de tempo em segundos | Operações máximas permitidas |
 | --- | --- | --- |
-| Enviar para conversa | 1 | 7  |
+| Enviar para conversa | 1  | 7  |
 | Enviar para conversa | 2 | 8  |
 | Enviar para conversa | 30 | 60 |
 | Enviar para conversa | 3600 | 1800 |
-| Criar conversa | 1 | 7  |
+| Criar conversa | 1  | 7  |
 | Criar conversa | 2 | 8  |
 | Criar conversa | 30 | 60 |
 | Criar conversa | 3600 | 1800 |
-| Obter membros da conversa| 1 | 14  |
+| Obter membros da conversa| 1  | 14  |
 | Obter membros da conversa| 2 | 16  |
 | Obter membros da conversa| 30 | 120 |
 | Obter membros da conversa| 3600 | 3600 |
-| Obter conversas | 1 | 14  |
+| Obter conversas | 1  | 14  |
 | Obter conversas | 2 | 16  |
 | Obter conversas | 30 | 120 |
 | Obter conversas | 3600 | 3600 |
@@ -158,15 +161,15 @@ A tabela a seguir fornece o limite por thread para todos os bots:
 
 | Cenário | Período de tempo em segundos | Operações máximas permitidas |
 | --- | --- | --- |
-| Enviar para conversa | 1 | 14  |
+| Enviar para conversa | 1  | 14  |
 | Enviar para conversa | 2 | 16  |
-| Criar conversa | 1 | 14  |
+| Criar conversa | 1  | 14  |
 | Criar conversa | 2 | 16  |
-| Criar conversa| 1 | 14  |
+| Criar conversa| 1  | 14  |
 | Criar conversa| 2 | 16  |
-| Obter membros da conversa| 1 | 28 |
+| Obter membros da conversa| 1  | 28 |
 | Obter membros da conversa| 2 | 32 |
-| Obter conversas | 1 | 28 |
+| Obter conversas | 1  | 28 |
 | Obter conversas | 2 | 32 |
 
 ## <a name="next-step"></a>Próxima etapa

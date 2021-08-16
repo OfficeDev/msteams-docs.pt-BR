@@ -5,12 +5,12 @@ keywords: getting started node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703177"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345175"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crie seu primeiro aplicativo Microsoft Teams usando o gerador Yeoman
 
@@ -82,7 +82,7 @@ Esta seção orienta você pelas etapas para gerar seu projeto.
 
     ![seleção de item](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Responda ao próximo conjunto de perguntas de acompanhamento que aparecem com base nos itens selecionados na Etapa 2.
+1. Responda ao próximo conjunto de perguntas de acompanhamento que aparecem com base nos itens selecionados na Etapa 3.
 1. Insira uma URL para o local onde você hospedará sua solução. 
 
    > [!NOTE]

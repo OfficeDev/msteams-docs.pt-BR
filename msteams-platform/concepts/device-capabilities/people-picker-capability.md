@@ -1,35 +1,35 @@
 ---
-title: Funcionalidade Integrar Seletor de Pessoas
+title: Integrar o Se picker de pessoas
 author: Rajeshwari-v
-description: Como usar Teams SDK do cliente JavaScript para integrar o recurso de Selador de Pessoas
+description: Como usar Teams SDK do cliente JavaScript para integrar o controle People Picker
 keywords: controle do se picker de pessoas
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702778"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345287"
 ---
-# <a name="integrate-people-picker-capability"></a>Funcionalidade Integrar Seletor de Pessoas 
+# <a name="integrate-people-picker"></a>Integrar o Se picker de pessoas  
 
 O Seletor de Pessoas é um controle para pesquisar e selecionar pessoas. Esse é um recurso nativo disponível na Teams plataforma. Você pode integrar Teams controle de entrada nativo do People Picker com seus aplicativos Web. Você pode selecionar entre uma seleção única ou várias e configurações, como limitar a pesquisa em um chat, canais ou em toda a organização.
 
-Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece API para integrar o recurso `selectPeople` People Picker no seu aplicativo Web. 
+Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece API para integrar o `selectPeople` Selador de Pessoas ao seu aplicativo Web. 
 
-## <a name="advantages-of-integrating-people-picker-capability"></a>Vantagens da integração da funcionalidade do Se picker de pessoas
+## <a name="advantages-of-integrating-the-native-people-picker"></a>Vantagens de integrar o Selador de Pessoas nativos 
 
 * O controle People Picker funciona em todas as Teams, como módulo de tarefa, chat, canal, guia de reunião e aplicativo pessoal.
 * Esse controle permite que você pesquise e selecione usuários em um chat, canal ou toda a organização.
-*  A funcionalidade People Picker ajuda com cenários que envolvem atribuição de tarefas, marcação e notificação de um usuário. 
+* O People Picker ajuda com cenários que envolvem atribuição de tarefas, marcação, notificação de um usuário. 
 * Você pode usar esse controle prontamente disponível em seu aplicativo Web. Economiza o esforço e o tempo significativamente para criar esse controle por conta própria.
 
 Você deve chamar a `selectPeople` API para integrar o controle Se picker de pessoas em seu Teams app. Para uma integração eficaz, você deve ter uma compreensão do [trecho de código](#code-snippet) para chamar a API. É importante se familiarizar com os erros de resposta [da API](#error-handling) para lidar com os erros em seu aplicativo Web.
 
 > [!NOTE] 
-> Atualmente, o Microsoft Teams para o recurso People Picker está disponível apenas para clientes móveis.
+> Atualmente, o Microsoft Teams suporte para o People Picker está disponível apenas para clientes móveis.
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -44,14 +44,14 @@ A `selectPeople` API acompanha as seguintes configurações de entrada:
 
 |Parâmetro Configuration|Tipo|Descrição| Valor padrão|
 |-----|------|--------------|------|
-|`title`| Cadeia de Caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
-|`setSelected`|Cadeia de Caracteres| É um parâmetro opcional. Você deve passar as IDs do AAD das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
-|`openOrgWideSearchInChatOrChannel`|Booliano | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |Falso|
-|`singleSelect`|Booliano|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |Falso|
+|`title`| Cadeia de caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
+|`setSelected`|Cadeia de caracteres| É um parâmetro opcional. Você deve passar as IDs do AAD das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
+|`openOrgWideSearchInChatOrChannel`|Boolean | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |Falso|
+|`singleSelect`|Boolean|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |Falso|
 
-A imagem a seguir mostra a experiência do recurso People Picker em um aplicativo Web de exemplo:
+A imagem a seguir mostra a experiência do People Picker em um aplicativo Web de exemplo:
 
-![Experiência do aplicativo Web do recurso People Picker](../../assets/images/tabs/people-picker-control-capability.png)
+![Experiência do aplicativo Web do Se picker de pessoas](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### <a name="code-snippet"></a>Trecho de código
 
@@ -78,7 +78,7 @@ A imagem a seguir mostra a experiência do recurso People Picker em um aplicativ
   });
 ```
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com os erros adequadamente em seu aplicativo Web. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 

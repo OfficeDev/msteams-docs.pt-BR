@@ -29,7 +29,7 @@ A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necess�
 
 Em sua janela de terminal:
 
-1. Executar `teamsfx provision` .
+1. Execute `teamsfx provision`.
 
    ``` bash
    teamsfx provision
@@ -40,7 +40,7 @@ Em sua janela de terminal:
    > [!NOTE]
    > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
 
-1. Executar `teamsfx deploy` .
+1. Execute `teamsfx deploy`.
 
    ``` bash
    teamsfx deploy

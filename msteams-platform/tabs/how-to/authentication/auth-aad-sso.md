@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 localization_priority: Normal
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34d98707313dea011a072fa77cc0dfc1b03b2a83
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701889"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345666"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -159,7 +159,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 Quando você chama - e o consentimento adicional do usuário é necessário para permissões no nível do usuário, uma caixa de diálogo é mostrada ao usuário para `getAuthToken` conceder consentimento adicional.
 
-Depois de receber o token de acesso no retorno de chamada de sucesso, você pode decodificar o token de acesso para exibir as declarações associadas a esse token. Opcionalmente, você pode copiar e colar manualmente o token de acesso em uma ferramenta, como jwt.ms [inspecionar](https://jwt.ms/) seu conteúdo. Se você não estiver recebendo o UPN no token de acesso retornado, poderá adicioná-lo como uma [declaração opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD.
+Depois de receber o token de acesso no retorno de chamada de sucesso, você pode decodificar o token de acesso para exibir as declarações associadas a esse token. Opcionalmente, você pode copiar e colar manualmente o token de acesso em uma ferramenta, como jwt.ms [inspecionar](https://jwt.ms/) seu conteúdo. Se você não estiver recebendo o UPN no token de acesso retornado, poderá adicioná-lo como uma [declaração opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD. Para obter mais informações, consulte [tokens de acesso](/azure/active-directory/develop/access-tokens).
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -169,7 +169,7 @@ Depois de receber o token de acesso no retorno de chamada de sucesso, você pode
 
 |**Nome do exemplo**|**Descrição**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Guia SSO |Microsoft Teams exemplo de aplicativo para guias do Azure AD SSO| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Guia SSO |Microsoft Teams exemplo de aplicativo para guias do Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 

@@ -6,12 +6,12 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: ab346c9bf3a2359ce33a5ec73b743d9b340a71b3c27b9555a6978a00c3ca1e8f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 02332ad1f0805bfc4972333086e48552761a48a8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702764"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345252"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
 
@@ -72,7 +72,7 @@ A imagem a seguir mostra a experiência do aplicativo Web da capacidade de QR ou
 
 ![experiência do aplicativo web para o recurso de scanner de código de barras ou qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
@@ -111,5 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar recursos de localização Teams](location-capability.md)
-* [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)
+* [Integrar o Se picker de pessoas no Teams](people-picker-capability.md)
 

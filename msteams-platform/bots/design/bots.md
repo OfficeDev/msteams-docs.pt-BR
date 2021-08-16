@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea0392868b06653657beff60b157070eaef7f4ba
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709633"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345645"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -156,7 +156,7 @@ Você pode usar bots nos seguintes contextos:
 |----------|-----------|
 |1|**Ícone e nome do aplicativo**|
 |2|**Guia de chat**: abre o espaço para falar com o bot (somente em aplicativos pessoais).|
-|3|**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
+|3 |**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
 |4 |**Guia Sobre**: exibe informações básicas sobre o aplicativo.|
 |5 |**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
 |6 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
@@ -170,7 +170,7 @@ Você pode usar bots nos seguintes contextos:
 |----------|-----------|
 |1|**Ícone e nome do aplicativo**|
 |2|**Guia de chat**: abre o espaço para falar com o bot (somente em aplicativos pessoais).|
-|3|**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
+|3 |**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
 |4 |**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
 |5 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
 

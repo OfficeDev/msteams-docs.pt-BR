@@ -5,18 +5,21 @@ ms.topic: conceptual
 keywords: desenvolvimento de bots do teams
 localization_priority: Normal
 ms.date: 05/20/2018
-ms.openlocfilehash: 674576efccb2916b8a82ae27310d8fe49909a782
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dd32439c74daf55c89d0e34614a073a36a5ffa1e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566751"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345680"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Adicionar bots a Microsoft Teams aplicativos
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 Crie e conecte bots inteligentes para interagir com Microsoft Teams usuários naturalmente por meio do chat. Ou forneça um bot simples baseado em comandos, a ser usado como sua interface de "linha de comando" para sua experiência Teams aplicativo mais ampla. Você pode fazer um bot somente de notificação, que pode enviar informações relevantes para seus usuários diretamente para eles em um canal ou mensagem direta. Você pode até mesmo trazer seu bot baseado em Bot Framework existente e adicionar Teams suporte específico para fazer sua experiência brilhar.
+
+> [!IMPORTANT]
+> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).
 
 ![Exemplo de um bot ajudando um usuário](~/assets/images/bot_example.png)
 

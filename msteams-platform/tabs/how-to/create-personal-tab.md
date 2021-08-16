@@ -5,12 +5,12 @@ description: Um guia de início rápido para criar uma guia pessoal com o Gerado
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 47ed3027f936366964871733e78c7a43851ffb99
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179821"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345673"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -42,13 +42,13 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
 - [Node.js/npm](https://nodejs.org/en/). Use a versão LTS mais recente. O nó Gerenciador de Pacotes (npm) é instalado em seu sistema com a instalação de Node.js.
 
-- Depois de instalar o Node.js, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte no prompt de comando:
+- Depois de instalar o Node.js, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte comando no prompt de comando:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Instale o Microsoft Teams aplicativos inserindo o seguinte no prompt de comando:
+- Instale o Microsoft Teams aplicativos inserindo o seguinte comando no prompt de comando:
 
     ```bash
     npm install generator-teams --global
@@ -72,7 +72,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Qual é o nome da solução?**
 
-    Esse é o nome do seu projeto. Você pode aceitar o nome sugerido selecionando a **tecla Enter.**
+    O nome da solução é o nome do projeto. Você pode aceitar o nome sugerido selecionando **Enter**.
 
     **Onde você deseja colocar os arquivos?**
 
@@ -80,7 +80,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Título do seu projeto Microsoft Teams aplicativo?**
 
-    Esse é o nome do pacote do aplicativo e será usado no manifesto e na descrição do aplicativo. Insira um título ou selecione **Enter** para aceitar o nome padrão.
+    O título é o nome do pacote do aplicativo e é usado no manifesto e na descrição do aplicativo. Insira um título ou selecione **Enter** para aceitar o nome padrão.
 
     **Seu nome (empresa) ? (máx. 32 caracteres)**
 
@@ -96,7 +96,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Insira sua ID do Microsoft Partner, se você tiver uma? (Deixe em branco para ignorar)**
 
-    Esse campo não é obrigatório e só deve ser usado se você já faz parte da [Rede de Parceiros da Microsoft.](https://partner.microsoft.com)
+    Esse campo não é obrigatório e deve ser usado somente se você já faz parte da [Rede de Parceiros da Microsoft.](https://partner.microsoft.com)
 
     **O que você deseja adicionar ao seu projeto?**
 
@@ -116,7 +116,11 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Você gostaria de incluir a estrutura de teste e testes iniciais? (y/N)**
 
-    Escolha **não** incluir uma estrutura de teste para este projeto. O padrão é sim, digite **n**.
+    Escolha **não** incluir uma estrutura de teste para este projeto. O padrão é não, digite **n**.
+
+    **Você gostaria de incluir suporte ao ESLint? (y/N)**
+
+    Escolha não incluir suporte ao ESLint. O padrão é não, digite **n**.
 
     **Você gostaria de usar aplicativos do Azure Insights para telemetria? (y/N)**
 
@@ -143,7 +147,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
 **Para adicionar uma guia pessoal a esse aplicativo, crie uma página de conteúdo e atualize arquivos existentes**
 
-1. No editor de código, crie um novo arquivo HTML, **personal.html** e adicione a seguinte marcação:
+1. No editor de código, crie um novo arquivo HTML **personal.html** e adicione a seguinte marcação:
 
     ```html
     <!DOCTYPE html>
@@ -235,13 +239,13 @@ gulp build
 
 #### <a name="run-your-application-in-localhost"></a>Executar seu aplicativo no localhost
 
-1. Inicie um servidor Web local inserindo o seguinte no prompt de comando:
+1. Inicie um servidor Web local inserindo o seguinte comando no prompt de comando:
 
     ```bash
     gulp serve
     ```
 
-1. Insira no navegador, substitua pelo nome da guia e veja a home page do aplicativo, conforme `http://localhost:3007/<yourDefaultAppNameTab>/` mostrado na imagem a **<yourDefaultAppNameTab>** seguir:
+1. Insira no navegador, substitua pelo nome da guia e veja a home page do aplicativo, conforme `http://localhost:3007/<yourDefaultAppNameTab>/` mostrado na imagem a `**<yourDefaultAppNameTab>**` seguir:
 
     ![captura de tela da home page](~/assets/images/tab-images/homePage.png)
 
@@ -251,11 +255,11 @@ gulp build
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia seja disponibilizado na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Você deve publicar sua guia em uma URL pública ou usar um proxy que exponha sua porta local a uma URL voltada para a Internet.
+Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia está disponível na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Publique sua guia em uma URL pública ou use um proxy que exponha sua porta local a uma URL voltada para a Internet.
 
-Para testar sua extensão de tabulação, você pode usar [ngrok](https://ngrok.com/docs), que é integrado a esse aplicativo. O Ngrok é uma ferramenta de software de proxy reverso que cria um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Os pontos de extremidade da Web do seu servidor estão disponíveis durante a sessão atual em seu computador. Quando o computador é desligado ou vai para o sono, o serviço não está mais disponível.
+Para testar sua extensão de tabulação, use [ngrok](https://ngrok.com/docs), que é integrado a esse aplicativo. Ngrok é uma ferramenta de software de proxy reverso. O Ngrok cria um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Os pontos de extremidade da Web do seu servidor estão disponíveis durante a sessão atual em seu computador. Quando o computador é desligado ou vai para o sono, o serviço não está mais disponível.
 
-No prompt de comando, saia do localhost e insira o seguinte:
+No prompt de comando, saia do localhost e insira o seguinte comando:
 
 ```bash
 gulp ngrok-serve
@@ -268,7 +272,7 @@ gulp ngrok-serve
 
 **Para carregar seu aplicativo para Teams**
 
-1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web,](https://teams.microsoft.com) poderá inspecionar seu código front-end usando as ferramentas de desenvolvedor [do navegador.](~/tabs/how-to/developer-tools.md)
+1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web,](https://teams.microsoft.com)poderá inspecionar seu código front-end usando as ferramentas de desenvolvedor [do navegador.](~/tabs/how-to/developer-tools.md)
 1. No canto inferior esquerdo, selecione **Aplicativos**.
 1. No canto inferior esquerdo, escolha **Upload um aplicativo personalizado.**
 1. Vá para o diretório do projeto, navegue até a pasta **./package,** selecione a pasta zip e escolha **Abrir**.
@@ -281,13 +285,13 @@ gulp ngrok-serve
 
 ### <a name="view-your-personal-tab"></a>Exibir sua guia pessoal
 
-Na barra de navegação localizada à esquerda no Teams, selecione as releições &#x25CF;&#x25CF;&#x25CF; e escolha seu aplicativo na lista.
+Na barra de navegação à esquerda no Teams, selecione &#x25CF;&#x25CF;&#x25CF; e escolha seu aplicativo.
 
 # <a name="aspnet-core"></a>[ASP.NET Core](#tab/aspnetcore)
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Criar uma guia pessoal personalizada usando ASP.NET Core
 
-Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core Páginas de lâmina de corte. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
+Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core Páginas de lâmina de corte. [O App Studio](~/concepts/build-and-test/app-studio-overview.md) também é usado para concluir o manifesto do aplicativo e implantar sua guia para Teams.
 
 ### <a name="prerequisites-for-personal-tab"></a>Pré-requisitos para guia pessoal
 
@@ -302,9 +306,9 @@ Você deve ter uma compreensão dos seguintes pré-requisitos:
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão Microsoft Visual Studio Community [versão](https://visualstudio.microsoft.com/downloads) mais recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver uma Visual Studio, poderá baixar e instalar a versão Microsoft Visual Studio Community [versão](https://visualstudio.microsoft.com/downloads) mais recente gratuitamente.
 
-- A [ferramenta proxy reverso ngrok.](https://ngrok.com) Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
+- A [ferramenta proxy reverso ngrok.](https://ngrok.com) Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Você pode [baixar ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obter o código-fonte
 
@@ -362,7 +366,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 - Um **manifest.json** que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um `contentUrl` <iframe \> e o renderiza em sua guia.
+Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um `contentUrl` <iframe \> e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -390,7 +394,7 @@ Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Para que sua guia seja exibida Teams, você deve incluir o **SDK** do cliente JavaScript Microsoft Teams e incluir uma chamada depois que a página `microsoftTeams.initialize()` for carregada. É assim que sua guia e o aplicativo Teams se comunicam:
+Para que sua guia seja exibida Teams, você deve incluir o **SDK** do cliente JavaScript Microsoft Teams e incluir uma chamada depois que a página `microsoftTeams.initialize()` for carregada. Sua guia e o aplicativo Teams se comunicam dessa maneira:
 
 Vá para **a pasta Shared,** **abra _Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
 
@@ -407,7 +411,7 @@ Certifique-se de salvar **seu PersonalTab.cshtml atualizado.**
 
 ### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Estabeleça um túnel seguro para sua guia para Teams
 
-Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia seja disponibilizado na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Você deve publicar sua guia em uma URL pública ou usar um proxy que exponha sua porta local a uma URL voltada para a Internet.
+Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia está disponível na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Publique sua guia em uma URL pública ou use um proxy que exponha sua porta local a uma URL voltada para a Internet.
 
 Para testar sua guia, use [ngrok](https://ngrok.com/docs). Os pontos de extremidade da Web do seu servidor estão disponíveis enquanto o ngrok está em execução no computador. Na versão gratuita do ngrok, se você fechar o ngrok, as URLs serão diferentes na próxima vez em que você a iniciar.
 
@@ -455,9 +459,9 @@ Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **
 
 Depois de carregar seu pacote de aplicativos no App Studio, você deve configurá-lo.
 
-Selecione o azulejo para sua guia recém-importada no painel direito da página de boas-vindas do editor de manifesto.
+Selecione o azulejo para sua guia recém-importada da página de boas-vindas do editor de manifesto.
 
-Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foi fornecida pelo seumanifest.js **em,** mas há campos que você deve atualizar.
+Há uma lista de etapas no lado esquerdo do editor de Manifesto. No lado direito do editor de manifesto, há uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foi fornecida pelo seumanifest.js **em,** mas há campos que você deve atualizar.
 
 ##### <a name="details-app-details"></a>Detalhes: Detalhes do aplicativo
 
@@ -518,7 +522,7 @@ Na seção **Domínios e** permissões, **domínios** de suas guias devem conter
 
 ### <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Criar uma guia pessoal personalizada com ASP.NET Core MVC
 
-Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core MVC. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
+Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core MVC. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para concluir o manifesto do aplicativo e implantar sua guia para Teams.
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>Pré-requisitos para guia pessoal com ASP.NET Core MVC
 
@@ -531,9 +535,9 @@ Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core MVC. [O
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão Microsoft Visual Studio Community [versão](https://visualstudio.microsoft.com/downloads) mais recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver uma Visual Studio, poderá baixar e instalar a versão Microsoft Visual Studio Community [versão](https://visualstudio.microsoft.com/downloads) mais recente gratuitamente.
 
-- A [ferramenta proxy reverso ngrok.](https://ngrok.com) Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
+- A [ferramenta proxy reverso ngrok.](https://ngrok.com) Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Você pode [baixar ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obter o código-fonte
 
@@ -586,7 +590,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 * Um **manifest.json** que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e `contentUrl` o renderiza em sua guia.
+Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e `contentUrl` o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -616,7 +620,7 @@ Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito
 
 #### <a name="views"></a>Modos de exibição
 
-Estas são as diferentes exibições em ASP.NET Core MVC:
+Essas exibições são as diferentes exibições ASP.NET Core MVC:
 
 * Home: ASP.NET Core trata arquivos chamados **Index** como o padrão ou home page do site. Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** é exibida como a home page do aplicativo.
 

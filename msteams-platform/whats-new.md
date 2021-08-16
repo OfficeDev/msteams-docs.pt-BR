@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: e2ab4728b765cf93f069f9a26679e5ea641a8ecafe0819666a0abacc1714572d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 53ffa86fae41cc35c080a92067cfcb6c59f9657e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706886"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345743"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|08/12/2021|Criar guias com Cartões Adaptáveis|[Criar guias com Cartões Adaptáveis](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| As guias não terão mais margens ao redor de suas experiências.  | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
 |07/08/2021|A extensibilidade do aplicativo de reunião está disponível no celular. Os clientes móveis suportam aplicativos durante a reunião. |[Extensibilidade do aplicativo de reunião](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Funcionalidade Integrar Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|  
@@ -169,8 +170,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 | -------- | --------- | ------------------ |
 |06/23/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|  
-|05/26/2021|Criar guias com Cartões Adaptáveis|[Guias de criação](tabs/how-to/build-adaptive-card-tabs.md)|
+|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
