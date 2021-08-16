@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: 97db37f4fd2831647f891a970479a03ddcc160c921098efc82aa82aec9e297c9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: abe1b96d6761887248d4e34db466a18cbf71905e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707306"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345694"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -241,20 +241,20 @@ No caso de uma chamada de vídeo, o cliente solicitará a confirmação e ativar
 | Link profundo | Formatar | Exemplo |
 |-----------|--------|---------|
 | Fazer uma chamada de áudio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Fazer uma chamada de áudio e vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|Fazer uma chamada de áudio e vídeo com uma fonte de parâmetro opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Fazer uma chamada de áudio e vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; comVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
+|Fazer uma chamada de áudio e vídeo com uma fonte de parâmetro opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; comVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
 | Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; número de telefone&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 A seguir estão os parâmetros de consulta:
 * `users`: a lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID do Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4: &lt; phonenumber &gt; .
-* `Withvideo`: Este é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. A configuração desse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela Teams de notificação de chamada. 
+* `withVideo`: Este é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. A configuração desse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela Teams de notificação de chamada. 
 * `Source`: Este é um parâmetro opcional, que informa sobre a origem do deeplink.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome do exemplo | Descrição | C# |Node.js|
+| Nome do exemplo | Descrição | C # |Node.js|
 |-------------|-------------|------|----|
-|ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 

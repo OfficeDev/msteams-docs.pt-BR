@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f7fa2ab75aa81740d1e5a3b9680c9290a57d296e346262044094965750f2d5ae
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bafaa54bd4c7b01fcdebae48ccf9a88adfe03a3b
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707441"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345708"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -81,7 +81,7 @@ Para guias de canal ou grupo, você também pode criar uma página de configura�
 Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por aplicativo.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Ferramentas que você pode usar para criar guias
-* [Teams Toolkit código visual stuido](../toolkit/visual-studio-code-overview.md)
+* [Kit de ferramentas do Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit visual stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>Confira também

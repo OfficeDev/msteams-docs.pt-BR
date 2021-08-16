@@ -6,12 +6,12 @@ keywords: mídia de permissões nativas de dispositivo de recursos de microfone 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704958"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345729"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
@@ -76,7 +76,7 @@ A imagem a seguir mostra a experiência do aplicativo Web da `selectMedia` API p
 
 ![experiência do aplicativo web para funcionalidade de microfone](../../assets/images/tabs/microphone-capability.png)
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
@@ -254,5 +254,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](location-capability.md)
-* [Integrar a funcionalidade do Se picker de pessoas no Teams](people-picker-capability.md)
+* [Integrar o Se picker de pessoas no Teams](people-picker-capability.md)
 

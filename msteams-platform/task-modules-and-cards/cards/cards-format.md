@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706102"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345715"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -41,7 +41,7 @@ A formatação é diferente entre a área de trabalho e as versões móveis do T
 
  A tabela a seguir fornece os estilos com suporte `Textblock` para , `Fact.Title` e `Fact.Value` :
 
-| Style | Exemplo | Markdown |
+| Estilo | Exemplo | Markdown |
 | --- | --- | --- |
 | Negrito | **Negrito** | ```**Bold**``` |
 | Itálico | _Itálico_ | ```_Italic_``` |
@@ -293,7 +293,7 @@ Na exibição de estágio, os usuários podem ampliar e diminuir o zoom da image
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 
-| Style | Exemplo | Markdown |
+| Estilo | Exemplo | Markdown |
 | --- | --- | --- |
 | Negrito | **text** | `**text**` |
 | Itálico | *text* | `*text*` |
@@ -391,7 +391,7 @@ A formatação é diferente entre a área de trabalho e as versões móveis do T
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 
-| Style | Exemplo | HTML |
+| Estilo | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
@@ -481,7 +481,7 @@ O código a seguir mostra um exemplo de formatação para cartões de conector H
 
 As marcas HTML são suportadas para cartões simples, como cartões de herói e miniatura. Não há suporte para markdown.
 
-| Style | Exemplo | HTML |
+| Estilo | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
@@ -527,4 +527,4 @@ Você pode testar a formatação em seus próprios cartões modificando esse có
 ## <a name="see-also"></a>Confira também
 
 * [Ações do cartão](./cards-actions.md)
-* [Módulos de tarefas](~/task-modules-and-cards/cards/cards-format.md)
+* [Módulos de tarefa](~/task-modules-and-cards/cards/cards-format.md)
