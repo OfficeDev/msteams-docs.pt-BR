@@ -4,12 +4,12 @@ description: Como adicionar o botão Compartilhar ao Teams incorporado em seu si
 ms.topic: reference
 localization_priority: Normal
 keywords: Compartilhar Teams share-to-Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707707"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358619"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
@@ -31,7 +31,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. Adicione um elemento HTML em sua página da Web com o atributo de classe e `teams-share-button` o link para compartilhar no `data-href` atributo.
+1. Adicione um elemento HTML em sua página da Web com o `teams-share-button` atributo class e o link para compartilhar no `data-href` atributo.
 
     ```html
     <div
@@ -53,7 +53,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
       data-icon-px-size="64">
     </div>
     ```
-1. Se o link compartilhado exigir autenticação do usuário e a visualização de URL do link a ser compartilhado não renderizar bem no Teams, você poderá desabilitar a visualização da URL adicionando o atributo `data-preview` definido como `false` .
+1. Se o link compartilhado exigir autenticação do usuário e a visualização da URL do link a ser compartilhado não renderizar bem no Teams, você poderá desabilitar a visualização da URL adicionando o `data-preview` atributo definido como `false` .
 
     ```html
     <div
@@ -63,7 +63,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
     </div>
     ```
 
-1. Se sua página renderizar dinamicamente o conteúdo, você poderá usar o método para forçar o botão Compartilhar a renderizar no `shareToMicrosoftTeams.renderButtons()` local apropriado no pipeline. 
+1. Se sua página renderizar dinamicamente o conteúdo, você poderá usar o método para forçar `shareToMicrosoftTeams.renderButtons()` **o Compartilhamento** a renderizar no local apropriado no pipeline.
 
 ## <a name="craft-your-website-preview"></a>Criar a visualização do site
 
@@ -82,7 +82,7 @@ A tabela a seguir descreve as marcas necessárias:
 |Descrição|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Imagem de miniatura| none. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Você pode usar as versões padrão html ou a versão Graph Open.
+Você pode usar as versões padrão HTML ou a versão Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Compartilhar com Teams para Educação
 
@@ -94,12 +94,12 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 
 | Propriedade | Atributo HTML | Tipo | Padrão | Descrição |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | n/d | O href do conteúdo a ser compartilhá-lo. |
+| href | `data-href` | cadeia de caracteres | n/d | O href do conteúdo a ser compartilhá-lo. |
 | visualização | `data-preview` | booleano (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
 | iconPxSize | `data-icon-px-size` | number (como uma cadeia de caracteres) | `32` | O tamanho em pixels do botão Compartilhar para Teams renderizar. |
-| msgText | `data-msg-text` | string | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
-| assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
-| assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" de atribuições. O número máximo de caracteres é 50. |
+| msgText | `data-msg-text` | cadeia de caracteres | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
+| assignInstr | `data-assign-instr` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
+| assignTitle | `data-assign-title` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
 
 ### <a name="methods"></a>Métodos
 
