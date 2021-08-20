@@ -4,16 +4,19 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 53ffa86fae41cc35c080a92067cfcb6c59f9657e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d8b92b2e534d868dd475356f1b765626d80eb146
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345743"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398652"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
 Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e na visualização do desenvolvedor.
+
+> [!IMPORTANT]
+> Agora você pode obter as atualizações mais recentes Teams plataforma assinando o feed de download RSS [ ![ feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Para obter mais informações, consulte [configure RSS feed](#get-latest-updates).
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -186,3 +189,20 @@ Junto com novos recursos, também fornecemos modelos de aplicativos prontos para
 ## <a name="submit-your-feedback"></a>Enviar seus comentários
 
 Incentivamos Teams desenvolvedores a fazer perguntas, bugs de arquivo, enviar solicitações de recursos e fazer contribuições. Você pode enviar comentários por meio de qualquer [um dos canais disponíveis.](feedback.md)
+
+## <a name="get-latest-updates"></a>Obter atualizações mais recentes
+
+Você pode obter as atualizações mais recentes Teams plataforma configurando para o [RSS feed](/microsoftteams/platform/feed.atom).
+
+**Para configurar feed RSS**
+
+1. Abra o Microsoft Teams.
+1. Selecione **Teams** no painel esquerdo.
+1. Selecione um canal na equipe.
+1. Selecione releições &#x25CF;&#x25CF;&#x25CF; e, na lista suspenso, selecione **Conectores**.
+1. Pesquise **RSS** na caixa de diálogo **Conectores** que aparece.
+1. Selecione **Configurar**.
+1. Insira um nome em **Enter a name for your RSS connection.**.
+1. Insira **https://aka.ms/TeamsPlatformUpdates** Endereço **para RSS feed**.
+1. Selecione a frequência do feed na lista lista suspenso de frequência **digest.**
+1. Selecione **Salvar**.

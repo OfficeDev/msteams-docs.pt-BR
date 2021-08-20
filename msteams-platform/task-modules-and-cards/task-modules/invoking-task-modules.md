@@ -4,12 +4,12 @@ description: Invocar e descartar módulos de tarefa.
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 88544199007b92b2f29d99153cde7bca760a44f3c92c7ce710cdd8db4ebff986
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b58c4445953cc668156745871698679462ce888f
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706636"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398666"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar e ignorar módulos de tarefas
 
@@ -20,9 +20,6 @@ Os módulos de tarefa podem ser invocados de guias, bots ou links profundos. A r
 | JavaScript em uma guia | 1. Use a função SDK do Teams cliente `tasks.startTask()` com uma função de retorno de chamada `submitHandler(err, result)` opcional. <br/><br/> 2. No código do módulo de tarefas, quando o usuário tiver executado as ações, chame a função Teams SDK com um objeto `tasks.submitTask()` `result` como parâmetro. Se um `submitHandler` retorno de chamada foi especificado em , Teams chama como um `tasks.startTask()` `result` parâmetro. Se houve um erro ao invocar , a `tasks.startTask()` função será chamada com uma cadeia de `submitHandler` `err` caracteres. <br/><br/> 3. Você também pode especificar um `completionBotId` ao chamar `teams.startTask()` . Em `result` seguida, o é enviado para o bot. | 1. Chame a função SDK do cliente Teams com um objeto TaskInfo e contenha o JSON para o Cartão Adaptável para mostrar no `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` pop-up do módulo de tarefas. <br/><br/> 2. Se um retorno de chamada foi especificado em , Teams chama-o com uma cadeia de caracteres, se houve um erro ao invocar ou se o usuário fechar o `submitHandler` pop-up do módulo de tarefa usando o X na parte superior `tasks.startTask()` `err` `tasks.startTask()` direita. <br/><br/> 3. Se o usuário pressionar um `Action.Submit` botão, seu `data` objeto será retornado como o valor de `result` . |
 | Botão de cartão bot | 1. Botões de cartão bot, dependendo do tipo de botão, podem invocar módulos de tarefa de duas maneiras, uma URL de link profundo ou enviando uma `task/fetch` mensagem. <br/><br/> 2. Se a ação do botão for o tipo de botão para Cartões Adaptáveis, um evento que seja `type` um HTTP POST será enviado para o `task/fetch` `Action.Submit` `task/fetch invoke` bot. O bot responde ao POST com HTTP 200 e ao corpo da resposta contendo um wrapper ao redor do [objeto TaskInfo](#the-taskinfo-object). Para obter mais informações, consulte [invocando um módulo de tarefa usando `task/fetch` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch). Teams exibe o módulo de tarefa. <br/><br/> 3. Depois que o usuário tiver executado as ações, chame a função Teams SDK com um `tasks.submitTask()` `result` objeto como parâmetro. O bot recebe uma `task/submit invoke` mensagem que contém o `result` objeto. <br/><br/> 4. Você tem três maneiras diferentes de responder à mensagem, não fazendo nada que seja a tarefa concluída com êxito, exibindo uma mensagem para o usuário em uma janela pop-up ou invocando outra janela do módulo de `task/submit` tarefa. Para obter mais informações, [consulte discussão detalhada em `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). | <ul><li> Como botões em cartões de Estrutura de Bot, os botões em Cartões Adaptáveis suportam duas maneiras de invocar módulos de tarefa, urLs de link profundo com botões e `Action.openUrl` `task/fetch` usar `Action.Submit` botões. </li></ul> <br/><br/> <ul><li> Os módulos de tarefa com Cartões Adaptáveis funcionam de forma muito semelhante ao caso HTML ou JavaScript. A principal diferença é que, como não há JavaScript quando você está usando Cartões Adaptáveis, não há como chamar `tasks.submitTask()` . Em vez disso, Teams pega o objeto e o retorna como `data` `Action.Submit` a carga do `task/submit` evento. Para obter mais informações, consulte [flexibilidade de `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). </li></ul> |
 | URL de link profundo <br/>[Sintaxe de URL](#task-module-deep-link-syntax) | 1. Teams invoca o módulo de tarefa que é a URL que aparece dentro do especificado no parâmetro `<iframe>` `url` do link profundo. Não há `submitHandler` retorno de chamada. <br/><br/> 2. Dentro do JavaScript da página no módulo de tarefas, chame para fechar com um objeto como um parâmetro, o mesmo que ao invocá-lo de uma guia ou um botão de cartão `tasks.submitTask()` `result` de bot. No entanto, a lógica de conclusão é ligeiramente diferente. Se sua lógica de conclusão reside no cliente que está se não houver bot, não há retorno de chamada, portanto, qualquer lógica de conclusão deve estar no código que precede a `submitHandler` chamada para `tasks.submitTask()` . Os erros de invocação são relatados apenas por meio do console. Se você tiver um bot, poderá especificar um parâmetro no `completionBotId` link profundo para enviar o objeto por meio de um `result` `task/submit` evento. | 1. Teams invoca o módulo de tarefa que é o corpo do cartão JSON do Cartão Adaptável especificado como um valor codificado por URL do parâmetro `card` do link profundo. <br/><br/> 2. O usuário fecha o módulo de tarefa selecionando o X no canto superior direito do módulo de tarefa ou pressionando `Action.Submit` um botão no cartão. Como não há como chamar, o usuário deve ter um bot para enviar o valor `submitHandler` dos campos Cartão Adaptável. O usuário deve usar o `completionBotId` parâmetro no link profundo para especificar o bot para enviar os dados para o uso de um `task/submit invoke` evento. |
-
-> [!NOTE]
-> Não há suporte para invocar um módulo de tarefa do JavaScript no celular.
 
 A próxima seção especifica o `TaskInfo` objeto que define determinados atributos para um módulo de tarefa.
 
@@ -229,8 +226,8 @@ Microsoft Teams garante que a navegação do teclado funcione corretamente do he
 
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Exemplo de módulo de tarefa bots-V4 | Exemplos para a criação de módulos de tarefa. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Exemplo de módulo de tarefa bots-V4 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="see-also"></a>Confira também
 

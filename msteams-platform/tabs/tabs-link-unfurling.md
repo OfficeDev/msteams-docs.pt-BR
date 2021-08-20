@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345273"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398673"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -136,6 +136,13 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
 | `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
 | `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Nome do exemplo | Descrição | C# |Node.js|
+|-------------|-------------|------|----|
+|Guia no exibição de estágio |Microsoft Teams exemplo de guia para demonstração de guia no exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+    
 
 ## <a name="see-also"></a>Confira também
 

@@ -3,12 +3,12 @@ title: Extensibilidade do aplicativo de reunião
 author: surbhigupta
 description: Compreender a extensibilidade do aplicativo de reunião
 ms.topic: conceptual
-ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345280"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398680"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
 
@@ -32,7 +32,8 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 > Se você tiver integrado uma guia à sua reunião Teams, seu aplicativo deverá seguir o fluxo de autenticação de logom único [(SSO)](../tabs/how-to/authentication/auth-aad-sso.md)para guias .
 
 > [!NOTE]
-> Os aplicativos têm suporte apenas em reuniões agendadas privadas.
+> * As reuniões agendadas privadas só suportam aplicativos.
+> * A opção Adicionar aplicativo para Teams aplicativo de guia de extensão de reunião não é suportada Teams cliente Web.
 
 #### <a name="pre-meeting-app-experience"></a>Experiência do aplicativo de pré-reunião
 
