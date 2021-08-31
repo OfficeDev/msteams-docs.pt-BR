@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorização do teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528940"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822217"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso Teams
 
@@ -45,7 +45,8 @@ O RSC (consentimento específico de recursos) é uma integração de API Microso
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
    }
 ```
@@ -68,7 +69,8 @@ O RSC (consentimento específico de recursos) é uma integração de API Microso
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
    }
 ```
@@ -131,7 +133,7 @@ Execute toda a coleção de permissões para cada chamada de API. As permissões
     2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Verifique todos os códigos de status de resposta para confirmar se as chamadas de API **específicas falharam com um código de status HTTP 403.**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 [API Graph Microsoft e Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

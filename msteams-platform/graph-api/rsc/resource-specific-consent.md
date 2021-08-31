@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528947"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822210"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
@@ -43,6 +43,7 @@ As permissões granulares, Teams RSC específicas definem o que um aplicativo po
 |TeamsTab.ReadWrite.Group|Atualize as guias desta equipe. |
 |TeamsTab.Delete.Group|Excluir as guias dessa equipe. |
 |TeamMember.Read.Group|Obter os membros dessa equipe. |
+|TeamsActivity.Send.Group|Crie novas notificações nos feeds de atividade dos usuários nesta equipe. |
 
 Para obter mais detalhes, consulte permissões de consentimento [específicas do](/graph/permissions-reference#teams-resource-specific-consent-permissions)recurso de equipe .
 
@@ -65,6 +66,7 @@ A tabela a seguir fornece permissões específicas de recursos para um chat:
 | OnlineMeeting.ReadBasic.Chat   | Leia as propriedades básicas, como nome, agendamento, organizador, link de associação e notificações de início/término de uma reunião associada a esse chat. |
 | Calls.AccessMedia.Chat         | Acesse fluxos de mídia em chamadas associadas a esse chat ou reunião.                                    |
 | Calls.JoinGroupCalls.Chat         | Participe de chamadas associadas a esse chat ou reunião.                                    |
+| TeamsActivity.Send.Chat         | Crie novas notificações nos feeds de atividade dos usuários neste chat. |
 
 Para obter mais detalhes, consulte [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
@@ -145,7 +147,7 @@ As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. A
 |Nome| Tipo | Descrição|
 |---|---|---|
 |`id` |Cadeia de caracteres |Sua ID do aplicativo AAD. Para obter mais informações, [consulte register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
-|`resource`|Cadeia de Caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
+|`resource`|Cadeia de caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
 |`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
 
 >
@@ -172,7 +174,8 @@ As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. A
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -196,7 +199,8 @@ As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. A
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
   }
 ```
