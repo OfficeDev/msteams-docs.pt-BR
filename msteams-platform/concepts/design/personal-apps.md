@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705718"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408619"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetar seu aplicativo pessoal para Microsoft Teams
 
@@ -27,37 +27,19 @@ Você pode encontrar diretrizes abrangentes de design de aplicativo pessoal, inc
 
 ## <a name="add-a-personal-app"></a>Adicionar um aplicativo pessoal
 
-Você pode adicionar um aplicativo pessoal do Teams store (AppSource) ou  do flyout do aplicativo selecionando o ícone Mais no lado esquerdo do Teams (mostrado no exemplo a seguir).
+Os usuários podem adicionar um aplicativo pessoal do Teams ou do flyout do aplicativo selecionando o ícone **Mais** no lado esquerdo do Teams (mostrado no exemplo a seguir).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Exemplo mostra como adicionar um aplicativo pessoal do flyout do aplicativo." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Usar um aplicativo pessoal (espaço de trabalho privado)
 
-Com um espaço de trabalho privado, você pode exibir o conteúdo do aplicativo que é significativo para você em um local central sem sair Teams.
+Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplicativo que seja significativo para eles em um local central sem sair Teams.
 
 (Observação de implementação: o espaço de trabalho privado é baseado no [*recurso de guia*](../../build-your-first-app/build-personal-tab.md) pessoal.)
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomia: aplicativo pessoal (espaço de trabalho privado)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|A|**Atribuição do aplicativo**: o logotipo e o nome do aplicativo.|
-|B|**Guias**: fornece navegação para seu aplicativo pessoal.|
-|C|**Exibição pop-out**: empurra o conteúdo do aplicativo de uma janela pai para uma janela filha autônoma.|
-|D|**Mais menu**: inclui opções e informações adicionais do aplicativo. (Você poderia, alternativamente, **Configurações** uma guia.)|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|A|**Guias**: fornece navegação para seu aplicativo pessoal.|
-|1|**iframe**: exibe o conteúdo do aplicativo.|
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
@@ -75,9 +57,25 @@ Com um espaço de trabalho privado, você pode exibir o conteúdo do aplicativo 
 |A|**Guias**: fornece navegação para seu aplicativo pessoal.|
 |1|**webview**: exibe o conteúdo do aplicativo.|
 
----
+#### <a name="desktop"></a>Área de trabalho
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>Projetando com modelos de interface do usuário e componentes avançados
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Atribuição do aplicativo**: o logotipo e o nome do aplicativo.|
+|B|**Guias**: fornece navegação para seu aplicativo pessoal.|
+|C|**Exibição pop-out**: empurra o conteúdo do aplicativo de uma janela pai para uma janela filha autônoma.|
+|D|**Mais menu**: inclui opções e informações adicionais do aplicativo. (Você poderia, alternativamente, **Configurações** uma guia.)|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Guias**: fornece navegação para seu aplicativo pessoal.|
+|1|**iframe**: exibe o conteúdo do aplicativo.|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>Projetar com modelos de interface do usuário e componentes avançados
 
 Use um dos seguintes Teams e componentes para ajudar a projetar sua guia pessoal:
 
@@ -90,21 +88,11 @@ Use um dos seguintes Teams e componentes para ajudar a projetar sua guia pessoal
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
 
-Aplicativos pessoais podem incluir um bot para conversas um-a-um e notificações privadas (por exemplo, quando um colega posta um comentário em sua prancheta). O bot está disponível em uma guia especificada.
+Os aplicativos pessoais podem incluir um bot para conversas um-a-um e notificações privadas (por exemplo, quando um colega posta um comentário na prancheta). Os usuários interagem com o bot em uma guia especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|A|**Guia Bot**: Por exemplo, inclua uma guia **Chat** para acessar as conversas de bot e notificações.|
-|B|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
-|C|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 
@@ -115,11 +103,19 @@ Aplicativos pessoais podem incluir um bot para conversas um-a-um e notificaçõe
 |C|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
 |D|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|A|**Guia Bot**: Por exemplo, inclua uma guia **Chat** para acessar as conversas de bot e notificações.|
+|B|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
+|C|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
 
 ## <a name="manage-a-personal-tab"></a>Gerenciar uma guia pessoal
 
-No lado esquerdo da Teams, os usuários podem clicar com o botão direito do mouse no aplicativo pessoal para fixar, remover e configurar outras opções de aplicativo.
+No lado esquerdo do Teams, os usuários podem clicar com o botão direito do mouse no aplicativo pessoal para fixar, remover e configurar outras opções de aplicativo.
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Exemplo mostra opções para gerenciar um aplicativo pessoal." border="false":::
 

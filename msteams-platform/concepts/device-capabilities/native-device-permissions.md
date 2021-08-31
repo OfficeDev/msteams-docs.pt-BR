@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 5ebd762abf04b977e04e960e102ada9bf586fea3
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 27e70b0a8300d85138cb06d58160e32e3e308143
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345604"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408558"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -24,6 +24,7 @@ Você pode enriquecer seu Teams com recursos de dispositivo nativos, como câmer
 
 Você deve solicitar as permissões de dispositivo para acessar recursos de dispositivo nativos. As permissões de dispositivo funcionam da mesma forma para todas as construções de aplicativo, como guias, módulos de tarefa ou extensões de mensagens. O usuário deve ir para a página permissões em Teams para gerenciar permissões de dispositivo.
 Ao acessar os recursos do dispositivo, você pode criar experiências mais ricas na plataforma Teams, como:
+
 * Capturar e exibir imagens.
 * Verificar QR ou código de barras.
 * Grave e compartilhe vídeos curtos.
@@ -31,7 +32,7 @@ Ao acessar os recursos do dispositivo, você pode criar experiências mais ricas
 * Use as informações de local do usuário para exibir informações relevantes.
 
 > [!NOTE]
-> Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião. 
+> Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.
 
 ## <a name="access-device-permissions"></a>Permissões de dispositivo de acesso
 
@@ -39,21 +40,12 @@ O [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-cli
 
 Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, você deve informar Teams sobre os recursos que você usa atualizando o manifesto do aplicativo. Essa atualização permite que você peça permissões enquanto seu aplicativo é executado no Teams desktop.
 
-> [!NOTE] 
+> [!NOTE]
 > Atualmente, o Microsoft Teams suporte para recursos de mídia e o recurso de scanner de código de barras QR está disponível apenas para clientes móveis.
 
 ## <a name="manage-permissions"></a>Gerenciar permissões
 
 Um usuário pode gerenciar permissões de dispositivo em Teams configurações selecionando **Permitir** ou **Negar** permissões para aplicativos específicos.
- 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-1. Abra seu Teams aplicativo.
-1. Selecione seu ícone de perfil no canto superior direito da janela.
-1. Selecione **Configurações**  >  **Permissões** no menu suspenso.
-1. Selecione as configurações desejadas.
-
-   ![Tela de configurações da área de trabalho de permissões do dispositivo](../../assets/images/tabs/device-permissions.png)
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
@@ -63,6 +55,15 @@ Um usuário pode gerenciar permissões de dispositivo em Teams configurações s
 1. Selecione as configurações desejadas.
 
     ![Tela de configurações móveis de permissões de dispositivo](../../assets/images/tabs/MobilePermissions.png)
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+1. Abra seu Teams aplicativo.
+1. Selecione seu ícone de perfil no canto superior direito da janela.
+1. Selecione **Configurações**  >  **Permissões** no menu suspenso.
+1. Selecione as configurações desejadas.
+
+   ![Tela de configurações da área de trabalho de permissões do dispositivo](~/assets/images/tabs/device-permissions.png)
 
 ---
 
@@ -147,9 +148,6 @@ Por exemplo:
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-
-
-
 * Para usar a câmera ou a galeria de fotos de acesso, Teams celular pede permissão quando você chama `selectMedia()` :
 
     ```JavaScript
@@ -173,15 +171,16 @@ Por exemplo:
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-   ![Guia solicitação de permissões do dispositivo da área de trabalho](~/assets/images/tabs/device-permissions-prompt.png)
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
    ![Guia solicitação de permissões de dispositivo móvel](../../assets/images/tabs/MobileLocationPermission.png)
 
-* * * 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+   ![Guia solicitação de permissões do dispositivo da área de trabalho](~/assets/images/tabs/device-permissions-prompt.png)
+
+---
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão em sessões de logon
 
@@ -206,4 +205,3 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 > [!div class="nextstepaction"]
 > [Integrar recursos de localização Teams](location-capability.md)
-

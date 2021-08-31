@@ -4,12 +4,12 @@ description: Aprenda a projetar Cartões Adaptáveis para o Teams e obtenha o Ki
 localization_priority: Priority
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca7c38f112808f98ae1555e91f794f032e880c862a697e1218953d40cbb410aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28a6b794b9ebae88f8895013f945cbf3b4a91e87
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708465"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408654"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -39,145 +39,139 @@ Você também pode começar a projetar seus Cartões Adaptáveis diretamente no 
 
 Nosso maior cartão. Uso para compartilhar artigos ou cenários onde uma imagem conta a maior parte da história.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="O exemplo mostra um cartão de destaque do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável no dispositivo móvel." border="false":::
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="O exemplo mostra um cartão de destaque do Cartão Adaptável no dispositivo móvel." border="false":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável." border="false":::
 
 ### <a name="thumbnail"></a>Miniatura
 
 Use para enviar uma mensagem acionável simples.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="O exemplo mostra um cartão em miniatura do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável no dispositivo móvel." border="false":::
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="O exemplo mostra um cartão em miniatura do Cartão Adaptável no dispositivo móvel." border="false":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável." border="false":::
 
 ### <a name="list"></a>List
 
 Use em cenários em que você deseja que o usuário escolha um item de uma lista, mas os itens não precisam de muitas explicações.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="O exemplo mostra um cartão de lista do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável no dispositivo móvel." border="false":::
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="O exemplo mostra um cartão de lista do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável." border="false":::
 
----
-Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
-':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
----
+### <a name="digest"></a>Compilação
+
+Use para resumos de notícias e postagens de referência. Observação: recomendamos o cartão miniatura para uma atualização ou item de notícias isolados.
+
+#### <a name="mobile"></a>Dispositivo móvel
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável no dispositivo móvel" border="false":::
+
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável." border="false":::
 
 ### <a name="media"></a>Mídia
 
 Use quando quiser combinar texto e mídia, como áudio ou vídeo.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável." border="false":::
 
 ### <a name="people"></a>Pessoas
 
 Melhor usado para transmitir com eficiência quem está envolvido em uma tarefa.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável." border="false":::
 
 ### <a name="request-ticket"></a>Solicitar ingresso
 
 Use para obter entradas rápidas de um usuário para criar automaticamente uma tarefa ou tíquete.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável." border="false":::
 
 ### <a name="image-set"></a>Conjunto de imagens
 
 Use para enviar várias miniaturas de imagens.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável." border="false":::
 
 ### <a name="action-set"></a>Conjunto de ações
 
 Use quando quiser que o usuário selecione um botão e, em seguida, reúna a entrada adicional do usuário do mesmo cartão.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável." border="false":::
 
 ### <a name="choice-set"></a>Conjunto de opções
 
 Use para reunir várias entradas do usuário.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável." border="false":::
 
 ## <a name="anatomy"></a>Anatomia
 
 Os Cartões Adaptáveis têm muita flexibilidade. Mas, no mínimo, sugerimos fortemente incluir os seguintes componentes em cada cartão.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável no dispositivo móvel." border="false":::
 
----
+|Contador|Descrição|
+|----------|-----------|
+|A|**Cabeçalho**: Deixe seus cabeçalhos claros e concisos.|
+|B|**Cópia do corpo**: Transmita detalhes que sejam muito longos ou não são importantes o suficiente para incluir no cabeçalho.|
+|C|**Ações primárias**: Como prática recomendada, inclua 13 ações principais. Você pode ter até seis.|
+
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|

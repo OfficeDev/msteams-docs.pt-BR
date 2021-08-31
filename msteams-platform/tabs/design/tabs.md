@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709378"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408626"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para Microsoft Teams
 
@@ -31,19 +31,17 @@ Você pode adicionar uma guia do Teams (AppSource) ou em um dos seguintes contex
 * Canal
 * Reunião (antes, durante ou após a reunião)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-O exemplo a seguir mostra como os usuários podem adicionar uma guia em um canal.
-
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemplo mostra uma guia sendo adicionada a um canal." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 Os usuários podem acessar guias selecionando o botão **Mais** no canal (exemplo abaixo) ou o chat no qual foram adicionados.
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Exemplo mostra uma guia móvel sendo adicionada em um canal." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+O exemplo a seguir mostra como os usuários podem adicionar uma guia em um canal.
+
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemplo mostra uma guia sendo adicionada a um canal." border="false":::
 
 ## <a name="set-up-a-tab"></a>Configurar uma guia
 
@@ -53,7 +51,7 @@ Há um curto processo de instalação para adicionar um aplicativo como canal, c
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemplo mostra um modal de configuração de tabulação." border="false":::
 
-### <a name="anatomy-tab-configuration-dialog"></a>Anatomia: caixa de diálogo de configuração de tabulação
+#### <a name="anatomy-tab-configuration-dialog"></a>Anatomia: caixa de diálogo de configuração de tabulação
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um modal de configuração de tabulação." border="false":::
 
@@ -86,19 +84,27 @@ Use um dos seguintes modelos Teams de interface do usuário para ajudar a projet
 
 As guias fornecem uma experiência da Web de tela inteira em Teams onde você pode exibir conteúdo colaborativo, como painéis e painéis de tarefas, e informações importantes.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um quadro de tarefas." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Exemplo mostra uma guia móvel com um quadro de tarefas." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um quadro de tarefas." border="false":::
 
 ### <a name="anatomy-tab"></a>Anatomia: Guia
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Celular
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|1|**Nome da guia**: Rótulo de navegação para sua guia.|
+|2|**Chat de tabulação**: abre um chat que permite que os usuários tenham uma conversa ao lado do conteúdo.|
+|3|**webview**: exibe o conteúdo do aplicativo.|
+
+#### <a name="desktop"></a>Área de trabalho
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
 
@@ -109,19 +115,7 @@ As guias fornecem uma experiência da Web de tela inteira em Teams onde você po
 |3|**Chat de tabulação**: abre um chat à direita, permitindo que os usuários tenham uma conversa ao lado do conteúdo.|
 |4 |**iframe**: exibe o conteúdo do aplicativo.|
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
-
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|1|**Nome da guia**: Rótulo de navegação para sua guia.|
-|2|**Chat de tabulação**: abre um chat que permite que os usuários tenham uma conversa ao lado do conteúdo.|
-|3|**webview**: exibe o conteúdo do aplicativo.|
-
----
-
-### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>Criar uma guia com modelos de interface do usuário e componentes avançados
+### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Criar uma guia com modelos de interface do usuário e componentes avançados
 
 Use um dos seguintes Teams e componentes para ajudar a projetar sua experiência de tabulação:
 
@@ -140,29 +134,25 @@ Guias ajudam a facilitar conversas sobre conteúdo em um local central.
 
 Os usuários podem postar automaticamente em um canal ou chat depois de adicionarem uma nova guia. Isso não apenas notifica os membros da equipe do novo conteúdo e fornece um link para guia, ele permite que as pessoas comecem a falar sobre a guia.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em um thread de canal." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Exemplo mostra uma guia móvel sendo discutida em um thread de canal." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em um thread de canal." border="false":::
 
 ### <a name="tab-chat"></a>Chat de tabulação
 
 Os usuários podem ter uma conversa ao lado do conteúdo da guia que estão exibindo. Na área de trabalho, o chat é aberto ao lado do conteúdo do aplicativo.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia móvel com uma área de chat no contexto." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
 
 ### <a name="permissions-and-role-based-views"></a>Permissões e exibições baseadas em função
 
@@ -174,17 +164,7 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 
 ### <a name="anatomy-tab-menu"></a>Anatomia: menu Tab
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de tabulação." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|1|**Configurações**: (Opcional) Permite que os usuários modifiquem as configurações de uma guia depois que ela foi adicionada.|
-|2|**Renomear**: os usuários podem dar à guia um nome significativo para o canal, chat ou reunião.|
-|3|**Remover**: remove a guia do canal, chat ou reunião.|
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia móvel." border="false":::
 
@@ -196,7 +176,15 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 |4 |**Renomear**: os usuários podem dar à guia um nome significativo para o canal, chat ou reunião.|
 |5 |**Excluir**: remove a guia do canal, chat ou reunião.|
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de tabulação." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|1|**Configurações**: (Opcional) Permite que os usuários modifiquem as configurações de uma guia depois que ela foi adicionada.|
+|2|**Renomear**: os usuários podem dar à guia um nome significativo para o canal, chat ou reunião.|
+|3|**Remover**: remove a guia do canal, chat ou reunião.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Notificações de tabulação e vinculação profunda
 

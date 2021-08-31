@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702135"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528870"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para Teams reuniões
 
-As reuniões permitem colaboração, parceria, comunicação informada e comentários compartilhados em um fórum inclusivo e ativo. O aplicativo de reunião pode oferecer uma experiência do usuário para cada estágio do ciclo de vida da reunião, incluindo a experiência do aplicativo de pré-reunião, reunião e pós-reunião, dependendo do status do participante.
+As reuniões permitem colaboração, parceria, comunicação informada e comentários compartilhados. O aplicativo de reunião pode oferecer uma experiência do usuário para cada estágio do ciclo de vida da reunião. O ciclo de vida da reunião inclui a experiência do aplicativo pré-reunião, na reunião e pós-reunião, dependendo do status do participante.
 
-Os usuários podem acessar aplicativos durante reuniões usando a galeria de guias, por exemplo:
+Os usuários podem acessar aplicativos durante reuniões usando a galeria de guias de seu calendário, como:
 
 * Pré-estágio de um quadro Kanban.
 * Iniciar uma caixa de diálogo acionável na reunião.
@@ -25,13 +25,17 @@ Os usuários podem acessar aplicativos durante reuniões usando a galeria de gui
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
+A ilustração a seguir fornece uma ideia dos recursos de extensibilidade do aplicativo de reunião:
+
+![Extensibilidade do aplicativo de reunião](../assets/images/apps-in-meetings/meetingappextensibility.png)
+
 Este artigo fornece uma visão geral da extensibilidade do aplicativo de reunião, referências de API, habilitar e configurar aplicativos para reuniões e cenas personalizadas do modo Juntos Teams.
 
-Você pode aprimorar sua experiência de reunião usando o recurso de extensibilidade da reunião, que permite integrar seus aplicativos em reuniões. Ele também inclui diferentes estágios de um ciclo de vida de reunião, onde você pode integrar guias, bots e extensões de mensagens. Com as APIs de extensibilidade de reuniões, você pode identificar diferentes funções de participantes e tipos de usuário, obter eventos de reunião, gerar caixas de diálogo na reunião e assim por diante.
+Aprimora sua experiência de reunião usando o recurso de extensibilidade de reunião. Esse recurso permite integrar seus aplicativos em reuniões. Ele também inclui diferentes estágios de um ciclo de vida de reunião, onde você pode integrar guias, bots e extensões de mensagens. Você pode identificar várias funções de participante e tipos de usuário, obter eventos de reunião e gerar caixas de diálogo na reunião.
 
-Para personalizar Teams aplicativos para reuniões, você pode habilitar seus aplicativos para reuniões Teams atualizando o manifesto do aplicativo e também pode configurar seus aplicativos para cenários de reunião.
+Para personalizar Teams aplicativos para reuniões, habilita seus aplicativos para reuniões Teams atualizando o manifesto do aplicativo e também configure os aplicativos para cenários de reunião.
 
-O novo recurso de cenas do Modo Juntos personalizado permite que os usuários colaborem em uma reunião com sua equipe em um só lugar sem serem separados por caixas.
+O novo recurso de cenas do Modo Juntos personalizado permite que os usuários colaborem em uma reunião com sua equipe em um só lugar.
 
 ## <a name="see-also"></a>Confira também
 

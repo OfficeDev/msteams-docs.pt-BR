@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: f1d9a905ffb8239ecd3398e7db8ee593c6cbfba7
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ffa13e8a9f4014f0ed3e89f32b1eafed74fea76b
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345659"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528793"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
@@ -145,7 +145,7 @@ Se o aplicativo contiver um bot e uma guia, use o seguinte código para adiciona
 
 **webApplicationInfo** é o pai dos seguintes elementos:
 
-* **id** - A ID do cliente do aplicativo. Essa é a ID do aplicativo que você obteve como parte do registro do aplicativo com o AAD.
+* **id** - A ID do cliente do aplicativo. Essa é a ID do aplicativo que você obteve como parte do registro do aplicativo com o AAD. Não compartilhe essa ID do Aplicativo com vários Teams aplicativos. Crie um novo aplicativo AAD para cada manifesto de aplicativo que usa `webApplicationInfo` .
 * **resource** - O domínio e o subdomínio do seu aplicativo. Esse é o mesmo URI, incluindo o protocolo que você registrou ao criar o seu em Registrar seu aplicativo por meio `api://` `scope` do portal do [AAD.](#register-your-app-through-the-aad-portal) Você não deve incluir o `access_as_user` caminho em seu recurso. A parte de domínio deste URI deve corresponder ao domínio e aos subdomas usados nas URLs do seu manifesto Teams aplicativo.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Adicionar o código para solicitar e receber um token de bot

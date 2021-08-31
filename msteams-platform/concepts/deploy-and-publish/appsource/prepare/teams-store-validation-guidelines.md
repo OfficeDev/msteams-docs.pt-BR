@@ -4,12 +4,12 @@ description: Descreve as diretrizes que todos os aplicativos enviados ao Teams (
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703604"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408535"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 
@@ -199,6 +199,11 @@ A descrição longa pode fornecer uma narração envolvente que realça a propos
   * "... trabalhando com Microsoft Teams."
   * "... dentro Microsoft Teams."
   * "... para Microsoft Teams."
+  * "... integrado com Microsoft Teams."
+  * "... criado para... "
+  * "... desenvolvido para... "
+  * "... projetado para..."
+
 
 **Não faça:**
 
@@ -209,15 +214,8 @@ A descrição longa pode fornecer uma narração envolvente que realça a propos
 * Inclua erros de digitação, erros gramaticais e maiúsculas desnecessárias (por exemplo, **Usuários** em vez de **usuários**).
 * Inclua links para AppSource.
 * Use o seguinte idioma, a menos que você seja um parceiro certificado da Microsoft:
-  * "... integrado ao Microsoft Teams"
-  * "... integra-se com ..."
-  * "... built for ..."
-  * "... built on ..."
-  * "... é executado em ..."
-  * "... habilitado por ..."
   * "... certificado para ..."
-  * "... desenvolvido para ..."
-  * "... projetado para ..."
+  * "... alimentado por ..."
 
 ### <a name="screenshots"></a>Capturas de tela
 

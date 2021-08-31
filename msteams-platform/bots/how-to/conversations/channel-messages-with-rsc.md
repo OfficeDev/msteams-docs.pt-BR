@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Receber todas as mensagens de canal com permissões RSC
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705865"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528898"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 
@@ -79,6 +79,12 @@ Para fazer sideload em uma equipe para testar, se todas as mensagens de canal em
     O bot recebe a mensagem sem ser @mentioned.
 
     ![Bot recebe mensagem](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Nome do exemplo | Descrição | C# |Node.js|
+|-------------|-------------|------|----|
+|Mensagens de canal com permissões RSC| Microsoft Teams exemplo de aplicativo demonstrando como um bot pode receber todas as mensagens de canal com RSC sem @mentioned.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

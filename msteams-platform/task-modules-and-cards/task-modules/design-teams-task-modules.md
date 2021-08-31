@@ -5,12 +5,12 @@ description: Saiba como projetar módulos de tarefa para Teams aplicativos e obt
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708144"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408612"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Projetando módulos de tarefas para seu Microsoft Teams app
 
@@ -41,7 +41,19 @@ Os módulos de tarefas fornecem uma superfície flexível para experiências de 
 
 Eles também podem ser construídos com a estrutura [Cartões](../../task-modules-and-cards/cards/design-effective-cards.md) Adaptáveis, que pode ser uma maneira mais simples e mais rápida de facilitar cenários comuns (como formulários).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+### <a name="mobile"></a>Celular
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um módulo de tarefa no celular." border="false":::
+
+|Contador|Descrição|
+|----------|-----------|
+|1|**Header**: Tornar os headers claros e concisos. Descreva a tarefa que você deseja que os usuários concluam.
+|2|**Nome do aplicativo**: nome completo do seu aplicativo.|
+|3|**Botão Fechar**: fecha o módulo de tarefa. Não aplica alterações não savadas no conteúdo do aplicativo.|
+|4 |**webview**: Espaço responsivo que hospeda o conteúdo do aplicativo.|
+|5 |**Ações (opcional)**: Botões relacionados ao conteúdo do aplicativo.|
+
+### <a name="desktop"></a>Área de trabalho
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um módulo de tarefa." border="false":::
 
@@ -54,20 +66,6 @@ Eles também podem ser construídos com a estrutura [Cartões](../../task-module
 |5 |**iframe**: espaço responsivo que hospeda o conteúdo do aplicativo.|
 |6 |**Ações (opcional)**: Botões relacionados ao conteúdo do aplicativo.|
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
-
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um módulo de tarefa no celular." border="false":::
-
-|Contador|Descrição|
-|----------|-----------|
-|1|**Header**: Tornar os headers claros e concisos. Descreva a tarefa que você deseja que os usuários concluam.
-|2|**Nome do aplicativo**: nome completo do seu aplicativo.|
-|3|**Botão Fechar**: fecha o módulo de tarefa. Não aplica alterações não savadas no conteúdo do aplicativo.|
-|4 |**webview**: Espaço responsivo que hospeda o conteúdo do aplicativo.|
-|5 |**Ações (opcional)**: Botões relacionados ao conteúdo do aplicativo.|
-
----
-
 ## <a name="designing-with-ui-templates"></a>Projetando com modelos de interface do usuário
 
 Considere usar modelos para layouts comuns dentro de seus módulos de tarefas. Cada um deles é feito de componentes menores para criar um design elegante e responsivo que pode ser usado fora da caixa ou personalizado para seu cenário ou com a aparência da sua marca.
@@ -78,103 +76,89 @@ Considere usar modelos para layouts comuns dentro de seus módulos de tarefas. C
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="list"></a>Lista
+### <a name="list"></a>Listar
 
 As listas funcionam bem em um módulo de tarefa porque são fáceis de examinar.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de exemplos em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Lista de exemplos em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de exemplos em um módulo de tarefa." border="false":::
 
 ### <a name="form"></a>Formulário
 
 Os módulos de tarefa são um ótimo local para superfície de formulários com entradas de usuário sequenciais e validação em linha. Você pode aproveitar cartões adaptáveis como uma maneira de incorporar elementos de formulário.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulário de exemplo em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Formulário de exemplo em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulário de exemplo em um módulo de tarefa." border="false":::
 
 ### <a name="sign-in"></a>Entrar
 
 Crie um fluxo de login ou de assinatura focado com uma série de módulos de tarefas, deixando que os usuários se movam facilmente através de etapas sequenciais.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Experiência de login de exemplo em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Experiência de login de exemplo em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Experiência de login de exemplo em um módulo de tarefa." border="false":::
 
 ### <a name="media"></a>Mídia
 
 Incorporar conteúdo de mídia em um módulo de tarefa para uma experiência de exibição focada.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefa." border="false":::
 
 ### <a name="empty-state"></a>Estado vazio
 
 Use para mensagens de boas-vindas, erros e sucesso.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefa." border="false":::
 
 ### <a name="image-gallery"></a>Galeria de imagens
 
 Incorporar um carrossel de galeria em um iframe (desktop) ou webview (móvel).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+##### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefa no celular." border="false":::
 
----
+##### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefa." border="false":::
 
 ### <a name="poll"></a>Sondagem
 
 Este exemplo mostra os resultados da sondagem lançados de um Cartão Adaptável. A sondagem também pode ser colocada dentro de um módulo de tarefas.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Sondagem de exemplo em um módulo de tarefa." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Sondagem de exemplo em um módulo de tarefa no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Sondagem de exemplo em um módulo de tarefa." border="false":::
 
 ## <a name="best-practices"></a>Práticas recomendadas
 

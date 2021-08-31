@@ -1,24 +1,26 @@
 ---
-title: Extensibilidade do aplicativo de reunião
+title: Aplicativos de reuniões unificadas
 author: surbhigupta
-description: Compreender a extensibilidade do aplicativo de reunião
+description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
-ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.openlocfilehash: 330156d28bf78723c3c6a670cc34cd97b48ad7a4
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398680"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528891"
 ---
-# <a name="meeting-app-extensibility"></a>Extensibilidade do aplicativo de reunião
+# <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
-Teams extensibilidade do aplicativo de reunião baseia-se nos seguintes conceitos:
+Teams aplicativos de reuniões unificadas são baseados nos seguintes conceitos:
 
-* Um ciclo de vida de reunião tem vários estágios, como pré-reunião, reunião e pós-reunião.  
+* O ciclo de vida da reunião tem diferentes estágios: pré-reunião, reunião e pós-reunião.  
 * Há três funções de participantes distintas em uma reunião: organizador, apresentador e participante. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Há vários tipos [de usuário](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) em uma reunião: no locatário, [convidado,](/microsoftteams/guest-access) [federado](/microsoftteams/manage-external-access)e usuários anônimos.
 
-Este artigo aborda informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens em uma reunião. Ele fornece informações para identificar várias funções de participante e tipos de usuário para executar tarefas.
+> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
+
+Este artigo aborda as informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens. Ele identifica diferentes funções de participante e tipos de usuário.
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida da reunião
 
@@ -26,7 +28,7 @@ Um ciclo de vida de reunião consiste na experiência do aplicativo de pré-reun
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar guias ao ciclo de vida da reunião
 
-As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e dados disponíveis nas guias. Em uma Teams, os usuários podem adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e escolhendo o aplicativo que eles querem instalar.
+As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e dados disponíveis nas guias. Na Teams, você pode adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e selecione o aplicativo que você deseja instalar.
 
 > [!IMPORTANT]
 > Se você tiver integrado uma guia à sua reunião Teams, seu aplicativo deverá seguir o fluxo de autenticação de logom único [(SSO)](../tabs/how-to/authentication/auth-aad-sso.md)para guias .
@@ -37,20 +39,20 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 
 #### <a name="pre-meeting-app-experience"></a>Experiência do aplicativo de pré-reunião
 
-Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicionar aplicativos de reunião e realizar tarefas de pré-reunião, como desenvolver uma sondagem para participantes da reunião de pesquisa.
+Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicionar aplicativos de reunião. Você também pode realizar tarefas de pré-reunião, como desenvolver uma sondagem para sondar os participantes da reunião.
 
 **Para adicionar guias a uma reunião existente**
 
 1. Em seu calendário, selecione uma reunião à qual deseja adicionar uma guia.
 1. Selecione a **guia Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. A galeria de guias é exibida.
 
-    ![Experiência de pré-reunião](../assets/images/apps-in-meetings/PreMeeting.png)
+    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
-    > [!NOTE]
-    > * Você também pode adicionar uma guia a uma reunião existente usando a guia **Chat de** reunião.
-    > * O layout da guia deve estar em um estado organizado, se houver mais de 10 pesquisas ou pesquisas.
+   > [!NOTE]
+   > * Você também pode adicionar uma guia a uma reunião existente usando a guia **Chat de** reunião.
+   > * O layout da guia deve estar em um estado organizado, se houver mais de 10 pesquisas ou pesquisas.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -58,7 +60,7 @@ Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicio
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-Depois que as guias são adicionadas a uma reunião existente na área de trabalho  ou na Web, você pode ver os mesmos aplicativos na experiência de pré-reunião em Mais seção dos detalhes da reunião.
+Depois de adicionar as guias a uma reunião existente no celular, você pode ver os mesmos aplicativos na experiência de pré-reunião em **Mais** seção dos detalhes da reunião.
 
 <img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
@@ -76,7 +78,7 @@ Para dispositivos móveis, os  aplicativos de reunião estão disponíveis > apl
 1. Em seu calendário, selecione uma reunião na qual você deseja usar uma guia.
 1. Depois de inserir a reunião, na barra de ferramentas da janela de chat, selecione o aplicativo necessário.
     Um aplicativo fica visível em uma reunião Teams no painel lateral ou na caixa de diálogo na reunião.
-1. Na caixa de diálogo na reunião, insira sua resposta como um feedback.
+1. Na caixa de diálogo na reunião, insira sua resposta como comentários.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -86,7 +88,7 @@ Para dispositivos móveis, os  aplicativos de reunião estão disponíveis > apl
 
 Depois de inserir a reunião e adicionar o aplicativo da área de trabalho ou da Web, o aplicativo fica visível na reunião de Teams móvel na **seção Aplicativos.** Selecione **Aplicativos** para mostrar a lista de aplicativos. O usuário pode iniciar qualquer um dos aplicativos como um painel do lado da reunião do aplicativo.
 
-A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta como um feedback.
+A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta como feedback.
 
 <img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
@@ -97,12 +99,20 @@ A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta 
 
 > [!NOTE]
 > * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
-> * Se a caixa de diálogo na reunião for renderizada com êxito, você receberá uma notificação de que os resultados foram baixados com êxito.
+> * Se a caixa de diálogo na reunião for renderizada com êxito, ela enviará uma notificação de que os resultados foram baixados com êxito.
 > * O manifesto do aplicativo especifica os locais nos quais você deseja que os aplicativos apareçam. O campo de contexto é usado para essa finalidade. Também faz parte de uma experiência de bandeja de compartilhamento, sujeita a diretrizes de design especificadas.
 
 A imagem a seguir ilustra o painel do lado da reunião:
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 ![Painel do lado da reunião](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+
+---
 
 A tabela a seguir descreve o comportamento do aplicativo quando ele é aprovado e não aprovado:
 
@@ -131,13 +141,13 @@ A imagem a seguir exibe a **guia Contoso** com resultados da sondagem e comentá
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrar bots ao ciclo de vida da reunião
 
-Os bots habilitados no escopo de groupchat começam a funcionar em reuniões. Para implementar bots, comece com [a criação](../build-your-first-app/build-bot.md) de um bot e continue com a criação [de aplicativos para Teams reuniões.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)
+Os bots habilitados no escopo de groupchat começam a funcionar em reuniões. Para implementar bots, comece com [a criação](../build-your-first-app/build-bot.md) de um bot e continue com a criação [de aplicativos para Teams reuniões.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrar extensões de mensagens ao ciclo de vida da reunião
 
-Para implementar extensões de mensagens, comece com [a](../messaging-extensions/how-to/create-messaging-extension.md) criação de uma extensão de mensagens e continue com a criação de [aplicativos para Teams reuniões.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)
+Para implementar a extensão de mensagens, comece com a criação de uma extensão [de](../messaging-extensions/how-to/create-messaging-extension.md) mensagens e continue com a criação de [aplicativos para Teams reuniões.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
 
-A Teams extensibilidade do aplicativo de reunião permite que você projete seu aplicativo com base nas funções dos participantes em uma reunião.
+Os Teams de reuniões unificadas permitem que você projete seu aplicativo com base nas funções de participantes em uma reunião.
 
 ## <a name="participant-roles-in-a-meeting"></a>Funções de participante em uma reunião
 
@@ -145,9 +155,9 @@ A Teams extensibilidade do aplicativo de reunião permite que você projete seu 
 
 As configurações de participante padrão são determinadas pelo administrador de IT de uma organização. Veja a seguir as funções dos participantes em uma reunião:
 
-* **Organizador**: o organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Somente usuários com conta M365 e Teams licença podem ser organizadores e controlar permissões do participante. Um organizador da reunião pode alterar as configurações de uma reunião específica. Os organizadores podem fazer essas alterações na página da Web **opções de** reunião.
-* **Apresentador :** os apresentadores têm os mesmos recursos de organizadores com exclusões. Um apresentador não pode remover um organizador da sessão ou modificar opções de reunião para a sessão. Por padrão, os participantes que participam de uma reunião têm a função de apresentador.
-* **Participante**: um participante é um usuário que foi convidado a participar de uma reunião, mas não está autorizado a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma das configurações de reunião ou compartilhar conteúdo.
+* **Organizador**: o organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Os usuários com Microsoft 365 conta e Teams podem ser apenas os organizadores e controlar as permissões do participante. Um organizador da reunião pode alterar as configurações de uma reunião específica. Os organizadores podem fazer essas alterações na página da Web **opções de** reunião.
+* **Apresentador**: Os apresentadores têm os mesmos recursos dos organizadores com exclusões. Um apresentador não pode remover um organizador da sessão ou modificar as opções de reunião da sessão. Por padrão, os participantes que participam de uma reunião têm a função de apresentador.
+* **Participante**: Um participante é um usuário que foi convidado a participar de uma reunião. Mas os participantes não estão autorizados a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma das configurações da reunião ou compartilhar o conteúdo.
 
 > [!NOTE]
 > Somente um organizador ou apresentador pode adicionar, remover ou desinstalar aplicativos.
@@ -158,15 +168,15 @@ Depois de projetar seu aplicativo com base nas funções de participantes em uma
 
 ## <a name="user-types-in-a-meeting"></a>Tipos de usuário em uma reunião
 
+Tipos de usuário, como organizador, apresentador ou participante em uma reunião, podem fazer uma das funções de [participante em uma reunião](#participant-roles-in-a-meeting).
+
 > [!NOTE]
 > O tipo de usuário não está incluído na API **getParticipantRole.**
 
-Tipos de usuário, como, organizador, apresentador ou participante em uma reunião podem executar uma das funções de [participante em uma reunião](#participant-roles-in-a-meeting).
-
 A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessibilidade e desempenho:
 
-* **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais Azure Active Directory (AAD) para o locatário. Eles geralmente são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
-* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da organização e têm os mesmos Teams de um membro da equipe nativo com acesso a chats, reuniões e arquivos de equipe. Um usuário convidado pode ser organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados em Teams](/microsoftteams/guest-access).
+* **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais Azure Active Directory (AAD) para o locatário. Eles são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
+* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da organização e têm os mesmos Teams que um membro da equipe nativo. Eles têm acesso a chats, reuniões e arquivos de equipe. Um convidado pode ser um organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados em Teams](/microsoftteams/guest-access).
 * **Federado ou externo**: um usuário federado é um usuário externo Teams em outra organização que foi convidado a participar de uma reunião. Os usuários federados têm credenciais válidas com parceiros federados e são autorizados por Teams. Eles não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. O acesso de convidados é uma opção melhor para usuários externos ter acesso a equipes e canais. Para obter mais informações, consulte [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -175,20 +185,20 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
     > [!IMPORTANT]
     > Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and manage [apps](/microsoftteams/manage-apps).
 
-* **Anônimo**: os usuários anônimos não têm uma identidade AAD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é projetada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião. Um usuário anônimo não pode ser organizador, mas pode ser apresentador ou participante.
+* **Anônimo**: os usuários anônimos não têm uma identidade AAD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião. Um usuário anônimo não pode ser organizador, mas pode ser apresentador ou participante.
 
     > [!NOTE]
     > Os usuários anônimos herdam a política de permissão de aplicativo padrão global no nível do usuário. Para obter mais informações, consulte [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
 Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar aplicativos.
 
-A tabela a seguir fornece os tipos de usuário e quais recursos cada usuário pode acessar:
+A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
 | Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
-| Convidado que faz parte do locatário AAD | A interação é permitida. Não é permitido criar, atualizar e excluir. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível |
-| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Não é permitido criar, atualizar e excluir. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
+| Convidado que faz parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível |
+| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
 
 ## <a name="see-also"></a>Confira também
 

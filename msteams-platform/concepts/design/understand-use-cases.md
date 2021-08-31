@@ -5,12 +5,12 @@ description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro ent
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6669492c25cb3701f5c937b3f99e39d411fbc4a4
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703170"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408537"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -76,13 +76,6 @@ Acima de tudo, lembre-se de que ninguém gosta de spam. A explosão com mensagen
 ## <a name="plan-for-the-future"></a>Planejar o futuro
 
 Identifique quais novos recursos o usuário preferirá ter na solução atual. Se você tiver um roteiro para adicionar novos recursos ao aplicativo, o design e a arquitetura serão afetados.
-
-## <a name="see-also"></a>Confira também
-
-* [Escolha como distribuir o aplicativo](../deploy-and-publish/apps-publish-overview.md)
-* [Guias de design](../../tabs/design/tabs.md)
-* [Bots de design](../../bots/design/bots.md)
-* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Próxima etapa
 

@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702834"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408675"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -56,15 +56,13 @@ Um painel exibe diferentes tipos de conteúdo em um local central (Teams aplicat
 * Métricas de relatório
 * Organizar informações diferentes em um só lugar
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Exemplo mostra um modelo de interface do usuário do painel na área de trabalho." border="false":::
 
 ## <a name="data-visualization"></a>Visualização de dados
 
@@ -75,15 +73,13 @@ Você pode usar tamanhos de cartão diferentes (único, duplo e completo) para e
 * Exibir informações complexas
 * Criar um painel
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho." border="false":::
 
 ## <a name="empty-state"></a>Estado vazio
 
@@ -96,17 +92,15 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar,
 * Mensagens de sucesso
 * Mensagens de erro
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
 
-## <a name="filter"></a>Filter
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
+
+## <a name="filter"></a>Filtrar
 
 Um filtro permite reduzir as informações que você vê com base nos critérios selecionados. Você pode incluir filtros com tabelas, listas, cartões e outros componentes que organizam o conteúdo.
 
@@ -132,17 +126,15 @@ Os formulários são usados para coletar, validar e enviar entrada do usuário d
 * Configurações
 * Coleção de entrada do usuário
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
 
-## <a name="list"></a>Lista
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
+
+## <a name="list"></a>Listar
 
 Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 
@@ -151,15 +143,13 @@ Você pode usar uma lista para exibir itens relacionados em um formato digitaliz
 * Exibir dados
 * Ações contextuais no conteúdo do aplicativo
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Exemplo mostra um modelo de interface do usuário de lista na área de trabalho." border="false":::
 
 ## <a name="sign-in"></a>Entrar
 
@@ -169,15 +159,13 @@ Você pode projetar fluxos de entrada de aplicativos para diferentes Teams conte
 
 * Autenticar usuários
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login na área de trabalho." border="false":::
 
 ## <a name="settings"></a>Configurações
 
@@ -199,15 +187,13 @@ Um quadro de tarefas, às vezes chamado de quadro de kanban ou faixas de nadador
 * Brainstorming. Adicionar ideias em categorias diferentes
 * Exercícios de classificação. Organizar qualquer tipo de informação em buckets
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho." border="false":::
 
 ## <a name="wizard"></a>Assistente
 
@@ -219,12 +205,10 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 * Integração
 * Experiências de primeira
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::

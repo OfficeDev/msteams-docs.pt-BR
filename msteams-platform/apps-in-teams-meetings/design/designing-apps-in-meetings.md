@@ -5,16 +5,16 @@ description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Mi
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702361"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528912"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
-Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemplo, peça que as pessoas concluam uma pesquisa durante uma chamada ou enviem um lembrete rápido que não interrompa o fluxo da reunião.
+Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemplo, peça que as pessoas concluam uma pesquisa durante uma reunião ou enviem um lembrete rápido que não interrompa o fluxo da reunião.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
@@ -35,23 +35,21 @@ Nos detalhes da reunião, os usuários podem selecionar **Adicionar uma guia +**
 
 ### <a name="add-during-a-meeting"></a>Adicionar durante uma reunião
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+#### <a name="mobile"></a>Celular
+
+Depois que o aplicativo for adicionado (por exemplo, na área de trabalho), os usuários poderão acessar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
+
+#### <a name="desktop"></a>Área de trabalho
 
 Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e selecionar o aplicativo que eles querem.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião." border="false":::
 
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
-
-Depois de adicionar o aplicativo na área de trabalho, você pode selecionar o aplicativo e usar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
-
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
-
----
-
 ## <a name="before-a-meeting"></a>Antes de uma reunião
 
-Antes de uma reunião, os usuários podem adicionar conteúdo na guia. O exemplo a seguir mostra uma pergunta de rascunho de pesquisa que as pessoas responderão durante a chamada.
+Antes de uma reunião, seu aplicativo está disponível para os usuários em uma guia. O exemplo a seguir mostra uma pergunta de rascunho de pesquisa que as pessoas responderão durante a reunião.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Exemplo mostra como o conteúdo do aplicativo nos detalhes da reunião antes de uma chamada." border="false":::
 
@@ -65,7 +63,7 @@ Antes de uma reunião, os usuários podem adicionar conteúdo na guia. O exemplo
 |2|**Estouro da** guia : abre ações de guia, como renomear e remover.|
 |3|**iframe**: exibe o conteúdo do aplicativo.|
 
-### <a name="designing-with-ui-templates"></a>Projetando com modelos de interface do usuário
+### <a name="design-with-ui-templates"></a>Projetar com modelos de interface do usuário
 
 Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua guia de reunião:
 
@@ -88,15 +86,13 @@ As pessoas podem usar a guia na reunião para:
 * Crie uma sondagem, uma pesquisa ou um item de tarefa para os participantes da reunião.
 * Exibir anotações relevantes para a reunião. Por exemplo, informações sobre um líder de vendas.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar o conteúdo da sondagem em uma guia na reunião." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar conteúdo de sondagem em uma guia em reunião no celular." border="false":::
 
----
+#### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar o conteúdo da sondagem em uma guia na reunião." border="false":::
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomia: guia In-meeting
 
@@ -146,15 +142,13 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 * Enviar aprovações
 * Receber lembretes
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="false":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião no celular." border="false":::
 
----
+### <a name="desktop"></a>Área de trabalho
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="false":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomia: caixa de diálogo na reunião
 
@@ -186,13 +180,13 @@ As caixas de diálogo na reunião podem variar de tamanho para levar em conta ce
 * **Largura**: Você pode especificar a largura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado.
 * **Altura**: Você pode especificar a altura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado. Você também pode permitir que os usuários rolem verticalmente se o conteúdo do aplicativo exceder a altura máxima.
 
-Para implementar, especifique a largura e a altura usando a [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) chave.
+Para implementar, especifique a largura e a altura usando a [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) chave.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemplo mostra a caixa de diálogo na reunião. Largura: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Altura: 300 pixels (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Usar o estágio de reunião compartilhado
 
-O estágio de reunião compartilhado ajuda os participantes da reunião a interagir e colaborar no conteúdo do aplicativo em tempo real. Por exemplo, os usuários podem concentrar sua chamada na edição de um documento, no brainstorming com um quadro de dados ou na revisão de um painel.
+O estágio de reunião compartilhado ajuda os participantes da reunião a interagir e colaborar no conteúdo do aplicativo em tempo real. Por exemplo, os usuários podem concentrar sua reunião na edição de um documento, no brainstorming com um quadro de dados ou na revisão de um painel.
 
 Os aplicativos compartilhados no estágio de reunião ocupam o mesmo espaço que uma tela compartilhada. O estágio reorienta para todos os participantes da reunião.
 
@@ -203,7 +197,7 @@ O estágio de reunião compartilhada tem a ver com colaboração e participaçã
 :::row:::
    :::column span="1":::
 
-**Editar e revisar**: mergulhe nos painéis e no planejamento com todos na chamada.
+**Editar e revisar**: mergulhe nos painéis e no planejamento com todos na reunião.
 
    :::column-end:::
    :::column span="3":::
@@ -296,7 +290,7 @@ Para caixas de diálogo na reunião, remova conteúdo desnecessário que não aj
 
 #### <a name="dont-introduce-unnecessary-elements"></a>Não: introduzir elementos desnecessários
 
-Uma única caixa de diálogo na reunião com várias interações pode distrair a chamada.
+Uma única caixa de diálogo na reunião com várias interações pode distrair a reunião.
 
    :::column-end:::
 :::row-end:::
@@ -376,7 +370,7 @@ Recomendamos posicionar a ação mais pesada visualmente para o local mais à di
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: ações de alinhamento à esquerda ou central
 
-Isso se desvia do padrão do Teams para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
+Isso se desvia do padrão Teams padrão para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
 
    :::column-end:::
 :::row-end:::
@@ -392,7 +386,7 @@ Isso se desvia do padrão do Teams para o posicionamento do controle em uma caix
 
 #### <a name="do-scroll-vertically"></a>Do: role verticalmente
 
-Os usuários esperam rolagem vertical no Teams (e em outros lugares). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de whiteboard, que os usuários podem atravessar o eixo x e y.
+Os usuários esperam rolagem vertical em Teams (e em outros lugares). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de whiteboard, que os usuários podem atravessar o eixo x e y.
 
    :::column-end:::
    :::column span="":::
@@ -440,7 +434,7 @@ As caixas de diálogo na reunião destinam-se a interações breves.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Foco no tema escuro
 
-As reuniões do Teams são otimizadas para temas escuros para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de dados e edição de documentos) não precisam de uma tela escura.
+Teams reuniões são otimizadas para temas escuros para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de dados e edição de documentos) não precisam de uma tela escura.
 
    :::column-end:::
    :::column span="":::
@@ -451,7 +445,7 @@ As reuniões do Teams são otimizadas para temas escuros para ajudar a reduzir o
 
 #### <a name="dont-use-unfamiliar-colors"></a>Não: use cores desconhecidas
 
-As cores que se contraem com o ambiente de reunião podem ser distrativas e aparecem menos nativas do Teams. Saiba mais sobre a rampa [de cores do](https://developer.microsoft.com/fluentui#/styles/web/colors/products)Teams , incluindo neutros do tema de chamada.
+As cores que se colidem com o ambiente de reunião podem ser distrativas e aparecerem menos nativas Teams. Saiba mais sobre a Teams [de cores](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluindo neutros do tema de chamada.
 
    :::column-end:::
 :::row-end:::

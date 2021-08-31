@@ -5,12 +5,12 @@ description: Como trabalhar com eventos de conversa do Microsoft Teams bot.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 94bbb43110e45c9ab84c686f8fc8e2ade19d6998
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703613"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528997"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -1289,12 +1289,10 @@ async def on_reactions_removed(
 O bot recebe um `installationUpdate` evento quando você instala um bot em um thread de conversa. A desinstalação do bot do thread também dispara o evento. Ao instalar um bot, o campo de ação no evento é definido para  adicionar *e,* quando o bot é desinstalado, o campo de ação é definido para  *remover*.
  
 > [!NOTE]
-> Quando você atualiza um aplicativo e adiciona ou remove um bot, a ação também dispara o `installationUpdate` evento. O **campo** de ação será definido como *add-upgrade* se você adicionar um bot *ou remover a atualização* se você remover um bot. 
-
-> [!IMPORTANT]
-> Os eventos de atualização de instalação estão na visualização do desenvolvedor hoje e estarão geralmente disponíveis (GA) em março de 2021. Para ver os eventos de atualização de instalação, você pode mover seu cliente Teams para a visualização do desenvolvedor público e adicionar seu aplicativo pessoalmente ou a uma equipe ou um chat.
+> Quando você atualiza um aplicativo e adiciona ou remove um bot, a ação também dispara o `installationUpdate` evento. O **campo** de ação será definido como *add-upgrade* se você adicionar um bot *ou remover a atualização* se você remover um bot.
 
 ### <a name="install-update-event"></a>Instalar evento de atualização
+
 Use o `installationUpdate` evento para enviar uma mensagem introdutiva do bot na instalação. Esse evento ajuda você a atender aos requisitos de privacidade e retenção de dados. Você também pode limpar e excluir dados de usuário ou thread quando o bot for desinstalado.
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -1408,7 +1406,7 @@ Quando você usa esses eventos de instalação e desinstalação, há algumas in
 
 | **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Bot de conversa | Código de exemplo para eventos de conversa bots. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversa | Código de exemplo para eventos de conversa bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 

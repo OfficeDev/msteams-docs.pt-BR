@@ -5,12 +5,12 @@ description: Saiba como começar com o desenvolvimento Microsoft Teams aplicativ
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703138"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822224"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Pré-requisitos: começar a Microsoft Teams desenvolvimento de aplicativos
 
@@ -97,6 +97,7 @@ Você pode usar a CLI com o `teamsfx` comando. Verifique se o comando está func
 Instalar ferramentas de navegador para desenvolvimento de aplicativos. Por exemplo, se seu aplicativo for escrito com React, você poderá usar React Ferramentas de Desenvolvedor:
 
 - [React Ferramentas de desenvolvedor para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Ferramentas de Desenvolvedor para Borda](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Se você quiser acessar dados armazenados no Azure ou implantar um back-end baseado em nuvem para seu aplicativo Teams no Azure, instale estas ferramentas:
 
@@ -199,7 +200,7 @@ Visual Studio 2019 solicita que você faça logoff em cada serviço conforme nec
 
     Agora que seu ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 * [Visão geral dos tutoriais](code-samples.md) 
 * [Criar um aplicativo usando React](first-app-react.md)
