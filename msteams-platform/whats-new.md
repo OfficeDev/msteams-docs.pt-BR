@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 localization_priority: Normal
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 31cdd73aa6367ccc1d3ed58a0fd0db4b06ca1761
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 6b050fad93f39a983166a7cba48379664cae040b
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529011"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849430"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|08/31/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduzido o guia passo a passo para criar um Teams com SSO (sign-on único). | [Guia passo a passo para criar um Teams com SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Evento de atualização de instalação recebido ao instalar um bot em um thread de conversa. | [Evento de atualização de instalação](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Criar guias com Cartões Adaptáveis|[Criar guias com Cartões Adaptáveis](tabs/how-to/build-adaptive-card-tabs.md)|
@@ -178,7 +179,6 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 |06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
 |05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
 

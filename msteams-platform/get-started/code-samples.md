@@ -4,12 +4,12 @@ description: Links e descrições de aplicativos de exemplo para a plataforma Mi
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teams exemplos de desenvolvedor
-ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709584"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849423"
 ---
 # <a name="overview"></a>Visão Geral
 
@@ -45,7 +45,11 @@ Um Teams app é feito de um ou mais recursos de [plataforma](../concepts/capabil
 
 Dependendo dos recursos que você deseja para seu aplicativo, você precisará de um toolset de desenvolvimento apropriado.
 
-| Recursos do aplicativo | Interações do usuário | Ferramentas recomendadas | SDKs | A tecnologia empilha | |--------|-------------|| --------|| --------|| --------| | Guias | Uma experiência da Web incorporada em tela inteira. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [Teams SDK](/javascript/api/overview/msteams-client) do cliente | Tecnologia Web em geral, HTML, CSS e JavaScript | | Bots | Um bot de chat que conversa com membros. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [SDK da Estrutura de](https://dev.botframework.com/) Bots | Node.js, C# ou Python | | Extensões de mensagens | Atalhos para inserir conteúdo externo em uma conversa ou tomar medidas em mensagens. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [SDK da Estrutura de](https://dev.botframework.com/) Bots | Node.js, C# ou Python |
+| Recursos do aplicativo | Interações do usuário | Ferramentas recomendadas | SDKs | Pilhas de tecnologia |
+|--------|-------------|--------|--------|--------|
+| Guias | Uma experiência da Web incorporada em tela inteira. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [Teams SDK do cliente](/javascript/api/overview/msteams-client) | Tecnologia Web em geral, HTML, CSS e JavaScript |
+| Bots | Um bot de chat que conversa com membros. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C# ou Python |
+| Extensões de mensagens | Atalhos para inserir conteúdo externo em uma conversa ou tomar medidas em mensagens. | VS Code com Teams Toolkit ou YoTeams (Gerador Yeoman) | [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C# ou Python |
 
 A seção Começar levará você por meio de conjuntos de ferramentas recomendados e tecnologias comumente usadas, como Visual Studio Code com extensão Teams, React.js para guias e Node.js para bots e extensões de mensagens, embora você não se limite a usar essas pilhas *específicas.*
 

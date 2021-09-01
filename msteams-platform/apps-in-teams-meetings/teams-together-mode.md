@@ -2,17 +2,14 @@
 title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
-ms.openlocfilehash: 9a0ef7eb2d6a014aaf831a0e1765d4b4ca44b8c6
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528803"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849437"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
-
-> [!NOTE]
-> Esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.
 
 As cenas do Modo Personalizado em Conjunto Microsoft Teams um ambiente de reunião imersivo e envolvente com as seguintes ações:
 
