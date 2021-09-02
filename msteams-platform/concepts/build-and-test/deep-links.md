@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 localization_priority: Normal
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: abe1b96d6761887248d4e34db466a18cbf71905e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03b827585bacb292cf44274d7cdbcf337ca83935
+ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345694"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862324"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -156,13 +156,18 @@ Os parâmetros de consulta são:
 
 * `tenantId`: Exemplo de ID de locatário, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Tipo de arquivo com suporte, como docx, pptx, xlsx e pdf
-* `objectUrl`: URL do objeto do arquivo, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: URL base do arquivo, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Nome do serviço, ID do aplicativo
+* `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`
+* `serviceName`: Nome do serviço, ID do aplicativo. Por exemplo, equipes.
 * `threadId`: o threadId é a ID de equipe da equipe onde o arquivo está armazenado. Ele é opcional e não pode ser definido para arquivos armazenados na pasta OneDrive usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: ID de grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `groupId`: ID de grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
-A seguir está o formato de exemplo de deeplink para arquivos:
+> [!NOTE]
+> Você pode ver `threadId` e na URL do `groupId` canal.  
+
+O seguinte formato de link profundo é usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+O seguinte formato de exemplo mostra o deeplink para arquivos:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
