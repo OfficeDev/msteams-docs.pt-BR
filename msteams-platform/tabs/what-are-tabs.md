@@ -2,15 +2,15 @@
 title: Guias do Microsoft Teams
 author: surbhigupta
 description: Uma visão geral das guias personalizadas na Teams plataforma
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5a884be8133129ea98abf2557e529c3c88657d15
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.openlocfilehash: a4ad7c0d832f7a4c71c3749053333298086dcd28
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398645"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155175"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
