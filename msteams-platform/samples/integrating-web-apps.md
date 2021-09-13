@@ -3,15 +3,15 @@ author: heath-hamilton
 description: Práticas recomendadas para integrar aplicativos Web existentes com Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Aplicativos Web
-ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345757"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155089"
 ---
 # <a name="web-apps"></a>Aplicativos Web 
 
@@ -39,7 +39,7 @@ Seu Teams app deve incluir recursos colaborativos necessários e esperados. Para
 |Chatbots  |[Bots](../bots/what-are-bots.md) |
 |Notificações de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks de entrada](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Conectores de Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Serviços externos de mensagens  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks de saída](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Modals  |[Módulos de tarefa](../task-modules-and-cards/what-are-task-modules.md)  |
+|Modals  |[Módulos de tarefas](../task-modules-and-cards/what-are-task-modules.md)  |
 |Cartões ricos em conteúdo  |[Cartões Adaptáveis](../task-modules-and-cards/what-are-cards.md)  |
 
 ## <a name="determine-a-subset-of-functionality"></a>Determinar um subconjunto de funcionalidade

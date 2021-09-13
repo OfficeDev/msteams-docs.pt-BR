@@ -3,14 +3,14 @@ title: Formatação de texto com suporte em conversas
 description: Descreve o suporte à formatação de texto em conversas de bot
 keywords: bots mensagens de conversas
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 466b2383230ce0cf8086ba4a3dd45a5488ed24b2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566744"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155032"
 ---
 # <a name="formatting-bot-messages"></a>Formatar mensagens de bot
 
@@ -40,7 +40,7 @@ Para obter informações sobre formatação em cartões, [consulte Teams Referê
 
 Para garantir que sua formatação funcione em todas as plataformas suportadas pelo Microsoft Teams, esteja ciente de que alguns estilos não são suportados atualmente em todas as plataformas.
 
-| Style                     | Mensagens somente texto | Cartões (somente XML) |
+| Estilo                     | Mensagens somente texto | Cartões (somente XML) |
 |---------------------------|--------------------|------------------|
 | bold                      | ✔                  | ✖                |
 | italic                    | ✔                  | ✔                |
@@ -60,7 +60,7 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e po
 
 #### <a name="text-only-messages"></a>Mensagens somente texto
 
-| Style                     | Desktop | iOS | Android |
+| Estilo                     | Desktop | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |
@@ -76,7 +76,7 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e po
 
 ### <a name="examples-of-text-formatting"></a>Exemplos de formatação de texto
 
-| Style | Exemplo | Markdown | XML (HTML) |
+| Estilo | Exemplo | Markdown | XML (HTML) |
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |

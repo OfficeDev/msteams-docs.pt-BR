@@ -2,14 +2,14 @@
 title: Otimizar seu bot com limitação de fluxo no Teams
 description: Limitação de taxas e práticas recomendadas Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345590"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155111"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -131,19 +131,19 @@ A tabela a seguir fornece os limites por bot por thread:
 
 | Cenário | Período de tempo em segundos | Operações máximas permitidas |
 | --- | --- | --- |
-| Enviar para conversa | 1  | 7  |
+| Enviar para conversa | 1 | 7  |
 | Enviar para conversa | 2 | 8  |
 | Enviar para conversa | 30 | 60 |
 | Enviar para conversa | 3600 | 1800 |
-| Criar conversa | 1  | 7  |
+| Criar conversa | 1 | 7  |
 | Criar conversa | 2 | 8  |
 | Criar conversa | 30 | 60 |
 | Criar conversa | 3600 | 1800 |
-| Obter membros da conversa| 1  | 14  |
+| Obter membros da conversa| 1 | 14  |
 | Obter membros da conversa| 2 | 16  |
 | Obter membros da conversa| 30 | 120 |
 | Obter membros da conversa| 3600 | 3600 |
-| Obter conversas | 1  | 14  |
+| Obter conversas | 1 | 14  |
 | Obter conversas | 2 | 16  |
 | Obter conversas | 30 | 120 |
 | Obter conversas | 3600 | 3600 |
@@ -161,15 +161,15 @@ A tabela a seguir fornece o limite por thread para todos os bots:
 
 | Cenário | Período de tempo em segundos | Operações máximas permitidas |
 | --- | --- | --- |
-| Enviar para conversa | 1  | 14  |
+| Enviar para conversa | 1 | 14  |
 | Enviar para conversa | 2 | 16  |
-| Criar conversa | 1  | 14  |
+| Criar conversa | 1 | 14  |
 | Criar conversa | 2 | 16  |
-| Criar conversa| 1  | 14  |
+| Criar conversa| 1 | 14  |
 | Criar conversa| 2 | 16  |
-| Obter membros da conversa| 1  | 28 |
+| Obter membros da conversa| 1 | 28 |
 | Obter membros da conversa| 2 | 32 |
-| Obter conversas | 1  | 28 |
+| Obter conversas | 1 | 28 |
 | Obter conversas | 2 | 32 |
 
 ## <a name="next-step"></a>Próxima etapa

@@ -3,14 +3,14 @@ title: Adicionar autenticação ao seu Teams bot
 author: surbhigupta
 description: Como adicionar autenticação OAuth a um bot Microsoft Teams.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 76ea98feb27640ffb7b310ca097e5e7a810ac1aed31b8bf0d8aa2e09d73d341a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3612e194b0e05526bbe38dc66a2b75037a003eed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703682"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155050"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
 
@@ -262,7 +262,7 @@ Como alternativa, enquanto estiver Visual Studio, você pode seguir estas etapas
 1. Na janela exibida, selecione o **link Novo.**
 1. Na janela de diálogo, selecione **Serviço de Aplicativo** à esquerda e Criar **Novo** à direita.
 1. Selecione o **botão Publicar.**
-1. Na próxima janela de diálogo, insira as informações necessárias. Este é um exemplo:
+1. Na próxima janela de diálogo, insira as informações necessárias. Veja um exemplo a seguir:
 
     ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 

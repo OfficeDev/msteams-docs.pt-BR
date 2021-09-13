@@ -1,15 +1,15 @@
 ---
 title: Usar Módulos de Tarefa em Microsoft Teams guias
 description: Explica como invocar módulos de tarefas Teams guias usando o SDK Microsoft Teams cliente.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
-ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703576"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155394"
 ---
 # <a name="use-task-modules-in-tabs"></a>Usar módulos de tarefas nas guias
 
@@ -131,7 +131,7 @@ A tabela a seguir fornece os valores possíveis `err` que podem ser recebidos po
 
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="see-also"></a>Confira também
 

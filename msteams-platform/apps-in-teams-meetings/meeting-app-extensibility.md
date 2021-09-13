@@ -3,12 +3,13 @@ title: Aplicativos de reuniões unificadas
 author: surbhigupta
 description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
-ms.openlocfilehash: 330156d28bf78723c3c6a670cc34cd97b48ad7a4
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528891"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155128"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 

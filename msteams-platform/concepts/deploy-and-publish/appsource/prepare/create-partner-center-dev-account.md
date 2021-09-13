@@ -4,12 +4,13 @@ description: Para publicar seu aplicativo na Microsoft Teams, você precisa de u
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708647"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155437"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 
@@ -194,7 +195,7 @@ Os tíquetes de suporte são resolvidos em uma semana. Verifique se há atualiza
 
 Envie um email para <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> com os seguintes detalhes:
 
-* **Linha de Assunto**: Problema da conta do Partner Center para *<your app name>* .
+* **Linha de Assunto**: Problema da conta do Partner Center *para o nome do aplicativo.*
 * **Corpo do email**:
     * Número do tíquete de suporte.
     * Sua ID do vendedor.

@@ -3,14 +3,14 @@ title: Projetar seu aplicativo - Compreender a estrutura do aplicativo
 description: Entenda o que você pode ou não personalizar no Microsoft Teams ao projetar seu aplicativo.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408577"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155432"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Compreender a estrutura Microsoft Teams de aplicativos
 
@@ -36,7 +36,7 @@ A tela é uma webview para que você possa personalizar completamente a experiê
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para aplicativos pessoais em dispositivos móveis." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 A tela é um iframe para que você possa personalizar completamente a experiência.
 
@@ -54,7 +54,7 @@ A tela é uma webview para que você possa personalizar completamente a experiê
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para guias no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 A tela é um iframe para que você possa personalizar completamente a experiência.
 
@@ -70,7 +70,7 @@ Bots são aplicativos de conversa que se integram Teams recursos nativos de mens
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para bots em dispositivos móveis." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para bots na área de trabalho." border="false":::
 
@@ -84,7 +84,7 @@ Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou agi
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagens em dispositivos móveis." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagens na área de trabalho." border="false":::
 
@@ -100,7 +100,7 @@ A superfície é uma webview, permitindo que você personalize a experiência, m
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para extensões de reunião em dispositivos móveis." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 A superfície é um iframe, permitindo que você personalize a experiência, mas tenha em mente que durante as reuniões esses aplicativos usam tema escuro e são estreitos.
 

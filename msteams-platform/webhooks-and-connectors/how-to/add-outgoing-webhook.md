@@ -3,15 +3,15 @@ title: Criar um Webhook de Saída
 author: laujan
 description: descreve como criar um Webhook de Saída
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: guias do teams webhook de saída mensagem ativas verificar webhook
-ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2039ffdbc307b266e7bc0f93c1638450a8be9037
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704288"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155155"
 ---
 # <a name="create-outgoing-webhook"></a>Criar Webhook de saída
 
@@ -217,7 +217,7 @@ var responseMsg = JSON.stringify({
 
 |**Nome do exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhooks de saída | Exemplos para criar bots personalizados a serem usados em Microsoft Teams.| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhooks de saída | Exemplos para criar bots personalizados a serem usados em Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)

@@ -1,15 +1,15 @@
 ---
 title: Tipos de cartões
 description: Descreve todas as ações de cartões e cartões disponíveis para bots no Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705465"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155461"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -89,7 +89,7 @@ A tabela a seguir fornece as propriedades das imagens de cartão em linha:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | Cadeia de Caracteres | Descrição acessível da imagem. |
+| alt | String | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, o redirecionamento na URL da imagem não será suportado. Isso ocorre para imagens compartilhadas na nuvem pública.
@@ -447,7 +447,7 @@ Office 365 Os cartões conectores funcionam corretamente Microsoft Teams, inclui
 
 A diferença importante entre o uso de cartões de conector de um conector e o uso de cartões de conector no bot é o tratamento de ações de cartão. A tabela a seguir lista a diferença:
 
-| Conector | Bot |
+| Connector | Bot |
 | --- | --- |
 | O ponto de extremidade recebe a carga de cartão por meio de HTTP POST. | A ação dispara uma atividade que envia apenas a ID de ação `HttpPOST` e o corpo para o `invoke` bot.|
 

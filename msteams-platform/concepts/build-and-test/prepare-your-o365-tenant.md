@@ -2,14 +2,14 @@
 title: Preparar o locatário do Microsoft 365
 description: Como começar a usar Teams no Microsoft 365
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Configurar Microsoft 365 locatário Teams carregamento
-ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704410"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155047"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 
@@ -27,7 +27,7 @@ Microsoft 365 assinantes podem desenvolver aplicativos para Microsoft Teams com 
 
 ## <a name="create-your-development-environment"></a>Criar seu ambiente de desenvolvimento
 
-Se você não tiver uma conta Microsoft 365, você deve se inscrever para uma assinatura Microsoft 365 programa de [desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program) A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a use para atividades de desenvolvimento. Se você tiver uma assinatura Visual Studio Enterprise ou Professional, ambos os programas incluirão uma assinatura Microsoft 365 [desenvolvedor gratuita.](https://aka.ms/MyVisualStudioBenefits) Ele está ativo enquanto sua assinatura Visual Studio está ativa. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
+Se você não tiver uma conta Microsoft 365, você deve se inscrever para uma assinatura Microsoft 365 programa de [desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program) A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a use para atividades de desenvolvimento. Se você tiver uma assinatura Visual Studio Enterprise ou Professional, ambos os programas incluirão uma assinatura Microsoft 365 [desenvolvedor gratuita.](https://aka.ms/MyVisualStudioBenefits) Ele está ativo enquanto sua assinatura Visual Studio está ativa. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
 
 ## <a name="enable-teams-for-your-organization"></a>Habilitar Teams para sua organização
 
@@ -59,7 +59,7 @@ Enable Teams for your organization and for more information, see [enableing Team
 
     ![Upload de aplicativo](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-Para obter informações completas sobre como essas configurações interagem, consulte [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and manage app setup policies in [Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+Para obter informações completas sobre como essas configurações interagem, consulte [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and manage app setup policies in [Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="next-step"></a>Próxima etapa
 

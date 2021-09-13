@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identificar pré-requisitos com aplicativos para Teams reuniões
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: c237a3131eac0286a60fe5bbd398439b51245ee9
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822203"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155133"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Pré-requisitos para aplicativos em reuniões do Teams
 
@@ -81,8 +81,8 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| Cadeia de caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. |
 
 #### <a name="example"></a>Exemplo
@@ -281,7 +281,7 @@ A `Meeting Details` API inclui o seguinte parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 #### <a name="example"></a>Exemplo
 
@@ -507,7 +507,7 @@ meetingEventInfoObject);
 
 * Familiarizar-se `TurnContext` com o objeto disponível por meio do SDK bot. O objeto em contém a carga com o início e a `Activity` `TurnContext` hora de término reais. Eventos de reunião em tempo real exigem uma ID de bot registrada na plataforma Teams.
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)

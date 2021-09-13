@@ -3,14 +3,14 @@ title: Enviar mensagens proativas
 description: Descreve como enviar mensagens proativas com seu Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 Keywords: enviar uma mensagem obter iD de conversa de canal de ID do usuário
-ms.openlocfilehash: 5a999769879c8661d16b79f885b463166be557903a6448c709eb06ed16e49345
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705697"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155452"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -270,9 +270,9 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 
 | **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams Noções básicas de conversa  | Demonstra noções básicas de conversas Teams, incluindo o envio de mensagens proativas um para um.| [Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
-| Iniciar novo thread em um canal | Demonstra a criação de um novo thread em um canal. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Teams Noções básicas de conversa  | Demonstra noções básicas de conversas Teams, incluindo o envio de mensagens proativas um para um.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Iniciar novo thread em um canal | Demonstra a criação de um novo thread em um canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>Exemplo de código adicional
 

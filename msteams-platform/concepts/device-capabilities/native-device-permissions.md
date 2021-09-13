@@ -2,14 +2,14 @@
 title: Solicitar permissões de dispositivo para seu Microsoft Teams app
 keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 27e70b0a8300d85138cb06d58160e32e3e308143
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 33a0fc390dc2123ccb77901acb7967b1b9732e77
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408558"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155228"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 

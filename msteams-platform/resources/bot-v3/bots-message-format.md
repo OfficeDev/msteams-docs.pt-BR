@@ -3,14 +3,14 @@ title: Formato de mensagem bot
 description: Descreve os detalhes da formatação para mensagens bot
 keywords: teams scenarios channels conversation bot message
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e737cd42d2aa00e3e4f302b4917fef67adaa5645
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566471"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155232"
 ---
 # <a name="message-formatting-for-bots"></a>Formatação de mensagens para bots
 
@@ -40,7 +40,7 @@ Atualmente, as seguintes limitações se aplicam:
 
 Para garantir que sua formatação funcione em todas as plataformas suportadas pelo Microsoft Teams, esteja ciente de que alguns estilos não são suportados atualmente em todas as plataformas.
 
-| Style                     | Mensagens somente texto | Rich cards (somente XML) |
+| Estilo                     | Mensagens somente texto | Rich cards (somente XML) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
@@ -60,7 +60,7 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e po
 
 ### <a name="text-only-messages"></a>Mensagens somente texto
 
-| Style                     | Desktop | iOS | Android |
+| Estilo                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |

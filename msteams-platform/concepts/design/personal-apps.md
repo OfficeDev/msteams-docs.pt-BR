@@ -3,14 +3,14 @@ title: Criar seu aplicativo pessoal
 description: Saiba como projetar um aplicativo Teams pessoal e obter o kit Microsoft Teams interface do usuário.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408619"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155475"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetar seu aplicativo pessoal para Microsoft Teams
 
@@ -57,9 +57,9 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 |A|**Guias**: fornece navegação para seu aplicativo pessoal.|
 |1|**webview**: exibe o conteúdo do aplicativo.|
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Este exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -68,7 +68,7 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 |C|**Exibição pop-out**: empurra o conteúdo do aplicativo de uma janela pai para uma janela filha autônoma.|
 |D|**Mais menu**: inclui opções e informações adicionais do aplicativo. (Você poderia, alternativamente, **Configurações** uma guia.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Este exemplo mostra a anatomia estrutural da guia pessoal." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -103,7 +103,7 @@ Os aplicativos pessoais podem incluir um bot para conversas um-a-um e notificaç
 |C|**Mensagem bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
 |D|**Caixa de redação**: Campo de entrada para envio de mensagens para o bot.|
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 

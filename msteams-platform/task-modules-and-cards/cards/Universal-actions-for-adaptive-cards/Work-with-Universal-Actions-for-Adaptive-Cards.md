@@ -2,13 +2,13 @@
 title: Trabalhar com Ações Universais para Cartões Adaptáveis
 description: Trabalhar com Ações Universais para Cartões Adaptáveis.
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701963"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155169"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
@@ -105,8 +105,8 @@ Para obter mais informações, consulte [compatibilidade com versões anteriores
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
-| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

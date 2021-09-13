@@ -2,15 +2,15 @@
 title: Enviar e receber mensagens com um bot
 description: Descreve como enviar e receber mensagens com bots no Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: mensagens de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630457"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155249"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa com um Microsoft Teams bot
 
@@ -78,8 +78,8 @@ As imagens podem ter no máximo 1024×1024 e 1 MB no formato PNG, JPEG ou GIF; G
 
 Recomendamos que você especifique a altura e a largura de cada imagem usando XML. Se você usar Markdown, o tamanho da imagem será padrão para 256×256. Por exemplo:
 
-* Usar o `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Não use `![Duck on a rock](http://aka.ms/Fo983c)`
+* Use`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Não use `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 ## <a name="receiving-messages&quot;></a>Recebimento de mensagens
 

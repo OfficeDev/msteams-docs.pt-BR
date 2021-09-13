@@ -2,14 +2,14 @@
 title: Escolher uma instalação para testar e depurar seu aplicativo
 description: Descreve opções para testar e depurar Microsoft Teams aplicativos
 keywords: teams executar aplicativos de depuração
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5d358e7f37972f1b0954f2c4c5f6a892aeff8d8f4f08b4be22d4ae0215acbebe
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c20f10fc0f3fb7265921ded2bf412271695bbcd9
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707313"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155012"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolha uma instalação para testar e depurar seu Microsoft Teams app
 
@@ -70,7 +70,7 @@ Você pode usar qualquer serviço enderecável externamente para hospedar seu c�
 
 ## <a name="load-and-run-your-experience"></a>Carregar e executar sua experiência
 
-Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para saber mais, confira:
+Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para saber mais, consulte:
 
 * [Crie o pacote para seu Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload seu aplicativo em Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

@@ -1,17 +1,17 @@
 ---
 title: Testar permissões de consentimento específicas do recurso Teams
 description: Detalhes do teste de consentimento específico do recurso em Teams usando Postman
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorização do teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 66fff68e69f90f49e07cdd87266830f93cb0be2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822217"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155054"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso Teams
 
@@ -133,7 +133,7 @@ Execute toda a coleção de permissões para cada chamada de API. As permissões
     2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Verifique todos os códigos de status de resposta para confirmar se as chamadas de API **específicas falharam com um código de status HTTP 403.**
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 [API Graph Microsoft e Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

@@ -2,15 +2,15 @@
 title: Criar um canal ou uma guia de grupo
 author: laujan
 description: Um guia de início rápido para criar um canal e uma guia de grupo com o Gerador Yeoman para Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: fedaf3ec639917110e16c666734fa3eedbcda18e
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179963"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155072"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Criar um canal ou uma guia de grupo
 
@@ -199,7 +199,7 @@ gulp build
     gulp serve
     ```
 
-1. Insira no navegador, substitua pelo nome da guia e veja a home page do aplicativo, conforme `http://localhost:3007/<yourDefaultAppNameTab>/` mostrado na imagem a **<yourDefaultAppNameTab>** seguir:
+1. Insira `http://localhost:3007/<yourDefaultAppNameTab>/` no navegador, substitua **seuDefaultAppNameTab** pelo nome da guia e exibir a home page do aplicativo, conforme mostrado na imagem a seguir:
 
     ![captura de tela da home page](~/assets/images/tab-images/homePage.png)
 

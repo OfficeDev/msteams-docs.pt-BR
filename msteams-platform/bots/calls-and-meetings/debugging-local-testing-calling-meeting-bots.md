@@ -2,15 +2,15 @@
 title: Depurar seus chamados e o bot de reunião localmente
 description: Saiba como você também pode usar o ngrok para desenvolver chamadas e bots de reunião online no computador local.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: túnel ngrok de desenvolvimento local
 ms.date: 11/18/2018
-ms.openlocfilehash: c38fe4aa04b359dca19c48add1b1a0a52e83ec46c4cb942788671820d29bb9a7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706397"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155126"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desenvolver bots de reunião online e de chamada no computador local
 

@@ -2,14 +2,14 @@
 title: Fluxo de autenticação para guias
 description: Descreve o fluxo de autenticação em guias
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: ccafd5b14e95e2cf319dcf53263e747e0bd67dd062c724ba9c8b736ec6c547db
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f95a9c89fd8d40078de064da0ca7c33d929dc0a1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705220"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155029"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams fluxo de autenticação para guias
 
@@ -51,7 +51,7 @@ Código de exemplo mostrando o processo de autenticação de tabulação:
 
 | **Nome do exemplo** | **Descrição** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams autenticação de tabulação | Processo de autenticação para guias usando a AAD. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams autenticação de tabulação | Processo de autenticação para guias usando a AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>Mais detalhes
 

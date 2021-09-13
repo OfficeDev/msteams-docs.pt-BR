@@ -2,15 +2,15 @@
 title: Criar uma guia pessoal
 author: laujan
 description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman para Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345673"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155071"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 

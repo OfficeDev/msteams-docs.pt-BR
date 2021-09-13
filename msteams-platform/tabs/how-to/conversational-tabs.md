@@ -5,12 +5,13 @@ description: Criar chat de sub entidade conversacional para suas guias de canal
 keywords: canal de guias do teams configurável
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529004"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155496"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -91,7 +92,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome do exemplo | Descrição | C# |Node.js|
+| Nome do exemplo | Descrição | C # |Node.js|
 |-------------|-------------|------|----|
 |Guia Criar Conversa| Microsoft Teams exemplo de guia para demonstrar a guia criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

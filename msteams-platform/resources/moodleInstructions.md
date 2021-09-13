@@ -3,15 +3,15 @@ title: Instalar o Moodle LMS
 description: Como instalar e configurar o aplicativo de integração Moodle para Microsoft Teams
 keywords: Teams Plug-ins de integração de aplicativo miojo
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5f33fa9146d0abb735e9f76aeaecea2dbdd230efe81251f9b7dcaf5700a907a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bdf5ea5b6f08c638bd00a69df59ae2e25b76b0ad
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705998"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155030"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -108,7 +108,7 @@ Use a página de instalação de Plug-ins de miojo gerados e em sua página de i
     1. Abra a pasta extraída.
     1. Clique com o botão direito do mouse no `Moodle-AzureAD-Script.ps1` arquivo e selecione **Propriedades**.
     1. Na guia **Geral** da janela Propriedades, selecione a caixa de seleção ao lado do atributo Security localizado `Unblock` na parte inferior da janela. 
-    1. Clique em **OK**.
+    1. Selecionar **OK**.
     1. Copie o caminho do diretório para a pasta extraída.
 
 1. Execute o PowerShell como administrador:
@@ -174,10 +174,10 @@ Use a página de instalação de Plug-ins de miojo gerados e em sua página de i
 
 1. Na página **Teams Configurações,** configure as configurações necessárias para habilitar a integração Teams aplicativo.
 
-    1. Para **habilitar o OpenID Connect,** selecione o link **Gerenciar Autenticação** e selecione o ícone do olho na linha **OpenId Connect** se ele estiver acinzentado.
+    1. Para **habilitar o Conexão OpenID,** selecione o link **Gerenciar** Autenticação e selecione o ícone do olho na linha **Conexão OpenId** se estiver acinzentado.
     1. Para habilitar a incorporação de quadro, selecione o link **Segurança HTTP** e selecione a caixa de seleção ao lado **de Permitir a incorporação de quadro**.
     1. Para habilitar os serviços Web, que habilitam os recursos da API Moodle, selecione o **link** Recursos Avançados e, em seguida, verifique se a caixa de seleção ao lado de Habilitar serviços **Web** está selecionada.
-    1. Para habilitar os serviços externos do Microsoft 365, selecione o link **Serviços externos** e, em seguida:  
+    1. Para habilitar os serviços externos para Microsoft 365, selecione o link **Serviços externos** e, em seguida:  
 
         ✔ Selecione **Editar** na **linha Moodle Microsoft 365 Webservices.**
 
@@ -191,7 +191,7 @@ Use a página de instalação de Plug-ins de miojo gerados e em sua página de i
 
 ## <a name="3-deploy-the-moodle-assistant-bot-to-azure"></a>3. Implantar o Moodle Assistant Bot no Azure
 
-O bot de assistente de miojo gratuito do Microsoft Teams ajuda professores e alunos a responder a perguntas sobre seus cursos, atribuições, notas e outras informações no Moodle. O bot também envia notificações Moodle para alunos e professores no Teams. O bot é um projeto de código aberto mantido pela Microsoft e está disponível no [GitHub](https://github.com/microsoft/Moodle-Teams-Bot).
+O bot de assistente de miojo gratuito para Microsoft Teams ajuda professores e alunos a responder a perguntas sobre seus cursos, atribuições, notas e outras informações no Moodle. O bot também envia notificações Moodle para alunos e professores no Teams. O bot é um projeto de código aberto mantido pela Microsoft e está disponível [no](https://github.com/microsoft/Moodle-Teams-Bot)GitHub .
 
 > [!NOTE]
 >
@@ -207,28 +207,28 @@ Para instalar o bot, você deve registrá-lo na [Plataforma de Identidade da Mic
 
 **Para registrar seu bot**
 
-1. Vá para a página de administração de plug-ins e selecione **Plug-ins**. Em Integração com o **Microsoft 365,** selecione a **guia Configurações do Teams.**
+1. Vá para a página de administração de plug-ins e selecione **Plug-ins**. Em **Microsoft 365 Integração**, selecione a **guia Teams Configurações.**
 
 1. Selecione o link do Portal de Registro de **Aplicativos** da Microsoft e entre com sua ID da Microsoft.
 
 1. Insira um nome para seu aplicativo, como MoodleBot e selecione o **botão Criar.**
 
-1. Copie a **ID do** Aplicativo e a colar no campo **ID** do Aplicativo Bot na página **Configurações da** Equipe.
+1. Copie a **ID do** Aplicativo e a colar no campo **ID** do Aplicativo Bot na **página Equipe Configurações.**
 
-1. Selecione o **botão Gerar Nova Senha.** Copie a senha gerada e a colar no campo Senha do Aplicativo **Bot** na página **Configurações da** Equipe.
+1. Selecione o **botão Gerar Nova Senha.** Copie a senha gerada e a colar no campo Senha do Aplicativo **Bot** na **página Configurações** Equipe.
 
 1. Role até a parte inferior do formulário e selecione **Salvar Alterações**.
 
 Depois de gerar a ID e a senha do aplicativo, implante seu bot no Azure:
 
 > [!div class="checklist"]
-> * Selecione **Implantar no Azure** e preencha o formulário com as informações necessárias, como a ID do Aplicativo Bot, a Senha do Aplicativo Bot e o Segredo do Moodle na página **Configurações do Teams.** As informações do Azure estão na página **Instalação.** 
+> * Selecione **Implantar no Azure** e preencha o formulário com as informações necessárias, como a ID do Aplicativo Bot, a Senha do Aplicativo Bot e o Segredo do Moodle na página **Teams Configurações.** As informações do Azure estão na página **Instalação.** 
 > * Depois de concluir o formulário, selecione a caixa de seleção para concordar com os termos e condições.
 > * Selecione **Comprar**. Todos os recursos do Azure são implantados na camada gratuita.
 
-Após a conclusão da implantação dos recursos no Azure, você deve configurar os plug-ins do Moodle do Microsoft 365 com um ponto de extremidade de mensagens. Você deve obter o ponto de extremidade do bot no Azure:
+Após a conclusão da implantação dos recursos no Azure, você deve configurar os plug-ins Microsoft 365 Moodle com um ponto de extremidade de mensagens. Você deve obter o ponto de extremidade do bot no Azure:
 
-1. Entre no [portal do Azure](https://portal.azure.com).
+1. Entre no [Portal do Azure](https://portal.azure.com).
 
 1. No painel esquerdo, selecione **Grupos** de recursos e selecione o grupo de recursos que você usou ou criou ao implantar o bot.
 
@@ -236,38 +236,38 @@ Após a conclusão da implantação dos recursos no Azure, você deve configurar
 
 1. Copie o **Ponto de Extremidade de Mensagens** da seção **Visão** Geral.
 
-1. No Moodle, abra a **página Configurações da** Equipe de seus Plug-ins de Moodle do Microsoft 365.
+1. No Moodle, abra a **página Equipe Configurações** do seu Microsoft 365 Moodle Plugins.
 
 1. No campo **Ponto de Extremidade bot,** cole a URL que você acabou de copiar e altere as mensagens *de* palavra para *webhook*. A URL deve aparecer da seguinte forma: `https://botname.azurewebsites.net/api/webhook`
 
 1. Clique em **Salvar alterações**.
 
-1. Depois de salvar as alterações, volte para a guia Configurações da Equipe, selecione o botão **Baixar** arquivo de manifesto e salve o pacote de manifesto do aplicativo em seu computador para uso posterior. 
+1. Depois de salvar as alterações, volte para a guia **Equipe** Configurações, selecione o botão **Baixar** arquivo de manifesto e salve o pacote de manifesto do aplicativo em seu computador para uso posterior.
 
-## <a name="4-deploy-your-microsoft-teams-app"></a>4. Implantar seu aplicativo do Microsoft Teams
+## <a name="4-deploy-your-microsoft-teams-app"></a>4. Implante seu aplicativo Microsoft Teams aplicativo
 
-Depois que seu bot foi implantado no Azure e configurado para falar com seu servidor Moodle, você deve implantar seu aplicativo do Microsoft Teams. Para fazer isso, você deve carregar o arquivo de manifesto do aplicativo que você baixou da página Configurações de Equipe do Microsoft 365 Moodle Plugins na etapa anterior.
+Depois que seu bot foi implantado no Azure e configurado para falar com seu servidor Moodle, você deve implantar seu Microsoft Teams aplicativo. Para fazer isso, você deve carregar o arquivo de manifesto do aplicativo que você baixou da página Microsoft 365 Moodle Plugins Team Configurações página na etapa anterior.
 
 Antes de instalar o aplicativo, você deve garantir a habilitação de aplicativos externos e o carregamento de aplicativos. Para obter mais informações, [consulte Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md). 
 
 **Para implantar seu aplicativo** 
 
-1. Abra **o Microsoft Teams**. 
+1. Abra **Microsoft Teams**. 
 
 1. Selecione o **ícone aplicativo** na área inferior esquerda da barra de navegação.
 
-1. Selecione o **link Carregar um aplicativo personalizado** na lista de opções.
+1. Selecione o Upload um link **de aplicativo** personalizado na lista de opções.
 
    > [!NOTE]
    > Se você estiver conectado como um administrador global, deverá ter a opção de carregar o aplicativo no catálogo de aplicativos da sua organização, caso contrário, você só poderá carregar o aplicativo para uma equipe na qual você é membro.
 
-4. Selecione o `manifest.zip` pacote que você baixou anteriormente e selecione **Salvar**. Se você não tiver baixado o pacote de  manifesto do aplicativo, poderá baixar na guia Configurações da Equipe da página de configuração de plug-ins no Moodle.
+4. Selecione o `manifest.zip` pacote que você baixou anteriormente e selecione **Salvar**. Se você não tiver baixado o pacote de manifesto do aplicativo, poderá baixar Configurações guia **Equipe** da página de configuração de plug-ins no Moodle.
 
 Agora que você tem o aplicativo instalado, você pode adicionar a guia a qualquer canal ao que tiver acesso. Para fazer isso, navegue até o canal, selecione o símbolo **mais** (➕) e selecione seu aplicativo na lista. Siga os prompts para concluir a adição de sua guia de curso miojo a um canal.
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. Permitir a criação automática de guias Moodle no Microsoft Teams
 
-Embora as guias Moodle sejam criadas manualmente no Microsoft Teams, você pode decidir crie-as automaticamente quando as equipes são criadas a partir da sincronização do curso. Para fazer isso, você deve configurar a ID do aplicativo do Microsoft Teams carregado no Moodle.
+Embora as guias Moodle sejam criadas manualmente no Microsoft Teams, você pode decidir crie-as automaticamente quando as equipes são criadas a partir da sincronização do curso. Para fazer isso, você deve configurar a ID do aplicativo Microsoft Teams carregado no Moodle.
 
 **Para permitir a criação automática de guias Moodle**
 
@@ -277,13 +277,13 @@ Embora as guias Moodle sejam criadas manualmente no Microsoft Teams, você pode 
 
 1. Localize o aplicativo **Moodle** carregado > selecione o ícone **de** opções > selecione **copiar link**.
 
-1. Em um editor de texto, colar o conteúdo copiado. Ele deve conter uma URL como ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff. Copie a última parte da URL, como , que é a  `00112233-4455-6677-8899-aabbccddeeff` ID do aplicativo do Microsoft Teams.
+1. Em um editor de texto, colar o conteúdo copiado. Ele deve conter uma URL como ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff. Copie a última parte da URL, como , que é a `00112233-4455-6677-8899-aabbccddeeff` ID do Microsoft Teams app.
 
-1. No Moodle, abra a guia **Aplicativo miojo** do Teams na página de configuração de Plug-ins de miojo do Microsoft 365.
+1. No Moodle, abra **a guia Teams aplicativo Moodle** na página de configuração Microsoft 365 Plug-ins de Moodle.
 
 1. Colar a ID do aplicativo Microsoft Teams no campo ID do aplicativo Moodle e salvar alterações.
 
-Quando um curso Moodle é sincronizado, o Microsoft Teams instala automaticamente o aplicativo Moodle na equipe, cria uma guia Moodle no canal Geral do Teams e o configura para conter a página de curso para o curso Moodle a partir do qual ele é sincronizado. Agora você pode começar a trabalhar com seus cursos de Moodle diretamente do Microsoft Teams.
+Quando um curso Moodle é sincronizado, o Microsoft Teams instala automaticamente o aplicativo Moodle na equipe, cria uma guia Moodle no canal Geral do Teams e o configura para conter a página de curso do curso Moodle a partir do qual ele é sincronizado. Agora você pode começar a trabalhar com seus cursos de miojo diretamente Microsoft Teams.
 
 > [!NOTE]
 > Para compartilhar qualquer solicitação de recurso ou comentários conosco, visite nossa [página user voice](https://microsoftteams.uservoice.com/forums/916759-moodle).

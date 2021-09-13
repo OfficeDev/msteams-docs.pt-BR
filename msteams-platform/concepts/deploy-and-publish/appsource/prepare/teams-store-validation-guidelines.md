@@ -4,12 +4,13 @@ description: Descreve as diretrizes que todos os aplicativos enviados ao Teams (
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.localizationpriority: none
+ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408535"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155015"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 

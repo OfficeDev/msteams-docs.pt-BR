@@ -2,13 +2,13 @@
 title: Visão geral das ações universais para cartões adaptáveis
 description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis.
 ms.topic: overview
-localization_priority: Normal
-ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706334"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155172"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 

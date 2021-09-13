@@ -4,12 +4,13 @@ author: Rajeshwari-v
 description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.localizationpriority: none
+ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398673"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155414"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -115,11 +116,11 @@ A seguir estão os exemplos de link profundo para invocar o Stage View:
 
 **Exemplo 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl",:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl".:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
 
 **Exemplo 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl",:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl".:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
 
 > [!NOTE]
 > * O `name` é opcional em link profundo. Se não estiver incluído, o nome do aplicativo o substituirá.
@@ -132,14 +133,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `name` | String | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
 | `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `websiteUrl?` | String | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome do exemplo | Descrição | C# |Node.js|
+| Nome do exemplo | Descrição | C # |Node.js|
 |-------------|-------------|------|----|
 |Guia no exibição de estágio |Microsoft Teams exemplo de guia para demonstração de guia no exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     

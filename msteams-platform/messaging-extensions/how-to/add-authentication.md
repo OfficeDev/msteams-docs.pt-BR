@@ -2,15 +2,15 @@
 title: Adicionar autenticação à sua extensão de mensagens
 author: surbhigupta
 description: Como adicionar autenticação a uma extensão de mensagens
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c486ddcdda8ea23dc562f17ef42b3fc26a2c73c5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068918"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155191"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -134,7 +134,7 @@ Neste ponto, a janela fecha e o controle é passado para o cliente Teams. O clie
 ```
 
 ## <a name="code-sample"></a>Exemplo de código
-|**Exemplo de nome** | **Descrição** |**.NET** | **Node.js**|
+|**Nome do exemplo** | **Descrição** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |Extensões de mensagens - auth e config | Uma Extensão de Mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados depois que o usuário se inscreveu. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 

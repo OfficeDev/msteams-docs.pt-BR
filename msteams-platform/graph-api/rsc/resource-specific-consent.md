@@ -1,17 +1,17 @@
 ---
 title: Habilitar o consentimento específico do recurso Teams
 description: Descreve o consentimento específico do recurso em Teams e como tirar proveito dele.
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 256bdf29079f9a8f3085c63f7e072414c4bd3ce3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822210"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155254"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
@@ -144,7 +144,7 @@ Para obter mais informações, [consulte obter acesso em nome de um usuário](/g
 
 As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. Adicione uma [chave webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
-|Nome| Tipo | Descrição|
+|Name| Tipo | Descrição|
 |---|---|---|
 |`id` |Cadeia de caracteres |Sua ID do aplicativo AAD. Para obter mais informações, [consulte register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
 |`resource`|Cadeia de caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|

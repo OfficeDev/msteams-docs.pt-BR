@@ -3,15 +3,15 @@ title: Criar uma página de remoção de guias
 author: surbhigupta
 description: Como criar uma página de remoção de tabulação
 keywords: teams tabs group channel configurble remove delete
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706783"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155093"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -21,13 +21,13 @@ Você pode estender e aprimorar a experiência do usuário suportando opções d
 
 Seu **manifest.json** define os recursos e recursos da guia. A propriedade da instância de tabulação tem um valor Boolean que indica se um usuário pode modificar ou `canUpdateConfiguration` reconfigurar a guia depois que ela for criada. A tabela a seguir fornece os detalhes da propriedade:
 
-|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|Name| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. O padrão é `true`. |
 
 Quando sua guia é carregada em um chat de canal ou grupo, Teams adiciona um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração. A tabela a seguir fornece os detalhes da configuração:
 
-| `canUpdateConfiguration`| verdadeiro   | falso | descrição |
+| `canUpdateConfiguration`| verdadeiro   | falso | description |
 | ----------------------- | :----: | ----- | ----------- |
 |     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme aparece na barra de guias.          |

@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Visão geral dos recursos de dispositivo nativo.
 ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 4b09d4d81301aa8fc125da98a3633dc79e05d3d1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 6b1fcb436dc77c1859c81010c1d1eb5adcc3773a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345722"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155474"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
@@ -25,7 +25,7 @@ Um dispositivo móvel ou desktop tem dispositivos integrados, como uma câmera e
     * Microfone
     * Galeria
     * QR ou scanner de código de barras
-* Localização
+* Local
 
 Depois de obter acesso aos recursos do dispositivo, você pode integrá-los Teams plataforma para aprimorar a experiência colaborativa. 
 

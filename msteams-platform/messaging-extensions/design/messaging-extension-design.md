@@ -3,15 +3,15 @@ title: Projetando sua extensão de mensagens
 description: Saiba como criar uma extensão de mensagens do Teams e obter o Kit de Interface do Usuário do Microsoft Teams.
 keywords: práticas recomendadas de dicas de extensões de mensagens de referência de diretrizes de design do teams
 author: heath-hamilton
-localization_priority: Priority
+ms.localizationpriority: high
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 8ea0efa758855cdba4f7791eb6e99b3b1e22f8fe
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 3cc9ac28bd07d3d79894a59cb2ff436fa43dda0d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408640"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155053"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Criando sua extensão de mensagens do Microsoft Teams
 

@@ -3,14 +3,14 @@ title: Obter contexto para seu Microsoft Teams bot
 description: Descreve como obter contexto para bots no Microsoft Teams
 keywords: contexto de bots do teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: cda2e24816330964342b097f52bb955c8846c54a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566485"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155247"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obter contexto para seu Microsoft Teams bot
 
@@ -196,7 +196,7 @@ connector.fetchChannelList(
 Você pode buscar o clientInfo na atividade do bot. O clientInfo contém as seguintes propriedades:
 
 * Locale
-* País/Região
+* País
 * Plataforma
 * Timezone
 

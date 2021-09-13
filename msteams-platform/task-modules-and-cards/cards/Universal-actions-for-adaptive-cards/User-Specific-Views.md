@@ -3,13 +3,13 @@ title: Exibições Específicas do Usuário
 description: Exemplo de exibições específicas do usuário usando ações universais
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 00d6c8e5109fdd9cdf83662f9585a9a2d9e7fd86
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.localizationpriority: medium
+ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585981"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155092"
 ---
 # <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
@@ -204,7 +204,7 @@ Diretrizes de design de cartão para ter em mente ao projetar exibições espec�
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

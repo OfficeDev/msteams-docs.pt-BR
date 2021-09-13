@@ -4,12 +4,13 @@ author: surbhigupta
 description: Como responder ao comando de pesquisa de uma extensão de mensagens em um Microsoft Teams aplicativo.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068942"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155007"
 ---
 # <a name="respond-to-search-command"></a>Responder ao comando de pesquisa
 
@@ -24,7 +25,7 @@ Este documento orienta você sobre como responder a solicitações de usuário n
 
 Os parâmetros de solicitação são encontrados no objeto na `value` solicitação, que inclui as seguintes propriedades:
 
-| Nome da propriedade | Objetivo |
+| Nome da propriedade | Finalidade |
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
 | `parameters` | Matriz de parâmetros. Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
@@ -82,7 +83,7 @@ Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação 
 
 Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um aplicativo ou objeto JSON válido com as seguintes propriedades:
 
-|Nome da propriedade|Objetivo|
+|Nome da propriedade|Finalidade|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
 |`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: Exibe uma lista de resultados da pesquisa <br>`auth`: Pede ao usuário para autenticar <br>`config`: Pede ao usuário para configurar a extensão de mensagens <br>`message`: Exibe uma mensagem de texto sem texto |
@@ -343,7 +344,7 @@ A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regul
 | Exemplo de nome           | Descrição | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Confira também
 

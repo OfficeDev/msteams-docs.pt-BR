@@ -2,14 +2,14 @@
 title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de visita ou o serviço de bot do azure com o suporte ao cartão OAuth.
 keywords: token, token de usuário, suporte a SSO para bots
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ffa13e8a9f4014f0ed3e89f32b1eafed74fea76b
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: a3b150ee27eeb387c71191e74b6765dd5a93b148
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528793"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155115"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 

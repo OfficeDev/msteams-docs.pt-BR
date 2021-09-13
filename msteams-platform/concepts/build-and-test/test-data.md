@@ -2,15 +2,15 @@
 title: Adicionar dados de teste ao seu locatário Microsoft 365 teste
 description: Configurar sua assinatura de programa Office 365 desenvolvedor para testes bem-sucedidos de Microsoft Teams Apps
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707110"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155440"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
@@ -29,7 +29,7 @@ Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma as
 
 ## <a name="allow-users-to-upload-apps"></a>Permitir que os usuários carreguem aplicativos
 
-Por padrão, somente administradores globais ou Teams de serviço podem carregar aplicativos (sideload) em um locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste. Para obter mais informações, consulte [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
+Por padrão, somente administradores globais ou Teams de serviço podem carregar aplicativos (sideload) em um locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste. Para obter mais informações, consulte [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## <a name="create-teams-and-channels-for-testing"></a>Criar equipes e canais para teste
 

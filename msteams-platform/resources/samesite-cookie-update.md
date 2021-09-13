@@ -4,14 +4,14 @@ author: laujan
 description: descreve os atributos do cookie SameSite
 keywords: atributos de cookie samesite
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708333"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155417"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite 
 
@@ -61,7 +61,7 @@ Os atributos de cookie sameSite são os seguinte:
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Guias, módulos de tarefas e extensões de mensagens
 
 * Teams guias usam para incorporar conteúdo que é exibido em um contexto de nível `<iframes>` superior ou de primeira parte.
-* Módulos de tarefa permitem criar experiências pop-up modais no aplicativo do Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
+* Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
 * Extensões de mensagens permitem inserir conteúdo enriquecido em uma mensagem de chat de recursos externos.
 
 Todos os cookies usados pelo conteúdo incorporado são considerados como terceiros quando o site é exibido em `<iframe>` um . Além disso, se qualquer recurso remoto em uma página depender de cookies que estão sendo enviados com uma solicitação e marcas, fontes externas e conteúdo personalizado, você deve garantir que eles sejam marcados para uso entre sites, como ou garantir que um fallback está `<img>` `<script>` no `SameSite=None; Secure` local.

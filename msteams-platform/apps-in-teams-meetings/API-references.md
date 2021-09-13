@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identificar referências de API de aplicativos de reunião
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 78fb6d5927241b8fd3697c3bfe40528bb9fd35d0
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: ebb8bb95f9011e45afba59ad7b624bb2494c0b74
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529056"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155132"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -56,8 +56,8 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| Cadeia de Caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. |
 
 ### <a name="example"></a>Exemplo
@@ -256,7 +256,7 @@ A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 ### <a name="example"></a>Exemplo
 

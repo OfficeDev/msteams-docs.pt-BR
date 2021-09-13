@@ -2,14 +2,14 @@
 title: Autenticação para guias usando Azure Active Directory
 description: Descreve a autenticação no Teams e como usá-la em guias
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: guias de autenticação do teams AAD
-ms.openlocfilehash: 69b05edd2cb0106ccf951490c36e2268f947af418a50dd9cc53fe7ec1b3e1311
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6bd963a0ff6eee8b239693904fdf30798fd192d0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707784"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155028"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma Microsoft Teams guia
 
@@ -161,4 +161,4 @@ Código de exemplo mostrando o processo de autenticação de tabulação usando 
 
 | **Nome do exemplo** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teams autenticação de tabulação | Processo de autenticação de tabulação usando o Azure AD. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Microsoft Teams autenticação de tabulação | Processo de autenticação de tabulação usando o Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

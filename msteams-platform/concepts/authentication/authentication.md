@@ -2,14 +2,14 @@
 title: Autenticando usuários de aplicativos
 description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Autenticação do teams OAuth SSO AAD
-ms.openlocfilehash: 73d85fed57caff410e2f4986f208b868c228777deade8a5a2a0a1ce0e35d7cd3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705591"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155392"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
@@ -45,8 +45,8 @@ fornece exemplo de SDK de autenticação de bot v3.
 
 | **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Autenticação bot | Este exemplo mostra como começar a usar a autenticação em um bot para Microsoft Teams. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Guia, Bot e Extensão de Mensagens (ME) SSO | Este exemplo mostra SSO para Tab, Bot e ME - pesquisa, ação, linkunfurl. |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
+| Autenticação bot | Este exemplo mostra como começar a usar a autenticação em um bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Guia, Bot e Extensão de Mensagens (ME) SSO | Este exemplo mostra SSO para Tab, Bot e ME - pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
 
 
 ## <a name="configure-the-identity-provider"></a>Configurar o provedor de identidade

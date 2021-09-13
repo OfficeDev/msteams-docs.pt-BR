@@ -3,14 +3,14 @@ title: Atualizar e excluir mensagens enviadas do bot
 author: WashingtonKayaker
 description: Como atualizar e excluir mensagens enviadas de seu Microsoft Teams bot
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8f1738894aa5580f62b91fa44edf06d54fcc99f7786bae33ffc8cc7b95669fcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706089"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155109"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Atualizar e excluir mensagens enviadas do bot
 
@@ -182,7 +182,7 @@ O exemplo de código a seguir demonstra noções básicas de conversas:
 
 | **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams Noções básicas de conversa  | Demonstra noções básicas de conversas no Teams incluindo a atualização e exclusão de mensagens. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams Noções básicas de conversa  | Demonstra noções básicas de conversas no Teams incluindo a atualização e exclusão de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 

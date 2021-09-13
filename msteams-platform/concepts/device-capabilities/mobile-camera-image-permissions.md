@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Como usar Teams SDK do cliente JavaScript para habilitar recursos de mídia
 keywords: mídia de permissões nativas de dispositivo de recursos de microfone de imagem da câmera
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345729"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155055"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
@@ -80,7 +80,7 @@ A imagem a seguir mostra a experiência do aplicativo Web da `selectMedia` API p
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condição|
+|Código de erro |  Nome do erro     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **404** | FILE_NOT_FOUND | O arquivo especificado não é encontrado no local determinado.|

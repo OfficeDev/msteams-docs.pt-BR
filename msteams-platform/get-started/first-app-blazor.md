@@ -5,12 +5,13 @@ description: Crie rapidamente um aplicativo do Microsoft Teams que exibe uma men
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707131"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155211"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor
 
@@ -158,7 +159,7 @@ A implantação consiste em duas etapas:
 1. Recursos de nuvem necessários são criados. Isso também é conhecido como provisionamento.
 1. Comece a codificar e copie seu aplicativo para os recursos de nuvem criados.
 
-> **Visualizar**
+> **VISUALIZAR**
 >
 > O suporte para aplicativos Blazor é novo no Teams Toolkit.  O provisionamento e a implantação são feitos com uma combinação de Visual Studio 2019 e o Portal do Desenvolvedor para Teams.
 

@@ -3,13 +3,13 @@ title: Exibições atualizadas
 description: Exemplo de exibições atualizadas usando o Bot Universal
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707411"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155229"
 ---
 # <a name="up-to-date-cards"></a>Cartões atualizados
 
@@ -263,7 +263,7 @@ O código a seguir fornece um exemplo de Cartões Adaptáveis enviados como resp
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

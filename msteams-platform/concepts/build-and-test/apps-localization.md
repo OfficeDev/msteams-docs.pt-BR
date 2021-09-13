@@ -2,15 +2,15 @@
 title: Localizar o aplicativo
 description: Descreve considerações para a localização de seu Microsoft Teams app.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 403314eb732aef0a0813dc56c37cd3c34eecafd3754a74a4946a70f33d9fbde7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705570"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155230"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
@@ -157,5 +157,5 @@ Se você fornecer versões localizadas do aplicativo, os usuários responderão 
 
 | Nome do exemplo | Descrição | .NET | Node.js |
 |-------------|-------------|------|------|
-| Localização de aplicativos | Microsoft Teams localização de aplicativo usando bot e guia. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| Localização de aplicativos | Microsoft Teams localização de aplicativo usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 

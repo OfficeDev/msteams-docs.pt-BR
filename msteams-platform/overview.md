@@ -3,15 +3,15 @@ title: Criar aplicativos para a Microsoft Teams plataforma
 author: heath-hamilton
 description: Obter uma visão geral de como os desenvolvedores podem estender Microsoft Teams recursos com aplicativos personalizados.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: df871894a1353301edaeb12af3cb940f0bb47472
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: e35393a2696ace22068e34566c3dad4a3109bd73
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345611"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155421"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 

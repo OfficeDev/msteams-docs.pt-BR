@@ -3,13 +3,13 @@ title: Fluxos de Trabalho Sequenciais
 description: Exemplo de fluxos de trabalho sequenciais usando ações universais
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705514"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155171"
 ---
 # <a name="sequential-workflows"></a>Fluxos de Trabalho Sequenciais
 
@@ -127,8 +127,8 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
-| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 
 ## <a name="see-also"></a>Confira também

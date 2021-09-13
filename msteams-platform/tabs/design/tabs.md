@@ -2,15 +2,15 @@
 title: Guias de design para desktop, web e mobile
 description: Saiba como projetar uma guia Teams para desktop, web e celular e obter o Microsoft Teams de interface do usuário.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a33bc00f26d9a296d4b76e3885cd12d772e8f8e8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408626"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155031"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para Microsoft Teams
 
@@ -37,7 +37,7 @@ Os usuários podem acessar guias selecionando o botão **Mais** no canal (exempl
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Exemplo mostra uma guia móvel sendo adicionada em um canal." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 O exemplo a seguir mostra como os usuários podem adicionar uma guia em um canal.
 
@@ -88,7 +88,7 @@ As guias fornecem uma experiência da Web de tela inteira em Teams onde você po
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Exemplo mostra uma guia móvel com um quadro de tarefas." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um quadro de tarefas." border="false":::
 
@@ -104,9 +104,9 @@ As guias fornecem uma experiência da Web de tela inteira em Teams onde você po
 |2|**Chat de tabulação**: abre um chat que permite que os usuários tenham uma conversa ao lado do conteúdo.|
 |3|**webview**: exibe o conteúdo do aplicativo.|
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Esta Ilustração mostra a anatomia da interface do usuário de uma guia." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -138,7 +138,7 @@ Os usuários podem postar automaticamente em um canal ou chat depois de adiciona
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Exemplo mostra uma guia móvel sendo discutida em um thread de canal." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em um thread de canal." border="false":::
 
@@ -150,7 +150,7 @@ Os usuários podem ter uma conversa ao lado do conteúdo da guia que estão exib
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia móvel com uma área de chat no contexto." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
 
@@ -176,7 +176,7 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 |4 |**Renomear**: os usuários podem dar à guia um nome significativo para o canal, chat ou reunião.|
 |5 |**Excluir**: remove a guia do canal, chat ou reunião.|
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de tabulação." border="false":::
 

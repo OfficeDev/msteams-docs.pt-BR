@@ -3,14 +3,14 @@ title: Pesquisar com extensões de mensagens
 description: Descreve como desenvolver extensões de mensagens baseadas em pesquisa
 keywords: Pesquisa de extensões de mensagens de mensagens do teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 515472838ff2ad35ef5dd295043ec27c53edb4f1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a8e4a80835dade53c129e9efe1b21cd6715104ce
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566724"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155501"
 ---
 # <a name="search-with-messaging-extensions"></a>Pesquisar com extensões de mensagens
 

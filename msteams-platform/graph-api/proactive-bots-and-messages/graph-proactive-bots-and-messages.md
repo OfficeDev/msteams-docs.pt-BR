@@ -1,17 +1,17 @@
 ---
 title: Usar o Microsoft Graph autorizar a instalação proativa de bots e mensagens no Teams
 description: Descreve mensagens proativas no Teams e como implementar.
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: e6a14dbc94ceb86fc6c457a7c589260b36c8fdf4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585960"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155252"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
@@ -74,7 +74,7 @@ Você pode recuperar o `teamsAppId` das seguintes maneiras:
     **Solicitação GET HTTP:**
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     A solicitação deve retornar um objeto , que é a ID de aplicativo gerada pelo catálogo `teamsApp` `id` do aplicativo. Isso é diferente da ID fornecida no manifesto Teams aplicativo:
@@ -194,7 +194,7 @@ Seu bot pode [enviar mensagens proativas](/azure/bot-service/bot-builder-howto-p
 
 | **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 ## <a name="see-also"></a>Confira também
 
 * [**Gerenciar políticas de configuração de aplicativos Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)

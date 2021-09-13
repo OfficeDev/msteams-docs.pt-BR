@@ -5,12 +5,13 @@ description: Saiba como criar uma guia personalizada com a Estrutura do SharePoi
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706897"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155208"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Crie e execute seu primeiro aplicativo Microsoft Teams com Estrutura do SharePoint (SPFx)
 
@@ -219,7 +220,7 @@ O SharePoint pacote está localizado `SPFx/sharepoint/solution` no seu projeto. 
 
 1. Localize `{project}.sppkg` seu arquivo na pasta dentro do seu `SPFx/sharepoint/solution` projeto. Selecione **Abrir**.
 
-1. Clique em **OK**.
+1. Selecionar **OK**.
 
 1. O SharePoint de implantação será automaticamente iniciar. Verifique se **Tornar essa solução disponível para todos os sites da organização** está selecionada. Em seguida, **selecione Implantar**.
 

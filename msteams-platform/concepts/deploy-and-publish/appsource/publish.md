@@ -4,12 +4,13 @@ description: Descreve o processo para enviar seu aplicativo para o Partner Cente
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a7c46f6dc537d7cfad7c176582df1305c3f0bc056a78996e013757a3eff7e013
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 5f401e940b5c3f4c4d47ae4fcb77142809a2ff01
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706062"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155435"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo no Microsoft Teams store
 
@@ -30,7 +31,7 @@ Quando você acha que seu aplicativo está pronto para produção, você pode co
 1. [Revise as diretrizes Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) de validação da loja para garantir que seu aplicativo atenda Teams padrões de aplicativo e loja.
 1. [Criar uma conta de desenvolvedor do Partner Center.](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
 1. [Prepare o envio da](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)loja , que inclui a execução de testes automatizados, a compilação de notas de teste, a criação de uma listagem de loja, entre outras tarefas importantes para ajudar a acelerar o processo de revisão.
-1. [Envie seu aplicativo por](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) meio do Partner Center.
+1. [Envie seu aplicativo por](/office/dev/store/add-in-submission-guide) meio do Partner Center.
 1. Se o envio falhar, trabalhe diretamente com a Microsoft para resolver os problemas e [reabrir seu aplicativo.](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
 
    :::column-end:::
@@ -45,7 +46,7 @@ Quando você acha que seu aplicativo está pronto para produção, você pode co
 
 ## <a name="see-also"></a>Confira também
 
-* [Publicação para Microsoft 365 App Stores](https://docs.microsoft.com/office/dev/store/)
+* [Publicação para Microsoft 365 App Stores](/office/dev/store/)
 * [Upload seu Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publicar seu Teams aplicativo em sua organização](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 

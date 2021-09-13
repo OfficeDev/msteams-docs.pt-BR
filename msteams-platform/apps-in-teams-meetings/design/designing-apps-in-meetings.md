@@ -3,14 +3,14 @@ title: Projetando sua extensão de reunião
 author: heath-hamilton
 description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Microsoft Teams interface do usuário.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528912"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155131"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -41,7 +41,7 @@ Depois que o aplicativo for adicionado (por exemplo, na área de trabalho), os u
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 Em uma reunião, os usuários podem selecionar **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **Adicionar um aplicativo** e selecionar o aplicativo que eles querem.
 
@@ -90,7 +90,7 @@ As pessoas podem usar a guia na reunião para:
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar conteúdo de sondagem em uma guia em reunião no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Exemplo mostra como você pode apresentar o conteúdo da sondagem em uma guia na reunião." border="false":::
 
@@ -146,7 +146,7 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="false":::
 

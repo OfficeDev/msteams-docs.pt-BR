@@ -2,15 +2,15 @@
 title: Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 description: Entenda os requisitos e considerações importantes relacionados à criação de bots de mídia hospedados pelo aplicativo para Microsoft Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: vm do windows server do windows server hospedado pelo aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702827"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155453"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 
@@ -70,7 +70,7 @@ Exemplos de bots de mídia hospedados pelo aplicativo são os seguinte:
 
 | **Nome do exemplo** | **Descrição** | **Graph** |
 |------------|-------------|-----------|
-| Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="see-also"></a>Confira também

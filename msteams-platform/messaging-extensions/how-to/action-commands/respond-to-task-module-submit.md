@@ -2,15 +2,15 @@
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
 description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068959"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155513"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -589,7 +589,7 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
 |`mentionType`|String|Descreve a menção de uma "pessoa".|
 |`mri`|String|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|String|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

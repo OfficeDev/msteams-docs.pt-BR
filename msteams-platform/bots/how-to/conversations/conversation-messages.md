@@ -3,14 +3,14 @@ title: Mensagens em conversas de bot
 description: Descreve maneiras de ter uma conversa com um Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f2cb661ac20d8313101144be275a54a90f4f2db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707547"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155112"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -405,7 +405,7 @@ A seguir estão os códigos de status e seus valores de código de erro e mensag
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="see-also"></a>Confira também
 

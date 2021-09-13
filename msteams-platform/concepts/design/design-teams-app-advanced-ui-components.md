@@ -3,14 +3,14 @@ title: Projetar seu aplicativo com componentes avançados da interface do usuár
 author: heath-hamilton
 description: Saiba mais sobre os componentes da interface do usuário usados em Teams .
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408689"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155481"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
@@ -36,7 +36,7 @@ Os breadcrumbs são um auxílio de navegação que transmitem a hierarquia do ap
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb na área de trabalho." border="false":::
 
@@ -53,7 +53,7 @@ Use a navegação esquerda para navegar por várias páginas na guia Teams. No e
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo na área de trabalho." border="false":::
 
@@ -71,7 +71,7 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos de interface do usuário da barra de notificação na área de trabalho." border="false":::
 
@@ -92,7 +92,7 @@ Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, um link compar
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Exemplo mostra um modelo de estágio no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Exemplo mostra um modelo de estágio na área de trabalho." border="false":::
 
@@ -110,6 +110,6 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas na área de trabalho." border="false":::

@@ -1,15 +1,15 @@
 ---
 title: Criar um Assistente Virtual
 description: Como criar um Assistente Virtual e habilidades para uso no Microsoft Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de assistente virtual do teams
-ms.openlocfilehash: aec0b731b73607cd8f881509ab77da7b8fd35f21c121b97220fdd5019fc53df2
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 47258b55cd00452b33c09da6a5d5403ba1f0aa2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708368"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155086"
 ---
 # <a name="create-virtual-assistant"></a>Criar um Assistente Virtual 
 
@@ -572,7 +572,7 @@ Você também pode aproveitar as habilidades existentes do repositório [de Solu
 
 | **Nome do exemplo** | **Descrição** | **C#**  **.NET** |
 |----------|-----------------|---------------------------|
-| Modelo de visual studio atualizado | Modelo personalizado para dar suporte aos recursos das equipes. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Modelo de visual studio atualizado | Modelo personalizado para dar suporte aos recursos das equipes. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
 | Book-a-room bot skill code | Permite que você encontre e reserve rapidamente uma sala de reunião em qualquer lugar. | [Exibir](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 

@@ -1,15 +1,15 @@
 ---
 title: Obter contexto para sua guia
 description: Descrever como obter o contexto do usuário para suas guias
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 32c8606d172a785356107750eac8168b1987d7f6b41d44f02297f0c19d22aa61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709327"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155499"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 

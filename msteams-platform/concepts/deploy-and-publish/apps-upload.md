@@ -4,12 +4,13 @@ description: Saiba como fazer sideload do aplicativo Microsoft Teams. O sideload
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345259"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155107"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload seu aplicativo no Microsoft Teams
 

@@ -3,14 +3,14 @@ title: Noções básicas sobre os casos de uso do aplicativo
 author: heath-hamilton
 description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro entender quais problemas seu aplicativo está tentando resolver.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6669492c25cb3701f5c937b3f99e39d411fbc4a4
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 151e9d24015f45f9085bd07604bc1cc7882266de
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408537"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155476"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 

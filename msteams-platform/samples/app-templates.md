@@ -3,15 +3,15 @@ title: Microsoft Teams de aplicativos
 description: Links e descrições de modelos de aplicativos para a Microsoft Teams plataforma
 ms.topic: reference
 keywords: Microsoft Teams exemplos de modelos
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 1820de7a7a2a46766fac646c7a7267e754b855bfb1ea549ba208663ef9cadcd0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4a186997365499f30fe777a911d27a0b37fb7440
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708762"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155234"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -621,7 +621,7 @@ Os Check-ins de equipe são [um aplicativo Power Apps](/powerapps/powerapps-over
 
 ![Criar exibição de check-in](../assets/images/staff-check-ins-create.png)
 
-## <a name="survey"></a>Pesquisa
+## <a name="survey"></a>Survey
 
 A pesquisa é um [](../messaging-extensions/what-are-messaging-extensions.md) aplicativo Microsoft Teams de extensão de mensagens personalizado que permite que você crie uma pesquisa em um chat ou canal para coletar dados e obter informações ativas. O aplicativo tem suporte em todos os clientes da plataforma Teams, como desktop, navegador, iOS e Android, e está pronto para implantação como parte da sua assinatura Microsoft 365.  
 

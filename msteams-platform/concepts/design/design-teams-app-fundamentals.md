@@ -2,15 +2,15 @@
 title: Projetar seu aplicativo - Compreender o sistema de design
 description: Saiba mais sobre as noções básicas sobre como projetar seu aplicativo Microsoft Teams, incluindo layout, esquema de cores e muito mais.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 3c625f66912b9b45d820a663dfc6846aa1de7356cb77f5a800112fbedc615de1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703977"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155480"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de design de aplicativo
 

@@ -3,14 +3,14 @@ title: Manipuladores de atividade de bot
 author: surbhigupta
 description: Entenda os manipuladores de atividades do bot no Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 51199edcd28ea9f4521c4d0a19c7872b3e1a852e092dd949a9d6490e395c2ab1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705690"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155052"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 

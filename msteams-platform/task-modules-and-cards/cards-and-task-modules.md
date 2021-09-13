@@ -3,13 +3,13 @@ title: Cartões e módulos de tarefa
 description: Cartões e módulos de tarefa.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 5980759e1a6650dd801b92fae804994a776dd6fd8edbfb257a915f9092d7a1f9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: 245d2d27f62dba27c9468be84cf9aa514b319923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709556"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155173"
 ---
 # <a name="cards-and-task-modules"></a>Cartões e módulos de tarefa
 

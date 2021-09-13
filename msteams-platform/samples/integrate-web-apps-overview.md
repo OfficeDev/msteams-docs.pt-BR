@@ -4,12 +4,13 @@ author: Rajeshwari-v
 description: Uma visão geral da integração de aplicativos Web e recursos de dispositivo com Microsoft Teams aplicativo.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345764"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155395"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -77,7 +78,7 @@ Você pode criar links profundos para as entidades Teams. Você pode criar links
 
 Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams. 
 
-## <a name="integrate-people-picker"></a>Integrar o Se picker de pessoas
+## <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
 Você pode integrar o controle Teams seletor de pessoas nativas que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.
 

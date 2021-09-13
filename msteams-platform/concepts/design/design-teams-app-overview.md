@@ -2,15 +2,15 @@
 title: Projetando seu aplicativo personalizado
 author: heath-hamilton
 description: Saiba como projetar Microsoft Teams aplicativos. Os recursos incluem Microsoft Teams kit de interface do usuário, práticas recomendadas, exemplos e muito mais.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705028"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155479"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams aplicativo
 

@@ -3,15 +3,15 @@ title: 'Tutorial - Criar seu primeiro aplicativo usando C #'
 description: Saiba como começar a criar Microsoft Teams aplicativos com C# ou .NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707322"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155206"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Criar seu primeiro aplicativo Teams usando C #
 

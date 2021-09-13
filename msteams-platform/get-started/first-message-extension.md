@@ -5,12 +5,13 @@ description: Crie uma extensão de mensagens para o Microsoft Teams usando o Kit
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.localizationpriority: none
+ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254283"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155207"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crie e execute sua primeira extensão de mensagens para o Microsoft Teams
 
@@ -175,7 +176,7 @@ A implantação envolve o provisionamento de recursos em uma assinatura ativa do
 
 O Teams Config do Auth de Pesquisa para projetos de exemplo no GitHub, demonstre como criar extensões de mensagens que incluem uma página de configuração e a autenticação [do Serviço bot.](https://github.com/microsoft/BotBuilder-Samples#teams-samples) Os exemplos também demonstram como criar extensões de mensagem que aceitam solicitações de pesquisa e retornam os resultados depois que o usuário se inscreveu.
 
-| **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** | **Python** |
+| **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | Construtor de bots | Para criar extensões de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 

@@ -2,15 +2,15 @@
 title: Extensões de mensagens
 author: surbhigupta
 description: Uma visão geral das extensões de mensagens na plataforma Microsoft Teams de mensagens
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706020"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155251"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -72,8 +72,8 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 
 | **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|
-| Extensão de mensagens com comandos baseados em ação | Este exemplo ilustra como criar uma extensão de mensagens baseada em ação. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Extensão de mensagens com comandos baseados em pesquisa | Este exemplo ilustra como criar uma Extensão de Mensagens baseada em Pesquisa. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Extensão de mensagens com comandos baseados em ação | Este exemplo ilustra como criar uma extensão de mensagens baseada em ação. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Extensão de mensagens com comandos baseados em pesquisa | Este exemplo ilustra como criar uma Extensão de Mensagens baseada em Pesquisa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="see-also"></a>Confira também
 

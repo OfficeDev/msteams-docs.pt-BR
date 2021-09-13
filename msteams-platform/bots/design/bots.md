@@ -3,14 +3,14 @@ title: Criar um bot
 description: Saiba como criar um bot do Microsoft Teams e obter o Kit de Interface do Usuário do Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a52aa742d51ab637b850d8c55b15ab1305566e35
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408668"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155393"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -38,7 +38,7 @@ Os usuários podem acessar bots que foram adicionados à área de trabalho com u
 
 :::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="Exemplo mostra como acessar um bot móvel em um chat de grupo usando um @mention." border="false":::
 
-### <a name="desktop"></a>Área de trabalho
+### <a name="desktop"></a>Desktop
 
 Os usuários podem adicionar um bot de uma das seguintes maneiras:
 
@@ -60,7 +60,7 @@ No contexto pessoal, as mensagens de boas-vindas definem o tom do bot. A mensage
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um aplicativo pessoal no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um aplicativo pessoal." border="false":::
 
@@ -72,7 +72,7 @@ A introdução do bot deve ser um pouco diferente em canais e chats de grupo em 
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um contexto colaborativo no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um contexto colaborativo." border="false":::
 
@@ -86,7 +86,7 @@ Não se esqueça: no menu de comandos do bot (**O que posso fazer?**), você tam
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="Exemplo mostra um bot com um botão de login no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Exemplo mostrando um bot com um botão de logon." border="false":::
 
@@ -105,7 +105,7 @@ Em um aplicativo pessoal, um carrossel pode fornecer uma visão geral eficaz do 
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="Exemplo mostra um tour de bot em um chat um-a-um no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Exemplo mostrando um tour de bot em um chat entre duas pessoas." border="false":::
 
@@ -117,7 +117,7 @@ Em canais e chats em grupo, o tour deve ser aberto em um modal (também conhecid
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="Exemplo mostra um tour de bot em um canal móvel." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Exemplo mostrando um tour de bot em um canal." border="false":::
 
@@ -148,7 +148,7 @@ Você pode usar bots nos seguintes contextos:
 |4 |**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
 |5 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Exemplo mostrando a anatomia estrutural de um bot." border="false":::
 
@@ -223,7 +223,7 @@ Os bots podem fornecer uma correspondência exata de uma consulta ou um grupo de
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="Exemplo mostra uma interação de consulta simples com um bot no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Exemplo mostrando uma interação de consulta simples com um bot." border="false":::
 
@@ -237,7 +237,7 @@ Nos exemplos a seguir, o bot responde a cada mensagem com opções para o que po
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="Exemplo mostra uma interação de várias voltas com um bot no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Exemplo mostrando uma interação de várias etapas com um bot." border="false":::
 
@@ -255,7 +255,7 @@ Nesse canal, o usuário pode ler a mensagem por meio do bot.
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="Exemplo mostra o usuário olhando para a mensagem proativa do bot no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 No exemplo a seguir, o usuário recebe uma notificação de
 
@@ -273,7 +273,7 @@ Em aplicativos pessoais, uma guia pode complementar o que seu bot pode fazer. Po
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="Exemplo mostra como uma guia pode ajudar a organizar o conteúdo do bot no celular." border="false":::
 
-#### <a name="desktop"></a>Área de trabalho
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Exemplo mostrando como uma guia pode ajudar a organizar o conteúdo do bot." border="false":::
 

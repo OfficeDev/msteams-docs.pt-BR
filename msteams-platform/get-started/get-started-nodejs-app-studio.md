@@ -3,14 +3,14 @@ title: Tutorial - Crie seu primeiro aplicativo usando Node.js
 description: Saiba como começar a criar Microsoft Teams aplicativos com Node.js.
 keywords: getting started node.js nodejs App Studio
 ms.topic: tutorial
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 67cbc37e156b19f9e059f434a7dbfab4b9932256
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704568"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155195"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>Crie seu primeiro aplicativo Microsoft Teams usando Node.js
 
