@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 8ef06dc5c2d6461b4867150ec8fec773f225b058
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba12e7f450cc45f005567a5148d8f7b88a5fe77d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155094"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360659"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|09/08/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduzido o guia passo a passo para criar um Teams com SSO (sign-on único). | [Guia passo a passo para criar um Teams com SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Evento de atualização de instalação recebido ao instalar um bot em um thread de conversa. | [Evento de atualização de instalação](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |

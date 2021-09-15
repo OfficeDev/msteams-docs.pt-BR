@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: none
-ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ed3dd7abd877a91fce1c321f0f6c68d91fd1b1e3
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155015"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360472"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams diretrizes de validação do armazenamento
 
@@ -303,7 +303,6 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele adere a essas diret
 * Guias em um contexto pessoal podem agregar conteúdo de instâncias compartilhadas do aplicativo.
 * As guias devem ser responsivas Teams temas. Quando um usuário altera o tema, o tema do aplicativo deve refletir a seleção.
 * As guias devem usar Teams com estilo de Teams, como fontes de Teams, rampas de tipo, paletas de cores, sistema de grade, movimento, tom de voz e assim por diante sempre que possível.
-* Você deve incluir uma **guia Configurações.**
 * As guias devem seguir Teams design de interação, como, navegação na página, posição e uso de caixas de diálogo, hierarquias de informações e assim por diante sempre que possível.
 * O conteúdo de tabulação no iframe não deve incluir recursos que imitam Teams principais recursos. Por exemplo, bots, extensões de mensagens, chamada, reunião e assim por diante.
 

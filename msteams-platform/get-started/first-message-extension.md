@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155207"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360673"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crie e execute sua primeira extensão de mensagens para o Microsoft Teams
 
@@ -122,15 +122,19 @@ Para criar e executar o aplicativo localmente:
 
 1. Selecione **Adicionar** para adicionar o aplicativo à sua conta.
 
-   Depois que o aplicativo for carregado, você será levado diretamente para uma caixa de diálogo de pesquisa:
+   Depois que o aplicativo for carregado, você poderá tentar usar a funcionalidade de exemplo: você pode iniciar a extensão de mensagem de três pontos na área de composição e tentar pesquisar pacotes npm na barra de pesquisa.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
+   
+   Você também pode tentar @ sua instância de extensão de mensagem da barra de pesquisa na linha superior do Teams e pesquisar o pacote npm.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
 
-   Digite algum texto na caixa de pesquisa e selecione uma das opções.  Um cartão adaptativo será adicionado à sua caixa de entrada.
+   Digite algum texto na caixa de pesquisa e selecione uma das opções, você pode criar e enviar cartões adaptáveis dos resultados da pesquisa.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Sua extensão de mensagens baseada em pesquisa em ação":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Saiba o que acontece quando você executar seu aplicativo localmente no depurador.</summary>
+<summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>
 
 Quando você pressiona a **tecla F5,** o Teams Toolkit:
 

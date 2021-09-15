@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155206"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360723"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Criar seu primeiro aplicativo Teams usando C #
 
@@ -69,7 +69,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>Criar e executar o exemplo
 
-Você pode criar e executar o smaple depois que ele for clonado. 
+Você pode criar e executar o exemplo depois que ele for clonado. 
 
 **Para criar e executar o exemplo clonado**
 

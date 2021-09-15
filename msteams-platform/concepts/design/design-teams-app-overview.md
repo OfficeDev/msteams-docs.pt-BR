@@ -5,12 +5,12 @@ description: Saiba como projetar Microsoft Teams aplicativos. Os recursos inclue
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155479"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360465"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams aplicativo
 
@@ -33,7 +33,7 @@ Teams aplicativos ajudam as pessoas a alcançarem mais juntos. Use esses princí
 
 ### <a name="collaborative"></a>Colaborativo
 
-Teams aplicativos ajudam as pessoas a alcançarem mais juntos. Use esses princípios para orientar seu design.
+Teams app promove a colaboração por meio de atividades coordenadas e compartilhadas entre os usuários.
 
    :::column-end:::
    :::column span="":::

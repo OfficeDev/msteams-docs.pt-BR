@@ -6,12 +6,12 @@ ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 36aa779db0c45ab3724673cb0030a97cceef6a78
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155208"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360806"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Crie e execute seu primeiro aplicativo Microsoft Teams com Estrutura do SharePoint (SPFx)
 
@@ -105,11 +105,16 @@ Após a Teams Toolkit configura seu projeto, você terá os componentes para cri
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Captura de tela mostrando arquivos de projeto do aplicativo para um aplicativo pessoal no Visual Studio Code.":::
 
-O Kit de ferramentas cria automaticamente scaffolding para você no diretório do projeto com base nas capacidades que você adicionou durante a instalação. O Kit de ferramentas do Teams mantém o estado de seu aplicativo no diretório `.fx`.  Entre outros itens deste diretório:
+O Kit de ferramentas cria automaticamente scaffolding para você no diretório do projeto com base nas capacidades que você adicionou durante a instalação. O Kit de ferramentas do Teams mantém o estado de seu aplicativo no diretório `.fx`. 
 
-- Os ícones do aplicativo são armazenados como arquivos PNG em `color.png` e `outline.png`.
-- O manifesto do aplicativo para publicação no Portal do Desenvolvedor para Teams é armazenado em `manifest.source.json` .
-- As configurações que você escolheu ao criar o projeto são armazenadas em `settings.json`.
+- As configurações que você escolheu ao criar o projeto são armazenadas em `.fx/settings.json`.
+- O estado do seu projeto é armazenado em `.fx/env.*.json` .
+
+E as Teams do aplicativo são armazenadas no `appPackage` diretório.
+
+- Os ícones do aplicativo são armazenados como arquivos PNG em `appPackage/color.png` e `appPackage/outline.png`.
+- O manifesto do aplicativo para publicação no Portal do Desenvolvedor para Teams é armazenado em `appPackage/manifest.source.json` .
+
 
 Como você selecionou um SPFx webpart, os seguintes arquivos são relevantes para sua interface do usuário:
 
@@ -220,7 +225,7 @@ O SharePoint pacote está localizado `SPFx/sharepoint/solution` no seu projeto. 
 
 1. Localize `{project}.sppkg` seu arquivo na pasta dentro do seu `SPFx/sharepoint/solution` projeto. Selecione **Abrir**.
 
-1. Selecionar **OK**.
+1. Selecione **OK**.
 
 1. O SharePoint de implantação será automaticamente iniciar. Verifique se **Tornar essa solução disponível para todos os sites da organização** está selecionada. Em seguida, **selecione Implantar**.
 

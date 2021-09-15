@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155475"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360715"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetar seu aplicativo pessoal para Microsoft Teams
 
@@ -39,7 +39,7 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomia: aplicativo pessoal (espaço de trabalho privado)
 
-#### <a name="mobile"></a>Celular
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
@@ -88,11 +88,11 @@ Use um dos seguintes Teams e componentes para ajudar a projetar sua guia pessoal
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
 
-Os aplicativos pessoais podem incluir um bot para conversas um-a-um e notificações privadas (por exemplo, quando um colega posta um comentário na prancheta). Os usuários interagem com o bot em uma guia especificada.
+Os aplicativos pessoais podem incluir um bot para conversas um-a-um e notificações privadas (por exemplo, quando um colega posta um comentário na área de trabalho). Os usuários interagem com o bot em uma guia especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
 
-#### <a name="mobile"></a>Celular
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 

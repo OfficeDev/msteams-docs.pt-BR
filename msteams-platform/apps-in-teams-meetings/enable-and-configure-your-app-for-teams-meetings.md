@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155130"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360479"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -50,9 +50,6 @@ O manifesto do aplicativo deve incluir o seguinte trecho de código:
     }
   ]
 ```
-
-> [!NOTE]
-> `meetingStage` está disponível no momento apenas na [visualização do](../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
 
 ### <a name="context-property"></a>Propriedade Context
 
@@ -108,7 +105,7 @@ Em um chat de reunião, insira a **@** chave e selecione Obter **bots**.
 
 Durante uma reunião, você pode usar a caixa de diálogo ou a caixa de diálogo na reunião para `meetingSidePanel` criar experiências exclusivas para seus aplicativos.
 
-#### <a name="meeting-sidepanel"></a>Sidepanel de reunião
+#### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
 O permite personalizar experiências em uma reunião que permite que organizadores e apresentadores tenham diferentes tipos de `meetingSidePanel` exibição e ações. No manifesto do aplicativo, você deve adicionar `meetingSidePanel` à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
@@ -130,9 +127,6 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 > * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a ID Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
-
-> [!NOTE]
-> Esse recurso está disponível apenas na visualização [do](../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
 
 O estágio de reunião compartilhado permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real.
 
@@ -166,9 +160,10 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | Amostra |
-|----------------|-----------------|--------------|----------------|-----------|
-| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [Exibir](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|Nome do exemplo | Descrição | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

@@ -1,19 +1,19 @@
 ---
-title: Introdução - Construa o seu primeiro bot de conversação
+title: Começar - Criar seu primeiro bot
 author: adrianhall
-description: Crie um bot de conversação para o Microsoft Teams usando o Kit de ferramentas do Teams.
+description: Crie um bot para Microsoft Teams usando o Teams Toolkit.
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7e41de915e63b509da1db5b1cbe8e018be4d586d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155210"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360595"
 ---
-# <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Criar o seu primeiro bot de conversação para o Microsoft Teams
+# <a name="build-your-first-bot-for-microsoft-teams"></a>Crie seu primeiro bot para Microsoft Teams
 
 Neste tutorial, você aprenderá como construir, executar e implantar um aplicativo bot do Teams. Um bot atua como um intermediário entre um usuário do Teams e um serviço Web. Os usuários podem bater papo com um bot para obter informações rapidamente, iniciar fluxos de trabalho ou qualquer outra coisa que seu serviço Web possa fazer. 
 
@@ -93,7 +93,7 @@ Uma extensão de mensagem usa o [Bot Framework](https://docs.botframework.com) p
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="Layout de arquivo de um projeto de bot.":::
 
-O código do bot é armazenado no diretório `bot`.  O `bot/teamsBot.js` é o principal ponto de entrada para o bot e as caixas de diálogo são armazenadas no diretório `dialogs`.
+O código do bot é armazenado no diretório `bot`.  O `bot/teamsBot.js` é o ponto de entrada principal para o bot.
 
 > [!Tip]
 > Familiarize-se com os bots fora do Teams antes de integrar o seu primeiro bot dentro do Teams.  Você pode localizar mais informações sobre os bots analisando os tutoriais do [Serviço de Bot do Azure](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
@@ -104,7 +104,6 @@ O Kit de ferramentas do Teams permite hospedar o seu aplicativo localmente.  Par
 
 - Um Aplicativo do Azure Active Directory é registrado no locatário M365.
 - Um manifesto do aplicativo é enviado ao Centro de Desenvolvedor para o Teams.
-- Uma API é executada localmente usando o Azure Functions Core Tools para oferecer suporte ao seu aplicativo.
 - [ngrok](https://ngrok.io) é instalado e usado para fornecer um túnel entre o Teams e o código do seu bot.
 
 Para compilar e executar o seu aplicativo localmente:
@@ -120,9 +119,9 @@ Para compilar e executar o seu aplicativo localmente:
 1. Você pode ser solicitado a entrar.  Em caso afirmativo, entre com sua conta M365.
 1. Quando solicitado a instalar o aplicativo no Teams, selecione **Adicionar**.
 
-   Depois que o aplicativo for carregado, você será levado diretamente para uma sessão de chat com o bot.  Você pode digitar `intro` para mostrar um cartão de apresentação e `show` para mostrar seus detalhes do Microsoft Graph.  (Isso exigirá uma aprovação de permissões adicionais).
+   Depois que o aplicativo for carregado, você será levado diretamente para uma sessão de chat com o bot.  Você pode digitar para mostrar um cartão de introdução e ir para a documentação de comando de bot e `welcome` `learn` cartão adaptável. 
 
-   A depuração funciona normalmente - experimente você mesmo! Abra o arquivo `bot/dialogs/rootDialog.js` e localize o método `triggerCommand(...)`.  Defina um ponto de interrupção no caso padrão.  Em seguida, digite algum texto.
+   A depuração funciona normalmente - experimente você mesmo! Abra o arquivo `bot/teamsBot.js` e localize o método `onMessage()`.  Definir um ponto de interrupção em qualquer caso.  Em seguida, digite algum texto.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -132,7 +131,6 @@ Quando você pressiona a **tecla F5,** o Teams Toolkit:
 
 1. Registra seu aplicativo com Azure Active Directory.
 1. Registra seu aplicativo para "side loading" no Microsoft Teams.
-1. Inicia o back-end do aplicativo em execução localmente usando as Ferramentas Principais da [Função do Azure.](/azure/azure-functions/functions-run-local?#start)
 1. Inicia um túnel ngrok para que Teams possa se comunicar com seu aplicativo.
 1. Inicia Microsoft Teams com um comando para instruir Teams fazer sideload do aplicativo.
 
@@ -160,7 +158,6 @@ Para executar com êxito seu aplicativo no Teams, você deve ter uma conta de de
 
 Antes da implantação, o aplicativo era executado localmente:
 
-1. O back-end é executado usando o _Azure Functions Core Tools_.
 1. O ponto de extremidade HTTP do aplicativo, onde o Microsoft Teams carrega o aplicativo, é executado localmente.
 
    A implantação envolve o provisionamento de recursos em uma assinatura ativa do Azure e a implantação (upload) do código de back-end e front-end do aplicativo para o Azure. O back-end usa uma variedade de serviços do Azure, incluindo o Serviço de Aplicativo do Azure e o Serviço de Bot do Azure.

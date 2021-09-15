@@ -4,12 +4,12 @@ author: surbhigupta
 description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d77187543dd5e4ab774341f30a8a05a41c6a49f2
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155128"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360493"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -195,11 +195,11 @@ Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar ap
 
 A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
-| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
-| Convidado que faz parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível |
-| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível |
+| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio de Reunião | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Não é possível exibir, mas pode interagir com o aplicativo no estágio de reunião |
+| Convidado que faz parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
+| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
 
 ## <a name="see-also"></a>Confira também
 
