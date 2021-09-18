@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
+ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155499"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59439694"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -135,9 +135,9 @@ Você pode registrar seu aplicativo para ser informado se o tema mudar chamando 
 
 O argumento na função é uma cadeia de caracteres com `theme` um valor de , ou `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
-* [Diretrizes de design de tabulação](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Diretrizes de design de tabulação](../../tabs/design/tabs.md)
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
