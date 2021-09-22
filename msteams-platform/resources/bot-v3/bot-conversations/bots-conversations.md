@@ -81,12 +81,12 @@ Recomendamos que você especifique a altura e a largura de cada imagem usando XM
 * Use`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Não use `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-## <a name="receiving-messages&quot;></a>Recebimento de mensagens
+## <a name="receiving-messages"></a>Recebimento de mensagens
 
 Dependendo de quais escopos são declarados, seu bot pode receber mensagens nos seguintes contextos:
 
 * **chat pessoal** Os usuários podem interagir em uma conversa privada com um bot simplesmente selecionando o bot adicionado no histórico do chat ou digitando seu nome ou ID do aplicativo na caixa Para: em um novo chat.
-* **Canais** Um bot pode ser mencionado (&quot;@_botname_") em um canal se tiver sido adicionado à equipe. Observe que respostas adicionais a um bot em um canal exigem a menção ao bot. Ele não responderá às respostas onde não é mencionada.
+* **Canais** Um bot pode ser mencionado ("@_botname_") em um canal se tiver sido adicionado à equipe. Observe que respostas adicionais a um bot em um canal exigem a menção ao bot. Ele não responderá às respostas onde não é mencionada.
 
 Para mensagens de entrada, seu bot recebe um [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) do tipo `messageType: message` . Embora o objeto possa conter outros tipos de informações, como atualizações de canal enviadas ao bot, o tipo representa a comunicação `Activity` entre bot e [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuário.
 
