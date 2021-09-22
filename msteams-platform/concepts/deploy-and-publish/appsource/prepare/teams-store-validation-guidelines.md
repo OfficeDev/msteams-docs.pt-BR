@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5e2f26fcdbd2e11fcb28331cd9d226d63c9a2aad
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439687"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475703"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -23,7 +23,7 @@ Seguir essas diretrizes aumenta a probabilidade de que seu aplicativo seja aprov
 
 ### <a name="app-name"></a>Nome do aplicativo
 
-O nome de um aplicativo desempenha um papel fundamental na forma como os usuários o descobrem na loja. Lembre-se do seguinte quanto aos nomes de aplicativo:
+O nome de um aplicativo desempenha um papel fundamental na forma como os usuários o descobrem na loja. Lembre-se do seguinte quanto aos nomes de aplicativos:
 
 * O nome deve incluir termos relevantes aos seus usuários.
 * Nomes dos principais recursos&#8212 do Teams;como **Bate-papo**, **Contatos**, **Calendário**, **Chamadas**, **Arquivos**, **Atividade**, **Teams**, **Aplicativos** e **Ajuda**&#8212;não devem ser incluídos no nome do aplicativo.
@@ -32,7 +32,7 @@ O nome de um aplicativo desempenha um papel fundamental na forma como os usuári
 * Se seu aplicativo fizer parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro (por exemplo, **Conector Contoso do Microsoft Teams**).
 * Não é preciso copiar o nome de um aplicativo listado na loja ou em outra oferta no mercado comercial.
 * Não deve conter termos profanos ou depreciativos. O nome também não deve incluir linguagem racial ou culturalmente insensível.
-* Deve ser exclusivo. Por exemplo, você não pode listar vários aplicativos para regiões diferentes com o mesmo nome e funcionalidade.
+* Deve ser único. Por exemplo, você não pode listar vários aplicativos para regiões diferentes com o mesmo nome e funcionalidade.
 
 ### <a name="suitable-for-workplace-consumption"></a>Adequado para o consumo no local de trabalho
 
@@ -192,6 +192,7 @@ A longa descrição pode fornecer uma narrativa envolvente que destaca a propost
 * Usar a voz ativa e falar diretamente com os usuários. Por exemplo, *Você pode...*.
 * Listar os recursos com marcadores para que seja mais fácil escanear a descrição.
 * Descrever de forma clara as limitações, condições ou exceções da funcionalidade, recursos e produtos de entrega descritos na lista, assim como materiais relacionados antes de o usuário instalar seu aplicativo. Os recursos do Teams que seu aplicativo oferece suporte devem estar relacionados às funções principais que sua lista descreve.
+* Certifique-se de que a descrição do aplicativo corresponda à funcionalidade disponível dentro do aplicativo Teams. Qualquer referência a fluxos de trabalho fora do aplicativo Teams deve ser limitada e distintamente chamada a partir da funcionalidade do aplicativo Teams.
 * Inclua uma ajuda ou um link de suporte.
 * Consulte **Microsoft 365** em vez de **Office 365**.
 * Se você precisar referenciar o **Teams**, escreva a primeira referência como **Microsoft Teams**. As referências subsequentes podem ser reduzidas para **Teams**.
@@ -212,15 +213,19 @@ A longa descrição pode fornecer uma narrativa envolvente que destaca a propost
 * Abreviar **Microsoft** como **MS** ou **MSFT**.
 * Indicar que o aplicativo é uma oferta da Microsoft, incluindo o uso de lemas ou linhas de marcação da Microsoft.
 * Usar nomes de marca protegidos por direitos autorais que você não possui.
-* Incluir erros de digitação, erros gramaticais e letras maiúsculas desnecessárias (por exemplo, **Usuários** em vez de **usuários**).
-* Incluir links ao AppSource.
-* Usar a seguinte linguagem, a menos que você seja um parceiro certificado da Microsoft:
+ * Usar a seguinte linguagem, a menos que você seja um parceiro certificado da Microsoft:
   * "... certificado para ..."
   * "... alimentado por ..."
+* Inclua erros de digitação, erros gramaticais e maiúsculas desnecessárias, como **Usuários** em vez de **usuários.**
+* Incluir links ao AppSource.
+* Faça declarações não verificadas (por exemplo: melhor, superior, classificado), a menos que acompanhado da fonte da declaração.
+* Compare sua oferta com outras ofertas do marketplace.
+
+
 
 ### <a name="screenshots"></a>Capturas de tela
 
-As capturas de tela fornecem uma visualização panorâmica proeminente do seu aplicativo para complementar seu nome, ícone e descrições. Lembre-se do seguinte sobre capturas de tela:
+As capturas de tela fornecem uma visualização panorâmica proeminente do seu aplicativo para complementar o nome, ícone e descrições do seu aplicativo. Lembre-se do seguinte sobre as capturas de tela:
 
 * Você pode ter até cinco capturas de tela por lista.
 * Os tipos de arquivo com suporte incluem PNG, JPEG e GIF.
@@ -288,12 +293,12 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele siga essas diretriz
 
 * As guias não devem conter mais de três níveis de navegação.
 * As guias não devem fornecer navegação que entre em conflito com a navegação primária do Teams.
-* As páginas secundárias e terciárias em uma guia devem ser abertas em uma visualização de nível dois e três na área da guia principal, que é navegada por trilhas ou navegação à esquerda. Você também pode incluir os seguintes componentes para ajudar a navegação de guia:
+* As páginas secundárias e terciárias em uma guia devem ser abertas em uma visualização de nível dois e nível três na área da guia principal, que é navegada por trilhas ou navegação à esquerda. Você também pode incluir os seguintes componentes para auxiliar a navegação de guia:
     * Botões de voltar
     * Cabeçalhos da página
     * Menus de hambúrguer
 * A guia não deve possuir rolagem horizontal.
-* Os links profundos nas guias não devem possuir um link em uma página da Web externa, mas em algum lugar dentro do Teams. Por exemplo, módulos de tarefas ou outras guias.
+* Links profundos nas guias não devem possuir um link em uma página da Web externa, mas em algum lugar dentro do Teams. Por exemplo, módulos de tarefas ou outras guias.
 * As guias não devem permitir que os usuários naveguem fora do Teams em busca da experiência do aplicativo principal.
 
 ### <a name="usability"></a>Usabilidade
@@ -303,6 +308,7 @@ Se seu aplicativo incluir uma guia, certifique-se de que ele siga essas diretriz
 * As guias em um contexto pessoal podem agregar conteúdo de instâncias compartilhadas do aplicativo.
 * As guias devem responder aos temas do Teams. Quando um usuário altera o tema, o tema do aplicativo deve refletir a seleção.
 * As guias devem usar componentes de estilo do Teams, como fontes do Teams, rampas de tipo, paletas de cores, sistema de grade, movimento, tom de voz, e assim por diante, sempre que possível.
+* Se a funcionalidade do seu aplicativo exigir alterações nas configurações, inclua uma guia **Configurações**.
 * As guias devem seguir o design de interação do Teams, como navegação na página, posição e uso de caixas de diálogo, hierarquias de informações, e assim por diante, sempre que possível.
 * O conteúdo da guia no iframe não deve incluir recursos que imitam os principais recursos do Teams. Por exemplo, bots, extensões de mensagens, chamada, reunião, e assim por diante.
 
@@ -320,7 +326,7 @@ Se seu aplicativo incluir um bot, certifique-se de que ele siga essas diretrizes
 
 ### <a name="bot-commands"></a>Comandos do bot
 
-Analisar a entrada do usuário e prever a intenção do usuário é difícil. Os comandos do bot fornecem aos usuários um conjunto de palavras ou frases que o seu bot entende para que eles (e o seu bot) não tenham que adivinhar.
+Analisar a entrada do usuário e prever a intenção do usuário é difícil. Os comandos do bot fornecem aos usuários um conjunto de palavras ou frases que seu bot entende para que eles (e o seu bot) não tenham que adivinhar.
 
 * A lista de comandos de bot com suporte nas configurações do aplicativo é altamente recomendada. Esses comandos são exibidos na caixa de composição quando um usuário tenta enviar uma mensagem ao bot.
 * Todos os comandos compatíveis com o bot devem funcionar corretamente, incluindo os comandos **Oi**, **Olá** e **Ajuda**.
@@ -410,7 +416,7 @@ Se seu aplicativo incluir uma extensão de reunião, certifique-se de que ela si
 
 ### <a name="in-meeting-tabs"></a>Guias na reunião
 
-* Deve responder. Certifique-se de manter o preenchimento e o tamanho dos componentes.
+* Deve ser dinâmico. Certifique-se de manter o preenchimento e os tamanhos dos componentes.
 * Deve ter um botão voltar se houver mais de uma camada de navegação.
 * Não deve incluir mais de um botão de dispensar ou fechar. Isso pode confundir os usuários, pois já existe um botão de cabeçalho interno para dispensar a guia.
 * Não deve conter rolagem horizontal.
