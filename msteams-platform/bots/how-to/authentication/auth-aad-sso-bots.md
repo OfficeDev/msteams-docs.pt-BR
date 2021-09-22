@@ -4,16 +4,16 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: a3b150ee27eeb387c71191e74b6765dd5a93b148
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3f4c7a1c803baba2687e3803a820dc351f9ca33
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155115"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475724"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
-A autenticação de entrada única no Azure Active Directory (AAD) minimiza o número de vezes que os usuários precisam inserir suas credenciais de entrada atualize silenciosamente o token de autenticação. Se os usuários concordarem em usar seu aplicativo, eles não precisarão fornecer consentimento novamente em outro dispositivo e podem entrar automaticamente. O fluxo é semelhante ao do suporte Microsoft Teams [SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)da guia , no entanto, a diferença está no protocolo de como um bot solicita [tokens](#request-a-bot-token) e recebe [respostas](#receive-the-bot-token).
+A autenticação de entrada única no Azure Active Directory (AAD) minimiza o número de vezes que os usuários precisam inserir suas credenciais de entrada atualizendo silenciosamente o token de autenticação. Se os usuários concordarem em usar seu aplicativo, eles não precisarão fornecer consentimento novamente em outro dispositivo e podem entrar automaticamente. O fluxo é semelhante ao do suporte Microsoft Teams [SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)da guia , no entanto, a diferença está no protocolo de como um bot solicita [tokens](#request-a-bot-token) e recebe [respostas](#receive-the-bot-token).
 
 >[!NOTE]
 > OAuth 2.0 é um padrão aberto para autenticação e autorização usada pela AAD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
@@ -31,7 +31,7 @@ Conclua as etapas a seguir para obter tokens de aplicativo de bot e autenticaç�
     >* O token do bot é recebido a partir de cada ponto de extremidade de usuário ativo.
     >* O aplicativo deve ser instalado no escopo pessoal para suporte do SSO.
 
-1. Se o usuário atual estiver usando seu aplicativo bot pela primeira vez, um prompt de solicitação será exibido solicitando que o usuário faça um dos seguintes:
+1. Se o usuário atual estiver usando seu aplicativo bot pela primeira vez, um prompt de solicitação aparecerá para solicitar que o usuário faça um dos seguintes:
     * Forneça consentimento, se necessário.
     * Lidar com a autenticação avançada, como a autenticação de dois fatores.
 
@@ -92,7 +92,7 @@ As etapas para registrar seu aplicativo por meio do portal do AAD são semelhant
 
 Conclua as etapas a seguir para atualizar o portal do Azure com a conexão OAuth:
 
-1. No Portal do Azure, navegue até **Registros de aplicativo.**
+1. No portal do Azure, acesse **Registros de aplicativos**.
 
 2. Vá para **Permissões de API**. Selecione **Adicionar uma permissão microsoft**  >  **Graph** permissões  >  **delegadas**, em seguida, adicione as seguintes permissões da API Graph Microsoft:
     * User.Read (habilitado por padrão)
@@ -101,13 +101,13 @@ Conclua as etapas a seguir para atualizar o portal do Azure com a conexão OAuth
     * OpenId
     * perfil
 
-3. No Portal do Azure, navegue até **Bot Channels Registration**.
+3. No portal do Azure, acesse [ **AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+4. Selecione **Configuração** no painel esquerdo.
+5. Selecione **Adicionar conexão OAuth Configurações**.
 
-4. Selecione **Configurações** no painel esquerdo e escolha **Adicionar Configuração** na seção Conexão **OAuth Configurações.**
+    ![Exibição SSOBotHandle2](~/assets\Contosoairlines123.png)
 
-    ![Exibição SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
-
-5. Execute as etapas a seguir para concluir o **formulário Nova Configuração de** Conexão:
+6. Execute as etapas a seguir para concluir o **formulário Nova Configuração de** Conexão:
 
     >[!NOTE]
     > **A concessão** implícita pode ser necessária no aplicativo AAD.

@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155170"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475803"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -31,7 +31,7 @@ Você pode formatar cartões adaptáveis e Office 365 conector com Markdown que 
 Os seguintes tipos de cartão suportam a formatação markdown Teams:
 
 * Cartões Adaptáveis: a marcação é suportada no campo Cartão `Textblock` Adaptável, bem como e `Fact.Title` `Fact.Value` . HTML não é suportado em Cartões Adaptáveis.
-* Cartões do conector O365: Markdown e HTML limitado são suportados em cartões conectores O365 nos campos de texto.
+* Office 365 Cartões de conector: Markdown e HTML limitado são suportados Office 365 conectores nos campos de texto.
 
 Você pode usar linhas novas para Cartões Adaptáveis usando ou sequências de escape `\r` para linhas novas em `\n` listas. A formatação é diferente entre a área de trabalho e as versões móveis Teams para Cartões Adaptáveis. As menções baseadas em cartão são suportadas em clientes web, desktop e móveis. Você pode usar a propriedade de mascaramento de informações para mascarar informações específicas, como senha ou informações confidenciais de usuários dentro do elemento de entrada Cartão `Input.Text` Adaptável. Você pode expandir a largura de um Cartão Adaptável usando o `width` objeto. Você pode habilitar o suporte typeahead em Cartões Adaptáveis e filtrar o conjunto de opções de entrada à medida que o usuário digita a entrada. Você pode usar a `msteams` propriedade para adicionar a capacidade de exibir imagens no exibição de estágio seletivamente.
 
@@ -116,14 +116,14 @@ O código a seguir mostra um exemplo de formatação de Cartões Adaptáveis:
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>Mencionar suporte em Cartões Adaptáveis v1.2
+### <a name="mention-support-within-adaptive-cards"></a>Mencionar suporte em Cartões Adaptáveis 
 
 Você pode adicionar @mentions em um corpo de Cartão Adaptável para bots e respostas de extensão de mensagens. Para adicionar @mentions cartões, siga a mesma lógica de notificação e renderização das menções baseadas em mensagens em conversas de chat de canal [e grupo.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
 Bots e extensões de mensagens podem incluir menções no conteúdo do cartão nos [elementos TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
 > [!NOTE]
-> * [Atualmente,](https://adaptivecards.io/explorer/Media.html) os elementos de mídia não têm suporte em Cartões Adaptáveis v1.2 na plataforma Teams adaptável.
+> * [Atualmente,](https://adaptivecards.io/explorer/Media.html) os elementos de mídia não têm suporte em Cartões Adaptáveis Teams plataforma.
 > * As menções de canal e equipe não são suportadas em mensagens bot.
 
 Para incluir uma menção em um Cartão Adaptável, seu aplicativo precisa incluir os seguintes elementos:
@@ -164,6 +164,130 @@ O código a seguir mostra um exemplo de Cartão Adaptável com uma menção:
   }
 }
 ```
+
+### <a name="aad-object-id-and-upn-in-user-mention"></a>ID do objeto AAD e UPN na menção do usuário 
+
+Teams plataforma permite mencionar usuários com a ID do objeto AAD e o Nome de Princípio do Usuário (UPN), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada suportam as duas IDs de menção de usuário. 
+
+A tabela a seguir descreve as IDs de menção de usuário recém-suportadas:
+
+|IDs  | Recursos de suporte |   Descrição | Exemplo |
+|----------|--------|---------------|---------|
+| ID do objeto AAD | Bot, Conector |  ID de objeto do usuário AAD |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Conector | UPN do usuário AAD | john.smith@microsoft.com |
+
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis 
+
+Os bots suportam a menção do usuário com a ID do objeto AAD e o UPN, além das IDs existentes. O suporte para duas novas IDs está disponível em bots para mensagens de texto, corpo de Cartões Adaptáveis e resposta de extensão de mensagens. Os bots suportam as IDs de menção em conversas `invoke` e cenários. O usuário recebe notificação de feed de atividade ao @mentioned com as IDs. 
+
+> [!NOTE]
+> As atualizações de esquema e as alterações da interface do usuário/experiência do usuário não são necessárias para menções do usuário com Cartões Adaptáveis no Bot.
+
+##### <a name="example"></a>Exemplo 
+
+Exemplo de menção de usuário em bots com Cartões Adaptáveis da seguinte forma:
+
+```json 
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+    }
+  ],
+  "msteams": {
+    "entities": [
+      {
+        "type": "mention",
+        "text": "<at>Adele UPN</at>",
+        "mentioned": {
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
+        }
+      }
+    ]
+  }
+}
+```
+
+A imagem a seguir ilustra a menção do usuário com Cartão Adaptável no Bot:
+
+![Menção de usuário em bot com Cartão Adaptável](~/assets/images/authentication/user-mention-in-bot.png)
+
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em Webhook de entrada com cartões adaptáveis 
+
+Os webhooks de entrada começam a dar suporte à menção do usuário em Cartões Adaptáveis com a ID do Objeto AAD e o UPN.
+
+> [!NOTE]    
+> * Habilita a menção do usuário no esquema para webhooks de entrada para dar suporte à ID do objeto AAD e UPN. 
+> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com AAD Object ID e UPN.      
+> * A notificação de feed de atividade para Webhook de entrada com menção de usuário estará disponível na versão futura.
+
+##### <a name="example"></a>Exemplo 
+
+Exemplo de menção de usuário no Webhook de entrada da seguinte forma:
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Sample Adaptive Card with User Mention"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "msteams": {
+                "entities": [
+                    {
+                        "type": "mention",
+                        "text": "<at>Adele UPN</at>",
+                        "mentioned": {
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
+                        }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
+                ]
+            }
+        }
+    }]
+}
+```
+
+A imagem a seguir ilustra a menção do usuário no Webhook de entrada:
+
+![Menção de usuário no Webhook de entrada](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
 
 ### <a name="information-masking-in-adaptive-cards"></a>Mascaramento de informações em Cartões Adaptáveis
 
@@ -289,7 +413,7 @@ Na exibição de estágio, os usuários podem ampliar e diminuir o zoom da image
 > * A funcionalidade de zoom e zoom só se aplica aos elementos de imagem que são tipo de imagem em um Cartão Adaptável.
 > * Para Teams aplicativos móveis, a funcionalidade de exibição de estágio para imagens em Cartões Adaptáveis está disponível por padrão. Os usuários podem exibir imagens do Cartão Adaptável na exibição de estágio simplesmente tocando na imagem, independentemente de o `allowExpand` atributo estar presente ou não.
 
-# <a name="markdown-format-for-o365-connector-cards"></a>[Formato de marcação para cartões conectores O365](#tab/connector-md)
+# <a name="markdown-format-for-office-365-connector-cards"></a>[Formato de marcação para cartões Office 365 Conector](#tab/connector-md)
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 
@@ -382,12 +506,12 @@ O código a seguir mostra um exemplo de formatação para cartões de conector M
 
 Os seguintes tipos de cartão suportam formatação HTML Teams:
 
-* Cartões do conector O365: Marcação limitada e formatação HTML é suportada em cartões Office 365 Connector.
+* Office 365 Cartões de conector: Marcação limitada e formatação HTML são compatíveis com cartões Office 365 Conector.
 * Cartões de herói e miniatura: as marcas HTML são suportadas para cartões simples, como cartões de herói e miniatura.
 
-A formatação é diferente entre a área de trabalho e as versões móveis do Teams para cartões conectores O365 e cartões simples. Nesta seção, você pode passar pelo exemplo de formato HTML para cartões de conector e cartões simples.
+A formatação é diferente entre a área de trabalho e as versões móveis do Teams para cartões Office 365 Conector e cartões simples. Nesta seção, você pode passar pelo exemplo de formato HTML para cartões de conector e cartões simples.
 
-# <a name="html-format-for-o365-connector-cards"></a>[Formato HTML para cartões conectores O365](#tab/connector-html)
+# <a name="html-format-for-office-365-connector-cards"></a>[Formato HTML para cartões Office 365 Conector](#tab/connector-html)
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 

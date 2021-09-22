@@ -5,12 +5,12 @@ description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Mi
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155131"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475696"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -104,7 +104,7 @@ As pessoas podem usar a guia na reunião para:
 |2|**Nome do aplicativo**|
 |3|**Header**: Inclui o nome do aplicativo.|
 |4 |**Botão Fechar**: descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.|
-|5 |**Barra de** notificações : Os alertas de erro são exibidos diretamente abaixo do header e pressionam o conteúdo do iframe para baixo em 20 pixels.|
+|5|**Barra de** notificações : Os alertas de erro são exibidos diretamente abaixo do header e pressionam o conteúdo do iframe para baixo em 20 pixels.|
 |6 |**iframe**: exibe o conteúdo do aplicativo.|
 
 ### <a name="spacing"></a>Espaçamento
@@ -171,11 +171,11 @@ Há duas variantes de header. Quando possível, use a variante com o avatar para
 |2|**ícone de aplicativo**|
 |3|**Nome do aplicativo**|
 |4 |**Botão Fechar**: descarta a caixa de diálogo.|
-|5 |**Cadeia de caracteres** de ação : normalmente descreve quem iniciou a caixa de diálogo.|
+|5|**Cadeia de caracteres** de ação : normalmente descreve quem iniciou a caixa de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamento responsivo: caixas de diálogo na reunião
 
-As caixas de diálogo na reunião podem variar de tamanho para levar em conta cenários diferentes. Certifique-se de manter tamanhos de preenchimento e componentes.
+As caixas de diálogo na reunião podem variar de tamanho para levar em conta cenários diferentes. Certifique-se de manter o preenchimento e o tamanho dos componentes.
 
 * **Largura**: Você pode especificar a largura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado.
 * **Altura**: Você pode especificar a altura do iframe da caixa de diálogo em qualquer lugar dentro do intervalo de tamanhos suportado. Você também pode permitir que os usuários rolem verticalmente se o conteúdo do aplicativo exceder a altura máxima.
@@ -186,10 +186,13 @@ Para implementar, especifique a largura e a altura usando a [`externalResourceUr
 
 ## <a name="use-the-shared-meeting-stage"></a>Usar o estágio de reunião compartilhado
 
-O estágio de reunião compartilhado ajuda os participantes da reunião a interagir e colaborar no conteúdo do aplicativo em tempo real. Por exemplo, os usuários podem concentrar sua reunião na edição de um documento, no brainstorming com um quadro de dados ou na revisão de um painel.
+O estágio de reunião compartilhado ajuda os participantes da reunião a interagir e colaborar com o conteúdo do aplicativo em tempo real. Por exemplo, os usuários podem concentrar sua reunião na edição de um documento, no brainstorming com um quadro de dados ou na revisão de um painel.
 
 Os aplicativos compartilhados no estágio de reunião ocupam o mesmo espaço que uma tela compartilhada. O estágio reorienta para todos os participantes da reunião.
 
+> [!NOTE]
+> Atualmente, se um aplicativo for compartilhado em estágios na área de trabalho, ele mostrará apenas para os usuários em reuniões móveis.
+ 
 ### <a name="use-cases"></a>Casos de uso
 
 O estágio de reunião compartilhada tem a ver com colaboração e participação. Aqui estão alguns cenários de exemplo para ajudá-lo a começar.
@@ -243,7 +246,7 @@ O estágio de reunião compartilhada tem a ver com colaboração e participaçã
 |2|**Botão Compartilhar para estágio de reunião**: O ponto de entrada para compartilhar o aplicativo no estágio de reunião. Exibe se você configurar seu aplicativo para usar o estágio de reunião compartilhado.|
 |3|**iframe**: exibe o conteúdo do aplicativo.|
 |4 |**Botão Parar de compartilhar**: para de compartilhar o aplicativo no estágio de reunião. Exibe somente para o participante que iniciou o compartilhamento.|
-|5 |**Atribuição do apresentador**: exibe o nome do participante que compartilhou o aplicativo.|
+|5|**Atribuição do apresentador**: exibe o nome do participante que compartilhou o aplicativo.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamento responsivo: Estágio de reunião compartilhado
 
@@ -266,7 +269,7 @@ Quando o painel lateral é aberto, o estágio de reunião é 918x540 pixels por 
 
 ## <a name="after-a-meeting"></a>Após uma reunião
 
-Você pode voltar para uma reunião depois que ela terminar e exibir o conteúdo do aplicativo. Neste exemplo, o organizador da reunião pode ver os resultados da sondagem na guia **Contoso.** (Observação: Do ponto de vista de design, não há diferença entre uma experiência de guia pré e pós-reunião.)
+Você pode voltar para uma reunião depois que ela terminar e exibir o conteúdo do aplicativo. Neste exemplo, o organizador da reunião pode ver os resultados da sondagem na guia **Contoso.** (Observação: Do ponto de vista de design, não há diferença entre a experiência da guia pré e pós-reunião.)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="A ilustração de exemplo mostra uma guia pós-reunião." border="false":::
 

@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155401"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475773"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -219,6 +219,9 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 
 Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
+> [!NOTE]
+> Os parâmetros de pesquisa não suportam `+` sinal no lugar do espaço em branco ( ` ` ). Verifique se o código de codificação de uri retorna espaços, por `%20` exemplo, `?subject=test%20subject` é bom, mas `?subject=test+subject` é ruim.
+
 Os parâmetros de consulta são:
 
 * `attendees`: a lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. O campo ID do usuário atualmente só dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email.
@@ -257,7 +260,7 @@ A seguir estão os parâmetros de consulta:
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome do exemplo | Descrição | C # |Node.js|
+| Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
 |ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 

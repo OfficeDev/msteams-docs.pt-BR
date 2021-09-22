@@ -5,12 +5,12 @@ description: Entenda como webhooks e conectores podem conectar seus serviços We
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155494"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475752"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks e conectores
 
@@ -33,7 +33,7 @@ Webhooks de entrada ajudam a postar mensagens de aplicativos para Teams. Se os W
 
 ### <a name="office-365-connectors"></a>Conectores de Office 365
 
-Office 365 Os conectores permitem que você crie uma página de configuração personalizada para seu Webhook de Entrada e empacote-os como parte de um Teams app. Você envia mensagens principalmente usando Office 365 conector e tem a capacidade de adicionar um conjunto limitado de ações de cartão a eles. Por exemplo, um conector de clima que permite que os usuários selecionem um local e hora do dia, para receber atualizações sobre o clima de amanhã. Eles são configurados em um nível de canal, mas são instalados em um nível de equipe.
+Office 365 Os conectores permitem que você crie uma página de configuração personalizada para seu Webhook de Entrada e empacote-os como parte de um Teams app. Você envia mensagens principalmente usando Office 365 conector e tem a capacidade de adicionar um conjunto limitado de ações de cartão a eles. Por exemplo, um conector de clima que permite que os usuários selecionem um local e uma hora do dia, para receber atualizações sobre o clima de amanhã. Eles são configurados em um nível de canal, mas são instalados em um nível de equipe.
 
 > [!NOTE]
 > Você pode distribuir o Office 365 conector Teams aplicativo para nosso AppStore.

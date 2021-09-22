@@ -3,12 +3,12 @@ title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 5fb049668247a12231f91aec0e75537608f25b10
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155127"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475598"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -27,6 +27,9 @@ O processo a seguir fornece uma visão geral para criar um aplicativo somente de
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Criar aplicativo somente cena" border="false":::
 
 Um aplicativo somente de cena ainda é um aplicativo Microsoft Teams. O estúdio Scene lida com a criação do pacote de aplicativos em segundo plano. Várias cenas em um único pacote de aplicativos aparecem como uma lista simples para os usuários.
+
+> [!NOTE]
+> Os usuários não podem iniciar o Modo Juntos a partir do celular. No entanto, depois que um usuário ingressar em uma reunião por meio de dispositivo móvel e o modo Juntos for ligado da área de trabalho, os usuários móveis que tenham ligado o vídeo aparecerão no Modo Juntos na área de trabalho. 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -108,7 +111,7 @@ A imagem a seguir mostra cada assento representado como um avatar para a criaç�
 1. Selecione **Salvar** e selecione **Exibir em Teams** para testar rapidamente sua cena em Microsoft Teams.
 
     * Selecionar **Exibir no Teams** cria automaticamente um aplicativo Microsoft Teams que pode ser exibido na página **Aplicativos** no portal Teams Desenvolvedor.
-    * Selecionar **Exibir no Teams** cria automaticamente um pacote de aplicativos que appmanifest.jspor trás da cena. Você pode acessar  **Aplicativos** no menu e acessar o pacote de aplicativos criado automaticamente.
+    * Selecionar **Exibir no Teams** cria automaticamente um pacote de aplicativos que é appmanifest.json atrás da cena. Você pode acessar  **Aplicativos** no menu e acessar o pacote de aplicativos criado automaticamente.
     * Para excluir uma cena criada, selecione **Excluir cena** na barra superior.
 
 1. Em **Exibir em Teams**, selecione Visualizar em **Teams**.
@@ -124,19 +127,19 @@ Opcionalmente, você pode selecionar **Compartilhar** no **menu** suspenso Salva
 
 Após a visualização, a cena é enviada como um aplicativo para Teams seguindo as etapas para envio do aplicativo. Esta etapa requer o pacote do aplicativo. O pacote do aplicativo é diferente do pacote de cena, para a cena que foi projetada. O pacote de aplicativos criado automaticamente é encontrado na seção **Aplicativos** no Centro Teams desenvolvedores.
 
-Opcionalmente, o pacote de cena é  recuperado **selecionando Exportar** no menu suspenso Salvar. Um **.zip,** que é o pacote de cena, é baixado. O pacote de cena inclui um scene.jse os ativos PNG usados para criar uma cena. O pacote de cena é revisado para incorporar outras alterações:
+Opcionalmente, o pacote de cena é  recuperado **selecionando Exportar** no menu suspenso Salvar. Um **.zip,** que é o pacote de cena, é baixado. O pacote de cena inclui um scene.json e os ativos PNG usados para criar uma cena. O pacote de cena é revisado para incorporar outras alterações:
 
 ![Exportar uma cena](../assets/images/apps-in-meetings/build-a-scene.png)
 
 Uma cena complexa que usa o eixo Z é demonstrada no exemplo passo a passo de início.
 
-## <a name="sample-scenejson"></a>Exemplo scene.json
+## <a name="sample-scenejson"></a>Sample scene.json
 
-Scene.jsem junto com as imagens indicam a posição exata dos bancos. Uma cena consiste em imagens bitmap, sprites e retângulos para colocar vídeos de participantes. Esses sprites e caixas de participantes são definidos em um sistema de coordenadas do mundo. O eixo X aponta para a direita e o eixo Y aponta para baixo.
+Scene.json juntamente com as imagens indicam a posição exata dos bancos. Uma cena consiste em imagens bitmap, sprites e retângulos para colocar vídeos de participantes. Esses sprites e caixas de participantes são definidos em um sistema de coordenadas do mundo. O eixo X aponta para a direita e o eixo Y aponta para baixo.
 
 As cenas do Modo Juntos Personalizados suportam o zoom nos participantes atuais. Esse recurso é útil para pequenas reuniões em uma cena grande. Um sprite é uma imagem de bitmap estática posicionada no mundo. O valor Z do sprite determina a posição do sprite. A renderização começa com o sprite com o menor valor Z, portanto, o valor Z mais alto significa que está mais próximo da câmera. Cada participante tem seu próprio feed de vídeo, que é segmentado para que apenas o primeiro plano seja renderizado.
 
-O código a seguir é o scene.jsexemplo:
+O código a seguir é o exemplo scene.json:
 
 ```json
 {
@@ -205,7 +208,7 @@ Cada cena tem uma ID e um nome exclusivos. A cena JSON também contém informaç
 
 Representa `zOrder` a ordem de colocação de imagens e bancos ao longo do eixo Z. Ele dá uma noção de profundidade ou partição, se necessário. Consulte o exemplo passo a passo de início. O exemplo usa `zOrder` o .
 
-Agora que você passou pelo exemplo de scene.jsativado, você pode ativar as cenas personalizadas do modo Juntos para participar de cenas.
+Agora que você já passou pela amostra scene.json, você pode ativar as cenas personalizadas do modo Juntos para participar de cenas.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Ativar cenas personalizadas do modo Juntos
 

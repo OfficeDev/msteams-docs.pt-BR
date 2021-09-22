@@ -3,12 +3,12 @@ title: Visão geral das ações universais para cartões adaptáveis
 description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155172"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475710"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
@@ -19,7 +19,7 @@ Ações universais para Cartões Adaptáveis traz o bot como o back-back comum p
 Este documento ajuda você a entender como você pode usar o modelo de Ações Universais para aprimorar a experiência do usuário de interagir com Cartões Adaptáveis em plataformas e aplicativos.
 
 > [!NOTE]
-> O suporte para Ações Universais para Cartões Adaptáveis só está disponível para cartões enviados por bot. O suporte para cartões enviados por meio da caixa de redação e dos cartões de desfraldamento de link está chegando em breve.
+> O suporte para Ações Universais para Cartões Adaptáveis v1.4 só está disponível para cartões enviados por bot. O suporte para cartões enviados por meio da caixa de redação e dos cartões de desfraldamento de link está chegando em breve.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Aprimorar as experiências do usuário com ações universais para cartões adaptáveis
 

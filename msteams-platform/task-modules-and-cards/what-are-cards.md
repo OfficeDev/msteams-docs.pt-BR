@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: medium
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 345e37a9af00c2f3300cc76f4b44b83cc47d0392
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155458"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475794"
 ---
 # <a name="cards"></a>Cartões
 
@@ -58,9 +58,13 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 
 > [!NOTE]
 > * Todos os elementos de esquema de Cartão Adaptável nativos, exceto `Action.Submit` , são totalmente suportados.
-> * As ações suportadas são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> * As ações com suporte são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Cartões adaptáveis com Webhooks de entrada permite que você use os recursos avançados e flexíveis de Cartões Adaptáveis. Ele envia dados usando Webhooks de entrada Teams de seu serviço Web.
+
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Suporte para ID de objeto AAD e UPN na menção do usuário 
+
+Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD Object ID e User Principle Name (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com a ID do Objeto AAD e o UPN.
 
 ## <a name="see-also"></a>Confira também
 

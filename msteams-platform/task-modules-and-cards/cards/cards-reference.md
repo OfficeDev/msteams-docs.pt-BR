@@ -4,12 +4,12 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 ms.localizationpriority: medium
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155461"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475591"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -59,10 +59,10 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 
 ## <a name="features-that-support-different-card-types"></a>Recursos que suportam diferentes tipos de cartão
 
-| Tipo de cartão | Bots | Visualizações de extensão de mensagem | Resultados da extensão de mensagem | Módulos de tarefas | Webhooks de saída | Webhooks de entrada | Conectores O365 |
+| Tipo de cartão | Bots | Visualizações de extensão de mensagem | Resultados da extensão de mensagem | Módulos de tarefas | Webhooks de saída | Webhooks de entrada | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Cartão Adaptável | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Cartão conector O365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 Cartão conector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Cartão de herói | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Cartão de miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Cartão de listagem | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -70,11 +70,14 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 | Cartão de signin | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
 > [!NOTE]
-> Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit` , são totalmente suportados. As ações suportadas são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit` , são totalmente suportados. As ações com suporte são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 ## <a name="common-properties-for-all-cards"></a>Propriedades comuns para todos os cartões
 
 Você pode passar por algumas propriedades comuns que são aplicáveis a todos os cartões.
+
+> [!NOTE]
+> Cartões de herói e miniatura com várias ações são automaticamente divididos em vários cartões em um layout de carrossel.
 
 ### <a name="inline-card-images"></a>Imagens de cartão em linha
 
@@ -89,7 +92,7 @@ A tabela a seguir fornece as propriedades das imagens de cartão em linha:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | String | Descrição acessível da imagem. |
+| alt | Cadeia de caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, o redirecionamento na URL da imagem não será suportado. Isso ocorre para imagens compartilhadas na nuvem pública.
@@ -110,18 +113,19 @@ Depois de identificar as propriedades comuns para todos os cartões, agora você
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-Um Cartão Adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Para obter mais informações, [consulte Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+Um Cartão Adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Para obter mais informações, consulte [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### <a name="support-for-adaptive-cards"></a>Suporte para cartões adaptáveis
 
 A tabela a seguir fornece os recursos que suportam Cartões Adaptáveis:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams plataforma suporta v1.2 ou anterior de recursos de Cartão Adaptável.
+> * Teams plataforma suporta v1.4 ou anterior dos recursos de Cartão Adaptável para cartões enviados por bot e extensões de mensagens baseadas em ação.
+> * Teams plataforma suporta v1.3 ou anterior de recursos de Cartão Adaptável para outros recursos, como cartões enviados pelo usuário (extensões de mensagens baseadas em pesquisa e vinculação de link), guias e módulos de tarefa.
 > * O estilo de ação positivo ou destrutivo não é suportado em Cartões Adaptáveis na Teams plataforma.
 > * No momento, os elementos de mídia não têm suporte no Cartão Adaptável na Teams plataforma.
 
@@ -281,7 +285,7 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 
 A tabela a seguir fornece os recursos que suportam cartões de herói:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -348,7 +352,7 @@ O cartão de lista foi adicionado por Teams para fornecer funções além do que
 
 A tabela a seguir fornece os recursos que suportam cartões de lista:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -426,7 +430,7 @@ Você pode trabalhar com um cartão Office 365 Conector que fornece um layout fl
 
 A tabela a seguir fornece os recursos que suportam Office 365 conectores:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -548,7 +552,7 @@ Teams dá suporte ao cartão de recebimento. É um cartão que permite que um bo
 
 A tabela a seguir fornece os recursos que suportam cartões de recebimento:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -622,7 +626,7 @@ A ação de signin pode ser usada de qualquer cartão Teams, não apenas o cart�
 
 A tabela a seguir fornece os recursos que suportam cartões de assinatura:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -641,7 +645,7 @@ Você pode trabalhar com um cartão de miniatura que é usado para enviar uma me
 
 A tabela a seguir fornece os recursos que suportam cartões de miniatura:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -724,7 +728,7 @@ O [layout do carrossel](/azure/bot-service/bot-builder-howto-add-media-attachmen
 
 A tabela a seguir fornece os recursos que suportam coleções de carrossel:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -918,7 +922,7 @@ O layout da lista mostra uma lista verticalmente empilhada de cartões, opcional
 
 A tabela a seguir fornece os recursos que suportam coleções de lista:
 
-| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 

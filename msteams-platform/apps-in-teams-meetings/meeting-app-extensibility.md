@@ -4,12 +4,12 @@ author: surbhigupta
 description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: d77187543dd5e4ab774341f30a8a05a41c6a49f2
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 45633546825a54ed4d2adffbb60f459f26efe1c6
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360493"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475619"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -101,7 +101,7 @@ A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta 
 > [!NOTE]
 > * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
 > * Se a caixa de diálogo na reunião for renderizada com êxito, ela enviará uma notificação de que os resultados foram baixados com êxito.
-> * O manifesto do aplicativo especifica os locais nos quais você deseja que os aplicativos apareçam. O campo de contexto é usado para essa finalidade. Também faz parte de uma experiência de bandeja de compartilhamento, sujeita a diretrizes de design especificadas.
+> * O manifesto do aplicativo usa o campo de contexto e especifica os locais, onde o usuário deseja que os aplicativos apareçam. Além disso, atua como parte de uma experiência de bandeja de compartilhamento, conforme mencionado nas diretrizes de design especificadas.
 
 A imagem a seguir ilustra o painel do lado da reunião:
 

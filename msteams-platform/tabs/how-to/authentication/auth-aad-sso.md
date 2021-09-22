@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155233"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475682"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -67,6 +67,7 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia Teams que u
 > * Há suporte apenas para Graph de API no nível do usuário, ou seja, email, perfil, offline_access, OpenId. Se você deve ter acesso a outros escopos Graph, como ou , consulte Obter um token de acesso com Graph `User.Read` `Mail.Read` [permissões](#get-an-access-token-with-graph-permissions).
 > * É importante que o nome de domínio do aplicativo seja o mesmo que o nome de domínio que você registrou para seu aplicativo AAD.
 > * Atualmente, não há suporte para vários domínios por aplicativo.
+> * O usuário deve definir `accessTokenAcceptedVersion` como para um novo `v2` aplicativo.
 
 **Para registrar seu aplicativo por meio do portal do AAD**
 
