@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 07b2c969877dc61c8678bb89099d6275f2cf367c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
+ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475753"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59491678"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -193,7 +193,7 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
           "context": [
             "message"
           ],
-          "description": "Command Description; e.g., Search for a customer",
+          "description": "Command Description; e.g., Add a customer",
           "initialRun": true,
           "fetchTask": true,
           "parameters": [
@@ -204,14 +204,26 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
               "inputType": "text"
             }
           ]
+        },
+         {
+          "id": "exampleCmd3",
+          "title": "Example Command 3",
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "description": "Command Description; e.g., Add a customer",
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Initial dialog title",
+            "width": "Dialog width",
+            "height": "Dialog height",
+            "url": "Initial webview URL"
+          }
         }
       ],
-      "taskInfo": {
-        "title": "Initial dialog title",
-        "width": "Dialog width",
-        "height": "Dialog height",
-        "url": "Initial webview URL"
-      },
       "messageHandlers": [
         {
           "type": "link",
@@ -225,7 +237,7 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
       ]
     }
   ],
-  "permissions": [
+"permissions": [
     "identity",
     "messageTeamMembers"
   ],
@@ -479,7 +491,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
-|Name| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |title|string|12 |✔|O nome do comando bot.|
 |description|string|128 caracteres|✔|Uma descrição de texto simples ou um exemplo da sintaxe de comando e seus argumentos.|
@@ -628,7 +640,7 @@ Defina as propriedades que seu aplicativo usa para postar um feed de atividade d
 
 ### <a name="activitiesactivitytypes"></a>activities.activityTypes
 
-|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|Name| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|O tipo de notificação. *Consulte abaixo*.|
 |`description`|cadeia de caracteres|128 caracteres|✔|Uma breve descrição da notificação. *Consulte abaixo*.|
