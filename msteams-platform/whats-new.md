@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 4d664213b3a2a62a6ac99ef5f93ca276bfed9268
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
+ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475738"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59485765"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,7 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|09/21/2021|Teams dá suporte a ID de objeto AAD e UPN na menção do usuário para bots e Webhooks de entrada. | [Formatar cartões no Microsoft Teams](task-modules-and-cards/cards/cards-format.md)|
+|09/21/2021|Teams dá suporte a ID de objeto AAD e UPN na menção do usuário para bots e Webhooks de entrada. |[ID do objeto AAD e UPN na menção de usuário](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cartões- Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
