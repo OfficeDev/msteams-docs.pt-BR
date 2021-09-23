@@ -3,21 +3,21 @@ title: Criar um bot
 description: Saiba como criar um bot do Microsoft Teams e obter o Kit de Interface do Usuário do Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155393"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475822"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
 Bots são aplicativos de conversa que executam um conjunto específico de tarefas. Com base no <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, os bots se comunicam com os usuários, respondem às suas dúvidas e os notificam de forma proativa sobre alterações e outros eventos. Eles são uma ótima maneira de se comunicar.
 
 > [!IMPORTANT]
-> Os bots estão disponíveis em ambientes Nuvem da Comunidade Governamental (GCC), mas não GCC ambientes High e Department of Defense (DoD).
+> Os bots estão disponíveis em ambientes de Nuvem da Comunidade Governamental (GCC), mas não em ambientes de GCC High do Departamento de Defesa (DoD).
 
 Para orientar a criação do seu aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar bots no Mirosoft Teams.
 
@@ -34,13 +34,13 @@ Os bots estão disponíveis em chats, canais e aplicativos pessoais.
 
 ### <a name="mobile"></a>Celular
 
-Os usuários podem acessar bots que foram adicionados à área de trabalho com um @mention.
+Os usuários podem acessar bots que foram adicionados na área de trabalho com uma @menção.
 
-:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="Exemplo mostra como acessar um bot móvel em um chat de grupo usando um @mention." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="Exemplo mostrando como acessar um bot de dispositivo móvel em um chat em grupo usando uma @menção." border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-Os usuários podem adicionar um bot de uma das seguintes maneiras:
+Os usuários podem fazer isso por uma das formas a seguir:
 
 * Vá para a Teams Store.
 * Use o submenu do aplicativo selecionando o ícone **Mais** no lado esquerdo do Microsoft Teams.
@@ -54,23 +54,23 @@ Os usuários podem adicionar um bot de uma das seguintes maneiras:
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>Mensagem de boas-vindas em um chat entre duas pessoas
 
-No contexto pessoal, as mensagens de boas-vindas definem o tom do bot. A mensagem inclui uma saudação, o que o bot pode fazer e algumas sugestões de como interagir. Por exemplo, "Tente me perguntar sobre ...". Se possível, essas sugestões devem retornar respostas armazenadas sem que o usuário precise se conectar.
+No contexto pessoal, as mensagens de boas-vindas definem o tom do bot. A mensagem inclui uma saudação, o que o bot pode fazer e algumas sugestões sobre como interagir. Por exemplo, "Tente me perguntar sobre …". Se possível, essas sugestões devem retornar respostas armazenadas sem que o usuário precise se conectar.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um aplicativo pessoal no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um aplicativo pessoal no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um aplicativo pessoal." border="false":::
 
-### <a name="welcome-message-in-channels-and-group-chats"></a>Mensagem de boas-vindas em canais e chats de grupo
+### <a name="welcome-message-in-channels-and-group-chats"></a>Mensagem de boas-vindas em canais e chats em grupo
 
-A introdução do bot deve ser um pouco diferente em canais e chats de grupo em comparação com um espaço pessoal (como um aplicativo pessoal). Na vida real, ao entrar em uma sala cheia de pessoas, você se apresenta, em vez de dar boas-vindas a todos que já estão lá. Utilize esse raciocínio ao criar o bot.
+A apresentação do bot deve ser um pouco diferente em canais e chats em grupo em comparação com um espaço pessoal (como um aplicativo pessoal). Na vida real, ao entrar em uma sala cheia de pessoas, você se apresenta, em vez de dar boas-vindas a todos que já estão lá. Utilize esse raciocínio ao criar o bot.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="Exemplo mostra uma introdução de bot em um contexto colaborativo no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="Exemplo mostrando a apresentação de um bot em um contexto colaborativo no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -84,7 +84,7 @@ Não se esqueça: no menu de comandos do bot (**O que posso fazer?**), você tam
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="Exemplo mostra um bot com um botão de login no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="Exemplo mostrando um bot com um botão de logon no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -92,18 +92,18 @@ Não se esqueça: no menu de comandos do bot (**O que posso fazer?**), você tam
 
 ### <a name="tours"></a>Tours
 
-Você pode incluir um tour com mensagens de boas-vindas e se o bot responder a algo como um comando de "ajuda". Um tour é a maneira mais eficaz de descrever o que o bot pode fazer. Se aplicável, eles também são ótimos para descrever os outros recursos do seu aplicativo. Por exemplo, inclua capturas de tela de sua extensão de mensagens.
+Você pode incluir um tour com mensagens de boas-vindas e se o bot responder a algo como um comando de "ajuda". Um tour é a maneira mais eficaz de descrever o que o bot pode fazer. Se aplicável, eles também são ótimos para descrever outros recursos do seu aplicativo. Por exemplo, inclua capturas de tela da extensão de mensagem.
 
 > [!IMPORTANT]
 > Os tours devem estar acessíveis sem que o usuário precise se conectar.
 
 ### <a name="one-on-one-chats"></a>Chats entre duas pessoas
 
-Em um aplicativo pessoal, um carrossel pode fornecer uma visão geral eficaz do bot e de todos os outros recursos do aplicativo. Incluindo botões, os comandos de bot permitem que os usuários experimentem são incentivados. Por exemplo, **Criar uma tarefa**.
+Em um aplicativo pessoal, um carrossel pode fornecer uma visão geral eficaz do bot e de todos os outros recursos do aplicativo. É recomendável incluir botões para permitir que os usuários experimentem comandos de bot. Por exemplo, **Criar uma tarefa**.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="Exemplo mostra um tour de bot em um chat um-a-um no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="Exemplo mostrando um tour de bot em um chat entre duas pessoas no celular no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -115,7 +115,7 @@ Em canais e chats em grupo, o tour deve ser aberto em um modal (também conhecid
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="Exemplo mostra um tour de bot em um canal móvel." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="Exemplo mostrando um tour de bot em um canal no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -138,15 +138,15 @@ Você pode usar bots nos seguintes contextos:
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de um bot móvel." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="Exemplo mostrando a anatomia estrutural de um bot de dispositivo móvel." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
 |1|**Ícone e nome do aplicativo**|
 |2|**Guia de chat**: abre o espaço para falar com o bot (somente em aplicativos pessoais).|
 |3|**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
-|4 |**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
-|5 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
+|4|**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
+|5|**Cartão Adaptável**: se as respostas do bot incluírem Cartões Adaptáveis, o cartão ocupará toda a largura do balão de chat.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -157,10 +157,10 @@ Você pode usar bots nos seguintes contextos:
 |1|**Ícone e nome do aplicativo**|
 |2|**Guia de chat**: abre o espaço para falar com o bot (somente em aplicativos pessoais).|
 |3|**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
-|4 |**Guia Sobre**: exibe informações básicas sobre o aplicativo.|
-|5 |**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
-|6 |**Cartão Adaptável**: Se as respostas do bot incluirem Cartões Adaptáveis, o cartão ocupa a largura total da bolha de chat.|
-|7 |**Menu de comando**: exibe os comandos padrão do bot (definidos por você).|
+|4|**Guia Sobre**: exibe informações básicas sobre o aplicativo.|
+|5|**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
+|6|**Cartão Adaptável**: se as respostas do bot incluírem Cartões Adaptáveis, o cartão ocupará toda a largura do balão de chat.|
+|7|**Menu de comando**: exibe os comandos padrão do bot (definidos por você).|
 
 ### <a name="command-menu"></a>Menu de comando
 
@@ -192,7 +192,7 @@ Use um dicionário de sinônimos e receba pessoas de todas as origens para ajuda
 
 Projete seu bot para reconhecer intenções, o que interpreta o que alguém deseja de um bot em resposta a uma mensagem ou consulta. A intenção classifica uma mensagem ou consulta como uma única ação com um ou mais objetos de dados que são afetados por essa ação. 
 
-Os exemplos a seguir definem a intenção e os dados do usuário em mensagens enviadas para bots:
+Os exemplos a seguir descrevem as intenções e os dados do usuário em mensagens enviadas para bots:
 
 :::row:::
    :::column span="":::
@@ -221,7 +221,7 @@ Os bots podem fornecer uma correspondência exata de uma consulta ou um grupo de
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="Exemplo mostra uma interação de consulta simples com um bot no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="Exemplo mostrando uma interação de consulta simples com um bot no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -231,11 +231,11 @@ Os bots podem fornecer uma correspondência exata de uma consulta ou um grupo de
 
 Embora o seu bot possa dar suporte a solicitações e perguntas completas, ele também deve ser capaz de lidar com interações de várias etapas. Prever as próximas etapas possíveis torna muito mais fácil criar um fluxo de tarefas completo para as pessoas (em vez de esperar que elas criem uma única solicitação abrangente).
 
-Nos exemplos a seguir, o bot responde a cada mensagem com opções para o que pode querer fazer em seguida.
+Nos exemplos a seguir, o bot responde a cada mensagem com opções para o que talvez você queira fazer em seguida.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="Exemplo mostra uma interação de várias voltas com um bot no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="Exemplo mostrando uma interação de várias etapas com um bot no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -247,17 +247,17 @@ Com um sistema de mensagens proativo, seu bot pode atuar como um resumo que envi
 
 #### <a name="mobile"></a>Celular
 
-No exemplo a seguir, o usuário recebe uma notificação de que um bot os recebeu em outro canal.
+No exemplo a seguir, o usuário recebe uma notificação avisando que um bot enviou uma mensagem para ele em outro canal.
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="Exemplo mostra um sistema de mensagens de um bot de forma proativa de um usuário de outro canal no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="Exemplo mostrando uma notificação do sistema de um bot enviando mensagens proativamente a um usuário de outro canal no celular." border="false":::
 
 Nesse canal, o usuário pode ler a mensagem por meio do bot.
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="Exemplo mostra o usuário olhando para a mensagem proativa do bot no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="Exemplo mostrando o usuário observando a mensagem proativa do bot no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-No exemplo a seguir, o usuário recebe uma notificação de
+No exemplo a seguir, o usuário recebe uma notificação do sistema avisando que um bot enviou uma mensagem para ele em outro canal.
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Exemplo mostrando uma notificação do sistema de um bot enviando mensagens proativamente a um usuário de outro canal." border="false":::
 
@@ -267,11 +267,11 @@ Nesse canal, o usuário pode ler a mensagem por meio do bot.
 
 ### <a name="use-tabs-with-bots"></a>Usar guias com bots
 
-Em aplicativos pessoais, uma guia pode complementar o que seu bot pode fazer. Por exemplo, se o bot pode criar itens de trabalho, é bom mostrar todos esses itens em um local central dentro de uma guia. Consulte mais sobre [como projetar guias](../../tabs/design/tabs.md).
+Em aplicativos pessoais, uma guia pode complementar o que seu bot pode fazer. Por exemplo, se o bot pode criar itens de trabalho, é bom mostrar todos esses itens em um local central dentro de uma guia. Saiba mais sobre [criação de guias](../../tabs/design/tabs.md).
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="Exemplo mostra como uma guia pode ajudar a organizar o conteúdo do bot no celular." border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="Exemplo mostrando como uma guia pode ajudar a organizar o conteúdo do bot no celular." border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -289,7 +289,7 @@ Use essas recomendações para criar uma experiência de aplicativo de qualidade
 
 ### <a name="content"></a>Conteúdo
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemplo mostrando uma prática prática de bot para estabelecer uma persona clara." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemplo mostrando uma prática recomendada de bot para estabelecer uma personalidade clara." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Estabeleça uma personalidade bem definida
 
@@ -299,7 +299,7 @@ Saiba mais sobre como escrever para bots no <a href="https://www.figma.com/commu
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemplo mostrando para transmitir claramente o que seu bot pode fazer." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemplo mostrando claramente o que seu bot pode fazer." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Transmita claramente o que o bot pode fazer
 
@@ -307,18 +307,18 @@ Mensagens de boas-vindas e tours ajudam as pessoas a entender o que elas podem f
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemplo mostrando para não obscurecer os recursos do bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemplo mostrando como não ocultar os recursos do bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Não oculte os recursos do bot
 
-A primeira impressão é importante. As pessoas provavelmente ficarão confusas ou desconfiadas quando receberem uma mensagem de logon indefinida.
+As primeiras impressões são importantes. As pessoas provavelmente ficarão confusas ou desconfiadas quando receberem uma mensagem de logon indefinida.
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemplo mostrando que seu bot deve reconhecer não perguntas." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemplo mostrando que seu bot deve reconhecer o que não são perguntas." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Reconheça mensagens que não são perguntas
 
@@ -326,7 +326,7 @@ Seu bot deve ser capaz de responder a mensagens como "Olá", "Ajuda" e "Obrigado
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemplo mostrando que você deve evitar respostas desastradas a mensagens de bot simples." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemplo mostrando que você deve evitar respostas desajeitadas a mensagens simples de bot." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Não perca oportunidades de agradar
 
@@ -339,7 +339,7 @@ Algumas pessoas esperam que as conversas fluam naturalmente, como com uma pessoa
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemplo mostrando bots deve ajudar os usuários a entender como usar bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemplo mostrando que os bots devem ajudar os usuários a entender como usar bots." border="false":::
 
 #### <a name="do-provide-help"></a>Forneça ajuda
 
@@ -347,7 +347,7 @@ Se o bot não puder atender a uma solicitação, forneça maneiras de o usuário
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemplo mostrando que seu bot não deve deixar os usuários encalhados." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemplo mostrando que seu bot não deve abandonar os usuários." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Não deixe os usuários desamparados
 
@@ -360,7 +360,7 @@ As pessoas abandonarão o bot rapidamente se não puderem solucionar problemas.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemplo mostrando que você pode usar módulos de tarefa ou guias com seu bot para interações complexas." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemplo mostrando que você pode usar módulos de tarefas ou guias com seu bot para interações complexas." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Use guias ou módulos de tarefa
 
@@ -368,7 +368,7 @@ Se o bot fornece uma resposta que exige algumas etapas adicionais, você pode in
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemplo mostrando como seu bot deve evitar interações de várias voltas." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemplo mostrando como seu bot deve evitar interações em vários turnos." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Não torne as interações em várias etapas entediantes
 
@@ -381,7 +381,7 @@ Ter uma longa conversa para concluir uma única tarefa é algo lento e complexo 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemplo mostrando como os bots só devem mostrar informações privadas em um contexto pessoal." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemplo de como os bots devem mostrar apenas informações privadas em um contexto pessoal." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Somente mostre informações confidenciais em um contexto pessoal
 
@@ -389,7 +389,7 @@ Se o bot estiver em um chat em grupo ou canal, recomendamos direcionar os usuár
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemplo mostrando como os bots não devem revelar informações confidenciais para um grupo ou pessoas." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemplo mostrando como os bots não devem revelar informações confidenciais para um grupo ou para pessoas." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Alguns conteúdos não devem ser vistos por todos
 
