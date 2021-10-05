@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2453a8541a168db2c8417b8a3d80985c95efa12a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475780"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096560"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -22,9 +22,14 @@ Antes de enviar seu aplicativo para [o Partner Center,](/office/dev/store/use-pa
 
 Embora seu aplicativo possa estar funcionando em um ambiente de teste, você deve verificar o pacote do aplicativo para evitar problemas durante o processo de envio.
 
-A Microsoft Teams de validação de aplicativo ajuda você a corrigir problemas antes de enviar para o Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo em relação aos casos de teste usados durante a validação do armazenamento.
+> [!NOTE]
+>  O App Studio será preterido em breve. Configurar, distribuir e gerenciar seus aplicativos Teams com o novo [Portal do Desenvolvedor](https://dev.teams.microsoft.com/)
 
-1. Vá para a ferramenta [Microsoft Teams de validação de aplicativos](https://dev.teams.microsoft.com/appvalidation.html). (Observação: a ferramenta também está disponível no [App Studio](../../../build-and-test/app-studio-overview.md).)
+A Microsoft Teams de validação de aplicativo ajuda você a identificar e corrigir problemas antes de enviar ao Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo em relação aos mesmos casos de teste usados durante a validação do armazenamento.
+
+1. Vá para [Microsoft Teams de validação de aplicativos](https://dev.teams.microsoft.com/validation) no portal do desenvolvedor. 
+    > [!NOTE]
+    > A ferramenta de validação de aplicativo também está disponível no [App Studio.](../../../build-and-test/app-studio-overview.md)
 1. Upload pacote do aplicativo para executar os testes automatizados.
 1. Vá para **a lista de verificação Preliminar** e revise os casos de teste difíceis de automatizar.
 1. [Correção de problemas com suas configurações](~/resources/schema/manifest-schema.md) ou aplicativos em geral. Esses problemas ocorrerão se os testes automatizados lhe deem erros ou se você não tiver atendido a todos os critérios na lista de verificação.

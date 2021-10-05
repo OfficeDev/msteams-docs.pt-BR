@@ -5,12 +5,12 @@ description: Como adicionar autenticação OAuth a um bot Microsoft Teams.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 3612e194b0e05526bbe38dc66a2b75037a003eed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0fe330fe9eb6689998ff02df9403f00112379c66
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155050"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096644"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
 
@@ -66,7 +66,7 @@ Você usa um grupo de recursos para criar recursos individuais para a Estrutura 
 
 1. No portal [**do Azure**][azure-portal], no painel de navegação esquerdo, selecione **Criar um recurso**.
 1. Na caixa de pesquisa, digite *Plano de Serviço de Aplicativo*. Selecione o **cartão Plano de Serviço de Aplicativo** nos resultados da pesquisa.
-1. Selecione **Criar**.
+1. Selecionar **Criar**.
 1. Você será solicitado a fornecer as seguintes informações:
     1. **Assinatura**. Você pode usar uma assinatura existente.
     1. **Grupo de Recursos**. Selecione o grupo criado anteriormente.
@@ -75,7 +75,7 @@ Você usa um grupo de recursos para criar recursos individuais para a Estrutura 
     1. **Região**. Selecione *Oeste dos EUA* ou uma região próxima aos seus aplicativos.
     1. **Camada de preços**. Certifique-se *de que o Padrão S1* está selecionado. Esse deve ser o valor padrão.
     1. Selecione o **botão Revisar e** criar. Você deve ver um banner que lê *Validação passada*.
-    1. Selecione **Criar**. Pode levar alguns minutos para criar o plano de serviço do aplicativo. O plano será listado no grupo de recursos.
+    1. Selecionar **Criar**. Pode levar alguns minutos para criar o plano de serviço do aplicativo. O plano será listado no grupo de recursos.
 
 ## <a name="create-the-bot-channels-registration"></a>Criar o registro de canais bot
 
@@ -262,11 +262,11 @@ Como alternativa, enquanto estiver Visual Studio, você pode seguir estas etapas
 1. Na janela exibida, selecione o **link Novo.**
 1. Na janela de diálogo, selecione **Serviço de Aplicativo** à esquerda e Criar **Novo** à direita.
 1. Selecione o **botão Publicar.**
-1. Na próxima janela de diálogo, insira as informações necessárias. Veja um exemplo a seguir:
+1. Na próxima janela de diálogo, insira as informações necessárias. Este é um exemplo:
 
     ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. Selecione **Criar**.
+1. Selecionar **Criar**.
 1. Se a implantação for concluída com êxito, você deverá vê-la refletida em Visual Studio. Além disso, uma página é exibida no navegador padrão dizendo *que Seu bot está pronto!*. A URL será semelhante a esta: `https://botteamsauth.azurewebsites.net/` . Salve-o em um arquivo.
 1. No navegador, navegue até o [**portal do Azure.**][azure-portal]
 1. Verifique seu grupo de recursos, o bot deve ser listado junto com os outros recursos. A imagem a seguir é um exemplo:
@@ -382,13 +382,30 @@ O assistente a seguir é exibido:
 1. Selecione o botão **Adicionar a uma equipe**.
 1. Na próxima janela, selecione a equipe onde você deseja usar o bot.
 1. Selecione o **botão Configurar um bot.**
-1. Selecione os três pontos (&#x25cf;&#x25cf;&#x25cf;) no painel esquerdo. Em seguida, selecione **o ícone do App Studio.**
-1. Selecione a **guia Editor de** manifesto. Você deve ver o ícone do bot que você carregou.
-1. Além disso, você deve ser capaz de ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
+
+Você pode usar o App studio ou o Portal do Desenvolvedor para testar o bot.
+
+> [!NOTE]
+>  O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+11. Selecione os três pontos (●●)) no painel esquerdo. Em seguida, selecione o ícone do App Studio.
+12. Selecione a **guia Editor de** manifesto. Você deve ver o ícone do bot que você carregou.
+13. Além disso, você deve ser capaz de ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
+ 
+# <a name="developer-portal"></a>[Portal do Desenvolvedor](#tab/DP)
+
+11. Vá para **[o portal do desenvolvedor.](https://dev.teams.microsoft.com/)**
+12. Selecione **Aplicativos** no painel esquerdo. Em seguida, **selecione Importar Aplicativo**.
+13. Selecione **Recursos do aplicativo** e selecione **Bot**. Você pode ver o ícone do bot que você carregou.
+14. Além disso, você pode ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
+
+---
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Testar o bot localmente no Teams
 
-Microsoft Teams é um produto totalmente baseado em nuvem, exige que todos os serviços que acessa sejam disponibilizados na nuvem usando pontos de extremidade HTTPS. Portanto, para permitir que o bot (nosso exemplo) funcione no Teams, você precisa publicar o código na nuvem de sua  escolha ou tornar uma instância em execução localmente acessível externamente por meio de uma ferramenta de tunelamento. Recomendamos  [ngrok](https://ngrok.com/download), que cria uma URL de endereço externo para uma porta que você abre localmente em seu computador.
+Microsoft Teams é um produto totalmente baseado em nuvem, exige que todos os serviços que acessa sejam disponibilizados na nuvem usando pontos de extremidade HTTPS. Portanto, para permitir que o bot (nosso exemplo) funcione no Teams, você precisa publicar o código na nuvem de sua  escolha ou tornar uma instância em execução localmente acessível externamente por meio de uma ferramenta de tunelamento. Recomendamos [ngrok](https://ngrok.com/download), que cria uma URL de endereço externo para uma porta que você abre localmente em seu computador.
 Para configurar o ngrok em preparação para executar seu aplicativo Microsoft Teams localmente, siga estas etapas:
 
 1. Em uma janela de terminal, vá para o diretório onde `ngrok.exe` você instalou. Sugerimos definir o *caminho da variável do* ambiente para apontar para ele.

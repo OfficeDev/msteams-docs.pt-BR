@@ -4,12 +4,12 @@ description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticação do teams OAuth SSO AAD
-ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a49c209b3f421006b2a75f314fb0cbe4a591d86c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475766"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096707"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
@@ -41,7 +41,7 @@ Para obter mais informações sobre como usar o OAuthPrompt, consulte:
 
 ## <a name="code-sample"></a>Exemplo de código
 
-fornece exemplo de SDK de autenticação de bot v3.
+Exemplos de autenticação do Bot Framework v4.
 
 | **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|

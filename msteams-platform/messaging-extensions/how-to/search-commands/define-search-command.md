@@ -5,12 +5,12 @@ description: Defina comandos de pesquisa de extensão de mensagens para Microsof
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155250"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096581"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -38,9 +38,17 @@ A imagem a seguir exibe os locais de invocação do comando de pesquisa:
 
 Para adicionar o comando de pesquisa ao manifesto do aplicativo, você deve adicionar um novo objeto ao nível superior `composeExtension` do manifesto JSON do aplicativo. Você pode adicionar o comando de pesquisa com a ajuda do App Studio ou manualmente.
 
-### <a name="create-a-search-command-using-app-studio"></a>Criar um comando de pesquisa usando o App Studio
+### <a name="create-a-search-command"></a>Criar um comando de pesquisa 
 
-O pré-requisito para criar um comando de pesquisa é que você já deve ter criado uma extensão de mensagens. Para obter informações sobre como criar uma extensão de mensagens, consulte [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+Você pode criar o comando de pesquisa usando ** App Studio** ou **Portal do Desenvolvedor.**
+
+> [!NOTE]
+>  O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+> [!NOTE]
+> O pré-requisito para criar um comando de pesquisa é que você já deve ter criado uma extensão de mensagens. Para obter informações sobre como criar uma extensão de mensagens, consulte [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **Para criar um comando de pesquisa**
 
@@ -70,11 +78,54 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 1. Adicione o parâmetro de pesquisa e selecione **Salvar**.
 
+# <a name="developer-portal"></a>[Portal do Desenvolvedor](#tab/DP)
+
+**Para criar um comando de pesquisa usando o Portal do Desenvolvedor**
+
+1. Vá para **[o portal do desenvolvedor.](https://dev.teams.microsoft.com/)**
+    
+   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
+    
+1. Vá para **Aplicativos**.
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. Se você já criou seu pacote de aplicativos no Portal do **Desenvolvedor,** selecione-o na lista. Se você não tiver criado um pacote de aplicativos, selecione **Importar um aplicativo existente.**
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. Vá para **Recursos do aplicativo**.  
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. Selecione **Extensões de mensagens dos** recursos do **aplicativo.** Uma janela pop-up aparece para configurar a extensão de mensagens.
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+
+1. Selecione **um bot de extensão de mensagem** na listada em ID de **extensões de mensagem** e selecione **Salvar**.
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. Selecione **Adicionar um comando**. Uma janela pop-up parece adicionar comando.
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. Selecione **pesquisar com base no** comando de pesquisa e insira campos de comando.
+
+    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+
+1. Insira campos de parâmetro e selecione **Salvar**.
+
+    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+
+---
+
+
 ### <a name="create-a-search-command-manually"></a>Criar um comando de pesquisa manualmente 
 
 Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` sua matriz de objetos:
 
-| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui ao comando de pesquisa. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário (interface do usuário). | Sim | 1.0 |
@@ -85,7 +136,7 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao ma
 
 Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
 
-| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade define uma lista estática de parâmetros para o comando. | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |

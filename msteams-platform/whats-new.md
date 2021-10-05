@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
-ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
+ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59485765"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096539"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|10/04/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams dá suporte a ID de objeto AAD e UPN na menção do usuário para bots e Webhooks de entrada. |[ID do objeto AAD e UPN na menção de usuário](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cartões- Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -181,7 +182,6 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 |06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
-|05/25/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
 
