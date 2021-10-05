@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096539"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119654"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|10/05/2021|Planejar seus aplicativos para Teams celular|[Planejar guias responsivas para Teams celular](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams dá suporte a ID de objeto AAD e UPN na menção do usuário para bots e Webhooks de entrada. |[ID do objeto AAD e UPN na menção de usuário](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cartões- Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
