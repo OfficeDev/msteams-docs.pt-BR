@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: Mapeamento dos casos de uso para os recursos do aplicativo Teams
       href: concepts/design/map-use-cases.md
+    - name: Planejar guias responsivas para o aplicativo móvel do Teams
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: Funcionalidades de dispositivo
       items:
         - name: Visão Geral

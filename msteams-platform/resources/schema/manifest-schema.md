@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017321"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60127256"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
-O Teams descreve como o aplicativo se integra ao Microsoft Teams produto. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . As versões anteriores 1.0, 1.1,..., e 1.6 também são suportadas (usando "v1.x" na URL).
+O Teams descreve como o aplicativo se integra ao Microsoft Teams produto. Seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) . As versões anteriores 1.0, 1.1,..., e 1.11 também são suportadas (usando "v1.x" na URL).
 Para obter mais informações sobre as alterações feitas em cada versão, consulte [log de alterações de manifesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
@@ -23,8 +23,8 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -290,6 +290,8 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
       }
     ]
   },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
@@ -452,7 +454,7 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
 |`name`|string|128 caracteres|✔|O nome de exibição da guia na interface do canal.|
-|`contentUrl`|cadeia de caracteres||✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela Teams.|
+|`contentUrl`|string||✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela Teams.|
 |`websiteUrl`|string|||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
 |`searchUrl`|string|||A https:// URL a ser apontada para as consultas de pesquisa de um usuário.|
 |`scopes`|matriz de números|1|✔|Atualmente, as guias estáticas suportam apenas o escopo, o que significa que ele só pode ser `personal` provisionado como parte da experiência pessoal.|
@@ -551,10 +553,10 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
 |`taskInfo.url`|string|||URL do webview inicial.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando assume. Mínimo: 1; máximo: 5.|
-|`parameters.name`|cadeia de caracteres|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
-|`parameters.title`|cadeia de caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
-|`parameters.description`|cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
-|`parameters.value`|cadeia de caracteres|512 caracteres||Valor inicial do parâmetro.|
+|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
+|`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
+|`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial do parâmetro.|
 |`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset` o . Use somente quando `parameter.inputType` for `choiceset` .|
 |`parameters.choices.title`|string|128 caracteres|✔|Título da escolha.|
@@ -715,7 +717,7 @@ Quando um escopo de instalação de grupo é selecionado, ele define o recurso p
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado for `team` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
 |`groupchat`|string|||Quando o escopo de instalação selecionado for `groupchat` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado for `meetings` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
+|`meetings`|string|||Quando o escopo de instalação selecionado for `meetings` , este campo especifica o recurso padrão disponível. Opções: `tab` `bot` , ou `connector` .|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -737,3 +739,17 @@ Você pode definir qualquer uma das seguintes propriedades:
 * `developerUrl`: A URL HTTPS do site do desenvolvedor.
 * `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
+
+## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
+
+**Opcional**— booleano
+ 
+Quando a propriedade é definida como true , o aplicativo é oculto `defaultBlockUntilAdminAction` dos usuários por padrão até que o administrador o permita.  Se definido como **true**, o aplicativo será oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**.
+
+## <a name="publisherdocsurl"></a>publisherDocsUrl
+
+**Opcional** - cadeia de caracteres
+
+**Tamanho máximo** - 128 caracteres
+
+A propriedade depende de `defaultBlockUntilAdminAction` . Quando a propriedade é definida como true , a URL HTTPS fornece uma página de informações para que os administradores recebam diretrizes antes de permitir um aplicativo, que `defaultBlockUntilAdminAction` é bloqueado por  `publisherDocsUrl` padrão.

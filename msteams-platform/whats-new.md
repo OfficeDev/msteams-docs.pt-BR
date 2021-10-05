@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 13e749352662872d0b457085cc919b2357e9c348
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119654"
+ms.locfileid: "60127284"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,9 +30,11 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|10/05/2021| Ocultar Teams aplicativo até que o Administrador permita desa desabilitar o aplicativo. | [Ocultar Teams aplicativo até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|Planejar seus aplicativos para Teams celular|[Planejar guias responsivas para Teams celular](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams dá suporte a ID de objeto AAD e UPN na menção do usuário para bots e Webhooks de entrada. |[ID do objeto AAD e UPN na menção de usuário](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cartões- Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|09/08/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
