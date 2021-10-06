@@ -94,7 +94,7 @@
           href: task-modules-and-cards/task-modules/design-teams-task-modules.md
         - name: Notificações de feed de atividades
           href: concepts/design/activity-feed-notifications.md
-    - name: Habilitar personalização de aplicativo
+    - name: Personalização do aplicativo
       href: concepts/design/enable-app-customization.md
 - name: Ferramentas e SDKs
   items:
