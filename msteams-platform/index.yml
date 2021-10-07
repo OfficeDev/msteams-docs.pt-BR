@@ -4,7 +4,7 @@ summary: 'Obter documentação, código de exemplo, tutoriais e muito mais para 
 brand: teams
 metadata:
   title: Microsoft Teams Documentação do desenvolvedor da plataforma
-  description: 'A Microsoft Teams de desenvolvedores facilita que os desenvolvedores integrem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões mais rapidamente, fornecer foco (reduzindo a alternação de contexto) e criar colaboração em torno de conteúdo e fluxos de trabalho existentes. .'
+  description: 'A Microsoft Teams de desenvolvedores facilita que os desenvolvedores integrem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões com mais rapidez, oferecer foco reduzindo a alternação de contexto e criar colaboração em torno de conteúdo e fluxos de trabalho existentes.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -13,6 +13,9 @@ metadata:
   ms.date: 05/29/2020
 highlightedContent:
   items:
+    - title: Quais são as novidades?
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
     - title: "Novo para Teams desenvolvimento? \U0001F680Comece aqui!"
       itemType: get-started
       url: /microsoftteams/platform/overview
@@ -34,43 +37,9 @@ highlightedContent:
     - title: Amostras de códigos e tutoriais
       itemType: sample
       url: /microsoftteams/platform/get-started/code-samples
-    - title: Quais são as novidades?
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
 conceptualContent:
   title: Guias e recursos
   items:
-    - title: Espectadores
-      links:
-        - url: 'https://developer.microsoft.com/microsoft-teams'
-          itemType: concept
-          text: Desenvolvedores
-        - url: /microsoftteams/microsoft-teams
-          itemType: concept
-          text: Profissionais de TI
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
-          itemType: concept
-          text: Usuários finais
-    - title: Explorar
-      links:
-        - url: /microsoftteams/platform/concepts/capabilities-overview
-          itemType: overview
-          text: Recursos do aplicativo Teams
-        - url: /microsoftteams/platform/samples/teams-low-code-solutions
-          itemType: how-to-guide
-          text: 'Criar aplicativos, bots e fluxos de Teams de baixo código com a Plataforma Microsoft Power'
-        - url: 'https://dev.teams.microsoft.com/home'
-          itemType: reference
-          text: Portal do Desenvolvedor do Teams
-        - url: /microsoftteams/platform/resources/schema/manifest-schema
-          itemType: reference
-          text: Esquema de manifesto para Teams aplicativos
-        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
-          itemType: reference
-          text: Criar cenários para Teams aplicativos
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
-          itemType: reference
-          text: Práticas recomendadas para Teams cenários de aplicativos
     - title: Saiba mais
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
@@ -91,11 +60,48 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Conexão web para canais e equipes com webhooks e Office 365 Conectores
+    - title: Recursos
+      links:
+        - url: /microsoftteams/platform/tabs/what-are-tabs
+          itemType: overview
+          text: Guias
+        - url: /microsoftteams/platform/bots/what-are-bots
+          itemType: overview
+          text: Bots
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+          itemType: overview
+          text: Extensões de mensagens
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: overview
+          text: Aplicativos para Teams reuniões
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: concept
+          text: Cartões e módulos de tarefa
+        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+          itemType: overview
+          text: Webhooks e conectores
+    - title: Explorar
+      links:
+        - url: /microsoftteams/platform/concepts/authentication/authentication
+          itemType: concept
+          text: Autenticação do usuário e SSO
+        - url: /microsoftteams/platform/samples/teams-low-code-solutions
+          itemType: how-to-guide
+          text: 'Criar aplicativos, bots e fluxos de Teams de baixo código com a Plataforma Microsoft Power'
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Portal do Desenvolvedor do Teams
+        - url: /microsoftteams/platform/resources/schema/manifest-schema
+          itemType: reference
+          text: Esquema de manifesto para Teams aplicativos
+        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
+          itemType: reference
+          text: Criar cenários para Teams aplicativos
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: Práticas recomendadas para Teams cenários de aplicativos
     - title: Integrar
       links:
-        - url: /microsoftteams/platform/samples/integrating-web-apps
-          itemType: concept
-          text: Integrar aplicativos Web
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrar um Power Virtual Agents chatbot
@@ -114,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Integrar conectores shifts prontos para produção
-    - title: Conectar
+    - title: Community
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -125,14 +131,23 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: Anúncios
-    - title: Ajuda
-      links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams Desenvolvedor Community e resposta
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Contribuir para Microsoft Teams documentação
+    - title: Espectadores
+      links:
+        - url: 'https://developer.microsoft.com/microsoft-teams'
+          itemType: concept
+          text: Desenvolvedores
+        - url: /microsoftteams/microsoft-teams
+          itemType: concept
+          text: Profissionais de TI
+        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+          itemType: concept
+          text: Usuários finais
 tools:
   title: SDKs e ferramentas
   items:
