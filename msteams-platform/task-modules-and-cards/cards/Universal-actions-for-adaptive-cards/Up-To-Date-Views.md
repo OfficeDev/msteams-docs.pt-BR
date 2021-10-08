@@ -4,12 +4,12 @@ description: Exemplo de exibições atualizadas usando o Bot Universal
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
+ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155229"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60238234"
 ---
 # <a name="up-to-date-cards"></a>Cartões atualizados
 
@@ -22,7 +22,7 @@ Usar Exibições Específicas do Usuário  pode mostrar um cartão com botões *
 
 * Para manter o estado do cartão sempre atualizado, Teams mecanismo de edição de mensagem pode ser usado. Por exemplo, para cada aprovação, o bot pode disparar uma edição de mensagem para todos os usuários. Essa edição de mensagem bot dispara uma solicitação de invocação para todos os usuários de atualização automática, para os quais o bot pode responder com o cartão `adaptiveCard/action` específico do usuário atualizado.
 
-Para obter mais informações, [consulte como fazer uma edição de mensagem de bot](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+Para obter mais informações, [consulte como fazer uma edição de mensagem de bot](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Cartão base de aprovação
 
