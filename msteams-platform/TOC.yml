@@ -1,12 +1,12 @@
 - name: Documentação do Desenvolvedor do Microsoft Teams
   href: /microsoftteams/platform
+- name: Quais são as novidades?
+  href: whats-new.md
 - name: Visão Geral
   expanded: false
   items:
     - name: Crie aplicativos para o Microsoft Teams
       href: overview.md
-    - name: Quais são as novidades?
-      href: whats-new.md
 - name: Introdução
   expanded: false
   items:
