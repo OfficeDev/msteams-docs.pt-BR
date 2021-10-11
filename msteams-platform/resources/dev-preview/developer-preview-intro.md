@@ -4,12 +4,12 @@ description: Descreve os recursos na Visualização pública do desenvolvedor Mi
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Recursos de desenvolvedor de visualização do teams
-ms.openlocfilehash: 975dc5b29fce984b9c8321ee9b8fc9fa3d53b822
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8cf3f4faf4387aba6ea6238b0469bae840aba87f
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155399"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260615"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Visualização do desenvolvedor público para Microsoft Teams
 
@@ -20,7 +20,7 @@ O Developer Preview é um programa público para desenvolvedores que fornece ace
 
 ## <a name="developer-preview-app-manifest"></a>Manifesto do aplicativo de visualização do desenvolvedor
 
-Muitos recursos habilitados na visualização do desenvolvedor exigirão alterações no arquivo JSON do manifesto do aplicativo. Para fazer isso, você precisará [](~/resources/schema/manifest-schema-dev-preview.md) usar o esquema de manifesto de visualização do desenvolvedor Se você usar esse esquema, não poderá usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) para fazer essas alterações, nem poderá usá-lo para carregar seu aplicativo para testes. Para carregar seu aplicativo, você precisará clicar no ícone na barra de aplicativos `More apps` e, em seguida, selecione `Upload a custom app link` o . Usando esse método, você só pode carregar uma versão de zipped do pacote do aplicativo.
+Muitos recursos habilitados na visualização do desenvolvedor exigirão alterações no arquivo JSON do manifesto do aplicativo. Para fazer isso, você precisará usar o esquema de manifesto de [visualização do desenvolvedor.](~/resources/schema/manifest-schema-dev-preview.md) Se você usar esse esquema, não poderá usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) para fazer essas alterações, nem poderá usá-lo para carregar seu aplicativo para teste. Para carregar seu aplicativo, você precisará clicar no ícone na barra de aplicativos `More apps` e, em seguida, selecione `Upload a custom app link` o . Usando esse método, você só pode carregar uma versão de zipped do pacote do aplicativo.
 
 Você pode achar útil usar o App Studio para criar as partes de visualização que não são do desenvolvedor do pacote de aplicativos e, em seguida, exportar esse pacote e editar manualmente o arquivo para adicionar os recursos de visualização do desenvolvedor que você deseja `manifest.json` usar. Depois de adicionar recursos de visualização do desenvolvedor ao arquivo, você não poderá importar novamente o `manifest.json` pacote para o App Studio.
 

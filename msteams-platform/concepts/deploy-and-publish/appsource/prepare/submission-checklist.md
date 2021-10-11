@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096560"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260537"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -49,7 +49,7 @@ Forneça detalhes sobre os recursos do seu aplicativo em Teams e etapas para tes
 
 ### <a name="accounts"></a>Contas
 
-Forneça contas de teste se seu aplicativo exigir uma licença ou uma lista segura de back-end. Todas as contas fornecidas devem incluir dados pré-preenchidos para ajudar no teste.
+Forneça contas de teste se seu aplicativo exigir uma licença ou listagem segura de back-end. Todas as contas fornecidas devem incluir dados pré-preenchidos para ajudar no teste.
 
 Dependendo dos recursos do aplicativo, talvez seja necessário fornecer todas as seguintes contas:
 

@@ -3,12 +3,12 @@ title: Empacote seu aplicativo
 description: Saiba como empacotar seu aplicativo Microsoft Teams para testar, carregar e armazenar publicação.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155412"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260670"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Criar um pacote Microsoft Teams aplicativo
 
@@ -23,7 +23,7 @@ O arquivo de manifesto do aplicativo deve estar no nível superior do pacote com
 
 Ao publicar no Teams, certifique-se de que seu manifesto faça referência ao [esquema mais recente.](~/resources/schema/manifest-schema.md)
 
-## <a name="app-icons"></a>Ícones de aplicativo
+## <a name="app-icons"></a>Ícones do aplicativo
 
 Seu pacote de aplicativos deve incluir duas versões PNG do ícone do aplicativo: uma versão de cor e de contorno.
 
@@ -34,7 +34,7 @@ Para que seu aplicativo passe na Teams de armazenamento, esses ícones devem ate
 
 ### <a name="color-icon"></a>Ícone de cor
 
-A versão colorida do ícone é exibida na maioria Teams cenários e deve ter 192 x 192 pixels. Seu símbolo de ícone (96 x 96 pixels) pode ser qualquer cor, mas deve estar em um plano de fundo quadrado sólido ou totalmente transparente.
+A versão colorida do seu ícone é exibida na maioria dos cenários do Teams e deve ter 192 x 192 pixels. Seu símbolo de ícone (96 x 96 pixels) pode ser qualquer cor, mas deve estar em um plano de fundo quadrado sólido ou totalmente transparente.
 
 Teams automaticamente seu ícone para exibir um quadrado com cantos arredondados em vários cenários e uma forma hexagonal em cenários de bot. Para cortar o símbolo sem perder detalhes, inclua 48 pixels de preenchimento ao redor do símbolo.
 

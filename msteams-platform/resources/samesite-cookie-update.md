@@ -6,16 +6,16 @@ keywords: atributos de cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155417"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260643"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite 
 
-Cookies são cadeias de caracteres de texto, enviadas de sites e armazenadas em um computador pelo navegador da Web. Eles são usados para autenticação e personalização. Por exemplo, cookies são usados para lembrar informações de estado, preservar configurações do usuário, registrar atividades de navegação e exibir anúncios relevantes. Os cookies são sempre vinculados a um determinado domínio e são instalados por várias partes. 
+Cookies são cadeias de caracteres de texto enviadas de sites e armazenadas em um computador pelo navegador da Web. Eles são usados para autenticação e personalização. Por exemplo, cookies são usados para lembrar informações de estado, preservar configurações do usuário, registrar atividades de navegação e exibir anúncios relevantes. Os cookies são sempre vinculados a um determinado domínio e são instalados por várias partes. 
 
 ## <a name="types-of-cookies"></a>Tipos de cookies
 
@@ -43,9 +43,9 @@ O Chrome 80, lançado em fevereiro de 2020, introduz novos valores de cookie e i
  
 Os atributos de cookie sameSite são os seguinte:
 
-|Setting | Imposição | Valor |Especificação de Atributo |
+|Configuração | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador envia apenas cookies para solicitações de contexto de primeira parte. São solicitações provenientes do site que definiram o cookie. Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
 | **Nenhum** | Os cookies são enviados no contexto de primeira parte e em solicitações de origem cruzada; no entanto, o valor deve ser definido explicitamente como e todas as solicitações de navegador devem seguir o protocolo HTTPS e incluir o atributo que exige uma **`None`** conexão  **`Secure`** criptografada. Cookies que não aderem a esse requisito são **rejeitados.** <br/>**Ambos os atributos são necessários juntos.** Se for especificado sem ou se o protocolo HTTPS não for usado, os cookies de terceiros  **`None`** serão **`Secure`**  rejeitados.| Opcional, mas, se definido, o protocolo HTTPS é necessário. |`Set-Cookie: key=value; SameSite=None; Secure` |
 

@@ -4,12 +4,12 @@ description: Saiba como registrar um novo bot de chamada de áudio/vídeo para M
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155456"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260655"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões bot para Microsoft Teams
 
@@ -21,12 +21,12 @@ Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bo
 
 ## <a name="new-manifest-settings"></a>Novas configurações de manifesto
 
-Os bots de chamadas e reuniões online têm as duas configurações adicionais a seguir no manifest.jsque habilitam áudio ou vídeo para seu bot Teams.
+Os bots de chamadas e reuniões online têm as duas configurações adicionais a seguir no manifesto.json que habilitam áudio ou vídeo para seu bot no Teams.
 
 * `bots[0].supportsCalling`. Se presente e definido como `true` , Teams permite que seu bot participe de chamadas e reuniões online.
 * `bots[0].supportsVideo`. Se presente e definido como `true` , Teams que seu bot oferece suporte a vídeo.
 
-Se você quiser que seu IDE valide corretamente o manifest.jsno esquema para suas chamadas e reuniões bot para esses valores, você pode alterar o `$schema` atributo da seguinte maneira:
+Se você quiser que seu IDE valide corretamente o esquema manifest.json para suas chamadas e reuniões bot para esses valores, você pode alterar o `$schema` atributo da seguinte maneira:
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -84,7 +84,7 @@ Você deve configurar as permissões de aplicativo para seu bot antecipadamente 
 
 Para aplicativos que usam o ponto de extremidade do AAD V1, um administrador de locatários pode consentir com as permissões do aplicativo usando o portal do [Azure](https://portal.azure.com) quando seu aplicativo estiver instalado em sua organização. Como alternativa, você pode fornecer uma experiência de assinatura em seu aplicativo por meio do qual os administradores podem consentir com as permissões configuradas. Depois que o consentimento do administrador é registrado pelo AAD, seu aplicativo pode solicitar tokens sem precisar solicitar consentimento novamente.
 
-Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal do Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade do AAD `/adminconsent` V2. Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador.](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)
+Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal do Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade do AAD `/adminconsent` V2. Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Para construir a URL de consentimento do administrador do locatário, é necessário um URI de redirecionamento configurado ou URL de resposta no portal de [registro do aplicativo.](https://apps.dev.microsoft.com/) Para adicionar URLs de resposta para seu bot, acesse seu registro de bot, escolha **Opções Avançadas**  >  **Editar Manifesto do Aplicativo.** Adicione sua URL de redirecionamento à `replyUrls` coleção.

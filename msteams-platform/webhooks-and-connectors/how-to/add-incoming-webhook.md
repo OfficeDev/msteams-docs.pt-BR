@@ -6,12 +6,12 @@ keywords: teams tabs outgoing webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155009"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260698"
 ---
 # <a name="create-incoming-webhook"></a>Criar Webhook de entrada
 
@@ -29,7 +29,7 @@ A tabela a seguir fornece os recursos e a descrição do Webhook de entrada:
 | ------- | ----------- |
 |Cartões adaptáveis usando um Webhook de entrada|Cartões adaptáveis podem ser enviados por meio de Webhooks de entrada. Para obter mais informações, [consulte Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
 |Suporte a mensagens a ações|Os cartões de mensagem a ação são suportados em todos os grupos Office 365, incluindo Teams. Se você enviar mensagens por meio de cartões, deverá usar o formato de cartão de mensagem a ação. Para obter mais informações, consulte [referência de cartão de mensagem a actionable herdado](/outlook/actionable-messages/message-card-reference) e playground de cartão de [mensagem](https://messagecardplayground.azurewebsites.net).|
-|Suporte independente de mensagens HTTPS|Os cartões fornecem informações de forma clara e consistente. Qualquer ferramenta ou estrutura que possa enviar solicitações HTTPS POST, pode enviar mensagens para Teams por meio de um Webhook de entrada.|
+|Suporte independente de mensagens HTTPS|Os cartões fornecem informações de forma clara e consistente. Qualquer ferramenta ou estrutura que possa enviar solicitações HTTPS POST pode enviar mensagens para Teams por meio de um Webhook de entrada.|
 |Suporte a markdown|Todos os campos de texto em cartões de mensagens a ação suportam Markdown básico. Não use marcação HTML em seus cartões. O HTML será ignorado e tratado como texto sem formatação.|
 |Configuração com escopo|O Webhook de entrada tem escopo e configuração no nível do canal.|
 |Definições de recursos seguros|As mensagens são formatadas como cargas JSON. Essa estrutura declarativa de mensagens impede a inserção de código mal-intencionado.|

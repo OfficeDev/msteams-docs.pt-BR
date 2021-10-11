@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155231"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260626"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Manter seu aplicativo Microsoft Teams publicado
 
@@ -28,7 +28,7 @@ Verifique o seguinte ao publicar atualizações:
 
 ### <a name="app-updates-requiring-user-consent"></a>Atualizações de aplicativo que exigem consentimento do usuário
 
-Quando um usuário instala seu aplicativo, ele deve dar ao aplicativo permissão para acessar os serviços e informações que o aplicativo exige para funcionar. Na maioria dos casos, os usuários só têm que fazer isso uma vez e novas versões do aplicativo são instaladas automaticamente.
+Quando um usuário instala seu aplicativo, ele deve dar ao aplicativo permissão para acessar os serviços e informações que o aplicativo exige para funcionar. Na maioria dos casos, os usuários devem fazer isso uma vez e as novas versões do aplicativo são instaladas automaticamente.
 
 No entanto, se você fizer qualquer uma das seguintes alterações em seu aplicativo, seus usuários existentes devem aceitar outra solicitação de permissão para instalar a atualização:
 

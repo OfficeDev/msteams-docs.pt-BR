@@ -4,12 +4,12 @@ author: surbhigupta
 description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 45633546825a54ed4d2adffbb60f459f26efe1c6
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a69d0f709cdf3af52164d8ab336d3ec2a8f7de74
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475619"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260684"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -101,7 +101,7 @@ A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta 
 > [!NOTE]
 > * Os aplicativos podem aproveitar Teams SDK do cliente para acessar `meetingId` o , `userMri` e `frameContext` renderizar a experiência adequadamente.
 > * Se a caixa de diálogo na reunião for renderizada com êxito, ela enviará uma notificação de que os resultados foram baixados com êxito.
-> * O manifesto do aplicativo usa o campo de contexto e especifica os locais, onde o usuário deseja que os aplicativos apareçam. Além disso, atua como parte de uma experiência de bandeja de compartilhamento, conforme mencionado nas diretrizes de design especificadas.
+> * O manifesto do aplicativo especifica os locais nos quais você deseja que os aplicativos apareçam. Isso pode ser feito especificando o campo de contexto no manifesto. Também faz parte de uma experiência de estágio de reunião de compartilhamento, sujeita a diretrizes de [design especificadas.](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)
 
 A imagem a seguir ilustra o painel do lado da reunião:
 
@@ -197,7 +197,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 
 | Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio de Reunião | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Não é possível exibir, mas pode interagir com o aplicativo no estágio de reunião |
+| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Pode exibir, mas não pode interagir com o aplicativo no estágio de reunião |
 | Convidado que faz parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
 | Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
 

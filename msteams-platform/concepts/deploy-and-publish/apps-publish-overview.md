@@ -5,16 +5,16 @@ ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155438"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260614"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir seu Microsoft Teams app
 
-Você pode fornecer seu Microsoft Teams para uma pessoa, equipe, organização ou qualquer pessoa que queira usá-lo. A distribuição depende de vários fatores, incluindo as necessidades dos usuários, os requisitos técnicos e comerciais e suas metas para o aplicativo.
+Você pode fornecer seu Microsoft Teams para uma pessoa, equipe, organização ou qualquer pessoa que queira usá-lo. A distribuição depende de vários fatores, incluindo as necessidades dos usuários, os negócios, os requisitos técnicos e suas metas para o aplicativo.
 
 ## <a name="upload-your-app-in-teams"></a>Upload seu aplicativo no Teams
 
@@ -46,7 +46,7 @@ Para obter mais informações, [consulte publish to the Teams store](~/concepts/
 
 ## <a name="see-also"></a>Confira também
 
-* [Programa de Conformidade de Aplicativos do Microsoft 365](/microsoft-365-app-certification/overview)
+* [Programa de Conformidade do Aplicativo do Microsoft 365](/microsoft-365-app-certification/overview)
 
 ## <a name="next-step"></a>Próxima etapa
 
