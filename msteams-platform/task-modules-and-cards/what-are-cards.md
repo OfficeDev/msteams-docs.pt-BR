@@ -4,18 +4,29 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: medium
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 9ddfada39f6170e7fc81092028747230b87e35e3
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475794"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291608"
 ---
 # <a name="cards"></a>Cartões
 
 Um cartão é um contêiner de interface do usuário (UI) para informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos e podem incluir botões, que disparam ações [de cartão.](~/task-modules-and-cards/cards/cards-actions.md) Usando cartões, você pode organizar informações em grupos e dar aos usuários a oportunidade de interagir com partes específicas das informações.
 
-Os bots para Teams suportam os seguintes tipos de cartões: Cartão Adaptável, cartão de herói, cartão de lista, cartão de Office 365 Conector, cartão de recebimento, cartão de entrada, cartão de miniatura e coleções de cartões. Você pode adicionar formatação de rich text aos cartões usando Markdown ou HTML, dependendo do tipo de cartão. Cartões usados por bots e extensões de mensagens em Microsoft Teams, adicione e responda a essas ações de cartão, `openUrl` , , , e `messageBack` `imBack` `invoke` `signin` .
+Os bots para Teams suportam os seguintes tipos de cartões:
+ 
+- Cartão Adaptável
+- Cartão de herói
+- Cartão de listagem
+- Office 365 Cartão conector
+- Cartão de recebimento
+- Cartão de signin
+- Cartão de miniatura
+- Coleções de cartões
+
+Você pode adicionar formatação de rich text aos cartões usando Markdown ou HTML, dependendo do tipo de cartão. Cartões usados por bots e extensões de mensagens em Microsoft Teams, adicione e responda a essas ações de cartão, `openUrl` , , , e `messageBack` `imBack` `invoke` `signin` .
 
 Teams usa cartões em três locais diferentes:
 
@@ -62,9 +73,9 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 
 Cartões adaptáveis com Webhooks de entrada permite que você use os recursos avançados e flexíveis de Cartões Adaptáveis. Ele envia dados usando Webhooks de entrada Teams de seu serviço Web.
 
-## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Suporte para ID de objeto AAD e UPN na menção do usuário 
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Suporte para AAD ID de objeto e UPN na menção do usuário 
 
-Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD Object ID e User Principle Name (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com a ID do Objeto AAD e o UPN.
+Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD ID de objeto e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com AAD ID do objeto e UPN.
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155472"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291706"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -42,7 +42,7 @@ Em um nível alto, o processo de importação consiste no seguinte:
 ### <a name="set-up-your-office-365-tenant"></a>Configurar seu locatário do Office 365
 
 * Verifique se existe Office 365 locatário para os dados de importação. Para obter mais informações sobre como configurar Office 365 locatário para Teams, consulte [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Certifique-se de que os membros da equipe estão Azure Active Directory (AAD). Para obter mais informações, [consulte adicionar um novo usuário](/azure/active-directory/fundamentals/add-users-azure-active-directory) ao AAD.
+* Certifique-se de que os membros da equipe estão Azure Active Directory (AAD). Para obter mais informações, [consulte add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
 
 ## <a name="step-1-create-a-team"></a>Etapa 1: Criar uma equipe
 
@@ -373,7 +373,7 @@ A tabela a seguir fornece o escopo de conteúdo:
 |Imagens em linha como parte da mensagem|At mentions|
 |Links para arquivos existentes no SPO ou OneDrive|Reações|
 |Mensagens com texto rico|Vídeos|
-|Cadeia de resposta de mensagens|Announcements|
+|Cadeia de resposta de mensagens|Comunicados|
 |Processamento de alta taxa de transferência|Trechos de código|
 ||Adesivos|
 ||Emojis|

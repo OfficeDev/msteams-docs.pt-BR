@@ -3,17 +3,17 @@ title: Suporte de login único para guias
 description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: api de login único do SSO AAD de autenticação do teams
-ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: SSO de autenticação do teams AAD api de login único
+ms.openlocfilehash: e0dbef26be829980d04278d748298414bc17c473
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475682"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291713"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
-Os usuários entrarão Microsoft Teams suas contas de trabalho, escola ou Microsoft que Office 365, Outlook e assim por diante. Você pode aproveitar permitindo que um único login autorize sua guia Teams ou módulo de tarefa em clientes desktop ou móveis. Se um usuário entrar uma vez, ele não precisa entrar novamente em outro dispositivo quando estiver conectado automaticamente. Além disso, seu token de acesso é pré-buscado para melhorar o desempenho e os tempos de carregamento.
+Os usuários Microsoft Teams entrar em sua conta de trabalho, escola ou Microsoft que seja Office 365, Outlook, você pode aproveitar a vantagem permitindo que um único login autorize sua guia Teams ou módulo de tarefa em clientes desktop ou móveis. Se um usuário entrar uma vez, ele não precisa entrar novamente em outro dispositivo quando estiver conectado automaticamente. Além disso, seu token de acesso é pré-buscado para melhorar o desempenho e os tempos de carregamento.
 
 > [!NOTE]
 > **Teams versões do cliente móvel que suportam o SSO**  
@@ -38,8 +38,8 @@ A imagem a seguir mostra como o processo de SSO funciona:
 
 1. Na guia, uma chamada JavaScript é feita para `getAuthToken()`. `getAuthToken()`informa Teams obter um token de acesso para o aplicativo de tabulação.
 2. Se o usuário atual estiver usando seu aplicativo de tabulação pela primeira vez, haverá um prompt de solicitação para consentir se o consentimento for necessário. Como alternativa, há um prompt de solicitação para lidar com a autenticação de etapa, como a autenticação de dois fatores.
-3. Teams solicita o token de acesso de tabulação do ponto de extremidade Azure Active Directory (AAD) do usuário atual.
-4. O AAD envia o token de acesso de tabulação para o Teams aplicativo.
+3. Teams solicita o token de acesso de tabulação do ponto de extremidade Azure Active Directory (AAD) para o usuário atual.
+4. AAD envia o token de acesso de tabulação para o Teams aplicativo.
 5. Teams envia o token de acesso de tabulação para a guia como parte do objeto de resultado retornado pela `getAuthToken()` chamada.
 6. O token é analisado no aplicativo de tabulação usando JavaScript, para extrair informações necessárias, como o endereço de email do usuário.
 
@@ -52,12 +52,12 @@ A API do SSO também funciona em [módulos de tarefas](../../../task-modules-and
 
 Esta seção descreve as tarefas envolvidas na criação de uma guia Teams que usa SSO. Essas tarefas são agnósticas de idioma e estrutura.
 
-### <a name="1-create-your-aad-application"></a>1. Crie seu aplicativo AAD
+### <a name="1-create-your-aad-application"></a>1. Crie seu aplicativo AAD aplicativo
 
-**Para registrar seu aplicativo na visão geral [do portal do AAD](https://azure.microsoft.com/features/azure-portal/)**
+**Para registrar seu aplicativo na visão [geral AAD portal](https://azure.microsoft.com/features/azure-portal/)**
 
-1. Obter sua [ID do Aplicativo AAD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
-1. Especifique as permissões que seu aplicativo precisa para o ponto de extremidade do AAD e, opcionalmente, Graph.
+1. Obter sua [AAD ID do aplicativo.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
+1. Especifique as permissões que seu aplicativo precisa para o ponto de extremidade AAD e, opcionalmente, Graph.
 1. [Conceda permissões](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) para Teams desktop, web e aplicativos móveis.
 1. Pré-autorizar Teams selecionando o botão **Adicionar** um escopo e, no painel que é aberto, insira access_as_user **como** o nome do **escopo**.
 
@@ -65,13 +65,13 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia Teams que u
 > Há algumas restrições importantes que você deve saber:
 >
 > * Há suporte apenas para Graph de API no nível do usuário, ou seja, email, perfil, offline_access, OpenId. Se você deve ter acesso a outros escopos Graph, como ou , consulte Obter um token de acesso com Graph `User.Read` `Mail.Read` [permissões](#get-an-access-token-with-graph-permissions).
-> * É importante que o nome de domínio do aplicativo seja o mesmo que o nome de domínio que você registrou para seu aplicativo AAD.
+> * É importante que o nome de domínio do aplicativo seja o mesmo que o nome de domínio que você registrou para seu AAD aplicativo.
 > * Atualmente, não há suporte para vários domínios por aplicativo.
 > * O usuário deve definir `accessTokenAcceptedVersion` como para um novo `v2` aplicativo.
 
-**Para registrar seu aplicativo por meio do portal do AAD**
+**Para registrar seu aplicativo por meio do AAD portal**
 
-1. Registre um novo aplicativo no portal registros [do aplicativo AAD.](https://go.microsoft.com/fwlink/?linkid=2083908)
+1. Registre um novo aplicativo no portal [AAD Registros de Aplicativos.](https://go.microsoft.com/fwlink/?linkid=2083908)
 1. Selecione **Novo Registro**. A **página Registrar um aplicativo** é exibida.
 1. Na página **Registrar um aplicativo,** insira os seguintes valores:
     1. Insira um **Nome** para seu aplicativo.
@@ -121,9 +121,9 @@ Parabéns! Você concluiu os pré-requisitos de registro do aplicativo para cont
 
 > [!NOTE]
 >
-> * ¹ Se seu aplicativo AAD estiver registrado no mesmo locatário onde você está fazendo uma solicitação de autenticação no Teams, o usuário não poderá ser solicitado a consentir e terá um token de acesso imediatamente. Os usuários só consentem com essas permissões se o aplicativo AAD estiver registrado em um locatário diferente.
-> * ² Se o domínio personalizado não for adicionado ao AAD, você receberá um erro informando que o nome do host não deve ser baseado em um domínio já pertencente. Para adicionar domínio personalizado ao AAD e registrá-lo, siga o procedimento adicionar um nome de domínio personalizado ao [procedimento AAD](/azure/active-directory/fundamentals/add-custom-domain) e repita a etapa 5. Você também poderá obter esse erro se não estiver se inscreveu com credenciais de administrador no Office 365 de adoção.
-> * Se você não estiver recebendo o nome principal do usuário (UPN) no token de acesso retornado, você poderá adicioná-lo como uma declaração [opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD.
+> * ¹ Se seu aplicativo AAD estiver registrado no mesmo locatário em que você está fazendo uma solicitação de autenticação no Teams, o usuário não pode ser solicitado a consentir e é concedido um token de acesso imediatamente. Os usuários só consentem com essas permissões se o aplicativo AAD estiver registrado em um locatário diferente.
+> * ² Se o domínio personalizado não for adicionado ao AAD, você receberá um erro informando que o nome do host não deve se basear em um domínio já pertencente. Para adicionar domínio personalizado AAD e registrá-lo, siga o procedimento adicionar um nome de domínio personalizado ao AAD e repita [a](/azure/active-directory/fundamentals/add-custom-domain) etapa 5. Você também poderá obter esse erro se não estiver se inscreveu com credenciais de administrador no Office 365 de adoção.
+> * Se você não estiver recebendo o nome principal do usuário (UPN) no token de acesso retornado, poderá adicioná-lo como uma declaração opcional [no](/azure/active-directory/develop/active-directory-optional-claims) AAD.
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. Atualize seu manifesto Teams aplicativo
 
@@ -144,7 +144,7 @@ Use o código a seguir para adicionar novas propriedades ao manifesto Teams:
 
 > [!NOTE]
 >
->* O recurso para um aplicativo AAD geralmente é a raiz de sua URL de site e o appID (por `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` exemplo, ). Esse valor também é usado para garantir que sua solicitação seja proveniente do mesmo domínio. Verifique se a `contentURL` guia para sua guia usa os mesmos domínios que sua propriedade de recurso.
+>* O recurso para um AAD app geralmente é a raiz de sua URL de site e o appID (por `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` exemplo, ). Esse valor também é usado para garantir que sua solicitação seja proveniente do mesmo domínio. Verifique se a `contentURL` guia para sua guia usa os mesmos domínios que sua propriedade de recurso.
 >* Você deve usar o manifesto versão 1.5 ou superior para implementar o `webApplicationInfo` campo.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Obter um token de acesso do código do lado do cliente
@@ -161,7 +161,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 Quando você chama e o consentimento do usuário é necessário para permissões no nível do usuário, uma caixa de diálogo é mostrada para o `getAuthToken` usuário conceder consentimento.
 
-Depois de receber o token de acesso no retorno de chamada de sucesso, decodificar o token de acesso para exibir declarações desse token. Opcionalmente, copie manualmente e colar o token de acesso em uma ferramenta, como jwt.ms [.](https://jwt.ms/) Se você não estiver recebendo o UPN no token de acesso retornado, adicione-o como uma [declaração opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD. Para obter mais informações, consulte [tokens de acesso](/azure/active-directory/develop/access-tokens).
+Depois de receber o token de acesso no retorno de chamada de sucesso, decodificar o token de acesso para exibir declarações desse token. Opcionalmente, copie manualmente e colar o token de acesso em uma ferramenta, como jwt.ms [.](https://jwt.ms/) Se você não estiver recebendo o UPN no token de acesso retornado, adicione-o como uma declaração [opcional](/azure/active-directory/develop/active-directory-optional-claims) no AAD. Para obter mais informações, consulte [tokens de acesso](/azure/active-directory/develop/access-tokens).
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -177,7 +177,7 @@ Depois de receber o token de acesso no retorno de chamada de sucesso, decodifica
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>Obter um token de acesso com Graph permissões
 
-Nossa implementação atual para o SSO concede consentimento apenas para permissões no nível do usuário que não são usáveis para fazer Graph chamadas. Para obter as permissões (escopos) necessárias para fazer uma chamada Graph, as soluções de SSO devem implementar um serviço Web personalizado para trocar o token que recebeu do SDK javascript do Teams para um token que inclua os escopos necessários. Isso é feito usando o fluxo [on-behalf-of do](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)AAD.
+Nossa implementação atual para o SSO concede consentimento apenas para permissões no nível do usuário que não são usáveis para fazer Graph chamadas. Para obter as permissões (escopos) necessárias para fazer uma chamada Graph, as soluções de SSO devem implementar um serviço Web personalizado para trocar o token que recebeu do SDK javascript do Teams para um token que inclua os escopos necessários. Isso é feito AAD [fluxo em nome do AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 
 #### <a name="tenant-admin-consent"></a>Consentimento do administrador do locatário
 
@@ -185,22 +185,22 @@ Uma maneira simples de consentir em nome de uma organização como administrador
 
 #### <a name="ask-for-consent-using-the-auth-api"></a>Solicitar consentimento usando a API Auth
 
-Outra abordagem para obter Graph escopos é apresentar uma caixa de diálogo de consentimento usando nossa abordagem de autenticação do [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)baseada na Web existente. Essa abordagem envolve a aparecendo uma caixa de diálogo de consentimento do Azure AD.
+Outra abordagem para obter Graph escopos é apresentar uma caixa de diálogo de consentimento usando nossa abordagem de autenticação do [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)baseada na Web existente. Essa abordagem envolve a aparecendo uma caixa de diálogo de consentimento do Azure AD.
 
 **Para solicitar consentimento adicional usando a API Auth**
 
-1. O token recuperado usando deve ser trocado no lado do servidor usando o AAD em nome do fluxo para obter acesso às outras `getAuthToken()` APIs Graph. [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) Certifique-se de usar o ponto de extremidade v2 Graph para este exchange.
-2. Se a troca falhar, o AAD retornará uma exceção de concessão inválida. Geralmente, há uma das duas mensagens de erro `invalid_grant` ou `interaction_required` .
-3. Quando a troca falhar, você deve solicitar consentimento. Mostrar alguma interface do usuário (UI) solicitando que o usuário conceda outro consentimento. Essa interface do usuário deve incluir um botão que dispara uma caixa de diálogo de consentimento do AAD usando nossa API de autenticação [AAD.](~/concepts/authentication/auth-silent-aad.md)
-4. Ao solicitar mais consentimento do AAD, você deve incluir no parâmetro `prompt=consent` [query-string para](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) a AAD, caso contrário, o AAD não solicitará os outros escopos.
+1. O token recuperado usando deve ser trocado no lado do servidor usando AAD fluxo em nome do usuário para obter acesso às outras `getAuthToken()` APIs Graph. [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) Certifique-se de usar o ponto de extremidade v2 Graph para este exchange.
+2. Se a troca falhar, AAD retornará uma exceção de concessão inválida. Geralmente, há uma das duas mensagens de erro `invalid_grant` ou `interaction_required` .
+3. Quando a troca falhar, você deve solicitar consentimento. Mostrar alguma interface do usuário (UI) solicitando que o usuário conceda outro consentimento. Essa interface do usuário deve incluir um botão que aciona uma caixa de diálogo AAD consentimento usando nossa [API AAD autenticação.](~/concepts/authentication/auth-silent-aad.md)
+4. Ao solicitar mais consentimento do AAD, você deve incluir no parâmetro `prompt=consent` [query-string-para](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) AAD, caso contrário, AAD não solicitará os outros escopos.
     * Em vez de `?scope={scopes}`
     * Use isso `?prompt=consent&scope={scopes}`
     * Verifique se isso inclui todos os escopos que você está solicitando ao usuário, por `{scopes}` exemplo, Mail.Read ou User.Read.
 5. Depois que o usuário tiver concedido mais permissão, repetir o on-behalf-of-flow para obter acesso a essas outras APIs.
 
-### <a name="non-aad-authentication"></a>Autenticação não AAD
+### <a name="non-aad-authentication"></a>Autenticação AAD não-autenticação
 
-A solução de autenticação acima descrita só funciona para aplicativos e serviços que suportam o AAD como um provedor de identidade. Os aplicativos que querem autenticar usando serviços não baseados no AAD devem continuar usando o fluxo de autenticação da Web baseado em [pop-up.](~/concepts/authentication.md)
+A solução de autenticação acima descrita só funciona para aplicativos e serviços que suportam AAD como um provedor de identidade. Os aplicativos que querem autenticar usando serviços não baseados em AAD devem continuar usando o fluxo de autenticação da Web baseado em [pop-up.](~/concepts/authentication.md)
 
 > [!NOTE]
-> O SSO é suportado para aplicativos de propriedade do cliente nos locatários do AAD B2C.
+> O SSO é suportado para aplicativos de propriedade do cliente nos locatários AAD B2C.

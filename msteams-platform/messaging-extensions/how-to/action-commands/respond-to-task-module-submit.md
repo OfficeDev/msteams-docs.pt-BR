@@ -5,12 +5,12 @@ description: Descreve como responder à ação de envio do módulo de tarefa de 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155513"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291636"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -221,7 +221,7 @@ O cenário a seguir mostra como o aplicativo Polly configura uma sondagem sem in
 
 ## <a name="respond-to-initial-submit-action"></a>Responder à ação inicial de envio
 
-Seu módulo de tarefa deve responder à mensagem `composeExtension/submitAction` inicial com uma visualização do cartão que o bot envia para o canal. O usuário pode verificar o cartão antes de enviar e também tentar instalar seu bot na conversa se o bot ainda não estiver instalado.
+Seu módulo de tarefa deve responder à mensagem `composeExtension/submitAction` inicial com uma visualização do cartão que o bot envia para o canal. O usuário pode verificar o cartão antes de enviar e tentar instalar seu bot na conversa se o bot ainda não estiver instalado.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -405,7 +405,7 @@ Para obter mais informações sobre como responder ao evento `fetchTask` inicial
 
 ### <a name="respond-to-botmessagepreview-send"></a>Responder ao envio de botMessagePreview
 
-Depois que o usuário selecionar **Enviar**, você receberá uma `composeExtension/submitAction` invocação com `value.botMessagePreviewAction = send` . Seu serviço Web precisa criar e enviar uma mensagem proativa com o Cartão Adaptável para a conversa e também responder à invocação.
+Depois que o usuário selecionar **Enviar**, você receberá uma `composeExtension/submitAction` invocação com `value.botMessagePreviewAction = send` . Seu serviço Web deve criar e enviar uma mensagem proativa com o Cartão Adaptável para a conversa e também responder à invocação.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -587,9 +587,9 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
-|`mentionType`|String|Descreve a menção de uma "pessoa".|
-|`mri`|String|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`mentionType`|Cadeia de Caracteres|Descreve a menção de uma "pessoa".|
+|`mri`|Cadeia de Caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
+|`displayName`|Cadeia de Caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

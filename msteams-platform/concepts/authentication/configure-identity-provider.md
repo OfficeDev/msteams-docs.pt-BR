@@ -3,13 +3,13 @@ title: Configurar provedores de identidade OAuth 2.0
 description: Descreve como configurar provedores de identidade com foco no Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: autenticação do teams Provedor de identidade Oauth do AAD
-ms.openlocfilehash: a7630dce11e052eadf39e5bd695bae1b8411f33d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: autenticação do teams AAD provedor de identidade oauth
+ms.openlocfilehash: d14dc4811faae13535ad1029a8820c5904f44774
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155255"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291615"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
@@ -25,10 +25,10 @@ Os provedores de identidade que suportam o OAuth 2.0 não autenticam solicitaç�
 
     URLs de redirecionamento: `https://<hostname>/bot-auth/simple-start`
 
-Substitua `<hostname>` pelo host real. Pode ser um site de hospedagem dedicado, como o Azure, o Glitch ou um túnel ngrok para o localhost em sua máquina de desenvolvimento, como `abcd1234.ngrok.io` . Você pode não ter essas informações ainda se não tiver concluído ou hospedado seu aplicativo (ou o aplicativo de exemplo mencionado acima), mas sempre poderá retornar a essa página quando essas informações são conhecidas.
+Substitua `<hostname>` pelo host real. Pode ser um site de hospedagem dedicado, como o Azure, o Glitch ou um túnel ngrok para o localhost em sua máquina de desenvolvimento, como `abcd1234.ngrok.io` . Você pode não ter essas informações se não tiver concluído ou hospedado seu aplicativo (ou o aplicativo de exemplo mencionado acima), mas sempre poderá retornar a essa página quando essas informações são conhecidas.
 
 ## <a name="other-authentication-providers"></a>Outros provedores de autenticação
 
-* **LinkedIn** Siga as instruções em [Configurando seu aplicativo LinkedIn](/linkedin/talent/apply-with-linkedin)
+* **LinkedIn:** Siga as instruções em [Configurando seu aplicativo LinkedIn](/linkedin/talent/apply-with-linkedin)
 
-* **Google** Obter credenciais de cliente OAuth 2.0 do [Console da API do Google](https://console.developers.google.com/)
+* **Google:** Obter credenciais de cliente OAuth 2.0 do [Console da API do Google](https://console.developers.google.com/)

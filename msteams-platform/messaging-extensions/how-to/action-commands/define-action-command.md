@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096651"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291671"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de ação de extensão de mensagens
 
@@ -66,10 +66,10 @@ Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicio
 
 ### <a name="create-an-action-command-using-app-studio"></a>Criar um comando de ação usando o App Studio
 
-Você pode criar um comando de ação usando ** App Studio** ou **Developer Portal**.
+Você pode criar um comando de ação usando **o App Studio** ou o Portal do **Desenvolvedor.**
 
 > [!NOTE]
->  O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
+> O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
@@ -178,7 +178,7 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 Para adicionar manualmente o comando de extensão de mensagens baseada em ação ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` matriz de objetos:
 
-| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui a este comando. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário. | Sim | 1.0 |
@@ -188,7 +188,7 @@ Para adicionar manualmente o comando de extensão de mensagens baseada em ação
 
 Se você estiver usando uma lista estática de parâmetros, também deverá adicionar os seguintes parâmetros:
 
-| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade descreve a lista estática de parâmetros do comando. Use somente quando `fetchTask` for `false` . | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
@@ -198,7 +198,7 @@ Se você estiver usando uma lista estática de parâmetros, também deverá adic
 
 Se você estiver usando uma exibição da Web incorporada, você pode, opcionalmente, adicionar o objeto para buscar sua `taskInfo` exibição da Web sem chamar seu bot diretamente. Se você selecionar essa opção, o comportamento será semelhante ao de usar uma lista estática de parâmetros. Na medida em que a primeira interação com seu bot está [respondendo à ação](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)de envio do módulo de tarefas . Se você estiver usando um `taskInfo` objeto, deverá definir o `fetchTask` parâmetro como `false` .
 
-| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 |`taskInfo`|Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens. | Não | 1.4 |
 |`taskInfo.title`|Título inicial do módulo de tarefa. |Não | 1.4 |

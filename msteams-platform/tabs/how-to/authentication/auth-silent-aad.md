@@ -3,13 +3,13 @@ title: Autenticação silenciosa
 description: Descreve a autenticação silenciosa
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: autenticação do teams SSO silent AAD
-ms.openlocfilehash: 02078775ef3349ae5bb35e999e0f65587ab943d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: autenticação do teams SSO silencioso AAD
+ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155027"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291622"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
@@ -18,7 +18,7 @@ ms.locfileid: "59155027"
 
 A autenticação silenciosa no Azure Active Directory (AAD) minimiza o número de vezes que um usuário inssinge suas credenciais de entrada atualize silenciosamente o token de autenticação. Para ver o suporte verdadeiro ao login único, consulte [documentação do SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-Se você quiser manter seu código completamente no lado do cliente, você pode usar a biblioteca de autenticação [do AAD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obter um token de acesso AAD silenciosamente. Se o usuário tiver se assinado recentemente, ele nunca verá uma caixa de diálogo pop-up.
+Se você quiser manter seu código completamente no lado do cliente, você pode usar [a](/azure/active-directory/develop/active-directory-authentication-libraries) biblioteca de autenticação AAD para JavaScript para obter um token de AAD de acesso silenciosamente. Se o usuário tiver se assinado recentemente, ele nunca verá uma caixa de diálogo pop-up.
 
 Embora a biblioteca ADAL.js seja otimizada para aplicativos AngularJS, ela também funciona com aplicativos de página única JavaScript puros.
 
@@ -27,13 +27,13 @@ Embora a biblioteca ADAL.js seja otimizada para aplicativos AngularJS, ela tamb�
 
 ## <a name="how-silent-authentication-works"></a>Como funciona a autenticação silenciosa
 
-A ADAL.js cria um iframe oculto para o fluxo implícito de concessão do OAuth 2.0. Mas a biblioteca especifica `prompt=none` , portanto, o Azure AD nunca mostra a página de logom. Se a interação do usuário for necessária porque o usuário precisa entrar ou conceder acesso ao aplicativo, o AAD retornará imediatamente um erro que ADAL.js relatórios para seu aplicativo. Neste ponto, seu aplicativo pode mostrar um botão de login, se necessário.
+A ADAL.js cria um iframe oculto para o fluxo implícito de concessão do OAuth 2.0. Mas a biblioteca especifica `prompt=none` , portanto, o Azure AD nunca mostra a página de logom. Se a interação do usuário for necessária porque o usuário precisa entrar ou conceder acesso ao aplicativo, AAD retornará imediatamente um erro que ADAL.js para seu aplicativo. Neste ponto, seu aplicativo pode mostrar um botão de login, se necessário.
 
 ## <a name="how-to-do-silent-authentication"></a>Como fazer autenticação silenciosa
 
 O código neste artigo vem do aplicativo de exemplo Teams que é [Teams de autenticação.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-[Inicie a guia configurável de autenticação silenciosa](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) e simples usando o AAD e siga as instruções para executar o exemplo em seu computador local.
+[Inicie a guia configurável de](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) autenticação silenciosa e simples usando AAD e siga as instruções para executar o exemplo em seu computador local.
 
 ### <a name="include-and-configure-adal"></a>Incluir e configurar o ADAL
 
@@ -55,7 +55,7 @@ Inclua a ADAL.js em suas páginas de tabulação e configure o ADAL com a ID do 
 
 ### <a name="get-the-user-context"></a>Obter o contexto do usuário
 
-Na página de conteúdo da guia, chame para obter uma dica de `microsoftTeams.getContext()` login para o usuário atual. Isso é usado como loginHint na chamada ao AAD.
+Na página de conteúdo da guia, chame para obter uma dica de `microsoftTeams.getContext()` login para o usuário atual. Isso é usado como loginHint na chamada para AAD.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -105,7 +105,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Processar o valor de retorno
 
-ADAL.js analisar o resultado do AAD chamando a página de retorno `AuthenticationContext.handleWindowCallback(hash)` de chamada de login.
+ADAL.js analisar o resultado de AAD chamando a página de retorno de chamada `AuthenticationContext.handleWindowCallback(hash)` de login.
 
 Verifique se você tem um usuário válido e chame ou para relatar o status à página de conteúdo `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` da guia principal.
 
@@ -124,10 +124,10 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### <a name="handle-sign-out-flow"></a>Manipular fluxo de saída
 
-Use o código a seguir para manipular o fluxo de saída no AAD Auth:
+Use o seguinte código para manipular o fluxo de saída no AAD Auth:
 
 > [!NOTE]
-> Embora o logout para Teams guia ou bot seja feito, a sessão atual também está desmarcada.
+> Quando você faz logout Teams guia ou bot, a sessão atual é desmarcada.
 
 ```javascript
 function logout() {

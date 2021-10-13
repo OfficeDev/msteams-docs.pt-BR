@@ -4,12 +4,12 @@ description: Descreve Microsoft Teams fluxo de autenticação em bots
 keywords: bots de fluxo de autenticação do teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: afaffa47058b994aa3241797db9b03a32a1b69fe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f62725e87239cedcaa585b7c5da6a627e70d74cd
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155114"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291650"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Fluxo de autenticação para bots Microsoft Teams
 
@@ -25,7 +25,7 @@ Consulte o GitHub de Microsoft Teams [de](https://github.com/OfficeDev/Microsoft
 3. O bot constrói a URL para a página inicial do fluxo de autenticação e envia um cartão para o usuário com uma `signin` ação. ([Código de exibição](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Como outros fluxos de auth de aplicativos no Teams, a página inicial deve estar em um domínio que está em sua lista e no mesmo domínio que a página de redirecionamento `validDomains` pós-logon.
     > [!IMPORTANT] 
-    > O código de autorização OAuth 2.0 concede chamadas de fluxo para um parâmetro na solicitação de autenticação que contém um token de sessão exclusivo para evitar um ataque de falsificação de solicitação entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) O exemplo usa um GUID gerado aleatoriamente.
+    > O código de autorização OAuth 2.0 concede chamadas de fluxo para um parâmetro na solicitação de autenticação, que contém um token de sessão exclusivo para evitar um ataque de falsificação de solicitação entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) O exemplo usa um GUID gerado aleatoriamente.
 4. Quando o usuário seleciona o botão *de* Teams abre uma janela pop-up e navega até a página inicial.
    > [!NOTE]
    > O tamanho da janela pop-up pode ser controlado por meio de parâmetros de cadeia de caracteres de consulta de largura e altura na URL. Por exemplo, se você adicionar width=600 e height=600, o tamanho da janela pop-up será 600x600 pixels. O tamanho real da janela pop-up é limitado como uma porcentagem do tamanho da janela Teams principal. Se a Teams for pequena, a janela pop-up será menor do que as dimensões especificadas.

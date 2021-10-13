@@ -4,18 +4,18 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 ms.localizationpriority: medium
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475591"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291657"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
 Adaptável, herói, lista, conector Office 365, recibo, entrada e coleções de cartões de miniatura são suportados em bots para Microsoft Teams. Eles são baseados em cartões definidos pela Estrutura de Bot, mas Teams não dá suporte a todos os cartões da Estrutura de Bot e adicionou alguns de seus próprios.
 
-Antes de identificar os diferentes tipos de cartão, entenda como criar um cartão de herói, um cartão de miniatura ou um Cartão Adaptável.
+Antes de identificar os diferentes tipos de cartão, entenda como criar um cartão de herói, um cartão em miniatura ou um Cartão Adaptável.
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Criar um cartão de herói, um cartão em miniatura ou um Cartão Adaptável
 
@@ -92,7 +92,7 @@ A tabela a seguir fornece as propriedades das imagens de cartão em linha:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | Cadeia de caracteres | Descrição acessível da imagem. |
+| alt | Cadeia de Caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, o redirecionamento na URL da imagem não será suportado. Isso ocorre para imagens compartilhadas na nuvem pública.

@@ -5,18 +5,18 @@ description: Como executar o link desfraldamento com a extensão de mensagens em
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155193"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291720"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento orienta você sobre como adicionar link desfraldado ao manifesto do aplicativo usando o App studio e manualmente. Com o desenrolamento do link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando URLs com um domínio específico são coladas na área de composição de mensagem. O contém a URL completa que foi colar na área de mensagem de composição e você pode responder com um cartão que o usuário pode desafraldar, fornecendo informações ou `invoke` ações adicionais. Isso funciona de forma semelhante a um comando de pesquisa com a URL servindo como o termo de pesquisa.
+Este documento orienta você sobre como adicionar link desfraldado ao manifesto do aplicativo usando o App studio e manualmente. Com o link desfraldado, seu aplicativo pode se registrar para receber uma atividade quando URLs com um determinado domínio são colar na `invoke` área de mensagem de redação. O contém a URL completa que foi colar na área de mensagem de composição e você pode responder com um cartão que o usuário pode desafraldar, fornecendo informações ou `invoke` ações adicionais. Isso funciona de forma semelhante a um comando de pesquisa com a URL servindo como o termo de pesquisa.
 
 > [!NOTE]
 > * Atualmente, não há suporte para a desalinização de link em clientes Móveis.
@@ -31,7 +31,7 @@ A Azure DevOps de mensagens usa o link desfraldamento para procurar URLs colaram
 Para adicionar a desaplicação de link ao manifesto do aplicativo, adicione uma nova matriz à seção `messageHandlers` `composeExtensions` do manifesto JSON do aplicativo. Você pode adicionar a matriz com a ajuda do App Studio ou manualmente. Listagem de domínio pode incluir caracteres curinga, por exemplo `*.example.com` . Isso corresponde a exatamente um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com` .
 
 > [!NOTE]
-> Não adicione domínios que não estão em seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Além disso, os domínios de nível superior são proibidos. Por exemplo, `*.com` , `*.org` .
+> Não adicione domínios que não estão no seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Além disso, os domínios de nível superior são proibidos. Por exemplo, `*.com` , `*.org` .
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Adicionar link desfraldamento usando o App Studio
 
