@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475703"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260530"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -83,8 +83,8 @@ Lembre-se do seguinte se seu aplicativo autentica usuários com um serviço exte
 
 * **Entre, saia e inscreva-se em experiências**:
   * Os aplicativos que dependem de contas ou serviços externos devem fornecer experiências de entrada, saída e inscrição claras e simples.
-  * Quando um usuário sai, ele deve sair apenas do aplicativo e permanecer no Teams.
-* **Experiências de compartilhamento de conteúdo**: os aplicativos que exigem autenticação com um serviço externo para compartilhar o conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou descompartilhar o conteúdo se esse recurso tiver suporte no serviço externo. Isso não significa que a capacidade de descompartilhar o conteúdo deve estar presente no seu aplicativo do Teams.
+  * Quando um usuário sai, ele deve sair apenas do aplicativo e permanecer conectado ao Teams.
+* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação de um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou descompartilhar o conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de descompartilhar o conteúdo deve estar presente no aplicativo Teams.
 
 #### <a name="government-community-cloud-listings"></a>Listas da Nuvem Comunitária Governamental
 
@@ -148,7 +148,7 @@ O manifesto do aplicativo do Teams define as configurações do aplicativo.
 
 * Seu manifesto deve estar de acordo com o esquema de manifesto mais recente. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md).
 * Se seu aplicativo incluir uma extensão bot ou de mensagens, seu manifesto deve ser consistente com os metadados do Estrutura do Bot, incluindo o nome do bot, logotipo, link da política de privacidade e link dos termos de serviço.
-* Se seu aplicativo usar o Azure Active Directory (Azure AD) para autenticação, inclua a ID do aplicativo Azure AD (cliente) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Se o seu aplicativo usa o Azure Active Directory (Azure AD) para autenticação, inclua a ID do aplicativo (cliente) do Azure AD no manifesto. Para saber mais, confira a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Ícones do aplicativo
 
@@ -251,7 +251,7 @@ As capturas de tela fornecem uma visualização panorâmica proeminente do seu a
 
 ### <a name="privacy-policy"></a>Política de privacidade
 
-A política de privacidade pode ser específica ao seu aplicativo do Teams ou uma política geral para todos os seus serviços.
+A política de privacidade pode ser específica para seu aplicativo Teams ou uma política geral para todos os seus serviços.
 
 * Se você usar um modelo de política de privacidade genérico, deverá referenciar **serviços**, **aplicativos** e **plataformas** para incluir seu aplicativo do Teams, assim como seu serviço ou site.
 * Deve incluir como você lida com o armazenamento, retenção e exclusão de dados do usuário. Você também deve descrever os controles de segurança que você usa para proteger dados.
