@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127256"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378888"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -298,7 +298,7 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
     "team": "bot", 
     "groupchat": "bot"
   },
-  "configurableProperties": [
+ "configurableProperties": {
      "name",
      "shortDescription",
      "longDescription",
@@ -308,7 +308,7 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  }
 }
 ```
 
@@ -604,11 +604,11 @@ O objeto é uma matriz com todos os elementos do tipo `string` .
 
 **Opcional**—object
 
-Forneça sua Azure Active Directory (AAD) app ID e informações do Microsoft Graph para ajudar os usuários a entrar perfeitamente em seu aplicativo. Se seu aplicativo estiver registrado no AAD, você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento Teams centro de administração.
+Forneça suas Azure Active Directory (AAD) iD de aplicativo e informações do Microsoft Graph para ajudar os usuários a entrar perfeitamente em seu aplicativo. Se seu aplicativo estiver registrado AAD, você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento Teams centro de administração.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Essa ID deve ser um GUID.|
+|`id`|string|36 caracteres|✔|AAD ID do aplicativo do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando o SSO, certifique-se de inserir um valor de cadeia de caracteres fictício neste campo para o manifesto do aplicativo, por exemplo, para evitar https://notapplicable uma resposta de erro. |
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especifique o [consentimento específico do recurso granular](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 
@@ -732,7 +732,7 @@ Você pode definir qualquer uma das seguintes propriedades:
 
 * `name`: O nome de exibição do aplicativo.
 * `shortDescription`: A descrição curta do aplicativo.
-* `longDescription`: A descrição detalhada do aplicativo.
+* `longDescription`: A descrição longa do aplicativo.
 * `smallImageUrl`: O ícone de contorno do aplicativo.
 * `largeImageUrl`: O ícone de cor do aplicativo.
 * `accentColor`: A cor a ser usada e um plano de fundo para seus ícones de contorno.
