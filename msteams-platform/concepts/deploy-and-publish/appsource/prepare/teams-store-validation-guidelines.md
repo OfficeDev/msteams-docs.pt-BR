@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260530"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378895"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -108,6 +108,9 @@ Os aplicativos em execução na versão para iOS ou Android do Teams devem segui
 * Se seu aplicativo exigir uma conta, os usuários devem conseguir se inscrever em uma conta sem custo. É proibido o uso do termo **gratuito** ou **conta gratuita**.
 * Você pode determinar se uma conta estará ativa indefinidamente ou por um tempo limitado, mas se a conta expirar, nenhuma interface do usuário, texto ou links indicando a necessidade de pagamento poderá ser exibido.
 * A política de privacidade e os termos de uso do seu aplicativo devem estar livres de IU ou links relacionados ao comércio.
+
+> [!NOTE]
+> As listagens da store do Teams podem incluir planos de assinatura de aplicativos ou licenças para compra. Para obter mais informações, consulte [incluir uma oferta SaaS com seu aplicativo](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 ## <a name="general-functionality-and-performance"></a>Funcionalidade e desempenho gerais
 
