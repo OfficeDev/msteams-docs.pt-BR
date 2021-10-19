@@ -6,16 +6,18 @@ ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 6b1fcb436dc77c1859c81010c1d1eb5adcc3773a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8e8c7d7920d3a00d3414226296d9baf3dc209be2
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155474"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496190"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma Teams aprimorada permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local com seus aplicativos Web. Essa integração reduz a barreira ao desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
+
+As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Recursos de dispositivo nativo
 
@@ -43,5 +45,3 @@ Depois de obter acesso aos recursos do dispositivo, use [](mobile-camera-image-p
 * Compartilhar local usando [o se picker de localização](location-capability.md).
 
 Além disso, você pode integrar [](people-picker-capability.md) o controle Teams seletor de pessoas nativas que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.
-
-

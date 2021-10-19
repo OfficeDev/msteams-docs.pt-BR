@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 33a0fc390dc2123ccb77901acb7967b1b9732e77
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 84c866ddaae371b2c0e40defcbb1cef7c1194f0d
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155228"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496204"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -32,7 +32,8 @@ Ao acessar os recursos do dispositivo, você pode criar experiências mais ricas
 * Use as informações de local do usuário para exibir informações relevantes.
 
 > [!NOTE]
-> Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.    
+> * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 
 ## <a name="access-device-permissions"></a>Permissões de dispositivo de acesso
 
