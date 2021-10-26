@@ -6,12 +6,12 @@ keywords: mídia de permissões nativas de dispositivo de recursos de microfone 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: f1c091195b85bab84d01ea88cc8234d2e415b9f7
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496197"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566117"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
 
@@ -28,7 +28,7 @@ Para uma integração eficaz, você deve ter uma boa compreensão dos trechos de
 
 > [!NOTE] 
 > * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.   
-> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o sidepanel de reunião.   
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.   
 > * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md). 
 
 ## <a name="update-manifest"></a>Manifesto de atualização
@@ -53,8 +53,8 @@ As [APIs selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.m
 * Use o suporte **de galeria nativa** para permitir que os usuários **selecionem imagens de dispositivo** como anexos.
 * Use o **controle do visualizador de imagem nativo** para visualizar várias **imagens** ao mesmo tempo.
 * Suporte **a transferência de imagem grande** (de 1 MB a 50 MB) através da ponte SDK.
-* Suporte **aos recursos avançados de imagem** que permitem que os usuários visualizem e editem imagens:
-  * Examinar documento, quadro de trabalho e cartões de visita pela câmera.
+* Os **recursos avançados de imagem** permitem que os usuários visualizem e editem imagens:
+  * Scan documents, whiteboard, and business cards through the camera.
   
 > [!IMPORTANT]
 > * As APIs , e podem ser invocadas de várias superfícies Teams, como módulos de `selectMedia` `getMedia` `viewImages` tarefas, guias e aplicativos pessoais. Para obter mais detalhes, consulte [Pontos de entrada para Teams aplicativos](../extensibility-points.md).

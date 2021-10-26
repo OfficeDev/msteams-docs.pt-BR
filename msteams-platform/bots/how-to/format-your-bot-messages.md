@@ -5,12 +5,12 @@ description: Adicionar formatação rica às mensagens de bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155152"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566222"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
@@ -42,7 +42,7 @@ Depois de formatar o conteúdo de texto, certifique-se de que sua formatação f
 
 Atualmente, alguns estilos não têm suporte em todas as plataformas. A tabela a seguir fornece uma lista de estilos e quais desses estilos são suportados em mensagens somente texto e cartões rich:
 
-| Estilo                     | Mensagens somente texto | Rich cards - somente XML |
+| Style                     | Mensagens somente texto | Rich cards - somente XML |
 | ---                       | :---: | :---: |
 | Negrito                      | ✔ | ✖ |
 | Itálico                    | ✔ | ✔ |
@@ -64,9 +64,9 @@ O suporte para formatação de texto varia de acordo com o tipo de mensagem e pl
 
 ### <a name="text-only-messages"></a>Mensagens somente texto
 
-A tabela a seguir fornece uma lista de estilos e quais desses estilos são suportados na área de trabalho, iOS e Android:
+A tabela a seguir fornece uma lista de estilos, que são suportados na área de trabalho, iOS e Android:
 
-| Estilo                     | Desktop | iOS | Android |
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Negrito                      | ✔ | ✔ | ✔ |
 | Itálico                    | ✔ | ✔ | ✔ |

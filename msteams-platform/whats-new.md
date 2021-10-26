@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 3e2c7a2002192b7d752602f33865aafb12a8239f
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 385dd74cddc9c09a861c1bfb214c1d393bae77a1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496211"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566369"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|10/20/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |10/18/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
 |10/08/2021|Novas práticas recomendadas para projetar cartões adaptáveis.|[Projetando cartões adaptáveis para seu Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Ocultar Teams aplicativo até que o Administrador permita desa desabilitar o aplicativo. | [Ocultar Teams aplicativo até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
@@ -183,9 +184,8 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|10/19/2021|Permissões de dispositivo para o navegador.| [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
+|10/19/2021|Permissões de dispositivo para o navegador.| [Permissões do dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável. | [Inclua uma oferta SaaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
-|06/23/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
 |05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |

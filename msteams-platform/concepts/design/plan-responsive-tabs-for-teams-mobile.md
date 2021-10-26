@@ -5,14 +5,14 @@ description: Guia para planejar a criação de um aplicativo no Teams móvel
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123867"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566145"
 ---
-# <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para Teams celular
+# <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
  Teams plataforma oferece a oportunidade de criar aplicativos em dispositivos móveis e desktop. Os usuários do aplicativo podem preferir desktop ou móvel ou ambos. Os usuários podem preparar dados na área de trabalho, mas consumir e compartilhar mais dados usando o celular. A chave para criar qualquer aplicativo é entender e atender às necessidades dos usuários. Há recursos como bots, extensões de mensagens e conectores que funcionam perfeitamente na área de trabalho e em dispositivos móveis. No entanto, a criação de guias e módulos de tarefa exigem planejamento para hospedar sua experiência da Web Teams celular. O documento orienta para planejar suas páginas da Web responsivas Teams celular.
 
@@ -183,6 +183,6 @@ No terceiro estágio, forneça experiência completa aos usuários. Você pode h
 As seguintes diretrizes de design e validação ajudam dependendo do escopo do seu aplicativo:
 
 * [Projetando sua guia](../../tabs/design/tabs.md)
-* [Projetando um bot](../../bots/design/bots.md)
+* [Criar um bot](../../bots/design/bots.md)
 * [Criar módulos de tarefa](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Validando diretrizes](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

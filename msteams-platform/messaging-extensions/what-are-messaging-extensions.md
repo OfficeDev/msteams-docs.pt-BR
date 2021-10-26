@@ -5,12 +5,12 @@ description: Uma visão geral das extensões de mensagens na plataforma Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155251"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566138"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -19,6 +19,9 @@ As extensões de mensagens permitem que os usuários interajam com seu serviço 
 A imagem a seguir exibe os locais de onde as extensões de mensagens são invocadas:
 
 ![locais de invocação de extensão de mensagens](~/assets/images/messaging-extension-invoke-locations.png)
+
+> [!NOTE]
+> @mentioning extensões de mensagem não são mais suportadas na caixa de redação.
 
 ## <a name="scenarios-where-messaging-extensions-are-used"></a>Cenários em que extensões de mensagens são usadas
 

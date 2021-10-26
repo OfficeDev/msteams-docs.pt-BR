@@ -4,12 +4,12 @@ description: Como criar um Assistente Virtual e habilidades para uso no Microsof
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de assistente virtual do teams
-ms.openlocfilehash: 1231520278f97fc48ad53937af80c127021bd9c2
-ms.sourcegitcommit: 25a88715d9b06b2afeac14de86177bb34161b0cf
+ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60266631"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566243"
 ---
 # <a name="create-virtual-assistant"></a>Criar um Assistente Virtual 
 
@@ -42,9 +42,9 @@ A imagem a seguir exibe o diagrama de alto nível de uma Assistente Virtual solu
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Adicionar cartões adaptáveis ao seu Assistente Virtual
 
-Para despachar as solicitações corretamente, Assistente Virtual deve identificar o modelo DEID correto e as habilidades correspondentes associadas a ele. No entanto, o mecanismo de expedição não pode ser usado para atividades de ação de cartão como o modelo DEAA associado a uma habilidade, é treinado para textos de ação de cartão. Os textos de ação do cartão são palavras-chave fixas, pré-definidas e não comentadas de um usuário.
+Para despachar as solicitações corretamente, Assistente Virtual deve identificar o modelo DEID correto e as habilidades correspondentes associadas a ele. No entanto, o mecanismo de expedição não pode ser usado para atividades de ação de cartão, já que o modelo DEAD associado a uma habilidade é treinado para textos de ação de cartão. Os textos de ação do cartão são palavras-chave fixas, pré-definidas e não comentadas de um usuário.
 
-Essa desvantagem é resolvida incorporando informações de habilidade na carga de ação do cartão. Cada habilidade deve incorporar `skillId` no campo de ações de  `value` cartão. Você deve garantir que cada atividade de ação de cartão carregue as informações de habilidade relevantes e Assistente Virtual pode utilizar essas informações para a expedição.
+Essa desvantagem é resolvida por meio da incorporação de informações de habilidade na carga de ação do cartão. Cada habilidade deve incorporar `skillId` no campo de ações de  `value` cartão. Você deve garantir que cada atividade de ação de cartão carregue as informações de habilidade relevantes e Assistente Virtual pode utilizar essas informações para a expedição.
 
 Você deve fornecer no construtor para garantir que as informações de habilidade `skillId` sempre estão presentes em ações de cartão.
 Um código de exemplo de dados de ação de cartão é mostrado na seção a seguir:
@@ -70,7 +70,7 @@ Um código de exemplo de dados de ação de cartão é mostrado na seção a seg
     };
 ```
 
-Em seguida, a classe no modelo Assistente Virtual é introduz para extrair da carga `SkillCardActionData` `skillId` de ação do cartão.
+Em seguida, a classe no modelo Assistente Virtual é introduzida para `SkillCardActionData` extrair da carga de ação do `skillId` cartão.
 Um trecho de código para extrair da carga de ação  `skillId` do cartão é mostrado na seção a seguir:
 
 ```csharp
@@ -224,7 +224,7 @@ Além disso, você deve incluir todos os domínios de habilidade na seção no a
 
 ### <a name="handle-collaborative-app-scopes"></a>Manipular escopos de aplicativo colaborativos
 
-Teams aplicativos podem existir em vários escopos, incluindo chat 1:1, chat em grupo e canais. O modelo Assistente Virtual principal foi projetado para chats 1:1. Como parte da experiência de integração, Assistente Virtual solicita aos usuários o nome e mantém o estado do usuário. Como essa experiência de integração não é adequada para chat em grupo ou escopos de canal, ela foi removida.
+Teams aplicativos podem existir em vários escopos, incluindo chat 1:1, chat em grupo e canais. O modelo Assistente Virtual principal foi projetado para chats 1:1. Como parte da experiência de integração, Assistente Virtual solicita aos usuários o nome e mantém o estado do usuário. Como a experiência de integração não é adequada para escopos de chat de grupo ou canal, ela foi removida.
 
 As habilidades devem lidar com atividades em vários escopos, como chat 1:1, chat em grupo e conversa de canal. Se nenhum desses escopos tiver suporte, as habilidades deverão responder com uma mensagem apropriada.
 
@@ -263,7 +263,7 @@ O trecho do arquivo de manifesto de uma habilidade é mostrado na seção a segu
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    ....   
 ```
 
 O trecho Assistente Virtual código de arquivo de manifesto correspondente é mostrado na seção a seguir:
@@ -277,7 +277,7 @@ O trecho Assistente Virtual código de arquivo de manifesto correspondente é mo
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    .... 
 ```
 
 Depois que os comandos são invocados por um usuário, o Assistente Virtual pode identificar uma habilidade associada ao analisar a ID do comando, atualizar a atividade removendo o sufixo extra da ID de comando e encaminhá-la para a habilidade `:<skill_id>` correspondente. O código de uma habilidade não precisa manipular o sufixo extra. Assim, conflitos entre IDs de comando entre habilidades são evitados. Com essa abordagem, todos os comandos de pesquisa e ação de uma  habilidade em todos os contextos, como **redação,** **commandBox** e mensagem são alimentados por um Assistente Virtual.

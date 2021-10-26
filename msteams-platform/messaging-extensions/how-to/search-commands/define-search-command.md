@@ -5,12 +5,12 @@ description: Defina comandos de pesquisa de extensão de mensagens para Microsof
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096581"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566362"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -28,7 +28,7 @@ O comando de pesquisa é invocado de qualquer um ou ambos os seguintes locais:
 * Área de mensagem de redação: os botões na parte inferior da área de mensagem de composição.
 * Caixa de comando: @mentioning na caixa de comando.
 
-Quando o comando de pesquisa é invocado da área de mensagem de composição, o usuário envia os resultados para a conversa. Quando ele é invocado da caixa de comando, o usuário interage com o cartão resultante ou o copia para uso em outro lugar.
+  Quando o comando de pesquisa é invocado da área de mensagem de composição, o usuário envia os resultados para a conversa. Quando ele é invocado da caixa de comando, o usuário interage com o cartão resultante ou o copia para uso em outro lugar.
 
 A imagem a seguir exibe os locais de invocação do comando de pesquisa:
 

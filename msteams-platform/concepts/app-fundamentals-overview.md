@@ -5,12 +5,12 @@ description: Descreva os conceitos fundamentais do desenvolvimento Teams platafo
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119647"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566376"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams básicos de desenvolvimento de aplicativos
 
@@ -33,7 +33,7 @@ Você pode reconhecer problemas do usuário e identificar as respostas a alguns 
 
 [Mapear seus casos de uso](../concepts/design/map-use-cases.md) abrange alguns cenários comuns e como escolher os recursos do seu aplicativo. Informações para compartilhar seu aplicativo e colaborar em itens em um sistema externo são fornecidas. Você também pode aprender a iniciar fluxos de trabalho e enviar notificações aos usuários. Obter dicas adicionais sobre por onde começar, como obter social com usuários, bots de conversa e combinar vários recursos.
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para Teams celular
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 [Planeje guias responsivas para Teams móveis](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) aborda cenários comuns e ajuda no planejamento de aplicativos para Teams celular. O documento orienta sobre como estratégias para aplicativos em dispositivos móveis. Você também pode aprender sobre as diferentes sátiras e diferentes tipos de Teams app.
 
 ## <a name="integrate-device-capabilities"></a>Integrar recursos de dispositivo

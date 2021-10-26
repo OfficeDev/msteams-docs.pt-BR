@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155095"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566285"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
 
@@ -46,7 +46,7 @@ Os cenários a seguir orientarão você a entender a seleção de pontos de entr
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Criar, compartilhar e colaborar em itens em um sistema externo
 
-App for Microsoft Teams é uma ótima maneira de interagir com seus dados e há uma variedade de pontos de integração para escolher.
+Aplicativos para Microsoft Teams é uma ótima maneira de interagir com seus dados e há uma variedade de pontos de integração para escolher.
 
 * **Extensões de mensagens com comandos de pesquisa**: Pesquisar sistemas externos e compartilhar os resultados como um cartão interativo.
 

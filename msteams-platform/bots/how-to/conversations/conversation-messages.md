@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017328"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566236"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -206,7 +206,7 @@ Um objeto `channelData` típico em uma atividade enviada ao bot contém as segui
 * `team`: Passado somente em contextos de canal, não em chat pessoal.
   * `id`: GUID para o canal.
   * `name`: Nome da equipe passada somente em casos de [eventos de renomear a equipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `channel`: Passado somente em contextos de canal quando o bot é mencionado ou para eventos em canais em equipes onde o bot foi adicionado.
+* `channel`: Passado somente em contextos de canal, quando o bot é mencionado ou para eventos em canais em equipes, onde o bot foi adicionado.
   * `id`: GUID para o canal.
   * `name`: Nome do canal passado somente em casos de eventos [de modificação de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channelData.teamsTeamId`: Preterido. Essa propriedade só é incluída para compatibilidade com compatibilidade.

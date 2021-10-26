@@ -6,12 +6,12 @@ keywords: atributos de cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260643"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566124"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite 
 
@@ -43,7 +43,7 @@ O Chrome 80, lançado em fevereiro de 2020, introduz novos valores de cookie e i
  
 Os atributos de cookie sameSite são os seguinte:
 
-|Configuração | Imposição | Valor |Especificação de Atributo |
+|Setting | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador envia apenas cookies para solicitações de contexto de primeira parte. São solicitações provenientes do site que definiram o cookie. Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -60,7 +60,7 @@ Os atributos de cookie sameSite são os seguinte:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Guias, módulos de tarefas e extensões de mensagens
 
-* Teams guias usam para incorporar conteúdo que é exibido em um contexto de nível `<iframes>` superior ou de primeira parte.
+* Teams guias usam para inserir conteúdo que é exibido `<iframes>` em um nível superior ou contexto de primeira parte.
 * Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
 * Extensões de mensagens permitem inserir conteúdo enriquecido em uma mensagem de chat de recursos externos.
 

@@ -5,16 +5,16 @@ description: Descreve onde as pessoas podem descobrir e usar seu aplicativo no T
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155214"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566348"
 ---
 # <a name="entry-points-for-teams-apps"></a>Pontos de entrada para os aplicativos do Teams
 
-A Teams plataforma fornece um conjunto flexível de pontos de entrada, como equipe, canal e chat, onde as pessoas podem descobrir e usar seu aplicativo. Seu aplicativo pode ser tão simples quanto incorporar conteúdo existente da Web em uma guia ou um aplicativo com várias facetas com o qual os usuários interagem em vários contextos.
+A Teams oferece um conjunto flexível de pontos de entrada, como equipe, canal e chat, onde as pessoas podem descobrir e usar seu aplicativo. Seu aplicativo pode ser tão simples quanto incorporar conteúdo existente da Web em uma guia ou um aplicativo com várias facetas com o qual os usuários interagem em vários contextos.
 Os aplicativos mais bem-sucedidos são nativos Teams, portanto, escolha os pontos de entrada do aplicativo com cuidado.
 
 ## <a name="shared-app-experiences"></a>Experiências de aplicativo compartilhado

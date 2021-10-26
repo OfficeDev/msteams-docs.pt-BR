@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: a10c991c374392afca0ce793c0c34ea3fc0ca611
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155106"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566292"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Compreender Microsoft Teams recursos do aplicativo
 
@@ -37,11 +37,11 @@ A ilustração a seguir fornece uma ideia de quais recursos fornecerão os recur
 ## <a name="always-consider-your-user"></a>Sempre considere seu usuário
 
 À medida que você se familiariza com Teams desenvolvimento de aplicativos, você compreende seus principais fundamentos. Você entende que há mais de uma maneira de criar determinados recursos. Nesses cenários, considere como você pode fornecer uma experiência mais nativa ao usuário.
-Por exemplo, você pode coletar a entrada do usuário em um formulário criado como uma guia no aplicativo. Você também pode fazer isso usando um módulo de tarefa sem alternar exibições e interromper o fluxo de trabalho do usuário. É importante escolher pontos de extensão que forneçam menor desvio do fluxo regular de trabalho de um usuário.
+Por exemplo, você pode coletar a entrada do usuário em um formulário criado como uma guia no aplicativo. Você também pode fazer isso usando um módulo de tarefa sem alternar exibições e interromper o fluxo de trabalho do usuário. É importante escolher pontos de extensão que forneçam menor desvio do fluxo de trabalho regular de um usuário.
 
 ## <a name="government-community-cloud-gcc"></a>Nuvem Comunitária Governamental (GCC)
 
-Nuvem da Comunidade Governamental é uma cópia do ambiente comercial com foco no governo. O Departamento de Defesa (DOD) e os prestadores de serviços federais são necessários para atender aos requisitos rigorosos de conformidade e segurança cibernética. Para essa finalidade, GCC-High foi criado para atender às necessidades do DOD e dos prestadores de serviços federais. GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberana. A nuvem do DOD foi criada apenas para o Departamento de Defesa.
+Nuvem da Comunidade Governamental é uma cópia do ambiente comercial com foco no governo. O Departamento de Defesa (DOD) e os prestadores de serviços federais devem atender aos requisitos rigorosos de segurança cibernética e conformidade. Para essa finalidade, GCC-High foi criado para atender às necessidades do DOD e dos prestadores de serviços federais. GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberana. A nuvem do DOD foi criada apenas para o Departamento de Defesa.
 
 A tabela a seguir inclui Teams recursos e disponibilidade para GCC, GCC-Alta e DOD:
 

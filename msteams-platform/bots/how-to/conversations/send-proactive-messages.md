@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar uma mensagem obter iD de conversa de canal de ID do usuário
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155452"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566278"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -90,7 +90,7 @@ Mensagens de boas-vindas ruins podem levar os usuários a bloquear seu bot. Escr
 Para enviar notificações usando mensagens proativas, certifique-se de que seus usuários tenham um caminho claro para tomar ações comuns com base em sua notificação. Verifique se os usuários têm uma compreensão clara do motivo pelo qual receberam uma notificação. As boas mensagens de notificação geralmente incluem o seguinte:
 
 * O que aconteceu: uma indicação clara do que aconteceu para causar a notificação.
-* Qual foi o resultado: deve ser claro qual item foi atualizado para causar a notificação.
+* Qual foi o resultado: ele deve estar claro, qual item é atualizado para receber a notificação.
 * Who ou o que a disparou: Who ou o que fez com que a notificação fosse enviada.
 * O que os usuários podem fazer em resposta: facilitar a ação dos usuários com base em suas notificações.
 * Como os usuários podem optar por não fazer isso: você deve fornecer um caminho para que os usuários optem por não receber notificações adicionais.

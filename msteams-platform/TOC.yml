@@ -436,7 +436,6 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Incluir uma oferta SaaS com seu aplicativo
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-- name: Recursos
 - name: Manifesto do aplicativo
   items:
     - name: Esquema de manifesto do aplicativo

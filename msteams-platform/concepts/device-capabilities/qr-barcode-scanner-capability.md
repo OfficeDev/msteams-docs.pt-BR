@@ -6,12 +6,12 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155215"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566355"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
 
@@ -34,7 +34,7 @@ Para integrar a QR ou o recurso de scanner de código de barras, você deve atua
 
 ## <a name="update-manifest"></a>Manifesto de atualização
 
-Atualize seu Teams aplicativo [manifest.jsno](../../resources/schema/manifest-schema.md#devicepermissions) arquivo adicionando a propriedade `devicePermissions` e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar o recurso de QR ou scanner de código de barras. A atualização do manifesto do aplicativo é a seguinte:
+Atualize seu Teams arquivo [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) do aplicativo adicionando a `devicePermissions` propriedade e especificando `media` . Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar o recurso de QR ou scanner de código de barras. A atualização do manifesto do aplicativo é a seguinte:
 
 ``` json
 "devicePermissions": [
@@ -76,7 +76,7 @@ A imagem a seguir mostra a experiência do aplicativo Web da capacidade de QR ou
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
-|Código de erro |  Nome do erro     | Condition|
+|Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno é encontrado durante a execução da operação necessária.|

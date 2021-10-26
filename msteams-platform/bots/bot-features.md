@@ -5,12 +5,12 @@ description: Visão geral das ferramentas e SDKs para Microsoft Teams bots.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155051"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566341"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -78,7 +78,11 @@ Nos casos em que os bots funcionam melhor em um canal também funcionam melhor e
 
 ### <a name="in-a-one-to-one-chat"></a>Em um chat um para um
 
-O chat um para um é uma maneira tradicional de um bot de conversa interagir com um usuário. Alguns exemplos de bots conversais de um para um são os bots de Q&A, bots que iniciam fluxos de trabalho em outros sistemas, bots que contam as piadas e bots que fazem anotações. Antes de criar chatbots um para um, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
+O chat um para um é uma maneira tradicional de um bot de conversa interagir com um usuário. Alguns exemplos de bots de conversa um para um são:
+* P&A bots
+* bots que iniciam fluxos de trabalho em outros sistemas 
+* bots que contam as piadas
+* bots que anotam Antes de criar chatbots um para um, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
 
 ## <a name="disadvantages-of-bots"></a>Desvantagens dos bots
 

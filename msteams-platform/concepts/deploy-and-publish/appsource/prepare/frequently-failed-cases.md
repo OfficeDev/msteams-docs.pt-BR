@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: dicas de envio de aplicativo com frequência diretrizes de validação de casos com falha
-ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b080bc49c60e70fda66bf45b3f04a79241f8a57f
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155436"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566306"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Dicas para um envio de aplicativo de Microsoft Teams bem-sucedido
 
@@ -26,7 +26,7 @@ Este artigo aborda motivos comuns para a validação de falha dos aplicativos en
 
 ### <a name="9989-general-considerations"></a>&#9989; considerações gerais
 
-* Verifique se você está usando a versão 1.4.1 ou posterior do [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
+* Verifique se você está usando a versão 1.4.1 ou posterior do [SDK Microsoft Teams .](https://www.npmjs.com/package/@microsoft/teams-js)
 * Não faça alterações em seu aplicativo enquanto o processo de validação estiver em andamento. Isso exigirá uma revalidação completa do seu aplicativo.
 * Seu aplicativo não deve parar de responder, terminar inesperadamente ou conter erros de programação. Se ocorrer um problema, seu aplicativo deverá falhar e fornecer informações válidas para o encaminhamento para o usuário.
 * Seu aplicativo não deve baixar, instalar ou iniciar automaticamente qualquer código executável no ambiente do usuário. Todos os downloads devem buscar permissão explícita do usuário.
@@ -200,7 +200,7 @@ Os bots somente notificação devem enviar uma mensagem de boas-vindas que inclu
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensagens de boas-vindas no escopo pessoal
 
-   * **Tornar sua mensagem concisa e informativa**. A experiência do usuário e o conhecimento do seu aplicativo variam. Um usuário pode ter usado seu aplicativo em outra plataforma ou não saber nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todas as audiências e em algumas frases explica o que seu bot faz e as maneiras de interagir com ela. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
+   * **Tornar sua mensagem concisa e informativa**. A experiência do usuário e o conhecimento do seu aplicativo variam. Um usuário pode ter usado seu aplicativo em outra plataforma ou não saber nada sobre seu aplicativo. Você deseja adaptar sua mensagem a todas as audiências e, em algumas frases, explicar o que seu bot faz e as maneiras de interagir com ela. Você também deve explicar o valor do aplicativo e como os usuários se beneficiarão de usá-lo.
 ![Bot Café e Dinning](../../../../assets/images/faq/cafe-bot.png)
 
 * **Tornar sua mensagem a actionable**. Pense na primeira coisa que você deseja que os usuários faça depois de instalar seu aplicativo. Há um comando legal que eles devem tentar? Há outra experiência de integração que eles devem saber? Eles precisam entrar? Você pode adicionar ações em um cartão adaptável ou fornecer exemplos específicos como *"Tente perguntar...."*, "Isso é o *que posso fazer..."*.
@@ -211,7 +211,7 @@ As coisas são um pouco diferentes quando o bot é adicionado pela primeira vez 
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; capacidade de resposta móvel, nenhum upsell direto ou pagamento
 
-* Suas guias, cartões adaptáveis, mensagens de bot e conteúdo em módulos de tarefas devem ser responsivos para uma variedade de tamanhos de telas de dispositivo móvel.
+* Suas guias, cartões adaptáveis, mensagens bot e conteúdo em módulos de tarefas devem ser responsivos para uma variedade de tamanhos de telas de dispositivo móvel.
 * Os aplicativos que suportam o iOS devem estar totalmente funcionais no dispositivo iPad mais recente usando a versão mais recente do iOS.
 * Não deve incluir referências diretas a compras no aplicativo, ofertas de avaliação, ofertas para versões pagas ou links para qualquer loja online em que os usuários possam comprar ou adquirir outros conteúdos, aplicativos ou complementos do aplicativo Teams no sistema operacional móvel (Android, iOS).
 * A versão iOS ou Android do complemento não deve mostrar nenhuma interface do usuário ou idioma ou link para quaisquer outros aplicativos, complementos ou site que peçam ao usuário para pagar.

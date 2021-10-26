@@ -5,12 +5,12 @@ description: Como trabalhar com eventos de conversa do Microsoft Teams bot.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155493"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566250"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -48,7 +48,7 @@ A tabela a seguir mostra uma lista de eventos Teams de atualização de conversa
 | Canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal é renomeado](#channel-renamed). | Equipe |
 | Canal excluído     | channelDeleted    | OnTeamsChannelDeletedAsync | [Um canal é excluído](#channel-deleted). | Equipe |
 | Canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Um canal é restaurado](#channel-deleted). | Equipe |
-| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Todos |
+| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Tudo |
 | Membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro é removido](#team-members-removed). | groupChat e team |
 | Equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe é renomeada](#team-renamed).       | Equipe |
 | Equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe é excluída](#team-deleted).       | Equipe |
@@ -229,7 +229,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Canal excluído
 
-O evento excluído do canal é enviado para o bot sempre que um canal é excluído em uma equipe onde o bot está instalado.
+O evento excluído do canal é enviado para seu bot, sempre que um canal é excluído em uma equipe onde seu bot está instalado.
 
 O código a seguir mostra um exemplo de evento excluído do canal:
 
@@ -313,7 +313,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Canal restaurado
 
-O evento restaurado do canal é enviado para o bot sempre que um canal que foi excluído anteriormente é restaurado em uma equipe em que o bot já está instalado.
+O evento restaurado do canal é enviado para seu bot, sempre que um canal que foi excluído anteriormente é restaurado em uma equipe em que o bot já está instalado.
 
 O código a seguir mostra um exemplo de evento restaurado do canal:
 
@@ -402,7 +402,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
-O `teamMemberAdded` evento é enviado ao seu bot na primeira vez em que é adicionado a uma conversa. O evento é enviado para seu bot sempre que um novo usuário é adicionado a uma equipe ou chat de grupo onde seu bot está instalado. As informações do usuário que são ID são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo seu serviço, como o envio de uma mensagem para um usuário específico.
+O `teamMemberAdded` evento é enviado ao seu bot na primeira vez em que é adicionado a uma conversa. O evento é enviado para seu bot sempre que um novo usuário é adicionado a uma equipe ou chat de grupo onde seu bot está instalado. As informações do usuário que são ID, são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo seu serviço, como o envio de uma mensagem para um usuário específico.
 
 O código a seguir mostra um exemplo de evento adicionado aos membros da equipe:
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Equipe renomeada
 
-Seu bot é notificado quando a equipe em que está foi renomeada. Ele recebe um `conversationUpdate` evento `eventType.teamRenamed` com no `channelData` objeto.
+Seu bot é notificado quando a equipe é renomeada. Ele recebe um `conversationUpdate` evento `eventType.teamRenamed` com no `channelData` objeto.
 
 O código a seguir mostra um exemplo de evento renomeado para equipe:
 
@@ -738,7 +738,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Equipe excluída
 
-Seu bot é notificado quando a equipe em que está foi excluída. Ele recebe um `conversationUpdate` evento `eventType.teamDeleted` com no `channelData` objeto.
+Seu bot é notificado quando a equipe é excluída. Ele recebe um `conversationUpdate` evento `eventType.teamDeleted` com no `channelData` objeto.
 
 O código a seguir mostra um exemplo de evento excluído da equipe:
 
@@ -894,7 +894,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>Equipe arquivada
 
-O bot recebe uma notificação quando a equipe em que está instalada é arquivada. Ele recebe um `conversationUpdate` evento `eventType.teamarchived` com no `channelData` objeto.
+O bot recebe uma notificação quando a equipe é instalada e arquivada. Ele recebe um `conversationUpdate` evento `eventType.teamarchived` com no `channelData` objeto.
 
 O código a seguir mostra um exemplo de evento arquivado pela equipe:
 
@@ -975,7 +975,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Equipe desarquivada
 
-O bot recebe uma notificação quando a equipe em que ele está instalado é desarquivada. Ele recebe um `conversationUpdate` evento `eventType.teamUnarchived` com no `channelData` objeto.
+O bot recebe uma notificação quando a equipe é instalada e desarquivada. Ele recebe um `conversationUpdate` evento `eventType.teamUnarchived` com no `channelData` objeto.
 
 O código a seguir mostra um exemplo de evento não pesquisado da equipe:
 
@@ -1061,8 +1061,8 @@ O `messageReaction` evento é enviado quando um usuário adiciona ou remove rea�
 
 | EventType       | Objeto Payload   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Todos   |
-| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Todos |
+| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Tudo   |
+| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Tudo |
 
 ### <a name="reactions-added-to-bot-message"></a>Reações adicionadas à mensagem bot
 
