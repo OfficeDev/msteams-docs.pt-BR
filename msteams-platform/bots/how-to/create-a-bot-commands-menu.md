@@ -5,12 +5,12 @@ description: Como criar um menu de comando para seu Microsoft Teams bot
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155154"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720103"
 ---
 # <a name="bot-command-menus"></a>Menus de comando bot
 
@@ -44,7 +44,7 @@ Um pré-requisito para criar um menu de comando para seu bot é que você deve e
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. No **App Studio,** selecione a **guia Editor de** manifesto. Se você não tiver um pacote de aplicativos existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, [consulte atualizar um pacote de aplicativos](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. No **App Studio,** selecione a **guia Editor de** manifesto. Se você não tiver um pacote de aplicativos existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, [consulte atualizar um pacote de aplicativos](~/get-started/deploy-csharp-app-studio.md).
 
 3. No painel esquerdo do editor **de manifesto** e na seção **Recursos,** selecione **Bots**.
 
@@ -212,7 +212,7 @@ A seguir estão as práticas recomendadas do menu de comando:
 > [!NOTE]
 > Se você remover quaisquer comandos do manifesto, reimplante seu aplicativo para implementar as alterações. Em geral, quaisquer alterações no manifesto exigem que você reimplante seu aplicativo.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Conversas em canal e em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)

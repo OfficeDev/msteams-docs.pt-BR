@@ -4,22 +4,22 @@ description: Criar extensões de mensagens baseadas em ação para permitir que 
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Pesquisa de extensões de mensagens de mensagens do teams
-ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 56dcf316eb430b9745856469eaf837ffe7c0bc00
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155188"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720376"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar ações com extensões de mensagens
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-As extensões de mensagens baseadas em ação permitem que seus usuários acionem ações em serviços externos enquanto estão Teams.
+As extensões de mensagens baseadas em ação permitem que os usuários acionem ações em serviços externos enquanto Teams.
 
 ![Exemplo de cartão de extensão de mensagens](~/assets/images/compose-extensions/ceexample.png)
 
-As seções a seguir descrevem como fazer isso.
+As seções a seguir descrevem como fazer isso:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
@@ -130,11 +130,11 @@ Para iniciar ações de uma extensão de mensagens, de definir o `type` parâmet
 
 ### <a name="initiate-actions-from-messages"></a>Iniciar ações de mensagens
 
-Além de iniciar ações da área de mensagem de redação, você também pode usar a extensão de mensagens para iniciar uma ação de uma mensagem. Isso permitirá que você envie o conteúdo da mensagem para seu bot para processamento e, opcionalmente, responda a essa mensagem com uma resposta usando o método descrito em [Responder para enviar](#responding-to-submit). A resposta será inserida como uma resposta à mensagem que seus usuários podem editar antes de enviar. Os usuários podem acessar sua extensão de mensagens no menu de estouro e selecionar `...` como na imagem a `Take action` seguir:
+Além de iniciar ações da área de mensagem de redação, você também pode usar a extensão de mensagens para iniciar uma ação de uma mensagem. Isso permitirá que você envie o conteúdo da mensagem para seu bot para processamento e, opcionalmente, responda a essa mensagem com uma resposta usando o método, que é descrito em [Responder para enviar](#responding-to-submit). A resposta será inserida como uma resposta à mensagem que seus usuários podem editar antes de enviar. Os usuários podem acessar a extensão de mensagens no menu de estouro e, em `...` seguida, selecionar `Take action` como na imagem a seguir:
 
 ![Exemplo de inicialização de uma ação de uma mensagem](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-Para permitir que sua extensão de mensagens funcione a partir de uma mensagem, você precisará adicionar o parâmetro ao objeto da extensão de mensagens no manifesto do aplicativo, como no exemplo `context` `commands` a seguir. Cadeias de caracteres válidas `context` para a matriz são , e `"message"` `"commandBox"` `"compose"` . O valor padrão é `["compose", "commandBox"]`. Consulte a [seção definir comandos](#define-commands) para obter detalhes completos sobre o `context` parâmetro.
+Para permitir que sua extensão de mensagens funcione a partir de uma mensagem, adicione o parâmetro ao objeto da extensão de mensagens no manifesto do aplicativo, como `context` `commands` no exemplo a seguir. Cadeias de caracteres válidas `context` para a matriz são , e `"message"` `"commandBox"` `"compose"` . O valor padrão é `["compose", "commandBox"]`. Consulte a [seção definir comandos](#define-commands) para obter detalhes completos sobre o `context` parâmetro:
 
 ```json
 "composeExtensions": [
@@ -238,11 +238,11 @@ Há três maneiras de coletar informações de um usuário final Teams.
 
 Neste método, tudo o que você precisa fazer é definir uma lista estática de parâmetros no manifesto, conforme mostrado acima no comando "Criar To Do". Para usar esse método, verifique `fetchTask` se está definido e que você `false` defina seus parâmetros no manifesto.
 
-Quando um usuário escolhe um comando com parâmetros estáticos, Teams gerará um formulário em um Módulo de Tarefas com os parâmetros definidos no manifesto. Ao atingir Enviar um `composeExtension/submitAction` é enviado para o bot. Para obter mais informações sobre o conjunto esperado de respostas, consulte [Respondendo para enviar](#responding-to-submit).
+Quando um usuário escolhe um comando com parâmetros estáticos, Teams gerará um formulário em um Módulo de Tarefas com os parâmetros definidos no manifesto. Ao atingir Enviar, um `composeExtension/submitAction` é enviado para o bot. Para obter mais informações sobre o conjunto esperado de respostas, consulte [Respondendo para enviar](#responding-to-submit).
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>Entrada dinâmica usando um cartão adaptável
 
-Neste método, seu serviço pode definir um cartão adaptável personalizado para coletar a entrada do usuário final. Para essa abordagem, de `fetchTask` definir o parâmetro como no `true` manifesto. Observe que se você definir `fetchTask` para `true` quaisquer parâmetros estáticos definidos para o comando será ignorado.
+Neste método, seu serviço pode definir um cartão adaptável personalizado para coletar a entrada do usuário. Para essa abordagem, de `fetchTask` definir o parâmetro como no `true` manifesto. Se você definir, `fetchTask` `true` todos os parâmetros estáticos definidos para o comando serão ignorados.
 
 Neste método, seu serviço recebe um evento e responde com uma resposta de módulo de tarefa baseada em cartão `composeExtension/fetchTask` [adaptável.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) A seguir está uma resposta de exemplo com um cartão adaptável:
 
@@ -310,9 +310,9 @@ Assim como no fluxo de cartão adaptável, seu serviço envia um evento e respon
 
 ### <a name="request-to-install-your-conversational-bot"></a>Solicitar a instalação do bot de conversa
 
-Se seu aplicativo também contiver um bot de conversa, talvez seja necessário garantir que o bot está instalado na conversa antes de carregar o módulo de tarefa. Isso pode ser útil em situações em que você precisa obter contexto adicional para o módulo de tarefas. Por exemplo, talvez seja necessário buscar a lista para preencher um controle de selador de pessoas ou a lista de canais em uma equipe.
+Se seu aplicativo contiver um bot de conversa, verifique se ele está instalado na conversa antes de carregar seu módulo de tarefa. Isso pode ser útil em situações em que você precisa obter contexto adicional para o módulo de tarefas. Por exemplo, talvez seja necessário buscar a lista para preencher um controle de selador de pessoas ou a lista de canais em uma equipe.
 
-Para facilitar esse fluxo, quando sua extensão de mensagens recebe pela primeira vez a verificação de invocação para ver se o bot está `composeExtension/fetchTask` instalado no contexto atual. Você pode fazer isso ao tentar a chamada get roster, por exemplo, Se o bot não estiver instalado, você retornará um Cartão Adaptável com uma ação que solicita ao usuário para instalar seu bot Consulte o exemplo abaixo. Observe que isso exige que o usuário tenha permissão para instalar aplicativos nesse local; se não puderem, eles receberão uma mensagem solicitando que contatem o administrador.
+Para facilitar esse fluxo, quando sua extensão de mensagens recebe pela primeira vez a verificação de invocação para ver se o bot está `composeExtension/fetchTask` instalado no contexto atual. Você pode obter isso, tentando obter a chamada de lista de chamada. Por exemplo, se o bot não estiver instalado, você retornará um Cartão Adaptável com uma ação que solicita que o usuário instale seu bot. O usuário precisa ter permissão para instalar aplicativos nesse local. Se eles não puderem instalar, a mensagem solicitará entrar em contato com o administrador.
 
 Veja um exemplo da resposta:
 
@@ -366,11 +366,11 @@ Veja um exemplo da invocação:
 }
 ```
 
-Você deve responder a essa invocação com a mesma resposta de tarefa com a que teria respondido se o bot já estivesse instalado.
+Responda à invocação com a mesma resposta de tarefa com a que você teria respondido se o bot já estivesse instalado.
 
 ## <a name="responding-to-submit"></a>Respondendo ao envio
 
-Depois que um usuário concluir a entrada, o bot receberá um evento com a id de comando `composeExtension/submitAction` e os valores de parâmetro definidos.
+Depois que um usuário concluir a entrada, o bot receberá um evento com a ID de comando `composeExtension/submitAction` e os valores de parâmetro definidos.
 
 Estas são as diferentes respostas esperadas para um `submitAction` .
 
@@ -384,7 +384,7 @@ Isso é usado quando sua extensão precisa ser autenticada ou configurada para c
 
 ### <a name="compose-extension-result-response"></a>Resposta de resultado da extensão de composição
 
-Isso usado para inserir um cartão na caixa de composição como resultado de um comando. É a mesma resposta usada no comando de pesquisa, mas está limitada a um cartão ou a um resultado na matriz.
+Isso é usado para inserir um cartão na caixa de composição como resultado do comando. É a mesma resposta usada no comando de pesquisa, mas está limitada a um cartão ou a um resultado na matriz.
 
 ```json
 {
@@ -434,14 +434,14 @@ Isso usado para inserir um cartão na caixa de composição como resultado de um
 
 ### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>Responder com uma mensagem de cartão adaptável enviada de um bot
 
-Você também pode responder à ação enviar inserindo uma mensagem com um Cartão Adaptável no canal com um bot. O usuário poderá visualizar a mensagem antes de enviar e também pode editar/interagir com ela. Isso pode ser muito útil em cenários em que você precisa coletar informações de seus usuários antes de criar uma resposta de cartão adaptável. O cenário a seguir mostra como você pode usar esse fluxo para configurar uma sondagem sem incluir as etapas de configuração na mensagem do canal.
+Responda à ação enviar inserindo uma mensagem com um Cartão Adaptável no canal com um bot. O usuário pode visualizar a mensagem antes de enviar e, potencialmente, editar/interagir com ela também. Isso pode ser útil em cenários em que você precisa coletar informações de seus usuários antes de criar uma resposta de cartão adaptável. O cenário a seguir mostra como você pode usar esse fluxo para configurar uma sondagem sem incluir as etapas de configuração na mensagem do canal.
 
-1. O usuário clica na extensão de mensagens para disparar o módulo de tarefa.
+1. O usuário seleciona a extensão de mensagens para disparar o módulo de tarefa.
 1. O usuário usa o módulo de tarefa para configurar a sondagem.
 1. Depois de enviar o módulo de tarefa de configuração, o aplicativo usa as informações fornecidas no módulo de tarefa para criar um cartão adaptável e envia-o como uma resposta `botMessagePreview` ao cliente.
 1. Em seguida, o usuário pode visualizar a mensagem de cartão adaptável antes que o bot a insere no canal. Se o bot ainda não for membro do canal, clicar `Send` adicionará o bot.
 1. Interagir com o cartão adaptável alterará a mensagem antes de enviá-la.
-1. Depois que o usuário `Send` clicar, o bot postará a mensagem no canal.
+1. Depois que o usuário `Send` selecionar, o bot postará a mensagem no canal.
 
 Para habilitar esse fluxo, seu módulo de tarefa deve responder como no exemplo abaixo, que apresentará a mensagem de visualização ao usuário.
 
@@ -496,7 +496,7 @@ Sua extensão de mensagem agora precisará responder a dois novos tipos de inter
 }
 ```
 
-Ao responder à solicitação, você deve responder com uma resposta com os valores preenchidos com as informações que o usuário `edit` `task` já enviou. Ao responder à `send` solicitação, você deve enviar uma mensagem para o canal que contém o cartão adaptável finalizado.
+Ao responder à solicitação, você deve responder com uma resposta com os valores preenchidos com as informações que o usuário `edit` `task` já enviou. Ao responder à solicitação, você deve enviar uma mensagem para o canal contendo `send` o cartão adaptável finalizado.
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 

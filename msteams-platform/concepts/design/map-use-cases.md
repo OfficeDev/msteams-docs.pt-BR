@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566285"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720383"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
 
@@ -94,9 +94,9 @@ Uma plataforma de colaboração é inerentemente uma plataforma social. Deixe se
 
 As guias são páginas da Web incorporadas. Praticamente tudo o que você pode fazer em um SPA, você pode fazer em uma guia em Teams. Apenas certifique-se de prestar atenção ao escopo. Guias de grupo e canal são para experiências compartilhadas e guias pessoais são para experiências pessoais. A lista de coisas da equipe entra na guia canal e a lista de suas coisas entra na guia pessoal.
 
-## <a name="start-small"></a>Iniciar pequeno
+## <a name="initiate-small"></a>Iniciar pequeno
 
-Não sabe por onde começar? Está se sentindo sobrecarregado com a variedade incrível de opções disponíveis para você? Você deve escolher um recurso principal do seu aplicativo e começar por lá. Depois de ter uma opinião sobre o fluxo de informações por meio dos vários contextos no Teams, é muito mais simples imaginar uma interação mais complexa.
+Não sabe onde iniciar? Está se sentindo sobrecarregado com a variedade incrível de opções disponíveis para você? Você deve escolher um recurso principal do seu aplicativo e iniciar lá. Depois de ter uma opinião sobre o fluxo de informações por meio dos vários contextos no Teams, é muito mais simples imaginar uma interação mais complexa.
 
 ## <a name="put-it-all-together"></a>Colocar tudo junto
 
@@ -104,4 +104,4 @@ Dito isso, os melhores aplicativos geralmente combinam vários recursos, criando
 
 ## <a name="see-also"></a>Confira também
 
-[Criar seu primeiro Microsoft Teams app](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Criar seu primeiro Microsoft Teams app](../../get-started/get-started-overview.md)

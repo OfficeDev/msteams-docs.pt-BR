@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: 385dd74cddc9c09a861c1bfb214c1d393bae77a1
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ad3d18365eb513576379706d4bddd02efa71d96e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566369"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720173"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -29,32 +29,34 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 <summary><b>2021</b></summary>
 
 | **Date** | **Anotações** | **Tópicos alterados** |
-| -------- | --------- | ------------------ |
-|10/20/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
-|10/18/2021|Guias vinculam desfraldamento e exibição de estágio|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md) |
+| -------- | --------- | ----------------|
+|10/28/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável.| [Incluir uma oferta SaaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
+|10/25/2021| Atualizou o módulo Get started para Microsoft Teams documentação do desenvolvedor com nova estrutura e procedimentos em um guia passo a passo.| [Começar com seu primeiro Teams app](get-started/get-started-overview.md)|
+|10/21/2021| Adicione uma `registerOnFocused` API para guias ou aplicativos pessoais. |[Adicionar `registerOnFocused` API para guias ou aplicativos pessoais](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
+|10/20/2021| O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
+|10/20/2021| API de Detalhes da Reunião e eventos de Teams reunião em tempo real. | [Crie aplicativos para reuniões do Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
+|10/18/2021|Guias vinculam desfraldamento e exibição de estágio.|[Guias vinculam desfraldamento e exibição de estágio](tabs/tabs-link-unfurling.md)|
 |10/08/2021|Novas práticas recomendadas para projetar cartões adaptáveis.|[Projetando cartões adaptáveis para seu Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
-|10/05/2021| Ocultar Teams aplicativo até que o Administrador permita desa desabilitar o aplicativo. | [Ocultar Teams aplicativo até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
-|10/05/2021|Planejar seus aplicativos para Teams celular|[Planejar guias responsivas para o aplicativo móvel do Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos. | [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|Teams dá suporte AAD ID de objeto e UPN na menção do usuário para bots e Webhooks de entrada. |[AAD ID do objeto e UPN](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)na menção do usuário , [Cartões - Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|09/08/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|08/09/2021|O estágio de reunião agora está disponível em GA.|[Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/30/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados. | [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md) |
-|08/25/2021| Introduzido o guia passo a passo para criar um Teams com SSO (sign-on único). | [Guia passo a passo para criar um Teams com SSO](sbs-bots-with-sso.yml) |
-|08/19/2021| Evento de atualização de instalação recebido ao instalar um bot em um thread de conversa. | [Evento de atualização de instalação](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
-|08/12/2021|Criar guias com Cartões Adaptáveis|[Criar guias com Cartões Adaptáveis](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021|As guias não terão mais margens ao redor de suas experiências.  | [Removendo margens de tabulação](resources/removing-tab-margins.md) |
+|10/05/2021| Ocultar Teams aplicativo até que o Administrador permita não ocultar o aplicativo.| [Ocultar Teams aplicativo até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
+|10/05/2021|Planeje seus aplicativos para Teams celular.|[Planejar guias responsivas para o aplicativo móvel do Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
+|10/04/2021| Novo Portal do Desenvolvedor para Teams introduzido para gerenciar seus Teams aplicativos.| [Portal do Desenvolvedor do Teams](concepts/build-and-test/teams-developer-portal.md)|
+|09/21/2021|Teams dá suporte AAD ID de objeto e UPN na menção do usuário para bots e Webhooks de entrada.|[AAD ID do objeto e UPN](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)na menção do usuário , [Cartões - Visão geral](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|08/16/2021| Suporte para validação de entrada em Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot). |[Validação de entrada,](/adaptive-cards/authoring-cards/input-validation) [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
+|08/30/2021| O recurso Custom Together Mode scenes combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em assentos pré-determinados.| [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md)|
+|08/25/2021| Introduzido o guia passo a passo para criar um Teams com SSO (sign-on único).| [Guia passo a passo para criar um Teams com SSO](sbs-bots-with-sso.yml)|
+|08/19/2021| Evento de atualização de instalação recebido ao instalar um bot em um thread de conversa.| [Evento de atualização de instalação](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event)|
+|08/12/2021|Criar guias com Cartões Adaptáveis.|[Criar guias com Cartões Adaptáveis](tabs/how-to/build-adaptive-card-tabs.md)|
+|08/04/2021|As guias não terão mais margens ao redor de suas experiências.| [Removendo margens de tabulação](resources/removing-tab-margins.md)|
 |07/08/2021|Teams mobile adiciona suporte para aplicativos em reuniões. |[Extensibilidade do aplicativo de reunião](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar a funcionalidade do Se picker de pessoas.|[Funcionalidade Integrar Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|  
-|06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas. | [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml) |
-|06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo. | [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md) |
-|05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md) |
-|05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis e muito mais.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021| Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)
+|06/25/2021| Introduzido o guia passo a passo para enviar mensagens proativas.| [Guia passo a passo para enviar mensagens proativas](sbs-send-proactive.yml)|
+|06/09/2021| Exibição de estágio para imagens em Cartões Adaptáveis com `allowExpand` atributo.| [Exibição de estágio para imagens em Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-format.md)|
+|05/31/2021| Guias de conversa. | [Iniciar e continuar conversas sobre conteúdo em suas guias](~/tabs/how-to/conversational-tabs.md)|
+|05/24/2021| Diretrizes Teams de design de aplicativos atualizadas com padrões móveis.|[Projetando seu Teams aplicativo](~/concepts/design/design-teams-app-overview.md)|
+|05/13/2021| Adicionadas informações sobre mConnect e Skooler.|[Sistema de gerenciamento de aprendizagem de miojo](resources/moodle-overview.md)|
 |05/10/2021| Manifesto do aplicativo v1.10 lançado.|[Esquema de manifesto](resources/schema/manifest-schema.md) |
-|05/10/2021| Novo recurso de personalização de aplicativo.| [Habilitar organizações para personalizar seu aplicativo](concepts/design/enable-app-customization.md) |
-|05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|05/10/2021| Novo recurso de personalização de aplicativo.| [Habilitar organizações para personalizar seu aplicativo](concepts/design/enable-app-customization.md)|
+|05/07/2021| Links profundos para chamadas de áudio e vídeo no chat. |[Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)|
 |04/30/2021|Novas diretrizes sobre como publicar aplicativos no Teams store.|[Publique seu aplicativo no Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [de validação da loja](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Suporte para ações universais para cartões adaptáveis v1.4. | [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | Exibições específicas do usuário. | [Exibições Específicas do Usuário](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -184,12 +186,10 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
-|10/19/2021|Permissões de dispositivo para o navegador.| [Permissões do dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
-|10/14/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável. | [Inclua uma oferta SaaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
-|06/21/2021|Comportamento de desinstalação para aplicativo pessoal com bot | [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Consentimento específico de recursos para chats. |[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
-|05/25/2021| Atualização Teams Toolkit [para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code e [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Começar a desenvolver Teams aplicativos](~/get-started/prerequisites.md) |
-|05/24/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md)|
+|10/19/2021|Permissões de dispositivo para o navegador.| [Permissões do dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md)|
+|06/21/2021|Desinstalar o comportamento do aplicativo pessoal com bot.| [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|06/16/2021| Consentimento específico de recursos para chats.|[Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md), Testar permissões de consentimento [específicas](graph-api/rsc/test-resource-specific-consent.md) do recurso em Teams|
 
 Para obter mais informações, consulte [visualização do desenvolvedor público para Teams](~/resources/dev-preview/developer-preview-intro.md).
 

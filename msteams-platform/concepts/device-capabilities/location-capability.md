@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496141"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719788"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
 
@@ -90,7 +90,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="error-handling"></a>Tratamento de erros
+## <a name="error-handling"></a>Tratamento de erro
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 
@@ -102,6 +102,12 @@ Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela 
 | **4000** | INVALID_ARGUMENTS | A API é invocada com argumentos obrigatórios errados ou insuficientes.|
 | **8000** | USER_ABORT |O usuário cancelou a operação.|
 | **9000** | OLD_PLATFORM | O usuário está em uma com build de plataforma antiga onde a implementação da API não está presente. A atualização da com build deve resolver o problema.|
+
+### <a name="code-sample"></a>Exemplo de código
+
+|Nome do exemplo | Descrição | C# | Node.js | 
+|----------------|-----------------|--------------|--------------|
+| Local atual de check-in do aplicativo | Os usuários podem fazer check-in no local atual e exibir todos os check-ins de localização anteriores.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

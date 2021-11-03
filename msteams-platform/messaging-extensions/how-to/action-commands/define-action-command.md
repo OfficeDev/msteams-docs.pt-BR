@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291671"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720138"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de ação de extensão de mensagens
 
@@ -124,61 +124,11 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 1. Selecione **Salvar**.
 1. Para adicionar mais parâmetros, selecione o **botão Adicionar** na **seção Parâmetros.**
 
-# <a name="developer-portal"></a>[Portal do Desenvolvedor](#tab/DP)
-
-**Para criar um comando de ação usando o Portal do Desenvolvedor**
-
-1. Vá para **[o portal do desenvolvedor.](https://dev.teams.microsoft.com/)**
-    
-      ![Captura de tela do TDP](~/assets/images/tdp/tdp_home_1.png)
-
-1. Vá para **Aplicativos**.
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Se você já criou seu pacote de aplicativos no Portal do **Desenvolvedor,** selecione-o na lista. Caso não seja, selecione **Importar um aplicativo existente.**
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Vá para **Recursos do aplicativo**. 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Selecione **Extensões de mensagens dos** recursos do **aplicativo.** Uma janela pop-up aparece para configurar a extensão de mensagens.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. Selecione **um bot de extensão de mensagem** na listada em ID de **extensões** de mensagens e selecione **Salvar**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Selecione **Adicionar um comando**. Uma janela pop-up parece adicionar um comando.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Selecione o tipo do comando como **Baseado em Ação** para configurar a extensão de mensagens. Selecione **Parâmetros dinâmicos** para criar o comando de ação dinâmica.
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. Selecione **Parâmetros estáticos** para criar o comando de ação estática.   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. Insira os campos de comando. 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. Insira campos de parâmetro e selecione **Salvar**.
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
-
 ### <a name="create-an-action-command-manually"></a>Criar um comando de ação manualmente
 
 Para adicionar manualmente o comando de extensão de mensagens baseada em ação ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` matriz de objetos:
 
-| Nome da propriedade | Finalidade | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Propósito | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui a este comando. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário. | Sim | 1.0 |
@@ -188,7 +138,7 @@ Para adicionar manualmente o comando de extensão de mensagens baseada em ação
 
 Se você estiver usando uma lista estática de parâmetros, também deverá adicionar os seguintes parâmetros:
 
-| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Propósito | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade descreve a lista estática de parâmetros do comando. Use somente quando `fetchTask` for `false` . | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
@@ -198,7 +148,7 @@ Se você estiver usando uma lista estática de parâmetros, também deverá adic
 
 Se você estiver usando uma exibição da Web incorporada, você pode, opcionalmente, adicionar o objeto para buscar sua `taskInfo` exibição da Web sem chamar seu bot diretamente. Se você selecionar essa opção, o comportamento será semelhante ao de usar uma lista estática de parâmetros. Na medida em que a primeira interação com seu bot está [respondendo à ação](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)de envio do módulo de tarefas . Se você estiver usando um `taskInfo` objeto, deverá definir o `fetchTask` parâmetro como `false` .
 
-| Nome da propriedade | Finalidade | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Propósito | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 |`taskInfo`|Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens. | Não | 1.4 |
 |`taskInfo.title`|Título inicial do módulo de tarefa. |Não | 1.4 |
@@ -265,7 +215,7 @@ A seção a seguir é um exemplo de um `composeExtensions` objeto que define doi
 |Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 Se você estiver usando um Cartão Adaptável ou uma exibição da Web incorporada sem um objeto, a `taskInfo` próxima etapa será:
 

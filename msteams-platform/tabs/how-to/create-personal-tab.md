@@ -5,12 +5,12 @@ description: Um guia de início rápido para criar uma guia pessoal com o Gerado
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155071"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719921"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -66,7 +66,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
     yo teams
     ```
 
-1. Em seguida, forneça uma série de valores usados no arquivomanifest.js **no** aplicativo:
+1. Em seguida, forneça uma série de valores usados no arquivo **manifest.json do** aplicativo:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -175,7 +175,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.jsa partir** do seguinte local no editor de código:
+1. Abra **manifest.json** a partir do seguinte local no editor de código:
 
     ```bash
     ./src/manifest/manifest.json/
@@ -195,7 +195,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
 1. Atualize **o componente de caminho contentURL** **yourDefaultTabNameTab** com o nome da guia real.
 
-1. Salve o arquivo **manifest.jsno** arquivo.
+1. Salve o arquivo **manifest.json** atualizado.
 
 1. Para fornecer sua página de conteúdo em um IFrame, abra **Tab.ts** no editor de código do seguinte caminho:
 
@@ -221,9 +221,9 @@ Você deve ter um pacote de aplicativos para testar sua guia Teams. É uma pasta
 
 - Um **ícone de cor completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
-O pacote é criado por meio de uma tarefa gulp que valida o manifest.jsno arquivo on e gera a pasta zip no **diretório ./package.** No prompt de comando, insira o seguinte comando:
+O pacote é criado por meio de uma tarefa gulp que valida o arquivo manifest.json e gera a pasta zip no **diretório ./package**. No prompt de comando, insira o seguinte comando:
 
 ```bash
 gulp manifest
@@ -364,7 +364,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 - Um **ícone de cor completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
 Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um `contentUrl` <iframe \> e o renderiza em sua guia.
 
@@ -439,7 +439,7 @@ Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Upload sua guia com o App Studio para Teams
 
 > [!NOTE]
-> **O App Studio** pode ser usado para editar seu **manifest.jsno** arquivo e carregar o pacote concluído para Teams. Você também pode editar manualmente **manifest.jsem**. Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **Tab.zip** para carregar.
+> **O App Studio** pode ser usado para editar seu **arquivo manifest.json** e carregar o pacote concluído para Teams. Você também pode editar manualmente **manifest.json**. Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **Tab.zip** para carregar.
 
 **Para carregar sua guia com o App Studio**
 
@@ -461,7 +461,7 @@ Depois de carregar seu pacote de aplicativos no App Studio, você deve configur�
 
 Selecione o azulejo para sua guia recém-importada da página de boas-vindas do editor de manifesto.
 
-Há uma lista de etapas no lado esquerdo do editor de Manifesto. No lado direito do editor de manifesto, há uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foi fornecida pelo seumanifest.js **em,** mas há campos que você deve atualizar.
+Há uma lista de etapas no lado esquerdo do editor de Manifesto. No lado direito do editor de manifesto, há uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foram fornecidas por **seu manifesto.json,** mas há campos que você deve atualizar.
 
 ##### <a name="details-app-details"></a>Detalhes: Detalhes do aplicativo
 
@@ -588,7 +588,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 * Um **ícone de cor completo** medindo 192 x 192 pixels.
 * Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-* Um **manifest.json** que especifica os atributos do seu aplicativo.
+* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
 Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e `contentUrl` o renderiza em sua guia.
 
@@ -618,7 +618,7 @@ Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito
 
 **PersonalTab.cs** apresenta um objeto Message e métodos que são chamados de **PersonalTabController** quando um usuário seleciona um botão no Modo de Exibição **PersonalTab.**
 
-#### <a name="views"></a>Modos de exibição
+#### <a name="views"></a>Visualizações
 
 Essas exibições são as diferentes exibições ASP.NET Core MVC:
 
@@ -681,6 +681,70 @@ Se você criar um bot com **um escopo pessoal,** ele aparecerá na primeira posi
 }
 ```
 
+## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Adicionar `registerOnFocused` API para guias ou aplicativos pessoais
+
+A `registerOnFocused` API SDK permite que você use um teclado Teams. Você pode retornar a um aplicativo pessoal e manter o foco em uma guia ou aplicativo pessoal com a ajuda das teclas Ctrl, Shift e F6. Por exemplo, você pode se afastar do aplicativo pessoal para pesquisar algo e, em seguida, retornar ao aplicativo pessoal ou usar Ctrl+F6 para dar a volta nos locais necessários. 
+
+O código a seguir fornece um exemplo de definição de manipulador no SDK quando o foco deve ser retornado para a `registerFocusEnterHandler` guia ou aplicativo pessoal:
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+
+Depois que o manipulador é acionado com a palavra-chave , o manipulador é invocado com uma função de retorno de chamada que recebe `focusEnter` `registerFocusEnterHandler` um parâmetro chamado `focusEnterHandler` `navigateForward` . O valor de `navigateForward` determina o tipo de eventos. O `focusEnterHandler` é invocado apenas por Ctrl+F6 e não pela tecla de tabulação.   
+As chaves úteis para mover eventos dentro Teams são as seguinte:    
+* Encaminhar evento -> teclas Ctrl+F6
+* Evento backward -> teclas Ctrl+Shift+F6
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### <a name="personal-app"></a>Aplicativo pessoal
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Exemplo mostra opções para adicionar a API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---forward-event"></a>Aplicativo pessoal - Evento Forward
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Exemplo mostra opções para adicionar a movimentação de encaminhamento da API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---backward-event"></a>Aplicativo pessoal - Evento Backward
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Exemplo mostra opções para adicionar a movimentação para trás registerOnFocussed API" border="false":::
+
+### <a name="tab"></a>Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemplo mostra opções para adicionar a guia registerOnFocussed API para" border="false":::
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
@@ -688,7 +752,7 @@ Se você criar um bot com **um escopo pessoal,** ele aparecerá na primeira posi
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)

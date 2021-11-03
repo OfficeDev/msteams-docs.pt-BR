@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017335"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720110"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams aplicativos trazem informações importantes, ferramentas comuns
 Aplicativos são como você estende Teams para se ajustar às suas necessidades. Crie algo novo para Teams ou integre um aplicativo existente.
 
 > [!div class="nextstepaction"]
-> [Iniciar aqui](get-started/prerequisites.md)
+> [Iniciar aqui](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>O que Teams aplicativos?
 
@@ -77,7 +77,7 @@ Teams aplicativos são uma combinação de [recursos.](concepts/capabilities-ove
 
 :::row-end:::
 
-### <a name="messaging-extensions"></a>Extensão de mensagens
+### <a name="messaging-extensions"></a>Extensões de mensagens
 
 :::row:::
 
@@ -94,7 +94,7 @@ Teams aplicativos são uma combinação de [recursos.](concepts/capabilities-ove
    :::column-end:::
 :::row-end:::
 
-### <a name="meeting-extensions"></a>Extensões da reunião
+### <a name="meeting-extensions"></a>Extensões de reunião
 
 :::row:::
 
@@ -153,7 +153,7 @@ Teams aplicativos são uma combinação de [recursos.](concepts/capabilities-ove
 Familiarize-se rapidamente com a criação para Teams configurando seu ambiente e criando um aplicativo simples.
 
 > [!div class="nextstepaction"]
-> [Desenvolver seu primeiro aplicativo](get-started/prerequisites.md)
+> [Desenvolver seu primeiro aplicativo](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::

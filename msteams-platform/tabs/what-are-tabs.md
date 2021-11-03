@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a4ad7c0d832f7a4c71c3749053333298086dcd28
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f18760670f81bea0e0c2bad6da9f15bd1982f0f
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155175"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719837"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -38,7 +38,7 @@ Há dois tipos de guias disponíveis em Teams, pessoal e canal ou grupo. [Guias 
 
 Você pode [criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) como parte de uma guia pessoal, canal ou guia de grupo ou módulo de tarefa. Você [pode](~/tabs/how-to/create-tab-pages/configuration-page.md) criar uma página de configuração que permite que os usuários configurem um aplicativo Microsoft Teams e usem-no para configurar uma guia de chat de canal ou grupo, uma extensão de mensagens ou um conector Office 365. Você pode permitir que os usuários reconfigurem sua guia após a instalação e [criem uma página de remoção de tabulação](~/tabs/how-to/create-tab-pages/removal-page.md) para seu aplicativo. Quando você cria um aplicativo Teams que inclui uma guia, você deve testar como sua guia funciona nos clientes android e [iOS Teams .](~/tabs/design/tabs-mobile.md) Sua guia deve [obter contexto por](~/tabs/how-to/access-teams-context.md) meio de informações `entityId` básicas, informações de localidade e tema e ou que identifique o `subEntityId` que está na guia.
 
-Você pode criar guias com Cartões Adaptáveis e centralizar todos os Teams de aplicativo eliminando a necessidade de um back-back diferente para seus bots e guias. [O Stage View](~/tabs/tabs-link-unfurling.md) é um novo componente da interface do usuário que permite renderizar o conteúdo aberto em tela inteira Teams e fixado como uma guia. O serviço de [desatração](~/tabs/tabs-link-unfurling.md) de link existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você [](~/tabs/how-to/conversational-tabs.md) pode criar guias de conversa usando sub-entidades de conversa que permitem que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações nas [margens de tabulação](~/resources/removing-tab-margins.md) para melhorar a experiência do desenvolvedor ao criar aplicativos.
+Você pode criar guias com Cartões Adaptáveis e centralizar todos os Teams de aplicativo eliminando a necessidade de um back-back diferente para seus bots e guias. [O Stage View](~/tabs/tabs-link-unfurling.md) é um novo componente da interface do usuário que permite renderizar o conteúdo aberto em tela inteira Teams e fixado como uma guia. O serviço de [desatração](~/tabs/tabs-link-unfurling.md) de link existente é atualizado, para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você [](~/tabs/how-to/conversational-tabs.md) pode criar guias de conversa usando sub-entidades de conversa que permitem que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações nas [margens de tabulação](~/resources/removing-tab-margins.md) para melhorar a experiência do desenvolvedor ao criar aplicativos.
 
 ## <a name="tab-features"></a>Recursos de tabulação
 
@@ -91,7 +91,7 @@ Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por apl
 * [Integrar uma QR ou um scanner de código de barras](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar os recursos de localização](../concepts/device-capabilities/location-capability.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Pré-requisitos](~/tabs/how-to/tab-requirements.md)

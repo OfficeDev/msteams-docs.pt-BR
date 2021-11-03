@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378895"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720222"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -191,7 +191,7 @@ A longa descrição pode fornecer uma narrativa envolvente que destaca a propost
 
 **Fazer:**
 
-* Usar [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) para formatar sua descrição.
+* Usar Markdown para formatar sua descrição.
 * Usar a voz ativa e falar diretamente com os usuários. Por exemplo, *Você pode...*.
 * Listar os recursos com marcadores para que seja mais fácil escanear a descrição.
 * Descrever de forma clara as limitações, condições ou exceções da funcionalidade, recursos e produtos de entrega descritos na lista, assim como materiais relacionados antes de o usuário instalar seu aplicativo. Os recursos do Teams que seu aplicativo oferece suporte devem estar relacionados às funções principais que sua lista descreve.

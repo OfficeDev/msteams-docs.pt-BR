@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155070"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720187"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -90,11 +90,11 @@ O código a seguir é um exemplo de código correspondente para a página de con
 
 Escolha Selecionar **Botão Cinza** ou **Selecione Vermelho** na página de configuração, para exibir o conteúdo da guia com um ícone cinza ou vermelho.
 
-A imagem a seguir exibe o conteúdo da guia com um ícone cinza:
+A imagem a seguir exibe o conteúdo da guia com **o ícone Cinza** selecionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-A imagem a seguir exibe o conteúdo da guia com um ícone vermelho:
+A imagem a seguir exibe o conteúdo da guia com **o ícone** Vermelho selecionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
@@ -208,7 +208,7 @@ Se você optar por fazer com que seu canal ou guia de grupo apareça no Teams cl
 * [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)

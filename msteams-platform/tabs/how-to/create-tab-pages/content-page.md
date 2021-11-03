@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble static
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155006"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720305"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -83,7 +83,7 @@ A partir [do esquema de manifesto v1.7](../../../resources/schema/manifest-schem
 > [!NOTE]
 > * O comportamento em clientes móveis não é configurável por meio da propriedade indicador de carregamento nativo. Os clientes móveis mostram esse indicador por padrão em páginas de conteúdo e módulos de tarefa baseados em iframe. Esse indicador no celular é mostrado quando uma solicitação é feita para buscar conteúdo e é descartada assim que a solicitação é concluída.
 
-Se você indicar no manifesto do aplicativo, todas as páginas de configuração, conteúdo e remoção de guias e todos os módulos de tarefa baseados em iframe devem `showLoadingIndicator : true`  seguir estas etapas:
+Se você indicar no manifesto do aplicativo, todas as configurações de tabulação, conteúdo, páginas de remoção e todos os módulos de tarefa baseados em iframe devem `showLoadingIndicator : true`  seguir estas etapas:
 
 **Para mostrar o indicador de carregamento**
 
@@ -107,9 +107,8 @@ Se você indicar no manifesto do aplicativo, todas as páginas de configuração
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)

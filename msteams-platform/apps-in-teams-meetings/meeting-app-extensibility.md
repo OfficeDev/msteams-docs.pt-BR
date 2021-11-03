@@ -4,12 +4,12 @@ author: surbhigupta
 description: Compreender aplicativos de reuniões unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a69d0f709cdf3af52164d8ab336d3ec2a8f7de74
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260684"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720180"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -176,8 +176,8 @@ Tipos de usuário, como organizador, apresentador ou participante em uma reuniã
 
 A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessibilidade e desempenho:
 
-* **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais Azure Active Directory (AAD) para o locatário. Eles são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
-* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da organização e têm os mesmos Teams que um membro da equipe nativo. Eles têm acesso a chats, reuniões e arquivos de equipe. Um convidado pode ser um organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados em Teams](/microsoftteams/guest-access).
+* **In-tenant**: Os usuários no locatário pertencem à organização e têm credenciais em Azure Active Directory (AAD) para o locatário. Eles são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
+* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao AAD da organização e têm os mesmos Teams que um membro nativo da equipe. Eles têm acesso a chats, reuniões e arquivos de equipe. Um convidado pode ser um organizador, apresentador ou participante. Para obter mais informações, consulte [acesso de convidados em Teams](/microsoftteams/guest-access).
 * **Federado ou externo**: um usuário federado é um usuário externo Teams em outra organização que foi convidado a participar de uma reunião. Os usuários federados têm credenciais válidas com parceiros federados e são autorizados por Teams. Eles não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. O acesso de convidados é uma opção melhor para usuários externos ter acesso a equipes e canais. Para obter mais informações, consulte [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -197,9 +197,9 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 
 | Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio de Reunião | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Pode exibir, mas não pode interagir com o aplicativo no estágio de reunião |
-| Convidado que faz parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
-| Usuário federado. Para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião de um Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
+| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
+| Convidado, parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião |
+| Usuário federado, para obter mais informações, consulte [usuários não padrão.](/microsoftteams/non-standard-users) | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião |
 
 ## <a name="see-also"></a>Confira também
 
@@ -208,7 +208,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 * [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md)
 * [Criar seu aplicativo](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](create-apps-for-teams-meetings.md)

@@ -5,20 +5,17 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: e408d1e96b0abe2493d9c801ab947da702b749da
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378923"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719795"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
 :::row:::
    :::column span="3":::
-
-> [!NOTE]
-> Esse recurso está disponível apenas na [visualização de desenvolvedor](~/resources/dev-preview/developer-preview-intro.md) público.
 
 Com uma oferta de Software como serviço (SaaS) transacionável, você pode monetizar seu aplicativo Teams por meio da venda de planos de assinatura diretamente da listagem da Teams store. Por exemplo, digamos que você tenha um aplicativo gratuito que qualquer pessoa pode obter na loja. Agora você pode oferecer planos premium e empresariais para usuários que querem mais recursos.
 

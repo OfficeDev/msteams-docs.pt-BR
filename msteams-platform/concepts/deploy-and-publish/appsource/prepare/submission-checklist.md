@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260537"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720348"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -27,9 +27,7 @@ Embora seu aplicativo possa estar funcionando em um ambiente de teste, você dev
 
 A Microsoft Teams de validação de aplicativo ajuda você a identificar e corrigir problemas antes de enviar ao Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo em relação aos mesmos casos de teste usados durante a validação do armazenamento.
 
-1. Vá para [Microsoft Teams de validação de aplicativos](https://dev.teams.microsoft.com/validation) no portal do desenvolvedor. 
-    > [!NOTE]
-    > A ferramenta de validação de aplicativo também está disponível no [App Studio.](../../../build-and-test/app-studio-overview.md)
+1. Vá para a ferramenta [Microsoft Teams de validação de aplicativos](https://dev.teams.microsoft.com/appvalidation.html). (Observação: a ferramenta também está disponível no [App Studio](../../../build-and-test/app-studio-overview.md).)
 1. Upload pacote do aplicativo para executar os testes automatizados.
 1. Vá para **a lista de verificação Preliminar** e revise os casos de teste difíceis de automatizar.
 1. [Correção de problemas com suas configurações](~/resources/schema/manifest-schema.md) ou aplicativos em geral. Esses problemas ocorrerão se os testes automatizados lhe deem erros ou se você não tiver atendido a todos os critérios na lista de verificação.
@@ -211,7 +209,7 @@ O Partner Center dá [suporte a listagens de armazenamento localizado.](/office/
 > [!NOTE]
 > Se você estiver enviando um novo aplicativo, não poderá concluir oficialmente Publisher Atestado até que seu aplicativo seja listado na Teams store. Se você estiver atualizando um aplicativo listado, conclua Publisher Atestado antes de enviar a versão mais recente do aplicativo para validação.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Enviar seu aplicativo](/office/dev/store/add-in-submission-guide)

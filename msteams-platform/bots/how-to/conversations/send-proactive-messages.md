@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar uma mensagem obter iD de conversa de canal de ID do usuário
-ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566278"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720075"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Isso pode incluir mensagens, como:
+Uma mensagem proativa é qualquer mensagem enviada por um bot que não seja em resposta a uma solicitação de um usuário. Isso pode incluir mensagens, como:
 
 * Mensagem de boas-vindas
 * Notificações
@@ -33,7 +33,7 @@ Enviar uma mensagem proativa é diferente de enviar uma mensagem regular. Não h
 1. [Obter a ID da conversa](#get-the-conversation-id).
 1. [Envie a mensagem](#send-the-message).
 
-Os trechos de código na seção [exemplos](#samples) são para criar uma conversa um para um. Para links para concluir exemplos de trabalho para conversas um-para-um e grupos ou canais , consulte [exemplo de código](#code-sample).
+Os trechos de código na seção [exemplos](#samples) são para criar uma conversa um para um. Para links para concluir exemplos de trabalho para conversas de um para um e grupos ou canais, consulte [exemplo de código](#code-sample).
 
 Para usar mensagens proativas efetivamente, consulte [práticas recomendadas para mensagens proativas.](#best-practices-for-proactive-messaging) Para determinados cenários, você deve [instalar proativamente seu aplicativo usando Graph](#proactively-install-your-app-using-graph). Os trechos de código na seção [exemplos](#samples) são para criar uma conversa um para um. Para amostras completas de trabalho para conversas e grupos ou canais de um para um, consulte [amostra de código](#code-sample).
 
@@ -49,13 +49,13 @@ Para criar um novo thread de conversa ou conversa em um canal, você deve ter a 
 
 Independentemente de como você obter as informações, você deve armazenar e `tenantId` ou criar uma nova `userId` `channelId` conversa. Você também pode usar o para criar um novo thread de conversa no canal geral ou `teamId` padrão de uma equipe.
 
-O `userId` é exclusivo da ID do bot e de um usuário específico. Não é possível reutilizar os `userId` bots entre. O `channelId` é global. No entanto, seu bot deve ser instalado na equipe antes de poder enviar uma mensagem proativa para um canal.
+O `userId` é exclusivo da ID do bot e de um usuário específico. Não é possível reutilizar o `userId` entre bots. O `channelId` é global. No entanto, seu bot deve ser instalado na equipe antes de poder enviar uma mensagem proativa para um canal.
 
 Depois de ter as informações do usuário ou do canal, você deve criar a conversa.
 
 ## <a name="create-the-conversation"></a>Criar a conversa
 
-Você deve criar a conversa se ela não existir ou não conhecer `conversationId` o . Você só deve criar a conversa uma vez e armazenar `conversationId` o valor ou `conversationReference` objeto.
+Você deve criar a conversa se ela não existir ou você não sabe o `conversationId` . Você só deve criar a conversa uma vez e armazenar `conversationId` o valor ou `conversationReference` objeto.
 
 Após a criação da conversa, você deve obter a ID da conversa.
 
@@ -69,11 +69,11 @@ Depois de obter as informações de endereço apropriadas, você pode enviar sua
 
 Agora que você tem as informações de endereço corretas, você pode enviar sua mensagem. Se você estiver usando o SDK, deverá usar o método e e `continueConversation` fazer uma chamada de API `conversationId` `tenantId` direta. Você deve definir `conversationParameters` corretamente para enviar sua mensagem com êxito. Consulte a [seção exemplos](#samples) ou use um dos exemplos listados na seção de exemplo [de](#code-sample) código.
 
-Agora que você enviou a mensagem proativa, você deve seguir essas práticas recomendadas ao enviar mensagens proativas para melhor troca de informações entre usuários e o bot.
+Agora que você enviou a mensagem proativa, siga essas práticas recomendadas ao enviar mensagens proativas para melhor troca de informações entre usuários e o bot.
 
 ## <a name="best-practices-for-proactive-messaging"></a>Práticas recomendadas para mensagens proativas
 
-Enviar mensagens proativas aos usuários é uma maneira muito eficaz de se comunicar com seus usuários. No entanto, da perspectiva deles, essa mensagem pode parecer completamente não prompada e, no caso de mensagens de boas-vindas, é a primeira vez que elas interagem com seu aplicativo. Portanto, é muito importante usar mensagens proativas com moderação, não spam de seus usuários e fornecer informações suficientes para permitir que os usuários entendam por que estão recebendo as mensagens.
+Enviar mensagens proativas para os usuários é uma maneira eficaz de se comunicar com seus usuários. No entanto, da perspectiva do usuário, a mensagem aparece sem prompted. Se houver uma mensagem de boas-vindas, será a primeira vez que eles interagirão com seu aplicativo. É importante usar essa funcionalidade e fornecer as informações completas ao usuário para entender a finalidade dessa mensagem.
 
 ### <a name="welcome-messages"></a>Mensagem de boas-vindas
 
@@ -82,7 +82,6 @@ Quando as mensagens proativas são usadas para enviar uma mensagem de boas-vinda
 * Por que um usuário está recebendo a mensagem: deve ser muito claro para o usuário o motivo pelo qual ele está recebendo a mensagem. Se o bot foi instalado em um canal e você enviou uma mensagem de boas-vindas a todos os usuários, deixe-os saber em qual canal ele foi instalado e quem o instalou.
 * O que você oferece: os usuários devem ser capazes de identificar o que podem fazer com seu aplicativo e qual valor você pode trazer para eles.
 * O que eles devem fazer a seguir: convidar os usuários para experimentar um comando ou interagir com seu aplicativo.
-
 Mensagens de boas-vindas ruins podem levar os usuários a bloquear seu bot. Escreva até o ponto e limpe as mensagens de boas-vindas. Iterar nas mensagens de boas-vindas se elas não estão tendo o efeito desejado.
 
 ### <a name="notification-messages"></a>Mensagens de notificação
@@ -283,7 +282,7 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 
 [**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Formatar suas mensagens de bot](~/bots/how-to/format-your-bot-messages.md)

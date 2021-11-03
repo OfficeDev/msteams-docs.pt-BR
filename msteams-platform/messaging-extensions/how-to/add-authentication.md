@@ -5,12 +5,12 @@ description: Como adicionar autenticação a uma extensão de mensagens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c486ddcdda8ea23dc562f17ef42b3fc26a2c73c5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 85353608e062d30529d67184716f65c3e2de1863
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155191"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719858"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -28,7 +28,7 @@ Todas as solicitações aos seus serviços incluem a ID do usuário, o nome de e
 },
 ```
 
-Os `id` valores e são `aadObjectId` garantidos para o usuário Teams autenticado. Eles são usados como chaves para procurar as credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém Azure Active Directory ID de locatário do usuário, que é usada para identificar a organização do usuário. Se aplicável, a solicitação também contém a ID de equipe e a ID do canal da qual a solicitação é originada.
+Os `id` valores e são `aadObjectId` garantidos para o usuário Teams autenticado. Eles são usados como chaves para procurar as credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém Azure Active Directory ID do locatário, que é usada para identificar a organização do usuário. Se aplicável, a solicitação também contém a ID da equipe e a ID do canal da qual a solicitação é originada.
 
 ## <a name="authentication"></a>Autenticação
 
@@ -36,12 +36,12 @@ Se o serviço exigir autenticação do usuário, os usuários devem entrar antes
 
 1. O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.
 1. Seu serviço verifica se o usuário é autenticado inspecionando Teams ID do usuário.
-1. Se o usuário não for autenticado, envie uma resposta `auth` com uma `openUrl` ação sugerida, incluindo a URL de autenticação.
+1. Se o usuário não for autenticado, envie uma resposta com uma ação `auth` `openUrl` sugerida, incluindo a URL de autenticação.
 1. O Microsoft Teams cliente inicia uma caixa de diálogo hospedando sua página da Web usando a URL de autenticação determinada.
 1. Depois que o usuário entrar, você deve fechar a janela e enviar um código de autenticação **para** o Teams cliente.
 1. O Teams cliente, em seguida, reeditará a consulta para o seu serviço, que inclui o código de autenticação passado na Etapa 5.
 
-Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de login. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
+Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de acesso. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responder com uma ação de login
 
@@ -79,10 +79,10 @@ Assim como outras experiências incorporadas em execução dentro Microsoft Team
 
 Quando a solicitação de entrar é concluída e redireciona de volta para sua página, ela deve executar as seguintes etapas:
 
-1. Gere um código de segurança. Esse é um número aleatório. Você deve armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de logon, como tokens OAuth 2.0.
+1. Gere um código de segurança, um número aleatório. Você deve armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de logon, como tokens OAuth 2.0.
 1. Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
 
-Neste ponto, a janela fecha e o controle é passado para o cliente Teams. O cliente agora reeditará a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
+Neste ponto, a janela fecha e o controle é passado para o cliente Teams cliente. O cliente agora reeditará a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
 
 #### <a name="reissued-request-example"></a>Exemplo de solicitação reemissão
 

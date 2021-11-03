@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: SSO de autenticação do teams AAD api de login único
-ms.openlocfilehash: e0dbef26be829980d04278d748298414bc17c473
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: e242562c4e533b1a79f14598ad6edcf2bf561b03
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291713"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720334"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -21,6 +21,8 @@ Os usuários Microsoft Teams entrar em sua conta de trabalho, escola ou Microsof
 > ✔Teams para Android (1416/1.0.0.2020073101 e posterior)
 >
 > ✔Teams para iOS (_Versão_: 2.0.18 e posterior)  
+> 
+> ✔Teams SDK JavaScript (_Versão_: 1.10 e posterior) para que o SSO funcione no painel do lado da reunião. 
 >
 > Para ter a melhor experiência com Teams, use a versão mais recente do iOS e android.
 

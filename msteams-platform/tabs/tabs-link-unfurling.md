@@ -5,27 +5,24 @@ description: Como desatar um link, abrir o Stage View e fixar uma guia com Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483496"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720341"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
 O Stage View é um novo componente de interface do usuário (UI), que permite renderizar o conteúdo que é aberto em tela inteira em Teams e fixado como uma guia.
  
-> [!NOTE]
-> No momento, Teams clientes móveis não suportam guias link desfraldamento e Exibição de Estágio. Os clientes móveis usam `websiteUrl` o atributo fornecido pelo desenvolvedor para abrir a página no navegador da Web do dispositivo.
-
 ## <a name="stage-view"></a>Exibição de estágio
 
 O Stage View é um componente de interface do usuário de tela inteira que você pode invocar para exibir o conteúdo da Web. O serviço de desatração de link existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia uma URL em um chat ou canal, a URL é desfraldada para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Stage View.
 
 ## <a name="advantage-of-stage-view"></a>Vantagem da exibição de estágio
 
-O Stage View ajuda a fornecer uma experiência mais perfeita de exibição de conteúdo em Teams. Os usuários podem abrir e exibir o conteúdo fornecido pelo aplicativo sem sair do contexto, e eles podem fixar o conteúdo no chat ou canal para acesso rápido futuro. Isso leva a um envolvimento de usuário mais alto com seu aplicativo.
+O Stage View ajuda a fornecer uma experiência mais perfeita de exibição de conteúdo em Teams. Os usuários podem abrir e exibir o conteúdo fornecido pelo seu aplicativo sem sair do contexto, e eles podem fixar o conteúdo no chat ou canal para acesso rápido futuro, levando a um envolvimento mais alto do usuário com seu aplicativo.
 
 ## <a name="stage-view-vs-task-module"></a>Exibição de estágio versus módulo de tarefa
 
@@ -89,7 +86,7 @@ A seguir está o processo para invocar o Stage View:
 * O bot responde com um `200` código.
 
 > [!NOTE]
-> Atualmente, Teams clientes móveis não suportam o recurso Modo de Exibição de Estágio. Quando um usuário seleciona **Exibir** em um cliente móvel, o usuário é levado para o navegador do dispositivo. O navegador abre a URL especificada no `websiteUrl` parâmetro do `TabInfo` objeto.
+> No Teams móveis, invocar o Modo de Exibição de Estágio para aplicativos distribuídos através da loja [Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada por moblie abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no `websiteUrl` parâmetro do `TabInfo` objeto.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Exibição de Estágio por meio de um link profundo
 
@@ -122,18 +119,17 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * O `name` é opcional em link profundo. Se não estiver incluído, o nome do aplicativo o substituirá.
 > * O link profundo também pode ser passado por uma `OpenURL` ação.
-> * Atualmente, Teams clientes móveis não suportam o recurso Modo de Exibição de Estágio. Quando os usuários selecionam um link profundo para um Stage View, eles são levados para o navegador da Web do dispositivo. O navegador da Web abre a URL especificada no `websiteUrl` parâmetro do link profundo.
 > * Ao iniciar um Estágio a partir de um determinado contexto, verifique se seu aplicativo funciona nesse contexto. Por exemplo, se o seu Stage View for lançado a partir de um aplicativo pessoal, você deve garantir que seu aplicativo tenha um escopo pessoal.
 
 ## <a name="tab-information-property"></a>Propriedade Tab information
 
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `entityId` | String | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
+| `name` | String | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `contentUrl` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
+| `websiteUrl?` | String | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código
 
@@ -149,7 +145,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)

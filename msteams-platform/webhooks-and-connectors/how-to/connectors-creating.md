@@ -6,12 +6,12 @@ keywords: conector do o365 no teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d2f245b63d58c8de775786304026a41fd65081e3
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155010"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720201"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -19,9 +19,9 @@ Com Microsoft Teams aplicativos, você pode adicionar seu conector de Office 365
 
 ## <a name="add-a-connector-to-teams-app"></a>Adicionar um conector ao Teams app
 
-Você pode [empacotá-lo](~/concepts/build-and-test/apps-package.md) [e publicar](~/concepts/deploy-and-publish/apps-publish.md) seu conector como parte do envio do AppSource. Você pode distribuir seu conector registrado como parte do pacote Teams aplicativo. Para obter informações sobre pontos de entrada para Teams aplicativo, consulte [capabilities](~/concepts/extensibility-points.md). Você também pode fornecer o pacote aos usuários diretamente para carregar no Teams.
+Você pode criar um [pacote e](~/concepts/build-and-test/apps-package.md) [publicar seu](~/concepts/deploy-and-publish/apps-publish.md) conector como parte do envio do AppSource. Você pode distribuir seu conector registrado como parte do pacote Teams aplicativo. Para obter informações sobre pontos de entrada para Teams aplicativo, consulte [capabilities](~/concepts/extensibility-points.md). Você também pode fornecer o pacote aos usuários diretamente para carregar no Teams.
 
-Para distribuir seu conector, você deve se registrar por [meio do Painel de Desenvolvedores conectores.](https://outlook.office.com/connectors/home/login/#/publish) Quando um conector é registrado, presume-se que ele funcione em todos os produtos Office 365 que suportam aplicativos, incluindo Outlook e Teams. Se esse não for o caso e você deve criar um conector que funcione apenas no Microsoft Teams, entre em contato: Microsoft Teams [email envios de aplicativo.](mailto:teamsubm@microsoft.com)
+Para distribuir seu conector, você deve se registrar por [meio do Painel de Desenvolvedores conectores.](https://aka.ms/connectorsdashboard) Quando um conector é registrado, presume-se que ele funcione em todos os produtos Office 365 que suportam aplicativos, incluindo Outlook e Teams. Se esse não for o caso e você deve criar um conector que funcione apenas no Microsoft Teams, entre em contato: Microsoft Teams [email envios de aplicativo.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
 > Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em publicar seu aplicativo Microsoft Teams [no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após [a publicação de conectores para sua](#publish-connectors-for-the-organization)organização, nenhuma ação é necessária no Painel do Conector.
@@ -158,12 +158,12 @@ Baixe o auto gerado `Teams app manifest` do portal. Execute as etapas a seguir, 
 1. [Incluir dois ícones](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modifique `icons` a parte do manifesto para incluir os nomes de arquivo dos ícones em vez de URLs.
 
-O seguinte manifest.jsno arquivo contém os elementos necessários para testar e enviar o aplicativo:
+O seguinte arquivo manifest.json contém os elementos necessários para testar e enviar o aplicativo:
 
 > [!NOTE]
 > Substitua `id` `connectorId` e, no exemplo a seguir, pelo GUID do conector.
 
-#### <a name="example-of-manifestjson-with-connector"></a>Exemplo de manifest.jscom conector
+#### <a name="example-of-manifestjson-with-connector"></a>Exemplo de manifest.json com conector
 
 ```json
 {

@@ -5,16 +5,16 @@ description: Como habilitar o suporte ao SSO para suas extensões de mensagens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: efda0e946204a756d75874a55ac728f81f8ebaef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155190"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720054"
 ---
-# <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Suporte a SSO (login único) para extensões de mensagens
+# <a name="single-sign-on-support-for-messaging-extensions"></a>Suporte de login único para extensões de mensagens
  
-O suporte a um único sign-on agora está disponível para extensões de mensagens e desaparalização de link. A habilitação do SSO (SSO) para extensões de mensagens atualiza silenciosamente o token de autenticação, o que minimiza o número de vezes que você precisa inserir suas credenciais de entrada para Microsoft Teams.
+O suporte a SSO (conexão única) agora está disponível para extensões de mensagens e desassossequeamento de link. Habilenciar o login único para extensões de mensagens por padrão atualiza o token de autenticação, o que minimiza o número de vezes que você precisa inserir as credenciais de entrada para Microsoft Teams.
 
 Este documento orienta você sobre como habilitar o SSO e armazenar seu token de autenticação, se necessário.
 
@@ -22,7 +22,7 @@ Este documento orienta você sobre como habilitar o SSO e armazenar seu token de
 
 O pré-requisito para habilitar o SSO para extensões de mensagens e a desassobilização de link são:
 * Você deve ter uma [conta do Azure.](https://azure.microsoft.com/free/)
-* Você deve configurar seu aplicativo por meio do portal do AAD e atualizar o manifesto do aplicativo Teams para seu bot, conforme definido no registro de seu aplicativo por meio [do portal do AAD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
+* Você deve configurar seu aplicativo por meio do portal AAD e atualizar o manifesto do aplicativo Teams seu bot conforme definido no registro de seu aplicativo por meio do portal AAD [.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
 
 > [!NOTE]
 > Para obter mais informações sobre como criar uma conta do Azure e atualizar o manifesto do aplicativo, consulte Suporte a [SSO (login único) para bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)

@@ -5,12 +5,12 @@ description: Criar guias usando Cartões Adaptáveis
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 8a43efabbd9c40537854450581a4e7d996086fc5
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475584"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720327"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -36,7 +36,7 @@ A imagem a seguir mostra guias de com build com Cartões Adaptáveis na área de
 
 Antes de começar a usar Cartões Adaptáveis para criar guias, você deve:
 
-* Familiarizar-se com o desenvolvimento [de bots,](../../bots/what-are-bots.md)cartões [adaptáveis](https://adaptivecards.io/)e [módulos](../../task-modules-and-cards/task-modules/task-modules-bots.md) de tarefa no Teams.
+* Familiarizar-se [com o desenvolvimento de bots,](../../bots/what-are-bots.md)cartões [adaptáveis](https://adaptivecards.io/)e [módulos](../../task-modules-and-cards/task-modules/task-modules-bots.md) de tarefa Teams.
 * Tenha um bot em execução Teams seu desenvolvimento.
 
 ## <a name="changes-to-app-manifest"></a>Alterações no manifesto do aplicativo
@@ -436,7 +436,7 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)

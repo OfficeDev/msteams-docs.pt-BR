@@ -5,12 +5,12 @@ description: Saiba mais sobre os componentes da interface do usuário usados em 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155481"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719844"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
@@ -32,7 +32,7 @@ Os breadcrumbs são um auxílio de navegação que transmitem a hierarquia do ap
 * Hierarquia de comunicações
 * Navegação
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb no celular." border="false":::
 
@@ -49,7 +49,7 @@ Use a navegação esquerda para navegar por várias páginas na guia Teams. No e
 * Navegue por várias páginas em uma Teams guia.
 * Separar aplicativos complexos em várias páginas.
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo no celular." border="false":::
 
@@ -67,7 +67,7 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 * Mensagens de sucesso
 * Mensagens informativas ou promocionais
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
 
@@ -75,18 +75,18 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Exemplo mostra modelos de interface do usuário da barra de notificação na área de trabalho." border="false":::
 
-## <a name="stage"></a>Etapa
+## <a name="stage-view"></a>Exibição de estágio
 
-O estágio permite que os usuários exibirem conteúdo, como uma imagem, arquivo ou site, em uma grande superfície no Teams sem alternar contexto. O estágio é principalmente para exibir conteúdo. Não use estágio para interações complexas.
+A exibição de estágio permite que os usuários vejam conteúdo, como uma imagem, arquivo ou site, em uma superfície grande no Teams sem alternar contexto. Esse componente é principalmente para exibir conteúdo. Não o use para interações complexas.
 
-Saiba como implementar o [estágio](~/tabs/tabs-link-unfurling.md).
+Veja como implementar a [exibição de estágio](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Exibir conteúdo em uma superfície grande dentro Teams em vez de outro aplicativo ou navegador
 * Mídia em destaque ou outro conteúdo rico
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, um link compartilhado ou componentes visuais (como um gráfico).
 
@@ -106,7 +106,7 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 * Filtro contextual e local
 * Navegação e controles de navegação
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
 

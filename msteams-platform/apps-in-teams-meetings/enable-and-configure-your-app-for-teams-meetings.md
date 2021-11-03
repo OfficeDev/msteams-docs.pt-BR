@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para Teams reuniões
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360479"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720208"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -97,6 +97,7 @@ Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de 
 Em um chat de reunião, insira a **@** chave e selecione Obter **bots**.
 
 > [!NOTE]
+> * A bolha de conteúdo publica um Cartão Adaptável ou um cartão simultaneamente no chat de reunião que os usuários podem acessar. Isso ajuda os usuários quando a reunião ou o aplicativo Teams é minimizado.
 > * A identidade do usuário deve ser confirmada usando [Guias SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova sondagem.
 > * As atribuições de função podem ser alteradas enquanto uma reunião está em andamento. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
@@ -124,7 +125,7 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 
 > [!NOTE]
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a ID Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
 
