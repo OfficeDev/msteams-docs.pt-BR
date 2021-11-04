@@ -10,26 +10,18 @@
 - name: Introdução
   expanded: false
   items:
-    - name: Visão Geral
-      href: get-started/code-samples.md
-    - name: Pré-requisitos
-      href: get-started/prerequisites.md
-    - name: Criar seu primeiro aplicativo usando o Node.js
-      href: get-started/first-app-react.md
+    - name: Visão geral da introdução
+      href: get-started/get-started-overview.md
+    - name: Criar seu primeiro aplicativo usando o JavaScript
+      href: sbs-gs-javascript.yml
     - name: Criar seu primeiro aplicativo usando o Blazor
-      href: get-started/first-app-blazor.md
+      href: sbs-gs-blazor.yml
     - name: Criar seu primeiro aplicativo usando o SPFx
-      href: get-started/first-app-spfx.md
+      href: sbs-gs-spfx.yml
     - name: Criar seu primeiro aplicativo usando C# ou .NET
-      href: get-started/get-started-dotnet-app-studio.md
+      href: sbs-gs-csharp.yml
     - name: Criar seu primeiro aplicativo usando o Node.js
-      href: get-started/get-started-nodejs-app-studio.md
-    - name: Criar seu primeiro aplicativo usando o gerador Yeoman
-      href: get-started/get-started-yeoman.md
-    - name: Criar o seu primeiro bot de conversação para o Microsoft Teams
-      href: get-started/first-app-bot.md
-    - name: Criar sua primeira extensão de mensagens
-      href: get-started/first-message-extension.md
+      href: sbs-gs-nodejs.yml
     - name: Exemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Aplicativos básicos
