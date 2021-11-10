@@ -1,19 +1,19 @@
 ---
 title: Integrar os recursos de localização
 author: Rajeshwari-v
-description: Como usar Teams SDK do cliente JavaScript para aproveitar os recursos de localização
+description: Saiba como usar Teams SDK do cliente JavaScript para aproveitar recursos de localização usando trechos de código e exemplos
 keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: db86b2bf80bcc0f4f56c9998a573f0a7cbd1e9c3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719788"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888437"
 ---
-# <a name="integrate-location-capabilities"></a>Integrar os recursos de localização 
+# <a name="integrate-location-capabilities"></a>Integrar os recursos de localização
 
 Você pode integrar os recursos de localização do dispositivo nativo ao seu Teams app.  
 
@@ -90,7 +90,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams app. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados: 
 

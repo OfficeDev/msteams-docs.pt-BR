@@ -1,16 +1,17 @@
 ---
 title: Criar seu aplicativo pessoal
-description: Saiba como projetar um aplicativo Teams pessoal e obter o kit Microsoft Teams interface do usuário.
+description: Saiba como projetar um aplicativo Teams pessoal e obter o kit de interface do usuário Microsoft Teams, criar componentes, como painel, formulário, quadro de tarefas para experiência móvel e desktop. Saiba as práticas recomendadas para desenvolver aplicativos pessoais.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: Modelo de formulário do painel de guia do iframe do kit de interface do usuário pessoal do aplicativo webview
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360715"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888157"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetar seu aplicativo pessoal para Microsoft Teams
 
@@ -20,10 +21,10 @@ Para orientar o design do aplicativo, as informações a seguir descrevem e ilus
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Você pode encontrar diretrizes abrangentes de design de aplicativo pessoal, incluindo elementos que você pode pegar e modificar conforme necessário, no Kit de interface do usuário Microsoft Teams usuário. O kit de interface do usuário também tem tópicos essenciais, como acessibilidade e tamanho responsivo que não são abordados aqui.
+Você pode encontrar diretrizes abrangentes de design de aplicativo pessoal, incluindo elementos que você pode pegar e modificar conforme necessário, no Kit de interface do usuário Microsoft Teams usuário. O kit de Interface do Usuário também possui tópicos essenciais, como acessibilidade e dimensionamento dinâmico, que não são abordados aqui.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Adicionar um aplicativo pessoal
 
@@ -39,7 +40,7 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomia: aplicativo pessoal (espaço de trabalho privado)
 
-#### <a name="mobile"></a>Dispositivo móvel
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Exemplo mostra a anatomia do componente da guia pessoal." border="false":::
 
@@ -55,7 +56,7 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 |Contador|Descrição|
 |----------|-----------|
 |A|**Guias**: fornece navegação para seu aplicativo pessoal.|
-|1|**webview**: exibe o conteúdo do aplicativo.|
+|1|**Modo de exibição da Web**: exibe o conteúdo do aplicativo.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -79,11 +80,11 @@ Com um espaço de trabalho privado, os usuários podem exibir conteúdo de aplic
 
 Use um dos seguintes Teams e componentes para ajudar a projetar sua guia pessoal:
 
-* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
-* [Quadro de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tarefas : um quadro de tarefas, às vezes chamado de quadro kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes.
-* [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou conteúdo.
-* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): Os formulários são para coletar, validar e enviar entrada do usuário de forma estruturada.
-* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais.
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
+* [Painel de tarefas](../../concepts/design/design-teams-app-ui-templates.md#task-board): um painel de tarefas, às vezes chamado de quadro Kanban ou raias, é uma coleção de cartões frequentemente usados para acompanhar o status de itens de trabalho ou tíquetes.
+* [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou do conteúdo.
+* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários são para coletar, validar e enviar a entrada do usuário de forma estruturada.
+* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira execução, mensagens de erro, e muito mais.
 * [Navegação à esquerda](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav): O componente de navegação esquerdo pode ajudar se seu aplicativo pessoal exigir alguma navegação. Em geral, você deve manter a navegação no mínimo.
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
@@ -92,7 +93,7 @@ Os aplicativos pessoais podem incluir um bot para conversas um-a-um e notificaç
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
 
-#### <a name="mobile"></a>Dispositivo móvel
+#### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Exemplo mostra a anatomia do componente de bot pessoal." border="false":::
 

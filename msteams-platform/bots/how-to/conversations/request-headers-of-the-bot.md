@@ -1,14 +1,14 @@
 ---
 title: Enviar ID de locatário e ID de conversa para os headers de solicitação do bot
-description: descreve como enviar a ID do locatário e a ID da conversa para os headers de solicitação do bot.
+description: Descreve como enviar a ID do locatário e a ID da conversa para os headers de solicitação do bot.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 054b5bed99b1569a74ba4f69b144bd1edd60fd3d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155110"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889276"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Enviar ID de locatário e ID de conversa para os headers de solicitação do bot
 

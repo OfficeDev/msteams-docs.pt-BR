@@ -1,14 +1,14 @@
 ---
 title: Visão geral das ações universais para cartões adaptáveis
-description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis.
+description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis, como exibições específicas do usuário, suporte ao fluxo de trabalho sequencial e muito mais para ambientes desktop e móveis
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475710"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889353"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
@@ -111,14 +111,14 @@ Cartões adaptáveis são uma combinação de conteúdo, como texto e elementos 
 
 Você pode começar atualizando cenários usando o [guia](Work-with-universal-actions-for-adaptive-cards.md) de início rápido e aproveitar ações universais.
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [O que são bots](~/bots/what-are-bots.md)
 * [Visão geral dos Cartões Adaptáveis](~/task-modules-and-cards/what-are-cards.md)
 * [Cartões adaptáveis @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Cartões adaptáveis @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)

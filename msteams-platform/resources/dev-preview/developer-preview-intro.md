@@ -4,12 +4,12 @@ description: Descreve os recursos na Visualização pública do desenvolvedor Mi
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Recursos de desenvolvedor de visualização do teams
-ms.openlocfilehash: 8cf3f4faf4387aba6ea6238b0469bae840aba87f
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 756d30b0cbeb47be2b355bc9fe126e3bc39b3806
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260615"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888500"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Visualização do desenvolvedor público para Microsoft Teams
 
@@ -52,5 +52,6 @@ Para habilitar a visualização do desenvolvedor público em um cliente móvel, 
 
 Use o mesmo item de menu em Sobre → visualização do desenvolvedor e clique nele para a desativar.
 
+## <a name="see-also"></a>Confira também
 
-
+[Testar e depurar seu Microsoft Teams app](~/concepts/build-and-test/debug.md)

@@ -5,12 +5,12 @@ keywords: kit de ferramentas de código do visual studio do teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4425ea5ac6daa400d33497e031cf37639cd2722a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155026"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889318"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Teams Toolkit e Visual Studio Code
 
@@ -99,7 +99,7 @@ No seu núcleo, o Teams aplicativo abrange três componentes:
 
       > [!div class="checklist"]
       >
-      > - A manifest.jsestá.
+      > - O manifesto.json.
       > - Um [ícone de cor](../resources/schema/manifest-schema.md#icons) para seu aplicativo ser exibido no catálogo de aplicativos público ou da organização.
       > - Um [ícone de contorno](../resources/schema/manifest-schema.md#icons) para exibição na barra de Teams de atividades.
 
@@ -108,7 +108,7 @@ O manifesto e os ícones são armazenados na pasta do seu projeto antes `.fx` de
 1. Para configurar seu aplicativo, navegue até a guia **Teams Toolkit** no Visual Studio Code.
 1. Selecione **Editor de Manifesto** na seção **Project.**
 
-A edição dos campos na página detalhes do aplicativo atualiza o conteúdo do manifest.jsno arquivo que é finalmente enviado como parte do pacote do aplicativo.
+A edição dos campos na página detalhes do aplicativo atualiza o conteúdo do arquivo manifest.json que é finalmente enviado como parte do pacote de aplicativos.
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar e executar seu aplicativo localmente
 
@@ -144,3 +144,8 @@ Se estiver usando a hospedagem do Azure, você deverá ter provisionado e implan
 
 > [!div class="nextstepaction"]
 > [Mantendo e dando suporte ao aplicativo publicado](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Criar aplicativos com o Teams Toolkit e Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Criar guias e outras experiências hospedadas com o SDK do cliente JavaScript Microsoft Teams JavaScript](~/tabs/how-to/using-teams-client-sdk.md)

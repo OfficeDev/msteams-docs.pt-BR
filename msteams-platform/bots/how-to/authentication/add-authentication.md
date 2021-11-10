@@ -1,16 +1,17 @@
 ---
 title: Adicionar autenticação ao seu Teams bot
 author: surbhigupta
-description: Como adicionar autenticação OAuth a um bot Microsoft Teams.
+description: Como adicionar autenticação OAuth a um bot Microsoft Teams usando AAD. Saiba como criar, implantar e integrar bots habilitados para autenticação.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 0fe330fe9eb6689998ff02df9403f00112379c66
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+keywords: manifesto do bot do registro do canal do bot do grupo de recursos
+ms.openlocfilehash: da3a506ef4c1eeb77f97ce517a68005750026915
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096644"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887898"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
 
@@ -145,9 +146,9 @@ A imagem a seguir exibe a seleção correspondente na página de recursos:
     1. **URL de logon**. Insira `https://login.microsoftonline.com` .
     1. **ID do** locatário , insira a ID de Diretório **(locatário)** que você gravou anteriormente para seu aplicativo de identidade do Azure ou **comum,** dependendo do tipo de conta com suporte selecionado ao criar o aplicativo do provedor de identidade. Para decidir qual valor atribuir siga estes critérios:
 
-        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório organizacional *(diretório Microsoft AAD - Multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
+        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
 
-        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - contas da Microsoft de vários locatários e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário.  Caso contrário, o aplicativo AAD verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
+        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o AAD aplicativo verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
 
     h. Para **URL do Recurso,** insira `https://graph.microsoft.com/` . Isso não é usado no exemplo de código atual.  
     i. Deixar **escopos em** branco. A imagem a seguir é um exemplo:
@@ -174,9 +175,9 @@ A imagem a seguir exibe a seleção correspondente na página de recursos:
     1. **URL Exchange token.** Deixe isso em branco.
     1. **ID do** locatário , insira a ID de Diretório **(locatário)** que você gravou anteriormente para seu aplicativo de identidade do Azure ou **comum,** dependendo do tipo de conta com suporte selecionado ao criar o aplicativo do provedor de identidade. Para decidir qual valor atribuir siga estes critérios:
 
-        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório organizacional *(diretório Microsoft AAD - Multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
+        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
 
-        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - contas da Microsoft de vários locatários e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário.  Caso contrário, o aplicativo AAD verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
+        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o AAD aplicativo verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
 
     1. Para **Escopos,** insira uma lista delimitada por espaço de permissões gráficas que este aplicativo exige, por exemplo: User.Read User.ReadBasic.All Mail.Read 
 
@@ -382,30 +383,13 @@ O assistente a seguir é exibido:
 1. Selecione o botão **Adicionar a uma equipe**.
 1. Na próxima janela, selecione a equipe onde você deseja usar o bot.
 1. Selecione o **botão Configurar um bot.**
-
-Você pode usar o App studio ou o Portal do Desenvolvedor para testar o bot.
-
-> [!NOTE]
->  O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
-
-11. Selecione os três pontos (●●)) no painel esquerdo. Em seguida, selecione o ícone do App Studio.
-12. Selecione a **guia Editor de** manifesto. Você deve ver o ícone do bot que você carregou.
-13. Além disso, você deve ser capaz de ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
- 
-# <a name="developer-portal"></a>[Portal do Desenvolvedor](#tab/DP)
-
-11. Vá para **[o portal do desenvolvedor.](https://dev.teams.microsoft.com/)**
-12. Selecione **Aplicativos** no painel esquerdo. Em seguida, **selecione Importar Aplicativo**.
-13. Selecione **Recursos do aplicativo** e selecione **Bot**. Você pode ver o ícone do bot que você carregou.
-14. Além disso, você pode ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
-
----
+1. Selecione os três pontos (&#x25cf;&#x25cf;&#x25cf;) no painel esquerdo. Em seguida, selecione **o ícone do App Studio.**
+1. Selecione a **guia Editor de** manifesto. Você deve ver o ícone do bot que você carregou.
+1. Além disso, você deve ser capaz de ver o bot listado como um contato na lista de chat que você pode usar para trocar mensagens com o bot.
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Testar o bot localmente no Teams
 
-Microsoft Teams é um produto totalmente baseado em nuvem, exige que todos os serviços que acessa sejam disponibilizados na nuvem usando pontos de extremidade HTTPS. Portanto, para permitir que o bot (nosso exemplo) funcione no Teams, você precisa publicar o código na nuvem de sua  escolha ou tornar uma instância em execução localmente acessível externamente por meio de uma ferramenta de tunelamento. Recomendamos [ngrok](https://ngrok.com/download), que cria uma URL de endereço externo para uma porta que você abre localmente em seu computador.
+Microsoft Teams é um produto totalmente baseado em nuvem, exige que todos os serviços que acessa sejam disponibilizados na nuvem usando pontos de extremidade HTTPS. Portanto, para permitir que o bot (nosso exemplo) funcione no Teams, você precisa publicar o código na nuvem de sua  escolha ou tornar uma instância em execução localmente acessível externamente por meio de uma ferramenta de tunelamento. Recomendamos  [ngrok](https://ngrok.com/download), que cria uma URL de endereço externo para uma porta que você abre localmente em seu computador.
 Para configurar o ngrok em preparação para executar seu aplicativo Microsoft Teams localmente, siga estas etapas:
 
 1. Em uma janela de terminal, vá para o diretório onde `ngrok.exe` você instalou. Sugerimos definir o *caminho da variável do* ambiente para apontar para ele.

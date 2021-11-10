@@ -1,15 +1,15 @@
 ---
 title: Autenticação silenciosa
-description: Descreve a autenticação silenciosa
+description: Descreve autenticação silenciosa, login único, Azure Active Directory para guias
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: autenticação do teams SSO silencioso AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: Autenticação do teams SSO AAD guia
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291622"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888024"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>Confira também
+
+[Configurar provedores de identidade para usar AAD](~/concepts/authentication/configure-identity-provider.md)

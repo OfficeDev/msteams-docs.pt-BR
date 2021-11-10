@@ -1,15 +1,16 @@
 ---
 title: Exibições atualizadas
-description: Exemplo de exibições atualizadas usando o Bot Universal
+description: Saiba mais sobre exibições atualizadas usando o Universal Bot com exemplos de código
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
-ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
+keywords: aprovação cartão base rejeitar adaptável
+ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60238234"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887403"
 ---
 # <a name="up-to-date-cards"></a>Cartões atualizados
 

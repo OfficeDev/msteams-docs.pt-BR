@@ -6,12 +6,12 @@ keywords: teams tabs outgoing webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260698"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888311"
 ---
 # <a name="create-incoming-webhook"></a>Criar Webhook de entrada
 
@@ -96,3 +96,5 @@ O webhook está disponível no canal Teams.
 * [Criar um Webhook de Saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Criar um botão Compartilhar para o Teams](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

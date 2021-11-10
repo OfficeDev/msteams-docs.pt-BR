@@ -1,16 +1,16 @@
 ---
 title: Testar e depurar seu bot localmente
 author: surbhigupta
-description: Testando e depurando seu bot localmente com um IDE
+description: Saiba mais sobre como testar e depurar seu bot localmente com um IDE em um ambiente Teams por meio de sideload, fora do Teams usando o emulador bot e conversando diretamente com seu bot.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c07d1a9eb8a28b328a1a60ba299f05d39b460fbe
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 9ac6e2f7bf173e68e111b0d792ec89ba266c188f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096553"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888227"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 
@@ -20,11 +20,8 @@ Ao testar seu bot, você precisa levar em consideração os contextos em que des
 
 A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Este é o único método para testar a funcionalidade completa disponível para o bot, em todos os escopos.
 
-> [!NOTE]
->  O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos Teams com o novo [Portal do Desenvolvedor.](https://dev.teams.microsoft.com/)
-
 Há dois métodos para carregar seu aplicativo:
-* Use [o Portal do Desenvolvedor](https://dev.teams.microsoft.com/) ou o App [Studio.](~/concepts/build-and-test/app-studio-overview.md)
+* Use [o App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crie um pacote de aplicativo](~/concepts/build-and-test/apps-package.md) manualmente e carregue seu [aplicativo](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]

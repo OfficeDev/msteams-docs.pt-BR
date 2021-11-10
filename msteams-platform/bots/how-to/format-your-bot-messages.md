@@ -1,16 +1,16 @@
 ---
 title: Formatar suas mensagens de bot
 author: surbhigupta
-description: Adicionar formatação rica às mensagens de bot
+description: Adicione formatação rica às suas mensagens bot, como tachado, lista ordenada e não ordenada, hiperlink, link de imagem e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 3116b13f524279d4cca88fe649602d14d3542bbc
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566222"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887424"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 

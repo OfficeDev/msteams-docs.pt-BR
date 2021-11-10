@@ -1,16 +1,17 @@
 ---
 title: Preparar o envio para a Microsoft Store
-description: Descreve as etapas finais antes de enviar seu Microsoft Teams aplicativo para ser listado na loja.
+description: Descreve as etapas finais antes de enviar seu Microsoft Teams aplicativo para ser listado na loja. Aprenda a validar seu pacote de aplicativos, compilar instruções de teste e criar detalhes de listagem da loja.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: armazenamento de envio distribuir validar a localização de diretrizes de pacote de aplicativos
+ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720348"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889164"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -209,7 +210,11 @@ O Partner Center dá [suporte a listagens de armazenamento localizado.](/office/
 > [!NOTE]
 > Se você estiver enviando um novo aplicativo, não poderá concluir oficialmente Publisher Atestado até que seu aplicativo seja listado na Teams store. Se você estiver atualizando um aplicativo listado, conclua Publisher Atestado antes de enviar a versão mais recente do aplicativo para validação.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Enviar seu aplicativo](/office/dev/store/add-in-submission-guide)
+
+## <a name="see-also"></a>Confira também
+
+[Resolver problemas se o envio Microsoft Teams do armazenamento de dados falhar](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

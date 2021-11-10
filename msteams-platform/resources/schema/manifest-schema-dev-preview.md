@@ -1,16 +1,16 @@
 ---
 title: Referência do esquema de manifesto de visualização do desenvolvedor público
-description: Descreve o esquema suportado pelo manifesto para Microsoft Teams
+description: Arquivo de manifesto de exemplo e descrição de todos os componentes com suporte para Microsoft Teams
 ms.topic: reference
 keywords: Teams manifest schema Developer Preview
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 886b1d69052e9379f71e062da2f6f13eebcee1a2
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: f1b3a7d3d002f9aec698509b36bc72b4421eb138
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378902"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888542"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: Esquema de manifesto de visualização de desenvolvedor público para Microsoft Teams
 
@@ -352,10 +352,10 @@ O objeto é uma matriz com todos os elementos do tipo `object` . Esse bloco é n
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔|A https:// URL a ser usada ao configurar a guia.|
+|`configurationUrl`|String|2048 caracteres|✔|A https:// URL a ser usada ao configurar a guia.|
 |`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias configuráveis suportam apenas `team` os `groupchat` escopos e. |
-|`sharePointPreviewImage`|Cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso SharePoint. Tamanho 1024x768. |
+|`sharePointPreviewImage`|Cadeia de Caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de tabulação para uso SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opções `sharePointFullPage` são e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -372,10 +372,10 @@ O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
-|`name`|Cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface do canal.|
-|`contentUrl`|Cadeia de caracteres|2048 caracteres|✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela Teams.|
+|`name`|Cadeia de Caracteres|128 caracteres|✔|O nome de exibição da guia na interface do canal.|
+|`contentUrl`|Cadeia de Caracteres|2048 caracteres|✔|A https:// URL que aponta para a interface do usuário da entidade a ser exibida na tela Teams.|
 |`contentBotId`|   | | | A Microsoft Teams ID do aplicativo especificada para o bot no portal da Estrutura de Bots. |
-|`websiteUrl`|Cadeia de caracteres|2048 caracteres||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
+|`websiteUrl`|Cadeia de Caracteres|2048 caracteres||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias estáticas suportam apenas o escopo, o que significa que ele só pode ser `personal` provisionado como parte da experiência pessoal.|
 
 ## <a name="bots"></a>bots
@@ -444,27 +444,27 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |---|---|---|---|---|
 |`id`|String|64 caracteres|✔|A ID do comando.|
 |`type`|String|64 caracteres||Tipo do comando. Um dos `query` ou `action` . Padrão: `query`|
-|`title`|Cadeia de caracteres|32 caracteres|✔|O nome de comando amigável.|
-|`description`|Cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
+|`title`|Cadeia de Caracteres|32 caracteres|✔|O nome de comando amigável.|
+|`description`|Cadeia de Caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
 |`initialRun`|Boolean|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
 |`context`|Matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação `compose` de , , `commandBox` `message` . O padrão é `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Um valor booleano que indica se ele deve buscar o módulo de tarefa dinamicamente.|
 |`taskInfo`|Objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens.|
-|`taskInfo.title`|Cadeia de caracteres|64||Título da caixa de diálogo inicial.|
-|`taskInfo.width`|Cadeia de caracteres|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
-|`taskInfo.height`|Cadeia de caracteres|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
-|`taskInfo.url`|Cadeia de caracteres|||URL do webview inicial.|
+|`taskInfo.title`|Cadeia de Caracteres|64||Título da caixa de diálogo inicial.|
+|`taskInfo.width`|Cadeia de Caracteres|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
+|`taskInfo.height`|Cadeia de Caracteres|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como "grande", "médio" ou "pequeno".|
+|`taskInfo.url`|Cadeia de Caracteres|||URL do webview inicial.|
 |`messageHandlers`|Matriz de objetos|5||Uma lista de manipuladores que permitem que os aplicativos sejam invocados quando determinadas condições são atendidas. Os domínios também devem ser listados em `validDomains` .|
-|`messageHandlers.type`|Cadeia de caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
+|`messageHandlers.type`|Cadeia de Caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadeias de caracteres|||Matriz de domínios que o manipulador de mensagens de link pode registrar.|
 |`parameters`|Matriz de objeto|5|✔|A lista de parâmetros que o comando assume. Mínimo: 1; máximo: 5|
 |`parameter.name`|String|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. Isso está incluído na solicitação do usuário.|
-|`parameter.title`|Cadeia de caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
-|`parameter.description`|Cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
-|`parameter.inputType`|Cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um de `text` , , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
+|`parameter.title`|Cadeia de Caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
+|`parameter.description`|Cadeia de Caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
+|`parameter.inputType`|Cadeia de Caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um de `text` , , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
 |`parameter.choices`|Matriz de objetos|10 ||As opções de escolha para `choiceset` o . Use somente quando `parameter.inputType` for `choiceset` .|
-|`parameter.choices.title`|Cadeia de caracteres|128||Título da escolha.|
-|`parameter.choices.value`|Cadeia de caracteres|512||O valor da escolha.|
+|`parameter.choices.title`|Cadeia de Caracteres|128||Título da escolha.|
+|`parameter.choices.value`|Cadeia de Caracteres|512||O valor da escolha.|
 
 ## <a name="permissions"></a>permissões
 
@@ -511,7 +511,7 @@ Especifique sua ID do Aplicativo do Azure AD e Graph informações para ajudar o
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|Cadeia de caracteres|36 caracteres|✔|ID do aplicativo do Azure AD do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|Cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO.|
+|`resource`|Cadeia de Caracteres|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO.|
 |`applicationPermissions`|Matriz|Máximo de 100 itens|✔|Permissões de recurso para aplicativo.|
 
 ## <a name="configurableproperties"></a>configurableProperties

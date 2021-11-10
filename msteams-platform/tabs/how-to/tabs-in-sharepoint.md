@@ -1,19 +1,19 @@
 ---
 title: Adicionar uma guia do Teams ao SharePoint
 author: surbhigupta
-description: Como implantar sua guia de Teams existente para SharePoint como uma web part Estrutura do SharePoint web part.
+description: Saiba como implantar sua guia de Teams existente para SharePoint como uma web part Estrutura do SharePoint usando exemplos de código.
 keywords: teams tabs sharepoint framework development
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6561164f177277e76b80e3c33ee57b9383bbd527
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 766b9974419a6b4bfeb273a0d9d682a685b2da2d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155134"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887870"
 ---
-# <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint 
+# <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint
 
 Você pode obter uma experiência de integração rica entre Microsoft Teams e SharePoint adicionando uma guia Microsoft Teams no SharePoint como uma web part SPFx web part. Este documento orienta você sobre como você deve pegar uma guia de um aplicativo de exemplo Microsoft Teams e usá-lo em SharePoint. 
 

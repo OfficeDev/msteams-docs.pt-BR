@@ -1,16 +1,16 @@
 ---
 title: Criar aplicativos com o Teams Toolkit e Visual Studio
-description: Começar a criar grandes aplicativos personalizados diretamente Visual Studio com o Microsoft Teams Toolkit
+description: Começar a criar grandes aplicativos personalizados diretamente Visual Studio com o Microsoft Teams Toolkit. Aprenda a configurar seu aplicativo Visual Studio, validar seu aplicativo e publicá-lo no Visual Studio e no Portal do Desenvolvedor.
 keywords: kit de ferramentas do visual studio do teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155014"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888010"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Teams Toolkit e Visual Studio
 
@@ -55,7 +55,7 @@ No seu núcleo, o Teams aplicativo abrange três componentes:
 
     > [!div class="checklist"]
     >
-    > - O manifest.json
+    > - O manifesto.json
     > - Um [ícone de cor](../resources/schema/manifest-schema.md#icons) para seu aplicativo ser exibido no catálogo de aplicativos público ou da organização.
     > - Um [ícone de contorno](../resources/schema/manifest-schema.md#icons) para exibição na barra de Teams de atividades.
 

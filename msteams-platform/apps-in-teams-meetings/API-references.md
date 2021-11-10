@@ -1,17 +1,17 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Identificar referências de API de aplicativos de reunião
+description: Identificar referências de API de aplicativos de reunião com exemplos e exemplos de código
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 40b4f428c6e1c493a360588ce3dc569e067d4d0a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: consulta de sinal de notificação do usuário de função de usuário de reuniões de aplicativos do teams
+ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720194"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887703"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -56,8 +56,8 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
+|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| Cadeia de Caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. | 
 
 ### <a name="example"></a>Exemplo
@@ -256,7 +256,7 @@ A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 ### <a name="example"></a>Exemplo
 

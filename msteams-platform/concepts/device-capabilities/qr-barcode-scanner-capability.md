@@ -6,18 +6,18 @@ keywords: camera media qr code qrcode bar barcode scanner scan capabilities nati
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c21408ccbca6cd12d37d2066cf50f3468b669012
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566355"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887996"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras
 
 Código de barras é um método de representação de dados em um formulário visual e acessível por máquina. O código de barras contém informações sobre um produto, como um tipo, tamanho, fabricante e País de origem na forma de barras e espaços. O código é lido usando o scanner óptico em sua câmera de dispositivo nativa. Para uma experiência colaborativa mais rica, você pode integrar o recurso de QR ou scanner de código de barras fornecido na plataforma Teams com seu aplicativo Teams de código de barras.   
 
-Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use a API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) para integrar o recurso de scanner ao seu aplicativo. 
+Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para que seu aplicativo acesse os recursos de dispositivo [nativo do usuário.](native-device-permissions.md) Use a API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) para integrar o recurso de scanner ao seu aplicativo.
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Vantagem de integrar a QR ou o recurso de scanner de código de barras
 
@@ -112,4 +112,3 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 * [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar recursos de localização Teams](location-capability.md)
 * [Integrar o Se picker de pessoas no Teams](people-picker-capability.md)
-

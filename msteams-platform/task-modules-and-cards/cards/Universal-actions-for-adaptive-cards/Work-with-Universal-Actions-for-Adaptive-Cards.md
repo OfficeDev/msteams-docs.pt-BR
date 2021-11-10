@@ -1,14 +1,14 @@
 ---
 title: Trabalhar com Ações Universais para Cartões Adaptáveis
-description: Trabalhar com Ações Universais para Cartões Adaptáveis.
+description: Aprenda a trabalhar com as Ações Universais para Cartões Adaptáveis, incluindo Esquema para UniversalActions para cartões adaptáveis, modelo de atualização e compatibilidade com códigos.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155169"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888360"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
@@ -112,3 +112,5 @@ Para obter mais informações, consulte [compatibilidade com versões anteriores
 
 * [Ações de Cartão Adaptável no Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Como os bots funcionam](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [Fluxos de Trabalho Sequenciais](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
+* [Cartões atualizados](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

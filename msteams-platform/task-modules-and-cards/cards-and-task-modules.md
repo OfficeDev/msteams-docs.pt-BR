@@ -1,15 +1,15 @@
 ---
 title: Cartões e módulos de tarefa
-description: Cartões e módulos de tarefa.
+description: Saiba mais sobre tipos de cartões com suporte em bots para Teams, como cartões adaptáveis, cartão Hero, cartão thumbnail e muito mais. Saiba mais sobre ações de cartão e invocando módulos de tarefas em canais, bots ou links profundos.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 89185baa9900f2c8dbef62ab9a2fc85242fc49a1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719830"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888269"
 ---
 # <a name="cards-and-task-modules"></a>Cartões e módulos de tarefa
 
@@ -21,14 +21,16 @@ Os seguintes tipos de cartões são suportados em bots para Teams:
 
 * Cartão Adaptável
 * Cartão de herói
-* Cartão de listagem 
+* Cartão de listagem
 * Office 365 Cartão conector
 * Cartão de recebimento
 * Cartão de login
 * Cartão de miniatura
 * Coleções de cartões
 
-Você pode formatar texto de cartão usando um subconjunto de formatação XML ou HTML ou Markdown, dependendo do tipo de cartão. Você pode adicionar e responder a ações de cartão que:
+Você pode formatar texto de cartão usando um subconjunto de formatação XML ou HTML ou Markdown, dependendo do tipo de cartão.
+
+Você pode adicionar e responder a ações de cartão que:
 * Abrir uma URL
 * Enviar mensagens e carga para o bot
 * Iniciar fluxo OAuth

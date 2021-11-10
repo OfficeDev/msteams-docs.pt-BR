@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar uma mensagem obter iD de conversa de canal de ID do usuário
-ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720075"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889297"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -278,11 +278,13 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 > [!div class="nextstepaction"]
 > [Teams exemplos proativos de código de mensagens](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Confira também
-
-[**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Formatar suas mensagens de bot](~/bots/how-to/format-your-bot-messages.md)
+
+## <a name="see-also"></a>Confira também
+
+* [**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Conversas de chat de canal e grupo com um bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Responder à ação de envio do módulo de tarefas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

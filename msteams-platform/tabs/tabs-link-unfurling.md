@@ -1,16 +1,16 @@
 ---
 title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
-description: Como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app.
+description: Saiba como desatar um link, abrir o Stage View e fixar uma guia com Microsoft Teams app. Saiba mais sobre a exibição de estágio e invocando-a usando cartão adaptável usando exemplo de código e exemplo.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720341"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887564"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -125,18 +125,23 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | String | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | String | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
+| `name` | Cadeia de Caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `contentUrl` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
+| `websiteUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia no exibição de estágio |Microsoft Teams exemplo de guia para demonstração de guia no exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Guia no exibição de estágio |Microsoft Teams exemplo de guia para demonstração de guia no exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
 
 ## <a name="see-also"></a>Confira também
 
@@ -144,8 +149,3 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)

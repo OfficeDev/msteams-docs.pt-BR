@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475803"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887606"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -41,7 +41,7 @@ A formatação é diferente entre a área de trabalho e as versões móveis do T
 
  A tabela a seguir fornece os estilos com suporte `Textblock` para , `Fact.Title` e `Fact.Value` :
 
-| Estilo | Exemplo | Markdown |
+| Style | Exemplo | Markdown |
 | --- | --- | --- |
 | Negrito | **Negrito** | ```**Bold**``` |
 | Itálico | _Itálico_ | ```_Italic_``` |
@@ -165,20 +165,20 @@ O código a seguir mostra um exemplo de Cartão Adaptável com uma menção:
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>ID do objeto AAD e UPN na menção do usuário 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD ID do objeto e UPN na menção do usuário 
 
-Teams plataforma permite mencionar usuários com a ID do objeto AAD e o Nome de Princípio do Usuário (UPN), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada suportam as duas IDs de menção de usuário. 
+Teams plataforma permite mencionar usuários com a ID do objeto AAD e o Nome do Princípio do Usuário (UPN), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada suportam as duas IDs de menção de usuário. 
 
 A tabela a seguir descreve as IDs de menção de usuário recém-suportadas:
 
 |IDs  | Recursos de suporte |   Descrição | Exemplo |
 |----------|--------|---------------|---------|
-| ID do objeto AAD | Bot, Conector |  ID de objeto do usuário AAD |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Conector | UPN do usuário AAD | john.smith@microsoft.com |
+| AAD ID do objeto | Bot, Conector |  AAD ID do objeto do usuário |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Conector | AAD UPN do usuário | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis 
 
-Os bots suportam a menção do usuário com a ID do objeto AAD e o UPN, além das IDs existentes. O suporte para duas novas IDs está disponível em bots para mensagens de texto, corpo de Cartões Adaptáveis e resposta de extensão de mensagens. Os bots suportam as IDs de menção em conversas `invoke` e cenários. O usuário recebe notificação de feed de atividade ao @mentioned com as IDs. 
+Os bots suportam a menção do usuário com AAD ID de objeto e UPN, além das IDs existentes. O suporte para duas novas IDs está disponível em bots para mensagens de texto, corpo de Cartões Adaptáveis e resposta de extensão de mensagens. Os bots suportam as IDs de menção em conversas `invoke` e cenários. O usuário recebe notificação de feed de atividade ao @mentioned com as IDs. 
 
 > [!NOTE]
 > As atualizações de esquema e as alterações da interface do usuário/experiência do usuário não são necessárias para menções do usuário com Cartões Adaptáveis no Bot.
@@ -227,11 +227,11 @@ A imagem a seguir ilustra a menção do usuário com Cartão Adaptável no Bot:
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em Webhook de entrada com cartões adaptáveis 
 
-Os webhooks de entrada começam a dar suporte à menção do usuário em Cartões Adaptáveis com a ID do Objeto AAD e o UPN.
+Os webhooks de entrada começam a dar suporte à menção do usuário em Cartões Adaptáveis com AAD ID de objeto e UPN.
 
 > [!NOTE]    
-> * Habilita a menção do usuário no esquema para webhooks de entrada para dar suporte à ID do objeto AAD e UPN. 
-> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com AAD Object ID e UPN.      
+> * Habilita a menção do usuário no esquema para webhooks de entrada para dar suporte AAD ID de objeto e UPN. 
+> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com AAD ID de objeto e UPN.      
 > * A notificação de feed de atividade para Webhook de entrada com menção de usuário estará disponível na versão futura.
 
 ##### <a name="example"></a>Exemplo 
@@ -417,7 +417,7 @@ Na exibição de estágio, os usuários podem ampliar e diminuir o zoom da image
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 
-| Estilo | Exemplo | Markdown |
+| Style | Exemplo | Markdown |
 | --- | --- | --- |
 | Negrito | **text** | `**text**` |
 | Itálico | *text* | `*text*` |
@@ -515,7 +515,7 @@ A formatação é diferente entre a área de trabalho e as versões móveis do T
 
 Os cartões conectores suportam a formatação limitada markdown e HTML.
 
-| Estilo | Exemplo | HTML |
+| Style | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
@@ -605,7 +605,7 @@ O código a seguir mostra um exemplo de formatação para cartões de conector H
 
 As marcas HTML são suportadas para cartões simples, como cartões de herói e miniatura. Não há suporte para markdown.
 
-| Estilo | Exemplo | HTML |
+| Style | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
@@ -651,4 +651,6 @@ Você pode testar a formatação em seus próprios cartões modificando esse có
 ## <a name="see-also"></a>Confira também
 
 * [Ações do cartão](./cards-actions.md)
+* [Usar módulos de tarefas dos bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Módulos de tarefas](~/task-modules-and-cards/cards/cards-format.md)
+* [Formatar suas mensagens de bot](~/bots/how-to/format-your-bot-messages.md)

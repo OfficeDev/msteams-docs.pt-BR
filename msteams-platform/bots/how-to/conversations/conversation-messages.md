@@ -1,16 +1,16 @@
 ---
 title: Mensagens em conversas de bot
-description: Descreve maneiras de ter uma conversa com um Microsoft Teams bot
+description: Descreve maneiras de ter uma conversa com um Microsoft Teams bot. Saiba mais sobre Teams de canal, notificação para sua mensagem, mensagens de imagem, cartões adaptáveis usando exemplos de código.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566236"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889332"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -236,7 +236,7 @@ As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de cont
 
 ## <a name="message-content"></a>Conteúdo da mensagem
 
-| Formatar    | De usuário para bot | De bot para usuário | Notas                                                                                   |
+| Formatar    | De usuário para bot | De bot para usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto e imagens rich para seu bot.                                                                                        |
 | Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Gif animado não é suportado.  |
@@ -391,15 +391,16 @@ A seguir estão os códigos de status e seus valores de código de erro e mensag
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
-
-## <a name="see-also"></a>Confira também
-
-- [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Menus de comando bot](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md)
+* [Enviar ID de locatário e ID de conversa para os headers de solicitação do bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)

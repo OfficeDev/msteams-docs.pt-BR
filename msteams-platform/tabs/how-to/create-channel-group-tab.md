@@ -1,16 +1,16 @@
 ---
 title: Criar um canal ou uma guia de grupo
 author: laujan
-description: Um guia de início rápido para criar um canal e uma guia de grupo com o Gerador Yeoman para Microsoft Teams.
+description: Um guia de início rápido para criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 94e26c1edbc6f8a92cad6c5b4b19c422cb09bc70
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155072"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887445"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Criar um canal ou uma guia de grupo
 
@@ -66,7 +66,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
     yo teams
     ```
 
-1. Em seguida, forneça uma série de valores usados no arquivomanifest.js **no** aplicativo:
+1. Em seguida, forneça uma série de valores usados no arquivo **manifest.json do** aplicativo:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -175,9 +175,9 @@ Você deve ter um pacote de aplicativos para testar sua guia Teams. É uma pasta
 
 - Um **ícone de cor completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
-O pacote é criado por meio de uma tarefa gulp que valida o manifest.jsno arquivo on e gera a pasta zip no **diretório ./package.** No prompt de comando, insira o seguinte comando:
+O pacote é criado por meio de uma tarefa gulp que valida o arquivo manifest.json e gera a pasta zip no **diretório ./package**. No prompt de comando, insira o seguinte comando:
 
 ```bash
 gulp manifest
@@ -320,7 +320,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 - Um **ícone de cor completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Quando um usuário opta por adicionar ou atualizar sua guia, Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e a renderiza em `configurationUrl` sua guia.
 
@@ -435,7 +435,7 @@ Vá para **a pasta Shared,** abra **_Layout.cshtml** e adicione o seguinte à `<
 ### <a name="upload-your-tab-for-teams"></a>Upload sua guia para Teams
 
 > [!NOTE]
-> O App Studio pode ser usado para editar seu **manifest.jsno** arquivo e carregar o pacote concluído para Teams. Você também pode editar manualmente o **manifest.jsno** arquivo. Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **tab.zip** para carregar.
+> O App Studio pode ser usado para editar seu **arquivo manifest.json** e carregar o pacote concluído para Teams. Você também pode editar manualmente o **arquivo manifest.json.** Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **tab.zip** para carregar.
 
 **Para carregar sua guia com o App Studio**
 
@@ -457,7 +457,7 @@ Depois de carregar seu pacote de aplicativos no App Studio, você deve configur�
 
 Selecione o azulejo para sua guia recém-importada no painel direito da página de boas-vindas do editor de manifesto.
 
-Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foi fornecida pelo seumanifest.js **em,** mas há campos que você deve atualizar.
+Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foram fornecidas por **seu manifesto.json,** mas há campos que você deve atualizar.
 
 ##### <a name="details-app-details"></a>Detalhes: Detalhes do aplicativo
 
@@ -574,7 +574,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 - Um **ícone de cor completo** medindo 192 x 192 pixels.
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-- Um **manifest.json** que especifica os atributos do seu aplicativo.
+- Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams.
 
@@ -604,7 +604,7 @@ Na janela Visual Studio Do Explorador de Soluções, clique com o botão direito
 
 **ChannelGroup.cs** apresenta um objeto Message e métodos que serão chamados dos controladores durante a configuração.
 
-#### <a name="views"></a>Modos de exibição
+#### <a name="views"></a>Visualizações
 
 Estas são as diferentes exibições em ASP.NET Core MVC:
 
@@ -636,14 +636,15 @@ Em **Tab.cshtml,** o aplicativo apresenta ao usuário dois botões de opção pa
 
 ---
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Criar uma página de remoção](~/tabs/how-to/create-tab-pages/removal-page.md)

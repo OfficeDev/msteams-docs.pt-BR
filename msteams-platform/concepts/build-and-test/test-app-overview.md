@@ -1,15 +1,15 @@
 ---
 title: Testar a visão geral do aplicativo
-description: Descreve o processo para testar seu aplicativo Teams personalizado no Microsoft 365
+description: Descreve o processo para testar e depurar seu aplicativo Teams personalizado em Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Configurar Microsoft 365 de Teams de teste de carregamento
-ms.openlocfilehash: 045159133b53b83e256eea9bab09f71e45bf02cf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9cbb650fc248d12fc310cc8b1aaaded7b9a87140
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155067"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889262"
 ---
 # <a name="test-your-app"></a>Testar seu aplicativo
 
@@ -35,13 +35,13 @@ Para exibir os logs do console, exibir ou modificar solicitações de html, css 
 
 Adicione os dados de teste Microsoft 365 locatário de teste. Para obter mais informações, consulte [add test data to your Office 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Preparar o locatário do Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Depurar sua guia](~/tabs/how-to/developer-tools.md)
 * [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Preparar o locatário do Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)

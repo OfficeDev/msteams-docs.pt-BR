@@ -5,12 +5,12 @@ description: Tenha uma ideia geral de como e quando você pode usar ferramentas 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155478"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889094"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processo de design para Microsoft Teams aplicativos
 
@@ -116,3 +116,6 @@ Se você está apenas começando em seu aplicativo ou perto de um aplicativo pro
 * Microsoft Teams diretrizes de validação da loja : fornece padrões que todos os Teams aplicativos devem se esforçar e não apenas os **aplicativos** listados na loja. Para obter mais informações, consulte as [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Práticas recomendadas de** design: esses documentos e o kit de interface do usuário fornecem práticas recomendadas para projetar aplicativos de alta qualidade. Por exemplo, consulte as [práticas recomendadas para projetar bots](~/bots/design/bots.md#best-practices).
 
+## <a name="see-also"></a>Confira também
+
+[Projetando notificações de feed de atividade](~/concepts/design/activity-feed-notifications.md)

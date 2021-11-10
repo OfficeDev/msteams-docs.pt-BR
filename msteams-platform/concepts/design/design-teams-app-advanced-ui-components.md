@@ -1,16 +1,16 @@
 ---
 title: Projetar seu aplicativo com componentes avançados da interface do usuário
 author: heath-hamilton
-description: Saiba mais sobre os componentes da interface do usuário usados em Teams .
+description: Saiba mais sobre os Teams da interface do usuário, como breadcrumbs, barra de notificação, exibição de estágio junto com casos de uso relevantes.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719844"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889255"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
@@ -32,7 +32,7 @@ Os breadcrumbs são um auxílio de navegação que transmitem a hierarquia do ap
 * Hierarquia de comunicações
 * Navegação
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Exemplo mostra um modelo de breadcrumb no celular." border="false":::
 
@@ -49,7 +49,7 @@ Use a navegação esquerda para navegar por várias páginas na guia Teams. No e
 * Navegue por várias páginas em uma Teams guia.
 * Separar aplicativos complexos em várias páginas.
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Exemplo mostra um modelo de nav esquerdo no celular." border="false":::
 
@@ -67,7 +67,7 @@ Uma barra de notificação é uma área dedicada para exibir uma mensagem breve 
 * Mensagens de sucesso
 * Mensagens informativas ou promocionais
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
 
@@ -86,7 +86,7 @@ Veja como implementar a [exibição de estágio](~/tabs/tabs-link-unfurling.md).
 * Exibir conteúdo em uma superfície grande dentro Teams em vez de outro aplicativo ou navegador
 * Mídia em destaque ou outro conteúdo rico
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, um link compartilhado ou componentes visuais (como um gráfico).
 
@@ -106,7 +106,7 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 * Filtro contextual e local
 * Navegação e controles de navegação
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
 

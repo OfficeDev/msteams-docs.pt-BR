@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: links profundos do teams deeplink
-ms.openlocfilehash: fbf4d933db63ee634000bb5fc277c385fc3cfa44
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223045"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889150"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -246,6 +246,9 @@ No caso de uma chamada de vídeo, o cliente solicitará a confirmação e ativar
 > [!NOTE]
 > Esse deeplink não pode ser usado para invocar uma reunião.
 
+> [!NOTE]
+> Atualmente, o deeplink para chamada não é suportado em Teams dispositivos móveis.
+
 ### <a name="generate-a-deep-link-to-a-call"></a>Gerar um link profundo para uma chamada
 
 | Link profundo | Formatar | Exemplo |
@@ -262,11 +265,11 @@ A seguir estão os parâmetros de consulta:
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome do exemplo | Descrição | C # |Node.js|
+| Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
 |ID de subentência de consumo de link profundo  |Microsoft Teams exemplo de aplicativo para demonstrar o deeplink do chat de bot para a ID de subentidade de consumo de tabulação.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 
-[Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
-
+* [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

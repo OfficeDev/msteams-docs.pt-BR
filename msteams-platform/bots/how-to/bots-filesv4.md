@@ -1,16 +1,16 @@
 ---
 title: Enviar e receber arquivos por meio do bot
-description: Descreve como enviar e receber arquivos por meio do bot
+description: Saiba como enviar e receber arquivos por meio do bot, usar apIs Graph para todos os escopos Teams, usar APIs de bot Teams usando exemplos de código e exemplos.
 keywords: arquivos de bots do teams enviam recebimento
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155113"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889171"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar e receber arquivos por meio do bot
 
@@ -78,7 +78,7 @@ O código a seguir mostra um exemplo de atividade de mensagem com anexo de arqui
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Finalidade |
+| Propriedade | Objetivo |
 | --- | --- |
 | `downloadUrl` | OneDrive URL para buscar o conteúdo do arquivo. O usuário pode emitir um `HTTP GET` diretamente a partir dessa URL. |
 | `uniqueId` | ID de arquivo exclusivo. Essa é a OneDrive ID do item da unidade, caso o usuário envie um arquivo para o bot. |
@@ -124,7 +124,7 @@ A seguinte mensagem móvel contém um objeto de anexo solicitando permissão do 
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Finalidade |
+| Propriedade | Objetivo |
 | --- | --- |
 | `description` | Descreve a finalidade do arquivo ou resume seu conteúdo. |
 | `sizeInBytes` | Fornece ao usuário uma estimativa do tamanho do arquivo e da quantidade de espaço necessário OneDrive. |
@@ -191,7 +191,7 @@ Depois de carregar um arquivo na OneDrive do usuário, envie uma mensagem de con
 
 A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
-| Propriedade | Finalidade |
+| Propriedade | Objetivo |
 | --- | --- |
 | `uniqueId` | OneDrive ou SharePoint ID do item da unidade. |
 | `fileType` | Tipo de arquivo, como .pdf ou .docx. |

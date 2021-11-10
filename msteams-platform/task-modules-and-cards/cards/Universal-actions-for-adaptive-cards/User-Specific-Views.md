@@ -1,15 +1,15 @@
 ---
 title: Exibições Específicas do Usuário
-description: Exemplo de exibições específicas do usuário usando ações universais
+description: Saiba mais sobre exibições específicas do usuário usando ações universais com exemplo de código
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 10f9b63f59629e592f2dee75d3e91bab97ff9a08
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: e6dc1cc87f5a9896933566475d69ce9ad311fbfb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223038"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889199"
 ---
 # <a name="user-specific-views"></a>Exibições Específicas do Usuário
 

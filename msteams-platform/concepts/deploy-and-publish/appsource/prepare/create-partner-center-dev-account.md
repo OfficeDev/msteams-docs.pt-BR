@@ -1,16 +1,16 @@
 ---
 title: Criar sua conta de desenvolvedor do Partner Center
-description: Para publicar seu aplicativo na Microsoft Teams, você precisa de uma conta de desenvolvedor do Partner Center.
+description: Perguntas frequentes sobre como criar uma conta de desenvolvedor do Partner Center para publicar seu aplicativo no Microsoft Teams store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155437"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889416"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 

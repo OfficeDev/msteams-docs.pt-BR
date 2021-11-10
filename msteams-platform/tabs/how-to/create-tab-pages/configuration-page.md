@@ -1,17 +1,17 @@
 ---
 title: Criar uma página de configuração
 author: surbhigupta
-description: como criar uma página de configuração
+description: Saiba como criar uma página de configuração para configurar um canal ou chat de grupo para configurações, como, obter dados de contexto, inserir espaço reservados e autenticação usando exemplos de código.
 keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720187"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888017"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -200,6 +200,11 @@ microsoftTeams.settings.setSettings({
 
 Se você optar por fazer com que seu canal ou guia de grupo apareça no Teams clientes móveis, a configuração deve ter `setSettings()` um valor para `websiteUrl` . Para obter mais informações, [consulte diretrizes para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md).
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
@@ -207,8 +212,3 @@ Se você optar por fazer com que seu canal ou guia de grupo apareça no Teams cl
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md)

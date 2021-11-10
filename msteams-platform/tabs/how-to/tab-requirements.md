@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155135"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888052"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -43,17 +43,15 @@ Teams guias devem seguir os seguintes pré-requisitos:
 * [Kit de ferramentas do Teams para Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Kit de ferramentas do Teams para Visual Studio](../../toolkit/visual-studio-overview.md)
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar seu primeiro aplicativo usando o Node.js](../../get-started/first-app-react.md)
 * [Criar seu primeiro aplicativo usando o Blazor](../../get-started/first-app-blazor.md)
 * [Criar seu primeiro aplicativo usando o SPFx](../../get-started/first-app-spfx.md)
-* [Criar o seu primeiro bot de conversação para o Microsoft Teams](../../get-started/first-app-bot.md)
-* [Criar sua primeira extensão de mensagem](../../get-started/first-message-extension.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)

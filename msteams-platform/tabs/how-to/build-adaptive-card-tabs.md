@@ -1,16 +1,17 @@
 ---
 title: Criar guias de cartão adaptáveis
 author: KirtiPereira
-description: Criar guias usando Cartões Adaptáveis
+description: Saiba mais sobre a criação de guias usando cartões adaptáveis com exemplos de código, incluindo atividades de invocação, compreensão do fluxo de trabalho do módulo de tarefas e autenticação.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: fluxo de dados de autenticação de aplicativo pessoal de cartão adaptável
+ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720327"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887557"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -426,7 +427,12 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 
 |**Nome do exemplo** | **Descrição** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Confira também
 
@@ -435,8 +441,3 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)

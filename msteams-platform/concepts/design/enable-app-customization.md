@@ -5,12 +5,13 @@ description: Entenda como Teams administradores podem personalizar seu aplicativ
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 4e6699d2c021eb15f5a977517b616aeb256430c1
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+keywords: marca de cores de destaque ocultar aprovação do aplicativo
+ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127263"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888164"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar seu Teams app
 
@@ -52,4 +53,6 @@ Se, por padrão, você não quiser que o aplicativo seja oculto, você pode atua
 
 ## <a name="see-also"></a>Confira também
 
-[Personalizar aplicativos no Teams de administração](/MicrosoftTeams/customize-apps)
+* [Esquema de manifesh de aplicativo](/MicrosoftTeams/manifest-schema)
+* [Personalizar aplicativos no Teams de administração](/MicrosoftTeams/customize-apps)
+

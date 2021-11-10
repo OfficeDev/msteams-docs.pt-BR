@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378888"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888283"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -723,7 +723,7 @@ Quando um escopo de instalação de grupo é selecionado, ele define o recurso p
 
 **Opcional** - matriz
 
-O `configurableProperties` bloco define as propriedades do aplicativo que os Teams administradores podem personalizar. Para obter mais informações, consulte [enable app customization](~/concepts/design/enable-app-customization.md).
+O `configurableProperties` bloco define as propriedades do aplicativo que os Teams administradores podem personalizar. Para obter mais informações, consulte [enable app customization](~/concepts/design/enable-app-customization.md). O recurso de personalização do aplicativo não é suportado em aplicativos personalizados ou LOB.
 
 > [!NOTE]
 > Um mínimo de uma propriedade deve ser definido. Você pode definir um máximo de nove propriedades neste bloco.
@@ -744,7 +744,8 @@ Você pode definir qualquer uma das seguintes propriedades:
 
 **Opcional**— booleano
  
-Quando a propriedade é definida como true , o aplicativo é oculto `defaultBlockUntilAdminAction` dos usuários por padrão até que o administrador o permita.  Se definido como **true**, o aplicativo será oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**.
+Quando a propriedade é definida como true , o aplicativo é oculto `defaultBlockUntilAdminAction` dos usuários por padrão até que o administrador o permita.  Se definido como **true**, o aplicativo será oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloqueio padrão do aplicativo, consulte [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -753,3 +754,11 @@ Quando a propriedade é definida como true , o aplicativo é oculto `defaultBloc
 **Tamanho máximo** - 128 caracteres
 
 A propriedade depende de `defaultBlockUntilAdminAction` . Quando a propriedade é definida como true , a URL HTTPS fornece uma página de informações para que os administradores recebam diretrizes antes de permitir um aplicativo, que `defaultBlockUntilAdminAction` é bloqueado por  `publisherDocsUrl` padrão.
+
+## <a name="see-also"></a>Confira também
+
+* [Compreender a estrutura Microsoft Teams de aplicativos](~/concepts/design/app-structure.md)
+* [Habilitar personalização de aplicativo](~/concepts/design/enable-app-customization.md)
+* [Localizar o aplicativo](~/concepts/build-and-test/apps-localization.md)
+* [Integrar recursos de mídia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Referência do esquema de Manifesto de Visualização do Desenvolvedor - Teams](~/resources/schema/manifest-schema-dev-preview.md)

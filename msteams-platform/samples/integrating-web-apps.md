@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Aplicativos Web
-ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155089"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889206"
 ---
 # <a name="web-apps"></a>Aplicativos Web 
 
@@ -111,11 +111,11 @@ Você pode criar links para informações e recursos dentro Teams. Use [links pr
 
 Use um [bot](../bots/what-are-bots.md) em seu aplicativo Teams para conversas com vários threads, pois oferece mais flexibilidade do que um [webhook.](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Os bots também permitem que você envie mensagens **proativas** para usuários ou canais individuais. As mensagens proativas são mensagens não proativas disparadas por um evento externo e não uma mensagem enviada a um bot. Por exemplo, seu bot envia uma mensagem de boas-vindas quando ele é instalado ou um novo usuário ins junta um canal. 
+Os bots também permitem que você envie mensagens **proativas** para usuários ou canais individuais. As mensagens proativas são mensagens não proativas disparadas por um evento externo e não uma mensagem enviada a um bot. Por exemplo, seu bot envia uma mensagem de boas-vindas quando ele é instalado ou um novo usuário ins junta um canal.
 
 O envio de mensagens proativas requer Teams identificadores específicos. Você pode capturar as informações [buscando](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)dados de lista ou perfil de usuário, [assinando](../bots/how-to/conversations/subscribe-to-conversation-events.md)eventos de conversa ou usando [o Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-Não spam usuários com mensagens excessivas. Se a Teams a funcionalidade for compatível, os usuários poderão definir as configurações de notificação para seu aplicativo.   
+Não spam usuários com mensagens excessivas. Se a Teams a funcionalidade for compatível, os usuários poderão definir as configurações de notificação para seu aplicativo.
 A seguir está um exemplo de uma mensagem de notificação: Não me envie mensagens **não prompadas.**
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Usar SharePoint para armazenamento de arquivos e dados
@@ -126,4 +126,8 @@ Quando uma equipe é criada, um [conjunto de sites](/microsoftteams/sharepoint-o
 
 ## <a name="see-also"></a>Confira também
 
-[Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+* [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
+* [Soluções de código baixo e sem código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Criar um botão Compartilhar para o Teams](../concepts/build-and-test/share-to-teams.md)
+* [Atributos de cookie SameSite](~/resources/samesite-cookie-update.md)
+* [Integrar Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

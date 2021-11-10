@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155093"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889234"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -19,9 +19,9 @@ Você pode estender e aprimorar a experiência do usuário suportando opções d
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Permitir que sua guia seja reconfigurada após a instalação
 
-Seu **manifest.json** define os recursos e recursos da guia. A propriedade da instância de tabulação tem um valor Boolean que indica se um usuário pode modificar ou `canUpdateConfiguration` reconfigurar a guia depois que ela for criada. A tabela a seguir fornece os detalhes da propriedade:
+Seu **manifesto.json** define os recursos e os recursos da guia. A propriedade da instância de tabulação tem um valor Boolean que indica se um usuário pode modificar ou `canUpdateConfiguration` reconfigurar a guia depois que ela for criada. A tabela a seguir fornece os detalhes da propriedade:
 
-|Name| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. O padrão é `true`. |
 
@@ -91,14 +91,14 @@ Depois que o manipulador de remoção for executado, `removeEvent.notifySuccess(
 > * Teams habilita o **botão Remover** após cinco segundos, mesmo que sua guia não tenha chamado `setValidityState()` .
 > * Quando o usuário seleciona **Remover**, Teams remove a guia após 30 segundos, independentemente de as ações ter sido concluídas ou não.
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)

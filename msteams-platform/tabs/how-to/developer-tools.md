@@ -1,15 +1,15 @@
 ---
 title: Guias do DevTools para o Microsoft Teams
-description: Descreve como chegar ao DevTools ao usar o Microsoft Teams Desktop Client
+description: Descreve como chegar ao DevTools ao usar o Microsoft Teams desktop e a depuração
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools depurar ferramentas de desenvolvedor do cliente de área de trabalho do chrome móvel
-ms.openlocfilehash: 9aee38c6b063e54c876d11bfc498a9fcce9fbcf1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Guia ferramentas de desenvolvedor do cliente de área de trabalho do chrome móvel de depuração
+ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155146"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887417"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Guias do DevTools para o Microsoft Teams
 

@@ -1,15 +1,15 @@
 ---
 title: Usar Módulos de Tarefa em Microsoft Teams guias
-description: Explica como invocar módulos de tarefas Teams guias usando o SDK Microsoft Teams cliente.
+description: Explica como invocar módulos de tarefas Teams guias e enviar seu resultado usando o SDK do cliente Microsoft Teams cliente. Inclui exemplos de código.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
-ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 618775644b43f16a6de49f7bc2fa92a512b73591
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155394"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888556"
 ---
 # <a name="use-task-modules-in-tabs"></a>Usar módulos de tarefas nas guias
 
@@ -131,13 +131,13 @@ A tabela a seguir fornece os valores possíveis `err` que podem ser recebidos po
 
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
-
-## <a name="see-also"></a>Confira também
-
-[Invocar e ignorar módulos de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Usando módulos de tarefas de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+
+## <a name="see-also"></a>Confira também
+
+[Invocar e ignorar módulos de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

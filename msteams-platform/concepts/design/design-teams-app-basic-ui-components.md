@@ -1,16 +1,17 @@
 ---
 title: Projetar seu aplicativo com componentes básicos Fluent interface do usuário
 author: heath-hamilton
-description: Saiba mais sobre os componentes primitivos da interface do usuário comumente usados para criar Microsoft Teams aplicativos e obter o kit Microsoft Teams interface do usuário.
+description: Saiba mais sobre os componentes primitivos da interface do usuário comumente usados para criar Microsoft Teams aplicativos e obter o kit Microsoft Teams interface do usuário. Saiba mais sobre componentes, como breadcrumbs, card, carrossel, menu suspenso, marca de seleção, seletor, pivô, alternância, dica de ferramenta e muito mais.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Componentes da interface do usuário fluent kit breadcrumb button card carousel dropdown coachmark picker pivot toggle tooltip
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155227"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887494"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes básicos Fluent interface do usuário
 

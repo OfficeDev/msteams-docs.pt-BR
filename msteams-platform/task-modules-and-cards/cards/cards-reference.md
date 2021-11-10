@@ -4,12 +4,12 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 ms.localizationpriority: medium
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291657"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889122"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -119,7 +119,7 @@ Um Cartão Adaptável é um cartão personalizável que pode conter qualquer com
 
 A tabela a seguir fornece os recursos que suportam Cartões Adaptáveis:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -285,7 +285,7 @@ Um cartão que normalmente contém uma única imagem grande, um ou mais botões 
 
 A tabela a seguir fornece os recursos que suportam cartões de herói:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -352,7 +352,7 @@ O cartão de lista foi adicionado por Teams para fornecer funções além do que
 
 A tabela a seguir fornece os recursos que suportam cartões de lista:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -430,7 +430,7 @@ Você pode trabalhar com um cartão Office 365 Conector que fornece um layout fl
 
 A tabela a seguir fornece os recursos que suportam Office 365 conectores:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -552,7 +552,7 @@ Teams dá suporte ao cartão de recebimento. É um cartão que permite que um bo
 
 A tabela a seguir fornece os recursos que suportam cartões de recebimento:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -626,7 +626,7 @@ A ação de signin pode ser usada de qualquer cartão Teams, não apenas o cart�
 
 A tabela a seguir fornece os recursos que suportam cartões de assinatura:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -645,7 +645,7 @@ Você pode trabalhar com um cartão de miniatura que é usado para enviar uma me
 
 A tabela a seguir fornece os recursos que suportam cartões de miniatura:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -728,7 +728,7 @@ O [layout do carrossel](/azure/bot-service/bot-builder-howto-add-media-attachmen
 
 A tabela a seguir fornece os recursos que suportam coleções de carrossel:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -922,7 +922,7 @@ O layout da lista mostra uma lista verticalmente empilhada de cartões, opcional
 
 A tabela a seguir fornece os recursos que suportam coleções de lista:
 
-| Bots em Teams | Extensão de mensagens  | Conectores | Bot Framework |
+| Bots em Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -953,3 +953,5 @@ Os cartões a seguir são implementados pela Estrutura de Bot, mas não são sup
 
 * [Módulos de tarefas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Formatar cartões](~/task-modules-and-cards/cards/cards-format.md)
+* [Cartões atualizados](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Trabalhar com Ações Universais para Cartões Adaptáveis](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)

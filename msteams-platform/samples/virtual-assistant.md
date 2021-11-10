@@ -1,24 +1,24 @@
 ---
 title: Criar um Assistente Virtual
-description: Como criar um Assistente Virtual e habilidades para uso no Microsoft Teams
+description: Saiba como criar um Assistente Virtual para Microsoft Teams usando exemplos de código e trechos de código com recursos como cartões adaptáveis; manipulação de interrupções, solicitações de módulo de tarefa, escopos de aplicativo colaborativos e extensões de mensagens; usando manifesto de habilidades; Suporte para vários idiomas, validação de declaração, integração com o LUIS e modo.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de assistente virtual do teams
-ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2082e160387bd6ad80fa526e3dab39b385a6e955
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566243"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889227"
 ---
-# <a name="create-virtual-assistant"></a>Criar um Assistente Virtual 
+# <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
 Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. O [Assistente Virtual](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal é o bloco de construção básico que reúne as tecnologias da Microsoft necessárias para criar um Assistente Virtual, incluindo o [SDK](https://github.com/microsoft/botframework-sdk)da Estrutura de Bot, o Entendimento de Idioma [(LUIS)](https://www.luis.ai/)e o [QnA Maker](https://www.qnamaker.ai/). Ele também reúne os recursos essenciais, incluindo registro de habilidades, contas vinculadas, intenção de conversa básica para oferecer uma variedade de interações e experiências perfeitas aos usuários. Além disso, os recursos do modelo incluem exemplos avançados de habilidades de conversa [reutilizáveis.](https://microsoft.github.io/botframework-solutions/overview/skills)  As habilidades individuais são integradas em uma Assistente Virtual para habilitar vários cenários. Usando o SDK da Estrutura de Bot, as habilidades são apresentadas no formulário de código-fonte, permitindo que você personalize e se estenda conforme necessário. Para obter mais informações sobre as habilidades do Bot Framework, consulte [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Este documento orienta você sobre Assistente Virtual de implementação para organizações, como criar um Teams de Assistente Virtual, exemplo relacionado, exemplo de código e limitações de Assistente Virtual.
 A imagem a seguir exibe a visão geral do assistente virtual:
 
 ![Assistente Virtual diagrama de visão geral](../assets/images/bots/virtual-assistant/overview.png)
 
-As atividades de mensagem de texto são roteadas para habilidades associadas pelo núcleo Assistente Virtual usando um modelo [de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) expedição. 
+As atividades de mensagem de texto são roteadas para habilidades associadas pelo núcleo Assistente Virtual usando um modelo [de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) expedição.
 
 ## <a name="implementation-considerations"></a>Considerações sobre implementação
 
@@ -29,7 +29,7 @@ A decisão de adicionar um Assistente Virtual inclui muitos determinantes e dife
 * Os aplicativos existentes são personalizáveis, pertencentes à organização, e são convertidos em habilidades para um Assistente Virtual.
 * A equipe de experiências do funcionário central é capaz de influenciar personalizações para aplicativos existentes. Ele também fornece orientações necessárias para integrar aplicativos existentes como habilidades Assistente Virtual experiência.
 
-A imagem a seguir exibe as funções comerciais de Assistente Virtual: 
+A imagem a seguir exibe as funções comerciais de Assistente Virtual:
 
 ![A equipe central mantém o assistente e as equipes de função de negócios contribuem com habilidades](../assets/images/bots/virtual-assistant/business-functions.png)
 

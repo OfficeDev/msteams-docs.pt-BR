@@ -1,14 +1,15 @@
 ---
 title: Guias em dispositivos móveis
-description: Descreve considerações do desenvolvedor para implementar guias em Microsoft Teams celular.
+description: Saiba mais sobre como implementar guias em Microsoft Teams celular, sua autenticação, conexão de baixa largura de banda, testes em clientes móveis, distribuição e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: distribuição de autenticação do grupo do canal de guia móvel do aplicativo
+ms.openlocfilehash: d2b1190ee5bb7122557aa64fb18065f542291f3a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719851"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888430"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -67,14 +68,15 @@ A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o 
 
 Se você estiver fazendo sideload do aplicativo ou publicação no catálogo de aplicativos de uma organização, o comportamento da guia será o mesmo Teams aplicativos da loja aprovados pela Microsoft para dispositivos móveis.
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Obtenha contexto para sua guia](~/tabs/how-to/access-teams-context.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de tabulação](~/tabs/design/tabs.md)
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Obtenha contexto para sua guia](~/tabs/how-to/access-teams-context.md)
+* [Planejar o Teams móvel - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)

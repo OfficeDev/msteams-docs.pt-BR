@@ -1,21 +1,21 @@
 ---
 title: Integrar recursos de mídia
 author: Rajeshwari-v
-description: Como usar Teams SDK do cliente JavaScript para habilitar recursos de mídia
-keywords: mídia de permissões nativas de dispositivo de recursos de microfone de imagem da câmera
+description: Saiba como usar Teams SDK do cliente JavaScript para habilitar recursos de mídia usando exemplos de código
+keywords: camera image microphone capabilities native device permissions media api
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f1c091195b85bab84d01ea88cc8234d2e415b9f7
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2540383b0c546dea956cf8f534ba0669c0c16fa9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566117"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887731"
 ---
-# <a name="integrate-media-capabilities"></a>Integrar recursos de mídia 
+# <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
-Você pode integrar recursos de dispositivo nativo, como a **câmera** e o **microfone** com seu Teams app. Para integração, você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de dispositivo [de um usuário.](native-device-permissions.md) Use APIs de funcionalidade de mídia adequadas  para  integrar os recursos do dispositivo, como câmera e microfone com a plataforma Teams no seu aplicativo móvel Microsoft Teams, e crie uma experiência mais rica. 
+Você pode integrar recursos de dispositivo nativo, como a **câmera** e o **microfone** com seu Teams app. Para integração, você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de dispositivo [de um usuário.](native-device-permissions.md) Use APIs de funcionalidade de mídia adequadas  para  integrar os recursos do dispositivo, como câmera e microfone com a plataforma Teams no seu aplicativo móvel Microsoft Teams, e crie uma experiência mais rica.
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Vantagem da integração de recursos de mídia
 
@@ -26,10 +26,10 @@ Para uma integração eficaz, você deve ter uma boa compreensão dos trechos de
 
 É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams app.
 
-> [!NOTE] 
-> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.   
-> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.   
-> * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md). 
+> [!NOTE]
+> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível apenas para clientes móveis.
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.
+> * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 
 ## <a name="update-manifest"></a>Manifesto de atualização
 
@@ -256,4 +256,4 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](location-capability.md)
 * [Integrar o Se picker de pessoas no Teams](people-picker-capability.md)
-
+* [Requisitos e considerações para bots de mídia hospedados pelo aplicativo](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

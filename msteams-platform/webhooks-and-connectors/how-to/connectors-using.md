@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: conector do o365 no teams
-ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155497"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887389"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -251,7 +251,7 @@ A tabela a seguir fornece os detalhes da transação baseada em hora:
 
 | Tempo em segundos  | Máximo de solicitações permitidas  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -285,3 +285,5 @@ Esses limites estão no local para reduzir a spam de um canal por um conector e 
 * [Office 365 Conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um Webhook de Saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Limitação de taxa para Teams bots](~/bots/how-to/rate-limit.md)
+* [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)

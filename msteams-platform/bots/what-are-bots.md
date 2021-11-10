@@ -5,12 +5,12 @@ description: Uma visão geral dos bots Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a5702afcc4e87486d23f363e2e7ec0476f597a71
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155108"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887849"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -49,11 +49,15 @@ Com as APIs Graph Microsoft para chamadas e reuniões online, Microsoft Teams ap
 
 Você pode usar as APIs Teams bot para obter informações para um ou mais membros de um chat ou equipe. Para obter mais informações, consulte [alterações nas APIs Teams bot para buscar](~/resources/team-chat-member-api-changes.md)membros de equipe ou chat.
 
-## <a name="see-also"></a>Confira também
-
-[Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Bots e SDKs](~/bots/bot-features.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Registrar chamadas e reuniões bot para Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
+* [Adicionar autenticação ao seu Teams bot](~/bots/how-to/authentication/add-authentication.md)
+* [Manipuladores de atividade de bot](~/bots/bot-basics.md)
+* [Eventos de conversa em seu bot do Teams](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

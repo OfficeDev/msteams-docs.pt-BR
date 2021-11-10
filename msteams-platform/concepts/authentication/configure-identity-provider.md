@@ -4,12 +4,12 @@ description: Descreve como configurar provedores de identidade com foco no Azure
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: autenticação do teams AAD provedor de identidade oauth
-ms.openlocfilehash: d14dc4811faae13535ad1029a8820c5904f44774
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: cae2cc3d2feba8c17ad895864fd1b5995095f71b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291615"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887431"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
@@ -19,13 +19,13 @@ Os provedores de identidade que suportam o OAuth 2.0 não autenticam solicitaç�
 
 1. Abra o [Portal de Registro de Aplicativos](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
-2. Selecione seu aplicativo para exibir suas propriedades ou clique no botão "Novo Registro". Encontre a **seção Redirecionar URI** para o aplicativo.
+2. Selecione seu aplicativo para exibir suas propriedades ou selecione o botão "Novo Registro". Encontre a **seção Redirecionar URI** para o aplicativo.
 
-3. No menu suspenso, certifique-se **de que a Web** está selecionada. Atualize a URL para o ponto de extremidade de autenticação. Para os aplicativos de exemplo TypeScript/Node.js e C# no GitHub, as URLs de redirecionamento serão semelhantes a esta:
+3. Selecione **Web** no menu suspenso. Atualize a URL para o ponto de extremidade de autenticação. Para os aplicativos de exemplo TypeScript/Node.js e C# no GitHub, as URLs de redirecionamento serão semelhantes às seguintes:
 
     URLs de redirecionamento: `https://<hostname>/bot-auth/simple-start`
 
-Substitua `<hostname>` pelo host real. Pode ser um site de hospedagem dedicado, como o Azure, o Glitch ou um túnel ngrok para o localhost em sua máquina de desenvolvimento, como `abcd1234.ngrok.io` . Você pode não ter essas informações se não tiver concluído ou hospedado seu aplicativo (ou o aplicativo de exemplo mencionado acima), mas sempre poderá retornar a essa página quando essas informações são conhecidas.
+Substitua pelo host real, que pode ser um site de hospedagem dedicado, como o Azure, o Glitch ou um túnel de ngrok para o host local em sua máquina de desenvolvimento, como `<hostname>` `abcd1234.ngrok.io` . Você pode não ter essas informações se ainda não tiver concluído ou hospedado seu aplicativo (ou o aplicativo de exemplo mencionado acima), mas sempre poderá retornar a essa página quando essas informações são conhecidas.
 
 ## <a name="other-authentication-providers"></a>Outros provedores de autenticação
 

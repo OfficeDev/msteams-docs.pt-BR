@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155477"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887800"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -100,7 +100,7 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar,
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
 
-## <a name="filter"></a>Filtrar
+## <a name="filter"></a>Filter
 
 Um filtro permite reduzir as informações que você vê com base nos critérios selecionados. Você pode incluir filtros com tabelas, listas, cartões e outros componentes que organizam o conteúdo.
 
@@ -212,3 +212,9 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 ### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::
+
+## <a name="see-also"></a>Confira também
+
+* [Projetar seu aplicativo com componentes básicos Fluent interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [Formatar suas mensagens de bot](~/bots/how-to/format-your-bot-messages.md)

@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 6f18760670f81bea0e0c2bad6da9f15bd1982f0f
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d84a0a293ad4c0de507dfc56078db4d214649b1d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719837"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887396"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -84,14 +84,15 @@ Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por apl
 * [Kit de ferramentas do Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Kit de ferramentas do Teams para Visual Studio](../toolkit/visual-studio-overview.md)
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Solicitar permissões do dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar recursos de mídia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrar uma QR ou um scanner de código de barras](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar os recursos de localização](../concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Pré-requisitos](~/tabs/how-to/tab-requirements.md)
+* [Guias em dispositivos móveis](design/tabs-mobile.md#tabs-on-mobile)

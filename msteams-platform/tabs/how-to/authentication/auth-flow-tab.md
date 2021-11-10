@@ -1,15 +1,15 @@
 ---
 title: Fluxo de autenticação para guias
-description: Descreve o fluxo de autenticação em guias
+description: Descreve o fluxo de autenticação em guias, OAuth por AAD e fornece exemplo de código
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: 625d3ac7e20b4d3dbdef0c44ed3b49e6d36a6fe8
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291643"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888444"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams fluxo de autenticação para guias
 

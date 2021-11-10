@@ -1,15 +1,15 @@
 ---
 title: Invocar e ignorar módulos de tarefas
-description: Invocar e descartar módulos de tarefa.
+description: Saiba mais sobre como invocar e descartar módulos de tarefa, objeto de informações de tarefa, tamanho do módulo de tarefa, sintaxe de link profundo do módulo de tarefas usando exemplos de código
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ab6425ae90c04e142e5d69f4a41ff49358731a23
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 226548dca8001fecce4cd784a7411d4ca5841e5e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155166"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887529"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar e ignorar módulos de tarefas
 
@@ -32,10 +32,10 @@ O `TaskInfo` objeto contém os metadados de um módulo de tarefa. Defina `url` o
 | `title` | string | Esse atributo aparece abaixo do nome do aplicativo e à direita do ícone do aplicativo. |
 | `height` | número ou cadeia de caracteres | Esse atributo pode ser um número que representa a altura do módulo de tarefas em pixels `small` ou `medium` , ou `large` . Para obter mais informações, consulte [task module sizing](#task-module-sizing). |
 | `width` | número ou cadeia de caracteres | Esse atributo pode ser um número que representa a largura do módulo de tarefa em pixels `small` ou `medium` , ou `large` . Para obter mais informações, consulte [task module sizing](#task-module-sizing). |
-| `url` | cadeia de caracteres | Esse atributo é a URL da página carregada como `<iframe>` um dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
+| `url` | string | Esse atributo é a URL da página carregada como `<iframe>` um dentro do módulo de tarefa. O domínio da URL deve estar na matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) do aplicativo no manifesto do aplicativo. |
 | `card` | Anexo de cartão de bot adaptável ou cartão adaptável | Esse atributo é o JSON do Cartão Adaptável a ser exibido no módulo de tarefa. Se o usuário estiver invocando de um bot, use o JSON de Cartão Adaptável em um objeto Bot `attachment` Framework. Em uma guia, o usuário deve usar um Cartão Adaptável. Para obter mais informações, [consulte Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | cadeia de caracteres | Esse atributo abre a URL em uma guia do navegador, se um cliente não dá suporte ao recurso de módulo de tarefa. |
-| `completionBotId` | cadeia de caracteres | Este atributo especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa. Se especificado, o bot recebe um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
+| `fallbackUrl` | string | Esse atributo abre a URL em uma guia do navegador, se um cliente não dá suporte ao recurso de módulo de tarefa. |
+| `completionBotId` | string | Este atributo especifica uma ID de aplicativo bot para enviar o resultado da interação do usuário com o módulo de tarefa. Se especificado, o bot recebe um `task/submit invoke` evento com um objeto JSON na carga de eventos. |
 
 > [!NOTE]
 > O recurso de módulo de tarefa exige que os domínios de todas as URLs que você deseja carregar sejam incluídos na matriz no manifesto `validDomains` do aplicativo.
@@ -227,7 +227,12 @@ Microsoft Teams garante que a navegação do teclado funcione corretamente do he
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
 |Exemplo de módulo de tarefa bots-V4 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Guias de exemplo de módulo de tarefa e bots-V3 | Exemplos para a criação de módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Usar módulos de tarefas nas guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
 
 ## <a name="see-also"></a>Confira também
 
@@ -235,8 +240,3 @@ Microsoft Teams garante que a navegação do teclado funcione corretamente do he
 * [Integrar recursos de mídia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](~/concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Usar módulos de tarefas nas guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

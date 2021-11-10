@@ -1,17 +1,17 @@
 ---
 title: Criar abas para conversação
 author: surbhigupta
-description: Criar chat de subentidade de conversa para suas guias de canal
+description: Aprenda a criar chat de subentidade de conversa para suas guias de canal, para gerenciar conversas usando exemplos de código
 keywords: canal de guias do teams configurável
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720369"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889360"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -94,7 +94,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia Criar Conversa| Microsoft Teams exemplo de guia para demonstrar a guia criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Guia Criar Conversa| Microsoft Teams exemplo de guia para demonstrar a guia criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Alterações na margem da guia](~/resources/removing-tab-margins.md)
 
 ## <a name="see-also"></a>Confira também
 
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Alterações na margem da guia](~/resources/removing-tab-margins.md)

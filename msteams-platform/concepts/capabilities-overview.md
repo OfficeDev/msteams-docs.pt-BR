@@ -1,17 +1,18 @@
 ---
 title: Compreender os recursos do aplicativo
 author: heath-hamilton
-description: Teams de aplicativos explicados
+description: Descrição Teams recursos do aplicativo, como guias, bots, extensões de mensagens e webhooks e conectores.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: guias bots extensões de mensagens webhooks conectores gcc
+ms.openlocfilehash: e4db8bde75d2d396ada5c0789b8cc06731701443
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566292"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888143"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Compreender Microsoft Teams recursos do aplicativo
 
@@ -64,12 +65,12 @@ A lista a seguir ajuda a identificar a disponibilidade de GCC, GCC-Alta e DOD pa
 * Para fazer sideload de aplicativos, consulte enable your Teams app to be [customized](../concepts/design/enable-app-customization.md), distribute your [Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and Upload your app [in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Para conectores personalizados, consulte [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
-## <a name="see-also"></a>Confira também
-
-[Criar aplicativos para Teams](../overview.md) 
- [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Pontos de entrada do aplicativo Teams](../concepts/extensibility-points.md)
+
+## <a name="see-also"></a>Confira também
+
+[Criar aplicativos para Teams](../overview.md) 
+ [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

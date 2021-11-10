@@ -1,17 +1,17 @@
 ---
 title: Testar permissões de consentimento específicas do recurso Teams
-description: Detalhes do teste de consentimento específico do recurso em Teams usando Postman
+description: Detalhes do teste de consentimento específico do recurso em Teams postman com exemplos de código
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorização do teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 66fff68e69f90f49e07cdd87266830f93cb0be2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: fc926e307c2e3ee5d1336c09e264930abe20d9d0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155054"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887717"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso Teams
 
@@ -81,7 +81,7 @@ O RSC (consentimento específico de recursos) é uma integração de API Microso
 >[!NOTE]
 >Se o aplicativo tiver o objetivo de dar suporte à instalação em escopos de equipe e chat, as permissões de equipe e de chat poderão ser especificadas no mesmo manifesto em `applicationPermissions` .
 
->Se o aplicativo tiver como objetivo acessar as APIs de chamada/mídia, a ID do aplicativo AAD deve ser de `webApplicationInfo.Id` um Serviço bot do [Azure.](/graph/cloud-communications-get-started#register-a-bot)
+>Se o aplicativo tiver como objetivo acessar as APIs de chamada/mídia, a ID do aplicativo AAD de um Serviço bot do `webApplicationInfo.Id` [Azure.](/graph/cloud-communications-get-started#register-a-bot)
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test added RSC permissions to a team using the Postman app
 
@@ -105,7 +105,7 @@ Para verificar se as permissões RSC estão sendo acodadas pela carga de solicit
 * `azureADAppId`: ID do aplicativo do Azure AD do seu aplicativo.
 * `azureADAppSecret`: Sua senha do aplicativo do Azure AD.
 * `token_scope`: O escopo é necessário para obter um token. definir o valor como https://graph.microsoft.com/.default .
-* `tenantId`: O nome ou a ID do objeto AAD do locatário.
+* `tenantId`: O nome ou a AAD ID do objeto do locatário.
 * `chatId`: Você pode obter a ID do thread de chat do cliente *Teams Web* da seguinte forma:
 
     1. No cliente Teams Web, selecione **Chat** na barra de navegação à extrema esquerda.
@@ -135,5 +135,5 @@ Execute toda a coleção de permissões para cada chamada de API. As permissões
 
 ## <a name="see-also"></a>Confira também
 
-[API Graph Microsoft e Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-
+* [API Graph Microsoft e Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+* [Consentimento específico do recurso](~/graph-api/rsc/resource-specific-consent.md)

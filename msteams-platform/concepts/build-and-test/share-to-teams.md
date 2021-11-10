@@ -1,15 +1,15 @@
 ---
 title: Criar um botão Compartilhar para o Teams
-description: Como adicionar o botão Compartilhar ao Teams incorporado em seu site
+description: Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu site, com uma visualização de site, usando exemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar Teams share-to-Teams
-ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155046"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889283"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
@@ -94,12 +94,12 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 
 | Propriedade | Atributo HTML | Tipo | Padrão | Descrição |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | cadeia de caracteres | n/d | O href do conteúdo a ser compartilhá-lo. |
+| href | `data-href` | string | n/d | O href do conteúdo a ser compartilhá-lo. |
 | visualização | `data-preview` | booleano (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
 | iconPxSize | `data-icon-px-size` | number (como uma cadeia de caracteres) | `32` | O tamanho em pixels do botão Compartilhar para Teams renderizar. |
-| msgText | `data-msg-text` | cadeia de caracteres | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
-| assignInstr | `data-assign-instr` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
-| assignTitle | `data-assign-title` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
+| msgText | `data-msg-text` | string | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
+| assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
+| assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
 
 ### <a name="methods"></a>Métodos
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155107"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888185"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload seu aplicativo no Microsoft Teams
 
@@ -66,3 +66,8 @@ Para remover seu aplicativo, clique com o botão direito do mouse no ícone do a
 
 > [!div class="nextstepaction"]
 > [Usar seu Teams aplicativo](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+
+## <a name="see-also"></a>Confira também
+
+* [Configurar opções de instalação padrão](~/concepts/deploy-and-publish/add-default-install-scope.md)
+* [Manter seu aplicativo Microsoft Teams publicado](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

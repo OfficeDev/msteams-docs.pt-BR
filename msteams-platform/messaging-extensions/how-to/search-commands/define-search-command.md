@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagens
 author: surbhigupta
-description: Defina comandos de pesquisa de extensão de mensagens para Microsoft Teams aplicativos.
+description: Saiba mais sobre comandos de pesquisa de extensão de mensagens Microsoft Teams aplicativos, para criar um comando de pesquisa por meio do manifesto do aplicativo e manualmente usando exemplos de código e exemplos.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720124"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889381"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -70,11 +70,11 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
 1. Adicione o parâmetro de pesquisa e selecione **Salvar**.
 
-### <a name="create-a-search-command-manually"></a>Criar um comando de pesquisa manualmente 
+### <a name="create-a-search-command-manually"></a>Criar um comando de pesquisa manualmente
 
 Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao manifesto do aplicativo, adicione os seguintes parâmetros à `composeExtension.commands` sua matriz de objetos:
 
-| Nome da propriedade | Propósito | Obrigatório? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | Obrigatório? | Versão mínima do manifesto |
 |---|---|---|---|
 | `id` | Essa propriedade é uma ID exclusiva que você atribui ao comando de pesquisa. A solicitação do usuário inclui essa ID. | Sim | 1.0 |
 | `title` | Essa propriedade é um nome de comando. Esse valor aparece na interface do usuário (interface do usuário). | Sim | 1.0 |
@@ -85,7 +85,7 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagens ao ma
 
 Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
 
-| Nome da propriedade | Propósito | É necessário? | Versão mínima do manifesto |
+| Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade define uma lista estática de parâmetros para o comando. | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
@@ -95,7 +95,7 @@ Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto v
 
 #### <a name="example"></a>Exemplo
 
-A seção a seguir é um exemplo do manifesto de aplicativo simples do `composeExtensions` objeto que define um comando de pesquisa: 
+A seção a seguir é um exemplo do manifesto de aplicativo simples do `composeExtensions` objeto que define um comando de pesquisa:
 
 ```json
 {
@@ -130,7 +130,7 @@ Para o manifesto completo do aplicativo, consulte [Esquema de manifesto do aplic
 |Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Responder aos comandos de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md).

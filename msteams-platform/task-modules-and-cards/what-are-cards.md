@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: medium
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 9ddfada39f6170e7fc81092028747230b87e35e3
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291608"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888290"
 ---
 # <a name="cards"></a>Cartões
 
@@ -77,12 +77,13 @@ Cartões adaptáveis com Webhooks de entrada permite que você use os recursos a
 
 Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD ID de objeto e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com AAD ID do objeto e UPN.
 
-## <a name="see-also"></a>Confira também
-
-* [Formatar cartões em Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Projetar cartões adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Formatar cartões em Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Projetar cartões adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Cartões adaptáveis em bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

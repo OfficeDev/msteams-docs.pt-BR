@@ -1,15 +1,15 @@
 ---
 title: Habilitar e configurar seus aplicativos para Teams reuniões
 author: surbhigupta
-description: Habilitar e configurar seus aplicativos para Teams reuniões
+description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720208"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887710"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -62,7 +62,7 @@ A propriedade determina o que deve ser mostrado quando um usuário invoca um apl
 | **meetingChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários para uma reunião agendada. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingDetailsTab** | Uma guia no header da exibição de detalhes da reunião do calendário. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingSidePanel** | Um painel na reunião foi aberto por meio da barra unificada (U-bar). |
-| **meetingStage** | Um aplicativo do `meetingSidePanel` pode ser compartilhado para o estágio de reunião. Não é possível usar esse aplicativo no celular. |
+| **meetingStage** | Um aplicativo do `meetingSidePanel` pode ser compartilhado para o estágio de reunião. Você não pode usar esse aplicativo em clientes móveis ou Teams de sala. |
 
 Depois de habilitar seu aplicativo para Teams reuniões, você deve configurar seu aplicativo antes de uma reunião, durante uma reunião e após uma reunião.
 
@@ -170,3 +170,4 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Adicionar aplicativos a reuniões por meio do Microsoft Graph](/graph/api/chat-post-installedapps.md)

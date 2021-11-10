@@ -1,17 +1,17 @@
 ---
 title: Recursos do dispositivo - Visão geral
 author: Rajeshwari-v
-description: Visão geral dos recursos de dispositivo nativo.
+description: Visão geral dos recursos de dispositivo nativo, como câmera, imagem, mídia, microfone, microfone, código qr e muito mais.
 ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566264"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889136"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 

@@ -1,21 +1,21 @@
 ---
 title: Atributo de cookie SameSite
 author: laujan
-description: descreve os atributos do cookie SameSite
+description: Saiba mais sobre tipos de cookies, incluindo cookies sameSite, seus atributos, suas implicações em guias de Teams, módulos de tarefa e extensões de mensagens e sua autenticação no Teams
 keywords: atributos de cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 34347e172206228bed86874b44b768f87c2a63b9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566124"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887940"
 ---
-# <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite 
+# <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite
 
-Cookies são cadeias de caracteres de texto enviadas de sites e armazenadas em um computador pelo navegador da Web. Eles são usados para autenticação e personalização. Por exemplo, cookies são usados para lembrar informações de estado, preservar configurações do usuário, registrar atividades de navegação e exibir anúncios relevantes. Os cookies são sempre vinculados a um determinado domínio e são instalados por várias partes. 
+Cookies são cadeias de caracteres de texto enviadas de sites e armazenadas em um computador pelo navegador da Web. Eles são usados para autenticação e personalização. Por exemplo, cookies são usados para lembrar informações de estado, preservar configurações do usuário, registrar atividades de navegação e exibir anúncios relevantes. Os cookies são sempre vinculados a um determinado domínio e são instalados por várias partes.
 
 ## <a name="types-of-cookies"></a>Tipos de cookies
 
@@ -39,7 +39,7 @@ Você pode optar por não adicionar o atributo cookie SameSite ao header ou adic
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>Atributo de cookie SameSite: versão 2020
 
-O Chrome 80, lançado em fevereiro de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. Três valores são passados para o atributo SameSite atualizado: **Strict**, **Lax** ou **None**. Se não for especificado, o atributo Cookies SameSite assume o valor `SameSite=Lax` por padrão.    
+O Chrome 80, lançado em fevereiro de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. Três valores são passados para o atributo SameSite atualizado: **Strict**, **Lax** ou **None**. Se não for especificado, o atributo Cookies SameSite assume o valor `SameSite=Lax` por padrão.
  
 Os atributos de cookie sameSite são os seguinte:
 
@@ -80,9 +80,9 @@ De acordo com as restrições atualizadas do SameSite, um navegador não adicion
 
 O Android WebView é um componente do sistema Chrome que permite que aplicativos Android exibem o conteúdo da Web. Embora as novas restrições sejam padrão, começando com o Chrome 80, elas não são impostas imediatamente no WebViews. Eles serão aplicados no futuro. Para se preparar, o Android permite que aplicativos nativos de definir cookies diretamente por meio da [API CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
-> [!NOTE]     
-> * Você deve declarar cookies de primeira parte `SameSite=Lax` como ou , conforme `SameSite=Strict` apropriado.      
-> * Você deve declarar cookies de terceiros como `SameSite=None; Secure` .   
+> [!NOTE]
+> * Você deve declarar cookies de primeira parte `SameSite=Lax` como ou , conforme `SameSite=Strict` apropriado.
+> * Você deve declarar cookies de terceiros como `SameSite=None; Secure` .
 
 ## <a name="see-also"></a>Confira também
 

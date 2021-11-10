@@ -1,15 +1,15 @@
 ---
 title: Bots de chamadas e reuniões online
-description: Saiba como seus aplicativos Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online.
+description: Saiba como seus aplicativos Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online e saiba mais sobre fluxos de mídia em tempo real
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: chamadas de chamadas de vídeo de áudio reuniões de voz IVR online
-ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: chamadas de chamadas de áudio vídeo IVR voz online reuniões em tempo real fluxos de mídia bot
+ms.openlocfilehash: 17464683c8a5f6aa515d67be721968d56d1d2fb7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155457"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889143"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -93,25 +93,19 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 | **Nome do exemplo** | **Descrição** | **Graph** |
 |---------------|----------|--------|
 | Graph comunicação | Graph comunicações para interagir com a plataforma de comunicações da Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Bot de chamada e reunião | O exemplo de app demonesco começa como o Bot pode criar chamada, ingressar em reunião e transferir chamada. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
-
-## <a name="see-also"></a>Confira também
-
-- [Graph Referência da API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-
-- [Aplicativos de exemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-
-- [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md)
-
-- [Graph permissões para chamadas e bots de reuniões online](./registering-calling-bot.md#add-graph-permissions)
-
-- [Como desenvolver bots de reunião online e de chamada em seu computador](./debugging-local-testing-calling-meeting-bots.md)
-
-- [Requisitos e considerações para bots de mídia hospedados pelo aplicativo](./requirements-considerations-application-hosted-media-bots.md)
-
-- [Informações técnicas sobre como lidar com notificações de chamadas de entrada](./call-notifications.md)
+| Bot de chamada e reunião | O exemplo de app demonesco começa como o Bot pode criar chamada, ingressar em reunião e transferir chamada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Chamadas de mídia e reuniões em tempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)
+
+## <a name="see-also"></a>Confira também
+
+- [Graph Referência da API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+- [Aplicativos de exemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+- [Registrar um bot que oferece suporte a chamadas e reuniões online](./registering-calling-bot.md)
+- [Graph permissões para chamadas e bots de reuniões online](./registering-calling-bot.md#add-graph-permissions)
+- [Como desenvolver bots de reunião online e de chamada em seu computador](./debugging-local-testing-calling-meeting-bots.md)
+- [Requisitos e considerações para bots de mídia hospedados pelo aplicativo](./requirements-considerations-application-hosted-media-bots.md)
+- [Informações técnicas sobre como lidar com notificações de chamadas de entrada](./call-notifications.md)

@@ -1,15 +1,15 @@
 ---
 title: Escolher uma instalação para testar e depurar seu aplicativo
-description: Descreve opções para testar e depurar Microsoft Teams aplicativos
-keywords: teams executar aplicativos de depuração
+description: Descreve opções para testar e depurar Microsoft Teams aplicativos no ambiente local e hospedado na nuvem.
+keywords: teams executar aplicativos de depuração host local hospedado na nuvem
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c20f10fc0f3fb7265921ded2bf412271695bbcd9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155012"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889066"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolha uma instalação para testar e depurar seu Microsoft Teams app
 
@@ -19,7 +19,7 @@ Microsoft Teams aplicativos contêm um ou mais recursos e as maneiras de executa
 * **Hospedado localmente** em Teams : isso envolve a execução local do aplicativo no túnel de software e [a](~/concepts/build-and-test/apps-package.md) criação de um pacote para [carregar](~/concepts/deploy-and-publish/apps-upload.md) no Teams. Isso permite que você execute e depure facilmente seu aplicativo dentro do Teams cliente.
 * **Hospedado na nuvem em Teams**: isso realmente simula o suporte ao nível de produção para um Teams app. Ele envolve carregar sua solução para seu servidor externo acessível ou provedor de nuvem de escolha e [criar](~/concepts/build-and-test/apps-package.md) um pacote para [carregar](~/concepts/deploy-and-publish/apps-upload.md) no Teams.
 
-Execute a experiência do seu próprio computador para testes puramente locais ou Teams local. Ao fazer isso, você pode compilar e executar em seu ambiente de desenvolvimento integrado e aproveitar ao máximo as técnicas, como pontos de interrupção e depuração de etapas. 
+Execute a experiência do seu próprio computador para testes puramente locais ou Teams local. Ao fazer isso, você pode compilar e executar em seu ambiente de desenvolvimento integrado e aproveitar ao máximo as técnicas, como pontos de interrupção e depuração de etapas.
 
 > [!NOTE]
 > Para depuração e teste em escala de produção, recomendamos que você siga suas próprias diretrizes da empresa para garantir que você seja capaz de dar suporte a testes, preparação e implantação por meio de seus próprios processos.
@@ -54,7 +54,7 @@ Embora você possa usar qualquer ferramenta de sua escolha, usamos e recomendamo
 > [!NOTE]
 > Se você parar e reiniciar o ngrok, a URL será mudada.
 
-Para usar o ngrok em seu projeto com base nos recursos que você está usando, você deve substituir todas as referências de URL em seu arquivo de código, configuração e manifest.jsno arquivo para usar esse ponto de extremidade de URL.
+Para usar o ngrok em seu projeto com base nos recursos que você está usando, você deve substituir todas as referências de URL em seu código, configuração e arquivo manifest.json para usar esse ponto de extremidade de URL.
 
 Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar que o ngrok está funcionando testando a resposta do bot na janela de chat test do portal da Estrutura de Bot. Novamente, como o emulador, esse teste não permite que você acesse Teams funcionalidade específica.
 
@@ -70,7 +70,7 @@ Você pode usar qualquer serviço enderecável externamente para hospedar seu c�
 
 ## <a name="load-and-run-your-experience"></a>Carregar e executar sua experiência
 
-Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para saber mais, consulte:
+Para carregar e executar sua experiência em Microsoft Teams, você precisa criar um pacote e carregá-lo em Teams. Para saber mais, confira:
 
 * [Crie o pacote para seu Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload seu aplicativo em Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
@@ -80,3 +80,6 @@ Para carregar e executar sua experiência em Microsoft Teams, você precisa cria
 > [!div class="nextstepaction"] 
 > [Adicione dados de teste ao seu ambiente](~/concepts/build-and-test/test-data.md)
 
+## <a name="see-also"></a>Confira também
+
+[Testar e depurar seu bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

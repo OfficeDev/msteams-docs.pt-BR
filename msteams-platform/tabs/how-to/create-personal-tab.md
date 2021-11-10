@@ -1,16 +1,17 @@
 ---
 title: Criar uma guia pessoal
 author: laujan
-description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman para Microsoft Teams.
+description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC para Microsoft Teams usando Node.js e atualizando o manifesto do aplicativo.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
+ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719921"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888038"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -745,14 +746,14 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemplo mostra opções para adicionar a guia registerOnFocussed API para" border="false":::
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)

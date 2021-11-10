@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 9ac6e87a8f85d0e8d73c6bf58dd705a55f887f43
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720229"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887696"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Pré-requisitos para aplicativos em reuniões do Teams
 
@@ -51,13 +51,14 @@ Depois de passar pelos pré-requisitos, você pode usar as referências de API d
 > [!NOTE]
 > Teams SDK JavaScript (_Versão_: 1.10 e posterior) para que o SSO funcione no painel do lado da reunião.
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Referências à API de aplicativos de reunião](API-references.md)
+
 ## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicativos para Teams reuniões](teams-apps-in-meetings.md)
-
-## <a name="next-step"></a>Próxima Etapa
-
-> [!div class="nextstepaction"]
-> [Referências à API de aplicativos de reunião](API-references.md)
+* [Teams da API de bot para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md)

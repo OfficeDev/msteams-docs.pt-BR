@@ -2,16 +2,16 @@
 title: Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript
 author: heath-hamilton
 ms.author: surbhigupta
-description: Visão geral do Microsoft Teams SDK do cliente JavaScript, que pode ajudá-lo a criar Teams experiências de aplicativo hospedadas em um <iframe>.
+description: Visão geral do Microsoft Teams SDK do cliente JavaScript, que pode ajudá-lo a criar Teams experiências de aplicativo hospedadas em um <iframe>. Ele inclui funções básicas, namespace de autenticação e namespace de configurações.
 ms.localizationpriority: medium
 keywords: teams tabs group channel configurble static SDK JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: ae1192a7221300fc702093d64c97b31bb990d2e9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5c4a42e78a234616a0b88ef241c63b98fb7a0265
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155416"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887541"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript Microsoft Teams JavaScript
 

@@ -1,16 +1,16 @@
 ---
 title: Requisitos e considerações para bots de mídia hospedados pelo aplicativo
-description: Entenda os requisitos e considerações importantes relacionados à criação de bots de mídia hospedados pelo aplicativo para Microsoft Teams.
+description: Entenda requisitos e considerações importantes e considerações de escalabilidade e desempenho relacionadas à criação de bots de mídia hospedados pelo aplicativo para Microsoft Teams usando exemplos e exemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: vm do windows server do windows server hospedado pelo aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0597e99b1933270ee4ee85d1adc18378da3c3114
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155453"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887410"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 
@@ -71,7 +71,12 @@ Exemplos de bots de mídia hospedados pelo aplicativo são os seguinte:
 | **Nome do exemplo** | **Descrição** | **Graph** |
 |------------|-------------|-----------|
 | Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Formatos de mídia suportados](~/resources/media-formats.md)
 
 ## <a name="see-also"></a>Confira também
 
@@ -86,8 +91,3 @@ A próxima seção fornece exemplos que ilustram diferentes cenários de mídia 
 
 - [Exemplo de aplicativos](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph a documentação do SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Formatos de mídia suportados](~/resources/media-formats.md)

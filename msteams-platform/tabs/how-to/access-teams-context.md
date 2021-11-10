@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439694"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887536"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -27,7 +27,7 @@ O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil 
 * Você inicia um fluxo de autenticação Azure Active Directory (AAD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. Para obter mais informações, [consulte authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
-> Embora essas informações do usuário possam ajudar a fornecer uma experiência de usuário suave, você não deve usá-la como prova de identidade. Por exemplo, um invasor pode carregar sua página em um navegador e renderizar informações ou solicitações prejudiciais.
+> Embora essas informações do usuário possam ajudar a fornecer uma experiência de usuário suave, você não deve usá-la como prova de identidade.  Por exemplo, um invasor pode carregar sua página em um navegador e renderizar informações ou solicitações prejudiciais.
 
 ## <a name="access-context-information"></a>Informações de contexto de acesso
 
@@ -42,12 +42,12 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 
 * {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
 * {subEntityId}: A ID fornecida ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico nesta guia. Isso deve ser usado para restaurar para um estado específico dentro de uma entidade; por exemplo, rolar para ou ativar uma parte específica do conteúdo.
-* {loginHint}: Um valor adequado como uma dica de logon para a AAD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
+* {loginHint}: um valor adequado como uma dica de logon para AAD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
 * {userPrincipalName}: o Nome principal do usuário atual no locatário atual.
 * {userObjectId}: A ID do objeto AAD do usuário atual no locatário atual.
 * {theme}: O tema atual da interface do usuário (UI), como `default` , `dark` ou `contrast` .
 * {groupId}: A ID do grupo Office 365 no qual a guia reside.
-* {tid}: A ID do locatário do AAD do usuário atual.
+* {tid}: A AAD ID de locatário do usuário atual.
 * {locale}: a localidade atual do usuário formatada como languageId-countryId. Por exemplo, en-us.
 
 > [!NOTE]
@@ -135,14 +135,15 @@ Você pode registrar seu aplicativo para ser informado se o tema mudar chamando 
 
 O argumento na função é uma cadeia de caracteres com `theme` um valor de , ou `default` `dark` `contrast` .
 
-## <a name="see-also"></a>Também consulte
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
+
+## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de tabulação](../../tabs/design/tabs.md)
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Usar módulos de tarefas nas guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

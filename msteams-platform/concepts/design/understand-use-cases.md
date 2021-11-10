@@ -1,16 +1,16 @@
 ---
 title: Noções básicas sobre os casos de uso do aplicativo
 author: heath-hamilton
-description: Ao planejar seu Microsoft Teams aplicativo, você deve primeiro entender quais problemas seu aplicativo está tentando resolver.
+description: Planeje seu aplicativo, entenda seu usuário e suas necessidade, entenda os problemas do usuário que seu aplicativo resolveria, planeje a autenticação do usuário e sua experiência de integração
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720152"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888416"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -77,7 +77,11 @@ Acima de tudo, lembre-se de que ninguém gosta de spam. A explosão com mensagen
 
 Identifique quais novos recursos o usuário preferirá ter na solução atual. Se você tiver um roteiro para adicionar novos recursos ao aplicativo, o design e a arquitetura serão afetados.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Mapear seus casos de uso](../../concepts/design/map-use-cases.md)
+
+## <a name="see-also"></a>Confira também
+
+[Funcionalidades de dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)

@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble static
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: a3db1f535532fb00589cdff408e04d7addba234e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720305"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888381"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
@@ -102,13 +102,15 @@ Se você indicar no manifesto do aplicativo, todas as configurações de tabula�
     }
     ```
 
-## <a name="see-also"></a>Confira também
-
-* [Teams guias](~/tabs/what-are-tabs.md)
-* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
-* [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
+
+## <a name="see-also"></a>Confira também
+ 
+* [Teams guias](~/tabs/what-are-tabs.md)
+* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
+* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
+* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Guias do DevTools para o Microsoft Teams](~/tabs/how-to/developer-tools.md)

@@ -1,15 +1,15 @@
 ---
 title: Otimizar seu bot com limitação de fluxo no Teams
-description: Limitação de taxas e práticas recomendadas Microsoft Teams
+description: Saiba mais sobre como manipular o limite de taxa para bots com Per bot por limite de thread e por limite para todos os bots usando exemplos de código. Além disso, saiba como limitar as práticas recomendadas em Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155111"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889290"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -140,11 +140,11 @@ A tabela a seguir fornece os limites por bot por thread:
 | Criar conversa | 30 | 60 |
 | Criar conversa | 3600 | 1800 |
 | Obter membros da conversa| 1 | 14  |
-| Obter membros da conversa| 2 | 16  |
+| Obter membros da conversa| 2 | 16 |
 | Obter membros da conversa| 30 | 120 |
 | Obter membros da conversa| 3600 | 3600 |
 | Obter conversas | 1 | 14  |
-| Obter conversas | 2 | 16  |
+| Obter conversas | 2 | 16 |
 | Obter conversas | 30 | 120 |
 | Obter conversas | 3600 | 3600 |
 
@@ -162,11 +162,11 @@ A tabela a seguir fornece o limite por thread para todos os bots:
 | Cenário | Período de tempo em segundos | Operações máximas permitidas |
 | --- | --- | --- |
 | Enviar para conversa | 1 | 14  |
-| Enviar para conversa | 2 | 16  |
+| Enviar para conversa | 2 | 16 |
 | Criar conversa | 1 | 14  |
-| Criar conversa | 2 | 16  |
+| Criar conversa | 2 | 16 |
 | Criar conversa| 1 | 14  |
-| Criar conversa| 2 | 16  |
+| Criar conversa| 2 | 16 |
 | Obter membros da conversa| 1 | 28 |
 | Obter membros da conversa| 2 | 32 |
 | Obter conversas | 1 | 28 |
@@ -176,4 +176,3 @@ A tabela a seguir fornece o limite por thread para todos os bots:
 
 > [!div class="nextstepaction"]
 > [Bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-

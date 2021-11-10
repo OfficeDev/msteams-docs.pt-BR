@@ -1,16 +1,17 @@
 ---
 title: Projetando sua extensão de reunião
 author: heath-hamilton
-description: Saiba como projetar aplicativos em reuniões Teams e obter o kit Microsoft Teams interface do usuário.
+description: Saiba como projetar aplicativos em reuniões Teams e obter o Kit de interface do usuário Microsoft Teams, a guia de reunião e casos de uso, comportamento responsivo e estágio de reunião compartilhado e tema e navegação.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Estágio de reunião compartilhada do modelo de kit de interface do usuário na reunião
+ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475696"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887842"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -59,20 +60,20 @@ Antes de uma reunião, seu aplicativo está disponível para os usuários em uma
 
 |Contador|Descrição|
 |----------|-----------|
-|1|**Nome da guia**: Rótulo de navegação para sua guia.|
-|2|**Estouro da** guia : abre ações de guia, como renomear e remover.|
+|1|**Nome da guia**: rótulo de navegação para sua guia.|
+|2|**Excedente da guia**: abre as ações de guia, como renomear e remover.|
 |3|**iframe**: exibe o conteúdo do aplicativo.|
 
 ### <a name="design-with-ui-templates"></a>Projetar com modelos de interface do usuário
 
 Use um dos seguintes modelos Teams de interface do usuário para ajudar a projetar sua guia de reunião:
 
-* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
-* [Quadro de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tarefas : um quadro de tarefas, às vezes chamado de quadro kanban ou faixas de nadador, é uma coleção de cartões frequentemente usada para rastrear o status de itens de trabalho ou tíquetes.
-* [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou conteúdo.
-* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): Os formulários são para coletar, validar e enviar entrada do usuário de forma estruturada.
-* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira executar, mensagens de erro e muito mais.
-* [Navegação à esquerda](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): O componente de navegação esquerdo pode ajudar se sua guia exigir alguma navegação. Em geral, você deve manter a navegação no mínimo.
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
+* [Painel de tarefas](../../concepts/design/design-teams-app-ui-templates.md#task-board): um painel de tarefas, às vezes chamado de quadro Kanban ou raias, é uma coleção de cartões frequentemente usados para acompanhar o status de itens de trabalho ou tíquetes.
+* [Painel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): um painel é uma tela que contém vários cartões que fornecem uma visão geral dos dados ou do conteúdo.
+* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários são para coletar, validar e enviar a entrada do usuário de forma estruturada.
+* [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo logon, experiências de primeira execução, mensagens de erro e muito mais.
+* [Navegação esquerda](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): o componente de navegação à esquerda pode ajudar se a guia requer alguma navegação. Em geral, você deve manter a navegação no mínimo.
 
 ## <a name="use-an-in-meeting-tab"></a>Usar uma guia em reunião
 
@@ -103,7 +104,7 @@ As pessoas podem usar a guia na reunião para:
 |1|**Ícone do aplicativo (selecionado)**: logotipo de aplicativo transparente de 16 pixels.|
 |2|**Nome do aplicativo**|
 |3|**Header**: Inclui o nome do aplicativo.|
-|4 |**Botão Fechar**: descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.|
+|4|**Botão Fechar**: descarta a guia. Sempre use o ícone de fechamento superior direito em vez de uma ação no rodapé.|
 |5|**Barra de** notificações : Os alertas de erro são exibidos diretamente abaixo do header e pressionam o conteúdo do iframe para baixo em 20 pixels.|
 |6 |**iframe**: exibe o conteúdo do aplicativo.|
 
@@ -168,9 +169,9 @@ Há duas variantes de header. Quando possível, use a variante com o avatar para
 |Contador|Descrição|
 |----------|-----------|
 |1|**Avatar**: Pessoa que inicia a caixa de diálogo na reunião.|
-|2|**ícone de aplicativo**|
+|2|**ícone do aplicativo**|
 |3|**Nome do aplicativo**|
-|4 |**Botão Fechar**: descarta a caixa de diálogo.|
+|4|**Botão Fechar**: descarta a caixa de diálogo.|
 |5|**Cadeia de caracteres** de ação : normalmente descreve quem iniciou a caixa de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamento responsivo: caixas de diálogo na reunião
@@ -191,7 +192,7 @@ O estágio de reunião compartilhado ajuda os participantes da reunião a intera
 Os aplicativos compartilhados no estágio de reunião ocupam o mesmo espaço que uma tela compartilhada. O estágio reorienta para todos os participantes da reunião.
 
 > [!NOTE]
-> Atualmente, se um aplicativo for compartilhado em estágios na área de trabalho, ele mostrará apenas para os usuários em reuniões móveis.
+> Todos os usuários na reunião podem ver o aplicativo quando compartilhado da área de trabalho. No entanto, a capacidade de compartilhar um aplicativo em estágios do celular não está disponível no momento.
  
 ### <a name="use-cases"></a>Casos de uso
 
@@ -245,7 +246,7 @@ O estágio de reunião compartilhada tem a ver com colaboração e participaçã
 |1|**Ícone do** aplicativo : O ícone realçado indica que a guia de reunião do aplicativo está aberta.|
 |2|**Botão Compartilhar para estágio de reunião**: O ponto de entrada para compartilhar o aplicativo no estágio de reunião. Exibe se você configurar seu aplicativo para usar o estágio de reunião compartilhado.|
 |3|**iframe**: exibe o conteúdo do aplicativo.|
-|4 |**Botão Parar de compartilhar**: para de compartilhar o aplicativo no estágio de reunião. Exibe somente para o participante que iniciou o compartilhamento.|
+|4|**Botão Parar de compartilhar**: para de compartilhar o aplicativo no estágio de reunião. Exibe somente para o participante que iniciou o compartilhamento.|
 |5|**Atribuição do apresentador**: exibe o nome do participante que compartilhou o aplicativo.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamento responsivo: Estágio de reunião compartilhado

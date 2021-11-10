@@ -1,16 +1,16 @@
 ---
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
-description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens
+description: Descreve como responder ao módulo de tarefa enviar ação de um comando de ação de extensão de mensagens com mensagem proativa, outro módulo de tarefa, bot de cartão adaptável e muito mais usando exemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 92a7080d57b1ea6de3924da53a968d3fc960029a
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566383"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889409"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -605,3 +605,6 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 > [!div class="nextstepaction"]
 > [Definir comandos de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
+## <a name="see-also"></a>Confira também
+
+[Responder ao comando de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

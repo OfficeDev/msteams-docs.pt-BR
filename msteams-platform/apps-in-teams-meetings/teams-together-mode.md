@@ -3,12 +3,12 @@ title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 051924aa8a8f02c6e9a075639014e4fc3290d8c0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475598"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887627"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -242,4 +242,6 @@ Você pode compartilhar o Pacote de Cena que é um arquivo .zip recuperado do es
 
 ## <a name="see-also"></a>Confira também
 
-[Aplicativos para Teams reuniões](teams-apps-in-meetings.md)
+[Aplicativos para Teams reuniões](teams-apps-in-meetings.md) 
+ [Bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
+ [Chamadas de mídia em tempo real e reuniões com Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)

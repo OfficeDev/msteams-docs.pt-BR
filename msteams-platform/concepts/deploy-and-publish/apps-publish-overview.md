@@ -1,16 +1,17 @@
 ---
 title: Visão geral - Distribuir seu aplicativo
-description: Descreve as opções para publicar seu Microsoft Teams app.
+description: Descreve as opções para publicar seu aplicativo Microsoft Teams, carregar seu aplicativo e GCC.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+keywords: implantar publicar o carregamento de aplicativo gcc
+ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260614"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889185"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir seu Microsoft Teams app
 
@@ -44,11 +45,11 @@ Disponibilizar seu aplicativo para todos. Esse tipo de distribuição requer apr
 
 Para obter mais informações, [consulte publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-## <a name="see-also"></a>Confira também
-
-* [Programa de Conformidade do Aplicativo do Microsoft 365](/microsoft-365-app-certification/overview)
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Configurar as opções de instalação padrão do aplicativo](~/concepts/deploy-and-publish/add-default-install-scope.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Programa de Conformidade de Aplicativos do Microsoft 365](/microsoft-365-app-certification/overview)

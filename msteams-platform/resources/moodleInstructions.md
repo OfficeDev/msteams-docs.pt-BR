@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: bdf5ea5b6f08c638bd00a69df59ae2e25b76b0ad
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155030"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888129"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -108,7 +108,7 @@ Use a página de instalação de Plug-ins de miojo gerados e em sua página de i
     1. Abra a pasta extraída.
     1. Clique com o botão direito do mouse no `Moodle-AzureAD-Script.ps1` arquivo e selecione **Propriedades**.
     1. Na guia **Geral** da janela Propriedades, selecione a caixa de seleção ao lado do atributo Security localizado `Unblock` na parte inferior da janela. 
-    1. Selecionar **OK**.
+    1. Selecione **OK**.
     1. Copie o caminho do diretório para a pasta extraída.
 
 1. Execute o PowerShell como administrador:
@@ -228,7 +228,7 @@ Depois de gerar a ID e a senha do aplicativo, implante seu bot no Azure:
 
 Após a conclusão da implantação dos recursos no Azure, você deve configurar os plug-ins Microsoft 365 Moodle com um ponto de extremidade de mensagens. Você deve obter o ponto de extremidade do bot no Azure:
 
-1. Entre no [Portal do Azure](https://portal.azure.com).
+1. Entre no [portal do Azure](https://portal.azure.com).
 
 1. No painel esquerdo, selecione **Grupos** de recursos e selecione o grupo de recursos que você usou ou criou ao implantar o bot.
 
@@ -293,4 +293,3 @@ Quando um curso Moodle é sincronizado, o Microsoft Teams instala automaticament
 - [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
 - [Moodle](https://moodle.org/)
 - [Documentação de miojo](https://docs.moodle.org/34/en/Installing_plugins).
-

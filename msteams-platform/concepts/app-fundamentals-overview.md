@@ -1,16 +1,17 @@
 ---
 title: Visão geral dos fundamentos do desenvolvimento de aplicativos
 author: heath-hamilton
-description: Descreva os conceitos fundamentais do desenvolvimento Teams plataforma.
+description: Descreva os conceitos fundamentais do desenvolvimento Teams plataforma, como recursos de aplicativo e pontos de entrada, noções básicas sobre casos de uso e mapeamento deles para recursos de aplicativos e planejamento de aplicativos.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: pontos de entrada extensibilidade recurso de dispositivo de uso de casos
+ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566376"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889269"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams básicos de desenvolvimento de aplicativos
 
@@ -38,15 +39,14 @@ Você pode reconhecer problemas do usuário e identificar as respostas a alguns 
 
 ## <a name="integrate-device-capabilities"></a>Integrar recursos de dispositivo
 
-Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams. 
-
-## <a name="see-also"></a>Confira também
-
-* [Integrar aplicativos Web com Teams](../samples/integrating-web-apps.md)
-* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md) 
+Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Compreender Teams de aplicativos](capabilities-overview.md)
 
+## <a name="see-also"></a>Confira também
+
+* [Integrar aplicativos Web com Teams](../samples/integrating-web-apps.md)
+* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

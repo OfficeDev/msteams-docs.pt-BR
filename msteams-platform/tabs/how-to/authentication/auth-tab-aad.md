@@ -4,12 +4,12 @@ description: Descreve a autenticação no Teams e como usá-la em guias
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams AAD
-ms.openlocfilehash: 96ceb632f4cd619ecc17864b5cd2fb5a665022cd
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: a15d3c78d471bbcc510da019558faa45e3b76241
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291699"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889346"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma Microsoft Teams guia
 
@@ -162,3 +162,11 @@ Código de exemplo mostrando o processo de autenticação de tabulação usando 
 | **Nome do exemplo** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams autenticação de tabulação | Processo de autenticação de tabulação usando o Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+
+## <a name="see-also"></a>Confira também
+
+* [Planejar a autenticação do usuário](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Projete sua guia para o Microsoft Teams](~/tabs/design/tabs.md)
+* [Autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-aad.md)
+* [Adicionar autenticação à sua extensão de mensagens](~/messaging-extensions/how-to/add-authentication.md)
+* [Suporte a SSO (login único) para bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)

@@ -5,12 +5,13 @@ description: Uma visão geral da integração de aplicativos Web e recursos de d
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7d4056a23f126d636de3920d02a316440e51564e
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
+ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017307"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889213"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 

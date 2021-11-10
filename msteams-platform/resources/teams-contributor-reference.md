@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155396"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889241"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir com a documentação do Teams
 
@@ -30,7 +30,7 @@ Teams documentação faz parte da biblioteca de documentação técnica do **Mic
 > * Instalar dentro VS Code:
 
    1. Selecione o **ícone Extensões** na barra de atividades lateral ou use o comando **Exibir => Extensões** ou Ctrl+Shift+X e, pesquise o **Microsoft Docs Authoring Pack**.
-   1. Selecione **Instalar**.
+   1. Selecionar **Instalar**.
    1. Após a instalação, **o botão Instalar** muda para o botão **Gerenciar** engrenagem.
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar o Guia de Colaboradores do Microsoft Docs
@@ -69,6 +69,11 @@ Para obter mais informações sobre hiperlinks e caminhos de arquivo, [consulte 
 
 Exemplos de código desempenham uma função importante para usar APIs e SDKs de forma eficaz. Exemplos de código bem apresentados podem comunicar como as coisas funcionam mais claramente do que texto descritivo e informações instrucionais sozinhos. Seus exemplos de código devem ser precisos, concisos, bem documentados e amigáveis ao leitor. O código fácil de ler deve ser fácil de entender, testar, depurar, manter, modificar e estender. Para obter mais informações, [consulte como incluir código em documentos](/contribute/code-in-docs).
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Obter atualizações do Microsoft Docs e os comunicados mais recentes](/teamblog)
+
 ## <a name="see-also"></a>Confira também
 
 * [Microsoft Docs](/)
@@ -77,9 +82,3 @@ Exemplos de código desempenham uma função importante para usar APIs e SDKs de
 * [Borda de corte : Capacidade de leitura do código-fonte Dicas](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentação](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
-
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Obter atualizações do Microsoft Docs e os comunicados mais recentes](/teamblog)

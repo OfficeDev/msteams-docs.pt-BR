@@ -1,19 +1,19 @@
 ---
 title: Crie e envie o módulo de tarefas
 author: surbhigupta
-description: Como manipular a ação de invocação inicial e responder com um módulo de tarefa de um comando de extensão de mensagens de ação
+description: Saiba como manipular a ação de invocação inicial e responder com um módulo de tarefa a partir de um comando de extensão de mensagens de ação usando exemplos de código e exemplos.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b30388e88505e9d0049da5271187c06c68efd5f5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155011"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889178"
 ---
 # <a name="create-and-send-the-task-module"></a>Crie e envie o módulo de tarefas
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 Você pode criar o módulo de tarefa usando um Cartão Adaptável ou um exibição da Web incorporado. Para criar um módulo de tarefa, você deve executar o processo chamado de solicitação de invocação inicial. Este documento abrange a solicitação de invocação inicial, propriedades de atividade de carga quando um módulo de tarefa é invocado a partir de chat 1:1, chat de grupo, canal (nova postagem), canal (resposta ao thread) e caixa de comando. 
@@ -24,7 +24,7 @@ Você pode criar o módulo de tarefa usando um Cartão Adaptável ou um exibiç�
 
 No processo da solicitação de invocação inicial, seu serviço recebe um objeto do tipo e você deve responder com um objeto contendo um Cartão Adaptável ou uma URL para o exibição `Activity` `composeExtension/fetchTask` da Web `task` incorporado. Junto com as propriedades de atividade de bot padrão, a carga de invocação inicial contém os seguintes metadados de solicitação:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -74,7 +74,7 @@ O código da solicitação de invocação inicial é dado no exemplo a seguir:
 
 As propriedades de atividade de carga quando um módulo de tarefa é invocado do chat 1:1 são listadas da seguinte forma:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -125,7 +125,7 @@ As propriedades de atividade de carga quando um módulo de tarefa é invocado do
 
 As propriedades de atividade de carga quando um módulo de tarefa é invocado de um chat de grupo são listadas da seguinte forma:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -224,7 +224,7 @@ As propriedades de atividade de carga quando um módulo de tarefa é invocado de
 
 As propriedades de atividade de carga quando um módulo de tarefa é invocado de um canal (nova postagem) são listadas da seguinte forma:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -290,7 +290,7 @@ As propriedades de atividade de carga quando um módulo de tarefa é invocado de
 
 As propriedades de atividade de carga quando um módulo de tarefa é invocado de um canal (resposta ao thread) são listadas da seguinte forma:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -399,7 +399,7 @@ As propriedades de atividade de carga quando um módulo de tarefa é invocado de
 
 As propriedades de atividade de carga quando um módulo de tarefa é invocado de uma caixa de comando são listadas da seguinte forma:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke` . |
 |`name`| Tipo de comando emitido ao seu serviço. Deve ser `composeExtension/fetchTask` . |
@@ -645,14 +645,14 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Responda à solicitação de invocação com um objeto que contém um objeto com o Cartão Adaptável ou a URL da `task` Web ou uma mensagem de cadeia de `taskInfo` caracteres simples.
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Pode ser para `continue` apresentar um formulário ou para um `message` pop-up simples. |
 |`value`| Um `taskInfo` objeto para um formulário ou um `string` para uma mensagem. |
 
 O esquema do objeto taskInfo é:
 
-|Nome da propriedade|Finalidade|
+|Nome da propriedade|Objetivo|
 |---|---|
 |`title`| O título do módulo de tarefa.|
 |`height`| Deve ser um inteiro (em pixels) ou `small` `medium` , `large` .|
@@ -985,15 +985,13 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 | Exemplo de nome           | Descrição | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
-
-## <a name="see-also"></a>Confira também
-
-[Definir comandos de ação](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
+|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"] 
 > [Responder ao comando de ação](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
+## <a name="see-also"></a>Confira também
+
+[Definir comandos de ação](~/messaging-extensions/how-to/action-commands/define-action-command.md)

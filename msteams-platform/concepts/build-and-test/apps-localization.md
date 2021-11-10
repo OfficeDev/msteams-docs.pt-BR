@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155230"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887550"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
@@ -44,13 +44,13 @@ As imagens que você carrega com o idioma inglês são usadas no AppSource.
 
 ## <a name="localize-strings-in-your-app-manifest"></a>Localize cadeias de caracteres no manifesto do aplicativo
 
-Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo o atributo em seu arquivo manifest.json ou superior e atualizando a propriedade para `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** versão ( neste `manifestVersion` `$schema` `1.5` caso). 
+Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo o atributo no arquivo manifest.json como ou superior e atualizando a propriedade como `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** versão ( neste `manifestVersion` `$schema` `1.5` caso). 
 
 Você deve adicionar a `localizationInfo` propriedade com o idioma padrão compatível com o aplicativo. O idioma padrão é usado como o idioma de fallback final se as configurações do cliente do usuário não corresponderem a nenhum dos seus idiomas adicionais.
 
-### <a name="example-manifestjson-change"></a>Exemplo manifest.jsna alteração
+### <a name="example-manifestjson-change"></a>Exemplo de alteração manifest.json
 
-A manifest.jsa seguir ajuda a adicionar a propriedade com o idioma padrão compatível com `localizationInfo` o aplicativo junto com `additionalLanguages` :
+O manifesto.json a seguir ajuda a adicionar a propriedade com o idioma padrão que `localizationInfo` o aplicativo suporta juntamente com `additionalLanguages` :
 
 ```json
 {
@@ -102,9 +102,9 @@ Se o idioma do usuário estiver definido como 'es-es', o cliente Teams assume as
 
 Portanto, você deve fornecer traduções de nível superior, somente de idioma em seu manifesto. Por exemplo, 'en' em vez de 'en-us'. Você deve fornecer substituições de nível de região apenas para as poucas cadeias de caracteres que precisam delas. 
 
-### <a name="example-manifestjson-change"></a>Exemplo manifest.jsna alteração
+### <a name="example-manifestjson-change"></a>Exemplo de alteração manifest.json
 
-A manifest.jssobre a alteração é mostrada no exemplo a seguir:
+A alteração de manifest.json é mostrada no exemplo a seguir:
 
 ```json
 {
@@ -132,7 +132,7 @@ A manifest.jssobre a alteração é mostrada no exemplo a seguir:
 
 ### <a name="example-localization-json-file"></a>Exemplo de arquivo .json de localização
 
- A localization.jssobre a alteração é mostrada no exemplo a seguir:
+ A alteração de localization.json é mostrada no exemplo a seguir:
 
 ```json
 {
@@ -159,3 +159,6 @@ Se você fornecer versões localizadas do aplicativo, os usuários responderão 
 |-------------|-------------|------|------|
 | Localização de aplicativos | Microsoft Teams localização de aplicativo usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## <a name="see-also"></a>Confira também
+
+[Localizar referências do esquema JSON](~/resources/schema/localization-schema.md)

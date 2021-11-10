@@ -5,12 +5,12 @@ description: Adicionar experiências pop-up modais para coletar ou exibir inform
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a82552f43456aa1ddee0b68f13a8c5435165ed64
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155415"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888297"
 ---
 # <a name="task-modules"></a>Módulos de tarefas
 
@@ -50,11 +50,11 @@ Um módulo de tarefa inclui o seguinte, conforme mostrado na imagem anterior:
 6. Se você estiver exibindo um Cartão Adaptável usando a propriedade do `card` [objeto TaskInfo,](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) o preenchimento será adicionado para você. Para obter mais informações, consulte módulo de tarefa CSS para módulos de tarefa HTML ou [JavaScript.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)
 7. Botões de cartão adaptáveis são renderizar depois de selecionar **Inscrever-se**. Ao usar sua própria página, crie seus próprios botões.
 
-## <a name="see-also"></a>Confira também
-
-[Cartões](~/task-modules-and-cards/what-are-cards.md)
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Invocar e ignorar módulos de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="see-also"></a>Confira também
+
+[Cartões](~/task-modules-and-cards/what-are-cards.md)
