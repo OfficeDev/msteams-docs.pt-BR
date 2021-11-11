@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 868c41ad0df976fec60b9f579b8447a310344d9a
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719795"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912229"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
@@ -57,13 +57,13 @@ Ao planejar como monetizar seu aplicativo Teams, veja algumas coisas a considera
 
 A integração com as APIs de Atendimento saas é necessária para monetizar seu Teams app. Essas APIs ajudam você a gerenciar o ciclo de vida de um plano de assinatura depois que ele é comprado por um usuário.
 
-Para obter instruções completas e referência à API, consulte a documentação das [APIs de](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2)Atendimento saas . Em geral, você implementará as etapas a seguir usando as APIs depois que uma assinatura for comprada:
+Para obter instruções completas e referência à API, consulte a documentação das [APIs de](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis)Atendimento saas . Em geral, você implementará as etapas a seguir usando as APIs depois que uma assinatura for comprada:
 
-1.  Receba um [*token de identificação de compra*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2#purchased-but-not-yet-activated-pendingfulfillmentstart) por meio da URL para sua página inicial.
+1. Receba um [*token de identificação de compra*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) por meio da URL para sua página inicial.
 
-1.  Use o token para recuperar detalhes da assinatura.
+1. Use o token para recuperar detalhes da assinatura.
 
-1.  Notifique o marketplace comercial de que a assinatura está ativada.
+1. Notifique o marketplace comercial de que a assinatura está ativada.
 
 ### <a name="best-practices-for-implementing-subscription-management"></a>Práticas recomendadas para implementar o gerenciamento de assinaturas
 

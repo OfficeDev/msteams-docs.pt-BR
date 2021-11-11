@@ -1,20 +1,20 @@
 ---
-title: Permissões de dispositivo para o navegador
+title: Permissões do dispositivo para o navegador
 keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: b2e83ca784e5459edfd80a3862610ebab2f8df30
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 32ccdc732fb05b82ab36b631c5e35f25f8c6c7dc
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496222"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912182"
 ---
-# <a name="device-permissions-for-the-browser"></a>Permissões de dispositivo para o navegador
+# <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
 > [!NOTE]
-> A alteração de como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização de [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público. Essa alteração estará geralmente disponível (GA) até 21 de janeiro de 2022.
+> A alteração de como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização de [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público. Essa alteração estará geralmente disponível (GA) até 01 de fevereiro de 2022.
 
 Os aplicativos que exigem permissões de dispositivo - como acesso a câmera ou microfone - agora exigem que os usuários concedam o consentimento manualmente em um nível de aplicativo no navegador da Web. Anteriormente, o navegador manipulava como essas permissões eram concedidas, mas agora essas permissões serão tratadas em Microsoft Teams. Isso tem implicações sobre como você projeta seu aplicativo se eles exigirem essas permissões no navegador.
 

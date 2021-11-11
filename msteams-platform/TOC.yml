@@ -442,7 +442,7 @@
   items:
     - name: Visão Geral
       href: samples/integrate-web-apps-overview.md
-    - name: Aplicativos Web
+    - name: Considerações sobre a integração do Teams
       href: samples/integrating-web-apps.md
     - name: Administrador da plataforma de alimentação
       items:

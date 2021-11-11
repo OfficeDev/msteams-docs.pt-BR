@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação do usuário de função de usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887703"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912190"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -56,8 +56,8 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| Cadeia de Caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| Cadeia de caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. | 
 
 ### <a name="example"></a>Exemplo
@@ -256,7 +256,7 @@ A API De Detalhes da Reunião inclui o seguinte parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de Caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 ### <a name="example"></a>Exemplo
 
@@ -462,7 +462,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | C# | Node.js | 
+|Nome do exemplo | Descrição | C # | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
@@ -476,8 +476,3 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicativos para Teams reuniões](teams-apps-in-meetings.md)
-
-## <a name="next-steps"></a>Próximas etapas
-
-> [!div class="nextstepaction"]
-> [Habilitar e configurar seus aplicativos para Teams reuniões](enable-and-configure-your-app-for-teams-meetings.md)

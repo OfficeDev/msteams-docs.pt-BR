@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6838471befd48c439caf9cfbf81589f3bdf75a79
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887696"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912189"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Pré-requisitos para aplicativos em reuniões do Teams
 
@@ -54,7 +54,7 @@ Depois de passar pelos pré-requisitos, você pode usar as referências de API d
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Referências à API de aplicativos de reunião](API-references.md)
+> [Habilitar e configurar seus aplicativos para Teams reuniões](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Confira também
 

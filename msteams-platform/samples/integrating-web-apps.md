@@ -1,19 +1,19 @@
 ---
 author: heath-hamilton
-description: Práticas recomendadas para integrar aplicativos Web existentes com Microsoft Teams
+description: Práticas recomendadas ou considerações para integrar aplicativos Web existentes com Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Aplicativos Web
-ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+title: Considerações sobre Teams integração
+ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889206"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912252"
 ---
-# <a name="web-apps"></a>Aplicativos Web 
+# <a name="considerations-for-teams-integration"></a>Considerações sobre Teams integração 
 
 Você pode tornar os aplicativos Web adequados Teams recursos sociais e colaborativos, integrando-os corretamente com Teams.
   

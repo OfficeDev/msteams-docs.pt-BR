@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888283"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912203"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -298,7 +298,7 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -308,6 +308,9 @@ O exemplo de esquema a seguir mostra todas as opções de extensibilidade:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -359,7 +362,7 @@ Especifica informações sobre sua empresa. Para aplicativos enviados ao Teams, 
 |`termsOfUseUrl`|2048 caracteres|✔|A https:// URL dos termos de uso do desenvolvedor.|
 |`mpnId`|10 caracteres| |**Opcional** A ID da Rede de Parceiros da Microsoft que identifica a organização do parceiro que está criando o aplicativo.|
 
-## <a name="name"></a>name
+## <a name="name"></a>nome
 
 **Obrigatório —object**
 
@@ -746,7 +749,6 @@ Você pode definir qualquer uma das seguintes propriedades:
  
 Quando a propriedade é definida como true , o aplicativo é oculto `defaultBlockUntilAdminAction` dos usuários por padrão até que o administrador o permita.  Se definido como **true**, o aplicativo será oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloqueio padrão do aplicativo, consulte [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
-
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
 **Opcional** - cadeia de caracteres
@@ -754,6 +756,16 @@ Quando a propriedade é definida como true , o aplicativo é oculto `defaultBloc
 **Tamanho máximo** - 128 caracteres
 
 A propriedade depende de `defaultBlockUntilAdminAction` . Quando a propriedade é definida como true , a URL HTTPS fornece uma página de informações para que os administradores recebam diretrizes antes de permitir um aplicativo, que `defaultBlockUntilAdminAction` é bloqueado por  `publisherDocsUrl` padrão.
+
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**Opcional** - objeto
+
+Especifica a oferta SaaS associada ao seu aplicativo.
+
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|---|---|---|---|---|
+|`offerId`| string | 2.048 caracteres | ✔ | Um identificador exclusivo que inclui sua ID de Publisher e ID da Oferta, que você pode encontrar no [Partner Center](https://partner.microsoft.com/dashboard). Você deve formatar a cadeia de caracteres como `publisherId.offerId` .|
 
 ## <a name="see-also"></a>Confira também
 

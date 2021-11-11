@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17add35ef0b2d2cbb3ce2e6658d11d6d58dd8d2d
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887710"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912217"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -161,13 +161,18 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | C# | Node.js |
+|Nome do exemplo | Descrição | C # | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-|Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Referências à API de aplicativos de reunião](API-references.md)
 
 ## <a name="see-also"></a>Confira também
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Adicionar aplicativos a reuniões por meio do Microsoft Graph](/graph/api/chat-post-installedapps.md)
+* [Adicionar aplicativos a reuniões por meio do Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http)
