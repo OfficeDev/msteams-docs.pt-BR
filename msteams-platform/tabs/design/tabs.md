@@ -1,16 +1,17 @@
 ---
 title: Projete guias para desktop, Web e dispositivos móveis
-description: Saiba como criar uma guia para desktop, Web e dispositivos móveis do Teams e obter o Kit de Interface do Usuário do Microsoft Teams.
+description: Saiba como criar uma guia para desktop, Web e dispositivos móveis do Teams e obter o Kit de Interface do Usuário do Microsoft Teams. Saiba mais sobre a funcionalidade e a aparência da guia, criando autenticação do usuário, notificações de tabulação e vinculação profunda em guias.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Discussão do thread do modo de exibição baseado em função do kit de interface do usuário gerenciar a configuração de guia de logon único
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475626"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887919"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para o Microsoft Teams
 
@@ -62,9 +63,9 @@ Há um breve processo de configuração para adicionar um aplicativo como um can
 |3|**iframe**: espaço responsivo para o conteúdo do seu aplicativo (por exemplo, configurações de guia ou autenticação).|
 |4|**Link Sobre**: abre uma caixa de diálogo mostrando mais informações sobre o aplicativo, como uma descrição completa, permissões exigidas pelo aplicativo e links para sua política de privacidade e termos de serviço.|
 |5|**Botão Fechar**: fecha a caixa de diálogo.|
-|6|**opção Notificar membros da equipe**: a caixa de diálogo pergunta aos usuários se eles desejam criar uma postagem, permitindo que outras pessoas saibam que adicionaram uma guia.|
-|7|**Botão Voltar**: vai para a etapa anterior com base no local onde a caixa de diálogo foi aberta.|
-|8|**Botão Salvar**: conclui a configuração da guia.|
+|6 |**opção Notificar membros da equipe**: a caixa de diálogo pergunta aos usuários se eles desejam criar uma postagem, permitindo que outras pessoas saibam que adicionaram uma guia.|
+|7 |**Botão Voltar**: vai para a etapa anterior com base no local onde a caixa de diálogo foi aberta.|
+|8 |**Botão Salvar**: conclui a configuração da guia.|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>Autenticação de guia de logon único
 
@@ -77,7 +78,7 @@ Você pode adicionar uma etapa na qual os usuários devem primeiro entrar com su
 Use um dos seguintes modelos de interface do usuário do Teams para ajudar a projetar sua experiência de configuração de guia:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
-* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários são para coletar, validar e enviar a entrada do usuário de forma estruturada.
+* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários servem para coletar, validar e submeter a entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo logon, experiências de primeira execução, mensagens de erro e muito mais.
 
 ## <a name="view-a-tab"></a>Exibir uma guia
@@ -282,3 +283,7 @@ Se você não usar tokens de cor do Teams, seus designs serão menos escalonáve
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>Confira também
+
+[Alterações na margem da guia](~/resources/removing-tab-margins.md)

@@ -4,12 +4,12 @@ description: Aprenda a projetar Cartões Adaptáveis para o Teams e obtenha o Ki
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
-ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
+ms.openlocfilehash: b016df98d57b9a3f5fe03e6cf26b31ad2d7b8db9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60249784"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887961"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -679,3 +679,11 @@ Os Cartões Adaptáveis devem apresentar conteúdo rápido e prático. Muitas a�
 #### <a name="do-be-concise"></a>Faça: Seja conciso
 
 É fácil enviar vários cartões em uma conversa, mas quando os cartões saem da exibição, eles se tornam menos úteis. Experimente se limitar ao essencial. Isso é especialmente verdadeiro em um canal onde os usuários têm menos tolerância com o que percebem como "ruído".
+
+## <a name="see-also"></a>Confira também
+
+* [Cartões e módulos de tarefa](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Cartões e módulos de tarefa suportados no Teams bot](~/task-modules-and-cards/what-are-task-modules.md)
+* [Trabalhar com Ações Universais para Cartões Adaptáveis](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Responder à ação de envio do módulo de tarefas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Exibições Específicas do Usuário](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)
