@@ -5,12 +5,12 @@ keywords: kit de ferramentas de código do visual studio do teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8eeaadf28b9bdb46c91a803a66b4855d2a5e848c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889318"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948436"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Criar aplicativos com o Teams Toolkit e Visual Studio Code
 

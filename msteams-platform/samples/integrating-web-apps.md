@@ -5,15 +5,15 @@ ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerações sobre Teams integração
-ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+title: Considerações sobre a Teams integração
+ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912252"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948569"
 ---
-# <a name="considerations-for-teams-integration"></a>Considerações sobre Teams integração 
+# <a name="considerations-for-teams-integration"></a>Considerações sobre a Teams integração 
 
 Você pode tornar os aplicativos Web adequados Teams recursos sociais e colaborativos, integrando-os corretamente com Teams.
   
@@ -48,7 +48,7 @@ Seu Teams app deve incluir recursos colaborativos necessários e esperados. Para
 
 A integração de todos os recursos de um aplicativo existente Teams geralmente leva a uma experiência de usuário forçada ou não natural, especialmente em aplicativos maiores. Comece com os recursos mais impactados e aqueles que se integram mais naturalmente com Teams. Você pode permitir que os usuários lancem o aplicativo principal e acessem seu conjunto completo de recursos.
 
-**Pré-requisitos para integrar seu aplicativo ao Teams** A seguir estão os pré-requisitos para integrar seu aplicativo com Teams. 
+**Pré-requisitos para integrar** seu aplicativo ao Teams a seguir estão os pré-requisitos para integrar seu aplicativo ao Teams. 
 
 1. [Mapeie os casos de uso do aplicativo para Teams da plataforma.](../concepts/design/map-use-cases.md)
 1. [Determine os pontos de entrada do aplicativo.](../concepts/extensibility-points.md) É para uso pessoal, colaboração ou ambos?

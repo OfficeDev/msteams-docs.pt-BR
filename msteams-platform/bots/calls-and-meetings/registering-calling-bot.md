@@ -4,12 +4,12 @@ description: Saiba como registrar um novo bot de chamada de áudio/vídeo para M
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 144e623ea21da51b8a06bf20f50a60345dda081a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889101"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948618"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões bot para Microsoft Teams
 

@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
-ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889213"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948576"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
 Você pode fornecer uma experiência de usuário enriquecida integrando os recursos de um aplicativo Web existente Microsoft Teams plataforma. Certifique-se [de seguir Teams de design](~/concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo Teams.
-Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web com o Teams, plataforma Power para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, conectores de turno, LMS Moodle, criação de um botão Share-to-Teams para seu site, adicionando uma guia Microsoft Teams no SharePoint, criando links profundos e integrando recursos de dispositivo.
+Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web com o Teams, plataforma Power para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, conectores de turno, LMS Moodle, criação de um botão Share-to-Teams para seu site, adicionando um Microsoft Teams  tab in SharePoint, criando links profundos e integrando recursos de dispositivo.
 
 ## <a name="prerequisites"></a>Pré-requisitos   
 
@@ -55,9 +55,9 @@ Assistente Virtual é um modelo de código aberto da Microsoft que permite que v
 
 Você pode usar o modelo de aplicativo para criar aplicativos personalizados feitos para atender às suas necessidades organizacionais. Esses são aplicativos prontos para produção para Microsoft Teams que são orientados pela comunidade, de código aberto e disponíveis no GitHub. Cada modelo contém instruções detalhadas para implantar e instalar o aplicativo para sua organização. Ele fornece um aplicativo pronto para uso que você pode instalar e começar a usar imediatamente. 
 
-## <a name="teams-shifts-work-force-management-connectors"></a>Teams Desloca conectores de Gerenciamento de Força de Trabalho
+## <a name="teams-shifts-work-force-management-connectors"></a>Teams de Gerenciamento de Força de Trabalho de Turnos
 
-Teams Os conectores de Gerenciamento de Força de Trabalho de Turnos são integrações prontas para produção, de código aberto e orientadas pela comunidade. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital de trabalhadores de primeira linha com Teams Turnos.
+Teams conectores de Gerenciamento de Força de Trabalho de Turnos são integrações prontas para produção, de código aberto e orientadas pela comunidade. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital de trabalhadores de primeira linha com Teams Turnos.
 
 ## <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -94,7 +94,7 @@ Você também pode integrar Microsoft 365 identidade para criar aplicativos exte
 
 * [Mapear os casos de uso do aplicativo para Teams plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar os pontos de entrada do aplicativo](~/concepts/extensibility-points.md)
-* [Integrar aplicativos Web](~/samples/integrating-web-apps.md)
+* [Considerações sobre a Teams integração](~/samples/integrating-web-apps.md)
 * [Criar aplicativos personalizados de baixo código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Adicionar um chatbot de agentes virtuais de energia](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Criar assistente virtual](~/samples/virtual-assistant.md)

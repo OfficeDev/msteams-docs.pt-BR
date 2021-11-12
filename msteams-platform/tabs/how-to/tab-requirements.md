@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888052"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948604"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -51,7 +51,7 @@ Teams guias devem seguir os seguintes pré-requisitos:
 ## <a name="see-also"></a>Confira também
 
 * [Teams guias](~/tabs/what-are-tabs.md)
-* [Criar seu primeiro aplicativo usando o Node.js](../../get-started/first-app-react.md)
+* [Criar seu primeiro aplicativo usando o JavaScript](../../get-started/first-app-react.md)
 * [Criar seu primeiro aplicativo usando o Blazor](../../get-started/first-app-blazor.md)
 * [Criar seu primeiro aplicativo usando o SPFx](../../get-started/first-app-spfx.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)

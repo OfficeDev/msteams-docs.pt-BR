@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: guias bots extensões de mensagens webhooks conectores gcc
-ms.openlocfilehash: e4db8bde75d2d396ada5c0789b8cc06731701443
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888143"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948401"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Compreender Microsoft Teams recursos do aplicativo
 
@@ -72,5 +72,5 @@ A lista a seguir ajuda a identificar a disponibilidade de GCC, GCC-Alta e DOD pa
 
 ## <a name="see-also"></a>Confira também
 
-[Criar aplicativos para Teams](../overview.md) 
- [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Criar aplicativos para Teams](../overview.md)
+* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

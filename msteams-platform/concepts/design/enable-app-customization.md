@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 keywords: marca de cores de destaque ocultar aprovação do aplicativo
-ms.openlocfilehash: 2061b638034a0b6359f1853163c49f7d696381c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912210"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948611"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar seu Teams app
 
@@ -53,6 +53,6 @@ Se, por padrão, você não quiser que o aplicativo seja oculto, você pode atua
 
 ## <a name="see-also"></a>Confira também
 
-* [Esquema de manifesto do aplicativo](/MicrosoftTeams/manifest-schema)
+* [Esquema de manifesto do aplicativo](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Personalizar aplicativos no Teams de administração](/MicrosoftTeams/customize-apps)
 

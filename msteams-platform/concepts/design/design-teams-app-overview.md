@@ -5,12 +5,12 @@ description: Saiba como projetar Microsoft Teams aplicativos. Os recursos inclue
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888136"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948562"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams aplicativo
 
@@ -139,14 +139,14 @@ Com base Fluent interface do usuário, esses são os elementos [principais que](
 
 As ferramentas a seguir podem ajudar designers e desenvolvedores a começar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Projete um Teams com componentes da interface do usuário, modelos e exemplos que você pode arrastar, soltar e modificar conforme necessário. O kit de interface do usuário também inclui informações abrangentes sobre como os aplicativos devem ter aparência e comportamento em diferentes Teams cenários.
 
 > [!div class="nextstepaction"]
 > [Obter o kit de interface do usuário (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Biblioteca da interface do usuário
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams biblioteca de interface do usuário
 
 Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados no navegador.
 
@@ -169,7 +169,7 @@ Você pode carregar um aplicativo de exemplo para ver como os aplicativos devem 
 
 Para saber mais, experimente um dos seguintes recursos:
 
-### <a name="fluent-ui-documentation"></a>Fluent Documentação da interface do usuário
+### <a name="fluent-ui-documentation"></a>Fluent da interface do usuário
 
 Obter exemplos de código e detalhes de implementação para os componentes básicos Fluent da interface do usuário usados para criar Teams experiências.
 

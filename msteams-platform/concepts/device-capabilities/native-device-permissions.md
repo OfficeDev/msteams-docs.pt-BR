@@ -4,12 +4,12 @@ keywords: recursos de aplicativos do teams permissões de dispositivo de verific
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário, como verificação de qr, código de barras, imagem, áudio, recursos de vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889115"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948429"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -196,13 +196,12 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 |---------------|--------------|--------|
 |Permissões de dispositivos | Usar Microsoft Teams de exemplo de guia para demonstrar permissões de dispositivo |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
+## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Integrar recursos de localização Teams](location-capability.md)
+* [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
+* [Integrar recursos de localização Teams](location-capability.md)

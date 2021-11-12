@@ -4,12 +4,12 @@ description: Entenda os principais conceitos na criação de bot que podem condu
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: áudio stream vídeo stream audio/video calling meeting real-time media application-hosted media service-hosted media hosted media
-ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889059"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948548"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Chamadas de mídia em tempo real e reuniões com Microsoft Teams
 

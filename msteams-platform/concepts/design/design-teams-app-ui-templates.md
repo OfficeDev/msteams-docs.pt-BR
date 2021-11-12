@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887800"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948443"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -20,14 +20,14 @@ Projete seu Microsoft Teams aplicativo mais rápido com modelos de interface do 
 
 Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usando modelos de interface do usuário.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Pegue modelos de interface do usuário para seu design de aplicativo no kit de interface do usuário Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
 > [!div class="nextstepaction"]
 > [Obter o kit de interface do usuário (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Biblioteca da interface do usuário
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams biblioteca de interface do usuário
 
 Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados no navegador.
 
@@ -123,7 +123,7 @@ Os formulários são usados para coletar, validar e enviar entrada do usuário d
 
 * Entrar
 * Perfis de usuário
-* Configurações
+* Settings
 * Coleção de entrada do usuário
 
 ### <a name="mobile"></a>Celular
@@ -134,7 +134,7 @@ Os formulários são usados para coletar, validar e enviar entrada do usuário d
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
 
-## <a name="list"></a>Listar
+## <a name="list"></a>List
 
 Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 
@@ -167,7 +167,7 @@ Você pode projetar fluxos de entrada de aplicativos para diferentes Teams conte
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Exemplo mostra um modelo de interface do usuário de login na área de trabalho." border="false":::
 
-## <a name="settings"></a>Configurações
+## <a name="settings"></a>Settings
 
 Configurações telas são onde os usuários podem configurar suas preferências com seu aplicativo. (Observação: Configurações é um contêiner para [componentes básicos da interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
@@ -201,7 +201,7 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Configurar
+* Configuração
 * Integração
 * Experiências de primeira
 

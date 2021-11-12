@@ -5,12 +5,12 @@ description: Tenha uma ideia geral de como e quando você pode usar ferramentas 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 95af942973b25a085662eb303077dff6cba815e5
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889094"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948597"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processo de design para Microsoft Teams aplicativos
 

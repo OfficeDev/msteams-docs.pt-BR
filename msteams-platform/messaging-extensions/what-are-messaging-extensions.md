@@ -5,12 +5,12 @@ description: Uma visão geral das extensões de mensagens na plataforma Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889367"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948555"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -83,9 +83,7 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 > [!div class="nextstepaction"]
 > [Definir comando de extensão de mensagens de ação](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [Definir o comando de extensão de mensagens de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-
 ## <a name="see-also"></a>Confira também
 
+* [Definir o comando de extensão de mensagens de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Criar uma extensão de mensagem](../build-your-first-app/build-messaging-extension.md)

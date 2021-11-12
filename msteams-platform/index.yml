@@ -3,7 +3,7 @@ title: Microsoft Teams de desenvolvedor
 summary: 'Obter documentação, código de exemplo, tutoriais e muito mais para ajudá-lo a criar aplicativos Microsoft Teams personalizados.'
 brand: teams
 metadata:
-  title: Microsoft Teams Documentação do desenvolvedor da plataforma
+  title: Microsoft Teams documentação do desenvolvedor da Plataforma
   description: 'A Microsoft Teams de desenvolvedores facilita que os desenvolvedores integrem seus próprios aplicativos e serviços para melhorar a produtividade, tomar decisões com mais rapidez, oferecer foco reduzindo a alternação de contexto e criar colaboração em torno de conteúdo e fluxos de trabalho existentes.'
   ms.service: msteams
   ms.topic: hub-page
@@ -74,7 +74,7 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Aplicativos para Teams reuniões
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+        - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cartões e módulos de tarefa
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -120,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Integrar conectores shifts prontos para produção
-    - title: Comunidade
+    - title: Community
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -133,7 +133,7 @@ conceptualContent:
           text: Comunicados
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Desenvolvedor Community e resposta
+          text: Microsoft Teams resposta e Community desenvolvedor
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Contribuir para Microsoft Teams documentação

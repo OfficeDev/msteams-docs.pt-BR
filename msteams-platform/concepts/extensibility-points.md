@@ -5,12 +5,12 @@ description: Descreve pontos de entrada para seu aplicativo, como equipe, canal 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2dd2670787c3da9140b5798db3e7d28b30271f70
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889076"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948415"
 ---
 # <a name="entry-points-for-teams-apps"></a>Pontos de entrada para os aplicativos do Teams
 
@@ -52,5 +52,5 @@ A lista a seguir mostra como Teams recursos são comumente usados em contextos p
 
 ## <a name="see-also"></a>Confira também
 
-[Teams de design de aplicativo](../concepts/design/design-teams-app-overview.md) <br>
-[Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Teams de design de aplicativo](../concepts/design/design-teams-app-overview.md) <br>
+* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

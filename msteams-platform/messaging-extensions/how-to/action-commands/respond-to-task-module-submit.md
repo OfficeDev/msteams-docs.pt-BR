@@ -5,12 +5,12 @@ description: Descreve como responder ao módulo de tarefa enviar ação de um co
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889409"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948408"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -589,9 +589,9 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
-|`mentionType`|Cadeia de Caracteres|Descreve a menção de uma "pessoa".|
-|`mri`|Cadeia de Caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|Cadeia de Caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`mentionType`|Cadeia de caracteres|Descreve a menção de uma "pessoa".|
+|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
+|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

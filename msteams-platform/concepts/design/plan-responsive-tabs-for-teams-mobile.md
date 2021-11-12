@@ -5,12 +5,12 @@ description: Guia para planejar a criação de um aplicativo no Teams móvel
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 60aab6b9c81dbc28fbbfe0d9a985b42c22ddee47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566145"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948394"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
@@ -185,4 +185,4 @@ As seguintes diretrizes de design e validação ajudam dependendo do escopo do s
 * [Projetando sua guia](../../tabs/design/tabs.md)
 * [Criar um bot](../../bots/design/bots.md)
 * [Criar módulos de tarefa](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Validando diretrizes](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Diretrizes de validação da Loja](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
