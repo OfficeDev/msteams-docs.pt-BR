@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: armazenamento de envio distribuir validar a localização de diretrizes de pacote de aplicativos
-ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889164"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949065"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio Microsoft Teams de armazenamento de dados
 
@@ -159,7 +159,7 @@ Lembre-se das seguintes práticas recomendadas sobre capturas de tela:
 
 Para ver as práticas recomendadas, consulte os seguintes recursos:
 
-* [Teams Diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Criar imagens efetivas para os armazenamentos de aplicativos da Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Criar um vídeo

@@ -4,12 +4,12 @@ description: Como começar a usar Teams no Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Configurar Microsoft 365 locatário Teams carregamento
-ms.openlocfilehash: 2b7da66460df12efd1e3c5bd45a9dfa6572e4b4c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c1f6a3009a3622c9ba46f2f03024ab696d03d979
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888150"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949030"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 
