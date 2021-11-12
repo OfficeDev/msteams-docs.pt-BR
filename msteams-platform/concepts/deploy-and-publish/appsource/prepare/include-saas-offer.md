@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 868c41ad0df976fec60b9f579b8447a310344d9a
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: c66a7aad6b56ca5be50ffa20384bb648a3750ba5
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912229"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949660"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
@@ -202,4 +202,4 @@ Se você desvincular uma oferta SaaS incluída na listagem da loja Teams, você 
 
 ## <a name="see-also"></a>Confira também
 
-* [Mantendo e dando suporte ao aplicativo publicado](../post-publish/overview.md)
+[Mantendo e dando suporte ao aplicativo publicado](../post-publish/overview.md)

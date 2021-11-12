@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889241"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949639"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir com a documentação do Teams
 
@@ -77,7 +77,7 @@ Exemplos de código desempenham uma função importante para usar APIs e SDKs de
 ## <a name="see-also"></a>Confira também
 
 * [Microsoft Docs](/)
-* [guia colaboradores](/contribute)
+* [Guia colaboradores](/contribute)
 * [Estilo docs e início rápido de voz](/contribute/style-quick-start)
 * [Borda de corte : Capacidade de leitura do código-fonte Dicas](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentação](/microsoftteams/platform/overview)

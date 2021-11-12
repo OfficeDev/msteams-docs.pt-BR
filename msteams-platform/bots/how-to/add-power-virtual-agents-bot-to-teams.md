@@ -5,12 +5,12 @@ description: Aprenda a integrar um chatbot Power Virtual Agents na plataforma Te
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c8f2f61157d1a08dcf7410b86a2f8bda221a6c50
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: bba50757f02a33f1eb83240041c73f104921ee00
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887578"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949667"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia 
 
@@ -99,15 +99,17 @@ Abra **a guia Testar e distribua** e selecione **Instalar** para adicionar seu b
 1. **Iniciar um chat**   
 O processo de configuração para adicionar seu Power Virtual Agents de chat ao Teams está concluído. Agora você pode iniciar uma conversa com seu bot em um chat pessoal.
 
-## <a name="see-also"></a>Confira também
-
-* [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Crie um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents).  
-* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-* [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-* [Segurança e conformidade em Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
-
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Criar um assistente virtual](~/samples/virtual-assistant.md)
+
+## <a name="see-also"></a>Confira também
+
+* [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Criar um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents) 
+* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+* [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Segurança e conformidade no Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+
+

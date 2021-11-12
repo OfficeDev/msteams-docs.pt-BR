@@ -18,7 +18,7 @@ highlightedContent:
       url: /microsoftteams/platform/whats-new
     - title: "Novo para Teams desenvolvimento? \U0001F680Comece aqui!"
       itemType: get-started
-      url: /microsoftteams/platform/overview
+      url: /microsoftteams/platform/get-started/get-started-overview
     - title: Planejar seu aplicativo
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
@@ -34,9 +34,9 @@ highlightedContent:
     - title: Publicar seu aplicativo no Teams store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Amostras de códigos e tutoriais
+    - title: Exemplos de código
       itemType: sample
-      url: /microsoftteams/platform/get-started/code-samples
+      url: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 conceptualContent:
   title: Guias e recursos
   items:

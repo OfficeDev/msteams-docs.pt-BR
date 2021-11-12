@@ -4,18 +4,18 @@ description: Descreve o fluxo de autenticação em guias, OAuth por AAD e fornec
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888444"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949646"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams fluxo de autenticação para guias
 
 > [!NOTE]
 > Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que esteja usando pelo menos a versão 1.4.1 do SDK do Microsoft Teams JavaScript.  
-> Teams O SDK inicia uma janela separada para fluxo de autenticação. De definir `SameSite` o atributo como **Lax**. Teams cliente da área de trabalho ou versões mais antigas do Chrome ou Safari não `SameSite` suportam =None.
+> Teams SDK inicia janela separada para fluxo de autenticação. De definir `SameSite` o atributo como **Lax**. Teams cliente da área de trabalho ou versões mais antigas do Chrome ou Safari não `SameSite` suportam =None.
 
 OAuth 2.0 é um padrão aberto para autenticação e autorização usada por Azure Active Directory (AAD) e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams. Para obter mais informações, consulte [OAuth 2 simplificado](https://aaronparecki.com/oauth-2-simplified/) que é mais fácil de seguir do que a [especificação formal](https://oauth.net/2/). O fluxo de autenticação para guias e bots é diferente porque as guias são semelhantes aos sites para que possam usar o OAuth 2.0 diretamente. Os bots fazem algumas coisas de forma diferente, mas os conceitos principais são idênticos.
 
@@ -51,9 +51,9 @@ Código de exemplo mostrando o processo de autenticação de tabulação:
 
 | **Nome do exemplo** | **Descrição** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams autenticação de tabulação | Processo de autenticação para guias usando AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams autenticação de tabulação | Processo de autenticação para guias usando AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## <a name="more-details"></a>Mais detalhes
+## <a name="see-also"></a>Confira também
 
 Para uma implementação detalhada para autenticação de tabulação usando AAD, consulte:
 
