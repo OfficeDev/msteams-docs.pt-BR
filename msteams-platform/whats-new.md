@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: ad3d18365eb513576379706d4bddd02efa71d96e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 370a23392c8b6233802b9faa0cc1edb9a6215e73
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720173"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960157"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ----------------|
+|11/13/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão [geral da](~/bots/how-to/conversations/conversation-basics.md)conversa bot e conversas de canal [e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)|
 |10/28/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável.| [Incluir uma oferta SaaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
 |10/25/2021| Atualizou o módulo Get started para Microsoft Teams documentação do desenvolvedor com nova estrutura e procedimentos em um guia passo a passo.| [Começar com seu primeiro Teams app](get-started/get-started-overview.md)|
 |10/21/2021| Adicione uma `registerOnFocused` API para guias ou aplicativos pessoais. |[Adicionar `registerOnFocused` API para guias ou aplicativos pessoais](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
@@ -95,14 +96,14 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 |08/06/2020|Suporte para autenticação SSO de guias.|[Desenvolver uma guia de Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph bots e mensagens proativos (Visualização Pública).|[Habilitar a instalação proativa de bots e mensagens proativas Teams com o Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |Atualizações de funcionalidade de dispositivo móvel.|[Solicitar permissões de dispositivo para sua guia Microsoft Teams de usuário](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams Ferramenta de Validação de Aplicativos](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Crie um assistente virtual para Teams.|[Assistente Virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Navegando em uma documentação de indicador de carregamento nativo.|[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Começar a criar Teams aplicativos com o Visual Studio Code Toolkit.|[Criar aplicativos com o Microsoft Teams Toolkit e Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Login único para guias GA para clientes Teams web e desktop.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema de manifesto atualizado para a versão 1.7.| [Referência: esquema de manifesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integre Power Virtual Agents com Teams.|[Integrar um Power Virtual Agents chatbot com Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
-|04/01/2020|Integrar sistemas WFM com o Conector de Turnos para Teams.|[Microsoft Teams Desloca conectores WFM](samples/shifts-wfm-connectors.md)
+|04/01/2020|Integrar sistemas WFM com o Conector de Turnos para Teams.|[Microsoft Teams os conectores WFM de turnos](samples/shifts-wfm-connectors.md)
 |03/24/2020 | Adicionado suporte para recuperar um único membro de uma conversa e suporte adicional para recuperar membros pagedos. | [Obter o contexto do Teams para o seu bot](~/bots/how-to/get-teams-context.md) |
 
 <br>
@@ -186,6 +187,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Anotações** | **Tópicos alterados** |
 | -------- | --------- | ------------------ |
+|11/15/2021|Guias pessoais e extensões de mensagens são executados Outlook e Office|[Estender Teams aplicativos em Microsoft 365](m365-apps/overview.md)
 |10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).|[Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), visão geral da conversa [de bot,](~/bots/how-to/conversations/conversation-basics.md)conversas de canal e [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)e esquema de manifesto [de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|Permissões de dispositivo para o navegador.| [Permissões do dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md)|
 |06/21/2021|Desinstalar o comportamento do aplicativo pessoal com bot.| [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

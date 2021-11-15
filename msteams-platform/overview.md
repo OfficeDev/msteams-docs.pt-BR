@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: adf95bb9eca4f6cd5ac07385212b1fd388a47079
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888031"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960233"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Crie aplicativos para o Microsoft Teams
 
@@ -208,6 +208,13 @@ Procurando inspiração para desenvolvimento de aplicativos? Navegue pela nossa 
 
    :::column-end:::
 :::row-end:::
+
+## <a name="test-your-app-running-across-microsoft-365"></a>Teste seu aplicativo em execução no Microsoft 365
+
+Você pode visualizar seus aplicativos Teams em execução em outras experiências de Microsoft 365 de alto uso com Microsoft Teams SDK do cliente JavaScript v2 Preview.
+
+> [!div class="nextstepaction"]
+> [Estender seu aplicativo](m365-apps/overview.md)
 
 ## <a name="see-also"></a>Confira também
 

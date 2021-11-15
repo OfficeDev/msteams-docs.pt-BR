@@ -4,21 +4,18 @@ author: surbhigupta12
 description: Receber todas as mensagens de canal com permissões RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155013"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960226"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 
-> [!NOTE]
-> Esse recurso está disponível apenas na [visualização de desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md) público.
+O modelo de permissões de consentimento específico do recurso (RSC), originalmente desenvolvido para APIs Teams Graph, é estendido para cenários de bot.
 
-O modelo de permissões de consentimento específico do recurso (RSC), originalmente desenvolvido para APIs Teams Graph, agora é estendido para cenários de bot.
-
-Atualmente, os bots só podem receber mensagens de canal do usuário quando estão @mentioned. Usando o RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens de usuário nos canais padrão em uma equipe sem @mentioned. Essa funcionalidade é habilitada especificando a permissão no manifesto de um `ChannelMessage.Read.Group` aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
+Usando o RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens de usuário nos canais padrão em uma equipe sem @mentioned. Essa funcionalidade é habilitada especificando a permissão no manifesto de um `ChannelMessage.Read.Group` aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
 
 Para obter mais informações sobre a habilitação do RSC para seu aplicativo, consulte [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
@@ -26,15 +23,19 @@ Para obter mais informações sobre a habilitação do RSC para seu aplicativo, 
 
 A `ChannelMessage.Read.Group` permissão RSC é estendida para bots. Com o consentimento do usuário, essa permissão permite que os aplicativos gráficos recebam todas as mensagens em uma conversa e bots recebam todas as mensagens de canal sem serem @mentioned.
 
+> [!NOTE]
+> * Os serviços que precisam de acesso a todos os Teams de mensagens devem usar as APIs Graph que também fornecem acesso a dados arquivados em canais e chats.
+> * Os bots devem usar a permissão RSC adequadamente para criar e aprimorar a experiência envolvente para os usuários na equipe ou eles não passarão na aprovação `ChannelMessage.Read.Group` do armazenamento. A descrição do aplicativo deve incluir como o bot usa os dados lidos.
+> * A permissão RSC pode não ser usada por bots como uma maneira de extrair `ChannelMessage.Read.Group` grandes quantidades de dados do cliente. 
+
 ## <a name="update-app-manifest"></a>Atualizar manifesto do aplicativo
 
 Para que o bot receba todas as mensagens de canal, o RSC deve ser configurado no manifesto do aplicativo Teams com a permissão `ChannelMessage.Read.Group` especificada na `webApplicationInfo` propriedade.
-
 ![Atualizar manifesto do aplicativo](~/bots/how-to/conversations/Media/appmanifest.png)
 
 Veja a seguir um exemplo do `webApplicationInfo` objeto:
 
-* **id**: Sua Azure Active Directory (AAD) iD do aplicativo. Isso pode ser o mesmo que sua ID de bot.
+* **id**: Sua Azure Active Directory (AAD) ID do aplicativo. Isso pode ser o mesmo que sua ID de bot.
 * **resource**: Qualquer cadeia de caracteres. Este campo não tem nenhuma operação no RSC, mas deve ser adicionado e ter um valor para evitar a resposta de erro.
 * **applicationPermissions**: as permissões RSC para seu aplicativo com `ChannelMessage.Read.Group` devem ser especificadas. Para obter mais informações, consulte [permissões específicas do recurso](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
@@ -50,7 +51,7 @@ O código a seguir fornece um exemplo do manifesto do aplicativo:
   }
 ```
 
-## <a name="sideload-in-a-team-to-test"></a>Fazer sideload em uma equipe para testar
+## <a name="sideload-in-a-team"></a>Sideload em uma equipe
 
 Para fazer sideload em uma equipe para testar, se todas as mensagens de canal em uma equipe com RSC são recebidas sem @mentioned:
 
