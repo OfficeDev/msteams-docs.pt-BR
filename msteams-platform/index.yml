@@ -60,6 +60,9 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Conexão web para canais e equipes com webhooks e Office 365 Conectores
+        - url: /microsoftteams/platform/m365-apps/overview
+          itemType: overview
+          text: Estender Teams aplicativos em Microsoft 365
     - title: Recursos
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs

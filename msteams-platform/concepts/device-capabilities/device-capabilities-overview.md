@@ -6,18 +6,18 @@ ms.author: surbhigupta
 keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d51b9532822a6cb9df2f69975722d16da6ee2531
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889136"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041710"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma Teams aprimorada permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local com seus aplicativos Web. Essa integração reduz a barreira ao desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
 
-As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
+As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipulava como conceder permissões de acesso e agora essas permissões são tratadas Microsoft Teams. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Recursos de dispositivo nativo
 
@@ -27,7 +27,7 @@ Um celular ou desktop tem dispositivos integrados, como câmera e microfone, cha
     * Microfone
     * Galeria
     * QR ou scanner de código de barras
-* Local
+* Localização
 
 Depois de obter acesso aos recursos do dispositivo, você pode integrá-los à plataforma Teams para aprimorar a experiência colaborativa. 
 

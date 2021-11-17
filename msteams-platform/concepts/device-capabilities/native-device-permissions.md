@@ -4,12 +4,12 @@ keywords: recursos de aplicativos do teams permissões de dispositivo de verific
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário, como verificação de qr, código de barras, imagem, áudio, recursos de vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 24556765866eb271e30e9d1c7294c38352c78092
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948429"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041724"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -194,14 +194,11 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 | **Exemplo de nome** | **Descrição** | **Node.js** |
 |---------------|--------------|--------|
-|Permissões de dispositivos | Usar Microsoft Teams de exemplo de guia para demonstrar permissões de dispositivo |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
+|Permissões de dispositivos | Usar Microsoft Teams de exemplo de guia para demonstrar permissões de dispositivo |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 
+* [Permissões do dispositivo para o navegador](browser-device-permissions.md)
+* [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](location-capability.md)

@@ -4,36 +4,40 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 32ccdc732fb05b82ab36b631c5e35f25f8c6c7dc
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 8ace96ea1e9582c6087d0f551dc021e69a4a8de2
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912182"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041717"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
 > [!NOTE]
-> A alteração de como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização de [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público. Essa alteração estará geralmente disponível (GA) até 01 de fevereiro de 2022.
+> A atualização mais recente sobre como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização do [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público. Essa atualização estará geralmente disponível (GA) até 01 de fevereiro de 2022.
 
-Os aplicativos que exigem permissões de dispositivo - como acesso a câmera ou microfone - agora exigem que os usuários concedam o consentimento manualmente em um nível de aplicativo no navegador da Web. Anteriormente, o navegador manipulava como essas permissões eram concedidas, mas agora essas permissões serão tratadas em Microsoft Teams. Isso tem implicações sobre como você projeta seu aplicativo se eles exigirem essas permissões no navegador.
 
-## <a name="change-in-behavior"></a>Mudança no comportamento
-Se seu aplicativo tiver declarado que precisa de permissões de dispositivo no manifesto do [aplicativo,](native-device-permissions.md)os usuários receberão uma opção de "permissões de aplicativo", onde poderão habilitar as permissões de dispositivo de um aplicativo. A opção "permissões de aplicativo" pode ser encontrada em aplicativos pessoais, caixas de diálogo do módulo de tarefas e guias em chats, canais ou reuniões.
+Teams aplicativo que exigem permissões de dispositivo, como acesso a câmera ou microfone, agora exigem que os usuários concedam permissão manualmente em um nível de aplicativo no navegador da Web. Anteriormente, o navegador manipulava como conceder permissões de acesso, mas agora essas permissões são tratadas em Microsoft Teams. Isso tem implicações sobre como você projeta seu aplicativo e se eles exigem essas permissões no navegador.
 
-### <a name="personal-apps-and-task-module-dialogs"></a>Caixas de diálogo de aplicativos pessoais e módulos de tarefas
-A configuração "permissões de aplicativo" pode ser encontrada na parte superior direita.
+## <a name="enable-apps-device-permissions"></a>Habilitar permissões de dispositivo do aplicativo
+Se o aplicativo Teams tiver declarado [](native-device-permissions.md#specify-permissions) no manifesto do aplicativo que ele  precisa de permissões de dispositivo, a opção Permissões do aplicativo será exibida para os usuários habilitarem as permissões de dispositivo do aplicativo. A **opção Permissões do** aplicativo está disponível nos seguintes recursos: 
+
+* **Caixas de diálogo aplicativos** pessoais e módulos de tarefa : A opção **Permissões do** aplicativo está disponível no canto superior direito da página.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
-### <a name="chat-channel-or-meeting-tabs"></a>Guias de chat, canal ou reunião
-A configuração "permissões de aplicativo" pode ser encontrada no menu suspenso de tabulação.
-![Drop-down de permissões do aplicativo](../../assets/images/tabs/drop-downapppermissions.png)
+* **Chats, canais ou guias de reunião:** a opção **Permissões do** aplicativo está disponível no menu suspenso da guia. ![ Drop-down de permissões do aplicativo](../../assets/images/tabs/drop-downapppermissions.png)
 
-Um usuário precisará habilitar essas permissões no navegador para que essas permissões entre em vigor. Depois que um usuário altera as permissões de dispositivo de um aplicativo no navegador, ele será solicitado a recarregar o aplicativo Teams. É importante que você faça os usuários saberem para onde ir para habilitar essas permissões Microsoft Teams.
+Depois que **a opção Permissões do** aplicativo é selecionada, um pop-up aparece onde o usuário pode habilitar o botão permissões.
+
+Um usuário precisará habilitar essas permissões no navegador para que essas permissões entre em vigor. Depois que o usuário altera as permissões de dispositivo do aplicativo no navegador, ele é solicitado a recarregar o aplicativo Teams.
+
+> [!IMPORTANT]
+> Você deve tornar os usuários cientes de onde ir para habilitar essas **permissões de** aplicativo em Microsoft Teams.
 
 ## <a name="recommendation"></a>Recomendação
-Microsoft Teams aplicativos que exigem permissões de dispositivo no navegador devem mostrar instruções aos usuários sobre onde encontrar e habilitar essas permissões na interface do usuário Teams. Dependendo do contexto em que seu aplicativo está sendo executado, você precisará garantir que suas instruções estão apontando para o usuário para o local correto para acessar essas permissões, pois elas diferem para aplicativos pessoais, caixas de diálogo do módulo de tarefas e guias em chats, canais ou reuniões.
+Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar instruções aos usuários sobre onde encontrar e habilitar essas permissões na interface do usuário Teams usuário. Dependendo do contexto em que seu aplicativo está sendo executado, você precisa garantir que suas instruções estão apontando para o usuário a localização correta para acessar essas permissões, pois elas diferem para aplicativos pessoais, caixas de diálogo do módulo de tarefas, guias em chats e canais ou reuniões.
 
+</br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
 ## <a name="see-also"></a>Confira também

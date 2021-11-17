@@ -1,17 +1,17 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Identificar referências de API de aplicativos de reunião com exemplos e exemplos de código
+description: Identificar as referências da API de aplicativos de reunião com exemplos e exemplos de código
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação do usuário de função de usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: ba7996e0c33823c3f296d18350ea33421c844c68
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912190"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041626"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -40,13 +40,13 @@ A tabela a seguir fornece os métodos SDK da Estrutura de Bot para as APIs:
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte [obter contexto para](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)sua Teams guia . `meetingId`é usado por uma guia ao ser executado no contexto da reunião e é adicionado para a carga de resposta.
+Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte obter contexto para sua guia [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). é usado por uma guia ao ser executado no contexto da reunião e é adicionado para a carga de `meetingId` resposta.
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * Não armazenar em cache as funções do participante, pois o organizador da reunião pode alterar as funções a qualquer momento.
-> * Teams atualmente não dá suporte a grandes listas de distribuição ou tamanhos de lista de mais de 350 participantes para a `GetParticipant` API.
+> * Teams atualmente não suporta listas de distribuição grandes ou tamanhos de lista de mais de 350 participantes para o `GetParticipant` API.
 
 A `GetParticipant` API permite que um bot busque informações do participante por meio da ID da reunião e da ID do participante. A API inclui parâmetros de consulta, exemplos e códigos de resposta.
 
@@ -56,7 +56,7 @@ A `GetParticipant` API inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
 |**participantId**| Cadeia de caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. | 
 
@@ -462,7 +462,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | C # | Node.js | 
+|Nome do exemplo | Descrição | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
