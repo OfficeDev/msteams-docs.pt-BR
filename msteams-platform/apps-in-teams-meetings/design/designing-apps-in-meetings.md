@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Estágio de reunião compartilhada do modelo de kit de interface do usuário na reunião
-ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
+ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887842"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61051193"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -192,7 +192,7 @@ O estágio de reunião compartilhado ajuda os participantes da reunião a intera
 Os aplicativos compartilhados no estágio de reunião ocupam o mesmo espaço que uma tela compartilhada. O estágio reorienta para todos os participantes da reunião.
 
 > [!NOTE]
-> Todos os usuários na reunião podem ver o aplicativo quando compartilhado da área de trabalho. No entanto, a capacidade de compartilhar um aplicativo em estágios do celular não está disponível no momento.
+> Todos os usuários na reunião podem ver o aplicativo quando compartilhado da área de trabalho. Atualmente, os usuários móveis não podem compartilhar conteúdo do aplicativo no estágio de reunião.
  
 ### <a name="use-cases"></a>Casos de uso
 
