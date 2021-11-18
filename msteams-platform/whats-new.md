@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams o que há de novo mais recente
-ms.openlocfilehash: baca6a204c183f421479be7e69f426ef74ca901f
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: f980c31389408e51ddc44337db1c5b8a93f1ff1c
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041689"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061976"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,9 +22,9 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+| 11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Guias pessoais e extensões de mensagens são executados em Outlook e Office (Visualização) | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
-| 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bot > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|
+| 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > [conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -36,8 +36,9 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Atualizar** | **Encontre aqui** |
+| **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bot > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável.| Distribuir seu aplicativo > Publicar no Teams store > Incluir uma oferta [saaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Atualizou o módulo Get started para Microsoft Teams documentação do desenvolvedor com nova estrutura e procedimentos em um guia passo a passo.| Começar a > [Começar com seu primeiro Teams app](get-started/get-started-overview.md) |
@@ -93,7 +94,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Atualizar** | **Encontre aqui** |
+| **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Integração da plataforma de identidade com Teams Toolkit e Visual Studio Code para guias.|[Autenticação de login único com Teams Toolkit e Visual Studio Code para guias](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams manifesto do aplicativo atualizado para a versão 1.8.|[Referência: esquema de manifesto para Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -127,7 +128,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Atualizar** | **Encontre aqui** |
+| **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | O parâmetro em cargas enviadas a um bot não é mais criptografado, permitindo que você use esse valor para construir `replyToId` links profundos para essas mensagens. As cargas de mensagens incluem os valores criptografados no parâmetro `legacy.replyToId` .  |
 | 11/05/2019 | Login único usando o Teams JavaScript SDK. | [Logon único](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -157,7 +158,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Atualizar** | **Encontre aqui** |
+| **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams. Como parte desse trabalho, a seção guias foi reformulada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | O início do Nó JS e do .NET/C# foi atualizado para usar o App Studio no Teams, e uma nova seção foi adicionada para hospedar aplicativos Teams baseados em nó no Azure. | Começar Microsoft Teams plataforma Microsoft Teams com [o C#/.NET](~/get-started/get-started-dotnet-app-studio.md)e o App Studio , Iniciar na plataforma Microsoft Teams com [o Node JS](~/get-started/get-started-nodejs-app-studio.md)e o App Studio, hospedar seu aplicativo node Teams no [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -197,7 +198,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 A visualização do desenvolvedor é um programa público que fornece acesso antecipado a recursos Teams plataforma não lançados.  
 
-| **Date** | **Atualizar** | **Encontre aqui** |
+| **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
 | 11/15/2021 | Guias pessoais e extensões de mensagens são executados Outlook e Office | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).| • Crie bots > conversas bot > Mensagens em conversas de bot > [Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [canal e conversas em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de visualização [do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |

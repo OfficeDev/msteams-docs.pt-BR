@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: medium
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888290"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061955"
 ---
 # <a name="cards"></a>Cartões
 
@@ -20,7 +20,7 @@ Os bots para Teams suportam os seguintes tipos de cartões:
 - Cartão Adaptável
 - Cartão de herói
 - Cartão de listagem
-- Office 365 Cartão conector
+- Office 365 conector
 - Cartão de recebimento
 - Cartão de signin
 - Cartão de miniatura
@@ -62,6 +62,10 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 
 * Cartões conectores: usados como parte de conectores Office 365 conectores.
 * Cartões simples: usados a partir da Estrutura de Bot, como a miniatura e os cartões de herói.
+
+### <a name="type-ahead-search-in-adaptive-cards"></a>Pesquisa de tipo à frente em Cartões Adaptáveis  
+
+Digite a pesquisa à frente adicionada como [](~/task-modules-and-cards/cards/dynamic-search.md) um controle de entrada em Cartões Adaptáveis habilitam a experiência de pesquisa dinâmica a partir de um conjuntos de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa estática de tipo à frente dentro de uma lista com número limitado de opções. Os clientes móveis e de área de trabalho suportam o tipo de experiência de pesquisa dinâmica à frente. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartões adaptáveis e Webhooks de entrada
 
