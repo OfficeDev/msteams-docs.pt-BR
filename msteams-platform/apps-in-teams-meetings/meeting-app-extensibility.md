@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião, criando a experiência de reunião do usuário durante todo o ciclo de vida da reunião no ambiente de desktop e móvel, funções de participantes e tipos de usuário. Além disso, saiba mais sobre como integrar bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 51e04b9a43cab20b6854ae9dc8a08b174f36add7
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041703"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075462"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -18,8 +18,6 @@ Teams aplicativos de reuniões unificadas são baseados nos seguintes conceitos:
 * O ciclo de vida da reunião tem diferentes estágios: pré-reunião, reunião e pós-reunião.  
 * Há três funções de participantes distintas em uma reunião: organizador, apresentador e participante. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Há vários tipos [de usuário](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) em uma reunião: no locatário, [convidado,](/microsoftteams/guest-access) [federado](/microsoftteams/manage-external-access)e usuários anônimos.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
 Este artigo aborda as informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens. Ele identifica diferentes funções de participante e tipos de usuário.
 

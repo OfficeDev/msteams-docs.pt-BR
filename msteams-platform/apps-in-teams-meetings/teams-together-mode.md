@@ -3,12 +3,12 @@ title: Custom Together Mode Scenes
 description: Trabalhar com cenas personalizadas do modo Juntos
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 3820a711dfa759e3ad9429efd6b848cbe47e4623
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912238"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075455"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -17,8 +17,6 @@ As cenas do Modo Personalizado em Conjunto Microsoft Teams um ambiente de reuni�
 * Reunir pessoas e incentivá-las a ativar seu vídeo. 
 * Combine os participantes digitalmente em uma única cena virtual. 
 * Coloque os fluxos de vídeo dos participantes em assentos pré-determinados projetados e corrigidos pelo criador da cena.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 Em cenas personalizadas do modo Juntos, a cena é um artefato. A cena é criada pelo desenvolvedor de cena usando o estúdio do Microsoft Scene. Em uma configuração de cena concebida, os participantes têm bancos com fluxos de vídeo. Os vídeos são renderizados nesses bancos. Somente aplicativos de cena são recomendados, pois a experiência para esses aplicativos é clara.
 

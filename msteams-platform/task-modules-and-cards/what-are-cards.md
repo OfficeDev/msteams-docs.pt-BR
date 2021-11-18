@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: medium
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061955"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075441"
 ---
 # <a name="cards"></a>Cartões
 
@@ -54,8 +54,6 @@ Todos os cartões usados por Teams estão listados em [tipos de cartões](~/task
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [Cartões adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) são uma nova especificação de produto cruzado para cartões em produtos Microsoft, incluindo bots, Cortana, Outlook e Windows. Eles são o tipo de cartão recomendado para novos Teams desenvolvimento. Para obter informações gerais da equipe cartões adaptáveis, consulte [Adaptive Cards overview](/adaptive-cards). Você pode usar Cartões Adaptáveis em qualquer lugar que você use cartões de herói existentes, Office 365 cartões de Office 365 e cartões de miniatura.
 
 Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de cartões:
@@ -68,8 +66,6 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 Digite a pesquisa à frente adicionada como [](~/task-modules-and-cards/cards/dynamic-search.md) um controle de entrada em Cartões Adaptáveis habilitam a experiência de pesquisa dinâmica a partir de um conjuntos de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa estática de tipo à frente dentro de uma lista com número limitado de opções. Os clientes móveis e de área de trabalho suportam o tipo de experiência de pesquisa dinâmica à frente. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartões adaptáveis e Webhooks de entrada
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 
 > [!NOTE]
 > * Todos os elementos de esquema de Cartão Adaptável nativos, exceto `Action.Submit` , são totalmente suportados.

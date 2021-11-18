@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887689"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075448"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para Teams reuniões
 
@@ -22,8 +22,6 @@ Os usuários podem acessar aplicativos durante reuniões usando a galeria de gui
 * Pré-estágio de um quadro Kanban.
 * Iniciar uma caixa de diálogo acionável na reunião.
 * Crie uma pesquisa pós-reunião.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
 A ilustração a seguir fornece uma ideia dos recursos de extensibilidade do aplicativo de reunião:
 

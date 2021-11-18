@@ -5,12 +5,12 @@ keywords: kit de ferramentas do visual studio do teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888010"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075469"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Teams Toolkit e Visual Studio
 
@@ -86,8 +86,3 @@ No [portal](https://dev.teams.microsoft.com/home)do desenvolvedor do Teams , voc
 
 - Seu administrador de TI revisará esses envios.
 - Você pode retornar à página **Publicar** para verificar o status do envio e saber se seu aplicativo foi aprovado ou rejeitado pelo administrador de TI. Isso também é onde você pode enviar atualizações para seu aplicativo ou cancelar quaisquer envios ativos no momento.
-
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Criar e executar seu primeiro aplicativo Microsoft Teams com o Blazor](../get-started/first-app-blazor.md)

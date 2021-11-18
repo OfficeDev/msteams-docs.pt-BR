@@ -5,17 +5,14 @@ description: Descreve a pesquisa typeahead com o controle Input.ChoiceSet em Car
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062056"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075580"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Pesquisa typeahead em Cartões Adaptáveis  
-
-> [!NOTE]
-> Atualmente, esse recurso está disponível apenas na [visualização de desenvolvedor](~/resources/dev-preview/developer-preview-intro.md) público.
+# <a name="typeahead-search-in-adaptive-cards"></a>Pesquisa typeahead em Cartões Adaptáveis
 
 A funcionalidade de pesquisa typeahead em Cartões Adaptáveis oferece uma experiência de pesquisa aprimorada no `input.choiceset` componente. Ele fornece uma lista de opções para inserir texto no campo de pesquisa. Você pode incorporar a pesquisa typeahead com Cartões Adaptáveis para pesquisar e selecionar dados.
 
@@ -301,3 +298,6 @@ O exemplo de carga que contém a pesquisa de typeahead estático e dinâmico com
 ```
 
 ## <a name="see-also"></a>Confira também
+
+* [Ações Universais para Cartões Adaptáveis](Universal-actions-for-adaptive-cards/Overview.md)
+* [Módulos de tarefas](../what-are-task-modules.md)

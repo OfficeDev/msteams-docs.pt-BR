@@ -4,12 +4,12 @@ description: Descreve todas as ações de cartões e cartões disponíveis para 
 ms.localizationpriority: medium
 keywords: referência de cartões bots
 ms.topic: reference
-ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 47e87ea28a1e003838152cd7f535a23d6861ac6f
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889122"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075587"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -51,7 +51,7 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 | [Cartão Adaptável](#adaptive-card) | Esse cartão é altamente personalizável e pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. |
 | [Cartão de herói](#hero-card) | Esse cartão normalmente contém uma única imagem grande, um ou mais botões e uma pequena quantidade de texto. |
 | [Cartão de listagem](#list-card) | Este cartão contém uma lista de rolagem de itens. |
-| [Office 365 Cartão conector](#office-365-connector-card) | Esse cartão tem um layout flexível com várias seções, campos, imagens e ações. |
+| [Office 365 conector](#office-365-connector-card) | Esse cartão tem um layout flexível com várias seções, campos, imagens e ações. |
 | [Cartão de recebimento](#receipt-card) | Este cartão fornece um recibo para o usuário. |
 | [Cartão de signin](#signin-card) | Esse cartão permite que um bot solicite que um usuário entre. |
 | [Cartão de miniatura](#thumbnail-card) | Esse cartão normalmente contém uma única imagem em miniatura, algum texto curto e um ou mais botões. |
@@ -62,7 +62,7 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 | Tipo de cartão | Bots | Visualizações de extensão de mensagem | Resultados da extensão de mensagem | Módulos de tarefas | Webhooks de saída | Webhooks de entrada | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Cartão Adaptável | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 Cartão conector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 conector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Cartão de herói | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Cartão de miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Cartão de listagem | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -92,7 +92,7 @@ A tabela a seguir fornece as propriedades das imagens de cartão em linha:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | url | URL | URL HTTPS para a imagem. |
-| alt | Cadeia de Caracteres | Descrição acessível da imagem. |
+| alt | Cadeia de caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
 > Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, o redirecionamento na URL da imagem não será suportado. Isso ocorre para imagens compartilhadas na nuvem pública.
@@ -110,8 +110,6 @@ Para obter mais informações sobre formatação de texto em cartões, consulte 
 Depois de identificar as propriedades comuns para todos os cartões, agora você pode trabalhar com Cartões Adaptáveis, que ajudam a aumentar o envolvimento e a eficiência adicionando seu conteúdo a ação diretamente aos aplicativos que você usa.
 
 ## <a name="adaptive-card"></a>Cartão Adaptável
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
 Um Cartão Adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Para obter mais informações, consulte [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
@@ -363,7 +361,7 @@ A tabela a seguir fornece as propriedades de um cartão de listagem:
 | Propriedade | Tipo  | Descrição |
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas.|
-| itens | Matriz de itens de lista | Conjunto de itens aplicáveis ao cartão.|
+| items | Matriz de itens de lista | Conjunto de itens aplicáveis ao cartão.|
 | botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
 
 ### <a name="example-of-a-list-card"></a>Exemplo de um cartão de lista
@@ -447,7 +445,7 @@ A tabela a seguir fornece as propriedades do cartão Office 365 conector:
 
 ### <a name="additional-information-on-the-office-365-connector-card"></a>Informações adicionais sobre o cartão Office 365 conector
 
-Office 365 Os cartões conectores funcionam corretamente Microsoft Teams, incluindo [ `ActionCard` ações](/outlook/actionable-messages/card-reference#actioncard-action).
+Office 365 conectores funcionam corretamente no Microsoft Teams, incluindo [ `ActionCard` ações](/outlook/actionable-messages/card-reference#actioncard-action).
 
 A diferença importante entre o uso de cartões de conector de um conector e o uso de cartões de conector no bot é o tratamento de ações de cartão. A tabela a seguir lista a diferença:
 

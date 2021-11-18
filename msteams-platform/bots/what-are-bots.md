@@ -5,12 +5,12 @@ description: Uma visão geral dos bots Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c02fe1508261c1392472f87e7266e38fed7c12b1
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887849"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075604"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -18,8 +18,6 @@ Um bot também conhecido como chatbot ou bot de conversa é um aplicativo que ex
 
 > [!IMPORTANT]
 > Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
 Os bots de conversa permitem aos usuários interagir com o serviço Web por meio de texto, cartões interativos e módulos de tarefas.
 

@@ -4,12 +4,12 @@ description: Visão geral para Começar a Microsoft Teams De desenvolvedor
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemplos de desenvolvedor
-ms.openlocfilehash: 0b2ded130bf68f1db8715c8ff6e10336db6aeb2c
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720082"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075476"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -53,9 +53,6 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 > [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [Criar um Teams com o Blazor](../sbs-gs-blazor.yml)
-
-> [!div class="nextstepaction"]
 > [Criar um Teams com SPFx](../sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
@@ -63,4 +60,3 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 
 > [!div class="nextstepaction"]
 > [Criar um Teams com Node.js](../sbs-gs-nodejs.yml)
-
