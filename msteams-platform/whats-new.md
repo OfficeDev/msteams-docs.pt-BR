@@ -3,13 +3,13 @@ title: Novidades
 description: Descreve todos os novos recursos de desenvolvedor no Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams o que há de novo mais recente
-ms.openlocfilehash: f980c31389408e51ddc44337db1c5b8a93f1ff1c
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+keywords: teams quais são as novas atualizações e recursos mais recentes
+ms.openlocfilehash: ba1dab69442ec7693462456fd26bb58b9223df6c
+ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061976"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61078743"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+| 11/17/2021| Diretrizes Microsoft Teams de validação de loja atualizadas|[Diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Guias pessoais e extensões de mensagens são executados em Outlook e Office (Visualização) | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > [conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -38,9 +39,10 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Atualização** | **Encontre aqui** |
 | -------- | --------- | ----------------|
-| 11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
-| 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bot > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|10/28/2021 | Monetize seu Teams aplicativo com uma oferta SaaS transacionável.| Distribuir seu aplicativo > Publicar no Teams store > Incluir uma oferta [saaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|11/17/2021| Diretrizes Microsoft Teams de validação de loja atualizadas|[Diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
+|11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
+|11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bot > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021| Monetize seu Teams aplicativo com uma oferta SaaS transacionável.| Distribuir seu aplicativo > Publicar no Teams store > Incluir uma oferta [saaS com seu Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Atualizou o módulo Get started para Microsoft Teams documentação do desenvolvedor com nova estrutura e procedimentos em um guia passo a passo.| Começar a > [Começar com seu primeiro Teams app](get-started/get-started-overview.md) |
 |10/21/2021| Adicione uma `registerOnFocused` API para guias ou aplicativos pessoais. | Criar guias > Criar guias pessoais > [Adicionar `registerOnFocused` API para guias ou aplicativos pessoais](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| O estágio de reunião agora está disponível em GA. | Criar aplicativos para Teams reuniões > [Habilitar e configurar seus aplicativos para Teams reuniões](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
