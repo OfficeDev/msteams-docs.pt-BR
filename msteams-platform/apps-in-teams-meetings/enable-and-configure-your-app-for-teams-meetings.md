@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17add35ef0b2d2cbb3ce2e6658d11d6d58dd8d2d
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
+ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912217"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61156597"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -161,10 +161,14 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | C # | Node.js |
+|Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token de reunião em sua Teams reunião.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -175,4 +179,3 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Adicionar aplicativos a reuniões por meio do Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http)
