@@ -5,12 +5,12 @@ description: Saiba como adicionar link desfraldamento com extensão de mensagens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889395"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178290"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -40,6 +40,7 @@ Para adicionar a desaplicação de link ao manifesto do aplicativo, adicione uma
 1. Na página **Extensão de Mensagens,** adicione o domínio que você deseja procurar na seção **Manipuladores de** mensagens. A imagem a seguir explica o processo:
 
     ![seção manipuladores de mensagens no App Studio](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldamento manualmente
 
@@ -76,10 +77,10 @@ Os seguintes tipos de cartão são suportados:
 
 * [Cartão de miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Cartão de herói](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Cartão conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão Adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Você pode exibir uma visualização de um cartão adaptável ou Office 365 conector na lista de resultados usando sua propriedade de visualização. A propriedade preview não será necessária se os resultados já são cartões Hero ou Thumbnail. Se você usar o anexo de visualização, ele deve ser um cartão Hero ou Thumbnail. Se nenhuma propriedade preview for especificada, a visualização do cartão falhará e nada será exibido.
+Para obter mais informações, consulte [Tipo de ação invocar](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Exemplo
 

@@ -6,12 +6,12 @@ keywords: teams tabs outgoing webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888311"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178297"
 ---
 # <a name="create-incoming-webhook"></a>Criar Webhook de entrada
 
@@ -35,7 +35,7 @@ A tabela a seguir fornece os recursos e a descrição do Webhook de entrada:
 |Definições de recursos seguros|As mensagens são formatadas como cargas JSON. Essa estrutura declarativa de mensagens impede a inserção de código mal-intencionado.|
 
 > [!NOTE]
-> * Teams bots, extensões de mensagens, Webhook de entrada e a Estrutura de Bot suportam Cartões Adaptáveis, uma estrutura de plataforma de cartão cruzado aberta. Atualmente, Teams [conectores não](../../webhooks-and-connectors/how-to/connectors-creating.md) suportam Cartões Adaptáveis. No entanto, é possível criar um [fluxo que](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) poste Cartões Adaptáveis em um canal Teams.
+> * Teams bots, extensões de mensagens, Webhook de entrada e a Estrutura de Bot suportam Cartões Adaptáveis. Cartões Adaptáveis é uma estrutura de plataforma de cartão cruzado aberta que pode ser usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, [Teams conectores não](../../webhooks-and-connectors/how-to/connectors-creating.md) suportam Cartões Adaptáveis. No entanto, é possível criar um [fluxo que](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) poste Cartões Adaptáveis em um canal Teams.
 > * Para obter mais informações sobre cartões e webhooks, consulte [Cartões adaptáveis e Webhooks de entrada.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>Criar Webhook de entrada

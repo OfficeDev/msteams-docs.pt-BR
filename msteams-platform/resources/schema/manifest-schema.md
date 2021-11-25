@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912203"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178241"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -559,7 +559,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
 |`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
 |`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
-|`parameters.value`|string|512 caracteres||Valor inicial do parâmetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial do parâmetro. Atualmente, o valor não é suportado|
 |`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true` . Um de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset` o . Use somente quando `parameter.inputType` for `choiceset` .|
 |`parameters.choices.title`|string|128 caracteres|✔|Título da escolha.|

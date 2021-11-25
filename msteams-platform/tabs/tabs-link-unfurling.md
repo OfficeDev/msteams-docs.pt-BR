@@ -5,12 +5,12 @@ description: Saiba como desatar um link, abrir o Stage View e fixar uma guia com
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887564"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178255"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -43,9 +43,9 @@ Quando o usuário insula uma URL no cliente da área de [](../task-modules-and-c
 
 As imagens a seguir exibem um estágio aberto de um Cartão Adaptável:
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="700"/>
+[![Abrir um estágio do Cartão Adaptável](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
+[![Abrir um estágio](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
 
 ### <a name="example"></a>Exemplo
 
@@ -125,7 +125,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
+| `entityId` | String | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
 | `name` | Cadeia de Caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
 | `contentUrl` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
 | `websiteUrl?` | Cadeia de Caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|

@@ -5,12 +5,12 @@ description: Descreve como responder ao módulo de tarefa enviar ação de um co
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948408"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178281"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -21,12 +21,12 @@ Depois que um usuário envia o módulo de tarefa, seu serviço Web recebe uma me
 
 Você tem as seguintes opções para responder:
 
-* Nenhuma resposta: use a ação enviar para disparar um processo em um sistema externo e não fornecer comentários ao usuário, é útil para processos de longa duração e selecione fornecer comentários de forma alternativa. Por exemplo, você pode dar comentários com uma [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
+* Nenhuma resposta: use a ação enviar para disparar um processo em um sistema externo e não fornecer comentários para o usuário. É útil para processos de longa duração e para fornecer comentários de forma alternativa. Por exemplo, você pode dar comentários com uma [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Outro módulo de](#respond-with-another-task-module)tarefa : você pode responder com um módulo de tarefa adicional como parte de uma interação em várias etapas.
 * [Resposta ao](#respond-with-a-card-inserted-into-the-compose-message-area)cartão : você pode responder com um cartão com o que o usuário pode interagir ou inserir em uma mensagem.
 * [Cartão Adaptável do bot](#bot-response-with-adaptive-card): Insira um Cartão Adaptável diretamente na conversa.
 * [Solicitar que o usuário autenture](~/messaging-extensions/how-to/add-authentication.md).
-* [Solicite que o usuário forneça configuração adicional]~/get-started/first-message-extension.md).
+* [Solicite que o usuário forneça configuração adicional.](~/get-started/first-message-extension.md)
 
 Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original se ressente ao seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis com base no local de `commandContext` invocação da extensão de mensagens: 
 
@@ -589,9 +589,9 @@ A seção a seguir é uma descrição das entidades na `OnBehalfOf` Matriz:
 |Campo|Tipo|Descrição|
 |:---|:---|:---|
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0` .|
-|`mentionType`|Cadeia de caracteres|Descreve a menção de uma "pessoa".|
-|`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
-|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
+|`mentionType`|Cadeia de Caracteres|Descreve a menção de uma "pessoa".|
+|`mri`|Cadeia de Caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como " \<user\> através \<bot name\> ".|
+|`displayName`|Cadeia de Caracteres|Nome da pessoa. Usado como fallback em caso de resolução de nome não disponível.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

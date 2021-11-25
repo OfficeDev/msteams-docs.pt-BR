@@ -5,18 +5,18 @@ description: Saiba como responder ao comando de pesquisa de uma extensão de men
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889374"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178276"
 ---
 # <a name="respond-to-search-command"></a>Responder ao comando de pesquisa
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Depois que o usuário envia o comando de pesquisa, seu serviço Web recebe uma mensagem de invocação que contém um `composeExtension/query` `value` objeto com os parâmetros de pesquisa. Essa invocação é disparada com as seguintes condições:
+Depois que o usuário envia o comando de pesquisa, seu serviço Web recebe uma mensagem de invocação que contém um `composeExtension/query` `value` objeto com os parâmetros de pesquisa. Essa invocação que é disparada com as seguintes condições:
 
 * À medida que os caracteres são inseridos na caixa de pesquisa.
 * `initialRun` é definido como true no manifesto do aplicativo, você recebe a mensagem de invocação assim que o comando de pesquisa é invocado. Para obter mais informações, consulte [consulta padrão](#default-query).
@@ -98,7 +98,7 @@ Teams dá suporte aos seguintes tipos de cartão:
 
 * [Cartão de miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Cartão de herói](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Cartão conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão Adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Para ter uma melhor compreensão e visão geral sobre cartões, consulte [o que são cartões](~/task-modules-and-cards/what-are-cards.md).
@@ -107,13 +107,18 @@ Para saber como usar os tipos de miniatura e cartão de herói, consulte [adicio
 
 Para obter informações adicionais sobre o Office 365 conector, consulte [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
+
 A lista de resultados é exibida na interface do usuário Microsoft Teams com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
 
-* Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão Hero ou Thumbnail.
-* Extraído das propriedades `title` básicas `text` , e do `image` anexo. Eles são usados somente se `preview` a propriedade não estiver definida e essas propriedades estarão disponíveis.
-* O botão cartão Hero ou Thumbnail e as ações de toque, exceto invocar, não são suportadas no cartão de visualização.
+* Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão Hero ou thumbnail.
+* Extraindo das `title` propriedades `text` básicas , e do `image` `attachment` objeto. As propriedades básicas são usadas somente se `preview` a propriedade não for especificada.
 
-Você pode exibir uma visualização de um cartão adaptável ou Office 365 conector na lista de resultados usando sua propriedade de visualização. A propriedade preview não será necessária se os resultados já são cartões Hero ou Thumbnail. Se você usar o anexo de visualização, ele deve ser um cartão Hero ou Thumbnail. Se nenhuma propriedade preview for especificada, a visualização do cartão falhará e nada será exibido.
+Para cartão Hero ou Miniatura, exceto a ação invocar outras ações, como botão e toque, não são suportadas no cartão de visualização.
+
+Para enviar um Cartão Adaptável ou um cartão conector do Ofiice 365, você deve incluir uma visualização. A `preview` propriedade deve ser um cartão Hero ou Thumbnail. Se você não especificar a propriedade preview no `attachment` objeto, uma visualização não será gerada.
+
+Para cartões Hero e Thumbnail, você não precisa especificar uma propriedade de visualização, uma visualização é gerada por padrão. O exemplo a seguir exibe o recurso de desfralização de link quando um link é passado na extensão de mensagens:  
+![link desfraldamento](~/assets/images/messaging-extension/link-unfurl.gif)
 
 ### <a name="response-example"></a>Exemplo de resposta
 
@@ -311,6 +316,76 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 ```
 
 * * *
+
+### <a name="enable-and-handle-tap-actions"></a>Habilitar e manipular ações de toque
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
+{
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
+
+    var card = new ThumbnailCard
+    {
+        Title = "Card Select Item",
+        Subtitle = description
+    };
+
+    var attachment = new MessagingExtensionAttachment
+    {
+        ContentType = ThumbnailCard.ContentType,
+        Content = card,
+    };
+
+    return Task.FromResult(new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+        {
+            Type = "result",
+            AttachmentLayout = "list",
+            Attachments = new List<MessagingExtensionAttachment> { attachment }
+        }
+    });
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+async handleTeamsMessagingExtensionSelectItem(context, obj) {
+        return {
+            composeExtension: {
+                  type: 'result',
+                  attachmentLayout: 'list',
+                  attachments: [CardFactory.thumbnailCard(obj.Item3)]
+            }
+        };
+    } 
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "name": "composeExtension/selectItem",
+    "type": "invoke",
+    "value": {
+        "Item1": "Package_Name",
+        "Item2": "Version",
+        "Item3": "Package Description"
+    },
+    .
+    .
+    .
+}
+```
+
+* * *
+
+> [!NOTE]
+> `OnTeamsMessagingExtensionSelectItemAsync` não é disparado no aplicativo de equipes móveis.
 
 ## <a name="default-query"></a>Consulta padrão
 
