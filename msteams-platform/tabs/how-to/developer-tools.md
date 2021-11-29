@@ -4,12 +4,12 @@ description: Descreve como chegar ao DevTools ao usar o Microsoft Teams desktop 
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Guia ferramentas de desenvolvedor do cliente de área de trabalho do chrome móvel de depuração
-ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b9bc3f5afa43684b260f8618b5450e94c91e95f1
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887417"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216199"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Guias do DevTools para o Microsoft Teams
 
@@ -35,7 +35,7 @@ Embora a versão da Web e a versão da área de trabalho do Teams sejam quase as
 
 O exemplo a seguir mostra DevTools abrir e inspecionar uma caixa de diálogo de configuração de tabulação:
 
-   ![Tab e DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab e DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## <a name="access-devtools-from-an-android-device"></a>Access DevTools de um dispositivo Android
 

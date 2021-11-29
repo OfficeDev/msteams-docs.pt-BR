@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156597"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216073"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -129,13 +129,22 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
 
-O estágio de reunião compartilhado permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real.
+> [!NOTE]
+> Atualmente, esse recurso está disponível apenas na [visualização de desenvolvedor](../resources/dev-preview/developer-preview-intro.md) público.
 
-O contexto necessário está `meetingStage` no manifesto do aplicativo. Um pré-requisito é ter o `meetingSidePanel` contexto e ele habilita **o Compartilhamento** no `meetingSidePanel` .
+O estágio de reunião compartilhado permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real. Você pode compartilhar seus aplicativos para o estágio de reunião colaborativa das seguintes maneiras:
 
-![Compartilhar em estágios durante a experiência de reunião](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* [Compartilhar aplicativo inteiro em estágio](#share-entire-app-to-stage) usando o botão compartilhar para estágio no Teams cliente.
+* [Compartilhe partes específicas do aplicativo em estágios](#share-specific-parts-of-the-app-to-stage) usando APIs no SDK Teams cliente.
 
-Para habilitar o estágio de reunião compartilhado, configure o manifesto do aplicativo da seguinte forma:
+##### <a name="share-entire-app-to-stage"></a>Compartilhar aplicativo inteiro em estágio
+
+Os participantes podem compartilhar todo o aplicativo para o estágio de reunião colaborativa usando o botão compartilhar para o estágio do painel lateral do aplicativo.
+
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+Para compartilhar todo o aplicativo em estágio, no manifesto do aplicativo, você deve configurar `meetingStage` e `meetingSidePanel` como contextos de quadro. Por exemplo:
 
 ```json
 "configurableTabs": [
@@ -153,7 +162,16 @@ Para habilitar o estágio de reunião compartilhado, configure o manifesto do ap
   ]
 ```
 
-Veja como projetar [uma experiência de estágio de reunião compartilhada.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+Para obter mais informações, consulte [manifesto do aplicativo](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartilhar partes específicas do aplicativo em estágio
+
+Os participantes podem compartilhar partes específicas do aplicativo para o estágio de reunião colaborativa usando o compartilhamento para as APIs de estágio. As APIs estão disponíveis no SDK Teams cliente e são invocadas do painel lateral do aplicativo.
+
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+Para compartilhar partes específicas do aplicativo em estágio, você deve invocar as APIs relacionadas na biblioteca SDK do cliente Teams cliente. Para obter mais informações, consulte [REFERÊNCIA DA API](API-references.md).
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 
@@ -179,3 +197,5 @@ Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token
 
 * [Diretrizes de design de caixa de diálogo na reunião](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Diretrizes de design de experiência de reunião compartilhadas](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Adicionar aplicativos a reuniões por meio do Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

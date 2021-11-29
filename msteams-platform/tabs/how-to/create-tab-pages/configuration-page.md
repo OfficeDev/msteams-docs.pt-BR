@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888017"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216213"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -108,6 +108,7 @@ O código da página de configuração informa Teams que os requisitos de config
 
 >[!NOTE]
 >
+>* Você tem 30 segundos para concluir a operação de salvar (o retorno de chamada para registerOnSaveHandler) antes do tempo final. Após o tempo de tempo, uma mensagem de erro genérica é exibida.
 >* Se você registrar um manipulador de salvar usando , o retorno de chamada deverá invocar ou `microsoftTeams.settings.registerOnSaveHandler()` indicar o resultado da `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuração.
 >* Se você não registrar um manipulador de salvar, a chamada será feita automaticamente quando o `saveEvent.notifySuccess()` usuário selecionar **Salvar**.
 
@@ -184,7 +185,7 @@ Autenticar antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 De definir a propriedade do manifesto como , que permite que os usuários modifiquem, reconfigurem ou renomeiem um canal ou uma guia `canUpdateConfiguration` `true` de grupo. Além disso, indique o que acontece com o conteúdo quando uma guia é removida, incluindo uma página de opções de remoção no aplicativo e definindo um valor para a propriedade `removeUrl` na  `setSettings()` configuração. O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, [consulte create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setSettings()`Microsoft Teams configuração para página de remoção:
+Microsoft Teams para `setSettings()` página de remoção:
 
 ```javascript
 microsoftTeams.settings.setSettings({

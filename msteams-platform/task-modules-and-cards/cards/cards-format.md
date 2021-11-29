@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887606"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216227"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -31,7 +31,7 @@ Você pode formatar cartões adaptáveis e Office 365 conector com Markdown que 
 Os seguintes tipos de cartão suportam a formatação markdown Teams:
 
 * Cartões Adaptáveis: a marcação é suportada no campo Cartão `Textblock` Adaptável, bem como e `Fact.Title` `Fact.Value` . HTML não é suportado em Cartões Adaptáveis.
-* Office 365 Cartões de conector: Markdown e HTML limitado são suportados Office 365 conectores nos campos de texto.
+* Office 365 conectores: Markdown e HTML limitado são suportados Office 365 conectores nos campos de texto.
 
 Você pode usar linhas novas para Cartões Adaptáveis usando ou sequências de escape `\r` para linhas novas em `\n` listas. A formatação é diferente entre a área de trabalho e as versões móveis Teams para Cartões Adaptáveis. As menções baseadas em cartão são suportadas em clientes web, desktop e móveis. Você pode usar a propriedade de mascaramento de informações para mascarar informações específicas, como senha ou informações confidenciais de usuários dentro do elemento de entrada Cartão `Input.Text` Adaptável. Você pode expandir a largura de um Cartão Adaptável usando o `width` objeto. Você pode habilitar o suporte typeahead em Cartões Adaptáveis e filtrar o conjunto de opções de entrada à medida que o usuário digita a entrada. Você pode usar a `msteams` propriedade para adicionar a capacidade de exibir imagens no exibição de estágio seletivamente.
 
@@ -392,7 +392,7 @@ Em um Cartão Adaptável, você pode usar a propriedade para adicionar a capacid
             "msTeams": {
               "allowExpand": true
             }
-          },
+          }
      ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
@@ -506,7 +506,7 @@ O código a seguir mostra um exemplo de formatação para cartões de conector M
 
 Os seguintes tipos de cartão suportam formatação HTML Teams:
 
-* Office 365 Cartões de conector: Marcação limitada e formatação HTML são compatíveis com cartões Office 365 Conector.
+* Office 365 conectores: Marcação limitada e formatação HTML é suportada em cartões Office 365 Conector.
 * Cartões de herói e miniatura: as marcas HTML são suportadas para cartões simples, como cartões de herói e miniatura.
 
 A formatação é diferente entre a área de trabalho e as versões móveis do Teams para cartões Office 365 Conector e cartões simples. Nesta seção, você pode passar pelo exemplo de formato HTML para cartões de conector e cartões simples.

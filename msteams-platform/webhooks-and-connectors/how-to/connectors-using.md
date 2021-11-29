@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: conector do o365 no teams
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887389"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216192"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -18,7 +18,7 @@ Você pode criar mensagens ativas e enviá-las por meio do Webhook de entrada ou
 
 ## <a name="create-actionable-messages"></a>Criar mensagens ativas
 
-As mensagens ativas incluem três botões visíveis no cartão. Cada botão é definido na propriedade da mensagem usando ações, cada uma com um tipo de entrada, um campo de texto, um selador de datas ou uma lista `potentialAction` `ActionCard` de várias opções. Cada `ActionCard` uma tem uma ação associada, por exemplo `HttpPOST` .
+As mensagens ativas incluem seis botões visíveis no cartão. Cada botão é definido na propriedade da mensagem usando ações, cada uma com um tipo de entrada, um campo de texto, um selador de datas ou uma lista `potentialAction` `ActionCard` de várias opções. Cada `ActionCard` uma tem uma ação associada, por exemplo `HttpPOST` .
 
 Os cartões conectores suportam as seguintes ações:
 
@@ -282,8 +282,9 @@ Esses limites estão no local para reduzir a spam de um canal por um conector e 
 
 ## <a name="see-also"></a>Confira também
 
-* [Office 365 Conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Office 365 conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um Webhook de Saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Limitação de taxa para Teams bots](~/bots/how-to/rate-limit.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Formatar cartões no Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)

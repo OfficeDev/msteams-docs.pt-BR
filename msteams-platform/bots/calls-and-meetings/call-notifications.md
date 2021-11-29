@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidade de região de retorno de chamada de chamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889157"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216087"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
@@ -39,7 +39,8 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Habilita o bot a responder a uma chamada de entrada usando a API [de resposta.](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias de estado em que sua chamada é manipulada por uma partição específica e você deseja inserir essas informações no roteamento para `callbackUri` a instância certa.
+Habilita o bot a responder a uma chamada de entrada usando a API [de resposta.](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias de estado em que sua chamada é manipulada por uma partição específica e você deseja inserir essas informações no roteamento para `callbackUri` a instância certa.
+
 
 A próxima seção fornece detalhes sobre a autenticação do retorno de chamada inspecionando o token postado em seu webhook.
 

@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887536"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216101"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -24,7 +24,9 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo com o usuário ou a equipe especificado.
-* Você inicia um fluxo de autenticação Azure Active Directory (AAD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. Para obter mais informações, [consulte authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* Você inicia um fluxo de autenticação Azure Active Directory (AAD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
+
+Para obter mais informações, [consulte authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Embora essas informações do usuário possam ajudar a fornecer uma experiência de usuário suave, você não deve usá-la como prova de identidade.  Por exemplo, um invasor pode carregar sua página em um navegador e renderizar informações ou solicitações prejudiciais.
@@ -48,7 +50,7 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 * {theme}: O tema atual da interface do usuário (UI), como `default` , `dark` ou `contrast` .
 * {groupId}: A ID do grupo Office 365 no qual a guia reside.
 * {tid}: A AAD ID de locatário do usuário atual.
-* {locale}: a localidade atual do usuário formatada como languageId-countryId. Por exemplo, en-us.
+* {locale}: a localidade atual do usuário formatada como languageId-countryId(en-us).
 
 > [!NOTE]
 > O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
@@ -106,7 +108,8 @@ O código a seguir fornece um exemplo de variável de contexto:
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,7 +118,9 @@ O código a seguir fornece um exemplo de variável de contexto:
 > [!Note]
 > Canais privados estão atualmente na visualização do desenvolvedor privado.
 
-Quando sua página de conteúdo é carregada em um canal privado, os dados recebidos da chamada são ofuscados para proteger a privacidade `getContext` do canal. Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
+Quando sua página de conteúdo é carregada em um canal privado, os dados recebidos da chamada são ofuscados para proteger a privacidade `getContext` do canal. 
+
+Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
 
 * `groupId`: Indefinido para canais privados
 * `teamId`: De acordo com o threadId do canal privado
