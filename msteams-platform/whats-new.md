@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams quais são as novas atualizações e recursos mais recentes
-ms.openlocfilehash: 9b4593fc2a0affb2e6e529a55cf51c05daca69aa
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 5aa0d3c29f8a9e5e2d5c80cb0d7fa1b59418c784
+ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216108"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "61227849"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,9 +22,10 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
-|11/29/2021|Modo interativo para compartilhar o estágio de reunião.|[Estágio de reunião compartilhado,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [referências de API de aplicativos de reunião](apps-in-teams-meetings/API-references.md)e esquema de manifesto de [visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
-| 11/24/2021| Introduzido o guia passo a passo para gerar o token de reunião. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar token de reunião no [Teams](sbs-meeting-token-generator.yml)|
-| 11/17/2021| Diretrizes Microsoft Teams de validação de loja atualizadas|[Diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
+| 11/30/2021 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
+| 11/29/2021 |Modo interativo para compartilhar o estágio de reunião.|• Crie aplicativos para Teams reuniões > [estágio de reunião compartilhado](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para Teams reuniões > [de API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de [visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+| 11/24/2021 | Introduzido o guia passo a passo para gerar o token de reunião. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar token de reunião no [Teams](sbs-meeting-token-generator.yml)|
+| 11/17/2021 | Diretrizes Microsoft Teams de validação de loja atualizadas| Distribuir seu aplicativo > Publicar no Teams de > [de](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) validação da Loja|
 | 11/17/2021| Pesquisa de typeahead estático e dinâmico para usuários da área de trabalho e móveis.| • Criar cartões e módulos de tarefa > criar cartões > [pesquisa Typeahead em Cartões Adaptáveis](task-modules-and-cards/cards/dynamic-search.md) </br> • Crie cartões e módulos de tarefa > build cards > Visão geral > pesquisa de tipo à frente  [em Cartões Adaptáveis](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Criar cartões e módulos de tarefas > visão geral > [cartões e módulos de tarefa](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Guias pessoais e extensões de mensagens são executados em Outlook e Office (Visualização) | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso). | • Crie bots > conversas bot > Mensagens em conversas de bots > Receber todas as mensagens [de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > [conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -205,7 +206,8 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
-|11/29/2021|Modo interativo para compartilhar o estágio de reunião.|[Estágio de reunião compartilhado,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [referências de API de aplicativos de reunião](apps-in-teams-meetings/API-references.md)e esquema de manifesto de [visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+| 11/30/2021 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
+|11/29/2021|Modo interativo para compartilhar o estágio de reunião.|• Crie aplicativos para Teams reuniões > [estágio de reunião compartilhado](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para Teams reuniões > [de API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de [visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
 |11/15/2021| Guias pessoais e extensões de mensagens são executados Outlook e Office | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).| • Crie bots > conversas bot > Mensagens em conversas de bot > [Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [canal e conversas em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de visualização [do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Permissões de dispositivo para o navegador.| Fundamentos do aplicativo > recursos do dispositivo > [permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |

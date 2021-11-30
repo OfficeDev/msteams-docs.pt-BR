@@ -4,20 +4,27 @@ summary: Bem-vindo à visão geral Microsoft Teams Documentação do Desenvolved
 metadata:
   title: Microsoft Teams documentação do desenvolvedor
   description: Apresentando a criação de aplicativos para Teams
-  ms.date: 11/10/2021
+  ms.service: service
+  ms.subservice: subservice
   ms.topic: landing-page
-  ms.openlocfilehash: 39b4f4de53d5cae2e01e5e6217fa3e05361e347c
-  ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+  ms.collection: collection
+  author: surbhigupta12
+  ms.author: msauthor
+  ms.date: 11/10/2021
+  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
+  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/29/2021
-  ms.locfileid: "61216171"
+  ms.lasthandoff: 11/30/2021
+  ms.locfileid: "61227825"
 landingContent:
 - title: Explore o mais recente
   linkLists:
   - linkListType: concept
     links:
-    - text: Modo interativo para compartilhar o estágio de reunião
+    - text: Teams Toolkit para Visual Studio Code (Visualização)
+      url: ~/toolkit/teams-toolkit-fundamentals.md
+    - text: Modo interativo para compartilhar estágio de reunião (Visualização)
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Diretrizes de validação da loja do Microsoft Teams
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -45,6 +52,8 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: Guia passo a passo para adicionar autenticação a bots
       url: ~/sbs-bots-with-sso.yml
+    - text: Guia passo a passo para gerar token de reunião
+      url: ~/sbs-meeting-token-generator.yml
 - title: Introdução
   linkLists:
   - linkListType: get-started
