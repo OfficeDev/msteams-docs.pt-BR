@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams quais são as novas atualizações e recursos mais recentes
-ms.openlocfilehash: 5aa0d3c29f8a9e5e2d5c80cb0d7fa1b59418c784
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227849"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246068"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+| 11/30/2021 | Build your first app using SPFx step-by-step guide for Teams Toolkit 3.0.0 updates. | Começar a > [criar seu primeiro aplicativo usando SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Modo interativo para compartilhar o estágio de reunião.|• Crie aplicativos para Teams reuniões > [estágio de reunião compartilhado](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para Teams reuniões > [de API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de [visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021 | Introduzido o guia passo a passo para gerar o token de reunião. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar token de reunião no [Teams](sbs-meeting-token-generator.yml)|

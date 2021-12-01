@@ -5,18 +5,23 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260626"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246082"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Manter seu aplicativo Microsoft Teams publicado
 
 Com seu aplicativo listado na Microsoft Teams, comece a pensar em como você manterá o aplicativo em frente e aumentará os downloads e o uso.
 
 ## <a name="publish-updates-to-your-app"></a>Publicar atualizações em seu aplicativo
+
+> [!NOTE]
+> Teams store evoluiu:
+> 
+> Anteriormente, os links eram copiados selecionando releitos no telha do aplicativo. Com a experiência Teams loja atualizada, você acessará o mesmo na guia detalhes dos aplicativos. Essa atualização estará geralmente disponível (GA) até 01 de março de 2022.
 
 Você pode enviar alterações ao seu aplicativo (como novos recursos ou até mesmo metadados) no Partner Center. Essas alterações exigem um novo processo de revisão.
 
@@ -29,7 +34,6 @@ Verifique o seguinte ao publicar atualizações:
 ### <a name="app-updates-requiring-user-consent"></a>Atualizações de aplicativo que exigem consentimento do usuário
 
 Quando um usuário instala seu aplicativo, ele deve dar ao aplicativo permissão para acessar os serviços e informações que o aplicativo exige para funcionar. Na maioria dos casos, os usuários devem fazer isso uma vez e as novas versões do aplicativo são instaladas automaticamente.
-
 No entanto, se você fizer qualquer uma das seguintes alterações em seu aplicativo, seus usuários existentes devem aceitar outra solicitação de permissão para instalar a atualização:
 
 * Adicionar ou remover um bot.
@@ -40,7 +44,7 @@ No entanto, se você fizer qualquer uma das seguintes alterações em seu aplica
 * Adicione uma guia pessoal.
 * Adicione um canal e uma guia de grupo.
 * Adicione um conector.
-* Modificar configurações relacionadas ao seu Azure Active Directory (registro do aplicativo do Azure AD). Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) .
+* Modificar configurações relacionadas ao seu Azure Active Directory (registro do aplicativo do Azure AD). Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrigir problemas com seu aplicativo publicado
 

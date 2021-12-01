@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: guias bots extensões de mensagens webhooks conectores gcc
-ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948401"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246075"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Compreender Microsoft Teams recursos do aplicativo
 
@@ -43,6 +43,11 @@ Por exemplo, você pode coletar a entrada do usuário em um formulário criado c
 ## <a name="government-community-cloud-gcc"></a>Nuvem Comunitária Governamental (GCC)
 
 Nuvem da Comunidade Governamental é uma cópia do ambiente comercial com foco no governo. O Departamento de Defesa (DOD) e os prestadores de serviços federais devem atender aos requisitos rigorosos de segurança cibernética e conformidade. Para essa finalidade, GCC-High foi criado para atender às necessidades do DOD e dos prestadores de serviços federais. GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberana. A nuvem do DOD foi criada apenas para o Departamento de Defesa.
+
+> [!NOTE]
+> Teams store evoluiu:
+> 
+> Anteriormente, os aplicativos LOB eram atualizados selecionando as releições no azulejo. Com a experiência de Teams de armazenamento atualizada, agora você pode atualizar os aplicativos LOB fazendo logom no Centro de Administração [Teams.](https://admin.teams.microsoft.com)
 
 A tabela a seguir inclui Teams recursos e disponibilidade para GCC, GCC-Alta e DOD:
 
