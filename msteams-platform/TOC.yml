@@ -91,7 +91,37 @@
 - name: Ferramentas e SDKs
   items:
     - name: Kit de ferramentas do Teams para Visual Studio Code
-      href: toolkit/visual-studio-code-overview.md
+      items:
+        - name: Conceitos básicos do Kit de Ferramentas do Teams
+          href: toolkit/teams-toolkit-fundamentals.md
+        - name: Criar novo projeto
+          href: toolkit/create-new-project.md
+        - name: Preparar Contas para criar o aplicativo Teams
+          href: toolkit/accounts.md
+        - name: Provisionar Recursos de nuvem
+          href: toolkit/provision.md
+        - name: Implantar o Aplicativo Teams na nuvem
+          href: toolkit/deploy.md
+        - name: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
+          href: toolkit/publish.md
+        - name: Adicionar recursos ao aplicativo Teams
+          href: toolkit/add-capability.md
+        - name: Adicionar Recursos de nuvem ao aplicativo Teams
+          href: toolkit/add-resource.md
+        - name: Personalizar Manifesto do Aplicativo Teams
+          href: toolkit/TeamsFx-manifest-customization.md
+        - name: Visualizar Manifesto do Aplicativo Teams
+          href: toolkit/TeamsFx-manifest-preview.md
+        - name: Gerenciar Vários ambientes
+          href: toolkit/TeamsFx-multi-env.md
+        - name: Colaborando com outros desenvolvedores no Kit de Ferramentas do Teams
+          href: toolkit/TeamsFx-collaboration.md
+        - name: Usar fluxo de trabalho de CI/CD
+          href: toolkit/use-CICD-template.md
+        - name: CLI do Kit de Ferramentas do Teams
+          href: toolkit/TeamsFx-CLI.md
+        - name: TeamsFx SDK
+          href: toolkit/TeamsFx-SDK.md
     - name: Kit de ferramentas do Teams para Visual Studio
       href: toolkit/visual-studio-overview.md
     - name: Gerador Yeoman para o Teams (GitHub)
