@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889234"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323293"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -29,7 +29,7 @@ Quando sua guia é carregada em um chat de canal ou grupo, Teams adiciona um men
 
 | `canUpdateConfiguration`| verdadeiro   | falso | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia. |
+|     Settings            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme aparece na barra de guias.          |
 |     Remover              |   √    |   √   |  Se a propriedade e o valor são incluídos na página de configuração , a página de remoção é carregada em `removeURL` um IFrame e apresentada ao usuário.   Se uma página de remoção não estiver incluída, o usuário será apresentado com uma caixa de diálogo confirmar.          |
 
@@ -79,7 +79,6 @@ Veja a seguir um bloco de código de remoção de tabulação de exemplo:
     }
   </script>
 </body>
-
 ```
 
 Quando um usuário seleciona **Remover** do menu suspenso da guia, Teams carrega a página opcional atribuída na página de configuração , em `removeUrl` um IFrame. O usuário é mostrado um botão carregado com a função que chama e habilita o botão Remover mostrado na parte inferior da página de remoção `onClick()` `microsoftTeams.settings.setValidityState(true)` IFrame. 
@@ -88,7 +87,7 @@ Depois que o manipulador de remoção for executado, `removeEvent.notifySuccess(
 
 >[!NOTE]
 > * Para garantir que o controle de um usuário autorizado sobre uma guia não seja inibido, Teams remove a guia em casos de sucesso e falha.
-> * Teams habilita o **botão Remover** após cinco segundos, mesmo que sua guia não tenha chamado `setValidityState()` .
+> * Depois de invocar `registerOnRemoveHandler` o manipulador de eventos, você terá 15 segundos para responder ao método. Por padrão, Teams habilita o **botão Remover** após cinco segundos, mesmo que você não chame `setValidityState(true)` . 
 > * Quando o usuário seleciona **Remover**, Teams remove a guia após 30 segundos, independentemente de as ações ter sido concluídas ou não.
 
 ## <a name="next-step"></a>Próxima etapa
