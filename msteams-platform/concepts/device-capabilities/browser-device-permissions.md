@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 8ace96ea1e9582c6087d0f551dc021e69a4a8de2
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
+ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041717"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61348346"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
@@ -39,6 +39,13 @@ Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
+
+## <a name="code-sample"></a>Exemplo de código
+
+|Nome do exemplo | Descrição | Node.js |
+|----------------|-----------------|--------------|
+| Permissões de dispositivo tab para navegador | O código de exemplo demonstra como mostrar as permissões do dispositivo para o navegador. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+
 
 ## <a name="see-also"></a>Confira também
 
