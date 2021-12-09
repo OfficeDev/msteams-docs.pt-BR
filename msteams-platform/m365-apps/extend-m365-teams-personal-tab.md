@@ -3,19 +3,20 @@ title: Estender um Teams guia pessoal em Microsoft 365
 description: Estender um Teams guia pessoal em Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 8dcdb04b995206af05430bfdfb7c27992c8cd781
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 507cd74332ced731701e675554b11205715cfc58
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960262"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391364"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams guia pessoal entre Microsoft 365
 
 > [!NOTE]
 > *Estender uma guia Teams pessoal em* Microsoft 365 está disponível no momento apenas na [visualização do desenvolvedor público.](../resources/dev-preview/developer-preview-intro.md) Os recursos incluídos na visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis na versão pública. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
-As guias pessoais fornecem uma ótima maneira de aprimorar a experiência Microsoft Teams pessoal. Usando guias pessoais, você pode fornecer a um usuário acesso ao seu aplicativo dentro Teams, sem que o usuário tenha que deixar a experiência ou entrar novamente. Com essa visualização, as guias pessoais podem ser acesas em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de tomar uma guia Teams pessoal existente e atualizá-la para ser executado em experiências da Outlook da área de trabalho e da Web e também Microsoft Office Home (office.com).
+As guias pessoais fornecem uma ótima maneira de aprimorar a experiência Microsoft Teams pessoal. Usando guias pessoais, você pode fornecer a um usuário acesso ao seu aplicativo dentro Teams, sem que o usuário tenha que deixar a experiência ou entrar novamente. Com essa visualização, as guias pessoais podem ser acesas em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de tomar uma guia Teams pessoal existente e atualizá-la para ser executado em experiências da Outlook da área de trabalho e da Web e também Office na Web (office.com).
 
 Atualizar seu aplicativo pessoal para ser executado no Outlook e Office Home envolve estas etapas:
 
@@ -52,7 +53,7 @@ Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma 
 
 Se você quiser usar código de exemplo para concluir este tutorial, siga as etapas de instalação em Introdução a [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para criar um aplicativo de guia pessoal usando a extensão Teams Toolkit para Visual Studio Code. Ou, você pode começar com o mesmo Exemplo de Lista Inteira atualizado para o [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) e prosseguir para Visualizar sua guia pessoal em outras experiências Microsoft 365 [do](#preview-your-personal-tab-in-other-microsoft-365-experiences)TeamsJS. O exemplo atualizado também está disponível em uma extensão *Teams Toolkit:* Amostras de Exibição de Desenvolvimento Toda List (Funciona em  >    >  **Teams, Outlook e Office)**.
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemplo de Lista Inteira (Funciona em Teams, Outlook e Office) em Teams Toolkit":::
 
 
 ## <a name="update-the-app-manifest"></a>Atualizar o manifesto do aplicativo
@@ -84,14 +85,14 @@ Se você usou Teams Toolkit para criar seu aplicativo pessoal, também poderá u
 
 ## <a name="update-sdk-references"></a>Atualizar referências do SDK
 
-Para executar em Outlook e Office, seu aplicativo precisará depender do pacote npm `@microsoft/teams-js@2.0.0-beta.1` ou superior. Embora o código com versões de nível versões de Outlook e Office Office serão, `@microsoft/teams-js` eventualmente, `@microsoft/teams-js` cessadas. Outlook
+Para ser executado em Outlook e Office, seu aplicativo precisará depender do pacote npm (ou de uma `@microsoft/teams-js@2.0.0-beta.1` versão *beta* posterior). Embora o código com versões de nível versões de Outlook e Office Office serão, `@microsoft/teams-js` eventualmente, `@microsoft/teams-js` cessadas. Outlook
 
 Você pode usar o Teams Toolkit para ajudar a automatizar algumas das alterações de código para adotar a próxima versão de , mas se quiser executar as etapas `@microsoft/teams-js` manualmente, consulte [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) para obter detalhes.
 
 1. Abra a *paleta Comando:*`Ctrl+Shift+P`
 1. Executar o comando `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Após a conclusão, o utilitário atualizará seu arquivo com a dependência do `package.json` TeamsJS SDK Preview ( ) e seus arquivos serão atualizados `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` com:
+Após a conclusão, o utilitário atualizará seu arquivo com a dependência do TeamsJS SDK Preview ( ou posterior) e seus arquivos serão `package.json` `@microsoft/teams-js@2.0.0-beta.1` atualizados `*.js/.ts` `*.jsx/.tsx` com:
 
 > [!div class="checklist"]
 > * `package.json` referências ao TeamsJS SDK Preview
@@ -115,7 +116,7 @@ Se seu aplicativo [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/C
 |Microsoft 365 host| permissão frame-ancestral|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Escritório | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-aad-app-registration-for-sso"></a>Atualizar AAD registro de aplicativo para SSO
@@ -169,7 +170,7 @@ Você pode fixar o aplicativo para acesso rápido, ou pode encontrar seu aplicat
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Visualizar sua guia pessoal em outras Microsoft 365 experiências
 
-Quando você atualiza Teams guia pessoal e a descarrega no Teams Outlook, ela também será executado em clientes da área de trabalho e da Web e no Microsoft Office Home (office.com). Veja como visualizar essas experiências Microsoft 365.
+Quando você atualiza sua guia Teams pessoal e a descarrega no Teams, ela também será Outlook clientes de área de trabalho e web e Office na Web (office.com). Veja como visualizar essas experiências Microsoft 365.
 
 ### <a name="outlook"></a>Outlook
 
@@ -185,9 +186,9 @@ Para exibir seu aplicativo Outlook na Web, visite https://outlook.office.com e e
 
 Clique no ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
-### <a name="microsoft-office-home"></a>Microsoft Office Home
+### <a name="office-on-the-web"></a>Office na Web
 
-Para visualizar seu aplicativo em execução no Microsoft Office Home, entre office.com com credenciais de locatário de teste. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
+Para visualizar seu aplicativo em execução Office na Web, faça logoff office.com com credenciais de locatário de teste. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
 
 Clique no ícone do aplicativo para iniciar seu aplicativo no Office Home.
 

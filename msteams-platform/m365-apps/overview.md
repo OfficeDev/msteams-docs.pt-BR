@@ -3,12 +3,13 @@ title: Estender Teams aplicativos em Microsoft 365 (visualização)
 description: Estender suas Teams de aplicativo para outras áreas de alto uso de Microsoft 365
 ms.date: 11/15/2021
 ms.topic: overview
-ms.openlocfilehash: 97bbec718d2bff33cfca99bf2cedaae9533fbd92
-ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
+ms.custom: m365apps
+ms.openlocfilehash: 23251d06c38df847a98d27bbc7010b76681a4ea9
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61233502"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391329"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Estender Teams aplicativos em Microsoft 365
 
@@ -19,14 +20,14 @@ Você pode testar seus aplicativos Teams em execução no Microsoft Office e no 
 
 Com essa visualização, você pode:
 
-- Estenda as guias Teams [pessoais existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) para Outlook para área de trabalho e na Web e também Microsoft Office Home (office.com).
+- Estenda as guias Teams [pessoais existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) para Outlook para área de trabalho e na Web e também Office na Web (office.com).
 - Estenda as extensões Teams de mensagens baseadas em pesquisa [existentes](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) Outlook para área de trabalho e na Web.
 
 Para comentários e problemas, continue usando os canais Microsoft Teams [comunidade de desenvolvedores relevantes.](/microsoftteams/platform/feedback)
 
 ## <a name="teams-personal-tabs-in-office-and-outlook"></a>Teams guias pessoais em Office e Outlook
 
-Com essa visualização, você pode estender um aplicativo de guia pessoal Teams para ser executado no Outlook no Windows desktop e na Web e também Microsoft Office Home (office.com).
+Com essa visualização, você pode estender um Teams de tabulação pessoal para ser executado Outlook na área Windows desktop e na Web e também Office na Web.
 
 Após o sideload para Teams, sua guia pessoal aparece como um dos aplicativos instalados no Outlook e Office.
 

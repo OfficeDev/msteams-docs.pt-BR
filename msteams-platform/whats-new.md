@@ -4,12 +4,12 @@ description: Descreve todos os novos recursos de desenvolvedor no Microsoft Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams quais são as novas atualizações e recursos mais recentes
-ms.openlocfilehash: 180d1f02353b0a04a89b16e040be0927f568f916
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: 2f5ec4d3ab2c9be9480dd4400aed1ba503879940
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323279"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391740"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,8 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+| 12/09/2021| Introduzido o guia passo a passo para criar o painel lateral de reuniões. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar o painel lateral de [reuniões em Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduzido o guia passo a passo para o Exibição de Estágio de Reuniões. | Criar aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para [criar o Modo](sbs-meetings-stage-view.yml) de Exibição de Estágio de Reuniões| 
 |12/01/2021 | Introduzido novo ícone da loja | • Projete seus recursos > aplicativos > [designar seu aplicativo pessoal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Projete seu aplicativo > componentes da interface do usuário > designar seu aplicativo [Microsoft Teams com componentes avançados da interface do usuário](concepts/design/design-teams-app-advanced-ui-components.md) |
 |
 
@@ -37,6 +39,8 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 12/09/2021| Introduzido o guia passo a passo para criar o painel lateral de reuniões. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar o painel lateral de [reuniões em Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduzido o guia passo a passo para o Exibição de Estágio de Reuniões. | Criar aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para [criar o Modo](sbs-meetings-stage-view.yml) de Exibição de Estágio de Reuniões|
 |12/01/2021 | Introduzido novo ícone da loja | • Projete seus recursos > aplicativos > [designar seu aplicativo pessoal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Projete seu aplicativo > componentes da interface do usuário > designar seu aplicativo [Microsoft Teams com componentes avançados da interface do usuário](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Introduzido o guia passo a passo para gerar o token de reunião. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar token de reunião no [Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Diretrizes Microsoft Teams de validação de loja atualizadas|[Diretrizes de validação da Loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|

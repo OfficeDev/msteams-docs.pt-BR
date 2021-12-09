@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: bb58e7f54fe3ad75b2a52148540119ae5dbbc9e6
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 42949c9cdd3cb8e117925f170b2ab44e3bda1a1d
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227871"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391677"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colabore Teams projeto usando Teams Toolkit
 
@@ -82,9 +82,7 @@ Teams Toolkit agora oferece suporte ao recurso de colaboração para permitir qu
       4. Vá para [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecione **Registro de aplicativo** no painel esquerdo e encontre seu AAD App.
       5. Dentro da página AAD Gerenciamento de aplicativos, selecione **Proprietários** no painel esquerdo.
       6. Encontre e remova o colaborador.
-    
 
-1. O recurso de colaboração só dá suporte ao projeto hospedado no Azure, SPFx o projeto hospedado será suportado no futuro.
 
 1. O colaborador adicionado ao seu projeto não receberá nenhuma notificação. Project proprietário precisa notificar o colaborador offline.
 

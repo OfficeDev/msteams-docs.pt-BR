@@ -1,0 +1,48 @@
+### YamlMime:Tutorial
+title: Exibição de estágio de reuniões
+metadata:
+  title: Exibição de estágio de reuniões
+  description: Neste tutorial, você aprenderá a configurar uma exibição de estágio reuniões para Teams.
+  audience: Developer
+  level: Beginner
+  ms.date: 12/06/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialTitle: Leia mais para Habilitar e configurar seus aplicativos para Teams Reuniões
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 8238f49b75caf000370ef0541d1efac2a82f0864
+  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 12/09/2021
+  ms.locfileid: "61391757"
+items:
+- durationInMinutes: 1
+  content: "O Modo de Exibição de Estágio de Reuniões ajuda a habilitar e configurar seus aplicativos para Teams reuniões. Ele ajuda os usuários a compartilhar o Estágio de Reuniões, permite que os participantes da reunião adicionem detalhes de status de tarefas passadas, presentes e futuras, aprimorando Teams experiência de reunião. \n\n>[!NOTE]\n>Atualmente, esse recurso está disponível apenas na visualização do desenvolvedor.\n\n**Principais recursos do Exibição de Estágio de Reuniões**\n\n* Adicione detalhes de status no painel lateral.\n* Adicione detalhes para colaboração.\n\nEste guia passo a passo ajuda você a gerar o Meetings Stage View para adicionar detalhes de status para colaboração Teams. Você verá a seguinte saída:\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"exibição de estágio de reuniões\" border=\"false\":::\n"
+- title: Pré-requisitos
+  durationInMinutes: 1
+  content: "Certifique-se de instalar as seguintes ferramentas e configurar seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams com uma conta (não uma conta de convidado)](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n* [Visual Studio código](https://code.visualstudio.com/Download)\n* [nodejs](https://nodejs.org/en/download/) LTS versão 10.21.0 ou posterior\n* [Ngrok versão](https://ngrok.com/download) mais recente (somente para teste de devbox) ou qualquer solução de túnel equivalente, como Prompt de Comando\n\nVerifique se você tem conhecimento prático das seguintes tecnologias:\n\n* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET versão](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) principal 3.1\n* [React.JS](https://reactjs.org/tutorial/tutorial.html) versão 16 ou posterior\n"
+- title: Configurar ambiente local
+  durationInMinutes: 1
+  content: "Clone `Microsoft-Teams-Samples` o repositório para seu GitHub local:  \n\n 1. Abra [Microsoft Teams Amostras](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n 1. Selecione **Código**.\n 1. No menu suspenso, selecione **Abrir com GitHub Desktop**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png\" alt-text=\"clonando o repositório\" border=\"false\":::\n\n 1. Selecione **Clonar**. \n"
+- title: Configurar túnel para servidor Web local
+  durationInMinutes: 1
+  content: "Use o prompt ngrok ou Command para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Execute o seguinte comando em ngrok:\n\n ```bash\n ngrok http -host-header=localhost 3978\n ``` \n   > [!TIP]\n   > Se você encontrar **ERR_NGROK_4018**, siga as etapas, conforme exibido no prompt de comando para inscrever-se e autenticar o ngrok. Em seguida, execute o `ngrok http -host-header=localhost 3978` comando.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png\" alt-text=\"túnel usando prompt de comando\" border=\"false\":::\n"
+- title: Configurar arquivo de manifesto
+  durationInMinutes: 1
+  content: "1. Navegue **até manifest.json** node.js pasta no repositório clonado.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest path.png\" alt-text=\"path for manifest.json\" border=\"false\":::\n\n1. Abra **manifest.json** **no Visual Studio Code** e faça as seguintes alterações:\n\n     * Substitua `<<App-ID>>` pela **ID** do Microsoft App do seu bot ou por algum **GUID exclusivo.**\n     * Substitua `<<BASE-URL>>` pela url base do **ngrok.**\n     * Substitua `<<VALID DOMAIN>>` pelo domínio **ngrok**.\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"arquivo de manifesto\" border=\"false\":::   \n"
+- title: Criar e executar aplicativo cliente usando npm
+  durationInMinutes: 1
+  content: "**Para criar aplicativo cliente usando a instalação npm para gerar pasta distribuível**:\n\n1. Navegue até a pasta exemplos de caminho do **aplicativo/reuniões-estágio-view/nodejs** no repositório clonado.\n\n1. Copie o **caminho da pasta nodejs.**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png\" alt-text=\"caminho da pasta\" border=\"false\":::\n\n1. Abra uma nova janela prompt de comando, altere o diretório atual para o caminho **nodejs copiado.**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png\" alt-text=\"path for nodejs\" border=\"false\":::\n\n1. Execute `npm install` para baixar pacotes e dependências.\n\n1. Execute `npm start` para iniciar o aplicativo.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png\" alt-text=\"build and run\" border=\"false\":::\n   \n"
+- title: Adicionar exibição de estágio de reuniões ao Teams
+  durationInMinutes: 1
+  content: "**Para criar uma reunião Teams e adicionar a Exibição** de Estágio de Reuniões a Teams :\n\n1. No repositório clonado, navegue até amostras> **reuniões-estágio-view> nodejs> Manifesto**.\n\n1. Crie uma .zip com os seguintes arquivos presentes na **pasta Manifesto:** \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest zip.png\" alt-text=\"manifesto\" border=\"false\":::\n\n1. Crie uma Teams com alguns apresentadores e participantes.\n\n1. Depois que a reunião for criada, vá para a página de detalhes da reunião e selecione **Adicionar um aplicativo**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png\" alt-text=\"Adicionar um aplicativo\" border=\"false\":::\n1. No pop-up aberto, selecione **Gerenciar aplicativos**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-manageapps.png\" alt-text=\"gerenciar aplicativos\" border=\"false\":::\n\n1. Selecione **Upload um aplicativo personalizado.** \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/uploadcustomapp.png\" alt-text=\"carregar um arquivo\" border=\"false\":::\n\n1. Selecione **Abrir** para carregar o arquivo .zip que você criou na **pasta Manifesto.**\n\n1. Selecione **Adicionar**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add an app in meeting.png\" alt-text=\"adicionar aplicativo na reunião\" border=\"false\":::\n\n   A **seção Gerenciar aplicativos** exibe a lista de aplicativos.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/list of apps.png\" alt-text=\"lista de aplicativos\" border=\"false\":::\n"
+- title: Interagir com o aplicativo em Teams
+  durationInMinutes: 1
+  content: "**Para interagir com o aplicativo em Teams**:\n\n1. Vá para Teams reunião.\n\n1. Selecione **Adicionar um aplicativo**. \n\n   Na página de seleção do aplicativo, o aplicativo é exibido como **App In Meeting**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png\" alt-text=\"app in meetings stage view\" border=\"false\":::\n\n1. Selecione o **Aplicativo em Reunião**.\n\n1. Selecione **Salvar**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png\" alt-text=\"bem-vindo ao aplicativo\" border=\"false\":::\n\n1. Inicie a reunião. \n\n   O ícone fica visível na barra de controle de reunião.\n   \n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png\" alt-text=\"aplicativo de reunião\" border=\"false\":::\n\n1. Para atualizar a tarefa de status de sprint, adicione:\n\n   * **Atribuído a**\n   * **Descrição**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add status.png\" alt-text=\"adicionar status na reunião\" border=\"false\":::\n   \n   App in Side panel view:\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png\" alt-text=\"exibição de painel\" border=\"false\":::\n"
+- title: Desafio completo
+  durationInMinutes: 1
+  content: >
+    Você achou algo assim? :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="saída de exibição de estágio" border="false":::
+- content: Você concluiu o tutorial para começar com uma Exibição de Estágio de Reuniões.

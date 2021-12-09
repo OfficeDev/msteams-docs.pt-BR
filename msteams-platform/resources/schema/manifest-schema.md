@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178241"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61392369"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -755,7 +755,7 @@ Quando a propriedade é definida como true , o aplicativo é oculto `defaultBloc
 
 **Tamanho máximo** - 128 caracteres
 
-A propriedade depende de `defaultBlockUntilAdminAction` . Quando a propriedade é definida como true , a URL HTTPS fornece uma página de informações para que os administradores recebam diretrizes antes de permitir um aplicativo, que `defaultBlockUntilAdminAction` é bloqueado por  `publisherDocsUrl` padrão.
+É uma URL HTTPS para uma página de informações para que os administradores recebam diretrizes antes de permitir um `publisherDocsUrl` aplicativo, que é bloqueado por padrão. Ele também pode ser usado para fornecer instruções ou informações sobre o aplicativo que podem ser úteis para o administrador do locatário.
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 

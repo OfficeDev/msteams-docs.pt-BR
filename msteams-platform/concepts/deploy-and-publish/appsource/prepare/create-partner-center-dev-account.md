@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889416"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391670"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 
@@ -128,16 +128,6 @@ Lembre-se do seguinte sobre o processo de verificação de email:
 * O link de verificação de email só é válido por sete dias.
 * Você pode solicitar a ressarção do email visitando a página de perfil do parceiro e selecionando o link **Resend verification email.**
 * Para garantir que você receba o email, lista **segura microsoft.com** como um domínio seguro e verifique suas pastas de lixo eletrônico.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Como obter mais suporte para meus problemas relacionados à conta?</b></summary>
-
-Consulte [suporte para o programa de Marketplace Comercial no Partner Center](/azure/marketplace/partner-center-portal/support) para obter informações.
 
 <br>
 

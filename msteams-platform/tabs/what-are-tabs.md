@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ea777a615358467f12a6f98c5e06fc5dd14b7418
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075427"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391726"
 ---
 # <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
 
@@ -33,7 +33,10 @@ Há dois tipos de guias disponíveis em Teams, pessoal e canal ou grupo. [Guias 
 
 Você pode [criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) como parte de uma guia pessoal, canal ou guia de grupo ou módulo de tarefa. Você [pode](~/tabs/how-to/create-tab-pages/configuration-page.md) criar uma página de configuração que permite que os usuários configurem um aplicativo Microsoft Teams e usem-no para configurar uma guia de chat de canal ou grupo, uma extensão de mensagens ou um conector Office 365. Você pode permitir que os usuários reconfigurem sua guia após a instalação e [criem uma página de remoção de tabulação](~/tabs/how-to/create-tab-pages/removal-page.md) para seu aplicativo. Quando você cria um aplicativo Teams que inclui uma guia, você deve testar como sua guia funciona nos clientes android e [iOS Teams .](~/tabs/design/tabs-mobile.md) Sua guia deve [obter contexto por](~/tabs/how-to/access-teams-context.md) meio de informações `entityId` básicas, informações de localidade e tema e ou que identifique o `subEntityId` que está na guia.
 
-Você pode criar guias com Cartões Adaptáveis e centralizar todos os Teams de aplicativo eliminando a necessidade de um back-back diferente para seus bots e guias. [O Stage View](~/tabs/tabs-link-unfurling.md) é um novo componente da interface do usuário que permite renderizar o conteúdo aberto em tela inteira Teams e fixado como uma guia. O serviço de [desatração](~/tabs/tabs-link-unfurling.md) de link existente é atualizado, para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você [](~/tabs/how-to/conversational-tabs.md) pode criar guias de conversa usando sub-entidades de conversa que permitem que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações nas [margens de tabulação](~/resources/removing-tab-margins.md) para melhorar a experiência do desenvolvedor ao criar aplicativos.
+Você pode criar guias com Cartões Adaptáveis e centralizar todos os Teams de aplicativo eliminando a necessidade de um back-back diferente para seus bots e guias. [O Stage View](~/tabs/tabs-link-unfurling.md) é um novo componente da interface do usuário que permite renderizar o conteúdo aberto em tela inteira Teams e fixado como uma guia. O serviço de [desatração](~/tabs/tabs-link-unfurling.md) de link existente é atualizado, para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você [](~/tabs/how-to/conversational-tabs.md) pode criar guias de conversa usando sub-entidades de conversa que permitem que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações nas [margens de tabulação](~/resources/removing-tab-margins.md) para melhorar a experiência do desenvolvedor ao criar aplicativos. Você pode arrastar a guia e posicioná-la na posição desejada para trocar as posições da guia em seus aplicativos pessoais e chats de canal ou grupo. 
+
+> [!NOTE]
+> **As** **guias** Postagens, Arquivos e **Chat** não podem ser movidas de suas posições.
 
 ## <a name="tab-features"></a>Recursos de tabulação
 

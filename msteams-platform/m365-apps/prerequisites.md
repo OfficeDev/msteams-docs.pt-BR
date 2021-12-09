@@ -3,12 +3,13 @@ title: Configurar seu ambiente de dev para estender Teams aplicativos em Microso
 description: Aqui estão os pré-requisitos para estender seus aplicativos Teams aplicativos Microsoft 365
 ms.date: 11/15/2021
 ms.topic: how-to
-ms.openlocfilehash: d9e6ecb9e0cdbdb4754de12dff4399c02bf88863
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 967e45bb59c431476ead902e1413ab743c566779
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960244"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391343"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365-preview"></a>Configurar seu ambiente de dev para estender Teams aplicativos em todo o M365 (visualização)
 
@@ -17,7 +18,7 @@ O ambiente de desenvolvimento para estender Teams aplicativos em Microsoft 365 �
 > [!div class="checklist"]
 > * [Obter um Locatário do Desenvolvedor M365 (Área Desastiçada) e habilitar o sideload](#prepare-a-developer-tenant-for-testing)
 > * [Registrar seu locatário do M365 *em Office 365 Versões Direcionadas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
-> * [Configure sua conta para acessar versões de visualização de Outlook e Office](#install-beta-office-apps-in-your-test-environment)
+> * [Configure sua conta para acessar versões de visualização de Outlook e Office](#install-office-apps-in-your-test-environment)
 > * [Alternar para a versão de visualização do desenvolvedor Teams](#switch-to-the-developer-preview-version-of-teams)
 > * [*Opcional*] [Instalar Teams Toolkit extensão para Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
@@ -38,23 +39,22 @@ Se você tiver um locatário existente, verifique se o sideload está habilitado
 
 Para visualizar Teams aplicativos em execução outlook.com ou office.com, opte pelo locatário de teste para Office 365 [versões direcionadas.](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release)
 
-1. Entre no Centro de administração do Microsoft 365 usando credenciais para seu locatário de [](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) teste e navegue até a guia Perfil organizacional. Selecione Preferências de versão e selecione uma das **preferências** *de* versão direcionada:
+1. Entre no Centro de administração do Microsoft 365 usando credenciais para seu locatário de [](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) teste e navegue até *a* guia Perfil organizacional ( Configurações Perfil da organização de  >  *configurações* da  >>  organização )). Selecione **Preferências de versão** e selecione uma das preferências de *versão* direcionada:
 
-:::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centro de administração do Microsoft 365 menu 'Preferências de versão' com opção de versão direcionada selecionada":::
+  :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centro de administração do Microsoft 365 menu 'Preferências de versão' com opção de versão direcionada selecionada":::
 
-Para obter mais informações sobre Office 365 de versão, consulte [Configurar as](/microsoft-365/admin/manage/release-options-in-office-365) opções de versão Standard ou Targeted Centro de administração do Microsoft 365 *ajuda*.
+  Para obter mais informações sobre Office 365 de versão, consulte [Configurar as](/microsoft-365/admin/manage/release-options-in-office-365) opções de versão Standard ou Targeted Centro de administração do Microsoft 365 *ajuda*.
 
 1. Verifique se o locatário tem suporte para Teams guias pessoais em execução no office.com e outlook.com fazendo login com suas credenciais de locatário de teste. Se você vir uma opção de releitos (**...**) na barra lateral (o ponto de entrada para guias pessoais Teams sideload), seu locatário terá suporte.
 
-:::image type="content" source="images/outlook-web-ellipses.png" alt-text="Reellipses '...' ponto de entrada para aplicativos de tabulação Teams sideload no outlook.com":::
+  :::image type="content" source="images/outlook-web-ellipses.png" alt-text="Reellipses '...' ponto de entrada para aplicativos de tabulação Teams sideload no outlook.com":::
 
 1. Verifique o suporte de locatário de teste para extensões de mensagens em outlook.com verificando se há a opção Mais **aplicativos** na área de Outlook de mensagem de redação.
-``
 
 > [!NOTE]
 > Se você tiver optado por versões direcionadas, mas não vir essas opções, é provável que o suporte a recursos de visualização ainda esteja em processo de implantação para seu locatário. Para saber mais sobre as atualizações mais recentes, [consulte Microsoft Teams Blog do Desenvolvedor.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
 
-## <a name="install-beta-office-apps-in-your-test-environment"></a>Instalar aplicativos Office Beta em seu ambiente de teste
+## <a name="install-office-apps-in-your-test-environment"></a>Instalar Office aplicativos em seu ambiente de teste
 
 > [!IMPORTANT]
 > Consulte o Microsoft Teams mais recente [- Microsoft 365 Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/) do Desenvolvedor para verificar se o Outlook para suporte Windows área de trabalho para extensões de mensagens Teams está disponível para seu locatário de teste.
@@ -63,8 +63,7 @@ Você pode visualizar Teams aplicativos em execução Outlook em Windows desktop
 
 Aqui estão as etapas para instalar Office 365 *aplicativos do Canal Beta* em seu ambiente de teste:
 
-1. Em seu ambiente de teste, entre no Centro de administração do Microsoft 365 ( usando as credenciais que você criou para seu locatário de teste (por exemplo, domínio de nome de usuário https://admin.microsoft.com)  @ .onmicrosoft.com).
-1. No centro de administração, selecione **Instalar Office** (ou Vá para a instalação *guiada*) para instalar aplicativos de área de trabalho em seu ambiente de teste. Opcionalmente, adicione um usuário de teste (útil para testes).
+1. Faça logoff em seu ambiente de teste usando sua conta de locatário de teste.
 1. Baixe a [Office de Implantação e](https://www.microsoft.com/download/details.aspx?id=49117) extraia para uma pasta local.
 1. Abra *configuration-Office365-x86.xml* (ou o **x64.xml*, dependendo do seu ambiente) em um editor de texto e atualize o valor *do Canal* para `BetaChannel` .
 1. Em um Prompt de Comando elevado, execute `setup.exe /configure configuration-Office365-x86.xml` (ou use o arquivo **x64.xml,* dependendo da configuração).
@@ -74,13 +73,17 @@ Aqui estão as etapas para instalar Office 365 *aplicativos do Canal Beta* em se
 
    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Botão 'Em breve' no Outlook da área de trabalho alternado para 'On'}":::
 
+  > [!NOTE]
+  > Talvez seja necessário fechar o Outlook e reiniciar o computador para que o *botão Em* Breve apareça.
+
 Você pode verificar se o locatário dá suporte Teams guias pessoais em execução no Outlook para uma área de trabalho Windows fazendo login com suas credenciais de locatário de teste e procurando uma opção de releitos (**...**) na barra lateral (o ponto de entrada para guias pessoais Teams sideload).
 
 :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Reellipses '...' ponto de entrada para aplicativos de tabulação Teams sideloaded no Outlook para área de trabalho":::
 
 Da mesma forma, você pode verificar o suporte de locatário de teste para  extensões de mensagens no Outlook para Windows desktop verificando a opção Mais aplicativos na faixa de opções de redação Outlook mensagem.
 
-Se você tiver optado por versões direcionadas, mas não vir essas opções de releituras, é provável que o suporte a recursos de visualização ainda esteja em processo de implantação para seu locatário. Para saber mais sobre as atualizações mais recentes, [consulte Microsoft Teams Blog do Desenvolvedor.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
+> [!NOTE]
+> Se você tiver optado por versões do Canal Beta, mas não vir essas opções de releituras, é provável que o suporte a recursos de visualização ainda esteja em processo de implantação para seu locatário. Para saber mais sobre as atualizações mais recentes, [consulte Microsoft Teams Blog do Desenvolvedor.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Alternar para a versão de visualização do desenvolvedor Teams
 
@@ -100,5 +103,5 @@ A extensão [Teams Toolkit](https://aka.ms/teams-toolkit) para Visual Studio Cod
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Habilitar Teams guia pessoal para Office e Outlook](extend-m365-teams-personal-tab.md)
-- [Habilitar uma Teams de mensagens para Outlook](extend-m365-teams-message-extension.md)
+- [Habilitar uma guia pessoal do Teams para Office e Outlook](extend-m365-teams-personal-tab.md)
+- [Habilitar uma extensão de mensagens do Teams para o Outlook](extend-m365-teams-message-extension.md)

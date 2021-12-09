@@ -85,6 +85,9 @@ conceptualContent:
           text: Webhooks e conectores
     - title: Explorar
       links:
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
+          itemType: concept
+          text: Monetizar seu aplicativo Teams com uma oferta saaS transacionável
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: Autenticação do usuário e SSO
@@ -123,7 +126,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Integrar conectores shifts prontos para produção
-    - title: Community
+    - title: Comunidade
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -133,7 +136,7 @@ conceptualContent:
           text: Microsoft Teams da comunidade
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
-          text: Comunicados
+          text: Anúncios
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams resposta e Community desenvolvedor

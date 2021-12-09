@@ -3,12 +3,13 @@ title: Estender uma extensão Teams mensagem por Microsoft 365
 description: Veja como atualizar sua extensão de mensagens baseada em pesquisa Teams ser executado em Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 6adde57b6c5f59d28234afaacc721fba3812bd24
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960260"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391350"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão Teams mensagem por Microsoft 365
 
@@ -42,7 +43,9 @@ Para concluir este tutorial, você precisará:
 
 Se você tiver uma extensão de mensagens existente, faça uma cópia ou uma ramificação do seu projeto de produção para testar e atualizar sua ID do aplicativo no manifesto do aplicativo para usar um novo identificador (distinto da ID do aplicativo de produção).
 
-Se você quiser usar código de exemplo para concluir este [](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) tutorial, siga as etapas de configuração em Teams de pesquisa de extensão de mensagens para criar e registrar rapidamente um bot.
+Se você quiser usar código de exemplo para concluir este tutorial, siga [as](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) etapas de configuração em um exemplo de pesquisa de extensão de mensagens Teams para criar rapidamente uma extensão de mensagens baseada em pesquisa Microsoft Teams pesquisa. Ou, você pode começar com o mesmo exemplo de Pesquisa de Extensões de Mensagens do Teams atualizado para o [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) e continuar para Visualizar sua extensão de mensagens [em Outlook](#preview-your-message-extension-in-outlook). O exemplo atualizado também está disponível em uma extensão *Teams Toolkit:* Exemplos de visualização de desenvolvimento  >    >  **NPM Search Connector**.
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="Exemplo do NpM Search Connector no Teams Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>Atualizar o manifesto do aplicativo
 
