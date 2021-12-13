@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 358aa6e35e2916dd554b7f9bbf1655601ce77820
+ms.sourcegitcommit: 2e0764cdb955cf12c5dce7b9ec671a653fec218c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392369"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "61424097"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para Microsoft Teams
 
@@ -631,7 +631,7 @@ Indica se é ou não para mostrar o indicador de carregamento quando um aplicati
 Indica onde um aplicativo pessoal é renderizado com ou sem uma barra de header de tabulação. O padrão é **false**.
 
 > [!NOTE]
-> `isFullScreen`funciona apenas com SharePoint guias e aplicativos de armazenamento.
+> `isFullScreen` funciona apenas para aplicativos publicados em sua organização.
 
 ## <a name="activities"></a>activities
 
