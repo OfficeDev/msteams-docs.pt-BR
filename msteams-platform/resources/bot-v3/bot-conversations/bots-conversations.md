@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: mensagens de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 49b05e48a82208776beaa0b62b1b44f8fec0652f
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155249"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569515"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa com um Microsoft Teams bot
 
@@ -51,7 +51,7 @@ A conversa básica é manipulada por meio do Bot Framework Connector, uma única
 
 Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto e imagens rich para seu bot. Você pode especificar o tipo de conteúdo que o bot pode manipular na página Microsoft Teams configurações do bot.
 
-| Formatar | De usuário para bot  | De bot para usuário |  Observações |
+| Formatar | De usuário para bot  | De bot para usuário |  Notas |
 | --- | :---: | :---: | --- |
 | Rich text  | ✔ | ✔ |  |
 | Imagens | ✔ | ✔ | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF; GIF animado não são suportados. |
@@ -158,12 +158,10 @@ Ao interagir em um canal, seu bot deve ser inteligente sobre como fazer determin
 
 O objeto contém Teams informações específicas e é a fonte `channelData` definitiva para IDs de equipe e canal. Você deve armazenar em cache e usar essas IDs como chaves para armazenamento local.
 
-O `channelData` objeto não está incluído em mensagens em conversas pessoais, pois elas ocorrem fora de qualquer canal.
-
 Um objeto channelData típico em uma atividade enviada ao bot contém as seguintes informações:
 
-* `eventType`Teams tipo de evento; passada somente em casos de eventos [de modificação de canal](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id`Azure Active Directory ID do locatário; passado em todos os contextos.
+* `eventType`Teams tipo de evento; passado somente em casos de [eventos de modificação de canal.](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `tenant.id`Azure Active Directory ID do locatário; passada em todos os contextos.
 * `team` Passado somente em contextos de canal, não em chat pessoal.
   * `id` GUID para o canal.
   * `name`Nome da equipe; passada somente em casos de [eventos de renomear equipe.](~/resources/bot-v3/bots-notifications.md#team-name-updates)
@@ -219,7 +217,7 @@ A nova mensagem não precisa corresponder ao tipo original. Por exemplo, se a me
 > [!NOTE]
 > Você só pode atualizar o conteúdo enviado em mensagens de anexo único e layouts de carrossel. Não há suporte para postagem de atualizações em mensagens com vários anexos no layout da lista.
 
-### <a name="rest-api"></a>API REST
+### <a name="rest-api"></a>API do REST
 
 Para emitir uma atualização de mensagem, basta executar uma solicitação PUT no ponto de extremidade `/v3/conversations/<conversationId>/activities/<activityId>/` usando uma determinada ID de atividade. Para concluir esse cenário, você deve armazenar em cache a ID de atividade retornada pela chamada POST original.
 

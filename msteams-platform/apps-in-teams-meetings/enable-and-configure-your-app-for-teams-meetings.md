@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392488"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569417"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -141,9 +141,10 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
-* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token de **reunião** em sua Teams reunião.
-* Siga o [guia passo a passo](../sbs-meetings-sidepanel.yml) para gerar o **sidepanel** de reunião na reunião Teams reunião.
-* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar o Exibição de Estágio de Reuniões em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token de reunião em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meetings-sidepanel.yml) gerar o sidepanel de reunião em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar o exibição do estágio de reunião em sua Teams reunião.
+* Siga o [guia passo a passo](../sbs-meeting-content-bubble.yml) para gerar a bolha de conteúdo de reunião em sua reunião Teams reunião.
 
 ## <a name="next-step"></a>Próxima etapa
 

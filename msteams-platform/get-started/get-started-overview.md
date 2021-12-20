@@ -4,12 +4,12 @@ description: Visão geral para Começar a Microsoft Teams De desenvolvedor
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemplos de desenvolvedor
-ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075476"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569494"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -25,7 +25,7 @@ Aqui está uma ideia do que você aprenderá:
 
 Vamos dar uma olhada rápida nas opções de ambiente de complicação que você pode escolher e o roteiro para criar e implantar um aplicativo Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um Teams aplicativo.":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um Teams aplicativo":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Recursos de aplicativo e ferramentas de desenvolvimento
 
@@ -60,3 +60,7 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 
 > [!div class="nextstepaction"]
 > [Criar um Teams com Node.js](../sbs-gs-nodejs.yml)
+
+## <a name="see-also"></a>Confira também
+
+[Microsoft Teams exemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)

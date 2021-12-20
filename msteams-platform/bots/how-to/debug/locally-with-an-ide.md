@@ -5,12 +5,12 @@ description: Saiba mais sobre como testar e depurar seu bot localmente com um ID
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9ac6e2f7bf173e68e111b0d792ec89ba266c188f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888227"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569571"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 
@@ -21,11 +21,13 @@ Ao testar seu bot, você precisa levar em consideração os contextos em que des
 A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Este é o único método para testar a funcionalidade completa disponível para o bot, em todos os escopos.
 
 Há dois métodos para carregar seu aplicativo:
+
 * Use [o App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crie um pacote de aplicativo](~/concepts/build-and-test/apps-package.md) manualmente e carregue seu [aplicativo](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
-> Se você precisar alterar seu manifesto e carregar seu aplicativo de novo, [exclua](#delete-a-bot-from-teams) seu bot antes de carregar seu pacote de aplicativo alterado.
+> Para alterar o manifesto e carregar seu aplicativo de novo, [exclua](#delete-a-bot-from-teams) o bot antes de carregar o pacote de aplicativo alterado.
+> Para testar o bot, habilita o sideload em Teams. Consulte [habilitar sideloading](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## <a name="debug-your-bot-locally"></a>Depurar seu bot localmente
 
@@ -35,7 +37,7 @@ Se você estiver hospedando seu bot localmente durante o desenvolvimento, precis
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo. 
+Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo.
 
 > [!NOTE]
 > Se você fechar a janela de comando e reiniciar, uma nova URL será gerada e você precisará atualizar seu endereço de ponto de extremidade do bot para usá-la.

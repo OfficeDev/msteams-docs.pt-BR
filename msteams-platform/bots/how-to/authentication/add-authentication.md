@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifesto do bot do registro do canal do bot do grupo de recursos
-ms.openlocfilehash: da3a506ef4c1eeb77f97ce517a68005750026915
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887898"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569522"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
 
@@ -83,7 +83,7 @@ Você usa um grupo de recursos para criar recursos individuais para a Estrutura 
 O registro de canais de bot registra seu serviço Web como um bot com a Estrutura de Bot, desde que você tenha uma ID do Aplicativo microsoft e senha do aplicativo (segredo do cliente).
 
 > [!IMPORTANT]
-> Você só precisará registrar seu bot se ele não estiver hospedado no Azure. Se você [criou um bot por](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) meio do portal do Azure, ele já está registrado com o serviço. Se você criou seu bot por meio da [Estrutura de Bot](https://dev.botframework.com/bots/new) ou [AppStudio,](~/concepts/build-and-test/app-studio-overview.md) seu bot não está registrado no Azure.
+> Você só precisará registrar seu bot se ele não estiver hospedado no Azure. Se você [criou um bot por](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) meio do portal do Azure, ele já está registrado com o serviço. Se você criou seu bot por meio da [Estrutura de Bot ou](https://dev.botframework.com/bots/new) do Portal do [Desenvolvedor,](../../../concepts/build-and-test/teams-developer-portal.md) seu bot não está registrado no Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -126,7 +126,7 @@ Neste procedimento, você usará um provedor do Azure AD; outros provedores de i
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar a conexão do provedor de identidade e registrá-la com o bot
 
-Observação: há duas opções para Provedores de Serviços aqui-Azure AD V1 e Azure AD V2.  As diferenças entre os dois provedores são resumidas [aqui](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), mas, em geral, a V2 oferece mais flexibilidade em relação à alteração de permissões de bot.  Graph As permissões de API são listadas no campo escopos e, à medida que novas são adicionadas, os bots permitirão que os usuários consentam com as novas permissões no próximo login.  Para V1, o consentimento do bot deve ser excluído pelo usuário para que novas permissões sejam solicitados na caixa de diálogo OAuth. 
+Observação: há duas opções para Provedores de Serviços aqui-Azure AD V1 e Azure AD V2.  As diferenças entre os dois provedores são resumidas [aqui](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), mas, em geral, a V2 oferece mais flexibilidade em relação à alteração de permissões de bot.  Graph permissões de API são listadas no campo escopos e, à medida que novas são adicionadas, os bots permitirão que os usuários consentam com as novas permissões no próximo login.  Para V1, o consentimento do bot deve ser excluído pelo usuário para que novas permissões sejam solicitados na caixa de diálogo OAuth. 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -172,7 +172,7 @@ A imagem a seguir exibe a seleção correspondente na página de recursos:
     1. **Provedor de Serviços**. Selecione **Azure Active Directory v2**. Depois de selecionar isso, os campos específicos do Azure AD serão exibidos.
     1. **ID do cliente**. Insira a ID de aplicativo (cliente) que você gravou para seu aplicativo provedor de identidade do Azure nas etapas acima.
     1. **Segredo do cliente**. Insira o segredo que você gravou para seu aplicativo provedor de identidade do Azure nas etapas acima.
-    1. **URL Exchange token.** Deixe isso em branco.
+    1. **URL Exchange token.** Deixe em branco.
     1. **ID do** locatário , insira a ID de Diretório **(locatário)** que você gravou anteriormente para seu aplicativo de identidade do Azure ou **comum,** dependendo do tipo de conta com suporte selecionado ao criar o aplicativo do provedor de identidade. Para decidir qual valor atribuir siga estes critérios:
 
         - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
@@ -309,7 +309,7 @@ Depois de configurar o mecanismo de autenticação, você poderá executar o tes
 1. Na **URL do Bot,** insira a URL local do bot. Normalmente, `http://localhost:3978/api/messages` .
 1. Na **ID do Microsoft App,** insira a ID do aplicativo do bot de `appsettings.json` .
 1. Na senha **do Microsoft App,** insira a senha do aplicativo do bot a partir do `appsettings.json` .
-1. Selecione **Conexão**.
+1. Selecione **Conectar**.
 1. Depois que o bot está em execução, insira qualquer texto para exibir o cartão de entrada.
 1. Selecione o botão **Entrar**.
 1. Uma caixa de diálogo pop-up é exibida para **Confirmar URL aberta**. Isso é para permitir que o usuário do bot (você) seja autenticado.  

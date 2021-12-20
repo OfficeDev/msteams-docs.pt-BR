@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216227"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569529"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -296,7 +296,7 @@ Use a propriedade mascarar informações para mascarar informações específica
 > [!NOTE]
 > O recurso só dá suporte ao mascaramento de informações do lado do cliente. O texto de entrada mascarada é enviado como texto claro para o endereço de ponto de extremidade HTTPS especificado durante a configuração [do bot.](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)
 
-Para mascarar informações em Cartões Adaptáveis, adicione a propriedade para `isMasked` **digitar** e de definir seu valor `Input.Text` como **true**.
+Para mascarar informações em Cartões Adaptáveis, adicione a propriedade para `style` **digitar** `input.text` e desmarcar seu valor como **Senha**.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Cartão Adaptável de Exemplo com a propriedade mascaramento
 
