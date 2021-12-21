@@ -5,14 +5,14 @@ description: Uma visão geral das guias personalizadas na Teams plataforma
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: b48091c0701ebbb84e87e80cc3378f788bcb30b3
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391726"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573560"
 ---
-# <a name="microsoft-teams-tabs"></a>Guias do Microsoft Teams
+# <a name="build-tabs-for-microsoft-teams"></a>Criar guias para Microsoft Teams
 
 As guias são Teams web com conhecimento de Microsoft Teams. Eles são marcas html simples <iframe que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat de grupo ou aplicativo pessoal para um usuário \> individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web Teams ou adicionar uma funcionalidade específica Teams ao conteúdo da Web. Para obter mais informações, [consulte Teams SDK do cliente JavaScript.](/javascript/api/overview/msteams-client)
 
@@ -36,7 +36,7 @@ Você pode [criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/conte
 Você pode criar guias com Cartões Adaptáveis e centralizar todos os Teams de aplicativo eliminando a necessidade de um back-back diferente para seus bots e guias. [O Stage View](~/tabs/tabs-link-unfurling.md) é um novo componente da interface do usuário que permite renderizar o conteúdo aberto em tela inteira Teams e fixado como uma guia. O serviço de [desatração](~/tabs/tabs-link-unfurling.md) de link existente é atualizado, para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você [](~/tabs/how-to/conversational-tabs.md) pode criar guias de conversa usando sub-entidades de conversa que permitem que os usuários tenham conversas sobre sub-entidades em sua guia, como tarefas específicas, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações nas [margens de tabulação](~/resources/removing-tab-margins.md) para melhorar a experiência do desenvolvedor ao criar aplicativos. Você pode arrastar a guia e posicioná-la na posição desejada para trocar as posições da guia em seus aplicativos pessoais e chats de canal ou grupo. 
 
 > [!NOTE]
-> **As** **guias** Postagens, Arquivos e **Chat** não podem ser movidas de suas posições.
+> **Postagens** **e arquivos** não podem ser movidos de suas posições.
 
 ## <a name="tab-features"></a>Recursos de tabulação
 

@@ -5,12 +5,12 @@ description: Saiba como responder ao comando de pesquisa de uma extensão de men
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178276"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573411"
 ---
 # <a name="respond-to-search-command"></a>Responder ao comando de pesquisa
 
@@ -25,7 +25,7 @@ Este documento orienta você sobre como responder a solicitações de usuário n
 
 Os parâmetros de solicitação são encontrados no objeto na `value` solicitação, que inclui as seguintes propriedades:
 
-| Nome da propriedade | Objetivo |
+| Nome da propriedade | Finalidade |
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
 | `parameters` | Matriz de parâmetros. Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
@@ -83,7 +83,7 @@ Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação 
 
 Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um aplicativo ou objeto JSON válido com as seguintes propriedades:
 
-|Nome da propriedade|Objetivo|
+|Nome da propriedade|Finalidade|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
 |`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: Exibe uma lista de resultados da pesquisa <br>`auth`: Pede ao usuário para autenticar <br>`config`: Pede ao usuário para configurar a extensão de mensagens <br>`message`: Exibe uma mensagem de texto sem texto |
@@ -115,10 +115,9 @@ A lista de resultados é exibida na interface do usuário Microsoft Teams com um
 
 Para cartão Hero ou Miniatura, exceto a ação invocar outras ações, como botão e toque, não são suportadas no cartão de visualização.
 
-Para enviar um Cartão Adaptável ou um cartão conector do Ofiice 365, você deve incluir uma visualização. A `preview` propriedade deve ser um cartão Hero ou Thumbnail. Se você não especificar a propriedade preview no `attachment` objeto, uma visualização não será gerada.
+Para enviar um cartão adaptável ou Office 365 conector, você deve incluir uma visualização. A `preview` propriedade deve ser um cartão Hero ou Thumbnail. Se você não especificar a propriedade preview no `attachment` objeto, uma visualização não será gerada.
 
-Para cartões Hero e Thumbnail, você não precisa especificar uma propriedade de visualização, uma visualização é gerada por padrão. O exemplo a seguir exibe o recurso de desfralização de link quando um link é passado na extensão de mensagens:  
-![link desfraldamento](~/assets/images/messaging-extension/link-unfurl.gif)
+Para cartões Hero e Thumbnail, você não precisa especificar uma propriedade de visualização, uma visualização é gerada por padrão.
 
 ### <a name="response-example"></a>Exemplo de resposta
 
