@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e11c66e7e818a090305e320ed21080c7ca897856
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227918"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591782"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para provisionar recursos de nuvem
 
@@ -51,7 +51,7 @@ Ao criar um novo projeto, você obterá todos os recursos do Azure a serem criad
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Criação de recursos para Teams aplicativo Tab
 
-|Recursos|Finalidade desse recurso| Observações |
+|Recursos|Finalidade desse recurso| Notas |
 |----------|--------------------------------|-----|
 | Armazenamento do Microsoft Azure | Hospedar seu aplicativo de tabulação | Habilita o recurso de aplicativo Web estático para hospedar seu aplicativo de guia |
 | Plano de Serviço de Aplicativo para Auth Simples | Hospedar o aplicativo Web do Simple Auth | |
@@ -60,7 +60,7 @@ Ao criar um novo projeto, você obterá todos os recursos do Azure a serem criad
 
 ### <a name="resources-created-for-teams-bot-or-messaging-extension-application"></a>Recursos criados para Teams bot ou aplicativo de extensão de mensagens
 
-|Recursos|Finalidade desse recurso| Observações |
+|Recursos|Finalidade desse recurso| Notas |
 |----------|--------------------------------|-----|
 | Serviço bot do Azure | Registra seu aplicativo como um bot com a Estrutura de Bots | Conecta o bot ao Teams |
 | Plano de Serviço de Aplicativo para Bot | Hospedar o aplicativo Web do Bot | |
@@ -69,7 +69,7 @@ Ao criar um novo projeto, você obterá todos os recursos do Azure a serem criad
 
 ### <a name="resources-created-when-including-azure-functions-in-the-project"></a>Recursos criados ao incluir funções do Azure no projeto
 
-|Recursos|Finalidade desse recurso| Observações |
+|Recursos|Finalidade desse recurso| Notas |
 |----------|--------------------------------|-----|
 | Plano de Serviço de Aplicativo para Aplicativo de Função | Hospedar o Aplicativo de Função | |
 | Aplicativo function | Hospedar suas APIs de Funções do Azure | Adiciona identidade atribuída ao usuário para facilitar o acesso a outros recursos do Azure. <br /> Adiciona a regra CORS para permitir solicitações do seu aplicativo de guia <br /> Adiciona a configuração de autenticação que permite apenas solicitações de seu Teams app. <br /> Adiciona configurações de aplicativo exigidas pelo [SDK teamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -78,7 +78,7 @@ Ao criar um novo projeto, você obterá todos os recursos do Azure a serem criad
 
 ### <a name="resources-created-when-including-azure-sql-in-the-project"></a>Recursos criados ao incluir o Azure SQL no projeto
 
-|Recursos|Finalidade desse recurso| Observações |
+|Recursos|Finalidade desse recurso| Notas |
 |----------|--------------------------------|-----|
 | Azure SQL Server | Hospedar a Banco de Dados SQL do Azure de usuário | Permite que todos os serviços do Azure acessem o servidor |
 | Banco de Dados SQL Azure | Armazenar dados para seu aplicativo | Concede ao usuário permissão de leitura/gravação atribuída ao banco de dados |
@@ -94,14 +94,14 @@ Ao criar um novo projeto, você obterá todos os recursos do Azure a serem criad
 | Servidor OAuth de Gerenciamento de API | Permite que o Microsoft Power Platform acesse suas APIs hospedadas no Aplicativo de Função |
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure |
 
-## <a name="customize-resource-provision"></a>Personalizar o provisionamento de recursos 
+## <a name="customize-resource-provision"></a>Personalizar o provisionamento de recursos
 
 Teams Toolkit permite que você use uma infraestrutura como abordagem de código para definir quais recursos do Azure você deseja provisionar e como deseja configurá-los. A ferramenta usa um ARM para definir recursos do Azure. O ARM é um conjunto de arquivos bicep que define a infraestrutura e a configuração do seu projeto. Você pode personalizar os recursos do Azure criados modificando o ARM modelo. Para obter mais informações, consulte [bicep document](/azure/azure-resource-manager/bicep.md). O provisionamento com ARM envolve a alteração de dois conjuntos de arquivos, parâmetros e modelos:
 
 * ARM arquivos de parâmetros ( `azure.parameters.{your_env_name}.json` ) estão localizados na `.fx/configs` pasta, para passar parâmetros para modelos.
 * ARM de modelo localizados em `templates/azure` , esta pasta contém os seguintes arquivos:
 
-| Arquivo | O que ele faz | Permitir personalização |
+| File | O que ele faz | Permitir personalização |
 | --- | --- | --- |
 | main.bicep | Fornecer ponto de entrada para provisionamento de recursos do Azure | Sim |
 | provision.bicep | Criar e config recursos do Azure | Sim |
@@ -306,7 +306,7 @@ Considere o cenário, você deseja adicionar o Azure Armazenamento seu back-end 
 
 5. Agora, você pode atualizar sua função com as Armazenamento de saída do Azure.
 
-## <a name="faq"></a>PERGUNTAS FREQÜENTES
+## <a name="faq"></a>Perguntas frequentes
 
 <br>
 

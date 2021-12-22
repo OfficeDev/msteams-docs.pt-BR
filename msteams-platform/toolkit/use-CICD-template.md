@@ -6,17 +6,16 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff5b77b7891d36e63f2fd3260ae114cbf536384d
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: acd12a96365bf97bd419045c415e71efd3a118e2
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227892"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591775"
 ---
 # <a name="ci-or-cd-support-for-teams-application-developers"></a>Suporte a CI ou CD para Teams desenvolvedores de aplicativos
 
 O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a criação Teams aplicativo. O documento fornece ferramentas e modelos pré-preparados para você começar a configurar pipelines CI ou CD com as plataformas de desenvolvimento mais populares, incluindo GitHub, Azure Devops e Jenkins.
-
 
 |Ferramentas e modelos|Descrição|
 |---|---|
@@ -53,11 +52,11 @@ As etapas a seguir para personalizar o fluxo de trabalho de CD:
 1. Remova os scripts de teste se você não tiver testes.
 
 > [!Note]
-> A etapa de provisionamento não está incluída no modelo de CD, pois geralmente é executada apenas uma vez. Você pode executar o provisionamento dentro Teams Toolkit, a CLI do TeamsFx ou usar um fluxo de trabalho seperado. Lembre-se de se comprometer após o provisionamento (os resultados do provisionamento serão depositados dentro da pasta) e salve o conteúdo do arquivo em GitHub segredos do repositório com nome para uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` futuro.
+> A etapa de provisionamento não está incluída no modelo de CD, pois geralmente é executada apenas uma vez. Você pode executar o provisionamento em Teams Toolkit, no TeamsFx CLI ou usando um fluxo de trabalho separado. Lembre-se de se comprometer após o provisionamento (os resultados do provisionamento serão depositados dentro da pasta) e salve o conteúdo do arquivo em GitHub segredos do repositório com nome para uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` futuro.
 
 ### <a name="environment-variables"></a>Variáveis de ambiente
 
-Etapas para criar variáveis de ambiente em GitHub:
+Etapas para criar variáveis de ambiente em GitHub::
 
 1. Na página **Configurações** projeto, navegue até **Ambientes e** selecione **Novo ambiente**.
 1. Insira um nome para seu ambiente. O nome de ambiente padrão fornecido no modelo é `test_environment` . Selecione **Configurar ambiente** para continuar.
@@ -72,7 +71,9 @@ Etapas para criar variáveis de ambiente em GitHub:
 |Microsoft 365_ACCOUNT_NAME|A Microsoft 365 para criar e publicar o Teams App.|
 |Microsoft 365_ACCOUNT_PASSWORD|A senha da conta Microsoft 365.|
 |Microsoft 365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID Microsoft 365 locatário.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-> Observação: consulte a opção Configurar credenciais [Microsoft 365/Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para certificar-se de ter desabilitado a Autenticação Multifatetiva e os Padrões de Segurança para as credenciais usadas no fluxo de trabalho.
+
+> [!NOTE]
+> Consulte a opção [Configurar Microsoft 365/Credenciais do Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para garantir que você desabilitou a Autenticação Multifaional e Os Padrões de Segurança para as credenciais usadas no fluxo de trabalho.
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar ci ou cd Pipelines com Azure DevOps
 
@@ -146,7 +147,6 @@ steps:
   env:
     AZURE_ACCOUNT_NAME: $(AZURE_ACCOUNT_NAME)
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
     Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
@@ -184,7 +184,8 @@ Etapas para criar variáveis pipeline em Azure DevOps:
 |Microsoft 365_ACCOUNT_PASSWORD|A senha da conta Microsoft 365.|
 |Microsoft 365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID Microsoft 365 locatário.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> ! Observação Consulte As credenciais [Configurar Microsoft 365/Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para garantir que você desabilitou a Autenticação Multifatetiva e os Padrões de Segurança para as credenciais usadas no fluxo de trabalho.
+> [!NOTE]
+> A etapa de provisionamento não está incluída no modelo de CD, pois geralmente é executada apenas uma vez. Você pode executar o provisionamento dentro Teams Toolkit, a CLI do TeamsFx ou usar um fluxo de trabalho seperado. Lembre-se de se comprometer após o provisionamento (os resultados do provisionamento serão depositados dentro da pasta) e salve o conteúdo do arquivo de credenciais do Jenkins para uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` futuro.
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Modelos de pipeline de CI ou CD no Jenkins
 
@@ -219,7 +220,7 @@ Altere as etapas a seguir para personalizar o pipeline de CD:
 1. Remova os scripts de teste se você não tiver testes.
 
 > [!Note]
- A etapa de provisionamento não está incluída no modelo de CD, pois geralmente é executada apenas uma vez. Você pode executar o provisionamento dentro Teams Toolkit, a CLI do TeamsFx ou usar um fluxo de trabalho seperado. Lembre-se de se comprometer após o provisionamento (os resultados do provisionamento serão depositados dentro da pasta) e salve o conteúdo do arquivo de credenciais do Jenkins para uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` futuro.
+ A etapa de provisionamento não está incluída no modelo de CD, pois geralmente é executada apenas uma vez. Você pode executar o provisionamento em Teams Toolkit, no TeamsFx CLI ou usando um fluxo de trabalho separado. Lembre-se de se comprometer após o provisionamento (os resultados do provisionamento serão depositados dentro da pasta) e salve o conteúdo do arquivo de credenciais do Jenkins para uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` futuro.
 
 ### <a name="environment-variables-for-jenkins"></a>Variáveis de ambiente para o Jenkins
 
@@ -249,6 +250,19 @@ Os scripts são baseados em uma ferramenta de linha de comando [TeamsFx-CLI](htt
 > Para `@microsoft/teamsfx-cli` habilitar a execução no modo CI, ative `CI_ENABLED` por `export CI_ENABLED=true` . No modo CI, `@microsoft/teamsfx-cli` é amigável para CI ou CD.
 
 Certifique-se de definir credenciais do Azure e M365 em suas variáveis de ambiente com segurança. Por exemplo, se você estiver usando GitHub como repositório de código-fonte, poderá usar os [Segredos do Github](https://docs.github.com/en/actions/reference/encrypted-secrets) para armazenar com segurança as variáveis do seu ambiente.
+
+## <a name="publish-teams-app-using-teams-developer-portal"></a>Publicar Teams aplicativo usando Teams Portal do Desenvolvedor
+
+Se houver alterações relacionadas Teams arquivo de manifesto do aplicativo, talvez você queira publicar o Teams aplicativo novamente para atualizar o manifesto.
+
+Para publicar Teams aplicativo manualmente, você pode aproveitar o Portal do [Desenvolvedor para Teams](https://dev.teams.microsoft.com/home).
+
+**Para publicar seu aplicativo**
+
+1. Entre no [Portal do Desenvolvedor para Teams](https://dev.teams.microsoft.com) usando a conta correspondente.
+2. Importe seu pacote de aplicativo em zip selecionando `App -> Import app -> Replace` .
+3. Selecione o aplicativo de destino na lista de aplicativos e você irá para a página visão geral.
+4. Publicar seu aplicativo selecionando `Publish -> Publish to your org`
 
 ### <a name="see-also"></a>Confira também
 

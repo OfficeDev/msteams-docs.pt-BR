@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: menu de comando redigir conversa de mensagem @mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888234"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591789"
 ---
 # <a name="bot-command-menus"></a>Menus de comando bot
 
@@ -163,7 +163,7 @@ Você deve manipular comandos de menu em seu código de bot à medida que lida c
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Manipular comandos de menu em seu código de bot
 
-Os bots em um grupo ou canal respondem somente quando são mencionados `@botname` em uma mensagem. Cada mensagem recebida por um bot quando em um escopo de grupo ou canal contém seu nome no texto da mensagem retornado. Antes de manipular o comando que está sendo retornado, a análise da mensagem deve manipular a mensagem recebida por um bot com seu nome.
+Os bots em um grupo ou canal respondem somente quando são mencionados `@botname` em uma mensagem. Cada mensagem recebida por um bot quando em um escopo de grupo ou canal contém seu nome no texto da mensagem. Antes de manipular o comando que está sendo retornado, a análise da mensagem deve manipular a mensagem recebida por um bot com seu nome.
 
 > [!NOTE]
 > Para manipular os comandos em código, eles são enviados para o bot como uma mensagem regular. Você deve lidar com eles como faria com qualquer outra mensagem de seus usuários. Os comandos no código inseram texto pré-configurado na caixa de texto. Em seguida, o usuário deve enviar esse texto como faz para qualquer outra mensagem.
