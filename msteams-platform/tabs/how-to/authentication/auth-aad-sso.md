@@ -4,12 +4,12 @@ description: Descreve o SSO (sign-on único)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: SSO de autenticação do teams AAD api de login único
-ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 107c03fe7ecb2bc6fd38ede7797e6a2a23bac012
+ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569501"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598945"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte a SSO (login único) para guias
 
@@ -200,9 +200,10 @@ A solução de autenticação acima descrita só funciona para aplicativos e ser
 > [!NOTE]
 > O SSO é suportado para aplicativos de propriedade do cliente nos locatários AAD B2C.
 
-## <a name="step-by-step-guide"></a>Guias passo a passo
+## <a name="step-by-step-guides"></a>Guias passo a passo
 
-Siga o [guia passo a passo para](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) autenticar guias e extensões de mensagens.
+* Siga o [guia passo a passo para](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) autenticar guias e extensões de mensagens.
+* Siga o [guia passo a passo](../../../sbs-tab-with-adaptive-cards.yml) para criar guia com cartões adaptáveis.
 
 ## <a name="see-also"></a>Confira também
 [Teams Bot com login único](../../../sbs-bots-with-sso.yml)
