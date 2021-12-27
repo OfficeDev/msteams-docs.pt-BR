@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
-  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/23/2021
-  ms.locfileid: "61598938"
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608451"
 landingContent:
 - title: Explore o mais recente
   linkLists:
@@ -52,8 +52,12 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - text: Usar autenticação SSO para guias
       url: tabs/how-to/authentication/auth-aad-sso.md
+    - text: Permissão do dispositivo para navegador
+      url: concepts/device-capabilities/browser-device-permissions.md
   - linkListType: tutorial
     links:
+    - text: Guia passo a passo para permissões de dispositivo Tab
+      url: ~/sbs-tab-device-permissions.yml
     - text: Guia passo a passo para guias com cartões adaptáveis
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Guia passo a passo para mensagens proativas
@@ -100,7 +104,7 @@ landingContent:
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - linkListType: whats-new
     links:
-    - text: O que há de novo
+    - text: Novidades
       url: ../msteams-platform/whats-new.md
 - title: Criar recursos de aplicativo
   linkLists:

@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams quais são as novas atualizações e recursos mais recentes
-ms.openlocfilehash: 16558a8dede8033e8258696e1913a206e3531813
-ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+ms.openlocfilehash: a1fcc2bd015d8260dd0282010cbcbd0e20226d10
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2021
-ms.locfileid: "61598952"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608374"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+|12/24/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > recursos do dispositivo > guia passo a passo [para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduzido o guia passo a passo para criar guias com cartões adaptáveis.| Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo para criar guias com cartões [adaptáveis](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Atualizou os módulos Get started JavaScript, C# e Node.js para Teams Toolkit 3.0.0. | • Começar a > [criar seu primeiro aplicativo com JavaScript](sbs-gs-javascript.yml) <br> • Começar a > [criar seu primeiro aplicativo com C# ou .NET](sbs-gs-csharp.yml) <br> • Começar a> [criar seu primeiro aplicativo com Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Guia passo a passo para guias e extensões de mensagens com SSO (login único). | Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo com [o SSO](sbs-tabs-and-messaging-extensions-with-SSO.yml) para guias e extensões de mensagens|
@@ -215,6 +216,7 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|12/24/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > recursos do dispositivo > guia passo a passo [para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
 |11/30/2021 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Guias pessoais e extensões de mensagens são executados Outlook e Office | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).| • Crie bots > conversas bot > Mensagens em conversas de bot > [Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [canal e conversas em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de visualização [do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |

@@ -4,12 +4,12 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348346"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608381"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
@@ -44,8 +44,11 @@ Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar
 
 |Nome do exemplo | Descrição | Node.js |
 |----------------|-----------------|--------------|
-| Permissões de dispositivo tab para navegador | O código de exemplo demonstra como mostrar as permissões do dispositivo para o navegador. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+| Permissões de dispositivo tab para navegador | O código de exemplo demonstra como mostrar as permissões do dispositivo para o navegador. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../../sbs-tab-device-permissions.yml) conceder permissão de dispositivo de tabulação Microsoft Teams.
 
 ## <a name="see-also"></a>Confira também
 

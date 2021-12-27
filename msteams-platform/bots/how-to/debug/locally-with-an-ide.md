@@ -5,12 +5,12 @@ description: Saiba mais sobre como testar e depurar seu bot localmente com um ID
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569571"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608458"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 
@@ -74,6 +74,9 @@ Você também pode iniciar uma conversa com seu bot usando sua ID. Quando um bot
 
    3. Selecione seu bot e envie uma mensagem para iniciar uma conversa.
       Como alternativa, você pode colar a ID do aplicativo do bot na caixa de pesquisa na parte superior esquerda Microsoft Teams. Na página resultados da pesquisa, navegue até a guia **Pessoas** para ver seu bot e começar a conversar com ele.
+
+> [!Note]
+> Para Microsoft Teams se referir à ID do aplicativo do bot, habilita [o sideload de aplicativos](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).      
 
 Seu bot recebe o `conversationUpdate` evento à medida que você adiciona os bots a uma equipe, sem as informações da equipe no `channelData` objeto.
 

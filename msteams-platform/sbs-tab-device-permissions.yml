@@ -1,0 +1,49 @@
+### YamlMime:Tutorial
+title: Permissões de dispositivo tab
+metadata:
+  title: Permissões de dispositivo tab
+  description: Neste tutorial, você aprenderá a dar permissões de dispositivo de tabulação para Microsoft Teams aplicativos.
+  audience: Developer
+  level: Beginner
+  ms.date: 12/24/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
+  nextTutorialTitle: Leia mais em Permissões de dispositivo para navegador
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: b1ba241b5ba6aa2f95e8948ef7a87a99bd0b732b
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608526"
+items:
+- durationInMinutes: 1
+  content: >
+    > [!NOTE]
+
+    > A atualização mais recente sobre como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização do [desenvolvedor](resources/dev-preview/developer-preview-intro.md) público. Essa atualização estará geralmente disponível (GA) até 01 de fevereiro de 2022.
+
+
+    Teams aplicativo que exige permissões de dispositivo, como localização, câmera ou acesso a microfone, agora exige que os usuários concedam permissão manualmente por nível de aplicativo no navegador da Web. Anteriormente, o navegador manipulava como conceder permissões de acesso, mas agora essas permissões são tratadas em Microsoft Teams.
+
+
+    Este guia passo a passo ajuda você a fazer permissões de dispositivo de tabulação no Microsoft Teams. Você verá a seguinte saída:
+
+      ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+- title: Pré-requisitos
+  durationInMinutes: 1
+  content: "Certifique-se de instalar as seguintes ferramentas e configurar seu ambiente de desenvolvimento:  \n\n* Instalar [ngrok](https://ngrok.com/) ou solução de túnel equivalente.\n* Instale o [Node.js](https://nodejs.org/en/).\n* Visual Studio Code ou a versão mais recente.\n* [Microsoft 365 conta de desenvolvedor](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso Teams conta com as permissões apropriadas para instalar um aplicativo.\n"
+- title: Configurar e executar o aplicativo de permissões do dispositivo Tab no Teams
+  durationInMinutes: 1
+  content: "A maneira mais abrangente de testar seu aplicativo é criando um pacote de aplicativos e carregando-o para Teams. Esse método é a única maneira de testar a funcionalidade completa disponível para seu aplicativo em todos os escopos. \n\nPara configurar e executar o aplicativo Teams, carregando o arquivo manifest.zip, execute o seguinte:\n\n1. Configure e execute o aplicativo de permissões do dispositivo de tabulação.\n2. Inicie o serviço de tunelamento para obter um ponto de extremidade https.\n3. Execute as permissões do dispositivo de tabulação carregando o arquivo manifest.zip no Teams.\n\n**Para configurar e executar o aplicativo de permissões do dispositivo de tabulação:**\n\n1. Abra **o prompt de comando** e clone um clone do git do **repositório. https://github.com/OfficeDev/Microsoft-Teams-Samples.git** Certifique-se de observar **o Caminho** em que o repositório é clonado.\n2. No **Explorador** de Arquivos, vá para **Microsoft-Teams-Samples > exemplos > tab-device-permissions > nodejs** e copie o local da pasta.\n3. No prompt **de comando,** insira **o local do cd (local da pasta nó js)** e execute este comando.\n4. Execute o seguinte comando no **prompt de comando**:\n\n   ```command-prompt\n    npm install\n    ```\n5. Execute o aplicativo no **prompt de comando** usando o seguinte comando:\n\n   ```command-prompt\n   npm start\n   ```\n6. Você pode ver a seguinte saída no navegador:\n\n   ![react](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**Comece seu serviço de tunelamento para obter um ponto de extremidade https:**\n\n1. Vá para **Microsoft-Teams-Samples > exemplos > tab-device-permissions > nodejs**.\n2. Abra o terminal **ngrok** e inicie um túnel ngrok com o seguinte comando (você precisará do ponto de extremidade https para atualizar o arquivo de manifesto):\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**Para executar as permissões do dispositivo de tabulação carregando o arquivo manifest.zip no Teams:**\n\n1. No **Explorador** de Arquivos, vá para **Microsoft-Teams-Samples > exemplos > tab-device-permissions > nodejs > appPackage.**\n2. Abra o **arquivo manifest.json** no código do visual studio.\n3. No arquivo **manifest.json,** encontre<<BASE_URI_DOMAIN>>e substitua-o pelo ponto de extremidade https do ngrok, excluindo a parte \"https://\" em todos os locais. \n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. Feche os arquivos no **appPackage/folder** como manifest.zip.\n5. Abra Teams no navegador usando a ID do locatário.\n6. Para carregar **manifest.zip,** selecione **Aplicativos > Upload um aplicativo personalizado** e abra **manifest.zip**.\n7. Selecione **Tab Device Permission** app.\n8. Selecione **Adicionar** para adicionar o aplicativo de permissão do dispositivo de tabulação.\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. Permissão **de dispositivo de tabulação aberta** e selecione Guia de Permissão do **Dispositivo** para ver a seguinte saída:\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. Abra o Teams móvel para ver as seguintes saídas:\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. Abra a área de trabalho Teams.\n12. Para carregar **manifest.zip,** selecione **Aplicativos > Upload um aplicativo personalizado** e abra **manifest.zip**.\n13. Selecione **Adicionar** para adicionar o aplicativo de permissão do dispositivo de tabulação e você verá a seguinte saída:  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
+- title: Testar seu aplicativo
+  durationInMinutes: 1
+  content: "Para garantir que o aplicativo de permissão do dispositivo de tabulação permita que o usuário dê a permissão, você deve testar o aplicativo depois de carregar o aplicativo com êxito Teams.\n\n # <a name=\"desktop\"></a>[Desktop](#tab/Desktop)\n\n  Para testar o aplicativo na área de trabalho, selecione **Ícone de Permissão** do Aplicativo e receba os seguintes prompts para aceitar a solicitação de permissão:\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  Para testar o aplicativo no navegador, selecione **Obter Local** para ver as seguintes saídas:\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[Dispositivo móvel](#tab/Mobile)\n\n  Para testar o aplicativo no celular, selecione o botão respectivo para testar o cenário e obter os seguintes prompts para aceitar a solicitação de permissão:\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
+- title: Desafio completo
+  durationInMinutes: 1
+  content: >
+    Você achou algo assim?
+
+      ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+- content: Você concluiu o tutorial e agora pode conceder permissão de dispositivo de guia Microsoft Teams aplicativos.

@@ -6,12 +6,12 @@ keywords: teams tabs outgoing webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 9950bc6d610b280deff83c44ff26a5e4359d3b98
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178297"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608388"
 ---
 # <a name="create-incoming-webhook"></a>Criar Webhook de entrada
 
@@ -57,6 +57,8 @@ A tabela a seguir fornece os recursos e a descrição do Webhook de entrada:
     ![URL exclusiva](~/assets/images/url.png)
 
 O webhook está disponível no canal Teams.
+
+Você pode criar e enviar mensagens ativas por meio do Webhook de entrada ou Office 365 Connector. Para obter mais informações, consulte [Create and send messages](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL).
 
 > [!NOTE]
 > Em Teams, selecione **Configurações** Permissões de membro Permitir que os membros criem, atualizem e  >    >  **removam** conectores, para que qualquer membro da equipe possa adicionar, modificar ou excluir um conector.

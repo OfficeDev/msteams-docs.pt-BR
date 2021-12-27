@@ -237,9 +237,6 @@
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Mensagens proativas
           href: bots/how-to/conversations/send-proactive-messages.md
-          items:
-            - name: Guias passo a passo
-              href: sbs-send-proactive.yml
         - name: Formatar suas mensagens de bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Atualizar e excluir mensagens de bot
@@ -376,8 +373,6 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Usar autenticação SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-        - name: Guia passo a passo para bots com SSO
-          href: sbs-bots-with-sso.yml
     - name: Extensões de mensagens
       items:
         - name: Adicionar autenticação à sua extensão de mensagens
