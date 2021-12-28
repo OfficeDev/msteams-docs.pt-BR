@@ -4,12 +4,12 @@ description: Visão geral para Começar a Microsoft Teams De desenvolvedor
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemplos de desenvolvedor
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569494"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619799"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -63,4 +63,5 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 
 ## <a name="see-also"></a>Confira também
 
-[Microsoft Teams exemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams exemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git e GitHub recursos](/contribute/additional-resources)
