@@ -96,27 +96,27 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Criar novo projeto
           href: toolkit/create-new-project.md
-        - name: Preparar Contas para criar o aplicativo Teams
+        - name: Preparar contas para criar o aplicativo Teams
           href: toolkit/accounts.md
-        - name: Provisionar Recursos de nuvem
+        - name: Provisionar recursos de nuvem
           href: toolkit/provision.md
-        - name: Implantar o Aplicativo Teams na nuvem
+        - name: Implantar o aplicativo Teams na nuvem
           href: toolkit/deploy.md
         - name: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
           href: toolkit/publish.md
         - name: Adicionar recursos ao aplicativo Teams
           href: toolkit/add-capability.md
-        - name: Adicionar Recursos de nuvem ao aplicativo Teams
+        - name: Adicionar recursos de nuvem ao aplicativo Teams
           href: toolkit/add-resource.md
-        - name: Personalizar Manifesto do Aplicativo Teams
+        - name: Personalizar o manifesto do aplicativo Teams
           href: toolkit/TeamsFx-manifest-customization.md
-        - name: Visualizar Manifesto do Aplicativo Teams
+        - name: Visualizar manifesto do aplicativo Teams
           href: toolkit/TeamsFx-manifest-preview.md
-        - name: Gerenciar Vários ambientes
+        - name: Gerenciar vários ambientes
           href: toolkit/TeamsFx-multi-env.md
         - name: Colaborando com outros desenvolvedores no Kit de Ferramentas do Teams
           href: toolkit/TeamsFx-collaboration.md
-        - name: Usar fluxo de trabalho de CI/CD
+        - name: Guia de CI/CD
           href: toolkit/use-CICD-template.md
         - name: CLI do Kit de Ferramentas do Teams
           href: toolkit/TeamsFx-CLI.md

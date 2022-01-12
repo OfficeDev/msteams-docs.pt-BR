@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e157828f4070e13b4ef73fb02fef8d1cebdb34fa
+ms.sourcegitcommit: 241b17ee149aa096b787d12afa8bcbd16513b0e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569529"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61934009"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -232,7 +232,6 @@ Os webhooks de entrada começam a dar suporte à menção do usuário em Cartõe
 > [!NOTE]    
 > * Habilita a menção do usuário no esquema para webhooks de entrada para dar suporte AAD ID de objeto e UPN. 
 > * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com AAD ID de objeto e UPN.      
-> * A notificação de feed de atividade para Webhook de entrada com menção de usuário estará disponível na versão futura.
 
 ##### <a name="example"></a>Exemplo 
 
