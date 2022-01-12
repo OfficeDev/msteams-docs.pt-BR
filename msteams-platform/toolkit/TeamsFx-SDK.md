@@ -6,39 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 63c5fad9c795c513b476f305c09d94ffad7c5d61
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227915"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768368"
 ---
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK teamsFx para TypeScript ou JavaScript
 
-O TeamsFx tem como objetivo reduzir as tarefas de implementação de identidade e acesso a recursos de nuvem para instruções de linha única com "configuração zero".
+O TeamsFx tem como objetivo reduzir tarefas de implementação de identidade e acesso a recursos de nuvem para instruções de linha única com configuração zero.
 
 Use a biblioteca para:
 
 - Acessar as principais funcionalidades no ambiente de cliente e servidor de maneira semelhante.
 - Escreva o código de autenticação do usuário de maneira simplificada.
-
-   * [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-   * [Pacote (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-   * [Documentação de referência de API](https://aka.ms/teamsfx-sdk-help) 
-   * [Exemplos](https://github.com/OfficeDev/TeamsFx-Samples)
-
+ 
 ## <a name="get-started"></a>Introdução
 
 O SDK teamsFx é pré-configurado no projeto em scaffolded usando o TeamsFx toolkit ou CLI.
-Para obter mais informações sobre Teams de aplicativos, consulte [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+Para obter mais informações, [consulte Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Node.js versão `10.x.x` ou superior.
-- Se seu projeto instalou pacotes relacionados como dependências, verifique se eles são da `botbuilder` mesma versão e da versão [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+- Node.js versão `10.x.x` ou posterior.
+- Se seu projeto instalou pacotes relacionados como dependências, verifique se eles são da `botbuilder` mesma versão e a versão é [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-> [!TIP]
-> Um projeto criado pelo TeamsFx toolkit VS Code extensão ou ferramenta CLI.
+Para saber mais, confira:
+* [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
+* [Pacote (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
+* [Documentação de referência de API](https://aka.ms/teamsfx-sdk-help) 
+* [Exemplos](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Instalar o `@microsoft/teamsfx` pacote
 
@@ -48,9 +46,9 @@ Instale o SDK do TeamsFx para TypeScript ou JavaScript com `npm` :
 npm install @microsoft/teamsfx
 ```
 
-### <a name="create-and-authenticate-a-microsoftgraphclient"></a>Criar e autenticar um `MicrosoftGraphClient`
+### <a name="create-and-authenticate-microsoftgraphclient"></a>Criar e autenticar `MicrosoftGraphClient`
 
-Para criar um objeto cliente gráfico para acessar a API do Microsoft Graph, você precisará da credencial para fazer autenticação. O SDK fornece várias classes de credenciais para escolher que atendam a vários requisitos. Você precisa carregar a configuração antes de usar quaisquer credenciais.
+Para criar o objeto cliente graph para acessar a API Graph Microsoft, você precisará das credenciais para autenticar. O SDK fornece várias classes de credenciais para escolher que atendam a vários requisitos. Você precisa carregar a configuração antes de usar quaisquer credenciais.
 
 - No ambiente do navegador, você precisa passar explicitamente os parâmetros de configuração. O projeto scaffolded React forneceu variáveis de ambiente a ser usadas.
 
@@ -72,9 +70,7 @@ loadConfiguration();
 
 #### <a name="using-teams-app-user-credential"></a>Usando Teams de usuário do aplicativo
 
-Use o trecho abaixo:
-
-> [Observação] Você só pode usar essa classe de credencial no aplicativo do navegador como Teams Tab App.
+Use o seguinte trecho:
 
 ```ts
 loadConfiguration({
@@ -88,11 +84,14 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+> [!NOTE]
+> Você pode usar essa classe de credencial no aplicativo do navegador, como Teams Tab App.
 
 #### <a name="using-microsoft-365-tenant-credential"></a>Usando Microsoft 365 de locatário
 
-Ele não exige a interação com o usuário Teams App. Você pode chamar o Microsoft Graph como aplicativo.
-Use o trecho abaixo:
+Microsoft 365 credencial de locatário não exige interagir com Teams usuário do App. Você pode chamar o Microsoft Graph como aplicativo.
+
+Use o seguinte trecho:
 
 ```ts
 loadConfiguration();
@@ -105,30 +104,29 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credentials"></a>Credenciais
 
-Há três classes de credencial localizadas na pasta [de](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) credenciais para ajudar a simplificar a autenticação. 
+Há três classes de credencial localizadas na pasta [de credenciais para](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) ajudar a simplificar a autenticação.
 
-Classes de credenciais `TokenCredential` implementam interface amplamente usada nas APIs da biblioteca do Azure. Eles foram projetados para fornecer token de acesso para escopos específicos.
-As classes de credenciais representam identidade diferente em determinados cenários.
+Classes de credenciais `TokenCredential` implementam interface amplamente usada nas APIs da biblioteca do Azure. Eles foram projetados para fornecer tokens de acesso para escopos específicos. As seguintes classes de credenciais representam identidade diferente em determinados cenários:
 
-`TeamsUserCredential`representa Teams identidade do usuário atual. O uso dessa credencial solicitará o consentimento do usuário na primeira vez.
-`M365TenantCredential`representa Microsoft 365 identidade de locatário. Geralmente é usado quando o usuário não está envolvido, como o trabalho de automação disparado pelo tempo.
-`OnBehalfOfUserCredential` usa o fluxo em nome do fluxo. Ele precisa de um token de acesso e você pode obter um novo token para escopo diferente. Ele foi projetado para ser usado em cenários de Função do Azure ou Bot.
+* `TeamsUserCredential`representa Teams identidade do usuário atual. O uso dessa credencial solicitará o consentimento do usuário na primeira vez.
+* `M365TenantCredential`representa Microsoft 365 identidade de locatário. Geralmente é usado quando o usuário não está envolvido, como o trabalho de automação disparado pelo tempo.
+* `OnBehalfOfUserCredential` usa o fluxo em nome do fluxo. Ele precisa de um token de acesso e você pode obter um novo token para escopo diferente. Ele foi projetado para ser usado em cenários de Função do Azure ou Bot.
 
 ### <a name="bots"></a>Bots
 
-As classes relacionadas a bot são armazenadas na [pasta bot.](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)
+As classes relacionadas a bot são armazenadas na [pasta bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` tem uma boa integração com a estrutura bot. Simplifica o processo de autenticação quando você desenvolve um aplicativo bot.
+`TeamsBotSsoPrompt` pode integrar-se à estrutura bot. Simplifica o processo de autenticação para o desenvolvimento de aplicativo bot.
 
 ### <a name="helper-functions"></a>Funções auxiliares
 
-O SDK teamsFx fornece funções auxiliares para facilitar a configuração para bibliotecas de terceiros. Eles estão localizados na [pasta](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) principal.
+O SDK teamsFx fornece funções auxiliares para facilitar a configuração para bibliotecas de terceiros. Eles estão localizados na [pasta principal](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 ### <a name="error-handling"></a>Tratamento de erros
 
-A API lançará `ErrorWithCode` se ocorrer um erro. Cada `ErrorWithCode` um contém o código de erro e a mensagem de erro.
+A resposta de erro da API `ErrorWithCode` é , que contém o código de erro e a mensagem de erro.
 
-Por exemplo, para filtrar um erro específico, você pode usar a seguinte verificação:
+Por exemplo, para filtrar um erro específico, você pode usar o seguinte trecho:
 
 ```ts
 try {
@@ -144,7 +142,7 @@ try {
 }
 ```
 
-E se a instância de credencial for usada em outra biblioteca como a Microsoft Graph, é possível que o erro seja capturado e transformado.
+E se a instância de credencial for usada em outras bibliotecas, como o Microsoft Graph, é possível que o erro seja capturado e transformado.
 
 ```ts
 try {
@@ -163,13 +161,7 @@ try {
 
 ## <a name="scenarios"></a>Cenários
 
-As seções a seguir fornecem vários trechos de código que abrangem alguns dos cenários mais comuns:
-
-- [Usar Graph API no aplicativo guia](#use-graph-api-in-tab-app)
-- [Chamar a função do Azure no aplicativo guia](#call-azure-function-in-tab-app)
-- [Acessar SQL banco de dados no Azure Function](#access-sql-database-in-azure-function)
-- [Usar autenticação baseada em certificado na função Azure](#use-certificate-based-authentication-in-azure-function)
-- [Usar Graph API no aplicativo Bot](#use-graph-api-in-bot-application)
+A seção a seguir fornece vários trechos de código para cenários comuns:
 
 ### <a name="use-graph-api-in-tab-app"></a>Usar Graph API no aplicativo guia
 
@@ -283,14 +275,13 @@ dialogs.add(
 
 ### <a name="configure-log"></a>Configurar log
 
-Você pode definir o nível de log do cliente e as saídas de redirecionamento ao usar essa biblioteca.
-O registro em log está desligado por padrão, você pode agará-lo definindo o nível de log.
+Você pode definir o nível de log do cliente e as saídas de redirecionamento ao usar essa biblioteca. O registro em log está desligado por padrão, você pode agará-lo definindo o nível de log.
 
 #### <a name="enable-log-by-setting-log-level"></a>Habilitar o log definindo o nível de log
 
-Quando o nível de log é definido, o log é habilitado. Imprime informações de log para console por padrão.
+O registro em log só é habilitado quando você definir o nível de log. Por padrão, imprime informações de log para console.
 
-Definir o nível de log usando o trecho abaixo:
+Definir o nível de log usando o seguinte trecho:
 
 ```ts
 // Only need the warning and error messages.
@@ -309,7 +300,8 @@ setLogger(context.log);
 
 ##### <a name="redirect-by-setting-custom-log-function"></a>Redirecionar definindo a função de log personalizada
 
-Observe que a função de log não terá efeito se você definir um madeireiro personalizado.
+> [!NOTE]
+> A função log não terá efeito, se você definir um madeireiro personalizado.
 
 ```ts
 setLogLevel(LogLevel.Info);

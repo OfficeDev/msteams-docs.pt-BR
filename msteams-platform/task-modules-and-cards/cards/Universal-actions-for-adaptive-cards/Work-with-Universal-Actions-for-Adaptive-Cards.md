@@ -3,12 +3,12 @@ title: Trabalhar com Ações Universais para Cartões Adaptáveis
 description: Aprenda a trabalhar com as Ações Universais para Cartões Adaptáveis, incluindo Esquema para UniversalActions para cartões adaptáveis, modelo de atualização e compatibilidade com códigos.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888360"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768605"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
@@ -73,6 +73,16 @@ Estes são os recursos de UserIds na atualização:
 * A propriedade userIds é adicionada porque os canais no Teams podem incluir um número grande de membros. Se todos os membros estão exibindo o canal ao mesmo tempo, uma atualização automática incondicional resultará em muitas chamadas simultâneas para o bot. A propriedade sempre deve ser incluída para identificar quais usuários devem obter uma atualização automática com um máximo de `userIds` *60 (60) MRIs* de usuário.
 
 * Você pode buscar Teams MRIs de usuário do membro da conversa. Para obter mais informações sobre como adicionar na lista userIds na seção de atualização do Cartão Adaptável, consulte [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+
+ Você pode obter a MRI do usuário para canal, Chat de Grupo ou chat 1:1 usando o exemplo a seguir:
+
+ 1. Usando TurnContext  
+
+     `userMRI= turnContext.Activity.From.Id`
+
+ 1. Usando o método GetMemberAsync
+  
+     `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
 * Exemplo de MRI de usuário do Teams é `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 

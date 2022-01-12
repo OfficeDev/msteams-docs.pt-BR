@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião, criando a experiência de reunião do usuário durante todo o ciclo de vida da reunião no ambiente de desktop e móvel, funções de participantes e tipos de usuário. Além disso, saiba mais sobre como integrar bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 51e04b9a43cab20b6854ae9dc8a08b174f36add7
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: da1ce43c14117e976478d35663dca7fa1465471f
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075462"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768382"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -195,11 +195,11 @@ Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar ap
 
 A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
-| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio de Reunião | 
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião |
-| Convidado, parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião |
-| Usuário federado, para obter mais informações, consulte [usuários não padrão.](/microsoftteams/non-standard-users) | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião |
+| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio de Reunião | Bolha de conteúdo |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
+| Convidado, parte do locatário AAD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Disponível |
+| Usuário federado, para obter mais informações, consulte [usuários não padrão.](/microsoftteams/non-standard-users) | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
 
 ## <a name="next-step"></a>Próxima etapa
 

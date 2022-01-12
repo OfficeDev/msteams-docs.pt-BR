@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams quais são as novas atualizações e recursos mais recentes
-ms.openlocfilehash: a1fcc2bd015d8260dd0282010cbcbd0e20226d10
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: c540be24b4fc1e9965a5e3896ca36f6c4d9abb37
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608374"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768451"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,15 +22,8 @@ Descubra Microsoft Teams da plataforma que estão geralmente disponíveis (GA) e
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
-|12/24/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > recursos do dispositivo > guia passo a passo [para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
-|12/23/2021| Introduzido o guia passo a passo para criar guias com cartões adaptáveis.| Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo para criar guias com cartões [adaptáveis](sbs-tab-with-adaptive-cards.yml) |
-| 12/21/2021 | Atualizou os módulos Get started JavaScript, C# e Node.js para Teams Toolkit 3.0.0. | • Começar a > [criar seu primeiro aplicativo com JavaScript](sbs-gs-javascript.yml) <br> • Começar a > [criar seu primeiro aplicativo com C# ou .NET](sbs-gs-csharp.yml) <br> • Começar a> [criar seu primeiro aplicativo com Node.js](sbs-gs-nodejs.yml) |
-|12/20/2021| Guia passo a passo para guias e extensões de mensagens com SSO (login único). | Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo com [o SSO](sbs-tabs-and-messaging-extensions-with-SSO.yml) para guias e extensões de mensagens|
-| 12/20/2021| Guia passo a passo para criar uma bolha de conteúdo de reunião. | Criar aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar bolha de conteúdo [de reunião](sbs-meeting-content-bubble.yml) |
-|12/13/2021 | Diretrizes introduzidas para aplicativos vinculados à oferta SaaS. | Distribuir seu aplicativo > Publicar no Teams store > Revisar diretrizes de validação do armazenamento > Diretrizes para [aplicativos vinculados](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) à oferta saaS|
-| 12/09/2021| Introduzido o guia passo a passo para o exibição de estágio de reunião. | Criar aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar o modo de exibição de estágio [de reuniões](sbs-meetings-stage-view.yml)|
-| 12/09/2021| Introduzido o guia passo a passo para criar o sidepanel de reunião. | Crie aplicativos para Teams reuniões > Habilitar e configurar aplicativos para reuniões > guia passo a passo para criar o [sidepanel](sbs-meetings-sidepanel.yml) de reunião em Teams|
-|12/01/2021 | Introduzido o novo ícone da loja. | • Projete seus recursos > aplicativos > [designar seu aplicativo pessoal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Projete seu aplicativo > componentes da interface do usuário > designar seu aplicativo [Microsoft Teams com componentes avançados da interface do usuário](concepts/design/design-teams-app-advanced-ui-components.md) |
+|01/10/2022 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
+|
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -44,6 +37,7 @@ Microsoft Teams da plataforma que estão disponíveis para todos os desenvolvedo
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|12/24/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > recursos do dispositivo > guia passo a passo [para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduzido o guia passo a passo para criar guias com cartões adaptáveis.| Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo para criar guias com cartões [adaptáveis](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | Atualizou os módulos Get started JavaScript, C# e Node.js para Teams Toolkit 3.0.0. | • Começar a > [criar seu primeiro aplicativo com JavaScript](sbs-gs-javascript.yml) <br> • Começar a > [criar seu primeiro aplicativo com C# ou .NET](sbs-gs-csharp.yml) <br> • Começar a> [criar seu primeiro aplicativo com Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Guia passo a passo para guias e extensões de mensagens com SSO (login único). | Adicionar > guias de autenticação > Usar o guia de autenticação SSO > passo a passo com [o SSO](sbs-tabs-and-messaging-extensions-with-SSO.yml) para guias e extensões de mensagens|
@@ -216,8 +210,8 @@ A visualização do desenvolvedor é um programa público que fornece acesso ant
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|01/10/2022 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > recursos do dispositivo > guia passo a passo [para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
-|11/30/2021 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Teams Toolkit para Visual Studio Code > [Teams Toolkit básicos](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Guias pessoais e extensões de mensagens são executados Outlook e Office | [Estender Teams aplicativos em Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso).| • Crie bots > conversas bot > Mensagens em conversas de bot > [Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > conversas bots > visão geral [da conversa bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > conversas bots > [canal e conversas em grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifesto do aplicativo > visualização do desenvolvedor público > esquema de manifesto de visualização [do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Permissões de dispositivo para o navegador.| Fundamentos do aplicativo > recursos do dispositivo > [permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |

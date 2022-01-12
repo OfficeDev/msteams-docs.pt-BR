@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens c
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3590309abf3e994333c907c69785f58af0162890
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887989"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768235"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de ação de extensão de mensagens
 
@@ -29,11 +29,20 @@ Antes de criar o comando de ação, você deve decidir os seguintes fatores:
 Primeiro, você deve decidir o local de onde seu comando de ação deve ser invocado. Especificando o `context` no manifesto do aplicativo, seu comando pode ser invocado de um ou mais dos seguintes locais:
 
 * Área de mensagem de redação: os botões na parte inferior da área de mensagem de composição.
-* Caixa de comando: @mentioning seu aplicativo na caixa de comando. 
+
+    Contexto de comando = redação
+
+* Caixa de comando: @mentioning seu aplicativo na caixa de comando.
+
+    Contexto de comandos = commandBox
+
    > [!NOTE]
    > Se a extensão de mensagens for invocada da caixa de comando, você não poderá responder com uma mensagem bot inserida diretamente na conversa.
 
-* Mensagem: diretamente de uma mensagem existente por meio do `...` menu de estouro em uma mensagem. 
+* Mensagem: diretamente de uma mensagem existente por meio do `...` menu de estouro em uma mensagem.
+
+    Contexto de comandos = mensagem
+
     > [!NOTE] 
     > A invocação inicial ao bot inclui um objeto JSON que contém a mensagem da qual foi invocada. Você pode processar a mensagem antes de apresentá-la com um módulo de tarefa.
 

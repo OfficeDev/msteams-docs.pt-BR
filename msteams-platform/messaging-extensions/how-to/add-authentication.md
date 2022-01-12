@@ -5,12 +5,12 @@ description: Saiba como adicionar autenticação a uma extensão de mensagens us
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949093"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768444"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -67,7 +67,8 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
-> Para que a experiência de login seja hospedada em uma janela pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
+> * Para que a experiência de login seja hospedada em uma janela pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
+> * O tamanho do pop-up de autenticação pode ser definido incluindo parâmetros de cadeia de caracteres de consulta de largura e altura, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` .
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de login
 

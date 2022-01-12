@@ -1,37 +1,37 @@
 ---
 title: Visualizar Teams Manifesto do Aplicativo no Teams Toolkit
 author: zyxiaoyuer
-description: Visualizar Teams Manifesto do Aplicativo
+description: Visualizar Manifesto do Aplicativo Teams
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 8c86f85aa917edb3afcaebd430a7d11bc039e7ea
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 3555725fdea8ff858c842ed26ed652bb13e82b7f
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227675"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768577"
 ---
 # <a name="preview-teams-app-manifest-in-teams-toolkit"></a>Visualizar Teams manifesto do aplicativo no Teams Toolkit
 
-Após o scaffolding, você obterá dois arquivos de modelo de manifesto na `templates/appPackage` pasta.
+Após o scaffolding, os seguintes são os arquivos de modelo de manifesto disponíveis na `templates/appPackage` pasta:
 
 - `manifest.local.template.json` - aplicativo de equipes de depuração local.
 - `manifest.remote.template.json` - compartilhado entre todos os ambientes remotos.
 
-Esses arquivos de modelo que contêm alguns espaço reservados, e os valores reais Teams Toolkit serão resolvidos em arquivos em `.fx/configs` `.fx/states` e .
+Os arquivos Template que consistem em espaço reservados e os valores reais Teams Toolkit são resolvidos em arquivos em `.fx/configs` `.fx/states` e .
 
 ## <a name="prerequisite"></a>Pré-requisito
 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
 > [!TIP]
-> Você já deve ter um projeto Teams aplicativo aberto em código VS.
+> Verifique se você Teams projeto de aplicativo aberto em código VS.
 
 ## <a name="preview-manifest"></a>Manifesto de visualização
 
-Para visualizar o manifesto com conteúdo real, Teams Toolkit gerará arquivos de manifesto de visualização na `build/appPackage` pasta:
+Para visualizar o manifesto com conteúdo real, Teams Toolkit gera arquivos de manifesto de visualização na `build/appPackage` pasta:
 
 ```text
 └───build
@@ -42,52 +42,54 @@ Para visualizar o manifesto com conteúdo real, Teams Toolkit gerará arquivos d
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### <a name="local-debug-teams-app"></a>Aplicativo de depuração Teams local
+### <a name="preview-local-manifest-file"></a>Visualizar o arquivo de manifesto local
 
-Para visualizar o arquivo de manifesto do aplicativo de equipes locais, você precisa pressionar **F5** para executar a depuração local primeiro. Esta etapa gerará configurações locais padrão para você, em seguida, o pacote do aplicativo e o manifesto de visualização serão construídos na **pasta build/appPackage.**
+Para visualizar o arquivo de manifesto do aplicativo de equipes locais, você precisa pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e, em seguida, o pacote do aplicativo e os builds de manifesto de visualização sob **a pasta build/appPackage.**
 
-As outras maneiras são:
+Você também pode visualizar o manifesto local seguindo as etapas:
 
-- Selecione **Visualizar** nos codelens do **arquivo manifest.local.template.json**
-- Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.local.template.json**
-- Selecione **Zip Teams pacote de metadados** em Treeview e selecione Local O **local** de visualização aparece como mostrado na imagem a seguir:
+1. Selecione **Visualizar** nos codelens do **arquivo manifest.local.template.json.**
+2. Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.local.template.json.**
+3. Selecione **Zip Teams pacote de metadados** em Treeview e selecione **Local**.
+O local de visualização aparece como mostrado na imagem:
 
-![visualização local](./images/preview.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="Visualização":::
 
-### <a name="remote-environment"></a>Ambiente remoto
+### <a name="preview-manifest-in-remote-environment"></a>Manifesto de visualização em ambiente remoto
 
-Para visualizar o arquivo de manifesto do aplicativo de equipes remotas, você precisa selecionar **Provisionar** na nuvem no painel DESENVOLVIMENTO do treeview de extensão Teams Toolkit ou disparar **Teams: Provisionar** na nuvem pela paleta de comandos primeiro. Esta etapa gerará configurações para o aplicativo de equipes remotas e, em seguida, o pacote do aplicativo e o manifesto de visualização serão construídos na **pasta build/appPackage.**
+Para visualizar o arquivo de  manifesto do aplicativo de equipes remotas, selecione Provisionar na nuvem no painel **DESENVOLVIMENTO** do Treeview de extensão Teams Toolkit ou acionar **Teams: Provisionar** na nuvem da paleta de comandos. Ele gera configuração para o aplicativo de equipes remotas e cria o pacote e o manifesto de visualização na **pasta build/appPackage.**
 
-As outras maneiras são:
+Você também pode visualizar o manifesto em ambiente remoto seguindo as etapas:
 
-- Selecione **Visualizar** nos codelens do **arquivo manifest.remote.template.json.**
-- Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.remote.template.json.**
-- Selecione **Zip Teams pacote de metadados** em Treeview e selecione seu ambiente.
+1. Selecione **Visualizar** nos codelens do **arquivo manifest.remote.template.json.**
+2. Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.remote.template.json.**
+3. Selecione **Zip Teams pacote de metadados** em Treeview.
+4. Selecione seu ambiente.
 
-![remoto de visualização](./images/preview-remote.png)
+Se houver mais de um ambiente, você precisará selecionar o ambiente que deseja visualizar, conforme mostrado na imagem:
 
-> Se houver mais de um ambiente, você precisará selecionar o env que deseja visualizar, conforme mostrado na imagem:
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Adicionar env":::
 
-![selecionar env](./images/select-env.png)
+## <a name="sync-local-changes-to-dev-portal"></a>Sincronizar alterações locais no portal de desenvolvimento
 
-## <a name="sync-local-changes-to-dev-portal"></a>Sincronizar alterações locais no Portal de Desenvolvimento
+Depois de visualizar o arquivo de manifesto, você pode sincronizar as alterações locais no portal de desenvolvimento seguindo as etapas:
 
-Depois de visualizar o arquivo de manifesto, você pode sincronizar as alterações locais no Portal de Desenvolvimento das seguintes maneiras:
+1.  Selecione **Atualizar para Teams plataforma** no canto superior esquerdo da`manifest.{env}.json`
+2. Selecione **Teams: Atualizar manifesto para Teams plataforma na** barra de menus de`manifest.{env}.json`
 
-- Selecione **Atualizar para Teams plataforma** no canto superior esquerdo da`manifest.{env}.json`
-- Selecione **Teams: Atualizar manifesto para Teams plataforma na** barra de menus de`manifest.{env}.json`
-- Trigger **Teams: atualizar manifesto para Teams plataforma da** paleta de comandos
+ Você também pode disparar **Teams: atualizar manifesto para Teams plataforma da** paleta de comandos
 
-![update ](./images/updatetoteamsplatform.png)
- ![ update-cmd](./images/update_manifest_cmp.png)
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="modo de exibição em árvore":::
 
 > [!NOTE]
-> O gatilho de codelens de editor ou botão de título atualizará o arquivo de manifesto atual para Teams plataforma. O gatilho da paleta de comandos exigirá a seleção do ambiente de destino.
+> O gatilho de codelens ou **título** do editor atualizará o arquivo de manifesto atual para Teams plataforma. O gatilho da paleta de comandos requer a seleção do ambiente de destino.
 
-Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo de configuração ou à alteração do modelo, o usuário será solicitado a confirmar sua ação: ![ desatualizada do manifesto](./images/manifest_outdated_dialog.png)
+Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo de configuração ou à alteração do modelo, confirme a seguinte ação:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 - **Somente visualização:** o arquivo de manifesto local será substituído de acordo com a configuração atual
-- **Visualização e atualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual e também atualizado para Teams plataforma ao mesmo tempo
+- **Visualização e atualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual e também atualizado para Teams plataforma
 - **Cancelar**: não fazer nada
 
 > [!NOTE]
@@ -95,5 +97,4 @@ Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo
 
 ## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Personalizar Teams Manifesto do Aplicativo no Teams Toolkit](TeamsFx-manifest-customization.md)
+[Personalizar Teams Manifesto do Aplicativo no Teams Toolkit](TeamsFx-manifest-customization.md)
