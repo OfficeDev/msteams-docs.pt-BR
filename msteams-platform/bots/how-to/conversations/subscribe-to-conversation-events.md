@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversa de reação de mensagem de canal bot de eventos
-ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888276"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014553"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -49,7 +49,7 @@ A tabela a seguir mostra uma lista de eventos Teams de atualização de conversa
 | Canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal é renomeado](#channel-renamed). | Equipe |
 | Canal excluído     | channelDeleted    | OnTeamsChannelDeletedAsync | [Um canal é excluído](#channel-deleted). | Equipe |
 | Canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Um canal é restaurado](#channel-deleted). | Equipe |
-| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Tudo |
+| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Todos |
 | Membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro é removido](#team-members-removed). | groupChat e team |
 | Equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe é renomeada](#team-renamed).       | Equipe |
 | Equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe é excluída](#team-deleted).       | Equipe |
@@ -1062,8 +1062,8 @@ O `messageReaction` evento é enviado quando um usuário adiciona ou remove rea�
 
 | EventType       | Objeto Payload   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Tudo   |
-| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Tudo |
+| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Todos   |
+| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Todos |
 
 ### <a name="reactions-added-to-bot-message"></a>Reações adicionadas à mensagem bot
 
@@ -1322,7 +1322,17 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-Não disponível
+```typescript
+async onInstallationUpdateActivity(context: TurnContext) {
+        var activity = context.activity.action;
+        if(activity == "Add") {
+            await context.sendActivity(MessageFactory.text("Added"));
+        }
+        else {
+            await context.sendActivity(MessageFactory.text("Uninstalled"));
+        }
+    }
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1381,7 +1391,13 @@ Não disponível
 
 # <a name="python"></a>[Python](#tab/python)
 
-Não disponível
+```python
+async def on_installation_update(self, turn_context: TurnContext):
+   if turn_context.activity.action == "add":   
+       await turn_context.send_activity(MessageFactory.text("Added"))
+   else:
+       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
 
 ---
 
