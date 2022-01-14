@@ -6,17 +6,14 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: a52d36150ee384841cde73e9a00510cabc31f144
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949576"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043221"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
-
->[!IMPORTANT]
-> O Microsoft Graph e Microsoft Teams visualizações públicas estão disponíveis para acesso antecipado e comentários. Embora essa versão tenha passado por testes abrangentes, ela não se destina a ser usada na produção.
 
 ## <a name="proactive-messaging-in-teams"></a>Mensagens proativas em Teams
 
@@ -31,7 +28,7 @@ As mensagens proativas são iniciadas por bots para iniciar conversas com um usu
 
 Antes que o bot possa enviar mensagens proativas a um usuário, ele deve ser instalado como um aplicativo pessoal ou em uma equipe em que o usuário seja membro. Às vezes, você precisa enviar mensagens proativas aos usuários que não tenham instalado ou interagido anteriormente com seu aplicativo. Por exemplo, a necessidade de enviar informações importantes para todos na sua organização. Para esses cenários, você pode usar a API do Microsoft Graph para instalar proativamente seu bot para seus usuários.
 
-## <a name="permissions"></a>Permissões
+## <a name="permissions"></a>Permissions
 
 Permissões de tipo de recurso do Microsoft Graph [TeamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) ajudam você a gerenciar o ciclo de vida de instalação do aplicativo para todos os escopos de usuário (pessoal) ou equipe (canal) na plataforma Microsoft Teams:
 
@@ -156,14 +153,14 @@ Se o usuário tiver Microsoft Teams em execução, a instalação do aplicativo 
 
 Quando seu aplicativo é instalado para o usuário, o bot recebe uma notificação de evento que contém as informações necessárias `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para enviar a mensagem proativa.
 
-**Referência Graph página da Microsoft:** [Obter chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Referência Graph página da Microsoft:** [Obter chat](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 1. Você deve ter o `{teamsAppInstallationId}` seu aplicativo. Se você não o tiver, use o seguinte:
 
     **Solicitação GET HTTP:**
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
     A **propriedade id** da resposta é `teamsAppInstallationId` .
@@ -173,7 +170,7 @@ Quando seu aplicativo é instalado para o usuário, o bot recebe uma notificaç�
     **Solicitação GET** HTTP (permissão `TeamsAppInstallation.ReadWriteSelfForUser.All` — ):  
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
     A **propriedade id** da resposta é `chatId` .
@@ -183,7 +180,7 @@ Quando seu aplicativo é instalado para o usuário, o bot recebe uma notificaç�
     **Solicitação GET** HTTP (permissão `Chat.Read.All` — ):
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
     ```
 
 ### <a name="send-proactive-messages"></a>Enviar mensagens proativas

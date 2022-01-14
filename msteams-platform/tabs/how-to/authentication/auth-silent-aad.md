@@ -3,46 +3,49 @@ title: Autenticação silenciosa
 description: Descreve autenticação silenciosa, login único, Azure Active Directory para guias
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Autenticação do teams SSO AAD guia
-ms.openlocfilehash: e5e8de1878aaec29c8ae1cd8dc1350a110d38b5e
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+keywords: Guia de autenticação silenciosa do SSO do Azure AD do teams
+ms.openlocfilehash: bf50f1840996371292b94ef6d3b2f16d5377a3f9
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949044"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043214"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
+> [!IMPORTANT]
+> O suporte e desenvolvimento da Microsoft para a Biblioteca de Autenticação do Active Directory (ADAL), incluindo as correções de segurança, termina em 30 de junho de **2022**. Atualize seus aplicativos para usar a Biblioteca de Autenticação da Microsoft (MSAL) para continuar recebendo suporte. Consulte [Migrar aplicativos para a Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-migration).
+
 > [!NOTE]
-> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando pelo menos a versão 1.4.1 do SDK do Teams JavaScript.
+> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando Teams JavaScript SDK versão 1.4.1 ou posterior.
 
-A autenticação silenciosa no Azure Active Directory (AAD) minimiza o número de vezes que um usuário inssinge suas credenciais de entrada atualize silenciosamente o token de autenticação. Para ver o suporte verdadeiro ao login único, consulte [documentação do SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
+A autenticação silenciosa no Azure Active Directory minimiza o número de vezes que um usuário inssinge suas credenciais atualize silenciosamente o token de autenticação. Para ver o suporte verdadeiro ao login único, consulte [documentação do SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-Se você quiser manter seu código completamente no lado do cliente, você pode usar [a](/azure/active-directory/develop/active-directory-authentication-libraries) biblioteca de autenticação AAD para JavaScript para obter um token de AAD de acesso silenciosamente. Se o usuário tiver se assinado recentemente, ele nunca verá uma caixa de diálogo pop-up.
+Para manter seu código no lado do cliente, use a biblioteca de autenticação [do Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obter um token de acesso do Azure AD silenciosamente. Se o usuário tiver se assinado recentemente, ele não verá uma caixa de diálogo pop-up.
 
-Embora a biblioteca ADAL.js seja otimizada para aplicativos AngularJS, ela também funciona com aplicativos de página única JavaScript puros.
+Embora a Biblioteca de Autenticação do Active Directory seja otimizada para aplicativos AngularJS, ela também funciona com aplicativos de página única (SPA) javaScript.
 
 > [!NOTE]
 > Atualmente, a autenticação silenciosa só funciona para guias. Ele não funciona ao entrar de um bot.
 
 ## <a name="how-silent-authentication-works"></a>Como funciona a autenticação silenciosa
 
-A ADAL.js cria um iframe oculto para o fluxo implícito de concessão do OAuth 2.0. Mas a biblioteca especifica `prompt=none` , portanto, o Azure AD nunca mostra a página de logom. Se a interação do usuário for necessária porque o usuário precisa entrar ou conceder acesso ao aplicativo, AAD retornará imediatamente um erro que ADAL.js para seu aplicativo. Neste ponto, seu aplicativo pode mostrar um botão de login, se necessário.
+A Biblioteca de Autenticação do Active Directory cria um iframe oculto para o fluxo implícito de concessão do OAuth 2.0. Mas a biblioteca especifica `prompt=none` , portanto, o Azure AD não exibe a página de login. A interação do usuário pode ser necessária se o usuário precisar entrar ou conceder acesso ao aplicativo. Se a interação do usuário for necessária, o Azure AD retornará um erro que a biblioteca relata para seu aplicativo. Se necessário, seu aplicativo agora pode exibir uma opção de login.
 
 ## <a name="how-to-do-silent-authentication"></a>Como fazer autenticação silenciosa
 
 O código neste artigo vem do aplicativo de exemplo Teams que é [Teams de autenticação.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-[Inicie a guia configurável de](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) autenticação silenciosa e simples usando AAD e siga as instruções para executar o exemplo em seu computador local.
+[Inicie a guia configurável de autenticação](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) silenciosa e simples usando o Azure AD e siga as instruções para executar o exemplo em seu computador local.
 
-### <a name="include-and-configure-adal"></a>Incluir e configurar o ADAL
+### <a name="include-and-configure-active-directory-authentication-library"></a>Incluir e configurar a Biblioteca de Autenticação do Active Directory
 
-Inclua a ADAL.js em suas páginas de tabulação e configure o ADAL com a ID do cliente e a URL de redirecionamento:
+Inclua a Biblioteca de Autenticação do Active Directory em suas páginas de tabulação e configure a biblioteca com a ID do cliente e a URL de redirecionamento:
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
 <script type="text/javascript">
-    // ADAL.js configuration
+    // Active Directory Authentication Library configuration
     let config = {
         clientId: "YOUR_APP_ID_HERE",
         // redirectUri must be in the list of redirect URLs for the Azure AD app
@@ -55,10 +58,10 @@ Inclua a ADAL.js em suas páginas de tabulação e configure o ADAL com a ID do 
 
 ### <a name="get-the-user-context"></a>Obter o contexto do usuário
 
-Na página de conteúdo da guia, chame para obter uma dica de `microsoftTeams.getContext()` login para o usuário atual. Isso é usado como loginHint na chamada para AAD.
+Na página de conteúdo da guia, chame para obter uma dica de `microsoftTeams.getContext()` login para o usuário atual. A dica é usada como `loginHint` uma chamada para o Azure AD.
 
 ```javascript
-// Set up extra query parameters for ADAL
+// Set up extra query parameters for Active Directory Authentication Library
 // - openid and profile scope adds profile information to the id_token
 // - login_hint provides the expected user name
 if (loginHint) {
@@ -70,13 +73,13 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Autenticar
 
-Se a ADAL tiver um token armazenado em cache para o usuário que não expirou, use esse token. Como alternativa, tente obter um token silenciosamente chamando `acquireToken(resource, callback)` . ADAL.js chama a função de retorno de chamada com o token solicitado ou fornece um erro se a autenticação falhar.
+Se a Biblioteca de Autenticação do Active Directory tiver um token não gasto armazenado em cache para o usuário, use o token. Como alternativa, chame `acquireToken(resource, callback)` para receber silenciosamente um token. A biblioteca chama uma função de retorno de chamada com o token solicitado ou gera um erro se a autenticação falhar.
 
-Se você receber um erro na função de retorno de chamada, mostre um botão de login e volte para uma assinatura explícita.
+Se você receber um erro na função de retorno de chamada, exibe e use uma opção de login explícita.
 
 ```javascript
-let authContext = new AuthenticationContext(config); // from the ADAL.js library
-// See if there's a cached user and it matches the expected user
+let authContext = new AuthenticationContext(config); // from Active Directory Authentication Library
+// See if there is a cached user and it matches the expected user
 let user = authContext.getCachedUser();
 if (user) {
     if (user.profile.oid !== userObjectId) {
@@ -85,10 +88,10 @@ if (user) {
     }
 }
 
-// In this example we are getting an id token (which ADAL.js returns if we ask for resource = clientId)
+// In this example we are getting an id token (which Active Directory Authentication Library returns if we ask for resource = clientId)
 authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenType) {
     if (token) {
-        // Make sure ADAL gave us an id token
+        // Make sure Active Directory Authentication Library gave us an ID token
         if (tokenType !== authContext.CONSTANTS.ID_TOKEN) {
             token = authContext.getCachedToken(config.clientId);
         }
@@ -105,7 +108,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Processar o valor de retorno
 
-ADAL.js analisar o resultado de AAD chamando a página de retorno de chamada `AuthenticationContext.handleWindowCallback(hash)` de login.
+A Biblioteca de Autenticação do Active Directory analisará o resultado do Azure AD chamando a página de retorno de chamada `AuthenticationContext.handleWindowCallback(hash)` de login.
 
 Verifique se você tem um usuário válido e chame ou para relatar o status à página de conteúdo `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` da guia principal.
 
@@ -122,9 +125,9 @@ if (authContext.isCallback(window.location.hash)) {
 }
 ```
 
-### <a name="handle-sign-out-flow"></a>Manipular fluxo de saída
+### <a name="handle-the-sign-out-flow"></a>Manipular o fluxo de saída
 
-Use o seguinte código para manipular o fluxo de saída no AAD Auth:
+Use o seguinte código para manipular o fluxo de saída na autenticação do Azure AD:
 
 > [!NOTE]
 > Quando você faz logout Teams guia ou bot, a sessão atual é desmarcada.
@@ -135,6 +138,8 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+
 ## <a name="see-also"></a>Confira também
 
-[Configurar provedores de identidade para usar AAD](~/concepts/authentication/configure-identity-provider.md)
+* [Configurar provedores de identidade para usar o Azure AD](../../../concepts/authentication/configure-identity-provider.md)
+* [Saiba mais sobre a Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview)
