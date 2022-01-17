@@ -5,12 +5,12 @@ description: Saiba mais sobre comandos de pesquisa de extensão de mensagens Mic
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4cfbb57176f5c1bdcac5e120e23284b6bd705df3
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889381"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059072"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -64,7 +64,7 @@ A imagem a seguir exibe a adição de comando para extensão de mensagens:
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Adicione uma **ID de Comando** e um **Título.**
-1. Selecione o local de onde o comando de pesquisa deve ser invocado. Selecionar **mensagem** no momento não altera o comportamento do comando de pesquisa. A imagem a seguir exibe o local de invocação do comando de pesquisa:
+1. Selecione o local de onde o comando de pesquisa deve ser invocado. A imagem a seguir exibe o local de invocação do comando de pesquisa:
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 

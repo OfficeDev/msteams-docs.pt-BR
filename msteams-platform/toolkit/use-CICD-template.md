@@ -6,14 +6,14 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5ca5f81fd857296f2e81dbce97673f5a10c66ab7
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768570"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059065"
 ---
-# <a name="cicd-guide"></a>Guia CI/CD
+# <a name="cicd-guide"></a>Guia de CI/CD
 
 O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a criação Teams aplicativo. O documento fornece ferramentas e modelos para você começar a configurar pipelines CI ou CD com GitHub, Azure Devops e Jenkins.
 
@@ -77,11 +77,9 @@ A tabela a seguir lista todos os segredos necessários para criar o ambiente:
 |M365_ACCOUNT_PASSWORD|A senha da conta M365.|
 |M365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Para obter mais informações, [consulte como encontrar sua ID de locatário do M365.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> [!NOTE]
-> Atualmente, o estilo de autenticação não interativo para M365 é usado em fluxos de trabalho ci ou CD, certifique-se de que sua conta M365 tenha privilégios suficientes em seu locatário e não tenha autenticação multifafação ou outros recursos avançados de segurança habilitados. Para obter mais informações, consulte [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled multi-factor authentication and security defaults for the credentials used in the workflow.
 
 > [!NOTE]
-> Atualmente, a entidade de serviço do Azure é usada em fluxos de trabalho ci/CD. Para obter mais informações,[consulte create azure service principles](#create-azure-service-principals).
+> Atualmente, a entidade de serviço do Azure é usada em fluxos de trabalho ci/CD. Para obter mais informações, [consulte create azure service principles](#create-azure-service-principals).
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar pipelines CI ou CD com Azure DevOps
 
