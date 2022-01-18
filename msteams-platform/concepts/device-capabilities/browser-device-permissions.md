@@ -2,14 +2,14 @@
 title: Permissões do dispositivo para o navegador
 keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
-localization_priority: Normal
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: fbdca08c813d341c12fcfc824d21a6ff96d02749
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608381"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059783"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 

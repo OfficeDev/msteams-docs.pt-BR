@@ -1,81 +1,81 @@
 ---
-title: Criar um Webhook de entrada
+title: Criar um webhook de entrada
 author: laujan
-description: descreve como adicionar o Webhook de entrada ao Teams aplicativo e postar solicitações externas para Teams com webhooks de entrada
-keywords: teams tabs outgoing webhook
-ms.localizationpriority: medium
+description: descreva como adicionar Webhook de Entrada ao aplicativo Teams e postar solicitações externas ao Teams com webhooks de entrada
+keywords: webhook de saída das guias do Teams
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c398776e2858283a8c4a8f7b5087e2efd365c7d3
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
+ms.openlocfilehash: 308eaf9f08e946f468f02d897ad556681d1cc832
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768137"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059760"
 ---
-# <a name="create-incoming-webhook"></a>Criar Webhook de entrada
+# <a name="create-incoming-webhook"></a>Criar Webhooks de Entrada
 
-O Webhook de entrada permite que todos os aplicativos externos compartilhem conteúdo em Teams canais. Esses webhooks são usados como ferramentas de rastreamento e notificação. Eles fornecem uma URL exclusiva, para a qual você envia uma carga JSON com uma mensagem no formato de cartão. Os cartões são contêineres de interface do usuário que incluem conteúdo e ações relacionadas a um único tópico. Teams cartões nos seguintes recursos:
+O Webhook de Entrada permite que todos os aplicativos externos compartilhem conteúdo em canais do Teams. Esses webhooks são usados como ferramentas de acompanhamento e notificação. Eles fornecem uma URL exclusiva, para a qual você envia uma carga JSON com uma mensagem no formato de cartão. Os cartões são contêineres de interface do usuário que incluem conteúdo e ações relacionadas a um único tópico. As Teams usam cartões dentro dos seguintes recursos:
 
 * Bots
 * Extensões de mensagens
 * Conectores
 
-## <a name="key-features-of-incoming-webhook"></a>Principais recursos do Webhook de entrada
+## <a name="key-features-of-incoming-webhook"></a>Principais recursos do Webhook de Entrada
 
-A tabela a seguir fornece os recursos e a descrição do Webhook de entrada:
+A tabela a seguir fornece os recursos e a descrição do Webhook de Entrada:
 
 | Recursos | Descrição |
 | ------- | ----------- |
-|Cartões adaptáveis usando um Webhook de entrada|Cartões adaptáveis podem ser enviados por meio de Webhooks de entrada. Para obter mais informações, [consulte Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Suporte a mensagens a ações|Os cartões de mensagem a ação são suportados em todos os grupos Office 365, incluindo Teams. Se você enviar mensagens por meio de cartões, deverá usar o formato de cartão de mensagem a ação. Para obter mais informações, consulte [referência de cartão de mensagem a actionable herdado](/outlook/actionable-messages/message-card-reference) e playground de cartão de [mensagem](https://messagecardplayground.azurewebsites.net).|
-|Suporte independente de mensagens HTTPS|Os cartões fornecem informações de forma clara e consistente. Qualquer ferramenta ou estrutura que possa enviar solicitações HTTPS POST pode enviar mensagens para Teams por meio de um Webhook de entrada.|
-|Suporte a markdown|Todos os campos de texto em cartões de mensagens a ação suportam Markdown básico. Não use marcação HTML em seus cartões. O HTML será ignorado e tratado como texto sem formatação.|
-|Configuração com escopo|O Webhook de entrada tem escopo e configuração no nível do canal.|
+|Envie cartões adaptáveis usando um Webhook de Entrada|Cartões Adaptáveis pode ser enviado por meio de Webhooks de Entrada. Para obter mais informações, consulte [Enviar Cartões Adaptáveis usando Webhooks de Entrada](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
+|Suporte a mensagens acionáveis|Os cartões de mensagem a ação são suportados em todos os grupos do Office 365, incluindo o Teams. Se você enviar mensagens por meio de cartões, deverá usar o formato de cartão de mensagem acionável. Para mais informações, consulte o [legado de referência de cartões de mensagens acionáveis](/outlook/actionable-messages/message-card-reference) e [playground de cartões de mensagens](https://messagecardplayground.azurewebsites.net).|
+|Suporte independente a mensagens HTTPS|Os cartões fornecem informações de forma clara e consistente. Qualquer ferramenta ou estrutura que possa enviar solicitações HTTPS POST pode enviar mensagens para o Teams por meio de um Webhook de Entrada.|
+|Markdown compatível|Todos os campos de texto em cartões de mensagens acionáveis suportam Markdown básico. Não use a marcação HTML em seus cartões. O HTML será ignorado e tratado como texto sem formatação.|
+|Configuração com escopo|O Webhook de Entrada tem escopo e está configurado no nível do canal.|
 |Definições de recursos seguros|As mensagens são formatadas como cargas JSON. Essa estrutura declarativa de mensagens impede a inserção de código mal-intencionado.|
 
 > [!NOTE]
-> * Teams bots, extensões de mensagens, Webhook de entrada e a Estrutura de Bot suportam Cartões Adaptáveis. Cartões Adaptáveis é uma estrutura de plataforma de cartão cruzado aberta que pode ser usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, [Teams conectores não](../../webhooks-and-connectors/how-to/connectors-creating.md) suportam Cartões Adaptáveis. No entanto, é possível criar um [fluxo que](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) poste Cartões Adaptáveis em um canal Teams.
-> * Para obter mais informações sobre cartões e webhooks, consulte [Cartões adaptáveis e Webhooks de entrada.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
+> * Bots do Teams, extensões de mensagens, Webhook de entrada e Bot Framework suporte Cartões Adaptáveis. Cartões Adaptáveis é uma estrutura de plataforma de cartão cruzado aberta que pode ser usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, os [Conectores Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) não suportam os Cartões Adaptáveis. No entando, é impossível criar um [fluxo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publicam Cartões Adaptáveis para um canal Teams.
+> * Para mais informações sobre cartões e webhooks, veja [Cartões Adaptáveis e Webhooks de Entrada](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
-## <a name="create-incoming-webhook"></a>Criar Webhook de entrada
+## <a name="create-incoming-webhook"></a>Criar Webhooks de Entrada
 
-**Para adicionar um Webhook de entrada a um Teams canal**
+**Para adicionar um Webhook de Entrada a um canal do Teams**
 
-1. Vá para o canal onde você deseja adicionar o webhook e selecione &#8226;&#8226;&#8226; **mais opções** na barra de navegação superior.
-1. Selecione **Conectores** no menu suspenso:
+1. Vá até o canal onde você deseja adicionar o gancho da web e selecione &#8226;&#8226;&#8226; **Mais opções** a partir da barra de navegação superior.
+1. Selecione **Conectadores** no menu suspenso:
 
-    ![Selecionar Conector](~/assets/images/connectors.png)
+    ![Selecionar conector](~/assets/images/connectors.png)
 
-1. Pesquise **o Webhook de entrada** e selecione **Adicionar**.
-1. Selecione **Configurar**, forneça um nome e carregue uma imagem para seu webhook, se necessário:
+1. Pesquise para **Webhook de Entrada** e selecione **Adicionar**.
+1. Selecionar **Configurar**, providenciar um nome, e atualize uma imagem para seu webhook se requerido:
 
-    ![Botão Configurar](~/assets/images/configure.png)
+    ![Botão configurar](~/assets/images/configure.png)
 
-1. A janela de diálogo apresenta uma URL exclusiva que mapeia para o canal. Copie e salve a URL do webhook, para enviar informações para Microsoft Teams e selecione **Feito**:
+1. A janela de diálogo apresenta uma URL exclusiva que mapeia para o canal. Copie e salve a URL do webhook para enviar informações ao Microsoft Teams e selecione **Feito**:
 
-    ![URL exclusiva](~/assets/images/url.png)
+    ![URL única](~/assets/images/url.png)
 
-O webhook está disponível no canal Teams.
+O webhook está disponível no canal do Teams.
 
-Você pode criar e enviar mensagens ativas por meio do Webhook de entrada ou Office 365 Connector. Para obter mais informações, consulte [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
+Você pode criar e enviar mensagens acionáveis por meio do Webhook de Entrada ou do Conector do Office 365. Para obter mais informações, veja [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
-> Em Teams, selecione **Configurações** Permissões de membro Permitir que os membros criem, atualizem e  >    >  **removam** conectores, para que qualquer membro da equipe possa adicionar, modificar ou excluir um conector.
+> No Teams, selecione **Definições** > **Permitir aos membros** > **criar, atualizar, e remover conectores**, para que qualquer membro da equipe possa adicionar, modificar ou excluir um conector.
 
-## <a name="remove-incoming-webhook"></a>Remover Webhook de entrada
+## <a name="remove-incoming-webhook"></a>Remover Webhook de Entrada
 
-**Para remover um Webhook de entrada de um Teams canal**
+**Para remover um Webhook de Entrada de um canal Teams**
 
-1. Vá para o canal.
+1. Ir para o canal.
 1. Selecione &#8226;&#8226;&#8226; **Mais opções** na barra de navegação superior.
-1. Selecione **Conectores** no menu suspenso.
-1. À esquerda, em **Gerenciar**, selecione **Configurado**.
-1. Selecione **< *o 1>* Configurado para** ver uma lista dos conectores atuais:
+1. Selecione **Conectores** de um menu suspenso.
+1. No canto esquerdo, sob **Gerenciar**, selecione **Configurado**.
+1. Selecione o **<*1*> Configurado** para ver uma lista de seus conectores atuais:
 
     ![Webhook configurado](~/assets/images/configured.png)
 
-1. Selecione **Gerenciar** ao lado do conector que você deseja remover:
+1. Selecione **Gerenciar** próximo ao conector que você deseja eliminar:
 
     ![Gerenciar webhook](~/assets/images/manage.png)
 
@@ -83,15 +83,15 @@ Você pode criar e enviar mensagens ativas por meio do Webhook de entrada ou Off
 
     ![Remover webhook](~/assets/images/remove.png)
 
-    A **caixa de diálogo Remover Configuração** é exibida:
+    A **Configuração de Remover** aparece na caixa de diálogo:
 
     ![Remover Configuração](~/assets/images/removeconfiguration.png)
 
-1. Conclua os campos e caixas de seleção da caixa de diálogo e selecione **Remover**:
+1. Preencha os campos da caixa de diálogo e as caixas de seleção e selecione **Remover**:
 
-    ![Remover Final](~/assets/images/finalremove.png)
+    ![Remoção Final](~/assets/images/finalremove.png)
 
-    O webhook é removido do Teams canal.
+    O webhook é removido do canal do Teams.
 
 ## <a name="see-also"></a>Confira também
 

@@ -4,18 +4,18 @@ description: Saiba como registrar um novo bot de chamada de áudio/vídeo para M
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948618"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062506"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões bot para Microsoft Teams
 
 Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot Microsoft Teams com os seguintes recursos extras usados para registrar o bot:
 
-* Há uma nova versão do manifesto do aplicativo Teams com duas configurações adicionais `supportsCalling` e `supportsVideo` . Essas configurações estão incluídas na versão de [visualização](../../resources/dev-preview/developer-preview-intro.md) do desenvolvedor do manifesto Teams aplicativo.
+* Há uma nova versão do manifesto do aplicativo Teams com duas configurações adicionais `supportsCalling` e `supportsVideo` . Essas configurações estão incluídas no esquema [De manifesto para Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [As Graph microsoft](./registering-calling-bot.md#add-graph-permissions) devem ser configuradas para a ID do aplicativo Microsoft do bot.
 * As Graph de chamadas e apIs de reuniões online exigem o consentimento do administrador de locatários.
 
@@ -29,7 +29,7 @@ Os bots de chamadas e reuniões online têm as duas configurações adicionais a
 Se você quiser que seu IDE valide corretamente o esquema manifest.json para suas chamadas e reuniões bot para esses valores, você pode alterar o `$schema` atributo da seguinte maneira:
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 A próxima seção permite que você crie um novo bot ou adicione recursos de chamada ao bot existente.

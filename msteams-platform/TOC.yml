@@ -325,7 +325,9 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: Ações do cartão
           href: task-modules-and-cards/cards/cards-actions.md
-        - name: Pesquisa com permissão de digitação no Cartão Adaptável
+        - name: Seletor de Pessoas em Cartões Adaptáveis
+          href: task-modules-and-cards/cards/people-picker.md
+        - name: Pesquisa de preenchimento automático em cartões adaptáveis
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: Ações Universais para Cartões Adaptáveis
           items:

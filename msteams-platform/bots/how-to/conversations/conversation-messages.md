@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b78ca5b46442f30db3adfe314d627d3fc95682be
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043228"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059776"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -214,7 +214,7 @@ Um objeto `channelData` típico em uma atividade enviada ao bot contém as segui
 * `channelData.teamsTeamId`: Preterido. Essa propriedade só é incluída para compatibilidade com compatibilidade.
 * `channelData.teamsChannelId`: Preterido. Essa propriedade só é incluída para compatibilidade com compatibilidade.
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a>Exemplo de objeto channelData ou evento channelCreated
+### <a name="example-channeldata-object-channelcreated-event"></a>Objeto channelData de exemplo (evento channelCreated)
 
 O código a seguir mostra um exemplo do objeto channelData:
 
@@ -234,22 +234,20 @@ O código a seguir mostra um exemplo do objeto channelData:
 }
 ```
 
-As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de conteúdo de mensagem.
-
 ## <a name="message-content"></a>Conteúdo da mensagem
+
+As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de conteúdo de mensagem.
 
 | Formatar    | De usuário para bot | De bot para usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto e imagens rich para seu bot.                                                                                        |
 | Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Gif animado não é suportado.  |
 | Cartões     | ✖                | ✔                | Consulte a [Teams de cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
-| Emojis    | ✖                | ✔                | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para rosto de goslinha. |
-
-Você também pode adicionar notificações à sua mensagem usando a `Notification.Alert` propriedade.
+| Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para rosto de goslinha. |
 
 ## <a name="notifications-to-your-message"></a>Notificações à sua mensagem
 
-As notificações alertam os usuários sobre novas tarefas, menções e comentários. Esses alertas estão relacionados ao que os usuários estão trabalhando ou ao que devem observar inserindo um aviso no feed de atividades. Para que as notificações acionem de sua mensagem bot, de definir a propriedade `TeamsChannelData` objects `Notification.Alert` como *true*. A ativação ou não de uma notificação depende das configurações de Teams do usuário individual e você não pode substituir essas configurações. O tipo de notificação é um banner ou um banner e um email.
+Você também pode adicionar notificações à sua mensagem usando a `Notification.Alert` propriedade. As notificações alertam os usuários sobre novas tarefas, menções e comentários. Esses alertas estão relacionados ao que os usuários estão trabalhando ou ao que devem observar inserindo um aviso no feed de atividades. Para que as notificações acionem de sua mensagem bot, de definir a propriedade `TeamsChannelData` objects `Notification.Alert` como *true*. A ativação ou não de uma notificação depende das configurações de Teams do usuário individual e você não pode substituir essas configurações. O tipo de notificação é um banner ou um banner e um email.
 
 > [!NOTE]
 > O **campo** Resumo exibe qualquer texto do usuário como uma mensagem de notificação no feed.

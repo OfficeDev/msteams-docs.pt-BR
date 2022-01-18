@@ -4,12 +4,12 @@ description: Saiba mais sobre tipos de cartões com suporte em bots para Teams, 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 08128a81c913134c8c2e7d5b124c796661636b85
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061969"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062513"
 ---
 # <a name="cards-and-task-modules"></a>Cartões e módulos de tarefa
 
@@ -30,13 +30,14 @@ Os seguintes tipos de cartões são suportados em bots para Teams:
 
 Você pode formatar texto de cartão usando um subconjunto de formatação XML ou HTML ou Markdown, dependendo do tipo de cartão.
 
+[O Seletor de](cards/people-picker.md) Pessoas em Cartões Adaptáveis no Cartão Adaptável ajuda a pesquisar, selecionar, reatribuir e pré-selecionar usuários no chat ou canal.
+
 Você pode adicionar e responder a ações de cartão que:
 * Abrir uma URL
 * Enviar mensagens e carga para o bot
 * Iniciar fluxo OAuth
 
-Você pode dar uma [experiência de pesquisa](~/task-modules-and-cards/cards/dynamic-search.md) dinâmica em um grande conjuntos de dados usando o controle type ahead em Cartões Adaptáveis. Você também pode fazer uma pesquisa estática de tipo à frente dentro do número limitado de opções. Você pode invocar os módulos de tarefa em guias de canal ou pessoais, bots ou links profundos. A experiência do usuário para quaisquer fluxos de trabalho que exijam entrada de dados pode ser aprimorada adicionando um módulo de tarefa à guia do usuário. Você pode invocar módulos de tarefas Teams bots usando botões em Cartões Adaptáveis e cartões de Estrutura de Bot.
-Você pode invocar os módulos de tarefa em guias de canal ou pessoais, bots ou links profundos. A experiência do usuário para quaisquer fluxos de trabalho que exijam entrada de dados pode ser aprimorada adicionando um módulo de tarefa à guia do usuário. Você pode invocar módulos de tarefas Teams bots usando botões em Cartões Adaptáveis e cartões de Estrutura de Bot.
+Você pode fornecer uma [experiência de pesquisa](~/task-modules-and-cards/cards/dynamic-search.md) dinâmica em um grande conjuntos de dados usando o controle de tipo à frente em Cartões Adaptáveis e realizar a pesquisa estática de tipo à frente dentro do número limitado de opções. Você pode invocar os módulos de tarefa em guias de canal ou pessoais, bots ou links profundos. A experiência do usuário para quaisquer fluxos de trabalho que exijam entrada de dados pode ser aprimorada adicionando um módulo de tarefa à guia do usuário. Você pode invocar módulos de tarefas Teams bots usando botões em Cartões Adaptáveis e cartões de Estrutura de Bot.
 
 ## <a name="see-also"></a>Confira também
 

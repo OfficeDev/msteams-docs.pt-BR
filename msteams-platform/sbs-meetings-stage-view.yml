@@ -10,13 +10,13 @@ metadata:
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Leia mais para habilitar e configurar aplicativos para reuniões
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: 0dc94d828c0669f2345aa2101a901bf22dfb9682
-  ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+  ms.localizationpriority: high
+  ms.openlocfilehash: ccd5a3935bcf304fe2f283e1cf74d2398b4c552a
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/04/2022
-  ms.locfileid: "61722193"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059655"
 items:
 - durationInMinutes: 1
   content: "O Modo de Exibição de Estágio de Reuniões ajuda a habilitar e configurar seus aplicativos para Teams reuniões. Ele ajuda os usuários a compartilhar o Estágio de Reuniões, permite que os participantes da reunião adicionem detalhes de status de tarefas passadas, presentes e futuras, aprimorando Teams experiência de reunião. \n\n**Principais recursos do Exibição de Estágio de Reuniões**\n\n* Adicione detalhes de status no painel lateral.\n* Adicione detalhes para colaboração.\n\nEste guia passo a passo ajuda você a gerar o Meetings Stage View para adicionar detalhes de status para colaboração Teams. Você verá a seguinte saída:\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"exibição de estágio de reuniões\" border=\"false\":::\n"
