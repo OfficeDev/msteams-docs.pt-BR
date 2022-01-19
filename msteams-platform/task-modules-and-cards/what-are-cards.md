@@ -1,34 +1,34 @@
 ---
 title: Cartões
 description: Descreve cartões e como eles são usados em bots, conectores e extensões de mensagens
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
-ms.translationtype: MT
+ms.openlocfilehash: 077da748ec7dd594b5ba029e3e53b0642610f1ee
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075441"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062520"
 ---
 # <a name="cards"></a>Cartões
 
-Um cartão é um contêiner de interface do usuário (UI) para informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos e podem incluir botões, que disparam ações [de cartão.](~/task-modules-and-cards/cards/cards-actions.md) Usando cartões, você pode organizar informações em grupos e dar aos usuários a oportunidade de interagir com partes específicas das informações.
+Um cartão é um contêiner de interface do usuário (UI) para obter informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos e podem incluir botões que disparam [ações de cartão](~/task-modules-and-cards/cards/cards-actions.md). Ao usar os cartões, você pode organizar informações em grupos e dar aos usuários a oportunidade de interagirem com partes específicas das informações.
 
-Os bots para Teams suportam os seguintes tipos de cartões:
+Os bots do Teams suportam os seguintes tipos de cartões:
  
 - Cartão Adaptável
-- Cartão de herói
+- Cartão Hero
 - Cartão de listagem
-- Office 365 conector
+- Cartão do Conector do Office 365
 - Cartão de recebimento
-- Cartão de signin
+- Cartão de entrada
 - Cartão de miniatura
 - Coleções de cartões
 
-Você pode adicionar formatação de rich text aos cartões usando Markdown ou HTML, dependendo do tipo de cartão. Cartões usados por bots e extensões de mensagens em Microsoft Teams, adicione e responda a essas ações de cartão, `openUrl` , , , e `messageBack` `imBack` `invoke` `signin` .
+Você pode adicionar a formatação Rich Text aos cartões usando Markdown ou HTML, dependendo do tipo de cartão. Cartões usados por bots e extensões de mensagens no Microsoft Teams, adicione e responda a essas ações de cartão, `openUrl`, `messageBack`, `imBack`, `invoke` e `signin`.
 
-Teams usa cartões em três locais diferentes:
+O Teams usa cartões em três locais diferentes:
 
 * Conectores
 * Bots
@@ -36,46 +36,50 @@ Teams usa cartões em três locais diferentes:
 
 ## <a name="cards-in-connectors"></a>Cartões em conectores
 
-Os cartões foram definidos pela primeira vez como parte do Outlook e Office 365 e agora são usados como parte de Office 365 Conectores. Como muitos Office 365, o Teams dá suporte a conectores. Para obter mais informações, [consulte Office 365 Conectores para Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Você pode encontrar a especificação para cartões em conectores em referência de cartão de mensagem a [ação.](/outlook/actionable-messages/card-reference)
+Os cartões foram definidos pela primeira vez como parte do Outlook e Office 365 e já são usados como parte dos Conectores do Office 365. Como muitos aplicativos do Office 365, o Teams dá suporte aos conectores. Para obter mais informações, consulte [Conectores do Office 365 do Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Você pode encontrar a especificação para cartões nos conectores em [referência de cartão de mensagens acionáveis](/outlook/actionable-messages/card-reference).
 
 ## <a name="cards-in-bots"></a>Cartões em bots
 
-O Microsoft Bot Framework estende a especificação de cartões adicionando um conjunto de cartões predefinidos que os bots podem usar como parte das mensagens bot. Teams oferece suporte a bots usando a Estrutura de Bot, mas oferece suporte a um conjunto diferente dessas cartas. Informações gerais sobre cartões no Bot Framework podem ser encontradas em [adicionar anexos de cartão rich card a mensagens](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). Esses cartões são chamados de cartões simples Teams.
+O Microsoft Bot Framework estende a especificação de cartões adicionando um conjunto de cartões predefinidos que os bots podem usar como parte das mensagens do bot. O Teams oferece suporte aos bots usando o Bot Framework, mas oferece suporte a um conjunto diferente dessas cartas. Informações gerais sobre cartões no Bot Framework podem ser encontradas em [adicionar anexos de cartões avançados para mensagens](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). Esses cartões são chamados de cartões simples no Teams.
 
-Os bots no Teams podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. [Tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md) fornece informações sobre cartões, com suporte de bots em Teams.
+Os bots no Teams podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. Os [Tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md) fornecem informações sobre cartões, com suporte dos bots no Teams.
 
-## <a name="cards-in-messaging-extensions"></a>Cartões em extensões de mensagens
+## <a name="cards-in-messaging-extensions"></a>Cartões nas extensões de mensagens
 
-[Extensões de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) também podem retornar um cartão. As extensões de mensagens podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. Esses cartões são encontrados [em tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md).
+As [Extensões de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) também podem retornar um cartão. As extensões de mensagens podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. Esses cartões são encontrados em [tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## <a name="types-of-cards"></a>Tipos de cartões
 
-Todos os cartões usados por Teams estão listados em [tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md). Essa referência também descreve as diferenças entre cartões e cartões da Estrutura de Bot no Teams.
+Todos os cartões usados pelo Teams estão listados em [tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md). Essa referência também descreve as diferenças entre cartões do Bot Framework e cartões no Teams.
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-[Cartões adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) são uma nova especificação de produto cruzado para cartões em produtos Microsoft, incluindo bots, Cortana, Outlook e Windows. Eles são o tipo de cartão recomendado para novos Teams desenvolvimento. Para obter informações gerais da equipe cartões adaptáveis, consulte [Adaptive Cards overview](/adaptive-cards). Você pode usar Cartões Adaptáveis em qualquer lugar que você use cartões de herói existentes, Office 365 cartões de Office 365 e cartões de miniatura.
+Os [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) são uma nova especificação de produto cruzado de cartões nos produtos da Microsoft, incluindo bots, Cortana, Outlook e Windows. Eles são o tipo de cartão recomendado do novo desenvolvimento do Teams. Para obter informações gerais da equipe dos Cartões Adaptáveis, consulte [Visão geral dos Cartões Adaptáveis](/adaptive-cards). Você pode usar os Cartões Adaptáveis em qualquer lugar que você usar os cartões hero, cartões do Office 365 e cartões em miniatura existentes.
 
 Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de cartões:
 
-* Cartões conectores: usados como parte de conectores Office 365 conectores.
-* Cartões simples: usados a partir da Estrutura de Bot, como a miniatura e os cartões de herói.
+* Cartões conectores: usados como parte dos conectores do Office 365.
+* Cartões simples: usados do Bot Framework, como os carões em miniatura e os cartões hero.
 
-### <a name="type-ahead-search-in-adaptive-cards"></a>Pesquisa de tipo à frente em Cartões Adaptáveis  
+### <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
-Digite a pesquisa à frente adicionada como [](~/task-modules-and-cards/cards/dynamic-search.md) um controle de entrada em Cartões Adaptáveis habilitam a experiência de pesquisa dinâmica a partir de um conjuntos de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa estática de tipo à frente dentro de uma lista com número limitado de opções. Os clientes móveis e de área de trabalho suportam o tipo de experiência de pesquisa dinâmica à frente. 
+O [Seletor de Pessoas](cards/people-picker.md#people-picker-in-adaptive-cards) adicionado como um controle de entrada nos Cartões Adaptáveis permite a pesquisa e seleção de pessoas. Você pode usá-lo em chats, canais, módulos de tarefas e guias. Os clientes móveis e de área de trabalho suportam o Seletor de Pessoas que fornece uma experiência de digitação em linha. 
+
+### <a name="type-ahead-search-in-adaptive-cards"></a>Pesquisa de preenchimento automático nos Cartões Adaptáveis  
+
+Pesquisa de preenchimento automático adicionado como um controle de entrada nos Cartões Adaptáveis habilitam a experiência de [pesquisa dinâmica](~/task-modules-and-cards/cards/dynamic-search.md) de um conjunto de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa de preenchimento automático em uma lista com limite de opções. Os clientes móveis e de área de trabalho suportam a experiência de pesquisa de preenchimento automático. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartões adaptáveis e Webhooks de entrada
 
 > [!NOTE]
-> * Todos os elementos de esquema de Cartão Adaptável nativos, exceto `Action.Submit` , são totalmente suportados.
-> * As ações com suporte são [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> * Todos os elementos de esquema dos Cartões Adaptáveis nativos, exceto `Action.Submit`, são totalmente suportados.
+> * As ações com suporte são [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Cartões adaptáveis com Webhooks de entrada permite que você use os recursos avançados e flexíveis de Cartões Adaptáveis. Ele envia dados usando Webhooks de entrada Teams de seu serviço Web.
+Os Cartões Adaptáveis com Webhooks de entrada permitem que você use os recursos avançados e flexíveis dos Cartões Adaptáveis. Ele envia dados usando os Webhooks de entrada no Teams do seu serviço Web.
 
-## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Suporte para AAD ID de objeto e UPN na menção do usuário 
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Suporte da ID e UPN do Objeto AAD e na menção do usuário 
 
-Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD ID de objeto e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com AAD ID do objeto e UPN.
+Os Bots com Cartões Adaptáveis suportam IDs de menção do usuário, como ID e Nome de Princípio do Usuário (UPN) do Objeto AAD, além das IDs existentes. Os Webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com ID e UPN do Objeto AAD.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -84,6 +88,6 @@ Bots com Cartões Adaptáveis suportam IDs de menção de usuário, como AAD ID 
 
 ## <a name="see-also"></a>Confira também
 
-* [Formatar cartões em Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Projetar cartões adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Cartões adaptáveis em bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Formatar cartões no Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Projetar os Cartões Adaptáveis](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Cartões adaptáveis nos bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

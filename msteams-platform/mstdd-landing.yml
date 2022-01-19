@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Teams documentação do desenvolvedor
-summary: Bem-vindo à visão geral Microsoft Teams Documentação do Desenvolvedor. Microsoft Teams aplicativos trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas coletam, aprendem e trabalham cada vez mais.
+summary: Bem-vindo à visão geral Microsoft Teams Documentação do Desenvolvedor. Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas se reúnem, aprendem e trabalham cada vez mais.
 metadata:
   title: Microsoft Teams documentação do desenvolvedor
   description: Apresentando a criação de aplicativos para Teams
@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 58d64f6a8c0e596e8a8b688746497ad67578db30
-  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
+  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/17/2022
-  ms.locfileid: "62059797"
+  ms.lasthandoff: 01/18/2022
+  ms.locfileid: "62062485"
 landingContent:
 - title: Explore o mais recente
   linkLists:
   - linkListType: concept
     links:
+    - text: People Picker in Adaptive Cards
+      url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Toolkit para Visual Studio Code (Visualização)
       url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: Introduzido novo ícone da loja
