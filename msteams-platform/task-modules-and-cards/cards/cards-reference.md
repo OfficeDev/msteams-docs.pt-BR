@@ -4,12 +4,12 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 81d38b4b068b647b55e130e320d4edb67d332cd4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059711"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081132"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -953,3 +953,4 @@ Os cartões a seguir são implementados pelo Bot Framework, mas não têm suport
 * [Formatar cartões](~/task-modules-and-cards/cards/cards-format.md)
 * [Cartões atualizados](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Trabalhar com Ações Universais para Cartões Adaptáveis](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
