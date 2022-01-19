@@ -4,12 +4,12 @@ description: Descreve ações de cartão no Microsoft Teams e como usá-las em s
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889325"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081055"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -565,5 +565,6 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
 
 * [Referência de cartões](./cards-reference.md)
 * [Usar módulos de tarefas dos bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Cartões adaptáveis em bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Cartões adaptáveis nos bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Ações Universais para Cartões Adaptáveis](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
+* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

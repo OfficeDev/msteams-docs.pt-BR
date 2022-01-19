@@ -12,18 +12,20 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
-  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
+  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/18/2022
-  ms.locfileid: "62062485"
+  ms.lasthandoff: 01/19/2022
+  ms.locfileid: "62081041"
 landingContent:
 - title: Explore o mais recente
   linkLists:
   - linkListType: concept
     links:
-    - text: People Picker in Adaptive Cards
+    - text: Comentários de conclusão do formulário cartões adaptáveis
+      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
+    - text: Seletor de Pessoas nos Cartões Adaptáveis
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Toolkit para Visual Studio Code (Visualização)
       url: ~/toolkit/teams-toolkit-fundamentals.md

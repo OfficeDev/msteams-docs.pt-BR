@@ -3,12 +3,12 @@ title: Trabalhar com Ações Universais para Cartões Adaptáveis
 description: Aprenda a trabalhar com as Ações Universais para Cartões Adaptáveis, incluindo Esquema para UniversalActions para cartões adaptáveis, modelo de atualização e compatibilidade com códigos.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768605"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080950"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabalhar com Ações Universais para Cartões Adaptáveis
 
@@ -115,7 +115,7 @@ Para obter mais informações, consulte [compatibilidade com versões anteriores
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
 | Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
@@ -124,3 +124,4 @@ Para obter mais informações, consulte [compatibilidade com versões anteriores
 * [Como os bots funcionam](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Fluxos de Trabalho Sequenciais](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Cartões atualizados](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

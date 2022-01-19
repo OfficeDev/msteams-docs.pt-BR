@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059776"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081097"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -241,7 +241,7 @@ As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de cont
 | Formatar    | De usuário para bot | De bot para usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto e imagens rich para seu bot.                                                                                        |
-| Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Gif animado não é suportado.  |
+| Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.  |
 | Cartões     | ✖                | ✔                | Consulte a [Teams de cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
 | Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para rosto de goslinha. |
 
@@ -331,7 +331,7 @@ Para aprimorar sua mensagem, você pode incluir imagens como anexos a essa mensa
 
 As imagens são enviadas adicionando anexos a uma mensagem. Para obter mais informações sobre anexos, consulte [Documentação da Estrutura de Bots.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)
 
-As imagens podem ter no máximo 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Gif animado não é suportado.
+As imagens podem ter no máximo 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.
 
 Especifique a altura e a largura de cada imagem usando XML. Na marcação, o tamanho da imagem é padrão para 256×256. Por exemplo:
 
@@ -342,7 +342,7 @@ Um bot de conversa pode incluir Cartões Adaptáveis que simplificam fluxos de t
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-Cartões adaptáveis podem ser autorados em um bot e mostrados em vários aplicativos, como Teams, seu site e assim por diante. Para obter mais informações, consulte [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Cartões adaptáveis podem ser autorados em um bot e mostrados em vários aplicativos, como Teams, seu site e assim por diante. Para obter mais informações, [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 O código a seguir mostra um exemplo de envio de um cartão adaptável simples:
 
@@ -370,7 +370,25 @@ O código a seguir mostra um exemplo de envio de um cartão adaptável simples:
 }
 ```
 
-Para saber mais sobre cartões e cartões em bots, consulte [documentação de cartões.](~/task-modules-and-cards/what-are-cards.md)
+### <a name="form-completion-feedback"></a>Comentários sobre a conclusão do formulário
+
+A mensagem de conclusão do formulário aparece em Cartões Adaptáveis ao enviar uma resposta ao bot. A mensagem pode ser de dois tipos, erro ou sucesso:
+
+* **Erro**: Quando uma resposta enviada para o bot não é bem-sucedida, **Algo deu errado, a mensagem Tentar novamente** é exibida.
+
+    ![Mensagem de erro](~/assets/images/Cards/error-message.png)
+
+* **Sucesso**: quando uma resposta enviada ao bot é bem-sucedida, Sua resposta **foi enviada para** a mensagem do aplicativo.
+
+    ![Mensagem de êxito](~/assets/images/Cards/success.PNG)
+
+Você pode selecionar **Fechar** ou alternar o chat para descartar a mensagem.    
+
+**Resposta no celular**:
+
+A mensagem de erro aparece na parte inferior do Cartão Adaptável.
+
+Para obter mais informações sobre cartões e cartões em bots, consulte [documentação de cartões](~/task-modules-and-cards/what-are-cards.md).
 
 ## <a name="status-code-responses"></a>Respostas de código de status
 
@@ -391,14 +409,14 @@ A seguir estão os códigos de status e seus valores de código de erro e mensag
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Menus de comando bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 * [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

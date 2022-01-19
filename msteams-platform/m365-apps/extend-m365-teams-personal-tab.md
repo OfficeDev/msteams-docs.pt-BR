@@ -5,17 +5,17 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059627"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081069"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams guia pessoal entre Microsoft 365
 
 > [!NOTE]
-> *Estender uma guia Teams pessoal em* Microsoft 365 está disponível no momento apenas na [visualização do desenvolvedor público.](../resources/dev-preview/developer-preview-intro.md) Os recursos incluídos na visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis na versão pública. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
+> *Estender uma guia Teams pessoal em* Microsoft 365 está disponível no momento apenas na [visualização do desenvolvedor público.](../resources/dev-preview/developer-preview-intro.md) Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
 As guias pessoais fornecem uma ótima maneira de aprimorar a experiência Microsoft Teams pessoal. Usando guias pessoais, você pode fornecer a um usuário acesso ao seu aplicativo dentro Teams, sem que o usuário tenha que deixar a experiência ou entrar novamente. Com essa visualização, as guias pessoais podem ser acesas em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de tomar uma guia Teams pessoal existente e atualizá-la para ser executado em experiências da Outlook da área de trabalho e da Web e também Office na Web (office.com).
 
@@ -144,7 +144,7 @@ Na seção **Aplicativos cliente autorizados,** verifique se todos os seguintes 
 |Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-app-in-teams"></a>Fazer sideload do aplicativo Teams
+## <a name="sideload-your-app-in-teams"></a>Faça o sideload do seu aplicativo do Teams
 
 A etapa final é fazer sideload da guia pessoal atualizada ([pacote de aplicativos](/microsoftteams/platform/concepts/build-and-test/apps-package)) no Microsoft Teams. Depois de concluído, seu aplicativo estará disponível para ser executado em Office e Outlook, além de Teams.
 
@@ -177,7 +177,7 @@ Quando você atualiza sua guia Teams pessoal e a descarrega no Teams, ela també
 
 Para exibir seu aplicativo em execução Outlook na área de trabalho Windows, Outlook e entre usando sua conta de locatário dev. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção releitos ('Mais aplicativos') na barra lateral para ver suas guias pessoais instaladas":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção releições ('Mais aplicativos') na barra lateral do cliente da área de trabalho Office para ver suas guias pessoais instaladas":::
 
 Clique no ícone do aplicativo para iniciar seu aplicativo Outlook.
 
@@ -185,9 +185,14 @@ Clique no ícone do aplicativo para iniciar seu aplicativo Outlook.
 
 Para exibir seu aplicativo Outlook na Web, visite https://outlook.office.com e entre usando sua conta de locatário dev. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção releitos ('Mais aplicativos') na barra lateral do outlook.com para ver suas guias pessoais instaladas":::
+
 Clique no ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
 ### <a name="office-on-the-web"></a>Office na Web
+
+> [!IMPORTANT]
+> Consulte as atualizações mais recentes no [Microsoft Teams - Microsoft 365 Blog](https://devblogs.microsoft.com/microsoft365dev/) do Desenvolvedor para verificar se o suporte Office.com para Teams aplicativos pessoais está disponível para seu locatário de teste.
 
 Para visualizar seu aplicativo em execução Office na Web, faça logoff office.com com credenciais de locatário de teste. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
 

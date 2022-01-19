@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: fluxo de dados de autenticação de aplicativo pessoal de cartão adaptável
-ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216094"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080964"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -427,17 +427,18 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 
 |**Nome do exemplo** | **Descrição** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Também consulte
 
 * [Cartão Adaptável](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
+* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

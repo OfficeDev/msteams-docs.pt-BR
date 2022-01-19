@@ -4,17 +4,18 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 7ff02efe553d4b91c81ea184ae2b6b67b8464042
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391350"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081118"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão Teams mensagem por Microsoft 365
 
 > [!NOTE]
-> *Estender uma extensão Teams mensagem Microsoft 365* está disponível no momento apenas na [visualização do desenvolvedor público.](../resources/dev-preview/developer-preview-intro.md) Os recursos incluídos na visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis na versão pública. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
+> *Estender uma extensão Teams mensagem Microsoft 365* está disponível no momento apenas na [visualização do desenvolvedor público.](../resources/dev-preview/developer-preview-intro.md) Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
 Extensões de [mensagens baseadas](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) em pesquisa permitem que os usuários pesquisem um sistema externo e compartilhem resultados por meio da área de mensagem de composição do cliente Microsoft Teams. Estendendo seus aplicativos Teams em Microsoft 365 [(visualização),](overview.md)agora você pode levar suas extensões de mensagem baseadas em pesquisa Teams para Outlook para Windows de área de trabalho e web.
 
@@ -124,13 +125,18 @@ Agora você está pronto para testar sua extensão de mensagens em execução Ou
 
 Ao testar sua extensão de mensagens, você pode identificar a origem (proveniente de Teams versus Outlook) de solicitações de bot pela [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) do [objeto Activity.](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) Quando um usuário executa uma consulta, seu serviço recebe um objeto Da Estrutura de `Activity` Bot padrão. Uma das propriedades no objeto Activity é , que terá o valor de ou , dependendo de onde a solicitação `channelId` `msteams` de bot se `outlook` origina. Para obter mais, consulte  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
-### <a name="outlook"></a>Outlook
-
-Para visualizar seu aplicativo em execução Outlook na área de trabalho Windows, abra Outlook conectado com credenciais para seu locatário de teste. Clique em **Novo Email.** Abra o menu **de sobrevoo** Mais aplicativos na faixa de opções superior. Sua extensão de mensagem será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
-
 ### <a name="outlook-on-the-web"></a>Outlook na Web
 
 Para visualizar seu aplicativo em execução Outlook na Web, entre outlook.com [usando](https://www.outlook.com) credenciais para seu locatário de teste. Clique em **Nova mensagem**. Abra o menu **de** sobreposição Mais aplicativos na parte inferior da janela de composição. Sua extensão de mensagem será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Clique no botão &quot;Mais aplicativos&quot; na parte inferior da janela outlook.com de composição de email para começar a usar a extensão da mensagem.":::
+
+### <a name="outlook"></a>Outlook
+
+> [!IMPORTANT]
+> Consulte as atualizações mais recentes no [Microsoft Teams -](https://devblogs.microsoft.com/microsoft365dev/) Microsoft 365 Blog do Desenvolvedor para verificar se o Outlook para suporte Windows área de trabalho para extensões de mensagens Teams está disponível para seu locatário de teste.
+
+Para visualizar seu aplicativo em execução Outlook na área de trabalho Windows, abra Outlook conectado com credenciais para seu locatário de teste. Clique em **Novo Email.** Abra o menu **de sobrevoo** Mais aplicativos na faixa de opções superior. Sua extensão de mensagem será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
 
 ## <a name="next-steps"></a>Próximas etapas
 
