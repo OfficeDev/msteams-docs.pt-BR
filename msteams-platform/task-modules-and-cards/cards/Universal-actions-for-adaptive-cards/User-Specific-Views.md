@@ -4,12 +4,12 @@ description: Saiba mais sobre exibições específicas do usuário usando açõe
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081062"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185432"
 ---
 # <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
@@ -181,7 +181,9 @@ O código a seguir fornece um exemplo de um cartão de resposta de invocação a
 
 O código a seguir fornece um exemplo de uma resposta de invocação para retornar Cartões Adaptáveis:
 
-```C#
+### <a name="c"></a>[C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -192,6 +194,26 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+---
 
 Diretrizes de design de cartão para ter em mente ao projetar exibições específicas do usuário:
 
@@ -211,4 +233,4 @@ Diretrizes de design de cartão para ter em mente ao projetar exibições espec�
 
 * [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
 * [Exibições atualizadas](Up-To-Date-Views.md)
-* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

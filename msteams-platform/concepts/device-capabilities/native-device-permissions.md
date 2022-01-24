@@ -4,12 +4,12 @@ keywords: recursos de aplicativos do teams permissões de dispositivo de verific
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário, como verificação de qr, código de barras, imagem, áudio, recursos de vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 24556765866eb271e30e9d1c7294c38352c78092
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: e6ee04f47c87df8be7a424993a4f0c916b5a69f3
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041724"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185453"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams app
 
@@ -96,7 +96,7 @@ Cada propriedade permite solicitar que o usuário peça seu consentimento:
 
 Depois de `devicePermissions` adicionar ao manifesto do aplicativo, verifique permissões usando a API de permissões **HTML5** sem causar um prompt:
 
-``` Javascript
+``` JavaScript
 // Different query options:
 navigator.permissions.query({ name: 'camera' });
 navigator.permissions.query({ name: 'microphone' });
@@ -125,52 +125,98 @@ Aproveite o HTML5 ou Teams API apropriada, para exibir um prompt para obter cons
 Por exemplo:
  * Para solicitar que o usuário acesse sua localização, você deve chamar `getCurrentPosition()` :
 
-    ```Javascript
+    ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
  * Para solicitar que o usuário acesse sua câmera na área de trabalho ou na Web, você deve chamar `getUserMedia()` :
 
-    ```Javascript
+    ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
  * Para capturar a imagem no celular, Teams celular pede permissão quando você chama `captureImage()` :
 
-    ```Javascript
-    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-      /* ... */
-    });
+    ```JavaScript
+            function captureImage() {
+            microsoftTeams.media.captureImage((error, files) => {
+                // If there's any error, an alert shows the error message/code
+                if (error) {
+                    if (error.message) {
+                        alert(" ErrorCode: " + error.errorCode + error.message);
+                    } else {
+                        alert(" ErrorCode: " + error.errorCode);
+                    }
+                } else if (files) {
+                    image = files[0].content;
+                    // Adding this image string in src attr of image tag will display the image on web page.
+                    let imageString = "data:" + item.mimeType + ";base64," + image;
+                }
+            });
+        } 
     ```
 
  * As notificações solicitarão ao usuário quando você chamar `requestPermission()` :
 
-    ```Javascript
+    ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
 * Para usar a câmera ou a galeria de fotos de acesso, Teams celular pede permissão quando você chama `selectMedia()` :
 
     ```JavaScript
-    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    );
-    ```
+     function selectMedia() {
+     microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         } else if (attachments) {
+             // creating image array which contains image string for all attached images. 
+             const imageArray = attachments.map((item, index) => {
+                 return ("data:" + item.mimeType + ";base64," + item.preview)
+             })
+         }
+     });
+    } 
+  ```
 
 * Para usar o microfone, Teams celular pede permissão quando você chama `selectMedia()` :
 
-    ```JavaScript 
-    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    });
+    ```JavaScript
+     function selectMedia() {
+     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         }
+
+         if (attachments) {
+             // taking the first attachment  
+             let audioResult = attachments[0];
+
+             // setting audio string which can be used in Video tag
+             let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
+         }
+     });
+     }
     ```
 
 * Para solicitar que o usuário compartilhe o local na interface do mapa, Teams celular pede permissão quando você chama `getLocation()` :
 
     ```JavaScript 
-    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-      /* ... *
-    /});
+     function getLocation() {
+     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+         let currentLocation = JSON.stringify(location);
+     });
+     } 
     ```
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
@@ -192,13 +238,13 @@ As permissões do dispositivo são armazenadas para cada sessão de logon. Isso 
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| **Exemplo de nome** | **Descrição** | **Node.js** |
+| **Nome de exemplo** | **Descrição** | **Node.js** |
 |---------------|--------------|--------|
 |Permissões de dispositivos | Usar Microsoft Teams de exemplo de guia para demonstrar permissões de dispositivo |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 
-* [Permissões do dispositivo para o navegador](browser-device-permissions.md)
+* [Permissões de dispositivo para o navegador](browser-device-permissions.md)
 * [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
 * [Integrar a QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
 * [Integrar recursos de localização Teams](location-capability.md)

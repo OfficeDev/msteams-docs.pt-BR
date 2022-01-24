@@ -5,12 +5,12 @@ description: Uma visão geral das extensões de mensagens na plataforma Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: baef9ac9bb15b3b2efd7b05b36966c5e6d30083c
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 975a51850e7e9d0049de46fc8d77016166ffedab
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216220"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185446"
 ---
 # <a name="messaging-extensions"></a>Extensões de mensagens
 
@@ -71,9 +71,163 @@ As imagens a seguir exibem o recurso de desfralização de link quando um link �
 
 ![link desfraldamento](../assets/images/messaging-extension/link-unfurl.gif)
 
+## <a name="code-snippets"></a>Trechos de código
+
+O código a seguir fornece um exemplo de ação baseada em extensões de mensagens:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+        {
+            // Handle different actions using switch
+            switch (action.CommandId)
+            {
+                case "HTML":
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Height = 200,
+                                Width = 400,
+                                Title = "Task Module HTML Page",
+                                Url = baseUrl + "/htmlpage.html",
+                            },
+                        },
+                    };
+                // return TaskModuleHTMLPage(turnContext, action);
+                default:
+                    string memberName = "";
+                    var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
+                    memberName = member.Name;
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Card = <<AdaptiveAction card json>>,
+                                Height = 200,
+                                Width = 400,
+                                Title = $"Welcome {memberName}",
+                            },
+                        },
+                    };
+            }
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+    async handleTeamsMessagingExtensionFetchTask(context, action) {
+        switch (action.commandId) {
+            case 'Static HTML':
+                return staticHtmlPage();
+        }
+    }
+
+    staticHtmlPage(){
+        return {
+            task: {
+                type: 'continue',
+                value: {
+                    width: 450,
+                    height: 125,
+                    title: 'Task module Static HTML',
+                    url: `${baseurl}/StaticPage.html`
+                }
+            }
+        };
+    }
+
+```
+
+---
+
+O código a seguir fornece um exemplo de pesquisa com base em extensões de mensagens:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+        {
+            var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
+
+            var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+            // We take every row of the results and wrap them in cards wrapped in MessagingExtensionAttachment objects.
+            // The Preview is optional, if it includes a Tap, that will trigger the OnTeamsMessagingExtensionSelectItemAsync event back on this bot.
+            var attachments = packages.Select(package =>
+            {
+                var previewCard = new ThumbnailCard { Title = package.title, Tap = new CardAction { Type = "invoke", Value = package } };
+                if (!string.IsNullOrEmpty(package.title))
+                {
+                    previewCard.Images = new List<CardImage>() { new CardImage(package.title, "Icon") };
+                }
+
+                var attachment = new MessagingExtensionAttachment
+                {
+                    ContentType = HeroCard.ContentType,
+                    Content = new HeroCard { Title = package.title },
+                    Preview = previewCard.ToAttachment()
+                };
+
+                return attachment;
+            }).ToList();
+
+            // The list of MessagingExtensionAttachments must we wrapped in a MessagingExtensionResult wrapped in a MessagingExtensionResponse.
+            return new MessagingExtensionResponse
+            {
+                ComposeExtension = new MessagingExtensionResult
+                {
+                    Type = "result",
+                    AttachmentLayout = "list",
+                    Attachments = attachments
+                }
+            };
+        }
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;     
+        const attachments = [];
+                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+                
+                response.data.objects.forEach(obj => {
+                        const heroCard = CardFactory.heroCard(obj.package.name);
+                        const preview = CardFactory.heroCard(obj.package.name);
+                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
+                        const attachment = { ...heroCard, preview };
+                        attachments.push(attachment);
+                });
+    
+                return {
+                    composeExtension:  {
+                           type: 'result',
+                           attachmentLayout: 'list',
+                           attachments: attachments
+                    }
+                };
+            }       
+        }
+```
+
+---
+
 ## <a name="code-sample"></a>Exemplo de código
 
-| **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
+| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|------------|
 | Extensão de mensagens com comandos baseados em ação | Este exemplo ilustra como criar uma extensão de mensagens baseada em ação. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extensão de mensagens com comandos baseados em pesquisa | Este exemplo ilustra como criar uma Extensão de Mensagens baseada em Pesquisa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |

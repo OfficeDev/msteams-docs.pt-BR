@@ -5,12 +5,12 @@ description: Visão geral das ferramentas e SDKs para Microsoft Teams bots.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948380"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185418"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -111,6 +111,79 @@ Como há apenas seis comandos visíveis no menu de bot atual, é improvável que
 ### <a name="maintain-a-large-knowledge-base"></a>Manter uma grande base de dados de conhecimento
 
 Uma das desvantagens dos bots é que é difícil manter uma grande base de dados de conhecimento de recuperação com respostas sem controle. Os bots são mais adequados para interações curtas e rápidas e não passam por listas longas procurando uma resposta.
+
+## <a name="code-snippets"></a>Trechos de código
+
+O código a seguir fornece um exemplo de atividade bot para um escopo de equipe de canal:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+---
+
+O código a seguir fornece um exemplo de atividade bot para um chat um para um:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+this.onMessage(async (context, next) => {
+    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await next();
+});
+```
+
+---
 
 ## <a name="code-sample"></a>Exemplo de código
 

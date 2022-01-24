@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043221"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185419"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
@@ -28,7 +28,7 @@ As mensagens proativas são iniciadas por bots para iniciar conversas com um usu
 
 Antes que o bot possa enviar mensagens proativas a um usuário, ele deve ser instalado como um aplicativo pessoal ou em uma equipe em que o usuário seja membro. Às vezes, você precisa enviar mensagens proativas aos usuários que não tenham instalado ou interagido anteriormente com seu aplicativo. Por exemplo, a necessidade de enviar informações importantes para todos na sua organização. Para esses cenários, você pode usar a API do Microsoft Graph para instalar proativamente seu bot para seus usuários.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permissões
 
 Permissões de tipo de recurso do Microsoft Graph [TeamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) ajudam você a gerenciar o ciclo de vida de instalação do aplicativo para todos os escopos de usuário (pessoal) ou equipe (canal) na plataforma Microsoft Teams:
 
@@ -187,16 +187,61 @@ Quando seu aplicativo é instalado para o usuário, o bot recebe uma notificaç�
 
 Seu bot pode [enviar mensagens proativas](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) depois que o bot foi adicionado para um usuário ou uma equipe e recebeu todas as informações do usuário.
 
+## <a name="code-snippets"></a>Trechos de código
+
+O código a seguir fornece um exemplo de envio de mensagens proativas:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+   int msgSentCount = 0;
+
+   // Send notification to all the members
+   foreach (var conversationReference in _conversationReferences.Values)
+   {
+       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+       msgSentCount++;
+   }
+
+   return msgSentCount;
+}
+
+private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+{
+   await turnContext.SendActivityAsync("Proactive hello.");
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+server.get('/api/notify', async (req, res) => {
+    for (const conversationReference of Object.values(conversationReferences)) {
+        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
+            await context.sendActivity('proactive hello');
+        });
+    }
+
+    res.setHeader('Content-Type', 'text/html');
+    res.writeHead(200);
+    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
+    res.end();
+});
+```
+---
+
 ## <a name="code-sample"></a>Exemplo de código
 
-| **Exemplo de nome** | **Descrição** | **.NET** | **Node.js** |
+| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs do Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## <a name="additional-code-samples"></a>Exemplos de código adicionais
 >
 > [!div class="nextstepaction"]
-> [**Teams exemplos proativos de código de mensagens**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Exemplos de código de mensagens proativas do Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
 ## <a name="see-also"></a>Confira também
 
