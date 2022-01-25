@@ -3,20 +3,20 @@ title: Autenticação para guias usando Azure Active Directory
 description: Descreve a autenticação no Teams e como usá-la em guias
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do teams AAD
-ms.openlocfilehash: 1c3c5a69d7b42589a104755968a6d6949efbcca2
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+keywords: guias de autenticação do teams do Azure AD
+ms.openlocfilehash: 6fb7e608cd89183a6207fc16b4e42a0e31e4db32
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949037"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212437"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma Microsoft Teams guia
 
 > [!Note]
 > Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que esteja usando a versão 1.4.1 ou posterior do SDK do Teams JavaScript.
 
-Há muitos serviços que você pode querer consumir no seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e Teams. Teams informações de perfil de usuário são armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph e este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
+Há muitos serviços que você pode querer consumir no seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e Teams. Teams informações de perfil de usuário são armazenadas no Azure Active Directory usando o Microsoft Graph e este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
 
 OAuth 2.0 é um padrão aberto para autenticação usado pelo Azure AD e muitos outros provedores de serviços. Noções básicas sobre o OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos a seguir usam o fluxo de Concessão Implícita OAuth 2.0 com o objetivo de, eventualmente, ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
 
@@ -159,7 +159,7 @@ Para obter mais informações sobre o SSO (single Sign-On) consulte o artigo [Au
 
 Código de exemplo mostrando o processo de autenticação de tabulação usando o Azure AD:
 
-| **Nome do exemplo** | **description** | **.NET** | **Node.js** |
+| **Nome de exemplo** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams autenticação de tabulação | Processo de autenticação de tabulação usando o Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
 

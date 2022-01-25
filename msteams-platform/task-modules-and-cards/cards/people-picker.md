@@ -1,19 +1,19 @@
 ---
-title: People Picker in Adaptive Cards
+title: Seletor de Pessoas nos Cartões Adaptáveis
 description: Descreve como usar o controle People Picker em Cartões Adaptáveis
 localization_priority: Normal
 keywords: Se picker de pessoas de cartões adaptáveis
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: d0183ea8f00c14e93586c0c12e02b837a41572c9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062530"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212472"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>People Picker in Adaptive Cards
+# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
 >[!NOTE]
 > Atualmente, o People Picker em Cartões [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) Adaptáveis está disponível na visualização de desenvolvedor público apenas para dispositivos móveis e geralmente disponíveis (GA) para área de trabalho.
@@ -107,7 +107,7 @@ As seguintes propriedades são adições ao `Input.ChoiceSet` esquema para habil
 
 |Propriedade |Tipo |Obrigatório |Descrição|
 |--|--|--|--|
-|**dataset** |Cadeia de caracteres |Sim |O tipo de dados que deve ser buscado dinamicamente.|   
+|**dataset** |Cadeia de Caracteres |Sim |O tipo de dados que deve ser buscado dinamicamente.|   
 
 #### <a name="dataset"></a>dataset
 A tabela a seguir fornece valores predefinidos como **conjunto de dados** para o seletor de pessoas:   
@@ -160,25 +160,25 @@ Para habilitar a pesquisa em uma lista de membros da conversa, use o conjuntos d
 
 ### <a name="data-submission"></a>Envio de dados
 
-Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para seu bot. A carga recebida no bot é uma lista de `invoke` AAD IDs ou as IDs fornecidas na lista estática.
-No Seletor de Pessoas, quando um usuário é selecionado no controle, o do `AAD ID` usuário é o valor enviado de volta. É `AAD ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
+Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para seu bot. A carga recebida no bot é uma lista de IDs do Azure AD ou as `invoke` IDs fornecidas na lista estática.
+No Seletor de Pessoas, quando um usuário é selecionado no controle, o do `Azure AD ID` usuário é o valor enviado de volta. É `Azure AD ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
 
 O formato do valor enviado ao bot depende do valor da `isMultiSelect` propriedade:
 
 |valor de `isMultiSelect`|Formatar|
 |--|--|
-|false _(seleção única)_|<selected_AAD_ID>|
-|true _(seleção multi)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>|  
+|false _(seleção única)_|<selected_Azure_AD_ID>|
+|true _(seleção multi)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Com `AAD ID` o , o Seletor de Pessoas pré-seleciona o usuário correspondente. 
+Com `Azure AD ID` o , o Seletor de Pessoas pré-seleciona o usuário correspondente. 
 
 ## <a name="preselection-of-user"></a>Pré-seleção do usuário
 
 O Seletor de Pessoas dá suporte à pré-seleção do usuário no controle, ao criar e enviar um Cartão Adaptável. `Input.ChoiceSet` dá suporte `value` à propriedade usada para pré-selecionar um usuário. O formato dessa propriedade é o mesmo do formato de valor `value` enviado no envio de [dados.](#data-submission)  
 A lista a seguir fornece as informações para pré-selecionar usuários:
 
-* Para um único usuário no controle, especifique o `AAD ID` do usuário como `value` . 
-* Para vários usuários, como `isMultiSelect` é `true` , especifique uma cadeia de caracteres separada por vírgulas de `AAD ID` s.  
+* Para um único usuário no controle, especifique o `Azure AD ID` do usuário como `value` . 
+* Para vários usuários, como `isMultiSelect` é `true` , especifique uma cadeia de caracteres separada por vírgulas de `Azure AD ID` s.  
 
 O exemplo a seguir descreve a pré-seleção de um único usuário:
 
@@ -200,7 +200,7 @@ O exemplo a seguir descreve a pré-seleção de um único usuário:
                 "dataset": "graph.microsoft.com/users"
             },
             "id": "people-picker",
-            "value": "<AAD ID 1>"
+            "value": "<Azure AD ID 1>"
         }
     ],
     "actions": [
@@ -235,7 +235,7 @@ O exemplo a seguir descreve a pré-seleção de vários usuários:
             },
             "id": "people-picker",
             "isMultiSelect": true,
-            "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>"
+            "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
         }
     ],
     "actions": [

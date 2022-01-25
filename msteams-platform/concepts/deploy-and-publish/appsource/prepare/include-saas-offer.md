@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 597896d79408fa596e9949166fceda97ef440d07
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059613"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212002"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
@@ -49,7 +49,7 @@ Ao planejar como monetizar seu aplicativo Teams, veja algumas coisas a considera
 
 * Decida o modelo de assinatura. Uma oferta saaS transactável pode incluir vários planos de assinatura. Os planos de assinatura pública disponíveis para qualquer pessoa são mais comuns, mas você também pode querer direcionar clientes específicos com ofertas apenas para eles. Para obter mais informações, consulte [ofertas privadas no marketplace comercial da Microsoft.](/azure/marketplace/private-offers)
 * Leia sobre a opção [ *Vender por meio*](/azure/marketplace/plan-saas-offer#listing-options) da Microsoft para sua oferta saaS, que é necessária se você quiser que os usuários comprem planos de assinatura para seu aplicativo diretamente por meio da Teams store.
-* Saiba como [Azure Active Directory o SSO (SSO) único (Azure AD)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (O SSO do Azure AD é necessário para Teams aplicativos com ofertas SaaS.)
+* Saiba como [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (O SSO do Azure AD é necessário para Teams aplicativos com ofertas SaaS.)
 * Entenda que você é responsável pelo gerenciamento e pagamento da infraestrutura necessária para dar suporte ao uso da oferta saaS dos seus clientes.
 * Planejar para celular. Para evitar violar políticas de armazenamento de aplicativos de terceiros, seu aplicativo não pode incluir links que permitem que os usuários comprem planos de assinatura em dispositivos móveis. No entanto, você ainda pode indicar se seu aplicativo tem recursos que exigem um plano de assinatura. Para obter mais informações, consulte as políticas de [certificação do marketplace comercial relacionadas.](/legal/marketplace/certification-policies#114048-mobile-experience)
 

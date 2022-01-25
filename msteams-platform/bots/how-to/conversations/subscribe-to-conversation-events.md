@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversa de reação de mensagem de canal bot de eventos
-ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
-ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
+ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "62014553"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212542"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -49,7 +49,7 @@ A tabela a seguir mostra uma lista de eventos Teams de atualização de conversa
 | Canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal é renomeado](#channel-renamed). | Equipe |
 | Canal excluído     | channelDeleted    | OnTeamsChannelDeletedAsync | [Um canal é excluído](#channel-deleted). | Equipe |
 | Canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Um canal é restaurado](#channel-deleted). | Equipe |
-| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Todos |
+| Membros adicionados   | membersAdded   | OnTeamsMembersAddedAsync   | [Um membro é adicionado](#team-members-added). | Tudo |
 | Membros removidos | membersRemoved | OnTeamsMembersRemovedAsync | [Um membro é removido](#team-members-removed). | groupChat e team |
 | Equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe é renomeada](#team-renamed).       | Equipe |
 | Equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe é excluída](#team-deleted).       | Equipe |
@@ -1062,8 +1062,8 @@ O `messageReaction` evento é enviado quando um usuário adiciona ou remove rea�
 
 | EventType       | Objeto Payload   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Todos   |
-| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Todos |
+| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem bot](#reactions-added-to-bot-message).           | Tudo   |
+| messageReaction | reactionsRemoved | [Reações removidas da mensagem bot](#reactions-removed-from-bot-message). | Tudo |
 
 ### <a name="reactions-added-to-bot-message"></a>Reações adicionadas à mensagem bot
 
@@ -1346,7 +1346,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 
@@ -1421,7 +1421,7 @@ Quando você usa esses eventos de instalação e desinstalação, há algumas in
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| **Nome do exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
+| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | Bot de conversa | Código de exemplo para eventos de conversa bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

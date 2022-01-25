@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c0bb7eb75ee982e7c08d3039e59f03fc7f18146
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 5aa701bc884a290c5030d54c67d31dd47d794d94
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768458"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212465"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>Gerenciar vários ambientes em Teams Toolkit
 
@@ -78,8 +78,8 @@ A tabela a seguir lista os cenários comuns com suporte para provisionamento per
 | Cenários | Local| Descrição |
 | --- | --- | --- |
 | Personalizar o Recurso do Azure | <ul> <li>Arquivos Bicep em `templates/azure` .</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Personalizar ARM parâmetros e modelos.](provision.md#customize-arm-parameters-and-templates) |
-| Reutilizar o aplicativo AAD existente para Teams app | <ul> <li>`auth` seção em `.fx/config.<envName>.json` .</li> </ul> |  [Use um aplicativo de AAD existente para seu Teams app](provision.md#use-an-existing-aad-app-for-your-teams-app). |
-| Reutilizar o aplicativo AAD existente para bot | <ul> <li>`bot` seção em `.fx/config.<envName>.json` .</li> </ul> | [Use um aplicativo de AAD existente para seu bot](provision.md#use-an-existing-aad-app-for-your-bot). |
+| Reutilizar o aplicativo existente do Azure AD para Teams app | <ul> <li>`auth` seção em `.fx/config.<envName>.json` .</li> </ul> |  [Use um aplicativo existente do Azure AD para seu Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app). |
+| Reutilizar o aplicativo existente do Azure AD para bot | <ul> <li>`bot` seção em `.fx/config.<envName>.json` .</li> </ul> | [Use um aplicativo existente do Azure AD para seu bot](provision.md#use-an-existing-azure-ad-app-for-your-bot). |
 | Ignorar a adição de usuários durante o provisionamento SQL | <ul> <li>`skipAddingSqlUser` propriedade em `.fx/config.<envName>.json` .</li> </ul> | [Ignore a adição de usuário para SQL banco de dados](provision.md#skip-adding-user-for-sql-database). |
 | Personalizar manifesto do aplicativo | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` seção em `.fx/config.<envName>.json` .</li>  </ul> | [Personalizar Teams Manifesto do Aplicativo no Teams Toolkit](TeamsFx-manifest-customization.md). |
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569417"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212023"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -125,7 +125,7 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 
 > [!NOTE]
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é a Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é Azure Active Directory ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 

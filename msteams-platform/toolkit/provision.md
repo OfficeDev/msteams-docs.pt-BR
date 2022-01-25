@@ -1,17 +1,17 @@
 ---
 title: Usar Teams Toolkit para provisionar recursos de nuvem
 author: MuyangAmigo
-description: Provisione recursos de nuvem
+description: Provisionar recursos de nuvem
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e68596e9d109fcfa54708a76570874951fe326b2
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: d6365cf7e513a1fbf8b5e4f443fdcf2c805f3b10
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768612"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212367"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para provisionar recursos de nuvem
 
@@ -39,7 +39,7 @@ A provisionamento é executada com um único comando Teams Toolkit para Visual S
 
 Quando você aciona o comando provisionamento Teams Toolkit cli do TeamsFx ou do TeamsFx, você pode obter os seguintes recursos:
 
-* AAD aplicativo em seu Microsoft 365 locatário
+* Aplicativo do Azure AD em seu locatário Microsoft 365 locatário
 * Teams de aplicativos na plataforma Microsoft 365 do locatário Teams locatário
 * Recursos do Azure em sua assinatura selecionada do Azure
 
@@ -50,7 +50,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Criação de recursos para Teams aplicativo Tab
 
-|Recurso|Objetivo|Descrição |
+|Resource|Objetivo|Descrição |
 |----------|--------------------------------|-----|
 | Armazenamento do Azure | Hospedar seu aplicativo de tabulação | Habilita o recurso de aplicativo Web estático para hospedar seu aplicativo de guia |
 | Plano de serviço de aplicativo para auth simples | Hospedar o aplicativo Web do Simple Auth |Não aplicável |
@@ -59,7 +59,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Criação de recursos para Teams bot ou aplicativo de extensão de mensagens
 
-|Recurso|Objetivo| Descrição |
+|Resource|Objetivo| Descrição |
 |----------|--------------------------------|-----|
 | Serviço de bot do Azure | Registra seu aplicativo como um bot com a estrutura de bot | Conecta o bot ao Teams |
 | Plano de serviço de aplicativo para bot | Hospedar o aplicativo Web do bot |Não aplicável |
@@ -68,7 +68,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Criação de recursos para funções do Azure no projeto
 
-|Recurso|Objetivo| Descrição|
+|Resource|Objetivo| Descrição|
 |----------|--------------------------------|-----|
 | Plano de serviço de aplicativo para aplicativo de função | Hospedar o aplicativo de função |Não aplicável |
 | Aplicativo function | Hospedar suas APIs de funções do Azure | Adiciona identidade atribuída ao usuário para acessar outros recursos do Azure. <br /> Adiciona a regra de compartilhamento de recursos de origem cruzada (CORS) para permitir solicitações do aplicativo de tabulação <br /> Adiciona a configuração de autenticação que permite apenas solicitações de seu Teams app. <br /> Adiciona configurações de aplicativo exigidas pelo [SDK teamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,7 +77,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Criação de recursos para o Azure SQL no projeto
 
-|Recurso|Objetivo | Descrição |
+|Resource|Objetivo | Descrição |
 |----------|--------------------------------|-----|
 | Servidor SQL Azure | Hospedar a instância de banco de dados SQL do Azure | Permite que todos os serviços do Azure acessem o servidor |
 | Banco de dados SQL Azure | Armazenar dados para seu aplicativo | Concede ao usuário a identidade atribuída, a permissão de leitura ou gravação para o banco de dados |
@@ -85,7 +85,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Criação de recursos para o Gerenciamento de API do Azure no projeto
 
-|Recurso|Objetivo|
+|Resource|Objetivo|
 |----------|--------------------------------|
 | Aplicativo do Active Directory do Azure para serviço de gerenciamento de API | Permite que as APIs de acesso da Plataforma do Microsoft Power gerenciadas pelo serviço de gerenciamento de API |
 | Serviço de gerenciamento de API | Gerenciar suas APIs hospedadas no aplicativo de função |
@@ -97,7 +97,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 |Recursos|Finalidade desse recurso|
 |----------|--------------------------------|
-| Serviço de Cofre de Chaves do Azure | Gerenciar segredos (por exemplo, AAD do cliente de aplicativo) usados por outros Serviços do Azure |
+| Serviço de Cofre de Chaves do Azure | Gerenciar segredos (por exemplo, segredo do cliente de aplicativo do Azure AD) usado por outros Serviços do Azure |
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar o provisionamento de recursos
@@ -161,18 +161,18 @@ A tabela a seguir fornece uma lista de parâmetros predefinidos disponíveis:
 
 Entretanto, os parâmetros a seguir estão disponíveis com valores preenchidos durante a provisionamento. O objetivo desses espaço reservados é garantir que possamos criar novos recursos para você em um novo ambiente. Os valores reais são resolvidos de `.fx/states/state.{env}.json` .
 
-##### <a name="aad-application-related-parameters"></a>AAD parâmetros relacionados a aplicativos
+##### <a name="azure-ad-application-related-parameters"></a>Parâmetros relacionados a aplicativos do Azure AD
 
 | Nome do parâmetro | Porta-valores padrão | Significado do titular do local | Como personalizar |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | A ID do cliente AAD aplicativo do seu aplicativo criada durante a provisão | [Personalizar o valor](#use-an-existing-aad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | O segredo do cliente AAD aplicativo criado durante a provisionamento | [Personalizar o valor](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | ID do locatário do aplicativo AAD aplicativo | [Personalizar o valor](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | Host de autoridade OAuth do aplicativo AAD aplicativo | [Personalizar o valor](#use-an-existing-aad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | ID do cliente de aplicativo AAD bot criada durante a provisionamento | [Personalizar o valor](#use-an-existing-aad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | O segredo do AAD de aplicativo criado durante a provisionamento | [Personalizar o valor](#use-an-existing-aad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | ID do cliente de aplicativo AAD APIM criada durante a provisionamento | Excluir o espaço reservado e preencher o valor real |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | O segredo do cliente de aplicativo AAD APIM criado durante a provisionamento | Excluir o espaço reservado e preencher o valor real |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | ID do cliente do aplicativo do Azure AD do seu aplicativo criado durante a provisionamento | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | O segredo do cliente do aplicativo do Azure AD do seu aplicativo criado durante a provisionamento | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | ID de locatário do aplicativo do Azure AD do seu aplicativo | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | Host de autoridade OAuth do aplicativo do Azure AD do seu aplicativo | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | ID do cliente do aplicativo do Azure AD do Bot criada durante a provisionamento | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Segredo do cliente do aplicativo do Azure AD do Bot criado durante a provisionamento | [Personalizar o valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | ID do cliente do aplicativo do Azure AD da APIM criada durante a provisionamento | Excluir o espaço reservado e preencher o valor real |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Segredo do cliente do aplicativo do Azure AD da APIM criado durante a provisionamento | Excluir o espaço reservado e preencher o valor real |
 
 ##### <a name="azure-resource-related-parameters"></a>Parâmetros relacionados a recursos do Azure
 
@@ -212,15 +212,15 @@ Para garantir que a ferramenta TeamsFx funcione corretamente, certifique-se de p
 
 Você pode personalizar os seguintes cenários:
 
-#### <a name="use-an-existing-aad-app-for-your-teams-app"></a>Usar um aplicativo de AAD existente para seu Teams app
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Usar um aplicativo existente do Azure AD para seu Teams app
 
-Você pode adicionar o seguinte trecho de configuração ao arquivo para usar um aplicativo AAD criado por você mesmo para `.fx/configs/config.{env}.json` seu Teams app. Para criar um AAD, consulte <https://aka.ms/teamsfx-existing-aad-doc> .
+Você pode adicionar o seguinte trecho de configuração ao arquivo para usar um aplicativo do Azure AD criado por você mesmo para seu `.fx/configs/config.{env}.json` Teams app. Para criar um aplicativo do Azure AD, consulte <https://aka.ms/teamsfx-existing-aad-doc> .
 
 ```json
 "auth": {
-    "clientId": "<your AAD app client id>",
+    "clientId": "<your Azure AD app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
-    "objectId": "<your AAD app object id>",
+    "objectId": "<your Azure AD app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
 }
 ```
@@ -228,15 +228,15 @@ Você pode adicionar o seguinte trecho de configuração ao arquivo para usar um
 Depois de adicionar o trecho, adicione seu segredo à variável de ambiente relacionada para que a ferramenta possa resolver o segredo real durante a provisionamento.
 
 > [!NOTE]
-> Certifique-se de não compartilhar o mesmo AAD aplicativo em vários ambientes. Se você não tiver permissão para atualizar o aplicativo AAD, você poderá receber um aviso com instruções sobre como atualizar manualmente o aplicativo AAD. Siga as instruções para atualizar seu aplicativo AAD após a provisão.
+> Certifique-se de não compartilhar o mesmo aplicativo do Azure AD em vários ambientes. Se você não tiver permissão para atualizar o aplicativo do Azure AD, poderá receber um aviso com instruções sobre como atualizar manualmente o aplicativo do Azure AD. Siga as instruções para atualizar seu aplicativo do Azure AD após o provisionamento.
 
-#### <a name="use-an-existing-aad-app-for-your-bot"></a>Usar um aplicativo de AAD existente para seu bot
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Usar um aplicativo existente do Azure AD para seu bot
 
-Você pode adicionar o seguinte trecho de configuração ao arquivo para usar um aplicativo `.fx/configs/config.{env}.json` AAD criado por você mesmo para seu bot:
+Você pode adicionar o seguinte trecho de configuração ao arquivo para usar um `.fx/configs/config.{env}.json` aplicativo do Azure AD criado por você mesmo para seu bot:
 
 ```json
 "bot": {
-    "appId": "<your AAD app client id>",
+    "appId": "<your Azure AD app client id>",
     "appPassword": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}"
 }
 ```
@@ -313,7 +313,7 @@ Considere o cenário, você deseja adicionar o armazenamento do Azure ao back-en
 
 5. Você pode atualizar sua função com as vinculações de saída de armazenamento do Azure.
 
-## <a name="faq"></a>Perguntas frequentes
+## <a name="faq"></a>PERGUNTAS FREQÜENTES
 
 <br>
 
@@ -365,6 +365,6 @@ Você pode seguir [o provisionamento SharePoint aplicativo baseado em .](/micros
 
 ## <a name="see-also"></a>Confira também
 
-* [Implantar Teams aplicativo na nuvem](deploy.md)
+* [Implantar o aplicativo Teams na nuvem](deploy.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)
 * [Colaborar com outros desenvolvedores no Teams projeto](TeamsFx-collaboration.md)

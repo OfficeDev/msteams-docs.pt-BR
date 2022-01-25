@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291706"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212521"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -42,7 +42,7 @@ Em um nível alto, o processo de importação consiste no seguinte:
 ### <a name="set-up-your-office-365-tenant"></a>Configurar seu locatário do Office 365
 
 * Verifique se existe Office 365 locatário para os dados de importação. Para obter mais informações sobre como configurar Office 365 locatário para Teams, consulte [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Certifique-se de que os membros da equipe estão Azure Active Directory (AAD). Para obter mais informações, [consulte add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
+* Certifique-se de que os membros da equipe estão Azure Active Directory. Para saber mais, [confira adicionar um novo usuário](/azure/active-directory/fundamentals/add-users-azure-active-directory) ao Azure AD.
 
 ## <a name="step-1-create-a-team"></a>Etapa 1: Criar uma equipe
 

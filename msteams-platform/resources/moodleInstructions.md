@@ -1,17 +1,17 @@
 ---
 title: Instalar o Moodle LMS
 description: Como instalar e configurar o aplicativo de integração Moodle para Microsoft Teams
-keywords: Teams Plug-ins de integração de aplicativo miojo
+keywords: Teams plug-ins de integração do aplicativo Moodle
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7460a4f6e1a15df30ebc9b1c50f43b561908c7d4
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888129"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212381"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -20,7 +20,7 @@ Neste artigo, você aprenderá a instalar o Moodle LMS.
 > [!NOTE]
 > Para ajudar os administradores de IT a configurar facilmente o Moodle e Teams integração, os Plug-ins de Moodle de Microsoft 365 de código aberto são atualizados para o seguinte:
 >
-> * Registro automático do servidor Moodle com [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
+> * Registro automático do servidor Moodle com [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
 >
 > * Implantação de um clique do bot do Assistente de miojo no Azure.
 >
@@ -57,7 +57,7 @@ Certifique-se de instalar e baixar o seguinte antes de prosseguir com a instala�
     >
     > Além disso, os [plug-ins Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams) são altamente recomendados.
 
-### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Plug-ins de moodle
+### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 plug-ins Moodle
 
 1. Entre no servidor Moodle como administrador e selecione **Administração** de site no bloco Configurações [localizado](https://docs.moodle.org/22/en/Settings_block) no painel de navegação esquerdo.
 
@@ -75,7 +75,7 @@ Certifique-se de instalar e baixar o seguinte antes de prosseguir com a instala�
     >
     > * Se você não tiver um site Moodle existente, vá para o Moodle no repo do [Azure](https://github.com/azure/moodle) e implante rapidamente uma instância de Moodle e personalize-a de acordo com suas necessidades.
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory-azure-ad"></a>2. Configure a conexão entre os plug-ins Microsoft 365 e Azure Active Directory (Azure AD)
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. Configure a conexão entre os plug-ins Microsoft 365 e Azure Active Directory
 
 Você deve configurar a conexão entre os Microsoft 365 e o Azure AD.
 

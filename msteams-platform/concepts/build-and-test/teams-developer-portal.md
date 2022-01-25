@@ -5,14 +5,14 @@ keywords: iniciando equipes do portal do desenvolvedor
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888549"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212535"
 ---
-# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerenciar seus aplicativos com o Portal do Desenvolvedor para Microsoft Teams
+# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams
 
 O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolvedor para Teams</a> é a principal ferramenta para configurar, distribuir e gerenciar seus Microsoft Teams aplicativos. Com o Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de tempo de execução e muito mais.
 
@@ -85,7 +85,7 @@ O Portal do Desenvolvedor também inclui ferramentas para ajudá-lo a criar algu
 
 * **Estúdio de cena**: Projetar [cenas personalizadas do](~/apps-in-teams-meetings/teams-together-mode.md) modo Juntos para Teams reuniões.
 * **Editor de Cartões Adaptáveis**: Crie e visualize Cartões Adaptáveis para incluir com seus aplicativos.
-* **plataforma de identidade da Microsoft gerenciamento**: registre seus aplicativos com o Azure Active Directory (Azure AD) para ajudar os usuários a entrar e fornecer acesso a APIs.
+* **plataforma de identidade da Microsoft gerenciamento**: registre seus aplicativos com Azure Active Directory para ajudar os usuários a entrar e fornecer acesso a APIs.
 
 ## <a name="see-also"></a>Confira também
 

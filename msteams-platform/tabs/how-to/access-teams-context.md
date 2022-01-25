@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216101"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212416"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -24,7 +24,7 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo com o usuário ou a equipe especificado.
-* Você inicia um fluxo de autenticação Azure Active Directory (AAD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
+* Você inicia um fluxo de autenticação Azure Active Directory ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
 
 Para obter mais informações, [consulte authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -44,12 +44,12 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 
 * {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
 * {subEntityId}: A ID fornecida ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico nesta guia. Isso deve ser usado para restaurar para um estado específico dentro de uma entidade; por exemplo, rolar para ou ativar uma parte específica do conteúdo.
-* {loginHint}: um valor adequado como uma dica de logon para AAD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
+* {loginHint}: Um valor adequado como uma dica de logon para o Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
 * {userPrincipalName}: o Nome principal do usuário atual no locatário atual.
-* {userObjectId}: A ID do objeto AAD do usuário atual no locatário atual.
+* {userObjectId}: A ID do objeto do Azure AD do usuário atual no locatário atual.
 * {theme}: O tema atual da interface do usuário (UI), como `default` , `dark` ou `contrast` .
 * {groupId}: A ID do grupo Office 365 no qual a guia reside.
-* {tid}: A AAD ID de locatário do usuário atual.
+* {tid}: ID do locatário do Azure AD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como languageId-countryId(en-us).
 
 > [!NOTE]

@@ -1,25 +1,25 @@
 ---
-title: Adicionar autenticação ao seu Teams bot
+title: Adicionar autenticação ao seu bot do Teams
 author: surbhigupta
-description: Como adicionar autenticação OAuth a um bot Microsoft Teams usando AAD. Saiba como criar, implantar e integrar bots habilitados para autenticação.
+description: Como adicionar autenticação OAuth a um bot no Microsoft Teams usando o Azure AD. Saiba como criar, implantar e integrar bots habilitados para autenticação.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifesto do bot do registro do canal do bot do grupo de recursos
-ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 6ca9706dc946fcd98f573b9f7cdb05368156184d
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569522"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212493"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu Teams bot
+# <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu bot do Teams
 
 Há momentos em que você pode precisar criar bots no Microsoft Teams que podem acessar recursos em nome do usuário, como um serviço de email.
 
 Este artigo demonstra como usar a autenticação do Azure Bot Service v4 SDK, com base no OAuth 2.0. Isso facilita o desenvolvimento de um bot que pode usar tokens de autenticação com base nas credenciais do usuário. A chave em tudo isso é o uso de **provedores de identidade**, como veremos mais adiante.
 
-O OAuth 2.0 é um padrão aberto para autenticação e autorização usadas pelo Azure Active Directory (Azure AD) e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
+OAuth 2.0 é um padrão aberto para autenticação e autorização usada por Azure Active Directory e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
 
 Consulte [OAuth 2 Simplificado para](https://aka.ms/oauth2-simplified) um entendimento básico e [OAuth 2.0](https://oauth.net/2/) para a especificação completa.
 
@@ -146,9 +146,9 @@ A imagem a seguir exibe a seleção correspondente na página de recursos:
     1. **URL de logon**. Insira `https://login.microsoftonline.com` .
     1. **ID do** locatário , insira a ID de Diretório **(locatário)** que você gravou anteriormente para seu aplicativo de identidade do Azure ou **comum,** dependendo do tipo de conta com suporte selecionado ao criar o aplicativo do provedor de identidade. Para decidir qual valor atribuir siga estes critérios:
 
-        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
+        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo do Azure AD. Esse será o locatário associado aos usuários que podem ser autenticados.
 
-        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o AAD aplicativo verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
+        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o aplicativo do Azure AD verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
 
     h. Para **URL do Recurso,** insira `https://graph.microsoft.com/` . Isso não é usado no exemplo de código atual.  
     i. Deixar **escopos em** branco. A imagem a seguir é um exemplo:
@@ -175,9 +175,9 @@ A imagem a seguir exibe a seleção correspondente na página de recursos:
     1. **URL Exchange token.** Deixe em branco.
     1. **ID do** locatário , insira a ID de Diretório **(locatário)** que você gravou anteriormente para seu aplicativo de identidade do Azure ou **comum,** dependendo do tipo de conta com suporte selecionado ao criar o aplicativo do provedor de identidade. Para decidir qual valor atribuir siga estes critérios:
 
-        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo AAD. Esse será o locatário associado aos usuários que podem ser autenticados.
+        - Se você selecionou contas somente neste diretório organizacional *(somente Microsoft -* Locatário único) ou Contas em qualquer diretório *organizacional(Microsoft AAD directory - multi locatário)* insira a **ID** de locatário que você gravou anteriormente para o aplicativo do Azure AD. Esse será o locatário associado aos usuários que podem ser autenticados.
 
-        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o AAD aplicativo verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
+        - Se você selecionou Contas em qualquer diretório organizacional (qualquer diretório AAD - Contas da Microsoft de vários locatários  e pessoais, *por exemplo, Skype, Xbox, Outlook)* insira a palavra comum em vez de uma ID de locatário. Caso contrário, o aplicativo do Azure AD verificará por meio do locatário cuja ID foi selecionada e excluirá contas pessoais da Microsoft.
 
     1. Para **Escopos,** insira uma lista delimitada por espaço de permissões gráficas que este aplicativo exige, por exemplo: User.Read User.ReadBasic.All Mail.Read 
 

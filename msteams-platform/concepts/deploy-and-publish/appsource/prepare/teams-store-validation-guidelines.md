@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: HT
+ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768277"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212121"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -271,7 +271,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 * Seu manifesto deve estar em conformidade com um esquema de manifesto divulgado publicamente. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md). Não envie seu aplicativo usando uma versão prévia do manifesto.
 * Se seu aplicativo incluir um bot ou uma extensão de mensagens, os detalhes no manifesto do aplicativo deverão ser consistentes com os metadados do Bot Framework, incluindo o nome do bot, o logotipo, o link da política de privacidade e o link de termos de serviço.
-* Se o seu aplicativo usa o Azure Active Directory (Azure AD) para autenticação, inclua a ID do aplicativo (cliente) do Azure AD no manifesto. Para saber mais, confira a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do Aplicativo do Azure AD (cliente) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Ícones do aplicativo
 
@@ -1423,7 +1423,7 @@ Se o seu aplicativo usa as APIs de feed de [atividades fornecidas pelo Microsoft
 
 O Programa de Conformidade dos Aplicativos do Microsoft 365 tem como objetivo ajudar as organizações a avaliarem e gerenciarem riscos através da avaliação de informações de segurança e conformidade do seu aplicativo. Se você publicar um aplicativo na loja do Teams, precisará concluir os seguintes níveis do programa: 
 
-  * **Verificação do Editor**: ajuda os administradores e usuários finais a entenderem a autenticidade dos desenvolvedores de aplicativos que se integram à plataforma de identidade da Microsoft. Quando concluído, um emblema azul **verificado** é exibido na caixa de diálogo de consentimento do Azure Active Directory (Azure Active Directory) e em outras telas. Para obter mais informações, consulte [Marcar seu aplicativo como verificado pelo editor](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Verificação do Editor**: ajuda os administradores e usuários finais a entenderem a autenticidade dos desenvolvedores de aplicativos que se integram à plataforma de identidade da Microsoft. Quando concluído, um selo **verificado** azul é exibido na caixa de diálogo Azure Active Directory consentimento e outras telas. Para obter mais informações, consulte [Marcar seu aplicativo como verificado pelo editor](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::

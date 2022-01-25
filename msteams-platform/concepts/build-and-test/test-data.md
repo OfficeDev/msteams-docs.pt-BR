@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888409"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212556"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
@@ -168,7 +168,7 @@ Por padrão, somente administradores globais ou Teams de serviço podem carregar
 
             $creds = Get-Credential
 
-            # Connecting to AAD PowerShell
+            # Connecting to Azure AD PowerShell
             Connect-AzureAD -Credential $creds | Out-Null
 
             # Connect to Microsoft Teams PowerShell

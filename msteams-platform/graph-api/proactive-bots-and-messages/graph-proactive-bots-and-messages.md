@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Instalação proativa de chat de mensagens do teams Graph
-ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185419"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212402"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 
@@ -39,14 +39,14 @@ Permissões de tipo de recurso do Microsoft Graph [TeamsAppInstallation](/graph/
 
 Para usar essas permissões, você deve adicionar uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
-* **id**: Sua Azure Active Directory (AAD) ID do aplicativo.
+* **id**: Sua Azure Active Directory ID do aplicativo.
 * **resource**: A URL de recurso do aplicativo.
 
 > [!NOTE]
 >
 > * Seu bot requer permissões de aplicativo e não delegadas pelo usuário, pois a instalação é para outras pessoas.
 >
-> * Um AAD administrador de locatário deve [conceder explicitamente permissões a um aplicativo](/graph/security-authorization#grant-permissions-to-an-application). Depois que o aplicativo receber permissões, todos os membros do AAD locatário receberão as permissões concedidas.
+> * Um administrador de locatário do Azure AD deve [conceder explicitamente permissões a um aplicativo](/graph/security-authorization#grant-permissions-to-an-application). Depois que o aplicativo recebe permissões, todos os membros do locatário do Azure AD receberão as permissões concedidas.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Habilitar a instalação proativa de aplicativos e mensagens
 

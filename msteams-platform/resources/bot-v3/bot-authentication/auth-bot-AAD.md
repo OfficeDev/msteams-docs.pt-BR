@@ -1,22 +1,22 @@
 ---
 title: Autenticação para bots usando Azure Active Directory
 description: Descreve a autenticação do Azure AD no Teams e como usá-la em seus bots
-keywords: bots de autenticação do teams AAD
+keywords: bots de autenticação do teams do Azure AD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 7456580b3c0cd45ed9f2032e08068d542986cfea
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720068"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212395"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar um usuário em um Microsoft Teams bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Há muitos serviços que você pode querer consumir no seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter o acesso. Os Serviços incluem Facebook, Twitter e Teams. Os usuários de Teams têm informações de perfil de usuário armazenadas no Azure Active Directory (Azure AD) usando o Microsoft Graph. Este tópico se concentra na autenticação usando o Azure AD para obter acesso.
+Há muitos serviços que você pode querer consumir no seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter o acesso. Os Serviços incluem Facebook, Twitter e Teams. Os usuários de Teams têm informações de perfil de usuário armazenadas em Azure Active Directory usando o Microsoft Graph. Este tópico se concentra na autenticação usando o Azure AD para obter acesso.
 OAuth 2.0 é um padrão aberto para autenticação usado pelo Azure AD e muitos outros provedores de serviços. Noções básicas sobre o OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos a seguir usam o fluxo de Concessão Implícita OAuth 2.0 para, eventualmente, ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
 
 O fluxo de autenticação descrito neste tópico é semelhante às guias, exceto que as guias podem usar o fluxo de autenticação baseada na Web, e os bots exigem que a autenticação seja controlada do código. Os conceitos neste tópico também serão úteis ao implementar a autenticação da plataforma móvel.

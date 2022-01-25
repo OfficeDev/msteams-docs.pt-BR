@@ -6,16 +6,16 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1440af663d0c3d26bdad968a7e0549c51d28dccb
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9a39b84c3cfa94c410df5774d4a177535e1cfdd6
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768396"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212346"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colabore Teams projeto usando Teams Toolkit
 
-Vários desenvolvedores podem trabalhar em conjunto para depurar, provisionar e implantar para o mesmo projeto TeamsFx, mas exige a definição manual das permissões corretas do Teams App e do AAD App.Teams Toolkit suportam o recurso de colaboração para permitir que desenvolvedores e proprietários do projeto convidem outros desenvolvedores ou colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto teamsFx.
+Vários desenvolvedores podem trabalhar juntos para depurar, provisionar e implantar para o mesmo projeto TeamsFx, mas exige a definição manual das permissões corretas do Teams App e do Azure AD App.Teams Toolkit oferece suporte ao recurso de colaboração para permitir que desenvolvedores e proprietários do projeto convidem outros desenvolvedores ou colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto teamsFx.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -23,8 +23,8 @@ Vários desenvolvedores podem trabalhar em conjunto para depurar, provisionar e 
 
     Para provisionar recursos de nuvem, você deve ter as seguintes contas. Para obter mais informações, consulte Prepare [accounts to build Teams app](accounts.md).
 
-    * Assinatura do Microsoft 365
-    * Azure com assinatura válida
+  * Assinatura do Microsoft 365
+  * Azure com assinatura válida
 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
@@ -77,8 +77,8 @@ Não é possível remover colaboradores diretamente da Teams Toolkit extensão. 
   1. Vá para Teams Portal do Desenvolvedor e selecione seu aplicativo Teams por nome ou ID do aplicativo.
   2. Selecione **Proprietários** no painel esquerdo.
   3. Selecione e remova o colaborador.
-  4. Vá para [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecione **Registro de aplicativo** no painel esquerdo e encontre seu AAD App.
-  5. Selecione **Proprietários** no painel esquerdo na AAD gerenciamento de aplicativos.
+  4. Vá para [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecione **Registro de aplicativo** no painel esquerdo e encontre o aplicativo do Azure AD.
+  5. Selecione **Proprietários** no painel esquerdo na página de gerenciamento de aplicativos do Azure AD.
   6. Selecione e remova o colaborador.
 
 > [!NOTE]
@@ -87,6 +87,6 @@ Não é possível remover colaboradores diretamente da Teams Toolkit extensão. 
 
 ## <a name="see-also"></a>Confira também
 
-* [Provisione recursos de nuvem](provision.md)
-* [Implantar Teams aplicativo na nuvem](deploy.md)
+* [Provisionar recursos de nuvem](provision.md)
+* [Implantar o aplicativo Teams na nuvem](deploy.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)

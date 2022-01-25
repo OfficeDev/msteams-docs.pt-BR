@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 828b3fa2886782d8e7a28f506bbb6526b4b9c848
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081069"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212058"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams guia pessoal entre Microsoft 365
 
@@ -25,7 +25,7 @@ Atualizar seu aplicativo pessoal para ser executado no Outlook e Office Home env
 > * Atualizar o manifesto do aplicativo
 > * Atualizar suas referências do SDK do TeamsJS 
 > * Alterar seus headers de Política de Segurança de Conteúdo
-> * Atualizar seu AAD registro de aplicativo para SSO (registro único)
+> * Atualizar o registro do aplicativo do Azure AD para SSO (Single Sign On)
 
 Testar seu aplicativo exigirá as seguintes etapas:
 
@@ -63,7 +63,7 @@ Você precisará usar o [](/microsoftteams/platform/resources/schema/manifest-sc
 
 Você pode usar o Teams Toolkit para atualizar o manifesto do aplicativo ou aplicar as alterações manualmente:
 
-# <a name="teams-toolkit"></a>[Teams Toolkit](#tab/manifest-teams-toolkit)
+# <a name="teams-toolkit"></a>[Kit de ferramentas do Teams](#tab/manifest-teams-toolkit)
 
 1. Abra a *paleta Comando:*`Ctrl+Shift+P`
 1. Execute o `Teams: Upgrade Teams manifest to support Outlook and Office apps` comando e selecione o arquivo de manifesto do aplicativo. As alterações serão feitas no local.
@@ -120,9 +120,9 @@ Se seu aplicativo [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/C
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-aad-app-registration-for-sso"></a>Atualizar AAD registro de aplicativo para SSO
+## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
 
-Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo AAD do aplicativo de tabulação no portal de registros de *aplicativos* do locatário.
+Azure Active Directory Logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do aplicativo de tabulação no portal de registros de *aplicativos* do locatário.
 
 1. Entre no [portal do Azure](https://portal.azure.com) com sua conta de locatário de área de reserva.
 1. Abra a **folha Registros de** aplicativo.

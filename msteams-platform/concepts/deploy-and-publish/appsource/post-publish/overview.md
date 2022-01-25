@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246082"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212409"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Manter seu aplicativo Microsoft Teams publicado
+# <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
 Com seu aplicativo listado na Microsoft Teams, comece a pensar em como você manterá o aplicativo em frente e aumentará os downloads e o uso.
 
@@ -44,7 +44,7 @@ No entanto, se você fizer qualquer uma das seguintes alterações em seu aplica
 * Adicione uma guia pessoal.
 * Adicione um canal e uma guia de grupo.
 * Adicione um conector.
-* Modificar configurações relacionadas ao seu Azure Active Directory (registro do aplicativo do Azure AD). Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modificar configurações relacionadas ao registro Azure Active Directory aplicativo. Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrigir problemas com seu aplicativo publicado
 

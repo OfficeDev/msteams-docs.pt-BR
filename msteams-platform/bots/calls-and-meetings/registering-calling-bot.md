@@ -1,17 +1,17 @@
 ---
-title: Registrar chamadas e reuniões bot para Microsoft Teams
+title: Registrar chamadas e reuniões do bot do Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um novo bot ou adicionar recurso de chamada e adicionar permissões de gráfico.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 2d2a3411d8db09c6bdf2199efb9cb5e721701135
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062506"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212486"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões bot para Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
 Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot Microsoft Teams com os seguintes recursos extras usados para registrar o bot:
 
@@ -78,13 +78,13 @@ A tabela a seguir fornece uma lista de permissões de aplicativo para reuniões 
 
 ### <a name="assign-permissions"></a>Atribuir permissões
 
-Você deve configurar as permissões de aplicativo para seu bot antecipadamente usando o portal do [Azure](https://aka.ms/aadapplist) se preferir usar o ponto de extremidade [Azure Active Directory (AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Você deve configurar as permissões de aplicativo para seu bot antecipadamente usando o portal do [Azure](https://aka.ms/aadapplist) se preferir usar o ponto de extremidade [Azure Active Directory V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obter consentimento do administrador de locatários
 
-Para aplicativos que usam o ponto de extremidade AAD V1, um administrador de locatários pode consentir com as permissões do aplicativo usando o portal do [Azure](https://portal.azure.com) quando seu aplicativo estiver instalado em sua organização. Como alternativa, você pode fornecer uma experiência de assinatura em seu aplicativo por meio do qual os administradores podem consentir com as permissões configuradas. Depois que o consentimento do administrador for registrado AAD, seu aplicativo poderá solicitar tokens sem precisar solicitar consentimento novamente.
+Para aplicativos que usam o ponto de extremidade do Azure AD V1, um administrador de locatários pode consentir com as permissões do aplicativo usando o portal do [Azure](https://portal.azure.com) quando seu aplicativo estiver instalado em sua organização. Como alternativa, você pode fornecer uma experiência de assinatura em seu aplicativo por meio do qual os administradores podem consentir com as permissões configuradas. Depois que o consentimento do administrador for registrado pelo Azure AD, seu aplicativo poderá solicitar tokens sem precisar solicitar consentimento novamente.
 
-Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal do Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade AAD `/adminconsent` V2. Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador.](/graph/uth-v2-service#3-get-administrator-consent)
+Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal do Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade do Azure AD `/adminconsent` V2. Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Para construir a URL de consentimento do administrador do locatário, é necessário um URI de redirecionamento configurado ou URL de resposta no portal de [registro do aplicativo.](https://apps.dev.microsoft.com/) Para adicionar URLs de resposta para seu bot, acesse seu registro de bot, escolha **Opções Avançadas**  >  **Editar Manifesto do Aplicativo.** Adicione sua URL de redirecionamento à `replyUrls` coleção.

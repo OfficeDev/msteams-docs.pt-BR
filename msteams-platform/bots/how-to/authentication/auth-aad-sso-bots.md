@@ -1,22 +1,22 @@
 ---
 title: Suporte de logon único para bots
 description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de visita ou o serviço de bot do Azure com o suporte ao cartão OAuth.
-keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, AAD
+keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: f9934d29b9c340b7e3543420a212ae9304ba22e6
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: 7ce49841522187570944d304224dba557d38ccc6
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608444"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212570"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
-A autenticação de entrada única no Azure Active Directory (AAD) atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisam fornecer consentimento novamente em outro dispositivo à medida que estão conectados automaticamente. Guias e bots têm fluxo semelhante para suporte a SSO. Mas o [bot solicita tokens](#request-a-bot-token) [e recebe respostas](#receive-the-bot-token) com um protocolo diferente.
+A autenticação de entrada única no Azure Active Directory atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisam fornecer consentimento novamente em outro dispositivo à medida que estão conectados automaticamente. Guias e bots têm fluxo semelhante para suporte a SSO. Mas o [bot solicita tokens](#request-a-bot-token) [e recebe respostas](#receive-the-bot-token) com um protocolo diferente.
 
 >[!NOTE]
-> OAuth 2.0 é um padrão aberto para autenticação e autorização usada por AAD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
+> OAuth 2.0 é um padrão aberto para autenticação e autorização usada pelo Azure AD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
 
 ## <a name="bot-sso-at-runtime"></a>SSO de bot em tempo de execução
 
@@ -39,9 +39,9 @@ As etapas a seguir ajudam você com tokens de aplicativo de bot e autenticação
     * Forneça o consentimento, se necessário.
     * Lidar com a autenticação avançada, como a autenticação de dois fatores.
 
-1. Teams solicita o token de aplicativo bot AAD ponto de extremidade do usuário atual.
+1. Teams solicita o token de aplicativo bot do ponto de extremidade do Azure AD para o usuário atual.
 
-1. AAD envia o token de aplicativo bot para o Teams aplicativo.
+1. O Azure AD envia o token de aplicativo bot para o aplicativo Teams aplicativo.
 
 1. Teams envia o token para o bot como parte do objeto value retornado pela invocação com **logon/tokenExchange**.
   
@@ -51,17 +51,17 @@ As etapas a seguir ajudam você com tokens de aplicativo de bot e autenticação
   
 As etapas a seguir orientam você a desenvolver o Teams SSO:
 
-1. [Registre seu aplicativo por meio do portal AAD .](#register-your-app-through-the-aad-portal)
+1. [Registre seu aplicativo por meio do portal do Azure AD.](#register-your-app-through-the-azure-ad-portal)
 1. [Atualize seu Teams de aplicativo para seu bot.](#update-your-teams-application-manifest-for-your-bot)
 1. [Adicione o código para solicitar e receber um token de bot](#add-the-code-to-request-and-receive-a-bot-token).
 
-### <a name="register-your-app-through-the-aad-portal"></a>Registre seu aplicativo por meio do portal AAD site
+### <a name="register-your-app-through-the-azure-ad-portal"></a>Registrar seu aplicativo por meio do portal do Azure AD
 
-As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes ao [fluxo de SSO da guia](../../../tabs/how-to/authentication/auth-aad-sso.md). As etapas a seguir orientam você a registrar seu aplicativo:
+As etapas para registrar seu aplicativo por meio do portal do Azure AD são semelhantes ao [fluxo de SSO da guia](../../../tabs/how-to/authentication/auth-aad-sso.md). As etapas a seguir orientam você a registrar seu aplicativo:
 
 1. Registre um novo aplicativo no [portal Azure Active Directory – Registros de Aplicativos.](https://go.microsoft.com/fwlink/?linkid=2083908)
 
-1. Selecione **Novo Registro**. A **página Registrar um aplicativo** é exibida.
+1. Selecione **Novo registro**. A página **Registrar um aplicativo** é exibida.
 
     ![Novo registro](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
@@ -69,7 +69,7 @@ As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes 
 
    > [!NOTE]
    >
-   > Os usuários não são solicitados a consentir e são concedidos tokens de acesso imediatamente, se o aplicativo AAD estiver registrado no mesmo locatário em que eles estão fazendo uma solicitação de autenticação no Teams. No entanto, os usuários devem fornecer consentimento para as permissões, se o aplicativo AAD estiver registrado em um locatário diferente.
+   > Os usuários não são solicitados a consentir e são concedidos tokens de acesso imediatamente, se o aplicativo do Azure AD estiver registrado no mesmo locatário em que eles estão fazendo uma solicitação de autenticação no Teams. No entanto, os usuários devem fornecer consentimento para as permissões, se o aplicativo do Azure AD estiver registrado em um locatário diferente.
 
     * Insira **Nome** para seu aplicativo.
     * Selecione **Tipos de conta com suporte,** como locatário único ou multitenente.
@@ -81,16 +81,14 @@ As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes 
 1. Copie o valor da **ID do Aplicativo (cliente).**
 1. Em **Gerenciar**, vá para **Expor uma API**
 
-
-   > [!TIP] 
+   > [!TIP]
    > Para atualizar o manifesto do aplicativo mais tarde, salve o valor de **ID do** aplicativo (cliente).
 
-
    > [!IMPORTANT]
-   > * Se você estiver criando um bot autônomo, insira o URI de ID do Aplicativo como `api://botid-{YourBotId}` . Aqui, **YourBotId** é sua AAD ID do aplicativo.
-   > * Se você estiver criando um aplicativo com um bot e uma guia, insira o URI de ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+   > * Se você estiver criando um bot autônomo, insira o URI de ID do Aplicativo como `api://botid-{YourBotId}` . Aqui *YourBotId* é sua ID de aplicativo do Azure AD.
+   > * Se você estiver criando um aplicativo com um bot e uma guia, insira o URI de ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Selecione as permissões que seu aplicativo precisa para o ponto de extremidade AAD e, opcionalmente, para o Microsoft Graph.
+1. Selecione as permissões que seu aplicativo precisa para o ponto de extremidade do Azure AD e, opcionalmente, para o Microsoft Graph.
 1. [Conceda permissões](/azure/active-directory/develop/v2-permissions-and-consent) para Teams desktop, web e aplicativos móveis.
 1. Selecione **Adicionar um escopo**.
 1. No painel que solicita, digite `access_as_user` como o nome do **escopo**.
@@ -101,14 +99,14 @@ As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes 
    > Você deve estar ciente das seguintes restrições importantes:
    >
    > * Somente as permissões de API microsoft Graph nível do usuário, como email, perfil, offline_access e OpenId são suportadas. Se você precisar de acesso a outros escopos Graph microsoft, como ou , consulte Obter um token de acesso com Graph `User.Read` `Mail.Read` [permissões](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
-   > * O nome de domínio do seu aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo AAD aplicativo.
+   > * O nome de domínio do aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo do Azure AD.
    > * No momento, não há suporte para vários domínios por aplicativo.
    > * Os aplicativos que usam `azurewebsites.net` o domínio não têm suporte porque é comum e pode ser um risco de segurança.
 
 1. No Who **pode consentir?**, insira **Administradores e usuários**.
 1. Insira os seguintes detalhes para configurar os prompts de consentimento do administrador e do usuário com valores apropriados para o `access_as_user` escopo.
     * **Nome de exibição de** consentimento do administrador : Teams pode acessar o perfil do usuário.
-    * **Descrição do** consentimento do administrador : Teams pode chamar as APIs web do aplicativo como o usuário atual.
+    * **Descrição de consentimento do administrador**: o Teams pode chamar as APIs da web do aplicativo como o usuário atual.
     * **Nome de exibição** de consentimento do usuário : Teams pode acessar seu perfil e fazer solicitações em seu nome.
     * **Descrição do** consentimento do usuário : Teams pode chamar as APIs desse aplicativo com os mesmos direitos que você tem.
 
@@ -126,8 +124,8 @@ As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes 
     ![aplicativo cliente](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
 
 1. Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado criado na etapa anterior:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`para Teams aplicativo móvel ou desktop.
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`para Teams web.
+    * Aplicativo da área de trabalho ou móvel `1fec8e78-bce4-4aaf-ab1b-5451cc387264` para Teams.
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` para aplicativo web do Teams.
 
     ![id do cliente](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
@@ -143,7 +141,7 @@ As etapas para registrar seu aplicativo por meio do portal AAD são semelhantes 
 1. Insira os **URIs de redirecionamento** para seu aplicativo.
 
    >[!NOTE]
-   > Esse URI deve ser um nome de domínio totalmente qualificado. Ele também é seguido pela rota da API para a qual uma resposta de autenticação é enviada. Se você estiver seguindo qualquer uma das amostras Teams, o URI será `https://token.botframework.com/.auth/web/redirect` . Para obter mais informações, consulte [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+   > Esse URI deve ser um nome de domínio totalmente qualificado. Ele também é seguido pela rota da API para a qual uma resposta de autenticação é enviada. Se você estiver seguindo qualquer uma das amostras do Teams, o URI será `https://token.botframework.com/.auth/web/redirect`. Para obter mais informações, confira [Fluxo de código de autorização OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
     ![Redirecionar uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
 
@@ -187,7 +185,7 @@ As etapas a seguir orientarão você a atualizar o portal do Azure com a conexã
 1. As etapas a seguir orientarão você a concluir o formulário **Nova Configuração de** Conexão:
 
    >[!NOTE]
-   > **A concessão** implícita pode ser necessária no AAD aplicativo.
+   > **A concessão** implícita pode ser necessária no aplicativo do Azure AD.
 
     * Insira **Nome** na página **Nova Configuração de** Conexão.
 
@@ -195,10 +193,10 @@ As etapas a seguir orientarão você a atualizar o portal do Azure com a conexã
     > O **Nome** é referenciado às configurações do código de serviço de bot na *etapa 5* do [SSO bot no tempo de execução](#bot-sso-at-runtime).
 
     * No drop-down **Provedor de** Serviços, selecione **Azure Active Directory v2**.
-    * Insira as credenciais do cliente, como **id do cliente** e **segredo** do cliente para o AAD aplicativo.
-    * Para a **URL token Exchange**, use o valor de escopo definido em Atualizar seu manifesto do aplicativo Teams para seu [bot](#update-your-teams-application-manifest-for-your-bot). A URL Exchange Token indica ao SDK que esse aplicativo AAD está configurado para SSO.
+    * Insira as credenciais do cliente, como **id do cliente** e **segredo do cliente** para o aplicativo do Azure AD.
+    * Para a **URL token Exchange**, use o valor de escopo definido em Atualizar seu manifesto do aplicativo Teams para seu [bot](#update-your-teams-application-manifest-for-your-bot). A URL Exchange Token indica ao SDK que esse aplicativo do Azure AD está configurado para SSO.
     * Na **ID do Locatário,** insira *comum*.
-    * Adicione todos os **Escopos configurados** ao especificar permissões para APIs de downstream para seu AAD aplicativo. Com a ID do Cliente e o segredo do cliente fornecido, o armazenamento de tokens troca o token por um token de gráfico com permissões definidas.
+    * Adicione todos os **Escopos configurados** ao especificar permissões para APIs de downstream para seu aplicativo do Azure AD. Com a ID do Cliente e o segredo do cliente fornecido, o armazenamento de tokens troca o token por um token de gráfico com permissões definidas.
     * Selecione **Salvar**.
     * Selecione **Aplicar**.
    
@@ -227,8 +225,8 @@ Se o aplicativo contiver um bot e uma guia, use o seguinte código para adiciona
 
 **webApplicationInfo** é o pai dos seguintes elementos:
 
-* **id** - A ID do cliente do aplicativo. É a ID do aplicativo que você obteve como parte do registro do aplicativo com AAD. Não compartilhe essa ID de aplicativo com vários Teams aplicativos. Crie um novo aplicativo AAD para cada manifesto de aplicativo que usa `webApplicationInfo` .
-* **resource** - O domínio e o subdomínio do seu aplicativo. É o mesmo URI, incluindo o protocolo que você registrou ao criar seu em Registrar seu aplicativo por meio do `api://` `scope` portal AAD [.](#register-your-app-through-the-aad-portal) Não inclua o `access_as_user` caminho em seu recurso. A parte de domínio deste URI deve corresponder ao domínio e aos subdomas usados nas URLs do seu manifesto Teams aplicativo.
+* **id** - A ID do cliente do aplicativo. É a ID do aplicativo que você obteve como parte do registro do aplicativo no Azure AD. Não compartilhe essa ID de aplicativo com vários Teams aplicativos. Crie um novo aplicativo do Azure AD para cada manifesto de aplicativo que usa `webApplicationInfo` .
+* **resource** - O domínio e o subdomínio do seu aplicativo. É o mesmo URI, incluindo o protocolo que você registrou ao criar seu em Registrar seu aplicativo por meio do `api://` `scope` portal do [Azure AD](#register-your-app-through-the-azure-ad-portal). Não inclua o `access_as_user` caminho em seu recurso. A parte de domínio deste URI deve corresponder ao domínio e aos subdomas usados nas URLs do seu manifesto Teams aplicativo.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Adicionar o código para solicitar e receber um token de bot
 
@@ -383,7 +381,7 @@ Abra [Teams exemplo de auth](https://github.com/microsoft/BotBuilder-Samples/tre
 4. Feche o manifesto com as imagens de perfil e instale-o Teams.
 
 ## <a name="code-sample"></a>Exemplo de código
-|**Nome do exemplo** | **Descrição** |**.NET** | 
+|**Nome de exemplo** | **Descrição** |**.NET** | 
 |----------------|-----------------|--------------|
 |SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 
