@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059690"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212016"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -607,11 +607,11 @@ O objeto é uma matriz com todos os elementos do tipo `string`.
 
 **Opcional**—objeto
 
-Forneça a sua ID do aplicativo do Azure Active Directory (AAD) e informações do Microsoft Graph para ajudar os usuários a entrarem no seu aplicativo de forma transparente. Se o seu aplicativo estiver registrado no AAD, você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento no centro de administração do Teams.
+Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsoft Graph para ajudar os usuários a entrarem facilmente no seu aplicativo. Se seu aplicativo estiver registrado no Microsoft Azure AD, você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento no centro de administração do Teams.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|ID do aplicativo AAD do aplicativo. Essa ID deve ser um GUID.|
+|`id`|string|36 caracteres|✔|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, https://notapplicable para evitar uma resposta de erro. |
 |`applicationPermissions`|matriz de cadeia de caracteres|128 caracteres||Especifique o [consentimento específico do recurso](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) granular.|
 
