@@ -4,18 +4,18 @@ author: surbhigupta12
 description: Receber todas as mensagens de canal com permissões RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e499b414a91f815bfe84172a8559f3b7cfd6d839
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 520b409b7c3335bf7c936efb4e0bdb46f9d94a89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212451"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281900"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 
 O modelo de permissões de consentimento específico do recurso (RSC), originalmente desenvolvido para APIs Teams Graph, é estendido para cenários de bot.
 
-Usando o RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens de usuário nos canais padrão em uma equipe sem @mentioned. Essa funcionalidade é habilitada especificando a permissão no manifesto de um `ChannelMessage.Read.Group` aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
+Usando o RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens de usuário nos canais padrão em uma equipe sem @mentioned. Essa funcionalidade é habilitada especificando `ChannelMessage.Read.Group` a permissão no manifesto de um aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
 
 Para obter mais informações sobre a habilitação do RSC para seu aplicativo, consulte [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
@@ -25,12 +25,12 @@ A `ChannelMessage.Read.Group` permissão RSC é estendida para bots. Com o conse
 
 > [!NOTE]
 > * Os serviços que precisam de acesso a todos os Teams de mensagens devem usar as APIs Graph que também fornecem acesso a dados arquivados em canais e chats.
-> * Os bots devem usar a permissão RSC adequadamente para criar e aprimorar a experiência envolvente para os usuários na equipe ou eles não passarão na aprovação `ChannelMessage.Read.Group` do armazenamento. A descrição do aplicativo deve incluir como o bot usa os dados lidos.
-> * A permissão RSC pode não ser usada por bots como uma maneira de extrair `ChannelMessage.Read.Group` grandes quantidades de dados do cliente. 
+> * Os bots devem usar a `ChannelMessage.Read.Group` permissão RSC adequadamente para criar e aprimorar a experiência envolvente para os usuários na equipe ou eles não passarão na aprovação do armazenamento. A descrição do aplicativo deve incluir como o bot usa os dados lidos.
+> * A `ChannelMessage.Read.Group` permissão RSC pode não ser usada por bots como uma maneira de extrair grandes quantidades de dados do cliente. 
 
 ## <a name="update-app-manifest"></a>Atualizar manifesto do aplicativo
 
-Para que o bot receba todas as mensagens de canal, o RSC deve ser configurado no manifesto do aplicativo Teams com a permissão `ChannelMessage.Read.Group` especificada na `webApplicationInfo` propriedade.
+Para que o bot receba todas as mensagens de canal, o RSC `ChannelMessage.Read.Group` deve ser configurado no manifesto do aplicativo Teams com a permissão especificada na `webApplicationInfo` propriedade.
 ![Atualizar manifesto do aplicativo](~/bots/how-to/conversations/Media/appmanifest.png)
 
 Veja a seguir um exemplo do `webApplicationInfo` objeto:
@@ -93,7 +93,7 @@ O código a seguir fornece um exemplo de permissões RSC:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
 }
 ```
 
