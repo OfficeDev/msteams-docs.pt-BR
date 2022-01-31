@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: as guias do teams de saída da mensagem acionável do webhook verificam o webhook
-ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059746"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281760"
 ---
 # <a name="create-outgoing-webhook"></a>Criar Webhook de saída
 
@@ -25,8 +25,8 @@ A tabela a seguir fornece os recursos e a descrição do Webhook de Saída:
 | ------- | ----------- |
 | Configuração com escopo| Os webhooks são definidos no nível da equipe. O processo de configuração obrigatório para cada um adiciona um Webhook de Saída. |
 | Mensagens reativas| Os usuários devem usar @mencionar para que o webhook receba as mensagens. Atualmente, os usuários só podem enviar mensagens a um Webhook de Saída em canais públicos e não dentro do escopo pessoal ou privado. |
-|Troca de mensagens HTTP padrão|As respostas aparecerão na mesma cadeia da mensagem de solicitação original e podem incluir qualquer conteúdo da mensagem do Bot Framework, por exemplo, rich text, imagens, cartões e emojis. Embora os Webhooks de Saída possam usar cartões, eles não podem usar nenhuma ação de cartão, exceto `openURL`.|
-| Suporte ao método de API do Teams|Webhooks de saída enviam um HTTP POST para um serviço Web e obtém uma resposta. Eles não podem acessar nenhuma outra API, como recuperar a lista de participantes ou lista de canais em uma equipe.|
+|Troca de mensagens HTTP padrão|As respostas aparecem na mesma cadeia da mensagem de solicitação original e podem incluir qualquer conteúdo de mensagem do Bot Framework. Por exemplo, rich text, imagens, cartões e emojis. Embora os Webhooks de Saída possam utilizar cartões, eles não podem utilizar nenhuma ação de cartão, exceto para `openURL`.|
+| Suporte ao método de API do Teams|Webhooks de saída enviam um HTTP POST para um serviço Web e obtém uma resposta. Eles não podem acessar nenhuma outra API, como recuperar a lista de participantes ou a lista de canais em uma equipe.|
 
 ## <a name="create-outgoing-webhooks"></a>Criar Webhooks de saída
 
@@ -61,7 +61,7 @@ Criar Webhooks de Saída e adicionar bots personalizados ao Teams.
 
     ![criar Webhooks de saída](~/assets/images/outgoingwebhook.png)
 
-Uma caixa de diálogo [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) é exibida. É um token de segurança usado para autenticar chamadas entre o Teams e o serviço externo designado.
+Uma caixa de diálogo [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) é exibida. É um token de segurança usado para autenticar chamadas entre o Teams e o serviço externo designado. O token de segurança do HMAC não expira e é exclusivo para cada configuração.
 
 >[!NOTE]
 > O Webhook de Saída estará disponível para os usuários da equipe somente se a URL for válida e os tokens de autenticação do servidor e do cliente forem iguais. Por exemplo, um handshake HMAC.
@@ -69,7 +69,7 @@ Uma caixa de diálogo [Hash-based Message Authentication Code (HMAC)](https://se
 O cenário a seguir fornece os detalhes para adicionar um Webhook de Saída:
 
 * Cenário: enviar notificações de status de alteração por push em um servidor de banco de dados de canal do Teams para seu aplicativo.
-* Exemplo: você tem um aplicativo de linha de negócios que acompanha todas as operações CRUD, como criar, ler, atualizar e excluir. Essas operações são feitas nos registros de funcionários por usuários de RH do canal do Teams em uma locação do Office 365.
+* Exemplo: Você tem um aplicativo de linha de negócios que rastreia todas as operações CRUD (criar, ler, atualizar e excluir). Essas operações são feitas nos registros de funcionários por usuários de RH do canal do Teams em uma locação do Office 365.
 
 # <a name="url-json-payload"></a>[Carga JSON da URL](#tab/urljsonpayload)
 **Crie uma URL no servidor do aplicativo para aceitar e processar uma solicitação POST com uma carga JSON**
@@ -215,7 +215,7 @@ var responseMsg = JSON.stringify({
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|**Nome do exemplo** | **Descrição** | **.NET** | **Node.js** |
+|**Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Webhooks de Saída | Exemplos de criação de bots personalizados para uso no Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 

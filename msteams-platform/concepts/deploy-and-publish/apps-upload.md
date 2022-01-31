@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059606"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281753"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
@@ -38,6 +38,9 @@ Você pode fazer o sideload do aplicativo para uma equipe, chat, reunião ou par
 1. Selecione o arquivo .zip do pacote do aplicativo. Uma caixa de diálogo de instalação é exibida.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando um exemplo de diálogo de instalação de um aplicativo do Teams.":::
 1. Adicione seu aplicativo ao Teams.
+
+> [!NOTE]
+> Ao adicionar o bot ao Microsoft Teams, você não pode obter a localidade do Microsoft Teams porque a atividade do bot não é iniciada pela ação do usuário, como o envio de uma mensagem; portanto, `turnContext.Activity.GetLocale();` retorna um valor nulo.
 
 ## <a name="troubleshoot-upload-issues"></a>Solução de problemas de carregamento
 
