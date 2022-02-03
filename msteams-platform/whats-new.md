@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080957"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214339"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+|25/01/2022| CART API | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#cart-api)|
 |19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Seletor de Pessoas nos Cartões Adaptáveis (visualização do desenvolvedor para dispositivos móveis e GA para área de trabalho) | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Kit de ferramentas do Teams para Visual Studio Code > [Fundamentos do Kit de ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) |
@@ -38,6 +39,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|25/01/2022| CART API | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#cart-api)|
 |19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Seletor de Pessoas em Cartões Adaptáveis para área de trabalho | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 
@@ -76,7 +78,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 |05/10/2021| Ocultar aplicativo Teams até que o Administrador permita não ocultar o aplicativo.| Projetar seu aplicativo > [Ocultar aplicativo Teams até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |05/10/2021| Planeje seus aplicativos para Teams em dispositivo móvel. | Fundamentos do aplicativo > [Planeje guias responsivas do para Teams celular](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |04/10/2021| Novos Portal do Desenvolvedor para o Teams introduzidos para gerenciar seus aplicativos do Teams | Ferramentas e SDK > [Portal do Desenvolvedor para Teams](concepts/build-and-test/teams-developer-portal.md) |
-|21/09/2021|O Teams dá suporte à ID de Objeto do AAD e ao UPN na menção do usuário para bots e Webhooks de entrada | • Criar cartões e módulos de tarefa > Criar cartões > [ID do objeto AAD e UPN na menção do usuário](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Criar cartões e módulos de tarefas > Criar cartões > [Cartões – Visão geral](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|21/09/2021|O Teams dá suporte à ID de Objeto do Azure Active Directory e AO UPN na menção do usuário para bots e Webhooks de entrada | • Criar cartões e módulos de tarefas > criar cartões > [ID de Objeto do Azure Active Directory e UPN na menção do usuário](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Criar cartões e módulos de tarefas > Criar cartões > [Cartões – Visão geral](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |16/08/2021| Suporte para validação de entrada Cartões Adaptáveis (v1.3 para todos os recursos) e Ações Universais (v1.4 para cartões enviados por bot) | • Cartões adaptáveis > Cartões de criação > [Validação de entrada](/adaptive-cards/authoring-cards/input-validation)</br> • Criar cartões e módulos de tarefa > Criar cartões > Ações universais para Cartões Adaptáveis > [Ações Universais para Cartões Adaptáveis v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |30/08/2021| O recurso de cenas do Modo Juntos Personalizado combina os participantes em uma única cena virtual e coloca seus fluxos de vídeo em estações pré-determinadas | Criar aplicativos para reuniões do Teams > [Cenas do modo conferência personalizadas](~/apps-in-teams-meetings/teams-together-mode.md) |
 |25/08/2021| Introduzido o guia passo a passo para criar um Teams com SSO (sign-on único).| Adicionar autenticação > Bots > [Guia passo a passo para criar bot do Teams com SSO](sbs-bots-with-sso.yml) |
@@ -206,7 +208,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 | 29/05/2018 | Há suporte para cartões adaptáveis no Teams. | [Ações de cartão adaptável no Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 17/04/2018 | replyToID foi adicionado ao conteúdo para `Invoke` e `MessageBack` ações de cartão. Isso é especialmente útil se você precisar atualizar a mensagem de origem da ação do cartão. | [Ações do cartão](~/concepts/cards/cards-actions.md)|
 | 12/04/2018 | Este tópico foi adicionado para controlar as alterações na interface de programação do Teams e neste conjunto de documentação. | [Novidades](~/whats-new.md)|
-| 10/04/2018 | As URLs de autenticação foram alteradas para usar consistentemente a ID de locatário no caminho. | [Fluxo de autenticação para Guias](~/concepts/authentication/auth-flow-tab.md), [Autenticação de guia do AAD](~/concepts/authentication/auth-tab-AAD.md)|
+| 10/04/2018 | As URLs de autenticação foram alteradas para usar consistentemente a ID de locatário no caminho. | [Fluxo de autenticação para Guias](~/concepts/authentication/auth-flow-tab.md), [Autenticação da Guia do Azure Active Directory](~/concepts/authentication/auth-tab-AAD.md)|
 | 06/04/2018 | Foram adicionadas diretrizes de design para usar a Caixa de Comando. |[Caixa de comando](~/resources/design/framework/command-box.md)|
 | 02/04/2018 | Usando bots para enviar notificações para seu aplicativo. |[Bots somente de notificação](~/concepts/bots/bots-notification-only.md)|
 | 27/03/2018 | Documentação expandida para mensagens proativas. |[Iniciar uma conversa](./concepts/bots/bot-conversations/bots-conv-proactive.md)|

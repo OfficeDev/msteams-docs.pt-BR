@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: e87c167495700a44084fb4984696ad2df9b7c099
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 97803e89c225c45aee82c6969c8168dec7bf5cac
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059592"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212500"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -43,7 +43,7 @@ Você pode criar guias com Cartões Adaptáveis centralizar todos os recursos de
 Os recursos da guia são os seguintes:
 
 * Se uma guia for adicionada a um aplicativo que também tem um bot, o bot também será adicionado à equipe.
-* Reconhecimento da Azure Active Directory (AAD) do usuário atual.
+* Reconhecimento da ID do Azure Active Directory do usuário atual.
 * Reconhecimento de localidade para o usuário indicar o idioma `en-us`.
 * Funcionalidade de SSO (logon único), se houver suporte.
 * Capacidade de usar bots ou notificações de aplicativo para vincular profundamente à guia ou a uma sub-entidade dentro do serviço, por exemplo, um item de trabalho individual.

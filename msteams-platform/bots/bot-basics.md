@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: evento de canal de consentimento de cartão de bot da estrutura de atividades
-ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 54583fedadbd5a9791daaebf6df842b83aff1f6f
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889129"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214326"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
@@ -33,6 +33,68 @@ Na classe Teams manipulador de atividades, há dois manipuladores Teams de ativi
 
 Para implementar sua lógica para Teams de atividades específicas, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Não há implementação base para esses manipuladores, portanto, você deve adicionar a lógica que deseja em sua substituição.
 
+Os trechos de código para Teams de atividade:
+
+`OnTeamsChannelCreatedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersAddedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+        {
+            // Code logic here
+        }
+```
+
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o `onMessage` manipulador de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `dispatchConversationUpdateActivity` . O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
@@ -40,6 +102,68 @@ Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma ativida
 Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `dispatchConversationUpdateActivity` e `onInvokeActivity` . `dispatchConversationUpdateActivity`encaminha todas as atividades de atualização de conversa `onInvokeActivity` e encaminha todas as Teams atividades de invocação.
 
 Para implementar sua lógica para Teams de atividades específicas, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot.](#bot-logic) Defina sua lógica de bot para esses manipuladores e, em seguida, certifique-se de `next()` chamar no final. Ao chamar `next()` você, certifique-se de que o próximo manipulador seja executado.
+
+Os trechos de código para Teams de atividade:
+
+`OnTeamsChannelCreatedAsync`
+
+```javascript
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```javascript
+
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
 
 # <a name="python"></a>[Python](#tab/python)
 
