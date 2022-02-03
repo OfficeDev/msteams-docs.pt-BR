@@ -92,7 +92,7 @@
   items:
     - name: Kit de ferramentas do Teams para Visual Studio Code
       items:
-        - name: Conceitos básicos do Kit de Ferramentas do Teams
+        - name: Visão geral do Kit de ferramentas do Microsoft Teams
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Criar novo projeto
           href: toolkit/create-new-project.md
@@ -465,6 +465,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Manter seu aplicativo publicado
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Monetize seu aplicativo
+      items:
+        - name: Visão Geral
+          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: Incluir uma oferta SaaS com seu aplicativo
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
 - name: Manifesto do aplicativo
