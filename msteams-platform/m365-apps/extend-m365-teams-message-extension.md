@@ -4,12 +4,12 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: f019f82c4e617e3cf6aa7caa499e125dc448b1c3
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
+ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281739"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62345377"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma Teams de mensagens em Microsoft 365
 
@@ -91,6 +91,28 @@ Para que os usuários interajam com sua extensão de mensagens Outlook, você pr
 1. Confirme se seu Outlook está listado junto com Microsoft Teams no painel **Canais do** bot:
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Painel canais bot do Azure listando canais de Microsoft Teams e Outlook":::
+
+## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
+
+> [!NOTE]
+> Você pode ignorar a etapa se estiver usando Teams de pesquisa de extensão de [mensagens, pois](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) o cenário não envolve Azure Active Directory (AAD) autenticação de Sign-On única.
+
+Azure Active Directory Logor único (SSO) para extensões de mensagens funciona da mesma maneira no Outlook como no [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), no entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do bot no portal de registros de *aplicativos* do locatário.
+
+1. Entre no [portal do Azure](https://portal.azure.com) com sua conta de locatário de área de reserva.
+1. Abrir **registros de aplicativos**.
+1. Selecione o nome do aplicativo para abrir o registro do aplicativo.
+1. Selecione  **Expor uma API** (em *Gerenciar*).
+
+Na seção **Aplicativos cliente autorizados** , verifique se todos os seguintes valores `Client Id` estão listados:
+
+|Microsoft 365 cliente | ID do cliente |
+|--|--|
+|Teams desktop e mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+|Outlook para área de trabalho | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000000 |
+|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-messaging-extension-in-teams"></a>Fazer sideload da extensão de mensagens atualizada no Teams
 
