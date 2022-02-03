@@ -6,14 +6,27 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 33c67cc3ddd41d3c32ef95fe3b3360a0ad7f04fa
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 45f5d58708b3ec7e452d864c6dfb6fcc79b4a48d
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768535"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323180"
 ---
-# <a name="teamsfx-command-line-interface"></a>Interface de linha de comando TeamsFx
+# <a name="teamsfx-library"></a>Biblioteca TeamsFx
+
+Microsoft Teams Framework (TeamsFx) é uma biblioteca encapsulando padrões comuns de integração e funcionalidade (como acesso simplificado à Microsoft Identity). Você pode criar aplicativos para Microsoft Teams com configuração zero.
+
+Aqui está uma lista dos principais recursos do TeamsFx:
+
+- **Colaboração teamsFx**: permitir que os desenvolvedores e o proprietário do projeto convidem outros colaboradores para o projeto TeamsFx. Você pode colaborar para depurar e implantar um projeto TeamsFx.
+
+- **CLI do TeamsFx**: acelera o Teams de aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
+
+- **SDK do TeamsFx**: O TeamsFx Software Development Kit (SDK) é a biblioteca de código principal do TeamsFx encapsulando a autenticação simples para o cliente e o código do lado do servidor personalizado para desenvolvedores Teams do Teams.
+
+
+## <a name="teamsfx-command-line-interface"></a>Interface de linha de comando TeamsFx
 
 A CLI teamsFx é uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos. Ele tem como objetivo fornecer uma experiência centrada no teclado durante a criação de Teams aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
 
@@ -23,7 +36,7 @@ Para saber mais, confira:
 
 ## <a name="get-started"></a>Introdução
 
-Instale `teamsfx-cli` e execute para verificar todos os comandos `npm` `teamsfx -h` disponíveis:
+Instale `teamsfx-cli` e `npm` execute para `teamsfx -h` verificar todos os comandos disponíveis:
 
 ```bash
   npm install -g @microsoft/teamsfx-cli
@@ -50,7 +63,7 @@ Instale `teamsfx-cli` e execute para verificar todos os comandos `npm` `teamsfx 
 
 ## `teamsfx new`
 
-Por padrão, entra no modo interativo e orienta você pelo processo de criação de um novo Teams `teamsfx new` aplicativo. Você também pode trabalhar com o modo não interativo definindo `--interactive` o sinalizador como `false` .
+Por padrão, `teamsfx new` entra no modo interativo e orienta você pelo processo de criação de um novo Teams aplicativo. Você também pode trabalhar com o modo não interativo definindo o `--interactive` sinalizador como `false`.
 
 | `teamsFx new` Comando | Descrição |
 |:----------------  |:-------------|
@@ -62,18 +75,18 @@ Por padrão, entra no modo interativo e orienta você pelo processo de criação
 | Parâmetro | Requisito | Descrição |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Sim| Nome do seu Teams aplicativo.|
-|`--interactive`| Não | Selecione as opções interativamente. As opções são `true` e e o valor padrão é `false` `true` .|
-|`--capabilities`| Não| Escolha Teams recursos do aplicativo, as várias opções `tab` são `bot` , e `messaging-extension` `tab-spfx` . O valor padrão é `tab`.|
-|`--programming-language`| Não| Linguagem de programação para o projeto. As opções são `javascript` ou e o valor padrão é `typescript` `javascript` .|
+|`--interactive`| Não | Selecione as opções interativamente. As opções são e `true` e `false` o valor padrão é `true`.|
+|`--capabilities`| Não| Escolha Teams recursos do aplicativo, as várias opções são `tab`, `bot`e `messaging-extension` `tab-spfx`. O valor padrão é `tab`.|
+|`--programming-language`| Não| Linguagem de programação para o projeto. As opções são `javascript` ou e `typescript` o valor padrão é `javascript`.|
 |`--folder`| Não | Project diretório. Uma sub pasta com o nome do aplicativo é criada neste diretório. O valor padrão é `./`.|
-|`--spfx-framework-type`| Não| Aplicável se `Tab(SPfx)` a funcionalidade estiver selecionada. Estrutura frontend. As opções são `none` e , e o valor padrão é `react` `none` .|
+|`--spfx-framework-type`| Não| Aplicável se `Tab(SPfx)` a funcionalidade estiver selecionada. Estrutura frontend. As opções são `none` e `react`, e o valor padrão é `none`.|
 |`--spfx-web part-name`| Não | Aplicável se `Tab(SPfx)` a funcionalidade estiver selecionada. O valor padrão é "helloworld".|
 |`--spfx-web part-desp`| Não | Aplicável se `Tab(SPfx)` a funcionalidade estiver selecionada. O valor padrão é "helloworld description". |
-|`--azure-resources`| Não| Aplicável se `tab` contiver funcionalidade. Adicione recursos do Azure ao seu projeto. As várias opções são `sql` (Banco de Dados SQL do Azure) e `function` (Funções do Azure). |
+|`--azure-resources`| Não| Aplicável se contiver `tab` funcionalidade. Adicione recursos do Azure ao seu projeto. As várias opções são `sql` (Banco de Dados SQL do Azure) e `function` (Funções do Azure). |
 
 ### <a name="scenarios-for-teamsfx-new"></a>Cenários para `teamsfx new`
 
-Você pode usar o modo interativo para criar um Teams aplicativo. Os cenários de controle de todos os parâmetros `teamsfx new` com são os seguinte:
+Você pode usar o modo interativo para criar um Teams aplicativo. Os cenários de controle de todos os parâmetros com `teamsfx new` são os seguinte:
 
 #### <a name="tab-app-hosted-on-spfx-using-react"></a>Aplicativo tab hospedado no SPFx usando React
 
@@ -95,7 +108,7 @@ teamsfx new --interactive false app-name newapp --azure-resources sql function -
 
 ## `teamsfx account`
 
-Gerenciar contas de serviço na nuvem. Os serviços de nuvem com suporte `Azure` são e `Microsoft 365` .
+Gerenciar contas de serviço na nuvem. Os serviços de nuvem com suporte são `Azure` e `Microsoft 365`.
 
 | `teamsFx account` Comando | Descrição |
 |:----------------  |:-------------|
@@ -139,7 +152,7 @@ Adicione novos recursos ao aplicativo atual.
 
 ## `teamsfx resource`
 
-Gerencie os recursos no aplicativo atual. Os `<resource-type>` suportes são: `azure-sql` e `azure-function` `azure-apim` .
+Gerencie os recursos no aplicativo atual. Os suportes `<resource-type>` são: `azure-sql`e `azure-apim` `azure-function` .
 
 | `teamsFx resource` Comando  | Descrição |
 |:----------------  |:-------------|
@@ -162,12 +175,12 @@ Gerencie os recursos no aplicativo atual. Os `<resource-type>` suportes são: `a
 |`--function-name`| Sim | Forneça um nome de função. O valor padrão é `getuserprofile`. |
 
 > [!NOTE]
-> O nome da função é verificado como SQL e precisa ser acessado a partir da carga de trabalho do servidor. Se seu projeto não contém `Azure Functions` , crie um para você.
+> O nome da função é verificado como SQL e precisa ser acessado a partir da carga de trabalho do servidor. Se seu projeto não contém `Azure Functions`, crie um para você.
 
 ### <a name="parameters-for-teamsfx-resource-add-azure-apim"></a>Parâmetros para `teamsfx resource add azure-apim`
 
 > [!TIP]
-> As opções são efetivadas quando você tenta usar uma instância `APIM` existente. Por padrão, você não precisa especificar nenhuma opção e ela cria uma nova instância durante a `teamsfx provision` etapa.
+> As opções são efetivadas quando você tenta usar uma instância `APIM` existente. Por padrão, você não precisa especificar nenhuma opção e ela cria uma nova instância durante `teamsfx provision` a etapa.
 
 | Parâmetro  | Requisito | Descrição |
 |:----------------  |:-------------|:-------------|
@@ -177,7 +190,7 @@ Gerencie os recursos no aplicativo atual. Os `<resource-type>` suportes são: `a
 |`--function-name`| Sim | Forneça um nome de função. O valor padrão é `getuserprofile`. |
 
 > [!NOTE]
-> `Azure API Management` precisa trabalhar com `Azure Functions` . Se seu projeto não contém `Azure Functions` , você pode criar um.
+> `Azure API Management` precisa trabalhar com `Azure Functions`. Se seu projeto não contém `Azure Functions`, você pode criar um.
 
 ## `teamsfx provision`
 
@@ -195,7 +208,7 @@ Provisione os recursos de nuvem no aplicativo atual.
 
 ## `teamsfx deploy`
 
-Esse comando é usado para implantar o aplicativo atual. Por padrão, ele implanta todo o projeto, mas também é possível implantar parcialmente. As várias opções são `frontend-hosting` `function` , , e `apim` `teamsbot` `spfx` .
+Esse comando é usado para implantar o aplicativo atual. Por padrão, ele implanta todo o projeto, mas também é possível implantar parcialmente. As várias opções são `frontend-hosting`, `function`, `apim`e `teamsbot``spfx`.
 
 ### <a name="parameters-for-teamsfx-deploy"></a>Parâmetros para `teamsfx deploy`
 
@@ -203,7 +216,7 @@ Esse comando é usado para implantar o aplicativo atual. Por padrão, ele implan
 |:----------------  |:-------------|:-------------|
 |`--env`| Sim| Selecione um ambiente existente para o projeto. |
 |`--open-api-document`| Não | Aplicável quando há recurso APIM no projeto. O caminho do arquivo de documento da API aberto. |
-|`--api-prefix`| Não | Aplicável quando há recurso APIM no projeto. O prefixo de nome da API. O nome exclusivo padrão da API é `{api-prefix}-{resource-suffix}-{api-version}` . |
+|`--api-prefix`| Não | Aplicável quando há recurso APIM no projeto. O prefixo de nome da API. O nome exclusivo padrão da API é `{api-prefix}-{resource-suffix}-{api-version}`. |
 |`--api-version`| Não | Aplicável quando há recurso APIM no projeto. A versão da API. |
 
 ## `teamsfx validate`
@@ -234,11 +247,11 @@ Visualize o aplicativo atual de local ou remoto.
 
 | Parâmetro  | Requisito | Descrição |
 |:----------------  |:-------------|:-------------|
-|`--local`| Não | Visualize o aplicativo de local. `--local` é exclusivo com `--remote` . |
-|`--remote`| Não | Visualize o aplicativo do controle remoto. `--remote` é exclusivo com `--local` . |
-|`--env`| Não | Selecione um ambiente existente para o projeto quando o `--remote` parâmetro for anexado. |
+|`--local`| Não | Visualize o aplicativo de local. `--local` é exclusivo com `--remote`. |
+|`--remote`| Não | Visualize o aplicativo do controle remoto. `--remote` é exclusivo com `--local`. |
+|`--env`| Não | Selecione um ambiente existente para o projeto quando o parâmetro `--remote` for anexado. |
 |`--folder`| Não | Project diretório raiz. O valor padrão é `./`. |
-|`--browser`| Não | O navegador para abrir Teams cliente Web. As opções são `chrome` , e como navegador padrão do sistema e o valor é `edge` `default` `default` . |
+|`--browser`| Não | O navegador para abrir Teams cliente Web. As opções são `chrome`, e `edge` como `default` navegador padrão do sistema e o valor é `default`. |
 |`--browser-arg`| Não | Argumento para passar para o navegador, requer --browser, pode ser usado várias vezes, por exemplo, --browser-args="--guest" |
 |`--sharepoint-site`| Não | SharePoint URL do site, como `{your-tenant-name}.sharepoint.com` para SPFx visualização remota do projeto. |
 
@@ -265,7 +278,7 @@ teamsfx preview --remote --browser edge
 ```
 
 > [!NOTE]
-> Os logs dos serviços em segundo plano, como React são salvos em `~/.fx/cli-log/local-preview/` .
+> Os logs dos serviços em segundo plano, como React são salvos em `~/.fx/cli-log/local-preview/`.
 
 ## `teamsfx config`
 
@@ -282,11 +295,11 @@ Gerencie os dados de configuração no escopo do usuário ou no escopo do projet
 |:----------------  |:-------------|:-------------|
 |`--env`| Sim | Selecione um ambiente existente para o projeto. |
 |`--folder`| Não | Project diretório. Isso é usado para obter ou definir a configuração do projeto. O valor padrão é `./`. |
-|`--global`| Não | Lidar com a configuração. Se isso for verdadeiro, o escopo será limitado ao escopo do usuário em vez do escopo do projeto. O valor padrão é `false`. Atualmente, as configurações globais com suporte `telemetry` incluem , `validate-dotnet-sdk` , , `validate-func-core-tools` `validate-node` . |
+|`--global`| Não | Lidar com a configuração. Se isso for verdadeiro, o escopo será limitado ao escopo do usuário em vez do escopo do projeto. O valor padrão é `false`. Atualmente, as configurações globais com suporte incluem `telemetry`, `validate-dotnet-sdk`, , `validate-func-core-tools``validate-node`. |
 
 ### <a name="scenerios-for-teamsfx-config"></a>Scenerios para `teamsfx config`
 
-Os segredos `.userdata` no arquivo são criptografados e podem `teamsfx config` ajudá-lo a exibir ou atualizar os valores.
+Os segredos `.userdata` no arquivo são criptografados e `teamsfx config` podem ajudá-lo a exibir ou atualizar os valores.
 
 #### <a name="stop-sending-telemetry-data"></a>Parar de enviar dados de telemetria
 
@@ -335,7 +348,7 @@ teamsfx config set fx-resource-aad-app-for-teams.clientSecret xxx --env dev
 
 ## `teamsfx permission`
 
-A CLI teamsFx fornece `teamsFx permission` comandos para o cenário de colaboração.
+A CLI teamsFx fornece comandos `teamsFx permission` para o cenário de colaboração.
 
 | `teamsFx permission` command | Descrição |
 |:------------------------------|-------------|
@@ -358,7 +371,7 @@ A CLI teamsFx fornece `teamsFx permission` comandos para o cenário de colabora�
 
 ### <a name="scenarios-for-teamsfx-permission"></a>Cenários para `teamsfx permission`
 
-As permissões para `TeamsFx` projetos são as seguinte:
+As permissões para projetos `TeamsFx` são as seguinte:
 
 #### <a name="grant-permission"></a>Conceder Permissão
 
@@ -372,7 +385,7 @@ Depois de receber a permissão necessária, o criador do projeto e os colaborado
 
 #### <a name="show-permission-status"></a>Mostrar Status da Permissão
 
-Project criadores e colaboradores podem usar o comando para exibir sua Microsoft 365 de conta `teamsfx permission status` para env específico:
+Project criadores e colaboradores podem usar `teamsfx permission status` o comando para exibir sua Microsoft 365 de conta para env específico:
 
 ```bash
 teamsfx permission status --env dev

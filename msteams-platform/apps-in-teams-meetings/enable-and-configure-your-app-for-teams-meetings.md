@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212023"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323173"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -21,11 +21,11 @@ Para habilitar seu aplicativo para reuniões Teams, atualize o manifesto do apli
 
 ### <a name="update-your-app-manifest"></a>Atualizar o manifesto do aplicativo
 
-Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativo usando `configurableTabs` `scopes` as matrizes , e `context` . O escopo define quem pode acessar e o contexto define onde seu aplicativo está disponível.
+Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativo usando `configurableTabs`as matrizes , `scopes`e `context` . O escopo define quem pode acessar e o contexto define onde seu aplicativo está disponível.
 
 > [!NOTE]
 > * Você deve atualizar o manifesto do aplicativo com o [esquema de manifesto](../resources/schema/manifest-schema-dev-preview.md).
-> * Aplicativos em reuniões `groupchat` exigem escopo. O `team` escopo funciona apenas para guias em canais.
+> * Aplicativos em reuniões exigem `groupchat` escopo. O `team` escopo funciona apenas para guias em canais.
 
 O manifesto do aplicativo deve incluir o seguinte trecho de código:
 
@@ -53,7 +53,7 @@ O manifesto do aplicativo deve incluir o seguinte trecho de código:
 
 ### <a name="context-property"></a>Propriedade Context
 
-A propriedade determina o que deve ser mostrado quando um usuário invoca um aplicativo em uma reunião, dependendo de onde o usuário `context` invoca o aplicativo. A guia `context` e `scopes` as propriedades permitem determinar onde seu aplicativo deve aparecer. As guias no `team` escopo ou podem ter mais de um `groupchat` contexto. A seguir estão os valores da propriedade da qual você pode usar todos ou `context` alguns dos valores:
+A `context` propriedade determina o que deve ser mostrado quando um usuário invoca um aplicativo em uma reunião, dependendo de onde o usuário invoca o aplicativo. A guia `context` e as `scopes` propriedades permitem determinar onde seu aplicativo deve aparecer. As guias no escopo ou `team` podem `groupchat` ter mais de um contexto. A seguir estão os valores da `context` propriedade da qual você pode usar todos ou alguns dos valores:
 
 |Valor|Descrição|
 |---|---|
@@ -62,7 +62,7 @@ A propriedade determina o que deve ser mostrado quando um usuário invoca um apl
 | **meetingChatTab** | Uma guia no header de um chat de grupo entre um conjunto de usuários para uma reunião agendada. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingDetailsTab** | Uma guia no header da exibição de detalhes da reunião do calendário. Você pode especificar **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingSidePanel** | Um painel na reunião foi aberto por meio da barra unificada (U-bar). |
-| **meetingStage** | Um aplicativo do `meetingSidePanel` pode ser compartilhado para o estágio de reunião. Você não pode usar esse aplicativo em clientes móveis ou Teams de sala. |
+| **meetingStage** | Um aplicativo do pode `meetingSidePanel` ser compartilhado para o estágio de reunião. Você não pode usar este aplicativo em clientes móveis ou de sala do Teams. |
 
 Depois de habilitar seu aplicativo para Teams reuniões, você deve configurar seu aplicativo antes de uma reunião, durante uma reunião e após uma reunião.
 
@@ -94,38 +94,38 @@ Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de 
 
 **Para adicionar um bot a uma reunião**
 
-Em um chat de reunião, insira a **@** chave e selecione Obter **bots**.
+Em um chat de reunião, insira a chave **@** e selecione **Obter bots**.
 
 > [!NOTE]
 > * A bolha de conteúdo publica um Cartão Adaptável ou um cartão simultaneamente no chat de reunião que os usuários podem acessar. Isso ajuda os usuários quando a reunião ou o aplicativo Teams é minimizado.
-> * A identidade do usuário deve ser confirmada usando [Guias SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
+> * A identidade do usuário deve ser confirmada usando [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova sondagem.
 > * As atribuições de função podem ser alteradas enquanto uma reunião está em andamento. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 ### <a name="during-a-meeting"></a>Durante uma reunião
 
-Durante uma reunião, você pode usar a caixa de diálogo ou a caixa de diálogo na reunião para `meetingSidePanel` criar experiências exclusivas para seus aplicativos.
+Durante uma reunião, você pode usar a caixa `meetingSidePanel` de diálogo ou a caixa de diálogo na reunião para criar experiências exclusivas para seus aplicativos.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
-O permite personalizar experiências em uma reunião que permite que organizadores e apresentadores tenham diferentes tipos de `meetingSidePanel` exibição e ações. No manifesto do aplicativo, você deve adicionar `meetingSidePanel` à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+O `meetingSidePanel` permite personalizar experiências em uma reunião que permite que organizadores e apresentadores tenham diferentes tipos de exibição e ações. No manifesto do aplicativo, você deve adicionar `meetingSidePanel` à matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
-Para usar a `userContext` API para rotear solicitações, [consulte Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obter mais informações, [consulte Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Para obter mais informações, consulte plataforma de identidade da Microsoft fluxo de código de autorização [do OAuth 2.0 e do OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+Para usar a `userContext` API para rotear solicitações, [consulte Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obter mais informações, [consulte Teams fluxo de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Para obter mais informações, [consulte plataforma de identidade da Microsoft fluxo de código de autorização do OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 A extensão de mensagens funciona conforme o esperado quando um usuário está em uma exibição de reunião. O usuário pode postar cartões de extensão de mensagem de composição. AppName in-meeting é uma dica de ferramenta que informa o nome do aplicativo na U-bar de reunião.
 
 > [!NOTE]
-> Use a versão 1.7.0 ou superior do [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)pois as versões anteriores a ele não suportam o painel lateral.
+> Use a versão 1.7.0 ou superior do [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), pois as versões anteriores a ele não suportam o painel lateral.
 
 #### <a name="in-meeting-dialog-box"></a>Caixa de diálogo na reunião
 
 A caixa de diálogo na reunião é usada para envolver os participantes durante a reunião e coletar informações ou comentários durante a reunião. Use a [`NotificationSignal`](API-references.md#notificationsignal-api) API para disparar uma notificação de bolha. Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser mostrado está hospedado.
 
-A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
+A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o método `submitTask` para enviar dados em um chat de reunião.
 
 > [!NOTE]
-> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, consulte Teams módulo de tarefa [do SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Se você quiser que seu aplicativo suporte usuários anônimos, a carga inicial de solicitação de invocação deve depender dos metadados de solicitação no `from.id` `from` objeto, não `from.aadObjectId` de metadados de solicitação. `from.id`é a ID do usuário `from.aadObjectId` e é Azure Active Directory ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, [consulte Teams módulo de tarefa do SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true).
+> * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é Azure Active Directory ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 
@@ -141,10 +141,10 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
-* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token de reunião em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar o token de reunião em sua Teams reunião.
 * Siga o [guia passo a passo para](../sbs-meetings-sidepanel.yml) gerar o sidepanel de reunião em sua Teams reunião.
-* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar o exibição do estágio de reunião em sua Teams reunião.
-* Siga o [guia passo a passo](../sbs-meeting-content-bubble.yml) para gerar a bolha de conteúdo de reunião em sua reunião Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar o exibição do estágio de reunião em sua reunião Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meeting-content-bubble.yml) gerar a bolha de conteúdo de reunião em sua Teams reunião.
 
 ## <a name="next-step"></a>Próxima etapa
 
