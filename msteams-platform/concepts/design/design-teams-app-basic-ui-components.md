@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Componentes da interface do usuário fluent kit breadcrumb button card carousel dropdown coachmark picker pivot toggle tooltip
-ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 40a0c789275d98ab5bfbe74a61aa04a0e2daee32
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887494"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362960"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes básicos Fluent interface do usuário
 
@@ -21,14 +21,14 @@ As ilustrações nesta página mostram como os componentes são Teams padrão (c
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface do</a>usuário, o kit de interface do usuário Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
+Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface do</a> usuário, o kit de interface do usuário Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerta
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="Exemplo mostra um componente de interface do usuário de alerta." border="false":::
+:::image type="content" source="../../assets/images/components/alert-button.png" alt-text="Exemplo mostra um componente de interface do usuário de alerta." border="false":::
 
 ## <a name="button"></a>Botão
 

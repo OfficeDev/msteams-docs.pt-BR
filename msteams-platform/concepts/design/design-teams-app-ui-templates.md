@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948443"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362939"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -20,7 +20,7 @@ Projete seu Microsoft Teams aplicativo mais rápido com modelos de interface do 
 
 Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usando modelos de interface do usuário.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Pegue modelos de interface do usuário para seu design de aplicativo no kit de interface do usuário Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
@@ -46,9 +46,23 @@ Instale um aplicativo de exemplo para ver como os modelos de interface do usuár
 > [!div class="nextstepaction"]
 > [Obter o aplicativo de exemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
+## <a name="calendar"></a>Calendário
+
+No Teams, um calendário é onde um usuário visualiza, agenda e gerencia eventos futuros e passados para si ou para um grupo.
+
+### <a name="top-use-cases"></a>Principais casos de uso
+
+* Agendar reuniões e eventos
+* Obter lembretes das próximas reuniões e eventos
+* Exibir agendamentos
+
+### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Exemplo mostra um modelo de interface do usuário de calendário na área de trabalho." border="false":::
+
 ## <a name="dashboard"></a>Painel
 
-Um painel exibe diferentes tipos de conteúdo em um local central (Teams aplicativo pessoal ou guia). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
+Um painel exibe diferentes tipos de conteúdo em um local central (como um Teams ou guia pessoal). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -201,7 +215,7 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Configuração
+* Configurar
 * Integração
 * Experiências de primeira
 
