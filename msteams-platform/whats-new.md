@@ -4,13 +4,8 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214339"
 ---
+
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
 Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (GA) e na visualização do desenvolvedor.
@@ -22,7 +17,11 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
-|25/01/2022| CART API | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#cart-api)|
+|03/02/2022| Apresentado o manifesto do aplicativo versão 1.12 |  • Manifesto do aplicativo > [Esquema do manifesto de aplicativo](resources/schema/manifest-schema.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [Esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/02/2022 |Modo interativo para a janela de conteúdo compartilhado na reunião|• Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Teste de visualização para aplicativos monetizados (visualização do desenvolvedor)| Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03/02/2022| Fluxo de compras no aplicativo para a monetização de aplicativos (visualização do desenvolvedor) | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|25/01/2022| API de envio de legendas em tempo real | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Seletor de Pessoas nos Cartões Adaptáveis (visualização do desenvolvedor para dispositivos móveis e GA para área de trabalho) | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Kit de ferramentas do Teams para Visual Studio Code > [Fundamentos do Kit de ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) |
@@ -39,7 +38,8 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
-|25/01/2022| CART API | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > [Esquema do manifesto do aplicativo](resources/schema/manifest-schema.md) |
+|25/01/2022| API de envio de legendas em tempo real | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Seletor de Pessoas em Cartões Adaptáveis para área de trabalho | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 
@@ -72,7 +72,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 |25/10/2021| Atualizado o módulo Introdução à Documentação do Desenvolvedor do Microsoft Teams com nova estrutura e procedimentos em um guia passo a passo | Começar > [Introdução ao seu primeiro aplicativo do Teams](get-started/get-started-overview.md) |
 |21/10/2021| Adicionar um `registerOnFocused`API para guias ou aplicativos pessoais | Criar guias > Criar guias pessoais > [Adicionar `registerOnFocused` API para guias ou aplicativos pessoais](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20/10/2021| O estágio de reunião agora está disponível em GA. | Criar aplicativos para reuniões do Teams > [Habilitar e configurar seus aplicativos para reuniões do Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|20/10/2021| API de Detalhes da Reunião e eventos de reunião do Teams em tempo real | Criar aplicativos para reuniões do Teams > [Criar aplicativos para reuniões do Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|20/10/2021| API de detalhes da reunião e eventos de reuniões do Teams em tempo real. | Crie aplicativos para reuniões do Teams [Obtenha a API de detalhes da reunião](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Link de guias desdobradas e exibição de estágio. | Criar guias > [Link de guias desdobradas e exibição de estágio](tabs/tabs-link-unfurling.md) |
 |08/10/2021| Novas práticas recomendadas para criar Cartões Adaptáveis | Projetar seu aplicativo > Componentes da interface do usuário > [Fazendo o design de Cartões Adaptáveis para seu aplicativo Teams](task-modules-and-cards/cards/design-effective-cards.md) |
 |05/10/2021| Ocultar aplicativo Teams até que o Administrador permita não ocultar o aplicativo.| Projetar seu aplicativo > [Ocultar aplicativo Teams até que o administrador aprove](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
@@ -228,6 +228,10 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|02/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/02/2022 |Modo interativo para a janela de conteúdo compartilhado na reunião|• Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Teste de visualização para aplicativos monetizados| Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03/02/2022| Fluxo de compras no aplicativo para a monetização de aplicativos | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |17/01/2022| Seletor de Pessoas em cartões adaptáveis para dispositivos móveis  | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Kit de ferramentas do Teams para Visual Studio Code > [Fundamentos do Kit de ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) |
 |24/12/2021| Introduzido o guia passo a passo para conceder permissões de dispositivo Tab. | Fundamentos do aplicativo > Recursos do dispositivo > [Guia passo a passo para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |

@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363400"
 ---
+
 # <a name="in-app-purchases"></a>Compras no aplicativo
 
 Microsoft Teams fornecer APIs que você pode usar para implementar as compras no aplicativo para atualizar de aplicativos Teams gratuitos. A compra no aplicativo permite converter usuários de planos gratuitos para pagos diretamente de dentro de seu aplicativo.
@@ -106,6 +101,10 @@ O exemplo a seguir mostra os usuários para comprar planos de assinatura para um
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página inicial da assinatura." border="true":::
 
+## <a name="next-step"></a>Próxima etapa
+
+> [!div class="nextstepaction"]
+> [Teste de visualização para aplicativos monetizados](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>Confira também
 

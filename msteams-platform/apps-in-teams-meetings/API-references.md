@@ -6,13 +6,8 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação de contexto de usuário de api de usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 2335233db1c973ed134968c7192a32d4bf9b5a34
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362722"
 ---
+
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
 A extensibilidade da reunião fornece APIs para aprimorar a experiência de reunião. Você pode executar o seguinte com a ajuda das APIs listadas:
@@ -28,12 +23,12 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs Microsoft Team
 |[**Obter contexto do usuário**](#get-user-context-api)| Obter informações contextuais para exibir conteúdo relevante em uma Teams guia.| MSTC SDK|
 |[**Obter participante**](#get-participant-api)| Buscar informações do participante por meio da ID da reunião e da ID do participante. |MSBF SDK|
 |[**Enviar sinal de notificação**](#send-notification-signal-api)| Forneça sinais de reunião usando a API de notificação de conversa existente para chat usuário-bot e permite notificar a ação do usuário que mostra uma caixa de diálogo na reunião. |MSBF SDK|
-|[**Obter detalhes da reunião**](#get-meeting-details-api)| Obter metadados estáticos de uma reunião. |Bot SDK |
+|[**Obter detalhes da reunião**](#get-meeting-details-api)| Obter metadados estáticos de uma reunião. |MSBF SDK |
 |[**Enviar legendas em tempo real**](#send-real-time-captions-api)| Envie legendas em tempo real para uma reunião contínua. |MSTC SDK|
 |[**Compartilhar conteúdo do aplicativo em estágio**](#share-app-content-to-stage-api)| Compartilhe partes específicas do aplicativo para o estágio de reunião do painel do lado do aplicativo em uma reunião. |MSTC SDK|
 |[**Obter estado de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-state-api)| Buscar informações sobre o estado de compartilhamento de aplicativos no estágio de reunião. |MSTC SDK|
 |[**Obter recursos de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-capabilities-api)| Busque os recursos dos aplicativos para compartilhamento no estágio de reunião. |MSTC SDK|
-|[**Obter eventos de reunião Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Buscar eventos de reunião em tempo real, como início e hora de término reais.| Bot SDK|
+|[**Obter eventos de reunião Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Buscar eventos de reunião em tempo real, como início e hora de término reais.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
 
@@ -365,7 +360,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 } 
 ```
 
-## <a name="send-real-time-captions-api"></a>Enviar API de legendas em tempo real
+## <a name="send-real-time-captions-api"></a>API de envio de legendas em tempo real
 
 A API de legendas de envio em tempo real expõe um ponto de extremidade POST para Microsoft Teams legendas de conversão em tempo real de acesso à comunicação (CART), legendas fechadas do tipo humano. O conteúdo de texto enviado para esse ponto de extremidade aparece para usuários finais em uma reunião Microsoft Teams quando eles têm legendas habilitadas.
 
@@ -379,8 +374,8 @@ A URL cart inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|----|
-|**meetingId**| String | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%22%7d|
-|**token**| Cadeia de caracteres | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
+|**meetingId**| Cadeia de caracteres | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%22%7d|
+|**token**| String | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
 
 #### <a name="example"></a>Exemplo
 
@@ -486,7 +481,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
 
 ### <a name="example"></a>Exemplo
 

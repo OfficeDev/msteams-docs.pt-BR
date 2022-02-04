@@ -471,6 +471,10 @@
           href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: Incluir uma oferta SaaS com seu aplicativo
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+        - name: Teste de visualização para aplicativos monetizados
+          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+        - name: Compras no aplicativo
+          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
 - name: Manifesto do aplicativo
   items:
     - name: Esquema de manifesto do aplicativo
