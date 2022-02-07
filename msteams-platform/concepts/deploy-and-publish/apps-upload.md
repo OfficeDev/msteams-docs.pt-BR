@@ -5,13 +5,8 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281753"
 ---
+
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
 Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar publicar em sua organização ou na loja do Teams. Isso faz sentido nos seguintes cenários:
@@ -40,7 +35,7 @@ Você pode fazer o sideload do aplicativo para uma equipe, chat, reunião ou par
 1. Adicione seu aplicativo ao Teams.
 
 > [!NOTE]
-> Ao adicionar o bot ao Microsoft Teams, você não pode obter a localidade do Microsoft Teams porque a atividade do bot não é iniciada pela ação do usuário, como o envio de uma mensagem; portanto, `turnContext.Activity.GetLocale();` retorna um valor nulo.
+> `onInstallationUpdateActivityAsync()`método usado para obter Microsoft Teams Locale ao adicionar o bot ao Microsoft Teams.
 
 ## <a name="troubleshoot-upload-issues"></a>Solução de problemas de carregamento
 

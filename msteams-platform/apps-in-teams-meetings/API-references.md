@@ -26,8 +26,8 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs Microsoft Team
 |[**Obter detalhes da reunião**](#get-meeting-details-api)| Obter metadados estáticos de uma reunião. |MSBF SDK |
 |[**Enviar legendas em tempo real**](#send-real-time-captions-api)| Envie legendas em tempo real para uma reunião contínua. |MSTC SDK|
 |[**Compartilhar conteúdo do aplicativo em estágio**](#share-app-content-to-stage-api)| Compartilhe partes específicas do aplicativo para o estágio de reunião do painel do lado do aplicativo em uma reunião. |MSTC SDK|
-|[**Obter estado de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-state-api)| Buscar informações sobre o estado de compartilhamento de aplicativos no estágio de reunião. |MSTC SDK|
-|[**Obter recursos de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-capabilities-api)| Busque os recursos dos aplicativos para compartilhamento no estágio de reunião. |MSTC SDK|
+|[**Obter estado de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-state-api)| Busque informações sobre o estado de compartilhamento do aplicativo no estágio de reunião. |MSTC SDK|
+|[**Obter recursos de compartilhamento de estágio de conteúdo do aplicativo**](#get-app-content-stage-sharing-capabilities-api)| Busque os recursos do aplicativo para compartilhamento no estágio de reunião. |MSTC SDK|
 |[**Obter eventos de reunião Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Buscar eventos de reunião em tempo real, como início e hora de término reais.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
@@ -49,7 +49,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
 |**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. |
 
@@ -311,7 +311,7 @@ A tabela a seguir lista o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 ### <a name="example"></a>Exemplo
 
@@ -374,7 +374,7 @@ A URL cart inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|----|
-|**meetingId**| Cadeia de caracteres | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%22%7d|
+|**meetingId**| String | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%22%7d|
 |**token**| String | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
 
 #### <a name="example"></a>Exemplo
@@ -443,8 +443,8 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O *resultado* pode conter um valor verdadeiro, no caso de um compartilhamento bem-sucedido ou nulo quando o compartilhamento falhar.|
-|**appContentURL**| Cadeia de caracteres | Sim | A URL que será compartilhada no estágio.|
+|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O *resultado* pode conter um valor verdadeiro, no caso de um compartilhamento bem-sucedido ou nulo quando o compartilhamento falhar.|
+|**appContentURL**| String | Sim | A URL que será compartilhada no estágio.|
 
 ### <a name="example"></a>Exemplo
 
@@ -481,7 +481,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
+|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
 
 ### <a name="example"></a>Exemplo
 
@@ -521,7 +521,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O resultado pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
+|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O resultado pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
 
 ### <a name="example"></a>Exemplo
 
@@ -740,12 +740,12 @@ O código a seguir fornece um exemplo de carga de evento final de reunião:
 
 |Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Extensibilidade de reuniões | Microsoft Teams exemplo de extensibilidade de reunião para tokens de passagem. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Guia Detalhes na Reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com a Guia detalhes na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Exemplo de eventos de reunião|Exemplo de aplicativo para mostrar eventos de Teams reunião em tempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
-|Exemplo de recrutamento de reunião|Exemplo de aplicativo para mostrar a experiência de reunião para cenário de recrutamento.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
+|Exemplo de recrutamento de reunião|Exemplo de aplicativo para mostrar a experiência de reunião para cenário de recrutamento.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Instalação de aplicativo usando código QR|Exemplo de aplicativo que gera o código QR e instala o aplicativo usando o código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
 ## <a name="see-also"></a>Confira também

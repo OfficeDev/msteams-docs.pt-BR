@@ -1,18 +1,13 @@
 ---
 title: Teams Toolkit visão geral
 author: zyxiaoyuer
-description: Visão geral Teams Toolkit, instalação de Teams Toolkit e tour de Toolkit recursos
+description: 'Visão geral Teams Toolkit, instalação de Teams Toolkit e tour de Toolkit recursos'
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0a048e12167847c1cc34560531cba13da9d74f8f
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323159"
 ---
+
 # <a name="teams-toolkit-overview"></a>Teams Toolkit visão geral
 
 > [!NOTE]
@@ -70,6 +65,72 @@ Após Toolkit instalação, você verá a interface do usuário Teams Toolkit co
 Você pode selecionar **Início** Rápido para explorar o Teams Toolkit ou selecionar **Criar** um novo aplicativo Teams para criar um Teams projeto. Você pode exibir uma lista de todos os Toolkit ao criar ou abrir um projeto existente na Visual Studio Code sidebar.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="funções":::
+
+Vamos fazer um tour dos tópicos abordados neste documento:
+
+## <a name="accounts"></a>Contas
+
+Para desenvolver um Teams, você precisa de pelo menos uma Microsoft 365 com uma assinatura válida. Se você quiser hospedar seus recursos de back-end no Azure, uma conta do Azure também será necessária. Teams Toolkit oferece suporte à experiência integrada para entrar, provisionar e implantação para recursos do Azure. Você pode [criar uma conta gratuita do Azure](https://azure.microsoft.com/free/) antes de começar.
+
+## <a name="environment"></a>Ambiente
+
+Teams Toolkit ajuda você a criar e gerenciar vários ambientes, provisionar e implantar artefatos no ambiente de destino para Teams App.
+
+### <a name="teamsfx-collaboration"></a>Colaboração teamsFx
+
+Ele permite que os desenvolvedores e o proprietário do projeto convidem outros colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto teamsFx.
+
+## <a name="development"></a>Desenvolvimento
+
+Teams Toolkit ajuda você a criar e personalizar seu projeto de aplicativo Teams que torna o Teams de aplicativos mais simples.
+
+### <a name="create-a-new-teams-app"></a>Criar um novo Teams app
+
+Ele ajuda você a começar com Teams desenvolvimento de aplicativos criando um novo projeto Teams usando Teams Toolkit usando Criar novo projeto ou **Criar a partir de exemplos**.
+
+### <a name="add-capabilities"></a>Adicionar recursos
+
+Ele ajuda a adicionar outros recursos de Teams necessários Teams aplicativo durante o processo de desenvolvimento.
+
+### <a name="add-cloud-resources"></a>Adicionar recursos de nuvem
+
+Ele ajuda você a adicionar, opcionalmente, recursos de nuvem que se ajustam às suas necessidades de desenvolvimento.
+
+### <a name="edit-manifest-file"></a>Editar arquivo de manifesto 
+
+Ele ajuda você a editar a integração Teams aplicativo com Teams cliente.
+
+## <a name="deployment"></a>Implantação
+
+Durante ou após o desenvolvimento, certifique-se de provisionar, implantar e publicar Teams aplicativo antes de ser acessível aos usuários.
+
+### <a name="provision-in-the-cloud"></a>Provisionamento na nuvem
+
+Ele se integra ao gerenciador de recursos do Azure que permite provisionar recursos do Azure, que seu aplicativo precisa para abordagem de código.
+
+### <a name="deploy-to-the-cloud"></a>Implantar na nuvem
+
+ Ele ajuda você a implantar o código-fonte no Azure.
+
+### <a name="publish-to-teams"></a>Publicar no Teams
+
+Depois de criar o aplicativo, você pode distribuir seu aplicativo para escopos diferentes, como individual, equipe, organização ou qualquer pessoa. Publicar no Teams ajuda você a publicar seu aplicativo desenvolvido.
+
+### <a name="cicd-guide"></a>Guia de CI/CD
+
+Ele ajuda a automatizar seu fluxo de trabalho de desenvolvimento ao criar Teams aplicativo. O guia CI/CD fornece ferramentas e modelos para você começar a configurar pipelines ci ou CD.
+
+#### <a name="teamsfx-cli"></a>TeamsFx CLI
+
+É uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos e também permite cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
+
+#### <a name="teamsfx-sdk"></a>TeamsFx SDK
+
+Ele ajuda você a reduzir tarefas de implementação de identidade e acesso a recursos de nuvem para instruções de linha única com configuração zero.
+
+## <a name="help-and-feedback"></a>Ajuda e comentários
+
+Nesta seção, você pode encontrar a documentação e os recursos necessários. Você pode selecionar **Relatar problemas GitHub** no Teams Toolkit para obter **suporte rápido do especialista** em produtos. Navegue pelo problema antes de criar um novo ou visite a marca [StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) para enviar comentários.
 
 Vamos explorar Teams Toolkit recursos.
 

@@ -6,13 +6,8 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768368"
 ---
+
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK teamsFx para TypeScript ou JavaScript
 
 O TeamsFx tem como objetivo reduzir tarefas de implementação de identidade e acesso a recursos de nuvem para instruções de linha única com configuração zero.
@@ -21,7 +16,7 @@ Use a biblioteca para:
 
 - Acessar as principais funcionalidades no ambiente de cliente e servidor de maneira semelhante.
 - Escreva o código de autenticação do usuário de maneira simplificada.
- 
+
 ## <a name="get-started"></a>Introdução
 
 O SDK teamsFx é pré-configurado no projeto em scaffolded usando o TeamsFx toolkit ou CLI.
@@ -29,8 +24,8 @@ Para obter mais informações, [consulte Teams app project](https://github.com/O
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Node.js versão `10.x.x` ou posterior.
-- Se seu projeto instalou pacotes relacionados como dependências, verifique se eles são da `botbuilder` mesma versão e a versão é [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+- Node.js versão ou `10.x.x` posterior.
+- Se seu projeto instalou pacotes `botbuilder` [relacionados como](https://github.com/Microsoft/botbuilder-js#packages) dependências, verifique se eles são da mesma versão e a versão é `>= 4.9.3`. ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 Para saber mais, confira:
 * [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
@@ -40,7 +35,7 @@ Para saber mais, confira:
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Instalar o `@microsoft/teamsfx` pacote
 
-Instale o SDK do TeamsFx para TypeScript ou JavaScript com `npm` :
+Instale o SDK do TeamsFx para TypeScript ou JavaScript com `npm`:
 
 ```bash
 npm install @microsoft/teamsfx
@@ -56,13 +51,12 @@ Para criar o objeto cliente graph para acessar a API Graph Microsoft, você prec
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
 ```
 
-- No ambiente NodeJS, como a Função Azure, você pode simplesmente chamar `loadConfiguration` . Ele será carregado de variáveis de ambiente por padrão.
+- No ambiente NodeJS, como a Função Azure, você pode simplesmente chamar `loadConfiguration`. Ele será carregado de variáveis de ambiente por padrão.
 
 ```ts
 loadConfiguration();
@@ -76,7 +70,6 @@ Use o seguinte trecho:
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -106,7 +99,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 Há três classes de credencial localizadas na pasta [de credenciais para](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) ajudar a simplificar a autenticação.
 
-Classes de credenciais `TokenCredential` implementam interface amplamente usada nas APIs da biblioteca do Azure. Eles foram projetados para fornecer tokens de acesso para escopos específicos. As seguintes classes de credenciais representam identidade diferente em determinados cenários:
+Classes de credenciais implementam `TokenCredential` interface amplamente usada nas APIs da biblioteca do Azure. Eles foram projetados para fornecer tokens de acesso para escopos específicos. As seguintes classes de credenciais representam identidade diferente em determinados cenários:
 
 * `TeamsUserCredential`representa Teams identidade do usuário atual. O uso dessa credencial solicitará o consentimento do usuário na primeira vez.
 * `M365TenantCredential`representa Microsoft 365 identidade de locatário. Geralmente é usado quando o usuário não está envolvido, como o trabalho de automação disparado pelo tempo.
@@ -124,7 +117,7 @@ O SDK teamsFx fornece funções auxiliares para facilitar a configuração para 
 
 ### <a name="error-handling"></a>Tratamento de erros
 
-A resposta de erro da API `ErrorWithCode` é , que contém o código de erro e a mensagem de erro.
+A resposta de erro da API é `ErrorWithCode`, que contém o código de erro e a mensagem de erro.
 
 Por exemplo, para filtrar um erro específico, você pode usar o seguinte trecho:
 
@@ -165,13 +158,12 @@ A seção a seguir fornece vários trechos de código para cenários comuns:
 
 ### <a name="use-graph-api-in-tab-app"></a>Usar Graph API no aplicativo guia
 
-Use `TeamsUserCredential` e `createMicrosoftGraphClient` .
+Use `TeamsUserCredential` e `createMicrosoftGraphClient`.
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -188,7 +180,6 @@ Use `axios` a biblioteca para fazer solicitação HTTP para a Função Azure.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -205,13 +196,16 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Acessar SQL banco de dados no Azure Function
 
-Use `tedious` a biblioteca para acessar SQL e aproveitar que gerencia a `DefaultTediousConnectionConfiguration` autenticação.
-Além de , você também pode compor a configuração de conexão `tedious` de outras bibliotecas SQL com base no resultado de `sqlConnectionConfig.getConfig()` .
+Use `tedious` a biblioteca para acessar SQL e aproveitar `DefaultTediousConnectionConfiguration` que gerencia a autenticação.
+Além de `tedious`, você também pode compor a configuração de conexão de outras bibliotecas SQL com base no resultado de `sqlConnectionConfig.getConfig()`.
 
 ```ts
 loadConfiguration();
 const sqlConnectConfig = new DefaultTediousConnectionConfiguration();
+// If there's only one SQL database
 const config = await sqlConnectConfig.getConfig();
+// If there are multiple SQL databases
+const config2 = await sqlConnectConfig.getConfig("your database name");
 const connection = new Connection(config);
 connection.on("connect", (error) => {
   if (error) {
