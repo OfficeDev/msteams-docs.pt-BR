@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: be53bc97ecc5df84ab4358927f4332764068d1c4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: e67ab472f28dc44dc23f892b36ddc78ff602d28d
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059641"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435835"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -33,9 +33,9 @@ Dependendo dos recursos que você deseja para seu aplicativo, escolha um conjunt
 
 | Recursos do aplicativo | Interações do usuário | Ferramentas recomendadas | SDKs | Pilhas de tecnologia / idiomas |
 |--------|-------------|--------|--------|--------|
-| Guias | Uma experiência da Web incorporada em tela inteira. | VS Code com extensão do Kit de ferramentas do Teams [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) se preferir usar CLI | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) para bibliotecas principais e [SDK do cliente do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) para funcionalidades da interface do usuário | Tecnologia Web em geral, HTML, CSS e JavaScript (incl. React). |
-| Bots | Um bot de chat que conversa com membros. | VS Code com extensão do KIt de ferramentas do Teams ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK do TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) e [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C#, Java e Python. |
-| Extensões de mensagens | Atalhos para inserir conteúdo externo em uma conversa ou tomar medidas em mensagens. | VS Code com extensão do KIt de ferramentas do Teams ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK do TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) e [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C#, Java e Python. |
+| Guias | Uma experiência da Web incorporada em tela inteira. | O Microsoft Visual Studio Code com extensão Kit de ferramentas do Teams ou a [CLI do TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) se preferir usar a CLI | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) para bibliotecas principais e [SDK do cliente do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) para funcionalidades da interface do usuário | Tecnologia Web em geral, HTML, CSS e JavaScript (incl. React). |
+| Bots | Um bot de chat que conversa com membros. | Visual Studio Code com a extensão Kit de ferramentas do Teams ou a [CLI do TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK do TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) e [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C#, Java e Python. |
+| Extensões de mensagens | Atalhos para inserir conteúdo externo em uma conversa ou tomar medidas em mensagens. | Visual Studio Code com a extensão Kit de ferramentas do Teams ou a [CLI do TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK do TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) e [SDK da Estrutura de Bots](https://dev.botframework.com/) | Node.js, C#, Java e Python. |
 
 *Você não está limitado a usar essas pilhas específicas!*
 
