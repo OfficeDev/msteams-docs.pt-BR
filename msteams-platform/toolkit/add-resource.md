@@ -17,14 +17,14 @@ O TeamsFx ajuda a provisionar recursos de nuvem para sua hospedagem de aplicativ
 [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
 > [!TIP]
-> Verifique se você Teams projeto de aplicativo no VS Code.
+> Verifique se você Teams projeto de aplicativo no Visual Studio Code.
 
 ## <a name="add-cloud-resources-using-teams-toolkit"></a>Adicionar recursos de nuvem usando Teams Toolkit
 
 > [!IMPORTANT]
 > Você precisa provisionar cada ambiente depois de adicionar um recurso.
 
-1. Abra **Visual Studio Code**.
+1. Abra **Microsoft Visual Studio Código**.
 1. Selecione **Teams Toolkit** no painel esquerdo.
 1. No painel Teams Toolkit barra lateral, selecione **Adicionar recursos de nuvem**:
 
@@ -76,7 +76,7 @@ Depois de adicionar resouces, as alterações adicionais em seu projeto são as 
 
 |Recursos|Altera|Descrição|
 |---------------|---------------|-----------------------------|
-|Funções do Azure|Um código de modelo de funções do Azure é adicionado a uma subpasta com caminho `yourProjectFolder/api`</br></br>`launch.json` e `task.json` atualizado em `.vscode` pasta.| Inclui um modelo de gatilho http hello world em seu projeto.</br></br> Inclui scripts necessários para Visual Studio Code serem executados quando você deseja depurar seu aplicativo localmente.|
+|Funções do Azure|Um código de modelo de funções do Azure é adicionado a uma subpasta com caminho `yourProjectFolder/api`</br></br>`launch.json` e `task.json` atualizado em `.visual studio code` pasta.| Inclui um modelo de gatilho http hello world em seu projeto.</br></br> Inclui scripts necessários para Visual Studio Code serem executados quando você deseja depurar seu aplicativo localmente.|
 |Gerenciamento de API do Azure|Um arquivo de especificação de API aberto adicionado a uma subpasta com caminho `yourProjectFolder/openapi`|Define sua API após a publicação, é o arquivo de especificação da API .|
 
 ## <a name="limitation"></a>Limitação

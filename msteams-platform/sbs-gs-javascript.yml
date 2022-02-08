@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Criar seu primeiro aplicativo usando JavaScript
+title: Criar seu primeiro aplicativo usando o JavaScript
 metadata:
   title: Hello World com JavaScript
-  description: Neste tutorial, você aprenderá a criar o aplicativo Hello World com JavaScript.
+  description: 'Neste tutorial, você aprenderá a criar o aplicativo Hello World com JavaScript.'
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -10,37 +10,1062 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Visão geral de Voltar para Começar
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: e6b437170764e09f9e7e220aeceb2fec26f2f61b
-  ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
-  ms.translationtype: MT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/03/2021
-  ms.locfileid: "60720862"
+  ms.localizationpriority: high
 items:
-- durationInMinutes: 1
-  content: "Inicie Microsoft Teams desenvolvimento de aplicativos com seu primeiro Teams app. Você criará três aplicativos Teams: um aplicativo de guia, um aplicativo de bot e um aplicativo de extensão de mensagem. \n\nCada aplicativo terá um recurso, que vem com sua própria interface do usuário e UX:\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png\" alt-text=\"Diagrama mostrando que esse aplicativo tem três recursos.\" border=\"false\":::\n\nNeste tutorial, você aprenderá:\n\n- Como configurar um novo projeto com Teams Toolkit.\n- Como criar três aplicativos com um recurso diferente cada, guia, bot e extensão de mensagem.\n- A estrutura do aplicativo:\n    - A parte da guia com JavaScript usando React.\n    - O restante dos recursos com Node.js.\n- Como implantar seu aplicativo\n"
-- title: Pré-requisitos
-  durationInMinutes: 1
-  content: "\nAqui está uma lista de ferramentas que você precisará para criar e implantar seus aplicativos.\n\n\n| &nbsp; | Instalar | Para usar... |\n| --- | --- | --- |\n| **Required** | &nbsp; | &nbsp; |\n| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de tempo de execução javaScript back-end. Use a versão mais recente do v14 LTS.|\n| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/) | Um navegador com ferramentas de desenvolvedor. |\n| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Ambientes de com build javaScript, TypeScript ou Estrutura do SharePoint (SPFx). Use a versão 1.55 ou posterior. |\n| **Opcional** | &nbsp; | &nbsp; |\n| &nbsp; | [Ferramentas do Azure para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) e [CLI do Azure](/cli/azure/install-azure-cli) | Ferramentas do Azure para acessar dados armazenados ou implantar um back-back baseado em nuvem para seu aplicativo Teams no Azure. |\n| &nbsp; | [React ferramentas de desenvolvedor para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OU [React ferramentas de desenvolvedor para borda](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Uma extensão DevTools do navegador para a biblioteca javascript React de código aberto. |\n| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, uma ferramenta baseada em navegador que permite executar uma consulta da Microsoft Graph dados. |\n| &nbsp; | [Portal do Desenvolvedor do Teams](https://dev.teams.microsoft.com/) | Portal baseado na Web para configurar, gerenciar e distribuir seu aplicativo Teams, incluindo para sua organização ou o Teams store. |\n| &nbsp; | **Visual Studio Code Extensões** | &nbsp; |\n| &nbsp; | [Ferramentas principais das funções do Azure](/azure/azure-functions/functions-run-local) | Componentes de back-end localmente durante uma operação de depuração local. Ele inclui os auxiliares de autenticação para executar seus serviços no Azure. Ele é instalado no diretório do projeto (usando o npm `devDependencies` ). |\n| &nbsp; | [.NET SDK](/dotnet/core/install/) | Vinculações personalizadas para implantações de aplicativos de depuração local e funções do Azure. Se você não tiver instalado o SDK .NET 3.1 (ou posterior) globalmente, a versão portátil poderá ser instalada. |\n| &nbsp; | [ngrok](https://ngrok.com/download) | Teams recursos do aplicativo (bots de conversação e extensões de mensagens) exigem conexões de entrada. Um túnel conecta seu sistema de desenvolvimento a Teams. Não é necessário para aplicativos que incluem apenas guias. Este pacote é instalado no diretório do projeto (usando npm `devDependencies` ). |\n\n\n> [!TIP]\n> Se você trabalhar com dados Graph microsoft, você deve aprender sobre e marcar o Microsoft Graph Explorer. Essa ferramenta baseada em navegador permite que você consulte o Microsoft Graph fora de um aplicativo.\n\n\n## <a name=\"prepare-development-environment\"></a>Preparar o ambiente de desenvolvimento\n\nDepois de instalar as ferramentas necessárias, configurar o ambiente de desenvolvimento.\n\n\n### <a name=\"install-the-teams-toolkit\"></a>Instalar o Teams Toolkit\n\nO Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramentas para provisionar e implantar recursos de nuvem para seu aplicativo, publicar no Teams store e muito mais. \n\nVocê pode usar o kit de ferramentas com Visual Studio Code, ou CLI (interface de linha de comando), chamada `TeamsFx` .\n\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vscode)\n\n1. Abra Visual Studio Code e selecione o **exibição** Extensões (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **View > Extensions**).\n1. Na caixa de pesquisa, digite **Teams Toolkit**.\n1. Selecione **Instalar** ao lado do Teams Toolkit.\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png\" alt-text=\"A ilustração mostra a instalação Teams Toolkit extensão.\" border=\"false\":::\n\n    O Teams Toolkit ícone aparece na barra Visual Studio Code depois de instalado.\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png\" alt-text=\"A ilustração mostra o Teams Toolkit ícone na Visual Studio Code lateral.\" border=\"false\":::\n\nVocê também pode encontrar o Teams Toolkit no [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cli)\n\nPara instalar a CLI do TeamsFx, use o `npm` gerenciador de pacotes:\n\n``` bash\nnpm install -g @microsoft/teamsfx-cli\n```\n\nDependendo da configuração, talvez seja necessário usar `sudo` para instalar a CLI:\n\n``` bash\nsudo npm install -g --unsafe-perm @microsoft/teamsfx-cli\n```\n\nEssa condição é mais comum em sistemas Linux e macOS.\n\nCertifique-se de adicionar o cache global npm ao seu PATH. Esta etapa normalmente é feita como parte do Node.js instalador.  \n\nVocê pode usar a CLI com o `teamsfx` comando. Verifique se o comando está funcionando executando `teamsfx -h` .\n\n> [!CAUTION]\n> Antes de executar o TeamsFx em terminais do PowerShell, você deve habilitar a política de execução \"assinada remotamente\" para o PowerShell.\n\n---\n\n## <a name=\"set-up-your-teams-development-tenant\"></a>Configurar seu locatário Teams desenvolvimento\n\nUm **locatário** é como um espaço ou um contêiner para sua organização em Teams, onde você conversa, compartilha arquivos e executar reuniões. Esse espaço também é onde você faz sideload e testa seu aplicativo. Vamos verificar se você está pronto para desenvolver com o locatário.\n\n### <a name=\"enable-sideloading-option\"></a>Habilitar a opção de sideload\n\nDepois de criar o aplicativo, você deve carregar seu aplicativo Teams sem distribuí-lo. Esse processo é conhecido como sideload. Entre na sua conta Microsoft 365 para exibir essa opção.\n  \nVocê já tem um locatário e tem acesso ao administrador? Vamos verificar se você realmente faz!\n\nVerifique se você pode fazer sideload de aplicativos Teams:\n\n1. No cliente Teams, selecione **Ícone da** Loja.\n1. Selecione **Gerenciar seus aplicativos**.\n1. Procure a opção para Upload **um aplicativo personalizado.** Se você vir a opção, o sideload de aplicativos será habilitado.\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png\" alt-text=\"A ilustração mostra a opção de carregar um aplicativo personalizado Teams.\":::\n\n    > [!NOTE]\n    > Se você não tiver a opção de carregar um aplicativo personalizado, fale com seu Teams administrador.\n\n### <a name=\"create-a-free-teams-developer-tenant-optional\"></a>Criar um locatário Teams desenvolvedor gratuito (opcional)\n\nSe você não tiver uma conta Teams desenvolvedor, poderá obter gratuitamente. Participe do programa Microsoft 365 desenvolvedor!\n\n1. Vá para o programa [Microsoft 365 desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program)\n1. Selecione **Ingressar agora** e siga as instruções na tela.\n1. Na tela de boas-vindas, selecione **Configurar assinatura do E5**.\n1. Configurar sua conta de administrador. Depois de concluir, a tela a seguir será exibida.\n\n    :::image type=\"content\" source=\"~/assets/images/build-your-first-app/dev-program-subscription.png\" alt-text=\"Exemplo do que você vê depois de se inscrever no programa Microsoft 365 desenvolvedor.\":::\n\n1. Entre no Teams usando a conta de administrador que você acabou de configurar. Verifique se você tem a opção **Upload aplicativo personalizado** no Teams.\n\n## <a name=\"get-a-free-azure-account\"></a>Obter uma conta gratuita do Azure\n\nSe você deseja hospedar seu aplicativo ou acessar recursos no Azure, deve ter uma assinatura do Azure. [Crie uma conta gratuita](https://azure.microsoft.com/free/) antes de começar.\n\nAgora você tem todas as ferramentas e configura sua conta. Em seguida, vamos configurar seu ambiente de desenvolvimento e começar a criar!\n"
-- title: Criar espaço de trabalho do projeto para seu aplicativo de guia
-  durationInMinutes: 1
-  content: "\nInicie Microsoft Teams desenvolvimento de aplicativos criando seu primeiro aplicativo. Este aplicativo usa o recurso Tab.\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png\" alt-text=\"Diagrama mostrando que esse aplicativo tem três recursos. A guia é realçada.\" border=\"false\":::\n\nNesta página, você aprenderá:\n1. [Como configurar um novo projeto Tab com Teams Toolkit](#create-your-tab-project-workspace)\n1. [Sobre a estrutura de diretório do seu aplicativo](#take-a-tour-of-the-source-code)\n\n## <a name=\"create-your-tab-project-workspace\"></a>Criar seu espaço de trabalho do projeto de tabulação\n\nSe os pré-requisitos estão no local, vamos começar!\n\n> [!NOTE]\n> A Visual Studio Code da interface do usuário mostrada é do Mac. Ele pode diferir dependendo do sistema operacional, Toolkit versão e ambiente.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vsc)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra Visual Studio Code lateral.\n\n1. Selecione **Criar um novo aplicativo do Teams**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams.\" border=\"false\":::\n\n1. Selecione **Criar um novo Teams para** criar um aplicativo usando o Teams Toolkit.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"Início do assistente para Criar Novo Projeto\" border=\"false\":::\n\n1. Verifique se **o aplicativo baseado na interface** do usuário tab está selecionado como o recurso que você deseja criar em seu aplicativo. Selecione **OK**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png\" alt-text=\"Selecionar Recurso do Aplicativo\" border=\"false\":::\n\n1. Selecione **Azure** como o tipo de hospedagem frontend.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png\" alt-text=\"Selecionar Tipo de Hospedagem\" border=\"false\":::\n\n    Se quiser hospedar seu aplicativo no SharePoint, selecione Estrutura do SharePoint (SPFx) nesta opção.\n\n1. Selecione **OK** para continuar. Você não precisa de outros recursos de nuvem para este tutorial.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png\" alt-text=\"Recursos de nuvem\" border=\"false\":::\n\n1. Selecione **JavaScript** como linguagem de programação.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"Captura de tela mostrando como selecionar a linguagem de programação.\" border=\"false\":::\n\n1. Selecione uma pasta de espaço de trabalho para o aplicativo. Teams Toolkit cria a estrutura de diretório do aplicativo neste espaço de trabalho para seu projeto.\n\n1. Insira `helloworld` como o nome do aplicativo. Certifique-se de usar somente caracteres alfanuméricos. Selecione **Enter** para continuar.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-name.png\" alt-text=\"Captura de tela mostrando onde inserir o nome do aplicativo.\" border=\"false\":::\n\n    O Teams aplicativo é criado em alguns segundos.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png\" alt-text=\"Captura de tela mostrando o aplicativo criado.\" border=\"false\":::\n\n    <details>\n    <summary>Uma recapitulação rápida da criação de um Teams app.</summary>\n    Assista a esta breve recapitulação para criar um Teams app.\n\n    ![Criar um Teams app ](~/assets/videos/javascript-tab-app.gif) </details>\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cli)\n\nUse a CLI `teamsfx` para criar o seu primeiro projeto. Inicie pela pasta onde deseja criar a pasta do projeto.\n\n``` bash\nteamsfx new\n```\n\nVocê pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.\n\nPor exemplo, use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.\n\n1. Selecione **Criar um novo aplicativo do Teams**.\n1. Selecione o **recurso Tab.**\n1. Selecione **Azure** como hospedagem front-end.\n1. Não selecione recursos de nuvem.\n1. Selecione **JavaScript** como linguagem de programação.\n1. Pressione **Inserir** para selecionar a pasta padrão do espaço de trabalho.\n1. Insira `helloworld` como o nome do seu aplicativo. O nome do aplicativo deve ter apenas caracteres alfanuméricos.\n\n  Depois de responder a todas as perguntas, seu projeto será criado.\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>Faça um tour pelo código-fonte\n\nTeams Toolkit fornece todos os componentes para a criação de um aplicativo. Depois de criar o projeto, você pode exibir as pastas e arquivos do projeto na área Explorer de Visual Studio Code.\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/hw-folder-structure.png\" alt-text=\"Project arquivos scaffolded para o aplicativo com o recurso Tab no Visual Studio Code.\":::\n\nEmbora você esteja livre para escolher qualquer estrutura de interface do usuário (ou não usar nenhuma), este código de modelo de exemplo fornece um scaffolding com React componentes.\n\nEntre outros itens nesta estrutura de diretório, o Toolkit mantém:\n\n- `.fx`: O estado do seu aplicativo nesta pasta.\n- `appPackage`: Os ícones do aplicativo na `appPackage` pasta. Os ícones são `color.png` e `outline.png` .\n- `manifest.source.json`: O manifesto do aplicativo para publicação no Portal do Desenvolvedor para Teams em `manifest.source.json` .\n- `settings.json`: As configurações do aplicativo, que você selecionou durante a criação do projeto, em `settings.json` .\n- O código para o recurso Tab na `Tabs` pasta. Alguns dos arquivos importantes nesta pasta são:\n\n  - `tabs/src/index.jsx` é o ponto de entrada do front-end do aplicativo, onde o componente principal `App` é renderizado com `ReactDOM.render()`.\n  - `tabs/src/components/App.jsx` lida com o roteamento de URL no aplicativo. Ele chama o [Microsoft Teams SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) do cliente JavaScript para estabelecer a comunicação entre o aplicativo e Teams.\n  - `tabs/src/components/Tab.jsx` contém o código para implementar a IU do seu aplicativo.\n  - `tabs/src/components/TabConfig.jsx` contém o código para implementar a IU que configura seu aplicativo.\n  - Essa pasta também contém o código para as guias necessárias no tempo de execução. Algumas delas são o aviso de privacidade, os termos de uso e as guias de configuração.\n\nQuando você adiciona a funcionalidade de nuvem, Teams Toolkit adiciona as pastas necessárias ao projeto. A `api` pasta mantém o código em qualquer função do Azure que você gravar.\n"
-- title: Criar e executar seu primeiro aplicativo de guia
-  durationInMinutes: 1
-  content: "\nDepois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de guia. Você precisará entrar na sua conta Microsoft 365.\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>Entre na sua conta Microsoft 365 de usuário\n\nUse sua Microsoft 365 de usuário para entrar no Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra lateral.  \n1. Selecione **Entrar no M365**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"Captura de tela mostrando onde entrar no Microsoft 365 e no Azure.\" border=\"false\":::\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta.\n\n1. Entre na sua conta Microsoft 365 usando suas credenciais.\n1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.\n1. Volte para Teams Toolkit dentro Visual Studio Code.\n\n    A **seção CONTAS** da barra lateral mostra o nome Microsoft 365 conta.\n\n    Agora você está pronto para criar o aplicativo e execute-o localmente!\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cline)\n\n1. Entre no Microsoft 365 com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n2. Entre no Azure com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n    Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.\n\n    Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.\n\n---\n\n## <a name=\"build-and-run-your-app-locally-in-visual-studio-code\"></a>Compilar e executar seu aplicativo localmente em Visual Studio Code\n\nPara compilar e executar seu aplicativo localmente:\n\n1. Na Visual Studio Code, selecione **F5** para executar o aplicativo no modo de depuração.\n\n    <!-- markdownlint-disable MD033 -->\n\n    <details>\n    <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>\n\n    Caso esteja se perguntando, ao pressionar a **tecla F5** a tecla Teams Toolkit:\n\n    - Registra seu aplicativo com Azure Active Directory. Este aplicativo tem permissões para o local de onde o aplicativo é carregado e os recursos de back-end.\n    - *Sideloads* do aplicativo em Teams.\n    - Inicia o back-end do aplicativo em execução localmente usando as Ferramentas Principais da [Função do Azure.](/azure/azure-functions/functions-run-local?#start)\n    - Inicia o front-end do aplicativo hospedado localmente.\n    - Inicia Microsoft Teams em um navegador da Web com um comando para instruir Teams carregar o aplicativo de lado de `https://localhost:3000/tab` . Essa URL está registrada no manifesto do aplicativo.\n    - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams. O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.\n\n    </details>\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png\" alt-text=\"Captura de tela mostrando quando a tecla F5 é pressionada.\":::\n\n    > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado.  Uma janela do navegador é aberta quando a com build é concluída. Esse processo pode levar de 3 a 5 minutos para ser concluído.\n\n    A Toolkit solicita que você instale um certificado local, se necessário. Esse certificado permite que o Teams carregue seu aplicativo a partir de `https://localhost`.\n\n1. Selecione **Sim** se a caixa de diálogo a seguir for exibida:\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png\" alt-text=\"Captura de tela mostrando o prompt para instalar um certificado SSL para permitir Teams carregar seu aplicativo do localhost.\":::\n\n    Ou selecione **Continuar**, dependendo do sistema operacional:\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png\" alt-text=\"Captura de tela mostrando o prompt para instalar um certificado SSL para permitir Teams carregar seu aplicativo de localhost no Mac.\":::\n\n    Teams cliente Web é aberto em uma janela do navegador.\n\n1. Entre com sua conta Microsoft 365, se solicitado.\n\n1. Selecione **Adicionar** quando solicitado a fazer sideload do aplicativo Teams no computador local.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-add.png\" alt-text=\"Adicione o aplicativo ao Teams\":::\n\n1. Selecione a versão do aplicativo Web, se for solicitado a alternar para Teams área de trabalho. Execute seu aplicativo no cliente Teams Web. Você pode ver o código HTML, CSS e JavaScript em um ambiente de desenvolvimento da Web padrão.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-and-pick-webapp.png\" alt-text=\"Captura de tela mostrando como escolher a versão da web das equipes quando lançadas\":::\n\n1. Parabéns, seu primeiro aplicativo está sendo executado Teams!\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-congratulations.png\" alt-text=\"Captura de tela do aplicativo concluído\":::\n\n    Você pode fazer atividades normais de depuração, como definir pontos de interrupção, como se fosse qualquer outro aplicativo Web. O aplicativo dá suporte à recarga dinâmica. Se você alterar qualquer arquivo dentro do projeto, a página será recarregada.\n\n  <!-- markdownlint-disable MD033 -->\n\n  <details>\n  <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>\n\n  Para executar seu aplicativo com êxito Teams, verifique se você habilitar o sideload na sua Teams conta. Você pode saber mais sobre sideload na seção Pré-requisitos.\n\n  </details>\n\n  Você sabe como usar o Toolkit para configurar um aplicativo de tabulação e execute-o localmente. Em seguida, vamos aprender a criar um bot de chat conversacional com Toolkit!\n"
-- title: Criar espaço de trabalho de projeto para seu aplicativo bot
-  durationInMinutes: 1
-  content: "\nVocê criou seu aplicativo de guia. Agora vamos criar seu primeiro aplicativo bot.\n\nA funcionalidade bot de um aplicativo Teams cria um chatbot ou um bot de conversa. Use-o para executar tarefas simples e automatizadas, como o fornecimento de serviço ao cliente. Um bot conversa com um serviço Web e ajuda você a usar suas ofertas. Você pode obter previsão do tempo, fazer reservas ou qualquer outro serviço oferecido usando um bot de conversação.\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png\" alt-text=\"Diagrama mostrando que esse aplicativo tem três recursos. Bot é realçado.\" border=\"false\":::\n\nÀ medida que você já se preparou para criar esses aplicativos, você pode configurar um novo projeto Teams para criar o aplicativo bot.\n\nNeste tutorial, você aprenderá:\n\n1. [Como configurar um novo projeto bot com Teams Toolkit.](#create-your-bot-project-workspace)\n1. [Sobre a estrutura de diretório do seu projeto de aplicativo.](#take-a-tour-of-the-source-code)\n\n> [!IMPORTANT]\n> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).\n\n## <a name=\"create-your-bot-project-workspace\"></a>Criar seu espaço de trabalho de projeto de bot\n\nSe os pré-requisitos estão no local, vamos começar!\n\n> [!NOTE]\n> A Visual Studio Code da interface do usuário mostrada é do Mac. Ele pode diferir dependendo do sistema operacional, Toolkit versão e ambiente.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vscode)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra Visual Studio Code lateral.\n\n1. Selecione **Criar um novo aplicativo do Teams**. A interface do usuário pode ter uma aparência diferente, dependendo do sistema operacional.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams.\" border=\"false\":::\n\n1. Selecione **Criar um novo Teams para** criar um aplicativo usando o Teams Toolkit.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"Início do assistente para Criar Novo Projeto\" border=\"false\":::\n\n1. Selecione **Bot,** desmarque **Tab** e selecione **OK**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities.png\" alt-text=\"Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo.\" border=\"false\":::\n\n1. Selecione **JavaScript** na seção **Linguagem de** Programação.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"Captura de tela mostrando como selecionar a linguagem de programação.\" border=\"false\":::\n\n1. Selecione uma pasta do espaço de trabalho. Teams Toolkit cria uma pasta em sua pasta de espaço de trabalho para o projeto do aplicativo.\n\n1. Insira um nome adequado para seu aplicativo, como `hellobot`. Verifique se o nome do aplicativo é alfanumérico. Selecione **Enter** para continuar.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name.png\" alt-text=\"Captura de tela mostrando onde inserir o nome do aplicativo.\" border=\"false\":::\n\n    Seu Teams app com um recurso Bot é criado em alguns segundos.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/app-created-bot.png\" alt-text=\"Captura de tela mostrando o aplicativo criado.\" border=\"false\":::\n\n\n<details>\n<summary>Uma recapitulação rápida da criação de um Teams app.</summary>\nAssista a esta breve recapitulação para criar um Teams app.\n\n![Criar um Teams aplicativo](~/assets/videos/javascript-bot-app.gif)\n</details>\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cli)\n\nUse a CLI `teamsfx` para criar o seu primeiro projeto.  Inicie pela pasta onde deseja criar a pasta do projeto.\n\n``` bash\nteamsfx new\n```\n\nVocê pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.\n\nPor exemplo, use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.\n\n1. Selecione **Criar um novo aplicativo do Teams**.\n1. Selecione **Bot** e desmarque **Tab**.\n1. Selecione **JavaScript** como linguagem de programação.\n1. Selecione **Enter** para selecionar a pasta de espaço de trabalho padrão.\n1. Insira um nome adequado para seu aplicativo, como `HelloBot`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.\n\nDepois de responder a todas as perguntas, seu projeto será criado.\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>Faça um tour pelo código-fonte\n\nDepois que o scaffolding for feito, ex view the project directories and files in the Explorer area of Visual Studio Code.\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png\" alt-text=\"Project arquivos scaffolded para bot em Visual Studio Code.\" border=\"false\":::\n\nEntre outros itens nesta estrutura de diretório, o Toolkit mantém:\n- `bot`: O código do bot é armazenado no `bot` diretório.\n- O `bot/teamsBot.js` é o ponto de entrada principal para o bot.\n\n> [!Tip]\n> Familiarize-se com os bots fora do Teams antes de integrar o seu primeiro bot dentro do Teams.\n"
-- title: Criar e executar seu primeiro aplicativo de bot
-  durationInMinutes: 1
-  content: "\nDepois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de bot. Verifique se você se inscreveu na sua conta Microsoft 365.\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>Entre na sua conta Microsoft 365 de usuário\n\nUse essa conta para entrar Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra lateral.  \n1. Selecione **Entrar no M365**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"Captura de tela mostrando onde entrar no Microsoft 365 e no Azure.\" border=\"false\":::\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta.\n\n1. Entre na sua conta Microsoft 365 usando suas credenciais.\n1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.\n1. Volte para Teams Toolkit dentro Visual Studio Code.\n\n    A **seção CONTAS** da barra lateral mostra o nome Microsoft 365 conta.\n\n    Agora você está pronto para criar o aplicativo e execute-o localmente!\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cline)\n\n1. Entre no Microsoft 365 com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n2. Entre no Azure com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n    Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.\n\n    Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.\n\n---\n\n## <a name=\"build-and-run-your-first-bot-app-locally\"></a>Criar e executar seu primeiro aplicativo de bot localmente\n\nPara criar e executar seu aplicativo no ambiente local:\n\n1. Selecione **F5** no Visual Studio Code para executar seu aplicativo no modo de depuração.\n\n    <!-- markdownlint-disable MD033 -->\n\n    <details>\n    <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>\n\n    Caso esteja se perguntando, ao pressionar a **tecla F5,** a Teams Toolkit:\n\n    - Registra seu aplicativo com Azure Active Directory. Este aplicativo tem permissões para o local de onde o aplicativo é carregado e os recursos de back-end.\n    - *Sideloads* do aplicativo em Teams.\n    - Inicia o back-end do aplicativo em execução localmente usando as Ferramentas Principais da [Função do Azure.](/azure/azure-functions/functions-run-local?#start)\n    - Inicia o front-end do aplicativo hospedado localmente.\n    - Inicia Microsoft Teams em um navegador da Web com um comando para instruir Teams carregar o aplicativo de lado de `https://localhost:3000/tab` . Essa URL está registrada no manifesto do aplicativo.\n    - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams. O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.\n\n    </details>\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png\" alt-text=\"Captura de tela mostrando quando a tecla F5 é pressionada.\":::\n\n    > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado. Uma janela do navegador é aberta automaticamente quando a compilação é concluída. Esse processo pode levar de 3 a 5 minutos para ser concluído.\n\n    O navegador da Web começa a executar o aplicativo.\n\n1. Entre com sua conta Microsoft 365, se solicitado.\n\n    > Você pode ser solicitado a abrir Teams área de trabalho, selecione **Cancelar** para permanecer no navegador.\n\n1. Selecione **Adicionar** quando solicitado a fazer sideload do aplicativo Teams no computador local.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/install-bot.png\" alt-text=\"Captura de tela mostrando que o bot está sendo adicionado Teams cliente.\":::\n\n    Agora o bot está sendo executado com êxito Teams! Depois que o aplicativo é carregado, uma sessão de chat com o bot é aberta.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/run-bot.png\" alt-text=\"Captura de tela mostrando que o bot está sendo executado Teams cliente.\":::\n\n    Você pode digitar para mostrar um cartão de introdução e digitar para ir para a documentação de comando de bot e `welcome` `learn` cartão adaptável.\n\n    Você pode fazer atividades normais de depuração, como definir pontos de interrupção, como com qualquer outro aplicativo Web. Abra o arquivo `bot/teamsBot.js` e localize o método `onMessage()`. Definir um ponto de interrupção em qualquer caso. Em seguida, digite algum texto.\n\n  <!-- markdownlint-disable MD033 -->\n  <details>\n  <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>\n\n  Para executar seu aplicativo com êxito Teams, verifique se você habilitar o sideload na sua Teams conta. Você pode saber mais sobre sideload na seção Pré-requisitos.\n\n  > [!IMPORTANT]\n  > Atualmente, os aplicativos de sideload estão disponíveis em Nuvem da Comunidade Governamental (GCC), GCC-Alto e DOD.\n\n  > [!TIP]\n  > Verifique se há problemas antes de fazer sideload do aplicativo, usando a [ferramenta de validação do aplicativo.](https://dev.teams.microsoft.com/appvalidation.html) Esta ferramenta está incluída no kit de ferramentas. Correção dos erros para fazer sideload do aplicativo.\n  </details> \n"
-- title: Criar espaço de trabalho do projeto para seu aplicativo de extensão de mensagem
-  durationInMinutes: 1
-  content: "\nVocê criou seu aplicativo bot. Agora, vamos criar seu primeiro aplicativo de extensão de mensagem.\n\nO recurso Extensão de Mensagem permite que você interaja com um serviço Web. Use a área de composição, a caixa de comando ou uma mensagem Teams cliente para pesquisar e iniciar ações em um sistema externo.\n\n  :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png\" alt-text=\"Diagrama mostrando que esse aplicativo tem três recursos. Extensão de Mensagem é realçada.\" border=\"false\":::\n\nHá dois tipos de **extensões de mensagens** do Teams:\n\n- [Comandos de pesquisa](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): Você pode pesquisar sistemas externos. Em seguida, você pode inserir seus resultados em uma mensagem na forma de um cartão.\n- [Comandos de](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md)ação : você pode apresentar aos usuários um pop-up modal para coletar ou exibir informações. Em seguida, você pode processar a interação deles e enviar informações de volta para Teams.\n\nVamos criar um aplicativo de extensão de mensagem com um *comando de pesquisa*. Use-o para pesquisar dados externos e inserir os resultados em uma mensagem dentro Teams cliente.\n\nComo você já se preparou para criar esses aplicativos, você pode configurar um novo projeto Teams para criar o aplicativo de extensão de mensagem.\n\n> [!NOTE]\n> As extensões de mensagens dependem dos bots para fornecer uma caixa de diálogo entre o usuário e seu código.\n\n\nNeste tutorial, você aprenderá:\n\n1. [Como configurar um novo projeto de Extensão de Mensagem com Teams Toolkit.](#create-your-message-extension-project-workspace)\n1. [Sobre a estrutura de diretório do seu projeto de aplicativo.](#take-a-tour-of-the-source-code)\n\n## <a name=\"create-your-message-extension-project-workspace\"></a>Criar seu espaço de trabalho do projeto extensão de mensagem\n\nSe os pré-requisitos estão no local, vamos começar!\n\n> [!NOTE]\n> A Visual Studio Code da interface do usuário mostrada é do Mac. Ele pode diferir dependendo do sistema operacional, Toolkit versão e ambiente.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vsc)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra Visual Studio Code lateral.\n\n1. Selecione **Criar novo Project** do lado esquerdo do Toolkit.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams.\" border=\"false\":::\n\n1. Selecione **Criar novo Project** para criar um aplicativo usando o Teams Toolkit.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"Início do assistente para Criar Novo Projeto\" border=\"false\":::\n\n1. Selecione **Extensão de Mensagem,** Desmarque **a Guia** e selecione **OK**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png\" alt-text=\"Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo.\" border=\"false\":::\n\n1. Selecione **JavaScript** como linguagem de programação.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"Captura de tela mostrando como selecionar a linguagem de programação.\" border=\"false\":::\n\n1. Selecione uma pasta do espaço de trabalho. Uma pasta é criada em sua pasta de espaço de trabalho para o projeto.\n\n1. Insira um nome adequado para seu aplicativo. Verifique se o nome do aplicativo é alfanumérico. Selecione **Enter** para continuar.\n\n    Teams Toolkit criar o aplicativo em alguns segundos.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created.png\" alt-text=\"Captura de tela mostrando o aplicativo criado.\" border=\"false\":::\n\n  <details>\n  <summary>Uma recapitulação rápida da criação de um Teams app.</summary>\n  Assista a esta breve recapitulação para criar um Teams app.\n\n  ![Criar um Teams aplicativo](~/assets/videos/javascript-msg-ext-app.gif)\n  </details>\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cli)\n\nUse a CLI `teamsfx` para criar o seu primeiro projeto.  Inicie pela pasta onde deseja criar a pasta do projeto.\n\n``` bash\nteamsfx new\n```\n\nVocê pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.\n\nPor exemplo, Use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.\n\n\n1. Selecione **Criar um novo aplicativo do Teams**.\n1. Selecione a **Extensão da Mensagem** e desmarque a **Guia**.\n1. Selecione **JavaScript** como linguagem de programação.\n1. Selecione **Enter** para selecionar a pasta de espaço de trabalho padrão.\n1. Insira um nome adequado para seu aplicativo, como `HelloMsgExtn`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.\n\n  Depois que todas as perguntas foram respondidas, seu projeto é criado.\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>Faça um tour pelo código-fonte\n\nUma extensão de mensagem usa a Estrutura de Bot. Use-o para interagir com seu serviço por meio de uma conversa. Depois que o scaffolding for feito, ex view the project directories and files in the Explorer area of Visual Studio Code.\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/code-tree.png\" alt-text=\"Layout de arquivo de um projeto de bot\" border=\"false\":::\n\n- `bot`: O código do bot é armazenado no `bot` diretório.\n- O `bot/messageExtensionBot.js` é o ponto de entrada principal da extensão de mensagens.\n\n> [!Tip]\n> Familiarize-se com bots e extensão de mensagem fora do Teams antes de integrar seu bot Teams.\n"
-- title: Criar e executar seu primeiro aplicativo de extensão de mensagem
-  durationInMinutes: 1
-  content: "\nDepois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de guia. Você precisará entrar na sua conta Microsoft 365.\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>Entre na sua conta Microsoft 365 de usuário\n\nUse essa conta para entrar Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vcode)\n\n1. Abra o Visual Studio Code.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra lateral.  \n1. Selecione **Entrar no M365**.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"Captura de tela mostrando onde entrar no Microsoft 365 e no Azure.\" border=\"false\":::\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta.\n\n1. Entre na sua conta Microsoft 365 de usuário.\n1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.\n1. Volte para Teams Toolkit dentro Visual Studio Code.\n\n    A **seção CONTAS** da barra lateral mostra o nome Microsoft 365 conta.\n\n    Agora você está pronto para criar o aplicativo e execute-o localmente!\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cline)\n\n1. Entre no Microsoft 365 com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n2. Entre no Azure com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n    Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.\n\n    Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.\n\n---\n\n## <a name=\"build-and-run-your-app-locally-in-visual-studio-code\"></a>Compilar e executar seu aplicativo localmente em Visual Studio Code\n\nPara compilar e executar seu aplicativo localmente:\n\n1. Selecione **F5** no Visual Studio Code para executar seu aplicativo no modo de depuração.\n    <!-- markdownlint-disable MD033 -->\n    <details>\n    <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>\n\n    Quando você seleciona **F5,** o Teams Toolkit:\n\n    1. Registra seu aplicativo com Azure Active Directory.\n    1. Registra seu aplicativo para \"side loading\" no Microsoft Teams.\n    1. Inicia o back-end do aplicativo em execução localmente usando as Ferramentas Principais da [Função do Azure.](/azure/azure-functions/functions-run-local?#start)\n    1. Inicia o túnel ngrok para que Teams possa se comunicar com seu aplicativo.\n    1. Inicia Microsoft Teams com um comando para instruir Teams fazer sideload do aplicativo.\n\n    </details>\n\n    > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado. Uma janela do navegador é aberta quando a com build é concluída. Isto pode levar de 3 a 5 minutos para ser concluído.\n\n      Teams abre em um navegador da Web.\n    1. Selecione **Cancelar** para permanecer no navegador, se você for solicitado a abrir Microsoft Teams.\n    1. Entre com sua conta Microsoft 365, se solicitado.\n    1. Selecione **Adicionar** para adicionar o aplicativo à sua conta.\n\n        :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/launch-web-browser-add.png\" alt-text=\"Captura de tela que mostra a confirmação de que o aplicativo foi adicionado\" border=\"false\":::\n\n        O aplicativo é adicionado ao Teams e é carregado.\n\n    <!-- markdownlint-disable MD033 -->\n    <details>\n    <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>\n\n    Para executar seu aplicativo Teams, você deve ter uma conta Microsoft 365 de desenvolvimento que permita o sideload do aplicativo. Você pode saber mais sobre sideload na seção Pré-requisitos.\n\n### <a name=\"try-your-message-extension\"></a>Experimente a extensão da mensagem \n\nSiga estas etapas no Teams cliente para habilitar o recurso de extensão de mensagem que você acabou de adicionar:\n\n1. Iniciar a extensão de mensagem de três pontos na área de composição.\n1. Vá para **Chat** ou um canal **Teams** e habilita a área de redação da mensagem.\n1. Iniciar a extensão de mensagem de três pontos na parte inferior da área de composição.\n1. Selecione o aplicativo de extensão de mensagem instalado.       \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png\" alt-text=\"Captura de tela que mostra como abrir o aplicativo de extensão de mensagens de exemplo\" border=\"false\":::\n\n    Este aplicativo de exemplo permite que você pesquise pacotes npm de código aberto no registro de software.\n\n1. Vamos inserir uma cadeia de caracteres de pesquisa na caixa de pesquisa, como \"cli\". Você receberá uma lista dos itens correspondentes:\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png\" alt-text=\"Captura de tela que mostra como usar o aplicativo de exemplo\" border=\"false\":::\n\n1. Selecione um dos resultados da pesquisa. Ele será exibido na área de composição para que você possa enviar o resultado para o canal.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png\" alt-text=\"Captura de tela que mostra o resultado da pesquisa\" border=\"false\":::\n\n    Agora, você aprendeu a criar e executar uma extensão de mensagem básica!\n"
-- title: Implantar seu primeiro Teams aplicativo
-  durationInMinutes: 1
-  content: "\nVocê aprendeu a criar, criar e executar um aplicativo Teams com os recursos Tab, Bot e Message Extension. A etapa final é implantar seu aplicativo no Azure.\n\nVamos implantar o primeiro aplicativo com o recurso Tab no Azure usando Teams Toolkit.\n\n## <a name=\"sign-in-to-your-azure-account\"></a>Entrar na sua conta do Azure\n\nUse essa conta para acessar o portal do Azure e provisionar novos recursos de nuvem para dar suporte ao aplicativo.\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. Abra o Visual Studio Code.\n1. Abra a pasta do projeto na qual você criou o aplicativo de guia.\n1. Selecione o Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: na barra lateral.  \n1. Selecione **Entrar no Azure**.\n\n    > [!TIP]\n    > Se você tiver a extensão da Conta do Azure instalada e estiver usando a mesma conta, ignore esta etapa. Use a mesma conta que você está usando em outras extensões.\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta.\n1. Entre na sua conta do Azure usando suas credenciais.\n1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.\n\n    A **seção CONTAS** da barra lateral mostra as duas contas separadamente. Ele também lista o número de assinaturas usáveis do Azure disponíveis para você. Certifique-se de ter pelo menos uma assinatura do Azure acessível disponível. Caso não, saia e use uma conta diferente.\n\n    Agora você está pronto para implantar seu aplicativo no Azure!\n\n    Parabéns, você criou três tipos de Teams aplicativos! \n    Agora vamos em frente e aprender como implantar um dos aplicativos no Azure usando o Teams Toolkit.\n\n# <a name=\"command-line\"></a>[Linha de comando](#tab/cline)\n\n1. Entre no Microsoft 365 com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n2. Entre no Azure com a CLI teamsFx:\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.\n\n    Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.\n\n    Parabéns, você criou três tipos de Teams aplicativos! \n    Agora vamos em frente e aprender como implantar um dos aplicativos no Azure usando o Teams Toolkit.\n\n---\n\n  [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]\n\n  <!-- markdownlint-disable MD033 -->\n  <details>\n  <summary>Saiba o que acontece quando você implanta o seu aplicativo no Azure</summary>\n\n  Antes da implantação, o aplicativo era executado localmente:\n\n  * O back-end é executado usando o **Azure Functions Core Tools**.\n  * O ponto de extremidade HTTP do aplicativo, onde o Microsoft Teams carrega o aplicativo, é executado localmente.\n\n  A implantação é um processo de duas etapas. Você provisiona os recursos em uma assinatura ativa do Azure e, em seguida, implanta ou carrega o código back-end e front-end para o aplicativo no Azure.\n\n  * O back-end, se configurado, usa vários serviços do Azure, incluindo o Serviço de Aplicativo do Azure e o Azure Armazenamento.\n  * O front-end do aplicativo será implantado em uma conta de Armazenamento do Microsoft Azure configurada para hospedagem Web estática.\n\n  </details>"
+  - durationInMinutes: 1
+    content: |
+      Inicie Microsoft Teams desenvolvimento de aplicativos com seu primeiro Teams app. Você criará três aplicativos Teams: um aplicativo de guia, um aplicativo de bot e um aplicativo de extensão de mensagens. 
+
+      Cada aplicativo terá um recurso, que vem com sua própria interface do usuário e UX:
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagrama mostrando que esse aplicativo tem três recursos." border="false":::
+
+      > [!NOTE]
+      > Neste tutorial, você criará primeiro um aplicativo de tabulação, seguido de um aplicativo bot e, em seguida, um aplicativo de extensão de mensagens. No entanto, você pode optar por criar um aplicativo com qualquer funcionalidade primeiro, sem prejudicar a funcionalidade de outros aplicativos.
+
+      Neste tutorial, você aprenderá:
+
+      - Como configurar um novo projeto com Teams Toolkit.
+      - Como criar três aplicativos com um recurso diferente cada, guia, bot e extensão de mensagens.
+      - A estrutura do aplicativo:
+          - A parte da guia com JavaScript usando React.
+          - O restante dos recursos com Node.js.
+      - Como implantar seu aplicativo
+  - title: Pré-requisitos
+    durationInMinutes: 1
+    content: |
+
+      Aqui está uma lista de ferramentas que você precisará para criar e implantar seus aplicativos.
+
+      | &nbsp; | Instalar | Para usar... |
+      | --- | --- | --- |
+      | **Required** | &nbsp; | &nbsp; |
+      | &nbsp; | [Kit de ferramentas do Teams](#install-the-teams-toolkit) |  Uma Microsoft Visual Studio de código que cria um scaffolding de projeto para seu aplicativo. Use a versão mais recente. |
+      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams colaborar com todos com os quais você trabalha por meio de aplicativos para chat, reuniões, chamada - tudo em um só lugar.|
+      | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de tempo de execução javaScript back-end. Use a versão mais recente do v14 LTS.|
+      | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/) | Um navegador com ferramentas de desenvolvedor. |
+      | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Ambientes de com build javaScript, TypeScript ou Estrutura do SharePoint (SPFx). Use a versão 1.55 ou posterior. |
+      | **Opcional** | &nbsp; | &nbsp; |
+      | &nbsp; | [Ferramentas do Azure para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) e [CLI do Azure](/cli/azure/install-azure-cli) | Ferramentas do Azure para acessar dados armazenados ou implantar um back-back baseado em nuvem para seu aplicativo Teams no Azure. |
+      | &nbsp; | [React ferramentas de desenvolvedor para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OU [React de desenvolvedor para Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Uma extensão DevTools do navegador para a biblioteca javascript React de código aberto. |
+      | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, uma ferramenta baseada em navegador que permite executar uma consulta da Microsoft Graph dados. |
+      | &nbsp; | [Portal do Desenvolvedor do Teams](https://dev.teams.microsoft.com/) | Portal baseado na Web para configurar, gerenciar e distribuir seu aplicativo Teams, incluindo para sua organização ou o Teams store. |
+
+
+      > [!TIP]
+      > Se você trabalhar com dados Graph microsoft, você deve aprender sobre e marcar o Microsoft Graph Explorer. Essa ferramenta baseada em navegador permite que você consulte o Microsoft Graph fora de um aplicativo.
+
+
+      ## <a name="prepare-development-environment"></a>Preparar o ambiente de desenvolvimento
+
+      Depois de instalar as ferramentas necessárias, configurar o ambiente de desenvolvimento.
+
+
+      ### <a name="install-the-teams-toolkit"></a>Instalar o Teams Toolkit
+
+      O Teams Toolkit ajuda a simplificar o processo de desenvolvimento com ferramentas para provisionar e implantar recursos de nuvem para seu aplicativo, publicar no Teams store e muito mais. 
+       
+      Você pode usar o kit de ferramentas com Visual Studio Code, ou CLI (interface de linha de comando), chamada `TeamsFx`.
+
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
+
+      1. Abra Visual Studio Code e selecione o exibição Extensões (**Ctrl+Shift+X** / **⌘⇧-X** ou **View > Extensions**).
+      1. Na caixa de pesquisa, digite **Teams Toolkit**.
+      1. Selecione **Instalar** ao lado do Teams Toolkit.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="A ilustração mostra a instalação Teams Toolkit extensão." border="false":::
+
+       O Teams Toolkit ícone aparece na barra Visual Studio Code depois de instalado.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="A ilustração mostra o Teams Toolkit ícone na Visual Studio Code lateral." border="false":::
+
+      Você também pode encontrar o Teams Toolkit no [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cli)
+
+      Para instalar a CLI do TeamsFx, use o gerenciador de `npm` pacotes:
+
+      ``` bash
+      npm install -g @microsoft/teamsfx-cli
+      ```
+
+      Dependendo da configuração, talvez seja necessário usar para `sudo` instalar a CLI:
+
+      ``` bash
+      sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+      ```
+
+      Essa condição é mais comum em sistemas Linux e macOS.
+
+      Certifique-se de adicionar o cache global npm ao seu PATH. Esta etapa normalmente é feita como parte do Node.js instalador.  
+
+      Você pode usar a CLI com o `teamsfx` comando. Verifique se o comando está funcionando executando `teamsfx -h`.
+
+      > [!CAUTION]
+      > Antes de executar o TeamsFx em terminais do PowerShell, você deve habilitar a política de execução "assinada remotamente" para o PowerShell.
+
+      ---
+
+      ## <a name="set-up-your-teams-development-tenant"></a>Configurar seu locatário Teams desenvolvimento
+
+      Um **locatário** é como um espaço ou um contêiner para sua organização no Teams, onde você conversa, compartilha arquivos e executar reuniões. Esse espaço também é onde seu sideload e teste seu aplicativo. Vamos verificar se você está pronto para desenvolver com o locatário.
+
+      ### <a name="check-for-sideloading-option"></a>Verifique se há opção de sideload
+
+      Depois de criar o aplicativo, você deve carregar seu aplicativo Teams sem distribuí-lo. Esse processo é conhecido como sideload. Entre na sua conta Microsoft 365 para exibir essa opção.
+         
+      Você já tem um locatário e tem acesso ao administrador? Vamos verificar se você realmente faz!
+
+      Verifique se você pode fazer sideload de aplicativos Teams:
+
+       1. No cliente Teams, selecione o **ícone da** Loja.
+       1. Selecione **Gerenciar seus aplicativos**.
+       1. Selecione **Publicar um aplicativo**.
+       1. Procure a opção para Upload **um aplicativo personalizado**. Se você vir a opção, o sideload de aplicativos será habilitado.
+
+           :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="A ilustração mostra a opção de carregar um aplicativo personalizado Teams.":::
+
+           > [!NOTE]
+           > Se você não tiver a opção de carregar um aplicativo personalizado, fale com seu Teams administrador.
+
+      ### <a name="create-a-free-teams-developer-tenant-optional"></a>Criar um locatário Teams desenvolvedor gratuito (opcional)
+
+      Se você não tiver uma conta Teams desenvolvedor, poderá obter gratuitamente. Participe do programa Microsoft 365 desenvolvedor!
+
+      1. Vá para o programa [Microsoft 365 desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program)
+      1. Selecione **Ingressar agora** e siga as instruções na tela.
+      1. Na tela de boas-vindas, selecione **Configurar assinatura do E5**.
+      1. Configurar sua conta de administrador. Depois de concluir, a tela a seguir será exibida.
+
+          :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemplo do que você vê depois de se inscrever no programa Microsoft 365 desenvolvedor.":::
+
+      1. Entre no Teams usando a conta de administrador que você acabou de configurar. Verifique se você tem a **opção Upload aplicativo personalizado** no Teams.
+
+      ## <a name="get-a-free-azure-account"></a>Obter uma conta gratuita do Azure
+
+      Se você deseja hospedar seu aplicativo ou acessar recursos no Azure, deve ter uma assinatura do Azure. [Crie uma conta gratuita](https://azure.microsoft.com/free/) antes de começar.
+
+      Agora você tem todas as ferramentas e configura sua conta. Em seguida, vamos configurar seu ambiente de desenvolvimento e começar a criar! Selecione o aplicativo que você deseja fazer primeiro.
+  - title: Criar espaço de trabalho do projeto para seu aplicativo de guia
+    durationInMinutes: 1
+    content: |
+
+      Inicie Microsoft Teams desenvolvimento de aplicativos criando seu primeiro aplicativo. Este aplicativo usa o recurso Tab.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagrama mostrando que esse aplicativo tem três recursos. A guia é realçada." border="false":::
+
+      Nesta página, você aprenderá:
+      1. [Como configurar um novo projeto Tab com Teams Toolkit](#create-your-tab-project-workspace)
+      1. [Sobre a estrutura de diretório do seu aplicativo](#take-a-tour-of-the-tab-app-source-code)
+
+      ## <a name="create-your-tab-project-workspace"></a>Criar seu espaço de trabalho do projeto de tabulação
+
+      Se os pré-requisitos estão no local, vamos começar!
+
+      > [!NOTE]
+      > A Visual Studio Code da interface do usuário mostrada é do Mac. Pode ser diferente, dependendo do sistema operacional, Teams Toolkit versão e ambiente.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vsc)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
+
+      1. Selecione **Criar um novo aplicativo do Teams**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams." border="false":::
+
+      1. Selecione **Criar um novo Teams para** criar um aplicativo usando Teams Toolkit.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Assistente é iniciado para criar um novo projeto" border="false":::
+
+      1. Verifique se **Tab** está selecionado como o recurso que você deseja criar em seu aplicativo. Selecione **OK**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Selecionar Recurso do Aplicativo" border="false":::
+
+      1. Selecione **JavaScript** como linguagem de programação.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação." border="false":::
+
+      1. Insira `helloworld` como o nome do aplicativo. Certifique-se de usar somente caracteres alfanuméricos. Selecione **Enter** para continuar.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Captura de tela mostrando onde inserir o nome do aplicativo." border="false":::
+
+          O Teams guia é criado em alguns segundos.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Captura de tela mostrando o aplicativo criado." border="false":::
+
+          Depois que seu aplicativo é criado, Teams Toolkit exibe uma mensagem para indicar o local onde o espaço de trabalho do projeto é criado. Esta pasta é o local padrão especificado em Visual Studio Code configurações.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Mensagem de local":::
+
+          A mensagem oferece duas opções:
+          
+          - **Alterar local**
+          - **Depuração local**
+          
+          Para este tutorial, você não precisa usar essas opções.
+
+          > [!NOTE]
+          > Se você optar por alterar o local de espaço de trabalho, ele será refletido somente para projetos que você criar após recarregar Visual Studio Code. Nenhuma alteração é feita no local dos projetos existentes.
+
+          <details>
+          <summary>Uma recapitulação rápida da criação de um Teams app.</summary>
+          Assista a esta breve recapitulação para criar um Teams app.
+
+          ![Criar um Teams app](~/assets/videos/javascript-tab-app.gif) </details>
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cli)
+
+      Use a CLI `teamsfx` para criar o seu primeiro projeto. Inicie pela pasta onde deseja criar a pasta do projeto.
+
+      ``` bash
+      teamsfx new
+      ```
+
+      Você pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.
+
+      Por exemplo, use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.
+
+      1. Selecione **Criar um novo aplicativo do Teams**.
+      1. Selecione o **recurso Tab** .
+      1. Selecione **Azure** como hospedagem front-end.
+      1. Não selecione recursos de nuvem.
+      1. Selecione **JavaScript** como linguagem de programação.
+      1. Pressione **Inserir** para selecionar a pasta padrão do espaço de trabalho.
+      1. Insira `helloworld` como o nome do seu aplicativo. O nome do aplicativo deve ter apenas caracteres alfanuméricos.
+
+        Depois de responder a todas as perguntas, seu projeto será criado.
+
+      ---
+
+      ## <a name="take-a-tour-of-the-tab-app-source-code"></a>Fazer um tour pelo código-fonte do aplicativo guia
+
+      Teams Toolkit fornece todos os componentes para a criação de um aplicativo. Depois de criar o projeto, você pode exibir as pastas e arquivos do projeto na área **Explorer** de Visual Studio Code.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab.png" alt-text="Project arquivos scaffolded para o aplicativo com o recurso Tab no Visual Studio Code.":::
+
+      Embora você esteja livre para escolher qualquer estrutura de interface do usuário (ou não usar nenhuma), este código de modelo de exemplo fornece um scaffolding com React componentes.
+
+      Entre outros itens nesta estrutura de diretório, o Toolkit mantém:
+
+      | Nome da pasta | Conteúdos |
+      | --- | --- |
+      | `.fx/configs` | Arquivos de configuração que o usuário pode personalizar para o Teams app. |
+      | - `.fx/configs/config.<envName>.json` | Arquivo de configuração para todos os ambientes. |
+      | - `.fx/configs/azure.parameters.<envName>.json` | Arquivo de parâmetros para provisionamento do Azure BICEP para todos os ambientes. |
+      | - `.fx/configs/projectSettings.json` | Configurações globais do projeto que se aplicam a todos os ambientes. |
+      | - `.fx/configs/localSettings.json` | Arquivo de configuração para depuração local. |
+      | - `.fx/states` | Provisione a saída gerada por Teams Toolkit.  O kit de ferramentas cria essa pasta depois que você provisiona recursos para seu aplicativo. |
+      | - `.fx/states/state.<envName>.json` | Provisionar arquivo de saída para todos os ambientes. |
+      | - `.fx/states/<env>.userdata` | Dados de usuário confidenciais para a saída de provisionamento para todos os ambientes. |
+      | `tabs` | Código para o recurso Tab necessário no tempo de execução, como aviso de privacidade, termos de uso e guias de configuração. |
+      | - `tabs/src/index.jsx` | Ponto de entrada para o aplicativo front-end, onde o componente principal do Aplicativo é renderizado com `ReactDOM.render()` |
+      | - `tabs/src/components/App.jsx` | Código para manipular o roteamento de URL no aplicativo. Ele chama o [Microsoft Teams JavaScript client SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) para estabelecer a comunicação entre seu aplicativo e o Teams. |
+      | - `tabs/src/components/Tab.jsx` | Código para implementar a interface do usuário do seu aplicativo. |
+      | - `tabs/src/components/TabConfig.jsx` | Código para implementar a interface do usuário que configura seu aplicativo. |
+      | `templates/appPackage` | Arquivos de modelo de manifesto do aplicativo e os ícones do aplicativo: color.png e outline.png. |
+      | - `templates/appPackage/manifest.local.template.json` | Manifesto do aplicativo para executar o aplicativo no ambiente local  |
+      | - `templates/appPackage/manifest.remote.template.json` | Manifesto do aplicativo para executar o aplicativo em ambiente remoto, como um site do Azure |
+      | `templates/azure` | Arquivos de modelo BICEP |
+      |
+
+      Quando você adiciona a funcionalidade de nuvem, Teams Toolkit adiciona as pastas necessárias ao projeto. A `api` pasta mantém o código em qualquer função do Azure que você gravar.
+  - title: Criar e executar seu primeiro aplicativo de guia
+    durationInMinutes: 1
+    content: |
+
+      Depois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de guia. Você precisará entrar na sua conta Microsoft 365.
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>Entre na sua conta Microsoft 365 de usuário
+
+      Use sua Microsoft 365 de usuário para entrar no Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra lateral.
+      1. Selecione **Entrar no M365**.
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta.
+
+      1. Entre na sua conta Microsoft 365 usando suas credenciais.
+      1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.
+      1. Volte para Teams Toolkit dentro Visual Studio Code.
+
+          A **seção CONTAS** da barra lateral mostra o nome Microsoft 365 conta. Teams Toolkit exibe **Sideloading habilitado se** o sideload estiver habilitado para sua Microsoft 365 de usuário.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Captura de tela mostrando onde entrar no Microsoft 365 e no Azure." border="false":::
+
+          Agora você está pronto para criar o aplicativo e execute-o no ambiente local!
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cline)
+
+      1. Entre no Microsoft 365 com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+      2. Entre no Azure com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+          Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
+
+          Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
+
+      ---
+
+      ## <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Compilar e executar seu aplicativo localmente em Visual Studio Code
+
+      Para compilar e executar seu aplicativo localmente:
+
+      1. No Visual Studio Code, selecione **F5** para executar o aplicativo no modo de depuração.
+
+          <!-- markdownlint-disable MD033 -->
+
+          <details>
+          <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>
+
+          Caso esteja se perguntando, ao pressionar a **tecla F5**, Teams Toolkit:
+
+          - Registra seu aplicativo com Azure Active Directory. Este aplicativo tem permissões para o local de onde o aplicativo é carregado e os recursos de back-end.
+          - *Sideloads* do aplicativo em Teams.
+          - Inicia o back-end do aplicativo em execução localmente usando as [Ferramentas Principais da Função do Azure](/azure/azure-functions/functions-run-local?#start).
+          - Inicia o front-end do aplicativo hospedado localmente.
+          - Inicia Microsoft Teams em um navegador da Web com um comando para instruir Teams carregar o aplicativo de lado de `https://localhost:3000/tab`. Essa URL está registrada no manifesto do aplicativo.
+          - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams. O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Captura de tela mostrando quando a tecla F5 é pressionada.":::
+
+          > [!NOTE]
+          > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado. Uma janela do navegador é aberta quando a com build é concluída. Esse processo pode levar de 3 a 5 minutos para ser concluído.
+
+          O kit de ferramentas solicita que você instale um certificado local, se necessário. Esse certificado permite que o Teams carregue seu aplicativo a partir de `https://localhost`.
+
+      1. Selecione **Sim** se a caixa de diálogo a seguir for exibida:
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de tela mostrando o prompt para instalar um certificado SSL para permitir Teams carregar seu aplicativo do localhost.":::
+
+          Ou selecione **Continuar**, dependendo do sistema operacional:
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Captura de tela mostrando o prompt para instalar um certificado SSL para permitir Teams carregar seu aplicativo de localhost no Mac.":::
+
+          Teams cliente Web é aberto em uma janela do navegador.
+
+      1. Entre com sua conta Microsoft 365, se solicitado.
+
+      1. Selecione **Adicionar** quando solicitado a fazer sideload do aplicativo Teams no computador local.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Adicione o aplicativo ao Teams":::
+
+      1. Parabéns, seu primeiro aplicativo está sendo executado Teams!
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="Captura de tela do aplicativo concluído":::
+
+      1. Mova a página para exibir os detalhes do usuário.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-authorize.png" alt-text="Captura de tela da seção de informações do usuário na guia":::
+          
+      1. Selecione **Autorizar** para permitir que seu aplicativo recupere detalhes do usuário usando o Microsoft Graph.
+
+          O aplicativo solicita permissão para conceder acesso para exibir detalhes do usuário.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Captura de tela do aplicativo de autorização para acessar detalhes do usuário":::
+
+      1. Selecione **Aceitar** para permitir que seu aplicativo acesse os detalhes do usuário.
+
+          Sua foto e detalhes aparecem em suas guias pessoais.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-user-info.png" alt-text="Captura de tela das informações do usuário na guia":::
+
+          Você pode fazer atividades normais de depuração, como definir pontos de interrupção, como se fosse qualquer outro aplicativo Web. O aplicativo dá suporte à recarga dinâmica. Se você alterar qualquer arquivo dentro do projeto, a página será recarregada.
+
+        <!-- markdownlint-disable MD033 -->
+
+        <details>
+        <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>
+
+        Para executar seu aplicativo com êxito Teams, verifique se você habilitar o sideload na sua Teams conta. Você pode saber mais sobre sideload na seção Pré-requisitos.
+
+        </details>
+
+        Você sabe como usar o Toolkit para configurar um aplicativo de tabulação e execute-o localmente. Em seguida, vamos aprender a criar um bot de chat conversacional com Toolkit!
+  - title: Criar espaço de trabalho de projeto para seu aplicativo bot
+    durationInMinutes: 1
+    content: |
+
+      Você criou seu aplicativo de guia. Agora vamos criar seu primeiro aplicativo bot.
+
+      A funcionalidade bot de um aplicativo Teams cria um chatbot ou um bot de conversa. Use-o para executar tarefas simples e automatizadas, como o fornecimento de serviço ao cliente. Um bot conversa com um serviço Web e ajuda você a usar suas ofertas. Você pode obter previsão do tempo, fazer reservas ou qualquer outro serviço oferecido usando um bot de conversação.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagrama mostrando que esse aplicativo tem três recursos. Bot é realçado." border="false":::
+
+      À medida que você já se preparou para criar esses aplicativos, você pode configurar um novo projeto Teams para criar o aplicativo bot.
+
+      Neste tutorial, você aprenderá:
+
+      1. [Como configurar um novo projeto bot com Teams Toolkit.](#create-your-bot-project-workspace)
+      1. [Sobre a estrutura de diretório do seu projeto de aplicativo.](#take-a-tour-of-the-bot-app-source-code)
+
+      > [!IMPORTANT]
+      > Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) mas não estão disponíveis no GCC-High e Departamento de Defesa (DOD).
+
+      ## <a name="create-your-bot-project-workspace"></a>Criar seu espaço de trabalho de projeto de bot
+
+      Se os pré-requisitos estão no local, vamos começar!
+
+      > [!NOTE]
+      > A Visual Studio Code da interface do usuário mostrada é do Mac. Pode ser diferente, dependendo do sistema operacional, Teams Toolkit versão e ambiente.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
+
+      1. Selecione **Criar um novo aplicativo do Teams**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams." border="false":::
+
+      1. Selecione **Criar um novo Teams para** criar um aplicativo usando o Teams Toolkit.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Início do assistente para Criar Novo Projeto" border="false":::
+
+      1. Selecione **Bot**, desmarque **Tab** e selecione **OK**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo." border="false":::
+
+      1. Selecione **JavaScript** na seção **Linguagem de** Programação.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação." border="false":::
+
+      1. Insira um nome adequado para seu aplicativo, como `hellobot`. Verifique se o nome do aplicativo é alfanumérico. Selecione **Enter** para continuar.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Captura de tela mostrando onde inserir o nome do aplicativo." border="false":::
+
+          Seu Teams app com um recurso Bot é criado em alguns segundos.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Captura de tela mostrando o aplicativo criado." border="false":::
+
+          Depois que seu aplicativo é criado, o Teams Toolkit exibe uma mensagem para indicar o local onde o espaço de trabalho do projeto é criado. Esta pasta é o local padrão especificado em Visual Studio Code configurações.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Mensagem de local":::
+
+          A mensagem oferece duas opções:
+          
+          - **Alterar local**
+          - **Depuração local**
+          
+          Para este tutorial, você não precisa usar essas opções.
+
+          > [!NOTE]
+          > Se você optar por alterar o local de espaço de trabalho, ele será refletido somente para projetos que você criar após recarregar Visual Studio Code. Nenhuma alteração é feita no local dos projetos existentes.
+
+      <details>
+      <summary>Uma recapitulação rápida da criação de um Teams app.</summary>
+      Assista a esta breve recapitulação para criar um Teams app.
+
+      ![Criar um Teams aplicativo](~/assets/videos/javascript-bot-app.gif)
+      </details>
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cli)
+
+      Use a CLI `teamsfx` para criar o seu primeiro projeto.  Inicie pela pasta onde deseja criar a pasta do projeto.
+
+      ``` bash
+      teamsfx new
+      ```
+
+      Você pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.
+
+      Por exemplo, use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.
+
+      1. Selecione **Criar um novo aplicativo do Teams**.
+      1. Selecione **Bot** e desmarque **Tab**.
+      1. Selecione **JavaScript** como linguagem de programação.
+      1. Selecione **Enter** para selecionar a pasta de espaço de trabalho padrão.
+      1. Insira um nome adequado para seu aplicativo, como `HelloBot`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.
+
+      Depois de responder a todas as perguntas, seu projeto será criado.
+
+      ---
+
+      ## <a name="take-a-tour-of-the-bot-app-source-code"></a>Fazer um tour pelo código-fonte do aplicativo bot
+
+      Depois que o scaffolding for feito, ex view the project directories and files in the Explorer area of Visual Studio Code.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project arquivos scaffolded para bot em Visual Studio Code." border="false":::
+
+      | Nome da pasta | Conteúdos |
+      | --- | --- |
+      | `.fx/configs` | Arquivos de configuração que o usuário pode personalizar para o Teams app. |
+      | `.fx/configs/config.<envName>.json` | Arquivo de configuração para todos os ambientes. |
+      | `.fx/configs/azure.parameters.<envName>.json` | Arquivo de parâmetros para provisionamento do Azure BICEP para todos os ambientes. |
+      | `.fx/configs/projectSettings.json` | Configurações globais do projeto que se aplicam a todos os ambientes. |
+      | `.fx/configs/localSettings.json` | Arquivo de configuração para depuração local. |
+      | `.fx/states` | Provisione a saída gerada pelo Toolkit.  O kit de ferramentas cria essa pasta depois que você provisiona recursos para seu aplicativo. |
+      | `.fx/states/state.<envName>.json` | Provisionar arquivo de saída para todos os ambientes. |
+      | `.fx/states/<env>.userdata` | Dados de usuário confidenciais para a saída de provisionamento para todos os ambientes. |
+      | `bot` |  Código para o recurso Bot necessário no tempo de execução. |
+      | `bot/teamsBot.js` | Ponto de entrada principal para o aplicativo bot. |
+      | `templates/appPackage` | Arquivos de modelo de manifesto de aplicativo e os ícones do aplicativo, color.png e outline.png. |
+      | `templates/appPackage/manifest.local.template.json` | Manifesto do aplicativo para executar o aplicativo no ambiente local  |
+      | `templates/appPackage/manifest.remote.template.json` | Manifesto do aplicativo para executar o aplicativo em ambiente remoto, como o site do Azure |
+      | `templates/azure` | Arquivos de modelo BICEP |
+
+      > [!Tip]
+      > Familiarize-se com os bots fora do Teams antes de integrar o seu primeiro bot dentro do Teams.
+  - title: Criar e executar seu primeiro aplicativo de bot
+    durationInMinutes: 1
+    content: |
+
+      Depois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de bot. Verifique se você se inscreveu na sua conta Microsoft 365.
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>Entre na sua conta Microsoft 365 de usuário
+
+      Use essa conta para entrar Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra lateral.  
+      1. Selecione **Entrar no M365**.
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta.
+
+      1. Entre na sua conta Microsoft 365 usando suas credenciais.
+      1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.
+      1. Volte para Teams Toolkit dentro Visual Studio Code.
+
+          Use essa conta para entrar Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Captura de tela mostrando onde entrar no Microsoft 365 e no Azure." border="false":::
+
+          Agora você está pronto para criar o aplicativo e execute-o localmente!
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cline)
+
+      1. Entre no Microsoft 365 com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+      2. Entre no Azure com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+          Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
+
+          Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
+
+      ---
+
+      ## <a name="build-and-run-your-first-bot-app-locally"></a>Criar e executar seu primeiro aplicativo de bot localmente
+
+      Para criar e executar seu aplicativo no ambiente local:
+
+      1. Selecione **F5** no Visual Studio Code para executar seu aplicativo no modo de depuração.
+
+          <!-- markdownlint-disable MD033 -->
+
+          <details>
+          <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>
+
+          Caso esteja se perguntando, ao pressionar a **tecla F5**, a Teams Toolkit:
+
+          - Registra seu aplicativo com Azure Active Directory. Este aplicativo tem permissões para o local de onde o aplicativo é carregado e os recursos de back-end.
+          - *Sideloads* do aplicativo em Teams.
+          - Inicia o back-end do aplicativo em execução localmente usando as [Ferramentas Principais da Função do Azure](/azure/azure-functions/functions-run-local?#start).
+          - Inicia o front-end do aplicativo hospedado localmente.
+          - Inicia Microsoft Teams em um navegador da Web com um comando para instruir Teams carregar o aplicativo de lado de `https://localhost:3000/tab`. Essa URL está registrada no manifesto do aplicativo.
+          - Um manifesto de aplicativo é gerado e existe no Portal de Desenvolvedor do Teams. O Teams usa o manifesto do aplicativo para dizer aos clientes conectados de onde carregar o aplicativo.
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Captura de tela mostrando quando a tecla F5 é pressionada para depuração.":::
+
+          > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado. Uma janela do navegador é aberta automaticamente quando a compilação é concluída. Esse processo pode levar de 3 a 5 minutos para ser concluído.
+
+          O navegador da Web começa a executar o aplicativo.
+
+      1. Entre com sua conta Microsoft 365, se solicitado.
+
+      1. Selecione **Adicionar** quando solicitado a fazer sideload do aplicativo Teams no computador local.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Captura de tela mostrando que o bot está sendo adicionado Teams cliente.":::
+
+          Agora o bot está sendo executado com êxito Teams! Depois que o aplicativo é carregado, uma sessão de chat com o bot é aberta.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Captura de tela mostrando que o bot está sendo executado Teams cliente.":::
+
+          Você pode digitar para `welcome` mostrar um cartão de introdução e digitar `learn` para ir para a documentação de comando de bot e cartão adaptável.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Captura de tela mostrando o cartão de aprendizado no bot no Teams cliente.":::       
+
+          Você pode fazer atividades normais de depuração, como definir pontos de interrupção, como com qualquer outro aplicativo Web. Abra o arquivo `bot/teamsBot.js` e localize o método `onMessage()`. Definir um ponto de interrupção em qualquer caso. Em seguida, digite algum texto.
+
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>
+
+        Para executar seu aplicativo com êxito Teams, verifique se você habilitar o sideload na sua Teams conta. Você pode saber mais sobre sideload na seção Pré-requisitos.
+
+        > [!IMPORTANT]
+        > Atualmente, os aplicativos de sideload estão disponíveis em Nuvem da Comunidade Governamental (GCC), GCC-Alto e DOD.
+
+        > [!TIP]
+        > Verifique se há problemas antes de fazer sideload do aplicativo, usando a [ferramenta de validação do aplicativo](https://dev.teams.microsoft.com/appvalidation.html). Esta ferramenta está incluída no kit de ferramentas. Correção dos erros para fazer sideload do aplicativo.
+        </details> 
+  - title: Criar espaço de trabalho do projeto para seu aplicativo de extensão de mensagens
+    durationInMinutes: 1
+    content: |
+
+      Você criou seu aplicativo bot. Agora, vamos criar seu primeiro aplicativo de extensão de mensagens.
+
+      O recurso Extensão de Mensagens permite que você interaja com um serviço Web. Use a área de composição, a caixa de comando ou uma mensagem no Teams cliente para pesquisar e iniciar ações em um sistema externo.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagrama mostrando que esse aplicativo tem três recursos. a extensão de mensagens é realçada." border="false":::
+
+      Há dois tipos de **extensões de mensagens** do Teams:
+
+      - [Comandos de pesquisa](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): você pode pesquisar sistemas externos. Em seguida, você pode inserir seus resultados em uma mensagem na forma de um cartão.
+      - [Comandos de](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md) ação: você pode apresentar aos usuários um pop-up modal para coletar ou exibir informações. Em seguida, você pode processar a interação deles e enviar informações de volta para Teams.
+
+      Vamos criar um aplicativo de extensão de mensagens com um *comando de pesquisa*. Use-o para pesquisar dados externos e inserir os resultados em uma mensagem dentro Teams cliente.
+
+      Como você já se preparou para criar esses aplicativos, você pode configurar um novo projeto Teams para criar o aplicativo de extensão de mensagens.
+
+      > [!NOTE]
+      > As extensões de mensagens dependem dos bots para fornecer uma caixa de diálogo entre o usuário e seu código.
+
+
+      Neste tutorial, você aprenderá:
+
+      1. [Como configurar um novo projeto de Extensão de Mensagens com Teams Toolkit.](#create-your-messaging-extension-project-workspace)
+      1. [Sobre a estrutura de diretório do seu projeto de aplicativo.](#take-a-tour-of-the-messaging-extension-app-source-code)
+
+      ## <a name="create-your-messaging-extension-project-workspace"></a>Criar seu espaço de trabalho do projeto de extensão de mensagens
+
+      Se os pré-requisitos estão no local, vamos começar!
+
+      > [!NOTE]
+      > A Visual Studio Code da interface do usuário mostrada é do Mac. Ele pode diferir dependendo do sistema operacional, Toolkit versão e ambiente.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vsc)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
+
+      1. Selecione **Criar novo Project** do lado esquerdo do Toolkit.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Localização do link de Criação de Novo Projeto na barra lateral do Kit de ferramentas do Teams." border="false":::
+
+      1. Selecione **Criar Novo Project** para criar um aplicativo usando o Teams Toolkit.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Início do assistente para Criar Novo Projeto" border="false":::
+
+      1. Selecione **Extensão de Mensagens**, desmarque **a Guia** e selecione **OK**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex.png" alt-text="Captura de tela mostrando como adicionar capacidades ao seu novo aplicativo." border="false":::
+
+      1. Selecione **JavaScript** como linguagem de programação.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="Captura de tela mostrando como selecionar a linguagem de programação." border="false":::
+
+      1. Insira um nome adequado para seu aplicativo. Verifique se o nome do aplicativo é alfanumérico. Selecione **Enter** para continuar.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="Captura de tela mostrando como inserir o nome do aplicativo." border="false":::
+
+          Teams Toolkit criar o aplicativo em alguns segundos.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Captura de tela mostrando o aplicativo criado." border="false":::
+
+          Depois que seu aplicativo é criado, o Teams Toolkit exibe uma mensagem para indicar o local onde o espaço de trabalho do projeto é criado. Este é o local padrão especificado em Visual Studio Code configurações.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Mensagem de local":::
+
+          A mensagem oferece duas opções:
+          
+          - **Alterar local**
+          - **Depuração local**
+          
+          Para este tutorial, você não precisa usar essas opções.
+
+          > [!NOTE]
+          > Se você optar por alterar o local de espaço de trabalho, ele será refletido somente para projetos que você criar após recarregar Visual Studio Code. Nenhuma alteração é feita no local dos projetos existentes.
+
+        <details>
+        <summary>Uma recapitulação rápida da criação de um Teams app.</summary>
+        Assista a esta breve recapitulação para criar um Teams app.
+
+        ![Criar um Teams aplicativo](~/assets/videos/javascript-msg-ext-app.gif)
+        </details>
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cli)
+
+      Use a CLI `teamsfx` para criar o seu primeiro projeto. Inicie pela pasta onde deseja criar a pasta do projeto.
+
+      ``` bash
+      teamsfx new
+      ```
+
+      Você pode usar a CLI para criar um novo Teams app. A CLI o conduz por uma série de perguntas. Cada pergunta inclui uma instrução sobre como respondê-la.
+
+      Por exemplo, Use teclas de seta para selecionar uma opção. Depois de fazer a escolha, selecione **Enter** para confirmá-la.
+
+
+      1. Selecione **Criar um novo aplicativo do Teams**.
+      1. Selecione **Extensão de Mensagem** e desmarque **a Guia**.
+      1. Selecione **JavaScript** como linguagem de programação.
+      1. Selecione **Enter** para selecionar a pasta de espaço de trabalho padrão.
+      1. Insira um nome adequado para seu aplicativo, como `HelloMsgExtn`.  O nome do aplicativo deve consistir apenas de caracteres alfanuméricos.
+
+        Depois que todas as perguntas foram respondidas, seu projeto é criado.
+
+      ---
+
+      ## <a name="take-a-tour-of-the-messaging-extension-app-source-code"></a>Fazer um tour pelo código-fonte do aplicativo de extensão de mensagens
+
+      Uma extensão de mensagens usa a Estrutura de Bot. Use-o para interagir com seu serviço por meio de uma conversa. Depois que o scaffolding for feito, ex view the project directories and files in the Explorer area of Visual Studio Code.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hw-folder-structure-mex.png" alt-text="Layout de arquivo de um projeto de bot" border="false":::
+
+      | Nome da pasta | Conteúdos |
+      | --- | --- |
+      | `.fx/configs` | Arquivos de configuração que o usuário pode personalizar para o Teams app. |
+      | `.fx/configs/config.<envName>.json` | Arquivo de configuração para todos os ambientes. |
+      | `.fx/configs/azure.parameters.<envName>.json` | Arquivo de parâmetros para provisionamento do Azure BICEP para todos os ambientes. |
+      | `.fx/configs/projectSettings.json` | Configurações globais do projeto que se aplicam a todos os ambientes. |
+      | `.fx/configs/localSettings.json` | Arquivo de configuração para depuração local. |
+      | `.fx/states` | Provisione a saída gerada pelo Toolkit.  O kit de ferramentas cria essa pasta depois que você provisiona recursos para seu aplicativo. |
+      | `.fx/states/state.<envName>.json` | Provisionar arquivo de saída para todos os ambientes. |
+      | `.fx/states/<env>.userdata` | Dados de usuário confidenciais para a saída de provisionamento para todos os ambientes. |
+      | `bot` |  Código para o Bot necessário no tempo de execução. |
+      | `bot/messageExtensionBot.js` | Ponto de entrada principal para o aplicativo de extensão de mensagens. |
+      | `templates/appPackage` | Arquivos de modelo de manifesto de aplicativo e os ícones do aplicativo, color.png e outline.png. |
+      | `templates/appPackage/manifest.local.template.json` | Manifesto do aplicativo para executar o aplicativo no ambiente local  |
+      | `templates/appPackage/manifest.remote.template.json` | Manifesto do aplicativo para executar o aplicativo em ambiente remoto, como o site do Azure |
+      | `templates/azure` | Arquivos de modelo BICEP |
+
+      > [!Tip]
+      > Familiarize-se com bots e extensão de mensagens fora do Teams antes de integrar seu aplicativo Teams.
+  - title: Criar e executar seu primeiro aplicativo de extensão de mensagens
+    durationInMinutes: 1
+    content: |
+
+      Depois de configurar seu espaço de trabalho do projeto com Teams Toolkit, crie seu projeto de guia. Você precisará entrar na sua conta Microsoft 365.
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>Entre na sua conta Microsoft 365 de usuário
+
+      Use essa conta para entrar Teams. Se você estiver usando um locatário de programa Microsoft 365 desenvolvedor, a conta de administrador configurada durante o registro é sua Microsoft 365 de usuário.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vcode)
+
+      1. Abra o Visual Studio Code.
+      1. Selecione o Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra lateral.  
+      1. Selecione **Entrar no M365**.
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta.
+
+      1. Entre na sua conta Microsoft 365 de usuário.
+      1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.
+      1. Volte para Teams Toolkit dentro Visual Studio Code.
+
+          A **seção CONTAS** da barra lateral mostra o nome Microsoft 365 conta. O Teams Toolkit **exibirá Sideloading habilitado** se o sideload estiver habilitado para sua Microsoft 365 de usuário.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Captura de tela mostrando onde entrar no Microsoft 365 e no Azure." border="false":::
+
+          Agora você está pronto para criar o aplicativo e execute-o localmente!
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cline)
+
+      1. Entre no Microsoft 365 com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+      2. Entre no Azure com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+          Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
+
+          Agora que o ambiente de desenvolvimento está configurado, você pode criar, criar e implantar seu primeiro Teams aplicativo.
+
+      ---
+
+      ## <a name="build-and-run-your-app-in-the-local-environment"></a>Criar e executar seu aplicativo no ambiente local
+
+      Uma extensão de mensagens permite que você interaja com um serviço Web. Ele aproveita o recurso de mensagens e a comunicação segura de um bot. O aplicativo de extensão de mensagens é adicionado a um serviço Web registrado como bot. 
+
+      ### <a name="build-and-run-your-app-locally"></a>Criar e executar seu aplicativo localmente
+
+      1. Selecione **F5** no Visual Studio Code para executar seu aplicativo no modo de depuração.
+          <!-- markdownlint-disable MD033 -->
+          <details>
+          <summary>Saiba o que acontece quando você executa seu aplicativo localmente no depurador.</summary>
+
+          Quando você seleciona **F5**, o Teams Toolkit:
+
+          1. Registra seu aplicativo com Azure Active Directory.
+          1. Registra seu aplicativo para "side loading" no Teams.
+          1. Inicia o back-end do aplicativo em execução localmente usando as Ferramentas [Principais da Função do Azure](/azure/azure-functions/functions-run-local?#start).
+          1. Inicia o túnel ngrok para que Teams possa se comunicar com seu aplicativo.
+          1. Inicia Microsoft Teams com um comando para instruir Teams fazer sideload do aplicativo.
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Captura de tela mostrando quando a tecla F5 é pressionada para depurar.":::
+
+          > [!NOTE]
+          > Quando você executar o aplicativo pela primeira vez, todas as dependências serão baixadas e o aplicativo será criado. Uma janela do navegador é aberta quando a com build é concluída. Esse processo pode levar de 3 a 5 minutos para ser concluído.
+
+          Teams abre em um navegador da Web.
+          
+      1. Entre com sua conta Microsoft 365, se solicitado.
+      1. Selecione **Adicionar** para adicionar o aplicativo à sua conta.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png" alt-text="Captura de tela mostra mensagem para adicionar o aplicativo" border="false":::
+
+          O kit de ferramentas exibe uma mensagem para indicar que o aplicativo é adicionado Teams.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Captura de tela mostra mensagem para experimentar o aplicativo agora ou mais tarde" border="true":::
+
+          - Se você selecionar **Got it**, você pode experimentar o aplicativo posteriormente na lista de aplicativos Sideloaded.
+          - Se você selecionar **Experimentar, Teams** carregará seu aplicativo.
+
+      1. Selecione **Experimentar**.
+
+          O aplicativo Extensão de Mensagens é carregado em um aplicativo de bot de chat.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Captura de tela que mostra o sideload do aplicativo em Teams" border="false":::
+
+          À medida que os aplicativos de extensão de mensagens dependem de bots para permitir a comunicação entre o usuário e o serviço Web, seu aplicativo é carregado em um recurso de chat de um bot.
+
+          - Se você tiver criado um aplicativo bot antes de criar o aplicativo de extensão de mensagens, poderá ver que ele é carregado no mesmo aplicativo de bot que você criou. As mensagens de chat anteriores estão visíveis.
+          - Se você criou uma extensão de mensagens primeiro, seu aplicativo é carregado em qualquer chat aberto no Teams.
+
+      ### <a name="test-your-app"></a>Testar seu aplicativo
+
+      Na primeira vez que seu aplicativo é carregado, o aplicativo de extensão de mensagens está aberto para você testar. Este aplicativo de exemplo permite que você pesquise pacotes npm de código aberto no registro de software.
+
+      #### <a name="to-run-a-search-query"></a>Para executar uma consulta de pesquisa
+
+      1. Vamos inserir uma cadeia de caracteres de pesquisa na caixa de pesquisa, como "cli". Você receberá uma lista dos itens correspondentes:
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Captura de tela que mostra como usar o aplicativo para pesquisa" border="true":::
+
+      1. Selecione um dos resultados da pesquisa. Ele será exibido na área de composição para que você possa enviar o resultado para o canal.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Captura de tela que mostra o resultado da pesquisa" border="false":::
+
+      1. Selecione as **instruções Enviar** .
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Captura de tela que mostra o resultado da pesquisa enviado no chat" border="false":::
+
+          Agora, você aprendeu a criar e executar um aplicativo básico de extensão de mensagens!         
+
+      ## <a name="optional-scenarios"></a>Cenários opcionais
+
+      Você testou o recurso de pesquisa de um aplicativo básico de extensão de mensagens. Agora, você pode experimentar algumas outras funcionalidades deste aplicativo. Esses são cenários opcionais neste aplicativo.
+      <br>
+      <br>
+      <details>
+      <summary>Para criar um cartão</summary>
+
+      1. Selecione **Criar Cartão**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Captura de tela que mostra como criar um cartão" border="false":::
+
+      1. Insira os detalhes do cartão conforme mostrado e selecione **Enviar**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Captura de tela que mostra como adicionar detalhes de um cartão" border="true":::
+
+          Os detalhes do cartão aparecem na área de composição.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Captura de tela que mostra como adicionar detalhes de um cartão" border="true":::
+
+      1. Selecione o **ícone Enviar** na área de composição.
+
+          O aplicativo envia o cartão no chat de bot.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Captura de tela que mostra o cartão enviado" border="false":::
+      </details>
+      <br>
+      <details>
+      <summary>Para abrir seu aplicativo na área de composição</summary>
+
+      Escolha uma das seguintes maneiras de abrir seu aplicativo.
+
+      **Usando `@mention`:**
+
+      1. Insira `@your-app-name` na área de comando do seu aplicativo.
+          
+          O aplicativo abre a caixa de pesquisa e você pode usá-la para executar uma consulta.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Captura de tela que mostra como @mention aplicativo de extensão de mensagens" border="false":::
+
+      1. Insira uma cadeia de caracteres de pesquisa e selecione uma no resultado da pesquisa.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Captura de tela que mostra como executar uma pesquisa usando o aplicativo de extensão de mensagens" border="false":::
+
+          Ele é exibido na área de comando como um cartão.
+
+      1. Copie o cartão para colar na área de composição.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Captura de tela que mostra o resultado da pesquisa em um cartão" border="false":::
+          
+      1. Envie o cartão usando a área de composição.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Captura de tela que mostra o resultado da pesquisa em um chat" border="false":::
+
+      **Usando ícone de três pontos:**
+
+      1. Iniciar a extensão de mensagens de três pontos na parte inferior da área de composição.
+      1. Selecione seu aplicativo de extensão de mensagens.       
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Captura de tela que mostra como abrir o aplicativo de extensão de mensagens de exemplo" border="false":::
+
+          O aplicativo de extensão de mensagens é carregado com as opções para executar uma pesquisa e criar cartões adaptáveis.
+      </details>
+      <br>
+      <details>
+      <summary>Executar o aplicativo de aplicativos com sideload</summary>
+
+      Você pode abrir um aplicativo Teams sideload na lista de aplicativos com sideload. 
+
+      1. Selecione o **ícone da** Loja na Teams lateral.
+      1. Selecione Gerenciar **aplicativos**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Captura de tela que mostra aplicativos com sideload" border="false":::
+
+      1. Selecione o ícone de três pontos para seu aplicativo e selecione **Exibir detalhes**. Você também pode copiar o link para o aplicativo e usá-lo para abrir o aplicativo.
+      1. Selecione **Abrir** para carregar o aplicativo e, em seguida, selecione **Experimentar**. 
+          
+          O aplicativo é carregado em Teams.
+      </details>
+      <br>
+      <br>
+      <!-- markdownlint-disable MD033 -->
+      <details>
+      <summary>Saiba como solucionar problemas se seu aplicativo não for executado localmente.</summary>
+
+      Para executar seu aplicativo Teams, você deve ter uma conta Microsoft 365 de desenvolvimento que permita o sideload do aplicativo. Você pode saber mais sobre sideload na seção Pré-requisitos.
+      </details>
+  - title: Implantar seu primeiro Teams aplicativo
+    durationInMinutes: 1
+    content: |
+
+      Você aprendeu a criar, criar e executar um aplicativo Teams com recursos de Guia, Bot e Extensão de Mensagens. A etapa final é implantar seu aplicativo no Azure.
+
+      Vamos implantar o primeiro aplicativo com o recurso Tab no Azure usando Teams Toolkit.
+
+      ## <a name="sign-in-to-your-azure-account"></a>Entrar na sua conta do Azure
+
+      Use essa conta para acessar o portal Microsoft Azure e provisionar novos recursos de nuvem para dar suporte ao aplicativo.
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. Abra o Visual Studio Code.
+      1. Abra a pasta do projeto na qual você criou o aplicativo de guia.
+      1. Selecione o Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra lateral.  
+      1. Selecione **Entrar no Azure**.
+
+          > [!TIP]
+          > Se você tiver a extensão da Conta do Azure instalada e estiver usando a mesma conta, ignore esta etapa. Use a mesma conta que você está usando em outras extensões.
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta.
+      1. Entre na sua conta do Azure usando suas credenciais.
+      1. Feche o navegador quando solicitado e retorne ao Visual Studio Code.
+
+          A **seção CONTAS** da barra lateral mostra as duas contas separadamente. Ele também lista o número de assinaturas usáveis do Azure disponíveis para você. Certifique-se de ter pelo menos uma assinatura do Azure acessível disponível. Caso não, saia e use uma conta diferente.
+
+          Agora você está pronto para implantar seu aplicativo no Azure!
+
+          Parabéns, você criou três tipos de Teams aplicativos! 
+          Agora vamos em frente e aprender como implantar um dos aplicativos no Azure usando o Teams Toolkit.
+
+      # <a name="command-line"></a>[Linha de comando](#tab/cline)
+
+      1. Entre no Microsoft 365 com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+      2. Entre no Azure com a CLI teamsFx:
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          Seu navegador da Web padrão é aberto para permitir que você entre na conta. Entre na sua conta do Azure usando suas credenciais. Feche o navegador quando for solicitado.
+
+          Os logons da conta são compartilhados entre Visual Studio Code e a CLI teamsFx.
+
+          Parabéns, você criou três tipos de Teams aplicativos! 
+          Agora vamos em frente e aprender como implantar um dos aplicativos no Azure usando o Teams Toolkit.
+
+      ---
+
+        [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
+
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Saiba o que acontece quando você implanta o seu aplicativo no Azure</summary>
+
+        Antes da implantação, o aplicativo era executado localmente:
+
+        * O back-end é executado usando o **Azure Functions Core Tools**.
+        * O ponto de extremidade HTTP do aplicativo, onde o Microsoft Teams carrega o aplicativo, é executado localmente.
+
+        A implantação é um processo de duas etapas. Você provisiona os recursos em uma assinatura ativa do Azure e, em seguida, implanta ou carrega o código back-end e front-end para o aplicativo no Azure.
+
+        * O back-end, se configurado, usa vários serviços do Azure, incluindo o Serviço de Aplicativo do Azure e o Azure Armazenamento.
+        * O front-end do aplicativo será implantado em uma conta de Armazenamento do Microsoft Azure configurada para hospedagem Web estática.
+
+        </details>
+  - title: Parabéns!
+    durationInMinutes: 1
+    content: |
+
+      Você fez isso!
+
+      Você criou três aplicativos, cada um com um recurso diferente: um aplicativo de guia, um aplicativo de bot e um aplicativo de extensão de mensagens.
+
+      Agora que você aprendeu a criar aplicativos básicos, você pode seguir em frente para criar aplicativos mais complexos. Para começar, tente adicionar recursos aos aplicativos existentes.
+
+      Para adicionar recursos ao aplicativo existente:
+
+      1. Selecione **Adicionar funcionalidade na** seção **Desenvolvimento** da barra Teams Toolkit lateral.
+
+      1. Selecione o recurso que você deseja adicionar ao seu aplicativo.
+
+      Isso é tudo. Teams Toolkit adiciona o scaffolding para o novo recurso à estrutura de diretórios do aplicativo. Siga os procedimentos para criar e implantar o aplicativo, e seu aplicativo terá vários recursos. 
+
+      Você concluiu o tutorial para criar aplicativos com JavaScript.

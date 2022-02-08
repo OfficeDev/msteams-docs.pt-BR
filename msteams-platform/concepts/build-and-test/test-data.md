@@ -5,24 +5,19 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212556"
 ---
+
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
 Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma assinatura Microsoft 365 desenvolvedor.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. [Participe do Microsoft 365 programa](/office/developer-program/office-365-developer-program)de desenvolvedores , se você não tiver um locatário de teste.
+1. [Participe do Microsoft 365 de desenvolvedores](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
 2. [Configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
-3. [Use pacotes de dados de exemplo com sua assinatura Microsoft 365 desenvolvedor para instalar o pacote de conteúdo Usuários.](/office/developer-program/install-sample-packs)
-4. [Instale o Teams do PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
-5. [Instale o módulo do PowerShell do Azure AD.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
+3. [Use pacotes de dados de exemplo com sua assinatura Microsoft 365 desenvolvedor para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs).
+4. [Instale o módulo Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+5. [Instale o módulo do PowerShell do Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
 > Você deve ter permissões de administrador global no locatário para executar os scripts.
@@ -164,7 +159,7 @@ Por padrão, somente administradores globais ou Teams de serviço podem carregar
 
         try {
 
-            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 

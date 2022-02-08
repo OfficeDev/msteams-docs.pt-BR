@@ -3,18 +3,13 @@ title: Requisitos e considerações para bots de mídia hospedados pelo aplicati
 description: Entenda requisitos e considerações importantes e considerações de escalabilidade e desempenho relacionadas à criação de bots de mídia hospedados pelo aplicativo para Microsoft Teams usando exemplos e exemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: vm do windows server do windows server hospedado pelo aplicativo
+keywords: VM de mídia hospedada por aplicativo Windows Azure
 ms.date: 11/16/2018
-ms.openlocfilehash: 0597e99b1933270ee4ee85d1adc18378da3c3114
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887410"
 ---
+
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados pelo aplicativo
 
-Um bot de mídia hospedado por aplicativo requer a [ `Microsoft.Graph.Communications.Calls.Media` biblioteca .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo. O bot deve ser implantado em um computador Windows Server ou Windows sistema operacional convidado do servidor (OS) no Azure.
+Um bot de mídia hospedado por aplicativo requer [`Microsoft.Graph.Communications.Calls.Media` a biblioteca .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo. O bot deve ser implantado em um computador Windows Server ou Windows sistema operacional convidado do servidor (OS) no Azure.
 
 > [!NOTE]
 > * As diretrizes para o desenvolvimento de mensagens e ivr (resposta interativa de voz) não se aplicam completamente à criação de bots de mídia hospedados pelo aplicativo.
@@ -33,7 +28,7 @@ Um bot de mídia hospedado por aplicativo requer o seguinte:
   
 - O bot não pode ser implantado como um aplicativo Web do Azure.
 
-- O bot deve estar em execução em uma versão recente da `Microsoft.Graph.Communications.Calls.Media` biblioteca .NET. O bot deve usar a versão mais recente disponível do pacote [NuGet ou](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)uma versão que não tem mais de três meses. As versões mais antigas da biblioteca são preterida e não funcionam após alguns meses. Manter a biblioteca atualizada garante a melhor interoperabilidade entre o `Microsoft.Graph.Communications.Calls.Media` bot e Microsoft Teams.
+- O bot deve estar em execução em uma versão recente da biblioteca `Microsoft.Graph.Communications.Calls.Media` .NET. O bot deve usar a versão mais recente disponível do pacote [NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) ou uma versão que não tem mais de três meses. As versões mais antigas da biblioteca são preterida e não funcionam após alguns meses. Manter a `Microsoft.Graph.Communications.Calls.Media` biblioteca atualizada garante a melhor interoperabilidade entre o bot e Microsoft Teams.
 
 A próxima seção fornece detalhes sobre onde as chamadas de mídia em tempo real estão localizadas.
 
@@ -62,16 +57,16 @@ A próxima seção fornece detalhes sobre escalabilidade e considerações de de
 Os bots de mídia hospedados pelo aplicativo exigem as seguintes considerações de escalabilidade e desempenho:
 - Os bots de mídia hospedados pelo aplicativo exigem mais capacidade de computação e rede (largura de banda) do que bots de mensagens e podem incorrer em custos operacionais significativamente maiores. Um desenvolvedor de bot de mídia em tempo real deve medir cuidadosamente a escalabilidade do bot e garantir que o bot não aceite mais chamadas simultâneas do que pode gerenciar. Um bot habilitado para vídeo pode ser capaz de sustentar apenas uma ou duas sessões de mídia simultâneas por núcleo de CPU (se usar os formatos de vídeo RGB24 ou NV12 "brutos").
 - No momento, a Plataforma de Mídia em Tempo Real não tira proveito de qualquer GPU (Unidades de Processamento de Elementos Gráficos) disponível na VM para descarramento/decodificação de vídeo H.264. Em vez disso, a codificação de vídeo e a decodificar são feitas em software na CPU. Se uma GPU estiver disponível, o bot poderá tirar proveito dela para sua própria renderização gráfica, por exemplo, se o bot estiver usando um mecanismo gráfico 3D.
-- A instância da VM que hospeda o bot de mídia em tempo real deve ter pelo menos 2 núcleos de CPU. Para o Azure, uma máquina virtual da série Dv2 é recomendada. Para outros tipos de VM do Azure, um sistema com quatro CPUs virtuais (vCPU) é o tamanho mínimo necessário. Informações detalhadas sobre tipos de VM do Azure estão disponíveis na documentação [do Azure.](/azure/virtual-machines/windows/sizes-general) 
+- A instância da VM que hospeda o bot de mídia em tempo real deve ter pelo menos 2 núcleos de CPU. Para o Azure, uma máquina virtual da série Dv2 é recomendada. Para outros tipos de VM do Azure, um sistema com quatro CPUs virtuais (vCPU) é o tamanho mínimo necessário. Informações detalhadas sobre tipos de VM do Azure estão disponíveis na [documentação do Azure](/azure/virtual-machines/windows/sizes-general). 
 
 ## <a name="code-sample"></a>Exemplo de código
 
 Exemplos de bots de mídia hospedados pelo aplicativo são os seguinte:
 
-| **Nome do exemplo** | **Descrição** | **Graph** |
+| **Nome de exemplo** | **Descrição** | **Graph** |
 |------------|-------------|-----------|
 | Exemplo de mídia local | Exemplos que ilustram diferentes cenários de mídia local. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Exemplo de mídia remota | Exemplos que ilustram diferentes cenários de mídia remota. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -80,7 +75,7 @@ Exemplos de bots de mídia hospedados pelo aplicativo são os seguinte:
 
 ## <a name="see-also"></a>Confira também
 
-- [Graph Chamando documentação do SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+- [Graph a documentação do SDK de chamada](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Os bots exigem mais capacidade de computação e largura de banda de rede do que bots de mensagens e incorrem em custos operacionais significativamente maiores. Um desenvolvedor de bot de mídia em tempo real deve medir cuidadosamente a escalabilidade do bot e garantir que o bot não aceite mais chamadas simultâneas do que pode gerenciar. Um bot habilitado para vídeo pode sustentar apenas uma ou duas sessões de mídia simultâneas por núcleo de CPU se usar os formatos de vídeo RGB24 ou NV12 brutos.
 - No momento, a Plataforma de Mídia em Tempo Real não tira proveito de nenhuma GPU (Unidades de Processamento de Gráficos) disponíveis na VM para codificação de vídeo H.264 descarramento ou decodificação. Em vez disso, a codificação de vídeo e a decodificar são feitas em software na CPU. Se uma GPU estiver disponível, o bot tirará proveito dela para sua própria renderização gráfica, por exemplo, se o bot estiver usando um mecanismo gráfico 3D.
 - A instância da VM que hospeda o bot de mídia em tempo real deve ter pelo menos 2 núcleos de CPU. Para o Azure, uma máquina virtual da série Dv2 é recomendada. Para outros tipos de VM do Azure, um sistema com 4 CPUs virtuais (vCPU) é o tamanho mínimo necessário. Para obter mais informações sobre tipos de VM do Azure, consulte [Documentação do Azure](/azure/virtual-machines/windows/sizes-general).

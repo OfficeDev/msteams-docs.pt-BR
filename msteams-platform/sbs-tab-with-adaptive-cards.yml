@@ -2,7 +2,7 @@
 title: Guia criar com cartões adaptáveis
 metadata:
   title: Guia criar com cartões adaptáveis
-  description: Neste tutorial, você aprenderá a configurar Cartões Adaptáveis em uma guia para Teams.
+  description: 'Neste tutorial, você aprenderá a configurar Cartões Adaptáveis em uma guia para Teams.'
   audience: Developer
   level: Beginner
   ms.date: 12/23/2021
@@ -11,136 +11,357 @@ metadata:
   nextTutorialTitle: Ler mais na autenticação de tabulação
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 1877bbd129492db3b1c7a204bf5d804b5cc2e5a3
-  ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
-  ms.translationtype: MT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/31/2022
-  ms.locfileid: "62281824"
 items:
-- durationInMinutes: 1
-  content: >
-    As guias Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Embora o front-end seja renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
+  - durationInMinutes: 1
+    content: |
+      As guias Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Embora o front-end seja renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
 
+      Você pode criar suas guias com blocos de construção da interface do usuário (interface do usuário) relevantes nativos na área de trabalho, na Web e em dispositivos móveis.
 
-    Você pode criar suas guias com blocos de construção da interface do usuário (interface do usuário) relevantes nativos na área de trabalho, na Web e em dispositivos móveis.
+      Este artigo ajuda você a entender:
 
+      * As alterações necessárias para serem feitas no manifesto do aplicativo.
+      * Identifica como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis.
+      * Efeito no fluxo de trabalho do módulo de tarefas.
 
-    Este artigo ajuda você a entender:
+      Este guia passo a passo ajuda você a criar guias com Cartões Adaptáveis na área de trabalho e no celular. Você verá a seguinte saída:
 
+      ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+  - title: Pré-requisitos
+    durationInMinutes: 1
+    content: |
+      Certifique-se de instalar as ferramentas a seguir e configurar seu ambiente de desenvolvimento
 
-    * As alterações necessárias para serem feitas no manifesto do aplicativo.
+      * Microsoft Teams com uma conta (não uma conta de convidado).
+      * [Visual Studio Code](https://code.visualstudio.com/)
+      * [.NET Core SDK](https://dotnet.microsoft.com/download) versão 3.1
+      * [ngrok](https://ngrok.com/) ou [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
+      * [Microsoft 365 conta de desenvolvedor](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso Teams conta com as permissões apropriadas para instalar um aplicativo.
+  - title: Criar um Registro de Bot no Microsoft Azure portal
+    durationInMinutes: 2
+    content: |
+      As guias Cartão Adaptável exigiriam que o Serviço bot do Azure criasse guias em equipes. Registre bot com o Serviço de Bot do Azure quando você o desenvolver e hospedá-lo no Azure. Execute o seguinte:
+      1. Use ngrok para criar um túnel para os pontos de extremidade do servidor Web.
+      1. Crie o recurso bot do Azure para registrar bot com o Serviço bot do Azure.
+      1. Crie o segredo do cliente que habilita a autenticação SSO do bot.
+      1. Adicione Microsoft Teams canal para implantar o bot em um canal Teams.
+      1. Adicione o ponto de extremidade de mensagens ao túnel de ngrok que você criou.
 
-    * Identifica como as solicitações de atividade de invocação e envia informações na guia com Cartões Adaptáveis.
+      Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Execute o seguinte comando em ngrok:
 
-    * Efeito no fluxo de trabalho do módulo de tarefas.
+      ```bash
+      ngrok http -host-header=rewrite 3978
+      ```
 
+      **Para criar o recurso bot do Azure**
 
-    Este guia passo a passo ajuda você a criar guias com Cartões Adaptáveis na área de trabalho e no celular. Você verá a seguinte saída:
+      1. Abra [Microsoft Azure portal](https://portal.azure.com/).
+      1. Selecione **Criar um recurso**.
+      1. **Pesquise o bot do Azure** na caixa de pesquisa.
+      1. Selecione **Bot do Azure**.
 
+          ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
 
-    ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- title: Pré-requisitos
-  durationInMinutes: 1
-  content: >
-    Certifique-se de instalar as ferramentas a seguir e configurar seu ambiente de desenvolvimento
+      1. Selecionar **Criar**.
+      1. Insira o nome da alça do bot no **campo Manipular** Bot.
+      1. Selecione sua **Assinatura** na lista de menus suspensos.
+      1. Selecione seu **grupo De recursos** na lista de menus suspensos.
+          
+          Para criar um novo grupo de recursos, selecione **Criar** novo, insira nome do recurso, selecione **OK** e selecione o local necessário  na lista lista suspenso Novo local do grupo de recursos.
 
+      1. Selecione **Tipo de Aplicativo** como **Multi Locatário** para **ID do Aplicativo Microsoft**.
 
-    * Microsoft Teams com uma conta (não uma conta de convidado).
+          ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
 
-    * [Visual Studio Code](https://code.visualstudio.com/)
+          > [!NOTE]
+          > Na **seção Criação do** tipo de ID do Microsoft **App, Criar nova ID do Microsoft App** já está selecionada para criar um novo bot. Você também pode selecionar **Usar o registro de aplicativo existente**, se já tiver registrado um bot. Insira a ID do Aplicativo microsoft **no campo ID do aplicativo** existente e insira valor **no campo Senha do aplicativo** existente.
 
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) versão 3.1
+      1. Selecione **Examinar + criar**.
 
-    * [ngrok](https://ngrok.com/) ou [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
+          ![Criar Bot do Azure](~/assets/images/adaptive-cards/create-azure-bot.png)
 
-    * [Microsoft 365 conta de desenvolvedor](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso Teams conta com as permissões apropriadas para instalar um aplicativo.
-- title: Criar um Registro de Bot no portal do Azure
-  durationInMinutes: 2
-  content: "As guias Cartão Adaptável exigiriam que o Serviço bot do Azure criasse guias em equipes. Registre bot com o Serviço de Bot do Azure quando você o desenvolver e hospedá-lo no Azure. Execute o seguinte:\n1. Use ngrok para criar um túnel para os pontos de extremidade do servidor Web.\n1. Crie o recurso bot do Azure para registrar bot com o Serviço bot do Azure.\n1. Crie o segredo do cliente que habilita a autenticação SSO do bot.\n1. Adicione Microsoft Teams canal para implantar o bot em um canal Teams.\n1. Adicione o ponto de extremidade de mensagens ao túnel de ngrok que você criou.\n\nUse o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Execute o seguinte comando em ngrok:\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**Para criar o recurso bot do Azure**\n\n1. Abra [o portal do Azure](https://portal.azure.com/).\n1. Selecione **Criar um recurso**.\n1. **Pesquise o bot do Azure** na caixa de pesquisa.\n1. Selecione **Bot do Azure**.\n\n    ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)\n\n1. Selecionar **Criar**.\n1. Insira o nome da alça do bot no **campo Manipular** Bot.\n1. Selecione sua **Assinatura** na lista de menus suspensos.\n1. Selecione seu **grupo De recursos** na lista de menus suspensos.\n    \n    Para criar um novo grupo de recursos, selecione **Criar** novo, insira nome do recurso, selecione **OK** e selecione o local necessário  na lista lista suspenso Novo local do grupo de recursos.\n\n1. Selecione **Tipo de Aplicativo** como **Multi Locatário** para **ID do Aplicativo Microsoft**.\n\n    ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)\n\n    > [!NOTE]\n    > Na **seção Criação do** tipo de ID do Microsoft **App, Criar nova ID do Microsoft App** já está selecionada para criar um novo bot. Você também pode selecionar **Usar o registro de aplicativo existente**, se já tiver registrado um bot. Insira a ID do Aplicativo microsoft **no campo ID do aplicativo** existente e insira valor **no campo Senha do aplicativo** existente.\n\n1. Selecione **Examinar + criar**.\n\n    ![Criar Bot do Azure](~/assets/images/adaptive-cards/create-azure-bot.png)\n\n1. Se a validação for aprovada, selecione **Criar**.\n\n    Leva alguns instantes para que o serviço de bot seja provisionado.\n\n    ![Validação do Bot do Azure](~/assets/images/adaptive-cards/validation-pane.png)\n\n1. Selecione **Acessar recursos**. O bot e os recursos relacionados estão listados no grupo de recursos.\n\n    ![Ir para o recurso](~/assets/images/adaptive-cards/go-to-resource-card.png)\n\n    Agora seu bot do Azure é criado.\n\n    ![Recurso de bot do Azure criado](~/assets/images/adaptive-cards/azure-bot-ui.png)\n\n**Para criar o segredo do cliente**\n\n1. Em **Configurações**, selecione **Configuração**. Salve a **ID do Microsoft App** (ID do cliente) para referência futura.\n\n    ![ID do Aplicativo Microsoft](~/assets/images/adaptive-cards/config-microsoft-app-id.png)\n\n    > [!NOTE]\n    > Verifique **se MultiTenant** está selecionado em Tipo **de Bot**.\n\n1. Adjacente à **ID do Microsoft App**, selecione **Gerenciar**.\n\n    ![Gerenciar Bot](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. Na seção **Segredos do** cliente, selecione **Novo segredo do cliente**. **Adicionar uma janela de segredo do** cliente é exibida.  \n\n    ![Novo segredo do cliente](~/assets/images/adaptive-cards/new-client-secret.png)\n\n1. Insira **Descrição** e selecione **Adicionar**.\n\n    ![Segredo do cliente](~/assets/images/adaptive-cards/client-secret.png)\n\n1. Na coluna **Valor** , selecione **Copiar para área de transferência** e salve a ID do segredo do cliente para referência futura.\n\n    ![Valor de segredo do cliente](~/assets/images/adaptive-cards/client-secret-value.png)\n   \n**Para adicionar o Microsoft Teams canal**\n\n1. Vá para **Home**.\n\n    ![Home page bot](~/assets/images/adaptive-cards/bot-home-page.png)\n\n1. Abra seu bot, que está listado na **seção Recursos recentes** .\n1. Selecione **Canais** no painel esquerdo e selecione **Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n    ![Canal Teams](~/assets/images/adaptive-cards/channel-teams.png)\n\n1. Selecione a caixa de seleção para aceitar os termos de serviço e selecione **Concordar**.</br>\n\n    ![Selecionar termos de serviço](~/assets/images/adaptive-cards/select-terms-of-service.png)\n\n1. Selecione **Salvar**.\n\n    ![Selecione Teams](~/assets/images/adaptive-cards/select-teams.png)\n\n**Para adicionar ponto de extremidade de mensagens**\n\n1. Vá para **Página** Inicial e selecione **Configuração** **em Configurações** no painel esquerdo.\n1. Vá para ngrok.\n1. Copie a URL HTTPS (https para io) conforme mostrado na imagem a seguir:\n\n    ![URL HTTPS do ngrok](~/assets/images/adaptive-cards/ngrok-url.png)\n\n1. No **ponto de extremidade Mensagens**, adicione a URL HTTPS gerada a partir do ngrok e, no final da URL, adicione **/api/messages**.\n\n    ![Ponto de extremidade de mensagens](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)\n\n1. Selecione **Aplicar**.\n\n    Você definiu com êxito um bot no Serviço de Bot do Azure e agora precisa configurar a conexão de serviço bot.\n"
-- title: Configurar a conexão de serviço de bot
-  durationInMinutes: 5
-  content: "Para garantir que o Serviço bot permita que o usuário entre e acesse o bot, você deve configurar o SSO para seu bot. Para fazer isso, execute o seguinte:\n\n1. Adicionar URI de redirecionamento ao recurso de bot do Azure\n1. Expor ponto de extremidade da API\n1. Autorizar aplicativos cliente\n1. Adicionar quaisquer permissões de API necessárias para chamadas downstream\n1. Habilitar concessão implícita\n1. Manifesto de atualização\n1. Configurar a conexão de Serviço de Bot\n\n**Para adicionar o URI de redirecionamento ao recurso de bot do Azure**\n\n1. Selecione **Gerenciar** ao lado da **ID do Microsoft App**.\n\n    ![Gerenciar Bot](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. Selecione **Autenticação** no painel esquerdo do recurso bot.\n1. Em **Configurações de plataforma**, selecione **Adicionar uma plataforma**.\n1. Selecione **Web**.\n1. Insira **URIs de redirecionamento** como **https://token.botframework.com/.auth/web/redirect** e selecione **Configurar**.\n\n    ![Configurar url de redirecionamento da Web](~/assets/images/adaptive-cards/configure-web-redirect-url.png)\n\n    O URI de redirecionamento é adicionado ao recurso de bot do Azure.\n\n    ![Exibir URL de redirecionamento da Web](~/assets/images/adaptive-cards/web-redirect-url-display.png)\n\n**Para expor o ponto de extremidade da API**\n\n1. Selecione **Expor uma API** no painel esquerdo.\n1. Selecione **Definir** para o URI de ID do Aplicativo.\n1. Use a **URL de ID** do Aplicativo mostrada e  adicione api:// em vez de https://  na **url do ngrok** e adicione no início da URL da ID do Aplicativo.\n\n    ![URI da ID do Aplicativo](~/assets/images/adaptive-cards/app-id-url.png)\n\n1. Selecione **Salvar**.\n1. Selecione **Adicionar um escopo**.\n1. Em **Nome do escopo**, **digite access_as_user**.\n1. Em **Who pode consentir?**, alternar para **Administradores e usuários**.\n1. Insira os seguintes valores nas caixas:\n\n    | Campo | Valor |\n    | ----- | ----- |\n    | Nome de exibição de consentimento do administrador | Teams pode acessar o perfil do usuário |\n    | Descrição do consentimento do administrador | Permite Teams chamar as APIs web do aplicativo como o usuário atual. |\n    | Nome de exibição de consentimento do usuário | Teams pode acessar seu perfil de usuário e fazer solicitações em seu nome |\n    | Descrição do consentimento do usuário | Habilita Teams chamar as APIs desse aplicativo com os mesmos direitos que você tem. |\n\n1. Verifique se o **Estado** está definido como **Habilitado**.\n\n    ![Adicionar um escopo](~/assets/images/adaptive-cards/add-scope.png)\n\n1. Selecione **Adicionar escopo**. O nome do escopo corresponde automaticamente ao URI de ID do aplicativo, com **/access_as_user** adicionado ao final.\n\n**Para autorizar aplicativos cliente**\n\nAdicione as seguintes IDs como **aplicativos cliente autorizados**, marque a caixa de seleção para **escopos autorizados** e selecione **Adicionar aplicativo**.      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams aplicativo móvel ou desktop)            \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams aplicativo Web)</br>\n\n    ![Adicionar aplicativo cliente](~/assets/images/adaptive-cards/add-client-aapplication.png)      \n\n**Para adicionar quaisquer permissões de API necessárias para chamadas downstream**\n\n1. Selecione **permissões de API** no painel esquerdo.\n1. Selecione **Adicionar uma permissão**. **A janela Solicitar permissões de API** é exibida.\n1. Selecione **API da Microsoft**. Em seguida **, selecione Microsoft Graph** e selecione **Permissões delegadas**.\n1. Adicione qualquer permissão **delegada pelo** usuário que seu aplicativo exija para APIs de downstream, por exemplo, User.Read.</br>\n\n    ![Permissões de API](~/assets/images/adaptive-cards/add-permissions.png)\n\n**Para habilitar a concessão implícita**\n\n1. Selecione **Autenticação** no painel esquerdo.\n1. Selecione **Caixas de seleção Tokens de** **acesso e tokens de ID** .</br>\n\n    ![Tokens de autenticação](~/assets/images/adaptive-cards/authentication-tokens.png)\n\n1. Selecione **Salvar** para salvar as alterações.\n\n**Para atualizar manifesto**\n\n1. Selecione **Manifesto** no painel esquerdo.\n1. Verifique se o item config está definido como **\"accessTokenAcceptedVersion\": 2**. Caso não seja, altere seu valor para **2** e selecione **Salvar**.\n    \n    > [!NOTE]\n    > Se você já estiver testando seu bot Teams, você deve sair deste aplicativo e sair Teams. Em seguida, entre novamente para ver essa alteração.\n\n    ![Manifesto de atualização](~/assets/images/adaptive-cards/manifest.png)\n\n**Para configurar a conexão de Serviço de Bot**\n\n1. Vá para **Página** Inicial e selecione **Configuração** **em Configurações** no painel esquerdo.\n1. Selecione **Adicionar conexão OAuth Configurações**.\n1. Em **Nova Configuração de Conexão**, insira os seguintes detalhes:\n\n    | Campo | Valor ou descrição |\n    | ----- | ----- |\n    | Nome | Digite o nome da nova configuração de conexão. Você pode usar o nome nas configurações do código de serviço de bot. |\n    | Service Provider | Selecione **Azure Active Directory V2**. |\n    | ID do cliente | Salvo anteriormente como sua **ID do Microsoft App**. |\n    | Segredo do cliente | Salvo anteriormente **como Valor** da ID secreta do cliente. |\n    | URL Exchange token | Use a **URL de ID do Aplicativo** obtida anteriormente durante a exposição do ponto de extremidade da API. |\n    | ID do locatário | Insira **comum**. |\n    | Scopes | Insira **User.Read e** também adicione todos os **Escopos necessários** ao especificar permissões para APIs de downstream. |\n\n    :::image type=\"content\" source=\"./assets/images/adaptive-cards/oauth-connection-setting.png\" alt-text=\"Conexão de serviço bot\":::\n\n1. Selecione **Salvar**.\n"
-- title: Configurar o bot
-  durationInMinutes: 1
-  content: >
-    Configure o exemplo de bot para entender como autenticar o bot de conversa no Microsoft Teams.
+      1. Se a validação for aprovada, selecione **Criar**.
 
+          Leva alguns instantes para que o serviço de bot seja provisionado.
 
-    **Para configurar e executar seu exemplo de bot**
+          ![Validação do Bot do Azure](~/assets/images/adaptive-cards/validation-pane.png)
 
+      1. Selecione **Acessar recursos**. O bot e os recursos relacionados estão listados no grupo de recursos.
 
-    1. Vá para o repo https://github.com/OfficeDev/Microsoft-Teams-Samples.git.
+          ![Ir para o recurso](~/assets/images/adaptive-cards/go-to-resource-card.png)
 
-    1. Selecione **Código** e selecione o menu suspenso.
+          Agora seu bot do Azure é criado.
 
-    1. Selecione **Baixar ZIP**.
+          ![Recurso de bot do Azure criado](~/assets/images/adaptive-cards/azure-bot-ui.png)
 
-        ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
+      **Para criar o segredo do cliente**
 
-    1. Certifique-se de observar o Caminho do repositório baixado.
+      1. Em **Configurações**, selecione **Configuração**. Salve a **ID do Microsoft App** (ID do cliente) para referência futura.
 
-    1. No Explorador de Arquivos, selecione o **Project**.
+          ![ID do Aplicativo Microsoft](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
-    1. Vá para **Microsoft-Teams-Samples > exemplos > tab-adaptive-cards > csharp > pasta TabWithAdpativeCardFlow**.
+          > [!NOTE]
+          > Verifique **se MultiTenant** está selecionado em Tipo **de Bot**.
 
-    1. Abra o **arquivo appsettings.json** Visual Studio Code.
+      1. Adjacente à **ID do Microsoft App**, selecione **Gerenciar**.
 
-    1. Atualize **a configuração appsettings.json** para o bot `MicrosoftAppId`usar o , `MicrosoftAppPassword`e adicione seu URI ngrok como `ApplicationBaseUrl`.
+          ![Gerenciar Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
-    1. Use o nome da conexão OAuth como o **Nome da Conexão**.
+      1. Na seção **Segredos do** cliente, selecione **Novo segredo do cliente**. **Adicionar uma janela de segredo do** cliente é exibida.  
 
-        > [!NOTE]
-        > Você pode obter a `MicrosoftAppId` partir da página Configuração do bot. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
+          ![Novo segredo do cliente](~/assets/images/adaptive-cards/new-client-secret.png)
 
-        ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
+      1. Insira **Descrição** e selecione **Adicionar**.
 
-    1. Selecione **Salvar**.
-- title: Configurar e carregar o aplicativo Teams
-  durationInMinutes: 2
-  content: >
-    A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Este método é a única maneira de testar a funcionalidade completa disponível para o bot, em todos os escopos. Você pode configurar e executar o aplicativo Teams carregando o arquivo **manifest.zip**.
+          ![Segredo do cliente](~/assets/images/adaptive-cards/client-secret.png)
 
+      1. Na coluna **Valor** , selecione **Copiar para área de transferência** e salve a ID do segredo do cliente para referência futura.
 
-    **Para executar o Teams, carregando o arquivo manifest.zip**
+          ![Valor de segredo do cliente](~/assets/images/adaptive-cards/client-secret-value.png)
+         
+      **Para adicionar o Microsoft Teams canal**
 
+      1. Vá para **Home**.
 
-    1. No Explorador de Arquivos, vá para **Microsoft-Teams-Samples > exemplos > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** para abrir a pasta.
+          ![Home page bot](~/assets/images/adaptive-cards/bot-home-page.png)
 
-    1. Abra o **arquivo manifest.json** no Visual Studio Code.
+      1. Abra seu bot, que está listado na **seção Recursos recentes** .
+      1. Selecione **Canais** no painel esquerdo e selecione **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. No arquivo **manifest.json** , encontre **{contentBotId}** e adicione sua ID do Microsoft App e salve.
+          ![Canal Teams](~/assets/images/adaptive-cards/channel-teams.png)
 
-        ![Config de manifesto](~/assets/images/adaptive-cards/manifest-vsc.png)
+      1. Selecione a caixa de seleção para aceitar os termos de serviço e selecione **Concordar**.</br>
 
-    1. No Explorador de Arquivos, vá para a **pasta AppPackage** .
+          ![Selecionar termos de serviço](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-    1. Feche o conteúdo da pasta **AppPackage** **para criarmanifest.zip**.
+      1. Selecione **Salvar**.
 
-        > [!NOTE]
-        > O **manifest.zip** deve conter pastas adicionais. Ele deve ter **arquivo de** origem json de manifesto, **ícone de** cor e ícone **de contorno** dentro da pasta zip.
+          ![Selecione Teams](~/assets/images/adaptive-cards/select-teams.png)
 
-    1. Vá para Teams.
+      **Para adicionar ponto de extremidade de mensagens**
 
-    1. Para carregar **manifest.zip**, selecione **Armazenar > Gerenciar seus aplicativos > Upload um aplicativo** personalizado e abra **manifest.zip**.
+      1. Vá para **Página** Inicial e selecione **Configuração** **em Configurações** no painel esquerdo.
+      1. Vá para ngrok.
+      1. Copie a URL HTTPS (https para io) conforme mostrado na imagem a seguir:
 
-    1. Selecione **Adicionar** para adicionar a guia ao seu chat.
+          ![URL HTTPS do ngrok](~/assets/images/adaptive-cards/ngrok-url.png)
 
-        ![Guia no Teams app](~/assets/images/adaptive-cards/tab-in-teams.png)
+      1. No **ponto de extremidade Mensagens**, adicione a URL HTTPS gerada a partir do ngrok e, no final da URL, adicione **/api/messages**.
 
-        Você pode interagir com essa guia ao entrar.
+          ![Ponto de extremidade de mensagens](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)
 
-    1. Envie uma mensagem para a guia.
+      1. Selecione **Aplicar**.
 
-        ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- title: Interagindo com a guia no Teams
-  durationInMinutes: 1
-  content: "As guias permitem que você acesse serviços e conteúdo em um espaço dedicado em um canal ou em um chat.\n\nSiga as etapas para usar a guia:\n\n1. No painel esquerdo do Teams, selecione as releições *** e escolha seu aplicativo na lista.\n1. Guia mostrando cartão adaptável com controles de ação.\n\n    ![Guia mostrando cartão adaptável com controles de ação](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)\n\n1. Selecione **Entrar e** escolha uma conta para acessar a guia.\n\n    ![Entrar](~/assets/images/adaptive-cards/sign-in-page.png)\n\n1. Selecione **Mostrar Módulo de Tarefa** na home page.\n\n    ![Mostrar Módulo de Tarefa](~/assets/images/adaptive-cards/tab-home-page.png)\n\n1. Tab/fetch é a primeira solicitação de invocação que seu bot recebe quando um usuário abre uma guia Cartão Adaptável. Quando o bot recebe a solicitação, ele envia uma resposta de continuação de tabulação ou uma resposta de tabulação.\n\n    ![Módulo de Tarefa de Exemplo](~/assets/images/adaptive-cards/sample-task-module.png)\n\n1. **Função Enviar do Cartão Adaptável**\n    **a solicitação de tarefa/** envio é acionada para o bot com os dados correspondentes por meio da Ação. \n\n    ![Cartão de envio de tarefa](~/assets/images/adaptive-cards/task-submit.png)\n\n1. A guia mantém você entrar, a menos que você selecione **Sair**.\n\n    ![Sair](~/assets/images/adaptive-cards/sign-out.png)\n\n1. Atualize **para entrar** novamente.\n\n    ![Saída de sucesso](~/assets/images/adaptive-cards/success-sign-out.png)\n"
-- title: Desafio completo
-  durationInMinutes: 1
-  content: >
-    Você achou algo assim?
+          Você definiu com êxito um bot no Serviço de Bot do Azure e agora precisa configurar a conexão de serviço bot.
+  - title: Configurar a conexão de serviço de bot
+    durationInMinutes: 5
+    content: |
+      Para garantir que o Serviço bot permita que o usuário entre e acesse o bot, você deve configurar o SSO para seu bot. Para fazer isso, execute o seguinte:
 
+      1. Adicionar URI de redirecionamento ao recurso de bot do Azure
+      1. Expor ponto de extremidade da API
+      1. Autorizar aplicativos cliente
+      1. Adicionar quaisquer permissões de API necessárias para chamadas downstream
+      1. Habilitar concessão implícita
+      1. Manifesto de atualização
+      1. Configurar a conexão de Serviço de Bot
 
-    ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- content: Você concluiu o tutorial para começar com cartões adaptáveis para Microsoft Teams usando a Estrutura de Bot.
+      **Para adicionar o URI de redirecionamento ao recurso de bot do Azure**
+
+      1. Selecione **Gerenciar** ao lado da **ID do Microsoft App**.
+
+          ![Gerenciar Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+
+      1. Selecione **Autenticação** no painel esquerdo do recurso bot.
+      1. Em **Configurações de plataforma**, selecione **Adicionar uma plataforma**.
+      1. Selecione **Web**.
+      1. Insira **URIs de redirecionamento** como **https://token.botframework.com/.auth/web/redirect** e selecione **Configurar**.
+
+          ![Configurar url de redirecionamento da Web](~/assets/images/adaptive-cards/configure-web-redirect-url.png)
+
+          O URI de redirecionamento é adicionado ao recurso de bot do Azure.
+
+          ![Exibir URL de redirecionamento da Web](~/assets/images/adaptive-cards/web-redirect-url-display.png)
+
+      **Para expor o ponto de extremidade da API**
+
+      1. Selecione **Expor uma API** no painel esquerdo.
+      1. Selecione **Definir** para o URI de ID do Aplicativo.
+      1. Use a **URL de ID** do Aplicativo mostrada e  adicione api:// em vez de https://  na **url do ngrok** e adicione no início da URL da ID do Aplicativo.
+
+          ![URI da ID do Aplicativo](~/assets/images/adaptive-cards/app-id-url.png)
+
+      1. Selecione **Salvar**.
+      1. Selecione **Adicionar um escopo**.
+      1. Em **Nome do escopo**, **digite access_as_user**.
+      1. Em **Who pode consentir?**, alternar para **Administradores e usuários**.
+      1. Insira os seguintes valores nas caixas:
+
+          | Campo | Valor |
+          | ----- | ----- |
+          | Nome de exibição de consentimento do administrador | Teams pode acessar o perfil do usuário |
+          | Descrição do consentimento do administrador | Permite Teams chamar as APIs web do aplicativo como o usuário atual. |
+          | Nome de exibição de consentimento do usuário | Teams pode acessar seu perfil de usuário e fazer solicitações em seu nome |
+          | Descrição do consentimento do usuário | Habilita Teams chamar as APIs desse aplicativo com os mesmos direitos que você tem. |
+
+      1. Verifique se o **Estado** está definido como **Habilitado**.
+
+          ![Adicionar um escopo](~/assets/images/adaptive-cards/add-scope.png)
+
+      1. Selecione **Adicionar escopo**. O nome do escopo corresponde automaticamente ao URI de ID do aplicativo, com **/access_as_user** adicionado ao final.
+
+      **Para autorizar aplicativos cliente**
+
+      Adicione as seguintes IDs como **aplicativos cliente autorizados**, marque a caixa de seleção para **escopos autorizados** e selecione **Adicionar aplicativo**.      
+      * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams aplicativo móvel ou desktop)            
+      * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams aplicativo Web)</br>
+
+          ![Adicionar aplicativo cliente](~/assets/images/adaptive-cards/add-client-aapplication.png)      
+
+      **Para adicionar quaisquer permissões de API necessárias para chamadas downstream**
+
+      1. Selecione **permissões de API** no painel esquerdo.
+      1. Selecione **Adicionar uma permissão**. **A janela Solicitar permissões de API** é exibida.
+      1. Selecione **API da Microsoft**. Em seguida **, selecione Microsoft Graph** e selecione **Permissões delegadas**.
+      1. Adicione qualquer permissão **delegada pelo** usuário que seu aplicativo exija para APIs de downstream, por exemplo, User.Read.</br>
+
+          ![Permissões de API](~/assets/images/adaptive-cards/add-permissions.png)
+
+      **Para habilitar a concessão implícita**
+
+      1. Selecione **Autenticação** no painel esquerdo.
+      1. Selecione **Caixas de seleção Tokens de** **acesso e tokens de ID** .</br>
+
+          ![Tokens de autenticação](~/assets/images/adaptive-cards/authentication-tokens.png)
+
+      1. Selecione **Salvar** para salvar as alterações.
+
+      **Para atualizar manifesto**
+
+      1. Selecione **Manifesto** no painel esquerdo.
+      1. Verifique se o item config está definido como **"accessTokenAcceptedVersion": 2**. Caso não seja, altere seu valor para **2** e selecione **Salvar**.
+          
+          > [!NOTE]
+          > Se você já estiver testando seu bot Teams, você deve sair deste aplicativo e sair Teams. Em seguida, entre novamente para ver essa alteração.
+
+          ![Manifesto de atualização](~/assets/images/adaptive-cards/manifest.png)
+
+      **Para configurar a conexão de Serviço de Bot**
+
+      1. Vá para **Página** Inicial e selecione **Configuração** **em Configurações** no painel esquerdo.
+      1. Selecione **Adicionar conexão OAuth Configurações**.
+      1. Em **Nova Configuração de Conexão**, insira os seguintes detalhes:
+
+          | Campo | Valor ou descrição |
+          | ----- | ----- |
+          | Nome | Digite o nome da nova configuração de conexão. Você pode usar o nome nas configurações do código de serviço de bot. |
+          | Service Provider | Selecione **Azure Active Directory V2**. |
+          | ID do cliente | Salvo anteriormente como sua **ID do Microsoft App**. |
+          | Segredo do cliente | Salvo anteriormente **como Valor** da ID secreta do cliente. |
+          | URL Exchange token | Use a **URL de ID do Aplicativo** obtida anteriormente durante a exposição do ponto de extremidade da API. |
+          | ID do locatário | Insira **comum**. |
+          | Scopes | Insira **User.Read e** também adicione todos os **Escopos necessários** ao especificar permissões para APIs de downstream. |
+
+          :::image type="content" source="./assets/images/adaptive-cards/oauth-connection-setting.png" alt-text="Conexão de serviço bot":::
+
+      1. Selecione **Salvar**.
+  - title: Configurar o bot
+    durationInMinutes: 1
+    content: |
+      Configure o exemplo de bot para entender como autenticar o bot de conversa no Microsoft Teams.
+
+      **Para configurar e executar seu exemplo de bot**
+
+      1. Vá para o repo https://github.com/OfficeDev/Microsoft-Teams-Samples.git.
+      1. Selecione **Código** e selecione o menu suspenso.
+      1. Selecione **Baixar ZIP**.
+
+          ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
+
+      1. Certifique-se de observar o Caminho do repositório baixado.
+      1. No Explorador de Arquivos, selecione o **Project**.
+      1. Vá para **Microsoft-Teams-Samples > exemplos > tab-adaptive-cards > csharp > pasta TabWithAdpativeCardFlow**.
+      1. Abra o **arquivo appsettings.json** Visual Studio Code.
+      1. Atualize **a configuração appsettings.json** para o bot `MicrosoftAppId`usar o , `MicrosoftAppPassword`e adicione seu URI ngrok como `ApplicationBaseUrl`.
+      1. Use o nome da conexão OAuth como o **Nome da Conexão**.
+
+          > [!NOTE]
+          > Você pode obter a `MicrosoftAppId` partir da página Configuração do bot. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
+
+          ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
+
+      1. Selecione **Salvar**.
+  - title: Configurar e carregar o aplicativo Teams
+    durationInMinutes: 2
+    content: |
+      A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Este método é a única maneira de testar a funcionalidade completa disponível para o bot, em todos os escopos. Você pode configurar e executar o aplicativo Teams carregando o arquivo **manifest.zip**.
+
+      **Para executar o Teams, carregando o arquivo manifest.zip**
+
+      1. No Explorador de Arquivos, vá para **Microsoft-Teams-Samples > exemplos > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** para abrir a pasta.
+      1. Abra o **arquivo manifest.json** no Visual Studio Code.
+      1. No arquivo **manifest.json** , encontre **{contentBotId}** e adicione sua ID do Microsoft App e salve.
+
+          ![Config de manifesto](~/assets/images/adaptive-cards/manifest-vsc.png)
+
+      1. No Explorador de Arquivos, vá para a **pasta AppPackage** .
+      1. Feche o conteúdo da pasta **AppPackage** **para criarmanifest.zip**.
+
+          > [!NOTE]
+          > O **manifest.zip** deve conter pastas adicionais. Ele deve ter **arquivo de** origem json de manifesto, **ícone de** cor e ícone **de contorno** dentro da pasta zip.
+
+      1. Vá para Teams.
+      1. Para carregar **manifest.zip**, selecione **Armazenar > Gerenciar seus aplicativos > Upload um aplicativo** personalizado e abra **manifest.zip**.
+      1. Selecione **Adicionar** para adicionar a guia ao seu chat.
+
+          ![Guia no Teams app](~/assets/images/adaptive-cards/tab-in-teams.png)
+
+          Você pode interagir com essa guia ao entrar.
+
+      1. Envie uma mensagem para a guia.
+
+          ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+  - title: Interagindo com a guia no Teams
+    durationInMinutes: 1
+    content: |
+      As guias permitem que você acesse serviços e conteúdo em um espaço dedicado em um canal ou em um chat.
+
+      Siga as etapas para usar a guia:
+
+      1. No painel esquerdo do Teams, selecione as releições *** e escolha seu aplicativo na lista.
+      1. Guia mostrando cartão adaptável com controles de ação.
+
+          ![Guia mostrando cartão adaptável com controles de ação](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)
+
+      1. Selecione **Entrar e** escolha uma conta para acessar a guia.
+
+          ![Entrar](~/assets/images/adaptive-cards/sign-in-page.png)
+
+      1. Selecione **Mostrar Módulo de Tarefa** na home page.
+
+          ![Mostrar Módulo de Tarefa](~/assets/images/adaptive-cards/tab-home-page.png)
+
+      1. Tab/fetch é a primeira solicitação de invocação que seu bot recebe quando um usuário abre uma guia Cartão Adaptável. Quando o bot recebe a solicitação, ele envia uma resposta de continuação de tabulação ou uma resposta de tabulação.
+
+          ![Módulo de Tarefa de Exemplo](~/assets/images/adaptive-cards/sample-task-module.png)
+
+      1. **Função Enviar do Cartão Adaptável**
+          **a solicitação de tarefa/** envio é acionada para o bot com os dados correspondentes por meio da Ação. 
+
+          ![Cartão de envio de tarefa](~/assets/images/adaptive-cards/task-submit.png)
+
+      1. A guia mantém você entrar, a menos que você selecione **Sair**.
+
+          ![Sair](~/assets/images/adaptive-cards/sign-out.png)
+
+      1. Atualize **para entrar** novamente.
+
+          ![Saída de sucesso](~/assets/images/adaptive-cards/success-sign-out.png)
+  - title: Desafio completo
+    durationInMinutes: 1
+    content: |
+      Você achou algo assim?
+
+      ![Captura de tela do Desktop Mobile](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+  - content: |
+      Você concluiu o tutorial para começar com cartões adaptáveis para Microsoft Teams usando a Estrutura de Bot.

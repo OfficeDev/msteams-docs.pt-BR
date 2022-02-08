@@ -1,22 +1,16 @@
 ---
 title: Criar um botão Compartilhar para o Teams
-description: Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu site, com uma visualização de site, usando exemplos de código
+description: 'Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu site, com uma visualização de site, usando exemplos de código'
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar Teams share-to-Teams
-ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889283"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
 Sites de terceiros podem usar o script do launcher para inserir botões de Compartilhamento para Teams em suas páginas da Web. Quando você seleciona, ele inicia a experiência Share-to-Teams em uma janela pop-up. Isso permite compartilhar um link diretamente com qualquer pessoa ou canal Microsoft Teams sem alternar o contexto. Este documento orienta você sobre como criar e inserir um botão Compartilhar para Teams para seu site, criar a visualização do site e estender o Share-to-Teams para Educação.
 
 > [!NOTE]
-> * Somente as versões da área de trabalho do Edge e do Chrome têm suporte.
+> * Somente as versões da área de trabalho do Microsoft Edge e do Google Chrome têm suporte.
 > * Não há suporte para o uso de contas de convidado ou de Freemium.  
 
 A imagem a seguir exibe a experiência pop-up Share-to-Teams:
@@ -53,7 +47,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
       data-icon-px-size="64">
     </div>
     ```
-1. Se o link compartilhado exigir autenticação do usuário e a visualização da URL do link a ser compartilhado não renderizar bem no Teams, você poderá desabilitar a visualização da URL adicionando o `data-preview` atributo definido como `false` .
+1. Se o link compartilhado exigir autenticação do usuário e a visualização de URL do link a ser compartilhado não renderizar bem no Teams, você poderá desabilitar a visualização da URL `data-preview` adicionando o atributo definido como `false`.
 
     ```html
     <div
@@ -63,7 +57,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
     </div>
     ```
 
-1. Se sua página renderizar dinamicamente o conteúdo, você poderá usar o método para forçar `shareToMicrosoftTeams.renderButtons()` **o Compartilhamento** a renderizar no local apropriado no pipeline.
+1. Se sua página renderizar dinamicamente o conteúdo, `shareToMicrosoftTeams.renderButtons()` você poderá usar o método para forçar **o Compartilhamento** a renderizar no local apropriado no pipeline.
 
 ## <a name="craft-your-website-preview"></a>Criar a visualização do site
 
@@ -71,7 +65,7 @@ Quando seu site é compartilhado Teams, o cartão inserido no canal selecionado 
 
 **Para exibir a visualização**
 
-* Você deve incluir uma imagem **thumbnail** ou um **título** e uma **descrição.** Para melhores resultados, inclua todos os três.
+* Você deve incluir uma imagem **em miniatura** ou um **Título** e Uma **Descrição**. Para melhores resultados, inclua todos os três.
 * A URL compartilhada não exige autenticação. Se ela exigir autenticação, você poderá compartilhá-la, mas a visualização não será criada.
 
 A tabela a seguir descreve as marcas necessárias:
@@ -86,7 +80,7 @@ Você pode usar as versões padrão HTML ou a versão Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Compartilhar com Teams para Educação
 
-Para professores que usam o botão Compartilhar Teams, há uma opção adicional para `Create an Assignment` . Isso permite que você crie rapidamente uma atribuição na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe Share-to-Teams para educação: 
+Para professores que usam o botão Compartilhar Teams, há uma opção adicional para `Create an Assignment`. Isso permite que você crie rapidamente uma atribuição na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe Share-to-Teams para educação: 
 
 ![Compartilhar para Teams educação pop-up](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -107,7 +101,7 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 
 `options` (opcional): `{ elements?: HTMLElement[] }`
 
-Atualmente, todos os botões de compartilhamento são renderizados na página. Se um objeto `options` opcional for fornecido com uma lista de elementos, esses elementos serão renderizados em botões de compartilhamento.
+Atualmente, todos os botões de compartilhamento são renderizados na página. Se um objeto opcional `options` for fornecido com uma lista de elementos, esses elementos serão renderizados em botões de compartilhamento.
 
 ### <a name="set-default-form-values"></a>Definir valores de formulário padrão
 

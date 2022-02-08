@@ -2,16 +2,8 @@
 title: Configurar seu ambiente de dev para estender Teams aplicativos em Microsoft 365
 description: Aqui estão os pré-requisitos para estender seus aplicativos Teams aplicativos Microsoft 365
 ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
-ms.openlocfilehash: e024b11f03c605144a5d1cac6904cdd0095ec15c
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281697"
 ---
-# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>Configurar seu ambiente de dev para estender Teams aplicativos em todo o M365
+# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de dev para estender Teams aplicativos em Microsoft 365
 
 > [!NOTE]
 > Estender o aplicativo de equipes Microsoft 365 está disponível no momento apenas na [visualização de desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
@@ -21,11 +13,11 @@ O ambiente de desenvolvimento para estender Teams aplicativos em Microsoft 365 �
 Para configurar seu ambiente de desenvolvimento:
 
 > [!div class="checklist"]
-> * [Obter o Locatário do Desenvolvedor M365 (Área Desastiçada) e habilitar o sideload](#prepare-a-developer-tenant-for-testing)
-> * [Registrar seu locatário do M365 *em Office 365 Versões Direcionadas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Obter Microsoft 365 locatário do Desenvolvedor (Área Desarmado) e habilitar o sideload](#prepare-a-developer-tenant-for-testing)
+> * [Registrar seu Microsoft 365 locatário *em Office 365 Versões Direcionadas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure sua conta para acessar versões de visualização de Outlook e Office](#install-office-apps-in-your-test-environment)
 > * [Alternar para a versão de visualização do desenvolvedor Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Opcional*] [Instalar Teams Toolkit extensão para Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Opcional*] [Instalar Teams Toolkit extensão para Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Preparar um locatário de desenvolvedor para teste
 

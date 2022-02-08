@@ -6,13 +6,8 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 25b8a8b4ab04f2ff3a574a1e6c4422b38aaa977d
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362750"
 ---
+
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
 > [!NOTE]
@@ -28,7 +23,7 @@ As permissões granulares, Teams RSC específicas definem o que um aplicativo po
 
 ### <a name="resource-specific-permissions-for-a-team"></a>Permissões específicas de recursos para uma equipe
 
-|Permissão do aplicativo| Action |
+|Permissão do aplicativo| Ação |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obter as configurações dessa equipe.|
 |TeamSettings.ReadWrite.Group|Atualize as configurações dessa equipe.|
@@ -51,7 +46,7 @@ Para obter mais detalhes, consulte [permissões de consentimento específicas do
 
 A tabela a seguir fornece permissões específicas de recursos para um chat:
 
-|Permissão do aplicativo| Action |
+|Permissão do aplicativo| Ação |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | Obter as configurações desse chat.                                    |
 | ChatSettings.ReadWrite.Chat    | Atualize as configurações desse chat.                          |
@@ -91,9 +86,9 @@ Para obter mais detalhes, consulte [permissões de consentimento específicas do
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Configurar configurações de consentimento do proprietário do grupo para RSC em uma equipe
 
-Você pode habilitar ou [desabilitar o consentimento do proprietário do](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) grupo diretamente no portal do Azure:
+Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) proprietário do grupo diretamente Microsoft Azure portal:
 
-1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Entre no portal Microsoft Azure [como](https://portal.azure.com) Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Selecione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **e permissionsAs** >  [**configurações de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado consentimento do proprietário **do grupo para aplicativos que acessam dados**. O padrão é **Permitir consentimento do proprietário do grupo para todos os proprietários do grupo**. Para que o proprietário da equipe instale um aplicativo usando o RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
 
@@ -103,9 +98,9 @@ Além disso, você pode habilitar ou desabilitar o consentimento do proprietári
 
 ### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurar configurações de consentimento do usuário para RSC em um chat
 
-Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) usuário diretamente no portal do Azure:
+Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) usuário diretamente no Microsoft Azure portal:
 
-1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Entre no portal Microsoft Azure [como](https://portal.azure.com) Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Selecione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **e permissionsAs** >  [**configurações de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado **consentimento do usuário para aplicativos**. O padrão é **Permitir o consentimento do usuário para aplicativos**. Para um membro do chat instalar um aplicativo usando o RSC, o consentimento do usuário deve ser habilitado para esse usuário.
 
@@ -159,8 +154,8 @@ Adicione uma [chave webApplicationInfo](../../resources/schema/manifest-schema.m
 
 |Nome| Tipo | Descrição|
 |---|---|---|
-|`id` |String |Sua ID do aplicativo do Azure AD. Para obter mais informações, [consulte register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Cadeia de caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
+|`id` |Cadeia de caracteres |Sua ID do aplicativo do Azure AD. Para obter mais informações, [consulte register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
 
 Especifique as permissões necessárias pelo aplicativo.
 

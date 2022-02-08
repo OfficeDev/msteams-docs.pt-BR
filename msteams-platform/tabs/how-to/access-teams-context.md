@@ -4,20 +4,15 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212416"
 ---
+
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
 Sua guia requer informações contextuais para exibir conteúdo relevante:
 
 * Informações básicas sobre o usuário, equipe ou empresa.
 * Informações de localidade e tema.
-* Leia `entityId` o ou `subEntityId` que identifica o que está nesta guia.
+* Leia o `entityId` ou `subEntityId` que identifica o que está nesta guia.
 
 ## <a name="user-context"></a>Contexto do usuário
 
@@ -36,7 +31,7 @@ Para obter mais informações, [consulte authenticate a user in your Microsoft T
 Você pode acessar informações de contexto de duas maneiras:
 
 * Inserir valores de espaço reservado de URL.
-* Use o [Microsoft Teams SDK do](/javascript/api/overview/msteams-client)cliente JavaScript .
+* Use o [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client).
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado de URL
 
@@ -47,7 +42,7 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 * {loginHint}: Um valor adequado como uma dica de logon para o Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
 * {userPrincipalName}: o Nome principal do usuário atual no locatário atual.
 * {userObjectId}: A ID do objeto do Azure AD do usuário atual no locatário atual.
-* {theme}: O tema atual da interface do usuário (UI), como `default` , `dark` ou `contrast` .
+* {theme}: O tema atual da interface do usuário (UI), como `default`, `dark`ou `contrast`.
 * {groupId}: A ID do grupo Office 365 no qual a guia reside.
 * {tid}: ID do locatário do Azure AD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como languageId-countryId(en-us).
@@ -55,11 +50,11 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 > [!NOTE]
 > O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
 
-Por exemplo, em seu manifesto de tabulação, você definiu o atributo como , o usuário in-lo como `configURL` , tem os seguintes `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` atributos:
+Por exemplo, em seu manifesto de tabulação, você definiu o `configURL` atributo como `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`, o usuário in-lo como , tem os seguintes atributos:
 
 * Seu nome de usuário **é user@example.com**.
-* A ID do locatário da empresa é **e2653c-etc.**
-* Eles são membros do grupo Office 365 id **00209384-etc.**
+* A ID do locatário da empresa é **e2653c-etc**.
+* Eles são membros do grupo Office 365 com id **00209384-etc**.
 * O usuário definiu seu Teams como **escuro**.
 
 Quando eles configuram a guia, Teams chama a seguinte URL:
@@ -86,7 +81,7 @@ O código a seguir fornece um exemplo de variável de contexto:
     "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current O365 Group ID",
+    "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
     "teamType": "The type of team",
@@ -118,7 +113,7 @@ O código a seguir fornece um exemplo de variável de contexto:
 > [!Note]
 > Canais privados estão atualmente na visualização do desenvolvedor privado.
 
-Quando sua página de conteúdo é carregada em um canal privado, os dados recebidos da chamada são ofuscados para proteger a privacidade `getContext` do canal. 
+Quando sua página de conteúdo é carregada em um canal privado, `getContext` os dados recebidos da chamada são ofuscados para proteger a privacidade do canal. 
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
 
@@ -129,16 +124,16 @@ Os campos a seguir são alterados quando sua página de conteúdo está em um ca
 * `teamSitePath`: De acordo com o caminho de um site SharePoint exclusivo para o canal privado
 * `teamSiteDomain`: Definir para o domínio de um domínio de site SharePoint exclusivo para o canal privado
 
-Se sua página fizer uso de qualquer um desses valores, você deverá verificar o campo para determinar se sua página está carregada em um canal privado e `channelType` responder adequadamente.
+Se sua página fizer uso de qualquer um desses valores, `channelType` você deverá verificar o campo para determinar se sua página está carregada em um canal privado e responder adequadamente.
 
 > [!Note]
 > `teamSiteUrl` também funciona bem para canais padrão.
 
 ## <a name="handle-theme-change"></a>Manipular a alteração de tema
 
-Você pode registrar seu aplicativo para ser informado se o tema mudar chamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
+Você pode registrar seu aplicativo para ser informado se o tema mudar chamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-O argumento na função é uma cadeia de caracteres com `theme` um valor de , ou `default` `dark` `contrast` .
+O `theme` argumento na função é uma cadeia de caracteres com um valor `default`de , `dark`ou `contrast`.
 
 ## <a name="next-step"></a>Próxima etapa
 

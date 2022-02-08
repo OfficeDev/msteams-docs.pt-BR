@@ -13,6 +13,8 @@ ms.date: 11/29/2021
 > [!NOTE]
 > Atualmente, esse recurso está disponível apenas na **visualização de desenvolvedor** público.
 
+
+Teams Toolkit for Microsoft Visual Studio Code ajuda você a criar e implantar aplicativos Teams com identidade integrada, acesso ao armazenamento em nuvem, dados do Microsoft Graph e outros serviços no Azure e Microsoft 365 com abordagem de configuração zero. Para Teams desenvolvimento de aplicativos, semelhante ao Teams Toolkit para Visual Studio, você pode usar a ferramenta [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), `teamsfx`que consiste em Toolkit .
 Teams Toolkit permite que você crie, depure e implante seu aplicativo Teams de Visual Studio Code. O desenvolvimento de aplicativos com o kit de ferramentas tem as vantagens de:
 
 - Identidade integrada
@@ -38,6 +40,7 @@ Os principais marcos dessa jornada são:
 1. Use a conta do Azure para provisionar e implantar seu aplicativo na nuvem.
 1. Publique seu aplicativo no Teams.
 
+
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Instalar Teams Toolkit para Visual Studio Code
 
 1. Abra **Visual Studio Code.**
@@ -62,7 +65,8 @@ Após Toolkit instalação, você verá a interface do usuário Teams Toolkit co
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini-funções":::
 
-Você pode selecionar **Início** Rápido para explorar o Teams Toolkit ou selecionar **Criar** um novo aplicativo Teams para criar um Teams projeto. Você pode exibir uma lista de todos os Toolkit ao criar ou abrir um projeto existente na Visual Studio Code sidebar.
+
+Você pode selecionar **Início** Rápido para explorar o Teams Toolkit ou selecionar **Criar** um novo aplicativo Teams para criar um Teams projeto. Se você tiver um projeto Teams criado pelo Teams Toolkit v2.+ aberto no Visual Studio Code Teams Toolkit, você verá uma interface do usuário com todas as funcionalidades, conforme mostrado na imagem a seguir: Você pode selecionar **Início** Rápido para explorar o Teams Toolkit , ou selecione **Criar um novo Teams App** para criar um Teams projeto. Você pode exibir uma lista de todos os Toolkit ao criar ou abrir um projeto existente na Visual Studio Code sidebar.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="funções":::
 

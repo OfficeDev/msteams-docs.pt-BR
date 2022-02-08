@@ -6,13 +6,8 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
-ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059065"
 ---
+
 # <a name="cicd-guide"></a>Guia de CI/CD
 
 O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a criação Teams aplicativo. O documento fornece ferramentas e modelos para você começar a configurar pipelines CI ou CD com GitHub, Azure Devops e Jenkins.
@@ -26,7 +21,7 @@ O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a
 
 ## <a name="ci-or-cd-workflow-templates-in-github"></a>Modelos de fluxo de trabalho ci ou CD em GitHub
 
-**Para incluir fluxos de trabalho ci** ou CD para automatizar Teams processo de desenvolvimento de aplicativos em GitHub :
+**Para incluir fluxos de trabalho de CI ou CD para automatizar Teams processo de desenvolvimento de aplicativos GitHub**:
 
 1. Criar pasta em `.github/workflows`
 1. Copie um dos seguintes arquivos de modelo:
@@ -47,7 +42,7 @@ Execute as etapas a seguir para adaptar o fluxo de trabalho do seu projeto:
 Execute as etapas a seguir para personalizar o fluxo de trabalho de CD:
 
 1. Por padrão, o fluxo de trabalho de CD é acionado, quando novas confirmações são feitas no `main` branch.
-1. Crie GitHub [de repositório por](https://docs.github.com/en/actions/reference/encrypted-secrets) ambiente para manter as credenciais de logon da conta do Azure e do M365. Para obter mais informações, [consulte GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Crie GitHub [de repositório por](https://docs.github.com/en/actions/reference/encrypted-secrets) ambiente para manter a entidade de serviço do Azure e Microsoft 365 de logon da conta. Para obter mais informações, [consulte GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Altere os scripts de com build, se necessário.
 1. Remova os scripts de teste conforme necessário.
 
@@ -59,9 +54,9 @@ Execute as etapas a seguir para personalizar o fluxo de trabalho de CD:
 A tabela a seguir lista todos os segredos necessários para criar ambiente em GitHub:
 
 1. Selecione **Configurações**.
-1. Vá para **a seção Ambientes.**
+1. Vá para **a seção Ambientes** .
 1. Selecione **Novo ambiente**.
-1. Insira um nome para seu ambiente. O nome de ambiente padrão fornecido no modelo é `test_environment` . 
+1. Insira um nome para seu ambiente. O nome de ambiente padrão fornecido no modelo é `test_environment`. 
 1. Selecione **Configurar ambiente**.
 1. Selecione **Adicionar Segredo**.
 
@@ -69,17 +64,16 @@ A tabela a seguir lista todos os segredos necessários para criar o ambiente:
 
 |Nome|Descrição|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|O nome principal do serviço do Azure usado para provisionar recursos.|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|A senha da entidade de serviço do Azure.|
-|AZURE_SUBSCRIPTION_ID|Para identificar a assinatura na qual os recursos serão provisionados.|
-|AZURE_TENANT_ID|Para identificar o locatário no qual a assinatura reside.|
-|M365_ACCOUNT_NAME|A conta M365 para criar e publicar Teams aplicativo.|
-|M365_ACCOUNT_PASSWORD|A senha da conta M365.|
-|M365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Para obter mais informações, [consulte como encontrar sua ID de locatário do M365.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-
+|`AZURE_SERVICE_PRINCIPAL_NAME`|O nome principal do serviço do Azure usado para provisionar recursos.|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|A senha da entidade de serviço do Azure.|
+|`AZURE_SUBSCRIPTION_ID`|Para identificar a assinatura na qual os recursos serão provisionados.|
+|`AZURE_TENANT_ID`|Para identificar o locatário no qual a assinatura reside.|
+|`M365_ACCOUNT_NAME`|A Microsoft 365 para criar e publicar Teams app.|
+|`M365_ACCOUNT_PASSWORD`|A senha da conta Microsoft 365.|
+|`M365_TENANT_ID`|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Para obter mais informações, [consulte como encontrar sua Microsoft 365 ID de locatário](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
-> Atualmente, a entidade de serviço do Azure é usada em fluxos de trabalho ci/CD. Para obter mais informações, [consulte create azure service principles](#create-azure-service-principals).
+> Atualmente, a entidade de serviço do Azure é usada em fluxos de trabalho ci/CD. Para obter mais informações, consulte [create Azure service principles](#create-azure-service-principals).
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar pipelines CI ou CD com Azure DevOps
 
@@ -92,7 +86,7 @@ Execute as seguintes etapas para começar:
 
 ### <a name="set-up-ci-pipeline"></a>Configurar pipeline CI
 
-1. Adicione [scripts ci ao](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) seu repositório Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
+1. Adicione [scripts ci](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) ao seu repositório Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
 1. Siga as [etapas para criar seu Azure DevOps Pipeline para CI](/azure/devops/pipelines/create-first-pipeline).
 Aqui está um cenário de scripts de pipeline CI comuns:
 
@@ -125,7 +119,7 @@ Veja a seguir as alterações que você pode fazer para o script ou a definiçã
 
 1. Adicione [scripts de CD](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) ao repositório Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
 1. Crie seu Azure DevOps para CD. Para obter mais informações, consulte [create first pipeline](/azure/devops/pipelines/create-first-pipeline). A definição do Pipeline pode ser referenciada para a definição de exemplo a seguir para o Pipeline CI.
-1. Adicione variáveis necessárias [por Definir variáveis](/azure/devops/pipelines/process/variables)e torná-las como segredos, se necessário.
+1. Adicione as variáveis necessárias [por Definir](/azure/devops/pipelines/process/variables) variáveis e as faça como segredos, se necessário.
 
 ```yml
 trigger:
@@ -166,22 +160,22 @@ Execute as etapas a seguir para criar variáveis pipeline em Azure DevOps:
 
 1. Na página Edição do Pipeline, selecione **Variáveis** e selecione **Nova variável**.
 1. Insira o par Nome ou Valor para sua variável.
-1. Alterne a caixa de seleção de **Manter esse valor em segredo,** se necessário.
+1. Alterne a caixa de seleção de **Manter esse valor em segredo** , se necessário.
 1. Selecione **OK** para criar a variável.
 
 |Nome|Descrição|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|O nome principal do serviço do Azure usado para provisionar recursos.|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|A senha da entidade de serviço do Azure.|
-|AZURE_SUBSCRIPTION_ID|Para identificar a assinatura na qual os recursos serão provisionados.|
-|AZURE_TENANT_ID|Para identificar o locatário no qual a assinatura reside.|
-|M365_ACCOUNT_NAME|A conta M365 para criar e publicar o Teams App.|
-|M365_ACCOUNT_PASSWORD|A senha da conta M365.|
-|M365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID de locatário do M365.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
+|`AZURE_SERVICE_PRINCIPAL_NAME`|O nome principal do serviço do Azure usado para provisionar recursos.|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|A senha da entidade de serviço do Azure.|
+|`AZURE_SUBSCRIPTION_ID`|Para identificar a assinatura na qual os recursos serão provisionados.|
+|`AZURE_TENANT_ID`|Para identificar o locatário no qual a assinatura reside.|
+|`M365_ACCOUNT_NAME`|A Microsoft 365 para criar e publicar o Teams App.|
+|`M365_ACCOUNT_PASSWORD`|A senha da conta Microsoft 365.|
+|`M365_TENANT_ID`|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID Microsoft 365 locatário.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Modelos de pipeline ci ou CD no Jenkins
 
-Para adicionar esses modelos ao seu repositório, você deve reapresar as versões do [modelo jenkins-ci. Modelo de jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile)  [e jenkins-cd. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) a ser localizado em seu repositório por filial.
+Para adicionar esses modelos ao repositório, você exige as versões do [modelo jenkins-ci. Modelo de jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile)  [e jenkins-cd. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) a ser localizado em seu repositório por filial.
 
 Além disso, você precisa criar pipelines CI ou CD no Jenkins que apontem para o **Jenkinsfile específico** correspondentemente.
 
@@ -196,8 +190,8 @@ Siga as etapas para verificar como conectar o Jenkins a diferentes plataformas S
 
 Veja a seguir algumas das alterações que você pode fazer para adaptar seu projeto:
 
-1. Renomeie o arquivo de modelo para **Jenkinsfile** e coloque-o sob o branch de destino, por exemplo, o **branch de dev.**
-1. Altere como o fluxo de CI é disparado. Padrão é usar os gatilhos do **pollSCM** quando uma nova alteração é empurrada para o **branch de dev.**
+1. Renomeie o arquivo de modelo para **Jenkinsfile** e coloque-o sob o branch de destino, por exemplo, o **branch de dev** .
+1. Altere como o fluxo de CI é disparado. Padrão é usar os gatilhos do **pollSCM** quando uma nova alteração é empurrada para o **branch de dev** .
 1. Verifique se você tem um script de com build npm ou personalize a maneira como você cria no código de automação.
 1. Verifique se você tem um script de teste npm que retorna zero para sucesso e/ou altere os comandos de teste.
 
@@ -207,7 +201,7 @@ Execute as seguintes etapas para personalizar o pipeline de CD:
 
 1. Renomeie o arquivo de modelo para **Jenkinsfile** e coloque-o sob o branch de destino, por exemplo, o **branch** principal.
 1. Altere o fluxo de CD. Padrão é usar os gatilhos do **pollSCM** quando uma nova alteração é empurrada para o **branch** principal.
-1. Crie credenciais [de pipeline do](https://www.jenkins.io/doc/book/using/using-credentials/) Jenkins para manter as credenciais de logon da conta do Azure e da conta do M365.
+1. Crie credenciais [de pipeline do](https://www.jenkins.io/doc/book/using/using-credentials/) Jenkins para manter a entidade de serviço do Azure e Microsoft 365 de logon da conta.
 1. Altere os scripts de com build, se necessário.
 1. Remova os scripts de teste se você não tiver testes.
 
@@ -217,13 +211,13 @@ Siga [as credenciais de uso](https://www.jenkins.io/doc/book/using/using-credent
 
 |Nome|Descrição|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|O nome principal do serviço do Azure usado para provisionar recursos.|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|A senha da entidade de serviço do Azure.|
-|AZURE_SUBSCRIPTION_ID|Para identificar a assinatura na qual os recursos serão provisionados.|
-|AZURE_TENANT_ID|Para identificar o locatário no qual a assinatura reside.|
-|M365_ACCOUNT_NAME|A conta M365 para criar e publicar o Teams App.|
-|M365_ACCOUNT_PASSWORD|A senha da conta M365.|
-|M365_TENANT_ID|Para identificar o locatário no qual o Teams App será criado/publicado. Esse valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID de locatário do M365.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
+|`AZURE_SERVICE_PRINCIPAL_NAME`|O nome principal do serviço do Azure usado para provisionar recursos.|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|A senha da entidade de serviço do Azure.|
+|`AZURE_SUBSCRIPTION_ID`|Para identificar a assinatura na qual os recursos serão provisionados.|
+|`AZURE_TENANT_ID`|Para identificar o locatário no qual a assinatura reside.|
+|`M365_ACCOUNT_NAME`|A Microsoft 365 para criar e publicar o Teams App.|
+|`M365_ACCOUNT_PASSWORD`|A senha da conta Microsoft 365.|
+|`M365_TENANT_ID`|Para identificar o locatário no qual o aplicativo Teams é criado ou publicado. O valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID Microsoft 365 locatário.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
 ## <a name="get-started-guide-for-other-platforms"></a>Guia de início para outras plataformas
 
@@ -232,13 +226,13 @@ Você pode seguir os scripts de bash de exemplo pré-definidos listados para cri
 * [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
 
-Os scripts são baseados em uma ferramenta de linha de comando [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli)entre plataformas. Você pode instalá-lo com `npm install -g @microsoft/teamsfx-cli` e seguir a [documentação](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) para personalizar os scripts.
+Os scripts são baseados em uma ferramenta de linha de comando [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) entre plataformas. Você pode instalá-lo com `npm install -g @microsoft/teamsfx-cli` e seguir a [documentação](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) para personalizar os scripts.
 
 > [!NOTE]
-> * Para `@microsoft/teamsfx-cli` habilitar a execução no modo CI, ative `CI_ENABLED` por `export CI_ENABLED=true` . No modo CI, `@microsoft/teamsfx-cli` é amigável para CI ou CD.
-> * Para `@microsoft/teamsfx-cli` habilitar a execução no modo não interativo, de definir uma configuração global com o comando: `teamsfx config set -g interactive false` . No modo não interativo, `@microsoft/teamsfx-cli` não fará perguntas sobre entradas interativamente.
+> * Para habilitar `@microsoft/teamsfx-cli` a execução no modo CI, ative `CI_ENABLED` por `export CI_ENABLED=true`. No modo CI, `@microsoft/teamsfx-cli` é amigável para CI ou CD.
+> * Para habilitar `@microsoft/teamsfx-cli` a execução no modo não interativo, de definir uma configuração global com o comando: `teamsfx config set -g interactive false`. No modo não interativo, `@microsoft/teamsfx-cli` não fará perguntas sobre entradas interativamente.
 
-Certifique-se de definir credenciais do Azure e M365 em suas variáveis de ambiente com segurança. Por exemplo, se você estiver usando GitHub como repositório de código-fonte. Para obter mais informações, consulte [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Certifique-se de definir credenciais do Azure e do Microsoft365 em suas variáveis de ambiente com segurança. Por exemplo, se você estiver usando GitHub como repositório de código-fonte. Para obter mais informações, consulte [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## <a name="create-azure-service-principals"></a>Criar entidades de serviço do Azure
 
@@ -252,10 +246,10 @@ Execute as seguintes etapas para criar entidades de serviço do Azure:
 > [!TIP]
 > Salve sua id de locatário, id do aplicativo(AZURE_SERVICE_PRINCIPAL_NAME) e o segredo(AZURE_SERVICE_PRINCIPAL_PASSWORD) para uso futuro.
 
-Para obter mais informações, consulte Diretrizes de entidades de serviço do [Azure.](/azure/active-directory/develop/howto-create-service-principal-portal) Veja a seguir as três maneiras de criar a entidade de serviço: 
-* [Portal do Azure](/azure/active-directory/develop/howto-create-service-principal-portal)
-* [PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
-* [Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
+Para obter mais informações, consulte [Diretrizes de entidades de serviço do Azure](/azure/active-directory/develop/howto-create-service-principal-portal). Veja a seguir as três maneiras de criar a entidade de serviço: 
+* [Microsoft Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
+* [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
+* [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Publicar Teams aplicativo usando Teams Portal do Desenvolvedor
 Se houver alterações relacionadas Teams arquivo de manifesto do aplicativo, talvez você queira publicar o Teams aplicativo novamente para atualizar o manifesto.
@@ -263,8 +257,8 @@ Se houver alterações relacionadas Teams arquivo de manifesto do aplicativo, ta
 Para publicar Teams aplicativo manualmente, você pode aproveitar o Portal do [Desenvolvedor para Teams](https://dev.teams.microsoft.com/home).
 
 Execute as seguintes etapas para publicar seu aplicativo:
-1. Entre no [Portal do Desenvolvedor para Teams](https://dev.teams.microsoft.com) usando a conta correspondente.
-2. Importe seu pacote de aplicativo em zip selecionando `App -> Import app -> Replace` .
+1. Entre no [portal do desenvolvedor para Teams](https://dev.teams.microsoft.com) usando a conta correspondente.
+2. Importe seu pacote de aplicativo em zip selecionando `App -> Import app -> Replace`.
 3. Selecione o aplicativo de destino na lista de aplicativos.
 4. Publicar seu aplicativo selecionando `Publish -> Publish to your org`
 
@@ -273,4 +267,4 @@ Execute as seguintes etapas para publicar seu aplicativo:
 * [Início rápido para GitHub ações](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Criar sua primeira Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Criar seu primeiro Pipeline do Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Gerenciar seus aplicativos com o Portal do Desenvolvedor para Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
+* [Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams](/concepts/build-and-test/teams-developer-portal)

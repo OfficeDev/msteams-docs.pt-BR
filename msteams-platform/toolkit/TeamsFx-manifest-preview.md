@@ -6,13 +6,8 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3555725fdea8ff858c842ed26ed652bb13e82b7f
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768577"
 ---
+
 # <a name="preview-teams-app-manifest-in-teams-toolkit"></a>Visualizar Teams manifesto do aplicativo no Teams Toolkit
 
 Após o scaffolding, os seguintes são os arquivos de modelo de manifesto disponíveis na `templates/appPackage` pasta:
@@ -20,14 +15,14 @@ Após o scaffolding, os seguintes são os arquivos de modelo de manifesto dispon
 - `manifest.local.template.json` - aplicativo de equipes de depuração local.
 - `manifest.remote.template.json` - compartilhado entre todos os ambientes remotos.
 
-Os arquivos Template que consistem em espaço reservados e os valores reais Teams Toolkit são resolvidos em arquivos em `.fx/configs` `.fx/states` e .
+Os arquivos Template que consistem em espaço reservados e os valores reais Teams Toolkit são resolvidos em arquivos em `.fx/configs` e `.fx/states`.
 
 ## <a name="prerequisite"></a>Pré-requisito
 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
 > [!TIP]
-> Verifique se você Teams projeto de aplicativo aberto em código VS.
+> Verifique se você Teams projeto de aplicativo aberto Visual Studio código.
 
 ## <a name="preview-manifest"></a>Manifesto de visualização
 
@@ -44,12 +39,12 @@ Para visualizar o manifesto com conteúdo real, Teams Toolkit gera arquivos de m
 
 ### <a name="preview-local-manifest-file"></a>Visualizar o arquivo de manifesto local
 
-Para visualizar o arquivo de manifesto do aplicativo de equipes locais, você precisa pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e, em seguida, o pacote do aplicativo e os builds de manifesto de visualização sob **a pasta build/appPackage.**
+Para visualizar o arquivo de manifesto do aplicativo de equipes locais, você precisa pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e, em seguida, o pacote do aplicativo e os builds de manifesto de visualização sob **a pasta build/appPackage** .
 
 Você também pode visualizar o manifesto local seguindo as etapas:
 
-1. Selecione **Visualizar** nos codelens do **arquivo manifest.local.template.json.**
-2. Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.local.template.json.**
+1. Selecione **Visualizar** nos codelens do **arquivo manifest.local.template.json** .
+2. Selecione **Visualizar arquivo de manifesto** na barra de menus **do arquivo manifest.local.template.json** .
 3. Selecione **Zip Teams pacote de metadados** em Treeview e selecione **Local**.
 O local de visualização aparece como mostrado na imagem:
 
@@ -57,12 +52,12 @@ O local de visualização aparece como mostrado na imagem:
 
 ### <a name="preview-manifest-in-remote-environment"></a>Manifesto de visualização em ambiente remoto
 
-Para visualizar o arquivo de  manifesto do aplicativo de equipes remotas, selecione Provisionar na nuvem no painel **DESENVOLVIMENTO** do Treeview de extensão Teams Toolkit ou acionar **Teams: Provisionar** na nuvem da paleta de comandos. Ele gera configuração para o aplicativo de equipes remotas e cria o pacote e o manifesto de visualização na **pasta build/appPackage.**
+Para visualizar o arquivo de manifesto do aplicativo de equipes remotas, selecione Provisionar na nuvem no painel **DESENVOLVIMENTO** do Treeview de extensão Teams Toolkit ou acionar Teams **: Provisionar** na nuvem da paleta de comandos. Ele gera configuração para o aplicativo de equipes remotas e cria o pacote e o manifesto de visualização na **pasta build/appPackage** .
 
 Você também pode visualizar o manifesto em ambiente remoto seguindo as etapas:
 
-1. Selecione **Visualizar** nos codelens do **arquivo manifest.remote.template.json.**
-2. Selecione **Visualizar arquivo de manifesto** na barra de menus do arquivo **manifest.remote.template.json.**
+1. Selecione **Visualizar** nos codelens do **arquivo manifest.remote.template.json** .
+2. Selecione **Visualizar arquivo de manifesto** na barra de menus **do arquivo manifest.remote.template.json** .
 3. Selecione **Zip Teams pacote de metadados** em Treeview.
 4. Selecione seu ambiente.
 
@@ -88,7 +83,7 @@ Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-- **Somente visualização:** o arquivo de manifesto local será substituído de acordo com a configuração atual
+- **Somente visualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual
 - **Visualização e atualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual e também atualizado para Teams plataforma
 - **Cancelar**: não fazer nada
 

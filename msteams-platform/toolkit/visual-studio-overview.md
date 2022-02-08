@@ -1,18 +1,13 @@
 ---
 title: Criar aplicativos com o Teams Toolkit e Visual Studio
-description: Começar a criar grandes aplicativos personalizados diretamente Visual Studio com o Microsoft Teams Toolkit. Aprenda a configurar seu aplicativo Visual Studio, validar seu aplicativo e publicá-lo no Visual Studio e no Portal do Desenvolvedor.
+description: 'Começar a criar grandes aplicativos personalizados diretamente Visual Studio com o Microsoft Teams Toolkit. Aprenda a configurar seu aplicativo Visual Studio, validar seu aplicativo e publicá-lo no Visual Studio e no Portal do Desenvolvedor.'
 keywords: kit de ferramentas do visual studio do teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075469"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Criar aplicativos com o Teams Toolkit e Visual Studio
+
+# <a name="build-apps-with-the-teams-toolkit-and-microsoft-visual-studio"></a>Criar aplicativos com o Teams Toolkit e Microsoft Visual Studio
 
 O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados do Teams diretamente no ambiente de desenvolvimento integrado (IDE) do Visual Studio. O kit de ferramentas do Microsoft Teams guia você através do processo e fornece o necessário para criar, depurar e iniciar seu aplicativo do Teams.
 
@@ -20,13 +15,13 @@ O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados
 
 1. [Habilitar a visualização do desenvolvedor](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
 
-2. Certifique-se de que o **<span>ASP.NET</span> e** o módulo de desenvolvimento da Web foram adicionados à sua Visual Studio instância. Para obter mais informações, consulte [Modify Visual Studio by adding or remove workloads and components](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
+2. Certifique-se de que **<span>o ASP.NET</span> e o** módulo de desenvolvimento da Web foram adicionados à sua Visual Studio instância. Para saber mais, confira [Modificar Visual Studio adicionando ou removendo cargas de trabalho e componentes](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
 
 ![Módulo de asp.net visual studio](../assets/images/visual-studio-web-dev-module.png)
 
 ## <a name="install-the-teams-toolkit"></a>Instalar o Teams Toolkit
 
-O Microsoft Teams Toolkit para Visual Studio está disponível para download no [marketplace do Visual Studio ou](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) diretamente no menu **Extensões** no Visual Studio.
+O Microsoft Teams Toolkit para Visual Studio está disponível para download no [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) ou diretamente no menu **Extensões** no Visual Studio.
 
 ## <a name="use-the-toolkit"></a>Usar o kit de ferramentas
 
@@ -40,8 +35,8 @@ O Microsoft Teams Toolkit para Visual Studio está disponível para download no 
 
 1. Iniciar Visual Studio 2019.
 2. Selecione **Criar um novo projeto**.
-3. Pesquise **Microsoft Teams App e** selecione **Próximo**.
-4. Na **configuração do novo projeto,** insira **o** nome Project, **Local** e Nome **da solução.**
+3. **Pesquise Microsoft Teams App** e selecione **Próximo**.
+4. Na **configuração do novo projeto**, **insira o nome** do Project, **Local** e **Nome da solução**.
 5. Selecione **Próximo** para inserir um nome para o aplicativo.
 6. Na tela Informações Adicionais, insira um **Nome do Aplicativo** e Nome do Desenvolvedor **ou** Empresa para seu Teams app.
 
@@ -64,7 +59,7 @@ Quando um aplicativo é instalado, o cliente Teams analisado o arquivo de manife
 > [!NOTE]
 >Se você ainda não fez isso, você deve entrar na sua conta Microsoft 365 para continuar com o processo de desenvolvimento.
 >
-> Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura Microsoft 365 programa de [desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program) Ele é gratuito por 90 dias e é renovado desde que você o use para atividades de desenvolvimento. Se você tiver uma assinatura Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura de desenvolvedor Microsoft 365 gratuita [,](https://aka.ms/MyVisualStudioBenefits)ativa para o tempo de vida da sua assinatura Visual Studio. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
+> Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura Microsoft 365 [programa de desenvolvedor](https://developer.microsoft.com/microsoft-365/dev-program). Ele é gratuito por 90 dias e é renovado desde que você o use para atividades de desenvolvimento. Se você tiver uma assinatura de Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura de desenvolvedor Microsoft 365 [gratuita, ativa](https://aka.ms/MyVisualStudioBenefits) para a vida útil da sua assinatura Visual Studio assinatura. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Etapas de configuração
 
@@ -78,11 +73,11 @@ Pressione F5 para iniciar a depuração. A caixa de diálogo de instalação do 
 
 ## <a name="validate-your-app"></a>Valide o seu aplicativo
 
-O **Project > do TeamsFx Validar** > Teams manifesto permite verificar se o pacote do aplicativo é válido.
+O **Project > menu Validar > Teams TeamsFx permite** verificar se o pacote do aplicativo é válido.
 
 ## <a name="publish-your-app-to-teams"></a>Publicar seu aplicativo no Teams
 
-No [portal](https://dev.teams.microsoft.com/home)do desenvolvedor do Teams , você pode carregar seu aplicativo em uma equipe, enviar seu aplicativo para a loja de aplicativos personalizada da sua empresa para usuários em sua organização ou enviar seu aplicativo para a Fonte do Aplicativo para todos os Teams usuários.
+No [portal do desenvolvedor do Teams](https://dev.teams.microsoft.com/home), você pode carregar seu aplicativo em uma equipe, enviar seu aplicativo para a loja de aplicativos personalizada da sua empresa para usuários em sua organização ou enviar seu aplicativo para a Fonte do Aplicativo para todos os usuários Teams.
 
 - Seu administrador de TI revisará esses envios.
 - Você pode retornar à página **Publicar** para verificar o status do envio e saber se seu aplicativo foi aprovado ou rejeitado pelo administrador de TI. Isso também é onde você pode enviar atualizações para seu aplicativo ou cancelar quaisquer envios ativos no momento.

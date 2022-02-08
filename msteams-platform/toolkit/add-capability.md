@@ -30,7 +30,7 @@ Você pode criar um novo Teams com um dos recursos Teams aplicativo. Durante o d
 > [!IMPORTANT]
 > Você precisa executar o provisionamento para cada ambiente depois de adicionar recursos com êxito ao seu Teams app.
 
-1. Abra **Visual Studio Code**.
+1. Abra **Microsoft Visual Studio Código**.
 1. Selecione **Teams Toolkit** no painel esquerdo.
 1. Selecione **Adicionar recursos**:
 

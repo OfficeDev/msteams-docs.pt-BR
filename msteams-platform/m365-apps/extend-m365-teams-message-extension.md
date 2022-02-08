@@ -4,12 +4,6 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345377"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma Teams de mensagens em Microsoft 365
 
@@ -34,7 +28,7 @@ Para concluir este tutorial, você precisará:
  - Um locatário Microsoft 365 área de área de trabalho do Programa de Desenvolvedores
  - Seu locatário de área de Office 365 *Versões Direcionadas*
  - Um ambiente de teste com Office aplicativos instalados no canal Microsoft 365 Apps *beta*
- - Visual Studio Code com a extensão Teams Toolkit (Visualização) (Opcional)
+ - Microsoft Visual Studio Código com a extensão Teams Toolkit (Visualização) (Opcional)
 
 > [!div class="nextstepaction"]
 > [Instalar pré-requisitos](prerequisites.md)
@@ -80,7 +74,7 @@ Em Microsoft Teams, uma extensão de mensagens consiste em um serviço Web que v
 
 Para que os usuários interajam com sua extensão de mensagens Outlook, você precisará adicionar um canal Outlook ao bot:
 
-1. No [portal do Azure](https://portal.azure.com) (ou [portal da Estrutura de Bots](https://dev.botframework.com) , se você registrou anteriormente), navegue até o recurso bot.
+1. No [Microsoft Azure portal](https://portal.azure.com) (ou [portal da Estrutura de Bots](https://dev.botframework.com), se você registrou anteriormente lá), navegue até o recurso bot.
 
 1. No *Configurações*, selecione **Canais**.
 

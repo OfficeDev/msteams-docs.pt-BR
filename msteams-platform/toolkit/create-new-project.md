@@ -25,7 +25,7 @@ Os guias a seguir ajudam você a criar um novo projeto Teams aplicativo usando T
 
  Você pode criar um novo projeto na **galeria de exemplos**. Selecione o exemplo necessário para criar aplicativos. As etapas a seguir orientam você a criar aplicativos a partir de exemplos:
 
- 1. Abra **Teams Toolkit** de Visual Studio Code.
+ 1. Abra **Teams Toolkit** código Microsoft Visual Studio código.
  1. Selecione **A seção DESENVOLVIMENTO** no Tree View.
  1. Selecione **Exibir exemplos**. A galeria de exemplo aparece conforme mostrado na imagem a seguir:
    
