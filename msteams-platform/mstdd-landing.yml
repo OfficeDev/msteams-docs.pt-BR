@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 7fcabd8bd0eda4bb39718d250e39e2bc228ab191
-  ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+  ms.openlocfilehash: b1c728fd27b1cecdf8e2fd7c62e6eaabf01b3cc7
+  ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/03/2022
-  ms.locfileid: "62362729"
+  ms.lasthandoff: 02/08/2022
+  ms.locfileid: "62443892"
 landingContent:
 - title: Explore o mais recente
   linkLists:
@@ -27,15 +27,15 @@ landingContent:
       url: ~/resources/schema/manifest-schema.md
     - text: Esquema de manifesto de visualização de desenvolvedor público
       url: ~/resources/schema/manifest-schema-dev-preview.md
-    - text: Modo interativo para compartilhar o estágio de reunião
+    - text: Modo interativo para a janela de conteúdo compartilhado na reunião
       url: ~/apps-in-teams-meetings/API-references.md
-    - text: Visualização de teste para aplicativos monetizados
+    - text: Teste de visualização para aplicativos monetizados
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    - text: Fluxo de compra no aplicativo para monetização de aplicativos
+    - text: Fluxo de compras no aplicativo para a monetização de aplicativos
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: Cartões Adaptáveis de conclusão do formulário
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: Seletor de Pessoas nos Cartões Adaptáveis
+    - text: Seletor de Pessoas em Cartões Adaptáveis
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Toolkit para Visual Studio Code (Visualização)
       url: ~/toolkit/teams-toolkit-fundamentals.md
@@ -57,6 +57,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Teams de chamada e reunião
+      url: bots/calls-and-meetings/registering-calling-bot.md
     - text: Permissão do dispositivo para navegador
       url: concepts/device-capabilities/browser-device-permissions.md
     - text: Usar autenticação SSO para guias
@@ -69,6 +71,8 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
+    - text: Criar bot de chamada e reunião
+      url: ~/sbs-calling-and-meeting.yml
     - text: Configurar permissões de dispositivo Tab
       url: ~/sbs-tab-device-permissions.yml
     - text: Configurar o SSO para guias e extensões de mensagens

@@ -1,9 +1,15 @@
 ---
 title: Registrar chamadas e reuniões do bot do Microsoft Teams
-description: 'Saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um novo bot ou adicionar recurso de chamada e adicionar permissões de gráfico.'
+description: Saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um novo bot ou adicionar recurso de chamada e adicionar permissões de gráfico.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
+ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443921"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
@@ -85,6 +91,10 @@ Você pode contar com um administrador para conceder as permissões que seu apli
 
 > [!IMPORTANT]
 > Sempre que você fizer uma alteração nas permissões do aplicativo, também deverá repetir o processo de consentimento do administrador. As alterações feitas no portal de registro do aplicativo não serão refletidas até que o consentimento tenha sido reaplicado pelo administrador do locatário.
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo](../../sbs-calling-and-meeting.yml) para configurar a chamada e a reunião em um bot.
 
 ## <a name="next-step"></a>Próxima etapa
 
