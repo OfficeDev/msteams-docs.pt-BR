@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API de logon único do Microsoft Azure AD de autenticação do teams
-ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 065b8a75348e026a7e4bc2514438c70dbef479d7
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212353"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435157"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -29,7 +29,7 @@ Os usuários do Microsoft Teams que entram em sua conta corporativa, de estudant
 > [!NOTE]
 > **Início rápido**  
 >
-> O jeito mais simples para começar com o SSO de guias é com o kit de ferramentas do Teams para o Visual Studio Code. Para obter mais informações, confira [SSO com kit de ferramentas do Teams e Visual Studio Code para guias](../../../toolkit/visual-studio-code-tab-sso.md)
+> O caminho mais simples para começar com o SSO da guia é com o kit de ferramentas do Teams para o Microsoft Visual Studio Code. Para obter mais informações, confira [SSO com kit de ferramentas do Teams e Visual Studio Code para guias](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Como o SSO funciona em tempo de execução
 
