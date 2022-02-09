@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212374"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443941"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -115,6 +115,14 @@ O código a seguir mostra um exemplo de formatação de Cartões Adaptáveis:
     ]
 }
 ```
+
+Cartões Adaptáveis suportam emojis. O código a seguir mostra um exemplo de Cartões Adaptáveis com um emoji:
+
+``` json
+{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+```
+
+:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Cartão adaptável com um emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Suporte a menções dentro dos Cartões Adaptáveis 
 
@@ -516,7 +524,7 @@ Os cartões de conector oferecem um suporte limitado à formatação Markdown e 
 
 | Estilo | Exemplo | HTML |
 | --- | --- | --- |
-| Negrito | **text** | `<strong>text</strong>` |
+| Negrito | **texto** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
