@@ -6,8 +6,13 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação de contexto de usuário de api de usuário de reuniões de aplicativos do teams
+ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
+ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62470785"
 ---
-
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
 A extensibilidade da reunião fornece APIs para aprimorar a experiência de reunião. Você pode executar o seguinte com a ajuda das APIs listadas:
@@ -426,7 +431,7 @@ Para usar a `shareAppContentToStage` API, você deve obter as permissões RSC. N
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
