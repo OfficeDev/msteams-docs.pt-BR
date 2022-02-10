@@ -6,8 +6,13 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518111"
 ---
-
 # <a name="cicd-guide"></a>Guia de CI/CD
 
 O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a criação Teams aplicativo. O documento fornece ferramentas e modelos para você começar a configurar pipelines CI ou CD com GitHub, Azure Devops e Jenkins.
@@ -239,9 +244,9 @@ Certifique-se de definir credenciais do Azure e do Microsoft365 em suas variáve
 Para provisionar e implantar recursos destinados ao Azure dentro de CI/CD, você deve criar uma entidade de serviço do Azure para uso.
 
 Execute as seguintes etapas para criar entidades de serviço do Azure:
-1. Registre um aplicativo do Azure AD em um único locatário.
-2. Atribua uma função ao seu aplicativo do Azure AD para acessar sua assinatura do Azure e `Contributor` a função é recomendada. 
-3. Crie um novo segredo de aplicativo do Azure AD.
+1. Registre um Microsoft Azure Active Directory (Azure AD) em locatário único.
+2. Atribua uma função ao seu aplicativo Microsoft Azure Active Directory (Azure AD) para acessar sua assinatura do Azure e `Contributor` a função é recomendada. 
+3. Crie um novo Microsoft Azure Active Directory de aplicativo (Azure AD).
 
 > [!TIP]
 > Salve sua id de locatário, id do aplicativo(AZURE_SERVICE_PRINCIPAL_NAME) e o segredo(AZURE_SERVICE_PRINCIPAL_PASSWORD) para uso futuro.

@@ -4,6 +4,12 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
+ms.openlocfilehash: 410f019beeed078ed51c37c241e08511572e18b8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518104"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma Teams de mensagens em Microsoft 365
 
@@ -86,14 +92,14 @@ Para que os usuários interajam com sua extensão de mensagens Outlook, você pr
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Painel canais bot do Azure listando canais de Microsoft Teams e Outlook":::
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Atualizar Microsoft Azure Active Directory do aplicativo (Azure AD) para SSO
 
 > [!NOTE]
 > Você pode ignorar a etapa se estiver usando Teams de pesquisa de extensão de [mensagens, pois](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) o cenário não envolve Azure Active Directory (AAD) autenticação de Sign-On única.
 
-Azure Active Directory Logor único (SSO) para extensões de mensagens funciona da mesma maneira no Outlook como no [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), no entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do bot no portal de registros de *aplicativos* do locatário.
+Azure Active Directory Logor único (SSO) para extensões de mensagens funciona da mesma maneira no Outlook como no [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), no entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro de aplicativo do Microsoft Azure Active Directory (Azure AD) do bot *no seu locatário Portal de registros de* aplicativos.
 
-1. Entre no [portal do Azure](https://portal.azure.com) com sua conta de locatário de área de reserva.
+1. Entre no Microsoft Azure [portal com](https://portal.azure.com) sua conta de locatário de área de reserva.
 1. Abrir **registros de aplicativos**.
 1. Selecione o nome do aplicativo para abrir o registro do aplicativo.
 1. Selecione  **Expor uma API** (em *Gerenciar*).

@@ -6,18 +6,18 @@ keywords: controle do se picker de pessoas
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 0c4bac7a92042d339f35c4b3eeb2c7302e5f0e1a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 7a7a229bdeab7d83f71f8dbe3b24da8b44b3db32
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212577"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518139"
 ---
 # <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas  
 
 O Seletor de Pessoas é um controle para pesquisar e selecionar pessoas. Esse é um recurso nativo disponível na Teams plataforma. Você pode integrar Teams controle de entrada nativo do People Picker com seus aplicativos Web. Você pode selecionar entre uma seleção única ou várias e configurações, como limitar a pesquisa em um chat, canais ou em toda a organização.
 
-Você pode usar [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)do cliente JavaScript , que fornece API para integrar o `selectPeople` Selador de Pessoas ao seu aplicativo Web. 
+Você pode usar [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), `selectPeople` que fornece API para integrar o Selador de Pessoas ao seu aplicativo Web. 
 
 ## <a name="advantages-of-integrating-the-native-people-picker"></a>Vantagens de integrar o Selador de Pessoas nativos 
 
@@ -33,7 +33,7 @@ Você deve chamar a `selectPeople` API para integrar o controle Se picker de pes
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
-`selectPeople`A API permite que você adicione Teams nativos `People Picker input control` aos seus aplicativos Web.  
+`selectPeople`A API permite que você adicione Teams nativos aos `People Picker input control` seus aplicativos Web.  
 A descrição da API é a seguinte:
 
 | API      | Descrição  |
@@ -44,8 +44,8 @@ A `selectPeople` API acompanha as seguintes configurações de entrada:
 
 |Parâmetro Configuration|Tipo|Descrição| Valor padrão|
 |-----|------|--------------|------|
-|`title`| Cadeia de Caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
-|`setSelected`|Cadeia de Caracteres| É um parâmetro opcional. Você deve passar as IDs do Azure AD das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
+|`title`| Cadeia de caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
+|`setSelected`|Cadeia de caracteres| É um parâmetro opcional. Você deve passar Microsoft Azure Active Directory IDs (Azure AD) das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo| 
 |`openOrgWideSearchInChatOrChannel`|Boolean | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |Falso|
 |`singleSelect`|Boolean|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |Falso|
 

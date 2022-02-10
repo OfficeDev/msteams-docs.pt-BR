@@ -1,22 +1,22 @@
 ---
-title: Seletor de Pessoas nos Cartões Adaptáveis
+title: Seletor de Pessoas em Cartões Adaptáveis
 description: Descreve como usar o controle People Picker em Cartões Adaptáveis
 localization_priority: Normal
 keywords: Se picker de pessoas de cartões adaptáveis
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212472"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518300"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
+# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas em Cartões Adaptáveis
 
 >[!NOTE]
-> Atualmente, o People Picker em Cartões [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) Adaptáveis está disponível na visualização de desenvolvedor público apenas para dispositivos móveis e geralmente disponíveis (GA) para área de trabalho.
+> Atualmente, o People Picker em Cartões Adaptáveis está disponível na visualização de desenvolvedor público apenas para dispositivos móveis e geralmente disponíveis (GA) para área de trabalho.[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)
 
 O Seletor de Pessoas ajuda os usuários a pesquisar e selecionar usuários no Cartão Adaptável. Você pode adicionar o People Picker como controle de entrada ao Cartão Adaptável, que funciona em chats, canais, módulos de tarefas e guias. O People Picker dá suporte aos seguintes recursos:        
 
@@ -29,7 +29,7 @@ O Seletor de Pessoas ajuda os usuários a pesquisar e selecionar usuários no Ca
 
 A tabela a seguir fornece cenários populares para o Seletor de Pessoas em Cartões Adaptáveis e as ações correspondentes:
 
-|Cenários|Ações|
+|Cenários|Actions|
 |----------|-------------------------|
 |Cenários baseados em aprovação| Para solicitar, atribuir e reatribuir a aprovação ao usuário pretendido com base no requisito.|
 |Gestão de incidentes| Para rastrear incidentes e notificar, atribuir e reatribuir ao usuário pretendido para ação imediata.| 
@@ -84,14 +84,14 @@ A imagem a seguir mostra o cenário de reatribuição:
 
 ## <a name="implement-people-picker"></a>Implementar o Se picker de pessoas
 
-O People Picker é implementado como uma extensão do [controle Input.ChoiceSet.](https://adaptivecards.io/explorer/Input.ChoiceSet.html) O controle de entrada inclui as seguintes seleções:   
+O People Picker é implementado como uma extensão do [controle Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) . O controle de entrada inclui as seguintes seleções:   
 
 * Menu suspenso, como uma seleção expandida.
 * Botão de rádio, como uma única seleção.
 * Caixas de seleção, como várias seleções.  
 
 > [!NOTE]
-> O `Input.ChoiceSet` controle é baseado nas propriedades `style` `isMultiSelect` e.  
+> O `Input.ChoiceSet` controle é baseado nas propriedades `style` e `isMultiSelect` .  
 
 ### <a name="update-schema"></a>Atualizar esquema
 
@@ -107,7 +107,7 @@ As seguintes propriedades são adições ao `Input.ChoiceSet` esquema para habil
 
 |Propriedade |Tipo |Obrigatório |Descrição|
 |--|--|--|--|
-|**dataset** |Cadeia de Caracteres |Sim |O tipo de dados que deve ser buscado dinamicamente.|   
+|**dataset** |String |Sim |O tipo de dados que deve ser buscado dinamicamente.|   
 
 #### <a name="dataset"></a>dataset
 A tabela a seguir fornece valores predefinidos como **conjunto de dados** para o seletor de pessoas:   
@@ -160,8 +160,8 @@ Para habilitar a pesquisa em uma lista de membros da conversa, use o conjuntos d
 
 ### <a name="data-submission"></a>Envio de dados
 
-Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para seu bot. A carga recebida no bot é uma lista de IDs do Azure AD ou as `invoke` IDs fornecidas na lista estática.
-No Seletor de Pessoas, quando um usuário é selecionado no controle, o do `Azure AD ID` usuário é o valor enviado de volta. É `Azure AD ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
+Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para seu bot. A `invoke` carga recebida no bot é uma lista de IDs Microsoft Azure Active Directory (Azure AD) ou as IDs fornecidas na lista estática.
+No Seletor de Pessoas, quando um usuário é selecionado no controle, o `Microsoft Azure Active Directory (Azure AD) ID` do usuário é o valor enviado de volta. É `Microsoft Azure Active Directory (Azure AD) ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
 
 O formato do valor enviado ao bot depende do valor da `isMultiSelect` propriedade:
 
@@ -170,15 +170,15 @@ O formato do valor enviado ao bot depende do valor da `isMultiSelect` propriedad
 |false _(seleção única)_|<selected_Azure_AD_ID>|
 |true _(seleção multi)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Com `Azure AD ID` o , o Seletor de Pessoas pré-seleciona o usuário correspondente. 
+Com o `Azure AD ID`, o Seletor de Pessoas pré-seleciona o usuário correspondente. 
 
 ## <a name="preselection-of-user"></a>Pré-seleção do usuário
 
-O Seletor de Pessoas dá suporte à pré-seleção do usuário no controle, ao criar e enviar um Cartão Adaptável. `Input.ChoiceSet` dá suporte `value` à propriedade usada para pré-selecionar um usuário. O formato dessa propriedade é o mesmo do formato de valor `value` enviado no envio de [dados.](#data-submission)  
+O Seletor de Pessoas dá suporte à pré-seleção do usuário no controle, ao criar e enviar um Cartão Adaptável. `Input.ChoiceSet` dá suporte `value` à propriedade usada para pré-selecionar um usuário. O formato dessa propriedade `value` é o mesmo do formato de valor enviado no envio [de dados](#data-submission).  
 A lista a seguir fornece as informações para pré-selecionar usuários:
 
-* Para um único usuário no controle, especifique o `Azure AD ID` do usuário como `value` . 
-* Para vários usuários, como `isMultiSelect` é `true` , especifique uma cadeia de caracteres separada por vírgulas de `Azure AD ID` s.  
+* Para um único usuário no controle, especifique o `Microsoft Azure Active Directory (Azure AD) ID` do usuário como `value`. 
+* Para vários usuários, como `isMultiSelect` é `true`, especifique uma cadeia de caracteres separada por vírgulas de `Microsoft Azure Active Directory (Azure AD) ID`s.  
 
 O exemplo a seguir descreve a pré-seleção de um único usuário:
 
@@ -251,12 +251,12 @@ O exemplo a seguir descreve a pré-seleção de vários usuários:
  
 ## <a name="static-choices"></a>Opções estáticas
 
-As opções estáticas suportam cenários em que perfis personalizados devem ser inseridos nos conjuntos de dados predefinidos. `Input.ChoiceSet` oferece suporte à `choices` especificação estática no json. A opção estática é usada para criar as opções das quais o usuário pode selecionar.
+As opções estáticas suportam cenários em que perfis personalizados devem ser inseridos nos conjuntos de dados predefinidos. `Input.ChoiceSet` oferece suporte à especificação `choices` estática no json. A opção estática é usada para criar as opções das quais o usuário pode selecionar.
 
 > [!NOTE]
 > Estáticas `choices` são usadas com conjuntos de dados dinâmicos. 
 
-A escolha consiste em `title` `value` e . Quando usadas junto com o Selador de Pessoas, essas opções são traduzidas para perfis de usuário que têm o nome e `title` `value` o identificador como. Esses perfis personalizados também fazem parte dos resultados da pesquisa quando a consulta de pesquisa corresponde ao `title` determinado .    
+A escolha consiste em `title` e `value`. Quando usadas junto com o Selador de Pessoas, `title` `value` essas opções são traduzidas para perfis de usuário que têm o nome e o identificador como. Esses perfis personalizados também fazem parte dos resultados da pesquisa quando a consulta de pesquisa corresponde ao determinado `title`.    
 O exemplo a seguir descreve opções estáticas: 
 
 ```json

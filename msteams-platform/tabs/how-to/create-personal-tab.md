@@ -1,13 +1,18 @@
 ---
 title: Criar uma guia pessoal
 author: laujan
-description: 'Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC para Microsoft Teams usando Node.js e atualizando o manifesto do aplicativo.'
+description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC para Microsoft Teams usando Node.js e atualizando o manifesto do aplicativo.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
+ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518027"
 ---
-
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
 ## <a name="create-a-custom-personal-tab"></a>Criar uma guia pessoal personalizada
@@ -130,9 +135,9 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     Use as teclas de seta para selecionar **Pessoal (estático)**.
 
-    **Você precisa do suporte para o Microsoft Azure Active Directory com Login Único para a guia?**
+    **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
-    Escolha **não** incluir o suporte ao Azure AD Single-Sign-On para a guia. O padrão é sim, digite **n**.
+    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-Sign-On para a guia. O padrão é sim, digite **n**.
 
     > [!IMPORTANT]
     > O componente de **caminho yourDefaultTabNameTab** é o valor que você inscrevia no gerador para Nome da Guia **Padrão** mais a **palavra Tab**.

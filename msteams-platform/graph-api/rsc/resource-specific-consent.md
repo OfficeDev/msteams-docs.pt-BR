@@ -6,8 +6,13 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO Azure AD rsc Graph
+ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518160"
 ---
-
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
 > [!NOTE]
@@ -140,7 +145,7 @@ Para obter mais informações, [consulte obter acesso em nome de um usuário](/g
 As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. 
 
 > [!IMPORTANT]
-> As permissões não RSC são armazenadas no portal do Azure. Não os adicione ao manifesto do aplicativo.
+> As permissões não RSC são armazenadas no portal Microsoft Azure. Não os adicione ao manifesto do aplicativo.
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>Alterações de manifesto para consentimento específico do recurso
 

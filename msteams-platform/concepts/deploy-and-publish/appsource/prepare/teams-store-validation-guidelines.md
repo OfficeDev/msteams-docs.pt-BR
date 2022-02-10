@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212121"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518230"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -231,7 +231,7 @@ Os aplicativos devem estar totalmente funcionais nas versões mais recentes dos 
 
 * Microsoft Windows
 * macOS
-* Microsoft Edge
+* MicrosoftEdge&nbsp;
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 * Seu manifesto deve estar em conformidade com um esquema de manifesto divulgado publicamente. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md). Não envie seu aplicativo usando uma versão prévia do manifesto.
 * Se seu aplicativo incluir um bot ou uma extensão de mensagens, os detalhes no manifesto do aplicativo deverão ser consistentes com os metadados do Bot Framework, incluindo o nome do bot, o logotipo, o link da política de privacidade e o link de termos de serviço.
-* Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do Aplicativo do Azure AD (cliente) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do aplicativo (cliente) Microsoft Azure Active Directory (Azure AD) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Ícones do aplicativo
 

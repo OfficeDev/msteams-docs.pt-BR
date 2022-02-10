@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081097"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517992"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
-Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message` . Quando um usuário envia uma mensagem, Teams a mensagem para o bot. Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. Seu bot examina a mensagem para determinar seu tipo e responde de acordo.
+Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, Teams a mensagem para o bot. Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. Seu bot examina a mensagem para determinar seu tipo e responde de acordo.
 
 As conversas básicas são manipuladas por meio do conector da Estrutura do Bot, uma única API REST. Essa API permite que seu bot se comunique com Teams e outros canais. O SDK do Construtor de Bots fornece os seguintes recursos:
 
@@ -22,7 +22,7 @@ As conversas básicas são manipuladas por meio do conector da Estrutura do Bot,
 * Funcionalidade adicional para gerenciar o fluxo e o estado da conversa.
 * Maneiras simples de incorporar serviços cognitivos, como o processamento de linguagem natural (NLP).
 
-Seu bot recebe mensagens de Teams usando a propriedade e envia respostas de mensagem única ou múltipla `Text` aos usuários.
+Seu bot recebe mensagens de Teams usando `Text` a propriedade e envia respostas de mensagem única ou múltipla aos usuários.
 
 ## <a name="receive-a-message"></a>Receber uma mensagem
 
@@ -119,7 +119,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Enviar uma mensagem
 
-Para enviar uma mensagem de texto, especifique a cadeia de caracteres que você deseja enviar como a atividade. No manipulador de atividades do bot, use o método do objeto turn context `SendActivityAsync` para enviar uma única resposta de mensagem. Use o método do `SendActivitiesAsync` objeto para enviar várias respostas ao mesmo tempo.
+Para enviar uma mensagem de texto, especifique a cadeia de caracteres que você deseja enviar como a atividade. No manipulador de atividades do bot, use o método do objeto turn context `SendActivityAsync` para enviar uma única resposta de mensagem. Use o método do objeto `SendActivitiesAsync` para enviar várias respostas ao mesmo tempo.
 
 O código a seguir mostra um exemplo de envio de uma mensagem quando um usuário é adicionado a uma conversa:
 
@@ -197,20 +197,20 @@ As mensagens enviadas entre usuários e bots incluem dados de canal interno dent
 
 ## <a name="teams-channel-data"></a>Teams de canal
 
-O objeto contém Teams informações específicas e é uma fonte `channelData` definitiva para IDs de equipe e canal. Opcionalmente, você pode armazenar em cache e usar essas IDs como chaves para armazenamento local. O no SDK retira informações importantes do objeto para `TeamsActivityHandler` `channelData` torná-lo facilmente acessível. No entanto, você sempre pode acessar os dados originais do `turnContext` objeto.
+O `channelData` objeto contém Teams informações específicas e é uma fonte definitiva para IDs de equipe e canal. Opcionalmente, você pode armazenar em cache e usar essas IDs como chaves para armazenamento local. O `TeamsActivityHandler` no SDK retira informações importantes do `channelData` objeto para torná-lo facilmente acessível. No entanto, você sempre pode acessar os dados originais do `turnContext` objeto.
 
 O `channelData` objeto não está incluído em mensagens em conversas pessoais, pois elas ocorrem fora de um canal.
 
 Um objeto `channelData` típico em uma atividade enviada ao bot contém as seguintes informações:
 
-* `eventType`: Teams tipo de evento passado somente em casos de [eventos de modificação de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `tenant.id`: Azure Active Directory ID de locatário passada em todos os contextos.
+* `eventType`: Teams tipo de evento passado somente em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id`: Microsoft Azure Active Directory ID de locatário (Azure AD) passada em todos os contextos.
 * `team`: Passado somente em contextos de canal, não em chat pessoal.
   * `id`: GUID para o canal.
-  * `name`: Nome da equipe passada somente em casos de [eventos de renomear a equipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+  * `name`: Nome da equipe passada somente em casos de [eventos de renomear equipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channel`: Passado somente em contextos de canal, quando o bot é mencionado ou para eventos em canais em equipes, onde o bot foi adicionado.
   * `id`: GUID para o canal.
-  * `name`: Nome do canal passado somente em casos de eventos [de modificação de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+  * `name`: Nome do canal passado somente em casos de eventos [de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId`: Preterido. Essa propriedade só é incluída para compatibilidade com compatibilidade.
 * `channelData.teamsChannelId`: Preterido. Essa propriedade só é incluída para compatibilidade com compatibilidade.
 
@@ -329,14 +329,14 @@ Para aprimorar sua mensagem, você pode incluir imagens como anexos a essa mensa
 
 ## <a name="picture-messages"></a>Mensagens de imagem
 
-As imagens são enviadas adicionando anexos a uma mensagem. Para obter mais informações sobre anexos, consulte [Documentação da Estrutura de Bots.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)
+As imagens são enviadas adicionando anexos a uma mensagem. Para obter mais informações sobre anexos, consulte [Documentação da Estrutura de Bot](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
 As imagens podem ter no máximo 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.
 
 Especifique a altura e a largura de cada imagem usando XML. Na marcação, o tamanho da imagem é padrão para 256×256. Por exemplo:
 
-* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
-* Não use: `![Duck on a rock](http://aka.ms/Fo983c)` .
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Não use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 Um bot de conversa pode incluir Cartões Adaptáveis que simplificam fluxos de trabalho de negócios. Os Cartões Adaptáveis oferecem texto, fala, imagens, botões e campos de entrada personalizáveis.
 
@@ -370,15 +370,15 @@ O código a seguir mostra um exemplo de envio de um cartão adaptável simples:
 }
 ```
 
-### <a name="form-completion-feedback"></a>Comentários sobre a conclusão do formulário
+### <a name="form-completion-feedback"></a>Comentários de preenchimento do formulário
 
 A mensagem de conclusão do formulário aparece em Cartões Adaptáveis ao enviar uma resposta ao bot. A mensagem pode ser de dois tipos, erro ou sucesso:
 
-* **Erro**: Quando uma resposta enviada para o bot não é bem-sucedida, **Algo deu errado, a mensagem Tentar novamente** é exibida.
+* **Erro**: quando uma resposta enviada para o bot não é bem-sucedida, **Algo deu errado, a mensagem Tentar novamente** é exibida.
 
     ![Mensagem de erro](~/assets/images/Cards/error-message.png)
 
-* **Sucesso**: quando uma resposta enviada ao bot é bem-sucedida, Sua resposta **foi enviada para** a mensagem do aplicativo.
+* **Sucesso**: quando uma resposta enviada ao bot é bem-sucedida, **Sua resposta foi enviada para a mensagem do** aplicativo.
 
     ![Mensagem de êxito](~/assets/images/Cards/success.PNG)
 
@@ -399,24 +399,24 @@ A seguir estão os códigos de status e seus valores de código de erro e mensag
 | 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensagem**: o usuário bloqueou a conversa com o bot. | O usuário bloqueou o bot no chat 1:1 ou em um canal por meio de configurações de moderação. |
 | 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensagem**: o bot não faz parte da lista de conversas. | O bot não faz parte da conversa. |
 | 403 | **Código**: `BotDisabledByAdmin` <br/> **Mensagem**: o administrador do locatário desabilitou esse bot. | O locatário bloqueou o bot. |
-| 401 | **Código**: `BotNotRegistered` <br/> **Mensagem**: nenhum registro encontrado para este bot. | O registro desse bot não foi encontrado. |
+| 401 | **Código**: `BotNotRegistered` <br/> **Mensagem**: nenhum registro encontrado para esse bot. | O registro desse bot não foi encontrado. |
 | 412 | **Código**: `PreconditionFailed` <br/> **Mensagem**: Falha na pré-condição, tente novamente. | Uma pré-condição falhou em uma de nossas dependências devido a várias operações simultâneas na mesma conversa. |
 | 404 | **Código**: `ConversationNotFound` <br/> **Mensagem**: Conversa não encontrada. | A conversa não foi encontrada. |
 | 413 | **Código**: `MessageSizeTooBig` <br/> **Mensagem**: tamanho da mensagem muito grande. | O tamanho da solicitação de entrada era muito grande. |
-| 429 | **Código**: `Throttled` <br/> **Mensagem**: solicitações demais. Também retorna quando repetir depois. | Muitas solicitações foram enviadas pelo bot. Para obter mais informações, consulte [limite de taxa](~/bots/how-to/rate-limit.md). |
+| 429 | **Código**: `Throttled` <br/> **Mensagem**: muitas solicitações. Também retorna quando repetir depois. | Muitas solicitações foram enviadas pelo bot. Para obter mais informações, consulte [limite de taxa](~/bots/how-to/rate-limit.md). |
 
 ## <a name="code-sample"></a>Exemplo de código
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Manipulação de eventos de mensagens e conversas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Menus de comando bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

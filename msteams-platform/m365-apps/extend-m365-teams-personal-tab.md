@@ -5,6 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
+ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518020"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams guia pessoal entre Microsoft 365
 
@@ -19,7 +25,7 @@ Atualizar seu aplicativo pessoal para ser executado no Outlook e Office Home env
 > * Atualizar o manifesto do aplicativo
 > * Atualizar suas referências do SDK do TeamsJS 
 > * Alterar seus headers de Política de Segurança de Conteúdo
-> * Atualizar o registro do aplicativo do Azure AD para SSO (Single Sign On)
+> * Atualizar seu Microsoft Azure Active Directory (Azure AD) Registro de Aplicativo para SSO (Single Sign On)
 
 Testar seu aplicativo exigirá as seguintes etapas:
 
@@ -111,12 +117,12 @@ Se seu aplicativo fizer uso de headers de Política de Segurança de [Conteúdo 
 |Microsoft 365 host| permissão frame-ancestral|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Escritório | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Atualizar Microsoft Azure Active Directory do aplicativo (Azure AD) para SSO
 
-Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como acontece no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do seu aplicativo de guia no portal de registros do aplicativo *do* locatário.
+Azure Active Directory SSO para guias pessoais funciona da mesma maneira no Office e no Outlook como no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao Microsoft Azure Active Directory  Registro do aplicativo (Azure AD) do aplicativo de guia no portal de registros *de aplicativos do* locatário.
 
 1. Entre no Microsoft Azure [portal com](https://portal.azure.com) sua conta de locatário de área de reserva.
 1. Abra a **folha Registros de** aplicativo.

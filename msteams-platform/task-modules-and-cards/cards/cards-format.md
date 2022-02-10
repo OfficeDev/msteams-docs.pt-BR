@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 965f74bd2756fc4a2beb9c65ebf8da577f12dc89
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443941"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518349"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -173,16 +173,16 @@ O código a seguir mostra um exemplo de Cartão Adaptável com uma menção:
 }
 ```
 
-### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>ID de Objeto do Microsoft Azure AD e UPN na menção do usuário 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>ID de Objeto e UPN do Microsoft Azure Active Directory (Azure AD) na menção do usuário 
 
-A plataforma Teams permite mencionar usuários com a ID de Objeto do Microsoft Azure AD e o UPN (Nome de Princípio do Usuário), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada oferecem suporte às duas IDs de menção de usuário. 
+A plataforma Teams permite mencionar usuários com a ID de Objeto e o Nome de Princípio do Usuário (UPN) do Microsoft Azure Active Directory (Azure AD), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada oferecem suporte às duas IDs de menção de usuário. 
 
 A tabela a seguir descreve as IDs de menção de usuário que passaram a ter suporte recentemente:
 
 |IDs  | Recursos que oferecem suporte |   Descrição | Exemplo |
 |----------|--------|---------------|---------|
-| ID do objeto do Microsoft Azure AD | Bot, Conector |  ID de objeto do usuário do Microsoft Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Conector | UPN do usuário do Microsoft Azure AD | john.smith@microsoft.com |
+| ID de objeto do Microsoft Azure Active Directory (Azure AD) | Bot, Conector |  ID de objeto do usuário do Microsoft Azure Active Directory (Azure AD) |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Conector | UPN do usuário do Microsoft Azure Active Directory (Azure AD) | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis 
 
@@ -235,11 +235,11 @@ A imagem a seguir ilustra a menção do usuário com Cartão Adaptável no Bot:
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em um Webhook de Entrada com Cartões Adaptáveis 
 
-Os webhooks de entrada começam a dar suporte à menção de usuário Cartões Adaptáveis com a ID de objeto e o UPN do Microsoft Azure AD.
+Os webhooks de entrada começam a dar suporte à menção do usuário Cartões Adaptáveis com a ID de objeto e UPN do Microsoft Azure Active Directory (Azure AD).
 
 > [!NOTE]    
-> * Habilite a menção de usuário no esquema para webhooks de entrada para dar suporte à ID de Objeto e UPN do Microsoft Azure AD. 
-> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com a ID de Objeto do Microsoft Azure AD e o UPN.      
+> * Habilite a menção de usuário no esquema para webhooks de entrada para dar suporte a ID de Objeto e UPN do Microsoft Azure Active Directory (Azure AD). 
+> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com ID de Objeto e UPN do Microsoft Azure Active Directory (Azure AD).      
 
 ##### <a name="example"></a>Exemplo 
 
@@ -429,7 +429,7 @@ Os cartões de conector oferecem um suporte limitado à formatação Markdown e 
 | Negrito | **text** | `**text**` |
 | Itálico | *text* | `*text*` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `### Text`|
-| Tachado | ~~texto~~ | `~~text~~` |
+| Tachado | ~~text~~ | `~~text~~` |
 | Lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>texto</li><li>texto</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Texto pré-formatado | `text` | ``preformatted text`` |
@@ -524,7 +524,7 @@ Os cartões de conector oferecem um suporte limitado à formatação Markdown e 
 
 | Estilo | Exemplo | HTML |
 | --- | --- | --- |
-| Negrito | **texto** | `<strong>text</strong>` |
+| Negrito | **text** | `<strong>text</strong>` |
 | Itálico | *text* | `<em>text</em>` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cc1e3abc2801e750cc838a73459e707ed1913271
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 45c12a52758bc86f2ab05112a69a8342ade9a5af
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362764"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518034"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -125,7 +125,7 @@ A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de
 
 > [!NOTE]
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, [consulte Teams módulo de tarefa do SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
-> * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a Azure Active Directory (AAD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a Microsoft Azure Active Directory (Azure AD) ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhado
 
@@ -171,7 +171,7 @@ Os participantes podem compartilhar partes específicas do aplicativo para o est
 
 Para compartilhar partes específicas do aplicativo em estágio, você deve invocar as APIs relacionadas na biblioteca SDK do cliente Teams cliente. Para obter mais informações, consulte [Referência de API](API-references.md).
 
-Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é Azure Active Directory ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a Microsoft Azure Active Directory (Azure AD) ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 
@@ -181,9 +181,9 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 
 |Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 

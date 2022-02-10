@@ -1,16 +1,22 @@
 ---
 title: Criar um botão Compartilhar para o Teams
-description: 'Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu site, com uma visualização de site, usando exemplos de código'
+description: Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu site, com uma visualização de site, usando exemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar Teams share-to-Teams
+ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518489"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
 Sites de terceiros podem usar o script do launcher para inserir botões de Compartilhamento para Teams em suas páginas da Web. Quando você seleciona, ele inicia a experiência Share-to-Teams em uma janela pop-up. Isso permite compartilhar um link diretamente com qualquer pessoa ou canal Microsoft Teams sem alternar o contexto. Este documento orienta você sobre como criar e inserir um botão Compartilhar para Teams para seu site, criar a visualização do site e estender o Share-to-Teams para Educação.
 
 > [!NOTE]
-> * Somente as versões da área de trabalho do Microsoft Edge e do Google Chrome têm suporte.
+> * Somente as versões da área de trabalho do MicrosoftEdge&nbsp; e do Google Chrome têm suporte.
 > * Não há suporte para o uso de contas de convidado ou de Freemium.  
 
 A imagem a seguir exibe a experiência pop-up Share-to-Teams:
@@ -95,7 +101,7 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 | assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
 | assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>Methods
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 

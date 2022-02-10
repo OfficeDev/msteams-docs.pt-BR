@@ -1,12 +1,17 @@
 ---
 title: Criar um canal ou uma guia de grupo
 author: laujan
-description: 'Um guia de início rápido para criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.'
+description: Um guia de início rápido para criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518258"
 ---
-
 # <a name="create-a-channel-or-group-tab"></a>Criar um canal ou uma guia de grupo
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>Criar um canal personalizado ou uma guia de grupo
@@ -129,9 +134,9 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     Você pode selecionar uma equipe ou um chat em grupo.
 
-    **Você precisa do suporte para o Microsoft Azure Active Directory com Login Único para a guia?**
+    **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
-    Escolha **não** incluir o suporte ao Azure AD Single-Sign-On para a guia. O padrão é sim, digite **n**.
+    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-Sign-On para a guia. O padrão é sim, digite **n**.
 
     **Deseja que essa guia seja disponibilizada no SharePoint Online? (Y/n)**
 

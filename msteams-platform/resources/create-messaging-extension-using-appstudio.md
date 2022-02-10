@@ -5,6 +5,12 @@ description: Saiba como criar uma extensão Microsoft Teams de mensagens usando 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
+ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518153"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 

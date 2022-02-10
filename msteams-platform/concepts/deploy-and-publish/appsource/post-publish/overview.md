@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212409"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518559"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -44,7 +44,7 @@ No entanto, se você fizer qualquer uma das seguintes alterações em seu aplica
 * Adicione uma guia pessoal.
 * Adicione um canal e uma guia de grupo.
 * Adicione um conector.
-* Modificar configurações relacionadas ao registro Azure Active Directory aplicativo. Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modificar configurações relacionadas ao seu Microsoft Azure Active Directory (registro do aplicativo do Azure AD). Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrigir problemas com seu aplicativo publicado
 
@@ -54,11 +54,11 @@ A Microsoft executa testes diários de automação em aplicativos listados no Te
 
 Quando seu aplicativo é listado na Teams, você pode criar um link que inicia Teams e exibe uma caixa de diálogo para instalar seu aplicativo. Você pode incluir esse link, por exemplo, com um botão de download na página de marketing do produto.
 
-Crie o link usando a seguinte URL anexada à ID do aplicativo: `https://teams.microsoft.com/l/app/<your-app-id>` .
+Crie o link usando a seguinte URL anexada à ID do aplicativo: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
 ## <a name="complete-microsoft-365-certification"></a>Concluir Microsoft 365 Certificação
 
-[Microsoft 365 Certificação](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos e protegidos quando um Aplicativo do Office ou um Aplicativo do Office de terceiros é instalado em seu ecossistema Microsoft 365 de terceiros. A certificação confirma que seu aplicativo é compatível com tecnologias da Microsoft, compatível com as práticas recomendadas de segurança do aplicativo na nuvem e com suporte da Microsoft.
+[Microsoft 365 Certificação](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos e protegidos quando um Aplicativo do Office ou um Microsoft 365 de terceiros é instalado em seu ecossistema Microsoft 365 de terceiros. A certificação confirma que seu aplicativo é compatível com tecnologias da Microsoft, compatível com as práticas recomendadas de segurança do aplicativo na nuvem e com suporte da Microsoft.
 
 ## <a name="see-also"></a>Confira também
 

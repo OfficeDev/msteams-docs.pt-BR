@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações sobre a Teams integração
-ms.openlocfilehash: 7de3e91a0971bc540536a25265e6e6871a5da92c
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212444"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518468"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações sobre a Teams integração 
 
@@ -19,8 +19,8 @@ Você pode tornar os aplicativos Web adequados Teams recursos sociais e colabora
   
 Os diferentes tipos de aplicativos que você pode integrar com Teams são:
 * **Aplicativos autônomos**: um aplicativo autônomo é um aplicativo de página única ou grande e complexo. O usuário pode usar alguns aspectos dele em Teams.
-* **Aplicativos de** colaboração : um aplicativo já criado para os recursos sociais e colaborativos inerentes Teams.
-* **SharePoint**: uma SharePoint página que você deseja que você queira aparecer no Teams.
+* **Aplicativos de** colaboração: um aplicativo já criado para os recursos sociais e colaborativos inerentes Teams.
+* **SharePoint**: uma SharePoint página que você deseja que seja Teams.
 
 Você pode mapear e seguir a diretriz apropriada aplicável ao seu cenário de integração.
 Este documento fornece uma visão geral dos recursos Teams, requisitos de ponto de compartilhamento para armazenamento de arquivos e dados, requisitos de API, autenticação e vinculação profunda do seu aplicativo com Teams.
@@ -50,14 +50,14 @@ A integração de todos os recursos de um aplicativo existente Teams geralmente 
 
 **Pré-requisitos para integrar seu aplicativo ao Teams**
 
-1. [Mapeie os casos de uso do aplicativo para Teams da plataforma.](../concepts/design/map-use-cases.md)
-1. [Determine os pontos de entrada do aplicativo.](../concepts/extensibility-points.md) É para uso pessoal, para colaboração ou para ambos?
+1. [Mapeie os casos de uso do aplicativo para Teams de plataforma](../concepts/design/map-use-cases.md).
+1. [Determine os pontos de entrada do aplicativo](../concepts/extensibility-points.md). É para uso pessoal, para colaboração ou para ambos?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Compreender SharePoint requisitos e opções
 
 ***Cenários de integração**: SharePoint*
 
-Para integrar uma página de [SharePoint existente](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) como uma guia Teams, considere o seguinte:
+Para integrar uma página SharePoint [existente](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) como uma guia Teams, considere o seguinte:
 
 * Deve ser uma página *SharePoint* online moderna.
 * Somente guias pessoais são suportadas. Você não pode integrar sua página como uma guia de canal.
@@ -74,7 +74,7 @@ Se seu aplicativo for usado por várias organizações, considere a hospedagem d
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração*
 
-As APIs e estruturas de dados do aplicativo devem dar suporte ao aplicativo durante a integração com Teams. Para estender o suporte, você deve aumentar as APIs e estruturas de dados com informações contextuais sobre o Teams para mapeamento de [identidade,](../concepts/authentication/configure-identity-provider.md)suporte a links profundos [e](../concepts/build-and-test/deep-links.md)incorporação do [Microsoft Graph](/graph/teams-concept-overview).
+As APIs e estruturas de dados do aplicativo devem dar suporte ao aplicativo durante a integração com Teams. Para estender o suporte, você deve aumentar as APIs e estruturas de dados com informações contextuais sobre o Teams para mapeamento de [identidade, suporte](../concepts/authentication/configure-identity-provider.md) a links profundos e a incorporação do [Microsoft Graph](/graph/teams-concept-overview). [](../concepts/build-and-test/deep-links.md)
 
 Veja como obter contexto para sua guia Teams [ou](../tabs/how-to/access-teams-context.md) [bot](../bots/how-to/get-teams-context.md).
 
@@ -82,16 +82,16 @@ Veja como obter contexto para sua guia Teams [ou](../tabs/how-to/access-teams-co
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração, SharePoint*
 
-Azure Active Directory é o provedor de identidade para Teams. Se seu aplicativo usa um provedor de identidade diferente, você deve fazer um exercício de mapeamento de identidade ou combinar com o Azure AD.
+Azure Active Directory é o provedor de identidade para Teams. Se seu aplicativo usa um provedor de identidade diferente, você deve fazer um exercício de mapeamento de identidade ou combinar com Microsoft Azure Active Directory (Azure AD).
 
-Teams tem mecanismos de SSO (login único) com o Azure AD para aplicativos de terceiros. Ele também fornece as diretrizes para fluxos de autenticação para outros provedores de identidade usando padrões como OAuth e Open ID Conexão, conhecidos como OIDC.
+Teams tem mecanismos de SSO (login único) com Microsoft Azure Active Directory (Azure AD) para aplicativos de terceiros. Ele também fornece as diretrizes para fluxos de autenticação para outros provedores de identidade usando padrões como OAuth e Open ID Conexão, conhecidos como OIDC.
 
 > [!IMPORTANT]
-> Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and manage [apps](/microsoftteams/manage-apps).
+> Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-Para SharePoint páginas, você só pode usar o SSO e não pode adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo SharePoint.
+Para SharePoint páginas, você só pode usar o SSO e não pode adicionar outra ID de Microsoft Azure Active Directory (Azure AD) se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo SharePoint.
 
-Saiba mais sobre [autenticação em Teams](../concepts/authentication/authentication.md).
+Saiba mais sobre [autenticação Teams](../concepts/authentication/authentication.md).
 
 ## <a name="follow-teams-design-guidelines"></a>Siga Teams de design
 
@@ -109,20 +109,20 @@ Você pode criar links de informações e recursos no Teams. Use [links profundo
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração, SharePoint*
 
-Use um [bot](../bots/what-are-bots.md) em seu aplicativo Teams para conversas com vários threads, pois oferece mais flexibilidade do que um [webhook.](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Use um [bot](../bots/what-are-bots.md) em seu aplicativo Teams para conversa com vários threads, pois oferece mais flexibilidade do que um [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 Os bots também permitem que você envie mensagens **proativas** para usuários ou canais individuais. As mensagens proativas são mensagens não proativas disparadas por um evento externo e não uma mensagem enviada a um bot. Por exemplo, seu bot envia uma mensagem de boas-vindas quando ele é instalado ou um novo usuário ins junta um canal.
 
-O envio de mensagens proativas requer Teams identificadores específicos. Você pode capturar as informações [buscando](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)dados de lista ou perfil de usuário, [assinando](../bots/how-to/conversations/subscribe-to-conversation-events.md)eventos de conversa ou usando [o Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
+O envio de mensagens proativas requer Teams identificadores específicos. Você pode capturar as informações buscando dados [de lista ou](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) perfil de usuário, [assinando](../bots/how-to/conversations/subscribe-to-conversation-events.md) eventos de conversa ou usando o [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
 Não spam usuários com mensagens excessivas. Se a Teams a funcionalidade for compatível, os usuários poderão definir as configurações de notificação para seu aplicativo.
-A seguir está um exemplo de uma mensagem de notificação: Não me envie mensagens **não prompadas.**
+A seguir está um exemplo de uma mensagem de notificação: **Não me envie mensagens não prompadas**.
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Usar SharePoint para armazenamento de arquivos e dados
 
 ***Cenários de integração:** Aplicativos autônomos, aplicativos de colaboração, SharePoint páginas*
 
-Quando uma equipe é criada, um [conjunto de sites](/microsoftteams/sharepoint-onedrive-interact) SharePoint também é provisionado para dar suporte ao armazenamento de arquivos e dados para essa equipe. Seu aplicativo deve aproveitar esse recurso se ele interagir com arquivos. Use o conjunto de sites para armazenar dados brutos em SharePoint Listas e Microsoft Excel.
+Quando uma equipe é criada, um [conjunto SharePoint site](/microsoftteams/sharepoint-onedrive-interact) também é provisionado para dar suporte ao armazenamento de arquivos e dados para essa equipe. Seu aplicativo deve aproveitar esse recurso se ele interagir com arquivos. Use o conjunto de sites para armazenar dados brutos em SharePoint Listas e Microsoft Excel.
 
 ## <a name="see-also"></a>Confira também
 

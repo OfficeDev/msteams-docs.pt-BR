@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362771"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517985"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
@@ -49,7 +49,7 @@ Ao planejar como monetizar seu aplicativo Teams, veja algumas coisas a considera
 
 * Decida o modelo de assinatura. Uma oferta saaS transactável pode incluir vários planos de assinatura. Os planos de assinatura pública disponíveis para qualquer pessoa são mais comuns, mas você também pode querer direcionar clientes específicos com ofertas apenas para eles. Para obter mais informações, consulte [ofertas privadas no marketplace comercial da Microsoft](/azure/marketplace/private-offers).
 * Leia sobre a opção [*Vender por meio da Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para sua oferta saaS, que é necessária se você quiser que os usuários comprem planos de assinatura para seu aplicativo diretamente por meio da Teams store.
-* Saiba como [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (O SSO do Azure AD é necessário para Teams aplicativos com ofertas SaaS.)
+* Saiba como [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (Microsoft Azure Active Directory (Azure AD) SSO é necessário para Teams aplicativos com ofertas saaS.)
 * Entenda que você é responsável pelo gerenciamento e pagamento da infraestrutura necessária para dar suporte ao uso da oferta saaS dos seus clientes.
 * Planejar para celular. Para evitar violar políticas de armazenamento de aplicativos de terceiros, seu aplicativo não pode incluir links que permitem que os usuários comprem planos de assinatura em dispositivos móveis. No entanto, você ainda pode indicar se seu aplicativo tem recursos que exigem um plano de assinatura. Para obter mais informações, consulte as políticas de [certificação do marketplace comercial relacionadas](/legal/marketplace/certification-policies#114048-mobile-experience).
 
@@ -81,7 +81,7 @@ Para obter instruções completas, [consulte build the landing page for your Saa
 
 Considere as seguintes abordagens ao criar uma página de aterrissagem para o Teams aplicativo que você está monetizando. Consulte uma página de aterrissagem de exemplo na [experiência de compra do usuário final](#end-user-purchasing-experience).
 
-* Os usuários devem poder fazer logoff na página inicial com as mesmas credenciais do Azure AD usadas para comprar a assinatura. Para obter mais informações, consulte [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Os usuários devem poder fazer logoff na página inicial com as mesmas credenciais Microsoft Azure Active Directory (Azure AD) usadas para comprar a assinatura. Para obter mais informações, [consulte Microsoft Azure Active Directory (Azure AD) e ofertas de SaaS transacíveis no marketplace comercial](/azure/marketplace/azure-ad-saas).
 * Permitir que os usuários tomem as seguintes ações em sua página de aterrissagem. Não se esqueça de considerar o que é apropriado para a função e as permissões de um usuário (por exemplo, talvez você queira permitir que apenas os administradores de assinatura pesquisem por usuários):
   * Pesquise usuários em sua organização usando email ou outra forma de identidade.
   * Consulte usuários aos que podem atribuir licenças em uma lista.

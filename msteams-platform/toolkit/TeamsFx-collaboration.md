@@ -6,11 +6,16 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518370"
 ---
-
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colabore Teams projeto usando Teams Toolkit
 
-Vários desenvolvedores podem trabalhar juntos para depurar, provisionar e implantar para o mesmo projeto TeamsFx, mas exige a definição manual das permissões corretas do Teams App e do Azure AD App.Teams Toolkit oferece suporte ao recurso de colaboração para permitir que desenvolvedores e proprietários do projeto convidem outros desenvolvedores ou colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto teamsFx.
+Vários desenvolvedores podem trabalhar juntos para depurar, provisionar e implantar para o mesmo projeto TeamsFx, mas exige a definição manual das permissões corretas do Teams App e Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit  oferece suporte ao recurso de colaboração para permitir que desenvolvedores e proprietários do projeto convidem outros desenvolvedores ou colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto TeamsFx.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,11 +44,11 @@ A lista a seguir nos orienta a entender o processo de colaboração e suas limit
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="colaboradores":::
 
-* Selecione **Adicionar Microsoft 365 Teams App (com o Aplicativo do Azure AD) Proprietários** e adicione outro endereço de email Microsoft 365 conta como colaborador. A conta a ser adicionada deve estar no mesmo locatário que o proprietário do projeto para depuração remota, conforme mostrado na imagem:
+* Selecione **Adicionar Microsoft 365 Teams App (com o aplicativo Microsoft Azure Active Directory (Azure AD) Proprietários e** adicione outro endereço de email de Microsoft 365 conta como colaborador. A conta a ser adicionada deve estar no mesmo locatário que o proprietário do projeto para depuração remota, conforme mostrado na imagem:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* Para exibir colaboradores no ambiente atual, selecione Listar Microsoft 365 Teams App (com Proprietários do **Azure AD App)** e, em seguida, os colaboradores são listados no canal de saída, conforme mostrado na imagem a seguir:
+* Para exibir colaboradores no ambiente atual, selecione Listar Microsoft 365 Teams App (com proprietários do aplicativo Microsoft Azure Active Directory **(Azure AD)** e, em seguida, os colaboradores são listados no canal de saída, conforme mostrado na imagem a seguir:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -72,8 +77,8 @@ Não é possível remover colaboradores diretamente da Teams Toolkit extensão. 
   1. Vá para Teams Portal do Desenvolvedor e selecione seu aplicativo Teams por nome ou ID do aplicativo.
   2. Selecione **Proprietários** no painel esquerdo.
   3. Selecione e remova o colaborador.
-  4. Vá para [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecione **Registro de** aplicativo no painel esquerdo e encontre o aplicativo do Azure AD.
-  5. Selecione **Proprietários** no painel esquerdo na página de gerenciamento de aplicativos do Azure AD.
+  4. Vá para [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecione Registro **de** aplicativo no painel esquerdo e encontre seu aplicativo Microsoft Azure Active Directory (Azure AD).
+  5. Selecione **Proprietários** no painel esquerdo Microsoft Azure Active Directory página de gerenciamento de aplicativos (Azure AD).
   6. Selecione e remova o colaborador.
 
 > [!NOTE]
