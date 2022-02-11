@@ -5,8 +5,13 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
+ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518356"
 ---
-
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
 O manifesto do Teams descreve como o aplicativo se integra ao produto Microsoft Teams. O seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,... e 1.12 também são suportadas (usando “v1.x” no URL).
@@ -619,11 +624,11 @@ O objeto é uma matriz com todos os elementos do tipo `string`.
 
 **Opcional**—objeto
 
-Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsoft Graph para ajudar os usuários a entrarem facilmente no seu aplicativo. Se seu aplicativo estiver registrado no Microsoft Azure AD, você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento no centro de administração do Teams.
+Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsoft Graph para ajudar os usuários a entrarem facilmente no seu aplicativo. Se o seu aplicativo estiver registrado no Microsoft Azure Active Directory (Azure AD), você deverá fornecer a ID do aplicativo. Os administradores podem revisar facilmente as permissões e conceder consentimento no centro de administração do Teams.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
+|`id`|string|36 caracteres|✔|ID de aplicativo do Microsoft Azure Active Directory (Azure AD) do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, https://notapplicable para evitar uma resposta de erro. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator

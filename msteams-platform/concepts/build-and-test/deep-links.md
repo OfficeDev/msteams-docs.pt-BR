@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: link profundo do link do teams
-ms.openlocfilehash: 63aa2849360d709e261c88472090caaf066f98c1
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059302"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518244"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -140,7 +140,7 @@ Exemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 Os parâmetros de consulta são:
 
-* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes do chat. O usuário que executa a ação é sempre incluído como um participante. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, como apenas um endereço de email.
+* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes do chat. O usuário que executa a ação é sempre incluído como um participante. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), como apenas um endereço de email.
 * `topicName`: Um campo opcional para o nome de exibição do chat, em chats com três ou mais usuários. Se esse campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
 * `message`: Um campo opcional para o texto da mensagem que você deseja inserir na caixa de redação do usuário atual enquanto o chat está em um estado de rascunho.
 
@@ -226,7 +226,7 @@ Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 Os parâmetros de consulta são:
 
-* `attendees`: A lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. Atualmente, o campo ID de usuário dá suporte apenas ao UserPrincipalName do Azure AD, normalmente um endereço de email.
+* `attendees`: A lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. Atualmente, o campo ID do usuário dá suporte apenas ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), normalmente um endereço de email.
 * `startTime`: A hora de início opcional do evento. Isso deve estar em um [formato ISO 8601 longo](https://en.wikipedia.org/wiki/ISO_8601), por exemplo, *2018-03-12T23:55:25+02:00*. 
 * `endTime`: A hora de término opcional do evento, também no formato ISO 8601.
 * `subject`: Um campo opcional para o assunto da reunião.
@@ -259,7 +259,7 @@ No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará
 | Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estes são os parâmetros de consulta:
-* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
+* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams. 
 * `Source`: esse é um parâmetro opcional, que informa sobre a origem do link profundo.
 
