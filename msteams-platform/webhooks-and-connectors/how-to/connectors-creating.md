@@ -2,10 +2,16 @@
 title: Criar Conectores do Office 365
 author: laujan
 description: Descreve como começar a usar Office 365 conectores no Microsoft Teams
-keywords: conector do teams Office365
+keywords: conector do Office365 para equipes
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
+ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801380"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -15,7 +21,9 @@ Com Microsoft Teams aplicativos, você pode adicionar seu conector de Office 365
 
 Você pode criar um [pacote e](~/concepts/build-and-test/apps-package.md) [publicar seu](~/concepts/deploy-and-publish/apps-publish.md) conector como parte do envio do AppSource. Você pode distribuir seu conector registrado como parte do pacote Teams aplicativo. Para obter informações sobre os pontos de entrada Teams aplicativo, consulte [capabilities](~/concepts/extensibility-points.md). Você também pode fornecer o pacote aos usuários diretamente para carregar no Teams.
 
-Para distribuir seu conector, você deve se registrar por [meio do Painel de Desenvolvedores conectores](https://aka.ms/connectorsdashboard). Quando um conector é registrado, presume-se que ele funcione em todos os produtos Office 365 que suportam aplicativos, incluindo Outlook e Teams. Se esse não for o caso e você deve criar um conector que funcione apenas em Microsoft Teams, entre em contato: Microsoft Teams [email envios de aplicativo](mailto:teamsubm@microsoft.com).
+Para distribuir seu conector, registre-o no [Painel de Desenvolvedores conectores](https://aka.ms/connectorsdashboard).
+
+Para que um conector funcione somente Microsoft Teams, siga as instruções para enviar o conector ao publicar seu aplicativo no artigo [Microsoft Teams store.](~/concepts/deploy-and-publish/appsource/publish.md) Caso contrário, um conector registrado funciona em todos os Office 365 que suportam aplicativos, incluindo Outlook e Teams.
 
 > [!IMPORTANT]
 > Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em publicar seu aplicativo [Microsoft Teams no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após [a publicação de conectores para sua](#publish-connectors-for-the-organization) organização, nenhuma ação é necessária no Painel do Conector.

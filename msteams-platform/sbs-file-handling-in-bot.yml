@@ -1,0 +1,98 @@
+### YamlMime:Tutorial
+title: Teams de carregamento de arquivo
+metadata:
+  title: Teams Arquivo Upload Bot
+  description: Neste tutorial, você aprenderá a carregar arquivos para Teams de um bot e como receber um arquivo enviado a um bot como um anexo.
+  audience: Developer
+  level: Beginner
+  ms.date: 28/12/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/bots-filesv4.md
+  nextTutorialTitle: Leia mais sobre enviar e receber arquivos por meio do bot
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 9906e3e445e73f1e53ebe713e46cffcf342965a2
+  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 02/14/2022
+  ms.locfileid: "62801400"
+items:
+- durationInMinutes: 1
+  content: "O bot é criado usando a Estrutura de Bot. Ele mostra como carregar arquivos para Teams de um bot e como receber um arquivo enviado para um bot como um anexo. Ele também mostra como buscar imagens em linha enviadas na mensagem.\n \nEste guia passo a passo ajuda você a carregar arquivos de um bot para Microsoft Teams. Você verá a seguinte saída:\n\n:::image type=\"content\" source=\"assets/images/teams-file-upload-bot/output-sbs.png\" alt-text=\"saída sbs\" lightbox=\"assets/images/teams-file-upload-bot/output-sbs.png\":::\n"
+- title: Pré-requisitos
+  durationInMinutes: 1
+  content: >
+    Para configurar seu ambiente de desenvolvimento, instale as seguintes ferramentas:
+
+
+    * Microsoft Teams e uma Teams de usuário.
+
+    * [.NET Core SDK versão 3.1](https://dotnet.microsoft.com/download).
+
+    * [ngrok](https://ngrok.com/) ou uma solução de tunelamento equivalente.
+
+    * Visual Studio 2019 ou posterior.
+- title: Criar um registro de bot no Portal do Azure
+  durationInMinutes: 5
+  content: "Para autenticar o bot, você pode configurar bot no Serviço de Bot do Azure. Registre bot com o Serviço de Bot do Azure quando você o desenvolver e hospedá-lo no Azure. Execute as etapas a seguir:\n\n1. Configure e execute seu aplicativo Teams bot de arquivo.\n1. Crie o recurso bot do Azure.\n1. Criar segredo do cliente.\n1. Adicione Microsoft Teams canal.\n1. Adicionar ponto de extremidade de mensagens.\n\n**Para configurar e executar seu aplicativo Teams bot de arquivo:**\n\n1. Abra um prompt de comando e clone o repositório em https://github.com/Microsoft/botbuilder-samples.git. Observe o caminho onde você clona o repositório.\n\n1. Em Visual Studio:\n\n    * Abra o Visual Studio.\n    * Selecione **FileOpen** >  >  **Project/Solution**.\n    * Pasta De `botbuilder-samples\\samples\\csharp_dotnetcore\\56.teams-file-upload` acesso.\n    * Abra o arquivo `Teamsfileupload.csproj`.\n\n1. Abra o terminal ngrok e inicie um túnel ngrok com este comando `ngrok http -host-header=rewrite 3978`.\n\n**Para criar o recurso bot do Azure:**\n\n1. Acesse o [portal do Azure](https://portal.azure.com/).\n1. Selecione **Criar um recurso**.\n1. Na caixa de pesquisa, insira **o bot do Azure** e selecione a tecla Enter.\n1. Selecione **Bot do Azure**.\n\n     ![Criar cartão de bot do Azure](~/assets/images/teams-file-upload-bot/azure-new.png)\n\n1. Selecionar **Criar**.\n1. Insira o nome de alça de bot necessário no **alça bot**.\n1. Na lista **suspenso** Assinatura, selecione a assinatura.\n1. Na lista **listada de grupos** de recursos, selecione o grupo de recursos.\n    \n    Para criar um novo recurso, selecione **Criar novo**, insira nome do recurso, selecione **OK** e selecione o local necessário na lista suspenso **Novo** local do grupo de recursos.\n\n    > [!NOTE]\n    > Na seção ID do Aplicativo da Microsoft, **Criar nova ID do Microsoft App** já está selecionado. Você pode selecionar **Usar o registro de aplicativo existente**, inserir **id de aplicativo existente** e inserir **senha de aplicativo existente**.\n\n1. Selecione **Examinar + criar**.\n\n     ![Revisar e criar](~/assets/images/teams-file-upload-bot/reg-azure-1.png)\n\n1. Se a validação for aprovada, selecione **Criar**. Leva alguns instantes para que o serviço de bot seja provisionado.\n\n1. Selecione **Acessar recursos**. O bot e os recursos relacionados estão listados no grupo de recursos.\n\n   Agora seu bot do Azure foi criado.\n\n     ![Recurso de bot do Azure criado](~/assets/images/teams-file-upload-bot/resource-group.png)\n\n**Para criar o segredo do cliente:**\n\n1. Em **Configurações**, selecione **Configuração**. Salve a **ID do Microsoft App** (ID do cliente) para referência futura.\n1. Adjacente à **ID do Microsoft App**, selecione **Gerenciar**.\n\n     ![ID do Aplicativo Microsoft](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. Na seção **Segredos do** cliente, selecione **Novo segredo do cliente**. A **janela Adicionar um segredo do** cliente é exibida.  \n\n1. Insira **Descrição** e selecione **Adicionar**.\n\n     ![Segredo do cliente](~/assets/images/teams-file-upload-bot/add-client-secret.png)\n\n1. Na coluna **Valor** , selecione **Copiar para área de** transferência e salve o valor da ID de segredo do cliente para referência futura.\n\n     ![Valor do segredo do cliente](~/assets/images/teams-file-upload-bot/copy-value.png)\n   \n**Para adicionar o canal Microsoft Teams:**\n\n1. Vá para **Home**.\n\n     ![Home](~/assets/images/teams-file-upload-bot/home-png.png)\n\n1. Abra seu bot na **seção Recursos recentes** .\n1. Selecione **Canais** no painel esquerdo e selecione **Microsoft Teams** \n\n      ![Abrir Teams canais](~/assets/images/teams-file-upload-bot/chanels-teams.png)  \n\n      ![Selecione Teams](~/assets/images/teams-file-upload-bot/configure-microsoft-teams.png)  \n\n1. Clique em **Salvar**.\n1. Selecione a caixa de seleção para aceitar os termos de serviço e selecione **Concordar**.</br>\n\n      ![Termos de serviço](~/assets/images/teams-file-upload-bot/terms-service.png)\n\n**Para adicionar ponto de extremidade de mensagens:**\n\n1. Em **Configurações** para o bot do Azure que você criou, selecione **Configuração**.\n1. Vá para ngrok.\n1. Copie a URL HTTPS (https para io).\n\n    ![URL HTTPS do ngrok](~/assets/images/teams-file-upload-bot/ngrok-url.png)\n\n1. No **ponto de extremidade mensagens**, use a URL HTTPS disponível no ngrok e, no final da URL, adicione **/api/messages**.\n\n     ![Ponto de extremidade de mensagens](~/assets/images/teams-file-upload-bot/messaging-endpoint.png)\n\n1. Selecione **Aplicar**.\n\n   Você definiu com êxito um bot no Serviço de Bot do Azure e agora precisa configurar a conexão de serviço bot.\n"
+- title: Configurar a conexão de serviço de bot
+  durationInMinutes: 5
+  content: "Para o Serviço de Bot permitir que um usuário entre e acesse o bot, configure o SSO para seu bot.\nPara configurar a conexão de serviço de bot, execute o seguinte:\n\n1. Adicione o URI de redirecionamento ao recurso de bot do Azure.\n1. Expor ponto de extremidade da API.\n1. Autorizar aplicativos cliente.\n1. Adicione quaisquer permissões de API necessárias para chamadas a jusante.\n1. Habilitar concessão implícita.\n1. Atualizar manifesto.\n1. Configurar a conexão de Serviço bot.\n\n**Para adicionar o URI de redirecionamento ao recurso de bot do Azure:**\n\n1. Selecione **Gerenciar opção** adjacente à **ID do Microsoft App**.\n\n     ![Gerenciar Bot](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. Selecione **Autenticação** no painel esquerdo do recurso bot.\n1. Em **Configurações de plataforma**, selecione **Adicionar uma plataforma**.\n1. Selecione **Web**.\n1. Insira **URIs de redirecionamento** como `https://token.botframework.com/.auth/web/redirect` e selecione **Configurar**.\n\n    ![Configurar url de redirecionamento da Web](~/assets/images/teams-file-upload-bot/authentication.png)\n\n    O URI de redirecionamento é adicionado ao recurso de bot do Azure.\n\n    ![Exibir URL de redirecionamento da Web](~/assets/images/bots/redirectURIadded.png)\n    \n**Para expor o ponto de extremidade da API:**\n\n1. Selecione **Expor uma API** no painel esquerdo.\n1. Selecione **Definir** para o URI de ID do Aplicativo.\n1. Use a **URL de ID do Aplicativo** mostrada e acrescentada `api://` `https://` em vez de na **url do ngrok** e adicione no início da URL da ID do Aplicativo.\n\n    ![URI da ID do Aplicativo](~/assets/images/teams-file-upload-bot/expose-api.png)\n\n1. Clique em **Salvar**.\n1. Selecione **Adicionar um escopo**.\n1. Em **Nome do escopo**, digite `access_as_user`.\n1. Em **Who pode consentir?**, alternar para **Administradores e usuários**.\n1. Insira os seguintes valores nas caixas:\n\n    | Campo | Valor |\n    | ----- | ----- |\n    | Nome de exibição de consentimento do administrador | Teams pode acessar o perfil do usuário |\n    | Descrição do consentimento do administrador | Permite Teams chamar as APIs web do aplicativo como o usuário atual. |\n    | Nome de exibição de consentimento do usuário | Teams pode acessar seu perfil de usuário e fazer solicitações em seu nome |\n    | Descrição do consentimento do usuário | Habilita Teams chamar as APIs desse aplicativo com as mesmas permissões que você tem. |\n\n1. Definir **Estado** **como Habilitado**, se ainda não estiver definido.\n\n    ![Adicionar um escopo](~/assets/images/teams-file-upload-bot/expo.png)\n\n1. Selecione **Adicionar escopo**. O nome do escopo corresponde automaticamente ao URI de ID do Aplicativo, com `/access_as_user` adicionado ao final.\n\n**Para autorizar aplicativos cliente:**\n\nPor exemplo, Adicione as seguintes IDs como aplicativos cliente autorizados **, marque** a caixa de seleção para **escopos autorizados** e selecione **adicionar aplicativo**.      \n* `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Teams aplicativo móvel ou desktop)            \n* `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Teams web)</br>\n\n    ![Adicionar aplicativo cliente](~/assets/images/teams-file-upload-bot/client-application.png)      \n\n**Para adicionar quaisquer permissões de API necessárias para chamadas downstream:**\n\n1. Selecione **permissões de API** no painel esquerdo.\n1. Selecione **Adicionar uma permissão**. **A janela Solicitar permissões de API** é exibida.\n1. Selecione **API da Microsoft**. Em seguida **, selecione Microsoft Graph** e selecione **Permissões delegadas**.\n1. Adicione qualquer permissão **delegada pelo** usuário que seu aplicativo exija para APIs de downstream, por exemplo, User.Read.</br>\n\n     ![Permissões de API](~/assets/images/teams-file-upload-bot/delegated-permission-1.png)\n\n**Para habilitar a concessão implícita:**\n\n1. Selecione **Autenticação** no painel esquerdo.\n1. Selecione **Caixas de seleção Tokens de** **acesso e tokens de ID** .\n\n     ![Tokens de autenticação](~/assets/images/teams-file-upload-bot/access-tokens.png)\n\n1. Clique em **Salvar**.\n\n**Para atualizar manifesto**\n\n1. Selecione **Manifesto** no painel esquerdo.\n1. De definir o item de configuração **como \"accessTokenAcceptedVersion\": 2**. Se não estiver definido, altere seu valor para '2'' e selecione **Salvar**.\n    \n    > [!NOTE]\n    > Se você já estiver testando seu bot Teams, saia deste aplicativo e saia Teams. Para ver essa alteração, entre novamente.\n\n    ![Manifesto de atualização](~/assets/images/teams-file-upload-bot/access-version-manifest-2.png)\n\n**Para configurar a conexão de Serviço bot:**\n\n1. Abra a **home** page do bot e selecione **Configuração** em **Configurações no painel** esquerdo.\n1. Selecione **Adicionar conexão OAuth Configurações**.\n1. Em **Nova Configuração de Conexão**, forneça os seguintes detalhes:\n\n    | Campo | Valor ou descrição |\n    | ----- | ----- |\n    | Nome | Forneça o nome para a nova configuração de conexão. Você pode usar o nome nas configurações do código de serviço de bot. |\n    | Service Provider | Selecione **Azure Active Directory V2**. |\n    | ID do cliente | Forneça a **ID do Microsoft App**. |\n    | Segredo do cliente | Forneça o **Valor** da ID secreta do cliente. |\n    | URL Exchange token | Use a **URL de ID do Aplicativo** obtida anteriormente durante a exposição do ponto de extremidade da API. |\n    | ID do locatário | Forneça **id de locatário**. |\n    | Scopes | Forneça **User.Read** e adicione todos os **Escopos necessários** ao especificar permissões para APIs de downstream. |\n\n    :::image type=\"content\" source=\"./assets/images/teams-file-upload-bot/oauth-settings.png\" alt-text=\"Conexão de serviço bot\":::\n\n1. Clique em **Salvar**.\n"
+- title: Testar seu aplicativo
+  durationInMinutes: 2
+  content: >
+    A maneira mais abrangente de testar seu aplicativo é criando um pacote de aplicativos e carregando-o para Teams. Esse método é a única maneira de testar a funcionalidade completa disponível para seu aplicativo em todos os escopos. Você pode configurar e executar o aplicativo Teams carregando o `manifest.zip` arquivo.
+
+
+    Para executar o Teams de arquivos, carregue o `manifest.zip` arquivo no Teams. Execute as etapas a seguir:
+
+
+    1. No **Explorador de Arquivos**, vá para **botbuilder-samplessamples** >  >  **csharp_dotnetcore** >  **56.teams-file-uploadappsettings** > .
+
+
+    1. Abra os appsettings no Visual Studio Code e atualize `appsettings.json` o arquivo de configuração do bot para usar `MicrosoftAppId (Bot Id)`o , `MicrosoftAppPassword(Value of the client secret ID)`, `MicrosoftAppType`e `MicrosoftAppTenantID`.
+
+       ![configurações do aplicativo](~/assets/images/teams-file-upload-bot/app-settings.png)
+
+    1. Abra o `manifest.json` arquivo em Visual Studio Code.
+
+
+    1. No arquivo `manifest.json` , localize `YOUR-MICROSOFT-APP-ID` e substitua-o pela ID do aplicativo. A ID do aplicativo é criada quando você registra seu bot. Salve o arquivo.
+
+       ![manifesto json](~/assets/images/teams-file-upload-bot/manifest-json.png)
+
+    1. Feche o conteúdo do arquivomanifest.zip`TeamsAppManifest' folder to create a ` ` archive. Open the manifest file in Visual Studio Code and replace with your MicrosoftAppID (depending on the scenario the Microsoft App Id may occur multiple times in the `manifesto.json.)
+
+
+    1. Upload para `manifest.zip` Teams (na exibição Aplicativos clique em "Upload um aplicativo personalizado")
+
+
+    1. Para carregar `manifest.zip`, selecione **StoreManage** >  **seus aplicativos** >  **Upload um aplicativo personalizado** e abra `manifest.zip`.
+
+
+    1. Selecione **Adicionar** para adicionar o bot ao chat.
+
+
+    1. Antes de enviar uma mensagem para o bot, vá para **Explorador** de Arquivos, navegue até **botbuilder-samplessamples** >  >  **csharp_dotnetcore** >  **56.teams-file-upload**
+
+
+    1. Abra `TeamsFileUpload.csproj` o arquivo Visual Studio Code e verifique se você está em 'Teams de arquivo'
+
+        ![Código visual](~/assets/images/teams-file-upload-bot/visual-studio-teams-file-upload-bot.png)
+
+    1. Execute seu bot, Visual Studio com `F5` ou usando `dotnet run` na pasta apropriada
+
+
+    1. Envie uma mensagem `Hi` para o bot e aguarde alguns segundos para que ele responda com um cartão.
+- title: Interagir com o bot no Teams
+  durationInMinutes: 2
+  content: "> [!NOTE]\n>  Depois que o bot é instalado no escopo pessoal, o usuário entra em uma em uma conversa de chat com o bot.\n\nEste guia mostra como se comunicar com o bot de várias maneiras. A seguir estão as etapas que demonstram as atividades do bot:\n\n1. Envie uma mensagem para o bot. Ele responde com um cartão para a permissão para carregar o arquivo.\n   \n     ![prompt1](~/assets/images/teams-file-upload-bot/sbs-1.png)\n\n1. Selecione **Permitir**. Um `teams-logo.png` arquivo é carregado no diretório de arquivos, que está pronto para download.\n\n     ![prompt de mensagem](~/assets/images/teams-file-upload-bot/sbs-2.png)\n\n1. Envie um arquivo para o bot como um anexo no Teams. Ele responde com uma mensagem `Received and Saved`. Você pode exibir o anexo na guia **Arquivos** .\n\n     ![prompt de arquivo](~/assets/images/teams-file-upload-bot/sbs-3.png)\n\n1. Envie uma imagem como um anexo. Ele responde com uma mensagem `Received and saved`. Você pode exibir a imagem na janela de chat e na **guia Arquivos** .\n   \n     ![Prompt de imagem](~/assets/images/teams-file-upload-bot/sbs-4.png)\n"
+- title: Desafio completo
+  durationInMinutes: 1
+  content: >
+    Você achou algo assim?
+
+
+    :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Saída esperada do guia que confirma que você pode carregar arquivos do bot para Teams." lightbox="assets/images/teams-file-upload-bot/output-sbs.png":::
+- content: Você concluiu o tutorial. Agora você pode carregar arquivos de bot para Microsoft Teams.
