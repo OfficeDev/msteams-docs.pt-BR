@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 2c20fcb473fea847e19451d3ca883cf4b93337a4
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523784"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801387"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui  |
 | --- | --- | --- |
+|02/09/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
 |02/11/2022| Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introdução ao guia passo a passo para criar um bot de Chamada e Reunião.| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
 |07/02/2022| Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
@@ -45,6 +46,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|02/09/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
 |02/11/2022| Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introdução ao guia passo a passo para criar um bot de Chamada e Reunião.| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
 |02/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > [Esquema do manifesto do aplicativo](resources/schema/manifest-schema.md) |
