@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
-ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518027"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821679"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -137,7 +137,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
-    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-Sign-On para a guia. O padrão é sim, digite **n**.
+    Escolha **não** incluir o suporte ao Azure AD Single-Sign-On para a guia. O padrão é sim, digite **n**.
 
     > [!IMPORTANT]
     > O componente de **caminho yourDefaultTabNameTab** é o valor que você inscrevia no gerador para Nome da Guia **Padrão** mais a **palavra Tab**.

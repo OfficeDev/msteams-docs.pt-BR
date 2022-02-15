@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: lista de canais de perfil do usuário de lista de lista de listas de perfis de usuário de contexto bot
-ms.openlocfilehash: 69f4f81720fc24acfbfb6ae5b0769e37511bd7b7
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: c356ea8e498f68ba1aec5c438840a366818070d0
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518566"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821616"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obter Teams contexto específico para seu bot
 
@@ -21,7 +21,7 @@ Um bot pode acessar dados de contexto adicionais sobre uma equipe ou chat em que
 
 ## <a name="fetch-the-roster-or-user-profile"></a>Buscar a lista ou o perfil de usuário
 
-Seu bot pode consultar a lista de membros e seus perfis de usuário básicos, incluindo Teams IDs de usuário e informações do Microsoft Azure Active Directory (Azure AD), como nome e objectId. Você pode usar essas informações para correlacionar identidades de usuário. Por exemplo, para verificar se um usuário entrou em uma guia por meio de credenciais Microsoft Azure Active Directory (Azure AD), é membro da equipe. Para obter membros da conversa, o tamanho mínimo ou máximo da página depende da implementação. O tamanho da página menor que 50, são tratados como 50 e maiores que 500 são limitados a 500. Mesmo que você use a versão não páginada, ela não é confiável em equipes grandes e não deve ser usada. Para obter mais informações, consulte [alterações nas APIs Teams Bot para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md).
+Seu bot pode consultar a lista de membros e seus perfis de usuário básicos, incluindo Teams IDs de usuário e informações do Microsoft Azure Active Directory (Azure AD), como nome e objectId. Você pode usar essas informações para correlacionar identidades de usuário. Por exemplo, para verificar se um usuário entrou em uma guia por meio de credenciais do Azure AD, é membro da equipe. Para obter membros da conversa, o tamanho mínimo ou máximo da página depende da implementação. O tamanho da página menor que 50, são tratados como 50 e maiores que 500 são limitados a 500. Mesmo que você use a versão não páginada, ela não é confiável em equipes grandes e não deve ser usada. Para obter mais informações, consulte [alterações nas APIs Teams Bot para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md).
 
 O código de exemplo a seguir usa o ponto de extremidade pagedo para buscar a lista:
 
@@ -128,7 +128,7 @@ Depois de buscar a lista ou o perfil de usuário, você pode obter detalhes de u
 
 ## <a name="get-single-member-details"></a>Obter detalhes de membro único
 
-Você também pode recuperar os detalhes de um usuário específico usando Teams ID de usuário, UPN ou ID de objeto Microsoft Azure Active Directory (Azure AD).
+Você também pode recuperar os detalhes de um usuário específico usando Teams ID de usuário, UPN ou ID de objeto do Azure AD.
 
 O código de exemplo a seguir é usado para obter detalhes de membro único:
 
@@ -212,7 +212,7 @@ Depois de obter detalhes de um único membro, você pode obter detalhes da equip
 
 ## <a name="get-teams-details"></a>Obter detalhes da equipe
 
-Quando instalado em uma equipe, seu bot pode consultar metadados sobre essa equipe, incluindo a ID do grupo Microsoft Azure Active Directory (Azure AD).
+Quando instalado em uma equipe, seu bot pode consultar metadados sobre essa equipe, incluindo a ID do grupo do Azure AD.
 
 O código de exemplo a seguir é usado para obter os detalhes da equipe:
 

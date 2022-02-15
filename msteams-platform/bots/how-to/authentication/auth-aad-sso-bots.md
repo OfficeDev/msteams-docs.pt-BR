@@ -1,11 +1,16 @@
 ---
 title: Suporte de logon único para bots
-description: 'Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de visita ou o serviço de bot do Azure com o suporte ao cartão OAuth.'
-keywords: 'token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD'
+description: Descreve como obter um token de usuário. Atualmente, um desenvolvedor de bot pode usar um cartão de visita ou o serviço de bot do Azure com o suporte ao cartão OAuth.
+keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.openlocfilehash: 760c9f964298e120dfaf5cfadd199f5a7d02454f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821595"
 ---
-
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
 A autenticação de entrada única no Azure Active Directory atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisam fornecer consentimento novamente em outro dispositivo à medida que estão conectados automaticamente. Guias e bots têm fluxo semelhante para suporte a SSO. Mas o [bot solicita tokens](#request-a-bot-token) [e recebe respostas](#receive-the-bot-token) com um protocolo diferente.
@@ -154,7 +159,7 @@ As etapas para registrar seu aplicativo por meio do portal do Azure AD são seme
 
 #### <a name="update-manifest-in-microsoft-azure-portal"></a>Atualizar manifesto no Microsoft Azure portal
 
-As etapas a seguir orientarão você a atualizar o manifesto do bot Microsoft Azure portal:
+As etapas a seguir orientarão você a atualizar o manifesto do bot no portal do Azure:
 
 1. Selecione **Manifesto** no painel esquerdo.
 1. Verifique se o item config está definido como **"accessTokenAcceptedVersion": 2**. Caso não seja, altere seu valor para **2**.
@@ -169,9 +174,9 @@ As etapas a seguir orientarão você a atualizar o manifesto do bot Microsoft Az
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>Atualizar o portal do Azure com a conexão OAuth
 
-As etapas a seguir orientarão você a atualizar o portal Microsoft Azure com a conexão OAuth:
+As etapas a seguir orientarão você a atualizar o portal do Azure com a conexão OAuth:
 
-1. No portal Microsoft Azure, acesse [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. No portal do Azure, acesse [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Vá para **Configuração** no painel esquerdo.
 1. Selecione **Adicionar conexão OAuth Configurações**.
 

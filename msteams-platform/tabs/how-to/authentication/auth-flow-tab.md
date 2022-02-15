@@ -4,12 +4,12 @@ description: Descreve o fluxo de autenticação em guias, OAuth pelo Azure AD e 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: a4d6c184ca0747a2b0328e0194ebad472e9dfa6e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: c0a3617332d3392c36f21645d4fb0074008ced40
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518293"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821371"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams fluxo de autenticação para guias
 
@@ -27,9 +27,9 @@ Por exemplo, o fluxo de autenticação para guias e bots usando Node e o tipo de
 ![Diagrama de sequência de autenticação de tabulação](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. O usuário interage com o conteúdo na configuração da guia ou na página de conteúdo, normalmente um botão **Entrar ou** **Entrar** .
-2. A guia constrói a URL para sua página inicial de autenticação. Opcionalmente, ele usa informações de placeholders `microsoftTeams.getContext()` de URL ou chamadas Teams método SDK do cliente para simplificar a experiência de autenticação para o usuário. Por exemplo, ao autenticar com um Microsoft Azure Active Directory (Azure AD), `login_hint` se o parâmetro for definido para o endereço de email do usuário, o usuário não precisa entrar se tiver feito isso recentemente. Isso porque Microsoft Azure Active Directory (Azure AD) usa as credenciais em cache do usuário. A janela pop-up é mostrada brevemente e desaparece.
+2. A guia constrói a URL para sua página inicial de autenticação. Opcionalmente, ele usa informações de placeholders `microsoftTeams.getContext()` de URL ou chamadas Teams método SDK do cliente para simplificar a experiência de autenticação para o usuário. Por exemplo, ao autenticar com o Azure AD, `login_hint` se o parâmetro estiver definido para o endereço de email do usuário, o usuário não precisa entrar se tiver feito isso recentemente. Isso porque o Azure AD usa as credenciais em cache do usuário. A janela pop-up é mostrada brevemente e desaparece.
 3. Em seguida, a guia chama o `microsoftTeams.authentication.authenticate()` geral e registra as `successCallback` e `failureCallback` funções.
-4. Teams abre a página inicial em um iframe em uma janela pop-up. A página inicial gera dados aleatórios`state`, salva-os para validação futura e redireciona `/authorize` para o ponto de extremidade do provedor de identidade, `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` como para Microsoft Azure Active Directory (Azure AD). Substitua `<tenant id>` por sua própria id de locatário que seja context.tid.
+4. Teams abre a página inicial em um iframe em uma janela pop-up. A página inicial gera dados aleatórios `state` , salva-os para validação futura e redireciona para `/authorize` o ponto de extremidade do provedor de identidade, `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` como para o Azure AD. Substitua `<tenant id>` por sua própria id de locatário que seja context.tid.
 Semelhante a outros fluxos de auth de aplicativos no Teams, a página inicial deve estar em um domínio que está em sua lista e no mesmo domínio que a `validDomains` página de redirecionamento de entrada de postagem.
 
     > [!NOTE]
@@ -51,11 +51,11 @@ Código de exemplo mostrando o processo de autenticação de tabulação:
 
 | **Nome de exemplo** | **Descrição** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams autenticação de tabulação | Processo de autenticação para guias usando Microsoft Azure Active Directory (Azure AD). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams autenticação de tabulação | Processo de autenticação para guias usando o Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 
-Para uma implementação detalhada para autenticação de tabulação usando Microsoft Azure Active Directory (Azure AD), consulte:
+Para uma implementação detalhada para autenticação de tabulação usando o Azure AD, consulte:
 
 * [Autenticar um usuário em uma Teams guia](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md)

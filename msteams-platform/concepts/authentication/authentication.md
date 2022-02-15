@@ -4,19 +4,19 @@ description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: autenticação do teams OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: cf8ab3d0f861187d304f26a1804ac3d953e9e5ac
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 79b50b8e2ba91d8b141cb36b38f0d94713131d43
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518279"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821357"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
 > [!Note]
 > A autenticação baseada na Web em clientes móveis requer a versão 1.4.1 ou posterior do SDK do cliente JavaScript do Teams JavaScript.
 
-Para acessar informações do usuário protegidas pelo Microsoft Azure Active Directory (Azure AD) e para acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usa APIs Graph Microsoft no escopo do usuário, autenture o usuário para recuperar os tokens de autenticação apropriados.
+Para acessar informações do usuário protegidas pelo Azure AD e acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usa APIs Graph Microsoft no escopo do usuário, autenture o usuário para recuperar os tokens de autenticação apropriados.
 
 No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execute um fluxo de autenticação baseado na Web tradicional em uma página [de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) inserida em uma guia, uma página de configuração ou um módulo de tarefa. Se o aplicativo contiver um bot de conversação, use o fluxo OAuthPrompt e, opcionalmente, o serviço de token do Bot Framework do Azure para autenticar um usuário como parte de uma conversa.
 
@@ -26,8 +26,8 @@ Use o fluxo de autenticação baseado na Web para [guias](~/tabs/what-are-tabs.m
 
 * [Adicionar autenticação ao bot Teams](~/bots/how-to/authentication/add-authentication.md) descreve como usar o fluxo de autenticação baseado na Web com um bot de conversa.
 * [O fluxo de autenticação nas guias](~/tabs/how-to/authentication/auth-flow-tab.md) descreve como a autenticação de tabulação funciona Teams. Isso mostra um fluxo de autenticação baseado na Web típico usado para guias.
-* [Microsoft Azure Active Directory autenticação (Azure AD)](~/tabs/how-to/authentication/auth-tab-AAD.md) em guias descreve como se conectar ao Microsoft Azure Active Directory (Azure AD) de dentro de uma guia no aplicativo no Teams.
-* [A autenticação silenciosa Microsoft Azure Active Directory (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) descreve como reduzir os prompts de login ou consentimento no aplicativo usando o Microsoft Azure Active Directory (Azure AD).
+* [A autenticação do Azure AD em guias](~/tabs/how-to/authentication/auth-tab-AAD.md) descreve como se conectar ao Azure AD de dentro de uma guia no aplicativo no Teams.
+* [Autenticação silenciosa O Azure AD](~/tabs/how-to/authentication/auth-silent-AAD.md) descreve como reduzir os prompts de login ou consentimento no aplicativo usando o Azure AD.
 * [O .Net ou C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [ou JavaScript ou Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) fornece exemplos para autenticação baseada na Web.
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>O fluxo OAuthPrompt para bots de conversa
@@ -51,7 +51,7 @@ fornece exemplo de SDK de autenticação de bot v3.
 
 ## <a name="configure-the-identity-provider"></a>Configurar o provedor de identidade
 
-Independentemente do fluxo de autenticação do aplicativo, configure o provedor de identidade para se comunicar com o Teams aplicativo. A maioria dos exemplos e passo a passo lida principalmente com o uso Microsoft Azure Active Directory (Azure AD) como provedor de identidade. No entanto, os conceitos se aplicam independentemente do provedor de identidade. 
+Independentemente do fluxo de autenticação do aplicativo, configure o provedor de identidade para se comunicar com o Teams aplicativo. A maioria dos exemplos e as explicações lidam principalmente com o uso do Azure AD como provedor de identidade. No entanto, os conceitos se aplicam independentemente do provedor de identidade. 
 
 Para obter mais informações, consulte [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 

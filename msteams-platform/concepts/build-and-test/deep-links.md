@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: link profundo do link do teams
-ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518244"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821385"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados 
 
@@ -226,7 +226,7 @@ Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 Os parâmetros de consulta são:
 
-* `attendees`: A lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. Atualmente, o campo ID do usuário dá suporte apenas ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), normalmente um endereço de email.
+* `attendees`: A lista opcional separada por vírgulas de IDs de usuário que representam os participantes da reunião. O usuário que executa a ação é o organizador da reunião. Atualmente, o campo ID de usuário dá suporte apenas ao UserPrincipalName do Azure AD, normalmente um endereço de email.
 * `startTime`: A hora de início opcional do evento. Isso deve estar em um [formato ISO 8601 longo](https://en.wikipedia.org/wiki/ISO_8601), por exemplo, *2018-03-12T23:55:25+02:00*. 
 * `endTime`: A hora de término opcional do evento, também no formato ISO 8601.
 * `subject`: Um campo opcional para o assunto da reunião.
@@ -246,9 +246,6 @@ No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará
 > [!NOTE]
 > Este link profundo não pode ser usado para invocar uma reunião.
 
-> [!NOTE]
-> Atualmente, não há suporte para link profundo para chamar em dispositivos móveis do Teams.
-
 ### <a name="generate-a-deep-link-to-a-call"></a>Gerar um link profundo para uma chamada
 
 | Link profundo | Formatar | Exemplo |
@@ -259,7 +256,7 @@ No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará
 | Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estes são os parâmetros de consulta:
-* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
+* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams. 
 * `Source`: esse é um parâmetro opcional, que informa sobre a origem do link profundo.
 

@@ -1,19 +1,19 @@
 ---
-title: Seletor de Pessoas em Cartões Adaptáveis
+title: Seletor de Pessoas nos Cartões Adaptáveis
 description: Descreve como usar o controle People Picker em Cartões Adaptáveis
 localization_priority: Normal
 keywords: Se picker de pessoas de cartões adaptáveis
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518300"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821630"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas em Cartões Adaptáveis
+# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
 >[!NOTE]
 > Atualmente, o People Picker em Cartões Adaptáveis está disponível na visualização de desenvolvedor público apenas para dispositivos móveis e geralmente disponíveis (GA) para área de trabalho.[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)
@@ -29,7 +29,7 @@ O Seletor de Pessoas ajuda os usuários a pesquisar e selecionar usuários no Ca
 
 A tabela a seguir fornece cenários populares para o Seletor de Pessoas em Cartões Adaptáveis e as ações correspondentes:
 
-|Cenários|Actions|
+|Cenários|Ações|
 |----------|-------------------------|
 |Cenários baseados em aprovação| Para solicitar, atribuir e reatribuir a aprovação ao usuário pretendido com base no requisito.|
 |Gestão de incidentes| Para rastrear incidentes e notificar, atribuir e reatribuir ao usuário pretendido para ação imediata.| 
@@ -161,7 +161,7 @@ Para habilitar a pesquisa em uma lista de membros da conversa, use o conjuntos d
 ### <a name="data-submission"></a>Envio de dados
 
 Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para seu bot. A `invoke` carga recebida no bot é uma lista de IDs Microsoft Azure Active Directory (Azure AD) ou as IDs fornecidas na lista estática.
-No Seletor de Pessoas, quando um usuário é selecionado no controle, o `Microsoft Azure Active Directory (Azure AD) ID` do usuário é o valor enviado de volta. É `Microsoft Azure Active Directory (Azure AD) ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
+No Seletor de Pessoas, quando um usuário é selecionado no controle, o `Azure AD ID` do usuário é o valor enviado de volta. É `Azure AD ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
 
 O formato do valor enviado ao bot depende do valor da `isMultiSelect` propriedade:
 
@@ -177,8 +177,8 @@ Com o `Azure AD ID`, o Seletor de Pessoas pré-seleciona o usuário corresponden
 O Seletor de Pessoas dá suporte à pré-seleção do usuário no controle, ao criar e enviar um Cartão Adaptável. `Input.ChoiceSet` dá suporte `value` à propriedade usada para pré-selecionar um usuário. O formato dessa propriedade `value` é o mesmo do formato de valor enviado no envio [de dados](#data-submission).  
 A lista a seguir fornece as informações para pré-selecionar usuários:
 
-* Para um único usuário no controle, especifique o `Microsoft Azure Active Directory (Azure AD) ID` do usuário como `value`. 
-* Para vários usuários, como `isMultiSelect` é `true`, especifique uma cadeia de caracteres separada por vírgulas de `Microsoft Azure Active Directory (Azure AD) ID`s.  
+* Para um único usuário no controle, especifique o `Azure AD ID` do usuário como `value`. 
+* Para vários usuários, como `isMultiSelect` é `true`, especifique uma cadeia de caracteres separada por vírgulas de `Azure AD ID`s.  
 
 O exemplo a seguir descreve a pré-seleção de um único usuário:
 

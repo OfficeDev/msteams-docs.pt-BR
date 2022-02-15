@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações sobre a Teams integração
-ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a67124f5556ed8b197b981ac150a652dc8d25ec1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518468"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821343"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações sobre a Teams integração 
 
@@ -84,12 +84,12 @@ Veja como obter contexto para sua guia Teams [ou](../tabs/how-to/access-teams-co
 
 Azure Active Directory é o provedor de identidade para Teams. Se seu aplicativo usa um provedor de identidade diferente, você deve fazer um exercício de mapeamento de identidade ou combinar com Microsoft Azure Active Directory (Azure AD).
 
-Teams tem mecanismos de SSO (login único) com Microsoft Azure Active Directory (Azure AD) para aplicativos de terceiros. Ele também fornece as diretrizes para fluxos de autenticação para outros provedores de identidade usando padrões como OAuth e Open ID Conexão, conhecidos como OIDC.
+Teams tem mecanismos de SSO (login único) com o Azure AD para aplicativos de terceiros. Ele também fornece as diretrizes para fluxos de autenticação para outros provedores de identidade usando padrões como OAuth e Open ID Conexão, conhecidos como OIDC.
 
 > [!IMPORTANT]
 > Atualmente, aplicativos de terceiros estão disponíveis em Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desligados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-Para SharePoint páginas, você só pode usar o SSO e não pode adicionar outra ID de Microsoft Azure Active Directory (Azure AD) se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo SharePoint.
+Para SharePoint páginas, você só pode usar o SSO e não pode adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo SharePoint.
 
 Saiba mais sobre [autenticação Teams](../concepts/authentication/authentication.md).
 

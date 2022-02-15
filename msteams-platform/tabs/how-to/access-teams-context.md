@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: ca77ba61a880bb12067f884e8c294700938cc6be
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518125"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821728"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -44,12 +44,12 @@ Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft
 
 * {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
 * {subEntityId}: A ID fornecida ao gerar um [link profundo](~/concepts/build-and-test/deep-links.md) para um item específico nesta guia. Isso deve ser usado para restaurar para um estado específico dentro de uma entidade; por exemplo, rolar para ou ativar uma parte específica do conteúdo.
-* {loginHint}: um valor adequado como uma dica de logon para Microsoft Azure Active Directory (Azure AD). Geralmente, esse é o nome de logon do usuário atual em seu locatário.
+* {loginHint}: Um valor adequado como uma dica de logon para o Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário.
 * {userPrincipalName}: o Nome principal do usuário atual no locatário atual.
-* {userObjectId}: A ID do objeto Microsoft Azure Active Directory (Azure AD) do usuário atual no locatário atual.
+* {userObjectId}: A ID do objeto do Azure AD do usuário atual no locatário atual.
 * {theme}: O tema atual da interface do usuário (UI), como `default`, `dark`ou `contrast`.
 * {groupId}: A ID do grupo Office 365 no qual a guia reside.
-* {tid}: A ID do locatário Microsoft Azure Active Directory (Azure AD) do usuário atual.
+* {tid}: ID do locatário do Azure AD do usuário atual.
 * {locale}: a localidade atual do usuário formatada como languageId-countryId(en-us).
 
 > [!NOTE]
@@ -82,10 +82,10 @@ O código a seguir fornece um exemplo de variável de contexto:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",

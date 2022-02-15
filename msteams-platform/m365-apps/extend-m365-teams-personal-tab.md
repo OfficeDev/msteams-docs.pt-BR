@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9c6c88835dc24c64f93605d09ac15da5409add0f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518020"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821413"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams guia pessoal entre Microsoft 365
 
@@ -120,16 +120,16 @@ Se seu aplicativo fizer uso de headers de Política de Segurança de [Conteúdo 
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Atualizar Microsoft Azure Active Directory do aplicativo (Azure AD) para SSO
+## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
 
-Azure Active Directory SSO para guias pessoais funciona da mesma maneira no Office e no Outlook como no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao Microsoft Azure Active Directory  Registro do aplicativo (Azure AD) do aplicativo de guia no portal de registros *de aplicativos do* locatário.
+Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como acontece no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do seu aplicativo de guia no portal de registros do aplicativo *do* locatário.
 
 1. Entre no Microsoft Azure [portal com](https://portal.azure.com) sua conta de locatário de área de reserva.
 1. Abra a **folha Registros de** aplicativo.
 1. Selecione o nome do aplicativo de guia pessoal para abrir seu registro de aplicativo. 
 1. Selecione  **Expor uma API** (em *Gerenciar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs de cliente da folha *Registros de aplicativo* no portal Microsoft Azure portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs de cliente da folha *Registros de aplicativo* no portal do Azure":::
 
 Na seção **Aplicativos cliente autorizados** , verifique se todos os seguintes valores `Client Id` são adicionados:
 

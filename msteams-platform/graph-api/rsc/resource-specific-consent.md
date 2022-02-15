@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorização do teams OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 613416c7363de8a9351e56f5cdb2a6a339b74392
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518160"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821686"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
@@ -93,7 +93,7 @@ Para obter mais detalhes, consulte [permissões de consentimento específicas do
 
 Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) proprietário do grupo diretamente Microsoft Azure portal:
 
-1. Entre no portal Microsoft Azure [como](https://portal.azure.com) Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Selecione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **e permissionsAs** >  [**configurações de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado consentimento do proprietário **do grupo para aplicativos que acessam dados**. O padrão é **Permitir consentimento do proprietário do grupo para todos os proprietários do grupo**. Para que o proprietário da equipe instale um aplicativo usando o RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
 
@@ -103,9 +103,9 @@ Além disso, você pode habilitar ou desabilitar o consentimento do proprietári
 
 ### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurar configurações de consentimento do usuário para RSC em um chat
 
-Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) usuário diretamente no Microsoft Azure portal:
+Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) usuário diretamente no portal do Azure:
 
-1. Entre no portal Microsoft Azure [como](https://portal.azure.com) Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Selecione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **e permissionsAs** >  [**configurações de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado **consentimento do usuário para aplicativos**. O padrão é **Permitir o consentimento do usuário para aplicativos**. Para um membro do chat instalar um aplicativo usando o RSC, o consentimento do usuário deve ser habilitado para esse usuário.
 
@@ -145,7 +145,7 @@ Para obter mais informações, [consulte obter acesso em nome de um usuário](/g
 As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo. 
 
 > [!IMPORTANT]
-> As permissões não RSC são armazenadas no portal Microsoft Azure. Não os adicione ao manifesto do aplicativo.
+> As permissões não RSC são armazenadas no portal do Azure. Não os adicione ao manifesto do aplicativo.
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>Alterações de manifesto para consentimento específico do recurso
 

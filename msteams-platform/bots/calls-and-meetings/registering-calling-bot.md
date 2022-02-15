@@ -4,12 +4,12 @@ description: Saiba como registrar um novo bot de chamada de áudio/vídeo para M
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518286"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821364"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
@@ -82,9 +82,9 @@ Você deve configurar as permissões de aplicativo para seu bot antecipadamente 
 
 ### <a name="get-tenant-administrator-consent"></a>Obter consentimento do administrador de locatários
 
-Para aplicativos que usam o ponto de extremidade do Microsoft Azure Active Directory (Azure AD) V1, um administrador de locatários pode consentir com as permissões do aplicativo usando o [portal Microsoft Azure quando](https://portal.azure.com) seu aplicativo estiver instalado em sua organização. Como alternativa, você pode fornecer uma experiência de assinatura em seu aplicativo por meio do qual os administradores podem consentir com as permissões configuradas. Depois que o consentimento do administrador for registrado pelo Microsoft Azure Active Directory (Azure AD), seu aplicativo poderá solicitar tokens sem precisar solicitar consentimento novamente.
+Para aplicativos que usam o ponto de extremidade do Azure AD V1, um administrador de locatários pode consentir com as permissões do aplicativo usando o [portal Microsoft Azure quando](https://portal.azure.com) seu aplicativo estiver instalado em sua organização. Como alternativa, você pode fornecer uma experiência de assinatura em seu aplicativo por meio do qual os administradores podem consentir com as permissões configuradas. Depois que o consentimento do administrador for registrado pelo Azure AD, seu aplicativo poderá solicitar tokens sem precisar solicitar consentimento novamente.
 
-Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal Microsoft Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade Microsoft Azure Active Directory (Azure AD) V2`/adminconsent`. Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador](/graph/uth-v2-service#3-get-administrator-consent).
+Você pode contar com um administrador para conceder as permissões que seu aplicativo precisa no [portal Microsoft Azure.](https://portal.azure.com) Uma opção melhor é fornecer uma experiência de assinatura para administradores usando o ponto de extremidade do Azure AD V2 `/adminconsent` . Para obter mais informações, consulte [instruções sobre como construir uma URL de consentimento do administrador](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Para construir a URL de consentimento do administrador do locatário, é necessário um URI de redirecionamento configurado ou URL de resposta no [portal de registro do aplicativo](https://apps.dev.microsoft.com/) . Para adicionar URLs de resposta para seu bot, acesse seu registro de bot, escolha **Advanced OptionsEdit** >  **Application Manifest**. Adicione sua URL de redirecionamento à `replyUrls` coleção.

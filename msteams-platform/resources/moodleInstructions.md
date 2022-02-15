@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: bdbfb1727784b3bf638b7d443b660c334ebfaa70
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7ba779b4425376cc128135a44a2b68ada2a2de5c
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518146"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821644"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -20,7 +20,7 @@ Neste artigo, você aprenderá a instalar o Moodle LMS.
 > [!NOTE]
 > Para ajudar os administradores de IT a configurar facilmente o Moodle e Teams integração, os Plug-ins de Moodle de Microsoft 365 de código aberto são atualizados para o seguinte:
 >
-> * Registro automático do servidor Moodle [com Microsoft Azure Active Directory (Microsoft Azure Active Directory (Azure AD))](https://azure.microsoft.com/services/active-directory/).
+> * Registro automático do servidor Moodle com [Microsoft Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
 >
 > * Implantação de um clique do bot do Assistente de miojo no Azure.
 >
@@ -36,7 +36,7 @@ A seguir estão os pré-requisitos para instalar o Moodle:
 
 * Credenciais de administrador de miojo.
 
-* Microsoft Azure Active Directory de administrador (Azure AD).
+* Credenciais de administrador do Azure AD.
 
 * Uma assinatura do Azure onde você pode criar novos recursos.
 
@@ -75,18 +75,18 @@ Certifique-se de instalar e baixar o seguinte antes de prosseguir com a instala�
     >
     > * Se você não tiver um site Moodle existente, vá para o [Moodle no repo do Azure](https://github.com/azure/moodle) e implante rapidamente uma instância de Moodle e personalize-a de acordo com suas necessidades.
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-microsoft-azure-active-directory-microsoft-azure-active-directory-azure-ad"></a>2. Configure a conexão entre os plug-ins Microsoft 365 e Microsoft Azure Active Directory (Microsoft Azure Active Directory (Azure AD))
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-ad"></a>2. Configurar a conexão entre os plug-ins Microsoft 365 e o Azure AD
 
-Você deve configurar a conexão entre os Microsoft 365 e Microsoft Azure Active Directory (Azure AD).
+Você deve configurar a conexão entre os Microsoft 365 e o Azure AD.
 
 ### <a name="requisites"></a>Requisitos
 
-Registre Moodle como um aplicativo em seu Microsoft Azure Active Directory (Azure AD), usando o script do PowerShell. O script provisiona o seguinte:
+Registre Moodle como um aplicativo no Azure AD, usando o script do PowerShell. O script provisiona o seguinte:
 
-* Um novo Microsoft Azure Active Directory (Azure AD) para seu locatário Microsoft 365, que é usado pelo Microsoft 365 Plug-ins de Moodle.
+* Um novo aplicativo do Azure AD para seu locatário Microsoft 365, que é usado pelo Microsoft 365 Plug-ins de m massa.
 * O aplicativo para seu Microsoft 365 locatário, configurar as URLs de resposta e permissões necessárias para o aplicativo provisionado e retorna o `AppID` e `Key`.
 
-Use a página de `AppID` instalação de `Key` Plug-ins de miojo gerados e na página de instalação de Microsoft 365 Moodle para configurar seu site de servidor Moodle com Microsoft Azure Active Directory (Azure AD).
+Use a página de `AppID` instalação de `Key` Plug-ins de miojo gerados e em sua página de instalação de Microsoft 365 Moodle para configurar seu site de servidor Moodle com o Azure AD.
 
 > [!IMPORTANT]
 >
@@ -125,7 +125,7 @@ Use a página de `AppID` instalação de `Key` Plug-ins de miojo gerados e na p�
     1. Insira `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`.
     1. Insira `./Moodle-AzureAD-Script.ps1`.
     1. Entre na sua conta Microsoft 365 administrador na janela pop-up.
-    1. Insira o nome do aplicativo Microsoft Azure Active Directory (Azure AD), por exemplo, plug-ins Moodle ou Moodle.
+    1. Insira o nome do Aplicativo do Azure AD, por exemplo, plug-ins Moodle ou Moodle.
     1. Insira a URL do servidor Moodle.
     1. Copie a **ID do Aplicativo (`AppID`)** **e o Application Key(`Key`)** gerados pelo script e salve-os.
 
@@ -137,33 +137,33 @@ Use a página de `AppID` instalação de `Key` Plug-ins de miojo gerados e na p�
 
 1. Após a atualização da página, você pode ver outra nova seção **Consentimento do administrador & informações adicionais**.
     1. Selecione **Fornecer o** link Fornecer Consentimento de Administrador, insira Microsoft 365 suas credenciais de Administrador Global e **aceite conceder as** permissões.
-    1. Ao lado do **campo locatário Microsoft Azure Active Directory (Azure AD),** selecione o **botão Detectar**.
+    1. Ao lado do **campo Locatário do Azure AD** , selecione o **botão Detectar** .
     1. Ao lado da **URL OneDrive for Business,** selecione o **botão Detectar**.
     1. Depois que os campos preencherem, selecione o **botão Salvar alterações** novamente.
 
 1. Selecione o **botão Atualizar** para verificar a instalação e, em seguida, selecione **Salvar alterações**.
 
-1. Sincronizar usuários entre seu servidor Moodle e Microsoft Azure Active Directory (Azure AD). Para começar:
+1. Sincronizar usuários entre seu servidor Moodle e o Azure AD. Para começar:
 
     > [!NOTE]
     > Dependendo do ambiente, você pode selecionar diferentes opções durante este estágio.
 
-1. Sincronizar usuários entre seu servidor Moodle e Microsoft Azure Active Directory (Azure AD). Dependendo do ambiente, você pode selecionar diferentes opções durante este estágio. Para começar:
+1. Sincronizar usuários entre seu servidor Moodle e o Azure AD. Dependendo do ambiente, você pode selecionar diferentes opções durante este estágio. Para começar:
     1. Alternar para a **guia Sincronizar Configurações.**
 
-    1. Na seção **Sincronizar usuários com Microsoft Azure Active Directory (Azure AD),** selecione as caixas de seleção que se aplicam ao seu ambiente. Você deve selecionar o seguinte:  
+    1. Na seção **Sincronizar usuários com o Azure AD** , selecione as caixas de seleção que se aplicam ao seu ambiente. Você deve selecionar o seguinte:  
 
-        ✔ Criar contas no Moodle para usuários no Microsoft Azure Active Directory (Azure AD).
+        ✔ Criar contas no Moodle para usuários no Azure AD.
 
-        ✔ Atualize todas as contas no Moodle para usuários no Microsoft Azure Active Directory (Azure AD).
+        ✔ Atualize todas as contas no Moodle para usuários no Azure AD.
 
-    1. Na seção **Restrição** de Criação de Usuário, você pode configurar um filtro para limitar os usuários Microsoft Azure Active Directory (Azure AD) sincronizados com moodle.
-    1. A **seção Mapeamento de Campo** do Usuário permite que você personalize o Microsoft Azure Active Directory (Azure AD) para mapeamento de campo Moodle User Profile.
+    1. Na seção **Restrição de Criação de** Usuário, você pode configurar um filtro para limitar os usuários do Azure AD sincronizados com moodle.
+    1. A **seção Mapeamento de** Campo do Usuário permite que você personalize o mapeamento de campo do Azure AD para Moodle User Profile.
     1. Na seção **Teams Sincronização**, você pode selecionar para criar automaticamente Grupos, como equipes para alguns ou todos, de seus cursos de Moodle existentes.
 
-13. Para [validar trabalhos](https://docs.moodle.org/310/en/Cron) de cron e execute-os manualmente para a primeira executar, selecione **o link da** página Gerenciamento de tarefas agendadas na seção Sincronizar usuários com Microsoft Azure Active Directory **(Azure AD**). Isso o leva à página **Tarefas Agendadas** .
+13. Para [validar trabalhos de](https://docs.moodle.org/310/en/Cron) cron e execute-os manualmente para a primeira executar, selecione **o link da** página Gerenciamento de tarefas agendadas na seção **Sincronizar usuários com o Azure AD** . Isso o leva à página **Tarefas Agendadas** .
 
-    1. Role para baixo e encontre o trabalho **Sincronizar usuários com Microsoft Azure Active Directory (Azure AD)** e selecione **Executar agora**.
+    1. Role para baixo e encontre **o trabalho Sincronizar usuários com o Azure AD** e selecione **Executar agora**.
     1. Se você selecionar criar Grupos com base em cursos existentes, também poderá executar o **trabalho Criar grupos de usuários Microsoft 365**.
 
     > [!NOTE]

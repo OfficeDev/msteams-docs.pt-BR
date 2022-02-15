@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 3cbe26e9c84996242a22e8d0325914e7bde87f8c
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517978"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821581"
 ---
 # <a name="cards"></a>Cartões
 
@@ -79,7 +79,7 @@ Os Cartões Adaptáveis com Webhooks de entrada permitem que você use os recurs
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Suporte para ID de Objeto do Azure Active Directory e UPN na menção do usuário 
 
-Bots com Cartões Adaptáveis dão suporte a IDs de menção de usuário, como ID de objeto do Microsoft Azure Active Directory (Azure AD) e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com a ID de objeto do Microsoft Azure Active Directory (Azure AD) e o UPN.
+Bots com Cartões Adaptáveis dão suporte a IDs de menção de usuário, como ID de objeto do Microsoft Azure Active Directory (Azure AD) e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com a ID de Objeto do Azure Active Directory e o UPN.
 
 ## <a name="next-step"></a>Próxima etapa
 

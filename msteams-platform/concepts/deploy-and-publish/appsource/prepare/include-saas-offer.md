@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 450afc9728a0c5f727dc772909da5c0e1b92f55b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517985"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821707"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
@@ -81,7 +81,7 @@ Para obter instruções completas, [consulte build the landing page for your Saa
 
 Considere as seguintes abordagens ao criar uma página de aterrissagem para o Teams aplicativo que você está monetizando. Consulte uma página de aterrissagem de exemplo na [experiência de compra do usuário final](#end-user-purchasing-experience).
 
-* Os usuários devem poder fazer logoff na página inicial com as mesmas credenciais Microsoft Azure Active Directory (Azure AD) usadas para comprar a assinatura. Para obter mais informações, [consulte Microsoft Azure Active Directory (Azure AD) e ofertas de SaaS transacíveis no marketplace comercial](/azure/marketplace/azure-ad-saas).
+* Os usuários devem poder fazer logoff na página inicial com as mesmas credenciais do Azure AD usadas para comprar a assinatura. Para obter mais informações, consulte [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
 * Permitir que os usuários tomem as seguintes ações em sua página de aterrissagem. Não se esqueça de considerar o que é apropriado para a função e as permissões de um usuário (por exemplo, talvez você queira permitir que apenas os administradores de assinatura pesquisem por usuários):
   * Pesquise usuários em sua organização usando email ou outra forma de identidade.
   * Consulte usuários aos que podem atribuir licenças em uma lista.
