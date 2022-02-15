@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518356"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821658"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -628,7 +628,7 @@ Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsof
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|ID de aplicativo do Microsoft Azure Active Directory (Azure AD) do aplicativo. Essa ID deve ser um GUID.|
+|`id`|string|36 caracteres|✔|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, https://notapplicable para evitar uma resposta de erro. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
