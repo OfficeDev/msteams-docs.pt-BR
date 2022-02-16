@@ -6,12 +6,12 @@ keywords: Se picker de pessoas de cartões adaptáveis
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821630"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855890"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
@@ -306,6 +306,13 @@ A imagem a seguir ilustra o Se picker de pessoas em Cartões Adaptáveis com op�
 
 
 Você pode implementar o People Picker para um gerenciamento eficiente de tarefas em diferentes cenários.  
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Exemplo de nome           | Descrição | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Controle de selador de pessoas em Cartões Adaptáveis| Este exemplo demonstra como usar o controle de selador de pessoas em Cartões Adaptáveis.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
 
 ## <a name="see-also"></a>Confira também
 
