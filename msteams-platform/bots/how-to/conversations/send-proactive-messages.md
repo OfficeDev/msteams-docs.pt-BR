@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: Enviar mensagem, obter ID do usuário, obter ID do canal, obter ID da conversa
-ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059769"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896324"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -104,9 +104,6 @@ Ao usar mensagens proativas para enviar mensagens agendadas aos usuários, verif
 * O que o usuário pode fazer a seguir: os usuários podem executar a ação necessária com base no conteúdo da mensagem.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Instalar proativamente seu aplicativo usando o Graph
-
-> [!Note]
-> A instalação proativa de aplicativos usando o Graph está atualmente em beta.
 
 Envie mensagens proativas a usuários que anteriormente não instalaram ou interagiram com seu aplicativo. Por exemplo, você deseja usar o [comunicador da empresa](~/samples/app-templates.md#company-communicator) para enviar mensagens para toda a organização. Nesse caso, você pode usar a API do Graph para instalar proativamente seu aplicativo aos usuários. Armazene em cache os valores necessários do evento `conversationUpdate` que seu aplicativo recebe após a instalação.
 
@@ -259,9 +256,6 @@ POST /v3/conversations
 ```
 
 ---
-
-> [!NOTE]
-> Atualmente, os bots não podem criar um chat em grupo por meio de APIs de bot ou do Graph. `createConversation` está disponível apenas para chats individuais.
 
 ## <a name="code-sample"></a>Exemplo de código
 
