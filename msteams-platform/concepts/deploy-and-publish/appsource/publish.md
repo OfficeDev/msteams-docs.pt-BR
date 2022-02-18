@@ -1,61 +1,61 @@
 ---
-title: Visão geral - Teams de publicação da loja de aplicativos
-description: Descreve o processo para enviar seu aplicativo para o Partner Center e publicá-lo no Microsoft Teams store (e AppSource).
+title: Visão geral – Processo de publicação da loja de aplicativos do Teams
+description: Descreve o processo para enviar seu aplicativo ao Partner Center e publicá-lo na loja do Microsoft Teams (e AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: eaebde76a3d1f387ba16c9fdc77670144d22fa61
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881648"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896317"
 ---
-# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo no Microsoft Teams store
+# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
-Você pode distribuir seu aplicativo diretamente para a loja dentro Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial.
+Você pode distribuir seu aplicativo diretamente na loja do Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial.
 
-Os aplicativos publicados na Teams store também listam automaticamente no [Microsoft AppSource](https://appsource.microsoft.com), que é o marketplace oficial para Microsoft 365 aplicativos e soluções.
+Os aplicativos publicados na loja do Teams também são listados automaticamente no [Microsoft AppSource](https://appsource.microsoft.com), que é o marketplace oficial para aplicativos e soluções do Microsoft 365.
 
 ## <a name="understand-the-publishing-process"></a>Compreender o processo de publicação
 
-Quando você acha que seu aplicativo está pronto para produção, você pode começar o processo de listá-lo no Teams store.
+Quando achar que seu aplicativo está pronto para produção, você poderá começar o processo de listá-lo na loja do Teams.
 
 > [!TIP]
-> Seguir as etapas de pré-envio de perto pode aumentar a possibilidade de que a Microsoft aprove seu aplicativo para publicação.
+> Seguir as etapas de pré-envio pode aumentar a possibilidade de que a Microsoft aprove seu aplicativo para publicação.
 
 :::row:::
    :::column span="":::
       
    :::column-end:::
    :::column span="3":::
-      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams de publicação da loja de aplicativos" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
+      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Processo de publicação da loja de aplicativos do Teams" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
       
    :::column-end:::
 :::row-end:::
 
-1. [Revise as diretrizes Teams de validação da loja](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) para garantir que seu aplicativo atenda Teams padrões de aplicativo e loja.
+1. [Revise as diretrizes Teams de validação do repositório](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) para garantir que seu aplicativo atenda Teams padrões de aplicativo e loja.
 
-1. [Crie uma conta de desenvolvedor do Partner Center](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
+1. [Criar uma conta de desenvolvedor do Partner Center](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 
-1. [Prepare o envio da loja](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), que inclui a execução de testes automatizados, a compilação de notas de teste, a criação de uma listagem de loja, entre outras tarefas importantes para ajudar a acelerar o processo de revisão.
+1. [Prepare o envio do seu repositório](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), que inclui a execução de testes automatizados, a compilação de notas de teste, a criação de uma listagem da loja, entre outras tarefas importantes para ajudar a agilizar o processo de revisão.
 
-1. [Envie seu aplicativo por](/office/dev/store/add-in-submission-guide) meio do Partner Center.
+1. [Envie seu aplicativo](/office/dev/store/add-in-submission-guide) por meio do Partner Center.
 
-1. Se o envio falhar, trabalhe diretamente com a Microsoft para [resolver os problemas e reabrir seu aplicativo](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
+1. Se o envio falhar, trabalhe diretamente com a Microsoft para [resolver os problemas e reenvie seu aplicativo](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
-## <a name="what-to-expect-after-you-submit-your-app"></a>O que esperar depois de enviar seu aplicativo?
+## <a name="what-to-expect-after-you-submit-your-app"></a>O que esperar depois de enviar seu aplicativo ou?
 
-* **Testes de experiência e funcional profundos**
+* **Testes funcionais e de experiência profundos**
 
-  Seu aplicativo é completamente revisado por um validador para garantir a conformidade com as políticas de certificação do [Microsoft Commercial Marketplace](/legal/marketplace/certification-policies) com foco em testes de experiência funcional e de usuário profundos, verificações de usabilidade e verificações de metadados. A validação de aplicativo é realizada em clientes desktop, web e móveis.
+  Seu aplicativo é completamente revisado por um validador para garantir a conformidade com as [políticas de certificação do Microsoft Commercial Marketplace](/legal/marketplace/certification-policies) com foco em testes profundos funcionais e de experiência do usuário, verificações de usabilidade e verificações de metadados. A validação do aplicativo é executada em clientes móveis, da Web e da área de trabalho.
 
-* **Publicação de aplicativos guiados por meio do serviço de concierge**
+* **Publicação de aplicativo guiado por meio do serviço de concierge**
 
-  Se não houver problemas observados com seu aplicativo, seu aplicativo será aprovado e publicado no Teams store. Se houver problemas, você receberá um relatório de validação automatizado do Partner Center com os detalhes de falha. Para ajudá-lo a publicar seu aplicativo com êxito no Teams store e orientá-lo durante esse processo, a equipe de validação enviará um email personalizado do nosso serviço de teamsubm@microsoft.com que [](mailto:teamsubm@microsoft.com) inclui as seguintes informações:
+  Se não houver problemas observados com seu aplicativo, seu aplicativo será aprovado e publicado na loja do Teams. Se houver problemas, você receberá um relatório de validação automatizado do Partner Center com os detalhes da falha. Para ajudá-lo a publicar com êxito seu aplicativo na loja do Teams e orientá-lo nesse processo, a equipe de validação enviará um e-mail personalizado do nosso serviço de concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) que inclui as seguintes informações:
 
    * Resumo de todos os problemas
 
@@ -63,73 +63,73 @@ Quando você acha que seu aplicativo está pronto para produção, você pode co
 
      * Correção obrigatória: esses problemas devem ser corrigidos antes da aprovação do aplicativo.
 
-     * Correção sugerida: esses problemas podem ser corrigidos após a aprovação do aplicativo, pois são recomendações para melhorar a experiência do aplicativo.
+     * Correção sugerida: esses problemas podem ser corrigidos após a aprovação do aplicativo, pois são recomendações para melhorar a experiência dos aplicativos.
 
      * Bloqueador: esses problemas impedem que a equipe de validação teste ainda mais a funcionalidade do aplicativo e devem ser resolvidos para que a validação continue.
 
-     * Consulta: Essas consultas podem ser compartilhadas para obter respostas a perguntas específicas relacionadas ao seu aplicativo.
+     * Consulta: essas consultas podem ser compartilhadas para obter respostas a perguntas específicas relacionadas ao seu aplicativo.
 
    * Etapas para recriar problemas por meio de instruções escritas ou formato de vídeo.
 
-   * Recomendações corrigir os problemas relatados com links para documentos de orientação.
+   * Recomendações para corrigir os problemas relatados com links para documentos de orientação.
  
-  Depois de revisar a lista de problemas, corrige todos os problemas relatados e compartilhe o pacote de aplicativo atualizado por email, para que a equipe de validação valide completamente seu aplicativo. Se você tiver alguma consulta relacionada aos problemas relatados, entre em contato com a equipe de validação em [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
+  Depois de examinar a lista de problemas, corrija todos os problemas relatados e compartilhe o pacote de aplicativo atualizado por email, para que a equipe de validação valide seu aplicativo completamente. Se você tiver alguma consulta relacionada aos problemas relatados, entre em contato com a equipe de validação em [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
-  Se houver problemas restantes ou problemas de regressão observados em seu aplicativo, a equipe de validação compartilhará um relatório de validação atualizado com você. Se o aplicativo tiver bloqueadores, você poderá ver novos problemas relatados quando o aplicativo for validado depois que os bloqueadores são resolvidos. Às vezes, a equipe de validação também reparou em problemas de regressão em aplicativos após a implantação de correções. É necessário alguns re-envios para fechar todos os problemas de um aplicativo que consiste em bugs e ser aprovado para publicar no Teams store.
+  Se houver problemas restantes ou de regressão observados em seu aplicativo, a equipe de validação compartilhará um relatório de validação atualizado com você. Se o aplicativo tiver bloqueadores, você poderá ver novos problemas relatados quando o aplicativo for validado depois que os bloqueadores forem resolvidos. Às vezes, a equipe de validação também observou problemas de regressão em aplicativos após a implantação de correções. São necessários alguns reenvios para fechar todos os problemas de um aplicativo que consiste em bugs e obtê-lo aprovado para publicação na loja do Teams.
 
-  Depois que todos os problemas relatados são fechados e o envio final é feito no Partner Center, a equipe de validação aprovará e publicará seu aplicativo. Permitir que pelo menos um dia útil para o aplicativo estar disponível no Teams store.
+  Depois que todos os problemas relatados forem encerrados e o envio final for feito no Partner Center, a equipe de validação aprovará e publicará seu aplicativo. Aguarde pelo menos um dia útil para que o aplicativo esteja disponível na loja do Teams.
 
-## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Dicas aprovação rápida para publicar seu aplicativo
+## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Dicas para aprovação rápida para publicar seu aplicativo
 
-* **Durante a fase de design**
+* **Durante a fase de projeto**
 
-  Revise as [diretrizes](prepare/teams-store-validation-guidelines.md) de validação da loja no início do ciclo de vida do aplicativo (fase de design) para garantir que você crie seu aplicativo em alinhamento com os requisitos da loja. Se você criar seu aplicativo de acordo com essas diretrizes, isso impedirá qualquer retrabalho devido à não adesão às políticas de armazenamento.
+  Revise as diretrizes de [validação do repositório](prepare/teams-store-validation-guidelines.md) no início do ciclo de vida do seu aplicativo (fase de design) para garantir que você crie seu aplicativo de acordo com os requisitos da loja. Se você criar seu aplicativo de acordo com essas diretrizes, isso impedirá qualquer retrabalho devido à não adesão às políticas de armazenamento.
 
-* **Antes do envio do aplicativo**
+* **Antes do envio de aplicativo**
 
-  1. [Crie sua conta do Partner Center](prepare/create-partner-center-dev-account.md) com antecedência. Se você enfrentar quaisquer desafios com sua [conta do Partner Center](prepare/create-partner-center-dev-account.md), crie um [tíquete de suporte](/azure/marketplace/partner-center-portal/support).
+  1. [Crie sua conta do Partner Center com antecedência](prepare/create-partner-center-dev-account.md). Se você encontrar algum desafio com sua [conta do Partner Center](prepare/create-partner-center-dev-account.md), crie um [tíquete de suporte](/azure/marketplace/partner-center-portal/support).
 
-  1. Revise as [diretrizes de validação da](prepare/teams-store-validation-guidelines.md) loja novamente para garantir que seu aplicativo está em alinhamento com os requisitos da loja. Isso ajuda a reduzir o número de problemas observados em seu aplicativo e, consequentemente, o tempo gasto para aprovar seu aplicativo.
+  1. Revise as [diretrizes de validação do repositório](prepare/teams-store-validation-guidelines.md) novamente para garantir que seu aplicativo esteja alinhado com os requisitos da loja. Isso ajuda a reduzir o número de problemas observados em seu aplicativo e, consequentemente, o tempo necessário para aprovar seu aplicativo.
 
-  1. Teste e teste seu aplicativo de novo:
+  1. Teste e teste novamente seu aplicativo:
 
-     1. Valide seu pacote de aplicativos usando o [Teams Portal do Desenvolvedor](https://dev.teams.microsoft.com/home) para identificar e corrigir quaisquer erros de pacote.
+     1. Valide seu pacote de aplicativo usando o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/home) do Teams para identificar e corrigir erros de pacote.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="validação da loja":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="validação do repositório":::
  
-     1. Teste seu aplicativo completamente antes do envio do aplicativo para garantir que ele adere às políticas da loja. Fazer sideload do aplicativo Teams e testar os fluxos de usuário de ponta a ponta para seu aplicativo. Verifique se a funcionalidade funciona conforme o esperado, os links não são quebrados, a experiência do usuário não é bloqueada e se as limitações são claramente realçadas.
+     1. Teste seu aplicativo completamente antes do envio do aplicativo para garantir que ele siga as políticas da loja. Faça sideload do aplicativo no Teams e teste os fluxos de usuário de ponta a ponta para seu aplicativo. Verifique se a funcionalidade funciona conforme o esperado, se os links não estão quebrados, se a experiência do usuário não está bloqueada e se há limitações claramente realçadas.
 
-     1. Teste seu aplicativo em clientes desktop, web e móveis. Verifique se o aplicativo está respondendo entre diferentes fatores de formulário.
+     1. Teste seu aplicativo na área de trabalho, na Web e em clientes móveis. Verifique se o aplicativo está respondendo entre diferentes fatores forma.
 
-  1. [Conclua a verificação do](/azure/active-directory/develop/publisher-verification-overview) editor antes de enviar seu aplicativo. Se você tiver problemas, poderá criar um tíquete [de suporte para](/azure/marketplace/partner-center-portal/support) resolução.
+  1. Conclua a [verificação do editor](/azure/active-directory/develop/publisher-verification-overview) antes de enviar seu aplicativo. Se você tiver algum problema, poderá criar um [tíquete de suporte](/azure/marketplace/partner-center-portal/support) para resolução.
 
-  1. Ao se preparar para o envio do aplicativo, [siga a lista de](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) verificação e inclua os seguintes detalhes como parte do pacote de envio:
+  1. Ao se preparar para o envio do aplicativo, [siga a lista de verificação](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) e inclua os seguintes detalhes como parte do pacote de envio:
 
-      1. Pacote de aplicativo totalmente verificado.
+      1. Pacote do aplicativo verificado por completo.
 
-      1. Trabalhando com credenciais de usuário de administrador e não administrador para testar a funcionalidade do aplicativo (se seu aplicativo oferecer um modelo de assinatura premium).
+      1. Credenciais de usuário administrador e não administrador em funcionamento para testar a funcionalidade do seu aplicativo (se seu aplicativo oferecer um modelo de assinatura premium).
 
-      1. Instruções de teste detalhando a funcionalidade do aplicativo e cenários com suporte.
+      1. Instruções de teste detalhando a funcionalidade do aplicativo e os cenários com suporte.
 
-      1. Instruções de instalação se seu aplicativo exigir configuração adicional para acessar a funcionalidade do aplicativo. Como alternativa, se seu aplicativo exigir configuração complexa, você também poderá fornecer acesso de administrador a um locatário [de demonstração](/office/developer-program/microsoft-365-developer-program-get-started) provisionado para que nossos validadores possam ignorar as etapas de configuração.
+      1. Instruções de configuração se seu aplicativo exigir configuração adicional para acessar a funcionalidade do aplicativo. Como alternativa, se seu aplicativo exigir configuração complexa, você também poderá fornecer um [locatário de demonstração provisionado](/office/developer-program/microsoft-365-developer-program-get-started) com acesso de administrador para que nossos validadores possam pular as etapas de configuração.
 
-      1. Vincule a um fluxo de usuário chave de gravação de vídeo de demonstração para seu aplicativo. Isso é altamente recomendado.
+      1. Link para um fluxo de usuário chave de gravação de vídeo de demonstração para seu aplicativo. Isso é altamente recomendado.
 
-* **Post app submission**
+* **Postar envio de aplicativo**
 
-  * Depois de revisar o relatório de validação, responda ao thread de email com quaisquer consultas relacionadas ao relatório de validação ou se você precisar de suporte adicional para resolver os problemas relatados.
+  * Depois de examinar o relatório de validação, responda ao thread de email com todas as consultas relacionadas ao relatório de validação ou se precisar de suporte adicional para resolver os problemas relatados.
 
-  * Verifique se você tem largura de banda adequada do desenvolvedor para resolver quaisquer problemas relatados até que o aplicativo seja aprovado.
+  * Verifique se você tem largura de banda de desenvolvedor adequada para resolver quaisquer problemas relatados até que o aplicativo seja aprovado.
 
-  * Certifique-se de ter resolvido [todos os problemas](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) relatados pelo serviço de teamsubm@microsoft.com antes de [](mailto:teamsubm@microsoft.com) compartilhar seu pacote de aplicativos para testes posteriores. Isso ajuda a reduzir o número de iterações necessárias para validar seu aplicativo e, consequentemente, o tempo necessário para aprovar seu aplicativo.
+  * Certifique-se de ter resolvido [todos os problemas relatados](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) a você pelo serviço de concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) antes de compartilhar seu pacote de aplicativos para testes adicionais. Isso ajuda a reduzir o número de iterações necessárias para validar seu aplicativo e, consequentemente, o tempo necessário para aprovar seu aplicativo.
   
   * Evite alterar a funcionalidade do aplicativo durante o processo de validação. Isso pode levar à descoberta de novos problemas e aumentar o tempo necessário para aprovar seu aplicativo.
 
 ## <a name="see-also"></a>Confira também
 
-* [Publicação para Microsoft 365 App Stores](/office/dev/store/)
-* [Upload seu Teams app](~/concepts/deploy-and-publish/apps-upload.md)
-* [Publicar seu Teams aplicativo em sua organização](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Planejar a experiência de integração para usuários](../../design/understand-use-cases.md#plan-the-onboarding-experience)
-* [Distribuindo aplicativos de guia em dispositivos móveis](../../../tabs/design/tabs-mobile.md#distribution)
+* [Publicando nas lojas de aplicativos do Microsoft 365](/office/dev/store/)
+* [Carregue seu aplicativo Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Publicar seu aplicativo Teams em sua organização](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+* [Planejar a experiência de integração para os usuários](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Distribuindo aplicativos de guia no celular](../../../tabs/design/tabs-mobile.md#distribution)
 * [Teste de visualização para aplicativos monetizados](prepare/Test-preview-for-monetized-apps.md)
