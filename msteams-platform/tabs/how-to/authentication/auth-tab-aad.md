@@ -4,12 +4,12 @@ description: Descreve a autenticação no Teams e como usá-la em guias
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821714"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897932"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma Microsoft Teams guia
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Notas
+### <a name="notes"></a>Observações
 
 * A URL que você passa é `microsoftTeams.authentication.authenticate()` a página inicial do fluxo de autenticação. Neste exemplo, que é `/tab-auth/simple-start`. Isso deve corresponder ao que você registrou no Portal de Registro de Aplicativos [do Azure AD](https://apps.dev.microsoft.com).
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 Depois que o usuário concluir a autorização, o usuário será redirecionado para a página de retorno de chamada especificada para seu aplicativo em `/tab-auth/simple-end`.
 
-### <a name="notes"></a>Notas
+### <a name="notes"></a>Observações
 
 * Consulte [obter informações de contexto do usuário](~/tabs/how-to/access-teams-context.md) para ajudar a criar solicitações de autenticação e URLs. Por exemplo, você pode usar o nome de logon `login_hint` do usuário como o valor para entrar no Azure AD, o que significa que o usuário pode precisar digitar menos. Lembre-se de que você não deve usar esse contexto diretamente como prova de identidade, pois um invasor pode carregar sua página em um navegador mal-intencionado e fornecer todas as informações que quiser.
 * Embora o contexto de tabulação fornece informações úteis sobre o usuário, não use essas informações para autenticar o usuário se você as recebe como parâmetros de URL para a URL `microsoftTeams.getContext()` de conteúdo da guia ou chamando a função no SDK do cliente Microsoft Teams. Um ator mal-intencionado poderia invocar sua URL de conteúdo de tabulação com seus próprios parâmetros, e uma página da Web que representa Microsoft Teams poderia carregar sua URL de conteúdo de tabulação em um iframe `getContext()` e retornar seus próprios dados para a função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usá-las.
@@ -136,7 +136,7 @@ if (hashParams["error"]) {
 
 Este código faz uma análise dos pares de valores-chave recebidos do Azure AD ao `window.location.hash` usar a `getHashParameters()` função auxiliar. Se ele encontrar um `access_token`, `state` e o valor for o mesmo fornecido no início do fluxo de autenticação, ele retornará o token de acesso `notifySuccess()`à guia chamando ; caso contrário, ele relata um erro com `notifyFailure()`.
 
-### <a name="notes"></a>Notas
+### <a name="notes"></a>Observações
 
 `NotifyFailure()` tem os seguintes motivos de falha predefinidos:
 
@@ -165,7 +165,7 @@ Código de exemplo mostrando o processo de autenticação de tabulação usando 
 
 ## <a name="see-also"></a>Confira também
 
-* [Planejar a autenticação do usuário](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Planejar a autenticação do usuário](../../../concepts/design/understand-use-cases.md)
 * [Projete sua guia para o Microsoft Teams](~/tabs/design/tabs.md)
 * [Autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [Adicionar autenticação à sua extensão de mensagens](~/messaging-extensions/how-to/add-authentication.md)
