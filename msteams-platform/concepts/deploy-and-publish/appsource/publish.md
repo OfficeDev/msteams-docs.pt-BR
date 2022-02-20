@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896317"
+ms.locfileid: "62898059"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -95,7 +95,7 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 
      1. Valide seu pacote de aplicativo usando o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/home) do Teams para identificar e corrigir erros de pacote.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="validação do repositório":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Validação do aplicativo da loja do Microsoft Teams no Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. Teste seu aplicativo completamente antes do envio do aplicativo para garantir que ele siga as políticas da loja. Faça sideload do aplicativo no Teams e teste os fluxos de usuário de ponta a ponta para seu aplicativo. Verifique se a funcionalidade funciona conforme o esperado, se os links não estão quebrados, se a experiência do usuário não está bloqueada e se há limitações claramente realçadas.
 
@@ -130,6 +130,6 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 * [Publicando nas lojas de aplicativos do Microsoft 365](/office/dev/store/)
 * [Carregue seu aplicativo Teams](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publicar seu aplicativo Teams em sua organização](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Planejar a experiência de integração para os usuários](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Planejar a experiência de integração para os usuários](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distribuindo aplicativos de guia no celular](../../../tabs/design/tabs-mobile.md#distribution)
 * [Teste de visualização para aplicativos monetizados](prepare/Test-preview-for-monetized-apps.md)

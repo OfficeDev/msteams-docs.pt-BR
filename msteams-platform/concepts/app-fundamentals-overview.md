@@ -1,52 +1,107 @@
 ---
-title: Visão geral dos fundamentos do desenvolvimento de aplicativos
+title: Planejar a visão geral do seu aplicativo
 author: heath-hamilton
-description: Descreva os conceitos fundamentais do desenvolvimento Teams plataforma, como recursos de aplicativo e pontos de entrada, noções básicas sobre casos de uso e mapeamento deles para recursos de aplicativos e planejamento de aplicativos.
+description: Apresente os elementos de planejamento de um aplicativo, compreensão dos casos de uso, recursos do aplicativo e outros recursos do Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: pontos de entrada extensibilidade recurso de dispositivo de uso de casos
-ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: casos de uso funcionalidade do dispositivo de extensibilidade pontos de entrada
+ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948422"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898038"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams básicos de desenvolvimento de aplicativos
+# <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
-Microsoft Teams básicos do aplicativo dão a direção que você precisa para criar seu aplicativo Teams personalizado. Você pode reconhecer a estrutura necessária para planejar seu Teams app. O documento ajuda você a entender a comunicação usuário-aplicativo e descobrir o tipo de superfícies de aplicativo que você precisa usar ou as APIs que seu aplicativo pode exigir no processo. Obter alguma inspiração para adotar a interatividade que pode aprofundar a experiência do aplicativo quando você se integra Teams.
+Criar um aplicativo incrível do Teams tem tudo a ver com encontrar a combinação certa de recursos para atender às necessidades do usuário. O design, os recursos e funcionalidades de um aplicativo derivam dessa finalidade.
 
-## <a name="capabilities-and-entry-points"></a>Recursos e pontos de entrada
+Em sua essência, o Teams é uma plataforma de colaboração. Também é uma plataforma social, é nativamente multiplataforma, está no coração do Office 365 e oferece uma tela pessoal para você criar aplicativos.
 
-Você pode estender seu Teams de várias maneiras. Para poder estender seu aplicativo, você deve entender todos os principais recursos e os pontos de entrada que funcionam em um espaço colaborativo. Você pode experimentar os pontos de extensão para criar seus aplicativos. Componentes importantes do projeto de aplicativo ajudam você a configurar corretamente a página do aplicativo. Teams aplicativo pode ter [vários recursos e](../concepts/capabilities-overview.md) pontos de [entrada.](../concepts/extensibility-points.md)
+Nesta seção, saiba como:
 
-## <a name="understand-your-use-cases"></a>Compreender os casos de uso
+ - Identifique e mapeie casos de uso para recursos do Microsoft Teams.
+ - Utilize a lista de verificação de planejamento.
+ - Planeje além da Implantação de aplicativos.
 
-Você pode reconhecer problemas do usuário e identificar as respostas a alguns problemas comuns que os usuários enfrentam. Você pode criar seu Teams de usuário encontrando a combinação certa para atender às necessidades do usuário. [Entenda os casos de](../concepts/design/understand-use-cases.md) uso para saber como um usuário final interage com seu aplicativo. Você aprende a entender o usuário e seus problemas. Algumas perguntas comuns respondidas são as seguinte:
+## <a name="plan-with-teams"></a>Planejar com Microsoft Teams
 
-* Você precisa de autenticação?
-* Qual é o problema que seu aplicativo vai resolver?
-* Who são os usuários finais do aplicativo?
-* Como deve ser a experiência de integração e o que mais o aplicativo pode fazer?
+O Microsoft Teams como plataforma oferece kits de ferramentas, bibliotecas e aplicativos em todos os estágios do desenvolvimento de aplicativos. Vamos dividi-lo para o ciclo de vida de criação de aplicativos:
 
-## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="A ilustração mostra o planejamento do seu aplicativo" border="true":::
 
-[Mapear seus casos de uso](../concepts/design/map-use-cases.md) abrange alguns cenários comuns e como escolher os recursos do seu aplicativo. Informações para compartilhar seu aplicativo e colaborar em itens em um sistema externo são fornecidas. Você também pode aprender a iniciar fluxos de trabalho e enviar notificações aos usuários. Obter dicas adicionais sobre por onde começar, como obter social com usuários, bots de conversa e combinar vários recursos.
+- [Antes da sua build](#before-you-build)
+- [Durante a build](#during-build)
+- [Pós-build](#post-build)
+- [Lista de verificação de planejamento](../concepts/design/planning-checklist.md)
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
-[Planeje guias responsivas para Teams móveis](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) aborda cenários comuns e ajuda no planejamento de aplicativos para Teams celular. O documento orienta sobre como estratégias para aplicativos em dispositivos móveis. Você também pode aprender sobre as diferentes sátiras e diferentes tipos de Teams app.
+### <a name="before-you-build"></a>Antes da sua build
 
-## <a name="integrate-device-capabilities"></a>Integrar recursos de dispositivo
+Entender o usuário e sua preocupação são os primeiros indicadores de como um aplicativo do Microsoft Teams pode ajudar. Construa seu caso de uso em torno do problema, determine como um aplicativo pode resolvê-lo e desenhe uma solução.
 
-Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
+- **Entenda seu caso de uso e os recursos do Aplicativo Teams**: Entenda os requisitos do seu usuário e você poderá identificar os recursos certos.
+
+- **Mapear seus casos de uso**: Mapeie casos de uso comuns para recursos do Teams com base em requisitos, tais como compartilhamento, colaboração, fluxos de trabalho, plataformas sociais relevantes e muito mais.
+
+- **Planeje guias responsivas para o Microsoft Teams Mobile**: Ele aborda cenários comuns e ajuda no planejamento de aplicativos para o Teams Mobile.
+
+### <a name="during-build"></a>Durante a build
+
+- **Criar e Compilar projeto de aplicativos**: Com o Microsoft Teams, você pode escolher o ambiente de compilação que melhor se adapta aos seus requisitos de aplicativo. Use o Kit de Ferramentas do Teams ou outros SDKs, como C#, Blazor, Node.js e muito mais para começar.
+
+- **Crie a interface do usuário do seu aplicativo**: use o Teams UI Toolkit e a UI Library para projetar o layout do seu aplicativo.
+
+- **Use o Microsoft Teams como uma plataforma**: A plataforma do Microsoft Teams ajuda você a criar um aplicativo único ou com vários recursos. Seu aplicativo do Microsoft Teams é apoiado por produtos e serviços integrados que fortalecem a experiência do aplicativo.
+
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams." border="true":::
+
+    Seus aplicativos aparecem no Teams como guias, bots, extensões de mensagens, conectores e webhooks ou como um aplicativo de vários recursos. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
+
+    Juntos, essas funcionalidades dão vida à sua solução de aplicativo.
+
+- **Integrar funcionalidades do dispositivo**: Você pode integrar as funcionalidades nativos do dispositivo em seu aplicativo, tais como câmera, leitor de QR ou código de verificador, galeria de fotos, microfone e localização.
+
+### <a name="post-build"></a>Pós-build
+
+- Integre seu aplicativo com o Teams e outros aplicativos, tais como o Microsoft 365, Microsoft Graph e muito mais.
+- Utilize o Portal do Desenvolvedor para configurar, gerenciar e implantar seu aplicativo.
+
+<details>
+<summary><b>Saiba mais sobre o Nuvem da Comunidade Governamental (GCC)</b></summary>
+
+Nuvem da Comunidade Governamental é uma cópia do ambiente comercial focada no governo. O Departamento de Defesa (DOD) e os prestadores de serviço federais devem atender aos rigorosos requisitos de segurança cibernética e conformidade. Para esse fim, a GCC-High foi criada para atender às necessidades dos prestadores de serviços Federais e do DOD. A GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberano. A nuvem do DOD foi criada somente para o Departamento de Defesa.
+
+A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GCC-High e o DOD:
+
+| Recursos   | CCG | GCC-High | DOD |
+|-------------|---------|---|---|
+| Aplicativos de propriedade de Teams como em aplicativos desenvolvidos internamente | ✔️ O aplicativo está habilitado se tiver a GCC. | ✔️ O aplicativo está habilitado se tiver a GCC-High. | ✔️ O aplicativo está habilitado se tiver o DOD. |
+| Aplicativos da Microsoft | ✔️ Aplicativos da Microsoft compatíveis com o GCC | ✔️ Aplicativos da Microsoft compatíveis com a GCC-High. | ✔️ Aplicativos da Microsoft compatíveis com o DOD |
+| Aplicativos 3p ou de terceiros | ✔️ Aplicativos de terceiros estão disponíveis. Desativado por padrão e o administrador de locatários utiliza seu próprio critério para habilita-lo. | ❌ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️ | ✔️ |
+| Sideload de aplicativos | ✔️ | ❌ | ❌ |
+| Bots personalizados ou Lob | ✔️ | ❌ | ❌ |
+| Extensões de mensagens personalizadas | ❌ | ❌ | ❌ |
+| Conectores personalizados | ❌ | ❌ | ❌ |
+
+A lista a seguir ajuda a identificar a disponibilidade da GCC, GCC High e do DOD para os recursos:
+
+- Para aplicativos de terceiros, consulte [aplicativos Web](../samples/integrating-web-apps.md) e [extensibilidade de aplicativos de reunião](../apps-in-teams-meetings/meeting-app-extensibility.md).
+- Para bots, consulte [criar seu primeiro bot de conversação para o Teams](../get-started/first-app-bot.md), [criação do seu bot do Teams](../bots/design/bots.md), [adicionar bots aos aplicativos do Microsoft Teams](../resources/bot-v3/bots-overview.md) e [bots no Teams](../bots/what-are-bots.md).
+- Para aplicativos de sideload, consulte [permitir que seu aplicativo Microsoft Teams seja personalizado](../concepts/design/enable-app-customization.md), [distribuir seu aplicativo Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md) e [Carregar seu aplicativo no Teams ](../concepts/deploy-and-publish/apps-upload.md).
+- Para conectores personalizados, consulte [criar conectores do Office 365 para Microsoft Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
+</details>
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Compreender Teams de aplicativos](capabilities-overview.md)
+> [Casos de uso e recursos do Microsoft Teams](design/understand-use-cases.md)
 
 ## <a name="see-also"></a>Confira também
 
-* [Considerações sobre a Teams integração](../samples/integrating-web-apps.md)
-* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+- [Lista de verificação de planejamento](../concepts/design/planning-checklist.md)
+- [Considerações para a integração do Microsoft Teams](../samples/integrating-web-apps.md)
+- [Crie seu primeiro aplicativo do Microsoft Teams ](../build-your-first-app/build-first-app-overview.md)
