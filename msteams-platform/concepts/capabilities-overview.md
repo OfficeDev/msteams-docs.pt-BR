@@ -1,81 +1,165 @@
 ---
-title: Compreender os recursos do aplicativo
+title: Entenda os recursos do aplicativo
 author: heath-hamilton
-description: Descrição Teams recursos do aplicativo, como guias, bots, extensões de mensagens e webhooks e conectores.
+description: Descrição dos recursos do aplicativo Teams, como Guias, Bots, Extensões de mensagens e Webhooks e conectores; escopo do aplicativo, como aplicativos pessoais e compartilhados
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
-keywords: guias bots extensões de mensagens webhooks conectores gcc
-ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
-ms.translationtype: MT
+keywords: guias bots extensões de mensagens webhooks conectores
+ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246075"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897967"
 ---
-# <a name="understand-microsoft-teams-app-capabilities"></a>Compreender Microsoft Teams recursos do aplicativo
+# <a name="understand-microsoft-teams-app-features"></a>Entenda os recursos do aplicativo Microsoft Teams
 
-Extensibilidade ou pontos de entrada são maneiras diferentes nas quais um aplicativo pode se manifesto para um usuário. Por exemplo, um usuário pode interagir com um aplicativo em uma guia de tela para fazer uma atividade ou pode optar por fazer o mesmo usando um bot de conversa. Os vários recursos usados para criar seu aplicativo Teams permite que você aumente seu escopo de uso.
+Há várias maneiras de estender o Teams para que cada aplicativo seja exclusivo. Um aplicativo do Teams pode se manifestar para um usuário de diferentes maneiras. Os recursos de um aplicativo do Teams incluem:
 
-Há várias maneiras de estender Teams, portanto, cada aplicativo é exclusivo. Alguns têm apenas um recurso, como um webhook, enquanto outros têm mais de um recurso para dar aos usuários várias opções. Por exemplo, seu aplicativo pode exibir dados em  um local central, ou seja, a guia e apresentar essas mesmas informações por meio de uma interface de conversa, ou seja, o **bot**.
+- Recursos do aplicativo
+- Escopo do aplicativo
+
+Por exemplo, um usuário pode interagir com um aplicativo em uma guia de tela para fazer uma atividade ou pode optar por fazer o mesmo usando um bot de conversa. Você pode usar apenas uma funcionalidade, como um webhook, enquanto outras têm mais de um recurso para oferecer várias opções aos usuários.
+
+Esses recursos pode existir em escopos diferentes. Por exemplo, seu aplicativo pode exibir dados em um local compartilhado central, ou seja, a guia e apresentar essas mesmas informações por meio de uma interface de conversa pessoal, ou seja, o bot.
 
 ## <a name="app-capabilities"></a>Recursos do aplicativo
 
-Seus Teams aplicativos têm um ou todos os seguintes recursos principais:
+Para poder estender seu aplicativo, você deve entender todos os recursos principais e os pontos de entrada que funcionam em um espaço colaborativo. Você pode experimentar os pontos de extensão para criar seus aplicativos. Componentes importantes do projeto do aplicativo ajudam você a configurar corretamente a página do aplicativo.
 
-* [Guias](../tabs/what-are-tabs.md)
-* [Extensões de Mensagens](../messaging-extensions/what-are-messaging-extensions.md)
-* [Bots](../bots/what-are-bots.md)
-* [Webhooks e conectores](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Seus aplicativos do Teams têm um ou todos os seguintes recursos principais:
 
-Seu aplicativo também pode tirar proveito dos recursos avançados, como a [API do Microsoft Graph para Teams](/graph/teams-concept-overview).
+:::row:::
+   :::column span="":::
+### <a name="personal-apps"></a>Aplicativos pessoais
 
-A ilustração a seguir fornece uma ideia de quais recursos fornecerão os recursos que você deseja em seu aplicativo:
+Um [aplicativo pessoal](../concepts/design/personal-apps.md) é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
 
-:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mapeie ilustrando quais são Teams de aplicativos.":::
+   :::column-end:::
 
-## <a name="always-consider-your-user"></a>Sempre considere seu usuário
+   :::column span="":::
 
-À medida que você se familiariza com Teams desenvolvimento de aplicativos, você compreende seus principais fundamentos. Você entende que há mais de uma maneira de criar determinados recursos. Nesses cenários, considere como você pode fornecer uma experiência mais nativa ao usuário.
-Por exemplo, você pode coletar a entrada do usuário em um formulário criado como uma guia no aplicativo. Você também pode fazer isso usando um módulo de tarefa sem alternar exibições e interromper o fluxo de trabalho do usuário. É importante escolher pontos de extensão que forneçam menor desvio do fluxo de trabalho regular de um usuário.
+:::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Representação conceitual de como são as aplicações pessoais no cliente do Teams." border="false":::
 
-## <a name="government-community-cloud-gcc"></a>Nuvem Comunitária Governamental (GCC)
+   :::column-end:::
 
-Nuvem da Comunidade Governamental é uma cópia do ambiente comercial com foco no governo. O Departamento de Defesa (DOD) e os prestadores de serviços federais devem atender aos requisitos rigorosos de segurança cibernética e conformidade. Para essa finalidade, GCC-High foi criado para atender às necessidades do DOD e dos prestadores de serviços federais. GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberana. A nuvem do DOD foi criada apenas para o Departamento de Defesa.
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="tabs"></a>Guias
+
+Exiba seu conteúdo baseado na Web em uma [aba](../tabs/what-are-tabs.md) em que as pessoas possam discutir e trabalhar em conjunto.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Representação conceitual de como são as abas no cliente do Teams." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="bots"></a>Bots
+
+As conversas geralmente resultam na necessidade de fazer algo (gerar um pedido, revisar meu código, verificar o status do tíquete e assim por diante). Um [bot](../bots/what-are-bots.md) pode dar início a este tipo de fluxo de trabalho dentro do Teams.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="Representação conceitual de como são os bots no cliente do Teams." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="messaging-extensions"></a>Extensões de mensagens
+
+Com as [extensões de mensagens](../messaging-extensions/what-are-messaging-extensions.md), você pode compartilhar rapidamente informações externas em uma conversa. Você também pode agir em uma mensagem, como criar um tíquete de ajuda com base no conteúdo de uma postagem de canal.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="Representação conceitual de como são as extensões de mensagens no cliente do Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="meeting-extensions"></a>Extensões de reunião
+
+Há algumas opções para [incorporar seu aplicativo na experiência de chamada do Teams](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Representação conceitual de como são as extensões de reuniões no cliente do Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="webhooks-and-connectors"></a>Webhooks e conectores
+
+[Webhooks de entrada](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) são uma maneira simples de enviar notificações automaticamente de outro aplicativo para um canal do Teams. Com os [webhooks de saída](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), envie uma mensagem a seu serviço web com uma @menção.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-connectors.png" alt-text="Representação conceitual de como são os conectores no cliente do Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para o Teams
+
+A [API do Microsoft Graph para Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que podem ajudá-lo a criar ou aprimorar recursos para seu aplicativo (como, por exemplo, notificações ricas).
+
+   :::column-end:::
 
 > [!NOTE]
-> Teams store evoluiu:
+> A loja do Teams evoluiu:
 > 
-> Anteriormente, os aplicativos LOB eram atualizados selecionando as releições no azulejo. Com a experiência de Teams de armazenamento atualizada, agora você pode atualizar os aplicativos LOB fazendo logom no Centro de Administração [Teams.](https://admin.teams.microsoft.com)
+> Anteriormente, os aplicativos LOB eram atualizados selecionando as reticências no bloco. Com a experiência atualizada da loja do Teams, agora você pode atualizar os aplicativos LOB fazendo logon no [Centro de Administrador do Teams](https://admin.teams.microsoft.com).
 
-A tabela a seguir inclui Teams recursos e disponibilidade para GCC, GCC-Alta e DOD:
+:::image type="content" source="../assets/images/overview-graph.png" alt-text="Representação conceitual do Microsoft Graph API para o Teams." border="false":::
 
-| Recursos   | CCG | GCC-High | DOD |
-|-------------|---------|
-| Teams aplicativos de propriedade como em aplicativos desenvolvidos internamente | ✔️ App será habilitado se tiver GCC. | ✔️ App será habilitado se tiver GCC-High. | ✔️ App está habilitado se tiver DOD. |
-| Aplicativos da Microsoft | ✔️ aplicativos Microsoft compatíveis com GCC | ✔️ aplicativos Microsoft compatíveis com GCC-High | ✔️ microsoft apps compatíveis com o DOD |
-| Aplicativos 3p ou de terceiros | ✔️ aplicativos de terceiros estão disponíveis. Desabilitado por padrão e o administrador do locatário usa sua própria discrição para habilita-lo. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
-| Aplicativos de tabulação personalizados ou lob |  ✔️ | ✔️ | ✔️ |
-| Sideload de aplicativos | ✔️ | ❌ | ❌ |
-| Bots personalizados ou Lob | ✔️ | ❌ | ❌ |
-| Extensões de mensagens personalizadas | ❌ | ❌ | ❌ |
-| Conectores personalizados | ❌ | ❌ | ❌ |
+   :::column-end:::
+:::row-end:::
 
-A lista a seguir ajuda a identificar a disponibilidade de GCC, GCC-Alta e DOD para os recursos:
+## <a name="choose-the-correct-scope-for-your-app"></a>Escolha o escopo correto para o seu aplicativo
 
-* Para aplicativos de terceiros, consulte [aplicativos Web](../samples/integrating-web-apps.md) e [extensibilidade de aplicativos de reunião.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Para bots, consulte build your first [conversational bot for Teams](../get-started/first-app-bot.md), [designing](../bots/design/bots.md)your Teams bot , add [bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
-* Para fazer sideload de aplicativos, consulte enable your Teams app to be [customized](../concepts/design/enable-app-customization.md), distribute your [Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and Upload your app [in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* Para conectores personalizados, consulte [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+Você pode escolher o escopo do aplicativo a partir dos seguintes:
 
-## <a name="next-step"></a>Próxima etapa
-
-> [!div class="nextstepaction"]
-> [Pontos de entrada do aplicativo Teams](../concepts/extensibility-points.md)
+- Experiência de aplicativo pessoal: um aplicativo pessoal é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
+- Experiência de aplicativo compartilhado: equipe, canal e chat são espaços de colaboração. Os aplicativos nesses contextos estão disponíveis para todos nesse espaço. Os espaços de colaboração normalmente se concentram em fluxos de trabalho para as interações do seu aplicativo ou para desbloquear novas interações sociais.
 
 ## <a name="see-also"></a>Confira também
 
-* [Criar aplicativos para Teams](../overview.md)
-* [Criar seu primeiro Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Criar aplicativos para o Teams](../overview.md)
+* [Crie seu primeiro aplicativo do Microsoft Teams ](../build-your-first-app/build-first-app-overview.md)
