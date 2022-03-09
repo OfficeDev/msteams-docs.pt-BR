@@ -5,12 +5,12 @@ keywords: iniciando equipes do portal do desenvolvedor
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355710"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399321"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams
 
@@ -18,7 +18,7 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a home page do Portal do Desenvolvedor para Teams.":::
 
-> [!NOTE] 
+> [!NOTE]
 > Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
@@ -35,18 +35,18 @@ O Portal do Desenvolvedor fornece algumas maneiras de registrar um Teams aplicat
 
 Você pode configurar ambientes e variáveis globais para ajudar a fazer a transição do aplicativo do tempo de execução local para a produção. As variáveis globais são usadas em todos os ambientes.
 
-**Para configurar um ambiente**
+Para configurar um ambiente:
 
 1. No Portal do Desenvolvedor, selecione o aplicativo em que você está trabalhando.
 2. Vá até a **página Ambientes** e selecione **+ Adicionar um ambiente**.
 3. Selecione **+ Adicionar uma variável** para criar variáveis de configuração para seu ambiente.
 
-**Para usar variáveis**
+Para usar variáveis:
 
 Use os nomes de variáveis em vez de valores codificados para definir as configurações do aplicativo.
 
 1. Insira `{{` em qualquer campo no Portal do Desenvolvedor. Um menu suspenso com todas as variáveis que você criou para o ambiente escolhido juntamente com as variáveis globais é exibido.  
-1. Antes de baixar o pacote do aplicativo (por exemplo, ao se preparar para publicar no Teams store), selecione o ambiente que você deseja usar. As configurações do aplicativo são atualizadas automaticamente com base no ambiente. 
+1. Antes de baixar o pacote do aplicativo (por exemplo, ao se preparar para publicar no Teams store), selecione o ambiente que você deseja usar. As configurações do aplicativo são atualizadas automaticamente com base no ambiente.
 
 ## <a name="identify-app-owners"></a>Identificar proprietários de aplicativos
 

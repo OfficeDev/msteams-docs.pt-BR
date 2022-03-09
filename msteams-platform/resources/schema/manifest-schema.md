@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356417"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399097"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -481,7 +481,7 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |`context` | matriz de enumerações| 2|| O conjunto de `contextItem` escopos em que uma guia é compatível.|
 
 > [!NOTE]
->  O recurso searchUrl não está disponível para desenvolvedores de terceiros. Se as suas guias exigirem informações dependentes do contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, para obter mais informações, consulte [Obter contexto para sua guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+> O recurso searchUrl não está disponível para desenvolvedores de terceiros. Se as suas guias exigirem informações dependentes do contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, para obter mais informações, consulte [Obter contexto para sua guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>bots
 
@@ -638,7 +638,6 @@ Indica se deve ou não mostrar o indicador de carregamento quando um aplicativo 
 >[!NOTE]
 >Se você selecionar `showLoadingIndicator` como true no manifesto do aplicativo, para carregar a página corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa conforme descrito em [Mostrar um documento de indicador de carregamento nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
-
 ## <a name="isfullscreen"></a>isFullScreen
 
  **Opcional**—booliano
@@ -717,6 +716,7 @@ Defina as propriedades que o seu aplicativo usa para postar um feed de atividade
 Cadeia de caracteres - **opcional**.
 
 Especifica o escopo de instalação definido para este aplicativo por padrão. O escopo definido será a opção exibida no botão quando um usuário tentar adicionar o aplicativo. As opções são:
+
 * `personal`
 * `team`
 * `groupchat`
@@ -727,14 +727,15 @@ Especifica o escopo de instalação definido para este aplicativo por padrão. O
 **Opcional** - objeto
 
 Quando um escopo de instalação de grupo é selecionado, ele definirá o recurso padrão quando o usuário instalar o aplicativo. As opções são:
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -761,7 +762,7 @@ Você pode definir qualquer uma das seguintes propriedades:
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **Opcional**—booliano
- 
+
 Quando a propriedade `defaultBlockUntilAdminAction` é definida como **true**, o aplicativo fica oculto dos usuários por padrão até que o administrador permita. Se definido como **true**, o aplicativo ficará oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração do Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloqueio de aplicativos padrão, consulte [Ocultar o aplicativo Teams até a aprovação pelo administrador](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl

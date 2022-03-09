@@ -7,19 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: guias bots extensões de mensagens webhooks conectores
-ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 7200e785bc7c857aa65cf8b228720fe8e1d40a66
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355542"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398950"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Entenda os recursos do aplicativo Microsoft Teams
 
 Há várias maneiras de estender o Teams para que cada aplicativo seja exclusivo. Um aplicativo do Teams pode se manifestar para um usuário de diferentes maneiras. Os recursos de um aplicativo do Teams incluem:
 
-- Recursos do aplicativo
-- Escopo do aplicativo
+* Recursos do aplicativo
+* Escopo do aplicativo
 
 Por exemplo, um usuário pode interagir com um aplicativo em uma guia de tela para fazer uma atividade ou pode optar por fazer o mesmo usando um bot de conversa. Você pode usar apenas uma funcionalidade, como um webhook, enquanto outras têm mais de um recurso para oferecer várias opções aos usuários.
 
@@ -33,6 +33,7 @@ Seus aplicativos do Teams têm um ou todos os seguintes recursos principais:
 
 :::row:::
    :::column span="":::
+
 ### <a name="personal-apps"></a>Aplicativos pessoais
 
 Um [aplicativo pessoal](../concepts/design/personal-apps.md) é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
@@ -156,8 +157,8 @@ A [API do Microsoft Graph para Teams](/graph/teams-concept-overview) fornece ace
 
 Você pode escolher o escopo do aplicativo a partir dos seguintes:
 
-- Experiência de aplicativo pessoal: um aplicativo pessoal é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
-- Experiência de aplicativo compartilhado: equipe, canal e chat são espaços de colaboração. Os aplicativos nesses contextos estão disponíveis para todos nesse espaço. Os espaços de colaboração normalmente se concentram em fluxos de trabalho para as interações do seu aplicativo ou para desbloquear novas interações sociais.
+* Experiência de aplicativo pessoal: um aplicativo pessoal é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
+* Experiência de aplicativo compartilhado: equipe, canal e chat são espaços de colaboração. Os aplicativos nesses contextos estão disponíveis para todos nesse espaço. Os espaços de colaboração normalmente se concentram em fluxos de trabalho para as interações do seu aplicativo ou para desbloquear novas interações sociais.
 
 ## <a name="see-also"></a>Confira também
 

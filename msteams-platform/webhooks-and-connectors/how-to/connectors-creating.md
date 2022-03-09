@@ -6,12 +6,12 @@ keywords: conector do Office365 para equipes
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356095"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399195"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -37,12 +37,13 @@ Os usuários podem concluir toda a experiência de configuração do conector se
 1. O usuário seleciona **Salvar**, que dispara um retorno de chamada no código.
 
     > [!NOTE]
+    >
     > * O código pode processar o evento save recuperando as configurações de webhook. Seu código armazena o webhook para postar eventos mais tarde.
     > * A experiência de configuração é carregada em linha Teams.
 
 Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente em Teams. Seu código deve incluir o Microsoft Teams JavaScript SDK. Isso fornece acesso de código a APIs para executar operações comuns, como obter o usuário, canal ou contexto de equipe atual e iniciar fluxos de autenticação.
 
-**Para integrar a experiência de configuração**
+Para integrar a experiência de configuração:
 
 1. Inicializar o SDK chamando `microsoftTeams.initialize()`.
 1. Chamada `microsoftTeams.settings.setValidityState(true)` para habilitar **Salvar**.
@@ -143,9 +144,9 @@ A tabela a seguir fornece os parâmetros e os detalhes das propriedades de `GetS
 
 Seu código deve manipular os usuários que retornam para editar uma configuração de conector existente. Para fazer isso, chame `microsoftTeams.settings.setSettings()` durante a configuração inicial com os seguintes parâmetros:
 
-- `entityId` é a ID personalizada que representa o que o usuário configurou e entendeu pelo seu serviço.
-- `configName` é um nome que o código de configuração pode recuperar.
-- `contentUrl` é uma URL personalizada que é carregada quando um usuário edita uma configuração de conector existente.
+* `entityId` é a ID personalizada que representa o que o usuário configurou e entendeu pelo seu serviço.
+* `configName` é um nome que o código de configuração pode recuperar.
+* `contentUrl` é uma URL personalizada que é carregada quando um usuário edita uma configuração de conector existente.
 
 Essa chamada é feita como parte do manipulador de eventos save. Em seguida, quando o `contentUrl` é carregado, seu código deve `getSettings()` chamar para preencher previamente quaisquer configurações ou formulários em sua interface de usuário de configuração.
 
@@ -218,7 +219,7 @@ Execute os seguintes comandos no PowerShell do Exchange Online:
 * Para desabilitar conectores para o locatário: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
 * Para desabilitar mensagens ativas para o locatário: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
 * Para habilitar conectores para Teams, execute os seguintes comandos:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
@@ -243,7 +244,7 @@ Se você quiser que o conector seja disponibilizado apenas para os usuários em 
 
 Depois de carregar o pacote de aplicativos para configurar e usar o conector em uma equipe, instale o conector do catálogo de aplicativos da organização.
 
-**Para configurar um conector**
+Para configurar um conector:
 
 1. Selecione **Aplicativos** na barra de navegação esquerda.
 1. Na seção **Aplicativos** , selecione **Conectores**.
@@ -269,8 +270,8 @@ A tabela a seguir fornece o nome de exemplo e sua descrição:
 
 |**Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Conectores    | Exemplo Office 365 conector gerando notificações para Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.|  | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Conectores | Exemplo Office 365 conector gerando notificações para Teams canal.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.| | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 

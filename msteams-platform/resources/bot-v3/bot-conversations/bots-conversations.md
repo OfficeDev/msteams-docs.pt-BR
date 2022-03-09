@@ -1,16 +1,16 @@
 ---
 title: Enviar e receber mensagens com um bot
-description: Descreve como enviar e receber mensagens com bots no Microsoft Teams
+description: Descreve como enviar e receber mensagens com bots em Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
 keywords: mensagens de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518496"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399216"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa com um Microsoft Teams bot
 
@@ -25,7 +25,7 @@ Uma conversa é uma série de mensagens enviadas entre seu bot e um ou mais usu�
 Um bot se comporta um pouco diferente dependendo do tipo de conversa em que ele está envolvido:
 
 * [Bots em conversas de chat](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) de canal e grupo exigem que o usuário @mention o bot para invocá-lo em um canal.
-* [Bots em conversas de usuário](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) único não exigem um @mention - o usuário pode apenas digitar.
+* [Bots em conversas de usuário único](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) não exigem um @mention - o usuário pode apenas digitar.
 
 Para que o bot funcione em um escopo específico, ele deve ser listado como suporte a esse escopo no manifesto. Os escopos são definidos e discutidos ainda mais na [Referência do Manifesto](~/resources/schema/manifest-schema.md).
 
@@ -55,7 +55,7 @@ Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto
 | --- | :---: | :---: | --- |
 | Rich text  | ✔ | ✔ |  |
 | Imagens | ✔ | ✔ | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF; GIF animado não são suportados. |
-| Cartões | ✖ | ✔ | Consulte a [referência Teams cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
+| Cartões | ✖ | ✔ | Consulte a [Teams de cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
 | Emojis | ✖ | ✔ | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para face de goslinha. |
 |
 
@@ -86,7 +86,7 @@ Recomendamos que você especifique a altura e a largura de cada imagem usando XM
 Dependendo de quais escopos são declarados, seu bot pode receber mensagens nos seguintes contextos:
 
 * **chat pessoal** Os usuários podem interagir em uma conversa privada com um bot simplesmente selecionando o bot adicionado no histórico do chat ou digitando seu nome ou ID do aplicativo na caixa Para: em um novo chat.
-* **Canais** Um bot pode ser mencionado ("@_botname_") em um canal se tiver sido adicionado à equipe. Observe que respostas adicionais a um bot em um canal exigem a menção ao bot. Ele não responderá às respostas onde não é mencionada.
+* **Canais** Um bot pode ser mencionado ("@*botname*") em um canal se tiver sido adicionado à equipe. Observe que respostas adicionais a um bot em um canal exigem a menção ao bot. Ele não responderá às respostas onde não é mencionada.
 
 Para mensagens de entrada, seu bot recebe um [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) do tipo `messageType: message`. Embora o `Activity` objeto possa conter outros tipos de informações, como [](~/resources/bot-v3/bots-notifications.md#channel-updates) atualizações de canal enviadas ao bot, `message` o tipo representa a comunicação entre bot e usuário.
 

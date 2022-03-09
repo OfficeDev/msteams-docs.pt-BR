@@ -5,16 +5,17 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356438"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398733"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
 A seguir temos duas maneiras de adicionar uma formatação em rich text aos seus cartões:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ Os Cartões Adaptáveis oferecem suporte aos emojis. O código a seguir mostra u
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Cartão adaptável com um emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>Suporte a menções dentro dos Cartões Adaptáveis 
+### <a name="mention-support-within-adaptive-cards"></a>Suporte a menções dentro dos Cartões Adaptáveis
 
 Você pode adicionar @mentions no corpo de um Cartão Adaptável para bots e respostas de extensão de mensagens. Para adicionar @mentions nos cartões, siga a mesma lógica de notificação e renderização das [menções baseadas em mensagens nas conversas do canal e do chat em grupo](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots e extensões de mensagens podem incluir menções dentro do conteúdo do cartão nos elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet](https://adaptivecards.io/explorer/FactSet.html).
 
 > [!NOTE]
+>
 > * Atualmente, não há suporte para [elementos de mídia](https://adaptivecards.io/explorer/Media.html) em Cartões Adaptáveis na plataforma do Teams.
 > * Não há suporte para menções de canal e de equipe nas mensagens de bot.
 
@@ -173,29 +175,29 @@ O código a seguir mostra um exemplo de Cartão Adaptável com uma menção:
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>ID de Objeto e UPN do Microsoft Azure Active Directory (Azure AD) na menção do usuário 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>ID de Objeto e UPN do Microsoft Azure Active Directory (Azure AD) na menção do usuário
 
-A plataforma Teams permite mencionar usuários com a ID de Objeto do Microsoft Azure AD e o UPN (Nome de Princípio do Usuário), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada oferecem suporte às duas IDs de menção de usuário. 
+A plataforma Teams permite mencionar usuários com a ID de Objeto do Microsoft Azure AD e o UPN (Nome de Princípio do Usuário), além das IDs de menção existentes. Bots com Cartões Adaptáveis e Conectores com Webhooks de Entrada oferecem suporte às duas IDs de menção de usuário.
 
 A tabela a seguir descreve as IDs de menção de usuário que passaram a ter suporte recentemente:
 
-|IDs  | Recursos que oferecem suporte |   Descrição | Exemplo |
+|IDs  | Recursos que oferecem suporte | Descrição | Exemplo |
 |----------|--------|---------------|---------|
-| ID do objeto do Microsoft Azure AD | Bot, Conector |  ID de objeto do usuário do Microsoft Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| ID do objeto do Microsoft Azure AD | Bot, Conector |  ID de objeto do usuário do Microsoft Azure AD | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Conector | UPN do usuário do Microsoft Azure AD | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis
 
-Os bots dão suporte à menção de usuário com a ID de objeto e o UPN do Microsoft Azure AD, além das IDs existentes. O suporte a duas novas IDs está disponível nos bots para mensagens de texto, corpo dos Cartões Adaptáveis e resposta de extensão de mensagens. Os bots oferecem suporte às IDs de menção em conversas e cenários `invoke`. O usuário recebe uma notificação do feed de atividades quando estiver sendo mencionado (@mentioned) com as IDs. 
+Os bots dão suporte à menção de usuário com a ID de objeto e o UPN do Microsoft Azure AD, além das IDs existentes. O suporte a duas novas IDs está disponível nos bots para mensagens de texto, corpo dos Cartões Adaptáveis e resposta de extensão de mensagens. Os bots oferecem suporte às IDs de menção em conversas e cenários `invoke`. O usuário recebe uma notificação do feed de atividades quando estiver sendo mencionado (@mentioned) com as IDs.
 
 > [!NOTE]
 > As atualizações de esquema e as alterações da interface do usuário/experiência do usuário não são obrigatórias para menções do usuário com Cartões Adaptáveis em Bots.
 
-##### <a name="example"></a>Exemplo 
+##### <a name="example"></a>Exemplo
 
 Exemplo de menção de usuário em bots com Cartões Adaptáveis como se segue:
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ A imagem a seguir ilustra a menção do usuário com Cartão Adaptável no Bot:
 
 ![Menção do usuário em bot com Cartão Adaptável](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em um Webhook de Entrada com Cartões Adaptáveis 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em um Webhook de Entrada com Cartões Adaptáveis
 
 Os webhooks de entrada começam a dar suporte à menção de usuário Cartões Adaptáveis com a ID de objeto e o UPN do Microsoft Azure AD.
 
-> [!NOTE]    
-> * Habilite a menção de usuário no esquema para webhooks de entrada para dar suporte à ID de Objeto e UPN do Microsoft Azure AD. 
-> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com a ID de Objeto do Microsoft Azure AD e o UPN.      
+> [!NOTE]
+>
+> * Habilite a menção de usuário no esquema para webhooks de entrada para dar suporte à ID de Objeto e UPN do Microsoft Azure AD.
+> * As alterações de interface do usuário/experiência do usuário não são necessárias para menções de usuário com a ID de Objeto do Microsoft Azure AD e o UPN.
 
-##### <a name="example"></a>Exemplo 
+##### <a name="example"></a>Exemplo
 
 Exemplo de menção de usuário em Webhooks de Entrada como se segue:
 
@@ -417,6 +420,7 @@ A imagem aparece no modo de exibição estendida quando o usuário seleciona o �
 Na exibição estendida, os usuários podem ampliar e reduzir a imagem. Você pode selecionar as imagens do seu Cartão Adaptável que precisam ter essa capacidade.
 
 > [!NOTE]
+>
 > * A capacidade de ampliar e reduzir se aplica somente aos elementos de imagem com o tipo de imagem de um Cartão Adaptável.
 > * No caso dos aplicativos móveis do Teams, a funcionalidade de exibição estendida para as imagens nos Cartões Adaptáveis está disponível por padrão. Os usuários podem visualizar as imagens do Cartão Adaptável no modo exibição estendida simplesmente tocando na imagem, independentemente de o atributo `allowExpand` estar presente ou não.
 
@@ -427,7 +431,7 @@ Os cartões de conector oferecem um suporte limitado à formatação Markdown e 
 | Estilo | Exemplo | Markdown |
 | --- | --- | --- |
 | Negrito | **text** | `**text**` |
-| Itálico | *text* | `*text*` |
+| Itálico | _text_ | `*text*` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `### Text`|
 | Tachado | ~~text~~ | `~~text~~` |
 | Lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ Os cartões de conector oferecem um suporte limitado à formatação Markdown e 
 | Estilo | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
-| Itálico | *text* | `<em>text</em>` |
+| Itálico | _text_ | `<em>text</em>` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ Os cartões simples, como cartões com imagem em destaque e em miniatura, oferec
 | Estilo | Exemplo | HTML |
 | --- | --- | --- |
 | Negrito | **text** | `<strong>text</strong>` |
-| Itálico | *text* | `<em>text</em>` |
+| Itálico | _text_ | `<em>text</em>` |
 | Cabeçalho (níveis 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista não ordenada | <ul><li>texto</li><li>texto</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

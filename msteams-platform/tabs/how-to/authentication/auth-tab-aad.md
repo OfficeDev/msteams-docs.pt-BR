@@ -4,23 +4,23 @@ description: Descreve a autenticação no Teams e como usá-la em guias
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ae0f14195ef686bf915884b86e1ba71c15c08133
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897932"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398985"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar um usuário em uma Microsoft Teams guia
 
 > [!Note]
-> Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que esteja usando a versão 1.4.1 ou posterior do SDK do Teams JavaScript.
+> Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que você esteja usando a versão 1.4.1 ou posterior do SDK javascript do Teams.
 
 Há muitos serviços que você pode querer consumir no seu aplicativo Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e Teams. Teams informações de perfil de usuário são armazenadas no Azure AD usando o Microsoft Graph e este artigo se concentrará na autenticação usando o Azure AD para obter acesso a essas informações.
 
 OAuth 2.0 é um padrão aberto para autenticação usado pelo Azure AD e muitos outros provedores de serviços. Noções básicas sobre o OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams e no Azure AD. Os exemplos a seguir usam o fluxo de Concessão Implícita OAuth 2.0 com o objetivo de, eventualmente, ler as informações de perfil do usuário do Azure AD e do Microsoft Graph.
 
-O código neste artigo vem do exemplo Teams exemplo de Microsoft Teams [de autenticação de tabulação (Nó)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Ele contém uma guia estática que solicita um token de acesso para o Microsoft Graph e mostra as informações básicas de perfil do usuário atual do Azure AD.
+O código neste artigo vem do exemplo Teams exemplo de Microsoft Teams [de autenticação de guia (Nó)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Ele contém uma guia estática que solicita um token de acesso para o Microsoft Graph e mostra as informações básicas de perfil do usuário atual do Azure AD.
 
 Para uma visão geral do fluxo de autenticação para guias, consulte [Fluxo de autenticação nas guias](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -36,7 +36,7 @@ O fluxo de autenticação deve ser disparado por uma ação do usuário. Você n
 
 Adicione um botão à sua configuração ou página de conteúdo para permitir que o usuário entre quando necessário. Isso pode ser feito na página de configuração [de](~/tabs/how-to/create-tab-pages/configuration-page.md) tabulação ou em qualquer [página de](~/tabs/how-to/create-tab-pages/content-page.md) conteúdo.
 
-O Azure AD, como a maioria dos provedores de identidade, não permite que seu conteúdo seja colocado em um iframe. Isso significa que você precisará adicionar uma página pop-up para hospedar o provedor de identidade. No exemplo a seguir, esta página é `/tab-auth/simple-start`. Use a `microsoftTeams.authenticate()` função do SDK Microsoft Teams cliente para iniciar essa página quando o botão estiver selecionado.
+O Azure AD, como a maioria dos provedores de identidade, não permite que seu conteúdo seja colocado em um iframe. Isso significa que você precisará adicionar uma página pop-up para hospedar o provedor de identidade. No exemplo a seguir, esta página é `/tab-auth/simple-start`. Use a `microsoftTeams.authenticate()` função do SDK Microsoft Teams cliente para iniciar esta página quando o botão estiver selecionado.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -94,7 +94,7 @@ Depois que o usuário concluir a autorização, o usuário será redirecionado p
 ### <a name="notes"></a>Observações
 
 * Consulte [obter informações de contexto do usuário](~/tabs/how-to/access-teams-context.md) para ajudar a criar solicitações de autenticação e URLs. Por exemplo, você pode usar o nome de logon `login_hint` do usuário como o valor para entrar no Azure AD, o que significa que o usuário pode precisar digitar menos. Lembre-se de que você não deve usar esse contexto diretamente como prova de identidade, pois um invasor pode carregar sua página em um navegador mal-intencionado e fornecer todas as informações que quiser.
-* Embora o contexto de tabulação fornece informações úteis sobre o usuário, não use essas informações para autenticar o usuário se você as recebe como parâmetros de URL para a URL `microsoftTeams.getContext()` de conteúdo da guia ou chamando a função no SDK do cliente Microsoft Teams. Um ator mal-intencionado poderia invocar sua URL de conteúdo de tabulação com seus próprios parâmetros, e uma página da Web que representa Microsoft Teams poderia carregar sua URL de conteúdo de tabulação em um iframe `getContext()` e retornar seus próprios dados para a função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usá-las.
+* Embora o contexto de guia fornece informações úteis sobre o usuário, não use essas informações para autenticar o usuário se você as recebe como parâmetros de URL para a URL `microsoftTeams.getContext()` de conteúdo da guia ou chamando a função no SDK do cliente Microsoft Teams. Um ator mal-intencionado poderia invocar sua URL de conteúdo de tabulação com seus próprios parâmetros, e uma página da Web que representa Microsoft Teams poderia carregar sua URL de conteúdo de tabulação em um iframe `getContext()` e retornar seus próprios dados para a função. Você deve tratar as informações relacionadas à identidade no contexto da guia simplesmente como dicas e validá-las antes de usá-las.
 * O `state` parâmetro é usado para confirmar se o serviço que chama o URI de retorno de chamada é o serviço chamado. Se o `state` parâmetro no retorno de chamada não corresponder ao parâmetro enviado durante a chamada, a chamada de retorno não será verificada e deverá ser encerrada.
 * Não é necessário incluir o domínio do provedor de identidade `validDomains` na lista no arquivo manifest.json do aplicativo.
 
@@ -148,12 +148,11 @@ Se tiver êxito, você poderá atualizar ou recarregar a página e mostrar conte
 Seu aplicativo pode definir seu próprio cookie de sessão para que o usuário não precise entrar novamente quando retornar à guia no dispositivo atual.
 
 > [!NOTE]
-> O Chrome 80, agendado para lançamento no início de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. É recomendável definir o uso pretendido para seus cookies em vez de depender do comportamento padrão do navegador. *Consulte* [o atributo cookie SameSite (atualização 2020)](../../../resources/samesite-cookie-update.md).
+>
+> * O Chrome 80, agendado para lançamento no início de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. É recomendável definir o uso pretendido para seus cookies em vez de depender do comportamento padrão do navegador. *Consulte* [o atributo cookie SameSite (atualização 2020)](../../../resources/samesite-cookie-update.md).
+> * Para obter o token correto para Microsoft Teams usuários gratuitos e convidados, é importante que os aplicativos usem o ponto de extremidade específico do locatário`https://login.microsoftonline.com/**{tenantId}**`. Você pode obter tenantId do contexto de mensagem de bot ou guia. Se os aplicativos `https://login.microsoftonline.com/common`usarem , os usuários receberão tokens incorretos e fazer logoff no locatário "home" em vez do locatário no momento em que estão entrando.
 
->[!NOTE]
->Para obter o token correto para Microsoft Teams usuários gratuitos e convidados, é importante que os aplicativos usem o ponto de extremidade específico do locatário`https://login.microsoftonline.com/**{tenantId}**`. Você pode obter tenantId do contexto de mensagem de bot ou guia. Se os aplicativos `https://login.microsoftonline.com/common`usarem , os usuários receberão tokens incorretos e fazer logoff no locatário "home" em vez do locatário no momento em que estão entrando.
-
-Para obter mais informações sobre o Sign-On único (SSO) consulte o artigo [Autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md).
+Para obter mais informações sobre o Sign-On (SSO) consulte o artigo [Autenticação silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## <a name="code-sample"></a>Exemplo de código
 

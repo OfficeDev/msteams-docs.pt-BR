@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: api de logon único de autenticação de equipes SSO do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821721"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356102"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -21,8 +21,8 @@ Os usuários do Microsoft Teams que entram em sua conta corporativa, de estudant
 > ✔Teams para Android (1416/1.0.0.2020073101 e posterior)
 >
 > ✔Teams para iOS (_Versão_: 2.0.18 e posterior)  
-> 
-> ✔SDK do JavaScript do Teams (_Versão_: 1.10 e posterior) para que o SSO funcione no painel lateral da reunião. 
+>
+> ✔SDK do JavaScript do Teams (_Versão_: 1.10 e posterior) para que o SSO funcione no painel lateral da reunião.
 >
 > Para obter uma melhor experiência no Teams, use a versão mais recente do iOS e Android.
 
@@ -30,6 +30,14 @@ Os usuários do Microsoft Teams que entram em sua conta corporativa, de estudant
 > **Início rápido**  
 >
 > O caminho mais simples para começar com o SSO da guia é com o kit de ferramentas do Teams para o Microsoft Visual Studio Code. Para obter mais informações, confira [SSO com kit de ferramentas do Teams e Visual Studio Code para guias](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>Como o SSO funciona em tempo de execução
 
@@ -52,7 +60,7 @@ A API do SSO também funciona em [módulos de tarefas](../../../task-modules-and
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>Desenvolver uma guia de SSO do Microsoft Teams
 
-Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams que usa SSO. Essas tarefas possuem uma linguagem e estrutura desconhecida.
+Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams que usa o SSO. Essas tarefas são independentes de linguagem e estrutura.
 
 ### <a name="1-create-your-azure-ad-application"></a>1. Criar seu aplicativo do Microsoft Azure AD
 
@@ -64,13 +72,13 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams qu
 > * Atualmente, não há suporte para vários domínios por aplicativo.
 > * O usuário deve definir `accessTokenAcceptedVersion` como `2` para um novo aplicativo.
 
-**Para registrar seu aplicativo por meio do portal do Microsoft Azure AD**
+Para registrar seu aplicativo por meio do portal do Azure AD, siga estas etapas:
 
 1. Registre um novo aplicativo no portal [Registros de aplicativo Microsoft Azure AD](https://go.microsoft.com/fwlink/?linkid=2083908).
 1. Selecione **Novo registro**. A página **Registrar um aplicativo** é exibida.
 1. Na página **Registrar um aplicativo**, insira os seguintes valores:
     1. Insira um **Nome** para seu aplicativo.
-    2. Escolha os **tipos de conta compatíveis**, selecione locatário único ou tipo de conta multilocatário. ¹
+    2. Escolha os **tipos de conta compatíveis**, selecione locatário único ou tipo de conta multilocatário.
     * Deixe o **URI de Redirecionamento** vazio.
     3. Escolha **Registrar**.
 1. Na página de visão geral, copie e salve a **ID do aplicativo (cliente).** Você o terá mais tarde ao atualizar seu manifesto do aplicativo Teams.
@@ -88,7 +96,7 @@ Esta seção descreve as tarefas envolvidas na criação de uma guia do Teams qu
     * **Título de consentimento do usuário**: o Teams pode acessar seu perfil e fazer solicitações em seu nome.
     * **Descrição de consentimento do usuário:** o Teams pode chamar as APIs deste aplicativo com os mesmos direitos que você tem.
 1. Verifique se o **Estado** está definido como **Habilitado**.
-1. Selecione **Adicionar escopo** para salvar os detalhes. A parte de domínio do **Nome de escopo** exibidos abaixo do campo de texto deve corresponder automaticamente ao URI de **ID do aplicativo** definidos na etapa anterior com `/access_as_user` acrescentado ao final `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+1. Selecione **Adicionar escopo** para salvar os detalhes. A parte de domínio do **Nome de escopo** exibida abaixo do campo de texto deve corresponder automaticamente ao URI de **ID do aplicativo** definidos na etapa anterior com `/access_as_user` acrescentado ao final `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 1. Na seção **Aplicativos cliente autorizados,** identifique os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo. Selecione **Adicionar um aplicativo cliente**. Insira cada uma das seguintes IDs de cliente e selecione o escopo autorizado criado na etapa anterior:
     * Aplicativo da área de trabalho ou móvel `1fec8e78-bce4-4aaf-ab1b-5451cc387264` para Teams.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` para aplicativo web do Teams.
@@ -143,6 +151,9 @@ Use o código a seguir para adicionar novas propriedades ao manifesto Teams:
 >* Você deve usar o manifesto versão 1.5 ou superior para implementar o campo `webApplicationInfo`.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Obter um token de acesso do código do lado do cliente
+
+> [!NOTE]
+> Para evitar erros como `Teams SDK Error: resourceDisabled`, verifique se o URI de ID do Aplicativo está configurado corretamente no registro do aplicativo do Azure AD e no aplicativo Teams.
 
 Use a seguinte API de autenticação:
 
@@ -244,7 +255,7 @@ Uma maneira simples de consentir em nome de uma organização como administrador
 
 Outra abordagem para obter escopos do Graph é apresentar uma caixa de diálogo de consentimento usando nossa [abordagem de autenticação do Azure AD baseada na Web](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page) existente. Essa abordagem envolve o surgimento de uma caixa de diálogo de consentimento do Azure AD.
 
-**Para solicitar consentimento adicional usando a API Auth**
+Para solicitar consentimento adicional usando a API Auth, siga estas etapas:
 
 1. O token recuperado usando `getAuthToken()` deve ser trocado no lado do servidor usando o [fluxo On-Behalf-Of](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) do Microsoft Azure AD para obter acesso a essas outras APIs do Graph. Certifique-se de usar o ponto de extremidade v2 Graph para esta troca.
 2. Se a troca falhar, o Microsoft Azure AD retornará uma exceção de concessão inválida. Geralmente, há uma das duas mensagens de erro, `invalid_grant` ou `interaction_required`.
@@ -268,4 +279,5 @@ A solução de autenticação descrita acima só funciona para aplicativos e ser
 * Siga o [guia passo a passo](../../../sbs-tab-with-adaptive-cards.yml) para criar guia com cartões adaptáveis.
 
 ## <a name="see-also"></a>Confira também
+
 [Teams Bot com logon único](../../../sbs-bots-with-sso.yml)

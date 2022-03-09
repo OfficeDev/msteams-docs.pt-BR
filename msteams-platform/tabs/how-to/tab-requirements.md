@@ -6,8 +6,13 @@ keywords: canal de grupo de guias do teams configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
+ms.openlocfilehash: eeb83f6bdd335c4d536f18915cff8b04a85761a5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399188"
 ---
-
 # <a name="prerequisites"></a>Pré-requisitos
 
 Teams guias devem seguir os seguintes pré-requisitos:
@@ -26,7 +31,7 @@ Teams guias devem seguir os seguintes pré-requisitos:
 
 * Você deve estilar suas guias com base Teams tema, design e intenção do cliente. Normalmente, as guias funcionam melhor quando são criadas para atender a uma necessidade específica e se concentrar em um pequeno conjunto de tarefas ou em um subconjunto de dados relevante para o local do canal da guia.
 
-* Em sua página de conteúdo, adicione uma referência Microsoft Teams [SDK do cliente JavaScript](/javascript/api/overview/msteams-client) usando marcas de script. Depois que sua página for carregada, faça uma chamada para `microsoftTeams.initialize()`, caso contrário, sua página não será exibida.
+* Em sua página de conteúdo, adicione uma referência ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client) usando marcas de script. Depois que sua página for carregada, faça uma chamada para `microsoftTeams.initialize()`, caso contrário, sua página não será exibida.
 
 * Para que a autenticação funcione em clientes móveis, você deve atualizar Teams SDK JavaScript para pelo menos a versão 1.4.1.
 
@@ -35,7 +40,8 @@ Teams guias devem seguir os seguintes pré-requisitos:
 * A guia Teams MS não dá suporte à capacidade de carregar sites da intranet que usam certificados auto-assinados.
 
 ## <a name="tools-you-can-use-to-build-tabs"></a>Ferramentas que você pode usar para criar guias
-* [Teams Toolkit para Microsoft Visual Studio Código](../../toolkit/visual-studio-code-overview.md)
+
+* [Kit de ferramentas do Teams para Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Kit de ferramentas do Teams para Visual Studio](../../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Próxima etapa

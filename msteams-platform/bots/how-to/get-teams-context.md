@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: lista de canais de perfil do usuário de lista de lista de listas de perfis de usuário de contexto bot
-ms.openlocfilehash: 0b7bba5e642d5cedc7a4c07c441a52fc9298d0f2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee931be0d84dadf518ee35625c6339c7880eb4d2
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355549"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398593"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obter Teams contexto específico para seu bot
 
@@ -291,6 +291,7 @@ Depois de obter detalhes da equipe, você pode obter a lista de canais em uma eq
 Seu bot pode consultar a lista de canais em uma equipe.
 
 > [!NOTE]
+>
 > * O nome do canal Geral padrão é retornado para `null` permitir a localização.
 > * A ID do canal para o canal Geral sempre corresponde à ID da equipe.
 
@@ -370,7 +371,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md)

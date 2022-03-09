@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517992"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399349"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -204,7 +204,7 @@ O `channelData` objeto não está incluído em mensagens em conversas pessoais, 
 Um objeto `channelData` típico em uma atividade enviada ao bot contém as seguintes informações:
 
 * `eventType`: Teams tipo de evento passado somente em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory ID de locatário (Azure AD) passada em todos os contextos.
+* `tenant.id`: Microsoft Azure Active Directory (ID de locatário do Azure AD) passada em todos os contextos.
 * `team`: Passado somente em contextos de canal, não em chat pessoal.
   * `id`: GUID para o canal.
   * `name`: Nome da equipe passada somente em casos de [eventos de renomear equipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -243,7 +243,7 @@ As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de cont
 | Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, pictures e cards. Os usuários podem enviar texto e imagens rich para seu bot.                                                                                        |
 | Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.  |
 | Cartões     | ✖                | ✔                | Consulte a [Teams de cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
-| Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para rosto de goslinha. |
+| Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio do UTF-16, como U+1F600 para rosto de curtição. |
 
 ## <a name="notifications-to-your-message"></a>Notificações à sua mensagem
 
@@ -342,7 +342,7 @@ Um bot de conversa pode incluir Cartões Adaptáveis que simplificam fluxos de t
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-Cartões adaptáveis podem ser autorados em um bot e mostrados em vários aplicativos, como Teams, seu site e assim por diante. Para obter mais informações, [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Cartões adaptáveis podem ser de autoria em um bot e mostrados em vários aplicativos, como Teams, seu site e assim por diante. Para obter mais informações, [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 O código a seguir mostra um exemplo de envio de um cartão adaptável simples:
 
@@ -382,7 +382,7 @@ A mensagem de conclusão do formulário aparece em Cartões Adaptáveis ao envia
 
     ![Mensagem de êxito](~/assets/images/Cards/success.PNG)
 
-Você pode selecionar **Fechar** ou alternar o chat para descartar a mensagem.    
+Você pode selecionar **Fechar** ou alternar o chat para descartar a mensagem.
 
 **Resposta no celular**:
 

@@ -1,13 +1,18 @@
 ---
 title: Manipuladores de atividade de bot
 author: surbhigupta
-description: Entenda os manipuladores de atividades do bot no Teams.
+description: Entenda os manipuladores de atividades do bot Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: evento de canal de consentimento de cartão de bot da estrutura de atividades
+ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398642"
 ---
-
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
 Este documento se baseia no artigo sobre como [os bots funcionam](https://aka.ms/how-bots-work) na documentação principal [da Estrutura de Bots](https://aka.ms/azure-bot-service-docs). A principal diferença entre bots desenvolvidos para Microsoft Teams e a Estrutura de Bot principal está nos recursos fornecidos no Teams.
@@ -22,7 +27,7 @@ Quando um bot para Teams recebe uma atividade, ele é roteado para os manipulado
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `OnMessageActivityAsync` de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `OnConversationUpdateActivityAsync`. O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `OnMessageActivityAsync` de atividades. Em Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `OnConversationUpdateActivityAsync`. O Teams de atividade primeiro verifica se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
 Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `OnConversationUpdateActivityAsync` e `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`encaminha todas as atividades de atualização de conversa e `OnInvokeActivityAsync` encaminha todas as Teams atividades de invocação.
 
@@ -55,9 +60,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -65,9 +70,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -75,9 +80,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -85,14 +90,14 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `onMessage` de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `dispatchConversationUpdateActivity`. O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `onMessage` de atividades. Em Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `dispatchConversationUpdateActivity`. O Teams de atividade primeiro verifica se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
 Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `dispatchConversationUpdateActivity` e `onInvokeActivity`. `dispatchConversationUpdateActivity`encaminha todas as atividades de atualização de conversa e `onInvokeActivity` encaminha todas as Teams atividades de invocação.
 
@@ -146,7 +151,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -156,13 +161,13 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
 # <a name="python"></a>[Python](#tab/python)
 
-Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `on_message_activity` de atividades. No Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `on_conversation_update_activity`. O Teams de atividades verifica primeiro se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
+Os bots são criados usando a Estrutura de Bot. Se os bots receberem uma atividade de mensagem, o manipulador de turno receberá uma notificação dessa atividade de entrada. Em seguida, o manipulador de turnos envia a atividade de entrada para o manipulador `on_message_activity` de atividades. Em Teams, essa funcionalidade permanece a mesma. Se o bot receber uma atividade de atualização de conversa, o manipulador de turno receberá uma notificação dessa atividade de entrada e enviará a atividade de entrada para `on_conversation_update_activity`. O Teams de atividade primeiro verifica se há Teams eventos específicos. Se nenhum evento for encontrado, ele os passará para o manipulador de atividades da Estrutura de Bot.
 
 Na classe Teams manipulador de atividades, há dois manipuladores Teams de atividade primários `on_conversation_update_activity` e `on_invoke_activity`. `on_conversation_update_activity`encaminha todas as atividades de atualização de conversa e `on_invoke_activity` encaminha todas as Teams atividades de invocação.
 
@@ -210,7 +215,7 @@ O `TeamsActivityHandler` estende a lista de manipuladores na seção principais 
 | MembersAdded | `OnTeamsMembersAddedAsync` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 
-#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
+#### <a name="teams-invoke-activities"></a>Teams invocar atividades
 
 A lista de Teams de atividades chamadas do manipulador de `OnInvokeActivityAsync` Teams de atividade inclui o seguinte:
 
@@ -220,7 +225,7 @@ A lista de Teams de atividades chamadas do manipulador de `OnInvokeActivityAsync
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Esse método é invocado quando uma atividade de ação de cartão de conector Office 365 conector é recebida do conector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Esse método é invocado quando uma atividade Office 365 ação de cartão de conector é recebida do conector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | Esse método é invocado quando uma atividade de estado signIn é recebida do conector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
@@ -262,7 +267,7 @@ O `TeamsActivityHandler` estende a lista de manipuladores na seção principais 
 | MembersAdded | `OnTeamsMembersAddedAsync` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 
-#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
+#### <a name="teams-invoke-activities"></a>Teams invocar atividades
 
 A lista de Teams de atividades chamadas do manipulador de `onInvokeActivity` Teams de atividade inclui o seguinte:
 
@@ -272,7 +277,7 @@ A lista de Teams de atividades chamadas do manipulador de `onInvokeActivity` Tea
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Esse método é invocado quando uma atividade de ação de cartão de conector Office 365 conector é recebida do conector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Esse método é invocado quando uma atividade Office 365 ação de cartão de conector é recebida do conector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | Esse método é invocado quando uma atividade de estado signIn é recebida do conector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
@@ -315,7 +320,7 @@ A `TeamsActivityHandler` estende a lista de manipuladores da seção principais 
 | MembersAdded | `on_teams_members_added` | Este método chama o `OnMembersAddedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros que ingressaram em uma equipe. Para obter mais informações, consulte [membros da equipe adicionados](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) em [eventos de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `on_teams_members_removed` | Este método chama o `OnMembersRemovedAsync` método em `ActivityHandler`. O método pode ser substituído para manipular membros deixando uma equipe. Para obter mais informações, consulte [membros da equipe removidos em](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) eventos [de atualização de conversa](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 
-#### <a name="teams-invoke-activities"></a>Teams atividades de invocação
+#### <a name="teams-invoke-activities"></a>Teams invocar atividades
 
 A lista de Teams de atividades chamadas do manipulador de `on_invoke_activity` Teams de atividade inclui o seguinte:
 
@@ -325,7 +330,7 @@ A lista de Teams de atividades chamadas do manipulador de `on_invoke_activity` T
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `on_teams_file_consent`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Esse método é invocado quando uma atividade de ação de cartão de conector Office 365 conector é recebida do conector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Esse método é invocado quando uma atividade Office 365 ação de cartão de conector é recebida do conector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | Esse método é invocado quando uma atividade de estado signIn é recebida do conector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `on_teams_task_module_submit`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
@@ -334,7 +339,7 @@ As atividades de invocação listadas nesta seção são para bots de conversa n
 
 ---
 
-* * *
+---
 
 Agora que você se familiarizou com manipuladores de atividades de bot, vamos ver como os bots se comportam de forma diferente, dependendo da conversa e das mensagens recebidas ou enviadas.
 

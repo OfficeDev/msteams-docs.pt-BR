@@ -6,12 +6,12 @@ keywords: webhook de saída das guias do Teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8c38d3effd16a445caca72628978d8822e006b30
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355640"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399111"
 ---
 # <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
 
@@ -38,6 +38,7 @@ A tabela a seguir fornece os recursos e a descrição de um Webhook de Entrada:
 --->
 
 > [!NOTE]
+>
 > * Bots do Teams, extensões de mensagens, Webhook de entrada e Bot Framework suporte Cartões Adaptáveis. Os Cartões Adaptáveis são uma estrutura de plataforma de cartão cruzado aberta que é usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, os [Conectores Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) não suportam os Cartões Adaptáveis. No entando, é impossível criar um [fluxo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publicam Cartões Adaptáveis para um canal Teams.
 > * Para mais informações sobre cartões e webhooks, veja [Cartões Adaptáveis e Webhooks de Entrada](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 

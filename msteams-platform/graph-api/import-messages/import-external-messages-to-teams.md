@@ -1,17 +1,17 @@
 ---
 title: Use o Microsoft Graph para importar mensagens de plataforma externa para Teams
-description: Descreve como usar o Microsoft Graph para importar mensagens de uma plataforma externa para Teams
+description: Descreve como usar o Microsoft Graph importar mensagens de uma plataforma externa para Teams
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migration post
-ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 559dcc1c6ab19032854ca5a431268bed0ea2540f
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212521"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398635"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -26,8 +26,8 @@ Em um nível alto, o processo de importação consiste no seguinte:
 
 1. [Crie uma equipe com um back-in-timestamp](#step-1-create-a-team).
 1. [Crie um canal com um back-in-timestamp](#step-2-create-a-channel).
-1. [Importar mensagens de back-in-time externas datadas](#step-3-import-messages).
-1. [Conclua o processo de migração de equipe e canal.](#step-4-complete-migration-mode)
+1. [Importe mensagens de back-in-time externas datadas](#step-3-import-messages).
+1. [Conclua o processo de migração de equipe e canal](#step-4-complete-migration-mode).
 1. [Adicionar membros da equipe](#step-five-add-team-members).
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -48,7 +48,7 @@ Em um nível alto, o processo de importação consiste no seguinte:
 
 Como você está migrando dados existentes, manter os datas de data/hora originais da mensagem e impedir a atividade de mensagens durante o processo de migração são fundamentais para recriar o fluxo de mensagens existente do usuário no Teams. Isso é alcançado da seguinte forma:
 
-> [Crie uma nova equipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso de `createdDateTime` equipe. Coloque a nova equipe em , um estado especial que restringe os usuários da maioria das atividades dentro da equipe até que o processo `migration mode` de migração seja concluído. Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `teamCreationMode` nova equipe como sendo criada para `migration` migração.  
+> [Crie uma nova equipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso de `createdDateTime` equipe. Coloque a nova equipe em `migration mode`, um estado especial que restringe os usuários da maioria das atividades dentro da equipe até que o processo de migração seja concluído. Inclua o `teamCreationMode` atributo instance com o `migration` valor na solicitação POST para identificar explicitamente a nova equipe como sendo criada para migração.  
 
 > [!NOTE]
 > O `createdDateTime` campo só será preenchido para instâncias de uma equipe ou canal que foram migradas.
@@ -93,13 +93,13 @@ Content-Location: /teams/{team-id}
 Você pode receber a mensagem de erro nos seguintes cenários:
 
 * Se `createdDateTime` estiver definido para o futuro.
-* Se `createdDateTime` for especificado corretamente, mas o atributo instance estiver ausente ou definido como valor `teamCreationMode` inválido.
+* Se `createdDateTime` for especificado corretamente, mas o `teamCreationMode` atributo instance estiver ausente ou definido como valor inválido.
 
 ## <a name="step-2-create-a-channel"></a>Etapa 2: Criar um canal
 
 A criação de um canal para as mensagens importadas é semelhante ao cenário de criação de equipe:
 
-> [Crie um novo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso `createdDateTime` channel. Coloque o novo canal em , um estado especial que restringe os usuários da maioria das atividades de chat dentro do canal até que o processo `migration mode` de migração seja concluído. Inclua o atributo instance com o valor na solicitação POST para identificar explicitamente a `channelCreationMode` nova equipe como sendo criada para `migration` migração.  
+> [Crie um novo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) com um back-in-timestamp usando a propriedade de recurso channel `createdDateTime` . Coloque o novo canal em `migration mode`, um estado especial que restringe os usuários da maioria das atividades de chat dentro do canal até que o processo de migração seja concluído. Inclua o `channelCreationMode` atributo instance com o `migration` valor na solicitação POST para identificar explicitamente a nova equipe como sendo criada para migração.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permission"></a>Permissão
 
@@ -146,6 +146,7 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+
 Você pode receber a mensagem de erro nos seguintes cenários:
 
 * Se `createdDateTime` estiver definido para o futuro.
@@ -153,12 +154,13 @@ Você pode receber a mensagem de erro nos seguintes cenários:
 
 ## <a name="step-3-import-messages"></a>Etapa 3: Importar mensagens
 
-Depois que a equipe e o canal foram criados, você pode começar a enviar mensagens de back-in-time usando as chaves e `createdDateTime` `from` no corpo da solicitação.
+Depois que a equipe e o canal foram criados, você pode começar a enviar mensagens de back-in-time `createdDateTime` `from` usando as chaves e no corpo da solicitação.
 
 > [!NOTE]
-> * Não há suporte para mensagens `createdDateTime` importadas com o thread da `createdDateTime` mensagem.
+>
+> * Não há suporte para `createdDateTime` mensagens importadas com o thread `createdDateTime` da mensagem.
 > * `createdDateTime` deve ser exclusivo entre mensagens no mesmo thread.
-> * `createdDateTime` oferece suporte a data/hora com precisão de milissegundos. Por exemplo, se a mensagem de solicitação de entrada tiver o valor definido como `createdDateTime` *2020-09-16T05:50:31.0025302Z*, ela será convertida em *2020-09-16T05:50:31.002Z* quando a mensagem for ingerida.
+> * `createdDateTime` oferece suporte a data/hora com precisão de milissegundos. Por exemplo, `createdDateTime` se a mensagem de solicitação de entrada tiver o valor definido como *2020-09-16T05:50:31.0025302Z*, ela será convertida em *2020-09-16T05:50:31.002Z* quando a mensagem for ingerida.
 
 #### <a name="request-post-message-that-is-text-only"></a>Solicitação (mensagem POST que é somente texto)
 
@@ -232,8 +234,9 @@ HTTP/1.1 200 OK
 #### <a name="request-post-a-message-with-inline-image"></a>Solicitar (POSTAR uma mensagem com imagem em linha)
 
 > [!NOTE]
-> * Não há escopos de permissão especiais nesse cenário, pois a solicitação faz parte de `chatMessage` .
-> * Os escopos para `chatMessage` aplicar aqui.
+>
+> * Não há escopos de permissão especiais nesse cenário, pois a solicitação faz parte de `chatMessage`.
+> * Os escopos para aplicar `chatMessage` aqui.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -321,11 +324,11 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Ação chamada em um `team` ou que não está em `channel` `migrationMode` .
+Ação chamada em um `team` ou `channel` que não está em `migrationMode`.
 
 ## <a name="step-five-add-team-members"></a>Etapa cinco: Adicionar membros da equipe
 
-Você pode adicionar um membro a uma equipe usando a interface [do usuário Teams ou](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) o Microsoft Graph adicionar API de [membro:](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)
+Você pode adicionar um membro a uma equipe usando a interface [do usuário Teams ou](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) o Microsoft Graph [adicionar API de membro](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true):
 
 #### <a name="request-add-member"></a>Solicitação (adicionar membro)
 
@@ -353,7 +356,7 @@ HTTP/1.1 204 No Content
 
 * Depois que `completeMigration` a solicitação for feita, você não poderá importar mais mensagens para a equipe.
 
-* Você só pode adicionar membros da equipe à nova equipe após a solicitação `completeMigration` ter retornado uma resposta bem-sucedida.
+* Você só pode adicionar membros da equipe à nova equipe após `completeMigration` a solicitação ter retornado uma resposta bem-sucedida.
 
 * Throttling: As mensagens são importadas em cinco RPS por canal.
 
@@ -379,7 +382,6 @@ A tabela a seguir fornece o escopo de conteúdo:
 ||Emojis|
 ||Cotações|
 ||Postagens entre canais|
-
 
 ## <a name="see-also"></a>Confira também
 

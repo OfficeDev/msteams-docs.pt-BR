@@ -4,25 +4,25 @@ description: Saiba mais sobre tipos de cartões com suporte em bots para Teams, 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062513"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399041"
 ---
 # <a name="cards-and-task-modules"></a>Cartões e módulos de tarefa
 
 Os cartões fornecem aos usuários várias mensagens visuais, de áudio e selecionáveis e ajudam no fluxo de conversas.
 
-Com módulos de tarefa, você pode criar experiências pop-up modais Microsoft Teams. Eles são úteis para iniciar e concluir as tarefas ou exibir informações ricas, como vídeos ou painéis de BI (Power business intelligence).
+Com módulos de tarefa, você pode criar experiências pop-up modais em Microsoft Teams. Eles são úteis para iniciar e concluir as tarefas ou exibir informações ricas, como vídeos ou painéis de BI (Power business intelligence).
 
 Os seguintes tipos de cartões são suportados em bots para Teams:
 
 * Cartão Adaptável
-* Cartão de herói
+* Cartão Hero
 * Cartão de listagem
-* Office 365 conector
+* Cartão do Conector do Office 365
 * Cartão de recebimento
 * Cartão de login
 * Cartão de miniatura
@@ -30,9 +30,10 @@ Os seguintes tipos de cartões são suportados em bots para Teams:
 
 Você pode formatar texto de cartão usando um subconjunto de formatação XML ou HTML ou Markdown, dependendo do tipo de cartão.
 
-[O Seletor de](cards/people-picker.md) Pessoas em Cartões Adaptáveis no Cartão Adaptável ajuda a pesquisar, selecionar, reatribuir e pré-selecionar usuários no chat ou canal.
+[O Seletor de Pessoas em Cartões](cards/people-picker.md) Adaptáveis no Cartão Adaptável ajuda a pesquisar, selecionar, reatribuir e pré-selecionar usuários no chat ou canal.
 
 Você pode adicionar e responder a ações de cartão que:
+
 * Abrir uma URL
 * Enviar mensagens e carga para o bot
 * Iniciar fluxo OAuth

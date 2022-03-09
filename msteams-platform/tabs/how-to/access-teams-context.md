@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356263"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398803"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -24,7 +24,7 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo com o usuário ou a equipe especificado.
-* Você inicia um fluxo de autenticação do Microsoft Azure Active Directory (Azure AD) ou de outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
+* Você inicia um fluxo de autenticação do Microsoft Azure Active Directory (Azure AD) ou de outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente.
 
 Para obter mais informações, [consulte authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -115,7 +115,7 @@ O código a seguir fornece um exemplo de variável de contexto:
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
-Quando sua página de conteúdo é carregada em um canal privado, `getContext` os dados recebidos da chamada são ofuscados para proteger a privacidade do canal. 
+Quando sua página de conteúdo é carregada em um canal privado, `getContext` os dados recebidos da chamada são ofuscados para proteger a privacidade do canal.
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
 
@@ -133,7 +133,7 @@ Se sua página fizer uso de qualquer um desses valores, `channelType` `Private` 
 > [!NOTE]
 > Atualmente, Microsoft Teams Conexão canais compartilhados estão apenas na [visualização do](../../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
 
-Quando sua página de conteúdo é carregada em um canal Microsoft Teams Conexão compartilhado, `getContext` os dados recebidos da chamada são alterados devido à lista exclusiva de usuários em canais compartilhados. 
+Quando sua página de conteúdo é carregada em um canal Microsoft Teams Conexão compartilhado, `getContext` os dados recebidos da chamada são alterados devido à lista exclusiva de usuários em canais compartilhados.
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal compartilhado:
 
@@ -157,7 +157,7 @@ Você pode registrar seu aplicativo para ser informado se o tema mudar chamando 
 
 O `theme` argumento na função é uma cadeia de caracteres com um valor `default`de , `dark`ou `contrast`.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)

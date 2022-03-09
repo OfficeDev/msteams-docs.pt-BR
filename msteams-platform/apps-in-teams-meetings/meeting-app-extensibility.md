@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião, criando a experiência de reunião do usuário durante todo o ciclo de vida da reunião no ambiente de desktop e móvel, funções de participantes e tipos de usuário. Além disso, saiba mais sobre como integrar bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355578"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398845"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -33,6 +33,7 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 > Se você tiver integrado uma guia à sua reunião, seu aplicativo deverá seguir o Teams fluxo de autenticação de [logom único (SSO) para guias](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
+>
 > * As reuniões agendadas privadas só suportam aplicativos.
 > * A opção Adicionar aplicativo para Teams guia de extensão de reunião não é suportada Teams cliente Web.
 
@@ -40,7 +41,7 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 
 Com a experiência de aplicativo de pré-reunião, os usuários podem encontrar e adicionar aplicativos de reunião. Os usuários também podem executar tarefas de pré-reunião, como desenvolver uma votação para pesquisar os participantes da reunião.
 
-**Para adicionar guias a uma reunião existente**
+Para adicionar guias a uma reunião existente:
 
 1. Em seu calendário, selecione uma reunião à qual deseja adicionar uma guia.
 1. Selecione a **guia Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. A galeria de guias é exibida.
@@ -50,6 +51,7 @@ Com a experiência de aplicativo de pré-reunião, os usuários podem encontrar 
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
    > [!NOTE]
+   >
    > * Você também pode adicionar uma guia a uma reunião existente usando a guia **Chat de** reunião.
    > * O layout da guia deve estar em um estado organizado, se houver mais de 10 pesquisas ou pesquisas.
 
@@ -71,7 +73,7 @@ Com a experiência do aplicativo na reunião, você pode envolver os participant
 
 Para dispositivos móveis, os aplicativos de  reunião estão disponíveis > aplicativos &#x25CF;&#x25CF;&#x25CF; na reunião. Selecione **Aplicativos** para exibir todos os aplicativos disponíveis na reunião.
 
-**Para usar guias durante uma reunião**
+Para usar guias durante uma reunião:
 
 1. Vá para Teams.
 1. Em seu calendário, selecione uma reunião na qual você deseja usar uma guia.
@@ -97,6 +99,7 @@ A caixa de diálogo na reunião é exibida onde você pode inserir sua resposta 
 ---
 
 > [!NOTE]
+>
 > * Os aplicativos podem aproveitar Teams SDK `meetingId`do cliente para acessar o , `userMri`e `frameContext` renderizar a experiência adequadamente.
 > * Se a caixa de diálogo na reunião for renderizada com êxito, ela enviará uma notificação de que os resultados foram baixados com êxito.
 > * O manifesto do aplicativo especifica os locais nos quais você deseja que os aplicativos apareçam. Isso pode ser feito especificando o campo de contexto no manifesto. Também faz parte de uma experiência de estágio de reunião de compartilhamento, sujeita a diretrizes de [design especificadas](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
@@ -201,7 +204,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 | Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Disponível |
 | Usuário federado, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](create-apps-for-teams-meetings.md)

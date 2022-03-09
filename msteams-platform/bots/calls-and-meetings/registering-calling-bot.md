@@ -1,27 +1,27 @@
 ---
 title: Registrar chamadas e reuniões do bot do Microsoft Teams
-description: Saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um novo bot ou adicionar recurso de chamada e adicionar permissões de gráfico.
+description: Saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um novo bot ou adicionar funcionalidade de chamada e adicionar permissões de gráfico.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamando mídia de vídeo de áudio/vídeo de bot
-ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821364"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398663"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
 Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot Microsoft Teams com os seguintes recursos extras usados para registrar o bot:
 
-* Há uma nova versão do manifesto do aplicativo Teams com duas configurações adicionais e `supportsCalling` `supportsVideo`. Essas configurações estão incluídas no esquema [ manifesto para](../../resources/schema/manifest-schema.md) Microsoft Teams.
-* [As Graph microsoft devem](./registering-calling-bot.md#add-graph-permissions) ser configuradas para a ID do aplicativo Microsoft do bot.
+* Há uma nova versão do manifesto do aplicativo Teams com duas configurações adicionais e `supportsCalling` `supportsVideo`. Essas configurações estão incluídas no esquema [Manifesto para](../../resources/schema/manifest-schema.md) Microsoft Teams.
+* [As Graph microsoft devem](./registering-calling-bot.md#add-graph-permissions) ser configuradas para a ID do aplicativo Microsoft do seu bot.
 * As Graph de chamadas e apIs de reuniões online exigem o consentimento do administrador de locatários.
 
 ## <a name="new-manifest-settings"></a>Novas configurações de manifesto
 
-Os bots de chamadas e reuniões online têm as duas configurações adicionais a seguir no manifesto.json que habilitam áudio ou vídeo para seu bot no Teams.
+Os bots de chamadas e reuniões online têm as duas configurações adicionais a seguir no manifesto.json que habilitam áudio ou vídeo para seu bot Teams.
 
 * `bots[0].supportsCalling`. Se presente e definido como `true`, Teams permite que seu bot participe de chamadas e reuniões online.
 * `bots[0].supportsVideo`. Se presente e definido como `true`, Teams sabe que seu bot dá suporte a vídeo.
@@ -38,7 +38,7 @@ A próxima seção permite que você crie um novo bot ou adicione recursos de ch
 
 Para obter informações sobre como criar bots, [consulte create a bot for Teams](../how-to/create-a-bot-for-teams.md).
 
-**Para criar um novo bot para Teams**
+Para criar um novo bot para Teams:
 
 1. Use este link para criar um novo bot, `https://dev.botframework.com/bots/new`. Como alternativa, se você selecionar o botão **Criar um bot** no portal da Estrutura de Bots, crie seu bot no Microsoft Azure, para o qual você deve ter uma conta do Azure.
 1. Adicione o Teams canal.
@@ -78,7 +78,7 @@ A tabela a seguir fornece uma lista de permissões de aplicativo para reuniões 
 
 ### <a name="assign-permissions"></a>Atribuir permissões
 
-Você deve configurar as permissões de aplicativo para seu bot antecipadamente usando o [portal](https://aka.ms/aadapplist) Microsoft Azure se preferir usar o ponto de extremidade [Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Você deve configurar as permissões de aplicativo para seu bot antecipadamente usando o [portal Microsoft Azure](https://aka.ms/aadapplist) se preferir usar o ponto de extremidade [Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obter consentimento do administrador de locatários
 

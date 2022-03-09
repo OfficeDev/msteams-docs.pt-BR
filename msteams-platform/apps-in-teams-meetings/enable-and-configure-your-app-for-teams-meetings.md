@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355794"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398859"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -24,6 +24,7 @@ Para habilitar seu aplicativo para reuniões Teams, atualize o manifesto do apli
 Os recursos do aplicativo de reuniões são declarados no manifesto do aplicativo usando `configurableTabs`as matrizes , `scopes`e `context` . O escopo define quem pode acessar e o contexto define onde seu aplicativo está disponível.
 
 > [!NOTE]
+>
 > * Você deve atualizar o manifesto do aplicativo com o [esquema de manifesto](../resources/schema/manifest-schema-dev-preview.md).
 > * Aplicativos em reuniões exigem `groupchat` escopo. O `team` escopo funciona apenas para guias em canais.
 
@@ -78,7 +79,7 @@ Teams reuniões fornecem uma experiência colaborativa para sua organização. C
 
 Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de mensagens. Os usuários com funções de organizador e apresentador podem adicionar guias a uma reunião.
 
-**Para adicionar uma guia a uma reunião**
+Para adicionar uma guia a uma reunião:
 
 1. Em seu calendário, selecione uma reunião à qual deseja adicionar uma guia.
 1. Selecione a **guia Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -87,16 +88,17 @@ Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de 
 
 1. Na galeria de guias exibida, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
-**Para adicionar uma extensão de mensagens a uma reunião**
+Para adicionar uma extensão de mensagens a uma reunião:
 
 1. Selecione as releições &#x25CF;&#x25CF;&#x25CF; localizadas na área de mensagem de composição no chat.
 1. Selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma extensão de mensagens.
 
-**Para adicionar um bot a uma reunião**
+Para adicionar um bot a uma reunião:
 
 Em um chat de reunião, insira a chave **@** e selecione **Obter bots**.
 
 > [!NOTE]
+>
 > * A bolha de conteúdo publica um Cartão Adaptável ou um cartão simultaneamente no chat de reunião que os usuários podem acessar. Isso ajuda os usuários quando a reunião ou o aplicativo Teams é minimizado.
 > * A identidade do usuário deve ser confirmada usando [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova sondagem.
@@ -156,7 +158,7 @@ Para compartilhar todo o aplicativo em estágio, no manifesto do aplicativo, voc
   ]
 ```
 
-Para obter mais informações, consulte [manifesto do aplicativo](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+Para obter mais informações, consulte [manifesto do aplicativo](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartilhar partes específicas do aplicativo em estágio
 
@@ -178,7 +180,7 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 |----------------|-----------------|--------------|----------------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
@@ -187,7 +189,7 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 * Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar a exibição do estágio de reunião na sua reunião Teams reunião.
 * Siga o [guia passo a passo para](../sbs-meeting-content-bubble.yml) gerar a bolha de conteúdo de reunião em sua reunião Teams reunião.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Referências à API de aplicativos de reunião](API-references.md)

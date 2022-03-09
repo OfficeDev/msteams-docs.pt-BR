@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação de contexto de usuário de api de usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355787"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398866"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -42,6 +42,7 @@ Para identificar e recuperar informações contextuais para o conteúdo da guia,
 ## <a name="get-participant-api"></a>Obter API do participante
 
 > [!NOTE]
+>
 > * Não armazenar em cache as funções do participante, pois o organizador da reunião pode alterar as funções a qualquer momento.
 > * Atualmente, a `GetParticipant` API só tem suporte para listas de distribuições ou listas com menos de 350 participantes.
 
@@ -54,8 +55,8 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
-|**participantId**| String | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK.|
+|**participantId**| Cadeia de caracteres | Sim | A ID do participante é a ID do usuário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de participante do SSO da guia. |
 |**tenantId**| Cadeia de caracteres | Sim | A ID do locatário é necessária para os usuários do locatário. Ele está disponível em Tab SSO, Bot Invoke e Teams Client SDK. É recomendável obter uma ID de locatário do SSO de tabulação. |
 
 ### <a name="example"></a>Exemplo
@@ -141,11 +142,12 @@ A tabela a seguir fornece os códigos de resposta:
 Todos os usuários em uma reunião recebem as notificações enviadas por meio da carga de notificação na reunião. A carga de notificação na reunião dispara uma notificação na reunião e permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat de usuário-bot. Você pode enviar uma notificação em reunião com base na ação do usuário. A carga está disponível por meio dos Serviços bot.
 
 > [!NOTE]
+>
 > * Quando uma notificação em reunião é invocada, o conteúdo é apresentado como uma mensagem de chat.
 > * Atualmente, não há suporte para o envio de notificações direcionadas e suporte para webapp.
 > * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, [consulte Teams módulo de tarefa do SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a ID Microsoft Azure Active Directory (Azure AD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
+>
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
 A tabela a seguir inclui os parâmetros de consulta:
@@ -159,6 +161,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 O `Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.
 
 > [!NOTE]
+>
 > * O `completionBotId` parâmetro do é `externalResourceUrl` opcional no exemplo de carga solicitada.
 > * Os `externalResourceUrl` parâmetros de largura e altura devem estar em pixels. Para obter mais informações, consulte [diretrizes de design](design/designing-apps-in-meetings.md).
 > * A URL é a página, que é carregada como `<iframe>` na notificação em reunião. O domínio deve estar na matriz dos `validDomains` aplicativos no manifesto do aplicativo.
@@ -308,14 +311,14 @@ Use o exemplo a seguir para configurar a propriedade do manifesto do aplicativo 
 
 > [!NOTE]
 > O bot pode receber eventos de `ChannelMeeting.ReadBasic.Group` início de reunião ou término automaticamente de todas as reuniões criadas em todos os canais adicionando ao manifesto para permissão RSC.
- 
+
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
 A tabela a seguir lista o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**meetingId**| String | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
+|**meetingId**| Cadeia de caracteres | Sim | O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. |
 
 ### <a name="example"></a>Exemplo
 
@@ -378,8 +381,8 @@ A URL cart inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|----|
-|**meetingId**| String | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%22%7d|
-|**token**| String | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
+|**meetingId**| Cadeia de caracteres | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%22%7d|
+|**token**| Cadeia de caracteres | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
 
 #### <a name="example"></a>Exemplo
 
@@ -387,9 +390,9 @@ A URL cart inclui os seguintes parâmetros de consulta:
 https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
 ```
 
-### <a name="method"></a>Method
+### <a name="method"></a>Método
 
-|Resource|Método|Descrição|
+|Recurso|Método|Descrição|
 |----|----|----|
 |/cartcaption|POST|Manipular legendas para reunião, que foi iniciada|
 
@@ -447,8 +450,8 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O *resultado* pode conter um valor verdadeiro, no caso de um compartilhamento bem-sucedido ou nulo quando o compartilhamento falhar.|
-|**appContentURL**| String | Sim | A URL que será compartilhada no estágio.|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O *resultado* pode conter um valor verdadeiro, no caso de um compartilhamento bem-sucedido ou nulo quando o compartilhamento falhar.|
+|**appContentURL**| Cadeia de caracteres | Sim | A URL que será compartilhada no estágio.|
 
 ### <a name="example"></a>Exemplo
 
@@ -485,7 +488,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError*, no caso de um erro, ou nulo quando o compartilhamento é bem-sucedido. O *resultado* pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
 
 ### <a name="example"></a>Exemplo
 
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 O corpo da resposta JSON para a `getAppContentStageSharingState` API é:
 
@@ -525,7 +528,7 @@ A tabela a seguir inclui os parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| String | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O resultado pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros, erro e resultado. O *erro* pode conter um erro do tipo *SdkError* ou nulo quando o compartilhamento for bem-sucedido. O resultado pode conter um objeto `AppContentStageSharingState` , indicando recuperação bem-sucedida ou nulo, indicando recuperação com falha.|
 
 ### <a name="example"></a>Exemplo
 
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 O corpo de resposta JSON para `getAppContentStageSharingCapabilities` API é:
 
@@ -614,6 +617,7 @@ O manifesto do aplicativo deve ter a `webApplicationInfo` propriedade para receb
 O bot recebe evento por meio do `OnEventActivityAsync` manipulador. Para desserializar a carga JSON, um objeto modelo é introduzido para obter os metadados de uma reunião. Os metadados de uma reunião estão na `value` propriedade na carga de eventos. O `MeetingStartEndEventvalue` objeto model é criado, cujas variáveis de membro correspondem às chaves sob a `value` propriedade na carga do evento.
 
 > [!NOTE]
+>
 > * Obter a ID da reunião de `turnContext.ChannelData`.
 > * Não use a ID da conversa como ID da reunião.
 > * Não use a ID da reunião do carregamento de eventos de reunião `turncontext.activity.value`.
@@ -621,6 +625,7 @@ O bot recebe evento por meio do `OnEventActivityAsync` manipulador. Para desseri
 O código a seguir mostra como capturar os metadados `MeetingType`de uma reunião que é , `Id``Title`, , `JoinUrl`, e `EndTime` `StartTime`de um evento de início/término de reunião:
 
 Evento Início da Reunião
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Evento Meeting End
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {

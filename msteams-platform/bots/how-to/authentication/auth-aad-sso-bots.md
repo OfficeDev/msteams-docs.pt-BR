@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 16e57a6ffc95aa9814016d56b66721ec44b07308
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: a51b96cdb5d2b37f826f533dae58bed117b71700
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355899"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399363"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte a SSO (login único) para bots
 
@@ -33,7 +33,6 @@ As etapas a seguir ajudam você com tokens de aplicativo de bot e autenticação
    > * Um usuário pode ter mais de um ponto de extremidade ativo por vez.
    > * O token do bot é recebido a partir de cada ponto de extremidade de usuário ativo.
    > * O aplicativo deve ser instalado no escopo pessoal para suporte do SSO.
-
 
 1. Se o usuário atual estiver usando seu aplicativo bot pela primeira vez, um prompt de solicitação aparecerá para o usuário para fazer uma das seguintes ações:
     * Forneça o consentimento, se necessário.
@@ -85,6 +84,7 @@ As etapas para registrar seu aplicativo por meio do portal do Azure AD são seme
    > Para atualizar o manifesto do aplicativo mais tarde, salve o valor de **ID do aplicativo (** cliente).
 
    > [!IMPORTANT]
+   >
    > * Se você estiver criando um bot autônomo, insira o URI de ID do Aplicativo como `api://botid-{YourBotId}`. Aqui *YourBotId* é sua ID de aplicativo do Azure AD.
    > * Se você estiver criando um aplicativo com um bot e uma guia, insira o URI de ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
@@ -146,9 +146,9 @@ As etapas para registrar seu aplicativo por meio do portal do Azure AD são seme
 1. As etapas a seguir ajudarão você a habilitar a concessão implícita:
     * Selecione **Autenticação** no painel esquerdo.
     * Selecione as **caixas de seleção Tokens de** **Acesso e tokens de ID** .
-    
+
     ![Conceder fluxo](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
+
     * Selecione **Salvar** para salvar as alterações.
 
 1. Adicione permissões **de API necessárias**.
@@ -163,7 +163,6 @@ As etapas a seguir orientarão você a atualizar o manifesto do bot no portal do
 1. Verifique se o item config está definido como **"accessTokenAcceptedVersion": 2**. Caso não seja, altere seu valor para **2**.
 
     ![Manifesto de atualização](~/assets/images/bots/update-manifest.png)
-
 
    >[!NOTE]
    > Se você já estiver testando seu bot Teams, saia deste aplicativo e saia Teams. Em seguida, entre novamente para ver essa alteração.
@@ -197,7 +196,7 @@ As etapas a seguir orientarão você a atualizar o portal do Azure com a conexã
     * Adicione todos os **Escopos configurados** ao especificar permissões para APIs de downstream para seu aplicativo do Azure AD. Com a ID do Cliente e o segredo do cliente fornecido, o armazenamento de tokens troca o token por um token de gráfico com permissões definidas.
     * Selecione **Salvar**.
     * Selecione **Aplicar**.
-   
+
     ![Configuração de conexão](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### <a name="update-your-teams-application-manifest-for-your-bot"></a>Atualizar seu manifesto Teams aplicativo para seu bot
@@ -211,6 +210,7 @@ Se o aplicativo contiver um bot autônomo, use o seguinte código para adicionar
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
+
 Se o aplicativo contiver um bot e uma guia, use o seguinte código para adicionar novas propriedades ao manifesto Teams aplicativo:
 
 ```json
@@ -356,7 +356,6 @@ Para entender o que o bot faz quando a troca de token falha ao disparar um promp
 
 6. Se o `TokenExchangeInvokeResponse` tiver um `status` de `200`, o cliente não mostrará o cartão OAuth. Consulte a [imagem de fluxo normal](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). Para qualquer outro `status` ou se `TokenExchangeInvokeResponse` o não for recebido, o cliente mostra o cartão OAuth para o usuário. Consulte a [imagem de fluxo de fallback](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). Se houver algum erro ou dependências não amet como consentimento do usuário, essa atividade garante que o fluxo de SSO volte ao fluxo OAuthCard normal.
 
-
 ### <a name="update-the-auth-sample"></a>Atualizar o exemplo de auth
 
 Abra [Teams exemplo de auth](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) e conclua as seguintes etapas para atualizá-lo:
@@ -379,9 +378,10 @@ Abra [Teams exemplo de auth](https://github.com/microsoft/BotBuilder-Samples/tre
 4. Feche o manifesto com as imagens de perfil e instale-o Teams.
 
 ## <a name="code-sample"></a>Exemplo de código
-|**Nome de exemplo** | **Descrição** |**.NET** | 
+
+|**Nome de exemplo** | **Descrição** |**.NET** |
 |----------------|-----------------|--------------|
-|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|SDK da estrutura bot | Exemplo para usar o SDK da estrutura de bot. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 

@@ -1,26 +1,30 @@
 ---
 title: Teams Toolkit visão geral
 author: zyxiaoyuer
-description: 'Visão geral Teams Toolkit, instalação de Teams Toolkit e tour de Toolkit recursos'
+description: Visão geral Teams Toolkit, Instalação de Teams Toolkit e Tour de Toolkit recursos
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: fd3a72d3738fb835a5ef1e8092d1e59c06dad454
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398817"
 ---
-
 # <a name="teams-toolkit-overview"></a>Teams Toolkit visão geral
 
 > [!NOTE]
 > Atualmente, esse recurso está disponível apenas na **visualização de desenvolvedor** público.
 
-
-Teams Toolkit for Microsoft Visual Studio Code ajuda você a criar e implantar aplicativos Teams com identidade integrada, acesso ao armazenamento em nuvem, dados do Microsoft Graph e outros serviços no Azure e Microsoft 365 com abordagem de configuração zero. Para Teams desenvolvimento de aplicativos, semelhante ao Teams Toolkit para Visual Studio, você pode usar a ferramenta [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), `teamsfx`que consiste em Toolkit .
+Teams Toolkit for Microsoft Visual Studio Code ajuda você a criar e implantar aplicativos Teams com identidade integrada, acesso ao armazenamento em nuvem, dados do Microsoft Graph e outros serviços no Azure e Microsoft 365 com abordagem de configuração zero. Para Teams desenvolvimento de aplicativos, semelhante ao Teams Toolkit para Visual Studio, você pode usar a ferramenta [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), que consiste em Toolkit `teamsfx`.
 Teams Toolkit permite que você crie, depure e implante seu aplicativo Teams de Visual Studio Code. O desenvolvimento de aplicativos com o kit de ferramentas tem as vantagens de:
 
-- Identidade integrada
-- Acesso ao armazenamento em nuvem
-- Dados do Microsoft Graph
-- Serviços do Azure e Microsoft 365 com abordagem de configuração zero
+* Identidade integrada
+* Acesso ao armazenamento em nuvem
+* Dados do Microsoft Graph
+* Serviços do Azure e Microsoft 365 com abordagem de configuração zero
 
 Teams Toolkit todas as ferramentas necessárias para a criação de um aplicativo Teams em um só lugar.
 
@@ -39,7 +43,6 @@ Os principais marcos dessa jornada são:
 1. Use Microsoft 365 conta para criar e depurar seu Teams app.
 1. Use a conta do Azure para provisionar e implantar seu aplicativo na nuvem.
 1. Publique seu aplicativo no Teams.
-
 
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Instalar Teams Toolkit para Visual Studio Code
 
@@ -65,7 +68,6 @@ Após Toolkit instalação, você verá a interface do usuário Teams Toolkit co
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini-funções":::
 
-
 Você pode selecionar **Início** Rápido para explorar o Teams Toolkit ou selecionar **Criar** um novo aplicativo Teams para criar um Teams projeto. Se você tiver um projeto Teams criado pelo Teams Toolkit v2.+ aberto no Visual Studio Code Teams Toolkit, você verá uma interface do usuário com todas as funcionalidades, conforme mostrado na imagem a seguir: Você pode selecionar **Início** Rápido para explorar o Teams Toolkit , ou selecione **Criar um novo Teams App** para criar um Teams projeto. Você pode exibir uma lista de todos os Toolkit ao criar ou abrir um projeto existente na Visual Studio Code sidebar.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="funções":::
@@ -90,7 +92,7 @@ Teams Toolkit ajuda você a criar e personalizar seu projeto de aplicativo Teams
 
 ### <a name="create-a-new-teams-app"></a>Criar um novo Teams app
 
-Ele ajuda você a começar com Teams desenvolvimento de aplicativos criando um novo projeto Teams usando Teams Toolkit usando Criar novo projeto ou **Criar a partir de exemplos**.
+Ele ajuda você a começar com Teams desenvolvimento de aplicativos criando um novo projeto Teams usando Teams Toolkit usando Criar novo projeto ou Criar a partir **de exemplos**.
 
 ### <a name="add-capabilities"></a>Adicionar recursos
 
@@ -100,7 +102,7 @@ Ele ajuda a adicionar outros recursos de Teams necessários Teams aplicativo dur
 
 Ele ajuda você a adicionar, opcionalmente, recursos de nuvem que se ajustam às suas necessidades de desenvolvimento.
 
-### <a name="edit-manifest-file"></a>Editar arquivo de manifesto 
+### <a name="edit-manifest-file"></a>Editar arquivo de manifesto
 
 Ele ajuda você a editar a integração Teams aplicativo com Teams cliente.
 
@@ -126,7 +128,7 @@ Ele ajuda a automatizar seu fluxo de trabalho de desenvolvimento ao criar Teams 
 
 #### <a name="teamsfx-cli"></a>TeamsFx CLI
 
-É uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos e também permite cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
+É uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos e também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
 
 #### <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -141,7 +143,7 @@ Vamos explorar Teams Toolkit recursos.
 | Teams Toolkit recursos | Inclui... | O que você pode fazer |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | Microsoft 365 conta | Use sua Microsoft 365 com uma assinatura E5 válida para criar seu aplicativo. |
+| &nbsp; | Conta do Microsoft 365 | Use sua Microsoft 365 com uma assinatura E5 válida para criar seu aplicativo. |
 | &nbsp; | Conta do Azure | Use sua conta do Azure para implantar o aplicativo no Azure. |
 | **Ambiente** | &nbsp; | &nbsp; |
 | &nbsp; | local | Implante seu aplicativo no ambiente local padrão com configurações de ambiente de máquina local. |
@@ -154,13 +156,13 @@ Vamos explorar Teams Toolkit recursos.
 | &nbsp; | Editar arquivo de manifesto | Edite a Teams de aplicativos com Teams cliente. |
 | **Implantação** | &nbsp; | &nbsp; |
 | &nbsp; | Provisionamento na nuvem | Alocar recursos do Azure para seu aplicativo. Teams Toolkit é integrado ao Gerenciador de Recursos do Azure. |
-| &nbsp; | Pacote Teams de metadados zip | Crie o pacote de aplicativos que pode ser carregado para Teams ou Portal do Desenvolvedor. Ele contém o manifesto do aplicativo e os ícones do aplicativo.  |
+| &nbsp; | Pacote Teams de metadados zip | Crie o pacote de aplicativos que pode ser carregado no Teams ou no Portal do Desenvolvedor. Ele contém o manifesto do aplicativo e os ícones do aplicativo.  |
 | &nbsp; | Implantar na nuvem | Implante o código-fonte no Azure. |
 | &nbsp; | Publicar no Teams | Publique seu aplicativo desenvolvido e distribua-o em escopos, como pessoal, equipe, canal ou organização. |
 | &nbsp; | Portal do Desenvolvedor do Teams | Use o Portal do Desenvolvedor para configurar e gerenciar seu Teams app. |
 | &nbsp; | Guia de CI/CD | Automatize seu fluxo de trabalho de desenvolvimento durante a criação Teams aplicativo. |
 | **Ajuda e comentários** | &nbsp; | &nbsp; |
-| &nbsp; | Início Rápido | Exibir a Teams Toolkit de Início Rápido dentro Visual Studio Code.  |
+| &nbsp; | Início Rápido | Exibir a ajuda Teams Toolkit início rápido no Visual Studio Code.  |
 | &nbsp; | Documentação | Selecione para acessar a documentação Microsoft Teams desenvolvedor. |
 | &nbsp; | Relatar problemas no GitHub | Selecione para acessar GitHub página e levantar quaisquer problemas. |
 |

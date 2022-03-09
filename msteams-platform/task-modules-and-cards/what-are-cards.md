@@ -4,27 +4,27 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821581"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398649"
 ---
 # <a name="cards"></a>Cartões
 
 Um cartão é um contêiner de interface do usuário (UI) para obter informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos e podem incluir botões que disparam [ações de cartão](~/task-modules-and-cards/cards/cards-actions.md). Ao usar os cartões, você pode organizar informações em grupos e dar aos usuários a oportunidade de interagirem com partes específicas das informações.
 
 Os bots do Teams suportam os seguintes tipos de cartões:
- 
-- Cartão Adaptável
-- Cartão Hero
-- Cartão de listagem
-- Cartão do Conector do Office 365
-- Cartão de recebimento
-- Cartão de entrada
-- Cartão de miniatura
-- Coleções de cartões
+
+* Cartão Adaptável
+* Cartão Hero
+* Cartão de listagem
+* Cartão do Conector do Office 365
+* Cartão de recebimento
+* Cartão de entrada
+* Cartão de miniatura
+* Coleções de cartões
 
 Você pode adicionar a formatação Rich Text aos cartões usando Markdown ou HTML, dependendo do tipo de cartão. Cartões usados por bots e extensões de mensagens no Microsoft Teams, adicione e responda a essas ações de cartão, `openUrl`, `messageBack`, `imBack`, `invoke` e `signin`.
 
@@ -63,21 +63,22 @@ Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de c
 
 ### <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
-O [Seletor de Pessoas](cards/people-picker.md#people-picker-in-adaptive-cards) adicionado como um controle de entrada nos Cartões Adaptáveis permite a pesquisa e seleção de pessoas. Você pode usá-lo em chats, canais, módulos de tarefas e guias. Os clientes móveis e de área de trabalho suportam o Seletor de Pessoas que fornece uma experiência de digitação em linha. 
+O [Seletor de Pessoas](cards/people-picker.md#people-picker-in-adaptive-cards) adicionado como um controle de entrada nos Cartões Adaptáveis permite a pesquisa e seleção de pessoas. Você pode usá-lo em chats, canais, módulos de tarefas e guias. Os clientes móveis e de área de trabalho suportam o Seletor de Pessoas que fornece uma experiência de digitação em linha.
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>Pesquisa de preenchimento automático nos Cartões Adaptáveis  
 
-Pesquisa de preenchimento automático adicionado como um controle de entrada nos Cartões Adaptáveis habilitam a experiência de [pesquisa dinâmica](~/task-modules-and-cards/cards/dynamic-search.md) de um conjunto de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa de preenchimento automático em uma lista com limite de opções. Os clientes móveis e de área de trabalho suportam a experiência de pesquisa de preenchimento automático. 
+Pesquisa de preenchimento automático adicionado como um controle de entrada nos Cartões Adaptáveis habilitam a experiência de [pesquisa dinâmica](~/task-modules-and-cards/cards/dynamic-search.md) de um conjunto de dados carregado dinamicamente. Ele também permite que os usuários façam uma pesquisa de preenchimento automático em uma lista com limite de opções. Os clientes móveis e de área de trabalho suportam a experiência de pesquisa de preenchimento automático.
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartões adaptáveis e Webhooks de entrada
 
 > [!NOTE]
+>
 > * Todos os elementos de esquema dos Cartões Adaptáveis nativos, exceto `Action.Submit`, são totalmente suportados.
 > * As ações com suporte são [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Os Cartões Adaptáveis com Webhooks de entrada permitem que você use os recursos avançados e flexíveis dos Cartões Adaptáveis. Ele envia dados usando os Webhooks de entrada no Teams do seu serviço Web.
 
-## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Suporte para ID de Objeto do Azure Active Directory e UPN na menção do usuário 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Suporte para ID de Objeto do Azure Active Directory e UPN na menção do usuário
 
 Bots com Cartões Adaptáveis dão suporte a IDs de menção de usuário, como ID de objeto do Microsoft Azure Active Directory (Azure AD) e Nome de Princípio do Usuário (UPN), além das IDs existentes. Os webhooks de entrada começam a dar suporte à menção do usuário no Cartão Adaptável com a ID de Objeto do Azure Active Directory e o UPN.
 

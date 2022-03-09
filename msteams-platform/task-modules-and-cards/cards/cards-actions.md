@@ -4,12 +4,12 @@ description: Descreve ações de cartão no Microsoft Teams e como usá-las em s
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081055"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398600"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -27,6 +27,7 @@ Os cartões usados por bots e extensões de mensagens no Teams dão suporte aos 
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
+>
 >* O Teams não dá suporte aos tipos `CardAction` não listados na tabela anterior.
 >* O Teams não dá suporte à propriedade `potentialActions`.
 >* As ações de cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou Serviço de Bot do Azure. Não há suporte para ações sugeridas no Microsoft Teams. Se você quiser que os botões apareçam em uma mensagem de bot do Teams, use um cartão.
@@ -556,6 +557,7 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
   }
 }
 ```
+
 ## <a name="next-step"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
@@ -567,4 +569,4 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
 * [Usar módulos de tarefas dos bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Cartões adaptáveis nos bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Ações Universais para Cartões Adaptáveis](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
-* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

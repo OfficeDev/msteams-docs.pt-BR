@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: e67ab472f28dc44dc23f892b36ddc78ff602d28d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435835"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398999"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -44,20 +44,16 @@ Se você já estiver familiarizado com o fluxo de trabalho Yeoman, talvez prefir
 > [!NOTE]
 > Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams.
 
-
 ## <a name="build-your-first-teams-app"></a>Crie seu primeiro aplicativo do Teams
 
 Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idioma (ou estrutura) e prepare seu ambiente de desenvolvimento.
 
 > [!div class="nextstepaction"]
 > [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
-
 > [!div class="nextstepaction"]
 > [Criar um aplicativo Teams com SPFx](../sbs-gs-spfx.yml)
-
 > [!div class="nextstepaction"]
 > [Criar um aplicativo Teams com C# ou .NET](../sbs-gs-csharp.yml)
-
 > [!div class="nextstepaction"]
 > [Criar um aplicativo Teams com Node.js](../sbs-gs-nodejs.yml)
 
