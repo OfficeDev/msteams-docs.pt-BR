@@ -5,17 +5,27 @@ description: descreve como criar um Webhook de Saída
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: as guias do teams de saída da mensagem acionável do webhook verificam o webhook
-ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+keywords: As guias do Teams exibem a mensagem acionável do webhook de saída para verificar o webhook
+ms.openlocfilehash: 2b77118e76bfde8c0fac7c74fce4dab1d78c7dd5
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281760"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356291"
 ---
 # <a name="create-outgoing-webhook"></a>Criar Webhook de saída
 
 O Webhook de Saída atua como um bot e pesquisa mensagens em canais usando **@mencionar**. Ele envia notificações para serviços Web externos e responde com mensagens avançadas, que incluem cartões e imagens. Ele ajuda a ignorar o processo de criação de bots por meio do [Microsoft Bot Framework](https://dev.botframework.com/).
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts may be overused in this article. Check once.
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* Some screenshots like teamschannel.png may be redundant. Check once.
+* Some headings use title case. We use sentence case for titles.
+* Check for markdownlint errors. 
+* Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
 
 ## <a name="key-features-of-outgoing-webhook"></a>Principais recursos do Webhook de Saída
 
@@ -32,13 +42,13 @@ A tabela a seguir fornece os recursos e a descrição do Webhook de Saída:
 
 Criar Webhooks de Saída e adicionar bots personalizados ao Teams.
 
-**Para criar um Webhook de Saída**
+Para criar um Webhook de Saída, siga estas etapas:
 
 1. Selecione **Teams** no painel esquerdo. A  página do **Teams** é exibida:
 
     ![Canal do Teams](~/assets/images/teamschannel.png)
 
-1. Na página do **Teams** selecione a equipe necessária para criar um Webhook de Saída e selecione o &#8226;&#8226;&#8226;. No menu suspenso, selecione **Gerenciar equipe**:
+1. Na página **Teams**, selecione a equipe necessária para criar um Webhook de Saída e selecione &#8226;&#8226;&#8226;&#8226;. No menu suspenso, selecione **Gerenciar equipe**:
 
     ![Criar Webhook de saída](~/assets/images/outgoingwebhook1.png)
 
@@ -64,7 +74,7 @@ Criar Webhooks de Saída e adicionar bots personalizados ao Teams.
 Uma caixa de diálogo [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) é exibida. É um token de segurança usado para autenticar chamadas entre o Teams e o serviço externo designado. O token de segurança do HMAC não expira e é exclusivo para cada configuração.
 
 >[!NOTE]
-> O Webhook de Saída estará disponível para os usuários da equipe somente se a URL for válida e os tokens de autenticação do servidor e do cliente forem iguais. Por exemplo, um handshake HMAC.
+> O Webhook de Saída estará disponível para os usuários da equipe, somente se a URL for válida e os tokens de autenticação do servidor e do cliente forem iguais. Por exemplo, um handshake HMAC.
 
 O cenário a seguir fornece os detalhes para adicionar um Webhook de Saída:
 
@@ -72,6 +82,7 @@ O cenário a seguir fornece os detalhes para adicionar um Webhook de Saída:
 * Exemplo: Você tem um aplicativo de linha de negócios que rastreia todas as operações CRUD (criar, ler, atualizar e excluir). Essas operações são feitas nos registros de funcionários por usuários de RH do canal do Teams em uma locação do Office 365.
 
 # <a name="url-json-payload"></a>[Carga JSON da URL](#tab/urljsonpayload)
+
 **Crie uma URL no servidor do aplicativo para aceitar e processar uma solicitação POST com uma carga JSON**
 
 Seu serviço recebe mensagens em um esquema de mensagens padrão do serviço de bot do Azure. O conector do Bot Framework é um serviço RESTful que permite processar o intercâmbio de mensagens formatadas em JSON por meio de protocolos HTTPS, conforme documentado na [API do Serviço de Bot do Azure](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Como alternativa, você pode seguir o SDK do Microsoft Bot Framework para processar e analisar mensagens. Para obter mais informações, consulte [Visão geral do Serviço de Bot do Azure](/azure/bot-service/bot-service-overview-introduction).
@@ -79,25 +90,27 @@ Seu serviço recebe mensagens em um esquema de mensagens padrão do serviço de 
 Os Webhooks de saída têm como escopo o nível `team` e são visíveis para todos os membros da equipe. Os usuários precisam **\@mencionar** o nome do Webhook de Saída para invocá-lo no canal.
 
 # <a name="verify-hmac-token"></a>[Verificar o token HMAC](#tab/verifyhmactoken)
+
 **Criar um método para verificar o token HMAC do Webhook de Saída**
 
 Usando o exemplo de mensagem de entrada e ID: "contoso" de SigningKeyDictionary de {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKey/N2bOmlM31zaA=" }.
 
 Use o valor "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" na autorização do cabeçalho da solicitação.
 
-Para garantir que seu serviço esteja recebendo chamadas somente de clientes reais do Teams, o Teams fornece um código HMAC no cabeçalho de autorização HTTP `hmac`. Sempre inclua o código em seu protocolo de autenticação.
+Para garantir que seu serviço esteja recebendo chamadas somente de clientes reais do Teams, o Teams fornece um código HMAC no cabeçalho de autorização http `hmac` acesso. Sempre inclua o código em seu protocolo de autenticação.
 
 Seu código sempre deve validar a assinatura HMAC incluída na solicitação da seguinte maneira:
 
-* Gere o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas, como o [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js e [Exemplos de webhook do Teams](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) para C\#). O Microsoft Teams usa criptografia HMAC SHA256 padrão. Você deve converter o corpo em uma matriz de bytes em UTF8.
-* Compute o hash da matriz de bytes do token de segurança fornecido pelo Teams quando você registrou o Webhook de Saída no cliente do Teams. Consulte [Criar um Webhook de Saída](#create-outgoing-webhook).
+* Gere o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas, como o [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js e exemplo de webhook do [Teams](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) para C\#. O Microsoft Teams usa criptografia HMAC SHA256 padrão. Você deve converter o corpo em uma matriz de bytes em UTF8.
+* Compute o hash da matriz de bytes do token de segurança fornecido pelo Teams quando você registrou o Webhook de Saída no cliente do Teams. Consulte [criar um webhook de saída](#create-outgoing-webhook).
 * Converta o hash em uma cadeia de caracteres usando a codificação UTF-8.
 * Compare o valor da cadeia de caracteres do hash gerado com o valor fornecido na solicitação HTTP.
 
 # <a name="method-to-respond"></a>[Método para responder](#tab/methodtorespond)
+
 **Criar um método para enviar uma resposta de êxito ou falha**
 
-As respostas de seus Webhooks de Saída aparecem na mesma cadeia de resposta que a mensagem original. Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para seu serviço e seu código tem cinco segundos para responder à mensagem antes que a conexão seja encerrada. 
+As respostas de seus Webhooks de Saída aparecem na mesma cadeia de resposta que a mensagem original. Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para seu serviço e seu código obtém cinco segundos para responder à mensagem antes que a conexão termine e termine.
 
 ### <a name="example-response"></a>Resposta de exemplo
 
@@ -107,11 +120,12 @@ As respostas de seus Webhooks de Saída aparecem na mesma cadeia de resposta que
     "text": "This is a reply!"
 }
 ```
+
 ---
 
 > [!NOTE]
-> * Você pode enviar mensagens de texto, cartão Hero e Cartão Adaptável como anexo com o Webhook de Saída.
-> * Os cartões dão suporte à formatação. Para obter mais informações, consulte[formatar cartões com markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
+> * Você pode enviar mensagens de texto, Cartão Hero e Cartão Adaptável como anexo com o Webhook de Saída.
+> * Os cartões dão suporte à formatação. Para obter mais informações, [formatar cartões com markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 
 Os códigos a seguir são exemplos de uma resposta de Cartão Adaptável:
 
@@ -211,15 +225,21 @@ var responseMsg = JSON.stringify({
 }
 ```
 
-* * *
+---
 
 ## <a name="code-sample"></a>Exemplo de código
 
 |**Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhooks de Saída | Exemplos de criação de bots personalizados para uso no Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhooks de Saída | Exemplos de criação de bots personalizados para uso no Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [passo a passo para](../../sbs-outgoing-webhooks.yml) webhooks de saída no Teams.
 
 ## <a name="see-also"></a>Confira também
+
 * [Criar um webhook de Entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)

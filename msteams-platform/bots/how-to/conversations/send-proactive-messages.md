@@ -5,28 +5,29 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: Enviar mensagem, obter ID do usuário, obter ID do canal, obter ID da conversa
-ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896324"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355731"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Isso inclui mensagens, como:
+Uma mensagem proativa é qualquer mensagem enviada por um bot que não esteja em resposta a uma solicitação de um usuário. Isso pode incluir mensagens, como:
 
 * Mensagem de boas-vindas
 * Notificações
 * Mensagens agendadas
 
-Para que seu bot envie uma mensagem proativa a um usuário, chat em grupo ou equipe, ele precisa ter acesso para enviar a mensagem. O aplicativo que contém seu bot deve ser instalado primeiro onde houver um chat em grupo ou equipe. Você pode [instalar seu aplicativo de forma proativa usando o Microsoft Graph](#proactively-install-your-app-using-graph) em uma equipe, se necessário, ou usar uma [política de aplicativo](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicativos para equipes e usuários em seu locatário. Se for um usuário, você deve ter o aplicativo instalado ou ser um membro da equipe na qual o aplicativo está instalado.
+Para que seu bot envie uma mensagem proativa a um usuário, chat em grupo ou equipe, ele precisa ter acesso para enviar a mensagem. O aplicativo que contém seu bot deve ser instalado primeiro onde houver um chat em grupo ou equipe.
+Você pode [instalar seu aplicativo de forma proativa usando o Microsoft Graph](#proactively-install-your-app-using-graph) em uma equipe, se necessário, ou usar uma [política de aplicativo](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicativos para equipes e usuários em seu locatário. Se for um usuário, você deve ter o aplicativo instalado ou ser um membro da equipe na qual o aplicativo está instalado.
 
 Enviar uma mensagem proativa é diferente de enviar uma mensagem normal. Não há nenhum ativo `turnContext` a ser usado como resposta. Você deve criar a conversa antes de enviar a mensagem. Por exemplo, um novo chat individual ou um novo tópico de conversa em um canal. Não é possível criar um novo chat em grupo ou um novo canal em uma equipe com mensagens proativas.
 
-**Para enviar uma mensagem proativa**
+Para enviar uma mensagem proativa, siga estas etapas:
 
 1. [Obtenha a ID do usuário, ID da equipe ou ID do canal](#get-the-user-id-team-id-or-channel-id), se necessário.
 1. [Crie a conversa](#create-the-conversation), se necessário.
