@@ -5,12 +5,12 @@ description: Planeje seu aplicativo, entenda o usuário e suas necessidades, ent
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898151"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399055"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -163,7 +163,7 @@ A [API do Microsoft Graph para Teams](/graph/teams-concept-overview) fornece ace
 
 > [!NOTE]
 > A loja do Teams evoluiu:
-> 
+>
 > Anteriormente, os aplicativos LOB eram atualizados selecionando as reticências no bloco. Com a experiência atualizada da loja do Teams, agora você pode atualizar os aplicativos LOB fazendo logon no [Centro de Administrador do Teams](https://admin.teams.microsoft.com).
 
 ### <a name="app-scope"></a>Escopo do aplicativo

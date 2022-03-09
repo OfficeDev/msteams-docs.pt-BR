@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 6bee9d01aa89d04eccbc1f20e9a7fca1efb62ab3
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898186"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398719"
 ---
 # <a name="the-teams-solution"></a>A solução do Microsoft Teams
 
@@ -21,7 +21,7 @@ A Plataforma Microsoft Teams é uma plataforma poderosa e flexível para a cria�
 
 Você obteve uma exibição das ofertas do Teams. Agora você pode mapeá-las de acordo com as necessidades do usuário. Vamos revisitar o cenário.
 
-O desenvolvedor da agência Tours and Travel quer criar um aplicativo para seus usuários, os viajantes. O aplicativo deve:
+O desenvolvedor da Agência de Viagens e Tours quer criar um aplicativo para seus usuários, os viajantes. O aplicativo deve:
 
 - Verificar e enviar a previsão para os passageiros registrados na agência de viagens.
 - Notificar os usuários um dia antes da data de partida para que eles possam se planejar.
@@ -34,13 +34,12 @@ Requisitos de agrupamento e mapeamento de recursos do Teams:
 | **Integração** | &nbsp; | &nbsp; | Microsoft Graph, API do Clima |
 | **Escopo** | &nbsp; | Aplicativo pessoal | &nbsp; |
 | **Ponto de integração** | &nbsp; | Chat | &nbsp; |
-|
 
 **Solução de aplicativo do Teams**: um aplicativo de *bot de chat pessoal* do Teams que verifica e *envia notificação de previsão* para *usuários registrados* antes da data da viagem.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Um desenvolvedor de uma agência de viagens cria um bot para o Microsoft Teams que envia a previsão do tempo aos clientes para eles se planejarem antes de suas viagens" border="false":::
 
-O Teams oferece esses e muito mais recursos para trazer aos usuários uma solução de aplicativos com recursos avançados. Para desenvolver esse aplicativo:
+O Teams oferece essas e muito mais funcionalidades para trazer aos usuários uma solução de aplicativos com recursos avançados. Para desenvolver este aplicativo:
 
 1. Crie um aplicativo de bot de chat pessoal.
 1. Integre com uma API externa de previsão do tempo para conectar e solicitar previsões para datas e localizações específicas.
@@ -55,7 +54,7 @@ Um aplicativo Teams oferece a flexibilidade de escolher seu ambiente de build. I
 
 :::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="A empresa precisa de um aplicativo" border="false":::
 
-Crie seu aplicativo Teams no ambiente adequado às suas necessidades específicas. Você pode até selecionar uma combinação.
+Crie seu aplicativo Teams no ambiente que funciona para seus requisitos específicos. Você pode até mesmo selecionar uma combinação.
 
 Por exemplo, você pode usar o kit de ferramentas do Teams para criar um aplicativo com JavaScript e hospedá-lo em um site do SharePoint.
 
@@ -67,10 +66,10 @@ Como plataforma para criar aplicativos, o Teams oferece uma gama completa de apl
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Descrevendo um ciclo de vida do desenvolvimento do aplicativo Teams. Planejar, projetar, construir, estender, testar, implantar, distribuir. Detalhes mostrados em uma lista de marcadores abaixo." border="false":::
 
-Desde o design até a criação e distribuição de um aplicativo Teams, você pode usar várias ferramentas e serviços. Um exemplo de fluxo de desenvolvimento pode ser:
+Desde o design até a criação e a distribuição de um aplicativo do Teams, você pode usar várias ferramentas e serviços. Um exemplo de fluxo de desenvolvimento pode ser:
 
 1. Planejar seu projeto e descobrir o requisito.
-1. Design do aplicativo. Usar o kit de interface do usuário do Teams e a biblioteca de interface do usuário para criar a interface do usuário da guia.
+1. Crie o aplicativo. Use o Kit de Interface do Usuário do Teams e a Biblioteca de Interface do Usuário para criar a interface do usuário das guias.
 1. Criar o aplicativo com JavaScript usando o kit de ferramentas do Teams.
 1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o Microsoft Graph.
 1. Testar o aplicativo em um locatário de desenvolvedor com dados de usuário de exemplo.
@@ -122,7 +121,7 @@ Desde o design até a criação e distribuição de um aplicativo Teams, você p
         **Criar seu aplicativo**
     :::column-end:::
     :::column span="2":::
-        Procurando inspiração para o desenvolvimento de aplicativos? Navegue em nossa lista de cenários reais e soluções do setor com simulações de conceito de alta fidelidade para entender as várias maneiras pelas quais um aplicativo do Teams pode ajudar seus usuários.
+        Procurando inspiração para o desenvolvimento de aplicativos? Navegue pela nossa lista de cenários reais e soluções do setor com simulações de conceito de alta fidelidade para entender as várias maneiras pelas quais um aplicativo Teams pode ajudar seus usuários.
 
         > [!div class="nextstepaction"]
         > [Ver cenários de aplicativo](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -182,7 +181,7 @@ Desde o design até a criação e distribuição de um aplicativo Teams, você p
         **Um código pequeno é muito longo**
     :::column-end:::
     :::column span="2":::
-        Você não precisa ser um programador especialista para criar um ótimo aplicativo do Teams. Experimente uma das várias soluções de pouco código.
+        Você não precisa ser um programador especialista para criar um ótimo aplicativo Teams. Experimente uma das várias soluções de pouco código.
 
         > [!div class="nextstepaction"]
         > [Criar um app de código-baixo](samples/teams-low-code-solutions.md)

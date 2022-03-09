@@ -3,12 +3,12 @@ title: Empacote o seu aplicativo
 description: Saiba como empacotar seu aplicativo do Microsoft Teams para testar, carregar e armazenar a publicação.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345385"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356067"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Criar um pacote de aplicativo do Microsoft Teams
 
@@ -25,13 +25,13 @@ Quando um usuário instala seu aplicativo no Teams, ele instala um pacote de apl
 
 ## <a name="app-manifest"></a>Manifesto do aplicativo
 
-O arquivo de manifesto do aplicativo deve estar no nível superior do pacote com o nome `manifest.json`. 
+O arquivo de manifesto do aplicativo deve estar no nível superior do pacote com o nome `manifest.json`.
 
 Ao publicar no repositório do Teams, certifique-se de que seu manifesto faça referência ao [esquema](~/resources/schema/manifest-schema.md) mais recente.
 
 ## <a name="app-icons"></a>Ícones do aplicativo
 
-Seu pacote de aplicativos deve incluir duas versões PNG do ícone do seu aplicativo: uma versão de cor e de contorno.
+Seu pacote de aplicativos deve incluir duas versões .png do ícone de seu aplicativo: Uma versão colorida e de contorno.
 
 > [!Note]
 > Se seu aplicativo tiver um bot ou uma extensão de mensagens, seus ícones também serão incluídos no registro do serviço de Bot do Microsoft Azure.
