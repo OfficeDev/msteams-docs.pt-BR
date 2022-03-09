@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de sinal de notificação de contexto de usuário de api de usuário de reuniões de aplicativos do teams
-ms.openlocfilehash: 3dd234e99068c2d7014a04f378a131b5d325a2c8
-ms.sourcegitcommit: 58f1c3e6a4fab0778ff035e0bbddcee267a0e8e2
+ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62857234"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355787"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -27,7 +27,7 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs Microsoft Team
 |---|---|----|
 |[**Obter contexto do usuário**](#get-user-context-api)| Obter informações contextuais para exibir conteúdo relevante em uma Teams guia.| MSTC SDK|
 |[**Obter participante**](#get-participant-api)| Buscar informações do participante por meio da ID da reunião e da ID do participante. |MSBF SDK|
-|[**Enviar sinal de notificação**](#send-notification-signal-api)| Forneça sinais de reunião usando a API de notificação de conversa existente para chat usuário-bot e permite notificar a ação do usuário que mostra uma caixa de diálogo na reunião. |MSBF SDK|
+|[**Enviar notificação de reunião**](#send-an-in-meeting-notification)| Forneça sinais de reunião usando a API de notificação de conversa existente para chat usuário-bot e permite notificar a ação do usuário que mostra uma notificação na reunião. |MSBF SDK|
 |[**Obter detalhes da reunião**](#get-meeting-details-api)| Obter metadados estáticos de uma reunião. |MSBF SDK |
 |[**Enviar legendas em tempo real**](#send-real-time-captions-api)| Envie legendas em tempo real para uma reunião contínua. |MSTC SDK|
 |[**Compartilhar conteúdo do aplicativo em estágio**](#share-app-content-to-stage-api)| Compartilhe partes específicas do aplicativo para o estágio de reunião do painel do lado do aplicativo em uma reunião. |MSTC SDK|
@@ -37,7 +37,7 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs Microsoft Team
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
 
-Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte obter contexto para sua guia [Teams.](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)`meetingId` é usado por uma guia em execução no contexto da reunião e é adicionado para a carga de resposta.
+Para identificar e recuperar informações contextuais para o conteúdo da guia, consulte obter contexto para sua guia [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` É usada por uma guia em execução no contexto da reunião e é adicionada para a carga de resposta.
 
 ## <a name="get-participant-api"></a>Obter API do participante
 
@@ -136,13 +136,15 @@ A tabela a seguir fornece os códigos de resposta:
 | **401** | O aplicativo responde com um token inválido.|
 | **404** | A reunião expirou ou os participantes não estão disponíveis.|
 
-## <a name="send-notification-signal-api"></a>Api de sinal de notificação de envio
+## <a name="send-an-in-meeting-notification"></a>Enviar uma notificação em reunião
 
-Todos os usuários em uma reunião recebem as notificações enviadas por meio da `NotificationSignal` API. `NotificationSignal` A API permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat usuário-bot. Você pode enviar sinal com base na ação do usuário, uma caixa de diálogo na reunião. A API inclui parâmetros de consulta, exemplos e códigos de resposta.
+Todos os usuários em uma reunião recebem as notificações enviadas por meio da carga de notificação na reunião. A carga de notificação na reunião dispara uma notificação na reunião e permite que você forneça sinais de reunião que são entregues usando a API de notificação de conversa existente para chat de usuário-bot. Você pode enviar uma notificação em reunião com base na ação do usuário. A carga está disponível por meio dos Serviços bot.
 
 > [!NOTE]
-> * Quando uma caixa de diálogo na reunião é invocada, o conteúdo é apresentado como uma mensagem de chat.
-> * Atualmente, não há suporte para o envio de notificações direcionadas.
+> * Quando uma notificação em reunião é invocada, o conteúdo é apresentado como uma mensagem de chat.
+> * Atualmente, não há suporte para o envio de notificações direcionadas e suporte para webapp.
+> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, [consulte Teams módulo de tarefa do SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a ID Microsoft Azure Active Directory (Azure AD) do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -159,7 +161,7 @@ O `Bot ID` é declarado no manifesto e o bot recebe um objeto de resultado.
 > [!NOTE]
 > * O `completionBotId` parâmetro do é `externalResourceUrl` opcional no exemplo de carga solicitada.
 > * Os `externalResourceUrl` parâmetros de largura e altura devem estar em pixels. Para obter mais informações, consulte [diretrizes de design](design/designing-apps-in-meetings.md).
-> * A URL é a página, que é carregada como `<iframe>` na caixa de diálogo na reunião. O domínio deve estar na matriz dos `validDomains` aplicativos no manifesto do aplicativo.
+> * A URL é a página, que é carregada como `<iframe>` na notificação em reunião. O domínio deve estar na matriz dos `validDomains` aplicativos no manifesto do aplicativo.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -364,11 +366,11 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 
 ## <a name="send-real-time-captions-api"></a>API de envio de legendas em tempo real
 
-A API de legendas de envio em tempo real expõe um ponto de extremidade POST para Microsoft Teams legendas de conversão em tempo real de acesso à comunicação (CART), legendas fechadas do tipo humano. O conteúdo de texto enviado para esse ponto de extremidade aparece para usuários finais em uma reunião Microsoft Teams quando eles têm legendas habilitadas.
+A API de legendas de envio em tempo real expõe um ponto de extremidade POST para Microsoft Teams legendas de conversão em tempo real de acesso à comunicação (CART), legendas fechadas digitadas por humanos. O conteúdo de texto enviado para esse ponto de extremidade aparece para usuários finais em uma reunião Microsoft Teams quando eles têm legendas habilitadas.
 
 ### <a name="cart-url"></a>CART URL
 
-Você pode obter a URL CART do ponto de extremidade POST na página **Opções** de reunião em uma Microsoft Teams reunião. Para obter mais informações, consulte [legendas CART em uma Microsoft Teams reunião](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL CART para usar legendas CART.
+Você pode obter a URL DO CART para o ponto de extremidade POST na página **Opções** de reunião em uma reunião Microsoft Teams reunião. Para obter mais informações, [consulte legendas CART em uma Microsoft Teams reunião](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL CART para usar legendas CART.
 
 #### <a name="query-parameter"></a>Parâmetro Query
 
@@ -376,7 +378,7 @@ A URL cart inclui os seguintes parâmetros de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|----|
-|**meetingId**| String | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%22%7d|
+|**meetingId**| String | Sim |O identificador de reunião está disponível por meio de Bot Invoke e Teams Client SDK. <br/>Por exemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%22%7d|
 |**token**| String | Sim |Token de autorização.<br/> Por exemplo, token=04751eac |
 
 #### <a name="example"></a>Exemplo
@@ -385,7 +387,7 @@ A URL cart inclui os seguintes parâmetros de consulta:
 https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
 ```
 
-### <a name="method"></a>Método
+### <a name="method"></a>Method
 
 |Resource|Método|Descrição|
 |----|----|----|
@@ -414,7 +416,7 @@ A tabela a seguir fornece os códigos de erro:
 |Código de erro|Descrição|
 |---|---|
 | **400** | Solicitação ruim. O corpo da resposta tem mais informações. Por exemplo, não de todos os parâmetros necessários apresentados.|
-| **401** | Não autorizado. Token ruim ou expirado. Se você receber esse erro, gere uma nova URL CART no Teams. |
+| **401** | Não autorizado. Token ruim ou expirado. Se você receber esse erro, gere uma nova URL cart no Teams. |
 | **404** | Reunião não encontrada ou não iniciada. Se você receber esse erro, certifique-se de iniciar a reunião e selecione iniciar legendas. Depois que as legendas são habilitadas na reunião, você pode começar a POSTing legendas na reunião.|
 | **500** |Erro de servidor interno. Para obter mais informações, [contate o suporte ou forneça comentários](../feedback.md).|
 
@@ -620,7 +622,7 @@ O código a seguir mostra como capturar os metadados `MeetingType`de uma reuniã
 
 Evento Início da Reunião
 ```csharp
-protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
@@ -746,7 +748,7 @@ O código a seguir fornece um exemplo de carga de evento final de reunião:
 | Bot de bolha de conteúdo de reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Guia Detalhes na Reunião | Microsoft Teams exemplo de extensibilidade de reunião para interagir com a Guia detalhes na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Exemplo de eventos de reunião|Exemplo de aplicativo para mostrar eventos de Teams reunião em tempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|Exemplo de eventos de reunião|Exemplo de aplicativo para mostrar eventos de reunião Teams reunião em tempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Exemplo de recrutamento de reunião|Exemplo de aplicativo para mostrar a experiência de reunião para cenário de recrutamento.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Instalação de aplicativo usando código QR|Exemplo de aplicativo que gera o código QR e instala o aplicativo usando o código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 

@@ -1,17 +1,17 @@
 ---
 title: Projetando sua extensão de reunião
 author: heath-hamilton
-description: Saiba como projetar aplicativos em reuniões Teams e obter o Kit de interface do usuário Microsoft Teams, a guia de reunião e casos de uso, comportamento responsivo e estágio de reunião compartilhado e tema e navegação.
+description: Saiba como projetar aplicativos em reuniões Teams e obter o Kit de interface do usuário Microsoft Teams, a guia de reunião e usar casos, comportamento responsivo e estágio de reunião compartilhado e tema e navegação.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Estágio de reunião compartilhada do modelo de kit de interface do usuário na reunião
-ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523792"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355810"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão Microsoft Teams reunião
 
@@ -97,7 +97,7 @@ As pessoas podem usar a guia na reunião para:
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomia: guia In-meeting
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de uma guia em reunião." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de uma guia em reunião." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -153,7 +153,7 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomia: caixa de diálogo na reunião
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de uma caixa de diálogo na reunião." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Exemplo mostra a anatomia estrutural de uma caixa de diálogo na reunião." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -392,7 +392,7 @@ Recomendamos posicionar a ação mais pesada visualmente para o local mais à di
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: ações de alinhamento à esquerda ou central
 
-Isso se desvia do padrão Teams padrão para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
+Isso se desvia do padrão de Teams padrão para o posicionamento de controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
 
    :::column-end:::
 :::row-end:::
@@ -467,7 +467,7 @@ Teams reuniões são otimizadas para temas escuros para ajudar a reduzir o ruíd
 
 #### <a name="dont-use-unfamiliar-colors"></a>Não: use cores desconhecidas
 
-As cores que se colidem com o ambiente de reunião podem ser distrativas e aparecerem menos nativas Teams. Saiba mais sobre a Teams [de cores](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluindo neutros do tema de chamada.
+As cores que se colidem com o ambiente de reunião podem ser distrativas e parecem menos nativas para Teams. Saiba mais sobre a Teams [de cores](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluindo neutros do tema de chamada.
 
    :::column-end:::
 :::row-end:::
@@ -527,7 +527,7 @@ A navegação flutuante e os controles fora da tela e a necessidade de um rolage
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Configurar seu aplicativo para reuniões](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

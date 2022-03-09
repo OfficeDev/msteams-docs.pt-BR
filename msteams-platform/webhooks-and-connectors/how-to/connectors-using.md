@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: conector do Office365 para equipes
-ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517964"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355633"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -22,15 +22,15 @@ As mensagens acionáveis incluem seis botões visíveis no cartão. Cada botão 
 
 Os cartões de conector dão suporte às seguintes ações:
 
-- `ActionCard`: Apresenta um ou mais tipos de entrada e ações associadas.
-- `HttpPOST`: Envia uma solicitação POST a uma URL.
-- `OpenUri`: Abre um URI em um navegador ou aplicativo separado; a opção visa URIs diferentes com base em sistemas operacionais.
+* `ActionCard`: Apresenta um ou mais tipos de entrada e ações associadas.
+* `HttpPOST`: Envia uma solicitação POST a uma URL.
+* `OpenUri`: Abre um URI em um navegador ou aplicativo separado; a opção visa URIs diferentes com base em sistemas operacionais.
 
 A ação `ActionCard` oferece suporte a três tipos de entrada:
 
-- `TextInput`: Um campo de texto de linha única ou de várias linhas com um limite de comprimento opcional.
-- `DateInput`: Um seletor de data com um seletor de tempo opcional.
-- `MultichoiceInput`: Uma lista enumerada de opções que oferece uma seleção única ou múltipla.
+* `TextInput`: Um campo de texto de linha única ou de várias linhas com um limite de comprimento opcional.
+* `DateInput`: Um seletor de data com um seletor de tempo opcional.
+* `MultichoiceInput`: Uma lista enumerada de opções que oferece uma seleção única ou múltipla.
 
 `MultichoiceInput` oferece suporte a uma propriedade `style` que controla se a lista já aparecerá totalmente expandida. O valor padrão de `style` depende do valor de `isMultiSelect` como segue:
 
@@ -39,7 +39,7 @@ A ação `ActionCard` oferece suporte a três tipos de entrada:
 | `false` ou não especificado  | `compact` |
 | `true` | `expanded` |
 
-Para exibir a lista de seleção múltipla no estilo compacto, você deve especificar `"isMultiSelect": true` e `"style": true`.
+Para exibir a lista de seleção múltipla no estilo compacto, especifique `"isMultiSelect": true` e `"style": true`.
 
 Para obter mais informações sobre ações de cartão do conector, veja [ Ações](/outlook/actionable-messages/card-reference#actions).
 
@@ -149,9 +149,9 @@ Essa mensagem produz o seguinte cartão no canal:
 
 # <a name="curl"></a>[cURL](#tab/cURL)
 
-**Para postar uma mensagem no webhook com um cURL**
+Para postar uma mensagem no webhook com cURL, siga estas etapas:
 
-1. Instale o cURL usando: https://curl.haxx.se/.
+1. Instale o cURL do [site do cURL](https://curl.haxx.se/).
 
 1. Na linha de comando, insira o seguinte comando cURL:
 
@@ -174,7 +174,7 @@ Essa mensagem produz o seguinte cartão no canal:
 
  Pré-requisito: Instalação do PowerShell e familiarização com seu uso básico.
 
-**Para postar uma mensagem no webhook com o PowerShell**
+Para postar uma mensagem no webhook com o PowerShell, siga estas etapas:
 
 1. Digite o seguinte comando no prompt do PowerShell:
 
@@ -198,7 +198,7 @@ Essa mensagem produz o seguinte cartão no canal:
 > * Todos os elementos de esquema dos Cartões Adaptáveis nativos, exceto `Action.Submit`, são totalmente suportados.
 > * As ações suportadas são [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), e [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-**Para enviar Cartões Adaptáveis através de um Webhook de Entrada**
+Para enviar Cartões Adaptáveis por meio de um Webhook de Entrada, siga estas etapas:
 
 1. [ Configurar um webhook personalizado](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) no Teams.
 1. Crie um arquivo JSON de Cartão Adaptável usando o seguinte código:
@@ -257,7 +257,7 @@ A tabela a seguir fornece os detalhes da transação baseada em tempo:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Siga as [práticas recomendadas](../../bots/how-to/rate-limit.md) para evitar atingir os limites de taxa.
+Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) pode atenuar a limitação de taxa para casos em que as solicitações estão excedendo os limites dentro de um segundo. Siga [práticas recomendadas](../../bots/how-to/rate-limit.md) para evitar atingir os limites de taxa.
 
 > [!NOTE]
 > Uma [lógica de repetição com retirada exponencial](/azure/architecture/patterns/retry) como abaixo reduziria a limitação da taxa nos casos em que as solicitações excederem os limites em um segundo. Referir [Respostas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar atingir os limites da taxa.

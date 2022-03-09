@@ -5,25 +5,25 @@ description: Um guia de início rápido para criar uma guia de canal e grupo com
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518258"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355843"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Criar um canal ou uma guia de grupo
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>Criar um canal personalizado ou uma guia de grupo
 
-Você pode criar um canal ou uma guia de grupo usando Node.js e o Gerador Yeoman, ASP. NETCore ou ASP. NETCore MVC.
+Você pode criar um canal ou uma guia de grupo usando Node.js e o Gerador Yeoman, ASP. NETCore ou ASP. NETCore MVC. Para ver um canal ou uma guia de grupo Microsoft Teams celular, consulte [guias no celular](~/tabs/design/tabs-mobile.md).
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
 ### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>Criar um canal personalizado e uma guia de grupo usando Node.js e o Gerador Yeoman
 
 > [!NOTE]
-> Este artigo segue as etapas descritas na com build [Seu](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) primeiro wiki de aplicativos Microsoft Teams encontrado no repositório do Microsoft OfficeDev GitHub.
+> Este artigo segue as etapas descritas na com build [Seu](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) primeiro wiki do aplicativo Microsoft Teams encontrado no repositório de GitHub Microsoft OfficeDev.
 
 Você pode criar um canal personalizado ou uma guia de grupo usando Teams [gerador Yeoman](https://github.com/OfficeDev/generator-teams/).
 
@@ -40,7 +40,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
 - Qualquer editor de texto ou IDE. Você pode instalar e usar [Microsoft Visual Studio Código](https://code.visualstudio.com/download) gratuitamente.
 
-- [Node.js/npm](https://nodejs.org/en/). Use a versão LTS mais recente. O nó Gerenciador de Pacotes (npm) instala em seu sistema com a instalação de Node.js.
+- [Node.js/npm](https://nodejs.org/en/). Use a versão LTS mais recente. O nó Gerenciador de Pacotes (npm) é instalado em seu sistema com a instalação de Node.js.
 
 - Depois de instalar o Node.js, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte no prompt de comando:
 
@@ -136,7 +136,7 @@ Além disso, este projeto exige que você tenha o seguinte instalado em seu ambi
 
     **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
-    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-Sign-On para a guia. O padrão é sim, digite **n**.
+    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-On para a guia. O padrão é sim, digite **n**.
 
     **Deseja que essa guia seja disponibilizada no SharePoint Online? (Y/n)**
 
@@ -244,7 +244,7 @@ gulp ngrok-serve
 
 ### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>Criar um canal personalizado ou uma guia de grupo com ASP.NET Core
 
-Você pode criar um canal personalizado ou uma guia de grupo usando a C# e ASP.Net core de lâmina. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
+Você pode criar um canal personalizado ou uma guia de grupo usando C# e ASP.Net core de lâmina de corte. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
 
 ### <a name="prerequisites-for-teams-apps"></a>Pré-requisitos para Teams aplicativos
 
@@ -259,7 +259,7 @@ Você deve ter uma compreensão dos seguintes pré-requisitos:
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas do .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
 
 - A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
 
@@ -322,7 +322,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 - Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Quando um usuário opta por adicionar ou atualizar sua guia, `configurationUrl` Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e a renderiza em sua guia.
+Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Quando um usuário opta por adicionar ou atualizar sua guia, `configurationUrl` Microsoft Teams carrega o especificado em seu manifesto, incorpora-o em um IFrame e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -430,7 +430,7 @@ Vá para **a pasta Shared** , abra **_Layout.cshtml** e adicione o seguinte à `
 1. Verifique se **o ngrok** está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
 
 > [!TIP]
-> Você precisa ter seu aplicativo no Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar seu aplicativo com a nova URL.
+> Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar seu aplicativo com a nova URL.
 
 ### <a name="upload-your-tab-for-teams"></a>Upload sua guia para Teams
 
@@ -467,7 +467,7 @@ Na seção **Detalhes do** aplicativo:
 
 1. Em **Informações do desenvolvedor**, atualize **Site** com sua URL HTTPS **ngrok** .
 
-1. Em **URLs de aplicativo**, atualize a **instrução Privacy** para `https://<yourngrokurl>/privacy` e **Os Termos de uso** para `https://<yourngrokurl>/tou`>.
+1. Em **URLs de aplicativo**, atualize a **instrução Privacy** to `https://<yourngrokurl>/privacy` e **Os Termos de uso** para `https://<yourngrokurl>/tou`>.
 
 ##### <a name="capabilities-tabs"></a>Recursos: guias
 
@@ -521,7 +521,7 @@ Você pode criar um canal personalizado ou uma guia de grupo usando C# e ASP.Net
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas do .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
 
 - A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
 
@@ -636,7 +636,7 @@ Em **Tab.cshtml** , o aplicativo apresenta ao usuário dois botões de opção p
 
 ---
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)

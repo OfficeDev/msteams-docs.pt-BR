@@ -5,12 +5,12 @@ description: Projete seu aplicativo mais rapidamente com componentes de interfac
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362939"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356431"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -27,9 +27,9 @@ Pegue modelos de interface do usuário para seu design de aplicativo no kit de i
 > [!div class="nextstepaction"]
 > [Obter o kit de interface do usuário (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams biblioteca de interface do usuário
+### <a name="microsoft-teams-ui-library"></a>Biblioteca de Interface do Usuário do Microsoft Teams
 
-Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados no navegador.
+Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados em seu navegador.
 
 > [!div class="nextstepaction"]
 > [Experimente a biblioteca da interface do usuário (playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
@@ -48,7 +48,7 @@ Instale um aplicativo de exemplo para ver como os modelos de interface do usuár
 
 ## <a name="calendar"></a>Calendário
 
-No Teams, um calendário é onde um usuário visualiza, agenda e gerencia eventos futuros e passados para si ou para um grupo.
+Em Teams, um calendário é onde um usuário visualiza, agenda e gerencia eventos futuros e passados para si ou para um grupo.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
@@ -146,9 +146,9 @@ Os formulários são usados para coletar, validar e enviar entrada do usuário d
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
 
-## <a name="list"></a>List
+## <a name="list"></a>Listar
 
 Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários tomem ações em uma lista inteira ou itens individuais.
 

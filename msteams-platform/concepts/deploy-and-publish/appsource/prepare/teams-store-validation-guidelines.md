@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2aa433731d71f672182339bca82f851a61ec5895
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518230"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356060"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -19,7 +19,7 @@ Seguir essas diretrizes aumenta as chances de seu aplicativo ser aprovado no pro
 > [!NOTE]
 > * É possível que algumas diretrizes não sejam pertinentes ao seu aplicativo. Por exemplo, se seu aplicativo não incluir um bot, você poderá ignorar as diretrizes relacionadas ao bot.
 > * Cruzamos essas diretrizes com as políticas de certificação comercial da Microsoft e adicionamos o que fazer e o que não fazer com exemplos de cenários de aprovação ou reprovação encontrados em nosso processo de validação.
-> * Determinadas diretrizes são marcadas como *Correção Obrigatória*. Se o envio do aplicativo não atender a essas diretrizes obrigatórias, você receberá um relatório de falha conosco com etapas para atenuar. O envio do seu aplicativo será aprovado na Validação da Store do Microsoft Teams somente depois que você corrigir os problemas. 
+> * Determinadas diretrizes são marcadas como *Correção Obrigatória*. Se o envio do aplicativo não atender a essas diretrizes obrigatórias, você receberá um relatório de falha conosco com etapas para atenuar. O envio do aplicativo passará Microsoft Teams validação da loja somente depois que você tiver corrigido os problemas. 
 > * Outras diretrizes são marcadas como *Correção Sugerida*. Para uma experiência de usuário ideal, sugerimos que você corrija os problemas, no entanto, seu envio de aplicativo não será impedido de publicar na store do Teams, se você optar por não corrigir os problemas. 
 
 
@@ -103,7 +103,7 @@ Para obter mais informações sobre como implementar a autenticação de aplicat
   * Os aplicativos que exigem que o administrador do locatário conclua a configuração única devem chamar a dependência do administrador do locatário para configurar o aplicativo (antes que qualquer outro usuário locatário possa instalar e usar o aplicativo).  
   A dependência deve ser mencionada no manifesto do aplicativo, na descrição longa do AppSource, em todos os pontos de contato da primeira experiência de execução (mensagem de boas-vindas do bot, configuração da guia ou página de configuração), texto de ajuda conforme considerado necessário como parte da resposta do bot, extensão de composição ou conteúdo da guia estática.
   
-* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação com um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou cancelar o compartilhamento de conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de cancelar o compartilhamento de conteúdo deve estar presente no aplicativo Teams.
+* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação com um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou cancelar o compartilhamento de conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de desa compartilhar conteúdo deve estar presente em seu Teams app.
 
 ## <a name="security"></a>Segurança
 > [!NOTE]  
@@ -191,7 +191,7 @@ Os bots sempre devem pedir permissão para fazer upload de um arquivo e exibir u
 > [!NOTE]
 > Esta seção está alinhada com a [política de marketplace comercial da Microsoft número 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) e fornece orientação ao desenvolvedor sobre o uso de domínios restritos na propriedade do manifesto `validDomains`.
 
-Não inclua domínios fora do controle de sua organização (incluindo curingas) e serviços de tunelamento nas configurações de domínio do seu aplicativo. As seguintes exceções incluem:
+Não inclua domínios fora do controle da sua organização (incluindo curingas) e serviços de túnel nas configurações de domínio do aplicativo. As seguintes exceções incluem:
 
   * Se seu aplicativo usar o OAuthCard do Serviço de Bot do Azure, você deverá incluir `token.botframework.com` como um domínio válido ou o botão **Entrar** não funcionará.
   * Se seu aplicativo depender do SharePoint, você poderá incluir o site raiz associado do SharePoint como um domínio válido usando a `{teamSiteDomain}` propriedade do contexto.
@@ -279,7 +279,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 Os ícones são um dos principais elementos que as pessoas visualizam ao navegar na loja do Teams. Seus ícones devem comunicar a marca e a finalidade do aplicativo, aderindo aos seguintes requisitos:
 
-* O pacote do seu aplicativo deve incluir duas versões PNG do ícone do seu aplicativo: um ícone de cor e um ícone de contorno.
+* O pacote do aplicativo deve incluir duas .png do ícone do aplicativo: um ícone de cor e um ícone de contorno.
 * A versão de cor do ícone deve ter 192 x 192 pixels. O símbolo de ícone pode ser qualquer cor ou cores, mas deve ficar em um plano de fundo quadrado sólido ou totalmente transparente.
 * A versão de estrutura de tópicos do ícone é exibida nos seguintes cenários:
   * Quando seu aplicativo está em uso e **hospedado** na barra de aplicativos no lado esquerdo do Teams.
@@ -1367,7 +1367,7 @@ Use as seguintes diretrizes para extensões de reunião:
 * Não deve usar módulos de tarefa.
 * Deve alinhar-se ao centro do estágio da reunião.
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1375,13 +1375,12 @@ Use as seguintes diretrizes para extensões de reunião:
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * Deve ser ignorado depois que um usuário seleciona um botão ou executa uma ação.
 
-* **Modo Conferência**: considere as seguintes práticas recomendadas para uma experiência de criação de cena: 
-  * Todas as imagens estão no formato PNG.
+* **Modo Conferência**: considere as seguintes práticas recomendadas para uma experiência de criação de cena:
+  * Todas as imagens estão .png formato.
   * O pacote final com todas as imagens juntas não deve exceder a resolução 1920x1080. A resolução é um número par. Essa resolução é um requisito para que as cenas sejam mostradas com êxito.
   * O tamanho máximo da cena é de 10 MB.
   * O tamanho máximo de cada imagem é de 5 MB. Uma cena é uma coleção de várias imagens. O limite é para cada imagem individual.

@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821672"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356438"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -22,7 +22,7 @@ Os cartões aceitam formatação somente na propriedade texto, excluindo as prop
 
 O suporte à formatação difere entre os tipos de cartão. A renderização do cartão pode diferir ligeiramente entre os clientes de desktop e do aplicativo móvel do Microsoft Teams e também do Teams no navegador para desktop.
 
-Você pode incluir uma imagem embutida em qualquer cartão do Teams. As imagens podem ser formatadas como arquivos `.png`, `.jpg` ou `.gif` e não devem exceder 1024 ×1024 pixels ou 1 MB. Não há suporte para GIFs animados. Para obter mais informações, consulte [tipos de cartões](./cards-reference.md#inline-card-images).
+Você pode incluir uma imagem embutida em qualquer cartão do Teams. Os formatos de imagem com suporte são os formatos .png, .jpg ou .gif. Mantenha as dimensões dentro de 1024 x 1024 px e tamanho de arquivo menor que 1 MB. Não há suporte para imagens .gif animadas. Para obter mais informações, consulte [tipos de cartões](./cards-reference.md#inline-card-images).
 
 Você pode formatar Cartões Adaptáveis e cartões do Conector do Office 365 em Markdown, o que inclui o suporte a determinados estilos.
 
@@ -116,7 +116,7 @@ O código a seguir mostra um exemplo de formatação de Cartões Adaptáveis:
 }
 ```
 
-Cartões Adaptáveis suportam emojis. O código a seguir mostra um exemplo de Cartões Adaptáveis com um emoji:
+Os Cartões Adaptáveis oferecem suporte aos emojis. O código a seguir mostra um exemplo de Cartões Adaptáveis com um emoji:
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }

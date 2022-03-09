@@ -1,24 +1,24 @@
 ---
-title: Estender uma Teams de mensagens em Microsoft 365
+title: Estender uma extensão Teams de mensagens em Microsoft 365
 description: Veja como atualizar sua extensão de mensagens baseada em pesquisa Teams ser executado em Outlook
-ms.date: 11/15/2021
+ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 93775e543610500452da6ebd6535c1945d2f8dda
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821651"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356004"
 ---
-# <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma Teams de mensagens em Microsoft 365
+# <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma extensão Teams de mensagens em Microsoft 365
 
 > [!NOTE]
-> *Estender uma extensão Teams de mensagens* em Microsoft 365 está disponível no momento apenas na [visualização do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md). Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
+> *Estender uma extensão Teams de mensagens* em Microsoft 365 está disponível atualmente apenas na [visualização do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md). Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
-Extensões de [mensagens baseadas](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) em pesquisa permitem que os usuários pesquisem um sistema externo e compartilhem resultados por meio da área de mensagem de composição do cliente Microsoft Teams. Estendendo seus aplicativos Teams por meio de [Microsoft 365 (visualização)](overview.md), agora você pode trazer suas extensões de mensagens baseadas em pesquisa Teams para Outlook para Windows de área de trabalho e web.
+Extensões de [mensagens baseadas em pesquisa](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) permitem que os usuários pesquisem um sistema externo e compartilhem resultados por meio da área de mensagem de composição do cliente Microsoft Teams. Estendendo seus aplicativos Teams em Microsoft 365 (visualização[)](overview.md), agora você pode levar suas extensões de mensagens baseadas em pesquisa Teams para Outlook para Windows de área de trabalho e web.
 
-O processo para atualizar sua extensão de mensagens baseada em pesquisa Teams para executar Outlook envolve estas etapas:
+O processo para atualizar sua extensão de mensagens baseada em pesquisa Teams ser executado Outlook envolve estas etapas:
 
 > [!div class="checklist"]
 > * Atualizar o manifesto do aplicativo
@@ -31,8 +31,8 @@ O restante deste guia guiará você por estas etapas e mostrará como visualizar
 
 Para concluir este tutorial, você precisará:
 
- - Um locatário Microsoft 365 área de área de trabalho do Programa de Desenvolvedores
- - Seu locatário de área de Office 365 *Versões Direcionadas*
+ - Um locatário Microsoft 365 área de área de trabalho do Programa de Desenvolvedor
+ - Seu locatário de área Office 365 *Versões Direcionadas*
  - Um ambiente de teste com Office aplicativos instalados no canal Microsoft 365 Apps *beta*
  - Microsoft Visual Studio Código com a extensão Teams Toolkit (Visualização) (Opcional)
 
@@ -43,13 +43,13 @@ Para concluir este tutorial, você precisará:
 
 Se você tiver uma extensão de mensagens existente, faça uma cópia ou uma ramificação do seu projeto de produção para testar e atualizar sua ID do aplicativo no manifesto do aplicativo para usar um novo identificador (distinto da ID do aplicativo de produção).
 
-Se você quiser usar código de exemplo para concluir este tutorial, siga [as](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) etapas de configuração em um exemplo de pesquisa de extensão de mensagens Teams para criar rapidamente uma extensão de mensagens baseada em pesquisa Microsoft Teams pesquisa. Ou, você pode começar com o mesmo exemplo de Pesquisa de Extensões de Mensagens do Teams atualizado para o [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) e prosseguir para Visualizar sua extensão de mensagens [no](#preview-your-messaging-extension-in-outlook) Outlook. O exemplo atualizado também está disponível em uma extensão Teams Toolkit: *DevelopmentView* >  *samplesNPM* >  **Search Connector**.
+Se você quiser usar código de exemplo para concluir este tutorial, siga [as](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) etapas de configuração em um exemplo de pesquisa de extensão de mensagens Teams para criar rapidamente uma extensão de mensagens baseada em pesquisa Microsoft Teams pesquisa. Ou, você pode começar com o mesmo exemplo de Pesquisa de Extensões de Mensagens do Teams atualizado para o [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) e continuar para Visualizar sua extensão de mensagens [no Outlook](#preview-your-messaging-extension-in-outlook). O exemplo atualizado também está disponível em Teams Toolkit extensão: *DevelopmentView* >  *samplesNPM* >  **Search Connector**.
 
 :::image type="content" source="images/toolkit-search-sample.png" alt-text="Exemplo do NpM Search Connector no Teams Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>Atualizar o manifesto do aplicativo
 
-Você precisará usar o [](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `m365DevPreview` esquema de manifesto Teams de visualização do desenvolvedor e a versão do manifesto para habilitar sua extensão de mensagens Teams para ser executado Outlook.
+Você precisará usar o esquema de manifesto Teams de visualização do desenvolvedor e [a](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `m365DevPreview` versão do manifesto para habilitar sua extensão de Teams de mensagens para ser Outlook.
 
 Você tem duas opções para atualizar o manifesto do aplicativo:
 
@@ -76,7 +76,7 @@ Se você usou Teams Toolkit para criar seu aplicativo de extensão de mensagens,
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Adicionar um Outlook para seu bot
 
-Em Microsoft Teams, uma extensão de mensagens consiste em um serviço Web que você hospeda e um manifesto de aplicativo, que define onde seu serviço Web está hospedado. O serviço Web aproveita o esquema de mensagens [do Bot Framework SDK](/azure/bot-service/bot-service-overview) e o protocolo de comunicação seguro por meio de um canal Teams registrado para o bot.
+No Microsoft Teams, uma extensão de mensagens consiste em um serviço Web que você hospeda e um manifesto de aplicativo, que define onde seu serviço Web está hospedado. O serviço Web aproveita o esquema de mensagens [do SDK](/azure/bot-service/bot-service-overview) da Estrutura de Bot e o protocolo de comunicação seguro por meio de um canal Teams registrado para o bot.
 
 Para que os usuários interajam com sua extensão de mensagens Outlook, você precisará adicionar um canal Outlook ao bot:
 
@@ -84,7 +84,7 @@ Para que os usuários interajam com sua extensão de mensagens Outlook, você pr
 
 1. No *Configurações*, selecione **Canais**.
 
-1. Clique em **Outlook**, selecione a guia **Extensões de mensagem** e clique em **Salvar**.
+1. Clique em **Outlook**, selecione a guia **Extensões de** mensagem e clique em **Salvar**.
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Adicionar um Outlook &quot;Extensões de Mensagem&quot; para seu bot no painel Canais de Bot do Azure":::
 
@@ -95,9 +95,9 @@ Para que os usuários interajam com sua extensão de mensagens Outlook, você pr
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Atualizar Microsoft Azure Active Directory do aplicativo (Azure AD) para SSO
 
 > [!NOTE]
-> Você pode ignorar a etapa se estiver usando Teams de pesquisa de extensão de [mensagens, pois](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) o cenário não envolve Azure Active Directory (AAD) autenticação de Sign-On única.
+> Você pode ignorar [a](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) etapa se estiver usando Teams de pesquisa de extensão de mensagens, pois o cenário não envolve Azure Active Directory (AAD) autenticação de Sign-On única.
 
-Azure Active Directory Logor único (SSO) para extensões de mensagens funciona da mesma maneira no Outlook como no [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), no entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do bot no portal de registros de *aplicativos* do locatário.
+Azure Active Directory Logor único (SSO) para extensões de mensagens funciona da mesma maneira no Outlook como acontece no [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), no entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do bot no portal de registros de *aplicativos* do locatário.
 
 1. Entre no [portal do Azure](https://portal.azure.com) com sua conta de locatário de área de reserva.
 1. Abrir **registros de aplicativos**.
@@ -118,44 +118,58 @@ Na seção **Aplicativos cliente autorizados** , verifique se todos os seguintes
 
 A etapa final é fazer sideload da extensão de mensagens atualizada ([pacote de](/microsoftteams/platform/concepts/build-and-test/apps-package) aplicativos) no Microsoft Teams. Depois de concluída, sua extensão de mensagens aparecerá em seus *Aplicativos* instalados da área de mensagem de redação.
 
-1. Empacote seu Teams ([ícones](/microsoftteams/platform/resources/schema/manifest-schema#icons) de manifesto e aplicativo) em um arquivo zip. Se você usou Teams Toolkit para criar seu aplicativo, você pode facilmente fazer isso usando Teams opção de pacote de **metadados zip** *no menu* Implantação do Teams Toolkit:
+1. Empacote seu Teams ([ícones](/microsoftteams/platform/resources/schema/manifest-schema#icons) de manifesto e aplicativo) em um arquivo zip. Se você usou Teams Toolkit para criar seu aplicativo, você pode facilmente fazer isso usando **a opção de pacote de metadados zip Teams** *no menu* Implantação do Teams Toolkit:
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Opção 'Pacote Teams de metadados zip' Teams Toolkit extensão para Visual Studio Code":::
 
-1. Faça logon no Teams com sua conta de locatário de área de segurança e verifique se você está  na Visualização do Desenvolvedor Público clicando no menu reellipse (**...**) pelo perfil de usuário e abrindo **Sobre** para verificar se  a opção de visualização do Desenvolvedor está alternada.
+1. Entre no Teams com sua conta de locatário de área de segurança e verifique se você está na  Visualização do Desenvolvedor Público clicando no menu reellipse (**...**) por seu perfil de usuário e abrindo **Sobre** para verificar se  a opção de visualização do Desenvolvedor está alternada.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="No Teams menu de releições, abra a opção 'Sobre' e verifique se a opção 'Visualização do Desenvolvedor' está marcada":::
 
-1. Abra o *painel Aplicativos* e clique **Upload um aplicativo** personalizado e, em seguida, **Upload para mim ou minhas equipes**.
+1. Abra o *painel Aplicativos* e clique **Upload um aplicativo** personalizado e Upload **para mim ou minhas equipes**.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Botão &quot;Upload um aplicativo personalizado&quot; no painel Teams &quot;Aplicativos&quot;":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Botão 'Upload um aplicativo personalizado' no painel Teams 'Aplicativos'":::
 
 1. Selecione seu pacote de aplicativos e clique em *Abrir*.
 
-Depois de ser carregado Teams, sua extensão de mensagens estará disponível Outlook na Web.
+Depois de ser carregado Teams, sua extensão de mensagens estará disponível em Outlook na Web.
 
 ## <a name="preview-your-messaging-extension-in-outlook"></a>Visualizar sua extensão de mensagens no Outlook
 
-Agora você está pronto para testar sua extensão de mensagens em execução Outlook na Windows desktop e na Web. Embora sua extensão de mensagens atualizada continue a ser executado em Teams com suporte completo a recursos para extensões de [mensagens, há](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) limitações nesta visualização inicial da experiência habilitada para Outlook para estar ciente:
+Agora você está pronto para testar sua extensão de mensagens em execução Outlook na Windows desktop e na Web. Embora sua extensão de mensagens atualizada continue sendo Teams com suporte completo a recursos para extensões de [mensagens, há](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) limitações nesta visualização inicial da experiência habilitada para Outlook para estar ciente:
 
-* As extensões de mensagens no Outlook estão limitadas ao contexto de [*composição de* email](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Mesmo que sua Teams de `commandBox` mensagens inclua como um contexto em seu manifesto *, a* visualização atual é limitada à opção de composição de email (`compose`). Não há suporte para invocar uma extensão de mensagens da caixa de pesquisa *Outlook global.*
-* [Comandos de extensão de mensagens baseados](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) em ação não são suportados Outlook. Se o aplicativo tiver comandos baseados em pesquisa e ação, ele será Outlook, mas o menu de ação não estará disponível.
+* As extensões de mensagens no Outlook estão limitadas ao contexto de [*composição de* email](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Mesmo que sua extensão Teams `commandBox` de mensagens inclua como um contexto em seu manifesto *, a* visualização atual é limitada à opção de composição de email (`compose`). Não há suporte para invocar uma extensão de mensagens da caixa de pesquisa *Outlook global.*
+* [Comandos de extensão de mensagens](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) baseados em ação não são suportados Outlook. Se o aplicativo tiver comandos baseados em pesquisa e ação, ele será Outlook, mas o menu de ação não estará disponível.
 * Não há suporte para a inserção de mais de cinco [Cartões](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) Adaptáveis em um email; Cartões adaptáveis v1.4 e posteriores não são suportados.
 * [Ações de](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) cartão do tipo `messageBack`, `imBack`, `invoke`e `signin` não são suportadas para cartões inseridos. O suporte é limitado a `openURL`: ao clicar, o usuário será redirecionado para a URL especificada em uma nova guia.
 
-Ao testar sua extensão de mensagens, você pode identificar a origem (proveniente de Teams versus Outlook) de solicitações de bot pelo [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) do [objeto Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md). Quando um usuário executa uma consulta, seu serviço recebe um objeto Da Estrutura de Bot `Activity` padrão. Uma das propriedades no objeto Activity `channelId`é , que terá o valor de `msteams` ou `outlook`, dependendo de onde a solicitação de bot se origina. Para obter mais, consulte  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
-
-### <a name="outlook"></a>Outlook
-
-Para visualizar seu aplicativo em execução Outlook na área de trabalho Windows, abra Outlook conectado com credenciais para seu locatário de teste. Clique em **Novo Email**. Abra o menu **de sobrevoo** Mais aplicativos na faixa de opções superior. Sua extensão de mensagens será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
+Ao testar sua extensão de mensagens, você pode identificar a origem (proveniente de Teams versus Outlook) de solicitações de bot pela [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) do [objeto Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md). Quando um usuário executa uma consulta, seu serviço recebe um objeto Da Estrutura de Bot `Activity` padrão. Uma das propriedades no objeto Activity `channelId`é , que terá o valor de `msteams` ou `outlook`, dependendo de onde a solicitação de bot se origina. Para obter mais, consulte  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
 ### <a name="outlook-on-the-web"></a>Outlook na Web
 
-Para visualizar seu aplicativo em execução Outlook na Web, faça logoff [outlook.com](https://www.outlook.com) usando credenciais para seu locatário de teste. Clique em **Nova mensagem**. Abra o menu **de** sobreposição Mais aplicativos na parte inferior da janela de composição. Sua extensão de mensagens será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
+Para visualizar seu aplicativo em execução Outlook na Web:
+
+1. Faça logoff [outlook.com](https://www.outlook.com) usando credenciais para seu locatário de teste.
+1. Clique em **Nova mensagem**.
+1. Abra o menu **de** sobreposição Mais aplicativos na parte inferior da janela de composição.
+
+Sua extensão de mensagens será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
+
+### <a name="outlook"></a>Outlook
+
+> [!IMPORTANT]
+> Consulte as atualizações mais recentes no [Microsoft Teams - blog](https://devblogs.microsoft.com/microsoft365dev/) do desenvolvedor Microsoft 365 para verificar se Outlook suporte Windows área de trabalho para Teams aplicativos pessoais está disponível para seu locatário de teste.
+
+Para visualizar seu aplicativo em execução Outlook na Windows desktop:
+
+1. Iniciar Outlook conectado com credenciais para seu locatário de teste. 1. Clique em **Novo Email**.
+1. Abra o menu **de sobrevoo** Mais aplicativos na faixa de opções superior.
+
+Sua extensão de mensagens será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Outlook habilitadas Teams de mensagens estão em visualização e não têm suporte para uso de produção. Veja como distribuir sua extensão Outlook de mensagens habilitada para visualização de audiências para fins de teste.
+Outlook habilitadas Teams extensões de mensagens estão em visualização e não têm suporte para uso de produção. Veja como distribuir sua extensão Outlook de mensagens habilitada para visualização de audiências para fins de teste.
 
 ### <a name="single-tenant-distribution"></a>Distribuição de locatário único
 
@@ -173,6 +187,6 @@ Como administrador Teams, você pode carregar e pré-instalar o pacote de aplica
 
 Como administrador global, você pode carregar e pré-instalar o pacote de aplicativos de https://admin.microsoft.com/. Consulte [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
-### <a name="multi-tenant-distribution"></a>Distribuição de vários locatários
+### <a name="multitenant-distribution"></a>Distribuição multitenant
 
 A distribuição para o Microsoft AppSource ainda não é suportada durante essa visualização inicial do desenvolvedor Outlook extensões Teams de mensagens.

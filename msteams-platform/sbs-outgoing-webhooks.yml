@@ -1,0 +1,44 @@
+### YamlMime:Tutorial
+title: Criar Webhooks de saída
+metadata:
+  title: Criar Webhooks de saída
+  description: Neste tutorial, você aprenderá a configurar Webhooks de saída para Teams.
+  audience: Developer
+  level: Beginner
+  ms.date: 14/01/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  nextTutorialTitle: Leia mais sobre Webhooks de saída
+  ms.custom: mvc
+  ms.localizationpriority: High
+  ms.openlocfilehash: 0cf221616cb233d69356e1a012de15afc1254070
+  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63360232"
+items:
+- durationInMinutes: 1
+  content: "Webhooks ajudam a Microsoft Teams se integrar com aplicativos externos. Em Teams, os Webhooks de saída atuam como bot e pesquisam mensagens em canais usando **@mention**. Os Webhooks de saída permitem que os usuários enviem mensagens para serviços Web sem executar todo o processo de criação de bots por meio Microsoft Bot Framework. Os Webhooks de saída postam dados de Teams para qualquer serviço capaz de aceitar a carga JSON. \n\n**Principais recursos de Webhooks de saída**\n\n* Envie notificações para qualquer serviço Web externo.\n* Responder com mensagens de texto rich, incluindo cartões e imagens. \n* Receber mensagens em canais públicos e não no escopo pessoal ou privado.\n* Envie HTTP POST para o serviço Web e receba resposta. \n\n > [!NOTE]\n > Os Webhooks de saída não podem acessar outras APIs, como recuperar a lista ou a lista de canais em uma equipe.\n\nEste guia passo a passo ajuda você a criar Webhooks de saída em Teams. Você verá a seguinte saída:\n\n![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"
+- title: Pré-requisitos
+  durationInMinutes: 1
+  content: "Certifique-se de instalar as seguintes ferramentas e configurar seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok versão](https://ngrok.com/download) mais recente (somente para teste de devbox) ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [authtoken](https://ngrok.com/download).\n"
+- title: Configurar ambiente local
+  durationInMinutes: 1
+  content: "Clone `Microsoft-Teams-Samples` o repositório para seu GitHub local:  \n\n 1. Abra [Microsoft Teams Exemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n 1. Selecione **Código**.\n 1. No menu suspenso, selecione **Abrir com GitHub Desktop**.\n\n    ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)\n\n 1. Selecione **Clonar**. \n"
+- title: Criar Webhooks de saída
+  durationInMinutes: 5
+  content: "1. Selecione a equipe necessária e selecione **Gerenciar equipe** no menu suspenso (•••).\n\n   ![Gerenciar](~/assets/images/sbs-outgoing-webhooks/manage-team.png)\n\n1. Escolha a **guia Aplicativos** na barra de navegação.\n\n   ![Escolher](~/assets/images/sbs-outgoing-webhooks/app-selection.png)\n\n1. Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Execute o seguinte comando em ngrok:\n\n    ```bash\n    ngrok http -host-header=localhost 3978\n    ```\n\n1. No canto inferior direito da janela, selecione **Criar um Webhook de Saída**.\n\n   ![Saída](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).\n\n1. Insira os seguintes detalhes:\n \n    * **Nome**: o título de webhook na @mention guia.\n\n    * **URL de retorno** de chamada: a URL gerada a partir do ngrok que aceita cargas JSON e recebe solicitações POST de Teams. Para usar a api/Sample ou api/authenticatedSample, faça o seguinte:\n\n        * Para api/exemplo, copie e colar a URL ngrok e a adeque com /api/sample.\n\n        * Para amostra autenticada, copie e colar a URL ngrok e a adeque com /authenticatedSample?id=contoso.\n\n    * **Descrição**: uma cadeia de caracteres detalhada que aparecerá no cartão de perfil e no painel de aplicativos no nível da equipe.\n\n    * **Imagem de perfil (opcional)**: ícone de aplicativo para seu webhook.\n\n1. Selecione **Criar**. O Webhook de saída é adicionado ao canal atual da equipe.\n\n    ![Criar Webhook de saída](~/assets/images/sbs-outgoing-webhooks/select.png)\n\n1. Uma `Hash-based Message Authentication Code (HMAC)` caixa de diálogo é exibida. Você pode usar o token de segurança no arquivo **AuthProvider.cs** para autenticar chamadas entre Teams e quaisquer serviços externos designados. \n\n    > [!NOTE]\n    > O Webhook de saída está disponível para os usuários da equipe, somente se a URL for válida e o servidor e os tokens de autenticação do cliente são iguais. Por exemplo, um handshake HMAC.\n                \n     ![Código](~/assets/images/sbs-outgoing-webhooks/security-token.png)   \n"
+- title: Criar e executar o serviço
+  durationInMinutes: 1
+  content: "1. Iniciar a versão mais recente do Visual Studio.\n\n1. Navegue **até** **FileOpen** >  >  **Project/Solution**.\n\n    ![Abrir arquivo](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)\n\n1. Selecione **Arquivo WebhookSampleBot.sln** na **pasta csharp** .\n\n    ![Arquivo de solução](~/assets/images//sbs-outgoing-webhooks/open-project.png)\n\n1. Atualize **o arquivo \"contoso\"** para \"M365x712764\" e HMAC no **arquivo AuthProvider.cs** .  \n\n    ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)\n\n1. Pressione **F5** para executar o projeto.\n\n1. Selecione **Sim** se a caixa de diálogo a seguir for exibida:\n\n    ![Certificado de Confiança](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)\n\n   Uma página da Web exibe informações de host local.\n\n    ![Aplicativo pronto](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  \n"
+- title: Interagir com o aplicativo no Teams
+  durationInMinutes: 1
+  content: "1. Selecione **Geral** para iniciar uma nova conversa.\n\n1. Selecione **Nova conversa** para iniciar uma conversa.\n\n1. Insira **\\@mencionar** o nome do Webhook de Saída para invocá-lo no canal. \n\n   ![mensagem](~/assets/images/sbs-outgoing-webhooks/type-mention.png)\n\n1. Selecione **enviar**.\n\n   > [!NOTE]\n   >  Você pode enviar mensagens de texto, cartão Hero e Cartão Adaptável como anexo com o Webhook de Saída.\n\n1. O chat de reunião exibe uma nova mensagem.\n\n   ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)\n   \n"
+- title: Desafio completo
+  durationInMinutes: 1
+  content: >
+    Você achou algo assim?
+
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+- content: Você concluiu o tutorial para começar com um aplicativo Webhook de saída!

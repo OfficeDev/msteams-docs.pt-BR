@@ -5,12 +5,12 @@ description: Saiba mais sobre comandos de pesquisa de extensão de mensagens Mic
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 9ff1d6c51320db07e0363dff9f72bd513acc6199
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281746"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356354"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -129,7 +129,11 @@ Para o manifesto completo do aplicativo, consulte [Esquema de manifesto do aplic
 |:---------------------|:--------------|:---------|:--------|
 |Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo](../../../sbs-messagingextension-searchcommand.yml) para criar uma extensão de mensagens baseada em pesquisa.
+
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Responda aos comandos de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md).

@@ -4,12 +4,12 @@ description: Descreve como configurar provedores de identidade com foco no Micro
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: autenticação do teams O provedor de identidade oauth do Azure AD
-ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821350"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356410"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
@@ -32,3 +32,11 @@ Substitua `<hostname>` pelo host real, que pode ser um site de hospedagem dedica
 * **LinkedIn:** Siga as instruções em [Configurando seu aplicativo LinkedIn](/linkedin/talent/apply-with-linkedin)
 
 * **Google:** Obter credenciais de cliente OAuth 2.0 do [Console da API do Google](https://console.developers.google.com/)
+
+* **Provedores OAuth externos de guias:** Para obter mais informações, [consulte Usar provedores OAuth externos](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## <a name="see-also"></a>Confira também 
+
+* [Autenticar um usuário em um Microsoft Teams bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Suporte ao SSO (logon único) para guias](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Autenticar um usuário em uma Microsoft Teams guia](../../tabs/how-to/authentication/auth-tab-aad.md)

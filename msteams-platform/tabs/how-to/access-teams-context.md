@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821728"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356263"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -24,7 +24,7 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo com o usuário ou a equipe especificado.
-* Você inicia um fluxo de autenticação Microsoft Azure Active Directory (Azure AD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
+* Você inicia um fluxo de autenticação do Microsoft Azure Active Directory (Azure AD) ou de outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente. 
 
 Para obter mais informações, [consulte authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -115,9 +115,6 @@ O código a seguir fornece um exemplo de variável de contexto:
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
-> [!Note]
-> Canais privados estão atualmente na visualização do desenvolvedor privado.
-
 Quando sua página de conteúdo é carregada em um canal privado, `getContext` os dados recebidos da chamada são ofuscados para proteger a privacidade do canal. 
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
@@ -127,12 +124,32 @@ Os campos a seguir são alterados quando sua página de conteúdo está em um ca
 * `teamName`: De acordo com o nome do canal privado
 * `teamSiteUrl`: De acordo com a URL de um site SharePoint exclusivo para o canal privado
 * `teamSitePath`: De acordo com o caminho de um site SharePoint exclusivo para o canal privado
-* `teamSiteDomain`: Definir para o domínio de um domínio de site SharePoint exclusivo para o canal privado
+* `teamSiteDomain`: De acordo com o domínio de um domínio de site SharePoint exclusivo para o canal privado
 
-Se sua página fizer uso de qualquer um desses valores, `channelType` você deverá verificar o campo para determinar se sua página está carregada em um canal privado e responder adequadamente.
+Se sua página fizer uso de qualquer um desses valores, `channelType` `Private` o valor do campo deverá ser para determinar se sua página é carregada em um canal privado e pode responder adequadamente.
 
-> [!Note]
-> `teamSiteUrl` também funciona bem para canais padrão.
+## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Recuperar contexto em Microsoft Teams Conexão canais compartilhados
+
+> [!NOTE]
+> Atualmente, Microsoft Teams Conexão canais compartilhados estão apenas na [visualização do](../../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
+
+Quando sua página de conteúdo é carregada em um canal Microsoft Teams Conexão compartilhado, `getContext` os dados recebidos da chamada são alterados devido à lista exclusiva de usuários em canais compartilhados. 
+
+Os campos a seguir são alterados quando sua página de conteúdo está em um canal compartilhado:
+
+* `groupId`: Não definido para canais compartilhados.
+* `teamId`: De acordo com a `threadId` equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, o `teamId` será definido como a equipe que hospeda (cria) o canal compartilhado.
+* `teamName`: De acordo com o nome da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, o `teamName` será definido como a equipe que hospeda (cria) o canal compartilhado.
+* `teamSiteUrl`: De acordo com a URL de um site SharePoint exclusivo para o canal compartilhado.
+* `teamSitePath`: De acordo com o caminho de um site SharePoint exclusivo para o canal compartilhado.
+* `teamSiteDomain`: De acordo com o domínio de um domínio de site SharePoint exclusivo para o canal compartilhado.
+
+Além dessas alterações de campo, há dois novos campos disponíveis para canais compartilhados:
+
+* `hostTeamGroupId`: De acordo com o `groupId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode fazer com que Graph chamadas de API da Microsoft recuperem a associação do canal compartilhado.
+* `hostTeamTenantId`: De acordo com o `tenantId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode ser referenciada com a ID `tid` `getContext` de locatário do usuário atual encontrada no campo de para determinar se o usuário é interno ou externo ao locatário da equipe de hospedagem.
+
+Se sua página fizer uso de qualquer um desses valores, `channelType` `Shared` o valor do campo deverá ser para determinar se sua página é carregada em um canal compartilhado e pode responder adequadamente.
 
 ## <a name="handle-theme-change"></a>Manipular a alteração de tema
 
@@ -140,7 +157,7 @@ Você pode registrar seu aplicativo para ser informado se o tema mudar chamando 
 
 O `theme` argumento na função é uma cadeia de caracteres com um valor `default`de , `dark`ou `contrast`.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)

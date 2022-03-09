@@ -5,21 +5,27 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518559"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356011"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
 Com seu aplicativo listado na Microsoft Teams, comece a pensar em como você manterá o aplicativo em frente e aumentará os downloads e o uso.
 
+## <a name="analyze-app-usage"></a>Analisar o uso do aplicativo
+
+Você pode acompanhar o uso do aplicativo [no relatório Teams uso do aplicativo](/office/dev/store/teams-apps-usage) no Partner Center. As métricas incluem usuários ativos mensais, diários e semanais e gráficos de retenção e intensidade que permitem controlar a rotatividade e a frequência de uso.
+
+Os dados de aplicativos recém-publicados demoram cerca de uma semana para aparecerem no relatório.
+
 ## <a name="publish-updates-to-your-app"></a>Publicar atualizações em seu aplicativo
 
 > [!NOTE]
-> Teams store evoluiu:
+> A loja do Teams evoluiu:
 > 
 > Anteriormente, os links eram copiados selecionando releitos no telha do aplicativo. Com a experiência Teams loja atualizada, você acessará o mesmo na guia detalhes dos aplicativos. Essa atualização estará geralmente disponível (GA) até 01 de março de 2022.
 
@@ -58,7 +64,7 @@ Crie o link usando a seguinte URL anexada à ID do aplicativo: `https://teams.mi
 
 ## <a name="complete-microsoft-365-certification"></a>Concluir Microsoft 365 Certificação
 
-[Microsoft 365 Certificação](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos e protegidos quando um Aplicativo do Office ou um Microsoft 365 de terceiros é instalado em seu ecossistema Microsoft 365 de terceiros. A certificação confirma que seu aplicativo é compatível com tecnologias da Microsoft, compatível com as práticas recomendadas de segurança do aplicativo na nuvem e com suporte da Microsoft.
+[Microsoft 365 Certificação](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos e protegidos quando um Aplicativo do Office ou um Microsoft 365 de terceiros é instalado em seu ecossistema de Microsoft 365. A certificação confirma que seu aplicativo é compatível com tecnologias da Microsoft, compatível com as práticas recomendadas de segurança do aplicativo na nuvem e com suporte da Microsoft.
 
 ## <a name="see-also"></a>Confira também
 

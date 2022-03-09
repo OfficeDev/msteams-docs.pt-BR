@@ -4,12 +4,12 @@ description: Aprenda a adicionar o botão Compartilhar Teams incorporado ao seu 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar Teams share-to-Teams
-ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518489"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355871"
 ---
 # <a name="create-share-to-teams-button"></a>Criar um botão Compartilhar para o Teams
 
@@ -23,7 +23,7 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
 
 ![Share-to-Teams pop-up](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>Inserir um botão Compartilhar Teams
+## <a name="embed-a-share-to-teams-button"></a>Inserir um botão Compartilhar para Teams
 
 1. Adicione o `launcher.js` script em sua página da Web.
 
@@ -40,9 +40,9 @@ A imagem a seguir exibe a experiência pop-up Share-to-Teams:
     </div>
     ```
 
-    Depois de concluir isso, o Microsoft Teams ícone é adicionado ao seu site. A imagem a seguir mostra o ícone Compartilhar para Teams:
+    Depois de concluir isso, o Microsoft Teams ícone de Microsoft Teams é adicionado ao seu site. A imagem a seguir mostra o ícone Compartilhar para Teams:
 
-    ![Compartilhar para Teams ícone](~/assets/icons/share-to-teams-icon.png)
+    ![Compartilhar com Teams ícone](~/assets/icons/share-to-teams-icon.png)
 
 1. Como alternativa, se você quiser um tamanho de ícone diferente para o botão Compartilhar Teams, use o `data-icon-px-size` atributo.
 
@@ -82,7 +82,7 @@ A tabela a seguir descreve as marcas necessárias:
 |Descrição|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Imagem de miniatura| none. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Você pode usar as versões padrão HTML ou a versão Open Graph.
+Você pode usar as versões padrão HTML ou a versão Graph Open.
 
 ## <a name="share-to-teams-for-education"></a>Compartilhar com Teams para Educação
 
@@ -95,11 +95,11 @@ Para professores que usam o botão Compartilhar Teams, há uma opção adicional
 | Propriedade | Atributo HTML | Tipo | Padrão | Descrição |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | n/d | O href do conteúdo a ser compartilhá-lo. |
-| visualização | `data-preview` | booleano (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
+| visualização | `data-preview` | Boolean (como uma cadeia de caracteres) | `true` | Se deve ou não mostrar uma visualização do conteúdo a ser compartilhá-lo. |
 | iconPxSize | `data-icon-px-size` | number (como uma cadeia de caracteres) | `32` | O tamanho em pixels do botão Compartilhar para Teams renderizar. |
 | msgText | `data-msg-text` | string | n/d | Texto padrão a ser inserido antes do link na caixa de redação da mensagem. O número máximo de caracteres é 200. |
-| assignInstr | `data-assign-instr` | string | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
-| assignTitle | `data-assign-title` | string | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
+| assignInstr | `data-assign-instr` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Instruções" de atribuições. O número máximo de caracteres é 200. |
+| assignTitle | `data-assign-title` | cadeia de caracteres | n/d | Texto padrão a ser inserido no campo "Título" das atribuições. O número máximo de caracteres é 50. |
 
 ### <a name="methods"></a>Methods
 

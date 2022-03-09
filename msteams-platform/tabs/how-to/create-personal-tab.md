@@ -5,26 +5,26 @@ description: Um guia de início rápido para criar uma guia pessoal com o Gerado
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
-ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+keywords: yeoman ASP.NET pacote MVC appmanifest conversation domain permission store
+ms.openlocfilehash: c9334410fa98e4407234921d08654dfe0ae5bbfa
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821679"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355829"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
 ## <a name="create-a-custom-personal-tab"></a>Criar uma guia pessoal personalizada
 
-Você pode criar uma guia pessoal usando Node.js e o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC.
+Você pode criar uma guia pessoal usando Node.js e o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC. Para uma guia pessoal Microsoft Teams celular, consulte [guias no celular](~/tabs/design/tabs-mobile.md).
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
 ### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>Criar uma guia pessoal personalizada usando Node.js e o Gerador Yeoman
 
 > [!NOTE]
-> Este artigo segue as etapas descritas na com build do seu [primeiro wiki de](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) aplicativo Microsoft Teams encontrado no repositório do Microsoft OfficeDev GitHub.
+> Este artigo segue as etapas descritas na com build do seu primeiro Microsoft Teams wiki de [aplicativos](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) encontrado no repositório do Microsoft OfficeDev GitHub.
 
 Você pode criar uma guia pessoal personalizada usando o [Teams yeoman.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) O aplicativo também é carregado para Teams.
 
@@ -292,7 +292,7 @@ Na barra de navegação à esquerda no Teams, selecione &#x25CF;&#x25CF;&#x25CF;
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Criar uma guia pessoal personalizada usando ASP.NET Core
 
-Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core Páginas de lâmina de corte. [O App Studio](~/concepts/build-and-test/app-studio-overview.md) também é usado para concluir o manifesto do aplicativo e implantar sua guia para Teams.
+Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core Páginas de lâmina de corte. [O App Studio](~/concepts/build-and-test/app-studio-overview.md) também é usado para concluir o manifesto do aplicativo e implantar sua guia Teams.
 
 ### <a name="prerequisites-for-personal-tab"></a>Pré-requisitos para guia pessoal
 
@@ -301,13 +301,13 @@ Você deve ter uma compreensão dos seguintes pré-requisitos:
 - Você deve ter um locatário Office 365 e uma equipe configurada com **Permitir o carregamento de aplicativos personalizados** habilitados. Para obter mais informações, [consulte prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Se você não tiver uma Microsoft 365, poderá se inscrever para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
+    > Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
 
 - Use o App Studio para importar seu aplicativo para Teams. Para instalar o App Studio, selecione **Aplicativo** ![da Loja](~/assets/images/tab-images/storeApp.png) de Aplicativos no canto inferior esquerdo do aplicativo Teams e pesquise por **App Studio**. Depois de encontrar o azulejo, selecione-o e escolha **Adicionar** na caixa de diálogo pop-up para instalá-lo.
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas do .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver uma Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
 
 - A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Você pode [baixar ngrok](https://ngrok.com/download).
 
@@ -367,7 +367,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 - Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 - Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
-Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega `contentUrl` o especificado em seu manifesto, o incorpora em um <iframe\> e o renderiza em sua guia.
+Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega `contentUrl` o especificado em seu manifesto, o incorpora em um <iframe\> e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -397,7 +397,7 @@ Na janela Visual Studio Solution Explorer, clique com o botão direito do mouse 
 
 Para que sua guia seja exibida Teams, você deve incluir o **SDK do cliente JavaScript** Microsoft Teams e incluir uma chamada depois que a `microsoftTeams.initialize()` página for carregada. Sua guia e o aplicativo Teams se comunicam dessa maneira:
 
-Vá para **a pasta Shared** , abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
+Vá para **a pasta Compartilhada** , abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -431,7 +431,7 @@ Para testar sua guia, use [ngrok](https://ngrok.com/docs). Os pontos de extremid
 2. Verifique se **o ngrok** está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
 
 > [!TIP]
-> Você precisa ter seu aplicativo no Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.
+> Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.
 
 #### <a name="run-your-application"></a>Executar seu aplicativo
 
@@ -474,7 +474,7 @@ Na seção **Detalhes do** aplicativo:
 
     ![URLs do aplicativo atualizadas](../../assets/images/tab-images/appurls.png)
 
-1. Em **URLs de aplicativo**, atualize a **instrução Privacy** para `https://<yourngrokurl>/privacy` e **Os Termos de uso** para `https://<yourngrokurl>/tou`>.
+1. Em **URLs de aplicativo**, atualize a **instrução Privacy** to `https://<yourngrokurl>/privacy` e **Os Termos de uso** para `https://<yourngrokurl>/tou`>.
 
 ##### <a name="capabilities-tabs"></a>Recursos: guias
 
@@ -530,13 +530,13 @@ Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core MVC. [O
 - Você deve ter um locatário Microsoft 365 e uma equipe configurada com **Permitir o carregamento de aplicativos personalizados** habilitados. Para obter mais informações, [consulte prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Se você não tiver uma Microsoft 365, poderá se inscrever para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
+    > Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
 
 - Use o App Studio para importar seu aplicativo para Teams. Para instalar o App Studio, selecione **Aplicativo** ![da Loja](~/assets/images/tab-images/storeApp.png) de Aplicativos no canto inferior esquerdo do aplicativo Teams e pesquise por **App Studio**. Depois de encontrar o azulejo, selecione-o e escolha **Adicionar** na caixa de diálogo pop-up para instalá-lo.
 
 Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
 
-- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas do .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
+- A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver uma Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
 
 - A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use o ngrok para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução local. Você pode [baixar ngrok](https://ngrok.com/download).
 
@@ -591,7 +591,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone de contorno transparente** medindo 32 x 32 pixels.
 * Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
 
-Esses arquivos devem ser cortados em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega o `contentUrl` especificado em seu manifesto, incorpora-o em um IFrame e o renderiza em sua guia.
+Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar sua guia para Teams. Microsoft Teams carrega `contentUrl` o especificado em seu manifesto, o incorpora em um IFrame e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -650,7 +650,7 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 1. Verifique se **o ngrok** está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
 
 > [!TIP]
-> Você precisa ter seu aplicativo no Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.
+> Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar todos os lugares que usam essa URL.
 
 #### <a name="run-your-application"></a>Executar seu aplicativo
 
@@ -684,7 +684,7 @@ Se você criar um bot com **um escopo pessoal** , ele aparecerá na primeira pos
 
 ## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Adicionar `registerOnFocused` API para guias ou aplicativos pessoais
 
-A `registerOnFocused` API SDK permite que você use um teclado Teams. Você pode retornar a um aplicativo pessoal e manter o foco em uma guia ou aplicativo pessoal com a ajuda das teclas Ctrl, Shift e F6. Por exemplo, você pode se afastar do aplicativo pessoal para pesquisar algo e, em seguida, retornar ao aplicativo pessoal ou usar Ctrl+F6 para dar a volta nos locais necessários. 
+A `registerOnFocused` API SDK permite que você use um teclado em Teams. Você pode retornar a um aplicativo pessoal e manter o foco em uma guia ou aplicativo pessoal com a ajuda das teclas Ctrl, Shift e F6. Por exemplo, você pode se afastar do aplicativo pessoal para pesquisar algo e, em seguida, retornar ao aplicativo pessoal ou usar Ctrl+F6 para dar a volta nos locais necessários. 
 
 O código a seguir fornece um exemplo de definição de manipulador no `registerFocusEnterHandler` SDK quando o foco deve ser retornado para a guia ou aplicativo pessoal:
 
@@ -746,7 +746,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemplo mostra opções para adicionar a guia registerOnFocussed API para" border="false":::
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)

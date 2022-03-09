@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens c
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281907"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355885"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de ação de extensão de mensagens
 
@@ -54,7 +54,7 @@ A imagem a seguir exibe os locais de onde o comando de ação é invocado:
 
 Além de selecionar de onde o comando pode ser invocado, você também deve selecionar como preencher o formulário no módulo de tarefas para seus usuários. Você tem as três opções a seguir para criar o formulário renderizado dentro do módulo de tarefa:   
 
-* **Lista estática de parâmetros**: este é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o cliente Teams renderiza, mas não pode controlar a formatação nesse caso.
+* **Lista estática de parâmetros**: este é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o Teams cliente renderiza, mas não pode controlar a formatação nesse caso.
 * **Cartão Adaptável**: você pode selecionar usar um Cartão Adaptável, que fornece maior controle sobre a interface do usuário, mas ainda o limita nos controles disponíveis e opções de formatação.
 * **Exibição da Web** incorporada: você pode selecionar inserir um exibição da Web personalizado no módulo de tarefas para ter um controle completo sobre a interface do usuário e os controles. 
 
@@ -223,7 +223,12 @@ A seção a seguir é um exemplo de um `composeExtensions` objeto que define doi
 |:---------------------|:--------------|:---------|:--------|
 |Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
-## <a name="next-step"></a>Próxima etapa
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../../../sbs-meetingextension-action.yml) criar Teams de mensagens baseadas em ação.
+
+## <a name="next-step"></a>Próxima Etapa
 
 Se você estiver usando um Cartão Adaptável ou uma exibição da Web incorporada sem um objeto, a `taskInfo` próxima etapa será:
 
@@ -234,3 +239,4 @@ Se você estiver usando os parâmetros ou uma exibição da Web incorporada com 
 
 > [!div class="nextstepaction"]
 > [Responder ao envio do módulo de tarefas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

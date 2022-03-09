@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: fluxo de dados de autenticação de aplicativo pessoal de cartão adaptável
-ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080964"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355857"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -31,23 +31,23 @@ Você pode criar suas guias com blocos de construção de interface do usuário 
 
 A imagem a seguir mostra guias de com build com Cartões Adaptáveis na área de trabalho e no celular:
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Exemplo de Cartão Adaptável renderizado em guias." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemplo de Cartão Adaptável renderizado em guias." border="false":::
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de começar a usar Cartões Adaptáveis para criar guias, você deve:
 
-* Familiarizar-se [com o desenvolvimento de bots,](../../bots/what-are-bots.md)cartões [adaptáveis](https://adaptivecards.io/)e [módulos](../../task-modules-and-cards/task-modules/task-modules-bots.md) de tarefa Teams.
+* Familiarizar-se [com o desenvolvimento de bots](../../bots/what-are-bots.md), [cartões adaptáveis](https://adaptivecards.io/) e [módulos de tarefas](../../task-modules-and-cards/task-modules/task-modules-bots.md) Teams.
 * Tenha um bot em execução Teams seu desenvolvimento.
 
 ## <a name="changes-to-app-manifest"></a>Alterações no manifesto do aplicativo
 
-Aplicativos pessoais que renderizar guias devem incluir uma `staticTabs` matriz no manifesto do aplicativo. As guias Cartão Adaptável são renderizadas quando `contentBotId` a propriedade é fornecida na `staticTab` definição. As definições de tabulação estáticas devem conter uma guia , especificando uma guia Cartão Adaptável ou uma , especificando uma experiência típica de guia de `contentBotId` `contentUrl` conteúdo da Web hospedada.
+Aplicativos pessoais que renderizar guias devem incluir uma `staticTabs` matriz no manifesto do aplicativo. As guias Cartão Adaptável são renderizadas quando a `contentBotId` propriedade é fornecida na `staticTab` definição. As definições de tabulação estáticas devem conter uma `contentBotId`guia , especificando uma guia Cartão Adaptável `contentUrl`ou uma , especificando uma experiência típica de guia de conteúdo da Web hospedada.
 
 > [!NOTE]
-> A propriedade está disponível no manifesto `contentBotId` versão 1.9 ou posterior.
+> A `contentBotId` propriedade está disponível no manifesto versão 1.9 ou posterior.
 
-Forneça a propriedade com a guia Cartão Adaptável com a que `contentBotId` `botId` deve se comunicar. A guia Cartão Adaptável configurada é enviada no parâmetro de cada solicitação de invocação e pode ser usada para diferenciar guias de cartão adaptáveis que são alimentadas pelo `entityId` `tabContext` mesmo bot. Para obter mais informações sobre outros campos de definição de tabulação estática, consulte [esquema de manifesto](../../resources/schema/manifest-schema.md#statictabs).
+Forneça a `contentBotId` propriedade com a guia `botId` Cartão Adaptável com a que deve se comunicar. A `entityId` guia Cartão `tabContext` Adaptável configurada é enviada no parâmetro de cada solicitação de invocação e pode ser usada para diferenciar guias de cartão adaptáveis que são alimentadas pelo mesmo bot. Para obter mais informações sobre outros campos de definição de tabulação estática, consulte [esquema de manifesto](../../resources/schema/manifest-schema.md#statictabs).
 
 A seguir está um manifesto de guia cartão adaptável de exemplo:
 
@@ -107,18 +107,18 @@ A seguir está um manifesto de guia cartão adaptável de exemplo:
 A comunicação entre sua guia Cartão Adaptável e seu bot é feita por meio de `invoke` atividades. Cada `invoke` atividade tem um nome **correspondente**. Use o nome de cada atividade para diferenciar cada solicitação. `tab/fetch` e `tab/submit` são as atividades abordadas nesta seção.
 
 > [!NOTE]
-> * Os bots precisam enviar todas as respostas para [a URL do serviço.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) A URL do serviço é recebida como parte `activity` da carga de entrada.
+> * Os bots precisam enviar todas as respostas à [URL do serviço](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). A URL do serviço é recebida como parte da `activity` carga de entrada.
 > * O tamanho da carga invocada aumentou para 80kb.
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Buscar Cartão Adaptável para renderizar em uma guia
 
-`tab/fetch`é a primeira solicitação de invocação que seu bot recebe quando um usuário abre uma guia Cartão Adaptável. Quando o bot recebe a solicitação,  ele envia uma resposta de continuação de tabulação ou uma **resposta de tabulação.**
+`tab/fetch`é a primeira solicitação de invocação que seu bot recebe quando um usuário abre uma guia Cartão Adaptável. Quando o bot recebe a solicitação, ele envia uma resposta de  continuação de tabulação ou uma **resposta de tabulação**.
 A **resposta continue** inclui uma matriz para **cartões**, que é renderizada verticalmente para a guia na ordem da matriz.
 
 > [!NOTE]
-> Para obter mais informações sobre **a resposta de autenticação,** consulte [authentication](#authentication).
+> Para obter mais informações sobre **a resposta de autenticação** , consulte [authentication](#authentication).
 
-O código a seguir fornece exemplos de `tab/fetch` solicitação e resposta:
+O código a seguir fornece exemplos de solicitação `tab/fetch` e resposta:
 
 **`tab/fetch` request**
 
@@ -168,14 +168,14 @@ O código a seguir fornece exemplos de `tab/fetch` solicitação e resposta:
 
 ### <a name="handle-submits-from-adaptive-card"></a>Manipular envios do Cartão Adaptável
 
-Depois que um Cartão Adaptável é renderizado na guia, ele pode responder às interações do usuário. Essa resposta é manipulada pela `tab/submit` solicitação de invocação.
+Depois que um Cartão Adaptável é renderizado na guia, ele pode responder às interações do usuário. Essa resposta é manipulada pela solicitação `tab/submit` de invocação.
 
-Quando um usuário seleciona um botão na guia Cartão Adaptável, a solicitação é disparada para o bot com os dados correspondentes por meio da função `tab/submit` `Action.Submit` de Cartão Adaptável. Os dados do Cartão Adaptável estão disponíveis por meio da propriedade data da `tab/submit` solicitação. Você recebe uma das seguintes respostas à sua solicitação:
+Quando um usuário seleciona um botão na guia Cartão Adaptável, `tab/submit` a solicitação é disparada para o bot `Action.Submit` com os dados correspondentes por meio da função de Cartão Adaptável. Os dados do Cartão Adaptável estão disponíveis por meio da propriedade data da `tab/submit` solicitação. Você recebe uma das seguintes respostas à sua solicitação:
 
-* Uma resposta de código de status HTTP `200` sem corpo. Uma resposta 200 vazia não resulta em nenhuma ação tomada pelo cliente.
-* A guia `200` padrão **continua** a resposta, conforme explicado em [fetch Adaptive Card](#fetch-adaptive-card-to-render-to-a-tab). Uma resposta **de continuação** de tabulação dispara o cliente para atualizar a guia Cartão Adaptável renderizado com os Cartões Adaptáveis fornecidos na matriz de cartões da **resposta continuar.**
+* Uma resposta de código de `200` status HTTP sem corpo. Uma resposta 200 vazia não resulta em nenhuma ação tomada pelo cliente.
+* A guia padrão `200` **continua** a resposta, conforme explicado na [busca de Cartão Adaptável](#fetch-adaptive-card-to-render-to-a-tab). Uma resposta **de continuação** de tabulação dispara o cliente para atualizar a guia Cartão Adaptável renderizado com os Cartões Adaptáveis fornecidos na matriz de cartões da **resposta continuar** .
 
-O código a seguir fornece exemplos de `tab/submit` solicitação e resposta:
+O código a seguir fornece exemplos de solicitação `tab/submit` e resposta:
 
 **`tab/submit` request**
 
@@ -226,13 +226,13 @@ O código a seguir fornece exemplos de `tab/submit` solicitação e resposta:
 
 ## <a name="understand-task-module-workflow"></a>Entender o fluxo de trabalho do módulo de tarefas
 
-O módulo de tarefa também usa Cartão Adaptável para invocar `task/fetch` e `task/submit` solicitações e respostas. Para obter mais informações, [consulte using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+O módulo de tarefa também usa Cartão Adaptável para invocar `task/fetch` e solicitações `task/submit` e respostas. Para obter mais informações, [consulte using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-Com a introdução da guia Cartão Adaptável, há uma alteração na forma como o bot responde a uma `task/submit` solicitação. Se você estiver usando uma guia Cartão Adaptável, o bot responderá à solicitação de invocação com a guia padrão continuar a resposta e `task/submit` fechará o módulo de tarefa.  A guia Cartão Adaptável é atualizada renderizando a nova lista de cartões fornecidos na guia continuar **o** corpo da resposta.
+Com a introdução da guia Cartão Adaptável, há uma alteração na forma como o bot responde a uma `task/submit` solicitação. Se você estiver usando uma guia Cartão Adaptável, o bot `task/submit` responderá à solicitação de invocação com a guia  padrão continuar a resposta e fechará o módulo de tarefa. A guia Cartão Adaptável é atualizada renderizando a nova lista de cartões fornecidos na guia continuar **o** corpo da resposta.
 
 ### <a name="invoke-taskfetch"></a>Invocar `task/fetch`
 
-O código a seguir fornece exemplos de `task/fetch` solicitação e resposta:
+O código a seguir fornece exemplos de solicitação `task/fetch` e resposta:
 
 **`task/fetch` request**
 ```json
@@ -280,7 +280,7 @@ O código a seguir fornece exemplos de `task/fetch` solicitação e resposta:
 
 ### <a name="invoke-tasksubmit"></a>Invocar `task/submit`
 
-O código a seguir fornece exemplos de `task/submit` solicitação e resposta:
+O código a seguir fornece exemplos de solicitação `task/submit` e resposta:
 
 **`task/submit` request**
 
@@ -335,23 +335,23 @@ O código a seguir fornece exemplos de `task/submit` solicitação e resposta:
 
 Nas seções anteriores, você viu que a maioria dos paradigmas de desenvolvimento pode ser estendida das solicitações e respostas do módulo de tarefas em solicitações e respostas de tabulação. Quando se trata de lidar com a autenticação, a guia fluxo de trabalho para Cartão Adaptável segue o padrão de autenticação para extensões de mensagens. Para obter mais informações, consulte [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
-`tab/fetch`solicitações podem ter uma **resposta continue** **ou auth.** Quando uma solicitação é disparada e recebe uma resposta `tab/fetch` **de tabulação,** a página de login é mostrada para o usuário.
+`tab/fetch` solicitações podem ter uma **resposta continue** **ou auth** . Quando uma solicitação é disparada e recebe uma resposta **de tabulação**, a `tab/fetch` página de login é mostrada para o usuário.
 
 **Para obter um código de autenticação por meio de `tab/fetch` invocação**
 
 1. Abra seu aplicativo. A página de login é exibida.
 
     > [!NOTE]
-    > O logotipo do aplicativo é fornecido por meio `icon` da propriedade definida no manifesto do aplicativo. O título que aparece depois que o logotipo é definido na `title` propriedade retornada no corpo **da resposta de tabulação.**
+    > O logotipo do aplicativo é fornecido por meio da `icon` propriedade definida no manifesto do aplicativo. O título que aparece depois que o logotipo é definido na `title` propriedade retornada no corpo **da resposta de tabulação** .
 
-1. Selecione **Entrar**.  Você é redirecionado para a URL de autenticação fornecida na `value` propriedade do corpo **da** resposta de autenticação.
+1. Selecione **Entrar**.  Você é redirecionado para a URL de autenticação fornecida na `value` propriedade do **corpo da** resposta de autenticação.
 1. Uma janela pop-up será exibida. Essa janela pop-up hospeda sua página da Web usando a URL de autenticação.
 1. Depois de entrar, feche a janela. Um **código de autenticação** é enviado para o Teams cliente.
-1. O Teams cliente em seguida reeditará a solicitação para seu serviço, que inclui o código de autenticação fornecido `tab/fetch` pela página da Web hospedada.
+1. O Teams cliente em seguida reeditará `tab/fetch` a solicitação para seu serviço, que inclui o código de autenticação fornecido pela sua página da Web hospedada.
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` fluxo de dados de autenticação
 
-A imagem a seguir fornece uma visão geral de como o fluxo de dados de autenticação funciona para uma `tab/fetch` invocação.
+A imagem a seguir fornece uma visão geral de como o fluxo de dados de autenticação funciona para uma invocação `tab/fetch` .
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Exemplo de fluxo de tabulação de cartão adaptável." border="false":::
 
@@ -425,20 +425,20 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|**Nome do exemplo** | **Descrição** |**.NET** | **Node.js** |
+|**Nome de exemplo** | **Descrição** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
 
-## <a name="see-also"></a>Também consulte
+## <a name="see-also"></a>Confira também
 
 * [Cartão Adaptável](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams guias](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar um canal ou uma guia de grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -6,32 +6,34 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
-ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948576"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355955"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
 Você pode fornecer uma experiência de usuário enriquecida integrando os recursos de um aplicativo Web existente Microsoft Teams plataforma. Certifique-se [de seguir Teams de design](~/concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo Teams.
 Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web com o Teams, plataforma Power para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, conectores de turno, LMS Moodle, criação de um botão Share-to-Teams para seu site, adicionando um Microsoft Teams  tab in SharePoint, criando links profundos e integrando recursos de dispositivo.
 
-## <a name="prerequisites"></a>Pré-requisitos   
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para uma integração eficaz, certifique-se de ter uma melhor compreensão dos seguintes pré-requisitos:
-* Teams recursos. 
+
+* Teams recursos.
 * SharePoint requisitos para armazenamento de arquivos e dados.
 * Requisitos de API.
 * Autenticação.
 * Vinculação profunda do seu aplicativo com Teams.
-* Mapeie os casos de uso do aplicativo para Teams da plataforma.
+* Mapeie os casos de uso do aplicativo para Teams de plataforma.
 * Determine os pontos de entrada do aplicativo, como uso pessoal, colaboração ou ambos.
 
 ## <a name="low-code-platforms"></a>Plataformas de código baixo
 
 As plataformas de código baixo fornecem uma abordagem intuitiva para o desenvolvimento de software e exigem pouca ou nenhuma codificação para criar aplicativos e processos. Você pode criar aplicativos personalizados facilmente com plataformas de código baixo. Essas plataformas consistem em uma interface visual, conectores para serviços back-end e um sistema de gerenciamento de ciclo de vida de aplicativos integrado para criar, depurar, implantar e manter aplicativos. A Microsoft fornece os seguintes gateways inovadores para criar rapidamente aplicativos compatíveis Teams usando atributos de código baixos:
+
 * Plataforma Microsoft Power
 * Microsoft Teams de aplicativos
 
@@ -41,19 +43,19 @@ A plataforma Microsoft Power combina quatro tecnologias robustas da Microsoft, c
 
 ### <a name="power-apps"></a>Power Apps
 
-Com Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados de negócios e são adaptados às necessidades da sua organização. Power Apps uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos de tela. Depois de criar o aplicativo, você pode exportá-lo do portal do criador Power Apps e incorporar no Microsoft Teams.
+Com Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados de negócios e são adaptados às necessidades da sua organização. Power Apps uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos de tela. Depois de criar o aplicativo, você pode exportá-lo do portal do criador Power Apps e incorporar em Microsoft Teams.
 
 ### <a name="power-virtual-agents"></a>Agentes virtuais do Power
 
-O Power Virtual Agent é uma solução de interface gráfica sem código e guiada. Ele é criado na Plataforma do Microsoft Power e na Estrutura de Bots. Ele permite que todos os membros da sua equipe criem e mantenham chatbots de conversação ricos que se integram facilmente à plataforma Teams. Você pode projetar, desenvolver e publicar agentes virtuais inteligentes para Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou se registrar diretamente com a Estrutura de Bots.
+O Power Virtual Agent é uma solução de interface gráfica sem código e guiada. Ele é criado na Plataforma do Microsoft Power e na Estrutura de Bots. Ele permite que todos os membros da sua equipe criem e mantenham chatbots de conversação rich que se integram facilmente à plataforma Teams. Você pode projetar, desenvolver e publicar agentes virtuais inteligentes para Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou registrar-se diretamente com a Estrutura de Bots.
 
 ### <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
-Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários. 
+Assistente Virtual é um modelo de código aberto da Microsoft que permite que você crie uma solução de conversação robusta, mantendo o controle total da experiência do usuário, da identidade visual organizacional e dos dados necessários.
 
 ## <a name="app-templates"></a>Modelos de aplicativo
 
-Você pode usar o modelo de aplicativo para criar aplicativos personalizados feitos para atender às suas necessidades organizacionais. Esses são aplicativos prontos para produção para Microsoft Teams que são orientados pela comunidade, de código aberto e disponíveis no GitHub. Cada modelo contém instruções detalhadas para implantar e instalar o aplicativo para sua organização. Ele fornece um aplicativo pronto para uso que você pode instalar e começar a usar imediatamente. 
+Você pode usar o modelo de aplicativo para criar aplicativos personalizados feitos para atender às suas necessidades organizacionais. Esses são aplicativos prontos para produção para Microsoft Teams que são orientados pela comunidade, de código aberto e disponíveis no GitHub. Cada modelo contém instruções detalhadas para implantar e instalar o aplicativo para sua organização. Ele fornece um aplicativo pronto para uso que você pode instalar e começar a usar imediatamente.
 
 ## <a name="teams-shifts-work-force-management-connectors"></a>Teams de Gerenciamento de Força de Trabalho de Turnos
 
@@ -65,28 +67,29 @@ Moodle é um sistema de gerenciamento de Learning (LMS) popular. Ele agora está
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Criar um botão Compartilhar no Teams para o seu site
 
-Sites de terceiros podem usar o script do launcher para incorporar o Share Teams botões em suas páginas da Web. Quando você seleciona o botão, ele inicia a experiência Compartilhar para Teams em uma janela pop-up. Isso permite compartilhar um link diretamente com qualquer pessoa ou canal Microsoft Teams sem alternar o contexto.
+Sites de terceiros podem usar o script do launcher para incorporar o Share Teams botões em suas páginas da Web. Quando você seleciona o botão, ele inicia a experiência Compartilhar para Teams em uma janela pop-up. Isso permite compartilhar um link diretamente com qualquer pessoa ou canal Microsoft Teams sem alternar contexto.
 
-## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Adicione uma Microsoft Teams de SharePoint
+## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Adicionar uma Microsoft Teams no SharePoint
 
-Você pode obter uma experiência de integração rica entre Microsoft Teams e SharePoint adicionando uma guia Microsoft Teams no SharePoint como uma web part SPFx web part. 
+Você pode obter uma experiência de integração rica entre Microsoft Teams e SharePoint adicionando uma guia Microsoft Teams no SharePoint como uma web part SPFx web part.
 
 ## <a name="create-deep-link"></a>Criar link profundo
 
-Você pode criar links profundos para as entidades Teams. Você pode criar links para informações e recursos dentro Teams. Esses links profundos navegam para conteúdo e informações em sua guia. Você pode usar links profundos para vincular seu aplicativo com Teams à medida que eles vinculam várias partes de um aplicativo para uma experiência mais Teams nativa.
+Você pode criar links profundos para as entidades Teams. Você pode criar links de informações e recursos no Teams. Esses links profundos navegam para conteúdo e informações em sua guia. Você pode usar links profundos para vincular seu aplicativo com Teams à medida que eles vinculam várias partes de um aplicativo para uma experiência mais Teams nativa.
 
-## <a name="integrate-device-capabilities"></a>Integrar recursos de dispositivo
+## <a name="integrate-device-capabilities"></a>Integrar as funcionalidades do dispositivo
 
-Microsoft Teams plataforma está aprimorando continuamente os recursos de desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams. 
+Microsoft Teams plataforma está aprimorando continuamente os recursos do desenvolvedor alinhando com experiências de primeira parte. A plataforma de Teams aprimorada permite que os parceiros acessem e integrem os recursos de dispositivo nativo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
 
 ## <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
 Você pode integrar o controle Teams seletor de pessoas nativas que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.
 
-## <a name="integrate-teams-in-your-external-app"></a>Integrar Teams em seu aplicativo externo
-Você pode incorporar suas próprias experiências em Microsoft Teams criando Teams aplicativos. Se você quiser  reverter esse modelo e integrar Teams ou outros recursos de comunicação à sua própria experiência de aplicativo externo, consulte Serviços de Comunicação do [Azure](/azure/communication-services/overview). Os Serviços de Comunicação do Azure são serviços baseados em nuvem com APIs REST e SDKs da biblioteca de clientes para ajudá-lo a integrar a comunicação aos seus próprios aplicativos personalizados. Você pode incorporar componentes Web genéricos ou Teams com estilo React para chamar e conversar com a ajuda da biblioteca [da interface do usuário.](https://azure.github.io/communication-ui-library/)
+## <a name="integrate-teams-in-your-external-app"></a>Integrar Teams no seu aplicativo externo
 
-Os aplicativos dos Serviços de Comunicação do Azure podem usar a funcionalidade de visualização pública para [interoperar](/azure/communication-services/concepts/teams-interop) com o Teams e permitir que seu aplicativo personalizado participe Teams reuniões anonimamente. Por exemplo, você pode integrar a chamada de vídeo a um aplicativo bancário móvel e permitir que os usuários finais se encontrem virtualmente com funcionários do banco usando Microsoft Teams. 
+Você pode incorporar suas próprias experiências em Microsoft Teams criando Teams aplicativos. Se você quiser reverter esse modelo  e integrar Teams ou outros recursos de comunicação à sua própria experiência de aplicativo externo, consulte Serviços de Comunicação do [Azure](/azure/communication-services/overview). Os Serviços de Comunicação do Azure são serviços baseados em nuvem com APIs REST e SDKs da biblioteca de clientes para ajudá-lo a integrar a comunicação aos seus próprios aplicativos personalizados. Você pode incorporar componentes Web genéricos ou Teams estilo React web para chamar e conversar com a ajuda da biblioteca [da interface do usuário](https://azure.github.io/communication-ui-library/).
+
+Os aplicativos dos Serviços de Comunicação do Azure podem usar a funcionalidade de visualização pública para [interoperar](/azure/communication-services/concepts/teams-interop) com o Teams e permitir que seu aplicativo personalizado participe Teams reuniões anonimamente. Por exemplo, você pode integrar a chamada de vídeo em um aplicativo de banco móvel e permitir que os usuários finais se reúnem virtualmente com funcionários do banco usando Microsoft Teams.
 
 Você também pode integrar Microsoft 365 identidade para criar aplicativos externos que incorporam vídeo e chamada PSTN em nome de um Teams usuário. Se você já usou [Skype for Business SDKs](/skype-sdk/appsdk/skypeappsdk) no passado, esses recursos como parte dos Serviços de Comunicação do Azure são recomendados como uma substituição.
 
@@ -94,7 +97,7 @@ Você também pode integrar Microsoft 365 identidade para criar aplicativos exte
 
 * [Mapear os casos de uso do aplicativo para Teams plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar os pontos de entrada do aplicativo](~/concepts/extensibility-points.md)
-* [Considerações sobre a Teams integração](~/samples/integrating-web-apps.md)
+* [Considerações para a integração do Microsoft Teams](~/samples/integrating-web-apps.md)
 * [Criar aplicativos personalizados de baixo código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Adicionar um chatbot de agentes virtuais de energia](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Criar assistente virtual](~/samples/virtual-assistant.md)

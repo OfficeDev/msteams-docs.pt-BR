@@ -5,18 +5,21 @@ keywords: iniciando equipes do portal do desenvolvedor
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212535"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355710"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams
 
 O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolvedor para Teams</a> é a principal ferramenta para configurar, distribuir e gerenciar seus Microsoft Teams aplicativos. Com o Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de tempo de execução e muito mais.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a home page do Portal do Desenvolvedor para Teams.":::
+
+> [!NOTE] 
+> Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 
@@ -26,7 +29,7 @@ O Portal do Desenvolvedor fornece algumas maneiras de registrar um Teams aplicat
 * Importar um pacote de aplicativo existente
 
 > [!NOTE]
-> Se você criar um aplicativo usando o [Microsoft Teams Toolkit para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)Visual Studio Code , poderá gerenciar esse aplicativo no Portal do Desenvolvedor.
+> Se você criar um aplicativo usando o [Microsoft Teams Toolkit para](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) Visual Studio Code, poderá gerenciar esse aplicativo no Portal do Desenvolvedor.
 
 ## <a name="set-up-an-environment"></a>Configurar um ambiente
 
@@ -47,7 +50,7 @@ Use os nomes de variáveis em vez de valores codificados para definir as configu
 
 ## <a name="identify-app-owners"></a>Identificar proprietários de aplicativos
 
-Cada aplicativo inclui uma página **Proprietários,** onde você pode compartilhar o registro do aplicativo com colegas em sua organização. A **função Colaborador** tem as mesmas permissões que a função **Owner,** exceto a capacidade de excluir um aplicativo.
+Cada aplicativo inclui uma página **Proprietários** , onde você pode compartilhar o registro do aplicativo com colegas em sua organização. A **função Colaborador** tem as mesmas permissões que a **função Owner** , exceto a capacidade de excluir um aplicativo.
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Configurar os recursos do aplicativo e outros metadados importantes
 
@@ -60,17 +63,17 @@ Para instalar e renderizar seu aplicativo Teams, você deve incluir um conjunto 
 O Portal do Desenvolvedor oferece opções para testar e depurar seu aplicativo:
 
 * Na página **Visão** geral, você pode ver um instantâneo de se as configurações do seu aplicativo são validadas em Teams casos de teste da loja.
-* O **botão Visualizar Teams** permite que você iniciar seu aplicativo rapidamente no cliente Teams para depuração.
+* O **botão Visualizar no Teams** permite iniciar seu aplicativo rapidamente no cliente Teams para depuração.
 
 ## <a name="distribute-your-app"></a>Distribuir seu aplicativo
 
 No Portal do Desenvolvedor, use o botão **Distribuir** para baixar um pacote de aplicativos, publicar em sua organização ou publicar no Teams store.
 
-Para obter mais informações, [consulte distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
+Para obter mais informações, consulte [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
 ## <a name="analyze-your-apps-usage"></a>Analisar o uso do seu aplicativo
 
-Na página **Visão** geral, você pode ver o número total de usuários ativos para seu aplicativo. Essas métricas estão disponíveis para aplicativos publicados na Teams ou no catálogo de aplicativos de uma organização por meio do Portal do Desenvolvedor e com escopo para a ID do aplicativo.
+Na página **Visão** geral, você pode ver o número total de usuários ativos para seu aplicativo. Essas métricas estão disponíveis para aplicativos publicados no Teams ou no catálogo de aplicativos de uma organização por meio do Portal do Desenvolvedor e com escopo para a ID do aplicativo.
 
 | Indicador | Definição |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -83,9 +86,9 @@ O uso mensal e diário é mostrado nos últimos sete, 30 dias e 60 dias. Você d
 
 O Portal do Desenvolvedor também inclui ferramentas para ajudá-lo a criar alguns recursos principais de Teams aplicativos. Algumas dessas ferramentas incluem:
 
-* **Estúdio de cena**: Projetar [cenas personalizadas do](~/apps-in-teams-meetings/teams-together-mode.md) modo Juntos para Teams reuniões.
+* **Estúdio de cena**: Projetar [cenas personalizadas do modo Juntos](~/apps-in-teams-meetings/teams-together-mode.md) para Teams reuniões.
 * **Editor de Cartões Adaptáveis**: Crie e visualize Cartões Adaptáveis para incluir com seus aplicativos.
-* **plataforma de identidade da Microsoft gerenciamento**: registre seus aplicativos com Azure Active Directory para ajudar os usuários a entrar e fornecer acesso a APIs.
+* **plataforma de identidade da Microsoft**: registre seus aplicativos com Azure Active Directory para ajudar os usuários a entrar e fornecer acesso a APIs.
 
 ## <a name="see-also"></a>Confira também
 

@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Teams manifest schema Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518545"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356256"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: Esquema de manifesto de visualização de desenvolvedor público para Microsoft Teams
 
-Para obter informações sobre como habilitar a visualização do desenvolvedor, consulte [visualização do desenvolvedor público para](~/resources/dev-preview/developer-preview-intro.md) Microsoft Teams.
+Para obter informações sobre como habilitar a visualização do desenvolvedor, consulte [visualização do desenvolvedor público para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Se você não estiver usando recursos de visualização de desenvolvedor, incluindo a execução de guias Teams pessoais e extensões de mensagens no [Outlook e Office](../../m365-apps/overview.md), use o manifesto do aplicativo para recursos [GA](~/resources/schema/manifest-schema.md).
+> Se você não estiver usando recursos de visualização do desenvolvedor, incluindo a execução de guias Teams pessoais e extensões de mensagens no [Outlook e Office](../../m365-apps/overview.md), use o manifesto do aplicativo para recursos [GA](~/resources/schema/manifest-schema.md).
 
 O Microsoft Teams descreve como o aplicativo se integra à plataforma Microsoft Teams. O seu manifesto deve estar em conformidade com o esquema hospedado em [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -284,7 +284,7 @@ A `https://` URL fazendo referência ao Esquema JSON do manifesto.
 
 **Necessário** &ndash; Cadeia de caracteres
 
-A versão do esquema de manifesto que este manifesto está usando. Use `m365DevPreview` somente se você estiver visualizando Teams [aplicativos em execução em Office e Outlook](../../m365-apps/overview.md). Caso contrário, use `devPreview` para todos os outros recursos Teams visualização.
+A versão do esquema de manifesto que este manifesto está usando. Use `m365DevPreview` somente se você estiver visualizando Teams [aplicativos em execução Office e Outlook](../../m365-apps/overview.md). Caso contrário, use `devPreview` para todos os outros recursos Teams visualização.
 
 ## <a name="version"></a>versão
 
@@ -300,7 +300,7 @@ Esta cadeia de caracteres da versão deve seguir o padrão [semver](http://semve
 
 **Necessário** &ndash; ID do aplicativo Microsoft
 
-O identificador exclusivo gerado pela Microsoft para este aplicativo. Se você tiver registrado um bot por meio do Microsoft Bot Framework, ou o aplicativo Web da guia já estiver entrando com a Microsoft, você já deve ter uma ID e deve insira-a aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus](https://apps.dev.microsoft.com) Aplicativos), insira-a aqui e, em seguida, reutilizar quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
+O identificador exclusivo gerado pela Microsoft para este aplicativo. Se você tiver registrado um bot por meio do Microsoft Bot Framework ou o aplicativo Web da sua guia já entrar com a Microsoft, você já deve ter uma ID e deve insira-a aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus](https://apps.dev.microsoft.com) Aplicativos), insira-a aqui e, em seguida, reutilizar quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -395,7 +395,7 @@ O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco é ne
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|A URL https:// a ser usada ao configurar a guia.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
 |`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`e `meetingStage`.|
 |`sharePointPreviewImage`|Cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
@@ -416,7 +416,7 @@ O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo 
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
 |`name`|String|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
-|`contentUrl`|Cadeia de caracteres|2048 caracteres|✔|A URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
+|`contentUrl`|String|2048 caracteres|✔|A URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
 |`contentBotId`|   | | | A Microsoft Teams ID do aplicativo especificada para o bot no portal da Estrutura de Bots. |
 |`websiteUrl`|String|2048 caracteres||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias estáticas oferecem suporte apenas ao escopo `personal`, o que significa que elas podem ser provisionadas apenas como parte da experiência pessoal.|
@@ -474,7 +474,7 @@ O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `o
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|Cadeia de caracteres|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. Isso pode ser o mesmo que a [ID geral do aplicativo](#id).|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão do sistema de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão do sistema de mensagens pode ser atualizada pelo usuário. O padrão é `false`.|
 |`commands`|Matriz de objeto|10 |✔|Matriz de comandos com suporte da extensão de mensagens|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -489,9 +489,9 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`type`|String|64 caracteres||O tipo do comando. Um de `query` ou `action`. Padrão: `query`|
 |`title`|String|32 caracteres|✔|O nome do comando amigável.|
 |`description`|String|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
-|`initialRun`|Boolean|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
+|`initialRun`|Booliano|||Um valor Boolean que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
 |`context`|Matriz de cadeias de caracteres|3||Define de onde a extensão de mensagens pode ser invocada. Qualquer combinação de `compose`, `commandBox`, `message`. O padrão é `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Um valor booleano que indica se ele deve buscar o módulo de tarefa dinamicamente.|
+|`fetchTask`|Booliano|||Um valor Boolean que indica se ele deve buscar o módulo de tarefa dinamicamente.|
 |`taskInfo`|Objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagens.|
 |`taskInfo.title`|Cadeia de caracteres|64||Título inicial da caixa de diálogo.|
 |`taskInfo.width`|String|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
@@ -553,7 +553,7 @@ Especifique Microsoft Azure Active Directory ID do aplicativo (Azure AD) e Graph
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|Cadeia de caracteres|36 caracteres|✔|Microsoft Azure Active Directory (Azure AD) ID do aplicativo. Essa ID deve ser um GUID.|
+|`id`|Cadeia de caracteres|36 caracteres|✔|ID de aplicativo do Microsoft Azure Active Directory (Azure AD) do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|String|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO.|
 |`applicationPermissions`|Matriz|Máximo de 100 itens|✔|Permissões de recurso para aplicativo.|
 

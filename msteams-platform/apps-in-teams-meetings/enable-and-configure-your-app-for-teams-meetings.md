@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821588"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355794"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -104,7 +104,7 @@ Em um chat de reunião, insira a chave **@** e selecione **Obter bots**.
 
 ### <a name="during-a-meeting"></a>Durante uma reunião
 
-Durante uma reunião, você pode usar a caixa `meetingSidePanel` de diálogo ou a caixa de diálogo na reunião para criar experiências exclusivas para seus aplicativos.
+Durante uma reunião, você pode usar a notificação `meetingSidePanel` ou em reunião para criar experiências exclusivas para seus aplicativos.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
@@ -117,21 +117,19 @@ A extensão de mensagens funciona conforme o esperado quando um usuário está e
 > [!NOTE]
 > Use a versão 1.7.0 ou superior do [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), pois as versões anteriores a ele não suportam o painel lateral.
 
-#### <a name="in-meeting-dialog-box"></a>Caixa de diálogo na reunião
+#### <a name="in-meeting-notification"></a>Notificação em reunião
 
-A caixa de diálogo na reunião é usada para envolver os participantes durante a reunião e coletar informações ou comentários durante a reunião. Use a [API SendNotificationSignal](API-references.md#send-notification-signal-api) para disparar uma notificação de bolha. Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser mostrado está hospedado.
+A notificação na reunião é usada para envolver os participantes durante a reunião e coletar informações ou comentários durante a reunião. Use uma [carga de notificação na reunião para](API-references.md#send-an-in-meeting-notification) disparar uma notificação na reunião. Como parte da carga da solicitação de notificação, inclua a URL onde o conteúdo a ser mostrado está hospedado.
 
-A caixa de diálogo na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a bolha de conteúdo em uma reunião. Você pode usar o método `submitTask` para enviar dados em um chat de reunião.
+A notificação na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a notificação na reunião. Você pode usar o método `submitTask` para enviar dados em um chat de reunião.
 
-> [!NOTE]
-> * Você deve invocar [a função submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartar automaticamente depois que um usuário realizar uma ação no visualização da Web. Esse é um requisito para envio de aplicativo. Para obter mais informações, [consulte Teams módulo de tarefa do SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
-> * Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id`é a ID do usuário e `from.aadObjectId` é a Microsoft Azure Active Directory (Azure AD) ID do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhada
 
 O estágio de reunião compartilhado permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real. Você pode compartilhar seus aplicativos para o estágio de reunião colaborativa das seguintes maneiras:
 
-* [Compartilhar aplicativo inteiro em estágio](#share-entire-app-to-stage) usando o botão compartilhar para estágios no Teams cliente.
+* [Compartilhar aplicativo inteiro em estágio usando](#share-entire-app-to-stage) o botão compartilhar para estágio no Teams cliente.
 * [Compartilhe partes específicas do aplicativo em estágios](#share-specific-parts-of-the-app-to-stage) usando APIs no SDK Teams cliente.
 
 ##### <a name="share-entire-app-to-stage"></a>Compartilhar aplicativo inteiro em estágio
@@ -166,7 +164,7 @@ Os participantes podem compartilhar partes específicas do aplicativo para o est
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-Para compartilhar partes específicas do aplicativo em estágio, você deve invocar as APIs relacionadas na biblioteca SDK do cliente Teams cliente. Para obter mais informações, consulte [Referência de API](API-references.md).
+Para compartilhar partes específicas do aplicativo em estágio, você deve invocar as APIs relacionadas na biblioteca SDK Teams cliente. Para obter mais informações, consulte [Referência de API](API-references.md).
 
 Se você quiser que seu aplicativo suporte usuários anônimos, `from.id` a carga inicial de solicitação de invocação deve depender dos metadados `from` de solicitação no objeto, não de `from.aadObjectId` metadados de solicitação. `from.id` é a ID do usuário e `from.aadObjectId` é a ID do Azure AD do usuário. Para obter mais informações, [consulte using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) e [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
@@ -180,16 +178,16 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 |----------------|-----------------|--------------|----------------|
 | Aplicativo de reunião | Demonstra como usar o aplicativo Gerador de Token de Reunião para solicitar um token. O token é gerado sequencialmente para que cada participante tenha uma oportunidade justa de contribuir em uma reunião. O token é útil em situações como reuniões scrum e&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Exemplo de estágio de reunião | Exemplo de aplicativo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Painel do lado da reunião | Exemplo de aplicativo para mostrar como adicionar agenda em um painel do lado da reunião | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
-* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar o token de reunião em sua Teams reunião.
-* Siga o [guia passo a passo para](../sbs-meetings-sidepanel.yml) gerar o sidepanel de reunião em sua Teams reunião.
-* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar o exibição do estágio de reunião em sua reunião Teams reunião.
-* Siga o [guia passo a passo para](../sbs-meeting-content-bubble.yml) gerar a bolha de conteúdo de reunião em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meeting-token-generator.yml) gerar token de reunião em sua Teams reunião.
+* Siga o [guia passo a passo](../sbs-meetings-sidepanel.yml) para gerar o sidepanel de reunião em sua Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meetings-stage-view.yml) gerar a exibição do estágio de reunião na sua reunião Teams reunião.
+* Siga o [guia passo a passo para](../sbs-meeting-content-bubble.yml) gerar a bolha de conteúdo de reunião em sua reunião Teams reunião.
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="next-step"></a>Próxima Etapa
 
 > [!div class="nextstepaction"]
 > [Referências à API de aplicativos de reunião](API-references.md)
