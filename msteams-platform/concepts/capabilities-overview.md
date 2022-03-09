@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: guias bots extensões de mensagens webhooks conectores
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897967"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355542"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Entenda os recursos do aplicativo Microsoft Teams
 
@@ -142,15 +142,15 @@ A [API do Microsoft Graph para Teams](/graph/teams-concept-overview) fornece ace
 
    :::column-end:::
 
-> [!NOTE]
-> A loja do Teams evoluiu:
-> 
-> Anteriormente, os aplicativos LOB eram atualizados selecionando as reticências no bloco. Com a experiência atualizada da loja do Teams, agora você pode atualizar os aplicativos LOB fazendo logon no [Centro de Administrador do Teams](https://admin.teams.microsoft.com).
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Representação conceitual do Microsoft Graph API para o Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> A loja do Teams evoluiu: anteriormente, os aplicativos LOB eram atualizados selecionando as reticências no bloco. Com a experiência atualizada da loja do Teams, agora você pode atualizar os aplicativos LOB fazendo logon no [Centro de Administrador do Teams](https://admin.teams.microsoft.com).
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>Escolha o escopo correto para o seu aplicativo
 

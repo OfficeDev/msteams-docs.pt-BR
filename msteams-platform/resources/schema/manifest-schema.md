@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821658"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356417"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -457,10 +457,10 @@ Usado quando a sua experiência de aplicativo tem uma experiência de guia de ca
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL https:// a ser usada ao configurar a guia.|
 |`scopes`|matriz de enumerações|1|✔|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
-|`canUpdateConfiguration`|booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|matriz de enumerações|1||Define como a sua guia é disponibilizada no SharePoint. As opção são `sharePointFullPage` e`sharePointWebPart` |
+|`supportedSharePointHosts`|matriz de enumerações|1||Define como sua guia é disponibilizada no SharePoint. As opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -481,8 +481,7 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 |`context` | matriz de enumerações| 2|| O conjunto de `contextItem` escopos em que uma guia é compatível.|
 
 > [!NOTE]
->  O recurso searchUrl não está disponível para desenvolvedores de terceiros.
-> Se as suas guias exigirem informações dependentes do contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, para obter mais informações, consulte [Obter contexto para sua guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+>  O recurso searchUrl não está disponível para desenvolvedores de terceiros. Se as suas guias exigirem informações dependentes do contexto para exibir conteúdo relevante ou para iniciar um fluxo de autenticação, para obter mais informações, consulte [Obter contexto para sua guia do Microsoft Teams](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>bots
 
@@ -496,11 +495,11 @@ O item é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas u
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. A ID pode ser igual a [ID do aplicativo](#id) geral.|
 |`scopes`|matriz de enumerações|3|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
-|`needsChannelSelector`|booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
-|`isNotificationOnly`|booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
-|`supportsFiles`|booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
-|`supportsCalling`|booliano|||Um valor que indica onde um bot dá suporte a chamadas de áudio. **IMPORTANTE**: Esta propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  A propriedade é fornecida apenas para fins de teste e exploração e não deve ser usada em aplicativos de produção. Padrão: **`false`**|
-|`supportsVideo`|booliano|||Um valor que indica onde um bot oferece suporte a chamadas com vídeo. **IMPORTANTE**: Esta propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  A propriedade é fornecida apenas para fins de teste e exploração e não deve ser usada em aplicativos de produção. Padrão: **`false`**|
+|`needsChannelSelector`|Booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
+|`isNotificationOnly`|Booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
+|`supportsFiles`|Booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
+|`supportsCalling`|Booliano|||Um valor que indica onde um bot dá suporte a chamadas de áudio. **IMPORTANTE**: Esta propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  A propriedade é fornecida apenas para fins de teste e exploração e não deve ser usada em aplicativos de produção. Padrão: **`false`**|
+|`supportsVideo`|Booliano|||Um valor que indica onde um bot oferece suporte a chamadas com vídeo. **IMPORTANTE**: Esta propriedade é experimental no momento. As propriedades experimentais podem não estar completas e podem sofrer alterações antes de se tornarem totalmente disponíveis.  A propriedade é fornecida apenas para fins de teste e exploração e não deve ser usada em aplicativos de produção. Padrão: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -508,7 +507,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumerações|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opção são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de enumerações|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opções são `team`, `personal` e `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -529,7 +528,7 @@ O objeto é uma matriz (máximo de 2 elementos) com todos os elementos do tipo `
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|A URL https:// a ser usada ao configurar o conector.|
-|`scopes`|matriz de enumerações|1|✔|Especifica se o Conector oferece uma experiência no contexto de um canal em um `team`, ou uma experiência com escopo apenas para um usuário individual (`personal`). Atualmente, apenas o escopo `team` é compatível.|
+|`scopes`|matriz de enumerações|1|✔|Especifica se o Conector oferece uma experiência no contexto de um canal em um `team`, ou uma experiência com escopo apenas para um usuário individual (`personal`). Atualmente, somente o escopo `team` é compatível.|
 |`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o Conector que corresponde a sua ID no [Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -547,7 +546,7 @@ O item é uma matriz (máximo de um elemento) com todos os elementos do tipo `ob
 |---|---|---|---|---|
 |`botId`|string|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. A ID pode ser igual à ID geral do aplicativo.|
 |`commands`|matriz de objetos|10 |✔|Matriz de comandos com suporte da extensão de mensagens.|
-|`canUpdateConfiguration`|booliano|||Um valor que indica se a configuração de uma extensão do sistema de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão do sistema de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
 |`messageHandlers`|matriz de Objetos|5||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas.|
 |`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de Cadeias de Caracteres|||Matriz de domínios para os quais o manipulador de mensagens de link pode se registrar.|
@@ -564,20 +563,20 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`title`|string|32 caracteres|✔|O nome do comando amigável.|
 |`type`|string|64 caracteres||O tipo do comando. Um de `query` ou `action`. Padrão: **consulta**.|
 |`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
-|`initialRun`|booliano|||Um valor booleano indica se o comando é executado inicialmente sem parâmetros. O padrão é **false**.|
+|`initialRun`|Booliano|||Um valor booleano indica se o comando é executado inicialmente sem parâmetros. O padrão é **false**.|
 |`context`|matriz de Cadeias de Caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação de `compose`,`commandBox`,`message`. O padrão é `["compose","commandBox"]`.|
-|`fetchTask`|booliano|||Um valor booleano que indica se deve buscar o módulo de tarefa dinamicamente. O padrão é **false**.|
+|`fetchTask`|Booliano|||Um valor booleano que indica se deve buscar o módulo de tarefa dinamicamente. O padrão é **false**.|
 |`taskInfo`|objeto|||Especifique o módulo de tarefa para pré-carregar ao usar um comando de extensão do sistema de mensagens.|
 |`taskInfo.title`|string|64 caracteres||Título inicial da caixa de diálogo.|
 |`taskInfo.width`|string|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.url`|string|||URL inicial da webview.|
 |`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5.|
-|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro é incluído na solicitação do usuário.|
+|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
 |`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
 |`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
 |`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro. Atualmente o valor não é suportado|
-|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para`fetchTask: true` . Uma de `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para`fetchTask: true`. Um de `text, textarea, number, date, time, toggle, choiceset`.|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset`. Use apenas quando `parameter.inputType` for `choiceset`.|
 |`parameters.choices.title`|string|128 caracteres|✔|Títulor da escolha.|
 |`parameters.choices.value`|string|512 caracteres|✔|O valor da escolha.|
@@ -591,7 +590,7 @@ Uma matriz de `string`, que especifica quais permissões o aplicativo solicita, 
 * `identity`&emsp; Requer informações de identidade do usuário.
 * `messageTeamMembers`&emsp; Requer permissão para enviar mensagens diretas aos membros da equipe.
 
-Alterar essas permissões durante a atualização do aplicativo faz com que seus usuários repitam o processo de consentimento depois de executar o aplicativo atualizado. Para saber mais, confira [Atualizando seu aplicativo](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+Alterar essas permissões durante a atualização do aplicativo faz com que seus usuários repitam o processo de consentimento depois de executar o aplicativo atualizado. Para saber mais, veja [atualizando seu aplicativo](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 ## <a name="devicepermissions"></a>devicePermissions
 
@@ -664,7 +663,7 @@ Defina as propriedades que o seu aplicativo usa para postar um feed de atividade
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|O tipo de notificação. *Confira a seguir*.|
-|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Confira a seguir*.|
+|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
 |`templateText`|string|128 caracteres|✔|Ex: "{actor} criou a tarefa {taskId} para você"|
 
 ```json
@@ -734,9 +733,9 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
  
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot` ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot` ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot` ou `connector`.|
+|`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -787,7 +786,7 @@ Especifica a oferta de SaaS associada ao seu aplicativo.
 
 **Opcional** - objeto
 
-Especifique a definição de extensão da reunião. Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -824,7 +823,7 @@ Especifique e consolide as informações relacionadas à autorização para o ap
 
 |Nome| Tipo|Tamanho máximo|Obrigatório |Descrição|
 |---|---|---|---|---|
-|`type`|string||✔| O tipo de permissão específica do recurso. Opções: `Application` e `Delegated`.|
+|`type`|string||✔| O tipo da permissão específica do recurso. Opções: `Application` e `Delegated`.|
 |`name`|string|128 caracteres|✔|O nome da permissão específica do recurso. <br> Para obter mais informações, consulte [Permissões do aplicativo](../../graph-api/rsc/resource-specific-consent.md) e [Permissões delegadas](#delegated-permissions).|
 
 ### <a name="delegated-permissions"></a>Permissões delegadas

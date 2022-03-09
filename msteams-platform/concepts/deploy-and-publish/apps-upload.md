@@ -2,11 +2,16 @@
 title: Carregar seu aplicativo personalizado
 description: Saiba como realizar o sideload de seu aplicativo no Microsoft Teams. O sideload é comum ao testar e depurar um aplicativo durante o desenvolvimento.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356277"
 ---
-
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
 Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar publicar em sua organização ou na loja do Teams. Isso faz sentido nos seguintes cenários:
@@ -58,7 +63,7 @@ Você não precisará realizar o sideload do aplicativo novamente se fizer alter
 Para remover seu aplicativo, clique com o botão direito do mouse no ícone do aplicativo no Teams e selecione **Desinstalar**.
 
 > [!NOTE]
-> Você não pode remover totalmente a atividade do bot pessoal. Se você remover o aplicativo e adicioná-lo novamente, a nova comunicação com o bot acrescentará à conversa anterior com ele.
+> Você não pode remover totalmente a atividade de bot pessoal. Se você remover o aplicativo e adicioná-lo novamente, a nova comunicação com o bot acrescentará à conversa anterior com ele.
 
 ## <a name="next-step"></a>Próxima etapa
 

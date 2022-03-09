@@ -4,24 +4,33 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
+ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881634"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356074"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
 Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (GA) e na visualização do desenvolvedor.
 
 > [!IMPORTANT]
-> Agora você pode obter as atualizações mais recentes da plataforma Teams assinando o RSS feed[![download](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Para obter mais informações, consulte [configurar RSS feed](#get-latest-updates).
+> Agora você pode obter as atualizações mais recentes da plataforma do Microsoft Teams assinando o feed RSS [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Para mais informações, consulte [configurar o feed RSS](#get-latest-updates).
 
 ## <a name="latest-updates-bullhorn-icon"></a>Últimas atualizações ![ícone de megafone](~/assets/images/bullhorn.png)
 
-| Data | Atualizar | Encontre aqui  |
+| Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|03/03/2022 | Como adicionar autenticação usando provedor OAuth externo| Adicionar autenticação > Guias > [Usar provedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
+|25/02/2022| Apresentado o guia passo a passo para invocar módulos de tarefa no Microsoft Teams| Criar cartões e módulos de tarefas > Criar módulos de tarefa > Usar módulos de tarefa de bots > [Invocar módulo de tarefa do Microsoft Teams](sbs-botbuilder-taskmodule.yml)|
+|24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em ação | Criar extensões de mensagens > Comandos de ação > Definir comandos de ação > [Criar extensão de mensagens baseada em ação](sbs-meetingextension-action.yml)|
+|24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em pesquisa | Criar extensões de mensagens > Comandos de pesquisa > Definir comandos de pesquisa > [Criar extensão de mensagens baseada em pesquisa](sbs-messagingextension-searchcommand.yml)|
+|24/02/2022| Apresentado guia passo a passo para criar Webhooks de saída | Criar webhooks e conectores > Criar Webhooks de Saída > [Criar Webhooks de Saída](sbs-outgoing-webhooks.yml)|
+| 23/02/2022 |Parâmetros de classificação da loja do Microsoft Teams| Distribua seu aplicativo > Publicar na loja do Microsoft Teams > [Parâmetros de classificação da loja do Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 18/02/2022 | Apresentado o Glossário extensivo para a Documentação do Desenvolvedor do Microsoft Teams para ajudá-lo a encontrar a definição sobre um termo rapidamente | [Glossário](~/get-started/glossary.md) |
+| 18/02/2022 | Atualizado o módulo Visão geral para mapear o aplicativo do Microsoft Teams para metas organizacionais, história do usuário e exploração dos recursos do aplicativo do Microsoft Teams | [Visão geral > Aplicativo Teams adequado](overview.md) |
+| 18/02/2022 | Atualizado o módulo conceitos básicos do aplicativo para Planejar seu aplicativo para incluir casos de uso de mapeamento para recursos do Microsoft Teams e lista de verificação de planejamento de aplicativos | [Planejar seu aplicativo > Visão geral](~/concepts/app-fundamentals-overview.md) |
 |17/02/2022| O que esperar depois de enviar seu aplicativo ou?| Distribuir seu aplicativo > Publicar na loja do Teams > [Visão geral](concepts/deploy-and-publish/appsource/publish.md)|
 |15/02/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [Guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
 |02/11/2022| Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
@@ -29,11 +38,8 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 |07/02/2022| Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
 |03/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | • Manifesto do aplicativo > [Esquema do manifesto de aplicativo](resources/schema/manifest-schema.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [Esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/02/2022| Teste de visualização para aplicativos monetizados (visualização do desenvolvedor)| Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Fluxo de compras no aplicativo para a monetização de aplicativos (visualização do desenvolvedor) | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|25/01/2022| API de envio de legendas em tempo real | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|17/01/2022| Seletor de Pessoas nos Cartões Adaptáveis (visualização do desenvolvedor para dispositivos móveis e GA para área de trabalho) | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
-|10/01/2022| Kit de ferramentas do Teams para Visual Studio Code | Ferramentas e SDKs > Kit de ferramentas do Teams para Visual Studio Code > [Fundamentos do Kit de ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) |
+|03/02/2022| Fluxo de compras no aplicativo para a monetização de aplicativos (visualização do desenvolvedor) | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
+
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -42,27 +48,40 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 <br>
 
 <details>
-
 <summary><b>2022</b></summary>
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
-|15/02/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [Guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
-|02/11/2022| Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
-|08/02/2022| Introdução ao guia passo a passo para criar um bot de Chamada e Reunião| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
-|02/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > [Esquema do manifesto do aplicativo](resources/schema/manifest-schema.md) |
-|25/01/2022| API de envio de legendas em tempo real | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|19/01/2022| Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|17/01/2022| Seletor de Pessoas em Cartões Adaptáveis para área de trabalho | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
-
-<br>
+|03/03/2022 | Como adicionar autenticação usando provedor OAuth externo| Adicionar autenticação > Guias > [Usar provedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
+| 25/02/2022| Apresentado o guia passo a passo para invocar módulos de tarefa no Microsoft Teams| Criar cartões e módulos de tarefas > Criar módulos de tarefa > Usar módulos de tarefa de bots > [Invocar módulo de tarefa do Microsoft Teams](sbs-botbuilder-taskmodule.yml)|
+| 24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em ação | Criar extensões de mensagens > Comandos de ação > Definir comandos de ação > [Criar extensão de mensagens baseada em ação](sbs-meetingextension-action.yml)|
+| 24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em pesquisa | Criar extensões de mensagens > Comandos de pesquisa > Definir comandos de pesquisa > [Criar extensão de mensagens baseada em pesquisa](sbs-messagingextension-searchcommand.yml)|
+| 24/02/2022| Apresentado guia passo a passo para criar Webhooks de saída | Criar webhooks e conectores > Criar Webhooks de Saída > [Criar Webhooks de Saída](sbs-outgoing-webhooks.yml)|
+| 23/02/2022 |Parâmetros de classificação da loja do Microsoft Teams| Distribua seu aplicativo > Publicar na loja do Microsoft Teams > [Parâmetros de classificação da loja do Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 18/02/2022 | Apresentado o Glossário extensivo para a Documentação do Desenvolvedor do Microsoft Teams para ajudá-lo a encontrar a definição sobre um termo rapidamente | [Glossário](~/get-started/glossary.md) |
+| 18/02/2022 | Atualizado o módulo Visão geral para mapear o aplicativo do Microsoft Teams para metas organizacionais, história do usuário e exploração dos recursos do aplicativo do Microsoft Teams | [Visão geral > Aplicativo Teams adequado](overview.md) |
+| 18/02/2022 | Atualizado o módulo conceitos básicos do aplicativo para Planejar seu aplicativo para incluir casos de uso de mapeamento para recursos do Microsoft Teams e lista de verificação de planejamento de aplicativos | [Planejar seu aplicativo > Visão geral](~/concepts/app-fundamentals-overview.md) |
+| 17/02/2022 | O que esperar depois de enviar seu aplicativo ou?| Distribuir seu aplicativo > Publicar na loja do Teams > [Visão geral](concepts/deploy-and-publish/appsource/publish.md) |
+| 15/02/2022 | Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [Guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
+| 02/11/2022 | Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+| 08/02/2022 | Introdução ao guia passo a passo para criar um bot de Chamada e Reunião| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
+| 02/02/2022 | Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > [Esquema do manifesto do aplicativo](resources/schema/manifest-schema.md) |
+| 25/01/2022 | API de envio de legendas em tempo real | Crie aplicativos para reuniões do Teams > Referências de API de aplicativos de reunião> [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 19/01/2022 | Cartões Adaptáveis de conclusão do formulário | Criar bots > Conversas de bot > Mensagens em conversas de bot > [Comentários sobre a conclusão do formulário](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 17/01/2022 | Seletor de Pessoas em Cartões Adaptáveis para área de trabalho | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-  
+ 
 <br>
 
 <details>
+<summary><b>Atualizações mais antigas</b></summary>
+<br>
+Explore as atualizações das versões anteriores do GA listadas aqui.
+<br><br>
 
+
+<details>
 <summary><b>2021</b></summary>
 
 | **Date** | **Atualizar** | **Encontre aqui** |
@@ -128,10 +147,6 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 <br>
 
 <details>
-<summary><b>Atualizações mais antigas</b></summary>
-
-<details>
-  
 <summary><b>2020</b></summary>
 
 | **Date** | **Atualizar** | **Encontre aqui** |
@@ -187,15 +202,12 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 | 23/04/2019 | As Extensões de Mensagens baseadas em ação já estão disponíveis. | [Extensões de mensagem baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
 | 18/02/2019 | Criando links profundos para o chat privado. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 23/01/2019 | Identificando informações de SKU e de tipo de licença no contexto da guia. | [Contexto da guia](~/concepts/tabs/tabs-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-
 <summary><b>2018</b></summary>
 
 | **Date** | **Atualizar** | **Encontre aqui** |
@@ -228,9 +240,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 | 03/03/2018 | Adição de documentação para o Teams App Studio. |[Desenvolver rapidamente aplicativos com o Teams App Studio](~/get-started/get-started-app-studio.md), [Usando a biblioteca de controle no App Studio](~/get-started/app-studio-component-library.md)|
 | 27/02/2018 | Código de exemplo adicionado para demonstrar o método AsTeamsChannelAccounts(). |[Obter contexto para o bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Tópicos adicionados para começar a usar C#. |[Introdução à plataforma do Microsoft Teams com C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-
-<br>
-
+|
 </details>
 </details>
 
@@ -257,7 +267,7 @@ Para obter mais informações, consulte [prévia do desenvolvedor público para 
 
 ## <a name="teams-app-template-catalog"></a>Catálogo de modelos de aplicativos do Teams
 
-Juntamente com novos recursos, também fornecemos [modelos de aplicativo do Teams prontos para produção](samples/app-templates.md) que você pode implantar imediatamente ou modificar de acordo com suas necessidades. Modelos recém-adicionados são indicados com uma estrela ☆.
+Juntamente com novos recursos, também fornecemos [modelos de aplicativo do Microsoft Teams prontos para produção](samples/app-templates.md) que você pode implantar imediatamente ou modificar de acordo com suas necessidades. Modelos recém-adicionados são indicados com uma estrela ☆.
 
 ## <a name="submit-your-feedback"></a>Enviar seus comentários
 

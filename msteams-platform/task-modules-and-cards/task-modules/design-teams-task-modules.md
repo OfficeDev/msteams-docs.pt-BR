@@ -5,12 +5,12 @@ description: Aprenda a projetar módulos de tarefas para os aplicativos do Teams
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1cf22c8ff94e5d1a6132bd382395067d3623b4bf
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475633"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355962"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Criando módulos de tarefa para o seu aplicativo do Microsoft Teams
 
@@ -37,7 +37,7 @@ Os módulos de tarefas podem ser iniciados de praticamente qualquer lugar no seu
 
 ## <a name="anatomy"></a>Anatomia
 
-Os módulos de tarefas fornecem uma superfície flexível às experiências de aplicativos hospedados. Eles são construídos usando um iframe (área de trabalho) ou Modo de Exibição da Web (móvel) para que você possa projetar módulos de tarefas com nossos modelos de IU (recomendados) ou do zero.
+Os módulos de tarefas fornecem uma superfície flexível às experiências de aplicativos hospedados. Eles são construídos usando um iframe (desktop) ou Modo de Exibição da Web (dispositivo móvel) para que você possa projetar módulos de tarefas com nossos modelos de IU (recomendados) ou do zero.
 
 Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../../task-modules-and-cards/cards/design-effective-cards.md), que pode ser uma maneira mais simples e mais rápida para facilitar cenários comuns (como formulários).
 
@@ -64,13 +64,13 @@ Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../..
 |3|**Cabeçalho**: tornar os cabeçalhos claros e concisos. Descreva a tarefa que você quer que os usuários concluam.
 |4|**Botão Fechar**: fecha o módulo de tarefas. Não aplica alterações não salvas no conteúdo do aplicativo.|
 |5|**iframe**: espaço responsivo que hospeda o conteúdo do aplicativo.|
-|6|**Ações (opcional)**: botões relacionados ao conteúdo do seu aplicativo.|
+|6 |**Ações (opcional)**: botões relacionados ao conteúdo do seu aplicativo.|
 
 ## <a name="designing-with-ui-templates"></a>Projetando com modelos de IU
 
 Considere usar modelos para layouts comuns dentro dos seus módulos de tarefas. Cada um é formado por componentes menores para criar um design elegante e responsivo que pode ser usado fora da caixa ou personalizado ao seu cenário ou com a aparência da sua marca.
 
-* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou em itens individuais.
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
 * [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários servem para coletar, validar e submeter a entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira execução, mensagens de erro, e muito mais.
 
@@ -98,7 +98,7 @@ Os módulos de tarefas são um ótimo lugar para criar formulários com entradas
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulário de exemplo em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Formulário de exemplo em um módulo de tarefas." border="false":::
 
 ### <a name="sign-in"></a>Entrar
 
