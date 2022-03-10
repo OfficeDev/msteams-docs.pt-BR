@@ -5,12 +5,12 @@ description: Perguntas a serem consideradas enquanto você planeja seu aplicativ
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 8b8f60909f6e88caea46e38b21735cf2851036ed
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898159"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399314"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
@@ -34,7 +34,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 3 | Eles usam equipes e canais ou principalmente chats em grupo? |
 | 4 | Quão tecnicamente sofisticados são seus principais usuários? |
 | 5 | Você precisa de uma experiência completa de integração ou algumas dicas podem ser suficientes? |
-|
+
 </details>
 <br>
 <details>
@@ -45,7 +45,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 1 | Quais são os prós e contras do sistema de estado atual usado pelos seus usuários? |
 | 2 | Quais são os problemas enfrentados por seus usuários que você deseja resolver? |
 | 3 | Quais recursos ou funcionalidades seus usuários gostam e adoram em sua maneira atual de fazer o processo? |
-|
+
 </details>
 <br>
 <details>
@@ -57,7 +57,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 2 | Quem é o proprietário dos dados de back-end - internos ou terceiros? |
 | 3 | Existem firewalls que afetam o funcionamento do aplicativo? |
 | 4 | Existem APIs para acessar os dados necessários para o funcionamento do aplicativo? |
-|
+
 </details>
 <br>
 <details>
@@ -69,7 +69,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 2 | Existem dados pessoais envolvidos? |
 | 3 | As interações também serão baseadas nas funções do usuário? |
 | 4 | Usuários externos acessarão o aplicativo? |
-|
+
 </details>
 <br>
 <details>
@@ -81,7 +81,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 2 | Se você estiver compartilhando cartões com uma extensão de mensagens, faz sentido adicionar um pequeno link a uma página Saiba mais para ajudar a apresentar aos usuários o que mais seu aplicativo pode fazer? |
 | 3 | Você espera que a maioria das pessoas já tenha algum contexto sobre o objetivo do seu aplicativo ou que já tenha usado seus serviços em outro contexto? |
 | 4 | Eles estão chegando ao seu aplicativo sem conhecimento prévio? |
-|
+
 </details>
 <br>
 <details>
@@ -92,7 +92,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | 1 | Existem interações individuais com o aplicativo necessárias por razões de privacidade ou outros? Por exemplo, verificar o saldo da licença ou outras informações privadas. |
 | 2 | Haverá colaboração entre usuários que podem não ter equipes comuns? Por exemplo, encontrar os próximos eventos em toda a organização em uma empresa. |
 | 3 | Existem notificações ou mensagens personalizadas que precisarão ser enviadas a um usuário ao longo da experiência do aplicativo Teams? |
-|
+
 </details>
 <br>
 <details>
@@ -100,10 +100,10 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 
 | # | Considere: |
 | --- | --- |
-| 1 | As informações apresentadas pelo aplicativo, na guia ou por meio de um bot, são relevantes e úteis para a maioria dos membros de uma equipe? Por exemplo, o aplicativo Scrum. |
+| 1 | As informações apresentadas pelo aplicativo, seja na guia ou através de um bot, são relevantes e úteis para a maioria dos membros de uma Equipe? Por exemplo, o aplicativo Scrum. |
 | 2 | O contexto do aplicativo pode alterar dependendo da equipe à qual ele é adicionado? Por exemplo, as tarefas do Planner são diferentes em equipes diferentes. |
-| 3 | É possível que todos os membros de uma persona que precisam colaborar façam parte de uma única equipe? Por exemplo, agentes trabalhando em um ticket. |
-|
+| 3 | É possível que todos os membros de uma persona que precisam colaborar façam parte de uma única equipe? Por exemplo, os agentes que trabalham em um ticket. |
+
 </details>
 <br>
 <details>
