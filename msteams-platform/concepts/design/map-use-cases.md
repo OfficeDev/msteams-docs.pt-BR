@@ -1,107 +1,101 @@
 ---
-title: Mapear seus casos de uso para Teams de aplicativos
+title: Mapeie seus casos de uso para os recursos e funcionalidades do aplicativo Teams
 author: surbhigupta
-description: Identifique como os casos de uso do seu aplicativo podem funcionar dentro da experiência Teams experiência.
+description: Identifique como os casos de uso do seu aplicativo podem funcionar na experiência do Teams, nos recursos e nas funcionalidades do aplicativo; mapeie casos de uso comuns com funcionalidades.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
-ms.translationtype: MT
+ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720383"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398901"
 ---
-# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapear seus casos de uso para Teams de aplicativos
+# <a name="map-your-use-cases-to-teams-app-features"></a>Mapeie seus casos de uso para os recursos do aplicativo Teams
 
-Depois de identificar *quem* é o usuário e *qual* problema você resolverá, é hora de decidir *como* resolver o problema. Quem , *o que* e *como* conclui o processo de compreensão e mapeamento de seus casos de uso para Teams aplicativos. Você precisa definir o escopo do aplicativo com base nas respostas recebidas do usuário para suas consultas e, em seguida, decidir qual recurso é mais adequado para criar seu aplicativo.
+Um caso de uso bem definido ajuda você a traçar a estrutura dos recursos desejados no aplicativo Teams. Depois de determinar os requisitos do usuário, defina o escopo e o recurso do Teams mais adequados para seu aplicativo.
 
-> [!NOTE]
-> Você deve ter uma boa compreensão dos pontos de entrada e dos elementos [de interface](../../concepts/extensibility-points.md) do usuário disponíveis para seu aplicativo. Você também deve se certificar de considerar [cuidadosamente seus casos de](../../concepts/design/understand-use-cases.md) uso.
+Você pode mapear seus casos de uso com base em:
 
-## <a name="choose-the-correct-scope-for-your-app"></a>Escolha o escopo correto para seu aplicativo
+- Compartilhamento e colaboração em itens em um sistema externo.
+- Iniciando fluxos de trabalho e enviando notificações aos usuários.
+- Usando plataformas sociais, bots de conversação e combinando vários recursos.
 
-Ao escolher o escopo do aplicativo, considere o seguinte:
+## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Casos de uso comum mapeados para as funcionalidades do Teams
 
-* Um aplicativo pode existir entre escopos.
-* Os recursos do aplicativo, como extensões de mensagens, seguem os usuários em todos os escopos.
-* Os usuários geralmente não podem adicionar aplicativos a Teams ou canais.
-* Os convidados podem acessar o conteúdo exposto em Teams ou canais.
+A próxima etapa é combinar casos de uso com recursos do aplicativo.
 
-Você pode escolher entre escopo pessoal e escopo de equipe ou canal para seu aplicativo, dependendo do seguinte:
+Veja uma lista de cenários comuns de usuários mapeados para as funcionalidades do Teams. Não é uma lista exaustiva, mas ajudará você a pensar em algumas das possibilidades disponíveis para você.
+</br>
+</br>
+<details>
+<summary>Criar, compartilhar e colaborar em itens em um sistema externo</summary>
 
-* Para escopo pessoal, faça as seguintes perguntas:
-  * Há interações um-a-um com o aplicativo necessárias por privacidade ou outros motivos? Por exemplo, verificar o saldo de licença ou outras informações privadas.
-  * Haverá colaboração entre usuários que talvez não tenham nenhuma Teams? Por exemplo, encontrar os próximos eventos de toda a organização em uma empresa.
-  * Há alguma notificação ou mensagens personalizadas que precisarão ser enviadas a um usuário durante toda a experiência Teams aplicativo? Por exemplo, lembretes para aprovações ou registros.
-* Para um escopo compartilhado (equipe, canal ou chat), faça as seguintes perguntas:
-  * As informações apresentadas pelo aplicativo, na guia ou por meio de um bot, são relevantes e úteis para a maioria dos membros em uma equipe? Por exemplo, aplicativo Scrum.
-  * O contexto do aplicativo pode mudar dependendo da equipe à qual ele é adicionado? Por exemplo, as tarefas do Planner são diferentes em equipes diferentes. 
-  * É possível que todos os membros em uma persona que precisem colaborar fazem parte de uma única equipe? Por exemplo, agentes trabalhando em um tíquete.
+Aplicativos para interagir com seus dados
 
-Os cenários a seguir orientarão você a entender a seleção de pontos de entrada e elementos da interface do usuário que funcionam bem com Teams de aplicativo:
+| **Se desejar...** | **Experimente ...** |
+| --- | --- |
+| Pesquise sistemas externos e compartilhe os resultados como um cartão interativo. | Extensões de mensagens com comandos de pesquisa |
+| Colete informações para inserir em um armazenamento de dados ou executar pesquisas avançadas. | Extensões de mensagens com comandos de ação |
+| Crie experiências da Web incorporadas para exibir, trabalhar e compartilhar dados. | Guias |
+| Envie dados por push e envie-os para fora do cliente do Teams. | Conectores e webhooks|
+| Formulários modais interativos de onde quer que você precise deles para coletar ou exibir informações. | Módulos de tarefas |
 
-> [!NOTE]
-> Não é uma lista exaustiva, mas ajudará você a pensar em algumas das possibilidades disponíveis para você.
+</details>
+</br>
+<details>
+<summary>Iniciar fluxos de trabalho e processos</summary>
 
-## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Criar, compartilhar e colaborar em itens em um sistema externo
+Uma maneira rápida de iniciar um processo ou fluxo de trabalho em um sistema externo.
 
-Aplicativos para Microsoft Teams é uma ótima maneira de interagir com seus dados e há uma variedade de pontos de integração para escolher.
+| **Se desejar...** | **Experimente ...** |
+| --- | --- |
+| Acione mensagens, permitindo que seus usuários enviem rapidamente o conteúdo de uma mensagem para seus serviços da Web. | Comandos de ação de extensões de mensagens |
+| Abra mensagens de uma guia, um bot ou uma extensão de mensagem para coletar informações antes de iniciar um fluxo de trabalho. | Módulos de tarefas |
+| Interaja com os usuários por meio de textos e cartões avançados. | Bots de conversação |
+| A boa opção para uma simples interação de ida e volta quando você não precisa criar um bot de conversação inteiro. |  Webhooks de saída |
 
-* **Extensões de mensagens com comandos de pesquisa**: Pesquisar sistemas externos e compartilhar os resultados como um cartão interativo.
+</details>
+</br>
+<details>
+<summary>Enviar notificações e alertas</summary>
 
-* **Extensões de mensagens com comandos de** ação : Coletar informações para inserir em um armazenamento de dados ou realizar pesquisas avançadas.
+Envie notificações e alertas assíncronos para seus usuários no Teams.
 
-* **Guias**: Crie experiências da Web incorporadas para exibir, trabalhar e compartilhar dados.
+| **Se desejar...** | **Experimente ...** |
+| --- | --- |
+| Envie mensagens proativas a grupos, canais ou usuários individuais. | Bots de conversação |
+| Permitir que um canal assine para receber mensagens. Um conector permite que os usuários personalizem a assinatura com uma página de configuração. | Conectores e webhooks de entrada |
 
-* **Conectores e webhooks**: uma maneira simples de enviar dados e enviar dados do cliente Teams.
+</details>
+</br>
+<details>
+<summary>Faça perguntas e receba respostas</summary>
 
-* **Módulos de tarefa**: formulários modais interativos de onde você precisa deles para coletar ou exibir informações.
+Conecte-se com seus usuários e resolva suas dúvidas
 
-## <a name="initiate-workflows-and-processes"></a>Iniciar fluxos de trabalho e processos
+| **Se desejar...** | **Experimente ...** |
+| --- | --- |
+| Processamento de linguagem natural, IA, aprendizado de máquina e todas as palavras-chave em evidência. Use um bot alimentado pela nuvem inteligente para conectar seus usuários às respostas de que precisam. | Bots de conversação |
+| Incorpore seu portal da Web existente no Teams ou crie uma versão específica do Teams para funcionalidades adicionais. | Guias |
 
-Às vezes, você só precisa de uma maneira rápida de iniciar um processo ou fluxo de trabalho em um sistema externo.
+</details>
 
-* **Comandos de ação de extensões de** mensagens : Disparar a partir de mensagens, permitindo que seus usuários enviem rapidamente o conteúdo de uma mensagem para seus serviços Web.
+## <a name="app-capabilities-mapped-to-features"></a>Funcionalidades do aplicativo mapeados para recursos
 
-* **Módulos de tarefa**: abra-os de uma guia, um bot ou uma extensão de mensagens para coletar informações antes de iniciar um fluxo de trabalho.
+A plataforma do Microsoft Teams oferece uma grande variedade de recursos. Cada recurso é uma maneira de interagir com seus usuários que tornam o recurso do aplicativo Teams relevante para a necessidade do usuário.
 
-* **Bots de conversação**: Interaja com seus usuários por meio de texto e rich cards.
+Vejamos como as funcionalidades do Teams permitem recursos diferentes para seu aplicativo.
 
-* **Webhooks de** saída : uma boa opção para uma interação simples de ida e volta quando você não precisa criar um bot de conversação inteiro.
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Imagem mostrando as funcionalidades do Teams" border="true":::
 
-## <a name="send-notifications-and-alerts"></a>Enviar notificações e alertas
+Por exemplo:
 
-Envie notificações e alertas assíncronos para seus usuários em Teams. Use cartões interativos para fornecer acesso rápido a ações comumente usadas e links para informações adicionais.
-
-* **Bots de conversa:** envie mensagens proativas para grupos, canais ou usuários individuais.
-
-* **Conectores e webhooks de entrada**: Permitir que um canal assine para receber mensagens. Um conector permite que os usuários adaptem a assinatura com uma página de configuração.
-
-## <a name="ask-questions-and-get-answers"></a>Fazer perguntas e obter respostas
-
-As pessoas têm perguntas e você provavelmente tem muitas das respostas armazenadas em algum lugar. Infelizmente, geralmente é muito difícil conectar os dois.
-
-* **Bots de conversação**: Processamento de linguagem natural, AI, aprendizado de máquina e todas as palavras-chave. Use um bot alimentado pela nuvem inteligente para conectar seus usuários às respostas de que precisam.
-
-* **Guias**: incorporar seu portal web existente no Teams ou criar uma versão Teams específica para a funcionalidade adicionada.
-
-## <a name="get-social"></a>Obter social
-
-Uma plataforma de colaboração é inerentemente uma plataforma social. Deixe seu lado criativo ser gratuito e adicionar um pouco de diversão ao seu local de trabalho. Todos os usuários devem ser capazes de enviar brincadeiras, dar parabéns, obter alguns memes, enviar alguns emojis ou qualquer outra coisa que lhe assente.
-
-## <a name="think-in-terms-of-a-single-page-app"></a>Pense em termos de um aplicativo de página única
-
-As guias são páginas da Web incorporadas. Praticamente tudo o que você pode fazer em um SPA, você pode fazer em uma guia em Teams. Apenas certifique-se de prestar atenção ao escopo. Guias de grupo e canal são para experiências compartilhadas e guias pessoais são para experiências pessoais. A lista de coisas da equipe entra na guia canal e a lista de suas coisas entra na guia pessoal.
-
-## <a name="initiate-small"></a>Iniciar pequeno
-
-Não sabe onde iniciar? Está se sentindo sobrecarregado com a variedade incrível de opções disponíveis para você? Você deve escolher um recurso principal do seu aplicativo e iniciar lá. Depois de ter uma opinião sobre o fluxo de informações por meio dos vários contextos no Teams, é muito mais simples imaginar uma interação mais complexa.
-
-## <a name="put-it-all-together"></a>Colocar tudo junto
-
-Dito isso, os melhores aplicativos geralmente combinam vários recursos, criando um aplicativo que envolve os usuários no contexto certo com a funcionalidade certa no momento certo. Você não deve forçar qualquer funcionalidade em um local que não pertence. Só porque você tem um bom bot de conversa um para um não significa adicioná-lo a qualquer equipe. Pontos de extensibilidade diferentes são bons para coisas diferentes, reproduzindo seus pontos fortes para criar um aplicativo bem-sucedido.
+- Use o recurso **guia** para exibir módulos de tarefas, solicitar permissões do dispositivo, exibir o conteúdo <`iframe`> ou usar links profundos.
+- Use o recurso de **extensão de mensagens** para enviar cartões, desenrolar links ou executar ações em relação às mensagens.
 
 ## <a name="see-also"></a>Confira também
 
-[Criar seu primeiro Microsoft Teams app](../../get-started/get-started-overview.md)
+- [Lista de verificação de planejamento](../design/planning-checklist.md)
+- [Crie seu primeiro aplicativo do Microsoft Teams ](../../get-started/get-started-overview.md)

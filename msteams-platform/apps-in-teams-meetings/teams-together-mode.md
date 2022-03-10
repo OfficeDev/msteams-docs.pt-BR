@@ -3,19 +3,19 @@ title: Cenas personalizadas no Modo Conferência
 description: Trabalhar com cenas personalizadas do Modo Conferência
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059662"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356081"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
 As cenas personalizadas do Modo Conferência no Microsoft Teams fornecem um ambiente de reunião imersivo e envolvente com as seguintes ações:
 
-* Reunir pessoas e incentivá-las a ativar seu vídeo. 
-* Combinar os participantes digitalmente em uma única cena virtual. 
+* Reunir pessoas e incentivá-las a ativar seu vídeo.
+* Combinar os participantes digitalmente em uma única cena virtual.
 * Colocar os fluxos de vídeo dos participantes em assentos pré-determinados projetados e corrigidos pelo criador da cena.
 
 Em cenas personalizadas do Modo Conferência, a cena é um artefato. A cena é criada pelo desenvolvedor de cena usando o estúdio do Microsoft Scene. Em uma configuração de cena concebida, os participantes têm assentos com fluxos de vídeo. Os vídeos são renderizados nesses assentos. Somente aplicativos de cena são recomendados, pois a experiência para esses aplicativos é clara.
@@ -27,7 +27,7 @@ O processo a seguir fornece uma visão geral para criar um aplicativo somente de
 Um aplicativo somente de cena ainda é um aplicativo no Microsoft Teams. O estúdio Scene lida com a criação do pacote de aplicativos em segundo plano. Várias cenas em um único pacote de aplicativos aparecem como uma lista simples para os usuários.
 
 > [!NOTE]
-> Os usuários não podem iniciar o Modo Conferência a partir do celular. No entanto, depois que um usuário ingressar em uma reunião por meio de dispositivo móvel e o Modo Conferência for ligado da área de trabalho, os usuários móveis que tenham ligado o vídeo aparecerão no Modo Conferência na área de trabalho. 
+> Os usuários não podem iniciar o Modo Conferência no celular. No entanto, depois que um usuário ingressar em uma reunião por meio de dispositivo móvel e o Modo Conferência for ligado da área de trabalho, os usuários móveis que tenham ligado o vídeo aparecerão no Modo Conferência na área de trabalho.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -54,7 +54,7 @@ A Microsoft tem um estúdio Scene que permite que você crie cenas. Ele está di
 
 Uma cena no contexto do estúdio Scene é um artefato que contém os seguintes elementos:
 
-* Assentos reservados para organizadores de reunião e apresentadores de reunião. O apresentador não se refere ao usuário que está compartilhando ativamente. Refere-se à [função de reunião](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Assentos reservados para organizadores de reunião e apresentadores de reunião. O apresentador não se refere ao usuário que está compartilhando ativamente. Refere-se à [função de reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Assento e imagem para cada participante com largura e altura ajustáveis. Somente o formato PNG é suportado para a imagem.
 
@@ -66,7 +66,7 @@ A imagem a seguir mostra cada assento representado como um avatar para a criaç�
 
 ![Estúdio de cena](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**Para criar uma cena usando o estúdio Scene**
+Para criar uma cena usando o estúdio Scene, siga estas etapas:
 
 1. Vá para [Editor de Cenas - Portal do Desenvolvedor Teams](https://dev.teams.microsoft.com/scenes).
 
@@ -86,7 +86,7 @@ A imagem a seguir mostra cada assento representado como um avatar para a criaç�
     ![Adicionar imagens ao ambiente](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * Você pode baixar os arquivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) e [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) com as imagens.
+    >Você pode baixar os arquivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) e [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) com as imagens.
 
 1. Selecione a imagem que você adicionou.
 
@@ -212,7 +212,7 @@ Agora que você já passou pelo exemplo scene.json, você pode ativar as cenas p
 
 Obter mais informações sobre como um usuário se envolve com cenas em cenas personalizadas do Modo Conferência.
 
-**Para selecionar cenas e ativar cenas personalizadas do Modo Conferência**
+Para selecionar cenas e ativar cenas personalizadas do Modo Conferência, siga estas etapas:
 
 1. Crie uma nova reunião de teste.
 
