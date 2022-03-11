@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: api de logon único de autenticação de equipes SSO do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356102"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398887"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -24,9 +24,7 @@ Os usuários do Microsoft Teams que entram em sua conta corporativa, de estudant
 >
 > ✔SDK do JavaScript do Teams (_Versão_: 1.10 e posterior) para que o SSO funcione no painel lateral da reunião.
 >
-> Para obter uma melhor experiência no Teams, use a versão mais recente do iOS e Android.
-
-> [!NOTE]
+> Para obter uma melhor experiência no Teams, use a versão mais recente do iOS e Android.[!NOTE]
 > **Início rápido**  
 >
 > O caminho mais simples para começar com o SSO da guia é com o kit de ferramentas do Teams para o Microsoft Visual Studio Code. Para obter mais informações, confira [SSO com kit de ferramentas do Teams e Visual Studio Code para guias](../../../toolkit/visual-studio-code-tab-sso.md)
@@ -142,9 +140,9 @@ Use o código a seguir para adicionar novas propriedades ao manifesto Teams:
 * **WebApplicationInfo** é o pai dos seguintes elementos:
 
 > [!div class="checklist"]
+>
 > * **id** - A ID do cliente do aplicativo. Esta é a ID do aplicativo que você obteve como parte do registro do aplicativo no Azure AD.
 >* **resource** - O domínio e o subdomínio do seu aplicativo. Esse é o mesmo URI (incluindo o protocolo `api://`) que você registrou ao criar seu `scope` na etapa 6. Você não deve incluir o caminho `access_as_user` em seu recurso. Parte de domínio deste URI deve coincidir com o domínio, incluindo qualquer subdomínio, usado nas URLs do manifesto do aplicativo Teams.
-
 > [!NOTE]
 >
 >* O recurso para um aplicativo do Microsoft Azure AD geralmente é a raiz de sua URL de site e a appID (por exemplo, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). Esse valor também é usado para garantir que sua solicitação venha do mesmo domínio. Verifique se `contentURL` para sua guia usa os mesmos domínios que sua propriedade de recurso.
@@ -233,6 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## <a name="code-sample"></a>Exemplo de código
