@@ -4,14 +4,14 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: link profundo do link do teams
-ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897911"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399307"
 ---
-# <a name="create-deep-links"></a>Criar links detalhados 
+# <a name="create-deep-links"></a>Criar links detalhados
 
 Você pode criar links de informações e recursos no Teams. Os cenários em que a criação de links profundos são úteis são os seguintes:
 
@@ -36,14 +36,14 @@ Você pode criar links de informações e recursos no Teams. Os cenários em que
 
 ## <a name="deep-linking-to-your-tab"></a>Vinculação profunda à sua guia
 
-Você pode criar links profundos para entidades no Teams. Isso é usado para criar links que navegam até o conteúdo e as informações na sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Quando você seleciona o link, ele navega até a guia que se concentra no item específico. Para implementar isso, adicione uma ação **copiar link** a cada item, da maneira mais adequada à interface do usuário. Quando o usuário executa essa ação, você chama `shareDeepLink()` para exibir uma caixa de diálogo que contém um link que o usuário pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para o item. Você o obtém de volta no [contexto](~/tabs/how-to/access-teams-context.md) quando o link é seguido e sua guia é recarregada.
+Você pode criar links profundos para entidades no Teams. Isso é usado para criar links que navegam até o conteúdo e as informações na sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Ao selecionar o link, ele navega até a guia que se concentra no item específico. Para implementar isso, adicione uma ação **copiar link** a cada item, da maneira mais adequada à interface do usuário. Quando o usuário executa essa ação, você chama `shareDeepLink()` para exibir uma caixa de diálogo que contém um link que o usuário pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para o item. Você o obtém de volta no [contexto](~/tabs/how-to/access-teams-context.md) quando o link é seguido e sua guia é recarregada.
 
-Como alternativa, você também pode gerar links profundos programaticamente, usando o formato especificado posteriormente neste tópico. Você pode usar links profundos nas mensagens do [bot](~/bots/what-are-bots.md) e do [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informam os usuários sobre alterações em sua guia ou em itens dentro dela.
+Como alternativa, é possível gerar links profundos programaticamente, usando o formato que será especificado posteriormente neste artigo. Você pode usar links profundos nas mensagens do [bot](~/bots/what-are-bots.md) e do [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informam os usuários sobre alterações em sua guia ou em itens dentro dela.
 
 > [!NOTE]
 > Esse link profundo é diferente dos links fornecidos pelo item de menu **Copiar para a guia**, que apenas gera um link profundo que aponta para essa guia.
 
->[!NOTE]
+>[!IMPORTANT]
 > Atualmente, o shareDeepLink não funciona em plataformas móveis.
 
 ### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Mostrar um link profundo para um item dentro de sua guia
@@ -52,17 +52,16 @@ Para mostrar uma caixa de diálogo que contém um link profundo para um item em 
 
 Forneça os seguintes campos:
 
-* `subEntityId`: Um identificador exclusivo para o item em sua guia para o qual você está criando um link direto.
+* `subEntityId`: um identificador exclusivo para o item da sua guia à qual você tem uma vinculação profunda.
 * `subEntityLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
-* `subEntityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia.
+* `subEntityWebUrl`: um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia.
 
 ### <a name="generate-a-deep-link-to-your-tab"></a>Gerar um link profundo para sua guia
 
 > [!NOTE]
-> As guias pessoais têm um escopo `personal`, enquanto as guias de canal e grupo usam escopos `team` ou `group`. Os dois tipos de guia têm uma sintaxe ligeiramente diferente, pois apenas a guia configurável possui uma propriedade `channel` associada ao seu objeto de contexto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md).
-
-> [!NOTE]
-> Os links profundos só funcionarão corretamente se a guia tiver sido configurada usando a biblioteca v0.4 ou posterior e, por isso, tiver uma ID de entidade. Links profundos para guias sem IDs de entidade ainda navegam até a guia, mas não podem fornecer a ID da sub-entidade para a guia.
+>
+> * As guias pessoais têm um escopo `personal`, enquanto as guias de canal e grupo usam escopos `team` ou `group`. Os dois tipos de guia têm uma sintaxe ligeiramente diferente, pois apenas a guia configurável possui uma propriedade `channel` associada ao seu objeto de contexto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md).
+> * Os links profundos só funcionarão corretamente se a guia tiver sido configurada usando a biblioteca v0.4 ou posterior e, por isso, tiver uma ID de entidade. Links profundos para guias sem IDs de entidade ainda navegam até a guia, mas não podem fornecer a ID da sub-entidade para a guia.
 
 Use o seguinte formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens:
 
@@ -71,6 +70,17 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 > [!NOTE]
 > Se o bot enviar uma mensagem contendo um `TextBlock` com um link profundo, uma nova guia do navegador será aberta quando o usuário selecionar o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams, ambos em execução no Linux.
 > Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta na guia atual do navegador quando o usuário selecionar o link. Uma nova guia do navegador não está aberta.
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused. 
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* List items in the table are not formatted well in output.
+* Some headings use -ing verbs.
+* Example values and some URLs should be in backticks and not emphasized.
+* Codeblock are missing language.
+* Check for markdownlint errors.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
 
 Os parâmetros de consulta são:
 
@@ -102,14 +112,14 @@ Os parâmetros de consulta são:
 * Link para um item de tarefa na guia configurável: 
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-    
-* Link para um aplicativo de guia adicionado a uma reunião ou chat em grupo: 
+
+* Link para um aplicativo de guia adicionado a uma reunião ou chat em grupo:
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Verifique se todos os parâmetros de consulta estão codificados corretamente no URI. Você deve seguir os exemplos anteriores usando o último exemplo:
-
+>
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -124,13 +134,13 @@ A chamada [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getc
 
 ## <a name="deep-linking-from-your-tab"></a>Vinculação profunda de sua guia
 
-Você pode fazer a vinculação profunda do conteúdo no Teams em sua guia. Isso será útil se sua guia precisar se vincular a outro conteúdo no Teams, como um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Para disparar um link profundo da guia, você deve chamar:
+Você pode criar um link profundo para o conteúdo do Teams a partir da sua guia. Isso será útil se sua guia precisar ser vinculada a outro conteúdo do Teams, como a um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Para disparar um link profundo da guia, chame:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Essa chamada navega até a URL correta ou dispara uma ação do cliente, como abrir uma caixa de diálogo de agendamento ou instalação de aplicativo. Veja o seguinte exemplo:
+Essa chamada navega até a URL correta ou dispara uma ação do cliente, como abrir uma caixa de diálogo de agendamento ou de instalação de aplicativo. Confira o exemplo a seguir:
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -142,9 +152,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="deep-linking-to-a-chat"></a>Vinculação profunda a um chat
 
-Você pode criar links profundos para chats privados entre usuários especificando o conjunto de participantes. Se um chat não existir com os participantes especificados, o link navegará para um novo chat vazio. Novos chats são criados em estado de rascunho até que o usuário envie a primeira mensagem. Caso contrário, você poderá especificar o nome do chat se ele ainda não existir, juntamente com o texto que deve ser inserido na caixa de redação do usuário. Você pode pensar nesse recurso como um atalho para o usuário executar a ação manual de navegar ou criar o chat e, em seguida, digitar a mensagem.
+Você pode criar links profundos para chats privados entre usuários especificando o conjunto de participantes. Se não houver um chat com os participantes especificados, o link direcionará o usuário para um novo chat vazio. Novos chats são criados em estado de rascunho até que o usuário envie a primeira mensagem. Caso contrário, você poderá especificar o nome do chat se ele ainda não existir, juntamente com o texto que deve ser inserido na caixa de texto do usuário. Você pode pensar nesse recurso como um atalho para o usuário executar a ação manual de navegar ou criar o chat e, em seguida, digitar a mensagem.
 
-Como exemplo de caso de uso, se você estiver retornando um perfil de usuário do Office 365 do seu bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
+Como exemplo de caso de uso, se estiver retornando um perfil do Office 365 do seu bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>Gerar link profundo para um chat
 
@@ -170,26 +180,29 @@ O seguinte formato de link profundo pode ser usado em um bot, conector ou cartã
 
 Os parâmetros de consulta são:
 
-* `fileId`: ID de arquivo exclusiva do Sharepoint Online, também conhecido como sourcedoc. Por exemplo, 1FA202A5-3762-4F10-B550-C04F81F6ACBD
-* `tenantId`: Exemplo de ID do locatário, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
-* `fileType`: tipo de arquivo com suporte, como docx, pptx, xlsx e pdf
-* `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Nome do serviço, ID do aplicativo. Por exemplo, equipes.
-* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: ID do grupo do arquivo, ae063b79-5315-4ddb-ba70-27328ba6c31e 
+* `fileId`: ID de arquivo exclusivo do Sharepoint Online, também conhecida como `sourcedoc`. Por exemplo,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `fileType`: tipo de arquivo compatível, como .docx, .pptx, .xlsx e .pdf.
+* `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`.
+* `serviceName`: nome do serviço, ID do aplicativo. Por exemplo, `teams`.
+* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: ID do grupo do arquivo. Por exemplo, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Você pode ver `threadId` e `groupId` na URL do canal.  
 
-O seguinte formato de link profundo é usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+O seguinte formato de link profundo é usado em um bot, conector ou cartão de extensão de mensagens: 
 
-O seguinte formato de exemplo mostra o link profundo para arquivos:
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+
+O seguinte formato de exemplo mostra o link profundo para os arquivos:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
-### <a name="serialization-of-this-object"></a>Serialização deste objeto:
-```
+### <a name="serialization-of-this-object"></a>Serialização deste objeto
+
+```javascript
 {
 fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
@@ -204,7 +217,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>Vinculação profunda a um aplicativo
 
-Crie link profundos para o aplicativo depois que ele for listado na loja do Teams. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar o aplicativo. 
+Crie link profundos para o aplicativo depois que ele for listado na loja do Teams. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar o aplicativo.
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
 
@@ -216,13 +229,13 @@ O seguinte formato de link profundo pode ser usado em um bot, conector ou cartã
 
 Os parâmetros de consulta são:
 
-* `appID`: sua ID de manifesto, por exemplo, **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID`: sua ID de manifesto, por exemplo, `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
-* `entityID`: a ID do item que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, **tasklist123**.
+* `entityID`: a ID do item que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, `tasklist123`.
 * `entityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
 * `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, Task List 123 ou Task 456.
 
-Exemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+Exemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
 ## <a name="deep-linking-to-the-scheduling-dialog"></a>Vinculação profunda à caixa de diálogo de agendamento
 
@@ -249,13 +262,13 @@ Os parâmetros de consulta são:
 * `content`: Um campo opcional para o campo de detalhes da reunião.
 
 > [!NOTE]
-> Atualmente, não há suporte para especificar o local. Você deve especificar a diferença UTC, ou seja, os fusos horários ao gerar os horários de início e término.
+> Atualmente, não é possível especificar o local. Você deve especificar o deslocamento UTC, ou seja, os fusos horários ao gerar os horários de início e de término.
 
 Para usar esse link profundo com o bot, você pode especificá-lo como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
 
 ## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Vinculação profunda a uma chamada de áudio ou chamada de vídeo com áudio.
 
-Você pode criar links profundos para invocar somente chamadas de áudio ou áudio/vídeo para um único usuário ou um grupo de usuários, especificando o tipo de chamada, como *áudio* ou *av* e os participantes. Depois que o link profundo é invocado e antes de fazer a chamada, o cliente da área de trabalho do Teams solicita uma confirmação para fazer a chamada. No caso de chamada em grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de link profundo. 
+Você pode criar links profundos para invocar somente chamadas de áudio ou áudio/vídeo para um único usuário ou um grupo de usuários, especificando o tipo de chamada, como *áudio* ou *av* e os participantes. Depois que o link profundo é invocado e antes de fazer a chamada, o cliente do Teams solicita uma confirmação para fazer a chamada. No caso de chamada em grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de link profundo.
 
 No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará o vídeo do chamador para a chamada. O receptor da chamada tem a opção de responder somente por áudio ou áudio e vídeo, por meio da janela de notificação de chamada do Teams.
 
@@ -266,14 +279,15 @@ No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará
 
 | Link profundo | Formatar | Exemplo |
 |-----------|--------|---------|
-| Fazer uma chamada de áudio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Fazer uma chamada de áudio e vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|Fazer uma chamada de áudio e vídeo com uma fonte de parâmetro opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+| Fazer uma chamada de áudio | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com` |
+| Fazer uma chamada de áudio e vídeo | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true` |
+|Fazer uma chamada de áudio e vídeo com uma fonte de parâmetro opcional | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |  
+| Fazer uma chamada de áudio e vídeo para uma combinação de usuários VoIP e PSTN | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210` |
   
 Estes são os parâmetros de consulta:
+
 * `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
-* `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams. 
+* `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams.
 * `Source`: esse é um parâmetro opcional, que informa sobre a origem do link profundo.
 
 ## <a name="code-sample"></a>Exemplo de código
