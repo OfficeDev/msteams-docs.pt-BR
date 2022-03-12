@@ -501,14 +501,14 @@
       href: samples/integrate-web-apps-overview.md
     - name: Considerações sobre a integração do Teams
       href: samples/integrating-web-apps.md
+    - name: Criar um Assistente Virtual
+      href: samples/virtual-assistant.md
     - name: Administrador da plataforma de alimentação
       items:
         - name: Visão Geral
           href: samples/teams-low-code-solutions.md
         - name: Adicionar um chatbot de Agentes Virtuais de Energia
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Criar um Assistente Virtual
-          href: samples/virtual-assistant.md
     - name: Modelos de aplicativos para o Teams
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção
@@ -517,8 +517,12 @@
       items:
         - name: Visão Geral
           href: resources/moodle-overview.md
-        - name: Instalar o Moodle LMS
-          href: resources/moodleInstructions.md
+        - name: Plug-ins do Microsoft 365
+          href: resources/m365-plugins/m365-plugins-overview.md
+        - name: Aplicativos de parceiros para o Moodle
+          href: resources/partner-apps-for-moodle.md
+        - name: Perguntas frequentes sobre o Moodle
+          href: resources/faqs.md
     - name: Criar um botão Compartilhar para o Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Adicionar uma guia do Teams ao SharePoint

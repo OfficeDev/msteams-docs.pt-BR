@@ -4,12 +4,12 @@ description: Aprenda a projetar Cartões Adaptáveis para o Teams e obtenha o Ki
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948639"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398621"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -188,15 +188,15 @@ Cartões projetados para uma escala de tela estreita bem em telas mais amplas (o
 Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para formatar o conteúdo do cartão em uma tabela ou grade. Existem várias opções para formatar a largura da coluna. Essas diretrizes o ajudam a entender quando usar cada uma delas.
 
 * `"width": "auto"`: Tamanhos de cada coluna no `ColumnSet` para se ajustar a qualquer conteúdo de aplicativo que você incluir nessa coluna.
-   * **Faça**: Use quando você tiver conteúdo de largura variável e não precisar priorizar uma coluna específica.
-   * **Faça**: Para cada `TextBlock`, definido `"wrap": true` já que o texto não se quebra por padrão.
-   * **Não faça**: Defina `"width": "auto"` para cada contêiner de coluna. Por exemplo, se você tiver uma entrada e um botão lado a lado, o botão poderá ser cortado em algumas telas. Em vez disso, defina `auto` para a coluna com botões e outros conteúdos que sempre devem estar completamente visíveis.
+  * **Faça**: Use quando você tiver conteúdo de largura variável e não precisar priorizar uma coluna específica.
+  * **Faça**: Para cada `TextBlock`, definido `"wrap": true` já que o texto não se quebra por padrão.
+  * **Não faça**: Defina `"width": "auto"` para cada contêiner de coluna. Por exemplo, se você tiver uma entrada e um botão lado a lado, o botão poderá ser cortado em algumas telas. Em vez disso, defina `auto` para a coluna com botões e outros conteúdos que sempre devem estar completamente visíveis.
 * `"width": "stretch"`: Tamanhos de colunas com base na largura `ColumnSet` disponível. Quando várias colunas usam o valor `"stretch"`, elas compartilham igualmente a largura disponível.
-   * **Faça**: Use com uma coluna se todas as outras colunas tiverem uma largura estática. Por exemplo, você tem imagens em miniatura em uma coluna com todos os 50 pixels de largura.
-* `"width": "<number>"`: Tamanhos de colunas usando uma proporção da largura `ColumnSet` disponível. Por exemplo, se você definir três colunas com `"width": "1"`, `"width": "4"`, e `"width": "5"`, as colunas assumirão 10, 40, e 50 por cento da largura disponível.
+  * **Faça**: Use com uma coluna se todas as outras colunas tiverem uma largura estática. Por exemplo, você tem imagens em miniatura em uma coluna com todos os 50 pixels de largura.
+* `"width": "<number>"`: dimensiona colunas usando uma proporção da largura `ColumnSet` disponível. Por exemplo, se você definir três colunas com `"width": "1"`, `"width": "4"` e `"width": "5"`, as colunas assumirão 10, 40 e 50% da largura disponível.
 * `"width": "<number>px"`: Tamanhos de colunas para uma largura de pixel específica. Essa abordagem é útil ao criar tabelas.
-   * **Faça**: Use quando a largura do que você está exibindo não precisa alterar (por exemplo, números e porcentagens).
-   * **Não faça**: Exceda acidentalmente a largura do que o cartão pode exibir. Lembre-se de que a largura da tela disponível depende do dispositivo. O dispositivo móvel do Teams também não suporta rolagem horizontal como a área de trabalho do Teams.
+  * **Faça**: Use quando a largura do que você está exibindo não precisa alterar (por exemplo, números e porcentagens).
+  * **Não faça**: Exceda acidentalmente a largura do que o cartão pode exibir. Lembre-se de que a largura da tela disponível depende do dispositivo. O dispositivo móvel do Teams também não suporta rolagem horizontal como a área de trabalho do Teams.
 
 #### <a name="example-knowing-when-to-stretch-columns"></a>Exemplo: saber quando estender colunas
 
@@ -647,9 +647,9 @@ Siga essas diretrizes ao incluir imagens em seus cartões.
 * **Faça**: Se você precisa controlar o tamanho exato de suas imagens, use as propriedades `width` e `height`.
 * **Não faça**: Inclua preenchimento em suas imagens. Isso normalmente introduz problemas indesejáveis de espaçamento e layout.
 * Em relação à cor da tela de fundo:
-   * **Faça**: Use fundos transparentes para que suas imagens se adaptem a qualquer tema do Teams. 
-   * **Não faça**: Inclua uma cor de fundo fixa, a menos que uma cor específica deva ser visível para seus usuários.
-   * **Não faça**: Adicione uma cor de fundo a um `TextBlock` que prejudica a legibilidade. Por exemplo, se seu fundo for escuro, use uma cor de texto mais clara e vice-versa.
+  * **Faça**: Use fundos transparentes para que suas imagens se adaptem a qualquer tema do Teams.
+  * **Não faça**: Inclua uma cor de fundo fixa, a menos que uma cor específica deva ser visível para seus usuários.
+  * **Não faça**: Adicione uma cor de fundo a um `TextBlock` que prejudica a legibilidade. Por exemplo, se seu fundo for escuro, use uma cor de texto mais clara e vice-versa.
 
 ### <a name="actions"></a>Ações
 

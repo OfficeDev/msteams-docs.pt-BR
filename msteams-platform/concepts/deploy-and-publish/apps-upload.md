@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356277"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453325"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
 Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar publicar em sua organização ou na loja do Teams. Isso faz sentido nos seguintes cenários:
 
 * Você deseja testar e depurar um aplicativo localmente por conta própria ou com outros desenvolvedores.
-* Você criou um aplicativo apenas para si mesmo. Por exemplo, para automatizar um fluxo de trabalho.
+* Você criou um aplicativo para você mesmo para automatizar um fluxo de trabalho.
 * Você criou um aplicativo para um pequeno conjunto de usuários, como seu grupo de trabalho.
 
 > [!IMPORTANT]
@@ -25,29 +25,32 @@ Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar pu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Crie seu [pacote de aplicativos](~/concepts/build-and-test/apps-package.md) e [valide-o](https://dev.teams.microsoft.com/appvalidation.html) para os erros.
+* Crie seu [pacote de aplicativos](~/concepts/build-and-test/apps-package.md) e [valide-o](https://dev.teams.microsoft.com/appvalidation.html) para erros.
 * [Habilitar o upload de aplicativos personalizados](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) no Teams.
-* Verifique se o aplicativo está em execução e acessível por meio de HTTPs.
+* Verifique se o aplicativo está em execução e é acessível por meio de HTTPs.
 
 ## <a name="upload-your-app"></a>Carregar seu aplicativo
 
 Você pode fazer o sideload do aplicativo para uma equipe, chat, reunião ou para uso pessoal, dependendo de como você configurou o escopo do aplicativo.
 
 1. Acesse o cliente do Teams com sua [conta de desenvolvimento Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
-1. Selecione **Apps** e escolha **Carregar um aplicativo personalizado**.
-1. Selecione o arquivo .zip do pacote do aplicativo. Uma caixa de diálogo de instalação é exibida.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando um exemplo de diálogo de instalação de um aplicativo do Teams.":::
-1. Adicione seu aplicativo ao Teams.
+1. Expanda **Aplicativos** e selecione **Gerenciar aplicativos**.
+1. Selecione **Fazer o upload de um aplicativo personalizado**.
+1. Selecione o arquivo .zip do pacote do aplicativo. A seguinte tela será exibida:
 
-> [!NOTE]
-> `onInstallationUpdateActivityAsync()`método usado para obter Microsoft Teams Locale ao adicionar o bot ao Microsoft Teams.
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando um exemplo de diálogo de instalação de um aplicativo do Teams.":::
 
-## <a name="troubleshoot-upload-issues"></a>Solução de problemas de carregamento
+1. Selecione **Adicionar** para adicionar seu aplicativo ao Teams.
 
-Se o sideload do aplicativo falhar, faça o seguinte até que o problema seja resolvido:
+    > [!NOTE]
+    > `onInstallationUpdateActivityAsync()`método usado para obter Microsoft Teams Locale ao adicionar o bot ao Microsoft Teams.
 
-1. Volte através das instruções para a [criação de seu pacote de aplicativos](../../concepts/build-and-test/apps-package.md).
-1. [Validar seu pacote de aplicativos](https://dev.teams.microsoft.com/appvalidation.html) novamente.
+## <a name="troubleshooting"></a>Solução de problemas
+
+Se o aplicativo não conseguir realizar o sideload ou se houver problemas para carregar, verifique as seguintes opções:
+
+1. Verifique se você seguiu todas as instruções para [criar pacote do aplicativo](../../concepts/build-and-test/apps-package.md).
+1. [Validar seu pacote de aplicativos](https://dev.teams.microsoft.com/appvalidation.html).
 1. Verifique se o manifesto do aplicativo corresponde ao [esquema](../../resources/schema/manifest-schema.md).
 
 ## <a name="access-your-app"></a>Acessar seus aplicativos
