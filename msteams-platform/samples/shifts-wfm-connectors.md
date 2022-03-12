@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams conectores kronos
 ms.author: lajanuar
-ms.openlocfilehash: 21ea28e3b5d53226a2ab50ac22db31fef561596a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355738"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453100"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 
@@ -36,7 +36,7 @@ A seguir estão os principais benefícios dos conectores WFM Teams Shifts:
 
 * **Integração perfeita:** A integração entre soluções WFM e turnos Teams permite que os funcionários de primeira linha usem o aplicativo shifts do Teams para exibir ou gerenciar seus horários e horários de turno e usar todos os outros recursos avançados de colaboração fornecidos no Teams desde seu dispositivo móvel ou desktop sem precisar alternar o contexto para outro aplicativo.  
 
-**Exibição de turnos abertos Teams**
+Exibição de turnos abertos Teams:
 
 A exibição de turnos no Teams é mostrada na imagem a seguir:
 

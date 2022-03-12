@@ -6,14 +6,14 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 692eebc774de42bddb2f832cb22681991ac0d87b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821378"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452561"
 ---
-# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colabore Teams projeto usando Teams Toolkit
+# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colaborar no Teams usando Teams Toolkit
 
 Vários desenvolvedores podem trabalhar juntos para depurar, provisionar e implantar para o mesmo projeto TeamsFx, mas exige a definição manual das permissões corretas do Teams App e Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit  oferece suporte ao recurso de colaboração para permitir que desenvolvedores e proprietários do projeto convidem outros desenvolvedores ou colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto TeamsFx.
 
@@ -48,7 +48,7 @@ A lista a seguir nos orienta a entender o processo de colaboração e suas limit
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* Para exibir colaboradores no ambiente atual, selecione Listar Microsoft 365 Teams App (com Proprietários do **Azure AD App)** e, em seguida, os colaboradores são listados no canal de saída, conforme mostrado na imagem a seguir:
+* Para exibir colaboradores no ambiente atual, selecione **Listar Microsoft 365 Teams App (com o Aplicativo Azure AD) Proprietários**, em seguida, os colaboradores são listados no canal de saída, conforme mostrado na seguinte imagem:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -63,7 +63,7 @@ A lista a seguir nos orienta a entender o processo de colaboração e suas limit
 * Faça logoff na Microsoft 365 conta.
 * Faça logoff na conta do Azure, que tem permissão de colaborador para todos os recursos do Azure que estão sendo usados neste projeto.
 * Para visualizar seu Teams, implante o projeto no controle remoto.
-* Iniciar remoto para ter uma visualização do Teams app.
+* Iniciar remoto para ter uma visualização do Teams aplicativo.
 
 Para obter mais informações, [consulte build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
@@ -82,6 +82,7 @@ Não é possível remover colaboradores diretamente da Teams Toolkit extensão. 
   6. Selecione e remova o colaborador.
 
 > [!NOTE]
+>
 > * O colaborador adicionado ao seu projeto não receberá nenhuma notificação. Project proprietário precisa notificar o colaborador offline.
 > * As permissões relacionadas ao Azure devem ser definidas manualmente pelo administrador de assinatura do Azure Microsoft Azure portal. A conta do Azure deve ter função de colaborador para a assinatura para que os desenvolvedores possam trabalhar juntos para provisionar e implantar o projeto TeamsFx.
 

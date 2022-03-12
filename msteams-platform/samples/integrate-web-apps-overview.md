@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
-ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 274525b61ae95021cde41095e4bb37133e05b3e8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355955"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453688"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -40,6 +40,9 @@ As plataformas de código baixo fornecem uma abordagem intuitiva para o desenvol
 ## <a name="microsoft-power-platform"></a>Plataforma Microsoft Power
 
 A plataforma Microsoft Power combina quatro tecnologias robustas da Microsoft, como Power BI, Power Apps, Power Automate e Power Virtual Agents em uma plataforma de aplicativos poderosa. Essas tecnologias capacitam você a criar soluções, automatizar processos, analisar dados e criar agentes virtuais em um ambiente unificado e integrado.
+
+>[!NOTE]
+>Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados no Teams de aplicativos. Os aplicativos da Plataforma Microsoft Power só podem ser publicados no armazenamento de aplicativos de uma organização.
 
 ### <a name="power-apps"></a>Power Apps
 

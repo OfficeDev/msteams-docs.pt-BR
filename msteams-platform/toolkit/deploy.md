@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0eeda4842ad3f0443d46b5075b1520b0042130ec
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768375"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452547"
 ---
 # <a name="deploy-to-the-cloud"></a>Implantar na nuvem
 
@@ -26,16 +26,18 @@ Teams Toolkit ajuda você a implantar ou carregar o código front-end e back-end
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
 > [!NOTE]
+>
 > * Verifique se você Teams projeto de aplicativo aberto em código VS.
-> * Antes de implantar o código do projeto na nuvem, [provisione os recursos de nuvem.](provision.md)
+> * Antes de implantar o código do projeto na nuvem, [provisione os recursos de nuvem](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implantar Teams aplicativos usando Teams Toolkit
 
 Os guias de início ajudam você a implantar usando Teams Toolkit. Você pode usar o seguinte para implantar seu Teams aplicativo:
+
 * [Implantar seu aplicativo no Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Implantar seu aplicativo para SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>Detalhes sobre a Teams de aplicativo
+## <a name="details-on-teams-app-workload"></a>Detalhes sobre a carga de trabalho Teams aplicativo
 
 | Teams carga de trabalho do aplicativo | Código-fonte | Artefato de com build| Recurso Target |
 |-------------|----------|---------------|---------------|

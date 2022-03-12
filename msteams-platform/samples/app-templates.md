@@ -6,12 +6,12 @@ keywords: Microsoft Teams exemplos de modelos
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5821894793ae99ae559ebedba068331a48b1aed
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398740"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453135"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modelos de aplicativos para o Teams
 
@@ -111,7 +111,8 @@ A Integração de Novos Funcionários é uma solução integrada Microsoft Teams
 Exemplos de código de modelo de aplicativo são uma coleção de aplicativos de exemplo para Microsoft Teams plataforma.
 
 > [!NOTE]
-> A Microsoft não está gerenciando ativamente o código-fonte. O código-fonte completo é de código-fonte aberto e você pode explorar, bifurcar e modificar o código-fonte para atender aos seus requisitos específicos.
+> * A Microsoft não está gerenciando ativamente o código-fonte. O código-fonte completo é de código-fonte aberto e você pode explorar, bifurcar e modificar o código-fonte para atender aos seus requisitos específicos.
+> * Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados no Teams de aplicativos. Os aplicativos da Plataforma Microsoft Power só podem ser publicados no armazenamento de aplicativos de uma organização.
 
 A tabela a seguir descreve exemplos de código de modelo de aplicativo:  
 

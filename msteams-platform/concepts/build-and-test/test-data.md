@@ -5,8 +5,13 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: testar equipes de programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
+ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452701"
 ---
-
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
 Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma assinatura Microsoft 365 desenvolvedor.
@@ -243,6 +248,6 @@ Por padrão, somente administradores globais ou Teams de serviço podem carregar
 
 ## <a name="see-also"></a>Confira também
 
-* [Depurar sua guia](~/tabs/how-to/developer-tools.md) 
+* [Depurar sua guia](~/tabs/how-to/developer-tools.md)
 * [Depurar seus bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Testar permissões RSC](~/graph-api/rsc/test-resource-specific-consent.md)

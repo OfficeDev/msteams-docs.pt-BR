@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356298"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453716"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams pessoal em Microsoft 365
 
@@ -22,14 +22,16 @@ As guias pessoais fornecem uma ótima maneira de aprimorar a experiência Micros
 Atualizar seu aplicativo pessoal para ser executado no Outlook e Office Home envolve estas etapas:
 
 > [!div class="checklist"]
+>
 > * Atualizar o manifesto do aplicativo
-> * Atualizar suas referências do SDK do TeamsJS 
+> * Atualizar suas referências do SDK do TeamsJS
 > * Alterar seus headers de Política de Segurança de Conteúdo
 > * Atualizar seu Microsoft Azure Active Directory (Registro de Aplicativo do Azure AD) para SSO (Single Sign On)
 
 Testar seu aplicativo exigirá as seguintes etapas:
 
 > [!div class="checklist"]
+>
 > * Registrar seu Microsoft 365 locatário *em Office 365 Versões Direcionadas*
 > * Configurar sua conta para acessar versões de visualização de aplicativos Outlook e Office
 > * Fazer sideload do aplicativo atualizado em Teams
@@ -56,7 +58,6 @@ Se você quiser usar código de exemplo para concluir este tutorial, siga as eta
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemplo de Lista Inteira (Funciona em Teams, Outlook e Office) em Teams Toolkit":::
 
-
 ## <a name="update-the-app-manifest"></a>Atualizar o manifesto do aplicativo
 
 Você precisará usar [](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `Microsoft 365 DevPreview` o esquema de manifesto Teams visualização do desenvolvedor e a versão do manifesto para habilitar sua guia pessoal Teams para ser executado em Office e Outlook.
@@ -78,6 +79,7 @@ Abra seu Teams de aplicativo e atualize o `$schema` e `manifestVersion` com os s
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Se você usou Teams Toolkit para criar seu aplicativo pessoal, você também pode usá-lo para validar as alterações no arquivo de manifesto e identificar quaisquer erros. Abra a paleta `Ctrl+Shift+P` de comandos e encontre **Teams:** Valide o arquivo de manifesto ou selecione a opção no menu Implantação do Teams Toolkit (procure o ícone Teams no lado esquerdo do Visual Studio Code).
@@ -96,6 +98,7 @@ Você pode usar o Teams Toolkit `@microsoft/teams-js`para ajudar a automatizar a
 Após a conclusão, o utilitário `package.json` atualizará seu arquivo com a dependência do TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` ou posterior) e seus arquivos serão atualizados `*.js/.ts` `*.jsx/.tsx` com:
 
 > [!div class="checklist"]
+>
 > * `package.json` referências ao TeamsJS SDK Preview
 > * Instruções de importação para o TeamsJS SDK Preview
 > * [Chamadas de Função, Enum e Interface](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) para Visualização do SDK do TeamsJS
@@ -126,7 +129,7 @@ Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesm
 
 1. Entre no Microsoft Azure [portal com](https://portal.azure.com) sua conta de locatário de área de reserva.
 1. Abra a **folha Registros de** aplicativo.
-1. Selecione o nome do aplicativo de guia pessoal para abrir seu registro de aplicativo. 
+1. Selecione o nome do aplicativo de guia pessoal para abrir seu registro de aplicativo.
 1. Selecione  **Expor uma API** (em *Gerenciar*).
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs de cliente da folha *Registros de aplicativo* no portal do Azure":::
@@ -179,7 +182,7 @@ Para exibir seu aplicativo em execução em Outlook na Windows desktop:
 
 1. Iniciar Outlook e entrar usando sua conta de locatário dev.
 1. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
-1.  Clique no ícone do aplicativo para iniciar seu aplicativo Outlook.
+1. Clique no ícone do aplicativo para iniciar seu aplicativo Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção releições ('Mais aplicativos') na barra lateral do cliente da área de trabalho Outlook para ver suas guias pessoais instaladas":::
 
@@ -187,7 +190,7 @@ Para exibir seu aplicativo em execução em Outlook na Windows desktop:
 
 Para exibir seu aplicativo em Outlook na Web:
 
-1. Navegue até https://outlook.office.com e entre usando sua conta de locatário dev.
+1. Navegue [até Outlook na Web](https://outlook.office.com) e entre usando sua conta de locatário dev.
 1. Clique nas releições (**...**) na barra lateral. Seu título de aplicativo sideload aparecerá entre seus aplicativos instalados.
 1. Clique no ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
@@ -227,11 +230,11 @@ No menu *Aplicativos*, selecione *Gerenciar seus* **aplicativosSubmitir um aplic
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-Como administrador Teams, você pode carregar e pré-instalar o pacote de aplicativos para o locatário da sua organização em https://admin.teams.microsoft.com/. Consulte [Upload seus aplicativos personalizados no centro de administração Microsoft Teams para](/MicrosoftTeams/upload-custom-apps) obter detalhes.
+Como administrador Teams, você pode carregar e pré-instalar o pacote de aplicativos para o locatário da sua organização [Teams administrador](https://admin.teams.microsoft.com/). Consulte [Upload seus aplicativos personalizados no centro de administração Microsoft Teams para](/MicrosoftTeams/upload-custom-apps) obter detalhes.
 
 #### <a name="microsoft-admin-center"></a>Centro de Administração da Microsoft
 
-Como administrador global, você pode carregar e pré-instalar o pacote de aplicativos de https://admin.microsoft.com/. Consulte [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+Como administrador global, você pode carregar e pré-instalar o pacote de aplicativos do [administrador da Microsoft](https://admin.microsoft.com/). Consulte [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### <a name="multitenant-distribution"></a>Distribuição multitenant
 

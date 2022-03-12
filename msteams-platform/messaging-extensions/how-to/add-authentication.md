@@ -5,12 +5,12 @@ description: Saiba como adicionar autenticação a uma extensão de mensagens us
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 932f62a086cc87d0d1662a4f27d1b6bdd199b8af
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768444"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452939"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -28,7 +28,7 @@ Todas as solicitações aos seus serviços incluem a ID do usuário, o nome de e
 },
 ```
 
-Os `id` valores e são `aadObjectId` garantidos para o usuário Teams autenticado. Eles são usados como chaves para procurar as credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém Azure Active Directory ID do locatário, que é usada para identificar a organização do usuário. Se aplicável, a solicitação também contém a ID da equipe e a ID do canal da qual a solicitação é originada.
+Os `id` valores `aadObjectId` e são garantidos para o usuário Teams autenticado. Eles são usados como chaves para procurar as credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém Azure Active Directory ID do locatário, que é usada para identificar a organização do usuário. Se aplicável, a solicitação também contém a ID da equipe e a ID do canal da qual a solicitação é originada.
 
 ## <a name="authentication"></a>Autenticação
 
@@ -36,9 +36,9 @@ Se o serviço exigir autenticação do usuário, os usuários devem entrar antes
 
 1. O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.
 1. Seu serviço verifica se o usuário é autenticado inspecionando Teams ID do usuário.
-1. Se o usuário não for autenticado, envie uma resposta com uma ação `auth` `openUrl` sugerida, incluindo a URL de autenticação.
+1. Se o usuário não for autenticado, envie uma `auth` resposta com uma `openUrl` ação sugerida, incluindo a URL de autenticação.
 1. O Microsoft Teams cliente inicia uma caixa de diálogo hospedando sua página da Web usando a URL de autenticação determinada.
-1. Depois que o usuário entrar, você deve fechar a janela e enviar um código de autenticação **para** o Teams cliente.
+1. Depois que o usuário entrar, você deve fechar a janela e enviar um código de autenticação **para o** cliente Teams cliente.
 1. O Teams cliente, em seguida, reeditará a consulta para o seu serviço, que inclui o código de autenticação passado na Etapa 5.
 
 Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de acesso. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
@@ -67,14 +67,15 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
+>
 > * Para que a experiência de login seja hospedada em uma janela pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
-> * O tamanho do pop-up de autenticação pode ser definido incluindo parâmetros de cadeia de caracteres de consulta de largura e altura, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` .
+> * O tamanho do pop-up de autenticação pode ser definido incluindo parâmetros de cadeia de caracteres de consulta de largura e altura, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`.
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de login
 
 Sua experiência de login deve ser responsiva e adequada dentro de uma janela pop-up. Ele deve se integrar ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como outras experiências incorporadas em execução dentro Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()` . Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário Teams para sua janela, que o passa para a URL de entrada do OAuth.
+Assim como com outras experiências incorporadas em execução dentro Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()`. Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário Teams para sua janela, que o passa para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de login
 
@@ -135,9 +136,10 @@ Neste ponto, a janela fecha e o controle é passado para o cliente Teams cliente
 ```
 
 ## <a name="code-sample"></a>Exemplo de código
-|**Nome do exemplo** | **Descrição** |**.NET** | **Node.js**|
+
+|**Nome de exemplo** | **Descrição** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensões de mensagens - auth e config | Uma Extensão de Mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados depois que o usuário se inscreveu. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensões de mensagens - auth e config | Uma Extensão de Mensagens que tem uma página de configuração, aceita solicitações de pesquisa e retorna resultados depois que o usuário se inscreveu. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## <a name="see-also"></a>Confira também
 

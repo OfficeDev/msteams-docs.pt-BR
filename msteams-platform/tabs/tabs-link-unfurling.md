@@ -5,17 +5,17 @@ description: Saiba como desatar um link, abrir o Stage View e fixar uma guia com
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 3119e444c8dd2b654f26b2fad5638f7c831619ac
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1608f6e24ef4fbd3c979dcb7081c754d3b7cc30f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518251"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453842"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
 O Stage View é um novo componente de interface do usuário (UI), que permite renderizar o conteúdo que é aberto em tela inteira em Teams e fixado como uma guia.
- 
+
 ## <a name="stage-view"></a>Exibição de estágio
 
 O Stage View é um componente de interface do usuário de tela inteira que você pode invocar para exibir o conteúdo da Web. O serviço de desatração de link existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia uma URL em um chat ou canal, a URL é desfraldada para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Stage View.
@@ -45,7 +45,7 @@ As imagens a seguir exibem um estágio aberto de um Cartão Adaptável:
 
 [![Abrir um estágio do Cartão Adaptável](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-[![Abrir um estágio](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
+[![Abrir um estágio](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>Exemplo
 
@@ -75,7 +75,8 @@ A seguir está o código para abrir um estágio de um Cartão Adaptável:
 O `invoke` tipo de solicitação deve ser `composeExtension/queryLink`.
 
 > [!NOTE]
-> * `invoke` o fluxo de trabalho é semelhante ao fluxo de trabalho `appLinking` atual. 
+>
+> * `invoke` o fluxo de trabalho é semelhante ao fluxo de trabalho `appLinking` atual.
 > * Para manter a consistência, é recomendável nomear `Action.Submit` como `View`.
 > * `websiteUrl` é uma propriedade necessária a ser passada no `TabInfo` objeto.
 
@@ -86,7 +87,7 @@ A seguir está o processo para invocar o Stage View:
 * O bot responde com um `200` código.
 
 > [!NOTE]
-> Em Teams clientes móveis, invocar o Modo de Exibição de Estágio para aplicativos distribuídos através do Teams [store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada por moblie abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no `websiteUrl` parâmetro do `TabInfo` objeto.
+> No Teams móveis, invocar o Modo de Exibição de Estágio para aplicativos distribuídos através do Teams [store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada por moblie abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no `websiteUrl` parâmetro do `TabInfo` objeto.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Exibição de Estágio por meio de um link profundo
 
@@ -94,7 +95,7 @@ Para invocar o Stage View por meio de um link profundo de sua guia, você deve q
 
 ### <a name="syntax"></a>Sintaxe
 
-A seguir está a sintaxe do deeplink: 
+A seguir está a sintaxe do deeplink:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
@@ -107,13 +108,12 @@ A seguir estão os exemplos de link profundo para invocar o Stage View:
 **Exemplo 1: URL com threadId**
 
 URL não codificada:
- 
+
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"","https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=truetitle":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 URL codificada:
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
-
 
 **Exemplo 2: URL sem threadId**
 
@@ -125,9 +125,9 @@ Codificado
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
-
 > [!NOTE]
 > Todos os deeplinks devem ser codificados antes de colar a URL. Não há suporte para URLs não codificadas.
+>
 > * O `name` é opcional em link profundo. Se não estiver incluído, o nome do aplicativo o substituirá.
 > * O link profundo também pode ser passado por uma `OpenURL` ação.
 > * Ao iniciar um Estágio a partir de um determinado contexto, verifique se seu aplicativo funciona nesse contexto. Por exemplo, se o seu Stage View for lançado a partir de um aplicativo pessoal, você deve garantir que seu aplicativo tenha um escopo pessoal.
@@ -137,17 +137,16 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 | Nome da propriedade | Tipo | Número de caracteres | Descrição |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
-| `name` | String | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | String | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
-| `removeUrl?` | String | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
+| `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
+| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela Teams. Esse é um campo obrigatório.|
+| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// para apontar, se um usuário selecionar para exibir em um navegador. Esse é um campo obrigatório.|
+| `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a URL https:// que aponta para a interface do usuário a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
 |Guia no exibição de estágio |Microsoft Teams exemplo de guia para demonstração de guia no exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
-    
 
 ## <a name="next-step"></a>Próxima etapa
 

@@ -4,24 +4,24 @@ description: Saiba mais sobre como manipular o limite de taxa para bots com Per 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: limitação da taxa de bots do teams
-ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 5f0eba162215aeda2c0f1e433b223f21628ea5e1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889290"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453373"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
 Limitação de taxa é um método para limitar as mensagens a uma determinada frequência máxima. Como um princípio geral, seu aplicativo deve limitar o número de mensagens que ele posta em um chat individual ou conversa de canal. Isso garante uma experiência ideal e as mensagens não aparecem como spam para seus usuários.
 
-Para proteger Microsoft Teams e seus usuários, as APIs de bot fornecem um limite de taxa para solicitações de entrada. Os aplicativos que passar por esse limite recebem um `HTTP 429 Too Many Requests` status de erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo o envio de mensagens, enumerações de canal e buscas de lista.
+Para proteger o Microsoft Teams e seus usuários, as APIs do bot fornecem um limite de taxa para solicitações de entrada. Os aplicativos que passar por esse limite recebem um `HTTP 429 Too Many Requests` status de erro. Todas as solicitações estão sujeitas à mesma política de limitação de taxa, incluindo o envio de mensagens, enumerações de canal e buscas de lista.
 
-Como os valores exatos dos limites de taxa estão sujeitos a alterações, seu aplicativo deve implementar o comportamento de backoff apropriado quando a API retornar `HTTP 429 Too Many Requests` .
+Como os valores exatos dos limites de taxa estão sujeitos a alterações, seu aplicativo deve implementar o comportamento de backoff apropriado quando a API retornar `HTTP 429 Too Many Requests`.
 
 ## <a name="handle-rate-limits"></a>Manipular limites de taxa
 
-Ao emissão de uma operação SDK do Construtor de Bots, você pode manipular e `Microsoft.Rest.HttpOperationException` verificar o código de status.
+Ao emissão de uma operação SDK do Construtor de Bots, `Microsoft.Rest.HttpOperationException` você pode manipular e verificar o código de status.
 
 O código a seguir mostra um exemplo de limites de taxa de manipulação:
 
@@ -40,7 +40,7 @@ catch (HttpOperationException ex)
 }
 ```
 
-Depois de manipular os limites de taxa para bots, você pode lidar com respostas usando um `HTTP 429` backoff exponencial.
+Depois de manipular os limites de taxa para bots, você pode lidar com `HTTP 429` respostas usando um backoff exponencial.
 
 ## <a name="handle-http-429-responses"></a>Manipular `HTTP 429` respostas
 
@@ -48,10 +48,10 @@ Em geral, você deve tomar precauções simples para evitar receber `HTTP 429` r
 
 Usar um backoff exponencial com um tremeamento aleatório é a maneira recomendada de lidar com 429s. Isso garante que várias solicitações não introduzam colisões em recuperações.
 
-Depois de lidar `HTTP 429` com as respostas, você pode passar pelo exemplo para detectar exceções transitórias.
+Depois de lidar com `HTTP 429` as respostas, você pode passar pelo exemplo para detectar exceções transitórias.
 
 > [!NOTE]
-> Além de tentar novamente o código de erro **429,** os códigos de erro **412**, **502** e **504** também devem ser novamente tentar.
+> Além de tentar novamente o código de erro **429**, os códigos **de erro 412**, **502** e **504** também devem ser novamente tentar.
 
 ## <a name="detect-transient-exceptions-example"></a>Exemplo de exceções transitórias
 
@@ -83,7 +83,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Você pode executar o backoff e as recuperações usando o tratamento [transitório de falhas](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obter e instalar o pacote de NuGet, consulte adicionar o bloco de aplicativos de tratamento de falhas [transitórios à sua solução.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Consulte também o [tratamento transitório de falhas](/azure/architecture/best-practices/transient-faults).
+Você pode executar o backoff e as recuperações usando o [tratamento de falhas transitórios](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obter e instalar o pacote de NuGet, consulte adicionar o bloco de aplicativos de tratamento transitório de [falhas à sua solução](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Consulte também o [tratamento transitório de falhas](/azure/architecture/best-practices/transient-faults).
 
 Depois de passar pelo exemplo para detectar exceções transitórias, vá pelo exemplo de backoff exponencial. Você pode usar o backoff exponencial em vez de repetir falhas.
 
@@ -123,7 +123,8 @@ Você também pode manipular o limite de taxa usando o bot por limite de thread.
 O limite por bot por thread controla o tráfego que um bot tem permissão para gerar em uma única conversa. Uma conversa é 1:1 entre bot e usuário, um chat em grupo ou um canal em uma equipe. Portanto, se o aplicativo enviar uma mensagem bot para cada usuário, o limite de thread não será limitado.
 
 >[!NOTE]
-> * O limite de thread de 3600 segundos e 1800 operações só se aplica se várias mensagens de bot são enviadas a um único usuário. 
+>
+> * O limite de thread de 3600 segundos e 1800 operações só se aplica se várias mensagens de bot são enviadas a um único usuário.
 > * O limite global por aplicativo por locatário é de 50 solicitações por segundo (RPS). Portanto, o número total de mensagens bot por segundo não deve cruzar o limite de thread.
 > * A divisão de mensagens no nível de serviço resulta em RPS maior do que o esperado. Se estiver preocupado com a abordagem dos limites, implemente a [estratégia de backoff](#backoff-example). Os valores fornecidos nesta seção são apenas para estimativa.
 
@@ -149,7 +150,7 @@ A tabela a seguir fornece os limites por bot por thread:
 | Obter conversas | 3600 | 3600 |
 
 >[!NOTE]
-> Versões anteriores `TeamsInfo.getMembers` e `TeamsInfo.GetMembersAsync` APIs estão sendo preterida. Eles são sujeitos a cinco solicitações por minuto e retornam no máximo 10 mil membros por equipe. Para atualizar o SDK da Estrutura de Bots e o código para usar os pontos de extremidade mais recentes da API paginada, consulte Alterações na API bot para membros de equipe [e chat.](../../resources/team-chat-member-api-changes.md)
+> Versões anteriores e `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` APIs estão sendo preterida. Eles são sujeitos a cinco solicitações por minuto e retornam no máximo 10 mil membros por equipe. Para atualizar o SDK da Estrutura de Bots e o código para usar os pontos de extremidade mais recentes da API paginada, consulte Alterações da API bot para membros de [equipe e chat](../../resources/team-chat-member-api-changes.md).
 
 Você também pode manipular o limite de taxa usando o limite por thread para todos os bots.
 

@@ -4,23 +4,24 @@ keywords: Permissões de recursos de aplicativos do teams
 description: Trazer de volta com segurança o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 18843d9d4981e83cf83472e37519344706f599bb
-ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
+ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62855883"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453002"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
 > [!NOTE]
-> A atualização mais recente sobre como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização do [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público. Essa atualização estará geralmente disponível (GA) a partir de 1º de fevereiro de 2022 e terminará de ser implantada no final de fevereiro.
-
+> A atualização mais recente sobre como as permissões de dispositivo são manipuladas no navegador está disponível apenas na visualização do [desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público.
+> Essa atualização estará geralmente disponível (GA) a partir de 1º de fevereiro de 2022 e terminará de ser implantada no final de fevereiro.
 
 Teams aplicativo que exigem permissões de dispositivo, como acesso a câmera ou microfone, agora exigem que os usuários concedam permissão manualmente em um nível de aplicativo no navegador da Web. Anteriormente, o navegador manipulava como conceder permissões de acesso, mas agora essas permissões são tratadas em Microsoft Teams. Isso tem implicações sobre como você projeta seu aplicativo e se eles exigem essas permissões no navegador.
 
 ## <a name="enable-apps-device-permissions"></a>Habilitar permissões de dispositivo do aplicativo
-Se seu Teams app tiver declarado no manifesto do aplicativo que [](native-device-permissions.md#specify-permissions) ele precisa de permissões de dispositivo, a opção Permissões do  aplicativo será exibida para os usuários habilitarem as permissões de dispositivo do aplicativo. A **opção Permissões do** aplicativo está disponível nos seguintes recursos: 
+
+Se seu Teams app tiver declarado no manifesto do aplicativo que [](native-device-permissions.md#specify-permissions) ele precisa de permissões de dispositivo, a opção Permissões do  aplicativo será exibida para os usuários habilitarem as permissões de dispositivo do aplicativo. A **opção Permissões do** aplicativo está disponível nos seguintes recursos:
 
 * **Caixas de diálogo aplicativos pessoais e módulos** de tarefa: a opção **Permissões do** aplicativo está disponível no canto superior direito da página.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
@@ -32,10 +33,11 @@ Depois que **a opção Permissões do** aplicativo é selecionada, um pop-up apa
 Um usuário precisará habilitar essas permissões no navegador para que essas permissões entre em vigor. Depois que o usuário altera as permissões de dispositivo do aplicativo no navegador, ele é solicitado a recarregar o aplicativo Teams.
 
 > [!IMPORTANT]
-> Você deve tornar os usuários cientes de onde ir para habilitar essas permissões **de aplicativo em** Microsoft Teams.
+> Você deve tornar os usuários cientes de onde ir para habilitar essas **permissões de** aplicativo em Microsoft Teams.
 
 ## <a name="recommendation"></a>Recomendação
-Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar instruções aos usuários sobre onde encontrar e habilitar essas permissões na interface do usuário Teams usuário. Dependendo do contexto em que seu aplicativo está sendo executado, você precisa garantir que suas instruções estão apontando para o usuário a localização correta para acessar essas permissões, pois elas diferem para aplicativos pessoais, caixas de diálogo do módulo de tarefas, guias em chats e canais ou reuniões.
+
+Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar instruções aos usuários sobre onde encontrar e habilitar essas permissões na interface do usuário Teams. Dependendo do contexto em que seu aplicativo está sendo executado, você precisa garantir que suas instruções estão apontando para o usuário a localização correta para acessar essas permissões, pois elas diferem para aplicativos pessoais, caixas de diálogo do módulo de tarefas, guias em chats e canais ou reuniões.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
@@ -48,7 +50,7 @@ Teams aplicativo que exigem permissões de dispositivo no navegador deve mostrar
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
-Siga o [guia passo a passo para](../../sbs-tab-device-permissions.yml) conceder permissão de dispositivo de tabulação Microsoft Teams.
+Siga o [guia passo a passo para](../../sbs-tab-device-permissions.yml) conceder permissão de dispositivo de guia Microsoft Teams.
 
 ## <a name="see-also"></a>Confira também
 

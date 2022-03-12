@@ -5,8 +5,13 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
+ms.openlocfilehash: 10c7bbf952311dd1668a3fa1b013228d9dd58000
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453114"
 ---
-
 # <a name="contribute-to-teams-documentation"></a>Contribuir com a documentação do Teams
 
 Teams documentação faz parte da biblioteca de documentação técnica do **Microsoft Docs**. O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Os artigos no mesmo docset têm a mesma extensão de caminho de **URL após docs.microsoft.com**. Por exemplo, `/docs.microsoft.com/microsoftteams/...` é o início do caminho do arquivo Teams docset. Teams artigos são escritos na sintaxe Markdown e hospedados em GitHub.
@@ -19,7 +24,6 @@ Teams documentação faz parte da biblioteca de documentação técnica do **Mic
 > * Instalar [Microsoft Visual Studio Código](https://code.visualstudio.com/) (VS Code).
 > * Instale [o Pacote de Autoria de Documentos](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) diretamente do VS Code Marketplace.
 <br>&emsp;&emsp; ou
-
 > [!div class="checklist"]
 >
 > * Instalar dentro VS Code:
@@ -30,7 +34,7 @@ Teams documentação faz parte da biblioteca de documentação técnica do **Mic
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar o Guia de Colaboradores do Microsoft Docs
 
-O guia de colaboradores fornece orientações para criar, publicar e atualizar conteúdo técnico na **plataforma Microsoft Docs** . 
+O guia de colaboradores fornece orientações para criar, publicar e atualizar conteúdo técnico na **plataforma Microsoft Docs** .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guias de escrita, estilo e conteúdo da Microsoft
 
@@ -47,17 +51,18 @@ O guia de colaboradores fornece orientações para criar, publicar e atualizar c
 ## <a name="file-paths"></a>Caminhos de arquivo
 
 Ao usar caminhos relativos e criar links para outros conjuntos de documentos, é importante definir um caminho de arquivo válido para hiperlinks em sua documentação. Sua com build só GitHub se o caminho do arquivo estiver correto ou válido.
- 
+
 Para obter mais informações sobre hiperlinks e caminhos de arquivo, [consulte usar links na documentação](/contribute/how-to-write-links).
 
 > [!IMPORTANT]
 > Para fazer referência a um artigo que **faz parte do** docset Teams plataforma:<br>
 > &emsp;&#x2714; Use um caminho relativo sem uma barra à frente.<br>
 > &emsp;&#x2714; Incluir a extensão de arquivo Markdown.<br>
->Ex: **diretório pai/diretório/caminho para** article.md —> [criando um aplicativo para Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> Para fazer referência a um artigo da biblioteca do Microsoft Docs **que não faz parte do** docset Teams plataforma:<br>
+>Ex: **diretório pai/diretório/caminho para** article.md —> [criar um aplicativo para Microsoft Teams](../concepts/building-an-app.md) <br><br>
+> Para fazer referência a um artigo da biblioteca do Microsoft Docs **que não faz** parte do Teams de plataforma:<br>
 > &emsp;&#x2714; Use um caminho relativo que comece com uma barra para frente.<br>
-> &emsp;&#x2714; Não inclua a extensão de arquivo. <br> Ex: **/docset/address-to-file-location** —> [Use a API do Microsoft Graph para trabalhar com Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> &emsp;&#x2714; Não inclua a extensão de arquivo. <br>
+> Ex: **/docset/address-to-file-location** — > [Use a API do Microsoft Graph para trabalhar com Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Para fazer referência a uma página fora da biblioteca do Microsoft Docs, como GitHub, use o caminho de arquivo `https` completo.<br>
 
 ## <a name="code-samples-and-snippets"></a>Exemplos de código e trechos de código

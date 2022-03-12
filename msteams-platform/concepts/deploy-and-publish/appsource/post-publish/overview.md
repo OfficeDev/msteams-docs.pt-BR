@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356011"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453576"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -18,15 +18,15 @@ Com seu aplicativo listado na Microsoft Teams, comece a pensar em como você man
 
 ## <a name="analyze-app-usage"></a>Analisar o uso do aplicativo
 
-Você pode acompanhar o uso do aplicativo [no relatório Teams uso do aplicativo](/office/dev/store/teams-apps-usage) no Partner Center. As métricas incluem usuários ativos mensais, diários e semanais e gráficos de retenção e intensidade que permitem controlar a rotatividade e a frequência de uso.
+Você pode acompanhar o uso do aplicativo [no relatório Teams uso do aplicativo](/office/dev/store/teams-apps-usage) no Partner Center. As métricas incluem usuários ativos mensais, diários e semanais e gráficos de retenção e intensidade que permitem acompanhar a variação e a frequência de uso.
 
-Os dados de aplicativos recém-publicados demoram cerca de uma semana para aparecerem no relatório.
+Os dados de aplicativos recém-publicados demoram cerca de uma semana para aparecer no relatório.
 
 ## <a name="publish-updates-to-your-app"></a>Publicar atualizações em seu aplicativo
 
 > [!NOTE]
 > A loja do Teams evoluiu:
-> 
+>
 > Anteriormente, os links eram copiados selecionando releitos no telha do aplicativo. Com a experiência Teams loja atualizada, você acessará o mesmo na guia detalhes dos aplicativos. Essa atualização estará geralmente disponível (GA) até 01 de março de 2022.
 
 Você pode enviar alterações ao seu aplicativo (como novos recursos ou até mesmo metadados) no Partner Center. Essas alterações exigem um novo processo de revisão.

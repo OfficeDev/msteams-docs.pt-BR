@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398901"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452827"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mapeie seus casos de uso para os recursos do aplicativo Teams
 
@@ -18,9 +18,9 @@ Um caso de uso bem definido ajuda você a traçar a estrutura dos recursos desej
 
 Você pode mapear seus casos de uso com base em:
 
-- Compartilhamento e colaboração em itens em um sistema externo.
-- Iniciando fluxos de trabalho e enviando notificações aos usuários.
-- Usando plataformas sociais, bots de conversação e combinando vários recursos.
+* Compartilhamento e colaboração em itens em um sistema externo.
+* Iniciando fluxos de trabalho e enviando notificações aos usuários.
+* Usando plataformas sociais, bots de conversação e combinando vários recursos.
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Casos de uso comum mapeados para as funcionalidades do Teams
 
@@ -92,10 +92,10 @@ Vejamos como as funcionalidades do Teams permitem recursos diferentes para seu a
 
 Por exemplo:
 
-- Use o recurso **guia** para exibir módulos de tarefas, solicitar permissões do dispositivo, exibir o conteúdo <`iframe`> ou usar links profundos.
-- Use o recurso de **extensão de mensagens** para enviar cartões, desenrolar links ou executar ações em relação às mensagens.
+* Use o recurso **guia** para exibir módulos de tarefas, solicitar permissões do dispositivo, exibir o conteúdo <`iframe`> ou usar links profundos.
+* Use o recurso de **extensão de mensagens** para enviar cartões, desenrolar links ou executar ações em relação às mensagens.
 
 ## <a name="see-also"></a>Confira também
 
-- [Lista de verificação de planejamento](../design/planning-checklist.md)
-- [Crie seu primeiro aplicativo do Microsoft Teams ](../../get-started/get-started-overview.md)
+* [Lista de verificação de planejamento](../design/planning-checklist.md)
+* [Crie seu primeiro aplicativo do Microsoft Teams ](../../get-started/get-started-overview.md)

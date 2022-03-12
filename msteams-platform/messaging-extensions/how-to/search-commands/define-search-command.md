@@ -5,12 +5,12 @@ description: Saiba mais sobre comandos de pesquisa de extensão de mensagens Mic
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356354"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452967"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagens
 
@@ -42,12 +42,12 @@ Para adicionar o comando de pesquisa ao manifesto do aplicativo, você deve `com
 
 O pré-requisito para criar um comando de pesquisa é que você já deve ter criado uma extensão de mensagens. Para obter informações sobre como criar uma extensão de mensagens, consulte [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**Para criar um comando de pesquisa**
+Para criar um comando de pesquisa:
 
 1. Abra **o App Studio** no cliente Microsoft Teams e selecione a **guia Editor de** Manifesto.
-1.  Se você já criou seu pacote de aplicativos **no App Studio**, selecione na lista. Se você não tiver criado um pacote de aplicativos, importe um existente.
+1. Se você já criou seu pacote de aplicativos **no App Studio**, selecione na lista. Se você não tiver criado um pacote de aplicativos, importe um existente.
 1. Depois de importar o pacote de aplicativos, selecione **Extensões de mensagens** em **Recursos**. Você tem uma janela pop-up para configurar a extensão de mensagens.
-1. Selecione **Configurar na** janela para incluir a extensão de mensagens na experiência do aplicativo. A imagem a seguir exibe a página de configuração de extensão de mensagens: 
+1. Selecione **Configurar na** janela para incluir a extensão de mensagens na experiência do aplicativo. A imagem a seguir exibe a página de configuração de extensão de mensagens:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ O pré-requisito para criar um comando de pesquisa é que você já deve ter cri
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Selecione **Adicionar** na seção **Comando da** página extensões de mensagens para incluir os comandos que decidem o comportamento da extensão de mensagens.   
+1. Selecione **Adicionar** na seção **Comando da** página extensões de mensagens para incluir os comandos que decidem o comportamento da extensão de mensagens.
 A imagem a seguir exibe a adição de comando para extensão de mensagens:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -121,6 +121,7 @@ A seção a seguir é um exemplo do manifesto de aplicativo simples do objeto `c
 ...
 }
 ```
+
 Para o manifesto completo do aplicativo, consulte [Esquema de manifesto do aplicativo](~/resources/schema/manifest-schema.md).
 
 ## <a name="code-sample"></a>Exemplo de código
@@ -133,8 +134,7 @@ Para o manifesto completo do aplicativo, consulte [Esquema de manifesto do aplic
 
 Siga o [guia passo a passo](../../../sbs-messagingextension-searchcommand.yml) para criar uma extensão de mensagens baseada em pesquisa.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Responda aos comandos de pesquisa](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

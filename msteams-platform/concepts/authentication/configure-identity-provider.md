@@ -4,12 +4,12 @@ description: Descreve como configurar provedores de identidade com foco no Micro
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: autenticação do teams O provedor de identidade oauth do Azure AD
-ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee99bf10f517eb928be0231a1188d2d5db74709d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356410"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452715"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
@@ -35,7 +35,7 @@ Substitua `<hostname>` pelo host real, que pode ser um site de hospedagem dedica
 
 * **Provedores OAuth externos de guias:** Para obter mais informações, [consulte Usar provedores OAuth externos](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
-## <a name="see-also"></a>Confira também 
+## <a name="see-also"></a>Confira também
 
 * [Autenticar um usuário em um Microsoft Teams bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [Suporte ao SSO (logon único) para guias](../../tabs/how-to/authentication/auth-aad-sso.md)

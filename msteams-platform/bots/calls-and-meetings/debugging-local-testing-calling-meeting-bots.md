@@ -5,18 +5,18 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: túnel ngrok de desenvolvimento local
 ms.date: 11/18/2018
-ms.openlocfilehash: 2b3da582f6529fd676ae8964acb09a038e39162a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: c55ec6e5d7296f4ee04ae3ad3de0f9bb82cfd276
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260654"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453359"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desenvolver bots de reunião online e de chamada no computador local
 
-Em [Executar e depurar seu aplicativo,](../../concepts/build-and-test/debug.md) explicamos como usar [o ngrok](https://ngrok.com) para criar um túnel entre o computador local e a Internet. Neste tópico, saiba como você também pode usar o ngrok e seu computador local para desenvolver bots que suportam chamadas e reuniões online.
+Em [Executar e depurar seu aplicativo](../../concepts/build-and-test/debug.md) , explicamos como usar [o ngrok](https://ngrok.com) para criar um túnel entre o computador local e a Internet. Neste tópico, saiba como você também pode usar o ngrok e seu computador local para desenvolver bots que suportam chamadas e reuniões online.
 
-Bots de mensagens usam HTTP, mas chamadas e bots de reunião online usam o TCP de nível inferior. O Ngrok dá suporte a tuneis TCP, além de tuneis HTTP. 
+Bots de mensagens usam HTTP, mas chamadas e bots de reunião online usam o TCP de nível inferior. O Ngrok dá suporte a tuneis TCP, além de tuneis HTTP.
 
 ## <a name="configure-ngrokyml"></a>Configurar ngrok.yml
 
@@ -28,7 +28,7 @@ Crie um arquivo de configuração ngrok `ngrok.yml` e adicione a seguinte linha.
 
 ## <a name="set-up-signaling"></a>Configurar sinalização
 
-Em [Bots de](./calls-meetings-bots-overview.md)chamadas e reuniões online, abordamos a sinalização de chamada sobre como os bots detectam e respondem a novas chamadas e eventos durante uma chamada. Os eventos de sinalização de chamada são enviados por HTTP POST para o ponto de extremidade de chamada do bot.
+Em [Bots de chamadas e](./calls-meetings-bots-overview.md) reuniões online, abordamos a sinalização de chamadas sobre como os bots detectam e respondem a novas chamadas e eventos durante uma chamada. Os eventos de sinalização de chamada são enviados por HTTP POST para o ponto de extremidade de chamada do bot.
 
 Assim como com a API de mensagens do bot, para que a Plataforma de Mídia em tempo real fale com seu bot, seu bot deve ser acessível pela Internet. O Ngrok torna isso simples. Adicione as seguintes linhas ao ngrok.yml:
 
@@ -46,8 +46,8 @@ tunnels:
 
 A mídia hospedada por aplicativo usa certificados e tuneis TCP. As etapas a seguir são necessárias:
 
-1. Os pontos de extremidade TCP públicos do Ngrok têm URLs fixas. Eles são `0.tcp.ngrok.io` , e assim por `1.tcp.ngrok.io` diante. Você deve ter uma entrada CNAME DNS para seu serviço que aponta para essas URLs. Por exemplo, digamos que se refere `0.bot.contoso.com` `0.tcp.ngrok.io` a , `1.bot.contoso.com` refere-se `1.tcp.ngrok.io` a e assim por diante.
-2. Um certificado SSL é necessário para suas URLs. Para facilitar, use um certificado SSL emitido para um domínio de curinga. Nesse caso, seria `*.bot.contoso.com` . Esse certificado SSL é validado pelo SDK de mídia, portanto, deve corresponder à URL pública do bot. Anote a impressão digital e instale-a nos certificados do computador.
+1. Os pontos de extremidade TCP públicos do Ngrok têm URLs fixas. Eles são `0.tcp.ngrok.io`, `1.tcp.ngrok.io`e assim por diante. Você deve ter uma entrada CNAME DNS para seu serviço que aponta para essas URLs. Por exemplo, digamos que `0.bot.contoso.com` se `0.tcp.ngrok.io`refere a , `1.bot.contoso.com` refere-se `1.tcp.ngrok.io`a e assim por diante.
+2. Um certificado SSL é necessário para suas URLs. Para facilitar, use um certificado SSL emitido para um domínio de curinga. Nesse caso, seria `*.bot.contoso.com`. Esse certificado SSL é validado pelo SDK de mídia, portanto, deve corresponder à URL pública do bot. Anote a impressão digital e instale-a nos certificados do computador.
 3. Agora, configurar um túnel TCP para encaminhar o tráfego para o localhost. Escreva as seguintes linhas em seu ngrok.yml:
 
     ```yaml
@@ -70,7 +70,7 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-Aqui está a porta de sinalização, é a porta hospedada pelo aplicativo e é a porta de mídia remota `12345` `8445` exposta pelo `12332` ngrok. Observe que temos um encaminhamento de `1.bot.contoso.com` para `1.tcp.ngrok.io` . Isso será usado como a URL de mídia do bot. Obviamente, esses números de porta são apenas exemplos e você pode usar qualquer porta disponível.
+Aqui está `12345` a porta de sinalização, é `8445` a porta hospedada pelo aplicativo e `12332` é a porta de mídia remota exposta pelo ngrok. Observe que temos um encaminhamento de `1.bot.contoso.com` para `1.tcp.ngrok.io`. Isso será usado como a URL de mídia do bot. Obviamente, esses números de porta são apenas exemplos e você pode usar qualquer porta disponível.
 
 ### <a name="update-code"></a>Código de atualização
 
@@ -86,16 +86,17 @@ statefulClientBuilder.SetNotificationUrl(
 ```
 
 > [!NOTE]
-> Substitua o sinal pelo fornecido pelo ngrok e pelo caminho `NotificationEndpoint` do controlador que recebe a notificação.
+> Substitua o sinal pelo fornecido pelo ngrok e pelo `NotificationEndpoint` caminho do controlador que recebe a notificação.
 
 > [!IMPORTANT]
+>
 > * A URL em `SetNotificationUrl` deve ser HTTPS.
-> 
+>
 > Sua instância local deve estar escutando o tráfego HTTP na porta de sinalização. As solicitações feitas pela plataforma de chamadas e reuniões online chegarão ao bot como tráfego HTTP do localhost, a menos que a criptografia de ponta a ponta esteja configurada.
 
 #### <a name="update-media"></a>Atualizar mídia
 
-Atualize `MediaPlatformSettings` o seguinte:
+Atualize o `MediaPlatformSettings` seguinte:
 
 ```csharp
 var mediaPlatform = new MediaPlatformSettings
@@ -113,12 +114,10 @@ var mediaPlatform = new MediaPlatformSettings
 ```
 
 > [!NOTE]
-> A impressão digital do certificado fornecida no `MediaPlatformSettings` deve corresponder ao FQDN do Serviço. É por isso que as entradas DNS são necessárias.
+> A impressão digital do certificado fornecida no deve `MediaPlatformSettings` corresponder ao FQDN do Serviço. É por isso que as entradas DNS são necessárias.
 
 ## <a name="caveats"></a>Advertências
 
-- As contas gratuitas de Ngrok **não fornecem** criptografia de ponta a ponta. Os dados HTTPS terminam na URL ngrok e os fluxos de dados não criptografados de ngrok para `localhost` . Se você exigir criptografia de ponta a ponta, considere uma conta ngrok paga. Consulte [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
-- Como a URL de retorno de chamada de bot é dinâmica, os cenários de chamada de entrada exigem que você atualize com frequência seus pontos de extremidade ngrok. Uma maneira de corrigir isso é usar uma conta ngrok paga que fornece subdomas fixos para os quais você pode apontar seu bot e a plataforma.
-- Os tuneis Ngrok também podem ser usados com [o Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Para ver um exemplo de como fazer isso, consulte o aplicativo de exemplo [HueBot.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)
-
- 
+* As contas gratuitas de Ngrok **não fornecem** criptografia de ponta a ponta. Os dados HTTPS terminam na URL ngrok e os fluxos de dados não criptografados de ngrok para `localhost`. Se você exigir criptografia de ponta a ponta, considere uma conta ngrok paga. Consulte [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
+* Como a URL de retorno de chamada de bot é dinâmica, os cenários de chamada de entrada exigem que você atualize com frequência seus pontos de extremidade ngrok. Uma maneira de corrigir isso é usar uma conta ngrok paga que fornece subdomas fixos para os quais você pode apontar seu bot e a plataforma.
+* Os tuneis Ngrok também podem ser usados com o [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Para ver um exemplo de como fazer isso, consulte o [aplicativo de exemplo HueBot](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).

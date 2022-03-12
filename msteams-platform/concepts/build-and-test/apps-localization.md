@@ -5,19 +5,19 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: ec734017a807f744a4b44d7d3594638a5ec72b32
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 13325d323ec1d4d87f6cd5ff64c4a6c71552e01c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355521"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452694"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
 Considere os seguintes fatores para localizar seu Microsoft Teams aplicativo:
 
 1. [Localize sua listagem appSource](#localize-your-appsource-listing).
-1. [Localize cadeias de caracteres no manifesto do aplicativo](#localize-strings-in-your-app-manifest). 
+1. [Localize cadeias de caracteres no manifesto do aplicativo](#localize-strings-in-your-app-manifest).
 1. [Manipular envios de texto localizados de seus usuários](#handle-localized-text-submissions-from-your-users).
 
 ## <a name="localize-your-appsource-listing"></a>Localize sua listagem do AppSource
@@ -44,7 +44,7 @@ As imagens que você carrega com o idioma inglês são usadas no AppSource.
 
 ## <a name="localize-strings-in-your-app-manifest"></a>Localize cadeias de caracteres no manifesto do aplicativo
 
-Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo `$schema` o atributo no arquivo manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` como ou superior e atualizando a propriedade como versão (`1.5` neste caso). 
+Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo `$schema` o atributo no arquivo manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` como ou superior e atualizando a propriedade como versão (`1.5` neste caso).
 
 Você deve adicionar a propriedade `localizationInfo` com o idioma padrão compatível com o aplicativo. O idioma padrão é usado como o idioma de fallback final se as configurações do cliente do usuário não corresponderem a nenhum dos seus idiomas adicionais.
 
@@ -57,14 +57,14 @@ O manifesto.json a seguir ajuda a adicionar a `localizationInfo` propriedade com
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "localizationInfo": {
-        "defaultLanguageTag": "en",
-        "additionalLanguages": [
-            {
-                "languageTag": "es-mx",
-                "file": "es-mx.json"
-            }
-        ]
-    }
+  "defaultLanguageTag": "en",
+  "additionalLanguages": [
+   {
+    "languageTag": "es-mx",
+    "file": "es-mx.json"
+   }
+  ]
+ }
   ...
 }
 ```
@@ -83,7 +83,6 @@ A seguir está um exemplo para localização .json:
 }
 ```
 
-
 Você pode fornecer arquivos .json adicionais com traduções de todas as cadeias de caracteres voltadas para o usuário em seu manifesto. Esses arquivos devem aderir ao esquema [JSON](../../resources/schema/localization-schema.md) do arquivo de localização e devem ser `localizationInfo` adicionados à propriedade do manifesto. Cada arquivo se correlaciona a uma marca de idioma, que o cliente Teams usa para selecionar as cadeias de caracteres apropriadas. A marca de idioma assume a forma de `<language>-<region>` , mas você pode omitir `<region>` a parte para direcionar todas as regiões que suportam o idioma desejado.
 
 O cliente Teams aplica as cadeias de caracteres na seguinte ordem: cadeias de caracteres de idioma padrão -> idioma do usuário somente cadeias de caracteres -> idioma do usuário + cadeias de caracteres de região do usuário.
@@ -93,14 +92,14 @@ Por exemplo, você fornece um idioma padrão de 'fr' (francês, todas as regiõe
 1. O Teams cliente pega as cadeias de caracteres 'fr' e as substitui com as cadeias de caracteres 'en'.
 1. Sobrescreva as cadeias de caracteres 'en' com as cadeias de caracteres 'en-gb'.
 
-Se o idioma do usuário for definido como 'en-ca', as seguintes alterações ocorrerão com base na seleção de idioma: 
+Se o idioma do usuário for definido como 'en-ca', as seguintes alterações ocorrerão com base na seleção de idioma:
 
 1. O Teams cliente pega as cadeias de caracteres 'fr' e as substitui com as cadeias de caracteres 'en'.
 1. Como nenhuma localização 'en-ca' é fornecida, as localizações 'en' são usadas.
 
 Se o idioma do usuário estiver definido como 'es-es', o cliente Teams assume as cadeias de caracteres 'fr'. O Teams cliente não substitui as cadeias de caracteres por nenhum dos arquivos de idioma, pois nenhuma tradução 'es' ou 'es-es' é fornecida.
 
-Portanto, você deve fornecer traduções de nível superior, somente de idioma em seu manifesto. Por exemplo, 'en' em vez de 'en-us'. Você deve fornecer substituições de nível de região apenas para as poucas cadeias de caracteres que precisam delas. 
+Portanto, você deve fornecer traduções de nível superior, somente de idioma em seu manifesto. Por exemplo, 'en' em vez de 'en-us'. Você deve fornecer substituições de nível de região apenas para as poucas cadeias de caracteres que precisam delas.
 
 ### <a name="example-manifestjson-change"></a>Exemplo de alteração manifest.json
 

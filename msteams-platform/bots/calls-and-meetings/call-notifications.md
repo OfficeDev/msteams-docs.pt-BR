@@ -5,20 +5,20 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidade de região de retorno de chamada de chamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216087"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453051"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
-Ao [registrar um bot de chamadas e](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)reuniões para Microsoft Teams , o Webhook para chamar URL é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot.
+Ao [registrar um bot de chamadas e reuniões](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities) para Microsoft Teams, o Webhook para chamar URL é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot.
 
 ## <a name="protocol-determination"></a>Determinação do protocolo
 
-A notificação de entrada é fornecida em um formato herdado para compatibilidade com o protocolo [Skype anterior.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Para converter a chamada para o protocolo microsoft Graph, seu bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
+A notificação de entrada é fornecida em um formato herdado para compatibilidade com o protocolo [Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para converter a chamada para o protocolo microsoft Graph, seu bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
 
 ```http
 HTTP/1.1 204 No Content
@@ -39,8 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Habilita o bot a responder a uma chamada de entrada usando a API [de resposta.](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias de estado em que sua chamada é manipulada por uma partição específica e você deseja inserir essas informações no roteamento para `callbackUri` a instância certa.
-
+Habilita o bot a responder a uma chamada de entrada usando a API [de resposta](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) . Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias de estado em que sua chamada é manipulada por uma partição específica e `callbackUri` você deseja inserir essas informações no roteamento para a instância certa.
 
 A próxima seção fornece detalhes sobre a autenticação do retorno de chamada inspecionando o token postado em seu webhook.
 
@@ -82,11 +81,11 @@ O token OAuth tem os seguintes valores e é assinado por Skype:
 }
 ```
 
-A configuração OpenID publicada <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> em pode ser usada para verificar o token. Cada valor de token OAuth é usado da seguinte forma:
+A configuração OpenID publicada em <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> pode ser usada para verificar o token. Cada valor de token OAuth é usado da seguinte forma:
 
 * `aud` onde audiência é o URI de ID do aplicativo especificado para o aplicativo.
 * `tid` é a ID do locatário para Contoso.com.
-* `iss` é o emissor de token, `https://api.botframework.com` .
+* `iss` é o emissor de token, `https://api.botframework.com`.
 
 Para a manipulação de código, o webhook deve validar o token, garantir que ele não expirou e verificar se ele foi assinado pela configuração OpenID publicada. Você também deve verificar se a aud corresponde à ID do aplicativo antes de aceitar a solicitação de retorno de chamada.
 

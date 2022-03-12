@@ -5,12 +5,12 @@ description: Aprenda a integrar um chatbot Power Virtual Agents na plataforma Te
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: e0b32f50f300b5a7b10b31b8bdef64ec91a50633
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a95b3fe3b9191facc2554262444bc4b558c372ed
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398824"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453835"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia
 
@@ -23,7 +23,8 @@ Power Virtual Agents permite criar chatbots poderosos que podem responder a perg
 Esses bots podem ser criados facilmente sem a necessidade de desenvolvedores ou desenvolvedores de dados.
 
 > [!NOTE]
-> Ao adicionar seu chatbot Microsoft Teams, alguns dos dados, como conteúdo de bot e conteúdo de chat do usuário, são compartilhados com Microsoft Teams. Isso significa que seus dados fluem fora da conformidade [da sua organização e dos limites geográficos ou regionais](/power-virtual-agents/data-location). <br/>
+> * Ao adicionar seu chatbot Microsoft Teams, alguns dos dados, como conteúdo de bot e conteúdo de chat do usuário, são compartilhados com Microsoft Teams. Isso significa que seus dados fluem fora da conformidade [da sua organização e dos limites geográficos ou regionais](/power-virtual-agents/data-location). <br/>
+> * Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados no Teams de aplicativos. Os aplicativos da Plataforma Microsoft Power só podem ser publicados no armazenamento de aplicativos de uma organização.
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Disponibilizar seu chatbot no Teams por meio do portal Power Virtual Agents.
 

@@ -5,12 +5,12 @@ description: Visão geral das ferramentas e SDKs para criar Microsoft Teams bots
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398656"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453884"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -44,6 +44,9 @@ A [Estrutura de Bot](https://dev.botframework.com/) é um SDK rico usado para cr
 ## <a name="bots-with-power-virtual-agents"></a>Bots com Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) é um serviço de chatbot criado na plataforma do Microsoft Power e no Bot Framework. O processo de desenvolvimento do Power Virtual Agent usa uma abordagem guiada, sem código e interface gráfica que permite aos membros da equipe criar e manter facilmente um agente virtual inteligente. Depois de criar seu chatbot no [portal Power Virtual Agents,](https://powervirtualagents.microsoft.com) você pode [integrá-lo facilmente com Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Para obter mais informações sobre como começar, [consulte Power Virtual Agents documentação](/power-virtual-agents).
+
+>[!NOTE]
+>Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados no Teams de aplicativos. Os aplicativos da Plataforma Microsoft Power só podem ser publicados no armazenamento de aplicativos de uma organização.
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots com webhooks e conectores
 

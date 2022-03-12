@@ -1,13 +1,18 @@
 ---
-title: Adicionar recursos aos aplicativos Teams aplicativos
+title: Adicionar recursos aos aplicativos Teams de usuário
 author: MuyangAmigo
 description: Descreve adicionar recursos de Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 246a871c26b0194d74e7d1fc8a3cb8be64d55fe6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453233"
 ---
-
 # <a name="add-capabilities-to-your-teams-apps"></a>Adicionar recursos aos aplicativos Teams aplicativos
 
 Você pode criar um novo Teams com um dos recursos Teams aplicativo. Durante o desenvolvimento de aplicativos, você pode Teams Toolkit adicionar mais recursos ao seu Teams app. A tabela a seguir lista os recursos Teams aplicativos:
@@ -28,7 +33,7 @@ Você pode criar um novo Teams com um dos recursos Teams aplicativo. Durante o d
 ## <a name="add-capabilities-using-teams-toolkit"></a>Adicionar recursos usando Teams Toolkit
 
 > [!IMPORTANT]
-> Você precisa executar o provisionamento para cada ambiente depois de adicionar recursos com êxito ao seu Teams app.
+> Você precisa executar a provisão para cada ambiente depois de adicionar recursos com êxito ao seu Teams app.
 
 1. Abra **Microsoft Visual Studio Código**.
 1. Selecione **Teams Toolkit** no painel esquerdo.
@@ -36,8 +41,8 @@ Você pode criar um novo Teams com um dos recursos Teams aplicativo. Durante o d
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
-   Você também pode abrir a paleta de comandos e inserir **Teams: Adicionar Recursos**: 
-      
+   Você também pode abrir a paleta de comandos e inserir **Teams: Adicionar Recursos**:
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Recursos alternativos":::
 
 1. No pop-up, selecione os recursos a incluir em seu projeto:
@@ -46,7 +51,7 @@ Você pode criar um novo Teams com um dos recursos Teams aplicativo. Durante o d
 
 1. Selecione **OK**.
 
-Os recursos selecionados são adicionados com sucesso ao seu projeto. O Teams Toolkit gerar código-fonte para recursos recém-adicionados.
+Os recursos selecionados são adicionados com sucesso ao seu projeto. A Teams Toolkit gerar código-fonte para recursos recém-adicionados.
 
 ## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>Adicionar recursos usando a CLI do TeamsFx na janela de comando
 
@@ -61,7 +66,7 @@ Os recursos selecionados são adicionados com sucesso ao seu projeto. O Teams To
 
 ## <a name="supported-capabilities-matrix"></a>Matriz de recursos com suporte
 
-Além dos recursos que seu Teams app já tem, você pode optar por adicionar diferentes recursos ao seu Teams app. A tabela a seguir fornece os diferentes recursos Teams aplicativos: 
+Além dos recursos que seu Teams app já tem, você pode optar por adicionar diferentes recursos ao seu Teams app. A tabela a seguir fornece os diferentes recursos Teams aplicativos:
 
 |Recursos existentes|Outros recursos com suporte podem ser adicionados|
 |--------------------|--------------------|
@@ -78,24 +83,24 @@ Além dos recursos que seu Teams app já tem, você pode optar por adicionar dif
 
 Depois de adicionar bot e extensão de mensagens, as alterações em seu projeto são as seguinte:
 
-- Um código de modelo de bot é adicionado a uma subpasta com caminho `yourProjectFolder/bot`. Isso inclui um modelo de aplicativo de bot hello **world** em seu projeto.
-- `launch.json`e `task.json` em `.vscode` pasta são atualizados, o que inclui scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente. 
-- `manifest.remote.template.json`e `manifest.local.template.json` o arquivo em `templates/appPackage` pasta são atualizados, o que inclui informações relacionadas ao bot no arquivo de manifesto que representa seu aplicativo na plataforma Teams. As alterações são:
-  - A ID do seu bot.
-  - Os escopos do bot.
-  - Os comandos aos que o aplicativo de bot hello world pode responder.
-- Os arquivos em `templates/azure/teamsfx` baixo serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado.
-- Os arquivos em `.fx/config` baixo são regenerados, o que garante que seu projeto seja definido com configurações certas para a funcionalidade recém-adicionada.
+* Um código de modelo de bot é adicionado a uma subpasta com caminho `yourProjectFolder/bot`. Isso inclui um modelo de aplicativo de bot hello **world** em seu projeto.
+* `launch.json`e `task.json` em `.vscode` pasta são atualizados, o que inclui scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente.
+* `manifest.remote.template.json`e `manifest.local.template.json` o arquivo em `templates/appPackage` pasta é atualizado, o que inclui informações relacionadas ao bot no arquivo de manifesto que representa seu aplicativo na plataforma Teams. As alterações são:
+  * A ID do seu bot.
+  * Os escopos do bot.
+  * Os comandos aos que o aplicativo de bot hello world pode responder.
+* Os arquivos em `templates/azure/teamsfx` baixo serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado.
+* Os arquivos em `.fx/config` baixo são regenerados, o que garante que seu projeto seja definido com configurações certas para a funcionalidade recém-adicionada.
 
 Depois de adicionar a guia, as alterações em seu projeto são as seguinte:
 
-- Um código de modelo de guia front-end é adicionado a uma subpasta `yourProjectFolder/tab`com caminho , que inclui um modelo de aplicativo de guia **hello world** em seu projeto.
-- `launch.json`e `task.json` em `.vscode` pasta são atualizados, o que inclui scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente. 
-- `manifest.remote.template.json`e `manifest.local.template.json` o arquivo `templates/appPackage` em pasta são atualizados, o que inclui informações relacionadas a guias no arquivo de manifesto que representa seu aplicativo na plataforma Teams, as alterações são as seguinte:
-  - As guias configuráveis e estáticas.
-  - Os escopos das guias.
-- Os arquivos em `templates/azure/teamsfx` baixo serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado.
-- O arquivo em `.fx/config` baixo é regenerado, o que garante que seu projeto seja definido com configurações certas para a funcionalidade recém-adicionada.
+* Um código de modelo de guia front-end é adicionado a uma subpasta `yourProjectFolder/tab`com caminho , que inclui um modelo de aplicativo de guia **hello world** em seu projeto.
+* `launch.json`e `task.json` em `.vscode` pasta são atualizados, o que inclui scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente.
+* `manifest.remote.template.json`e `manifest.local.template.json` o arquivo `templates/appPackage` em pasta são atualizados, o que inclui informações relacionadas a guias no arquivo de manifesto que representa seu aplicativo na plataforma Teams, as alterações são as seguinte:
+  * As guias configuráveis e estáticas.
+  * Os escopos das guias.
+* Os arquivos em `templates/azure/teamsfx` baixo serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado.
+* O arquivo em `.fx/config` baixo é regenerado, o que garante que seu projeto seja definido com configurações certas para a funcionalidade recém-adicionada.
 
 ## <a name="limitations"></a>Limitações
 

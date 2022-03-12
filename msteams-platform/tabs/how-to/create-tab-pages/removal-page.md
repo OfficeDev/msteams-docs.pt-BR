@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurble remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: fbff927687fd19de273ef801ef34e77dda7a83a5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323293"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452722"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -19,27 +19,27 @@ Você pode estender e aprimorar a experiência do usuário suportando opções d
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Permitir que sua guia seja reconfigurada após a instalação
 
-Seu **manifesto.json** define os recursos e os recursos da guia. A propriedade da instância de tabulação tem um valor Boolean que indica se um usuário pode modificar ou `canUpdateConfiguration` reconfigurar a guia depois que ela for criada. A tabela a seguir fornece os detalhes da propriedade:
+Seu **manifesto.json** define os recursos e os recursos da guia. A propriedade da instância `canUpdateConfiguration` de tabulação tem um valor Boolean que indica se um usuário pode modificar ou reconfigurar a guia depois que ela for criada. A tabela a seguir fornece os detalhes da propriedade:
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. O padrão é `true`. |
 
-Quando sua guia é carregada em um chat de canal ou grupo, Teams adiciona um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração. A tabela a seguir fornece os detalhes da configuração:
+Quando sua guia é carregada em um canal ou chat de grupo, Teams adiciona um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela `canUpdateConfiguration` configuração. A tabela a seguir fornece os detalhes da configuração:
 
 | `canUpdateConfiguration`| verdadeiro   | falso | description |
 | ----------------------- | :----: | ----- | ----------- |
 |     Settings            |   √    |       |A `configurationUrl` página é recarregada em um IFrame permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme aparece na barra de guias.          |
-|     Remover              |   √    |   √   |  Se a propriedade e o valor são incluídos na página de configuração , a página de remoção é carregada em `removeURL` um IFrame e apresentada ao usuário.   Se uma página de remoção não estiver incluída, o usuário será apresentado com uma caixa de diálogo confirmar.          |
+|     Remover              |   √    |   √   |  Se a `removeURL` propriedade e o valor estão incluídos na página de configuração **, a** página de remoção é carregada em um IFrame e apresentada ao usuário. Se uma página de remoção não estiver incluída, o usuário será apresentado com uma caixa de diálogo confirmar.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Criar uma página de remoção de tabulação para seu aplicativo
 
-A página de remoção opcional é uma página HTML que você hospeda e é exibida quando a guia é removida. A URL da página de remoção é designada pelo `setSettings()` método em sua página de configuração. Assim como todas as páginas em seu aplicativo, a página de remoção deve estar em conformidade [com Teams pré-requisitos da guia](../../../tabs/how-to/tab-requirements.md).
+A página de remoção opcional é uma página HTML que você hospeda e é exibida quando a guia é removida. A URL da página de remoção é designada pelo método `setSettings()` em sua página de configuração. Assim como todas as páginas em seu aplicativo, a página de remoção deve estar em conformidade [Teams pré-requisitos da guia](../../../tabs/how-to/tab-requirements.md).
 
 ### <a name="register-a-remove-handler"></a>Registrar um manipulador de remoção
 
-Opcionalmente, na lógica da página de remoção, você pode invocar o manipulador de eventos quando o usuário `registerOnRemoveHandler((RemoveEvent) => {}` remover uma configuração de guia existente. O método entra na interface e executa o código no [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) manipulador quando um usuário tenta remover o conteúdo. O método é usado para executar operações de limpeza, como a remoção do recurso subjacente que está no conteúdo da guia. Por vez, apenas um manipulador de remoção pode ser registrado.
+Opcionalmente, na lógica da página de remoção, você pode `registerOnRemoveHandler((RemoveEvent) => {}` invocar o manipulador de eventos quando o usuário remover uma configuração de guia existente. O método entra na [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface e executa o código no manipulador quando um usuário tenta remover o conteúdo. O método é usado para executar operações de limpeza, como a remoção do recurso subjacente que está no conteúdo da guia. Por vez, apenas um manipulador de remoção pode ser registrado.
 
 A `RemoveEvent` interface descreve um objeto com dois métodos:
 
@@ -49,11 +49,11 @@ A `RemoveEvent` interface descreve um objeto com dois métodos:
 
 #### <a name="use-the-getsettings-function"></a>Usar a `getSettings()` função
 
-Você pode usar `getSettings()` para atribuir o conteúdo da guia a ser removido. A função assume e fornece os valores de propriedade `getSettings((Settings) =>{})` [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) de configurações válidos que podem ser recuperados.
+Você pode usar `getSettings()`para atribuir o conteúdo da guia a ser removido. A `getSettings((Settings) =>{})` função assume e fornece os [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) valores de propriedade de configurações válidos que podem ser recuperados.
 
 #### <a name="use-the-getcontext-function"></a>Usar a `getContext()` função
 
-Você pode usar `getContext()` para obter o contexto atual no qual o quadro está sendo executado. A `getContext((Context) =>{})` função assume o [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) . A função fornece valores de propriedade válidos que você pode usar na lógica da página de remoção para determinar o conteúdo `Context` a ser exibido na página de remoção.
+Você pode usar `getContext()` para obter o contexto atual no qual o quadro está sendo executado. A `getContext((Context) =>{})` função assume o [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). A função fornece valores de `Context` propriedade válidos que você pode usar na lógica da página de remoção para determinar o conteúdo a ser exibido na página de remoção.
 
 #### <a name="include-authentication"></a>Incluir autenticação
 
@@ -81,14 +81,15 @@ Veja a seguir um bloco de código de remoção de tabulação de exemplo:
 </body>
 ```
 
-Quando um usuário seleciona **Remover** do menu suspenso da guia, Teams carrega a página opcional atribuída na página de configuração , em `removeUrl` um IFrame. O usuário é mostrado um botão carregado com a função que chama e habilita o botão Remover mostrado na parte inferior da página de remoção `onClick()` `microsoftTeams.settings.setValidityState(true)` IFrame. 
+Quando um usuário seleciona **Remover** do menu suspenso da guia, `removeUrl` Teams carrega a página opcional atribuída na página de configuração **em um** IFrame. O usuário é mostrado um botão carregado com `onClick()` `microsoftTeams.settings.setValidityState(true)` a função que chama e habilita o botão **Remover** mostrado na parte inferior da página de remoção IFrame.
 
-Depois que o manipulador de remoção for executado, `removeEvent.notifySuccess()` ou `removeEvent.notifyFailure()` notifica Teams do resultado de remoção de conteúdo.
+Depois que o manipulador de remoção for executado, `removeEvent.notifySuccess()` ou `removeEvent.notifyFailure()` notifica Teams resultado da remoção de conteúdo.
 
 >[!NOTE]
+>
 > * Para garantir que o controle de um usuário autorizado sobre uma guia não seja inibido, Teams remove a guia em casos de sucesso e falha.
-> * Depois de invocar `registerOnRemoveHandler` o manipulador de eventos, você terá 15 segundos para responder ao método. Por padrão, Teams habilita o **botão Remover** após cinco segundos, mesmo que você não chame `setValidityState(true)` . 
-> * Quando o usuário seleciona **Remover**, Teams remove a guia após 30 segundos, independentemente de as ações ter sido concluídas ou não.
+> * Depois de invocar o `registerOnRemoveHandler` manipulador de eventos, você terá 15 segundos para responder ao método. Por padrão, Teams habilita o **botão Remover** após cinco segundos, mesmo que você não chame `setValidityState(true)`.
+> * Quando o usuário seleciona **Remover, Teams** remove a guia após 30 segundos, independentemente de as ações ter sido concluídas ou não.
 
 ## <a name="next-step"></a>Próxima etapa
 

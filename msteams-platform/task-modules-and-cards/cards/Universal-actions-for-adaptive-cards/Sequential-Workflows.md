@@ -4,18 +4,18 @@ description: Saiba mais sobre fluxos de trabalho sequenciais para cartões adapt
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081048"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453247"
 ---
 # <a name="sequential-workflows"></a>Fluxos de Trabalho Sequenciais
 
 Os Cartões Adaptáveis agora suportam fluxos de trabalho sequenciais atualizados na ação do usuário. Usando fluxos de trabalho sequenciais, os Cartões Adaptáveis são atualizados na ação do usuário e o usuário pode progredir por meio de uma série de cartões que exigem a entrada do usuário. `Action.Execute` oferece suporte a Fluxos de Trabalho Sequenciais, o que permite que desenvolvedores de bot retornem Cartões Adaptáveis em resposta a uma ação do usuário.
 
-Por exemplo, veja um cenário em que o cafeteria deseja fazer um pedido para uma equipe ou canal. Com a escolha do usuário para vários itens, como alimentos e bebidas, pode ser `Action.Execute` gravado sequencialmente. O usuário também pode ir e voltar pelos cartões de acordo com a lógica definida pelo desenvolvedor do bot. <br/>
+Por exemplo, veja um cenário em que o cafeteria deseja fazer um pedido para uma equipe ou canal. Com `Action.Execute` a escolha do usuário para vários itens, como alimentos e bebidas, pode ser gravado sequencialmente. O usuário também pode ir e voltar pelos cartões de acordo com a lógica definida pelo desenvolvedor do bot. <br/>
 
 A imagem a seguir mostra o Fluxo de Trabalho Sequencial:
 
@@ -26,7 +26,7 @@ Um usuário pode progredir no fluxo de trabalho sem modificar o cartão para out
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Estados de bot de bufê":::
 
 > [!NOTE]
-> Para sincronizar o progresso do usuário entre dispositivos, use a `refresh` propriedade em Adaptive Card JSON.
+> Para sincronizar o progresso do usuário entre dispositivos, use `refresh` a propriedade em Adaptive Card JSON.
 
 ## <a name="sequential-workflow-for-adaptive-cards"></a>Fluxo de trabalho sequencial para cartões adaptáveis
 
@@ -127,13 +127,12 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
+| Bot de refeições do Teams | Crie um bot que aceite a ordem de alimentação usando Cartões Adaptáveis. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Ainda não disponível |
 | Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstre como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
-
 
 ## <a name="see-also"></a>Confira também
 
 * [Ações de Cartão Adaptável no Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Como os bots funcionam](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Trabalhar com Ações Universais para Cartões Adaptáveis](Work-with-universal-actions-for-adaptive-cards.md)
-* [Comentários sobre a conclusão do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

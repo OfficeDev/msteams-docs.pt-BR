@@ -2,12 +2,12 @@
 title: Configurar seu ambiente de dev para estender Teams aplicativos em Microsoft 365
 description: Aqui estão os pré-requisitos para estender seus aplicativos Teams de Microsoft 365
 ms.date: 02/11/2022
-ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1f9b893c185d7cbae249ccc77de2a52cbdcb409a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355997"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452736"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de dev para estender Teams aplicativos em Microsoft 365
 
@@ -19,6 +19,7 @@ O ambiente de desenvolvimento para estender Teams aplicativos em Microsoft 365 �
 Para configurar seu ambiente de desenvolvimento:
 
 > [!div class="checklist"]
+>
 > * [Obter Microsoft 365 locatário do Desenvolvedor (Área Desarmado) e habilitar o sideload](#prepare-a-developer-tenant-for-testing)
 > * [Registrar seu Microsoft 365 locatário *em Office 365 Versões Direcionadas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure sua conta para acessar versões de visualização de Outlook e Office](#install-office-apps-in-your-test-environment)
@@ -48,7 +49,7 @@ Para registrar seu locatário de teste para Office 365 versões direcionadas:
     1. **Versão de destino para usuários selecionados**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centro de administração do Microsoft 365 menu 'Preferências de versão' com opção de versão direcionada selecionada":::
-    
+
 1. Selecione **Salvar**.
 
 Para obter mais informações sobre Office 365 de versão, consulte [Configurar as opções de versão Standard ou Targeted](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) Centro de administração do Microsoft 365 *ajuda*.
@@ -71,7 +72,7 @@ Para instalar Office 365 aplicativos do Canal Beta em seu ambiente de teste:
 1. Abrir **Arquivo** >  **Office AccountAbout** >  **Outlook**.  
    Se o número de com build **for 14416** ou superior e o canal for *o Canal Beta*, você está executando Microsoft 365 com build do Canal beta.
 1. No canto superior direito, a turn on the **Coming Soon** toggle.
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="Opção de alternância 'Em breve' Outlook":::
 
 > [!NOTE]
@@ -108,5 +109,5 @@ A extensão [Teams Toolkit para](https://aka.ms/teams-toolkit) Visual Studio Cod
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Habilitar uma guia pessoal do Teams para Office e Outlook](extend-m365-teams-personal-tab.md)
-- [Habilitar uma extensão de mensagens do Teams para o Outlook](extend-m365-teams-message-extension.md)
+* [Habilitar uma guia pessoal do Teams para Office e Outlook](extend-m365-teams-personal-tab.md)
+* [Habilitar uma extensão de mensagens do Teams para o Outlook](extend-m365-teams-message-extension.md)

@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: e9094868f72fa96df8d0301932b7032192eb2652
-  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+  ms.openlocfilehash: a6366181f81942d12a63fb5be6b0bb505e85ff73
+  ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63356109"
+  ms.lasthandoff: 03/12/2022
+  ms.locfileid: "63453289"
 landingContent:
 - title: Explore o mais recente
   linkLists:
   - linkListType: concept
     links:
+    - text: Moodle LMS e Microsoft 365 plug-ins
+      url: ~/resources/moodle-overview.md
     - text: Menu de estouro de Cartões Adaptáveis
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: Glossário
@@ -33,8 +35,6 @@ landingContent:
       url: ~/concepts/app-fundamentals-overview.md
     - text: Esquema de manifesto do aplicativo versão 1.12
       url: ~/resources/schema/manifest-schema.md
-    - text: Modo interativo para a janela de conteúdo compartilhado na reunião
-      url: ~/apps-in-teams-meetings/API-references.md
     - text: Teste de visualização para aplicativos monetizados
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     - text: Fluxo de compras no aplicativo para a monetização de aplicativos

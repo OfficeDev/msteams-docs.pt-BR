@@ -4,12 +4,12 @@ description: Saiba mais sobre como implementar guias em Microsoft Teams celular,
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: distribuição de autenticação do grupo do canal de guia móvel do aplicativo
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356368"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452589"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -25,6 +25,7 @@ Os [aplicativos distribuídos pelo Teams têm](~/concepts/deploy-and-publish/app
 | **Guias de canal e grupo** | A guia é aberta no cliente Teams usando `contentUrl`. | A guia é aberta em um navegador fora do Teams cliente usando `websiteUrl`. |
 
 > [!NOTE]
+>
 > * Os aplicativos enviados ao [AppSource](https://appsource.microsoft.com) para publicação no Teams são avaliados automaticamente para a capacidade de resposta móvel. Para qualquer consulta, entre em contato com teamsubm@microsoft.com.
 > * Para todos os aplicativos que não são distribuídos por meio do AppSource, as guias abrem em uma webview no aplicativo dentro dos clientes Teams por padrão e não há um processo de aprovação separado necessário.
 > * O comportamento padrão dos aplicativos só será aplicável se for distribuído por meio do Teams store. Por padrão, todas as guias são abertas no Teams cliente.
@@ -68,7 +69,7 @@ A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o 
 
 Se você estiver fazendo sideload do seu aplicativo ou publicação no catálogo de aplicativos de uma organização, o comportamento da guia será o mesmo Teams aplicativos da loja aprovados pela Microsoft para dispositivos móveis.
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Obtenha contexto para sua guia](~/tabs/how-to/access-teams-context.md)

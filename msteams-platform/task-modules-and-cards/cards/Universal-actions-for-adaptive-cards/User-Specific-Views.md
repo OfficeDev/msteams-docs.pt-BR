@@ -4,12 +4,12 @@ description: Saiba mais sobre exibições específicas do usuário usando açõe
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356361"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453107"
 ---
 # <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
@@ -64,7 +64,7 @@ O código a seguir fornece um exemplo de Cartões Adaptáveis:
 }
 ```
 
-**Para enviar cartões adaptáveis, atualize exibições específicas do usuário e invoque solicitações ao bot**
+Para enviar Cartões Adaptáveis, atualize Exibições Específicas do Usuário e invoque solicitações ao bot:
 
 1. Quando Megan cria um novo incidente, o bot envia o Cartão Adaptável ou o cartão comum com detalhes do incidente na Teams conversa.
 2. Agora, esse cartão é atualizado automaticamente para o User Specific View para Megan e Alex. Os MRIs `userIds` `refresh` de usuário de Alex e Megan são adicionados na propriedade da propriedade JSON do Cartão Adaptável. O cartão permanece o mesmo para outros usuários na conversa.
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 Diretrizes de design de cartão para ter em mente ao projetar exibições específicas do usuário:
 

@@ -5,12 +5,12 @@ keywords: arquivos de bots do teams enviam recebimento
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ec77aeff3771efd648b77215ca2eb53a4bcad8e9
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801352"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452841"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar e receber arquivos por meio do bot
 
@@ -24,7 +24,7 @@ Há duas maneiras de enviar arquivos para e receber arquivos de um bot:
   * `channel`
   * `groupchat`
 
-* [**Use as APIs Teams bot:**](#use-the-teams-bot-apis) esses arquivos só suportam no `personal` contexto.
+* [**Use as APIs Teams bot:**](#use-the-teams-bot-apis) essas somente suportam arquivos no `personal` contexto.
 
 ## <a name="use-the-graph-apis"></a>Usar as APIs Graph de usuário
 
@@ -81,14 +81,14 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 | Propriedade | Objetivo |
 | --- | --- |
 | `downloadUrl` | OneDrive URL para buscar o conteúdo do arquivo. O usuário pode emitir um diretamente `HTTP GET` a partir dessa URL. |
-| `uniqueId` | ID de arquivo exclusivo. Essa é a OneDrive ID do item da unidade, caso o usuário envie um arquivo para o bot. |
+| `uniqueId` | ID de arquivo exclusivo. Essa é a OneDrive de item de unidade, caso o usuário envie um arquivo para o bot. |
 | `fileType` | Tipo de arquivo, como .pdf ou .docx. |
 
 Como prática prática, confirme o carregamento de arquivo enviando uma mensagem de volta para o usuário.
 
 ### <a name="upload-files-to-personal-chat"></a>Upload arquivos para chat pessoal
 
-**Para carregar um arquivo em um usuário**
+Para carregar um arquivo em um usuário:
 
 1. Envie uma mensagem para o usuário solicitando permissão para gravar o arquivo. Esta mensagem deve conter um `FileConsentCard` anexo com o nome do arquivo a ser carregado.
 2. Se o usuário aceitar o download do arquivo, o bot receberá uma atividade de invocação com uma URL de local.
@@ -133,7 +133,7 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Invocar atividade quando o usuário aceitar o arquivo
 
-Uma atividade de invocação é enviada ao bot se e quando o usuário aceitar o arquivo. Ele contém a URL OneDrive for Business espaço reservado que o bot pode emitir para `PUT` transferir o conteúdo do arquivo. Para obter informações sobre como carregar a URL OneDrive, consulte [upload bytes para a sessão de carregamento](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Uma atividade de invocação é enviada ao bot se e quando o usuário aceitar o arquivo. Ele contém a URL OneDrive for Business espaço reservado que o bot pode emitir para `PUT` transferir o conteúdo do arquivo. Para obter informações sobre como carregar na URL OneDrive, consulte [upload bytes para a sessão de carregamento](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 O código a seguir mostra um exemplo de uma versão concisa da atividade de invocação que o bot recebe:
 

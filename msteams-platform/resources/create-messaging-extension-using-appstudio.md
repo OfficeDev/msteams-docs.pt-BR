@@ -5,12 +5,12 @@ description: Saiba como criar uma extensão Microsoft Teams de mensagens usando 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518153"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452904"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 
@@ -27,7 +27,7 @@ Em um nível alto, você precisará concluir as etapas a seguir para criar uma e
 
 Criar seu serviço Web, criar seu pacote de aplicativos e registrar seu serviço Web com a Estrutura de Bot pode ser feito em qualquer ordem. Como essas três partes estão tão entrelaçadas, não importa qual ordem você as faça, você precisará retornar para atualizar as outras. Seu registro precisa do ponto de extremidade de mensagens do seu serviço Web implantado, e seu serviço Web precisa da ID e da senha criadas a partir do seu registro. O manifesto do aplicativo também precisa dessa ID para se conectar Teams seu serviço Web.
 
-À medida que você estiver criando sua extensão de mensagens, você estará se movendo regularmente entre alterar o manifesto do aplicativo e implantar código no seu serviço Web. Ao trabalhar com o manifesto do aplicativo, lembre-se de que você pode manipular manualmente o arquivo JSON ou fazer alterações por meio do App Studio. De qualquer forma, você precisará implantar (carregar) seu aplicativo no Teams quando fizer uma alteração no manifesto, mas não é necessário fazer isso ao implantar alterações no seu serviço Web.
+À medida que você estiver criando sua extensão de mensagens, você estará se movendo regularmente entre alterar o manifesto do aplicativo e implantar código no seu serviço Web. Ao trabalhar com o manifesto do aplicativo, lembre-se de que você pode manipular manualmente o arquivo JSON ou fazer alterações por meio do App Studio. De qualquer forma, você precisará implantar (carregar) seu aplicativo no Teams quando fizer uma alteração no manifesto, mas não é necessário fazer isso quando implantar alterações no seu serviço Web.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -37,17 +37,16 @@ O centro de sua extensão de mensagens é seu serviço Web. Ele definirá uma ú
 
 * Use um dos nossos [tutoriais de início rápido](#learn-more) que o guiarão pela criação do seu serviço Web.
 * Escolha um dos exemplos de extensão de mensagens disponíveis no repositório de exemplo [da Estrutura de Bots](https://github.com/Microsoft/BotBuilder-Samples) para começar.
-* Se você estiver usando JavaScript, use o gerador [Yeoman](https://github.com/OfficeDev/generator-teams) para Microsoft Teams para scaffold seu aplicativo Teams, incluindo seu serviço Web.
+* Se você estiver usando JavaScript, use o gerador [Yeoman](https://github.com/OfficeDev/generator-teams) para Microsoft Teams a fim de Teams aplicativo, incluindo seu serviço Web.
 * Criar seu serviço Web a partir do zero. Você pode optar por adicionar o SDK do verificador de bot para o seu idioma ou trabalhar diretamente com as cargas JSON.
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrar seu serviço Web com a estrutura bot
 
-As extensões de mensagens aproveitam o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação seguro; se você ainda não tiver um, precisará registrar seu serviço Web na Estrutura de Bots. A ID do Aplicativo da Microsoft (vamos nos referir a isso como sua ID de Bot de dentro do Teams, para identificá-la de outras IDs de aplicativos com as quais você pode estar trabalhando) e o ponto de extremidade de mensagens com o qual seu registro na Estrutura de Bots será usado na extensão de mensagens para receber e responder às solicitações. Se você estiver usando um registro existente, certifique-se de [habilitar o canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
-
+As extensões de mensagens aproveitam o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação seguro; se você ainda não tiver um, precisará registrar seu serviço Web na Estrutura de Bots. A ID do Aplicativo da Microsoft (vamos nos referir a isso como sua ID de Bot de dentro do Teams, para identificá-la de outras IDs de aplicativos com as quais você pode estar trabalhando) e o ponto de extremidade de mensagens com o qual seu registro na Estrutura de Bots será usado na extensão de mensagens para receber e responder a solicitações. Se você estiver usando um registro existente, certifique-se de [habilitar o canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
 
 Se você seguir um dos inícios rápidos ou começar a partir de um dos exemplos disponíveis, você será orientado a registrar seu serviço Web. Se você quiser registrar manualmente seu serviço, você tem três opções para fazer isso. Se você optar por se registrar sem usar uma assinatura do Azure, não poderá aproveitar o fluxo de autenticação OAuth simplificado fornecido pela Estrutura de Bots. Você poderá migrar seu registro para o Azure após a criação.
 
-* Se você tiver uma assinatura do Azure (ou quiser criar uma nova), poderá registrar seu serviço Web manualmente usando o portal Microsoft Azure. Crie um recurso "Registro de Canais bot". Você pode escolher a camada de preços gratuitos, pois as mensagens de Microsoft Teams não contam para o total de mensagens aceitável por mês.
+* Se você tiver uma assinatura do Azure (ou quiser criar uma nova), poderá registrar seu serviço Web manualmente usando o portal Microsoft Azure. Crie um recurso "Registro de Canais bot". Você pode escolher a camada de preços gratuitos, pois as mensagens Microsoft Teams não contam para o total de mensagens que podem ser recebidas por mês.
 * Se você não quiser usar uma assinatura do Azure, poderá usar o [portal de registro herdado](https://dev.botframework.com/bots/new).
 * O App Studio também pode ajudá-lo a registrar seu serviço Web (bot). Os serviços Web registrados por meio do App Studio não são registrados no Azure. Você pode usar o [portal herdado](https://dev.botframework.com/bots) para exibir, gerenciar e migrar seus registros.
 
@@ -68,7 +67,7 @@ Você pode usar o aplicativo App Studio de dentro do cliente Microsoft Teams par
 7. O **botão Adicionar** na seção **Comando** orientará você através da adição de comandos à extensão de mensagens. Consulte a [seção Saiba mais](#learn-more) para obter mais informações sobre como adicionar comandos. Lembre-se de que você pode definir até 10 comandos para sua extensão de mensagens.
 8. A **seção Manipuladores de** Mensagens permite que você adicione um domínio em que suas mensagens serão disparadas. Consulte [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) para obter mais informações.
 
-Na guia **Concluir =>** e distribuir, você pode **baixar** o pacote do aplicativo (que inclui o manifesto do aplicativo, bem como os ícones do aplicativo) ou **Instalar** o pacote.
+Na guia **Concluir =>** e distribuir, você pode **Baixar** o pacote do aplicativo (que inclui o manifesto do aplicativo, bem como os ícones do aplicativo) ou **Instalar** o pacote.
 
 ### <a name="create-your-app-manifest-manually"></a>Criar o manifesto do aplicativo manualmente
 
@@ -260,7 +259,7 @@ Experimente em um início rápido:
   * [Extensão de mensagens com comandos baseados em ação](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensão de mensagens com comandos baseados em pesquisa](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Saiba mais sobre Teams de desenvolvimento:
+Saiba mais sobre Teams conceitos de desenvolvimento:
 
 * [Compreender Teams de aplicativos](../concepts/capabilities-overview.md)
 * [O que são extensões de mensagens?](../messaging-extensions/what-are-messaging-extensions.md)

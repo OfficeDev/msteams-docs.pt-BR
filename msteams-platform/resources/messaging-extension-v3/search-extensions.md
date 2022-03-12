@@ -5,12 +5,12 @@ keywords: Pesquisa de extensões de mensagens de mensagens do teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443983"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453709"
 ---
 # <a name="search-with-messaging-extensions"></a>Pesquisar com extensões de mensagens
 
@@ -24,11 +24,11 @@ As seções a seguir descrevem como fazer isso:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>Extensões de mensagem de tipo de pesquisa
+## <a name="search-type-message-extensions"></a>Extensões de mensagem de tipo de pesquisa
 
 Para a extensão de mensagens baseada em pesquisa, de definir o `type` parâmetro como `query`. Veja a seguir um exemplo de um manifesto com um único comando de pesquisa. Uma única extensão de mensagens pode ter até 10 comandos diferentes associados a ela. Isso pode incluir vários comandos baseados em ação e pesquisa.
 
-#### <a name="complete-app-manifest-example"></a>Exemplo de manifesto completo do aplicativo
+### <a name="complete-app-manifest-example"></a>Exemplo de manifesto completo do aplicativo
 
 ```json
 {
@@ -85,7 +85,7 @@ Para a extensão de mensagens baseada em pesquisa, de definir o `type` parâmetr
 }
 ```
 
-### <a name="test-via-uploading"></a>Testar por meio do carregamento
+## <a name="test-via-uploading"></a>Testar por meio do carregamento
 
 Você pode testar sua extensão de mensagens carregando seu aplicativo.
 
@@ -97,7 +97,7 @@ A maior parte do seu trabalho envolve o `onQuery` evento, que lida com todas as 
 
 Se você definir `canUpdateConfiguration` como `true` no manifesto, habilita o item **de menu Configurações** para sua extensão de mensagens e também deve manipular `onQuerySettingsUrl` e `onSettingsUpdate`.
 
-### <a name="handle-onquery-events"></a>Manipular eventos onQuery
+## <a name="handle-onquery-events"></a>Manipular eventos onQuery
 
 Uma extensão de mensagens recebe um evento `onQuery` quando algo acontece na janela de extensão de mensagens ou é enviado para a janela.
 
@@ -109,11 +109,11 @@ Em seguida, verifique se `initialRun` está definido; em caso afirmativa, tome a
 
 O restante do manipulador solicita `onQuery` informações ao usuário, exibe uma lista de cartões de visualização e retorna o cartão selecionado pelo usuário.
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Manipular eventos onQuerySettingsUrl e onSettingsUpdate
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Manipular eventos onQuerySettingsUrl e onSettingsUpdate
 
 Os `onQuerySettingsUrl` eventos e `onSettingsUpdate` funcionam juntos para habilitar o **item Configurações** menu.
 
-![Capturas de tela de locais Configurações item de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Capturas de tela de locais de Configurações item de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 Seu manipulador para `onQuerySettingsUrl` retorna a URL da página de configuração; depois que a página de configuração é fechado, `onSettingsUpdate` o manipulador aceita e salva o estado retornado. Esse é o único caso em que `onQuery` *não recebe* a resposta da página de configuração.
 
@@ -133,7 +133,7 @@ Além das propriedades de atividade de bot padrão, a carga contém os seguintes
 |`name`| Tipo de comando emitido ao seu serviço. Atualmente, os seguintes tipos são suportados: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) id do objeto do usuário que enviou a solicitação. |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) do objeto ID do usuário que enviou a solicitação. |
 |`channelData.tenant.id`| Microsoft Azure Active Directory (ID de locatário do Azure AD). |
 |`channelData.channel.id`| ID do canal (se a solicitação foi feita em um canal). |
 |`channelData.team.id`| ID da equipe (se a solicitação foi feita em um canal). |
@@ -195,7 +195,7 @@ Os parâmetros de solicitação em si são encontrados no objeto value, que incl
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Receber solicitações de links inseridos na caixa de mensagem de redação
 
-Como alternativa (ou além disso) à pesquisa do seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de redação para consultar seu serviço e retornar um cartão. Na captura de tela abaixo, um usuário  pastou uma URL para um item de trabalho em Azure DevOps que a extensão de mensagens resolveu em um cartão.
+Como alternativa (ou além disso) à pesquisa do seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de redação para consultar seu serviço e retornar um cartão. Na captura de tela abaixo, um usuário foi colar em uma URL para um item de trabalho em Azure DevOps que a extensão de mensagens resolveu em um cartão.
 
 ![Exemplo de desfraldamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -457,7 +457,7 @@ A sequência é a seguinte:
 2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando Teams ID do usuário.
 3. Se o usuário não tiver sido autenticado, envie uma `auth` resposta com uma `openUrl` ação sugerida, incluindo a URL de autenticação.
 4. O Microsoft Teams cliente inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação determinada.
-5. Depois que o usuário entrar, você deve fechar a janela e enviar um "código de autenticação" para o Teams cliente.
+5. Depois que o usuário entrar, você deve fechar a janela e enviar um "código de autenticação" para o cliente Teams cliente.
 6. O Teams cliente, em seguida, reeditará a consulta para o seu serviço, que inclui o código de autenticação passado na etapa 5.
 
 Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de login. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
@@ -492,7 +492,7 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 
 Sua experiência de login deve ser responsiva e adequada dentro de uma janela pop-up. Ele deve se integrar ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como outras experiências incorporadas em execução dentro Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()`. Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário Teams para sua janela, que pode passá-lo para a URL de entrada do OAuth.
+Assim como com outras experiências incorporadas em execução dentro Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()`. Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário Teams para sua janela, que poderá passá-lo para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de login
 
@@ -501,7 +501,7 @@ Quando a solicitação de login for concluída e redirecionar para sua página, 
 1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de logon, como tokens OAuth 2.0.
 2. Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
 
-Neste ponto, a janela fecha e o controle é passado para o cliente Teams. O cliente agora pode reeditar a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
+Neste ponto, a janela fecha e o controle é passado para o cliente Teams cliente. O cliente agora pode reeditar a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
 
 #### <a name="reissued-request-example"></a>Exemplo de solicitação reemissão
 
@@ -602,7 +602,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-#### <a name="example-code-in-nodejs"></a>Exemplo de código no Node.js
+#### <a name="example-code-in-nodejs"></a>Exemplo de código Node.js
 
 ```javascript
 require('dotenv').config();

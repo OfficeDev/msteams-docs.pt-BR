@@ -4,17 +4,16 @@ description: Documentação do Desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: af5d713076419c016b65983e4876f52803d8d1fe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398704"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452743"
 ---
 # <a name="glossary"></a>Glossário
 
 Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
-
 
 ## <a name="a"></a>A
 

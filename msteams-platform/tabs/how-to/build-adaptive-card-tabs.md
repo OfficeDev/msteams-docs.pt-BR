@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: fluxo de dados de autenticação de aplicativo pessoal de cartão adaptável
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355857"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453261"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
 > [!IMPORTANT]
+>
 > * Atualmente, as guias com Cartões Adaptáveis têm suporte apenas como aplicativos pessoais.
 
 Ao desenvolver uma guia usando o método tradicional, você pode executar esses problemas:
@@ -107,6 +108,7 @@ A seguir está um manifesto de guia cartão adaptável de exemplo:
 A comunicação entre sua guia Cartão Adaptável e seu bot é feita por meio de `invoke` atividades. Cada `invoke` atividade tem um nome **correspondente**. Use o nome de cada atividade para diferenciar cada solicitação. `tab/fetch` e `tab/submit` são as atividades abordadas nesta seção.
 
 > [!NOTE]
+>
 > * Os bots precisam enviar todas as respostas à [URL do serviço](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). A URL do serviço é recebida como parte da `activity` carga de entrada.
 > * O tamanho da carga invocada aumentou para 80kb.
 
@@ -235,6 +237,7 @@ Com a introdução da guia Cartão Adaptável, há uma alteração na forma como
 O código a seguir fornece exemplos de solicitação `task/fetch` e resposta:
 
 **`task/fetch` request**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -429,7 +432,7 @@ O código a seguir mostra um exemplo de solicitação reeditar:
 |----------------|-----------------|--------------|--------------|
 | Mostrar cartões adaptáveis na Teams guia | Microsoft Teams código de exemplo de guia, que demonstra como mostrar cartões adaptáveis Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)

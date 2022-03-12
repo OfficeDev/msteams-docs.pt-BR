@@ -5,37 +5,37 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 450afc9728a0c5f727dc772909da5c0e1b92f55b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 235d3eb7da5a3bfda61d06662e6cb21bd056f275
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821707"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453555"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu Microsoft Teams app
 
 :::row:::
    :::column span="3":::
 
-Com uma oferta de Software como serviço (SaaS) transacionável, você pode monetizar seu aplicativo Teams por meio da venda de planos de assinatura diretamente da listagem da Teams store. Por exemplo, digamos que você tenha um aplicativo gratuito que qualquer pessoa pode obter na loja. Agora você pode oferecer planos premium e empresariais para usuários que querem mais recursos.
+Com uma oferta de Software como serviço (SaaS) transacionável, você pode monetizar seu aplicativo Teams por meio da venda de planos de assinatura diretamente da listagem da loja Teams. Por exemplo, digamos que você tenha um aplicativo gratuito que qualquer pessoa pode obter na loja. Agora você pode oferecer planos premium e empresariais para usuários que querem mais recursos.
 
 Aqui está uma ideia geral de como monetizar seu aplicativo:
 
-1.  [Planeje sua oferta SaaS](#plan-your-saas-offer).
+1. [Planeje sua oferta SaaS](#plan-your-saas-offer).
 
-1.  [Integre-se às APIs de Atendimento saas](#integrate-with-the-saas-fulfillment-apis).
+1. [Integre-se às APIs de Atendimento saas](#integrate-with-the-saas-fulfillment-apis).
 
-1.  [Crie uma página inicial para gerenciamento de assinatura](#build-a-landing-page-for-subscription-management).
+1. [Crie uma página inicial para gerenciamento de assinatura](#build-a-landing-page-for-subscription-management).
 
-1.  [Crie sua oferta SaaS](#create-your-saas-offer).
+1. [Crie sua oferta SaaS](#create-your-saas-offer).
 
-1.  [Configure seu aplicativo para a oferta SaaS](#configure-your-app-for-the-saas-offer).
+1. [Configure seu aplicativo para a oferta SaaS](#configure-your-app-for-the-saas-offer).
 
-1.  [Publique seu aplicativo no Teams store](#publish-your-app).
+1. [Publique seu aplicativo no Teams store](#publish-your-app).
 
    :::column-end:::
    :::column span="1":::
-   
+
 :::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagrama mostrando o processo de como incluir uma oferta SaaS com seu Teams app." border="false":::
 
    :::column-end:::
@@ -45,11 +45,11 @@ Aqui está uma ideia geral de como monetizar seu aplicativo:
 
 Para obter orientações abrangentes, [consulte como planejar uma oferta SaaS para o marketplace comercial da Microsoft](/azure/marketplace/plan-saas-offer).
 
-Ao planejar como monetizar seu aplicativo Teams, veja algumas coisas a considerar:
+Ao planejar como monetizar seu aplicativo Teams, aqui estão algumas coisas a considerar:
 
 * Decida o modelo de assinatura. Uma oferta saaS transactável pode incluir vários planos de assinatura. Os planos de assinatura pública disponíveis para qualquer pessoa são mais comuns, mas você também pode querer direcionar clientes específicos com ofertas apenas para eles. Para obter mais informações, consulte [ofertas privadas no marketplace comercial da Microsoft](/azure/marketplace/private-offers).
 * Leia sobre a opção [*Vender por meio da Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para sua oferta saaS, que é necessária se você quiser que os usuários comprem planos de assinatura para seu aplicativo diretamente por meio da Teams store.
-* Saiba como [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (Microsoft Azure Active Directory (Azure AD) SSO é necessário para Teams aplicativos com ofertas saaS.)
+* Saiba como [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (Microsoft Azure Active Directory (Azure AD) SSO é necessário para Teams aplicativos com ofertas SaaS.)
 * Entenda que você é responsável pelo gerenciamento e pagamento da infraestrutura necessária para dar suporte ao uso da oferta saaS dos seus clientes.
 * Planejar para celular. Para evitar violar políticas de armazenamento de aplicativos de terceiros, seu aplicativo não pode incluir links que permitem que os usuários comprem planos de assinatura em dispositivos móveis. No entanto, você ainda pode indicar se seu aplicativo tem recursos que exigem um plano de assinatura. Para obter mais informações, consulte as políticas de [certificação do marketplace comercial relacionadas](/legal/marketplace/certification-policies#114048-mobile-experience).
 
@@ -71,7 +71,7 @@ Para obter instruções completas e referência à API, consulte a documentaçã
 * Quando os usuários receberem um plano de assinatura, notifique-os por meio de um bot Teams ou email. Na mensagem, inclua informações sobre como adicionar o aplicativo Teams e começar.
 * Suporte à ideia de vários administradores. Em outras palavras, vários usuários na mesma organização podem comprar e gerenciar suas próprias assinaturas.
 
-## <a name="build-a-landing-page-for-subscription-management"></a>Criar uma página inicial para gerenciamento de assinaturas 
+## <a name="build-a-landing-page-for-subscription-management"></a>Criar uma página inicial para gerenciamento de assinaturas
 
 Quando alguém terminar de comprar um plano de assinatura para seu aplicativo na loja Teams, o marketplace comercial o direcionará para sua página inicial, onde poderá gerenciar a assinatura (por exemplo, atribuir uma licença a um usuário específico em sua organização).
 
@@ -104,12 +104,12 @@ Depois de integrar as APIs de Atendimento saas e criar sua página inicial onde 
 
 Consulte [criar uma oferta SaaS para](/azure/marketplace/create-new-saas-offer) obter instruções completas sobre como fazer isso no Partner Center. As etapas a seguir descrevem o que fazer em alto nível.
 
-1.  Crie uma [conta do Partner Center](https://partner.microsoft.com/) se você não tiver uma.
+1. Crie uma [conta do Partner Center](https://partner.microsoft.com/) se você não tiver uma.
 
-1.  Configure os planos de assinatura, detalhes de preços e muito mais para sua oferta de SaaS transactável. Em particular, certifique-se de concluir as seguintes etapas:
+1. Configure os planos de assinatura, detalhes de preços e muito mais para sua oferta de SaaS transactável. Em particular, certifique-se de concluir as seguintes etapas:
 
     * Em **Detalhes da Instalação**, selecione **a opção Sim** para especificar que você está vendendo a oferta por meio da Microsoft.
-     
+
     * Em **Microsoft 365 integração**, adicione o link AppSource à listagem do aplicativo. Esta etapa garante que as pessoas possam comprar seus planos de assinatura no AppSource, além de Teams.
 
 1. Armazene seu editor e ofereça IDs. (Você precisa deles mais tarde para vincular a oferta ao seu aplicativo no Portal do Desenvolvedor.)
@@ -153,12 +153,12 @@ Você publicou sua oferta saaS, mas ainda deve vinculá-la ao seu aplicativo Tea
 
 ## <a name="publish-your-app"></a>Publicar seu aplicativo
 
-Você criou sua oferta saaS e a Teams seu aplicativo de Teams , agora é hora de publicar seu aplicativo no Teams store. Para obter instruções completas, [consulte publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
+Você criou sua oferta saaS e a vinculau ao seu aplicativo Teams , agora é hora de publicar seu aplicativo no Teams store. Para obter instruções completas, [consulte publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
 > [!IMPORTANT]
-> Mesmo que seu aplicativo já esteja listado na loja Teams, você ainda deve passar pelo processo de validação da loja novamente para incluir sua oferta saaS.
+> Mesmo que seu aplicativo já esteja listado na Teams, você ainda deve passar pelo processo de validação da loja novamente para incluir sua oferta saaS.
 
-Depois de publicado, os usuários verão uma **opção Comprar** uma assinatura na caixa de diálogo detalhes do aplicativo quando tentarem adicionar seu aplicativo Teams.
+Depois de publicado, os usuários verão uma **opção Comprar** uma assinatura na caixa de diálogo detalhes do aplicativo quando tentarem adicionar seu aplicativo ao Teams.
 
 ## <a name="end-user-purchasing-experience"></a>Experiência de compra do usuário final
 

@@ -6,14 +6,19 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: aa80636a4fdb3c27d66bc08f9d308a009e183570
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453240"
 ---
-
 # <a name="preview-teams-app-manifest-in-teams-toolkit"></a>Visualizar Teams manifesto do aplicativo no Teams Toolkit
 
 Após o scaffolding, os seguintes são os arquivos de modelo de manifesto disponíveis na `templates/appPackage` pasta:
 
-- `manifest.local.template.json` - aplicativo de equipes de depuração local.
-- `manifest.remote.template.json` - compartilhado entre todos os ambientes remotos.
+* `manifest.local.template.json` - aplicativo de equipes de depuração local.
+* `manifest.remote.template.json` - compartilhado entre todos os ambientes remotos.
 
 Os arquivos Template que consistem em espaço reservados e os valores reais Teams Toolkit são resolvidos em arquivos em `.fx/configs` e `.fx/states`.
 
@@ -69,8 +74,8 @@ Se houver mais de um ambiente, você precisará selecionar o ambiente que deseja
 
 Depois de visualizar o arquivo de manifesto, você pode sincronizar as alterações locais no portal de desenvolvimento seguindo as etapas:
 
-1.  Selecione **Atualizar para Teams plataforma** no canto superior esquerdo da`manifest.{env}.json`
-2. Selecione **Teams: Atualizar manifesto para Teams plataforma na** barra de menus de`manifest.{env}.json`
+1. Selecione **Atualizar para Teams plataforma** no canto superior esquerdo da`manifest.{env}.json`
+2. Selecione **Teams: Atualizar manifesto para Teams plataforma** na barra de menus de`manifest.{env}.json`
 
  Você também pode disparar **Teams: atualizar manifesto para Teams plataforma da** paleta de comandos
 
@@ -83,13 +88,13 @@ Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-- **Somente visualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual
-- **Visualização e atualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual e também atualizado para Teams plataforma
-- **Cancelar**: não fazer nada
+* **Somente visualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual
+* **Visualização e atualização**: o arquivo de manifesto local será substituído de acordo com a configuração atual e também atualizado para Teams plataforma
+* **Cancelar**: não fazer nada
 
 > [!NOTE]
 > As alterações serão atualizadas para o portal de dev. Se você tiver algumas atualizações manuais no portal de dev, ela será substituída.
 
 ## <a name="see-also"></a>Confira também
 
-[Personalizar Teams Manifesto do Aplicativo no Teams Toolkit](TeamsFx-manifest-customization.md)
+[Personalizar Teams manifesto do aplicativo no Teams Toolkit](TeamsFx-manifest-customization.md)

@@ -1,17 +1,17 @@
 ---
 title: Atributo de cookie SameSite
 author: laujan
-description: Saiba mais sobre tipos de cookies, incluindo cookies sameSite, seus atributos, suas implicações em guias de Teams, módulos de tarefa e extensões de mensagens e sua autenticação no Teams
+description: Saiba mais sobre tipos de cookies, incluindo cookies SameSite, seus atributos, suas implicações em guias de Teams, módulos de tarefas e extensões de mensagens e sua autenticação no Teams
 keywords: atributos de cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518475"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452582"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite
 
@@ -33,17 +33,17 @@ Antes da introdução das restrições do SameSite, os cookies eram armazenados 
 
 ## <a name="samesite-cookie-attribute-initial-release"></a>Atributo cookie SameSite: versão inicial
 
-O Google Chrome versão 51 introduziu a `SetCookie SameSite` especificação como um atributo opcional. A partir do Build 17672, Windows 10 o suporte a cookie SameSite para o [navegador MicrosoftEdge&nbsp;](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
+O Google Chrome versão 51 introduziu a `SetCookie SameSite` especificação como um atributo opcional. A partir do Build 17672, Windows 10 o suporte a cookies SameSite para o [navegador MicrosoftEdge&nbsp;](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
 
 Você pode optar por não adicionar o atributo cookie `SetCookie` SameSite ao header ou adicioná-lo com uma das duas configurações, **Lax** e **Strict**. Um atributo SameSite não simplificado foi considerado o estado padrão.
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>Atributo de cookie SameSite: versão 2020
 
 O Chrome 80, lançado em fevereiro de 2020, introduz novos valores de cookie e impõe políticas de cookie por padrão. Três valores são passados para o atributo SameSite atualizado: **Strict**, **Lax** ou **None**. Se não for especificado, o atributo Cookies SameSite assume o valor `SameSite=Lax` por padrão.
- 
+
 Os atributos de cookie sameSite são os seguinte:
 
-|Configuração | Imposição | Valor |Especificação de Atributo |
+|Setting | Imposição | Valor |Especificação de Atributo |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Os cookies são enviados automaticamente somente em **um contexto de primeira** parte e com solicitações GET HTTP. Os cookies sameSite são retidos em solicitações de subsite cruzados, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega para a URL de um site externo, por exemplo, seguindo um link.| **Padrão** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador envia apenas cookies para solicitações de contexto de primeira parte. São solicitações provenientes do site que definiram o cookie. Se a solicitação tiver sido originada de uma URL diferente da do local atual, nenhum dos cookies marcados com o `Strict` atributo será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -56,11 +56,11 @@ Os atributos de cookie sameSite são os seguinte:
 1. Os parceiros internos da Microsoft podem ingressar na equipe a seguir para obter mais informações ou ajudar com este problema: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
 > [!NOTE]
-> Você deve definir atributos SameSite para refletir o uso pretendido para seus cookies. Não confie no comportamento padrão do navegador. Para obter mais informações, consulte [Desenvolvedores: Prepare-se para New SameSite=None; Cookies seguros Configurações](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> Você deve definir atributos SameSite para refletir o uso pretendido para seus cookies. Não confie no comportamento padrão do navegador. Para obter mais informações, consulte [Desenvolvedores: Prepare-se para New SameSite=None; Secure Cookie Configurações](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Guias, módulos de tarefas e extensões de mensagens
 
-* Teams guias usam para `<iframes>` inserir conteúdo que é exibido em um nível superior ou contexto de primeira parte.
+* Teams guias usam para `<iframes>` inserir conteúdo que é exibido em um contexto de nível superior ou de primeira parte.
 * Os módulos de tarefas permitem que você crie experiências pop-up modais em seu aplicativo Teams. Semelhante a uma guia, uma janela modal é aberta dentro da página atual.
 * Extensões de mensagens permitem inserir conteúdo enriquecido em uma mensagem de chat de recursos externos.
 
@@ -81,6 +81,7 @@ De acordo com as restrições atualizadas do SameSite, um navegador não adicion
 O Android WebView é um componente do sistema Chrome que permite que aplicativos Android exibem o conteúdo da Web. Embora as novas restrições sejam padrão, começando com o Chrome 80, elas não são impostas imediatamente no WebViews. Eles serão aplicados no futuro. Para se preparar, o Android permite que aplicativos nativos de definir cookies diretamente por meio da [API CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * Você deve declarar cookies de primeira parte como `SameSite=Lax` ou `SameSite=Strict`, conforme apropriado.
 > * Você deve declarar cookies de terceiros como `SameSite=None; Secure`.
 

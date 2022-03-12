@@ -4,12 +4,12 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356004"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453513"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma extensão Teams de mensagens em Microsoft 365
 
@@ -21,6 +21,7 @@ Extensões de [mensagens baseadas em pesquisa](/microsoftteams/platform/messagin
 O processo para atualizar sua extensão de mensagens baseada em pesquisa Teams ser executado Outlook envolve estas etapas:
 
 > [!div class="checklist"]
+>
 > * Atualizar o manifesto do aplicativo
 > * Adicionar um Outlook para seu bot
 > * Fazer sideload do aplicativo atualizado Teams
@@ -31,10 +32,10 @@ O restante deste guia guiará você por estas etapas e mostrará como visualizar
 
 Para concluir este tutorial, você precisará:
 
- - Um locatário Microsoft 365 área de área de trabalho do Programa de Desenvolvedor
- - Seu locatário de área Office 365 *Versões Direcionadas*
- - Um ambiente de teste com Office aplicativos instalados no canal Microsoft 365 Apps *beta*
- - Microsoft Visual Studio Código com a extensão Teams Toolkit (Visualização) (Opcional)
+* Um locatário Microsoft 365 área de área de trabalho do Programa de Desenvolvedor
+* Seu locatário de área Office 365 *Versões Direcionadas*
+* Um ambiente de teste com Office aplicativos instalados no canal Microsoft 365 Apps *beta*
+* Microsoft Visual Studio Código com a extensão Teams Toolkit (Visualização) (Opcional)
 
 > [!div class="nextstepaction"]
 > [Instalar pré-requisitos](prerequisites.md)
@@ -68,6 +69,7 @@ Abra seu Teams de aplicativo e atualize o `$schema` e `manifestVersion` com os s
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Se você usou Teams Toolkit para criar seu aplicativo de extensão de mensagens, poderá usá-lo para validar as alterações no arquivo de manifesto e identificar quaisquer erros. Abra a paleta `Ctrl+Shift+P` de comandos e encontre **Teams:** Valide o arquivo de manifesto ou selecione a opção no menu Implantação do Teams Toolkit (procure o ícone Teams no lado esquerdo do Visual Studio Code).
@@ -181,11 +183,11 @@ No menu *Aplicativos*, selecione *Gerenciar seus* **aplicativosSubmitir um aplic
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-Como administrador Teams, você pode carregar e pré-instalar o pacote de aplicativos para o locatário da sua organização em https://admin.teams.microsoft.com/. Consulte [Upload seus aplicativos personalizados no centro de administração Microsoft Teams para](/MicrosoftTeams/upload-custom-apps) obter detalhes.
+Como administrador Teams, você pode carregar e pré-instalar o pacote de aplicativos para o locatário da sua organização [Teams administrador](https://admin.teams.microsoft.com/). Consulte [Upload seus aplicativos personalizados no centro de administração Microsoft Teams para](/MicrosoftTeams/upload-custom-apps) obter detalhes.
 
 #### <a name="microsoft-admin-center"></a>Centro de Administração da Microsoft
 
-Como administrador global, você pode carregar e pré-instalar o pacote de aplicativos de https://admin.microsoft.com/. Consulte [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+Como administrador global, você pode carregar e pré-instalar o pacote de aplicativos do [administrador da Microsoft](https://admin.microsoft.com/). Consulte [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### <a name="multitenant-distribution"></a>Distribuição multitenant
 

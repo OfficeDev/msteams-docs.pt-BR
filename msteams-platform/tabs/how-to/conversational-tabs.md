@@ -6,12 +6,12 @@ keywords: canal de guias do teams configurável
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ac58448ec390d0e954c0737d5b0700d0d91b04b1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889360"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452596"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -21,7 +21,7 @@ As sub-entidades de conversa só têm suporte em canais. Elas podem ser usadas d
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para dar suporte a sub-entidades de conversação, seu aplicativo Web de tabulação deve ter a capacidade de armazenar um mapeamento entre sub-↔ conversas em um banco de dados back-end. O `conversationId` é fornecido, mas você deve armazená-lo e devolvê-lo Teams para que os `conversationId` usuários continuem a conversa.
+Para dar suporte a sub-entidades de conversação, seu aplicativo Web de tabulação deve ter a capacidade de armazenar um mapeamento entre as conversas de sub-entidades ↔ em um banco de dados de back-end. O `conversationId` é fornecido, mas você deve armazená-lo `conversationId` e devolvê-lo Teams para que os usuários continuem a conversa.
 
 ## <a name="start-a-new-conversation"></a>Iniciar uma nova conversa
 
@@ -33,7 +33,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **OpenConversation** assume as seguintes entradas para iniciar uma conversa em um canal:
 
-* **subEntityId**: A ID de sua subentência específica. Por exemplo, tarefa-123.
+* **subEntityId**: a ID de sua subentência específica. Por exemplo, tarefa-123.
 * **entityId**: a ID da instância da guia quando ela foi criada. A ID é importante para se referir à mesma instância de tabulação.
 * **channelId**: o canal no qual a instância da guia reside.
    > [!NOTE]
@@ -62,7 +62,7 @@ O `conversationResponse` objeto contém informações relacionadas à conversa q
 
 ## <a name="continue-a-conversation"></a>Continuar uma conversa
 
-Depois que uma conversa é iniciada, as chamadas subsequentes devem ser necessárias, que você também fornece as mesmas entradas que no início de uma nova conversa , mas também inclui `openConversation()` a **conversationId** [](#start-a-new-conversation). O painel de conversa é aberto para os usuários com a conversa apropriada em exibição. Os usuários podem ver mensagens novas ou de entrada em tempo real.
+Depois que uma conversa é iniciada, `openConversation()` as chamadas subsequentes devem ser necessárias, que você também fornece as mesmas entradas que no início de uma nova [conversa, mas](#start-a-new-conversation) também inclui a **conversationId**. O painel de conversa é aberto para os usuários com a conversa apropriada em exibição. Os usuários podem ver mensagens novas ou de entrada em tempo real.
 
 A imagem a seguir mostra o painel de conversa com a conversa apropriada:
 
@@ -72,7 +72,7 @@ A imagem a seguir mostra o painel de conversa com a conversa apropriada:
 
 É importante que sua guia inclua [links profundos para sua subentência](~/concepts/build-and-test/deep-links.md). Por exemplo, o usuário selecionando o link profundo da guia da conversa do canal. O comportamento esperado é receber o link profundo, abrir essa subentência e, em seguida, abrir o painel de conversa para essa subentência.
 
-Para dar suporte a sub entidades de conversa da guia pessoal ou estática, você não precisa alterar nada em sua implementação. Só há suporte para conversas in-comodas ou contínuas de guias de canal que já estão fixadas. As guias estáticas de suporte permitem que você forneça um único local para que seus usuários interajam com todas as suas sub-entidades. É importante que você salve o , e quando sua guia for originalmente criada em um canal para ter as propriedades certas ao abrir o exibição de conversa em `subEntityId` `entityId` uma guia `channelId` estática.
+Para dar suporte a sub entidades de conversa da guia pessoal ou estática, você não precisa alterar nada em sua implementação. Só há suporte para conversas in-comodas ou contínuas de guias de canal que já estão fixadas. As guias estáticas de suporte permitem que você forneça um único local para que seus usuários interajam com todas as suas sub-entidades. É importante que você `subEntityId`salve o , e `entityId``channelId` quando sua guia for originalmente criada em um canal para ter as propriedades certas ao abrir o exibição de conversa em uma guia estática.
 
 ## <a name="close-a-conversation"></a>Fechar uma conversa
 

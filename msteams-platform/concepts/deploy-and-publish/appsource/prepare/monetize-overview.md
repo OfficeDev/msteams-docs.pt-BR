@@ -5,8 +5,13 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: e371bcfe003ec2ff7122444e66df009c2436db7a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453317"
 ---
-
 # <a name="monetize-your-app"></a>Monetize seu aplicativo
 
 Microsoft Teams App Store fornecem recursos que permitem monetizar seus aplicativos e obter clientes se envolvendo com seus usuários. Os tópicos nesta seção mostram como criar esses recursos em seu aplicativo.
@@ -19,7 +24,7 @@ Microsoft Teams App Store fornecem recursos que permitem monetizar seus aplicati
     :::column-end:::
     :::column span="2":::
 
-**Incluir uma oferta SaaS com seu aplicativo**
+Inclua uma oferta SaaS com seu aplicativo:
 
 Com uma oferta [de Software como serviço (SaaS)](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) transacionável, você pode monetizar seu aplicativo Teams por meio da venda de planos de assinatura diretamente da listagem da Teams store.
 
@@ -32,7 +37,7 @@ Com uma oferta [de Software como serviço (SaaS)](~/concepts/deploy-and-publish/
     :::column-end:::
     :::column span="2":::
 
-**Avaliação gratuita**
+Avaliação gratuita:
 
 Você pode oferecer uma versão de avaliação gratuita do seu aplicativo para obter mais clientes para experimentar. Para atrair os clientes a comprar a versão completa, você pode limitar os recursos na versão de avaliação (por exemplo, incluindo apenas o número limitado de respostas por uma semana) ou especificar um período de tempo para a avaliação.
 
@@ -56,7 +61,7 @@ Se você cobra um preço pelo seu aplicativo ou o oferece gratuitamente, você p
     :::column-end:::
     :::column span="2":::
 
-**Visualização de teste para aplicativo monetizado**
+Visualização de teste para aplicativo monetizado:
 
 Com uma oferta de Software como serviço (SaaS) transactável, você pode testar a experiência de compra de ponta a ponta para seus aplicativos monetizados no Teams antes de publicar.
 
@@ -64,6 +69,7 @@ Com uma oferta de Software como serviço (SaaS) transactável, você pode testar
 
     :::column-end:::
 :::row-end:::
+
 ## <a name="next-step"></a>Próxima etapa
 
 [Incluir uma oferta SaaS com seu Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

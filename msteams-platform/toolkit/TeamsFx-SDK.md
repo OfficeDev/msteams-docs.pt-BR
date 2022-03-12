@@ -6,31 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453618"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK teamsFx para TypeScript ou JavaScript
 
 O TeamsFx tem como objetivo reduzir tarefas de implementação de identidade e acesso a recursos de nuvem para instruções de linha única com configuração zero.
 
 Use a biblioteca para:
 
-- Acessar as principais funcionalidades no ambiente de cliente e servidor de maneira semelhante.
-- Escreva o código de autenticação do usuário de maneira simplificada.
+* Acessar as principais funcionalidades no ambiente de cliente e servidor de maneira semelhante.
+* Escreva o código de autenticação do usuário de maneira simplificada.
 
 ## <a name="get-started"></a>Introdução
 
-O SDK teamsFx é pré-configurado no projeto em scaffolded usando o TeamsFx toolkit ou CLI.
-Para obter mais informações, [consulte Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+O SDK do TeamsFx é pré-configurado no projeto com scaffolding usando o Kit de Ferramentas do TeamsFx ou a CLI.
+Para obter mais informações, [consulte Teams projeto do aplicativo](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Node.js versão ou `10.x.x` posterior.
-- Se seu projeto instalou pacotes `botbuilder` [relacionados como](https://github.com/Microsoft/botbuilder-js#packages) dependências, verifique se eles são da mesma versão e a versão é `>= 4.9.3`. ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Node.js versão ou `10.x.x` posterior.
+* Se seu projeto instalou pacotes `botbuilder` [relacionados como](https://github.com/Microsoft/botbuilder-js#packages) dependências, verifique se eles são da mesma versão e a versão é `>= 4.9.3`. ([Problema - todos os pacotes BOTBUILDER devem ser a mesma versão](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 Para saber mais, confira:
-* [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [Pacote (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [Documentação de referência de API](https://aka.ms/teamsfx-sdk-help) 
+
+* [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [Pacote (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [Documentação de referência de API](https://aka.ms/teamsfx-sdk-help)
 * [Exemplos](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Instalar o `@microsoft/teamsfx` pacote
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 Para criar o objeto cliente graph para acessar a API Graph Microsoft, você precisará das credenciais para autenticar. O SDK fornece várias classes de credenciais para escolher que atendam a vários requisitos. Você precisa carregar a configuração antes de usar quaisquer credenciais.
 
-- No ambiente do navegador, você precisa passar explicitamente os parâmetros de configuração. O projeto scaffolded React forneceu variáveis de ambiente a ser usadas.
+* No ambiente do navegador, você precisa passar explicitamente os parâmetros de configuração. O projeto scaffolded React forneceu variáveis de ambiente a ser usadas.
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- No ambiente NodeJS, como a Função Azure, você pode simplesmente chamar `loadConfiguration`. Ele será carregado de variáveis de ambiente por padrão.
+* No ambiente NodeJS, como a Função Azure, você pode simplesmente chamar `loadConfiguration`. Ele será carregado de variáveis de ambiente por padrão.
 
 ```ts
 loadConfiguration();
@@ -77,12 +83,13 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
 > Você pode usar essa classe de credencial no aplicativo do navegador, como Teams Tab App.
 
 #### <a name="using-microsoft-365-tenant-credential"></a>Usando Microsoft 365 de locatário
 
-Microsoft 365 credencial de locatário não exige interagir com Teams usuário do App. Você pode chamar o Microsoft Graph como aplicativo.
+Microsoft 365 credencial de locatário não exige interagir com Teams usuário do Aplicativo. Você pode chamar o Microsoft Graph como aplicativo.
 
 Use o seguinte trecho:
 
@@ -101,7 +108,7 @@ Há três classes de credencial localizadas na pasta [de credenciais para](https
 
 Classes de credenciais implementam `TokenCredential` interface amplamente usada nas APIs da biblioteca do Azure. Eles foram projetados para fornecer tokens de acesso para escopos específicos. As seguintes classes de credenciais representam identidade diferente em determinados cenários:
 
-* `TeamsUserCredential`representa Teams identidade do usuário atual. O uso dessa credencial solicitará o consentimento do usuário na primeira vez.
+* `TeamsUserCredential`representam Teams identidade do usuário atual. O uso dessa credencial solicitará o consentimento do usuário na primeira vez.
 * `M365TenantCredential`representa Microsoft 365 identidade de locatário. Geralmente é usado quando o usuário não está envolvido, como o trabalho de automação disparado pelo tempo.
 * `OnBehalfOfUserCredential` usa o fluxo em nome do fluxo. Ele precisa de um token de acesso e você pode obter um novo token para escopo diferente. Ele foi projetado para ser usado em cenários de Função do Azure ou Bot.
 
@@ -135,7 +142,7 @@ try {
 }
 ```
 
-E se a instância de credencial for usada em outras bibliotecas, como o Microsoft Graph, é possível que o erro seja capturado e transformado.
+E se a instância de credencial for usada em outra biblioteca, como o Microsoft Graph, é possível que o erro seja capturado e transformado.
 
 ```ts
 try {

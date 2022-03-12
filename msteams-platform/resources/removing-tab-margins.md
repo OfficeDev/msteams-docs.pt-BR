@@ -6,26 +6,26 @@ keywords: guia removendo preenchimento de margens
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888073"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452834"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 
-Este documento descreve como a remoção de margens ao redor de todas as guias no Microsoft Teams melhora sua experiência de criação de aplicativos. Este é um aprimoramento introduzido no Microsoft Teams em 2021.
-Você pode criar aplicativos mais nativos para Teams removendo as margens ao redor de todas as guias. As guias com margens removidas se alinham Microsoft Teams designs de kit de [interface do usuário.](~/tabs/design/tabs.md) A maioria dos aplicativos tem uma aparência aprimorada sem margens.
+Este documento descreve como a remoção de margens ao redor de todas as guias no Microsoft Teams melhora a experiência de criação de aplicativos. Este é um aprimoramento introduzido no Microsoft Teams em 2021.
+Você pode criar aplicativos mais nativos para Teams removendo as margens ao redor de todas as guias. As guias com margens removidas se alinham Microsoft Teams designs de [kit de interface do usuário.](~/tabs/design/tabs.md) A maioria dos aplicativos tem uma aparência aprimorada sem margens.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Inteligência de tabulação e sem margens" border="false":::
 
 > [!NOTE]
-> Esse recurso não é aplicável a clientes móveis, pois as guias exibidas nos clientes móveis não têm margens. 
+> Esse recurso não é aplicável a clientes móveis, pois as guias exibidas nos clientes móveis não têm margens.
 
 ## <a name="guidelines"></a>Diretrizes
 
-A remoção de margens de tabulação afeta Teams aplicativos que usam guias. Nesses casos, você pode adicionar margens ao redor de seus designs de tabulação onde é necessário. Designs de aplicativos em produção têm um efeito de preenchimento extra, ou seja, margens fornecidas por Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e vai embora em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
+A remoção de margens de tabulação afeta Teams aplicativos que usam guias. Nesses casos, você pode adicionar margens ao redor de seus designs de tabulação onde é necessário. Os designs de aplicativos em produção têm um efeito de preenchimento extra, ou seja, margens fornecidas por Teams e margens fornecidas pela guia. No entanto, o preenchimento extra é apenas temporário e vai embora em algumas semanas, deixando apenas o preenchimento fornecido pelo aplicativo.
 
 ## <a name="faq"></a>Perguntas frequentes
 
@@ -44,8 +44,9 @@ Não, você deve fornecer seu próprio preenchimento ou margens à esquerda e à
 * Inferior: 0px
 
 > [!IMPORTANT]
+>
 > * Todas as guias têm suas margens removidas: guias pessoais, guias de chat (grupo), guias de reunião e guias de canal.
-> * A alteração da margem de tabulação se aplica a todas as guias. Não há como optar ou não pela alteração. 
+> * A alteração da margem de tabulação se aplica a todas as guias. Não há como optar ou não pela alteração.
 > * A alteração das margens de tabulação pode afetar as guias que dependem Microsoft Teams fornecer margens ao redor da interface do usuário.
 
 ## <a name="see-also"></a>Confira também

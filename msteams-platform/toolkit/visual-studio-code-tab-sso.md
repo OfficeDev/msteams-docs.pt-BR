@@ -5,6 +5,12 @@ keywords: Guias do kit de ferramentas de código visual studio do teams sso grap
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
+ms.openlocfilehash: c971cd99be0e283050561db2a0f1b89c9e20c9cf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452540"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Autenticação de logon único com o Kit de Ferramentas do Teams e Visual Studio Code para guias
 
@@ -13,7 +19,7 @@ ms.author: lajanuar
 >
 > Para obter informações atuais, leia [os pré-requisitos](../get-started/prerequisites.md) e siga um dos tutoriais mais novos.
 
-A Microsoft Teams Toolkit permite que você crie autenticação de logom único (SSO) para aplicativos de tabulação diretamente no Visual Studio Code. O kit de ferramentas orienta você pelo processo e fornece tudo o que você precisa, incluindo provisionar seu registro plataforma de identidade da Microsoft no portal Microsoft Azure.
+A Microsoft Teams Toolkit permite que você crie autenticação de logom único (SSO) para aplicativos de tabulação diretamente no Visual Studio Code. O kit de ferramentas orienta você pelo processo e fornece tudo o que você precisa, incluindo o provisionamento do seu registro plataforma de identidade da Microsoft no portal Microsoft Azure.
 
 ## <a name="get-started--create-a-project"></a>Começar — criar um projeto
 
@@ -22,7 +28,7 @@ A Microsoft Teams Toolkit permite que você crie autenticação de logom único 
 1. Selecione a opção para dar suporte ao SSO.
 
 > [!TIP]
-> Após a instalação, você deve ver o Teams Toolkit na barra de Visual Studio Code de atividade. Se não, clique com o botão direito do mouse na barra de atividades e selecione **Microsoft Teams** fixar o kit de ferramentas para facilitar o acesso.
+> Após a instalação, você deve ver o Teams Toolkit na barra de Visual Studio Code de atividade. Se não, clique com o botão direito do mouse na barra de atividades e **selecione Microsoft Teams** fixar o kit de ferramentas para facilitar o acesso.
 
 ## <a name="configure-your-project"></a>Configurar seu projeto
 
@@ -39,7 +45,7 @@ Se você quiser saber mais sobre como o registro do aplicativo do Azure será pr
 
 1. Selecione **npm install** na `api-server` pasta. Em **seguida, npm start**.
 1. Selecione **npm install** na `.src` pasta. Em **seguida, npm start**.
-1. Se você estiver usando um serviço de tunelamento como [ngrok](https://ngrok.com/), execute-o e certifique-se de que a URL corresponde ao que você entrou no assistente de criação do projeto. Se isso não ocorrer, você precisará atualizar o _URI da API_ e _redirecionar a URL_ no registro do aplicativo criado no Azure.
+1. Se você estiver usando um serviço de tunelamento como [ngrok](https://ngrok.com/), execute-o e certifique-se de que a URL corresponde ao que você entrou no assistente de criação do projeto. Se isso não ocorrer, você precisará atualizar o *URI da API* e *redirecionar a URL* no registro do aplicativo criado no Azure.
 1. Navegue até a barra de atividades no lado esquerdo da janela Visual Studio Code.
 1. Selecione o **ícone Executar** para exibir o **exibição Executar e Depurar** .
 1. Você também pode usar o atalho de teclado **Ctrl+Shift+D**.

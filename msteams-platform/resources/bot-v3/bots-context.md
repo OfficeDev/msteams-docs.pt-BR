@@ -5,12 +5,12 @@ keywords: contexto de bots do teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: c4f2df1168b5e429b1d5a1107cd07264e10243bc
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443990"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453142"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obter contexto para seu Microsoft Teams bot
 
@@ -22,7 +22,7 @@ Seu bot pode acessar contexto adicional sobre a equipe ou chat, como o perfil do
 >
 > * Microsoft Teams APIs de bot específicas são mais acessadas por meio de nossas extensões para o SDK do Construtor de Bots.
 > * Para C# ou .NET, baixe nosso [pacote Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet.
-> * Para Node.js desenvolvimento, o Construtor de Bots para Teams funcionalidade é incorporado ao [SDK](https://github.com/microsoft/botframework-sdk) da Estrutura de Bot v4.6.
+> * Para Node.js desenvolvimento, o Construtor de Bots para Teams funcionalidade é incorporada ao [SDK](https://github.com/microsoft/botframework-sdk) da Estrutura de Bot v4.6.
 
 ## <a name="fetch-the-team-roster"></a>Buscar a lista de equipe
 
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>Exemplo do .NET
 
-O exemplo a seguir usa a `FetchChannelList` chamada das [extensões Teams para o SDK do Construtor de Bots para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+O exemplo a seguir usa a `FetchChannelList` chamada do [Teams extensões do SDK do Construtor de Bots para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -173,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js exemplo
 
-O exemplo a seguir usa `fetchChannelList` a chamada Teams [extensões do SDK do Construtor de Bots para Node.js](https://www.npmjs.com/package/botbuilder-teams):
+O exemplo a seguir usa `fetchChannelList` a chamada Teams [extensões do SDK do Construtor de Bots para ](https://www.npmjs.com/package/botbuilder-teams)Node.js:
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

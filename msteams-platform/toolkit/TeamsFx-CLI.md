@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 45f5d58708b3ec7e452d864c6dfb6fcc79b4a48d
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323180"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453660"
 ---
 # <a name="teamsfx-library"></a>Biblioteca TeamsFx
 
@@ -19,19 +19,19 @@ Microsoft Teams Framework (TeamsFx) é uma biblioteca encapsulando padrões comu
 
 Aqui está uma lista dos principais recursos do TeamsFx:
 
-- **Colaboração teamsFx**: permitir que os desenvolvedores e o proprietário do projeto convidem outros colaboradores para o projeto TeamsFx. Você pode colaborar para depurar e implantar um projeto TeamsFx.
+* **Colaboração teamsFx**: permitir que os desenvolvedores e o proprietário do projeto convidem outros colaboradores para o projeto TeamsFx. Você pode colaborar para depurar e implantar um projeto TeamsFx.
 
-- **CLI do TeamsFx**: acelera o Teams de aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
+* **CLI do TeamsFx**: acelera o Teams de aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
 
-- **SDK do TeamsFx**: O TeamsFx Software Development Kit (SDK) é a biblioteca de código principal do TeamsFx encapsulando a autenticação simples para o cliente e o código do lado do servidor personalizado para desenvolvedores Teams do Teams.
-
+* **SDK do TeamsFx**: O TeamsFx Software Development Kit (SDK) é a biblioteca de código principal do TeamsFx encapsulando autenticação simples para o cliente e o código do lado do servidor personalizado para desenvolvedores do Teams.
 
 ## <a name="teamsfx-command-line-interface"></a>Interface de linha de comando TeamsFx
 
-A CLI teamsFx é uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos. Ele tem como objetivo fornecer uma experiência centrada no teclado durante a criação de Teams aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
+A CLI teamsFx é uma interface de linha de comando baseada em texto que acelera Teams desenvolvimento de aplicativos. Ele tem como objetivo fornecer experiência centrada no teclado durante a criação de Teams aplicativos. Ele também habilita cenário de CI/CD em que você pode integrar a CLI em scripts para automação.
 
 Para saber mais, confira:
-* [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
+
+* [Código-fonte](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Pacote (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
 ## <a name="get-started"></a>Introdução
@@ -47,7 +47,7 @@ Instale `teamsfx-cli` e `npm` execute para `teamsfx -h` verificar todos os coman
 
 | Comando | Descrição |
 |----------------|-------------|
-| `teamsfx new`| Crie um novo Teams aplicativo.|
+| `teamsfx new`| Criar novo Teams aplicativo.|
 | `teamsfx account`| Gerenciar contas de serviço na nuvem. Os serviços de nuvem com suporte são 'Azure' e 'Microsoft 365'. |
 | `teamsfx env` | Gerenciar ambientes. |
 | `teamsfx capability`| Adicione novos recursos ao aplicativo atual.|
@@ -74,7 +74,7 @@ Por padrão, `teamsfx new` entra no modo interativo e orienta você pelo process
 
 | Parâmetro | Requisito | Descrição |
 |:---------------- |:-------------|:-------------|
-|`--app-name` | Sim| Nome do seu Teams aplicativo.|
+|`--app-name` | Sim| Nome do aplicativo Teams aplicativo.|
 |`--interactive`| Não | Selecione as opções interativamente. As opções são e `true` e `false` o valor padrão é `true`.|
 |`--capabilities`| Não| Escolha Teams recursos do aplicativo, as várias opções são `tab`, `bot`e `messaging-extension` `tab-spfx`. O valor padrão é `tab`.|
 |`--programming-language`| Não| Linguagem de programação para o projeto. As opções são `javascript` ou e `typescript` o valor padrão é `javascript`.|
@@ -100,7 +100,7 @@ teamsfx new --interactive false --app-name newspfxapp --capabilities tab-spfx --
 teamsfx new --interactive false --app-name newtabbotapp --capabilities tab bot --programming-language javascript --azure-resources function
 ```
 
-#### <a name="teams-tab-app-with-azure-functions-and-azure-sql"></a>Teams guia app com funções do Azure e o Azure SQL
+#### <a name="teams-tab-app-with-azure-functions-and-azure-sql"></a>Teams guia com funções do Azure e o Azure SQL
 
 ```bash
 teamsfx new --interactive false app-name newapp --azure-resources sql function --programming-language typescript
@@ -204,7 +204,7 @@ Provisione os recursos de nuvem no aplicativo atual.
 |`--subscription`| Não | Especifique uma ID de Assinatura do Azure. |
 |`--resource-group`| Não | De definir o nome de um grupo de recursos existente. |
 |`--sql-admin-name`| Não | Aplicável quando houver SQL recurso no projeto. Nome do administrador SQL.|
-|`--sql-password`| Não| Aplicável quando houver SQL recurso no projeto. Senha de administrador SQL.|
+|`--sql-password`| Não| Aplicável quando houver SQL recurso no projeto. Senha de administrador de SQL.|
 
 ## `teamsfx deploy`
 
@@ -253,7 +253,7 @@ Visualize o aplicativo atual de local ou remoto.
 |`--folder`| Não | Project diretório raiz. O valor padrão é `./`. |
 |`--browser`| Não | O navegador para abrir Teams cliente Web. As opções são `chrome`, e `edge` como `default` navegador padrão do sistema e o valor é `default`. |
 |`--browser-arg`| Não | Argumento para passar para o navegador, requer --browser, pode ser usado várias vezes, por exemplo, --browser-args="--guest" |
-|`--sharepoint-site`| Não | SharePoint URL do site, como `{your-tenant-name}.sharepoint.com` para SPFx visualização remota do projeto. |
+|`--sharepoint-site`| Não | SharePoint URL do site, como `{your-tenant-name}.sharepoint.com` para SPFx de projeto remoto. |
 
 ### <a name="scenarios-for-teamsfx-preview"></a>Cenários para `teamsfx preview`
 
@@ -261,9 +261,9 @@ Visualize o aplicativo atual de local ou remoto.
 
 Dependências:
 
-- Node.js
-- .NET SDK
-- Ferramentas principais das funções do Azure
+* Node.js
+* .NET SDK
+* Ferramentas principais das funções do Azure
 
 ```bash
 teamsfx preview --local
@@ -309,9 +309,10 @@ teamsfx config set telemetry off
 
 #### <a name="disable-environment-checker"></a>Desabilitar o checker de ambiente
 
-Há três configurações para ativar ou desativar Node.js, validação do .NET SDK e ferramentas principais de funções do Azure, e todas elas estão habilitadas por padrão. Você pode definir a configuração como "off" se não precisar da validação de dependências e quiser instalar as dependências por conta própria. Verifique os seguintes guias:
+Há três configurações para ativar ou desativar Node.js, validação de Ferramentas Principais do .NET SDK e Azure Functions, e todas elas estão habilitadas por padrão. Você pode definir a configuração como "off" se não precisar da validação de dependências e quiser instalar as dependências por conta própria. Verifique os seguintes guias:
+
 * [Node.js de instalação](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-* [Guia de instalação do .NET SDK](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk) 
+* [Guia de instalação do .NET SDK](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
 * [Guia de instalação ferramentas principais do Azure Functions](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
 
 Para desabilitar a validação do .NET SDK, você pode usar o seguinte comando:
@@ -403,26 +404,26 @@ teamsfx permission status --env dev --list-all-collaborators
 
 Como criador do projeto:
 
-- Para criar um novo projeto de guia ou bot do TeamsFx e selecione Azure como o tipo de host:
+* Para criar um novo projeto de guia ou bot do TeamsFx e selecione Azure como o tipo de host:
 
   ```bash
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- Para fazer logon Microsoft 365 conta e conta do Azure:
+* Para fazer logon Microsoft 365 conta e conta do Azure:
 
   ```bash
   teamsfx account login azure
   teamsfx account login Microsoft 365
   ```
 
-- Para provisionar seu projeto:
+* Para provisionar seu projeto:
 
   ```bash
   teamsfx provision
   ```
 
-- Para exibir colaboradores:
+* Para exibir colaboradores:
 
   ```bash
   teamsfx permission status --env dev --list-all-collaborators
@@ -430,7 +431,7 @@ Como criador do projeto:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
 
-- Para adicionar outra conta como colaborador. Verifique se a conta adicionada está sob o mesmo locatário:
+* Para adicionar outra conta como colaborador. Verifique se a conta adicionada está sob o mesmo locatário:
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -438,36 +439,36 @@ Como criador do projeto:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permissão":::
 
-- Para empurrar seu projeto para GitHub
+* Para empurrar seu projeto para GitHub
 
 Como colaborador Project:
 
-- Clone o projeto de GitHub.
-- Faça logon Microsoft 365 conta. Certifique-se de que a mesma Microsoft 365 conta seja adicionada:
+* Clone o projeto de GitHub.
+* Faça logon Microsoft 365 conta. Verifique se a mesma Microsoft 365 conta foi adicionada:
 
   ```bash
   teamsfx account login Microsoft 365
   ```
 
-- Faça logon na conta do Azure com permissão de colaborador para todos os recursos do Azure.
+* Faça logon na conta do Azure com permissão de colaborador para todos os recursos do Azure.
 
   ```bash
   teamsfx account login azure
   ```
 
-- Verifique o status da permissão. Você deve encontrar a permissão do proprietário do projeto:
+* Verifique o status da permissão. Você deve encontrar a permissão do proprietário do projeto:
 
   ```bash
   teamsfx permission status --env dev
   ```
+
   ![status da permissão](./images/permission-status.png)
 
-- Atualize o código da guia e implante o projeto no controle remoto.
-- Iniciar remoto e o projeto deve funcionar bem.
+* Atualize o código da guia e implante o projeto no controle remoto.
+* Iniciar remoto e o projeto deve funcionar bem.
 
 ## <a name="see-also"></a>Confira também
 
 * [SDK teamsFx para TypeScript ou JavaScript](TeamsFx-SDK.md)
 * [Gerenciar vários ambientes em Teams Toolkit](TeamsFx-multi-env.md)
-* [Colabore Teams projeto usando Teams Toolkit](TeamsFx-collaboration.md)
- 
+* [Colaborar no Teams usando Teams Toolkit](TeamsFx-collaboration.md)
