@@ -4,12 +4,12 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081132"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399377"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -19,7 +19,7 @@ Antes de identificar os diferentes tipos de cartão, entenda como criar um cart�
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Criar um cartão hero, um cartão em miniatura ou um Cartão Adaptável
 
-**Para criar um cartão hero, um cartão em miniatura ou um Cartão Adaptável do App Studio**
+Para criar um cartão de destaque, cartão de miniatura ou Cartão Adaptável do App Studio:
 
 1. Acesse o **App Studio** do Teams.
 1. Selecione **Editor de cartão**.
@@ -85,7 +85,7 @@ O cartão pode conter uma imagem embutida, incluindo um link para a imagem dispo
 
 As imagens são dimensionadas para cima ou para baixo para manter a taxa de proporção para cobrir a área da imagem. As imagens são cortadas do centro para obter a taxa de proporção apropriada para o cartão.
 
-As imagens devem ter no máximo 1024×1024 e no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.
+As imagens devem ter no máximo 1024×1024 e no formato PNG, JPEG ou GIF. GIF animado não é suportado.
 
 A tabela a seguir fornece as propriedades de imagens de cartão embutidas:
 
@@ -95,7 +95,7 @@ A tabela a seguir fornece as propriedades de imagens de cartão embutidas:
 | alt | Cadeia de caracteres | Descrição acessível da imagem. |
 
 > [!NOTE]
-> Se um cartão incluir uma URL de imagem redirecionada antes da imagem final, não há suporte para o redirecionamento na URL da imagem. Isso ocorre para imagens compartilhadas na nuvem pública.
+> Se um cartão incluir um URL de imagem que é redirecionado antes da imagem final, o redirecionamento no URL da imagem não será suportado. Isso ocorre em imagens compartilhadas na nuvem pública.
 
 ### <a name="buttons"></a>Botões
 
@@ -111,7 +111,7 @@ Depois de identificar as propriedades comuns de todos os cartões, agora você p
 
 ## <a name="adaptive-card"></a>Cartão Adaptável
 
-Um Cartão Adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Para obter mais informações, [Cartões Adaptáveis](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+Um Cartão Adaptável é um cartão personalizável que pode conter qualquer combinação de texto, fala, imagens, botões e campos de entrada. Para obter mais informações, consulte [Cartões Adaptável](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### <a name="support-for-adaptive-cards"></a>Suporte para Cartões Adaptáveis
 
@@ -122,6 +122,7 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * A plataforma Teams dá suporte à v1.4 ou anterior aos recursos de Cartão Adaptável para cartões enviados por bot e extensões de mensagens baseadas em ação.
 > * A plataforma Teams é compatível com a versão 1.3 ou anterior dos recursos do Cartão Adaptável para outros recursos, como cartões enviados pelo usuário (extensões de mensagens baseadas em pesquisa e abertura de link), guias e módulos de tarefa.
 > * Não há suporte para o estilo de ação positiva ou destrutiva Cartões Adaptáveis na plataforma do Teams.
@@ -297,7 +298,7 @@ A tabela a seguir fornece as propriedades de um cartão hero:
 | subtítulo | Rich text  | Subtítulo do cartão. Máximo de duas linhas.|
 | texto | Rich text  | O texto aparece sob o subtítulo. Para opções de formatação, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). |
 | imagens | Matriz de imagens | Imagem exibida na parte superior do cartão. Taxa de proporção 16:9. |
-| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo de seis. |
+| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. No máximo seis. |
 | Torneira | Objeto Action | Ativado quando o usuário toca no próprio cartão. |
 
 ### <a name="example-of-a-hero-card"></a>Exemplo de um cartão hero
@@ -362,7 +363,7 @@ A tabela a seguir fornece as propriedades de um cartão de lista:
 | --- | --- | --- |
 | title | Rich text  | Título do cartão. Máximo de 2 linhas.|
 | items | Matriz de itens de lista | Conjunto de itens aplicáveis ao cartão.|
-| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
+| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. No máximo 6. |
 
 ### <a name="example-of-a-list-card"></a>Exemplo de um cartão de lista
 
@@ -447,7 +448,7 @@ A tabela a seguir fornece as propriedades do cartão do conector do Office 365:
 
 Os cartões do Conector do Office 365 funcionam corretamente no Microsoft Teams, incluindo [`ActionCard`ações](/outlook/actionable-messages/card-reference#actioncard-action).
 
-A diferença importante entre usar cartões conectores de um conector e usar cartões conectores em seu bot é o tratamento de ações de cartão. A tabela a seguir lista a diferença:
+A diferença importante entre usar cartões conectores de um conector e usar cartões conectores no seu bot é o tratamento das ações do cartão. A tabela a seguir lista a diferença:
 
 | Connector | Bot |
 | --- | --- |
@@ -659,7 +660,7 @@ A tabela a seguir fornece as propriedades de um cartão em miniatura:
 | subtítulo | Rich text  | Subtítulo do cartão. Máximo de 2 linhas.|
 | texto | Rich text  | O texto aparece sob o subtítulo. Para opções de formatação, consulte [formatação de cartão](~/task-modules-and-cards/cards/cards-format.md). |
 | imagens | Matriz de imagens | Imagem exibida na parte superior do cartão. Taxa de proporção 1:1 quadrado. |
-| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. Máximo 6. |
+| botões | Matriz de objetos de ação | Conjunto de ações aplicáveis ao cartão atual. No máximo 6. |
 | Torneira | Objeto Action | Ativado quando o usuário toca no próprio cartão. |
 
 ### <a name="example-of-a-thumbnail-card"></a>Exemplo de um cartão em miniatura
