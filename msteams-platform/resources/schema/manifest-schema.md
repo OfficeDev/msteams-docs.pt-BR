@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399097"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453765"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -736,7 +736,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -825,13 +825,17 @@ Especifique e consolide as informações relacionadas à autorização para o ap
 |Nome| Tipo|Tamanho máximo|Obrigatório |Descrição|
 |---|---|---|---|---|
 |`type`|string||✔| O tipo da permissão específica do recurso. Opções: `Application` e `Delegated`.|
-|`name`|string|128 caracteres|✔|O nome da permissão específica do recurso. <br> Para obter mais informações, consulte [Permissões do aplicativo](../../graph-api/rsc/resource-specific-consent.md) e [Permissões delegadas](#delegated-permissions).|
+|`name`|string|128 caracteres|✔|O nome da permissão específica do recurso. Para obter mais informações, consulte [Permissões de aplicativo específicas do recurso](#resource-specific-application-permissions) e [Permissões delegadas específicas do recurso](#resource-specific-delegated-permissions)|
 
-### <a name="delegated-permissions"></a>Permissões delegadas
+#### <a name="resource-specific-application-permissions"></a>Permissões de aplicativo específicas do recurso
+
+As permissões do aplicativo permitem que o aplicativo acesse dados sem um usuário conectado. Para obter informações sobre permissões de aplicativos, consulte [Consentimento específico de recursos para MS Graph e MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+
+#### <a name="resource-specific-delegated-permissions"></a>Permissões delegadas específicas do recurso
 
 As permissões delegadas permitem que o aplicativo acesse dados em nome do usuário conectado.
 
-* **Permissões específicas de recursos para equipes**
+* **Permissões delegadas específicas de recursos para equipes**
 
     |**Name**|**Descrição**|
     |---|---|
@@ -839,7 +843,7 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |`InAppPurchase.Allow.Group`| Permite que o aplicativo mostre ofertas do marketplace aos usuários nesta equipe e conclua suas compras dentro do aplicativo, em nome do usuário conectado.|
     |`ChannelMeetingStage.Write.Group`| Permite que o aplicativo mostre o conteúdo na janela de conteúdo compartilhado nas reuniões de canal associadas a essa equipe, em nome do usuário conectado.|
 
-* **Permissões específicas de recursos para chats ou reuniões**
+* **Permissões delegadas específicas do recurso para chats ou reuniões**
 
     |**Name**|**Descrição**|
     |---|---|
@@ -848,7 +852,7 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |`OnlineMeetingParticipant.Read.Chat`|Permite que o aplicativo leia as informações do participante, incluindo nome, função, ID, horários de ingresso e de saída, da reuniões associadas a este chat, em nome do usuário conectado.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite que o aplicativo alterne o áudio de entrada para participantes em reuniões associadas a este chat, em nome do usuário conectado.|
 
-* **Permissões específicas de recursos para usuários**
+* **Permissões delegadas específicas do recurso para usuários**
 
     |**Name**|**Descrição**|
     |---|---|
