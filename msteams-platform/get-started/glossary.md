@@ -4,12 +4,12 @@ description: Documentação do Desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452743"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466559"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -124,8 +124,8 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Estágio da reunião](../sbs-meetings-stage-view.yml) | Um recurso do aplicativo de extensão de reunião. É um espaço compartilhado acessível a todos os participantes durante a reunião. Ele ajuda os participantes a interagir e colaborar com o conteúdo do aplicativo em tempo real. <br>**Consulte também**: [Exibição do estágio](#s) |
 | [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md) | Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou agir em uma mensagem. É possível usar uma extensão de mensagem sem sair da conversa.<br>**Consulte também**: [Comandos de pesquisa](#s); [Comandos de ação](#a) |
 | [Extensão da reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Um aplicativo projetado para ser usado durante o ciclo de vida da reunião para torná-lo mais produtivo, como quadro de comunicações, painel e muito mais. |
-| [Conta do Microsoft 365](../toolkit/accounts.md#microsoft-365-account) | Uma conta do Microsoft 365 inclui 25 licenças de usuário, incluindo o administrador, apenas para fins de desenvolvimento. |
-| [Programa para desenvolvedores do Microsoft 365](../toolkit/accounts.md#join-microsoft-365-developer-program) | O Programa para desenvolvedores do Microsoft 365 te ajuda a criar aplicativos que estendem o Microsoft 365. |
+| [Conta do Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | Uma conta do Microsoft 365 inclui 25 licenças de usuário, incluindo o administrador, apenas para fins de desenvolvimento. |
+| [Programa para desenvolvedores do Microsoft 365](../toolkit/accounts.md)| O Programa para desenvolvedores do Microsoft 365 te ajuda a criar aplicativos que estendem o Microsoft 365. |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | O gateway para dados e inteligência no Microsoft 365. Ele fornece um modelo de programação unificado que você pode usar para acessar dados no Microsoft 365, no Windows 10, no Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | O Microsoft Teams é um software de colaboração em grupo que pode ser usado para ajudar as equipes a trabalharem em conjunto remotamente. |
 | [Plataforma do Microsoft Teams](../concepts/app-fundamentals-overview.md) | A plataforma de desenvolvedor do Microsoft Teams facilita que os desenvolvedores integrem seus próprios aplicativos e serviços com o Teams. |

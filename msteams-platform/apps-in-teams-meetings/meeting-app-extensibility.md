@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião, criando a experiência de reunião do usuário durante todo o ciclo de vida da reunião no ambiente de desktop e móvel, funções de participantes e tipos de usuário. Além disso, saiba mais sobre como integrar bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398845"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466475"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -46,7 +46,7 @@ Para adicionar guias a uma reunião existente:
 1. Em seu calendário, selecione uma reunião à qual deseja adicionar uma guia.
 1. Selecione a **guia Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. A galeria de guias é exibida.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Experiência de aplicativo de pré-reunião":::
 
 1. Na galeria de guias, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
@@ -57,7 +57,7 @@ Para adicionar guias a uma reunião existente:
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Exibição de guia de pré-reunião](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Guias durante uma reunião":::
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
@@ -69,7 +69,7 @@ Depois de adicionar as guias a uma reunião existente no celular, você pode ver
 
 #### <a name="in-meeting-app-experience"></a>Experiência de aplicativo na reunião
 
-Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra de ferramentas da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para demonstrar conteúdo acionável para os participantes nela. Para obter mais informações, consulte [create apps for Teams meetings](create-apps-for-teams-meetings.md).
+Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra de ferramentas da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para demonstrar conteúdo acionável para os participantes nela. Para obter mais informações, consulte [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
 Para dispositivos móveis, os aplicativos de  reunião estão disponíveis > aplicativos &#x25CF;&#x25CF;&#x25CF; na reunião. Selecione **Aplicativos** para exibir todos os aplicativos disponíveis na reunião.
 
@@ -82,8 +82,6 @@ Para usar guias durante uma reunião:
 1. Na caixa de diálogo na reunião, insira sua resposta como comentários.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
-
-![Exibição da caixa de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
@@ -132,11 +130,11 @@ A imagem a seguir exibe a **guia Contoso** com resultados da sondagem e comentá
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Exibição pós-reunião](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Guia Contoso com resultados":::
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Experiência de aplicativo pós-reunião":::
 
 ---
 
@@ -155,7 +153,7 @@ Os Teams de reuniões unificadas permitem que você projete seu aplicativo com b
 
 ## <a name="participant-roles-in-a-meeting"></a>Funções de participante em uma reunião
 
-![Participantes de uma reunião](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Funções de participante em uma reunião":::
 
 As configurações de participante padrão são determinadas pelo administrador de IT de uma organização. Veja a seguir as funções dos participantes em uma reunião:
 
@@ -207,7 +205,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](create-apps-for-teams-meetings.md)
+> [Habilitar e configurar seus aplicativos para Teams reuniões](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Confira também
 

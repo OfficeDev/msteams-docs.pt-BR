@@ -4,16 +4,28 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398859"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464356"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
 Cada equipe tem uma maneira diferente de comunicar e colaborar tarefas. Para realizar essas tarefas diferentes, personalize Teams com aplicativos para reuniões. Habilita seus aplicativos Teams reuniões e configure os aplicativos para estar disponíveis no escopo de reunião no manifesto do aplicativo.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Com aplicativos para Teams reuniões, você pode expandir os recursos de seus aplicativos no ciclo de vida da reunião. Antes de trabalhar com aplicativos para Teams reuniões, você deve cumprir os seguintes pré-requisitos:
+
+* Saiba como desenvolver Teams aplicativos. Para obter mais informações sobre como desenvolver Teams aplicativo, [consulte Teams desenvolvimento de aplicativos](../overview.md).
+
+* Use seu aplicativo que oferece suporte a guias configuráveis no escopo de groupchat. Para obter mais informações, consulte [group chat scope and](../resources/schema/manifest-schema.md#configurabletabs) [build a group tab](../build-your-first-app/build-channel-tab.md).
+
+* Acate as [diretrizes Teams de design de guias gerais para cenários](../tabs/design/tabs.md) pré e pós-reunião. Para experiências durante as reuniões, consulte as diretrizes de [design](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) da guia na reunião e as diretrizes de design da [caixa de diálogo na reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
+
+* Para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades do evento na reunião. Esses eventos podem estar dentro da caixa de diálogo na reunião e em outros estágios no ciclo de vida da reunião. Para a caixa de diálogo na reunião, consulte `completionBotId` parâmetro na carga de notificação [na reunião](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitar seu aplicativo para Teams reuniões
 
@@ -54,7 +66,11 @@ O manifesto do aplicativo deve incluir o seguinte trecho de código:
 
 ### <a name="context-property"></a>Propriedade Context
 
-A `context` propriedade determina o que deve ser mostrado quando um usuário invoca um aplicativo em uma reunião, dependendo de onde o usuário invoca o aplicativo. A guia `context` e as `scopes` propriedades permitem determinar onde seu aplicativo deve aparecer. As guias no escopo ou `team` podem `groupchat` ter mais de um contexto. A seguir estão os valores da `context` propriedade da qual você pode usar todos ou alguns dos valores:
+A `context` propriedade determina o que deve ser mostrado quando um usuário invoca um aplicativo em uma reunião, dependendo de onde o usuário invoca o aplicativo. A guia `context` e as `scopes` propriedades permitem determinar onde seu aplicativo deve aparecer. As guias no escopo ou `team` podem `groupchat` ter mais de um contexto.
+
+Suporte ao `groupchat` escopo para habilitar seu aplicativo em chats de pré-reunião e pós-reunião. Com a experiência do aplicativo de pré-reunião, você pode encontrar e adicionar aplicativos de reunião e realizar as tarefas de pré-reunião. Com a experiência do aplicativo pós-reunião, você pode exibir os resultados da reunião, como resultados da pesquisa ou taxa.
+
+ A seguir estão os valores da `context` propriedade da qual você pode usar todos ou alguns dos valores:
 
 |Valor|Descrição|
 |---|---|

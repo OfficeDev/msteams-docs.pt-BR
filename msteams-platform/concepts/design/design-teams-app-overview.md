@@ -5,22 +5,22 @@ description: Saiba como projetar Microsoft Teams aplicativos. Os recursos inclue
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948562"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466525"
 ---
-# <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams aplicativo
+# <a name="designing-your-microsoft-teams-app"></a>Projetando seu Microsoft Teams app
 
-:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Imagem conceitual introduzindo as Microsoft Teams de design.":::
+:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Imagem conceitual apresentando as diretrizes Microsoft Teams de design.":::
 
 Se você é um designer, gerente de produto, desenvolvedor ou criador usando ferramentas de código baixo, essas diretrizes podem ajudá-lo a tomar rapidamente as decisões de design corretas para seu Microsoft Teams app.
 
 ## <a name="creating-a-cohesive-experience"></a>Criando uma experiência coesiva
 
-Projetar um aplicativo Teams é como projetar um aplicativo Web convencional, mas também um pouco diferente. Um design eficaz realça os atributos exclusivos do seu aplicativo ao se ajustar naturalmente aos Teams e contextos.
+Projetar um aplicativo Teams é como projetar um aplicativo Web convencional, mas também um pouco diferente. Um design efetivo realça os atributos exclusivos do seu aplicativo ao se ajustar naturalmente aos Teams e contextos.
 
 Essas diretrizes e recursos podem ajudá-lo a atingir esse equilíbrio. Você vai saber o que fazer e o que evitar ao projetar seu aplicativo Teams (como navegação de vários níveis em uma guia).
 
@@ -129,26 +129,26 @@ Entenda como as pessoas adicionam, usam e gerenciam Teams aplicativos para aprov
 
 ## <a name="ui-templates"></a>Modelos de Interface de Usuário 
 
-Crie rapidamente designs complexos e de alta fidelidade com modelos para Teams casos de uso e [fluxos de trabalho](design-teams-app-ui-templates.md)comuns.
+Crie rapidamente designs complexos e de alta fidelidade com modelos para Teams [casos de uso e fluxos de trabalho](design-teams-app-ui-templates.md) comuns.
 
 ## <a name="basic-ui-components"></a>Componentes básicos da Interface de Usuário
 
-Com base Fluent interface do usuário, esses são os elementos [principais que](design-teams-app-basic-ui-components.md) você pode usar para criar Teams experiências do zero.
+Com base Fluent interface do usuário, esses [são os elementos](design-teams-app-basic-ui-components.md) principais que você pode usar para criar Teams experiências do zero.
 
 ## <a name="tools-and-samples"></a>Tools and samples
 
 As ferramentas a seguir podem ajudar designers e desenvolvedores a começar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Projete um Teams com componentes da interface do usuário, modelos e exemplos que você pode arrastar, soltar e modificar conforme necessário. O kit de interface do usuário também inclui informações abrangentes sobre como os aplicativos devem ter aparência e comportamento em diferentes Teams cenários.
+Projete um Teams com componentes da interface do usuário, modelos e exemplos que você pode arrastar, soltar e modificar conforme necessário. O kit de interface do usuário também inclui informações abrangentes sobre como os aplicativos devem parecer e se comportar em diferentes Teams cenários.
 
 > [!div class="nextstepaction"]
 > [Obter o kit de interface do usuário (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams biblioteca de interface do usuário
+### <a name="microsoft-teams-ui-library"></a>Biblioteca de Interface do Usuário do Microsoft Teams
 
-Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados no navegador.
+Exibir e testar modelos Teams de interface do usuário individuais e componentes relacionados em seu navegador.
 
 > [!div class="nextstepaction"]
 > [Experimente a biblioteca da interface do usuário (playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
@@ -174,7 +174,7 @@ Para saber mais, experimente um dos seguintes recursos:
 Obter exemplos de código e detalhes de implementação para os componentes básicos Fluent da interface do usuário usados para criar Teams experiências.
 
 > [!div class="nextstepaction"]
-> [Experimente Teams componentes da interface do usuário (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)
+> [Experimente Teams de interface do usuário (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)
 
 ### <a name="adaptive-cards-designer"></a>Designer de cartões adaptáveis
 
@@ -185,7 +185,7 @@ Projete Cartões Adaptáveis em nossa ferramenta baseada na Web.
 
 ## <a name="see-also"></a>Confira também
 
-* [Pré-requisitos e referências de API para aplicativos de reuniões do Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Habilitar e configurar seus aplicativos para Teams reuniões](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Criar um bot do Microsoft Teams](~/bots/design/bots.md)
 * [Criar um Assistente Virtual](~/samples/virtual-assistant.md)
 * [Criando módulos de tarefa para o seu aplicativo do Microsoft Teams](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
