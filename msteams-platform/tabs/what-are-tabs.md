@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 01d874f8d873cdbc2e9f3cd0c19b6093ff3ef4e5
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 72c1ae8b22ff4d3ac96ad7c6c07a98dd37266a99
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356179"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492959"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -21,11 +21,11 @@ As guias são páginas da Web compatíveis com o Microsoft Teams incorporadas ao
 
 A imagem a seguir mostra guias pessoais:
 
-![Guias pessoais](../assets/images/tabs/personaltab.png)
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Guia pessoal" lightbox="../assets/images/tabs/personaltab.png":::
 
 A imagem a seguir mostra as guias do canal Contoso:
 
-![Guias de canal ou grupo](../assets/images/tabs/tabs.png)
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Guias de canal ou grupo" lightbox="../assets/images/tabs/tabs.png":::
 
 Há alguns pré-requisitos pelos quais você deve passar antes de trabalhar nas guias.
 

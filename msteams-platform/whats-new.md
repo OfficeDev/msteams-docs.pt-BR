@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453436"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492985"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|14/03/2022| Introdução ao guia passo a passo para criar e testar um conector no Microsoft Teams. | Criar webhooks e conectores > Criar Conectores do Office 365 > [Criar conectores do Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Informações adicionadas sobre o Moodle LMS e Microsoft 365 plug-ins | Integrar com Teams > Moodle LMS > [Sistema de gerenciamento de aprendizagem Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Como adicionar autenticação usando provedor OAuth externo| Adicionar autenticação > Guias > [Usar provedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Apresentado o guia passo a passo para invocar módulos de tarefa no Microsoft Teams| Criar cartões e módulos de tarefas > Criar módulos de tarefa > Usar módulos de tarefa de bots > [Invocar módulo de tarefa do Microsoft Teams](sbs-botbuilder-taskmodule.yml)|
@@ -38,8 +39,6 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 |08/02/2022| Introdução ao guia passo a passo para criar um bot de Chamada e Reunião| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
 |07/02/2022| Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
 |03/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | • Manifesto do aplicativo > [Esquema do manifesto de aplicativo](resources/schema/manifest-schema.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [Esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
-|03/02/2022| Teste de visualização para aplicativos monetizados (visualização do desenvolvedor)| Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Fluxo de compras no aplicativo para a monetização de aplicativos (visualização do desenvolvedor) | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -52,6 +51,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|14/03/2022| Introdução ao guia passo a passo para criar e testar um conector no Microsoft Teams. | Criar webhooks e conectores > Criar Conectores do Office 365 > [Criar conectores do Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Informações adicionadas sobre o Moodle LMS e Microsoft 365 plug-ins | Integrar com Teams > Moodle LMS > [Sistema de gerenciamento de aprendizagem Moodle](resources/moodle-overview.md)|  
 |03/03/2022 | Como adicionar autenticação usando provedor OAuth externo| Adicionar autenticação > Guias > [Usar provedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Apresentado o guia passo a passo para invocar módulos de tarefa no Microsoft Teams| Criar cartões e módulos de tarefas > Criar módulos de tarefa > Usar módulos de tarefa de bots > [Invocar módulo de tarefa do Microsoft Teams](sbs-botbuilder-taskmodule.yml)|
@@ -156,7 +156,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 |10/11/2020|Diretrizes de design de bot do Teams |[Diretrizes de design de bot](bots/design/bots.md)|
 |30/09/2020|Agora há suporte para o envio e recebimento de arquivos para bots em dispositivos móveis |[Enviar e receber arquivos por meio do seu bot](resources/bot-v3/bots-files.md)|
 |22/09/2020|Novas informações para começar a usar o desenvolvimento do Teams |[Criar sua primeira visão geral do aplicativo Teams](build-your-first-app/build-first-app-overview.md)|
-|18/09/2020|Suporte para aplicativos do Teams em reunião (Versão Prévia) |[Criar aplicativos para reuniões do Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md) e [Aplicativos em reuniões do Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|18/09/2020|Suporte para aplicativos do Teams em reunião (Versão Prévia) |[Aplicativos em reuniões do Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |19/08/2020|Importar mensagens do Teams com Microsoft Graph |[Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 |12/08/2020 |Cartões Adaptáveis suporte no webhook de entrada movido para GA |[Enviar cartões adaptáveis usando um webhook de entrada](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |10/08/2020|Comece a criar aplicativos do Teams com o Visual Studio Toolkit |[Criar aplicativos com o Kit de Ferramentas do Microsoft Teams e Visual Studio Code](toolkit/visual-studio-overview.md) |
