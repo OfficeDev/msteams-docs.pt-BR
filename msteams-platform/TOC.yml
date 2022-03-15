@@ -86,7 +86,7 @@
       items:
         - name: Visão geral do Kit de ferramentas do Microsoft Teams
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Criar novo projeto
+        - name: Criar um novo aplicativo de Teams
           href: toolkit/create-new-project.md
         - name: Preparar contas para criar o aplicativo Teams
           href: toolkit/accounts.md
@@ -283,8 +283,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Aplicativos de reuniões unificadas
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Pré-requisitos para aplicativos em reuniões do Teams
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Habilitar e configurar aplicativos para reuniões
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Referências à API de aplicativos de reunião
