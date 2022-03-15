@@ -1,47 +1,51 @@
 ---
-title: Criar novo Teams usando Teams Toolkit
+title: Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 author: zyxiaoyuer
-description: Criar novo Teams usando Teams Toolkit
-ms.author: zhany
-ms.localizationpriority: medium
+description: Criar novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: bac67621e14d12b61b04eac3ec24c90cb3057a79
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452554"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464263"
 ---
-# <a name="create-new-teams-project-using-teams-toolkit"></a>Criar um novo Teams usando Teams Toolkit
+# <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 
-Para criar um novo Teams usando Teams Toolkit, selecione Criar um novo projeto Teams **aplicativo** ou **Iniciar a partir de um exemplo**.
+Para criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams, você pode selecionar uma das seguintes opções:
 
-## <a name="create-new-project"></a>Criar novo projeto
+* [Criar um novo aplicativo do Teams](create-new-project.md#create-a-new-teams-app)
+* [Exibir amostras](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-Os guias a seguir ajudam você a criar um novo projeto Teams aplicativo usando Teams Toolkit:
+### <a name="create-a-new-teams-app"></a>Criar um novo aplicativo do Teams
 
-* [Criar novo Teams aplicativo Tab (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-* [Criar novo aplicativo Teams Bot](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
-* [Criar novo aplicativo de Extensão de Mensagem](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-* [Criar novo Teams guia (Estrutura do SharePoint)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+1. Abra o Visual Studio Code.
+1. Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: na barra Visual Studio Code lateral.
+1. Selecione **Criar um novo aplicativo do Teams**.
+1. Selecione na guia de recursos disponíveis, bot, extensão de mensagens ou uma guia usando a Estrutura do SharePoint (SPFx). 
+1. Selecione pelo menos uma opção para começar a criar o aplicativo Teams.
 
-## <a name="create-from-samples"></a>Criar a partir de exemplos
+### <a name="create-a-new-teams-app-using-view-samples"></a>Criar um novo aplicativo do Teams usando exemplos de exibição
 
- Você pode criar um novo projeto na **galeria de exemplos**. Selecione o exemplo necessário para criar aplicativos. As etapas a seguir orientam você a criar aplicativos a partir de exemplos:
+Você pode criar um novo aplicativo explorando **Exibir amostras** e selecionando uma amostra existente. O exemplo selecionado já pode ter alguma funcionalidade, por exemplo, uma lista de tarefas com um back-end do Azure ou uma integração com o Kit de ferramentas do Microsoft Graph.
 
- 1. Abra **Teams Toolkit** código Microsoft Visual Studio código.
- 1. Selecione **A seção DESENVOLVIMENTO** no Tree View.
- 1. Selecione **Exibir exemplos**. A galeria de exemplo aparece conforme mostrado na imagem a seguir:
+ 1. Abra o **Kit de ferramentas do Teams** do Microsoft Visual Studio Code.
+ 1. Selecione a seção **DESENVOLVIMENTO** em Treeview.
+ 1. Selecione **Exibir amostras**. A galeria de amostra aparece conforme mostrado na imagem a seguir:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="samples":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Exibir amostras":::
 
-Você pode explorar e baixar amostras e executar aplicativos localmente ou remotamente para visualização Teams cliente Web. Siga as instruções de cada exemplo ou navegue pelo código-fonte de exemplos selecionando **Exibir** no GitHub para acessar o repo de código aberto para amostras.
+Você pode explorar e baixar amostras e executar seu aplicativo local ou remotamente para visualizar no cliente Web do Teams. Siga as instruções para cada amostra ou selecione **Exibir no GitHub** para abrir a amostra no `TeamsFx Samples repository` e navegar pelo código-fonte.
+
+Para obter mais informações, [Criar um novo aplicativo guia do Teams (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
 ## <a name="see-also"></a>Confira também
 
 * [Provisionar recursos de nuvem](provision.md)
 * [Implantar o aplicativo Teams na nuvem](deploy.md)
-* [Publicar seu Teams app](TeamsFx-collaboration.md)
+* [Publicar seu aplicativo Teams](TeamsFx-collaboration.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)
-* [Colaborar com outros desenvolvedores no Teams projeto](TeamsFx-collaboration.md)
+* [Colaborar com outros desenvolvedores no projeto do Teams](TeamsFx-collaboration.md)
