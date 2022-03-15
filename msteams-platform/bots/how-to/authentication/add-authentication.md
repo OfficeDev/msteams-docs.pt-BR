@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: registro do bot do grupo de recursos Manifesto do bot do emulador do Azure
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399370"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493021"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu bot do Teams
 
@@ -141,9 +141,10 @@ Para adicionar o canal Microsoft Teams:
     ![Home page bot](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. Abra seu bot, que está listado na **seção Recursos recentes** .
-1. Selecione **Canais** no painel esquerdo e selecione **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![Canal Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. Selecione **Canais** no painel esquerdo e selecione **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Canal Teams":::
 
 1. Selecione a caixa de seleção para aceitar os termos de serviço e selecione **Concordar**.</br>
 

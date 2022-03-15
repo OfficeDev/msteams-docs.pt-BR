@@ -1,117 +1,135 @@
 ---
-title: Preparar contas para criar Teams aplicativos
+title: Preparar contas para criar o aplicativo Teams
 author: zyxiaoyuer
-description: Preparar contas para criar Teams aplicativos
-ms.author: zhany
-ms.localizationpriority: medium
+description: Preparar contas para criar o aplicativo Teams
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452568"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464290"
 ---
-# <a name="prepare-accounts-to-build-teams-apps"></a>Preparar contas para criar Teams aplicativos
+# <a name="prepare-accounts-to-build-teams-apps"></a>Preparar contas para criar o aplicativo Teams
 
-Para desenvolver Teams aplicativo, você precisa de pelo menos uma Microsoft 365 com assinatura válida. Se você quiser hospedar seus recursos de back-end no Azure, precisará de uma conta do Azure. A conta do Azure será opcional se o aplicativo existente estiver hospedado em outro provedor de nuvem e você quiser integrar o aplicativo existente à Teams plataforma.
+Para criar e carregar um Teams, você precisa preparar as seguintes contas:
+
+* [Conta com assinatura válida do Microsoft 365.](accounts.md#microsoft-365-account)
+* [Conta do Azure para hospedar os recursos de back-end no Azure](accounts.md#azure-account-to-host-backend-resources).
 
 ## <a name="microsoft-365-account"></a>Conta do Microsoft 365
 
-Se você não tiver uma conta de Microsoft 365 existente com uma assinatura válida, poderá criar uma ao ingressar no programa Microsoft 365 [desenvolvedor](https://developer.microsoft.com/microsoft-365/dev-program). O Microsoft 365 de desenvolvedor inclui uma assinatura de desenvolvedor Microsoft 365 E5 que você pode usar para criar sua própria área de segurança e desenvolver soluções independentemente do seu ambiente de produção.
+Para criar uma conta Microsoft 365, inscreva-se em uma assinatura do Programa para Desenvolvedores do Microsoft 365. A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a esteja usando em atividades de desenvolvimento.
 
-## <a name="azure-account"></a>Conta do Azure
+Se você tiver uma assinatura do Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura de [desenvolvedor gratuita](https://aka.ms/MyVisualStudioBenefits) do Microsoft 365. Ele estará ativo desde que sua assinatura do Visual Studio esteja ativa. Para obter mais informações, consulte [Assinatura de desenvolvedor do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 
-Se quiser hospedar recursos relacionados ao aplicativo ou acessar recursos no Azure, você deve ter uma assinatura do Azure. Você pode [criar uma conta gratuita](https://azure.microsoft.com/free/) antes de começar.
+### <a name="microsoft-365-developer-program"></a>Programa para desenvolvedores do Microsoft 365
 
-## <a name="join-microsoft-365-developer-program"></a>Ingressar Microsoft 365 programa de desenvolvedor
+Para obter uma conta de desenvolvedor gratuita do Teams, ingresse no desenvolvedor do Microsoft 365 e execute as seguintes etapas:
 
-Se você não tiver uma conta Microsoft 365, inscreva-se para uma assinatura de programa Microsoft 365 [desenvolvedor](https://developer.microsoft.com/microsoft-365/dev-program). A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a use para atividades de desenvolvimento. Se você tiver uma assinatura Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura Microsoft 365 [desenvolvedor gratuita](https://aka.ms/MyVisualStudioBenefits). Ele está ativo enquanto sua assinatura Visual Studio está ativa. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program)
-
-1. Vá para o programa Microsoft 365 [desenvolvedor.](https://developer.microsoft.com/microsoft-365/dev-program)
+1. Acesse o [Programa para desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Selecione **Ingressar agora**.
-3. Selecione **Configurar assinatura do E5**.
-4. Configurar sua conta de administrador. Depois de concluir, você deverá ver a seguinte tela:
+3. Selecione **Configurar a assinatura do E5**.
+4. Configurar a conta de administrador.
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagrama que mostra Microsoft 365 programa":::
+   A imagem a seguir é exibida depois que você concluir a assinatura:
 
-## <a name="accounts-for-microsoft-365-developer-program"></a>Contas para Microsoft 365 programa de desenvolvedor
+    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagrama que mostra o programa do Microsoft 365":::
+
+### <a name="microsoft-365-developer-account-types"></a>Tipos de conta de desenvolvedor do Microsoft 365
 
 Você pode se inscrever no programa para desenvolvedores usando um dos seguintes tipos de conta:
 
-* **Conta da Microsoft para uso pessoal**
+- **Conta da Microsoft para uso pessoal**
 
-  Fornece acesso a todos os produtos e serviços de nuvem da Microsoft orientados para o consumidor, como Outlook, Messenger, OneDrive, MSN, Xbox Live ou Microsoft 365. Sua inscrição para uma caixa de correio do Outlook.com cria automaticamente um conta da Microsoft. Depois da criação de uma conta da Microsoft, ela pode ser usada para acessar serviços em nuvem direcionados ao consumidor, ou o Azure.
+    A conta Microsoft fornece-lhe acesso a produtos e serviços na nuvem da Microsoft, como Outlook, Messenger, OneDrive, MSN, Xbox Live ou Microsoft 365. Você pode se inscrever em uma caixa de correio Outlook.com para criar uma conta Microsoft, que pode ser usada para acessar os serviços na nuvem da Microsoft ou do Azure relacionados ao consumidor.
 
-* **Conta de trabalho para empresas**
+- **Conta de trabalho da Microsoft para empresas**
 
-  Fornece acesso a todos os serviços de nuvem da Microsoft de pequeno, médio e corporativo, como o Azure, Microsoft Intune ou Microsoft 365. Ao se inscrever em um desses serviços como organização, um diretório baseado em nuvem é provisionado automaticamente no Microsoft Azure Active Directory (Azure AD) para representar sua organização.
+     Essa conta fornece acesso a todos os serviços na nuvem da Microsoft de nível empresarial de pequeno, médio e grande porte, como Azure, Microsoft Intune ou Microsoft 365. Quando você acessa um desses serviços, como uma organização, um diretório na nuvem é provisionado automaticamente no Azure Active Directory (Azure AD) para representar sua organização.
 
-* **Visual Studio ID**
+- **ID de usuário do Visual Studio**
 
-  Você pode criar para suas assinaturas de Visual Studio Professional ou Enterprise – recomendamos que você use essa opção para ingressar no programa de desenvolvedor de dentro da Galeria Visual Studio para obter os benefícios completos como assinante Visual Studio.
+    A ID de usuário criada para usar a assinatura do Visual Studio Professional ou Enterprise pode ser usada para ingressar no programa de desenvolvedor na Galeria do Visual Studio para aproveitar todos os benefícios como assinante do Visual Studio.
 
-## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams de carregamento ou sideload de aplicativos do cliente
+## <a name="azure-account-to-host-backend-resources"></a>Conta do Azure para hospedar recursos de back-end
+
+A conta do Azure será opcional se seu aplicativo existente estiver hospedado em outro provedor na nuvem e você quiser integrar o aplicativo existente na plataforma Teams.
+
+**ID do Visual Studio**
+
+Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos no Azure, você pode [criar uma conta gratuita](https://azure.microsoft.com/free/) antes de começar. Como alternativa, você pode selecionar para hospedar seus recursos back-end usando outro provedor na nuvem ou em seus próprios servidores se eles estiverem disponíveis no domínio público.
+
+## <a name="teams-custom-app-upload-or-sideload-permission"></a>Permissão de carregamento de aplicativos personalizados ou sideload do Teams
 
 > [!IMPORTANT]
-> Durante o desenvolvimento, você deve carregar seu aplicativo em seu Teams sem distribuí-lo. Isso é conhecido como **sideload**.
+> Depois de criar o aplicativo, você deve carregar seu aplicativo no Teams sem distribuí-lo. Esse processo é conhecido como **sideload**.
 
-A lista a seguir fornece etapas para verificar se a permissão do aplicativo de sideload está habilitada. As duas maneiras diferentes são as seguinte:
+   Você pode verificar se a permissão de sideload está habilitada usando o Visual Studio Code ou cliente do Teams.
 
-* **Para usar o código do Microsoft Visual studio**
+* **Verificar a permissão de sideload usando o Visual Studio Code**
 
-    1. Abra **Visual Studio Code**.
-    1. Selecione **Teams Toolkit** no painel esquerdo.
-    1. Selecione **Contas** e faça logoff em sua Microsoft 365 de usuário.
-    1. Verifique se você pode ver a opção **Sideloading habilitada** conforme mostrado na imagem:
+    1. Abra o **Visual Studio Code**.
+    1. Selecione **Kit de ferramentas do Teams** no painel esquerdo. Se você não conseguir ver a opção, verifique se instalou a extensão do Kit de Ferramentas do Teams.
+    1. Selecione **Contas** e faça logon da sua conta Microsoft 365.
+    1. Verifique se você pode exibir a opção **Sideload habilitado** conforme mostrado na imagem a seguir:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar o sideload":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar o sideload" border="true":::
 
-* **Para usar Teams conta**
+* **Verificar a permissão de sideload usando o cliente Teams**
 
-    1. Abra **Microsoft Teams**.
-    2. Selecione **Aplicativos** na barra esquerda.
+    1. Abra o **Microsoft Teams**.
+    2. Selecione **Aplicativos** no painel esquerdo.
     3. Selecione **Publicar um aplicativo**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publicar um aplicativo":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publicar um aplicativo" border="true":::
 
-    4. Verifique se você pode ver a opção Upload **um aplicativo personalizado**, conforme mostrado na imagem:
+    4. Verifique se você pode ver a opção **Carregar um aplicativo personalizado**, conforme mostrado na imagem a seguir:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload um aplicativo personalizado":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Carregar um aplicativo personalizado" border="true":::.
 
-Se você não puder ver Upload uma opção **de** aplicativo personalizada, isso indica que você não tem permissão para sideload. Sem a permissão de sideload, você não poderá fazer nenhuma depuração local ou remota. Portanto, é muito importante obter a permissão de sideload para sua conta antes de fazer qualquer depuração para seu Teams app. Se você for administrador do seu locatário, poderá abrir a configuração de sideload para seu locatário ou organização. Se você não for um administrador, contate o administrador do locatário para a permissão.
+        Se você não conseguir exibir a opção **Carregar um aplicativo personalizado**, isso indicará que você não tem a permissão necessária para sideload.
+        * Quanto a um administrador de locatários, habilite a configuração do sideload do seu locatário ou organização no Centro de administração do Teams.
+        * Se você não for um administrador de locatários, precisará entrar em contato com o administrador do locatário para habilitar o sideload.
 
-## <a name="enable-custom-app-uploading-for-your-organization"></a>Habilitar o carregamento personalizado de aplicativos para sua organização
+### <a name="upload-your-custom-app"></a>Carregar seu aplicativo personalizado
 
 > [!IMPORTANT]
-> Para ativar o carregamento ou sideload de aplicativos personalizados para seu locatário de desenvolvedor, você deve ser o administrador do locatário.
+> Para ativar o carregamento ou o sideload de aplicativos personalizados do seu locatário de desenvolvedor, você deve ser o administrador do seu locatário.
 
-1. Entre [no Centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com suas credenciais de administrador.
+**Para carregar o aplicativo personalizado**
 
-2. Selecione **Mostrar Tudo** >  **Teams**.
+1. Acessar o [Centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com suas credenciais de administrador.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar tudo":::
+2. Selecione **Mostrar Tudo** > **Teams**.
 
-> [!NOTE]
-> Pode levar **até 24** horas para que a opção **Teams** apareça. Você pode [carregar seu aplicativo personalizado em um ambiente Teams para](/microsoftteams/upload-custom-apps) teste e validação nesse momento.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar tudo" border="true":::
 
-3. Navegue **até Teams** **appsSetup** >  **PoliciesGlobal** > .
+   > [!Note]
+   > Pode levar **até 24 horas** para a opção **Teams** ser exibida. Você pode [carregar seu aplicativo personalizado em um ambiente do Teams](/microsoftteams/upload-custom-apps) para teste e validação.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="definir olicies":::
+3. Navegue até **Aplicativos do Teams** > **Políticas de Configuração**.
 
-4. Alterne Upload aplicativos personalizados para a **posição** On.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="definir políticas":::
+
+4. Configurar alternar **Carregar aplicativos personalizados** para a posição **Ativado**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="alternância":::
 
 5. Selecione **Salvar**.
 
-> [!Note]
-> Pode levar até 24 horas para que o sideload seja ativo. Enquanto isso, você pode usar **o carregamento para seu locatário** testar seu aplicativo. Para carregar o arquivo .zip pacote do aplicativo, consulte [carregar aplicativos personalizados](/microsoftteams/teams-app-setup-policies).
+   > [!Note]
+   > Pode levar até 24 horas para que os dados sejam preenchidos. Enquanto isso, você pode usar **carregamento do seu locatário** para testar seu aplicativo. Para carregar o arquivo do pacote .zip do aplicativo, consulte [Carregar aplicativos personalizados](/microsoftteams/teams-app-setup-policies).
 
-Para obter mais informações, consulte [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
+Para obter mais informações, consulte [Gerenciar configurações e políticas de aplicativo personalizadas no Teams](/microsoftteams/teams-custom-app-policies-and-settings) e [Gerenciar políticas de configuração de aplicativo no Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="see-also"></a>Confira também
 
-* [Criar novo Teams projeto](create-new-project.md)
+* [Criar um novo aplicativo Teams usando o Kit de Ferramentas do Teams](create-new-project.md)
 * [Provisionar recursos de nuvem](provision.md)
+* [Implantar o aplicativo Teams na nuvem](deploy.md)
+* [Publique seu aplicativo Teams](TeamsFx-collaboration.md)
+* [Gerenciar vários ambientes](TeamsFx-multi-env.md)

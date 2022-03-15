@@ -6,12 +6,12 @@ keywords: conector do Office365 para equipes
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399195"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492978"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -238,6 +238,8 @@ Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. R
 
 Para verificar se a `HttpPOST` ação está funcionando corretamente, [envie mensagens para o conector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
+Siga o [guia passo a passo](../../sbs-teams-connectors.yml) para criar e testar os conectores em sua Microsoft Teams.
+
 ## <a name="publish-connectors-for-the-organization"></a>Publicar conectores para a organização
 
 Se você quiser que o conector seja disponibilizado apenas para os usuários em sua organização, você pode carregar seu aplicativo de conector personalizado no catálogo de aplicativos [da sua organização](~/concepts/deploy-and-publish/apps-publish.md).
@@ -271,7 +273,11 @@ A tabela a seguir fornece o nome de exemplo e sua descrição:
 |**Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Conectores | Exemplo Office 365 conector gerando notificações para Teams canal.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.| | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Exemplo de conectores genéricos |Código de exemplo para um conector genérico que é fácil de personalizar para qualquer sistema que oferece suporte a webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../../sbs-teams-connectors.yml) criar e testar o conector no Teams.
 
 ## <a name="see-also"></a>Confira também
 
