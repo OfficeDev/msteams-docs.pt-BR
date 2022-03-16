@@ -1,29 +1,29 @@
 ---
-title: Microsoft Teams de classificação do armazenamento
-description: O Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer resultados de pesquisa relevantes aos usuários.
+title: Parâmetros de classificação da loja do Microsoft Teams
+description: A loja do Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer resultados de pesquisa relevantes aos usuários.
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: f9d88decf4079cfd1c0ecae2819e12a699f0bf8d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.openlocfilehash: 10b637c388a862f7085216361ecb60d4d0bd72c4
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63360159"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501932"
 ---
-# <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams de classificação do armazenamento
+# <a name="microsoft-teams-store-ranking-parameters"></a>Parâmetros de classificação da loja do Microsoft Teams
 
-As informações nesta instrução de divulgação se aplica ao Microsoft Teams no qual a Microsoft disponibiliza aplicativos de terceiros para os usuários. O Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer resultados de pesquisa relevantes aos usuários. Os parâmetros de classificação listados não são exaustivos e destinam-se a fornecer à nossa comunidade de editores uma compreensão de alto nível dos principais parâmetros que o storefront usa nas determinações de classificação. Todos os termos definidos usados, mas não definidos de outra forma, terão o significado atribuído a ele no Contrato de Microsoft Publisher.
+As informações nesta declaração de divulgação se aplicam à loja do Microsoft Teams na qual a Microsoft disponibiliza aplicativos de terceiros para os usuários. A loja do Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer resultados de pesquisa relevantes aos usuários. Os parâmetros de classificação listados não são exaustivos e destinam-se a fornecer à nossa comunidade de editores uma compreensão de alto nível dos principais parâmetros que a vitrine usa nas determinações de classificação. Todos os termos definidos usados, mas não definidos de outra forma neste documento, terão o significado atribuído a eles no Contrato de Editor da Microsoft.
 
-A equipe editorial da loja Microsoft Teams determina o destaque e o local de um aplicativo nas seções Editoriais, como faixa promocional no armazenamento Microsoft Teams com base em parâmetros de classificação, e são usados como critérios objetivos aplicados igualmente a todos os aplicativos no Microsoft Teams  que inclui aplicativos próprios da Microsoft e todos os aplicativos de desenvolvedor de terceiros. A seguir estão os principais parâmetros usados para determinar os posicionamentos do aplicativo:
+A equipe editorial do repositório do Microsoft Teams determina o destaque e a localização de um aplicativo nas seções Editoriais, como faixa promocional no repositório do Microsoft Teams, com base nos parâmetros de classificação e são usados como critérios objetivos aplicados igualmente a todos os aplicativos no repositório do Microsoft Teams que incluem aplicativos próprios da Microsoft e todos os aplicativos de desenvolvedor de terceiros. Veja a seguir os principais parâmetros usados para determinar os posicionamentos do aplicativo:
 
-* Dados de uso histórico: aplicativos com volumes mais altos de uso no armazenamento Teams tendem a ser superiores aos aplicativos com menor uso.
+* Dados históricos de uso: os aplicativos com maiores volumes de uso na loja do Teams tendem a ter uma classificação mais alta do que os aplicativos com menor uso.
 
-* Dados de envolvimento do usuário: aplicativos com maior envolvimento do usuário no armazenamento Teams tendem a classificar mais alto do que aplicativos com menor envolvimento.
+* Dados de engajamento do usuário: os aplicativos com maior engajamento do usuário na loja do Teams tendem a ter uma classificação mais alta do que os aplicativos com menor engajamento.
 
-* Qualidade e valor do aplicativo: aplicativos que têm valor distinto e fornecem uma experiência de usuário de alta qualidade tendem a classificar mais alto.
+* Qualidade e valor do aplicativo: os aplicativos que têm valor distinto e oferecem uma experiência de usuário de alta qualidade tendem a ter uma classificação mais alta.
 
-* Relevância da audiência: os aplicativos que provavelmente serão mais relevantes para um público específico (por exemplo, com base em suas configurações de idioma e tipo de licença, como Educação, Enterprise ou Pequenas e Médias Empresas) tendem a ser superiores a aplicativos que provavelmente sejam menos relevantes.
+* Relevância do público-alvo: os aplicativos que provavelmente serão mais relevantes para um determinado público (por exemplo, com base nas configurações de idioma e no tipo de licença, como Educação, Empresa ou Pequenas e médias empresas) tendem a ter uma classificação mais alta do que os aplicativos com probabilidade de ser menos relevante.
 
-* Atualização de aplicativo ou nova versão: Aplicativos de alta qualidade recém-lançados ou atualizados tendem a ser superiores aos aplicativos lançados ou atualizados em uma data anterior.
+* Atualização ou nova versão do aplicativo: os aplicativos de alta qualidade recém-lançados ou atualizados tendem a ter uma classificação mais alta do que os aplicativos lançados ou atualizados em uma data anterior.

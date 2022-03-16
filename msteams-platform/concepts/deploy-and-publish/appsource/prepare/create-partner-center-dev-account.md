@@ -1,35 +1,35 @@
 ---
-title: Criar sua conta de desenvolvedor do Partner Center
-description: Perguntas frequentes sobre como criar uma conta de desenvolvedor do Partner Center para publicar seu aplicativo no Microsoft Teams store.
+title: Criar uma conta de desenvolvedor do Partner Center
+description: Perguntas frequentes sobre como criar uma conta de desenvolvedor do Partner Center para publicar seu aplicativo na loja do Microsoft Teams.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: 1d4fc957eb8511e9da2b3ebacd3a6b025e048e78
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453548"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501911"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 
-Para publicar seu aplicativo na Microsoft Teams, você deve [configurar sua conta de desenvolvedor do Partner Center](/office/dev/store/open-a-developer-account). Dependendo do cenário, você pode ser capaz de usar uma conta existente.
+Para publicar seu aplicativo na loja do Microsoft Teams, você deve [configurar sua conta de desenvolvedor do Partner Center](/office/dev/store/open-a-developer-account). Dependendo do cenário, você poderá usar uma conta existente.
 
 ## <a name="faq"></a>Perguntas frequentes
 
-Obter respostas para algumas perguntas comuns sobre como gerenciar sua conta do Partner Center.
+Obtenha respostas para algumas perguntas comuns sobre como gerenciar sua conta do Partner Center.
 
 <br>
 
 <details>
 
-<summary><b>Como criar uma conta do Partner Center?</b></summary>
+<summary><b>Como posso criar uma conta do Partner Center?</b></summary>
 
-Você pode criar uma conta do Partner Center de uma das seguintes maneiras:
+Você pode criar uma conta do Partner Center uma das seguintes maneiras:
 
-* Se você for novo no Partner Center e não tiver uma Conta de Rede da Microsoft, crie uma conta usando a página [de registro do Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
-* Se você já estiver inscrito na Microsoft Partner Network, crie uma conta diretamente do [Partner Center usando os inscrições existentes do Microsoft Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+* Se você for novo no Partner Center e não tiver uma Conta de Rede da Microsoft, [crie uma conta usando a página de registro do Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
+* Se você já estiver registrado no Microsoft Partner Network [, crie uma conta diretamente no Partner Center usando os registros existentes do Microsoft Partner Center](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 
 <br>
 
@@ -37,14 +37,14 @@ Você pode criar uma conta do Partner Center de uma das seguintes maneiras:
 
 <details>
 
-<summary><b>E se eu não conseguir encontrar minha conta no Partner Center?</b></summary>
+<summary><b>E se eu não encontrar minha conta no Partner Center?</b></summary>
 
-Abra um [tíquete de suporte do Partner Center](https://partner.microsoft.com/support/v2/?stage=1) e selecione o seguinte:
+Abra um [tíquete de suporte no Partner Center](https://partner.microsoft.com/support/v2/?stage=1) e selecione o seguinte:
 
 | Menu | Opção |
 | -------   | -------  |
 |Categoria| Marketplace Comercial|
-| Tópico | Perguntas gerais sobre Ajuda do Marketplace e Como fazer perguntas |
+| Tópico | Ajuda geral do Marketplace e perguntas de instruções |
 | Subtópico| Suplemento do Office |
 
 <br>
@@ -53,19 +53,9 @@ Abra um [tíquete de suporte do Partner Center](https://partner.microsoft.com/su
 
 <details>
 
-<summary><b>Onde posso obter suporte para problemas de conta do Partner Center?</b></summary>
+<summary><b>Onde posso obter suporte para problemas na minha conta do Partner Center?</b></summary>
 
-Visite a [página de suporte de editores](https://aka.ms/marketplacepublishersupport) para pesquisar seu problema. Se as orientações não são úteis, crie um tíquete [de suporte do Partner Center](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Como faço para gerenciar minha conta Office Store no Partner Center?</b></summary>
-
-Consulte [gerenciar sua conta por meio do Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter informações.
+Visite a [página de suporte dos editores](https://aka.ms/marketplacepublishersupport) para pesquisar seu problema. Se as diretrizes não forem úteis, crie um [tíquete de suporte do Partner Center](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
 <br>
 
@@ -73,9 +63,9 @@ Consulte [gerenciar sua conta por meio do Partner Center](/office/dev/store/mana
 
 <details>
 
-<summary><b>Meu número de telefone não tem um código de área, então como adicioná-lo ao meu perfil?</b></summary>
+<summary><b>Como fazer gerenciar minha conta da Office Store no Partner Center?</b></summary>
 
-O número de telefone tem três partes: código de país, código de área e número de telefone. Se o número de telefone não incluir um código de área, deixe a segunda caixa vazia e conclua a terceira caixa.
+Consulte [gerenciar sua conta por meio Partner Center](/office/dev/store/manage-account-settings-and-profile) para obter informações.
 
 <br>
 
@@ -83,7 +73,17 @@ O número de telefone tem três partes: código de país, código de área e nú
 
 <details>
 
-<summary><b>Como gerencie minhas configurações de conta e perfil de parceiro no Partner Center?</b></summary>
+<summary><b>Meu número de telefone não tem um código de área. Como faço para adicioná-lo ao meu perfil?</b></summary>
+
+O número de telefone tem três partes: código do país, código de área e número de telefone. Se o número de telefone não incluir um código de área, deixe a segunda caixa vazia e preencha a terceira caixa.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Como gerencio minhas configurações de conta e perfil de parceiro no Partner Center?</b></summary>
 
 Consulte [gerenciar configurações de conta e informações de perfil](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) para obter informações.
 
@@ -93,9 +93,9 @@ Consulte [gerenciar configurações de conta e informações de perfil](/windows
 
 <details>
 
-<summary><b>Por que vejo uma mensagem "Essa conta não é qualificada para publicar", quando tento enviar meu aplicativo?</b></summary>
+<summary><b>Por que vejo uma mensagem "Esta conta não está qualificada para publicação", quando tento enviar meu aplicativo?</b></summary>
 
-Você recebeu essa mensagem de erro porque o [status de verificação da](/partner-center/verification-responses) conta está pendente. Verifique seu status no painel do [Partner Center.](https://partner.microsoft.com/dashboard) Selecione o **Configurações** de engrenagem e escolha **Configurações do desenvolvedor > Configurações > Conta**.
+Você recebeu esta mensagem de erro porque seu [status de verificação da conta](/partner-center/verification-responses) está pendente. Verifique seu status no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione o ícone de engrenagem das **Configurações** e escolha **Configurações do desenvolvedor > Configurações de conta > Conta**.
 
 ![Status de verificação do Partner Center](~/assets/images/partner-center-verification-status.png)
 
@@ -105,13 +105,13 @@ Você recebeu essa mensagem de erro porque o [status de verificação da](/partn
 
 <details>
 
-<summary><b>O que é verificado no processo de verificação de conta do Partner Center?</b></summary>
+<summary><b>o que é verificado no processo de verificação da conta do Partner Center?</b></summary>
 
-Há três áreas de verificação, **Propriedade de Email**, **Emprego** e **Negócios**. Para obter mais informações, [consulte o que é verificado e como responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
+Há três áreas de verificação, **Propriedade de e-mail**, **Emprego** e **Business**. Para obter mais informações, confira [O que é verificado e como responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-Se você for o contato principal, administrador global ou administrador de conta, poderá monitorar o status de verificação e acompanhar o progresso em sua página de perfil.
+Se você for o contato principal, o administrador global ou o administrador da conta, poderá monitorar o status da verificação e acompanhar o progresso em sua página de perfil.
 
-Depois que o processo de verificação é concluído, o status do seu registro na página de perfil muda *de pendente* para *autorizado*. Em seguida, o contato principal recebe um email da Microsoft em alguns dias úteis.
+Depois que o processo de verificação for concluído, o status do registro na página de perfil será alterado de *pendente* para *autorizado*. Em seguida, o contato principal recebe um email da Microsoft dentro de alguns dias úteis.
 
 <br>
 
@@ -119,15 +119,15 @@ Depois que o processo de verificação é concluído, o status do seu registro n
 
 <details>
 
-<summary><b>O status de verificação da minha conta não avançou além da Propriedade de Email. Como devo continuar?</b></summary>
+<summary><b>O status de verificação da minha conta não avançou além da Propriedade do email. Como devo proceder?</b></summary>
 
-Durante o **processo de verificação de Propriedade de** Email, um email de verificação é enviado para o contato principal. Verifique sua caixa de entrada de contato principal para um email maccount@microsoft.com com **a** linha de assunto **Ação necessária:** Verifique sua conta de email com a Microsoft e conclua o processo de verificação de email. O email de verificação é enviado para o endereço listado nas configurações da conta do Partner Center.
+Durante o processo de verificação da **Propriedade do email** um email de verificação é enviado ao contato principal. Procure na caixa de entrada de contato principal um email de **maccount@microsoft.com** com o assunto Ação necessária: **Verifique sua conta de email com a Microsoft** e conclua o processo de verificação de email. O email de verificação é enviado para o endereço listado nas configurações da conta do Partner Center.
 
-Lembre-se do seguinte sobre o processo de verificação de email:
+Lembre-se o seguinte sobre o processo de verificação de email:
 
 * O link de verificação de email só é válido por sete dias.
-* Você pode solicitar a ressarção do email visitando a página de perfil do parceiro e selecionando o link **Resend verification email** .
-* Para garantir que você receba o email, lista **segura microsoft.com** como um domínio seguro e verifique suas pastas de lixo eletrônico.
+* Você pode solicitar o reenvio do email visitando sua página de perfil de parceiro e selecionando o link **Reenviar email de verificação**.
+* Para garantir que você receba o email, liste **microsoft.com** como um domínio seguro e verifique suas pastas de lixo eletrônico.
 
 <br>
 
@@ -135,15 +135,15 @@ Lembre-se do seguinte sobre o processo de verificação de email:
 
 <details>
 
-<summary><b>Eu chequei minhas pastas de email e não recebi o email de verificação. O que devo fazer em seguida?</b></summary>
+<summary><b>Consultei minhas pastas de email e não recebi o email de verificação. O que devo fazer em seguida?</b></summary>
 
 Tente o seguinte:
 
 * Verifique sua pasta de lixo eletrônico ou spam.
-* Limpe o cache do navegador, vá para o painel da conta do Partner Center e selecione **Resend verification email**.
-* Tente acessar o **link Enviar novamente** o email de verificação de um navegador diferente.
-* Trabalhe com seu departamento de IT para garantir que os emails de verificação não sejam bloqueados pelo servidor de email.
-* Ajuste o filtro de spam do servidor para permitir ou listar todos os emails de **maccount@microsoft.com**.
+* Limpe o cache do navegador, vá para o painel da conta do Partner Center e selecione **Reenviar email de verificação**.
+* Tente acessar o link **Reenviar email de verificação** de um navegador diferente.
+* Trabalhe com seu departamento de TI para garantir que os emails de verificação não sejam bloqueados pelo servidor de email.
+* Ajuste o filtro de spam do servidor para permitir ou listar com segurança todos os emails de **maccount@microsoft.com**.
 
 <br>
 
@@ -153,7 +153,7 @@ Tente o seguinte:
 
 <summary><b>Quanto tempo o processo de verificação de emprego geralmente leva?</b></summary>
 
-Se todos os detalhes enviados estão corretos, o processo de verificação de emprego leva cerca de duas horas para ser concluído.
+Se todos os detalhes enviados estiverem corretos, o processo de verificação de emprego leva cerca de duas horas para ser concluído.
 
 <br>
 
@@ -161,9 +161,9 @@ Se todos os detalhes enviados estão corretos, o processo de verificação de em
 
 <details>
 
-<summary><b>Quanto tempo o processo de verificação comercial geralmente leva?</b></summary>
+<summary><b>Quanto tempo o processo de verificação de negócios geralmente leva?</b></summary>
 
-Se todos os documentos necessários são enviados, a verificação de negócios leva de um a dois dias úteis para ser concluída.
+Se todos os documentos necessários forem enviados, a verificação de negócios levará de um a dois dias úteis para ser concluída.
 
 <br>
 
@@ -171,9 +171,9 @@ Se todos os documentos necessários são enviados, a verificação de negócios 
 
 <details>
 
-<summary><b>Se eu falar com a equipe de suporte, meu tíquete será expedido?</b></summary>
+<summary><b>Se eu entrar em contato com a equipe de suporte, meu tíquete será acelerado?</b></summary>
 
-Os tíquetes de suporte são resolvidos em uma semana. Verifique se há atualizações enviadas para o email fornecido ao criar o tíquete de suporte.
+Os tíquetes de suporte são resolvidos em uma semana. Verifique se há atualizações enviadas para o email que você forneceu ao criar o tíquete de suporte.
 
 <br>
 
@@ -183,12 +183,12 @@ Os tíquetes de suporte são resolvidos em uma semana. Verifique se há atualiza
 
 <summary><b>Criei um tíquete de suporte, mas não recebi uma atualização em sete dias úteis. Onde posso obter ajuda?</b></summary>
 
-Envie um <a href="mailto:teamsubm@microsoft.com">email para teamsubm@microsoft.com</a> com os seguintes detalhes:
+Envie um email para <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> com os seguintes detalhes:
 
-* **Linha de Assunto**: Problema da conta do Partner Center para *o nome do aplicativo*.
+* **Assunto**: Problema na conta do Partner Center para *nome do aplicativo*.
 * **Corpo do email**:
   * Número do tíquete de suporte.
-  * Sua ID do vendedor.
+  * Sua ID de vendedor.
   * Uma captura de tela do problema (se possível).
 
 <br>
@@ -197,11 +197,11 @@ Envie um <a href="mailto:teamsubm@microsoft.com">email para teamsubm@microsoft.c
 
 <details>
 
-<summary><b>Onde mais posso buscar ajuda do Partner Center?</b></summary>
+<summary><b>O que mais posso fazer para obter ajuda no Partner Center?</b></summary>
 
-Os seguintes recursos também podem ajudar:
+Os recursos a seguir também podem ajudar:
 
-* [Microsoft 365 perguntas frequentes sobre envio de aplicativos](/office/dev/store/appsource-submission-faq).
+* [Perguntas frequentes sobre o envio de aplicativos do Microsoft 365](/office/dev/store/appsource-submission-faq).
 * [Documentação do marketplace comercial](/azure/marketplace/).
 
 <br>
