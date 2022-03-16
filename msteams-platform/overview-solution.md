@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398719"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501960"
 ---
 # <a name="the-teams-solution"></a>A solução do Microsoft Teams
 
@@ -74,7 +74,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
 1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o Microsoft Graph.
 1. Testar o aplicativo em um locatário de desenvolvedor com dados de usuário de exemplo.
 1. Implantar o aplicativo no Azure.
-1. Gerenciar e publicar os aplicativos na Microsoft Store com o Portal do Desenvolvedor.
+1. Gerenciar e publicar os aplicativos na Microsoft Store com o Portal do Desenvolvedor. Monetize seu aplicativo com opções, como ofertas de SaaS, compras no aplicativo e muito mais.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -161,6 +161,18 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
 
         > [!div class="nextstepaction"]
         > [Distribuir seu aplicativo](~/concepts/deploy-and-publish/apps-publish-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Monetize seu aplicativo**
+    :::column-end:::
+    :::column span="2":::
+        A repositório do Teams oferece opções de monetização de aplicativos, como ofertas de SaaS e compras no aplicativo. Escolha a melhor opção de monetização adequada para seu aplicativo Teams.
+
+        > [!div class="nextstepaction"]
+        > [Monetize seu aplicativo](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 
