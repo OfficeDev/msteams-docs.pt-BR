@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião, criando a experiência de reunião do usuário durante todo o ciclo de vida da reunião no ambiente de desktop e móvel, funções de participantes e tipos de usuário. Além disso, saiba mais sobre como integrar bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466475"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558842"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -24,6 +24,9 @@ Este artigo aborda as informações sobre o ciclo de vida da reunião e como int
 ## <a name="meeting-lifecycle"></a>Ciclo de vida da reunião
 
 Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
+
+> [!NOTE]
+> Extensões de reunião, como bots, cartões, extensões de mensagens e ações de mensagem são suportadas no cliente Web. No entanto, experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar guias ao ciclo de vida da reunião
 
@@ -143,7 +146,7 @@ A imagem a seguir exibe a **guia Contoso** com resultados da sondagem e comentá
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrar bots ao ciclo de vida da reunião
 
-Os bots habilitados no escopo de groupchat começam a funcionar em reuniões. Para implementar bots, comece com [a criação](../build-your-first-app/build-bot.md) de um bot e continue com [a criação de aplicativos para Teams reuniões](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Os bots habilitados no escopo de chat de grupo começam a funcionar em reuniões. Para implementar bots, comece com [a criação](../build-your-first-app/build-bot.md) de um bot e continue com [a criação de aplicativos para Teams reuniões](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrar extensões de mensagens ao ciclo de vida da reunião
 
@@ -158,8 +161,14 @@ Os Teams de reuniões unificadas permitem que você projete seu aplicativo com b
 As configurações de participante padrão são determinadas pelo administrador de IT de uma organização. Veja a seguir as funções dos participantes em uma reunião:
 
 * **Organizador**: o organizador agenda uma reunião, define as opções de reunião, atribui funções de reunião e inicia a reunião. Os usuários com Microsoft 365 conta e Teams licença só podem ser os organizadores e controlar as permissões do participante. Um organizador da reunião pode alterar as configurações de uma reunião específica. Os organizadores podem fazer essas alterações na página **da Web opções de** reunião.
+
 * **Apresentador**: os apresentadores têm os mesmos recursos dos organizadores com exclusões. Um apresentador não pode remover um organizador da sessão ou modificar as opções de reunião da sessão. Por padrão, os participantes que participam de uma reunião têm a função de apresentador.
-* **Participante**: um participante é um usuário que foi convidado a participar de uma reunião. Mas os participantes não estão autorizados a atuar como apresentador. Os participantes podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma das configurações da reunião ou compartilhar o conteúdo.
+
+* **Participante**: um participante é um usuário que é convidado a participar da reunião. Os participantes têm recursos limitados durante a reunião, como:
+  * Eles podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma das configurações de reunião ou compartilhar o conteúdo.  
+  * Eles podem exibir ou interagir com o aplicativo de tabulação no estágio de reunião sem instalar o aplicativo ou sem quaisquer direitos de aplicativo.
+  * Eles não podem exibir ou interagir com o aplicativo no painel lateral sem quaisquer direitos do aplicativo.
+  * Eles não estão autorizados a atuar como apresentador.
 
 > [!NOTE]
 > Somente um organizador ou apresentador pode adicionar, remover ou desinstalar aplicativos.
@@ -200,7 +209,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
 | Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Disponível |
-| Usuário federado, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
+| Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. Não é permitido adquirir, atualizar e excluir. | Não disponível | Interações no chat de reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio de reunião | Não disponível |
 
 ## <a name="next-step"></a>Próxima etapa
 
