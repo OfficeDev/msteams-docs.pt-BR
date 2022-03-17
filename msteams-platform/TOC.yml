@@ -42,6 +42,8 @@
       href: concepts/design/planning-checklist.md
     - name: Planejar guias responsivas para o aplicativo móvel do Teams
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: Planejar monetizar seu aplicativo
+      href: concepts/design/plan-to-monetize.md
 - name: Criar seu aplicativo
   items:
     - name: Visão Geral
@@ -473,16 +475,16 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Parâmetros de classificação da loja do Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-    - name: Monetize seu aplicativo
-      items:
-        - name: Visão Geral
-          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-        - name: Incluir uma oferta SaaS com seu aplicativo
-          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-        - name: Compras no aplicativo
-          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-        - name: Teste de visualização para aplicativos monetizados
-          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: Monetize seu aplicativo
+  items:
+    - name: Visão Geral
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    - name: Incluir uma oferta SaaS com seu aplicativo
+      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - name: Compras no aplicativo
+      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - name: Teste de visualização para aplicativos monetizados
+      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifesto do aplicativo
   items:
     - name: Esquema de manifesto do aplicativo

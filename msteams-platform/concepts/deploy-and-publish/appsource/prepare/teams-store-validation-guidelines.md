@@ -4,13 +4,13 @@ description: Descreve as diretrizes que todos os aplicativos enviados à loja do
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
-ms.openlocfilehash: 6326c8ff28857ab75436e61de5b8783842642acb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399132"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501925"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -20,8 +20,8 @@ Seguir essas diretrizes aumenta as chances de seu aplicativo ser aprovado no pro
 >
 > * É possível que algumas diretrizes não sejam pertinentes ao seu aplicativo. Por exemplo, se seu aplicativo não incluir um bot, você poderá ignorar as diretrizes relacionadas ao bot.
 > * Cruzamos essas diretrizes com as políticas de certificação comercial da Microsoft e adicionamos o que fazer e o que não fazer com exemplos de cenários de aprovação ou reprovação encontrados em nosso processo de validação.
-> * Determinadas diretrizes são marcadas como *Correção Obrigatória*. Se o envio do aplicativo não atender a essas diretrizes obrigatórias, você receberá um relatório de falha conosco com etapas para atenuar. O envio do aplicativo passará Microsoft Teams validação da loja somente depois que você tiver corrigido os problemas.
-> * Outras diretrizes são marcadas como *Correção Sugerida*. Para uma experiência de usuário ideal, sugerimos que você corrija os problemas, no entanto, seu envio de aplicativo não será impedido de publicar na store do Teams, se você optar por não corrigir os problemas.
+> * Determinadas diretrizes são marcadas como *Correção Obrigatória*. Se o envio do aplicativo não atender a essas diretrizes obrigatórias, você receberá um relatório de falha conosco com etapas para atenuar. O envio do aplicativo passará na Validação da loja do Microsoft Teams somente depois que você corrigir os problemas.
+> * Outras diretrizes são marcadas como *Correção sugerida*. Para uma experiência de usuário ideal, sugerimos que você corrija os problemas, no entanto, seu envio de aplicativo não será impedido de publicar na loja do Teams, se você optar por não corrigir os problemas.
 
 ## <a name="value-proposition"></a>Proposta de valor
 
@@ -52,7 +52,7 @@ O nome de um aplicativo desempenha um papel fundamental na forma como os usuári
 * Se o seu aplicativo faz parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro. Por exemplo, **Conector da Contoso para Microsoft Teams**.
 * Não é preciso copiar o nome de um aplicativo listado na loja ou em outra oferta no mercado comercial.
 * Não deve conter termos profanos ou depreciativos. O nome também não deve incluir linguagem racial ou culturalmente insensível.
-* Deve ser exclusivo. Se o seu aplicativo (Contoso) estiver listado na loja do Microsoft Teams e no Microsoft AppSource e você quiser listar outro aplicativo específico para uma região, como Contoso México, seu envio deve atender aos seguintes critérios:
+* Deve ser exclusivo. Se seu aplicativo (Contoso) estiver listado no repositório do Microsoft Teams e Microsoft AppSource e você quiser listar outro aplicativo específico para uma geografia, como Contoso México, seu envio deverá atender aos seguintes critérios:
   * Chame a funcionalidade específica da região do aplicativo no título, metadados, experiência do aplicativo de primeira resposta e seções de ajuda. Por exemplo, o título deve ser Contoso México. O título do aplicativo deve diferenciar claramente um aplicativo existente do mesmo desenvolvedor para evitar confusão para o usuário final.
   * Ao fazer o upload do pacote do aplicativo no Partner Center, selecione os **Mercados** certos onde o aplicativo estará disponível na seção **Disponibilidade**.
 
@@ -104,7 +104,7 @@ Para obter mais informações sobre como implementar a autenticação de aplicat
   * Os aplicativos que exigem que o administrador do locatário conclua a configuração única devem chamar a dependência do administrador do locatário para configurar o aplicativo (antes que qualquer outro usuário locatário possa instalar e usar o aplicativo).  
   A dependência deve ser mencionada no manifesto do aplicativo, na descrição longa do AppSource, em todos os pontos de contato da primeira experiência de execução (mensagem de boas-vindas do bot, configuração da guia ou página de configuração), texto de ajuda conforme considerado necessário como parte da resposta do bot, extensão de composição ou conteúdo da guia estática.
   
-* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação com um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou cancelar o compartilhamento de conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de desa compartilhar conteúdo deve estar presente em seu Teams app.
+* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação de um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou descompartilhar o conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de descompartilhar o conteúdo deve estar presente no aplicativo Teams.
 
 ## <a name="security"></a>Segurança
 
@@ -230,7 +230,7 @@ Os aplicativos devem estar totalmente funcionais nas versões mais recentes dos 
 
 * Microsoft Windows
 * macOS
-* MicrosoftEdge&nbsp;
+* Microsoft&nbsp;Edge
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 * Seu manifesto deve estar em conformidade com um esquema de manifesto divulgado publicamente. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md). Não envie seu aplicativo usando uma versão prévia do manifesto.
 * Se seu aplicativo incluir um bot ou uma extensão de mensagens, os detalhes no manifesto do aplicativo deverão ser consistentes com os metadados do Bot Framework, incluindo o nome do bot, o logotipo, o link da política de privacidade e o link de termos de serviço.
-* Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do aplicativo (cliente) Microsoft Azure Active Directory (Azure AD) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do aplicativo (cliente) do Microsoft Azure Active Directory (Azure AD) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Ícones do aplicativo
 
@@ -279,7 +279,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 Os ícones são um dos principais elementos que as pessoas visualizam ao navegar na loja do Teams. Seus ícones devem comunicar a marca e a finalidade do aplicativo, aderindo aos seguintes requisitos:
 
-* O pacote do aplicativo deve incluir duas .png do ícone do aplicativo: um ícone de cor e um ícone de contorno.
+* O pacote do aplicativo deve incluir duas versões .png do ícone do aplicativo: um ícone de cor e um ícone de estrutura de tópicos.
 * A versão de cor do ícone deve ter 192 x 192 pixels. O símbolo de ícone pode ser qualquer cor ou cores, mas deve ficar em um plano de fundo quadrado sólido ou totalmente transparente.
 * A versão de estrutura de tópicos do ícone é exibida nos seguintes cenários:
   * Quando seu aplicativo está em uso e **hospedado** na barra de aplicativos no lado esquerdo do Teams.
@@ -357,7 +357,7 @@ A longa descrição pode fornecer uma narrativa envolvente que destaca a propost
 
 ### <a name="screenshots"></a>Capturas de tela
 
-As capturas de tela fornecem uma visualização panorâmica proeminente do seu aplicativo para complementar seu nome, ícone e descrições. Lembre-se do seguinte:
+As capturas de tela fornecem uma visualização visual proeminente do seu aplicativo para complementar o nome, o ícone e as descrições do aplicativo. Lembre-se do seguinte:
 
 * Você pode ter até cinco capturas de tela por lista.
 * Os tipos de arquivo com suporte incluem PNG, JPEG e GIF.
@@ -519,7 +519,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
    :::column-end:::
 :::row-end:::
 
-* A tela de configuração da guia não deve inserir um site inteiro. Mantenha sua experiência de configuração focada. Por exemplo, se você estiver criando um aplicativo de gerenciamento de projeto que permite que os usuários configurem um projeto em um canal, mantenha a tela de configuração da guia focada em permitir que o usuário selecione um projeto de seu aplicativo para configurar no canal. [*Correção Obrigatória*]
+* A tela de configuração da guia não deve inserir um site inteiro. Mantenha sua experiência de configuração focada. Por exemplo, se você estiver criando um aplicativo de gerenciamento de projeto que permite que os usuários configurem um projeto em um canal, mantenha a tela de configuração da guia focada em permitir que o usuário selecione um projeto de seu aplicativo para configurar no canal. [*Correção obrigatória*]
 
 :::row:::
    :::column span="":::
@@ -577,7 +577,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
    :::column-end:::
 :::row-end:::
 
-* O conteúdo pode ser simplificado por meio da divisão entre várias guias. [*Correção Sugerida*]
+* O conteúdo pode ser simplificado por meio da divisão entre várias guias. [*Correção sugerida*]
 
 :::row:::
    :::column span="":::
@@ -589,7 +589,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
    :::column-end:::
 :::row-end:::
 
-* As guias não devem ter um cabeçalho duplicado. Remova o logotipo duplicado do iframe, pois a estrutura da guia já exibe o ícone e o nome do aplicativo. [*Correção Sugerida*]
+* As guias não devem ter um cabeçalho duplicado. Remova o logotipo duplicado do iframe, pois a estrutura de guias já exibe o ícone e o nome do aplicativo. [*Correção sugerida*]
 
  :::row:::
     :::column span="":::
@@ -675,9 +675,9 @@ Projete seu aplicativo com componentes da interface do usuário do Fluent [bási
   * Botões de voltar
   * Cabeçalhos da página
   * Menus de hambúrguer
-* A guia não deve ter uma rolagem horizontal. Aplicativos de quadro de comunicações e outros aplicativos que exigem uma tela maior para permitir que os usuários colaborem sem uma experiência de aplicativo desfeita, podem usar a rolagem horizontal dependendo de suas necessidades de negócios. [*Correção Sugerida*]
+* A guia não deve ter uma rolagem horizontal. Aplicativos de quadro de comunicações e outros aplicativos que exigem uma tela maior para permitir que os usuários colaborem sem uma experiência de aplicativo desfeita, podem usar a rolagem horizontal dependendo de suas necessidades de negócios. [*Correção sugerida*]
 
-* Links profundos em guias não devem vincular a uma página da Web externa, mas dentro Teams. Por exemplo, módulos de tarefas ou outras guias. [*Correção Obrigatória*]
+* Links profundos em guias não devem ser vinculados a uma página da Web externa, mas ao Teams. Por exemplo, módulos de tarefa ou outras guias. [*Correção Obrigatória*]
 
 :::row:::
     :::column span="":::
@@ -783,7 +783,7 @@ Projete seu aplicativo com componentes da interface do usuário do Fluent [bási
    :::column-end:::
 :::row-end:::
 
-* As guias devem usar componentes com estilo do Teams, como fontes do Teams, rampas de tipo, paletas de cores, sistema de grade, movimento, tom de voz e assim por diante, sempre que possível. Para obter mais informações, confira [diretrizes de design de guia](/microsoftteams/platform/tabs/design/tabs). [*Correção Sugerida*]
+* As guias devem usar componentes com estilo do Teams, como fontes do Teams, rampas de tipo, paletas de cores, sistema de grade, movimento, tom de voz e assim por diante, sempre que possível. Para obter mais informações, confira [diretrizes de design de guia](/microsoftteams/platform/tabs/design/tabs). [*Correção sugerida*]
 
 :::row:::
     :::column span="":::
@@ -847,7 +847,7 @@ Se seu aplicativo incluir um bot, verifique se ele segue essas diretrizes.
 
 ### <a name="bot-commands"></a>Comandos do bot
 
-Analisar a entrada do usuário e prever a intenção do usuário é difícil. Os comandos de bot fornecem aos usuários um conjunto de palavras ou frases para o bot entender.
+É difícil analisar a entrada do usuário e prever a intenção do usuário. Os comandos de bot fornecem aos usuários um conjunto de palavras ou frases para o bot entender.
 
 * A lista de comandos de bot com suporte nas configurações do aplicativo é altamente recomendada. Esses comandos são exibidos na caixa de composição quando um usuário tenta enviar uma mensagem ao bot.
 
@@ -1107,7 +1107,7 @@ As extensões de mensagens baseadas em ação devem fazer o seguinte:
    :::column-end:::
 :::row-end:::
 
-* Transferir o contexto da mensagem ao próximo estado de trabalho. [*Correção Obrigatória*]
+* Passe o contexto da mensagem para o próximo estado de trabalho. [*Correção Obrigatória*]
 
 :::row:::
     :::column span="":::
@@ -1342,7 +1342,7 @@ Use as seguintes diretrizes para extensões de reunião:
 * Deve ser ignorado depois que um usuário seleciona um botão ou executa uma ação.
 
 * **Modo Conferência**: considere as seguintes práticas recomendadas para uma experiência de criação de cena:
-  * Todas as imagens estão .png formato.
+  * Todas as imagens estão no formato .png.
   * O pacote final com todas as imagens juntas não deve exceder a resolução 1920x1080. A resolução é um número par. Essa resolução é um requisito para que as cenas sejam mostradas com êxito.
   * O tamanho máximo da cena é de 10 MB.
   * O tamanho máximo de cada imagem é de 5 MB. Uma cena é uma coleção de várias imagens. O limite é para cada imagem individual.
@@ -1384,7 +1384,7 @@ Se o seu aplicativo usa as APIs de feed de [atividades fornecidas pelo Microsoft
 
 O Programa de Conformidade dos Aplicativos do Microsoft 365 tem como objetivo ajudar as organizações a avaliarem e gerenciarem riscos através da avaliação de informações de segurança e conformidade do seu aplicativo. Se você publicar um aplicativo na loja do Teams, precisará concluir os seguintes níveis do programa:
 
-* **Verificação do Editor**: ajuda os administradores e usuários finais a entenderem a autenticidade dos desenvolvedores de aplicativos que se integram à plataforma de identidade da Microsoft. Quando concluído, um selo **verificado** azul é exibido na caixa de diálogo Azure Active Directory consentimento e outras telas. Para obter mais informações, consulte [Marcar seu aplicativo como verificado pelo editor](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+* **Verificação do Editor**: ajuda os administradores e usuários finais a entenderem a autenticidade dos desenvolvedores de aplicativos que se integram à plataforma de identidade da Microsoft. Quando concluído, um selo azul **verificado** é exibido na caixa de diálogo de consentimento Azure Active Directory e em outras telas. Para obter mais informações, consulte [Marcar seu aplicativo como verificado pelo editor](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row:::
     :::column span="":::
