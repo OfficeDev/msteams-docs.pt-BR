@@ -4,12 +4,12 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399377"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558822"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -130,7 +130,7 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 
 ### <a name="example-of-adaptive-card"></a>Exemplo de cartão adaptável
 
-![Exemplo de um cartão adaptável](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemplo de um cartão adaptável" border="true":::
 
 O código a seguir mostra um exemplo de um Cartão Adaptável:
 
@@ -273,6 +273,8 @@ Referência do Bot Framework:
 
 * [Nó de Cartões Adaptáveis](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [C# de Cartão Adaptável](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+Para saber mais sobre Cartões Adaptáveis, consulte [Cartões Adaptáveis](/adaptive-cards/).
 
 Agora você pode trabalhar com um cartão hero, que é um cartão multiuso usado para realçar visualmente uma seleção de usuário potencial.
 
