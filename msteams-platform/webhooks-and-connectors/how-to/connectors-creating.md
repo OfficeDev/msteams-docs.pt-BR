@@ -6,12 +6,12 @@ keywords: conector do Office365 para equipes
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: 42288d757a12c6e31de612f19a5556a283cf3e98
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492978"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674933"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -223,7 +223,7 @@ Execute os seguintes comandos no PowerShell do Exchange Online:
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-Para obter mais informações sobre o intercâmbio de módulos do PowerShell, consulte [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar ou desabilitar Outlook conectores, [conecte aplicativos aos seus grupos em Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
+Para obter mais informações sobre o intercâmbio de módulos do PowerShell, consulte [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar ou desabilitar Outlook conectores, [conecte aplicativos aos seus grupos em Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab).
 
 ## <a name="test-your-connector"></a>Testar seu conector
 
@@ -262,8 +262,8 @@ O conector está disponível na seção &#9679;&#9679;&#9679; > **Mais** **opç�
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuir webhook e conector
 
-1. [Configurar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) diretamente para sua equipe.
-1. Adicione uma [página de configuração](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) e [publique seu Webhook de Entrada](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) em um conector Office 365 de entrada.
+1. [Configurar um Webhook de entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) diretamente para sua equipe.
+1. Adicione uma [página de configuração](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) e [publique seu Webhook de Entrada](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) em um conector Office 365 de entrada.
 1. Empacote e publique seu conector como parte do envio [do AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) .
 
 ## <a name="code-sample"></a>Exemplo de código

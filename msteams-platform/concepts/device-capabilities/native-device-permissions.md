@@ -4,12 +4,12 @@ keywords: recursos de aplicativos do teams permissões de dispositivo de verific
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem consentimento do usuário, como verificação de qr, código de barras, imagem, áudio, recursos de vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9d06cebaac7c3e0ff5938cd3c21dda306c8b1e45
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3cb15e82101be7df9f90c94928fa91ae570c14d5
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398712"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674961"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu Microsoft Teams aplicativo
 
@@ -33,7 +33,6 @@ Ao acessar os recursos do dispositivo, você pode criar experiências mais ricas
 * Use as informações de local do usuário para exibir informações relevantes.
 
 > [!NOTE]
->
 > * Atualmente, Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel do lado da reunião.
 > * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 

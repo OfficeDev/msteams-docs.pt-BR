@@ -19,7 +19,7 @@ highlightedContent:
     - title: "Novo para Teams desenvolvimento? \U0001F680Comece aqui!"
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
-    - title: Planejar seu aplicativo
+    - title: Planeje seu aplicativo
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
     - title: Criar seu aplicativo
@@ -62,7 +62,7 @@ conceptualContent:
           text: Conexão web para canais e equipes com webhooks e Office 365 Conectores
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
-          text: Estender Teams aplicativos em Microsoft 365
+          text: Estender aplicativos do Teams pelo Microsoft 365
     - title: Recursos
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -76,7 +76,7 @@ conceptualContent:
           text: Extensões de mensagens
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
-          text: Aplicativos para Teams reuniões
+          text: Aplicativos para reuniões do Teams
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cartões e módulos de tarefa
@@ -87,7 +87,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
-          text: Monetizar seu aplicativo Teams com uma oferta saaS transacionável
+          text: Monetize seu aplicativo Teams com uma oferta de SaaS transacionável
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: Autenticação do usuário e SSO
@@ -103,7 +103,7 @@ conceptualContent:
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
           text: Criar cenários para Teams aplicativos
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+        - url: 'https://developer.microsoft.com/microsoft-teams/app-development-resources'
           itemType: reference
           text: Práticas recomendadas para Teams cenários de aplicativos
     - title: Integrar
@@ -113,7 +113,7 @@ conceptualContent:
           text: Integrar um Power Virtual Agents chatbot
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: Integrar o botão Compartilhar Teams para seu site
+          text: Integrar o botão Compartilhar para Teams seu site
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: Integrar uma Teams com SharePoint
@@ -134,7 +134,7 @@ conceptualContent:
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
           text: Microsoft Teams da comunidade
-        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+        - url: 'https://docs.microsoft.com/teamblog/'
           itemType: whats-new
           text: Anúncios
         - url: /microsoftteams/platform/feedback
@@ -151,7 +151,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: Profissionais de TI
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+        - url: 'https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b'
           itemType: concept
           text: Usuários finais
 tools:

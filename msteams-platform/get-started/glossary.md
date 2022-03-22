@@ -4,12 +4,12 @@ description: Documentação do Desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
+ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466559"
+ms.lasthandoff: 03/18/2022
+ms.locfileid: "63625995"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -188,6 +188,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Kit de ferramentas do Teams](../toolkit/teams-toolkit-fundamentals.md) | O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados do Teams diretamente no ambiente do Visual Studio Code.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | O TeamsFx é uma interface de linha de comando baseada em texto que acelera o desenvolvimento de aplicativos do Teams. Ele também é chamado de CLI do TeamsFx.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | O SDK do TeamsFx é pré-configurado no projeto com scaffolding usando o Kit de Ferramentas do TeamsFx ou a CLI. |
+| [SDK do TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | O SDK do TeamsJS permite que você crie experiências hospedadas no Teams. Os recursos da [versão mais recente](~/m365-apps/using-teams-client-sdk-preview.md) estendem o aplicativo Teams para execução no Outlook e no Office. |
 | [Teams para dispositivos móveis](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | O Microsoft Teams disponível como um aplicativo móvel. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | Uma página de aterrissagem da loja que leva aplicativos para os usuários em um único lugar. Os aplicativos são categorizados por uso, setor e muito mais. Um aplicativo deve seguir as diretrizes de validação da Store e obter uma aprovação antes que ele seja disponibilizado aos usuários por meio da loja do Teams.  <br>**Consulte também**: [Diretrizes de validação da loja](#s) |
 | [Workbench do Teams](../sbs-gs-spfx.yml) | Um workbench no Visual Studio Code usado no build para aplicativos do Teams criados usando o SPFx e o Kit de Ferramentas do Teams. <br>**Consulte também**: [Workbench](#w); [Workbench local](#l) |

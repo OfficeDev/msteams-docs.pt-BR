@@ -4,12 +4,12 @@ description: Saiba mais sobre como invocar e descartar módulos de tarefa, objet
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399328"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674723"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar e ignorar módulos de tarefas
 
@@ -208,7 +208,7 @@ A próxima seção fornece detalhes sobre como usar um teclado com o módulo de 
 
 Com módulos de tarefa baseados em HTML ou JavaScript, você deve garantir que o módulo de tarefas do aplicativo possa ser usado com um teclado. Os programas de leitor de tela também dependem da capacidade de navegar usando o teclado. Isso inclui as duas coisas a seguir:
 
-* Usando o [atributo tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) em suas marcas HTML para controlar quais elementos podem ser focalizados. Além disso, use o atributo tabindex para identificar onde ele participa da navegação sequencial do teclado geralmente com as teclas <kbd>Tab</kbd> e <kbd>Shift-Tab</kbd> .
+* Usando o [atributo tabindex](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) em suas marcas HTML para controlar quais elementos podem ser focalizados. Além disso, use o atributo tabindex para identificar onde ele participa da navegação sequencial do teclado geralmente com as teclas <kbd>Tab</kbd> e <kbd>Shift-Tab</kbd> .
 * Manipulando <kbd>a chave Esc</kbd> no JavaScript para o módulo de tarefas. O código a seguir fornece um exemplo de como manipular a <kbd>chave Esc</kbd> :
 
     ```javascript

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 13325d323ec1d4d87f6cd5ff64c4a6c71552e01c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 1003097e17ade1abb475568333e6cf46213bd9ee
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452694"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674814"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
@@ -44,7 +44,7 @@ As imagens que você carrega com o idioma inglês são usadas no AppSource.
 
 ## <a name="localize-strings-in-your-app-manifest"></a>Localize cadeias de caracteres no manifesto do aplicativo
 
-Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo `$schema` o atributo no arquivo manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` como ou superior e atualizando a propriedade como versão (`1.5` neste caso).
+Você deve usar o esquema Microsoft Teams aplicativo e `v1.5` posteriormente para localizar seu aplicativo. Você pode fazer isso definindo `$schema` o atributo no arquivo manifest.json `$schema` `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` `manifestVersion` como ou superior e atualizando a propriedade como versão (`1.5` neste caso).
 
 Você deve adicionar a propriedade `localizationInfo` com o idioma padrão compatível com o aplicativo. O idioma padrão é usado como o idioma de fallback final se as configurações do cliente do usuário não corresponderem a nenhum dos seus idiomas adicionais.
 
@@ -54,7 +54,7 @@ O manifesto.json a seguir ajuda a adicionar a `localizationInfo` propriedade com
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "localizationInfo": {
   "defaultLanguageTag": "en",
@@ -75,7 +75,7 @@ A seguir está um exemplo para localização .json:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
   "manifestVersion": "1.5",
   "name.short": "Localización",
   "name.full": "Aplicación de localización",
@@ -99,7 +99,7 @@ Se o idioma do usuário for definido como 'en-ca', as seguintes alterações oco
 
 Se o idioma do usuário estiver definido como 'es-es', o cliente Teams assume as cadeias de caracteres 'fr'. O Teams cliente não substitui as cadeias de caracteres por nenhum dos arquivos de idioma, pois nenhuma tradução 'es' ou 'es-es' é fornecida.
 
-Portanto, você deve fornecer traduções de nível superior, somente de idioma em seu manifesto. Por exemplo, 'en' em vez de 'en-us'. Você deve fornecer substituições de nível de região apenas para as poucas cadeias de caracteres que precisam delas.
+Portanto, você deve fornecer traduções de nível superior, somente de idioma em seu manifesto. Por exemplo, em `en` vez de `en-us`. Você deve fornecer substituições de nível de região apenas para as poucas cadeias de caracteres que precisam delas.
 
 ### <a name="example-manifestjson-change"></a>Exemplo de alteração manifest.json
 
@@ -135,7 +135,7 @@ A alteração de manifest.json é mostrada no exemplo a seguir:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",

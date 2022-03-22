@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de recursos de mapa de localização
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a375d8f7c2692c9da8e220474c2c0ece97b623c2
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452820"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675010"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização
 
@@ -34,9 +34,9 @@ Para integrar recursos de local, você deve atualizar o arquivo de manifesto do 
 > [!NOTE]
 > Atualmente, o Microsoft Teams suporte para recursos de localização está disponível apenas para clientes móveis.
 
-## <a name="update-manifest"></a>Manifesto de atualização
+## <a name="update-manifest"></a>Atualizar manifesto
 
-Atualize seu Teams arquivo [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) do aplicativo adicionando a `devicePermissions` propriedade e especificando `geolocation`. Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar os recursos de localização. A atualização do manifesto do aplicativo é a seguinte:
+Atualize seu Teams arquivo [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) do aplicativo adicionando a `devicePermissions` propriedade e especificando `geolocation`. Ele permite que seu aplicativo peça permissões de requisito dos usuários antes de começar a usar os recursos de localização. A atualização para o manifesto do aplicativo é a seguinte:
 
 ``` json
 "devicePermissions": [
@@ -45,7 +45,6 @@ Atualize seu Teams arquivo [manifest.json](../../resources/schema/manifest-schem
 ```
 
 > [!NOTE]
->
 > * O **prompt De Permissões de** Solicitação é exibido automaticamente quando uma API Teams relevante é iniciada. Para obter mais informações, consulte [request device permissions](native-device-permissions.md).
 > * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
 
