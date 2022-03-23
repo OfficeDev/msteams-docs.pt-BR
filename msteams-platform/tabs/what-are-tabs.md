@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 72c1ae8b22ff4d3ac96ad7c6c07a98dd37266a99
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492959"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727913"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -90,6 +90,7 @@ Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por apl
 
 ## <a name="see-also"></a>Confira também
 
+* [Guias personalizadas no Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Solicitar permissões do dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar recursos de mídia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrar um scanner de código de barras QR](../concepts/device-capabilities/qr-barcode-scanner-capability.md)

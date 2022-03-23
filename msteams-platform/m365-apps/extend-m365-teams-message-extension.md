@@ -4,12 +4,12 @@ description: Veja como atualizar sua extensão de mensagens baseada em pesquisa 
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453513"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727520"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Estender uma extensão Teams de mensagens em Microsoft 365
 
@@ -152,8 +152,10 @@ Ao testar sua extensão de mensagens, você pode identificar a origem (provenien
 Para visualizar seu aplicativo em execução Outlook na Web:
 
 1. Faça logoff [outlook.com](https://www.outlook.com) usando credenciais para seu locatário de teste.
-1. Clique em **Nova mensagem**.
-1. Abra o menu **de** sobreposição Mais aplicativos na parte inferior da janela de composição.
+1. Selecione **Nova mensagem**.
+1. Abra **o menu de** sobreposição Mais aplicativos na parte inferior da janela de composição.
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Clique no menu &quot;Mais aplicativos&quot; na parte inferior da janela de composição de email para usar a extensão da mensagem":::
 
 Sua extensão de mensagens será listada. Você pode invocá-lo a partir daí e usá-lo da mesma forma que faria ao compor uma mensagem no Teams.
 

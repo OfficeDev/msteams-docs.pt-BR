@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar manifesto do aplicativo, configurar recursos, como, caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558835"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727299"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -183,6 +183,10 @@ Os participantes podem compartilhar partes específicas do aplicativo para o est
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Para compartilhar partes específicas do aplicativo em estágio, você deve invocar as APIs relacionadas na biblioteca SDK Teams cliente. Para obter mais informações, consulte [Referência de API](API-references.md).
+
+> [!NOTE]
+> * Para compartilhar partes específicas do aplicativo em estágio, use Teams versão 1.12 ou posterior do manifesto.
+> * O compartilhamento de partes específicas do aplicativo para estágio é suportado apenas Teams clientes da área de trabalho.
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 

@@ -10,7 +10,7 @@ A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necess�
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-Selecione o Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
+Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
 
 1. Selecione **Provisionamento na Nuvem**.
 
@@ -81,6 +81,7 @@ Depois que as etapas de provisionamento e implantação são concluídas:
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de tela mostrando o aplicativo de início remotamente." border="false":::
 
 1. Selecione **Adicionar**.
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
 
    Seu aplicativo é carregado no site do Azure.

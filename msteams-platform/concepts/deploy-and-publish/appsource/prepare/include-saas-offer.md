@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6828350ab09dede3022bb9cad61756eccc9988f0
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501995"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727336"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu aplicativo
 
@@ -52,6 +52,7 @@ Ao planejar como monetizar seu aplicativo do Teams, aqui estão algumas coisas a
 * Saiba como o [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (Microsoft Azure Active Directory (Azure AD) SSO é necessário para aplicativos do Teams com ofertas SaaS.)
 * Entenda que você é responsável pelo gerenciamento e pagamento da infraestrutura necessária para dar suporte ao uso da oferta de SaaS dos seus clientes.
 * Planeje para dispositivos móveis. Para evitar violar políticas de armazenamento de aplicativos de terceiros, seu aplicativo não pode incluir links que permitem que os usuários comprem planos de assinatura em dispositivos móveis. No entanto, você ainda pode indicar se seu aplicativo tem recursos que exigem um plano de assinatura. Para obter mais informações, consulte as [políticas de certificação do mercado comercial](/legal/marketplace/certification-policies#114048-mobile-experience) relacionadas.
+* Atualmente, o Teams não oferece suporte a modelos de preços de taxa fixa. No entanto, você pode criar uma oferta transacionável de taxa fixa no Partner Center. Para obter mais informações, confira [as práticas recomendadas para vender uma oferta transacionável de taxa fixa](#best-practices-for-selling-a-flat-rate-transactable-offer).
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>Integrar-se às APIs de atendimento de Saas
 
@@ -69,7 +70,7 @@ Para obter instruções completas e referência à API, consulte a documentaçã
 
 * Com as ofertas de SaaS transacionáveis para aplicativos do Teams, os planos de assinatura (licenças) devem ser atribuídos a usuários individuais, em vez de grupos ou a uma organização inteira.
 * Quando os usuários receberem um plano de assinatura, notifique-os por meio de um bot Teams ou email. Na mensagem, inclua informações sobre como adicionar o aplicativo ao Teams e começar.
-* Suporte a ideia de vários administradores. Em outras palavras, vários usuários na mesma organização podem comprar e gerenciar suas próprias assinaturas.
+* Apoie a ideia de vários administradores. Em outras palavras, vários usuários na mesma organização podem comprar e gerenciar suas próprias assinaturas.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Criar uma página de aterrissagem para gerenciamento de assinaturas
 
@@ -82,7 +83,7 @@ Para obter instruções completas, [criar a página de aterrissagem para sua ofe
 Considere as seguintes abordagens ao criar uma página de aterrissagem para o aplicativo do Teams que você está monetizando. Consulte uma página de aterrissagem de exemplo na [experiência de compra do usuário final](#end-user-purchasing-experience).
 
 * Os usuários devem ser capazes de fazer logon em sua página de aterrissagem com as mesmas credenciais do Azure AD usadas para comprar a assinatura. Para obter mais informações, confira [ofertas de SaaS transacionáveis e do Azure AD no marketplace comercial](/azure/marketplace/azure-ad-saas).
-* Permitir que os usuários tomem as seguintes ações em sua página de aterrissagem. Não se esqueça de considerar o que é apropriado para a função e as permissões de um usuário (por exemplo, talvez você queira permitir que apenas os administradores de assinatura pesquisem por usuários):
+* Permita que os usuários realizem as seguintes ações em sua página de aterrissagem. Não se esqueça de considerar o que é apropriado para a função e as permissões de um usuário (por exemplo, você pode permitir que apenas administradores de assinatura pesquisem usuários):
   * Pesquisar usuários em sua organização usando email ou outra forma de identidade.
   * Consultar usuários aos que podem atribuir licenças em uma lista.
   * Atribuir licenças a um ou vários usuários ao mesmo tempo.
@@ -112,7 +113,7 @@ Consulte [criar uma oferta de SaaS](/azure/marketplace/create-new-saas-offer) pa
 
     * Em integração do **Microsoft 365**, adicione o link AppSource à listagem do aplicativo. Esta etapa garante que as pessoas possam comprar seus planos de assinatura no AppSource, além do Teams.
 
-1. Armazene seu editor e ofereça IDs. (Você precisa deles mais tarde para vincular a oferta ao seu aplicativo no Portal do Desenvolvedor.)
+1. Armazene seus IDs de editor e oferta. (Você precisará deles posteriormente para vincular a oferta ao seu aplicativo no Portal do desenvolvedor.)
 
 1. Publique sua oferta no marketplace comercial.
 
@@ -121,7 +122,7 @@ Consulte [criar uma oferta de SaaS](/azure/marketplace/create-new-saas-offer) pa
 Recomendamos que você verifique a experiência de compra de ponta a ponta antes de publicar sua oferta de SaaS. Você pode fazer isso criando uma oferta separada apenas para teste. Para obter informações completas, consulte [Visão geral da oferta de teste](/azure/marketplace/plan-saas-offer#test-offer), [crie uma oferta de teste](/azure/marketplace/create-saas-dev-test-offer) e [visualize sua oferta](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Você pode testar uma transação de ponta a ponta no Teams até que seu aplicativo conclua a validação da loja. Para obter mais informações, consulte [Prévia de teste para aplicativos monetizados](Test-preview-for-monetized-apps.md).
+> Você pode testar uma transação de ponta a ponta no Teams até que seu aplicativo conclua a validação da loja. Para obter mais informações, confira[Teste de versão prévia para aplicativos monetizados](Test-preview-for-monetized-apps.md).
 
 Do ponto de Teams, esses testes devem verificar se o número de licenças e atribuições corresponderá ao que está no centro de administração Teams quando os usuários:
 
@@ -202,6 +203,24 @@ Se você desvincular uma oferta SaaS incluída na listagem da loja Teams, você 
 1. Depois que a oferta é desvinculada, faça o seguinte para atualizar a listagem da loja:
    1. Selecione **Distribuir > Publicar no repositório do Teams**.
    1. Selecione **Abrir a Central de Parceiros** para iniciar o processo de publicação do aplicativo sem a oferta.
+
+## <a name="best-practices-for-selling-a-flat-rate-transactable-offer"></a>Práticas recomendadas para vender uma oferta transacionável de taxa fixa
+
+1. Crie sua [oferta de SaaS transacionável de taxa fixa](/azure/marketplace/plan-saas-offer) e [publique no AppSource](/azure/marketplace/test-publish-saas-offer).
+
+1. Vincule sua [oferta de SaaS ao aplicativo Teams](/azure/marketplace/create-new-saas-offer) no Partner Center.
+
+    > [!CAUTION]
+    > Não adicione a ID da Oferta e Publisher ID ao manifesto do aplicativo. O aplicativo não passará no processo de envio da loja do Teams.
+
+1. Crie uma mensagem no aplicativo em seu aplicativo do Teams informando que uma assinatura é necessária e forneça um hiperlink para sua oferta de SaaS no AppSource para promover sua oferta de taxa fixa.
+
+   > [!NOTE]
+   > Certifique-se de que nenhum link do mercado apareça em dispositivos móveis e tablets para cumprir as [políticas de lojas de aplicativos de terceiros](/legal/marketplace/certification-policies).
+
+1. Envie seu aplicativo para validação.
+
+1. Depois que o marketplace do Teams oferecer suporte a preços de taxa fixa, atualize o manifesto do aplicativo com a ID da oferta e a ID do editor e reenvie seu aplicativo para validação.
 
 ## <a name="see-also"></a>Confira também
 

@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a5b8b2ca2a8685db5cd78ece283ea2a2938e8ab
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398999"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727637"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -26,6 +26,7 @@ Tenha uma ideia do que você aprenderá:
 Vamos dar uma olhada rápida nas opções de ambiente de compilação que você pode escolher e o roteiro para criar e implantar um aplicativo Teams.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um aplicativo do Teams":::
+
 
 ## <a name="app-capabilities-and-development-tools"></a>Recursos de aplicativo e ferramentas de desenvolvimento
 
