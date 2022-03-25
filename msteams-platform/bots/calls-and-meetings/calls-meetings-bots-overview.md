@@ -4,12 +4,12 @@ description: Saiba como seus aplicativos Microsoft Teams podem interagir com usu
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamadas de chamadas de áudio vídeo IVR voz online reuniões em tempo real fluxos de mídia bot
-ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727629"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63783999"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -108,3 +108,5 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 * [Como desenvolver bots de reunião online e de chamada em seu computador](./debugging-local-testing-calling-meeting-bots.md)
 * [Requisitos e considerações para bots de mídia hospedados pelo aplicativo](./requirements-considerations-application-hosted-media-bots.md)
 * [Informações técnicas sobre como lidar com notificações de chamadas de entrada](./call-notifications.md)
+* [Configurar um atendedor automático](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Configurar a resposta automática para Salas do Microsoft Teams em dispositivos de telefone de Teams Android e vídeo](/microsoftteams/set-up-auto-answer-on-teams-android)

@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 6a5b8b2ca2a8685db5cd78ece283ea2a2938e8ab
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 4dc9c77cacea5af84164bbb6e7c56a50461a0b0d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727637"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765873"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -26,7 +26,6 @@ Tenha uma ideia do que você aprenderá:
 Vamos dar uma olhada rápida nas opções de ambiente de compilação que você pode escolher e o roteiro para criar e implantar um aplicativo Teams.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um aplicativo do Teams":::
-
 
 ## <a name="app-capabilities-and-development-tools"></a>Recursos de aplicativo e ferramentas de desenvolvimento
 
@@ -49,6 +48,8 @@ Se você já estiver familiarizado com o fluxo de trabalho Yeoman, talvez prefir
 
 Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idioma (ou estrutura) e prepare seu ambiente de desenvolvimento.
 
+> [!div class="nextstepaction"]
+> [Criar um aplicativo do Teams com o Blazor](../sbs-gs-blazorapp.yml)
 > [!div class="nextstepaction"]
 > [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]

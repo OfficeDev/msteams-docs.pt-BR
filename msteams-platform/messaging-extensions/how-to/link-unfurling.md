@@ -5,12 +5,12 @@ description: Saiba como adicionar link desfraldado com extensão de mensagens em
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1ecab904f21d84cfa329e1c390d51ebade6a8e05
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006f1194fc15d633f442802891a1f5f28151f81e
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453863"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766153"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -178,6 +178,10 @@ A seguir está um exemplo da resposta:
 ```
 
 * * *
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../../sbs-botbuilder-linkunfurling.yml) desembolsar links Teams usando bot.
 
 ## <a name="see-also"></a>Confira também
 

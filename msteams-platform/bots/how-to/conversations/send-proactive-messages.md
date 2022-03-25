@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: Enviar mensagem, obter ID do usuário, obter ID do canal, obter ID da conversa
-ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: dc8c600c08c3f0e381a85aeef6c268ad8a5cbb96
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355731"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784006"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -287,3 +287,4 @@ Siga o [guia passo a passo](../../../sbs-send-proactive.yml), que ajuda você a 
 * [**Exemplos de código de mensagens proativas do Teams**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Canais e conversas de chat em grupo com um bot do Microsoft Teams](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Responder à ação de envio do módulo de tarefas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Enviar notificações proativas aos usuários](/azure/bot-service/bot-builder-howto-proactive-message)

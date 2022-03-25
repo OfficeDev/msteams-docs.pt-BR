@@ -5,12 +5,12 @@ description: Perguntas a serem consideradas enquanto você planeja seu aplicativ
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399314"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765929"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
@@ -91,7 +91,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | --- | --- |
 | 1 | Existem interações individuais com o aplicativo necessárias por razões de privacidade ou outros? Por exemplo, verificar o saldo da licença ou outras informações privadas. |
 | 2 | Haverá colaboração entre usuários que podem não ter equipes comuns? Por exemplo, encontrar os próximos eventos em toda a organização em uma empresa. |
-| 3 | Existem notificações ou mensagens personalizadas que precisarão ser enviadas a um usuário ao longo da experiência do aplicativo Teams? |
+| 3 | Existem notificações ou mensagens personalizadas que precisam ser enviadas a um usuário em toda a experiência do aplicativo Teams? |
 
 </details>
 <br>

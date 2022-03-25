@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: casos de uso funcionalidade do dispositivo de extensibilidade pontos de entrada
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399167"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766034"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -21,9 +21,9 @@ No fundo, o Teams é uma plataforma de colaboração. Também é uma plataforma 
 
 Nesta seção, saiba como:
 
-* Identifique e mapeie casos de uso para recursos do Microsoft Teams.
+* Identificar e mapear casos de usar para recursos do Microsoft Teams
 * Utilize a lista de verificação de planejamento.
-* Planeje além da Implantação de aplicativos.
+* Planeje além da implantação do aplicativo
 
 ## <a name="plan-with-teams"></a>Planejar com Microsoft Teams
 
@@ -52,7 +52,7 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 
 * **Crie a interface do usuário do seu aplicativo**: use o Teams UI Toolkit e a UI Library para projetar o layout do seu aplicativo.
 
-* **Use o Microsoft Teams como uma plataforma**: A plataforma do Microsoft Teams ajuda você a criar um aplicativo único ou com vários recursos. Seu aplicativo do Microsoft Teams é apoiado por produtos e serviços integrados que fortalecem a experiência do aplicativo.
+* **Use o Microsoft Teams como uma plataforma**: A plataforma do Microsoft Teams ajuda você a criar um aplicativo único ou com vários recursos. Seu aplicativo Teams é suportado por produtos e serviços integrados que fortalecem a experiência do aplicativo.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams." border="true":::
 
@@ -76,9 +76,9 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 
 | Recursos   | CCG | GCC-High | DOD |
 |-------------|---------|---|---|
-| Aplicativos de propriedade de Teams como em aplicativos desenvolvidos internamente | ✔️ O aplicativo está habilitado se tiver a GCC. | ✔️ O aplicativo está habilitado se tiver a GCC-High. | ✔️ O aplicativo está habilitado se tiver o DOD. |
+| Aplicativos de propriedade de Teams como em aplicativos desenvolvidos internamente | ✔️ O aplicativo está habilitado se tiverGCC | ✔️ O aplicativo está habilitado se tiver GCC-High | ✔️ O aplicativo está habilitado se tiver DOD |
 | Aplicativos da Microsoft | ✔️ Aplicativos da Microsoft compatíveis com o GCC | ✔️ Aplicativos da Microsoft compatíveis com a GCC-High. | ✔️ Aplicativos da Microsoft compatíveis com o DOD |
-| Aplicativos 3p ou de terceiros | ✔️ Aplicativos de terceiros estão disponíveis. Desabilitado por padrão e o administrador do locatário usa seu próprio critério para habilita-lo. | ❌ | ❌ |
+| Aplicativos 3P ou de terceiros | ✔️ Aplicativos de terceiros estão disponíveis. Desabilitado por padrão e o administrador do locatário usa seu próprio critério para habilita-lo. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️ | ✔️ |
 | Sideload de aplicativos | ✔️ | ❌ | ❌ |

@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452827"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765936"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mapeie seus casos de uso para os recursos do aplicativo Teams
 
@@ -26,7 +26,7 @@ Você pode mapear seus casos de uso com base em:
 
 A próxima etapa é combinar casos de uso com recursos do aplicativo.
 
-Veja uma lista de cenários comuns de usuários mapeados para as funcionalidades do Teams. Não é uma lista exaustiva, mas ajudará você a pensar em algumas das possibilidades disponíveis para você.
+Veja uma lista de cenários comuns de usuários mapeados para as funcionalidades do Teams. Não é uma lista exaustiva, mas ajuda você a pensar em algumas das possibilidades disponíveis para você.
 </br>
 </br>
 <details>

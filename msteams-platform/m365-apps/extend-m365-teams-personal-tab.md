@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453716"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765943"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams pessoal em Microsoft 365
 
@@ -120,7 +120,7 @@ Se seu aplicativo fizer uso de headers de Política de Segurança de [Conteúdo 
 |Microsoft 365 host| permissão frame-ancestral|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
+| Escritório | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
@@ -136,15 +136,14 @@ Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesm
 
 Na seção **Aplicativos cliente autorizados** , verifique se todos os seguintes valores `Client Id` são adicionados:
 
-|Microsoft 365 cliente | ID do cliente |
+|Microsoft 365 aplicativo cliente | ID do cliente |
 |--|--|
-|Teams desktop, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4345a7b9-9a63-4910-a426-35363201d503|
+|Área de trabalho do Teams, celular |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|Web do Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
 |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+|Office para a área de trabalho  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
 |Outlook para área de trabalho | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000000 |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Faça o sideload do seu aplicativo do Teams
@@ -196,7 +195,7 @@ Para exibir seu aplicativo em Outlook na Web:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção releitos ('Mais aplicativos') na barra lateral do outlook.com para ver suas guias pessoais instaladas":::
 
-### <a name="office"></a>Office
+### <a name="office"></a>Escritório
 
 Para exibir seu aplicativo em execução em Office em Windows desktop:
 

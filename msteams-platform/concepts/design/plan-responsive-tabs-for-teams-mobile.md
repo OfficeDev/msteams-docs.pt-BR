@@ -5,16 +5,16 @@ description: Guia para planejar a criação de um aplicativo no Teams celular
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453520"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766125"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
- Teams plataforma oferece a oportunidade de criar aplicativos em dispositivos móveis e desktop. Os usuários do aplicativo podem preferir desktop ou móvel ou ambos. Os usuários podem preparar dados na área de trabalho, mas consumir e compartilhar mais dados usando o celular. A chave para criar qualquer aplicativo é entender e atender às necessidades dos usuários. Há recursos como bots, extensões de mensagens e conectores que funcionam perfeitamente na área de trabalho e em dispositivos móveis. No entanto, a criação de guias e módulos de tarefas exige planejamento para hospedar sua experiência da Web em Teams celular. O documento orienta para planejar suas páginas da Web responsivas Teams celular.
+ Teams plataforma oferece a oportunidade de criar aplicativos em dispositivos móveis e desktop. Os usuários do aplicativo podem preferir desktop ou móvel ou ambos. Os usuários podem preparar dados na área de trabalho, mas consumir e compartilhar mais dados usando o celular. A chave para criar qualquer aplicativo é entender e atender às necessidades dos usuários. Há recursos como bots, extensões de mensagens e conectores que funcionam perfeitamente na área de trabalho e em dispositivos móveis. No entanto, a criação de guias e módulos de tarefas exige planejamento para hospedar sua experiência da Web em Teams celular. O artigo orienta para planejar suas páginas da Web responsivas Teams celular.
 
 ## <a name="identify-apps-scope"></a>Identificar escopo de aplicativos
 

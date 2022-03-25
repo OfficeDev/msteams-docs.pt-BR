@@ -5,16 +5,16 @@ description: Planeje seu aplicativo, entenda o usuário e suas necessidades, ent
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399055"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766118"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
-Na estrutura social colaborativa do Teams, há uma ampla variedade de necessidades dos usuários que você pode resolver com um aplicativo do Teams. Por exemplo, um aplicativo que preenche lacunas para alcançar uma colaboração eficaz é uma ótima opção.
+Na estrutura social colaborativa do Teams, há uma ampla variedade de necessidades dos usuários que você pode resolver com um aplicativo do Teams. Por exemplo, um aplicativo que preencha lacunas para alcançar uma colaboração efetiva é uma ótima opção.
 
 O usuário do aplicativo e os requisitos do aplicativo são as diretrizes básicas que determinam todas as opções de aplicativo que você fará. A criação do design do aplicativo, a seleção de recursos, a determinação do ambiente de build e teste e a distribuição de aplicativos seguem os requisitos do usuário do aplicativo.
 
@@ -150,7 +150,7 @@ Há algumas opções para [incorporar seu aplicativo na experiência de chamada 
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para o Teams
 
-A [API do Microsoft Graph para Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que podem ajudá-lo a criar ou aprimorar recursos para seu aplicativo.
+A [API do Microsoft Graph para o Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que ajudam você a criar ou aprimorar recursos para seu aplicativo.
 
    :::column-end:::
 
