@@ -5,12 +5,12 @@ description: Saiba como criar uma extensão Microsoft Teams de mensagens usando 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0dc7e8798301e57cc55814938e3311173ad82ce3
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452904"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590679"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 
@@ -42,7 +42,7 @@ O centro de sua extensão de mensagens é seu serviço Web. Ele definirá uma ú
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrar seu serviço Web com a estrutura bot
 
-As extensões de mensagens aproveitam o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação seguro; se você ainda não tiver um, precisará registrar seu serviço Web na Estrutura de Bots. A ID do Aplicativo da Microsoft (vamos nos referir a isso como sua ID de Bot de dentro do Teams, para identificá-la de outras IDs de aplicativos com as quais você pode estar trabalhando) e o ponto de extremidade de mensagens com o qual seu registro na Estrutura de Bots será usado na extensão de mensagens para receber e responder a solicitações. Se você estiver usando um registro existente, certifique-se de [habilitar o canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
+As extensões de mensagens aproveitam o esquema de mensagens da Estrutura de Bot e o protocolo de comunicação seguro; se você ainda não tiver um, precisará registrar seu serviço Web na Estrutura de Bots. A ID do Aplicativo da Microsoft (vamos nos referir a isso como sua ID de Bot de dentro do Teams, para identificá-la de outras IDs de aplicativos com as quais você pode estar trabalhando) e o ponto de extremidade de mensagens com o qual seu registro na Estrutura de Bots será usado na extensão de mensagens para receber e responder a solicitações. Se você estiver usando um registro existente, certifique-se de [habilitar o canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0)
 
 Se você seguir um dos inícios rápidos ou começar a partir de um dos exemplos disponíveis, você será orientado a registrar seu serviço Web. Se você quiser registrar manualmente seu serviço, você tem três opções para fazer isso. Se você optar por se registrar sem usar uma assinatura do Azure, não poderá aproveitar o fluxo de autenticação OAuth simplificado fornecido pela Estrutura de Bots. Você poderá migrar seu registro para o Azure após a criação.
 

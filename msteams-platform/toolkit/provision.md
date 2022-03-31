@@ -1,21 +1,21 @@
 ---
-title: Usar Teams Toolkit para provisionar recursos de nuvem
+title: Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 author: MuyangAmigo
 description: Provisionar recursos de nuvem
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674989"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590644"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para provisionar recursos de nuvem
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 
-O TeamsFx se integra ao Azure e Microsoft 365 nuvem, o que permite que você coloque seu aplicativo no Azure com um único comando. O TeamsFx se integra ao Gerenciador de Recursos do Azure que permite provisionar recursos do Azure, que seu aplicativo precisa para abordagem de código.  
+O TeamsFx se integra ao Azure e Microsoft 365 nuvem, o que permite que você coloque seu aplicativo no Azure com um único comando. O TeamsFx se integra ao Azure Resource Manager que permite provisionar recursos do Azure, que seu aplicativo precisa para abordagem de código.  
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -50,7 +50,7 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Criação de recursos para Teams aplicativo Tab
 
-|Recurso|Objetivo|Descrição |
+|Resource|Objetivo|Descrição |
 |----------|--------------------------------|-----|
 | Armazenamento do Azure | Hospedar seu aplicativo de tabulação | Habilita o recurso de aplicativo Web estático para hospedar seu aplicativo de guia |
 | Plano de serviço de aplicativo para auth simples | Hospedar o aplicativo Web do Simple Auth |Não aplicável |
@@ -59,33 +59,33 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Criação de recursos para Teams bot ou aplicativo de extensão de mensagens
 
-|Recurso|Objetivo| Descrição |
+|Resource|Objetivo| Descrição |
 |----------|--------------------------------|-----|
 | Serviço de bot do Azure | Registra seu aplicativo como um bot com a estrutura de bot | Conecta o bot ao Teams |
 | Plano de serviço de aplicativo para bot | Hospedar o aplicativo Web do bot |Não aplicável |
 | Aplicativo Web para bot | Hospedar seu aplicativo bot | Adiciona identidade atribuída ao usuário para acessar outros recursos do Azure. <br /> Adiciona configurações de aplicativo exigidas pelo [SDK teamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure | Compartilhado entre recursos e recursos diferentes |
 
-### <a name="resource-creation-for-azure-functions-in-the-project"></a>Criação de recursos para funções do Azure no projeto
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>Criação de recursos para Azure Functions no projeto
 
-|Recurso|Objetivo| Descrição|
+|Resource|Objetivo| Descrição|
 |----------|--------------------------------|-----|
 | Plano de serviço de aplicativo para aplicativo de função | Hospedar o aplicativo de função |Não aplicável |
 | Aplicativo function | Hospedar suas APIs de funções do Azure | Adiciona identidade atribuída ao usuário para acessar outros recursos do Azure. <br /> Adiciona a regra de compartilhamento de recursos de origem cruzada (CORS) para permitir solicitações do aplicativo de tabulação <br /> Adiciona a configuração de autenticação que permite apenas solicitações de seu Teams app. <br /> Adiciona configurações de aplicativo exigidas pelo [SDK teamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Armazenamento do Azure para aplicativo de função | Obrigatório para criar aplicativo de função |Não aplicável|
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure | Compartilhado entre recursos e recursos diferentes |
 
-### <a name="resource-creation-for-azure-sql-in-the-project"></a>Criação de recursos para o Azure SQL no projeto
+### <a name="resource-creation-for-azure-sql-in-the-project"></a>Criação de recursos para SQL do Azure no projeto
 
-|Recurso|Objetivo | Descrição |
+|Resource|Objetivo | Descrição |
 |----------|--------------------------------|-----|
-| Servidor SQL Azure | Hospedar a instância de banco de dados SQL do Azure | Permite que todos os serviços do Azure acessem o servidor |
-| Banco de dados SQL Azure | Armazenar dados para seu aplicativo | Concede ao usuário a identidade atribuída, a permissão de leitura ou gravação para o banco de dados |
+| SQL do Azure servidor | Hospedar a instância SQL do Azure banco de dados | Permite que todos os serviços do Azure acessem o servidor |
+| SQL do Azure banco de dados | Armazenar dados para seu aplicativo | Concede ao usuário a identidade atribuída, a permissão de leitura ou gravação para o banco de dados |
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure | Compartilhado entre recursos e recursos diferentes |
 
-### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Criação de recursos para o Gerenciamento de API do Azure no projeto
+### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Criação de recursos para o Azure Gerenciamento de API no projeto
 
-|Recurso|Objetivo|
+|Resource|Objetivo|
 |----------|--------------------------------|
 | Aplicativo do Azure AD para serviço de gerenciamento de API | Permite que as APIs de acesso da Plataforma do Microsoft Power gerenciadas pelo serviço de gerenciamento de API |
 | Serviço de gerenciamento de API | Gerenciar suas APIs hospedadas no aplicativo de função |
@@ -97,19 +97,19 @@ Ao criar um novo projeto, você pode usar todos os recursos do Azure. O ARM defi
 
 |Recursos|Finalidade desse recurso|
 |----------|--------------------------------|
-| Serviço de Cofre de Chaves do Azure | Gerenciar segredos (por exemplo, segredo do cliente de aplicativo do Azure AD) usado por outros Serviços do Azure |
+| Serviço Key Vault Azure | Gerenciar segredos (por exemplo, segredo do cliente de aplicativo do Azure AD) usado por outros Serviços do Azure |
 | Identidade atribuída pelo usuário | Autenticar solicitações de serviço para serviço do Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar o provisionamento de recursos
 
-Teams Toolkit permite que você use uma infraestrutura como abordagem de código para definir quais recursos do Azure você deseja provisionar e como deseja configurar. A ferramenta usa ARM para definir recursos do Azure. O ARM é um conjunto de arquivos bicep que define a infraestrutura e a configuração do seu projeto. Você pode personalizar os recursos do Azure modificando o ARM modelo. Para obter mais informações, consulte [documento do bicep](/azure/azure-resource-manager/bicep.md).
+Teams Toolkit permite que você use uma infraestrutura como abordagem de código para definir quais recursos do Azure você deseja provisionar e como deseja configurar. A ferramenta usa ARM para definir recursos do Azure. O ARM é um conjunto de arquivos bicep que define a infraestrutura e a configuração do seu projeto. Você pode personalizar os recursos do Azure modificando o ARM modelo. Para obter mais informações, consulte [documento do bicep](/azure/azure-resource-manager/bicep).
 
 O provisionamento com ARM envolve a alteração dos seguintes conjuntos de arquivos, parâmetros e modelos:
 
 * ARM arquivos de parâmetro (`azure.parameters.{your_env_name}.json`) localizados na `.fx/configs` pasta, para passar parâmetros para modelos.
 * ARM arquivos de modelo localizados em `templates/azure`, esta pasta contém os seguintes arquivos:
 
-| Arquivo | Função | Permitir personalização |
+| File | Função | Permitir personalização |
 | --- | --- | --- |
 | main.bicep | Fornecer ponto de entrada para provisionamento de recursos do Azure | Sim |
 | provision.bicep | Criar e configurar recursos do Azure | Sim |
@@ -148,16 +148,16 @@ A tabela a seguir fornece uma lista de parâmetros predefinidos disponíveis:
 | botDisplayName | ${resourceBaseName} | Nome de exibição do bot | 1 a 42 caracteres |
 | botServerfarmsName | ${resourceBaseName}bot | Nome do plano de serviço de aplicativo do bot | 1-40 alfanuméricos e hífens |
 | botWebAppName | ${resourceBaseName}bot | Nome do aplicativo Web do bot | 2 a 60 alfanuméricos e hífens <br /> Não é possível iniciar ou terminar com hífen |
-| botWebAppSKU | F1 | SKU do Plano de Serviço de Aplicativo bot | Não aplicável |
+| botWebAppSKU | F1 | SKU of Bot Serviço de Aplicativo Plan | Não aplicável |
 | userAssignedIdentityName | ${resourceBaseName} | Nome da identidade atribuída pelo usuário | 3-128 alfanuméricos, hífens e sublinhados <br /> Iniciar com letra ou número |
-| sqlServerName | ${resourceBaseName} | Nome do servidor SQL Azure | 1 a 63 letras minúsculas, números e hífens <br /> Não é possível iniciar ou terminar com hífen |
-| sqlDatabaseName | ${resourceBaseName} | Nome do banco de dados SQL Azure | De 1 a 128 caracteres, não é possível usar <>*%&:\/? ou caracteres de controle <br /> Não é possível terminar com ponto ou espaço |
-| sqlDatabaseSku | Básico | SKU do banco de dados SQL Azure | Não aplicável  |
+| sqlServerName | ${resourceBaseName} | Nome do SQL do Azure servidor | 1 a 63 letras minúsculas, números e hífens <br /> Não é possível iniciar ou terminar com hífen |
+| sqlDatabaseName | ${resourceBaseName} | Nome do banco SQL do Azure banco de dados | De 1 a 128 caracteres, não é possível usar <>*%&:\/? ou caracteres de controle <br /> Não é possível terminar com ponto ou espaço |
+| sqlDatabaseSku | Básico | SKU do banco de SQL do Azure de dados | Não aplicável  |
 | apimServiceName | ${resourceBaseName} | Nome do serviço APIM | 1 a 50 alfanuméricos e hífens <br /> Comece com letra e termine com alfanumérico |
 | apimServiceSku | Consumo | SKU do serviço APIM | [SKUs disponíveis](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Nome do produto APIM | 1-80 alfanuméricos e hífens <br /> Comece com letra e termine com alfanumérico |
 | apimOauthServerName | ${resourceBaseName} | Nome do servidor OAuth do APIM | 1-80 alfanuméricos e hífens <br /> Comece com letra e termine com alfanumérico |
-| keyVaultSkuName | standard | Nome SKU do Serviço de Cofre de Chaves do Azure| |
+| keyVaultSkuName | standard | Nome SKU do Serviço Key Vault Azure| |
 
 Entretanto, os parâmetros a seguir estão disponíveis com valores preenchidos durante a provisionamento. O objetivo desses espaço reservados é garantir que possamos criar novos recursos para você em um novo ambiente. Os valores reais são resolvidos de `.fx/states/state.{env}.json`.
 
@@ -178,8 +178,8 @@ Entretanto, os parâmetros a seguir estão disponíveis com valores preenchidos 
 
 | Nome do parâmetro | Porta-valores padrão | Significado do titular do local | Como personalizar |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server de administrador que você forneceu durante o provisionamento | Excluir o espaço reservado e preencher o valor real |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server senha de administrador que você forneceu durante o provisionamento | Excluir o espaço reservado e preencher o valor real |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | SQL do Azure de administrador do Servidor que você forneceu durante o provisionamento | Excluir o espaço reservado e preencher o valor real |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | SQL do Azure de administrador do servidor que você forneceu durante o provisionamento | Excluir o espaço reservado e preencher o valor real |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | Email do editor da APIM, valor padrão é sua conta do Azure | Excluir o espaço reservado e preencher o valor real |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | Nome do editor da APIM, valor padrão é sua conta do Azure | Excluir o espaço reservado e preencher o valor real |
 

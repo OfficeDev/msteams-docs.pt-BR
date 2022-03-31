@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerações sobre a Teams integração
-ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+title: Considerações para a integração do Microsoft Teams
+ms.openlocfilehash: f545acf25cc6b54a92dc8c7556b348394379abc5
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356249"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590735"
 ---
-# <a name="considerations-for-teams-integration"></a>Considerações sobre a Teams integração
+# <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
 
 Você pode tornar os aplicativos Web adequados Teams recursos sociais e colaborativos, integrando-os corretamente com Teams.
   
@@ -58,7 +58,7 @@ A seguir estão os pré-requisitos para integrar seu aplicativo com Teams.
 
 ***Cenários de integração**: SharePoint*
 
-Para integrar uma página de [SharePoint existente](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) como uma guia Teams, considere o seguinte:
+Para integrar uma página de [SharePoint existente](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model) como uma guia Teams, considere o seguinte:
 
 * Deve ser uma página *SharePoint* online moderna.
 * Somente guias pessoais são suportadas. Você não pode integrar sua página como uma guia de canal.

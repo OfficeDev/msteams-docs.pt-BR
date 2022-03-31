@@ -5,290 +5,258 @@ description: Um guia de início rápido para criar uma guia de canal e grupo com
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+zone_pivot_groups: teams-app-environment
+ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399335"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590659"
 ---
-# <a name="create-a-channel-or-group-tab"></a>Criar um canal ou uma guia de grupo
+# <a name="channel-or-group-tab"></a>Guia Canal ou grupo
 
-## <a name="create-a-custom-channel-or-group-tab"></a>Criar um canal personalizado ou uma guia de grupo
+Canal ou guias de grupo forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
 
-Você pode criar um canal ou uma guia de grupo usando Node.js e o Gerador Yeoman, ASP. NETCore ou ASP. NETCore MVC. Para ver um canal ou uma guia de grupo Microsoft Teams celular, consulte [guias no celular](~/tabs/design/tabs-mobile.md).
+::: zone pivot="node-java-script"
 
-# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+## <a name="create-a-custom-channel-or-group-tab-with-nodejs"></a>Criar um canal personalizado ou uma guia de grupo com Node.js
 
-### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>Criar um canal personalizado e uma guia de grupo usando Node.js e o Gerador Yeoman
+1. No prompt de comando, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte comando após a instalação do **Node.js**:
 
-> [!NOTE]
-> Este artigo segue as etapas descritas na com build [Seu](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) primeiro wiki do aplicativo Microsoft Teams encontrado no repositório de GitHub Microsoft OfficeDev.
-
-Você pode criar um canal personalizado ou uma guia de grupo usando Teams [gerador Yeoman](https://github.com/OfficeDev/generator-teams/).
-
-### <a name="prerequisites-for-apps"></a>Pré-requisitos para aplicativos
-
-Você deve ter uma compreensão dos seguintes pré-requisitos:
-
-* Você deve ter um locatário Office 365 e uma equipe configurada com **Permitir o carregamento de aplicativos personalizados** habilitados. Para obter mais informações, [consulte prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-
-    > [!NOTE]
-    > Se você não tiver uma conta Office 365, poderá inscrever-se para uma assinatura gratuita por meio do programa Office 365 Desenvolvedor. A assinatura permanece ativa desde que você a use para desenvolvimento contínuo. Consulte [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
-
-Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
-
-* Qualquer editor de texto ou IDE. Você pode instalar e usar [Microsoft Visual Studio Código](https://code.visualstudio.com/download) gratuitamente.
-
-* [Node.js/npm](https://nodejs.org/en/). Use a versão LTS mais recente. O nó Gerenciador de Pacotes (npm) é instalado em seu sistema com a instalação de Node.js.
-
-* Depois de instalar o Node.js, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte no prompt de comando:
-
-    ```bash
+    ```cmd
     npm install yo gulp-cli --global
     ```
 
-* Instale o Microsoft Teams aplicativos inserindo o seguinte no prompt de comando:
+2. No prompt de comando, instale o Microsoft Teams App inserindo o seguinte comando:
 
-    ```bash
+    ```cmd
     npm install generator-teams --global
     ```
 
-### <a name="generate-your-project"></a>Gerar seu projeto
+A seguir estão as etapas para criar um canal ou uma guia de grupo:
 
-**Para gerar seu projeto**
+* [Gerar seu aplicativo com uma guia canal ou grupo](#generate-your-application-with-a-channel-or-group-tab)
+* [Criar um pacote do aplicativo](#create-your-app-package)
+* [Criar e executar seu aplicativo](#build-and-run-your-application)
+* [Estabelecer um túnel seguro para sua guia](#establish-a-secure-tunnel-to-your-tab)
+* [Upload seu aplicativo para Teams](#upload-your-application-to-teams)
 
-1. Em um prompt de comando, crie um novo diretório para seu projeto de guia.
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Gerar seu aplicativo com uma guia canal ou grupo
 
-1. Para iniciar o gerador, vá para o novo diretório e digite o seguinte comando:
+1. No prompt de comando, crie um novo diretório para seu canal ou guia de grupo.
 
-    ```bash
+1. Insira o seguinte comando em seu novo diretório para iniciar o gerador Microsoft Teams App:
+
+    ```cmd
     yo teams
     ```
 
-1. Em seguida, forneça uma série de valores usados no arquivo **manifest.json do** aplicativo:
+1. Forneça seus valores a uma série de perguntas Microsoft Teams gerador de aplicativos para atualizar seu **arquivo manifest.json**:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **Qual é o nome da solução?**
+    <details>
+    <summary><b>Série de perguntas para atualizar seu arquivo manifest.json</b></summary>
 
-    Esse é o nome do seu projeto. Você pode aceitar o nome sugerido selecionando a **tecla Enter** .
+    * **Qual é o nome da solução?**
 
-    **Onde você deseja colocar os arquivos?**
+        O nome da solução é o nome do projeto. Você pode aceitar o nome sugerido selecionando **Enter**.
 
-    No momento, você está no diretório do projeto. Selecione **Enter**.
+    * **Onde você deseja colocar os arquivos?**
 
-    **Título do seu projeto Microsoft Teams aplicativo?**
+        No momento, você está no diretório do projeto. Selecione **Enter**.
 
-    Esse é o nome do pacote do aplicativo e será usado no manifesto e na descrição do aplicativo. Insira um título ou selecione **Enter** para aceitar o nome padrão.
+    * **Título do seu projeto Microsoft Teams aplicativo?**
 
-    **Seu nome (empresa) ? (máx. 32 caracteres)**
+        O título é o nome do pacote do aplicativo e é usado no manifesto e na descrição do aplicativo. Insira um título ou selecione **Enter** para aceitar o nome padrão.
 
-    O nome da empresa será usado no manifesto do aplicativo. Insira um nome da empresa ou selecione **Enter** para aceitar o nome padrão.
+    * **Seu nome (empresa) ? (máx. 32 caracteres)**
 
-    **Qual versão de manifesto você gostaria de usar?**
+        O nome da empresa será usado no manifesto do aplicativo. Insira um nome da empresa ou selecione **Enter** para aceitar o nome padrão.
 
-    Selecione o esquema padrão.
+    * **Qual versão de manifesto você gostaria de usar?**
 
-    **Scaffolding rápido? (Y/n)**
+        Selecione o esquema padrão.
 
-    O padrão é sim; insira **n** para inserir sua ID do Microsoft Partner.
+    * **Scaffolding rápido? (Y/n)**
 
-    **Insira sua ID do Microsoft Partner, se você tiver uma? (Deixe em branco para ignorar)**
+        O padrão é sim; insira **n** para inserir sua ID do Microsoft Partner.
 
-    Esse campo não é obrigatório e só deve ser usado se você já faz parte da [Rede de Parceiros da Microsoft](https://partner.microsoft.com).
+    * **Insira sua ID do Microsoft Partner, se você tiver uma? (Deixe em branco para ignorar)**
 
-    **O que você deseja adicionar ao seu projeto?**
+        Esse campo não é obrigatório e deve ser usado somente se você já faz parte da [Rede do Microsoft Partner](https://partner.microsoft.com).
 
-    Selecione **( &ast; ) Uma guia**.
+    * **O que você deseja adicionar ao seu projeto?**
 
-    **A URL onde você hospedará essa solução?**
+        Selecione **( &ast; ) Uma guia**.
 
-    Por padrão, o gerador sugere uma URL de Sites do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
+    * **A URL onde você hospedará essa solução?**
 
-    **Você gostaria de mostrar um indicador de carregamento quando seu aplicativo/guia é carregado?**
+        Por padrão, o gerador sugere uma URL de Sites do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
 
-    Escolha **não incluir** um indicador de carregamento quando seu aplicativo ou guia for carregado. O padrão é não, digite **n**.
+    * **Você gostaria de mostrar um indicador de carregamento quando seu aplicativo/guia é carregado?**
 
-   **Você gostaria que aplicativos pessoais fossem renderizados sem uma barra de texto de tabulação?**
+        Escolha **não incluir** um indicador de carregamento quando seu aplicativo ou guia for carregado. O padrão é não, digite **n**.
 
-    Escolha **não** incluir aplicativos pessoais a serem renderizados sem uma barra de header-bar de tabulação. O padrão é não, digite **n**.
+    * **Você gostaria que aplicativos pessoais fossem renderizados sem uma barra de texto de tabulação?**
 
-    **Você gostaria de incluir a estrutura de teste e testes iniciais? (y/N)**
+        Escolha **não** incluir aplicativos pessoais a serem renderizados sem uma barra de header-bar de tabulação. O padrão é não, digite **n**.
 
-    Escolha **não** incluir uma estrutura de teste para este projeto. O padrão é sim; enter **n**.
+    * **Você gostaria de incluir a estrutura de teste e testes iniciais? (y/N)**
 
-    **Você gostaria de usar aplicativos do Azure Insights para telemetria? (y/N)**
+        Escolha **não** incluir uma estrutura de teste para este projeto. O padrão é não, digite **n**.
 
-    Escolha **não** incluir o [aplicativo Azure Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
+    * **Você gostaria de incluir suporte ao ESLint? (y/N)**
 
-    **Nome da guia padrão (máx. 16 caracteres)?**
+        Escolha não incluir suporte ao ESLint. O padrão é não, digite **n**.
 
-    Nomeia sua guia. Esse nome de guia será usado em todo o seu projeto como um componente de caminho de arquivo ou URL.
+    * **Você gostaria de usar aplicativos do Azure Insights para telemetria? (y/N)**
 
-    **Que tipo de Guia você gostaria de criar?**
+        Escolha **não** incluir [Aplicativo Azure Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
 
-    Use as teclas de seta para selecionar **a guia Configurável** .
+    * **Nome da guia padrão (máx. 16 caracteres)?**
 
-    **Quais escopos você pretende usar para sua Guia?**
+        Nomeia sua guia. Esse nome de guia é usado em todo o seu projeto como um componente de caminho de arquivo ou URL.
 
-    Você pode selecionar uma equipe ou um chat em grupo.
+    * **Que tipo de Guia você gostaria de criar?**
 
-    **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
+        Use as teclas de seta para selecionar **a guia Configurável** .
 
-    Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-On para a guia. O padrão é sim, digite **n**.
+    * **Quais escopos você pretende usar para sua Guia?**
 
-    **Deseja que essa guia seja disponibilizada no SharePoint Online? (Y/n)**
+        Você pode selecionar uma equipe ou um chat em grupo.
 
-    Insira **n**.
+    * **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
-    > [!IMPORTANT]
-    > O componente de **caminho yourDefaultTabNameTab** é o valor que você inscrevia no gerador para **Nome da Guia Padrão** mais a **palavra Tab**.
-    >
-    > Por exemplo: DefaultTabName: **MyTab** > **/MyTabTab/**
+        Escolha **não** incluir o Microsoft Azure Active Directory (Azure AD) suporte a Single-On para a guia. O padrão é sim, digite **n**.
 
-1. Em Visual Studio Code ou em qualquer editor de código, vá para o diretório do projeto e abra o seguinte arquivo:
+    * **Deseja que essa guia seja disponibilizada no SharePoint Online? (Y/n)**
 
-    ```bash
-    ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
-    ```
+        Insira **n**.
 
-1. Localize o `render()` método e adicione a seguinte `<div>` marca e conteúdo à parte superior do código `<PanelBody>` do contêiner:
+    </details>
 
-    ```html
-        <PanelBody>
-            <div style={styles.section}>
-                Hello World! Yo Teams rocks!
-            </div>
-        </PanelBody>
-    ```
+> [!IMPORTANT]
+> O componente de **caminho yourDefaultTabNameTab** é o valor que você inscrevia no gerador para Nome da Guia **Padrão** mais a **palavra Tab**.
+>
+> Por exemplo: DefaultTabName é **MyTab** e **/MyTabTab/**
 
-1. Certifique-se de salvar o arquivo atualizado.
+### <a name="create-your-app-package"></a>Criar um pacote do aplicativo
 
-### <a name="build-and-run-your-application"></a>Criar e executar seu aplicativo
+Você deve ter um pacote de aplicativos para criar e executar seu aplicativo Teams. O pacote do aplicativo é criado por meio de uma tarefa gulp que valida o **arquivo manifest.json** e gera a pasta zip no **diretório ./package** . No prompt de comando, insira o seguinte comando:
 
-Em um prompt de comando, abra o diretório do projeto para concluir as próximas tarefas.
-
-#### <a name="create-the-app-package"></a>Criar o pacote do aplicativo
-
-Você deve ter um pacote de aplicativos para testar sua guia Teams. É uma pasta zip que contém os seguintes arquivos necessários:
-
-* Um **ícone de cor completo** medindo 192 x 192 pixels.
-* Um **ícone de contorno transparente** medindo 32 x 32 pixels.
-* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
-
-O pacote é criado por meio de uma tarefa gulp que valida o arquivo manifest.json e gera a pasta zip no **diretório ./package**. No prompt de comando, insira o seguinte comando:
-
-```bash
+```cmd
 gulp manifest
 ```
 
+### <a name="build-and-run-your-application"></a>Criar e executar seu aplicativo
+
 #### <a name="build-your-application"></a>Criar seu aplicativo
 
-O comando build transpila sua solução para a **pasta ./dist** . Insira o seguinte comando no prompt de comando:
+Insira o seguinte comando no prompt de comando para transpile sua solução na **pasta ./dist** :
 
-```bash
+```cmd
 gulp build
 ```
 
-#### <a name="run-your-application-in-localhost"></a>Executar seu aplicativo no localhost
+#### <a name="run-your-application"></a>Executar seu aplicativo
 
-1. Inicie um servidor Web local inserindo o seguinte no prompt de comando:
+1. No prompt de comando, insira o seguinte comando para iniciar um servidor Web local:
 
     ```bash
     gulp serve
     ```
 
-1. Insira `http://localhost:3007/<yourDefaultAppNameTab>/` no navegador, substitua **seuDefaultAppNameTab** pelo nome da guia e exibir a home page do aplicativo, conforme mostrado na imagem a seguir:
+1. Insira `http://localhost:3007/<yourDefaultAppNameTab>/` no navegador para exibir a home page do aplicativo.
 
-    ![captura de tela da home page](~/assets/images/tab-images/homePage.png)
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia Padrão" border="true":::
 
 1. Para exibir sua página de configuração de tabulação, vá para `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. O seguinte é mostrado:
 
-    ![Captura de tela da página de configuração](~/assets/images/tab-images/configurationPage.png)
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuração de tabulação" border="true":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia seja disponibilizado na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Você deve publicar sua guia em uma URL pública ou usar um proxy que exponha sua porta local a uma URL voltada para a Internet.
+Para estabelecer um túnel seguro em sua guia, saia do localhost e insira o seguinte comando:
 
-Para testar sua extensão de tabulação, use [ngrok](https://ngrok.com/docs), que é integrado a esse aplicativo. O Ngrok é uma ferramenta de software de proxy reverso que cria um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Os pontos de extremidade da Web do seu servidor estão disponíveis durante a sessão atual em seu computador. Quando o computador é desligado ou vai para o sono, o serviço não está mais disponível.
-
-No prompt de comando, saia do localhost e insira o seguinte:
-
-```bash
+```cmd
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Depois que sua guia for carregada no Microsoft Teams e salva com êxito, você poderá exibi-la na galeria de guias, adicioná-la à barra de guias e interagir com ela até que sua sessão de túnel de ngrok termine. Se você reiniciar sua sessão de ngrok, deverá atualizar seu aplicativo com a nova URL.
+> Depois que sua guia é carregada para Microsoft Teams por **meio do ngrok** e salva com êxito, você pode exibi-la no Teams até que sua sessão de túnel termine. Se você reiniciar sua sessão de ngrok, deverá atualizar seu aplicativo com a nova URL.
 
 ### <a name="upload-your-application-to-teams"></a>Upload seu aplicativo para Teams
 
-**Para carregar seu aplicativo para Teams**
+1. Vá para Microsoft Teams e selecione **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Selecione **Gerenciar seus aplicativos**.
+1. Selecione **Publicar um aplicativo** e **Upload um aplicativo personalizado**.
 
-1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web](https://teams.microsoft.com) , poderá inspecionar seu código front-end usando as ferramentas de desenvolvedor [do navegador](~/tabs/how-to/developer-tools.md).
-1. Em suas equipes no painel esquerdo, selecione as releições &#x25CF;&#x25CF;&#x25CF; ao lado da equipe que você está usando para testar sua guia e escolha **Gerenciar equipe**.
-1. No painel principal, selecione **Aplicativos** na barra de guias e escolha Upload um **aplicativo** personalizado localizado no canto inferior direito da página.
-1. Vá para o diretório do projeto, navegue até a **pasta ./package** , selecione a pasta zip do pacote do aplicativo e escolha **Abrir**.
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload aplicativo personalizado" border="true":::
 
-    ![Guia Canal adicionado](../../assets/images/tab-images/channeltabadded.png)
+1. Vá para o diretório do projeto, navegue até a pasta **./package** , selecione a pasta zip do pacote do aplicativo e escolha **Abrir**.
+    
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Guia Canal Carregado" border="true":::
 
-1. Selecione **Adicionar** na caixa de diálogo pop-up. Sua guia é carregada em Teams.
-1. Retorne à sua equipe, escolha o canal onde você deseja exibir a guia, ➕ selecione na barra de guias e escolha sua guia na galeria.
+1. Selecione **Adicionar** na janela pop-up. Sua guia é carregada para Teams.
+    
+    > [!NOTE]
+    > Se  **Add** não for exibido na caixa de diálogo, remova o código a seguir do manifesto da pasta zip do pacote do aplicativo carregado. Feche novamente a pasta e carregue-a Teams.
+    >
+    >```Json
+    >"staticTabs": [],
+    >"bots": [],
+    >"connectors": [],
+    >"composeExtensions": [],
+    >```
+
+1. Retorne à sua equipe, escolha o canal onde você deseja adicionar a guia, ➕ selecione na barra de guias e escolha sua guia na lista.
 1. Siga as instruções para adicionar uma guia. Há uma caixa de diálogo de configuração personalizada para seu canal ou guia de grupo.
 1. Selecione **Salvar** e sua guia é adicionada à barra de guias do canal.
 
-    ![Guia canal carregado](../../assets/images/tab-images/channeltabuploaded.png)
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Guia canal carregado" border="true":::
 
-# <a name="aspnet-core"></a>[ASP.NET Core](#tab/aspnetcore)
+::: zone-end
 
-### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>Criar um canal personalizado ou uma guia de grupo com ASP.NET Core
+::: zone pivot="razor-csharp"
 
-Você pode criar um canal personalizado ou uma guia de grupo usando C# e ASP.Net core de lâmina de corte. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
+## <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>Criar um canal personalizado ou uma guia de grupo com ASP.NET Core
 
-### <a name="prerequisites-for-teams-apps"></a>Pré-requisitos para Teams aplicativos
+1. No prompt de comando, crie um novo diretório para seu projeto de guia.
 
-Você deve ter uma compreensão dos seguintes pré-requisitos:
+1. Clone o repositório de exemplo em seu novo diretório usando o seguinte comando ou você pode [baixar o](https://github.com/OfficeDev/Microsoft-Teams-Samples) código-fonte e extrair os arquivos:
 
-- Você deve ter um locatário Office 365 e uma equipe configurada com **Permitir o carregamento de aplicativos personalizados** habilitados. Para obter mais informações, [consulte prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-    > [!NOTE]
-    > Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
+A seguir estão as etapas para criar um canal ou uma guia de grupo:
 
-* Use o App Studio para importar seu aplicativo para Teams. Para instalar o App Studio, selecione **Aplicativo** ![da Loja](~/assets/images/tab-images/storeApp.png) de Aplicativos no canto inferior esquerdo do aplicativo Teams e pesquise por **App Studio**. Depois de encontrar o azulejo, selecione-o e escolha **Adicionar** na caixa de diálogo pop-up para instalá-lo.
+* [Gerar seu aplicativo com uma guia canal ou grupo](#generate-your-application-with-a-channel-or-group-tab-1)
+* [Estabelecer um túnel seguro para sua guia](#establish-a-secure-tunnel-to-your-tab-1)
+* [Atualizar seu aplicativo](#update-your-application)
+* [Criar e executar seu aplicativo](#build-and-run-your-application-1)
+* [Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor](#update-your-app-package-with-developer-portal)
+* [Visualizar seu aplicativo em Teams](#preview-your-app-in-teams)
 
-Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Gerar seu aplicativo com uma guia canal ou grupo
 
-* A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
+1. Abra Visual Studio e selecione **Abrir um projeto ou solução**.
 
-* A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
+1. Vá para **a pasta Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp** >  >  >  e abra **channelGroupTab.sln**.
 
-### <a name="get-the-source-code"></a>Obter o código-fonte
+1. Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-Em um prompt de comando, crie um novo diretório para seu projeto de guia. Um projeto simples é fornecido para você começar. Clone o repositório de exemplo em seu novo diretório usando o seguinte comando:
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
-
-Como alternativa, você pode recuperar o código-fonte baixando a pasta zip e extraindo os arquivos.
-
-**Para criar e executar o projeto de guia**
-
-1. Depois de ter o código-fonte, vá para Visual Studio e selecione **Abrir um projeto ou solução**.
-1. Vá para o diretório de aplicativos de tabulação e abra **ChannelGroupTab.sln**.
-1. Para criar e executar seu aplicativo, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar** .
-1. Em um navegador, vá para as SEGUINTES URLs e verifique se o aplicativo foi carregado corretamente:
-
-    * `http://localhost:44355`
-    * `http://localhost:44355/privacy`
-    * `http://localhost:44355/tou`
-
-### <a name="review-the-source-code"></a>Revisar o código-fonte
+<details>
+<summary><b>Revisar o código-fonte</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este projeto foi criado a partir de um modelo vazio do Aplicativo Web 2.2 do ASP.NET Core 2.2 com a caixa de seleção **Advanced * Configure for HTTPS** selecionada na instalação. Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware `Configure()` de arquivos estáticos é adicionado ao método usando o seguinte código:
+Esse projeto foi criado a partir de um modelo vazio do aplicativo Web 3.1 ASP.NET Core 3.1 com a caixa de seleção **Avançado * Configurar para HTTPS** selecionado na instalação. Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware `Configure()` de arquivos estáticos é adicionado ao método usando o seguinte código:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -326,7 +294,7 @@ Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao car
 
 #### <a name="csproj"></a>.csproj
 
-Na janela Visual Studio Solution Explorer, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Na janela Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ```xml
 <PropertyGroup>
@@ -346,55 +314,42 @@ Na janela Visual Studio Solution Explorer, clique com o botão direito do mouse 
   </ItemGroup>
 ```
 
-### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Estabeleça um túnel seguro para sua guia para Teams
+</details>
 
-Microsoft Teams é um produto baseado em nuvem e exige que o conteúdo da guia seja disponibilizado na nuvem usando pontos de extremidade HTTPS. Teams não permite hospedagem local. Você deve publicar sua guia em uma URL pública ou usar um proxy que exponha sua porta local a uma URL voltada para a Internet.
+### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-Para testar sua guia, use [ngrok](https://ngrok.com/docs). Os pontos de extremidade da Web do seu servidor estão disponíveis enquanto o ngrok está em execução no computador. Na versão gratuita do ngrok, se você fechar o ngrok, as URLs serão diferentes na próxima vez em que você a iniciar.
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
 
-* Em um prompt de comando na raiz do diretório do projeto, execute o seguinte comando:
+```cmd
+ngrok http 3978 --host-header=localhost
+```
 
-    ```bash
-    ngrok http https://localhost:44355 -host-header="localhost:44355"
-    ```
-
-* O Ngrok escuta as solicitações da Internet e as encaminha para seu aplicativo quando está sendo executado na porta 44355. Deve parecer onde `https://y8rCgT2b.ngrok.io/` **y8rCgT2b** é substituído pela URL HTTPS alfanumérico ngrok.
-
-* Certifique-se de manter o prompt de comando com o ngrok em execução e anote a URL.
+Certifique-se de manter o prompt de comando com o ngrok em execução e anote a URL.
 
 ### <a name="update-your-application"></a>Atualizar seu aplicativo
 
-Em **Tab.cshtml** , o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher os **gatilhos**  `saveGray()` `saveRed()`do botão Selecionar Cinza ou Selecionar Vermelho ou , respectivamente, define `settings.setValidityState(true)`e habilita o botão **Salvar** na página de configuração. Esse código permite Teams que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de são `settings.setSettings` definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+1. Vá para a **pasta** **PagesShared** >  e abra **_Layout.cshtml** e adicione o seguinte ao <head> seção tags:
 
-#### <a name="_layoutcshtml"></a>_Layout.cshtml
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+    
+    > [!IMPORTANT]
+    > Não copie e colará as `<script src="...">` URLs desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, sempre vá [para Microsoft Teams API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
+    
+1. Na parte superior da marca `script` , insira uma chamada para `microsoftTeams.initialize();`.
 
-Para que sua guia seja exibida Teams, você deve incluir o **SDK do cliente JavaScript** Microsoft Teams e incluir uma chamada depois que a `microsoftTeams.initialize()` página for carregada. É assim que sua guia e o cliente Teams se comunicam:
+1. Vá para a **pasta Páginas** e abra **Tab.cshtml**
 
-Vá para **a pasta Shared** , abra **_Layout.cshtml** e adicione o seguinte à `<head>` marca:
-
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
-
-> [!IMPORTANT]
-> Não copie e colará as `<script src="...">` URLs desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, sempre vá [para Microsoft Teams API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
-
-#### <a name="tabcshtml"></a>Tab.cshtml
-
-**Para atualizar Tab.cshtml**
-
-1. Abra **Tab.cshtml** no Visual Studio e atualize o `<script>`.
-
-1. Na parte superior do script, chame `microsoftTeams.initialize()`.
+    Em **Tab.cshtml** , o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher os **gatilhos**  `saveGray()` `saveRed()`do botão Selecionar Cinza ou Selecionar Vermelho ou , respectivamente, define `settings.setValidityState(true)`e habilita o botão **Salvar** na página de configuração. Esse código permite Teams que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de são `settings.setSettings` definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os `websiteUrl` valores `contentUrl` e em cada função com a URL de ngrok HTTPS para sua guia.
 
     Seu código agora deve incluir o seguinte **com y8rCgT2b** substituído pela URL do ngrok:
 
     ```javascript
-        microsoftTeams.initialize();
-
+        
         let saveGray = () => {
             microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
                 microsoftTeams.settings.setSettings({
@@ -422,135 +377,100 @@ Vá para **a pasta Shared** , abra **_Layout.cshtml** e adicione o seguinte à `
 
 1. Salve o **Tab.cshtml atualizado**.
 
-### <a name="build-and-run-your-application-for-teams"></a>Criar e executar seu aplicativo para Teams
-
-**Para criar e executar seu aplicativo**
+### <a name="build-and-run-your-application"></a>Criar e executar seu aplicativo
 
 1. Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar**.
+
 1. Verifique se **o ngrok** está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
 
-> [!TIP]
-> Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar seu aplicativo com a nova URL.
+    > [!TIP]
+    > Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar seu aplicativo com a nova URL.
 
-### <a name="upload-your-tab-for-teams"></a>Upload sua guia para Teams
-
-> [!NOTE]
-> O App Studio pode ser usado para editar seu **arquivo manifest.json** e carregar o pacote concluído para Teams. Você também pode editar manualmente o **arquivo manifest.json** . Se fizer isso, certifique-se de criar a solução novamente para criar o arquivo **tab.zip** para carregar.
-
-**Para carregar sua guia com o App Studio**
+### <a name="update-your-app-package-with-developer-portal"></a>Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor
 
 1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as ferramentas de desenvolvedor [do navegador](~/tabs/how-to/developer-tools.md).
 
-1. Vá para **o App Studio** e selecione a **guia Editor de** manifesto.
+1. Navegue até **o portal do desenvolvedor** Teams.
 
-1. Selecione **Importar um aplicativo existente** no **editor de Manifesto** para começar a atualizar o pacote de aplicativos para sua guia. O código-fonte vem com seu próprio manifesto parcialmente completo. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
+1. Abra **Aplicativos** e selecione **Importar aplicativo**.
+
+1. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
 
     ```bash
-    /bin/Debug/netcoreapp2.2/tab.zip
+    /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Upload **tab.zip** App Studio.
+1. Selecione **tab.zip** e abra-o no Portal do Desenvolvedor.
 
-#### <a name="update-your-app-package-with-manifest-editor"></a>Atualizar seu pacote de aplicativos com o editor de manifesto
+1. Uma **ID de aplicativo padrão** é criada e preenchida na **seção Informações básicas** .
 
-Depois de carregar seu pacote de aplicativos no App Studio, você deve configurá-lo.
+1. Adicione a descrição Short e Long para seu aplicativo em **Descrições**.
 
-Selecione o azulejo para sua guia recém-importada no painel direito da página de boas-vindas do editor de manifesto.
+1. Em **Informações do Desenvolvedor**, adicione os detalhes necessários e, no Site (deve ser uma **URL HTTPS válida),** dê sua URL HTTPS ngrok.
 
-Há uma lista de etapas no lado esquerdo do editor de Manifesto e, à direita, uma lista de propriedades que devem ter valores para cada uma dessas etapas. Grande parte das informações foram fornecidas por **seu manifesto.json** , mas há campos que você deve atualizar.
+1. Em **URLs de aplicativos**, atualize a política de Privacidade para `https://<yourngrokurl>/privacy` e Os Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-##### <a name="details-app-details"></a>Detalhes: Detalhes do aplicativo
+1. Em **Recursos do aplicativo**, selecione Aplicativo Pessoal e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco. 
 
-Na seção **Detalhes do** aplicativo:
+1. Selecione **Salvar**.
 
-1. Em **Identificação**, selecione **Gerar** para substituir a ID do espaço reservado pelo GUID necessário para sua guia.
+1. Na seção Domínios, domínios de suas guias devem conter sua URL ngrok sem o prefixo `<yourngrokurl>.ngrok.io`HTTPS .
 
-1. Em **Informações do desenvolvedor**, atualize **Site** com sua URL HTTPS **ngrok** .
+### <a name="preview-your-app-in-teams"></a>Visualizar seu aplicativo em Teams
 
-1. Em **URLs de aplicativo**, atualize a **instrução Privacy** to `https://<yourngrokurl>/privacy` e **Os Termos de uso** para `https://<yourngrokurl>/tou`>.
+1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor. O Portal do Desenvolvedor informa que seu aplicativo é sideload com êxito.
 
-##### <a name="capabilities-tabs"></a>Recursos: guias
+1. Selecione **Gerenciar seus aplicativos**. Seu aplicativo está listado nos aplicativos com sideload.
 
-Na seção **Guias** :
+1. Encontre seu aplicativo usando a pesquisa, selecione &#x25CF;&#x25CF;&#x25CF;.
 
-1. Na **guia Equipe**, selecione **Adicionar**.
+1. Selecione a **opção Exibir detalhes** . A janela de detalhes do aplicativo é exibida para seu aplicativo.
 
-1. Na janela **pop-up da guia** Equipe, atualize a **URL de configuração** para `https://<yourngrokurl>/tab`.
+1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdownAdd" border="true":::&nbsp; >  **to team** to load the tab in a team. Sua guia agora está disponível no Teams.
 
-1. Verifique se **as caixas de seleção Pode atualizar configuração?**, **Equipe** e **Grupo de chat** estão selecionadas e selecione **Salvar**.
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia canal CARREGADO ASPNET" border="true":::
 
-##### <a name="finish-domains-and-permissions"></a>Concluir: domínios e permissões
+::: zone-end
 
-Na seção **Domínios e** permissões, **domínios** de suas guias devem conter sua URL ngrok sem o prefixo `<yourngrokurl>.ngrok.io/`HTTPS .
+::: zone pivot="mvc-csharp"
 
-##### <a name="finish-test-and-distribute"></a>Concluir: Testar e distribuir
+## <a name="create-a-custom-channel-or-group-tab-with-aspnet-core-mvc"></a>Criar um canal personalizado ou uma guia de grupo com ASP.NET Core MVC
 
-> [!IMPORTANT]
-> À direita, em **Descrição**, você verá o seguinte aviso:
->
-> &#9888; "**A matriz 'validDomains' não pode conter um site de tunelamento...**"
->
-> Esse aviso pode ser ignorado durante o teste da guia.
+1. No prompt de comando, crie um novo diretório para seu projeto de guia.
 
-1. Na seção **Testar e Distribuir** , selecione **Instalar**.
+1. Clone o repositório de exemplo em seu novo diretório usando o seguinte comando ou você pode [baixar o](https://github.com/OfficeDev/Microsoft-Teams-Samples) código-fonte e extrair os arquivos:
 
-1. Na caixa de diálogo pop-up, selecione **Adicionar a uma equipe** ou no drop-down, selecione **Adicionar a um chat**.
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-1. Escolha a equipe ou o chat onde você deseja que a guia seja exibida e selecione **Configurar uma guia**.
+A seguir estão as etapas para criar um canal ou uma guia de grupo:
 
-1. Na próxima caixa de diálogo pop-up, escolha **Selecionar Cinza** ou **Selecionar Vermelho** e **selecione Salvar**.
+* [Gerar seu aplicativo com uma guia canal ou grupo](#generate-your-application-with-a-channel-or-group-tab-2)
+* [Estabelecer um túnel seguro para sua guia](#establish-a-secure-tunnel-to-your-tab-2)
+* [Atualizar seu aplicativo](#update-your-application-1)
+* [Criar e executar seu aplicativo](#build-and-run-your-application-2)
+* [Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor](#update-your-app-package-with-developer-portal-1)
+* [Visualizar seu aplicativo em Teams](#preview-your-app-in-teams-1)
 
-1. Para exibir sua guia, vá para a equipe ou chat onde você instalou a guia e selecione-a na barra de guias. A página escolhida durante a configuração é exibida.
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Gerar seu aplicativo com uma guia canal ou grupo
 
-    ![Guia canal CARREGADO ASPNET](../../assets/images/tab-images/channeltabaspnetuploaded.png)
+1. Abra Visual Studio e selecione **Abrir um projeto ou solução**.
 
-# <a name="aspnet-core-mvc"></a>[ASP.NET Core MVC](#tab/aspnetcoremvc)
+1. Vá para **a pasta Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp** >  >  >  e abra **ChannelGroupTabMVC.sln**.
 
-### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core-mvc"></a>Criar um canal personalizado ou uma guia de grupo com ASP.NET Core MVC
+1. Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-Você pode criar um canal personalizado ou uma guia de grupo usando C# e ASP.Net Core MVC. [O App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) também é usado para finalizar o manifesto do aplicativo e implantar sua guia para Teams.
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
-### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Pré-requisitos para canal personalizado ou guia grupo
-
-* Você deve ter um locatário Microsoft 365 e uma equipe configurada com **Permitir o carregamento de aplicativos personalizados** habilitados. Para obter mais informações, [consulte prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-
-    > [!NOTE]
-    > Se você não tiver uma conta Microsoft 365, poderá inscrever-se para uma assinatura gratuita por meio do [Programa de Desenvolvedores da Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). A assinatura permanece ativa desde que você a use para desenvolvimento contínuo.
-
-* Use o App Studio para importar seu aplicativo para Teams. Para instalar o App Studio, selecione **Aplicativo** ![da Loja](~/assets/images/tab-images/storeApp.png) de Aplicativos no canto inferior esquerdo do aplicativo Teams e pesquise por **App Studio**. Depois de encontrar o azulejo, selecione-o e escolha **Adicionar** na caixa de diálogo pop-up para instalá-lo.
-
-Além disso, este projeto exige que você tenha o seguinte instalado em seu ambiente de desenvolvimento:
-
-* A versão atual do Visual Studio IDE com a carga de trabalho de desenvolvimento entre **plataformas .NET CORE** instalada. Se você ainda não tiver Visual Studio, poderá baixar e instalar a versão [Microsoft Visual Studio Community versão mais](https://visualstudio.microsoft.com/downloads) recente gratuitamente.
-
-* A [ferramenta proxy reverso ngrok](https://ngrok.com) . Use ngrok para criar um túnel para os pontos de extremidade HTTPS do servidor Web em execução localmente. Você pode [baixar ngrok](https://ngrok.com/download).
-
-### <a name="get-the-source-code"></a>Obter o código-fonte
-
-Em um prompt de comando, crie um novo diretório para seu projeto de guia. Um projeto [simples de Guia de Grupo](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) de Canal é fornecido para você começar. Clone o repositório de exemplo em seu novo diretório usando o seguinte comando:
-
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
-
-Como alternativa, você pode recuperar o código-fonte baixando a pasta zip e extraindo os arquivos.
-
-**Para criar e executar o projeto de guia**
-
-1. Depois de ter o código-fonte, vá para Visual Studio e selecione **Abrir um projeto ou solução**.
-1. Vá para o diretório de aplicativos de tabulação e abra **ChannelGroupTabMVC.sln**.
-1. Para criar e executar seu aplicativo, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar** .
-1. Em um navegador, navegue até as SEGUINTES URLs e verifique se o aplicativo foi carregado corretamente:
-
-    * `http://localhost:44360`
-    * `http://localhost:44360/privacy`
-    * `http://localhost:44360/tou`
-
-### <a name="review-the-source-code"></a>Revisar o código-fonte
+<details>
+<summary><b>Revisar o código-fonte</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-Esse projeto foi criado a partir de um modelo vazio do Aplicativo Web 2.2 do ASP.NET Core 2.2 com a caixa de seleção **Avançado - Configurar para HTTPS** selecionada na instalação. Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware `Configure()` de arquivos estáticos é adicionado ao método usando o seguinte código:
+Esse projeto foi criado a partir de um modelo vazio do aplicativo Web 3.1 do ASP.NET Core 3.1 com a caixa de seleção **Avançado - Configurar para HTTPS** selecionada na instalação. Os serviços MVC são registrados pelo método da estrutura de injeção de `ConfigureServices()` dependência. Além disso, o modelo vazio não habilita o serviço de conteúdo estático por padrão, portanto, o middleware `Configure()` de arquivos estáticos é adicionado ao método usando o seguinte código:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -580,7 +500,7 @@ Esses arquivos precisam ser cortados em um pacote de aplicativos para uso ao car
 
 #### <a name="csproj"></a>.csproj
 
-Na janela Visual Studio Solution Explorer, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Na janela Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ```xml
 <PropertyGroup>
@@ -616,25 +536,123 @@ Estas são as diferentes exibições em ASP.NET Core MVC:
 
 Os controladores usam a propriedade `ViewBag` para transferir valores dinamicamente para os exibições.
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+</details>
 
-* Abra um prompt de comando na raiz do diretório do projeto e execute o seguinte comando:
+### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-    ```bash
-    ngrok http https://localhost:443560 -host-header="localhost:44360"
-    ```
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
 
-* O Ngrok ouvirá as solicitações da Internet e as encaminhará para seu aplicativo quando estiver sendo executado na porta 44355. Deve parecer onde `https://y8rCgT2b.ngrok.io/` **y8rCgT2b** é substituído pela URL HTTPS alfanumérico ngrok.
+```cmd
+ngrok http 3978 --host-header=localhost
+```
 
-* Certifique-se de manter o prompt de comando com o ngrok em execução e anote a URL.
+Certifique-se de manter o prompt de comando com o ngrok em execução e anote a URL.
 
 ### <a name="update-your-application"></a>Atualizar seu aplicativo
 
-Em **Tab.cshtml** , o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher o **botão Selecionar Cinza** ou **Selecionar Vermelho** , dispara `saveGray()` ou `saveRed()`, respectivamente, define `settings.setValidityState(true)`e habilita o botão **Salvar** na página de configuração. Esse código permite Teams que você concluiu os requisitos de configuração e que a instalação pode continuar. Ao salvar, os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+1. Vá para a **pasta** **ViewsShared** >  e abra **_Layout.cshtml** e adicione o seguinte ao <head> seção tags:
 
-[!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+    
+    > [!IMPORTANT]
+    > Não copie e colará as `<script src="...">` URLs desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, sempre vá [para Microsoft Teams API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
+    
+1. Na parte superior da marca `script` , insira uma chamada para `microsoftTeams.initialize();`.
 
----
+1. Vá para a **pasta Tab** e abra **Tab.cshtml**
+
+    Em **Tab.cshtml** , o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher os **gatilhos**  `saveGray()` `saveRed()`do botão Selecionar Cinza ou Selecionar Vermelho ou , respectivamente, define `settings.setValidityState(true)`e habilita o botão **Salvar** na página de configuração. Esse código permite Teams que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de são `settings.setSettings` definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito. 
+
+1. Atualize os `websiteUrl` valores `contentUrl` e em cada função com a URL de ngrok HTTPS para sua guia.
+
+    Seu código agora deve incluir o seguinte **com y8rCgT2b** substituído pela URL do ngrok:
+
+    ```javascript
+
+        let saveGray = () => {
+            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+    
+        let saveRed = () => {
+            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+    ```
+
+1. Certifique-se de salvar **o Tab.cshtml atualizado**.
+
+### <a name="build-and-run-your-application"></a>Criar e executar seu aplicativo
+
+1. Em Visual Studio, pressione **F5** ou escolha **Iniciar Depuração** no menu **Depurar**.
+
+1. Verifique se **o ngrok** está sendo executado e funcionando corretamente abrindo seu navegador e indo para sua página de conteúdo por meio da URL HTTPS ngrok fornecida na janela do prompt de comando.
+
+    > [!TIP]
+    > Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado no Visual Studio. Se você tiver que reiniciar o serviço ngrok, ele retornará uma nova URL e será preciso atualizar seu aplicativo com a nova URL.
+
+### <a name="update-your-app-package-with-developer-portal"></a>Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor
+
+1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as ferramentas de desenvolvedor [do navegador](~/tabs/how-to/developer-tools.md).
+
+1. Vá para **Portal do Desenvolvedor** em Teams.
+
+1. Abra **Aplicativos** e selecione **Importar aplicativo**.
+
+1. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
+
+    ```bash
+    /bin/Debug/netcoreapp3.1/tab.zip
+    ```
+
+1. Selecione **tab.zip** e abra-o no Portal do Desenvolvedor.
+
+1. Uma **ID de aplicativo padrão** é criada e preenchida na **seção Informações básicas** .
+
+1. Adicione a descrição Short e Long para seu aplicativo em **Descrições**.
+
+1. Em **Informações do Desenvolvedor**, adicione os detalhes necessários e, no Site (deve ser uma **URL HTTPS válida),** dê sua URL HTTPS ngrok.
+
+1. Em **URLs de aplicativos**, atualize a política de Privacidade para `https://<yourngrokurl>/privacy` e Os Termos de uso para `https://<yourngrokurl>/tou` e salvar.
+
+1. Em **Recursos do aplicativo**, selecione Aplicativo Pessoal e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco.
+
+1. Selecione **Salvar**.
+
+1. Na seção Domínios, domínios de suas guias devem conter sua URL ngrok sem o prefixo `<yourngrokurl>.ngrok.io`HTTPS .
+
+### <a name="preview-your-app-in-teams"></a>Visualizar seu aplicativo em Teams
+
+1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor. O Portal do Desenvolvedor informa que seu aplicativo é sideload com êxito.
+
+1. Selecione **Gerenciar seus aplicativos**. Seu aplicativo está listado nos aplicativos com sideload.
+
+1. Encontre seu aplicativo usando a pesquisa, selecione &#x25CF;&#x25CF;&#x25CF;.
+
+1. Selecione a **opção Exibir detalhes** . A janela de detalhes do aplicativo é exibida para seu aplicativo.
+
+1. Selecione &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Guia Canal ASPNET carregadoAdd" border="true":::&nbsp; >  **para a equipe** para carregar a guia Teams. Sua guia agora está disponível no Teams.
+
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia canal ASPNET MVC carregado" border="true":::
+
+::: zone-end
 
 ## <a name="next-step"></a>Próxima etapa
 

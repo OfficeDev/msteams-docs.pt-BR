@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464814"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590756"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma Teams pessoal em Microsoft 365
 
@@ -54,7 +54,7 @@ Para concluir este tutorial, você precisará:
 
 Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma ramificação do seu projeto de produção para testar e atualizar a ID do aplicativo no manifesto do aplicativo para usar um novo identificador (distinto da ID do aplicativo de produção).
 
-Se você quiser usar código de exemplo para concluir este tutorial, siga as etapas de instalação em [Introdução a Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para criar um aplicativo de guia pessoal usando a extensão Teams Toolkit para Visual Studio Code. Ou, você pode começar com o mesmo [Exemplo de Lista Total atualizado para o TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) e continuar para Visualizar sua guia pessoal em outras experiências Microsoft 365 [do TeamsJS](#preview-your-personal-tab-in-other-microsoft-365-experiences). O exemplo atualizado também está disponível em uma extensão Teams Toolkit: *DevelopmentView* >  *samplesTodo* >  **List (Works in Teams, Outlook and Office)**.
+Se você quiser usar o código de exemplo para concluir este tutorial, siga as etapas de instalação no [Introdução com Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para criar um aplicativo de guia pessoal usando a extensão Teams Toolkit para Visual Studio Code. Ou, você pode começar com o mesmo [Exemplo de Lista Total atualizado para o TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) e continuar para Visualizar sua guia pessoal em outras experiências Microsoft 365 [do TeamsJS](#preview-your-personal-tab-in-other-microsoft-365-experiences). O exemplo atualizado também está disponível em uma extensão Teams Toolkit: *DevelopmentView* >  *samplesTodo* >  **List (Works in Teams, Outlook and Office)**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemplo de Lista Inteira (Funciona em Teams, Outlook e Office) em Teams Toolkit":::
 
@@ -120,19 +120,19 @@ Se seu aplicativo fizer uso de headers de Política de Segurança de [Conteúdo 
 |Microsoft 365 host| permissão frame-ancestral|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Escritório | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
 
-Azure Active Directory O logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como acontece no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do seu aplicativo de guia no portal de registros de *aplicativos* do locatário.
+Azure Active Directory Logor único (SSO) para guias pessoais funciona da mesma maneira no Office e no Outlook como no [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro do aplicativo do Azure AD do aplicativo de tabulação no Registros de aplicativo ** portal.
 
 1. Entre no Microsoft Azure [portal com](https://portal.azure.com) sua conta de locatário de área de reserva.
-1. Abra a **folha Registros de** aplicativo.
+1. Abra a **Registros de aplicativo**.
 1. Selecione o nome do aplicativo de guia pessoal para abrir seu registro de aplicativo.
 1. Selecione  **Expor uma API** (em *Gerenciar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs de cliente da folha *Registros de aplicativo* no portal do Azure":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs de cliente da folha *Registros de aplicativo* na portal do Azure":::
 
 Na seção **Aplicativos cliente autorizados** , verifique se todos os seguintes valores `Client Id` são adicionados:
 
@@ -173,9 +173,9 @@ Você pode fixar o aplicativo para acesso rápido ou pode encontrar seu aplicati
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Visualizar sua guia pessoal em outras Microsoft 365 experiências
 
-Quando você atualiza Teams guia pessoal e a descarrega no Teams, ela também será Outlook clientes da área de trabalho e da Web e Office na Web (office.com). Veja como visualizar essas experiências Microsoft 365.
+Quando você atualiza Teams guia pessoal e a descarrega no Teams, ela é Outlook no Windows, na Web, Office no Windows e na Web (office.com). Veja como visualizar essas experiências Microsoft 365.
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Outlook no Windows
 
 Para exibir seu aplicativo em execução em Outlook na Windows desktop:
 
@@ -195,7 +195,7 @@ Para exibir seu aplicativo em Outlook na Web:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção releitos ('Mais aplicativos') na barra lateral do outlook.com para ver suas guias pessoais instaladas":::
 
-### <a name="office"></a>Escritório
+### <a name="office-on-windows"></a>Office no Windows
 
 Para exibir seu aplicativo em execução em Office em Windows desktop:
 

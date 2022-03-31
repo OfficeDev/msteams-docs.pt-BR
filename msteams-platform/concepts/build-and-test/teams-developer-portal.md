@@ -5,12 +5,12 @@ keywords: iniciando equipes do portal do desenvolvedor
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511231"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464779"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams
 
@@ -19,9 +19,7 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a home page do Portal do Desenvolvedor para Teams.":::
 
 > [!NOTE]
->
-> * Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
-> * No entanto, você pode usar um locatário regular para criar um aplicativo no Portal do Desenvolvedor, baixar o aplicativo e carregar o aplicativo usando o [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) para uma nuvem nacional. Para obter mais informações, consulte [Implantações de nuvem nacionais](/graph/deployments).
+> Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 

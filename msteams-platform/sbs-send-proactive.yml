@@ -2,7 +2,7 @@
 title: Enviar mensagens proativas
 metadata:
   title: Enviar mensagens proativas
-  description: Nesse cenário, você aprenderá a enviar mensagens proativas
+  description: Neste módulo, saiba como enviar mensagens proativas, como mensagens de boas-vindas, mensagens agendadas e notificações de um bot
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Ler mais sobre mensagens proativas
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 0a89892df09816785a3848db442c1573ba9f04f8
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: 9738be897a0f520c137424eb8f5d062c41396f13
+  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674842"
+  ms.lasthandoff: 03/31/2022
+  ms.locfileid: "64571219"
 items:
 - durationInMinutes: 1
   content: "Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Isso inclui mensagens, como:\n - Mensagem de boas-vindas\n - Notificações\n - Mensagens agendadas\n \nEste guia passo a passo ajuda você a enviar uma mensagem proativa de um bot. Você verá as seguintes saídas:\n\n* Mensagem de olá proativa no chat        \n![Olá proativo no chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensagem hello proativa como um Cartão Adaptável    \n![hello proativo no Cartão Adaptável](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
