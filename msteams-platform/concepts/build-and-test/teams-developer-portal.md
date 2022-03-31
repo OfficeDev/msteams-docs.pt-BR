@@ -5,12 +5,12 @@ keywords: iniciando equipes do portal do desenvolvedor
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399321"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511231"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams
 
@@ -19,7 +19,9 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a home page do Portal do Desenvolvedor para Teams.":::
 
 > [!NOTE]
-> Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
+>
+> * Atualmente, o Portal do Desenvolvedor não está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou Departamento de Defesa (DOD).
+> * No entanto, você pode usar um locatário regular para criar um aplicativo no Portal do Desenvolvedor, baixar o aplicativo e carregar o aplicativo usando o [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) para uma nuvem nacional. Para obter mais informações, consulte [Implantações de nuvem nacionais](/graph/deployments).
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 
@@ -71,17 +73,6 @@ No Portal do Desenvolvedor, use o botão **Distribuir** para baixar um pacote de
 
 Para obter mais informações, consulte [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
-## <a name="analyze-your-apps-usage"></a>Analisar o uso do seu aplicativo
-
-Na página **Visão** geral, você pode ver o número total de usuários ativos para seu aplicativo. Essas métricas estão disponíveis para aplicativos publicados no Teams ou no catálogo de aplicativos de uma organização por meio do Portal do Desenvolvedor e com escopo para a ID do aplicativo.
-
-| Indicador | Definição |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *R30 mensal* | A métrica de uso padrão. Ele mostra a contagem de usuários ativos exclusivos que usaram seu aplicativo nessa janela de 30 dias de rolagem em UTC. |
-| *Diariamente* | Mostra a contagem de usuários ativos exclusivos que usaram seu aplicativo em um determinado dia em UTC. |
-
-O uso mensal e diário é mostrado nos últimos sete, 30 dias e 60 dias. Você deve ver o uso refletido para um determinado dia dentro de 24 a 48 horas. O uso de novos aplicativos pode levar de 3 a 5 dias para ser exibido.
-
 ## <a name="use-tools-to-create-app-features"></a>Usar ferramentas para criar recursos de aplicativo
 
 O Portal do Desenvolvedor também inclui ferramentas para ajudá-lo a criar alguns recursos principais de Teams aplicativos. Algumas dessas ferramentas incluem:
@@ -92,4 +83,4 @@ O Portal do Desenvolvedor também inclui ferramentas para ajudá-lo a criar algu
 
 ## <a name="see-also"></a>Confira também
 
-[Incluir uma oferta SaaS com seu Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Incluir uma oferta SaaS com seu aplicativo Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

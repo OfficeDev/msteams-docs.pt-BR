@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: evento de canal de consentimento de cartão de bot da estrutura de atividades
-ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 59c03c339187010867d9fd380d4ac9798e3aa20c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398642"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464772"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
@@ -184,7 +184,9 @@ A lógica do bot processa as atividades de entrada de um ou mais de seus canais 
 #### <a name="core-bot-framework-handlers"></a>Manipuladores da Estrutura de Bots Principais
 
 >[!NOTE]
-> Com **exceção das** atividades  dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não Teams.
+>
+>* Com **exceção das** atividades  dos membros adicionados e removidos, todos os manipuladores de atividades descritos nesta seção continuam a funcionar como fazem com um bot que não Teams.
+>* `onInstallationUpdateActivityAsync()`é usado para obter Teams Locale ao adicionar o bot ao Teams.
 
 Manipuladores de atividades são diferentes no contexto de uma equipe, onde um novo membro é adicionado à equipe em vez de um thread de mensagem.
 

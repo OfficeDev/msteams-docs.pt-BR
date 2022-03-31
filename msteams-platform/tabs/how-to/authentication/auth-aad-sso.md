@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: api de logon único de autenticação de equipes SSO do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398887"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464807"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -22,7 +22,7 @@ Os usuários do Microsoft Teams que entram em sua conta corporativa, de estudant
 >
 > ✔Teams para iOS (_Versão_: 2.0.18 e posterior)  
 >
-> ✔SDK do JavaScript do Teams (_Versão_: 1.10 e posterior) para que o SSO funcione no painel lateral da reunião.
+> ✔SDK do Teams JavaScript (_Versão_: 1.11 e posterior) para que o SSO funcione no painel lateral da reunião.
 >
 > Para obter uma melhor experiência no Teams, use a versão mais recente do iOS e Android.[!NOTE]
 > **Início rápido**  

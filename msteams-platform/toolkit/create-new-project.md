@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464263"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498214"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 
@@ -34,13 +34,20 @@ Você pode criar um novo aplicativo explorando **Exibir amostras** e selecionand
 
  1. Abra o **Kit de ferramentas do Teams** do Microsoft Visual Studio Code.
  1. Selecione a seção **DESENVOLVIMENTO** em Treeview.
- 1. Selecione **Exibir amostras**. A galeria de amostra aparece conforme mostrado na imagem a seguir:
+ 1. Selecione **Amostras de exibição**. A galeria de amostra aparece conforme mostrado na imagem a seguir:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Exibir amostras":::
 
 Você pode explorar e baixar amostras e executar seu aplicativo local ou remotamente para visualizar no cliente Web do Teams. Siga as instruções para cada amostra ou selecione **Exibir no GitHub** para abrir a amostra no `TeamsFx Samples repository` e navegar pelo código-fonte.
 
 Para obter mais informações, [Criar um novo aplicativo guia do Teams (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
+
+## <a name="step-by-step-guides-using-teams-toolkit"></a>Guias passo a passo usando o Kit de Ferramentas do Teams
+
+* [Criar um aplicativo do Teams com o Blazor](../sbs-gs-blazorapp.yml)
+* [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
+* [Criar um aplicativo Teams com SPFx](../sbs-gs-spfx.yml)
+* [Criar um aplicativo Teams com C# ou .NET](../sbs-gs-csharp.yml)
 
 ## <a name="see-also"></a>Confira também
 

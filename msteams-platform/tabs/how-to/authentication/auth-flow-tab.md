@@ -4,14 +4,14 @@ description: Descreve o fluxo de autenticação em guias, OAuth pelo Azure AD e 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação do teams
-ms.openlocfilehash: c0a3617332d3392c36f21645d4fb0074008ced40
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 28a6089eebe5ebc70f6be57f8eae451ce7a0be7e
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821371"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464800"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams fluxo de autenticação para guias
+# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Fluxo de autenticação do Microsoft Teams para guias
 
 > [!NOTE]
 > Para que a autenticação funcione para sua guia em clientes móveis, você precisa garantir que esteja usando pelo menos a versão 1.4.1 do SDK do Microsoft Teams JavaScript.  
@@ -40,6 +40,9 @@ Semelhante a outros fluxos de auth de aplicativos no Teams, a página inicial de
 7. A guia verifica se o valor `state` retornado corresponde ao que foi salvo anteriormente e chama , `successCallback` que, por sua vez, `microsoftTeams.authentication.notifySuccess()`chama a função registrada na etapa 3.
 8. Teams fecha a janela pop-up.
 9. A guia exibe a interface do usuário de configuração, atualiza ou recarrega o conteúdo das guias, dependendo de onde o usuário começou.
+
+> [!NOTE]
+> Se o aplicativo for compatível com o SSO SAML, o token JWT gerado pelo SSO não poderá ser usado, pois ele não tem suporte.
 
 ## <a name="treat-tab-context-as-hints"></a>Tratar o contexto da guia como dicas
 

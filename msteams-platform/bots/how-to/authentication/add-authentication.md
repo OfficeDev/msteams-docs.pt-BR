@@ -5,13 +5,13 @@ description: Como adicionar autenticação OAuth a um bot Microsoft Teams usando
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: registro do bot do grupo de recursos Manifesto do bot do emulador do Azure
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: registro do bot do grupo de recursos Implantação do manifesto do bot do emulador do Azure
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493021"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464821"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu bot do Teams
 
@@ -358,7 +358,7 @@ Se um bot exigir autenticação, você deve configurar o Emulator. Para configur
 1. Marque a caixa por **Usar tokens de autenticação da versão 1.0**.
 1. Insira o caminho local para a **ferramenta ngrok** . *Consulte* a wiki Bot Framework Emulator de túnel de Bot Framework Emulator /ngrok [.](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)) Para obter mais informações sobre a ferramenta, [consulte ngrok](https://ngrok.com/).
 1. Marque a caixa por **Executar ngrok quando o Emulator for iniciado**.
-1. Selecione o **botão Salvar** .
+1. Clique no botão **Salvar** na faixa de opções.
 
 Quando o bot exibe um cartão de login e o usuário seleciona o botão de login, o Emulator abre uma página que o usuário pode usar para entrar com o provedor de autenticação.
 Depois que o usuário faz isso, o provedor gera um token de usuário e o envia para o bot. Depois disso, o bot pode agir em nome do usuário.
@@ -436,7 +436,7 @@ and when for these, and just reference that from here, along with the set of ste
     1. Verifique se a **ID do aplicativo** bot que você recebeu no momento em que o registro do bot está atribuído `id` e `botId`.
     1. Atribua esse valor: `validDomains: [ "token.botframework.com" ]`.
 1. Selecione e **feche os** `manifest.json`arquivos , `outline.png`e `color.png` .
-1. Abra **Microsoft Teams**.
+1. Abra o **Microsoft Teams**.
 1. No painel esquerdo, na parte inferior, selecione o **ícone Aplicativos**.
 1. No painel direito, na parte inferior, selecione **Upload um aplicativo personalizado**.
 1. Navegue até a `TeamsAppManifest` pasta e carregue o manifesto de zipped.

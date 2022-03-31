@@ -1,16 +1,16 @@
 ---
 title: Noções básicas sobre os casos de uso do seu aplicativo e os recursos do Teams
 author: heath-hamilton
-description: Planeje seu aplicativo, entenda o usuário e suas necessidades, entenda os problemas do usuário que seu aplicativo resolveria, planeje a autenticação do usuário e sua experiência de integração
+description: Neste artigo, conheça os recursos do aplicativo Microsoft Teams, planeje seu aplicativo Teams, entenda o usuário do aplicativo e suas necessidades, entenda os problemas do usuário que seu aplicativo Teams resolveria, planeje a autenticação do usuário e sua experiência de integração.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766118"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498228"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 

@@ -5,12 +5,12 @@ description: Uma visão geral dos bots do Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a795ae8c75774f5f3814e5b664314c0f32f30bcb
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323194"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498221"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -37,13 +37,13 @@ Cada interação entre o usuário e o bot é representada como uma atividade. Qu
 
 Bots são aplicativos que têm uma interface de conversa. Você pode interagir com um bot usando texto, cartões interativos e fala. Um bot se comporta de forma diferente em uma conversa de chat de canal ou grupo e em uma conversa individual. As conversas são manipuladas pelo conector da Estrutura do Bot. Consulte [noções básicas de conversa](~/bots/how-to/conversations/conversation-basics.md).
 
-Seu bot exige informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Consulte [obter o contexto do Teams](~/bots/how-to/get-teams-context.md).
+Seu bot requer informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Confira [obter o contexto do Teams](~/bots/how-to/get-teams-context.md).
 
 Você pode enviar e receber arquivos pelo bot usando as APIs do Graph ou as APIs do bot do Teams. Consulte [enviar e receber arquivos pelo bot](~/bots/how-to/bots-filesv4.md).
 
 O limite de taxas é usado para otimizar os bots usados no seu aplicativo do Teams. Para proteger o Microsoft Teams e seus usuários, as APIs do bot fornecem um limite de taxa para solicitações de entrada. Consulte [otimizar seu bot com limitação de taxa no Teams](~/bots/how-to/rate-limit.md).
 
-Com as APIs do Microsoft Graph para chamadas e reuniões online, os aplicativos do Microsoft Teams já podem interagir com os usuários usando voz e vídeo. Consulte [bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+Com as APIs do Microsoft Graph para chamadas e reuniões online, os aplicativos do Microsoft Teams agora podem interagir com os usuários usando voz e vídeo. Confira [bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 Você pode usar as APIs do bot do Teams para obter informações dos membros de um chat ou equipe. Consulte [alterações nas APIs do bot do Teams para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md).
 
@@ -64,6 +64,7 @@ Você pode usar as APIs do bot do Teams para obter informações dos membros de 
 ## <a name="see-also"></a>Confira também
 
 * [Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Como os bots do Microsoft Teams funcionam](/azure/bot-service/bot-builder-basics-teams)
 * [Registrar chamadas e reuniões do bot do Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Adicionar autenticação ao seu bot do Teams](~/bots/how-to/authentication/add-authentication.md)
 * [Manipuladores de atividade de bot](~/bots/bot-basics.md)
