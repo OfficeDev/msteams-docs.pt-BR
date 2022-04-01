@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: fe6eb9a35173ee01ef5df8857bfe92892abc3630
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511238"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571485"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,7 +22,11 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|30/03/2022| Atualizado o módulo de Introdução com o aplicativo Blazor usando guias e bots|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorupdate.yml)|
+|30/03/2022|Permissões do dispositivo para o navegador | Integrar recursos do dispositivo > [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
+|29/03/2022 | Integrar o Seletor de Pessoas | Integrar com o Teams > [Integrar o Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|
 |03/23/2022| Introduziu o guia passo a passo para desdobrar links no Teams usando bot | Criar extensões de mensagens > Adicionar desdobramento de links > [Descompactar links no Teams usando bot](sbs-botbuilder-linkunfurling.yml)|
+|22/03/2022| Atualizado o aplicativo Introdução ao Blazor para Teams |  • Introdução > [Criar seu primeiro aplicativo usando o Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Atualizado o aplicativo Introdução ao Blazor para Teams |  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Adicionadas as informações sobre o processo de depuração| • Ferramentas e SDKs> Kit de ferramentas do Teams para Visual Studio Code > [Depurar seu aplicativo do Teams localmente](toolkit/debug-local.md) </br> • Ferramentas e SDKs> Kit de ferramentas do Teams para Visual Studio Code > [Depurar o processo em segundo plano ](toolkit/debug-background-process.md)|
 |14/03/2022| Introduziu o guia passo a passo para criar e testar um conector no Microsoft Teams | Criar webhooks e conectores > Criar Conectores do Office 365 > [Criar conectores do Teams](sbs-teams-connectors.yml)|
@@ -40,7 +44,11 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
-|03/23/2022| Introduziu o guia passo a passo para desdobrar links no Teams usando bot | Criar extensões de mensagens > Adicionar desdobramento de links > [Descompactar links no Teams usando bot](sbs-botbuilder-linkunfurling.yml)|
+|30/03/2022| Atualizado o módulo de Introdução com o aplicativo Blazor usando guias e bots|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorupdate.yml)|
+|30/03/2022|Permissões do dispositivo para o navegador | Integrar recursos do dispositivo > [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
+|29/03/2022 |Integrar o Seletor de Pessoas | Integrar com o Teams > [Integrar o Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)
+|03/23/2022| Introduziu o guia passo a passo para desdobrar links no Teams usando bot | Criar extensões de mensagens > Adicionar desdobramento de links > [Descompactar links no Teams usando bot](sbs-botbuilder-linkunfurling.yml)|  
+|22/03/2022| Atualizado o aplicativo Introdução ao Blazor para Teams|  • Introdução > [Criar seu primeiro aplicativo usando o Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Atualizado o aplicativo Introdução ao Blazor para Teams|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Adicionadas as informações sobre o processo de depuração| • Ferramentas e SDKs> Kit de ferramentas do Teams para Visual Studio Code > [Depurar seu aplicativo do Teams localmente](toolkit/debug-local.md) </br> • Ferramentas e SDKs> Kit de ferramentas do Teams para Visual Studio Code > [Depurar o processo em segundo plano ](toolkit/debug-background-process.md)|
 |14/03/2022| Introduziu o guia passo a passo para criar e testar um conector no Microsoft Teams | Criar webhooks e conectores > Criar Conectores do Office 365 > [Criar conectores do Teams](sbs-teams-connectors.yml)|
@@ -251,7 +259,6 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 |24/12/2021| Introdução ao guia passo a passo para conceder permissões de dispositivo Tab | Fundamentos do aplicativo > Recursos do dispositivo > [Guia passo a passo para conceder permissões de dispositivo Tab](sbs-tab-device-permissions.yml) |
 |15/11/2021| Guias pessoais e extensões de mensagens são executadas no Outlook e no Office | [Estender aplicativos do Teams pelo Microsoft 365](~/m365-apps/overview.md) |
 |28/10/2021|Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso) | • Criar bots > Conversas de bot > Mensagens em conversas de bot > [Receber todas as mensagens com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > Conversas de bot > [visão geral da conversa de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > Conversas de bot > [conversas em grupo e canal](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [esquema de manifesto de visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md) |
-|19/10/2021|Permissões do dispositivo para o navegador | Conceitos básicos do dispositivo > Recursos do dispositivo [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
 |21/06/2021|Comportamento de desinstalação do aplicativo pessoal com o bot | Criar bots > Conversas de bot > [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |16/06/2021| Consentimento específico de recursos para chats | • Utilizar dados do Teams com Microsoft Graph > [Consentimento específico do recurso](graph-api/rsc/resource-specific-consent.md) </br> • Testar seu aplicativo > Microsoft Graph > [Testar permissões de consentimento específicas do recurso no Teams](graph-api/rsc/test-resource-specific-consent.md)|
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464793"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571101"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
@@ -33,14 +33,16 @@ Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar pu
 
 Você pode fazer o sideload do aplicativo para uma equipe, chat, reunião ou para uso pessoal, dependendo de como você configurou o escopo do aplicativo.
 
-1. Acesse o cliente do Teams com sua [conta de desenvolvimento Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
+1. Acesse o cliente do Teams com sua [conta de desenvolvimento Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 1. Expanda **Aplicativos** e selecione **Gerenciar aplicativos**.
 1. Selecione **Fazer o upload de um aplicativo personalizado**.
-1. Selecione o arquivo .zip do pacote do aplicativo. A seguinte tela será exibida:
+1. Selecione o arquivo .zip do pacote do aplicativo.
+2. Adicione seu aplicativo ao Teams de acordo com suas necessidades:</br>
 
-    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de tela mostrando um exemplo de diálogo de instalação de um aplicativo do Teams.":::
+   a. Selecione **Adicionar** para adicionar seu aplicativo pessoal.</br>
+   b. Use o menu suspenso para adicionar seu aplicativo a uma Equipe ou chat.
 
-1. Selecione **Adicionar** para adicionar seu aplicativo ao Teams.
+![Criar um aplicativo do Teams](~/assets/videos/app-teams.gif)
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -63,7 +65,9 @@ Você não precisará realizar o sideload do aplicativo novamente se fizer alter
 Para remover seu aplicativo, clique com o botão direito do mouse no ícone do aplicativo no Teams e selecione **Desinstalar**.
 
 > [!NOTE]
-> Você não pode remover totalmente a atividade de bot pessoal. Se você remover o aplicativo e adicioná-lo novamente, a nova comunicação com o bot acrescentará à conversa anterior com ele.
+>
+> * Você não pode remover totalmente a atividade de bot pessoal. Se você remover o aplicativo e adicioná-lo novamente, a nova comunicação com o bot acrescentará à conversa anterior com ele.
+> * No momento, você não pode migrar seu aplicativo personalizado para a loja do Teams. Se você quiser listar seu aplicativo na loja do Teams, confira [Publicar seu aplicativo na loja do Microsoft Teams](appsource/publish.md).
 
 ## <a name="next-step"></a>Próxima etapa
 
