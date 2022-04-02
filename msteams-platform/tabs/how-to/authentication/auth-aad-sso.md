@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: api de logon único de autenticação de equipes SSO do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464807"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571317"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -83,7 +83,10 @@ Para registrar seu aplicativo por meio do portal do Azure AD, siga estas etapas:
 1. Em **Gerenciar**, selecione **Expor uma API**.
 
     > [!NOTE]
-    > Se você estiver criando um aplicativo com um bot e uma guia, insira o URI de ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Se você estiver criando um aplicativo com um bot e uma guia, insira o URI de ID do aplicativo como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Use letras minúsculas para o nome de domínio. Não use letras maiúsculas. Por exemplo, para criar um serviço de aplicativo ou aplicativo Web, insira o nome do recurso base como `demoapplication`, em seguida, a URL será `https://demoapplication.azurewebsites.net`. Mas se você usar o nome de recurso base como `DemoApplication`, a URL será `https://DemoApplication.azurewebsites.net` e terá suporte na área de trabalho, na Web e no iOS, mas não no Android.
 
 1. Selecione o link **Definir** para gerar o URI de ID do Aplicativo no formato de `api://{AppID}`. Insira o nome de domínio totalmente qualificado com uma barra "/" acrescentada ao final entre as duas barras e o GUID. A ID inteira deve ter a forma de `api://fully-qualified-domain-name.com/{AppID}`. ² Por exemplo, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. O nome de domínio totalmente qualificado é o nome de domínio em formato legível por humanos a partir do qual seu aplicativo é distribuído. Se você estiver usando um serviço de túnel, como ngrok, deverá atualizar esse valor sempre que o subdomínio ngrok mudar.
 1. Selecione **Adicionar um escopo**. No painel que se abre, insira **access_as_user** como o **Nome de escopo**.

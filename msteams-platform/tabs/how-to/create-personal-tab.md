@@ -5,14 +5,14 @@ description: Um guia de início rápido para criar uma guia pessoal com o Gerado
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET pacote MVC appmanifest conversation domain permission store
+keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571333"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614541"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -23,8 +23,6 @@ Verifique se você tem todos [os pré-requisitos para](~/tabs/how-to/tab-require
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>Criar uma guia pessoal com Node.js
-
-Para criar uma guia pessoal com Node.js
 
 1. No prompt de comando, instale os pacotes [Yeoman](https://yeoman.io/) e [gulp-cli](https://www.npmjs.com/package/gulp-cli) inserindo o seguinte comando após a instalação do Node.js:
 
@@ -45,7 +43,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 1. [Criar um pacote do aplicativo](#create-your-app-package)
 1. [Criar e executar seu aplicativo](#build-and-run-your-application)
 1. [Estabelecer um túnel seguro para sua guia pessoal](#establish-a-secure-tunnel-to-your-tab)
-1. [Upload seu aplicativo para Teams](#upload-your-application-to-teams)
+1. [Carregue seu aplicativo para Teams](#upload-your-application-to-teams)
 
 ### <a name="generate-your-application-with-a-personal-tab"></a>Gerar seu aplicativo com uma guia pessoal
 
@@ -116,9 +114,9 @@ A seguir estão as etapas para criar uma guia pessoal:
 
       Escolha não incluir suporte ao ESLint. O padrão é não, digite **n**.
 
-    * **Você gostaria de usar aplicativos do Azure Insights para telemetria? (y/N)**
+    * **Você gostaria de usar o Azure Applications Insights para telemetria? (y/N)**
 
-      Escolha **não** incluir [Aplicativo Azure Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
+      Escolha **não** incluir Aplicativo Azure [Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
 
     * **Nome da guia padrão (máx. 16 caracteres)?**
 
@@ -128,7 +126,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
       Use as teclas de seta para selecionar **Pessoal (estático)**.
 
-    * **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
+    * **Você precisa do suporte de Login Único do Microsoft Azure Active Directory (Azure AD) para a guia?**
 
       Escolha **não** incluir o suporte ao Azure AD Single-Sign-On para a guia. O padrão é sim, digite **n**.
 
@@ -138,7 +136,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
 Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de guia pessoal:
 
-1. Crie um novo **personal.html** em seu Visual Studio Code com a seguinte marcação:
+1. Crie um novo **arquivopersonal.html** no código Visual Studio com a seguinte marcação:
 
     ```html
     <!DOCTYPE html>
@@ -166,7 +164,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.json** a partir do seguinte local em sua Visual Studio Code:
+1. Abra **manifest.json** a partir do seguinte local em seu Visual Studio Código:
 
     ```
      ./src/manifest/manifest.json
@@ -178,8 +176,8 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -193,7 +191,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
 
 1. Salve o arquivo **manifest.json** atualizado.
 
-1. Abra **Tab.ts** em seu Visual Studio Code do seguinte caminho para fornecer sua página de conteúdo em um IFrame:
+1. Abra **Tab.ts** em seu Visual Studio Código do seguinte caminho para fornecer sua página de conteúdo em um IFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -252,13 +250,13 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > Depois que sua guia é carregada para Microsoft Teams por **meio do ngrok** e salva com êxito, você pode exibi-la no Teams até que sua sessão de túnel termine.
 
-### <a name="upload-your-application-to-teams"></a>Upload seu aplicativo para Teams
+### <a name="upload-your-application-to-teams"></a>Carregue seu aplicativo para Teams
 
 1. Vá para Microsoft Teams e selecione **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Selecione **Gerenciar seus aplicativos**
-1. Selecione **Publicar um aplicativo** e **Upload um aplicativo personalizado**.
+1. Selecione **Publicar um aplicativo e** **Carregar um aplicativo personalizado**.
 
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload aplicativo personalizado" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Carregar aplicativo personalizado" border="true":::
 
 1. Vá para o diretório do projeto, navegue até a **pasta ./package** , selecione a pasta zip e escolha **Abrir**.
 
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>Criar uma guia pessoal com ASP.NET Core
-
-Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core Páginas de lâmina de corte. Para criar uma guia pessoal com ASP.NET Core
 
 1. No prompt de comando, crie um novo diretório para seu projeto de guia.
 
@@ -350,7 +346,7 @@ Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar
 
 #### <a name="csproj"></a>.csproj
 
-Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você pode ver o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**. No final do arquivo, você pode ver o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ```xml
 <PropertyGroup>
@@ -383,7 +379,7 @@ Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse
 
 1. Abra **PersonalTab.cshtml da** **pasta Páginas** e adicione `microsoftTeams.initialize()` as `<script>` marcas e salve.
 
-1. Em Visual Studio, selecione **F5** ou **escolha Iniciar Depuração** no menu **Depuração do** aplicativo.
+1. Em Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>Criar uma guia pessoal com ASP.NET Core MVC
-
-Você pode criar uma guia pessoal personalizada usando C# e ASP.NET Core MVC. Para criar uma guia pessoal com ASP.NET Core MVC
 
 1. No prompt de comando, crie um novo diretório para seu projeto de guia.
 
@@ -511,7 +505,7 @@ Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar
 
 #### <a name="csproj"></a>.csproj
 
-Na Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Na Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ``` xml
 <PropertyGroup>
@@ -560,7 +554,7 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 
 1. Abra **PersonalTab.cshtml da** pasta **ViewsPersonalTab**  >  e adicione `microsoftTeams.initialize()` dentro das `<script>` marcas e salve.
 
-1. Em Visual Studio, selecione **F5** ou **escolha Iniciar Depuração** no menu **Depuração do** aplicativo.
+1. Em Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 

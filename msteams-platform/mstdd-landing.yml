@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 2162a3ca1e5cd82612217deba2df163e1fb175f6
-  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+  ms.openlocfilehash: a5a2f2c99f85333c4ebc5909499040b6b533b8b1
+  ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/31/2022
-  ms.locfileid: "64571093"
+  ms.lasthandoff: 04/01/2022
+  ms.locfileid: "64612647"
 landingContent:
 - title: Explore o mais recente
   linkLists:
   - linkListType: concept
     links:
+    - text: Criar Teams de conversa
+      url: ~/sbs-teams-conversation-bot.yml
     - text: Criar seu primeiro aplicativo usando o Blazor
       url: sbs-gs-blazorupdate.yml
     - text: Permissões do dispositivo para o navegador
@@ -41,15 +43,13 @@ landingContent:
       url: ~/resources/schema/manifest-schema.md
     - text: Teste de visualização para aplicativos monetizados
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    - text: Fluxo de compras no aplicativo para a monetização de aplicativos
-      url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
 - title: Introdução
   linkLists:
   - linkListType: get-started
     links:
-    - text: Introdução com a criação de aplicativos
+    - text: Começar a criar aplicativos
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: Introdução com GitHub
+    - text: Começar a GitHub
       url: /contribute/additional-resources
   - linkListType: tutorial
     links:
@@ -117,6 +117,8 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
+    - text: Criar Teams de conversa
+      url: ~/sbs-teams-conversation-bot.yml
     - text: Criar bot de chamada e reunião
       url: ~/sbs-calling-and-meeting.yml
     - text: Configurar permissões de dispositivo Tab
@@ -133,10 +135,6 @@ landingContent:
       url: ~/sbs-meeting-token-generator.yml
     - text: Criar um sidepanel de reunião
       url: ~/sbs-meetings-sidepanel.yml
-    - text: Gerar uma exibição de estágio de reuniões
-      url: ~/sbs-meetings-stage-view.yml
-    - text: Interagir com o bot de bolha de conteúdo em Reuniões
-      url: ~/sbs-meeting-content-bubble.yml
   - linkListType: tutorial
     links:
     - text: Upload arquivos para Teams de um bot

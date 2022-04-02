@@ -1,16 +1,16 @@
 ---
 title: Projetando notificações de feed de atividade
 author: heath-hamilton
-description: Saiba como projetar notificações de feed de atividade para seu aplicativo Teams e obter o kit Microsoft Teams interface do usuário.
+description: 'Saiba como projetar notificações de feed de atividade para seu aplicativo Teams e obter o kit Teams interface do usuário. Desenvolver notificações do Teams no Visual Studio C #'
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 06e6b0ed28208f9ce446a0fc037b7477a562c596
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719914"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612619"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Projetando notificações de feed de atividade para seu Microsoft Teams app
 
@@ -33,10 +33,10 @@ O feed de atividades é uma superfície para que os usuários acessem suas notif
 |Contador|Descrição|
 |----------|-----------|
 |1|**Avatar**: mostra quem iniciou a atividade.|
-|2|**Tipo de atividade/ícone de aplicativo:** representa o tipo de atividade. Para notificações de aplicativo, o ícone de linha é substituído por um ícone de aplicativo.|
-|3|**Título (primeira linha): Ator + motivo**: *Ator*: Nome do usuário ou aplicativo que iniciou a atividade. *Motivo*: Descreve a atividade.|
+|2|**Tipo de atividade/ícone de aplicativo**: representa o tipo de atividade. Para notificações de aplicativo, o ícone de linha é substituído por um ícone de aplicativo.|
+|3|**Título (primeira linha): Ator + motivo**: *Ator*: Nome do usuário ou aplicativo que iniciou a atividade. *Motivo*: descreve a atividade.|
 |4|**Timestamp**: mostra quando a atividade aconteceu.|
-|5|**Local (segunda linha)**: mostra onde a atividade aconteceu Teams.|
+|5|**Local (segunda linha)**: mostra onde a atividade ocorreu Teams.|
 |6 |**Visualização de texto (terceira linha)**: mostra uma linha truncada desde o início da notificação.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Tipos de cartões de notificação de feed de atividade
@@ -47,7 +47,7 @@ As variantes a seguir mostram os tipos de cartões de notificação de feed de a
 
 ## <a name="manage-activity-feed-notifications"></a>Gerenciar notificações de feed de atividade
 
-Os usuários podem gerenciar notificações enviadas do aplicativo na página Teams configurações.
+Os usuários podem gerenciar notificações enviadas de seu aplicativo na página Teams configurações.
 
 ## <a name="related-system-notifications"></a>Notificações relacionadas ao sistema
 
@@ -64,7 +64,7 @@ Cada atividade gera uma notificação do sistema. O que é exibido depende do qu
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams de atividade em sistemas operacionais diferentes." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams de atividade em diferentes sistemas operacionais." border="false":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -74,7 +74,7 @@ Cada atividade gera uma notificação do sistema. O que é exibido depende do qu
 
 ---
 
-## <a name="next-step"></a>Próxima Etapa
+## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
 > [Implementar notificações de feed de atividade](/graph/teams-send-activityfeednotifications)

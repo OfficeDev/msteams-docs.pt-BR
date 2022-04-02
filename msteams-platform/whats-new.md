@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571485"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612654"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|01/04/2022| Introdução ao guia passo a passo para criar um bot de conversa do Microsoft Teams| Criar bots > Conversas de bot > Conversas de grupo e canal > [Guia passo a passo para criar bot de conversação do bot](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Atualizado o módulo de Introdução com o aplicativo Blazor usando guias e bots|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permissões do dispositivo para o navegador | Integrar recursos do dispositivo > [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 | Integrar o Seletor de Pessoas | Integrar com o Teams > [Integrar o Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)|
@@ -44,6 +45,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|01/04/2022| Introdução ao guia passo a passo para criar um bot de conversa do Microsoft Teams| Criar bots > Conversas de bot > Conversas de grupo e canal > [Guia passo a passo para criar bot de conversação do bot](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Atualizado o módulo de Introdução com o aplicativo Blazor usando guias e bots|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permissões do dispositivo para o navegador | Integrar recursos do dispositivo > [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 |Integrar o Seletor de Pessoas | Integrar com o Teams > [Integrar o Seletor de Pessoas](concepts/device-capabilities/people-picker-capability.md)

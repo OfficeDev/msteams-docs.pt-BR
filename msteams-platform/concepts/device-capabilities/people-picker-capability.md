@@ -1,62 +1,75 @@
 ---
 title: Integrar o Seletor de Pessoas
-author: Rajeshwari-v
-description: Como usar Teams SDK do cliente JavaScript para integrar o controle People Picker
-keywords: controle do se picker de pessoas
+description: Como usar o SDK do cliente JavaScript do Teams para integrar o controle do Seletor de Pessoas
+keywords: controle do seletor de pessoas
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b12cda18e8144c64e7b533af63f8a49283fff593
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452995"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571450"
 ---
-# <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas  
+# <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
-O Seletor de Pessoas é um controle para pesquisar e selecionar pessoas. Esse é um recurso nativo disponível na Teams plataforma. Você pode integrar Teams controle de entrada nativo do People Picker com seus aplicativos Web. Você pode selecionar entre uma seleção única ou várias e configurações, como limitar a pesquisa em um chat, canais ou em toda a organização.
+O Seletor de Pessoas é um controle de entrada no Teams que permite aos usuários pesquisar e selecionar pessoas. Você pode integrar o controle de entrada do Seletor de Pessoas em um aplicativo Web, que permite que os usuários finais executem diferentes funções, tais como pesquisar e selecionar pessoas em um chat, canal ou em toda a organização dentro do Teams. O controle do Seletor de Pessoas está disponível em todos os clientes do Teams, como Web, área de trabalho e dispositivo móvel.
 
-Você pode usar [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), `selectPeople` que fornece API para integrar o Selador de Pessoas ao seu aplicativo Web.
+Você pode utilizar o [ SDK do cliente JavaScript do Microsoft Teams ](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), que fornece a API `selectPeople` para integrar o controle de entrada do Seletor de Pessoas no seu aplicativo da Web.
 
-## <a name="advantages-of-integrating-the-native-people-picker"></a>Vantagens de integrar o Selador de Pessoas nativos
+## <a name="advantages-of-using-people-picker"></a>Vantagens de usar o Seletor de Pessoas
 
-* O controle People Picker funciona em todas as Teams, como módulo de tarefa, chat, canal, guia de reunião e aplicativo pessoal.
-* Esse controle permite que você pesquise e selecione usuários em um chat, canal ou toda a organização.
-* O People Picker ajuda com cenários que envolvem atribuição de tarefas, marcação, notificação de um usuário.
-* Você pode usar esse controle prontamente disponível em seu aplicativo Web. Economiza o esforço e o tempo significativamente para criar esse controle por conta própria.
+* Funciona em todas as funcionalidades do Teams, como módulo de tarefas, chat, canal, guia de reuniões e aplicativos pessoais.
+* Permite que o usuário pesquise e selecione pessoas em um chat, canal ou toda a organização dentro do Teams.
+* Ajuda em cenários que envolvem a atribuição de tarefas, marcação e notificação do usuário.
+* Economiza tempo e esforços significativos em comparação com a construção de qualquer controle semelhante.
 
-Você deve chamar a `selectPeople` API para integrar o controle People Picker em seu Teams app. Para uma integração eficaz, você deve ter uma compreensão do [trecho de código](#code-snippet) para chamar a API.
-É importante se familiarizar com os erros de resposta [da API](#error-handling) para lidar com os erros em seu aplicativo Web.
-
-> [!NOTE]
-> Atualmente, o Microsoft Teams suporte para o People Picker está disponível apenas para clientes móveis.
+Para integrar o controle de entrada do Seletor de Pessoas no seu aplicativo Teams, use a API [`selectPeople`](#selectpeople-api). Para integrar e chamar a API, você deve ter uma boa compreensão do [trecho de código](#code-snippet) que a acompanha. Você também precisa estar familiarizado com [erros de réplica da API](#error-handling).
 
 ## <a name="selectpeople-api"></a>`selectPeople` API
 
-`selectPeople`A API permite que você adicione Teams nativo aos `People Picker input control` seus aplicativos Web.  
-A descrição da API é a seguinte:
+A API `selectPeople` permite que você adicione o controle de entrada do Seletor de Pessoas do Teams para os aplicativos Web e também ajuda você com o seguinte:
 
-| API      | Descrição  |
-| --- | --- |
-|**selectPeople**|Inicia um Seletor de Pessoas e permite que o usuário pesquise e selecione uma ou mais pessoas na lista.<br/><br/>Essa API retorna a ID, o nome e o endereço de email dos usuários selecionados para o aplicativo Web de chamada.<br/><br/>No caso de um aplicativo pessoal, o controle pesquisa em toda a organização. Se o aplicativo for adicionado a um chat ou canal, o contexto de pesquisa será configurado dependendo do cenário. A pesquisa é restrita dentro dos membros desse chat, canal ou disponibilizado em toda a organização.|
+* Permite que o usuário pesquise e selecione uma ou mais pessoas da lista.
+* Retorna a ID, o nome e o endereço de email dos usuários selecionados para o aplicativo Web.
 
-A `selectPeople` API acompanha as seguintes configurações de entrada:
+No caso de um aplicativo pessoal, o controle procura por nome ou ID de email em toda a organização dentro do Teams. Se o aplicativo for adicionado a um chat ou canal, o contexto de pesquisa será configurado com base no cenário. A pesquisar é restrita aos membros desse chat ou canal.
 
-|Parâmetro Configuration|Tipo|Descrição| Valor padrão|
+A API `selectPeople` vem com as seguintes configurações de entrada:
+
+|Parâmetro de Configuração|Tipo|Descrição| Valor padrão|
 |-----|------|--------------|------|
-|`title`| Cadeia de caracteres| É um parâmetro opcional. Ele define o título para o controle People Picker. | Selecionar pessoas|
-|`setSelected`|Cadeia de caracteres| É um parâmetro opcional. Você deve passar Microsoft Azure Active Directory IDs (Azure AD) das pessoas a serem pré-selecionadas. Esse parâmetro pré-seleciona as pessoas ao iniciar o controle People Picker. Em caso de seleção única, apenas o primeiro usuário válido é pré-populado ignorando o restante. |Nulo|
-|`openOrgWideSearchInChatOrChannel`|Booliano | É um parâmetro opcional. Quando é definido como true, ele inicia o People Picker no escopo de toda a organização, mesmo que o aplicativo seja adicionado a um chat ou canal. |False|
-|`singleSelect`|Booliano|É um parâmetro opcional. Quando ele é definido como true, ele inicia o Seletor de Pessoas restringindo a seleção somente a um usuário. |False|
+|`title`|Cadeia de caracteres| É um parâmetro opcional e define o título para o controle do Seletor de Pessoas.|`selectPeople`|
+|`setSelected`|String| É um parâmetro opcional. Você deve passar IDs do Microsoft Azure Active Directory (Microsoft Azure AD) das pessoas a serem pré-selecionadas. Este parâmetro pré-seleciona as pessoas ao iniciar o controle de entrada do Seletor de Pessoas. No caso de uma única seleção, apenas o primeiro usuário válido é pré-preenchido, ignorando o resto.|**Null**|
+|`openOrgWideSearchInChatOrChannel`|Boolean| É um parâmetro opcional e, quando definido como verdadeiro, inicia o Seletor de Pessoas em todo o escopo da organização, mesmo se o aplicativo for adicionado a um chat ou canal.|**Falso**|
+|`singleSelect`|Booliano|É um parâmetro opcional e, quando definido como true, ele inicia o Seletor de Pessoas e restringe a seleção a apenas um usuário.|**Falso**|
 
-A imagem a seguir mostra a experiência do People Picker em um aplicativo Web de exemplo:
+A imagem a seguir mostra a experiência do Seletor de Pessoas em dispositivos móveis e na área de trabalho:
 
-![Experiência do aplicativo Web do Se picker de pessoas](../../assets/images/tabs/people-picker-control-capability.png)
+# <a name="mobile"></a>[Dispositivo móvel](#tab/Samplemobileapp)
 
-### <a name="code-snippet"></a>Trecho de código
+O controle de entrada do Seletor de Pessoas permite que o usuário pesquise e adicione pessoas usando as seguintes etapas:
 
-**Chamada `selectPeople` API** para selecionar pessoas de uma lista:
+1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
+1. Selecione o nome da pessoa obrigatória na lista. 
+
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Selecionador do Seletor de Dispositivos Móveis" border="true":::
+
+# <a name="desktop"></a>[Desktop](#tab/Sampledesktop)
+
+O controle do Seletor de Pessoas na Web ou na área de trabalho é iniciado em uma janela modal na parte superior do aplicativo Web e, para adicionar pessoas, siga as seguintes etapas:
+
+1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
+1. Selecione o nome da pessoa obrigatória na lista. 
+
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Seletor de pessoas por nome de área de trabalho" border="true":::
+
+---
+
+## <a name="code-snippet"></a>Trecho de código
+
+O trecho de código a seguir exibe o uso das pessoas da API `selectPeople` de uma lista:
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
@@ -81,18 +94,18 @@ A imagem a seguir mostra a experiência do People Picker em um aplicativo Web de
 
 ## <a name="error-handling"></a>Tratamento de erros
 
-Certifique-se de lidar com os erros adequadamente em seu aplicativo Web. A tabela a seguir lista os códigos de erro e as condições nas quais os erros são gerados:
+A tabela a seguir lista os códigos de erro e suas descrições:
 
-|Código de erro |  Nome do erro     | Condição|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | A API não tem suporte na plataforma atual.|
-| **500** | INTERNAL_ERROR | Erro interno é encontrado ao iniciar o Selador de Pessoas.|
-| **4000** | INVALID_ARGUMENTS | A API é invocada com argumentos obrigatórios errados ou insuficientes.|
-| **8000** | USER_ABORT |O usuário cancelou a operação.|
-| **9000** | OLD_PLATFORM | O usuário está em uma com build de plataforma antiga onde a implementação da API não está presente.  Atualizar a com build resolve o problema.|
+|Código de erro |  Nome do erro     | Descrição|
+| --------- | --------------- | --------- |
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportada na plataforma atual.|
+| **500** | INTERNAL_ERROR | Erro interno encontrado ao iniciar o Seletor de Pessoas.|
+| **4000** | ARGUMENTOS_INVÁLIDOS | A API foi invocada com argumentos obrigatórios incorretos ou insuficientes.|
+| **8000** | ABORTAR_USUÁRIO |O usuário cancelou a operação.|
+| **9000** | ANTIGA_PLATAFORMA | O usuário está em uma compilação antiga da plataforma em que a implementação da API não está disponível. Atualize para a versão mais recente da build para resolver o problema.|
 
 ## <a name="see-also"></a>Confira também
 
-* [Integrar recursos de mídia no Teams](mobile-camera-image-permissions.md)
-* [Integrar o código de QR ou o recurso de scanner de código de barras Teams](qr-barcode-scanner-capability.md)
-* [Integrar recursos de localização Teams](location-capability.md)
+* [Integrar funcionalidades de mídia no Teams](mobile-camera-image-permissions.md)
+* [Integrar a funcionalidade do código QR ou o verificador de código de barras no Teams](qr-barcode-scanner-capability.md)
+* [Integrar funcionalidades de localização no Teams](location-capability.md)

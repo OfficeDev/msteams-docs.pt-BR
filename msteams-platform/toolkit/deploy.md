@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558814"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614527"
 ---
 # <a name="deploy-to-the-cloud"></a>Implantar na nuvem
 
@@ -32,7 +32,7 @@ Teams Toolkit ajuda você a implantar ou carregar o código front-end e back-end
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implantar Teams aplicativos usando Teams Toolkit
 
-Os guias de início ajudam você a implantar usando Teams Toolkit. Você pode usar o seguinte para implantar seu Teams aplicativo:
+As guias de início ajudam você a implantar usando Teams Toolkit. Você pode usar o seguinte para implantar seu Teams aplicativo:
 
 * [Implantar seu aplicativo no Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Implantar seu aplicativo para SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
@@ -52,6 +52,7 @@ Os guias de início ajudam você a implantar usando Teams Toolkit. Você pode us
 ## <a name="see-also"></a>Confira também
 
 * [Adicionar mais recursos de nuvem](add-resource.md)
+* [Criar e implantar um serviço de nuvem do Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Adicionar mais recursos Teams aplicativos](add-capability.md)
 * [Implantar código de projeto com pipelines CI/CD](use-CICD-template.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)

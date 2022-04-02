@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 3117195b697061b4199ac629f73d8ffd2d93cd6a
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453765"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590742"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -736,7 +736,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -807,6 +807,9 @@ Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no 
 ## <a name="authorization"></a>autorização
 
 **Opcional** - objeto
+
+> [!NOTE]
+> Se você definir a propriedade `manifestVersion` como **1.12**, a propriedade de autorização é incompatível com as versões mais antigas do manifesto. A autorização é suportada para o manifesto versão 1.12.
 
 Especifique e consolide as informações relacionadas à autorização para o aplicativo.
 

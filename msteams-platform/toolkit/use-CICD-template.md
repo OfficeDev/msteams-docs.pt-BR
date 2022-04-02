@@ -1,17 +1,17 @@
 ---
-title: Suporte a CI ou CD para Teams desenvolvedores de aplicativos
+title: Saiba como usar modelos de pipeline ci ou CD no GitHub, no Azure Devops e no Jenkins para Teams desenvolvedores de aplicativos
 author: MuyangAmigo
 description: Modelos CICD
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453408"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614534"
 ---
 # <a name="cicd-guide"></a>Guia de CI/CD
 
@@ -19,14 +19,14 @@ O TeamsFx ajuda a automatizar seu fluxo de trabalho de desenvolvimento durante a
 
 |Ferramentas e modelos|Descrição|
 |---|---|
-|[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Ação que se integra à CLI teamsFx.|
-|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) e [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub modelos ci ou CD para Teams aplicativo. |
+|[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|Ação do GitHub que se integra ao TeamsFx CLI.|
+|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) e [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| Modelos de CI ou CD do GitHub para Teams aplicativo. |
 |[jenkins-ci-template. Modelo de jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) [e jenkins-cd. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Modelos de CI ou CD do Jenkins para um Teams aplicativo.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) e [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Modelos de script para automação fora do GitHub. |
 
-## <a name="ci-or-cd-workflow-templates-in-github"></a>Modelos de fluxo de trabalho ci ou CD em GitHub
+## <a name="ci-or-cd-workflow-templates-in-github"></a>Modelos de fluxo de trabalho ci ou CD no GitHub
 
-**Para incluir fluxos de trabalho ci ou CD para automatizar Teams de desenvolvimento de aplicativos GitHub**:
+**Para incluir fluxos de trabalho ci ou CD para automatizar Teams de desenvolvimento de aplicativos no GitHub**:
 
 1. Criar pasta em `.github/workflows`
 1. Copie um dos seguintes arquivos de modelo:
@@ -47,7 +47,7 @@ Execute as etapas a seguir para adaptar o fluxo de trabalho do seu projeto:
 Execute as etapas a seguir para personalizar o fluxo de trabalho de CD:
 
 1. Por padrão, o fluxo de trabalho de CD é acionado, quando novas confirmações são feitas no `main` branch.
-1. Crie GitHub [de repositório por](https://docs.github.com/en/actions/reference/encrypted-secrets) ambiente para manter a entidade de serviço do Azure e Microsoft 365 de logon da conta. Para obter mais informações, consulte [GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Crie segredos de [repositório do](https://docs.github.com/en/actions/reference/encrypted-secrets) GitHub por ambiente para manter a entidade de serviço do Azure e Microsoft 365 de logon da conta. Para obter mais informações, [consulte GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Altere os scripts de com build, se necessário.
 1. Remova os scripts de teste conforme necessário.
 
@@ -56,7 +56,7 @@ Execute as etapas a seguir para personalizar o fluxo de trabalho de CD:
 
 ### <a name="github-secrets"></a>Segredos github
 
-A tabela a seguir lista todos os segredos necessários para criar ambiente em GitHub:
+A tabela a seguir lista todos os segredos necessários para criar ambiente no GitHub:
 
 1. Selecione **Configurações**.
 1. Vá para **a seção Ambientes** .
@@ -80,9 +80,9 @@ A tabela a seguir lista todos os segredos necessários para criar o ambiente:
 > [!NOTE]
 > Atualmente, a entidade de serviço do Azure é usada em fluxos de trabalho ci/CD. Para obter mais informações, consulte [create Azure service principles](#create-azure-service-principals).
 
-## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar pipelines CI ou CD com Azure DevOps
+## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar pipelines CI ou CD com o Azure DevOps
 
-Você pode configurar pipelines automatizados em Azure DevOps e fazer uma referência aos scripts.
+Você pode configurar pipelines automatizados no Azure DevOps e fazer uma referência aos scripts.
 
 Execute as seguintes etapas para começar:
 
@@ -91,8 +91,8 @@ Execute as seguintes etapas para começar:
 
 ### <a name="set-up-ci-pipeline"></a>Configurar pipeline CI
 
-1. Adicione [scripts ci ao](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) seu repositório Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
-1. Siga as [etapas para criar seu Azure DevOps Pipeline para CI](/azure/devops/pipelines/create-first-pipeline).
+1. Adicione [scripts ci ao](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) repositório do Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
+1. Siga as [etapas para criar seu Pipeline do Azure DevOps para CI](/azure/devops/pipelines/create-first-pipeline).
 Aqui está um cenário de scripts de pipeline CI comuns:
 
 ```yml
@@ -122,8 +122,8 @@ Veja a seguir as alterações que você pode fazer para o script ou a definiçã
 
 ### <a name="set-up-cd-pipeline"></a>Configurar pipeline de CD
 
-1. Adicione [scripts de CD](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) ao repositório Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
-1. Crie seu Azure DevOps pipeline para CD. Para obter mais informações, consulte [create first pipeline](/azure/devops/pipelines/create-first-pipeline). A definição do Pipeline pode ser referenciada para a definição de exemplo a seguir para o Pipeline CI.
+1. Adicione [scripts de CD](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) ao repositório do Azure DevOps e faça as personalizações necessárias à medida que você pode inferir dos comentários no arquivo de script.
+1. Crie seu pipeline do Azure DevOps para CD. Para obter mais informações, consulte [create first pipeline](/azure/devops/pipelines/create-first-pipeline). A definição do Pipeline pode ser referenciada para a definição de exemplo a seguir para o Pipeline CI.
 1. Adicione as variáveis necessárias [por Definir](/azure/devops/pipelines/process/variables) variáveis e as faça como segredos, se necessário.
 
 ```yml
@@ -159,9 +159,9 @@ Veja a seguir as alterações que você pode fazer para o script ou a definiçã
 1. Verifique se você tem um script de com build npm ou personalize a maneira como você cria no código de automação.
 1. Verifique se você tem um script de teste npm que retorna zero para sucesso e/ou altere os comandos de teste.
 
-### <a name="pipeline-variables-for-azure-devops"></a>Variáveis de pipeline para Azure DevOps
+### <a name="pipeline-variables-for-azure-devops"></a>Variáveis de pipeline do Azure DevOps
 
-Execute as etapas a seguir para criar variáveis pipeline em Azure DevOps:
+Execute as etapas a seguir para criar variáveis de pipeline no Azure DevOps:
 
 1. Na página Edição do Pipeline, selecione **Variáveis** e selecione **Nova variável**.
 1. Insira o par Nome ou Valor para sua variável.
@@ -224,7 +224,7 @@ Siga [as credenciais de uso](https://www.jenkins.io/doc/book/using/using-credent
 |`M365_ACCOUNT_PASSWORD`|A senha da conta Microsoft 365.|
 |`M365_TENANT_ID`|Para identificar o locatário no qual o aplicativo Teams é criado ou publicado. O valor é opcional, a menos que você tenha uma conta com vários locatários e queira usar outro locatário. Leia mais sobre [como encontrar sua ID Microsoft 365 locatário.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-## <a name="get-started-guide-for-other-platforms"></a>Guia de início para outras plataformas
+## <a name="get-started-guide-for-other-platforms"></a>Introdução guia para outras plataformas
 
 Você pode seguir os scripts de bash de exemplo pré-definidos listados para criar e personalizar pipelines de CI ou CD em outras plataformas:
 
@@ -238,7 +238,7 @@ Os scripts são baseados em uma ferramenta de linha de comando [TeamsFx-CLI](htt
 > * Para habilitar `@microsoft/teamsfx-cli` a execução no modo CI, ative `CI_ENABLED` por `export CI_ENABLED=true`. No modo CI, `@microsoft/teamsfx-cli` é amigável para CI ou CD.
 > * Para habilitar `@microsoft/teamsfx-cli` a execução no modo não interativo, de definir uma configuração global com o comando: `teamsfx config set -g interactive false`. No modo não interativo, `@microsoft/teamsfx-cli` não solicita entradas.
 
-Certifique-se de definir o Azure e Microsoft 365 credenciais em suas variáveis de ambiente com segurança. Por exemplo, se você estiver usando GitHub como repositório de código-fonte. Para obter mais informações, consulte [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Certifique-se de definir o Azure e Microsoft 365 credenciais em suas variáveis de ambiente com segurança. Por exemplo, se você estiver usando o GitHub como repositório de código-fonte. Para obter mais informações, consulte [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## <a name="create-azure-service-principals"></a>Criar entidades de serviço do Azure
 
@@ -246,7 +246,7 @@ Para provisionar e implantar recursos destinados ao Azure dentro de CI/CD, você
 
 Execute as seguintes etapas para criar entidades de serviço do Azure:
 
-1. Registre um Microsoft Azure Active Directory (Azure AD) em locatário único.
+1. Registre um aplicativo do Microsoft Azure Active Directory (Azure AD) em um único locatário.
 2. Atribua uma função ao seu aplicativo do Azure AD para acessar sua assinatura do Azure e `Contributor` a função é recomendada.
 3. Crie um novo segredo de aplicativo do Azure AD.
 
@@ -255,7 +255,7 @@ Execute as seguintes etapas para criar entidades de serviço do Azure:
 
 Para obter mais informações, consulte [Diretrizes de entidades de serviço do Azure](/azure/active-directory/develop/howto-create-service-principal-portal). Veja a seguir as três maneiras de criar a entidade de serviço:
 
-* [Microsoft Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
+* [Microsoft portal do Azure](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
@@ -274,7 +274,7 @@ Execute as seguintes etapas para publicar seu aplicativo:
 
 ### <a name="see-also"></a>Confira também
 
-* [Início rápido para GitHub ações](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [Criar sua primeira Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
+* [Início rápido para GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [Criar seu primeiro Pipeline do Azure DevOps](/azure/devops/pipelines/create-first-pipeline)
 * [Criar seu primeiro Pipeline do Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Gerencie seus aplicativos com o Portal do Desenvolvedor do Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
