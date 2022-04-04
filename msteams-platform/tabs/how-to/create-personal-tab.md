@@ -5,14 +5,14 @@ description: Um guia de início rápido para criar uma guia pessoal com o Gerado
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET pacote MVC appmanifest armazenamento de permissão de domínio de conversa
+keywords: yeoman ASP.NET pacote MVC appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: d19ecc04aa14561d443a65d4ea896c210fdf4d94
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614541"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636161"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -43,7 +43,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 1. [Criar um pacote do aplicativo](#create-your-app-package)
 1. [Criar e executar seu aplicativo](#build-and-run-your-application)
 1. [Estabelecer um túnel seguro para sua guia pessoal](#establish-a-secure-tunnel-to-your-tab)
-1. [Carregue seu aplicativo para Teams](#upload-your-application-to-teams)
+1. [Upload seu aplicativo para Teams](#upload-your-application-to-teams)
 
 ### <a name="generate-your-application-with-a-personal-tab"></a>Gerar seu aplicativo com uma guia pessoal
 
@@ -114,9 +114,9 @@ A seguir estão as etapas para criar uma guia pessoal:
 
       Escolha não incluir suporte ao ESLint. O padrão é não, digite **n**.
 
-    * **Você gostaria de usar o Azure Applications Insights para telemetria? (y/N)**
+    * **Você gostaria de usar aplicativos do Azure Insights para telemetria? (y/N)**
 
-      Escolha **não** incluir Aplicativo Azure [Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
+      Escolha **não** incluir [Aplicativo Azure Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não; enter **n**.
 
     * **Nome da guia padrão (máx. 16 caracteres)?**
 
@@ -126,7 +126,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
       Use as teclas de seta para selecionar **Pessoal (estático)**.
 
-    * **Você precisa do suporte de Login Único do Microsoft Azure Active Directory (Azure AD) para a guia?**
+    * **Você precisa de Microsoft Azure Active Directory (Azure AD) suporte a um único sign-on para a guia?**
 
       Escolha **não** incluir o suporte ao Azure AD Single-Sign-On para a guia. O padrão é sim, digite **n**.
 
@@ -136,7 +136,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
 Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de guia pessoal:
 
-1. Crie um novo **arquivopersonal.html** no código Visual Studio com a seguinte marcação:
+1. Crie um novo **personal.html** em seu Visual Studio Code com a seguinte marcação:
 
     ```html
     <!DOCTYPE html>
@@ -164,7 +164,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.json** a partir do seguinte local em seu Visual Studio Código:
+1. Abra **manifest.json** a partir do seguinte local em sua Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -191,7 +191,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
 
 1. Salve o arquivo **manifest.json** atualizado.
 
-1. Abra **Tab.ts** em seu Visual Studio Código do seguinte caminho para fornecer sua página de conteúdo em um IFrame:
+1. Abra **Tab.ts** em seu Visual Studio Code do seguinte caminho para fornecer sua página de conteúdo em um IFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -250,19 +250,19 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > Depois que sua guia é carregada para Microsoft Teams por **meio do ngrok** e salva com êxito, você pode exibi-la no Teams até que sua sessão de túnel termine.
 
-### <a name="upload-your-application-to-teams"></a>Carregue seu aplicativo para Teams
+### <a name="upload-your-application-to-teams"></a>Upload seu aplicativo para Teams
 
 1. Vá para Microsoft Teams e selecione **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Selecione **Gerenciar seus aplicativos**
-1. Selecione **Publicar um aplicativo e** **Carregar um aplicativo personalizado**.
+1. Selecione **Publicar um aplicativo** e **Upload um aplicativo personalizado**.
 
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Carregar aplicativo personalizado" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload aplicativo personalizado" border="true":::
 
 1. Vá para o diretório do projeto, navegue até a **pasta ./package** , selecione a pasta zip e escolha **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adicionar sua guia pessoal" border="true":::
 
-1. Selecione **Adicionar** na janela pop-up. Sua guia é carregada para Teams.
+1. Selecione **Adicionar** na caixa de diálogo. Sua guia é carregada para Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Guia pessoal carregado" border="true":::
 
@@ -346,7 +346,7 @@ Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar
 
 #### <a name="csproj"></a>.csproj
 
-Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**. No final do arquivo, você pode ver o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você pode ver o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ```xml
 <PropertyGroup>
@@ -370,16 +370,16 @@ Em Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse
 
 ### <a name="update-and-run-your-application"></a>Atualizar e executar seu aplicativo
 
-1. Vá para a **pasta** **PagesShared** >  e abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
+1. Abra Visual Studio Gerenciador de Soluções e vá para a pasta **PagesShared**  >  e abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Abra **PersonalTab.cshtml da** **pasta Páginas** e adicione `microsoftTeams.initialize()` as `<script>` marcas e salve.
+1. Em Visual Studio Gerenciador de Soluções **abra PersonalTab.cshtml** da pasta **Páginas** e adicione `microsoftTeams.initialize()` as `<script>` marcas e salve.
 
-1. Em Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.
+1. Em Visual Studio, selecione **F5** ou **escolha Iniciar Depuração** no menu **Depuração do** aplicativo.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Vá para **Portal do Desenvolvedor** em Teams.
+1. Vá para [**Portal do Desenvolvedor**](https://dev.teams.microsoft.com/home).
 
 1. Abra **Aplicativos** e selecione **Importar aplicativo**.
 
@@ -411,7 +411,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Em **URLs de aplicativos**, atualize a política de Privacidade para `https://<yourngrokurl>/privacy` e Os Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. Em **Recursos do aplicativo**, selecione Aplicativo Pessoal e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco.
+1. Em **Recursos do aplicativo**, selecione **Aplicativo** >  **PessoalCrie sua primeira guia de aplicativo pessoal** e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco e selecione **Contexto** como personalTab na lista lista suspenso e **Adicionar**.
 
 1. Selecione **Salvar**.
 
@@ -419,13 +419,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Visualizar seu aplicativo em Teams
 
-1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor. O Portal do Desenvolvedor informa que seu aplicativo é sideload com êxito.
-
-1. Selecione **Gerenciar seus aplicativos**. Seu aplicativo está listado nos aplicativos com sideload.
-
-1. Encontre seu aplicativo usando a pesquisa , selecione os três pontos em sua linha.
-
-1. Selecione a **opção Exibir** . A **página Adicionar** é exibida para seu aplicativo.
+1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor, o Portal do Desenvolvedor informa que seu aplicativo é sideloaded com êxito. A **página Adicionar** é exibida para seu aplicativo Teams.
 
 1. Selecione **Adicionar** para carregar a guia Teams. Sua guia agora está disponível no Teams.
 
@@ -505,7 +499,7 @@ Esses arquivos devem ser zipped em um pacote de aplicativos para uso ao carregar
 
 #### <a name="csproj"></a>.csproj
 
-Na Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Arquivo do Projeto**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
+Na Visual Studio Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Editar Project Arquivo**. No final do arquivo, você vê o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é construído:
 
 ``` xml
 <PropertyGroup>
@@ -545,16 +539,16 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 
 ### <a name="update-and-run-your-application"></a>Atualizar e executar seu aplicativo
 
-1. Vá para **a pasta** **ViewsShared** >  e abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
+1. Abra Visual Studio Gerenciador de Soluções e vá para a pasta **ViewsShared**  >  e abra **_Layout.cshtml** e adicione o seguinte à seção `<head>` tags:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Abra **PersonalTab.cshtml da** pasta **ViewsPersonalTab**  >  e adicione `microsoftTeams.initialize()` dentro das `<script>` marcas e salve.
+1. Em Visual Studio Gerenciador de Soluções **abrir PersonalTab.cshtml** da pasta **ViewsPersonalTab**  >  e adicionar `microsoftTeams.initialize()` dentro das `<script>` marcas e salvar.
 
-1. Em Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração do** aplicativo.
+1. Em Visual Studio, selecione **F5** ou **escolha Iniciar Depuração** no menu **Depuração do** aplicativo.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
@@ -566,7 +560,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualizar seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Vá para **Portal do Desenvolvedor** em Teams.
+1. Vá para [**Portal do Desenvolvedor**](https://dev.teams.microsoft.com/home).
 
 1. Abra **Aplicativos** e selecione **Importar aplicativo**.
 
@@ -586,7 +580,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Em **URLs de aplicativos**, atualize a política de Privacidade para `https://<yourngrokurl>/privacy` e Os Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. Em **Recursos do aplicativo**, selecione Aplicativo Pessoal e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco.
+1. Em **Recursos do aplicativo**, selecione **Aplicativo** >  **PessoalCrie sua primeira guia de aplicativo pessoal** e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do site em branco e selecione **Contexto** como personalTab na lista lista suspenso e **Adicionar**.
 
 1. Selecione **Salvar**.
 
@@ -594,13 +588,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Visualizar seu aplicativo em Teams
 
-1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor. O Portal do Desenvolvedor informa que seu aplicativo é sideload com êxito.
-
-1. Selecione **Gerenciar seus aplicativos**. Seu aplicativo está listado nos aplicativos com sideload.
-
-1. Encontre seu aplicativo usando a pesquisa, selecione os três pontos em sua linha.
-
-1. Selecione **Exibir** opção. A **página Adicionar** é exibida para seu aplicativo.
+1. Selecione **Visualizar no Teams** na barra de ferramentas portal do desenvolvedor, o Portal do Desenvolvedor informa que seu aplicativo é sideloaded com êxito. A **página Adicionar** é exibida para seu aplicativo Teams.
 
 1. Selecione **Adicionar** para carregar a guia Teams. Sua guia agora está disponível no Teams.
 
