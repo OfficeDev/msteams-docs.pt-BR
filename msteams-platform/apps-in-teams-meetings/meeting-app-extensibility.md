@@ -1,16 +1,11 @@
 ---
 title: Aplicativos de reuniões unificadas
 author: surbhigupta
-description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente de desktop e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
+description: 'Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente de desktop e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.'
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571128"
 ---
+
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
 Teams aplicativos de reuniões unificadas são baseados nos seguintes conceitos:
@@ -85,6 +80,9 @@ Para usar guias durante uma reunião:
 1. Na caixa de diálogo na reunião, insira sua resposta como comentários.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Exibição da área de trabalho":::
+
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
