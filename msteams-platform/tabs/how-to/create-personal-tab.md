@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET de permissão de domínio de conversa appmanifest do pacote MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685643"
+ms.locfileid: "64686680"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Upload seu aplicativo para Teams
 
-1. Vá para Microsoft Teams e selecione **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Selecione **Gerenciar seus aplicativos**
-1. Selecione **Publicar um aplicativo** e **Upload um aplicativo personalizado**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload aplicativo personalizado" border="true":::
-
+1. Vá para Microsoft Teams e selecione **Aplicativos**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Selecione **Gerenciar seus aplicativos** **e Upload um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até **a pasta ./package** , selecione a pasta zip e escolha **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adicionando sua guia pessoal" border="true":::
