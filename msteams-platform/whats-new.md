@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
-ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
-ms.translationtype: HT
+ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64612654"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685531"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|04/06/2022| Compartilhar com Teams aplicativo pessoal ou guia (visualização do desenvolvedor) | Integrar com Teams > Compartilhar para Teams > [compartilhar para Teams aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |01/04/2022| Introdução ao guia passo a passo para criar um bot de conversa do Microsoft Teams| Criar bots > Conversas de bot > Conversas de grupo e canal > [Guia passo a passo para criar bot de conversação do bot](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Atualizado o módulo de Introdução com o aplicativo Blazor usando guias e bots|  Comece > [Crie seu primeiro aplicativo usando o Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permissões do dispositivo para o navegador | Integrar recursos do dispositivo > [Permissões de dispositivo para o navegador](concepts/device-capabilities/browser-device-permissions.md) |
@@ -33,6 +34,22 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 |14/03/2022| Introduziu o guia passo a passo para criar e testar um conector no Microsoft Teams | Criar webhooks e conectores > Criar Conectores do Office 365 > [Criar conectores do Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Informações adicionadas sobre o Moodle LMS e Microsoft 365 plug-ins | Integrar com Teams > Moodle LMS > [Sistema de gerenciamento de aprendizagem Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Como adicionar autenticação usando provedor OAuth externo| Adicionar autenticação > Guias > [Usar provedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
+|25/02/2022| Apresentado o guia passo a passo para invocar módulos de tarefa no Microsoft Teams| Criar cartões e módulos de tarefas > Criar módulos de tarefa > Usar módulos de tarefa de bots > [Invocar módulo de tarefa do Microsoft Teams](sbs-botbuilder-taskmodule.yml)|
+|24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em ação | Criar extensões de mensagens > Comandos de ação > Definir comandos de ação > [Criar extensão de mensagens baseada em ação](sbs-meetingextension-action.yml)|
+|24/02/2022| Apresentado o guia passo a passo para criar a extensão de mensagens baseada em pesquisa | Criar extensões de mensagens > Comandos de pesquisa > Definir comandos de pesquisa > [Criar extensão de mensagens baseada em pesquisa](sbs-messagingextension-searchcommand.yml)|
+|24/02/2022| Apresentado guia passo a passo para criar Webhooks de saída | Criar webhooks e conectores > Criar Webhooks de Saída > [Criar Webhooks de Saída](sbs-outgoing-webhooks.yml)|
+| 23/02/2022 |Parâmetros de classificação da loja do Microsoft Teams| Distribua seu aplicativo > Publicar na loja do Microsoft Teams > [Parâmetros de classificação da loja do Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+|02/09/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
+| 18/02/2022 | Apresentado o Glossário extensivo para a Documentação do Desenvolvedor do Microsoft Teams para ajudá-lo a encontrar a definição sobre um termo rapidamente | [Glossário](~/get-started/glossary.md) |
+| 18/02/2022 | Atualizado o módulo Visão geral para mapear o aplicativo do Microsoft Teams para metas organizacionais, história do usuário e exploração dos recursos do aplicativo do Microsoft Teams | [Visão geral > Aplicativo Teams adequado](overview.md) |
+| 18/02/2022 | Atualizado o módulo conceitos básicos do aplicativo para Planejar seu aplicativo para incluir casos de uso de mapeamento para recursos do Microsoft Teams e lista de verificação de planejamento de aplicativos | [Planejar seu aplicativo > Visão geral](~/concepts/app-fundamentals-overview.md) |
+|17/02/2022| O que esperar depois de enviar seu aplicativo ou?| Distribuir seu aplicativo > Publicar na loja do Teams > [Visão geral](concepts/deploy-and-publish/appsource/publish.md)|
+|15/02/2022| Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [Guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
+|02/11/2022| Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crie aplicativos para reuniões do Teams > [Referências da API de aplicativos de reunião](apps-in-teams-meetings/API-references.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
+|08/02/2022| Introdução ao guia passo a passo para criar um bot de Chamada e Reunião| Criar bots > Bots de chamadas e reuniões > Registrar chamadas e o bot de reuniões > [Um guia passo a passo para criar um bot de Chamada e Reunião](sbs-calling-and-meeting.yml) |
+|07/02/2022| Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
+|03/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | • Manifesto do aplicativo > [Esquema do manifesto de aplicativo](resources/schema/manifest-schema.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [Esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |
+
 
 ## <a name="ga-features"></a>Recursos GA
 
@@ -252,6 +269,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|04/06/2022| Compartilhar com Teams de aplicativo pessoal ou guia | Integrar com Teams > Compartilhar para Teams > [compartilhar para Teams aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |07/02/2022| Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
 |02/02/2022| Apresentado o manifesto do aplicativo versão 1.12 | Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/02/2022| Teste de visualização para aplicativos monetizados| Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
