@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501981"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736875"
 ---
 # <a name="in-app-purchases"></a>Compras no aplicativo
 
@@ -31,11 +31,11 @@ Para oferecer uma experiência de compra no aplicativo aos usuários do seu apli
 
 * O aplicativo é invocado com a [`openPurchaseExperience` API](#purchase-experience-api).
 
-A experiência de compra no aplicativo pode ser habilitada atualizando o arquivo **manifest.json** ou habilitando **Mostrar ofertas de compra no aplicativo** na seção **Permissões** do **Portal do desenvolvedor**.
+A experiência de compra no aplicativo pode ser habilitada atualizando o arquivo `manifest.json` ou habilitando **Mostrar ofertas de compra no aplicativo** na seção **Permissões** do **Portal do desenvolvedor**.
 
 ### <a name="update-manifest"></a>Atualizar manifesto
 
-Para habilitar a experiência de compra no aplicativo, atualize o arquivo **manifest.json** do aplicativo Teams adicionando as permissões RSC. Ele permite que os usuários do seu aplicativo atualizem para uma versão paga do seu aplicativo e comecem a usar novas funcionalidades. A atualização para o manifesto do aplicativo é a seguinte:
+Para habilitar a experiência de compra no aplicativo, atualize o arquivo `manifest.json` do aplicativo Teams adicionando as permissões RSC. Ele permite que os usuários do seu aplicativo atualizem para uma versão paga do seu aplicativo e comecem a usar novas funcionalidades. A atualização para o manifesto do aplicativo é a seguinte:
 
 ```json
 

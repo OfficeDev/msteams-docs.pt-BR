@@ -3,12 +3,12 @@ title: Cenas personalizadas no Modo Conferência
 description: Trabalhar com cenas personalizadas do Modo Conferência
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356081"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736868"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -125,7 +125,7 @@ Opcionalmente, você pode selecionar **Compartilhar** no menu suspenso **Salvar*
 
 Após a visualização, a cena é enviada como um aplicativo para o Teams seguindo as etapas para envio do aplicativo. Esta etapa requer o pacote do aplicativo. O pacote do aplicativo é diferente do pacote de cena, para a cena que foi projetada. O pacote de aplicativos criado automaticamente é encontrado na seção **Aplicativos** no Centro de Desenvolvedores Teams.
 
-Opcionalmente, o pacote de cena é recuperado selecionando **Exportar** no menu suspenso **Salvar**. Um arquivo **.zip**, que é o pacote de cena, é baixado. O pacote de cena inclui um scene.json e os ativos PNG usados para criar uma cena. O pacote de cena é revisado para incorporar outras alterações:
+Opcionalmente, o pacote de cena é recuperado selecionando **Exportar** no menu suspenso **Salvar**. Um arquivo .zip, que é o pacote de cena, é baixado. O pacote de cena inclui um scene.json e os ativos PNG usados para criar uma cena. O pacote de cena é revisado para incorporar outras alterações:
 
 ![Exportar uma cena](../assets/images/apps-in-meetings/build-a-scene.png)
 

@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 736b8821a7d0f9e1eda35377bc4937e68c035c75
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: bc7cb1fceef586959be44ba680874914c4f07cc1
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686673"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737043"
 ---
 # <a name="channel-or-group-tab"></a>Guia Canal ou grupo
 
@@ -51,7 +51,7 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo Microsoft Teams App para atualizar seu **arquivo manifest.json**:
+1. Forneça seus valores para uma série de perguntas solicitadas pelo Microsoft Teams App para atualizar o `manifest.json` arquivo:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -137,13 +137,17 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
     </details>
 
 > [!IMPORTANT]
-> O componente de **caminho yourDefaultTabNameTab é** o valor que você inseriu no gerador para o Nome da Guia **Padrão mais a** palavra **Tab**.
->
-> Por exemplo: DefaultTabName é **MyTab** e **/MyTabTab/**
+> O componente de **caminho yourDefaultTabNameTab é** o valor que você inseriu no gerador para o Nome da Guia **Padrão mais a** palavra **Tab**. Por exemplo, `DefaultTabName` é **MyTab** e **/MyTabTab/**.
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### <a name="create-your-app-package"></a>Criar um pacote do aplicativo
 
-Você deve ter um pacote de aplicativos para compilar e executar seu aplicativo Teams. O pacote do aplicativo é criado por meio de uma tarefa gulp que valida o arquivo **manifest.json** e gera a pasta zip no diretório **./package** . No prompt de comando, insira o seguinte comando:
+Você deve ter um pacote de aplicativos para compilar e executar seu aplicativo Teams. O pacote do aplicativo é criado por meio de uma tarefa gulp que valida `manifest.json` o arquivo e gera a pasta zip no `./package` diretório. No prompt de comando, insira o seguinte comando:
 
 ```cmd
 gulp manifest
@@ -153,7 +157,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>Criar seu aplicativo
 
-Insira o seguinte comando no prompt de comando para transpile sua solução para a **pasta ./dist** :
+Insira o seguinte comando no prompt de comando para transpile sua solução para a `./dist` pasta:
 
 ```cmd
 gulp build
@@ -191,11 +195,11 @@ gulp ngrok-serve
 1. Vá para Microsoft Teams e selecione **Aplicativos**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Selecione **Gerenciar seus aplicativos** **e Upload um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a **pasta ./package** , selecione a pasta zip do pacote do aplicativo e escolha **Abrir**.
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Guia canal carregado" border="true":::
 
 1. Selecione **Adicionar** na caixa de diálogo. Sua guia é carregada para Teams.
-    
+
     > [!NOTE]
     > Se  **Adicionar** não for exibido na caixa de diálogo, remova o código a seguir do manifesto da pasta zip do pacote do aplicativo carregado. Novamente, compacte a pasta e carregue-a Teams.
     >
@@ -210,7 +214,7 @@ gulp ngrok-serve
 1. Selecione **Salvar** e sua guia será adicionada à barra de guias do canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Guia Canal carregado" border="true":::
-    
+
     Agora você criou e adicionou seu canal ou guia de grupo com êxito Teams.
 
 ::: zone-end
@@ -285,7 +289,7 @@ Essa pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 * Um **ícone de cor completo** medindo 192 x 192 pixels.
 * Um **ícone de estrutura de tópicos transparente** medindo 32 x 32 pixels.
-* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
+* Um `manifest.json` arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no upload da guia para Teams. Quando um usuário opta por adicionar ou atualizar sua guia, o Microsoft Teams `configurationUrl` carrega o especificado no manifesto, insere-o em um IFrame e o renderiza em sua guia.
 
@@ -383,6 +387,11 @@ Mantenha o prompt de comando com o ngrok em execução e anote a URL.
     > [!TIP]
     > Você precisa ter seu aplicativo em Visual Studio e ngrok em execução para concluir as etapas fornecidas neste artigo. Se você precisar parar de executar seu aplicativo no Visual Studio para trabalhar nele, **mantenha o ngrok em execução**. Ele escuta e retoma o roteamento da solicitação do aplicativo quando ele é reiniciado Visual Studio. Se você precisar reiniciar o serviço ngrok, ele retornará uma nova URL e você precisará atualizar seu aplicativo com a nova URL.
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualizar o pacote do aplicativo com o Portal do Desenvolvedor
 
 1. Vá para Microsoft Teams. Se você usar a [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código de front-end usando as ferramentas de desenvolvedor [do navegador](~/tabs/how-to/developer-tools.md).
@@ -391,13 +400,18 @@ Mantenha o prompt de comando com o ngrok em execução e anote a URL.
 
 1. Abra **aplicativos** e selecione **Importar aplicativo**.
 
-1. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. O nome do pacote do aplicativo é `tab.zip`. Ele está disponível no seguinte caminho:
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Selecione **tab.zip** e abra-o no Portal do Desenvolvedor.
+1. Selecione `tab.zip` e abra-o no Portal do Desenvolvedor.
 
 1. Uma **ID de aplicativo padrão** é criada e preenchida na **seção Informações** básicas.
 
@@ -487,7 +501,7 @@ Essa pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 * Um **ícone de cor completo** medindo 192 x 192 pixels.
 * Um **ícone de estrutura de tópicos transparente** medindo 32 x 32 pixels.
-* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
+* Um `manifest.json` arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no upload da guia para Teams.
 

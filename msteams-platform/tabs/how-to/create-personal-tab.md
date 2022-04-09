@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET de permissão de domínio de conversa appmanifest do pacote MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686680"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737211"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -55,7 +55,7 @@ A seguir estão as etapas para criar uma guia pessoal:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo Microsoft Teams App para atualizar o **arquivo manifest.json**.
+1. Forneça seus valores para uma série de perguntas solicitadas pelo Microsoft Teams App para atualizar o `manifest.json` arquivo.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams gerador" border="true":::
 
@@ -164,7 +164,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.json** no seguinte local em sua Visual Studio Code:
+1. Abra `manifest.json` a partir do seguinte local em seu Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -189,7 +189,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
 
 1. Atualize **o componente de caminho contentURL** **yourDefaultTabNameTab** com o nome real da guia.
 
-1. Salve o arquivo **manifest.json** atualizado.
+1. Salve o arquivo `manifest.json` atualizado.
 
 1. Abra **Tab.ts** em seu Visual Studio Code do seguinte caminho para fornecer sua página de conteúdo em um IFrame:
 
@@ -207,11 +207,7 @@ Crie uma página de conteúdo e atualize os arquivos existentes do aplicativo de
 
 ### <a name="create-your-app-package"></a>Criar um pacote do aplicativo
 
-Você deve ter um pacote de aplicativos para compilar e executar seu aplicativo Teams. O pacote do aplicativo é criado por meio de uma tarefa gulp que valida o arquivo **manifest.json** e gera a pasta zip no diretório **./package** . No prompt de comando, insira o seguinte comando:
-
-```cmd
-gulp manifest
-```
+Você deve ter um pacote de aplicativos para compilar e executar seu aplicativo Teams. O pacote do aplicativo é criado por meio de uma tarefa gulp que valida `manifest.json` o arquivo e gera a pasta zip no `./package` diretório. No prompt de comando, use o comando `gulp manifest`.
 
 ### <a name="build-and-run-your-application"></a>Compilar e executar seu aplicativo
 
@@ -334,9 +330,9 @@ ASP.NET Core trata arquivos chamados **Index** como o padrão ou home page do si
 
 Essa pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
-* Um **ícone de cor completo** medindo 192 x 192 pixels.
-* Um **ícone de estrutura de tópicos transparente** medindo 32 x 32 pixels.
-* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
+* Um ícone de cor completo medindo 192 x 192 pixels.
+* Um ícone de estrutura de tópicos transparente medindo 32 x 32 pixels.
+* Um `manifest.json` arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos devem ser compactados em um pacote do aplicativo para uso no carregamento da guia para Teams. Microsoft Teams carrega o `contentUrl` especificado em seu manifesto, insere-o em um <iframe\> e o renderiza em sua guia.
 
@@ -391,13 +387,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Abra **aplicativos** e selecione **Importar aplicativo**.
 
-1. O nome do pacote do aplicativo é **tab.zip**. Ele está disponível no seguinte caminho:
+1. O nome do arquivo do pacote do aplicativo `tab.zip` é e está disponível no `/bin/Debug/netcoreapp3.1/tab.zip` caminho.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Selecione **tab.zip** e abra-o no Portal do Desenvolvedor.
+1. Selecione `tab.zip` e abra-o no Portal do Desenvolvedor.
 
 1. Uma **ID de aplicativo padrão** é criada e preenchida na **seção Informações** básicas.
 
@@ -489,7 +481,7 @@ Essa pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 
 * Um **ícone de cor completo** medindo 192 x 192 pixels.
 * Um **ícone de estrutura de tópicos transparente** medindo 32 x 32 pixels.
-* Um **arquivo manifest.json** que especifica os atributos do seu aplicativo.
+* Um `manifest.json` arquivo que especifica os atributos do seu aplicativo.
 
 Esses arquivos devem ser compactados em um pacote do aplicativo para uso no carregamento da guia para Teams. Microsoft Teams carrega o `contentUrl` especificado em seu manifesto, insere-o em um IFrame e o renderiza em sua guia.
 
@@ -700,4 +692,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
-* [Compartilhar com Teams de aplicativo pessoal ou guia](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Compartilhar com o Teams a partir do aplicativo ou guia pessoal](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
