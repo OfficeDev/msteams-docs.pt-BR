@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398929"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793794"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -51,7 +51,7 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 
 * **Testes funcionais e de experiência profundos**
 
-  Seu aplicativo é examinado completamente por um validador para garantir a conformidade com as [Políticas de certificação do Marketplace Comercial da Microsoft](/legal/marketplace/certification-policies) com foco em testes de experiência do usuário e funcionais profundos, verificações de usabilidade e verificações de metadados. A validação do aplicativo é executada em clientes móveis, da Web e da área de trabalho.
+  Seu aplicativo é examinado totalmente por um validador para garantir a conformidade com as [Políticas de certificação do Marketplace Comercial da Microsoft](/legal/marketplace/certification-policies) com foco nos testes de experiência do usuário e funcionais profundos, verificações de usabilidade e verificações de metadados. A validação do aplicativo é executada nos clientes móveis da Web e da área de trabalho. Trabalhamos muito para fornecer um relatório de teste detalhado em 24 horas de trabalho depois do envio.
 
 * **Publicação de aplicativo guiado por meio do serviço de concierge**
 
