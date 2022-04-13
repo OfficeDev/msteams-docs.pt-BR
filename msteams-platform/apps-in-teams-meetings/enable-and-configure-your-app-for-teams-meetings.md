@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar o manifesto do aplicativo, configurar recursos, como caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820192"
+ms.locfileid: "64826975"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -25,7 +25,7 @@ Com aplicativos para Teams reuniões, você pode expandir os recursos de seus ap
 
 * Siga as [diretrizes Teams design de guia geral para cenários](../tabs/design/tabs.md) pré e pós-reunião. Para experiências durante reuniões, consulte as [diretrizes de design](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) da guia na reunião e as [diretrizes de design de diálogo na reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades de evento na reunião. Esses eventos podem estar dentro da caixa de diálogo na reunião e em outros estágios no ciclo de vida da reunião. Para a caixa de diálogo na reunião, consulte o `completionBotId` parâmetro [na carga de notificação na reunião](API-references.md#send-an-in-meeting-notification).
+* Para que seu aplicativo seja atualizado em tempo real, ele deve estar atualizado com base nas atividades de evento na reunião. Esses eventos podem estar dentro da caixa de diálogo na reunião e em outros estágios em todo o ciclo de vida da reunião. Para a caixa de diálogo na reunião, consulte `completionBotId` o parâmetro [na carga de notificação na reunião](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitar seu aplicativo para Teams reuniões
 
@@ -114,8 +114,7 @@ Para adicionar um bot a uma reunião:
 Em um chat de reunião, insira a chave **@** e selecione **Obter bots**.
 
 > [!NOTE]
->
-> * A bolha de conteúdo posta um Cartão Adaptável ou um cartão simultaneamente no chat de reunião que os usuários podem acessar. Isso ajuda os usuários quando a reunião ou o Teams aplicativo é minimizado.
+> * A caixa de diálogo na reunião exibe uma caixa de diálogo em uma reunião e posta simultaneamente um Cartão Adaptável no chat de reunião que os usuários podem acessar. O Cartão Adaptável no chat de reunião ajuda os usuários durante a reunião ou se o Teams aplicativo está minimizado.
 > * A identidade do usuário deve ser confirmada usando [o SSO do Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova votação.
 > * As atribuições de função podem ser alteradas enquanto uma reunião está em andamento. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
