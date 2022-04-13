@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente desktop e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 3d6ae0769f7138ff1ecd9946372153e1c8aae769
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
+ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826982"
+ms.locfileid: "64827187"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -107,6 +107,7 @@ A caixa de diálogo na reunião é exibida, na qual você pode inserir sua respo
 > * Os aplicativos podem aproveitar Teams SDK do cliente para `meetingId`acessar e `userMri``frameContext` renderizar a experiência adequadamente.
 > * Se a caixa de diálogo na reunião for renderizada com êxito, ela enviará uma notificação de que os resultados foram baixados com êxito.
 > * O manifesto do aplicativo especifica os locais em que você deseja que os aplicativos apareçam. Isso pode ser feito especificando o campo de contexto no manifesto. Ele também faz parte de uma experiência de estágio de reunião de compartilhamento, sujeito às diretrizes de [design especificadas](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
+> * Não há suporte para o estágio de reunião para usuários anônimos Teams cliente Web.
 
 A imagem a seguir ilustra o painel lateral na reunião:
 
@@ -169,9 +170,10 @@ As configurações de participante padrão são determinadas pelo administrador 
 
 * **Participante**: um participante é um usuário que é convidado a participar da reunião. Os participantes têm recursos limitados durante a reunião, como:
   * Eles podem interagir com outros membros da reunião, mas não podem gerenciar nenhuma das configurações da reunião nem compartilhar o conteúdo.  
-  * Eles podem exibir ou interagir com o aplicativo guia no estágio da reunião sem instalar o aplicativo ou sem quaisquer direitos de aplicativo.
+  * Eles podem exibir ou interagir com o aplicativo guia no estágio da reunião Teams cliente da área de trabalho sem instalar o aplicativo ou sem quaisquer direitos de aplicativo. Eles não podem exibir ou interagir com o aplicativo no estágio da reunião em um Teams web.
   * Eles não podem exibir ou interagir com o aplicativo no painel lateral sem quaisquer direitos de aplicativo.
   * Eles não estão autorizados a atuar como apresentadores.
+  * Se o participante ingressar como um usuário anônimo, ele não poderá exibir ou interagir com o aplicativo de guia no estágio da reunião Teams da Web e da área de trabalho.
 
 > [!NOTE]
 > Somente um organizador ou apresentador pode adicionar, remover ou desinstalar aplicativos.
@@ -199,7 +201,7 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
     > [!IMPORTANT]
     > Atualmente, aplicativos de terceiros estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte gerenciar políticas de permissão [de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
 
-* **Anônimo**: usuários anônimos não têm uma identidade do Azure AD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Usuários anônimos não podem acessar aplicativos em uma janela de reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou participante.
+* **Anônimo**: usuários anônimos não têm uma identidade do Azure AD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião e em um estágio de reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou participante.
 
     > [!NOTE]
     > Os usuários anônimos herdam a política de permissão de aplicativo padrão global no nível do usuário. Para obter mais informações, consulte [gerenciar aplicativos](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -211,8 +213,8 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 | Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da Reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Não disponível |
-| Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião |
-| Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. A aquisição, a atualização e a exclusão não são permitidas. | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Interações no chat da reunião são permitidas. | Pode [iniciar](~/apps-in-teams-meetings/API-references.md?tabs=dotnet#share-app-content-to-stage-api) (por meio da API do SDK), exibir e interagir com o aplicativo no estágio da reunião |
+| Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no Teams da área de trabalho |
+| Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. A aquisição, a atualização e a exclusão não são permitidas. | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente Teams cliente da área de trabalho. |
 
 ## <a name="next-step"></a>Próxima etapa
 
