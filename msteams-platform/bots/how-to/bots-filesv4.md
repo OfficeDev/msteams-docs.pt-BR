@@ -1,62 +1,62 @@
 ---
 title: Enviar e receber arquivos por meio do bot
-description: Saiba como enviar e receber arquivos por meio do bot usando Graph APIs para escopos pessoais, de canal e de groupchat. Use Teams de bot usando exemplos de código com base no SDK da Estrutura de Bots v4.
-keywords: arquivos de bots do teams enviam recebimento
+description: Saiba como enviar e receber arquivos por meio do bot usando apIs Graph para escopos pessoais, de canal e de chat de grupo. Use Teams APIs de bot usando exemplos de código com base no SDK do Bot Framework v4.
+keywords: recebimento de envio de arquivos de bots do Teams
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 787de4c774ae1b4cde71f74ed578668ca99a8f95
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
+ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590721"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64820297"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar e receber arquivos por meio do bot
 
 > [!IMPORTANT]
-> Os artigos neste documento são baseados no SDK da Estrutura de Bots v4.
+> Os artigos neste documento são baseados no SDK do Bot Framework v4.
 
-Há duas maneiras de enviar arquivos para e receber arquivos de um bot:
+Há duas maneiras de enviar e receber arquivos de um bot:
 
-* [**Use as APIs do Microsoft Graph:**](#use-the-graph-apis) este método funciona para bots em todos os Microsoft Teams escopos:
+* [**Use as APIs do Microsoft Graph:**](#use-the-graph-apis) esse método funciona para bots em todos os Microsoft Teams escopos:
   * `personal`
   * `channel`
   * `groupchat`
 
-* [**Use as APIs Teams bot:**](#use-the-teams-bot-apis) essas somente suportam arquivos no `personal` contexto.
+* [**Use as APIs Teams bot: elas**](#use-the-teams-bot-apis) só dão suporte a arquivos no `personal` contexto.
 
-## <a name="use-the-graph-apis"></a>Usar as APIs Graph de usuário
+## <a name="use-the-graph-apis"></a>Usar as APIs Graph configuração
 
-Poste mensagens com anexos de cartão que se referem a arquivos SharePoint existentes, usando as APIs Graph de OneDrive [e SharePoint](/onedrive/developer/rest-api/). Para usar as APIs Graph, obtenha acesso a uma das seguintes informações por meio do fluxo de autorização OAuth 2.0 padrão:
+Poste mensagens com anexos de cartão que fazem referência a arquivos SharePoint existentes, usando as APIs do Graph para OneDrive [e SharePoint](/onedrive/developer/rest-api/). Para usar as APIs Graph, obtenha acesso a qualquer uma das seguintes opções por meio do fluxo de autorização padrão do OAuth 2.0:
 
-* A pasta de OneDrive de um usuário e `personal` `groupchat` arquivos.
+* A pasta de OneDrive de um usuário e `personal` arquivos`groupchat`.
 * Os arquivos no canal de uma equipe para `channel` arquivos.
 
 Graph APIs funcionam em todos os Teams escopos. Para obter mais informações, consulte [enviar anexos de arquivo de mensagem de chat](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
 
-Como alternativa, você pode enviar arquivos para e receber arquivos de um bot usando as APIs Teams bot.
+Como alternativa, você pode enviar e receber arquivos de um bot usando as APIs Teams bot.
 
 ## <a name="use-the-teams-bot-apis"></a>Usar as APIs Teams bot
 
 > [!NOTE]
-> Teams APIs de bot funcionam somente no `personal` contexto. Eles não funcionam no contexto `channel` ou `groupchat` .
+> Teams APIs de bot funcionam somente no `personal` contexto. Eles não funcionam no contexto `channel` ou no `groupchat` contexto.
 
-Usando Teams APIs, o bot `personal` pode enviar e receber arquivos diretamente com usuários no contexto, também conhecidos como chats pessoais. Implemente recursos, como relatórios de despesas, reconhecimento de imagem, arquivamento de arquivos e assinaturas eletrônicas envolvendo a edição de conteúdo de arquivo. Os arquivos compartilhados Teams normalmente aparecem como cartões e permitem a exibição rica no aplicativo.
+Usando Teams APIs, o bot `personal` pode enviar e receber arquivos diretamente com usuários no contexto, também conhecidos como chats pessoais. Implemente recursos, como relatórios de despesas, reconhecimento de imagem, arquivamento de arquivos e assinaturas e-signatures que envolvem a edição do conteúdo do arquivo. Os arquivos compartilhados Teams normalmente aparecem como cartões e permitem a exibição avançada no aplicativo.
 
-As próximas seções descrevem como enviar conteúdo de arquivo como interação direta do usuário, como o envio de uma mensagem. Essa API é fornecida como parte da plataforma Teams bot.
+As próximas seções descrevem como enviar conteúdo de arquivo como interação direta do usuário, como enviar uma mensagem. Essa API é fornecida como parte da plataforma Teams bot.
 
 ### <a name="configure-the-bot-to-support-files"></a>Configurar o bot para dar suporte a arquivos
 
-Para enviar e receber arquivos no bot, de definir a `supportsFiles` propriedade no manifesto como `true`. Essa propriedade é descrita na seção [bots](~/resources/schema/manifest-schema.md#bots) da referência manifesto.
+Para enviar e receber arquivos no bot, defina a `supportsFiles` propriedade no manifesto como `true`. Essa propriedade é descrita na seção [bots](~/resources/schema/manifest-schema.md#bots) da referência de manifesto.
 
-A definição tem esta aparência, `"supportsFiles": true`. Se o bot não habilitar `supportsFiles`, os recursos listados nesta seção não funcionarão.
+A definição tem esta aparência. `"supportsFiles": true` Se o bot não habilitar `supportsFiles`, os recursos listados nesta seção não funcionarão.
 
 ### <a name="receive-files-in-personal-chat"></a>Receber arquivos no chat pessoal
 
-Quando um usuário envia um arquivo para o bot, o arquivo é carregado pela primeira vez no OneDrive do usuário para armazenamento comercial. Em seguida, o bot recebe uma atividade de mensagem notificando o usuário sobre o carregamento do usuário. A atividade contém metadados de arquivo, como seu nome e a URL de conteúdo. O usuário pode ler diretamente a partir dessa URL para buscar seu conteúdo binário.
+Quando um usuário envia um arquivo para o bot, o arquivo é carregado pela primeira vez na conta de OneDrive para empresas. Em seguida, o bot recebe uma atividade de mensagem notificando o usuário sobre o upload do usuário. A atividade contém metadados de arquivo, como seu nome e a URL de conteúdo. O usuário pode ler diretamente dessa URL para buscar seu conteúdo binário.
 
-#### <a name="message-activity-with-file-attachment-example"></a>Atividade de mensagem com exemplo de anexo de arquivo
+#### <a name="message-activity-with-file-attachment-example"></a>Exemplo de atividade de mensagem com anexo de arquivo
 
 O código a seguir mostra um exemplo de atividade de mensagem com anexo de arquivo:
 
@@ -80,20 +80,20 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
 | Propriedade | Objetivo |
 | --- | --- |
-| `downloadUrl` | OneDrive URL para buscar o conteúdo do arquivo. O usuário pode emitir um diretamente `HTTP GET` a partir dessa URL. |
-| `uniqueId` | ID de arquivo exclusivo. Essa é a OneDrive de item de unidade, caso o usuário envie um arquivo para o bot. |
+| `downloadUrl` | OneDrive URL para buscar o conteúdo do arquivo. O usuário pode emitir um `HTTP GET` diretamente dessa URL. |
+| `uniqueId` | ID de arquivo exclusiva. Essa é a OneDrive ID do item da unidade, caso o usuário envie um arquivo para o bot. |
 | `fileType` | Tipo de arquivo, como .pdf ou .docx. |
 
-Como prática prática, confirme o carregamento de arquivo enviando uma mensagem de volta para o usuário.
+Como prática recomendada, confirme o upload do arquivo enviando uma mensagem de volta para o usuário.
 
 ### <a name="upload-files-to-personal-chat"></a>Upload arquivos para chat pessoal
 
-Para carregar um arquivo em um usuário:
+Para carregar um arquivo para um usuário:
 
-1. Envie uma mensagem para o usuário solicitando permissão para gravar o arquivo. Esta mensagem deve conter um `FileConsentCard` anexo com o nome do arquivo a ser carregado.
+1. Envie uma mensagem para o usuário solicitando permissão para gravar o arquivo. Essa mensagem deve conter um `FileConsentCard` anexo com o nome do arquivo a ser carregado.
 2. Se o usuário aceitar o download do arquivo, o bot receberá uma atividade de invocação com uma URL de local.
-3. Para transferir o arquivo, o bot executa um diretamente para a `HTTP POST` URL de local fornecida.
-4. Opcionalmente, remova o cartão de consentimento original se você não quiser que o usuário aceite mais carregamentos do mesmo arquivo.
+3. Para transferir o arquivo, o bot executa um diretamente `HTTP POST` na URL de local fornecida.
+4. Opcionalmente, remova o cartão de consentimento original se você não quiser que o usuário aceite uploads adicionais do mesmo arquivo.
 
 #### <a name="message-requesting-permission-to-upload"></a>Mensagem solicitando permissão para carregar
 
@@ -127,13 +127,13 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 | Propriedade | Objetivo |
 | --- | --- |
 | `description` | Descreve a finalidade do arquivo ou resume seu conteúdo. |
-| `sizeInBytes` | Fornece ao usuário uma estimativa do tamanho do arquivo e da quantidade de espaço necessário OneDrive. |
+| `sizeInBytes` | Fornece ao usuário uma estimativa do tamanho do arquivo e a quantidade de espaço necessário OneDrive. |
 | `acceptContext` | Contexto adicional que é transmitido silenciosamente para o bot quando o usuário aceita o arquivo. |
 | `declineContext` | Contexto adicional que é transmitido silenciosamente para o bot quando o usuário recusa o arquivo. |
 
-#### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Invocar atividade quando o usuário aceitar o arquivo
+#### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Invocar atividade quando o usuário aceita o arquivo
 
-Uma atividade de invocação é enviada ao bot se e quando o usuário aceitar o arquivo. Ele contém a URL OneDrive for Business espaço reservado que o bot pode emitir para `PUT` transferir o conteúdo do arquivo. Para obter informações sobre como carregar na URL OneDrive, consulte [upload bytes para a sessão de carregamento](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Uma atividade de invocação é enviada ao bot se e quando o usuário aceita o arquivo. Ele contém a URL OneDrive for Business espaço reservado que o bot pode emitir para `PUT` transferir o conteúdo do arquivo. Para obter informações sobre como carregar para a URL OneDrive, consulte [bytes de upload para a sessão de upload](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 O código a seguir mostra um exemplo de uma versão concisa da atividade de invocação que o bot recebe:
 
@@ -157,7 +157,7 @@ O código a seguir mostra um exemplo de uma versão concisa da atividade de invo
 }
 ```
 
-Da mesma forma, se o usuário recusar o arquivo, o bot receberá o seguinte evento com o mesmo nome de atividade geral:
+Da mesma forma, se o usuário recusar o arquivo, o bot receberá o seguinte evento com o mesmo nome geral da atividade:
 
 ```json
 {
@@ -173,7 +173,7 @@ Da mesma forma, se o usuário recusar o arquivo, o bot receberá o seguinte even
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notificar o usuário sobre um arquivo carregado
 
-Depois de carregar um arquivo na OneDrive do usuário, envie uma mensagem de confirmação para o usuário. A mensagem deve conter o seguinte `FileCard` anexo que o usuário pode selecionar, para visualizar ou abri-la em OneDrive ou baixar localmente:
+Depois de carregar um arquivo na conta do OneDrive, envie uma mensagem de confirmação para o usuário. A mensagem deve conter o seguinte `FileCard` anexo que o usuário pode selecionar, para visualizar ou abri-lo no OneDrive ou baixar localmente:
 
 ```json
 {
@@ -193,16 +193,16 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
 | Propriedade | Objetivo |
 | --- | --- |
-| `uniqueId` | OneDrive ou SharePoint ID do item da unidade. |
+| `uniqueId` | OneDrive ou SharePoint ID do item da unidade de unidade. |
 | `fileType` | Tipo de arquivo, como .pdf ou .docx. |
 
-### <a name="fetch-inline-images-from-message"></a>Buscar imagens em linha da mensagem
+### <a name="fetch-inline-images-from-message"></a>Buscar imagens embutidas da mensagem
 
-Buscar imagens em linha que fazem parte da mensagem usando o token de acesso do Bot.
+Busque imagens embutidas que fazem parte da mensagem usando o token de acesso do Bot.
 
-![Imagem em linha](../../assets/images/bots/inline-image.png)
+![Imagem embutida](../../assets/images/bots/inline-image.png)
 
-O código a seguir mostra um exemplo de busca de imagens em linha da mensagem:
+O código a seguir mostra um exemplo de busca de imagens embutidas da mensagem:
 
 ```csharp
 private async Task ProcessInlineImage(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -241,7 +241,7 @@ private static Attachment GetInlineAttachment()
 
 ### <a name="basic-example-in-c"></a>Exemplo básico em C #
 
-O código a seguir mostra um exemplo de como lidar com carregamentos de arquivo e enviar solicitações de consentimento de arquivo na caixa de diálogo do bot:
+O código a seguir mostra um exemplo de como lidar com uploads de arquivos e enviar solicitações de consentimento de arquivo na caixa de diálogo do bot:
 
 ```csharp
 
@@ -327,7 +327,7 @@ O exemplo de código a seguir demonstra como obter o consentimento do arquivo e 
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
-Siga o [guia passo a passo para](../../sbs-file-handling-in-bot.yml) carregar arquivos para Teams de um bot.
+Siga o [guia passo a passo para](../../sbs-file-handling-in-bot.yml) carregar o arquivo no Teams usando o bot.
 
 ## <a name="next-step"></a>Próxima etapa
 
