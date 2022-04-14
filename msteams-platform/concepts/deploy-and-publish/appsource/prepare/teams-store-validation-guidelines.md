@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511246"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826989"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -1029,7 +1029,7 @@ A experiência do bot deve ser totalmente responsiva em dispositivos móveis. As
 
 ### <a name="notification-only-bots"></a>Bots somente de notificação
 
-Aplicativos que consistem em bots somente de notificação fornecem valor ao usuário disparando notificações do usuário com base em determinados gatilhos ou eventos no aplicativo principal ou back-end. Por exemplo, um novo cliente potencial de vendas é adicionado para a equipe de vendas acompanhar.
+Aplicativos que consistem em bots somente de notificação fornecem valor ao usuário disparando notificações do usuário com base em determinados gatilhos ou eventos no aplicativo principal ou back-end. Por exemplo, um novo cliente potencial de vendas é adicionado para a equipe de vendas acompanhar. Um bot somente de notificação de alta qualidade notifica os usuários regularmente sobre determinadas conclusões de eventos, como preenchimentos de fluxo de trabalho ou alertas.
 
 Uma notificação fornecerá valor no Teams se:
 
