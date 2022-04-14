@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET de permissão de domínio de conversa appmanifest do pacote MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737211"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838479"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
-Guias pessoais, junto com bots de conversação direta, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados no painel esquerdo para facilitar o acesso. Você também pode [reordenar](#reorder-static-personal-tabs) e adicionar [`registerOnFocused` a API](#add-registeronfocused-api-for-tabs-or-personal-apps) para guias pessoais.
+Guias pessoais, junto com bots de conversação direta, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados no painel esquerdo para facilitar o acesso. Você também pode [reordenar](#reorder-static-personal-tabs) suas guias pessoais.
 
 Verifique se você tem todos os [pré-requisitos para](~/tabs/how-to/tab-requirements.md) criar sua guia pessoal.
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    Agora você criou e adicionou sua guia pessoal com êxito Teams.
   
-   Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) e adicionar [`registerOnFocused` a API](#add-registeronfocused-api-for-tabs-or-personal-apps) para sua guia pessoal.
+   Como você tem sua guia pessoal Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
 ::: zone-end
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    Agora você criou e adicionou sua guia pessoal com êxito Teams.
   
-   Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) e adicionar [`registerOnFocused` a API](#add-registeronfocused-api-for-tabs-or-personal-apps) para sua guia pessoal.
+   Como você tem sua guia pessoal Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
 ::: zone-end
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    Agora você criou e adicionou sua guia pessoal com êxito Teams.
 
-   Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) e adicionar [`registerOnFocused` a API](#add-registeronfocused-api-for-tabs-or-personal-apps) para sua guia pessoal.
+   Como você tem sua guia pessoal Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
 ::: zone-end
 
@@ -611,75 +611,6 @@ Se você criar um bot com um **escopo pessoal** , ele aparecerá na primeira pos
 }
 
 ```
-
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Adicionar `registerOnFocused` API para guias ou aplicativos pessoais
-
-A `registerOnFocused` API do SDK permite que você use um teclado Teams. Você pode retornar a um aplicativo pessoal e manter o foco em uma guia ou aplicativo pessoal com a ajuda das teclas Ctrl, Shift e F6. Por exemplo, você pode se afastar do aplicativo pessoal para pesquisar algo e, em seguida, retornar ao aplicativo pessoal ou usar Ctrl+F6 para percorrer os locais necessários.
-
-O código a seguir fornece um exemplo de definição `registerFocusEnterHandler` de manipulador no SDK quando o foco deve ser retornado para a guia ou o aplicativo pessoal:
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-Depois que o manipulador é disparado com a palavra-chave `focusEnter`, `registerFocusEnterHandler` o manipulador é invocado com uma função de `focusEnterHandler` retorno de chamada que usa um parâmetro chamado `navigateForward`. O valor de `navigateForward` determina o tipo de eventos. Ele `focusEnterHandler` é invocado apenas por Ctrl+F6 e não pela tecla tab.
-As chaves úteis para mover eventos dentro Teams são as seguintes:
-
-* Evento forward: Ctrl+F6 keys
-* Evento backward: Ctrl+Shift+F6 keys
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>Aplicativo pessoal
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="O exemplo mostra as opções para adicionar a API registerOnFocussed" border="true":::
-
-#### <a name="personal-app-forward-event"></a>Aplicativo pessoal: encaminhar evento
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="O exemplo mostra as opções para adicionar a movimentação de encaminhamento da API registerOnFocussed" border="true":::
-
-#### <a name="personal-app-backward-event"></a>Aplicativo pessoal: evento Backward
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="O exemplo mostra as opções para adicionar o movimento de versões anteriores da API registerOnFocussed" border="true":::
-
-### <a name="tab"></a>Tab
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="O exemplo mostra as opções para adicionar a API registerOnFocussed para tab" border="true":::
 
 ## <a name="next-step"></a>Próxima etapa
 

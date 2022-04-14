@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706155"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838471"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -116,7 +116,6 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 |13/11/2021| Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso) | • Criar bots > Conversas de bot > Mensagens em conversas de bots > [Receber todas as mensagens de canal com RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Criar bots > Conversas de bot > [Visão geral da conversa de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > Conversas de bots > [Conversas de canal e grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |28/10/2021| Monetize seu aplicativo Teams com uma oferta de SaaS transacionável | Distribuir seu aplicativo > Publicar no Teams Store > [Incluir uma oferta SaaS com seu aplicativo do Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |25/10/2021| Atualizado o módulo Introdução à Documentação do Desenvolvedor do Microsoft Teams com nova estrutura e procedimentos em um guia passo a passo | Começar > [Introdução ao seu primeiro aplicativo do Teams](get-started/get-started-overview.md) |
-|21/10/2021| Adicionar um `registerOnFocused`API para guias ou aplicativos pessoais | Criar guias > Criar guias pessoais > [Adicionar `registerOnFocused` API para guias ou aplicativos pessoais](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20/10/2021| O estágio de reunião agora está disponível em GA | Criar aplicativos para reuniões do Teams > [Habilitar e configurar seus aplicativos para reuniões do Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 |20/10/2021| API de Detalhes da Reunião e eventos de reunião do Teams em tempo real | Crie aplicativos para reuniões do Teams [Obtenha a API de detalhes da reunião](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Link de guias desdobradas e exibição de estágio | Criar guias > [Link de guias desdobradas e exibição de estágio](tabs/tabs-link-unfurling.md) |

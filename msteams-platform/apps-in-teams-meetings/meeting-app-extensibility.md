@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente desktop e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
-ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
+ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64827187"
+ms.locfileid: "64838467"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -210,7 +210,7 @@ Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar ap
 
 A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
-| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da Reunião |
+| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Não disponível |
 | Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no Teams da área de trabalho |
