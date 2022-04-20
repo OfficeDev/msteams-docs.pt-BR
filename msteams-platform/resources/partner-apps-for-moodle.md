@@ -4,12 +4,12 @@ description: Introdução aos aplicativos de parceiros
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 7d2c9665f3a01a0496e34b40c774fadf90c88a8a
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 7ff5d15b0fcc3ef10b89470e98e3fd1d15af03d9
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453910"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910526"
 ---
 # <a name="partner-apps-for-moodle"></a>Aplicativos de parceiros para o Moodle
 
@@ -38,5 +38,4 @@ O aplicativo mConnect integra cursos e atividades do Moodle ao Teams para aprimo
 ## <a name="see-also"></a>Confira também
 
 * [Perguntas frequentes sobre o Moodle](faqs.md)
-* [Obter ajuda](getting-help.md)
 * [Skooler](https://skooler.com/mconnect/how-to/)
