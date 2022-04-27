@@ -5,12 +5,12 @@ description: Descreve a pesquisa typeahead com o controle Input.ChoiceSet em Car
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453828"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073786"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Pesquisa de preenchimento automático em cartões adaptáveis
 
@@ -23,8 +23,8 @@ Você pode usar a pesquisa typeahead para as seguintes pesquisas:
 
 ## <a name="static-typeahead-search"></a>Pesquisa de typeahead estático
 
-A pesquisa de typeahead estático permite que os usuários pesquisem de valores especificados `input.choiceset` na carga cartão adaptável. A pesquisa de typeahead estático pode ser usada para mostrar várias opções ao usuário. O tamanho da carga na pesquisa estática aumenta com o número de opções especificadas na carga.
-À medida que o usuário começa a inserir os textos, as opções são filtradas, que corresponderão parcialmente à entrada. A lista lista suspenso realça os caracteres de entrada que corresponderem à pesquisa.
+A pesquisa de typeahead estático permite que os usuários pesquisem de valores especificados `input.choiceset` no conteúdo do Cartão Adaptável. A pesquisa de typeahead estático pode ser usada para mostrar várias opções para o usuário. O tamanho da carga na pesquisa estática aumenta com o número de opções especificadas na carga.
+À medida que o usuário começa a inserir os textos, as opções são filtradas, que correspondem parcialmente à entrada. A lista suspensa realça os caracteres de entrada que correspondem à pesquisa.
 
 A imagem a seguir demonstra a pesquisa de typeahead estático:
 
@@ -32,27 +32,27 @@ A imagem a seguir demonstra a pesquisa de typeahead estático:
 
 ## <a name="dynamic-typeahead-search"></a>Pesquisa de typeahead dinâmico
 
-A pesquisa de typeahead dinâmico é útil para pesquisar e selecionar dados de conjuntos de dados grandes. Os conjuntos de dados são carregados dinamicamente do conjunto de dados especificado na carga do cartão. A funcionalidade de tipo à frente ajuda a filtrar as opções conforme os tipos de usuário.
+A pesquisa de typeahead dinâmico é útil para pesquisar e selecionar dados de grandes conjuntos de dados. Os conjuntos de dados são carregados dinamicamente do conjunto de dados especificado no conteúdo do cartão. A funcionalidade de tipo antecipado ajuda a filtrar as opções conforme o usuário digita.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-![Pesquisa de typeahead dinâmico](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Pesquisa de typeahead dinâmico":::
 
-![Imagem de pesquisa de typeahead dinâmica 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Pesquisa de typeahead dinâmico 2":::
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-Os clientes móveis Android e iOS suportam a pesquisa typeahead em Cartões Adaptáveis.
+Os clientes móveis Android e iOS dão suporte à pesquisa de typeahead em Cartões Adaptáveis.
 
 **Cenário**
 
-John é um funcionário da loja que trabalha em uma loja de varejo do Xbox. A loja usa um bot para aceitar novas solicitações de compra dos clientes. Um cliente pode pesquisar a partir dos milhares de jogos disponíveis. A pesquisa typeahead em Cartões Adaptáveis é usada para pesquisar e selecionar as escolhas dos clientes.
+João é um funcionário da loja que trabalha em uma loja de varejo do Xbox. A loja usa um bot para aceitar novas solicitações de compra dos clientes. Um cliente pode pesquisar de milhares de jogos disponíveis. A pesquisa de cabeça de tipo em Cartões Adaptáveis é usada para pesquisar e selecionar as opções dos clientes.
 
 **Para usar a pesquisa typeahead em Cartões Adaptáveis**
 
-1. O Usuário A abre o bot da loja.
-1. O Usuário A envia um comando ao bot para uma **solicitação de novo cliente**. O bot responde com o Cartão Adaptável que tem componente `Input.ChoiceSet` .
-1. O Usuário A usa a pesquisa typeahead para pesquisar e selecionar as informações com base na escolha do cliente.
+1. O usuário A abre o bot da loja.
+1. O usuário A envia um comando para o bot para uma **nova solicitação de cliente**. O bot responde com o Cartão Adaptável que tem componente `Input.ChoiceSet` .
+1. O usuário A usa a pesquisa typeahead para pesquisar e selecionar as informações com base na escolha do cliente.
 
 A imagem a seguir ilustra a experiência móvel da pesquisa typeahead:
 
@@ -61,41 +61,41 @@ A imagem a seguir ilustra a experiência móvel da pesquisa typeahead:
 ---
 
 > [!NOTE]
-> Você não pode obter experiências de cartão rich com pesquisa dinâmica, como extensões de mensagens baseadas em consulta.
+> Você não pode obter experiências avançadas de cartão com pesquisa dinâmica, como extensões de mensagens baseadas em consulta.
 
 ## <a name="implement-typeahead-search"></a>Implementar a pesquisa typeahead
 
-`Input.ChoiceSet` é um dos componentes de entrada importantes em Cartões Adaptáveis. Você pode adicionar um controle de pesquisa typeahead ao componente `Input.ChoiceSet` para implementar a pesquisa typeahead. Você pode pesquisar e selecionar as informações necessárias com as seguintes seleções:
+`Input.ChoiceSet` é um dos componentes de entrada importantes nos Cartões Adaptáveis. Você pode adicionar um controle de pesquisa typeahead ao componente `Input.ChoiceSet` para implementar a pesquisa typeahead. Você pode pesquisar e selecionar as informações necessárias com as seguintes seleções:
 
-* Menu suspenso, como seleção expandida.
-* Botão de rádio, como seleção única.
+* Lista suspensa, como seleção expandida.
+* Botão de opção, como seleção única.
 * Caixas de seleção, como várias seleções.
 
 > [!NOTE]
-> O `Input.ChoiceSet` controle se baseia no estilo e nas `isMultiSelect` propriedades.
+> O `Input.ChoiceSet` controle é baseado no estilo e nas `isMultiSelect` propriedades.
 
-### <a name="schema-properties"></a>Propriedades de esquema
+### <a name="schema-properties"></a>Propriedades do esquema
 
-As seguintes propriedades são as novas adições ao [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) esquema para habilitar a pesquisa typeahead:
+As propriedades a seguir são as novas adições ao esquema [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) para habilitar a pesquisa typeahead:
 
 | Propriedade| Tipo | Obrigatório | Descrição |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expandido <br/> Filtered | Não | Adiciona estilo filtrado à lista de validações com suporte para o tipo estático à frente.|
-| choices.data | Data.Query | Não | Habilita o tipo dinâmico à frente como os tipos de usuário, buscando um conjunto remoto de opções de um back-end. |
+| style | Compact <br/> Expandido <br/> Filtered | Não | Adiciona estilo filtrado à lista de validações com suporte para o tipo estático antecipado.|
+| choices.data | Data.Query | Não | Habilita o tipo dinâmico à medida que o usuário digita, buscando um conjunto remoto de opções de um back-end. |
 
 ### <a name="dataquery-definition"></a>Definição de Data.Query
 
 | Propriedade| Tipo | Obrigatório | Descrição |
 |-----------|------|----------|-------------|
 | type | Data.Query | Sim | Especifica que é um objeto Data.Query.|
-| dataset | Cadeia de caracteres | Sim | Especifica o tipo de dados que é buscado dinamicamente. |
-| value | Cadeia de caracteres | Não | Preenche a solicitação de invocação para o bot com a entrada que o usuário forneceu ao `ChoiceSet`. |
-| count | Número | Não | Preenche a solicitação de invocação para o bot para especificar o número de elementos que devem ser retornados. O bot o ignorará, se os usuários quiserem enviar uma quantidade diferente. |
-| skip | Número | Não | Preenche a solicitação de invocação para o bot para indicar que os usuários querem paginar e avançar na lista. |
+| Dataset | String | Sim | Especifica o tipo de dados que é buscado dinamicamente. |
+| value | String | Não | Popula a solicitação de invocação para o bot com a entrada que o usuário forneceu ao `ChoiceSet`. |
+| count | Número | Não | Popula a solicitação de invocação para o bot para especificar o número de elementos que devem ser retornados. O bot o ignorará se os usuários desejarem enviar um valor diferente. |
+| skip | Número | Não | Popula a solicitação de invocação para o bot para indicar que os usuários querem paginar e avançar na lista. |
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de carga que contém a pesquisa de typeahead estático e dinâmico com & opções de seleção única da seguinte forma:
+O conteúdo de exemplo que contém a pesquisa de typeahead estático e dinâmico com & opções de seleção única da seguinte maneira:
 
 ```json
 {
@@ -297,7 +297,7 @@ O exemplo de carga que contém a pesquisa de typeahead estático e dinâmico com
 }
 ```
 
-## <a name="code-snippets-for-invoke-request-and-response"></a>Trechos de código para invocar solicitação e resposta
+## <a name="code-snippets-for-invoke-request-and-response"></a>Snippets de código para invocar solicitação e resposta
 
 ### <a name="invoke-request"></a>Invocar Solicitação
 
@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 |**Nome de exemplo** | **Descrição** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Controle de pesquisa typeahead em Cartões Adaptáveis | O exemplo mostra os recursos do controle de pesquisa de typeahead estático e dinâmico em Cartões Adaptáveis. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Controle de pesquisa typeahead em Cartões Adaptáveis | O exemplo mostra os recursos do controle de pesquisa typeahead estático e dinâmico em Cartões Adaptáveis. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,38 +6,39 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 047cd9bcd86c103c3c9cab22793fb7d187f7493d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: de85674891a53c1e87b43ae1d472daf35716c348
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453597"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073537"
 ---
-# <a name="customize-app-manifest-in-teams-toolkit"></a>Personalizar o manifesto do aplicativo Teams Toolkit
+# <a name="customize-app-manifest-in-toolkit"></a>Personalizar o manifesto do aplicativo Toolkit
 
-Teams Toolkit consiste nos seguintes arquivos de modelo de manifesto na `templates/appPackage` pasta:
+Teams Toolkit consiste nos seguintes arquivos de modelo de manifesto em `manifest.template.json` pasta em ambientes locais e remotos:
 
-* `manifest.local.template.json` - aplicativo de equipes de depuração local
-* `manifest.remote.template.json` - compartilhado em todos os ambientes
+* `manifest.template.json`
+* `templates/appPackage`
+
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-* [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
+* Instalar a [versão mais recente do Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Verifique se você Teams projeto de aplicativo aberto Visual Studio Code.
 
-Durante o provisionamento, Teams Toolkit carrega manifesto `manifest.remote.template.json`de , combinado com `state.{env}.json` configurações de e `config.{env}.json`, e cria o aplicativo teams no [Portal deV](https://dev.teams.microsoft.com/apps).
+Durante a depuração ou provisionamento `manifest.template.json`local, Teams Toolkit carrega o manifesto de , `state.{env}.json`com configurações de , `config.{env}.json`e cria o aplicativo teams no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
 
-Durante a depuração local, Teams Toolkit carrega manifesto `manifest.local.template.json`de , combinado com `localSettings.json`configurações de , e cria o aplicativo teams no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
 
-## <a name="supported-placeholder-in-manifestremotetemplatejson"></a>Espaço reservado suportado em manifest.remote.template.json
+## <a name="placeholders-supported-in-manifesttemplatejson"></a>Espaços reservados com suporte em manifest.template.json
 
-* `{{state.xx}}`é um espaço reservado pré-definido cujo valor é resolvido por Teams Toolkit, definido em `state.{env}.json`. Certifique-se de não modificar os valores em estado. {env}.json.
-* `{{config.manifest.xx}}` é um espaço reservado personalizado cujo valor é resolvido de `config.{env}.json`.
-  * Você pode adicionar um parâmetro personalizado da seguinte forma:
-    * Adicione um espaço reservado em manifest.remote.template.json com padrão: `{{config.manifest.xx}}`
-    * Adicione um valor config em config. {env}.json
+* `{{state.xx}}`é um espaço reservado predefinido e seu valor é resolvido por Teams Toolkit, definido em `state.{env}.json`. Certifique-se de não modificar os valores no estado. {env}.json
+* `{{config.manifest.xx}}` é um espaço reservado personalizado e seu valor é resolvido de `config.{env}.json`
+
+  1. Você pode adicionar um parâmetro personalizado da seguinte maneira:
+      1. Adicione um espaço reservado em manifest.template.json com padrão: `{{config.manifest.xx}}`
+      2. Adicione um valor de configuração na configuração. {env}.json
 
         ```json
         {
@@ -47,15 +48,8 @@ Durante a depuração local, Teams Toolkit carrega manifesto `manifest.local.tem
         }
         ```
 
-    Além de cada espaço reservado de configuração em `manifest.remote.template.json`, há um `Go to config file`. Você pode navegar até o arquivo de configuração selecionando-o.
-
-## <a name="supported-placeholder-in-manifestlocaltemplatejson"></a>Espaço reservado suportado em manifest.local.template.json
-
-`{{localSettings.xx}}`é um espaço reservado pré-definido cujo valor é resolvido por Teams Toolkit, definido em `localSettings.json`. Certifique-se de não modificar os valores em localSettings.json.
-
- > [!NOTE]
- > Certifique-se de não personalizar o manifesto local.
+   2. Você pode navegar até o arquivo de configuração selecionando qualquer um dos espaços reservados de configuração **Ir** para o arquivo de configuração ou **Exibir o arquivo de estado** em `manifest.template.json`
 
 ## <a name="see-also"></a>Confira também
 
-[Visualizar Teams Manifesto do Aplicativo no Teams Toolkit](TeamsFx-manifest-preview.md)
+[Visualizar Teams manifesto do aplicativo no Teams Toolkit](TeamsFx-manifest-preview.md)

@@ -5,19 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736875"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073297"
 ---
 # <a name="in-app-purchases"></a>Compras no aplicativo
 
 O Microsoft Teams fornece APIs que você pode usar para implementar as compras no aplicativo para atualizar de aplicativos gratuitos para aplicativos pagos do Teams. A compra no aplicativo permite converter usuários de planos gratuitos para pagos diretamente de seu aplicativo.
-
-> [!NOTE]
-> No momento, as compras no aplicativo para aplicativos do Teams estão disponíveis apenas na [**visualização do desenvolvedor**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 ## <a name="implement-in-app-purchases"></a>Implementar compras no aplicativo
 
