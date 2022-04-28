@@ -1,19 +1,19 @@
 ---
-title: Testar o consentimento específico do recurso para um chat em Teams
-description: Saiba como testar o consentimento específico do recurso para um chat em Teams usando Postman com um arquivo JSON de exemplo.
-ms.localizationpriority: medium
+title: Testar o consentimento específico de recursos para um chat no Teams
+description: Aprenda como testar o consentimento específico de recursos para um chat no Teams usando o Postman com um arquivo JSON de amostra.
+ms.localizationpriority: high
 author: jecha
 ms.author: jecha
 ms.topic: how-to
-keywords: autorização do teams OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: 1f387dc7514fd8a9c1b9bbcb5363542cdbed4ab0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+keywords: autorização das equipes do Postman Graph de RSC de OAuth SSO do Azure AD
+ms.openlocfilehash: 7419316efbebf4f59c81432f7cd37db7a4a29e4a
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453870"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111175"
 ---
-# <a name="test-chat-rsc-postman-collection-for-json"></a>Test chat RSC Postman collection for JSON
+# <a name="test-chat-rsc-postman-collection-for-json"></a>Testar a coleção do Postman de RSC de chat para JSON
 
 ```json
 {

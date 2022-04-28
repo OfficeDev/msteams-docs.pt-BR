@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501939"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104529"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -35,7 +35,7 @@ Verifique o seguinte ao publicar atualizações:
 
 * Não altere a ID do aplicativo.
 * Incremente o número de versão do aplicativo.
-* No Partner Center, não selecione **Adicione um novo aplicativo** para fazer a atualização. Vá para a página do seu aplicativo.
+* No Partner Center, não selecione **Adicionar um novo aplicativo** para fazer a atualização. Vá para a página do seu aplicativo.
 
 ### <a name="app-updates-requiring-user-consent"></a>Atualizações de aplicativo que exigem consentimento do usuário
 
@@ -46,11 +46,11 @@ No entanto, se você fizer qualquer uma das seguintes alterações em seu aplica
 * Altere a ID do bot.
 * Modifique a configuração de notificação unidirecional de um bot.
 * Modifique o suporte de um bot para carregar e baixar arquivos.
-* Adicionar ou remover uma extensão de mensagens.
+* Adicionar ou remover uma extensão de mensagem.
 * Adicionar uma guia pessoal.
 * Adicionar um canal e guia do grupo.
 * Adicionar um conector.
-* Modifique as configurações relacionadas ao registro Microsoft Azure Active Directory aplicativo do Azure Active Directory (Azure AD). Para obter mais informações, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modifique as configurações relacionadas ao seu registro de aplicativo do Microsoft Azure Active Directory (Azure AD). Para mais informações, veja [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrigir problemas com seu aplicativo publicado
 

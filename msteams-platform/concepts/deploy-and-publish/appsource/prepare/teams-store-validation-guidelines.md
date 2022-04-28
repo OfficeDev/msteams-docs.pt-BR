@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826989"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103969"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -162,7 +162,7 @@ Os aplicativos em execução na versão para iOS ou Android do Teams devem segui
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Esta seção está alinhada com a [política do marketplace comercial da Microsoft número 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
-Para aplicativos que usam o Serviço de Bot do Microsoft Azure (como bots e extensões de mensagens), você deve seguir todos os requisitos definidos nos Termos do Microsoft [Online Services](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
+Para aplicativos que usam o Serviço de Bot do Microsoft Azure (como bots e extensões de mensagens), você deve seguir todos os requisitos definidos na Microsoft [Termos dos Serviços Online](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Os bots sempre devem pedir permissão para fazer upload de um arquivo e exibir uma mensagem de confirmação.
 
@@ -261,7 +261,7 @@ Os pacotes de aplicativos devem ser formatados corretamente e incluir todas as i
 O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 * Seu manifesto deve estar em conformidade com um esquema de manifesto divulgado publicamente. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md). Não envie seu aplicativo usando uma versão prévia do manifesto.
-* Se seu aplicativo incluir um bot ou uma extensão de mensagens, os detalhes no manifesto do aplicativo deverão ser consistentes com os metadados do Bot Framework, incluindo o nome do bot, o logotipo, o link da política de privacidade e o link de termos de serviço.
+* Se seu aplicativo incluir um bot ou uma extensão de mensagens, os detalhes no manifesto do aplicativo deverão ser consistentes com os metadados da Estrutura do Bot, incluindo o nome do bot, o logotipo, o link da política de privacidade e o link de termos de serviço.
 * Se seu aplicativo usa Azure Active Directory para autenticação, inclua a ID do aplicativo (cliente) do Microsoft Azure Active Directory (Azure AD) no manifesto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Ícones do aplicativo
@@ -1061,7 +1061,7 @@ Os aplicativos que fornecem apenas notificações com conteúdo como **Você tem
 > [!TIP]
 > Visualize informações e forneça ações básicas do usuário embutido no cartão postado para que o usuário não seja solicitado a navegar para fora do Teams para todas as ações (independentemente da complexidade).
 
-## <a name="messaging-extensions"></a>Extensões de mensagens
+## <a name="message-extensions"></a>Extensões de mensagens
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Esta seção está alinhada com a [política do marketplace comercial da Microsoft número 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
@@ -1170,7 +1170,7 @@ As extensões de mensagens devem visualizar links reconhecidos na caixa de reda�
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>Aplicativos de extensão de mensagens baseados em pesquisa
+### <a name="search-based-message-extension-only-apps"></a>Aplicativos de extensão de mensagens baseados em pesquisa
 
 [*Correção Obrigatória*]
 

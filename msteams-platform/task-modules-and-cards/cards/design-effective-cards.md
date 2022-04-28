@@ -4,16 +4,16 @@ description: Aprenda a projetar Cartões Adaptáveis para o Teams e obtenha o Ki
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398621"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103899"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
-Um Cartão Adaptável contém um corpo de elementos de cartão de forma livre e um conjunto opcional de ações. Cartões Adaptáveis são fragmentos de conteúdo acionáveis que você pode adicionar a uma conversa por meio de um bot ou extensão de mensagem. Usando texto, gráficos e botões, esses cartões fornecem uma comunicação rica para seu público-alvo.
+Um Cartão Adaptável contém um corpo de elementos de cartão de forma livre e um conjunto opcional de ações. Cartões Adaptativos são fragmentos de conteúdo acionáveis que você pode adicionar a uma conversa por meio de um bot ou extensão de mensagem. Usando texto, gráficos e botões, esses cartões fornecem uma comunicação rica para seu público-alvo.
 
 A estrutura de Cartão Adaptável é usada em muitos produtos da Microsoft, incluindo o Teams. Você pode enviar cartões dentro de mensagens para usuários por meio de bots ou extensões de mensagens. Os usuários também podem realizar ações em cartões quando presentes.
 

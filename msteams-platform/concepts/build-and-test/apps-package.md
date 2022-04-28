@@ -3,12 +3,12 @@ title: Empacote o seu aplicativo
 description: Saiba como empacotar seu aplicativo do Microsoft Teams para testar, carregar e armazenar a publicação.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356067"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104088"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Criar um pacote de aplicativo do Microsoft Teams
 
@@ -94,7 +94,7 @@ Veja como os ícones de aplicativo aparecem em diferentes recursos e contextos d
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemplo mostrando como um ícone de aplicativo fica em um bot dentro do canal." border="false":::
 
-#### <a name="messaging-extension"></a>Extensão de mensagem
+#### <a name="message-extension"></a>Extensão de mensagem
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
 

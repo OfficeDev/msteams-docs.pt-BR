@@ -4,12 +4,12 @@ description: Descreve o SSO (logon único)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: api de logon único de autenticação de equipes SSO do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d9391489c8bafafa24ba52528f5d0b8440319a55
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571317"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104417"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Suporte ao SSO (logon único) para guias
 
@@ -277,7 +277,7 @@ A solução de autenticação descrita acima só funciona para aplicativos e ser
 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
-* Siga o [guia passo a passo](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) para autenticar extensões de mensagens e guias.
+* Siga a [guia passo a passo](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) para autenticar guias e extensões de mensagem.
 * Siga o [guia passo a passo](../../../sbs-tab-with-adaptive-cards.yml) para criar guia com cartões adaptáveis.
 
 ## <a name="see-also"></a>Confira também
