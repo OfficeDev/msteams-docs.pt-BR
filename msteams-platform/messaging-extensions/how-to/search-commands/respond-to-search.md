@@ -4,13 +4,13 @@ author: surbhigupta
 description: Saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo Microsoft Teams usando exemplos de código e exemplos
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104501"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111931"
 ---
 # <a name="respond-to-search-command"></a>Responder ao comando de pesquisa
 
@@ -416,8 +416,8 @@ A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regul
 
 | Nome do exemplo           | Descrição | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams de extensão de mensagem| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams de extensão de mensagem   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams de extensão de mensagem| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams de extensão de mensagem   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Próxima etapa
 

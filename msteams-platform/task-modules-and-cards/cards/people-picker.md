@@ -1,19 +1,19 @@
 ---
-title: Seletor de Pessoas em Cartões Adaptáveis
+title: Seletor de Pessoas nos Cartões Adaptáveis
 description: Descreve como usar o controle Seletor de Pessoas em Cartões Adaptáveis
-localization_priority: Normal
+localization_priority: Medium
 keywords: Seletor de Pessoas de Cartões Adaptáveis
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 8a78be74d8142600ccc08093744491a19900e60b
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073417"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111630"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas em Cartões Adaptáveis
+# <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas nos Cartões Adaptáveis
 
 >[!NOTE]
 > Atualmente, o Seletor de Pessoas em Cartões Adaptáveis está disponível [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) na versão prévia do desenvolvedor público somente para dispositivos móveis e ga (disponibilidade geral) para área de trabalho.
@@ -107,7 +107,7 @@ As propriedades a seguir são adições ao esquema `Input.ChoiceSet` para habili
 
 |Propriedade |Tipo |Obrigatório |Descrição|
 |--|--|--|--|
-|**Dataset** |String |Sim |O tipo de dados que deve ser buscado dinamicamente.|
+|**Dataset** |Cadeia de caracteres |Sim |O tipo de dados que deve ser buscado dinamicamente.|
 
 #### <a name="dataset"></a>Dataset
 
@@ -162,7 +162,7 @@ Para habilitar a pesquisa dentro de uma lista de membros da conversa, use o conj
 
 ### <a name="data-submission"></a>Envio de dados
 
-Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para o bot. A `invoke` carga recebida no bot é uma lista de IDs Microsoft Azure Active Directory (Azure AD) ou as IDs fornecidas na lista estática.
+Você pode usar `Action.Submit` ou `Action.Execute` enviar dados selecionados para o bot. O `invoke` conteúdo recebido no bot é uma lista de IDs Microsoft Azure Active Directory (Azure AD) ou as IDs fornecidas na lista estática.
 No Seletor de Pessoas, quando um usuário é selecionado no controle, o `Azure AD ID` do usuário é o valor enviado de volta. É `Azure AD ID` uma cadeia de caracteres e identifica exclusivamente um usuário no diretório.
 
 O formato do valor enviado ao bot depende do valor da `isMultiSelect` propriedade:

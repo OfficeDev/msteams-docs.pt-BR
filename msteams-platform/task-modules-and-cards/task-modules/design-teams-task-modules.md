@@ -5,12 +5,12 @@ description: Aprenda a projetar módulos de tarefas para os aplicativos do Teams
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355962"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104130"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Criando módulos de tarefa para o seu aplicativo do Microsoft Teams
 
@@ -31,9 +31,9 @@ Os módulos de tarefas podem ser iniciados de praticamente qualquer lugar no seu
 
 * **Guia**: um módulo de tarefas pode ser iniciado de qualquer link em uma guia. Use em cenários em que você quer que o usuário se concentre em uma interação.
 * **Bot**: um módulo de tarefas pode ser iniciado de um link dentro de uma mensagem de bot.
-* **Cartão Adaptável**: um módulo de tarefas pode ser iniciado de um Cartão Adaptável (enviado com uma extensão de mensagens ou por um bot) quando um usuário seleciona um botão.
-* **Extensão de mensagens (comandos de ação)**: as extensões de mensagens permitem que você realize uma ação específica no conteúdo da mensagem. Selecionar uma ação abre um módulo de tarefas.
-* **Extensão de mensagens (contexto da caixa de redação)**: na caixa de redação, você pode projetar uma extensão de mensagens para abrir um módulo de tarefas em vez do submenu típico. Reserve módulos de tarefas para as interações complexas, como a conclusão de um formulário.
+* **Cartão Adaptável**: Um módulo de tarefas pode ser iniciado a partir de um Cartão Adaptável (enviado com uma extensão de mensagem ou por um bot) quando um usuário seleciona um botão.
+* **Extensão de mensagem (comandos de ação)**: as extensões de mensagens permitem que você realize uma ação específica no conteúdo da mensagem. Selecionar uma ação abre um módulo de tarefas.
+* **Extensão de mensagem (contexto da caixa de redação)**: na caixa de redação, você pode projetar uma extensão de mensagem para abrir um módulo de tarefas em vez do submenu típico. Reserve módulos de tarefas para as interações complexas, como a conclusão de um formulário.
 
 ## <a name="anatomy"></a>Anatomia
 

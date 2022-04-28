@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398747"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104494"
 ---
 # <a name="teams-app-that-fits"></a>Aplicativo do Microsoft Teams que se ajusta
 
@@ -21,7 +21,7 @@ Os aplicativos podem ser pessoais ou compartilhados. Um aplicativo pessoal habil
 
 ## <a name="driving-organizational-goals"></a>Impulsionando as metas organizacionais
 
-Colaboração e comunicação são fundamentais para uma organização. Comunicação concisa, integração com os serviços necessários e acessibilidade em qualquer lugar é o motivo pelo qual as organizações estão cada vez mais optando por confiar em aplicativos.
+A colaboração e a comunicação são fundamentais para uma organização. Comunicação concisa, integração com os serviços necessários e acessibilidade em qualquer lugar é por isso que as organizações estão escolhendo cada vez mais confiar em aplicativos.
 
 As organizações o usam para se conectar com seus clientes, fornecer serviços e compartilhar informações. Mas isso não é tudo! Os aplicativos são o local de reunião para que as pessoas trabalhem juntas. Um aplicativo bem colocado ajuda a criar um ambiente coeso para necessidades de negócios externas e internas.
 

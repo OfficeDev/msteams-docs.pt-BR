@@ -3,13 +3,13 @@ title: Desenvolver extensões de mensagem
 description: Descreve como começar a usar extensões de mensagem no Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: extensões de mensagem de extensões de mensagem do Teams
-ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+keywords: extensões de mensagens de extensões de mensagens do teams
+ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104327"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111917"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>Desenvolver extensões de mensagem para Microsoft Teams
 
@@ -29,7 +29,7 @@ Como você usaria extensões de mensagem? Aqui estão algumas possibilidades:
 * Imagens e conteúdo de mídia
 * Oportunidades de vendas e clientes potenciais
 
-## <a name="types-of-message-extensions"></a>Tipos de extensões de mensagem
+## <a name="types-of-message-extensions"></a>Tipos de extensões de mensagens
 
 Há principalmente dois tipos de extensões de mensagem que você pode criar para Teams hoje. Os tópicos a seguir orientarão você durante o processo de criação deles:
 

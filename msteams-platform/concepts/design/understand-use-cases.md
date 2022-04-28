@@ -5,12 +5,12 @@ description: Neste artigo, conheça os recursos do aplicativo Microsoft Teams, p
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498228"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104375"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -97,7 +97,7 @@ As conversas geralmente resultam na necessidade de fazer algo (gerar um pedido, 
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>Extensões de mensagens
+#### <a name="message-extensions"></a>Extensões de mensagens
 
 Com [extensões de mensagens](../../messaging-extensions/what-are-messaging-extensions.md), você pode pesquisar e compartilhar informações externas. Você também pode agir em uma mensagem, como criar um tíquete de ajuda com base no conteúdo de uma postagem de canal.
 

@@ -5,12 +5,12 @@ description: Identifique como os casos de uso do seu aplicativo podem funcionar 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765936"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103324"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mapeie seus casos de uso para os recursos do aplicativo Teams
 
@@ -51,7 +51,7 @@ Uma maneira rápida de iniciar um processo ou fluxo de trabalho em um sistema ex
 
 | **Se desejar...** | **Experimente ...** |
 | --- | --- |
-| Acione mensagens, permitindo que seus usuários enviem rapidamente o conteúdo de uma mensagem para seus serviços da Web. | Comandos de ação de extensões de mensagens |
+| Acione mensagens, permitindo que seus usuários enviem rapidamente o conteúdo de uma mensagem para seus serviços da Web. | Extensões de mensagens comandos de ação |
 | Abra mensagens de uma guia, um bot ou uma extensão de mensagem para coletar informações antes de iniciar um fluxo de trabalho. | Módulos de tarefas |
 | Interaja com os usuários por meio de textos e cartões avançados. | Bots de conversação |
 | A boa opção para uma simples interação de ida e volta quando você não precisa criar um bot de conversação inteiro. |  Webhooks de saída |

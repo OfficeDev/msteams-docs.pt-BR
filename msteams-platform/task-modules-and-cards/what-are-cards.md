@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398649"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104452"
 ---
 # <a name="cards"></a>Cartões
 
@@ -44,7 +44,7 @@ O Microsoft Bot Framework estende a especificação de cartões adicionando um c
 
 Os bots no Teams podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. Os [Tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md) fornecem informações sobre cartões, com suporte dos bots no Teams.
 
-## <a name="cards-in-messaging-extensions"></a>Cartões nas extensões de mensagens
+## <a name="cards-in-message-extensions"></a>Cartões em extensões de mensagem
 
 As [Extensões de mensagens](~/messaging-extensions/what-are-messaging-extensions.md) também podem retornar um cartão. As extensões de mensagens podem usar cartões simples, cartões de conector ou Cartões Adaptáveis. Esses cartões são encontrados em [tipos de cartões](~/task-modules-and-cards/cards/cards-reference.md).
 

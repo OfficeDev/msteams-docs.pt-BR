@@ -3,13 +3,13 @@ title: Aplicativos de reuniões unificadas
 author: surbhigupta
 description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente de área de trabalho e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103331"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111343"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -23,7 +23,7 @@ Este artigo aborda as informações sobre o ciclo de vida da reunião e como int
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida da reunião
 
-Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagem em cada estágio do ciclo de vida da reunião.
+Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
 
 > [!NOTE]
 > Há suporte para extensões de reunião, como bots, cartões, extensões de mensagem e ações de mensagem no cliente Web. No entanto, as experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
@@ -191,8 +191,8 @@ Tipos de usuário, como organizador, apresentador ou participante em uma reuniã
 
 A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessibilidade e desempenho:
 
-* **No locatário**: os usuários no locatário pertencem à organização e têm credenciais no Microsoft Azure Active Directory (Azure AD) para o locatário. Eles são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
-* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados ao Azure AD da organização e têm os mesmos Teams que um membro nativo da equipe. Eles têm acesso a chats, reuniões e arquivos da equipe. Um convidado pode ser um organizador, apresentador ou participante. Para obter mais informações, consulte [o acesso de convidados Teams](/microsoftteams/guest-access).
+* **No locatário**: os usuários no locatário pertencem à organização e têm credenciais Microsoft Azure Active Directory (Azure AD) para o locatário. Eles são funcionários em tempo integral, no local ou remotos. Um usuário no locatário pode ser um organizador, apresentador ou participante.
+* **Convidado**: um convidado é um participante de outra organização convidado para acessar Teams ou outros recursos no locatário da organização. Os convidados são adicionados à organização Azure AD e têm os mesmos Teams que um membro nativo da equipe. Eles têm acesso a chats, reuniões e arquivos da equipe. Um convidado pode ser um organizador, apresentador ou participante. Para obter mais informações, consulte [o acesso de convidados Teams](/microsoftteams/guest-access).
 * **Federado ou externo**: um usuário federado é um usuário Teams externo em outra organização que foi convidado a ingressar em uma reunião. Os usuários federados têm credenciais válidas com parceiros federados e são autorizados por Teams. Eles não têm acesso às suas equipes ou a outros recursos compartilhados da sua organização. O acesso de convidados é uma opção melhor para que os usuários externos tenham acesso a equipes e canais. Para obter mais informações, consulte [gerenciar o acesso externo Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -201,7 +201,7 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
     > [!IMPORTANT]
     > Atualmente, aplicativos de terceiros estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte gerenciar políticas de permissão [de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
 
-* **Anônimo**: usuários anônimos não têm uma identidade do Azure AD e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião e em um estágio de reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou participante.
+* **Anônimo**: os usuários anônimos não têm uma Azure AD identidade e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião e em um estágio de reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou participante.
 
     > [!NOTE]
     > Os usuários anônimos herdam a política de permissão de aplicativo padrão global no nível do usuário. Para obter mais informações, consulte [gerenciar aplicativos](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -210,10 +210,10 @@ Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar ap
 
 A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
-| Tipo de usuário | Guias | Bots | Extensões de mensagem | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
+| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Não disponível |
-| Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no Teams da área de trabalho |
+| Convidado, parte do locatário Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no Teams da área de trabalho |
 | Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. A aquisição, a atualização e a exclusão não são permitidas. | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente Teams cliente da área de trabalho. |
 
 ## <a name="next-step"></a>Próxima etapa
