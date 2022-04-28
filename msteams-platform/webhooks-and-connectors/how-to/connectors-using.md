@@ -5,12 +5,12 @@ description: Descreve como usar Conectores do Office 365 no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: conector do Office365 para equipes
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398873"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104074"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -52,7 +52,7 @@ Para obter mais informações sobre ações de cartão do conector, veja [ Açõ
 
 Para enviar uma mensagem por meio do Conector do Office 365 ou do Webhook de entrada, poste uma carga JSON na URL do Webhook. Essa carga deve estar na forma de um [cartão conector Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-Também é possível usar esse JSON para criar cartões contendo entradas avançadas, como entrada de texto, seleção múltipla ou escolha de data e hora. O código que gera o cartão e as postagens na URL do Webhook pode ser executado em qualquer serviço hospedado. Esses cartões são definidos como parte de mensagens acionáveis e também são compatíveis com [cartões](~/task-modules-and-cards/what-are-cards.md) usados nos bots do Teams e nas Extensões de mensagens.
+Também é possível usar esse JSON para criar cartões contendo entradas avançadas, como entrada de texto, seleção múltipla ou escolha de data e hora. O código que gera o cartão e as postagens na URL do Webhook pode ser executado em qualquer serviço hospedado. Estes cartões são definidos como parte de mensagens acionáveis e também são compatíveis com [cartões](~/task-modules-and-cards/what-are-cards.md) usados nos bots do Teams e nas extensões de mensagens.
 
 ### <a name="example-of-connector-message"></a>Exemplo de mensagem do conector
 

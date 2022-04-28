@@ -116,7 +116,7 @@
           href: toolkit/TeamsFx-multi-env.md
         - name: Colaborando com outros desenvolvedores no Kit de Ferramentas do Teams
           href: toolkit/TeamsFx-collaboration.md
-        - name: Guia de CI/CD
+        - name: Configurar pipelines de CI/CD
           href: toolkit/use-CICD-template.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md

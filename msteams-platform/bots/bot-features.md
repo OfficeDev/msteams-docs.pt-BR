@@ -5,12 +5,12 @@ description: Visão geral das ferramentas e SDKs para criar Microsoft Teams bots
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073743"
+ms.locfileid: "65104319"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -36,7 +36,7 @@ O [Bot Framework](https://dev.botframework.com/) é um SDK avançado usado para 
 
 * Use tipos de cartão especializados, como o cartão Office 365 conector.
 * Defina Teams de canal específicos em atividades.
-* Processar solicitações de extensão de mensagens.
+* Processar solicitações de extensão de mensagem.
 
 > [!IMPORTANT]
 > Você pode desenvolver Teams aplicativos em qualquer tecnologia de programação da Web e chamar as [APIs REST do Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) diretamente. Mas você deve executar o tratamento de token em todos os casos.

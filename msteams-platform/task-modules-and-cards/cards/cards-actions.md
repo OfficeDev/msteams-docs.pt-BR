@@ -4,16 +4,16 @@ description: Descreve ações de cartão no Microsoft Teams e como usá-las em s
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398600"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103906"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
-Os cartões usados por bots e extensões de mensagens no Teams dão suporte aos seguintes tipos de atividade: [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)
+Os cartões usados por bots e extensões de mensagem Teams dão suporte aos seguintes tipos de [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) atividade:
 
 > [!NOTE]
 > As ações `CardAction` são diferentes das `potentialActions` para Cartões conectores do Office 365 quando usadas de conectores.
@@ -31,7 +31,7 @@ Os cartões usados por bots e extensões de mensagens no Teams dão suporte aos 
 >* O Teams não dá suporte aos tipos `CardAction` não listados na tabela anterior.
 >* O Teams não dá suporte à propriedade `potentialActions`.
 >* As ações de cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou Serviço de Bot do Azure. Não há suporte para ações sugeridas no Microsoft Teams. Se você quiser que os botões apareçam em uma mensagem de bot do Teams, use um cartão.
->* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagens, as ações não funcionarão até que o cartão seja enviado para o canal. As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.
+>* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagem, as ações não funcionarão até que o cartão seja enviado para o canal. As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.
 
 ## <a name="action-type-openurl"></a>Tipo de ação openUrl
 

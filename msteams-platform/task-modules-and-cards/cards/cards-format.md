@@ -5,12 +5,12 @@ keywords: formato de cartões de bots do teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727264"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103948"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -66,15 +66,15 @@ Você pode usar as sequências de escape `\r` ou `\n` para quebras de linha em l
 
 Na versão desktop, a formatação Markdown para Cartões Adaptáveis aparece conforme mostrado na imagem a seguir, tanto em navegadores web quanto no aplicativo cliente do Teams:
 
-![Formatação Markdown para Cartões Adaptáveis no cliente desktop](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="cliente área de trabalho markdown adaptável":::
 
 No iOS, a formatação Markdown para Cartões Adaptáveis aparece conforme mostrado na imagem a seguir:
 
-![Formatação Markdown para Cartões Adaptáveis no iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Formatação Markdown para Cartões Adaptáveis no iOS":::
 
 No Android, a formatação Markdown para Cartões Adaptáveis aparece conforme mostrado na imagem a seguir:
 
-![Formatação Markdown para Cartões Adaptáveis no Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Formatação Markdown para Cartões Adaptáveis no Android":::
 
 Para obter mais informações, consulte [recursos de texto nos Cartões Adaptáveis](/adaptive-cards/create/textfeatures).
 
@@ -123,11 +123,11 @@ Os Cartões Adaptáveis oferecem suporte aos emojis. O código a seguir mostra u
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Cartão adaptável com um emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Cartão adaptável com um emoji":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Suporte a menções dentro dos Cartões Adaptáveis
 
-Você pode adicionar @mentions no corpo de um Cartão Adaptável para bots e respostas de extensão de mensagens. Para adicionar @mentions nos cartões, siga a mesma lógica de notificação e renderização das [menções baseadas em mensagens nas conversas do canal e do chat em grupo](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+Você pode adicionar @menções dentro de um corpo de Cartão Adaptável para respostas de bots e extensão de mensagem. Para adicionar @mentions nos cartões, siga a mesma lógica de notificação e renderização das [menções baseadas em mensagens nas conversas do canal e do chat em grupo](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots e extensões de mensagens podem incluir menções dentro do conteúdo do cartão nos elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) e [FactSet](https://adaptivecards.io/explorer/FactSet.html).
 
@@ -188,7 +188,7 @@ A tabela a seguir descreve as IDs de menção de usuário que passaram a ter sup
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Menção de usuário em bots com Cartões Adaptáveis
 
-Os bots dão suporte à menção de usuário com a ID de objeto e o UPN do Microsoft Azure AD, além das IDs existentes. O suporte a duas novas IDs está disponível nos bots para mensagens de texto, corpo dos Cartões Adaptáveis e resposta de extensão de mensagens. Os bots oferecem suporte às IDs de menção em conversas e cenários `invoke`. O usuário recebe uma notificação do feed de atividades quando estiver sendo mencionado (@mentioned) com as IDs.
+Os bots dão suporte à menção de usuário com a ID de objeto e o UPN do Microsoft Azure AD, além das IDs existentes. O suporte para duas novas IDs está disponível em bots para mensagens de texto, corpo de Cartões Adaptáveis e resposta de extensão de mensagem. Os bots oferecem suporte às IDs de menção em conversas e cenários `invoke`. O usuário recebe uma notificação do feed de atividades quando estiver sendo mencionado (@mentioned) com as IDs.
 
 > [!NOTE]
 > As atualizações de esquema e as alterações da interface do usuário/experiência do usuário não são obrigatórias para menções do usuário com Cartões Adaptáveis em Bots.
@@ -233,7 +233,7 @@ Exemplo de menção de usuário em bots com Cartões Adaptáveis como se segue:
 
 A imagem a seguir ilustra a menção do usuário com Cartão Adaptável no Bot:
 
-![Menção do usuário em bot com Cartão Adaptável](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Menção do usuário em bot com Cartão Adaptável":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Menção de usuário em um Webhook de Entrada com Cartões Adaptáveis
 
@@ -297,7 +297,7 @@ Exemplo de menção de usuário em Webhooks de Entrada como se segue:
 
 A imagem a seguir ilustra a menção do usuário em Webhooks de Entrada:
 
-![Menção do usuário em Webhooks de Entrada](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Menção do usuário em Webhooks de Entrada":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>Mascaramento de informações em Cartões Adaptáveis
 
@@ -322,7 +322,7 @@ O código a seguir mostra um exemplo de Cartão Adaptável com a propriedade de 
 
 A imagem a seguir é um exemplo de mascaramento de informações em Cartões Adaptáveis:
 
-![Imagem de mascaramento de informações](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Modo de exibição de informações de mascaramento":::
 
 ### <a name="full-width-adaptive-card"></a>Cartão Adaptável com largura total
 
@@ -359,11 +359,11 @@ Para criar um Cartão Adaptável com largura total, seu aplicativo precisa inclu
 
 A imagem a seguir mostra um Cartão Adaptável com largura total:
 
-![Modo de exibição de um Cartão Adaptável com largura total](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Modo de exibição de um Cartão Adaptável com largura total":::
 
 A imagem a seguir mostra o modo de exibição padrão do Cartão Adaptável quando a propriedade `width` não foi definida como **Full**:
 
-![Modo de exibição de um Cartão Adaptável com largura pequena](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Modo de exibição de um Cartão Adaptável com largura pequena":::
 
 ### <a name="typeahead-support"></a>Suporte ao typeahead
 
@@ -411,11 +411,11 @@ Em um Cartão Adaptável, você pode usar a propriedade `msteams` para adicionar
 
 Quando os usuários passam o mouse sobre a imagem, um ícone de expansão aparece no canto superior direito, conforme mostrado na imagem a seguir:
 
-![Cartão Adaptável com imagem expansível](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Cartão Adaptável com imagem expansível":::
 
 A imagem aparece no modo de exibição estendida quando o usuário seleciona o ícone de expansão, conforme mostrado na imagem a seguir:
 
-![Imagem expandida para a exibição estendida](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Imagem expandida para a exibição estendida":::
 
 Na exibição estendida, os usuários podem ampliar e reduzir a imagem. Você pode selecionar as imagens do seu Cartão Adaptável que precisam ter essa capacidade.
 
@@ -447,11 +447,11 @@ Nos cartões de conector, as quebras de linha são renderizadas para `\n\n`, mas
 
 Na versão desktop, a formatação Markdown para cartões de conector aparece conforme mostrado na imagem a seguir:
 
-![Formatação Markdown para cartões de conector no cliente desktop](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Formatação markdown para cartões conectores":::
 
 Na versão iOS, a formatação Markdown para cartões de conector aparece conforme mostrado na imagem a seguir:
 
-![Formatação Markdown para cartões de conector no cliente iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Formatação Markdown para cartões de conector no cliente iOS":::
 
 Os cartões de conector que usam Markdown para iOS incluem os seguintes problemas:
 
@@ -460,7 +460,7 @@ Os cartões de conector que usam Markdown para iOS incluem os seguintes problema
 
 No Android, a formatação Markdown para cartões de conector aparece conforme mostrado na imagem a seguir:
 
-![Formatação Markdown para cartões de conector no cliente Android](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Formatação Markdown para cartões de conector no cliente Android":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Exemplo de formatação Markdown para cartões de conector
 
@@ -545,11 +545,11 @@ Nos cartões de conector, as quebras de linha são renderizadas em HTML usando o
 
 Na versão desktop, a formatação HTML para cartões de conector aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML para cartões de conector no cliente desktop](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Formatação HTML para cartões de conector no cliente desktop":::
 
 No iOS, a formatação HTML aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML para cartões de conector no cliente iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Formatação HTML para cartões de conector no cliente iOS":::
 
 Os cartões de conector que usam HTML para iOS incluem os seguintes problemas:
 
@@ -558,7 +558,7 @@ Os cartões de conector que usam HTML para iOS incluem os seguintes problemas:
 
 No Android, a formatação HTML aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML para cartões de conector no cliente Android](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Formatação HTML para cartões de conector no cliente Android":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>Amostra de formatação HTML para cartões de conector
 
@@ -635,17 +635,17 @@ Como existem diferenças de resolução entre as plataformas desktop e móvel, a
 
 Na versão desktop, a formatação HTML aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML no cliente desktop](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Formatação HTML no cliente desktop":::
 
 No iOS, a formatação HTML aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML no cliente iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Formatação HTML no cliente iOS":::
 
 A formatação de caracteres, como negrito e itálico, não é renderizada no iOS.
 
 No Android, a formatação HTML aparece conforme mostrado na imagem a seguir:
 
-![Formatação HTML no cliente Android](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Formatação HTML no cliente Android":::
 
 A formatação de caracteres, como negrito e itálico, aparece corretamente no Android.
 

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Criar extensão de mensagens baseada em pesquisa
+title: Criar extensão de mensagem baseada em pesquisa
 metadata:
-  title: Criar extensão de mensagens baseada em pesquisa
-  description: Neste tutorial, você aprenderá a criar uma extensão de mensagens baseada em pesquisa.
+  title: Criar extensão de mensagem baseada em pesquisa
+  description: Neste tutorial, você aprenderá a criar uma mensagem baseada em pesquisa.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -11,15 +11,15 @@ metadata:
   nextTutorialTitle: Leia mais sobre comandos de pesquisa
   ms.custom: mvc
   ms.localizationpriority: High
-  ms.openlocfilehash: 31df7d3ca4793fa7517129f4f0d1c2566b547eff
-  ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+  ms.openlocfilehash: a64b1721ec3633984ed34862677365a10eb212c9
+  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/09/2022
-  ms.locfileid: "64737190"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65103962"
 items:
 - durationInMinutes: 1
-  content: "As extensões de mensagens permitem que os usuários interajam com serviços Web no Microsoft Teams cliente. Eles ajudam a pesquisar em um sistema externo da área de mensagem de composição, da caixa de comando ou diretamente de uma mensagem. \n\n**Principais recursos da extensão de mensagens baseada em pesquisa**\n\n* Permitir que os usuários pesquisem sistemas externos.\n* Insira os resultados da pesquisa em uma mensagem na forma de um cartão.\n\nEste guia passo a passo ajuda você a criar uma extensão de mensagens baseada em pesquisa. Você verá a seguinte saída:\n\n![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)\n"
+  content: "As extensões de mensagem permitem que os usuários interajam com serviços Web no Microsoft Teams cliente. Eles ajudam a pesquisar em um sistema externo da área de mensagem de composição, da caixa de comando ou diretamente de uma mensagem. \n\n**Principais recursos da extensão de mensagem baseada em pesquisa**\n\n* Permitir que os usuários pesquisem sistemas externos.\n* Insira os resultados da pesquisa em uma mensagem na forma de um cartão.\n\nEste guia passo a passo ajuda você a criar uma extensão de mensagem baseada em pesquisa. Você verá a seguinte saída:\n\n![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)\n"
 - title: Pré-requisitos
   durationInMinutes: 1
   content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [SDK do .NET Core](https://dotnet.microsoft.com/download) versão 3.1\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) versão mais recente ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
@@ -38,7 +38,7 @@ items:
 - title: Compilar e executar o serviço
   durationInMinutes: 1
   content: "**Para compilar e executar o serviço usando a versão mais recente do Visual Studio ou linha de comando**\n\n# <a name=\"latest-version-of-visual-studio\"></a>[Versão mais recente do Visual Studio](#tab/latestversionofvisualstudio)\n\n   1. Inicie a versão mais recente do Visual Studio.\n   1. Navegue **até** **FileOpen** >  >  **Project/Solution**.\n\n      ![Abrir arquivo](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)\n\n   1. Selecione **o arquivo TeamsMessagingExtensionsSearch.csproj** na pasta **50.teams-messaging-extensions-search** .\n\n      ![Arquivo CS proj](~/assets/images/Teams-Messaging-Extensions-Search/fileready.png)\n\n   1. Abra **Gerenciador de Soluções** **exibição**.\n\n      ![Gerenciador de Soluções](~/assets/images/Teams-Messaging-Extensions-Search/solutionexplorer.png)\n\n   1. Clique com o botão direito do mouse **para selecionar TeamsMessagingExtensionsSearch**.\n\n   1. Selecione **Definir como Inicialização Project**.\n\n      ![Gerenciador de Soluções](~/assets/images/Teams-Messaging-Extensions-Search/startup.png)\n\n   1. Pressione **F5** para executar o projeto.\n\n   1. Selecione **Sim** se a caixa de diálogo a seguir for exibida:\n\n      ![Certificado de Confiança](~/assets/images/Teams-Messaging-Extensions-Search/certificate.png)\n\n      Uma página da Web é aberta com uma mensagem **Seu bot está pronto!**.\n\n      ![Aplicativo pronto](~/assets/images/Teams-Messaging-Extensions-Search/appisready.png) \n\n    \n# <a name=\"command-line\"></a>[Linha de comando](#tab/cli)\n\nNavegue até **BotBuilder-Samples > exemplos > csharp_dotnetcore > 50.teams-messaging-extensions-search** na janela prompt de comando e insira o seguinte comando:\n\n```bash\ndotnet run\n```\n\n![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)\n"
-- title: Adicionar aplicativo de Extensão de Mensagens de Pesquisa
+- title: Adicionar aplicativo extensão de mensagem de pesquisa
   durationInMinutes: 1
   content: "1. No repositório clonado, navegue até **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.\n\n1. Crie um .zip com os seguintes arquivos que estão presentes na pasta **TeamsAppManifest** : \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Arquivo zip](~/assets/images/Teams-Messaging-Extensions-Search/zipfile.png) \n\n1. Vá para **Microsoft Teams**.\n\n1. Selecione **Aplicativos**.\n\n   ![Arquivo zip](~/assets/images/Teams-Messaging-Extensions-Search/AppStore.png)\n\n1. No canto inferior esquerdo, selecione **Gerenciar seus aplicativos**.\n\n   ![Gerenciar aplicativos](~/assets/images/Teams-Messaging-Extensions-Search/manageapps.png)\n\n1. Selecione **Upload um aplicativo para o catálogo de aplicativos da sua organização**. \n\n   ![Upload aplicativo personalizado](~/assets/images/Teams-Messaging-Extensions-Search/uploadapp.png)\n\n1. Selecione **Abrir** para carregar o .zip que você criou na pasta **TeamsAppManifest** .\n\n   ![Selecionar arquivo zip](~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen.png)\n\n1. Selecione **Adicionar**.\n\n   ![Adicionar o aplicativo](~/assets/images/Teams-Messaging-Extensions-Search/addapp.png)\n\n   Um pop-up é aberto em um chat.\n\n   ![Chat](~/assets/images/Teams-Messaging-Extensions-Search/popup.png)\n"
 - title: Interagir com o aplicativo no Teams
@@ -65,4 +65,4 @@ items:
 
 
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
-- content: Você concluiu o tutorial para começar a Teams de extensões de mensagens!
+- content: Você concluiu o tutorial para começar a Teams de extensões de mensagem!

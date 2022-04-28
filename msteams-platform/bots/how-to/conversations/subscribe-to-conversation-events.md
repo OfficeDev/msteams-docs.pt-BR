@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: eventos de conversa de reação de mensagem do canal bot
-ms.openlocfilehash: 26180e39bd26768b2e09311a370e5bd78c44c673
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: c089843d82ff7c722dd8c867b5866405ee4dae40
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073726"
+ms.locfileid: "65102267"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -1403,10 +1403,12 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>Comportamento de desinstalação do aplicativo pessoal com o bot
 
+> [!NOTE]
+> No momento, o comportamento de desinstalação do aplicativo pessoal com bot só está disponível na [versão prévia do desenvolvedor público](../../../resources/dev-preview/developer-preview-intro.md).
+
 Quando você desinstala um aplicativo, o bot também é desinstalado. Quando um usuário envia uma mensagem para seu aplicativo, ele recebe um código de resposta 403. Seu bot recebe um código de resposta 403 para novas mensagens postadas pelo bot. O comportamento pós-desinstalação para bots no escopo pessoal com os escopos Teams e groupChat agora está alinhado. Você não pode enviar ou receber mensagens depois que um aplicativo é desinstalado.
 
-
-<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+:::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Desinstalar o código de resposta"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>Manipulação de eventos para instalar e desinstalar eventos
 

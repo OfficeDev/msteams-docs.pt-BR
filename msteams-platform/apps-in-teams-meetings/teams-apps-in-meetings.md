@@ -1,17 +1,17 @@
 ---
 title: Aplicativos para reuniões do Teams
 author: surbhigupta
-description: visão geral dos aplicativos Teams reuniões baseadas na função de usuário e participante
+description: visão geral dos aplicativos Teams reuniões com base na função de usuário e participante
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: api de função de participante de reuniões de aplicativos do teams
-ms.openlocfilehash: 9715467d17205a7a913f36da099782a0f0da69df
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+keywords: API de função de participante de reuniões de aplicativos do Teams
+ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466422"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103296"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para reuniões do Teams
 
@@ -19,21 +19,21 @@ As reuniões permitem colaboração, parceria, comunicação informada e coment�
 
 Os usuários podem acessar aplicativos durante reuniões usando a galeria de guias de seu calendário, como:
 
-* Pré-estágio de um quadro Kanban.
-* Iniciar uma caixa de diálogo acionável na reunião.
+* Preparar um quadro Kanban.
+* Inicie uma caixa de diálogo acionável na reunião.
 * Crie uma pesquisa pós-reunião.
 
 A ilustração a seguir fornece uma ideia dos recursos de extensibilidade do aplicativo de reunião:
 
 ![Extensibilidade do aplicativo de reunião](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-Este artigo fornece uma visão geral da extensibilidade do aplicativo de reunião, referências de API, habilitar e configurar aplicativos para reuniões e cenas personalizadas do modo Juntos Teams.
+Este artigo fornece uma visão geral da extensibilidade do aplicativo de reunião, referências de API, habilitação e configuração de aplicativos para reuniões e cenas personalizadas do Modo Juntos Teams.
 
-Aprimore sua experiência de reunião ao usar o recurso de extensibilidade de reunião. Esse recurso permite que você integre seus aplicativos nas reuniões. Ele também inclui diferentes estágios de um ciclo de vida de reunião, em que você pode integrar guias, bots e extensões de mensagens. Você pode identificar várias funções de participante e tipos de usuário, obter eventos de reunião e gerar caixas de diálogo na reunião.
+Aprimore sua experiência de reunião ao usar o recurso de extensibilidade de reunião. Esse recurso permite que você integre seus aplicativos nas reuniões. Ele também inclui diferentes estágios de um ciclo de vida de reunião, em que você pode integrar guias, bots e extensões de mensagem. Você pode identificar várias funções de participante e tipos de usuário, obter eventos de reunião e gerar caixas de diálogo na reunião.
 
-Para personalizar Teams aplicativos para reuniões, habilita seus aplicativos para reuniões Teams atualizando o manifesto do aplicativo e também configure os aplicativos para cenários de reunião.
+Para personalizar Teams com aplicativos para reuniões, habilite seus aplicativos para reuniões Teams atualizando o manifesto do aplicativo e também configure os aplicativos para cenários de reunião.
 
-O novo recurso de cenas do Modo Juntos personalizado permite que os usuários colaborem em uma reunião com sua equipe em um só lugar.
+O novo recurso personalizado cenas modo juntos permite que os usuários colaborem em uma reunião com sua equipe em um só lugar.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -43,7 +43,7 @@ O novo recurso de cenas do Modo Juntos personalizado permite que os usuários co
 ## <a name="see-also"></a>Confira também
 
 * [Projetando sua extensão Microsoft Teams reunião](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Referências de API de aplicativos de reunião - Teams](~/apps-in-teams-meetings/api-references.md)
-* [Cenas do modo Custom Together](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Referências de API de aplicativos de reunião – Teams](~/apps-in-teams-meetings/api-references.md)
+* [Cenas do Modo Juntos Personalizado](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Habilitar e configurar seus aplicativos para Teams reuniões](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Ciclo de vida da reunião](meeting-app-extensibility.md#meeting-lifecycle)

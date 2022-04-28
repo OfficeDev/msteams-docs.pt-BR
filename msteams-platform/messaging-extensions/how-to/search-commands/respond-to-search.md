@@ -1,27 +1,27 @@
 ---
 title: Responder ao comando de pesquisa
 author: surbhigupta
-description: Saiba como responder ao comando de pesquisa de uma extensão de mensagens em um aplicativo Microsoft Teams usando exemplos de código e exemplos
+description: Saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo Microsoft Teams usando exemplos de código e exemplos
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 42b36e5d7056368463797d1297c0674b33b6b5a0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453821"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104501"
 ---
 # <a name="respond-to-search-command"></a>Responder ao comando de pesquisa
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Depois que o usuário envia o comando de pesquisa, seu serviço Web `composeExtension/query` `value` recebe uma mensagem de invocação que contém um objeto com os parâmetros de pesquisa. Essa invocação que é disparada com as seguintes condições:
+Depois que o usuário envia o comando de pesquisa, seu serviço Web `composeExtension/query` `value` recebe uma mensagem de invocação que contém um objeto com os parâmetros de pesquisa. Essa invocação é disparada com as seguintes condições:
 
 * À medida que os caracteres são inseridos na caixa de pesquisa.
-* `initialRun` é definido como true no manifesto do aplicativo, você recebe a mensagem de invocação assim que o comando de pesquisa é invocado. Para obter mais informações, consulte [consulta padrão](#default-query).
+* `initialRun` é definido como true no manifesto do aplicativo, você recebe a mensagem de invocação assim que o comando de pesquisa é invocado. Para obter mais informações, consulte [a consulta padrão](#default-query).
 
-Este documento orienta você sobre como responder às solicitações do usuário na forma de cartões e visualizações e as condições sob as quais Microsoft Teams emite uma consulta padrão.
+Este documento orienta você sobre como responder a solicitações de usuário na forma de cartões e visualizações e as condições sob as quais Microsoft Teams emite uma consulta padrão.
 
 Os parâmetros de solicitação são encontrados no `value` objeto na solicitação, que inclui as seguintes propriedades:
 
@@ -29,7 +29,7 @@ Os parâmetros de solicitação são encontrados no `value` objeto na solicitaç
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
 | `parameters` | Matriz de parâmetros. Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
-| `queryOptions` | Parâmetros paginação: <br>`skip`: Ignorar contagem para essa consulta <br>`count`: Número de elementos a retornar. |
+| `queryOptions` | Parâmetros de paginação: <br>`skip`: ignorar a contagem para esta consulta <br>`count`: número de elementos a serem retornados. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -77,18 +77,18 @@ O JSON abaixo é reduzido para realçar as seções mais relevantes.
 
 * * *
 
-## <a name="respond-to-user-requests"></a>Responder a solicitações de usuário
+## <a name="respond-to-user-requests"></a>Responder às solicitações do usuário
 
-Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação HTTP síncrona ao seu serviço. Nesse ponto, seu código tem segundos `5` para fornecer uma resposta HTTP à solicitação. Durante esse tempo, seu serviço pode realizar uma consulta adicional ou qualquer outra lógica de negócios necessária para atender à solicitação.
+Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para seu serviço. Nesse ponto, seu código tem segundos `5` para fornecer uma resposta HTTP à solicitação. Durante esse tempo, seu serviço pode executar uma pesquisa adicional ou qualquer outra lógica de negócios necessária para atender à solicitação.
 
-Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um aplicativo ou objeto JSON válido com as seguintes propriedades:
+Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP de `200 OK` um aplicativo ou objeto JSON válido com as seguintes propriedades:
 
 |Nome da propriedade|Objetivo|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
-|`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: Exibe uma lista de resultados da pesquisa <br>`auth`: Pede ao usuário para autenticar <br>`config`: Pede ao usuário para configurar a extensão de mensagens <br>`message`: Exibe uma mensagem de texto sem texto |
-|`composeExtension.attachmentLayout`|Especifica o layout dos anexos. Usado para respostas do tipo `result`. <br>Atualmente, os seguintes tipos são suportados: <br>`list`: Uma lista de objetos de cartão que contêm campos de miniatura, título e texto <br>`grid`: uma grade de imagens em miniatura |
-|`composeExtension.attachments`|Matriz de objetos de anexo válidos. Usado para respostas do tipo `result`. <br>Atualmente, os seguintes tipos são suportados: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Tipo de resposta. Há suporte para os seguintes tipos: <br>`result`: exibe uma lista de resultados da pesquisa <br>`auth`: solicita que o usuário se autentique <br>`config`: solicita que o usuário configure a extensão de mensagem <br>`message`: exibe uma mensagem de texto sem formatação |
+|`composeExtension.attachmentLayout`|Especifica o layout dos anexos. Usado para respostas do tipo `result`. <br>Atualmente, há suporte para os seguintes tipos: <br>`list`: uma lista de objetos de cartão que contêm campos de miniatura, título e texto <br>`grid`: uma grade de imagens em miniatura |
+|`composeExtension.attachments`|Matriz de objetos de anexo válidos. Usado para respostas do tipo `result`. <br>Atualmente, há suporte para os seguintes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Ações sugeridas. Usado para respostas de tipo `auth` ou `config`. |
 |`composeExtension.text`|Mensagem a ser exibida. Usado para respostas do tipo `message`. |
 
@@ -101,20 +101,20 @@ Teams dá suporte aos seguintes tipos de cartão:
 * [cartão do Conector do Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão Adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Para ter uma melhor compreensão e visão geral sobre cartões, consulte [o que são cartões](~/task-modules-and-cards/what-are-cards.md).
+Para ter uma melhor compreensão e visão geral sobre cartões, veja [o que são cartões](~/task-modules-and-cards/what-are-cards.md).
 
-Para saber como usar os tipos de miniatura e cartão de herói, consulte [adicionar cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
+Para saber como usar os tipos de cartão em miniatura e hero, consulte [adicionar cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
 
-Para obter informações adicionais sobre o Office 365 conector, consulte [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Para obter informações adicionais sobre o cartão Office 365 Connector, consulte [Usando cartões Office 365 Connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-A lista de resultados é exibida na interface do usuário Microsoft Teams com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
+A lista de resultados é exibida na interface Microsoft Teams interface do usuário com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
 
-* Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão Hero ou thumbnail.
-* Extraindo das `title`propriedades básicas , `text`e `image` do `attachment` objeto. As propriedades básicas são usadas somente se `preview` a propriedade não for especificada.
+* Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão hero ou miniatura.
+* Extraindo das propriedades básicas `title``text`e `image` do `attachment` objeto. As propriedades básicas serão usadas somente se `preview` a propriedade não for especificada.
 
-Para cartão Hero ou Miniatura, exceto a ação invocar outras ações, como botão e toque, não são suportadas no cartão de visualização.
+Para cartão Hero ou Miniatura, exceto a ação de invocação, outras ações, como botão e toque, não têm suporte no cartão de visualização.
 
-Para enviar um cartão adaptável ou Office 365 conector, você deve incluir uma visualização. A `preview` propriedade deve ser um cartão Hero ou Thumbnail. Se você não especificar a propriedade preview no `attachment` objeto, uma visualização não será gerada.
+Para enviar um Cartão Adaptável ou um Office 365 Conector, você deve incluir uma versão prévia. A `preview` propriedade deve ser um cartão Hero ou Thumbnail. Se você não especificar a propriedade de visualização no objeto `attachment` , uma visualização não será gerada.
 
 Para cartões Hero e Thumbnail, você não precisa especificar uma propriedade de visualização, uma visualização é gerada por padrão.
 
@@ -387,9 +387,9 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>Consulta padrão
 
-Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta padrão quando o usuário abrir pela primeira **vez a extensão** de mensagens. Seu serviço pode responder a essa consulta com um conjunto de resultados pré-preenchidos. Isso é útil quando o comando de pesquisa exige autenticação ou configuração, exibindo itens, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
+Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta padrão quando  o usuário abre a extensão da mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados preenchidos previamente. Isso é útil quando o comando de pesquisa requer autenticação ou configuração, exibindo itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
 
-A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, `name` `initialRun` `value` `true` com o campo definido como e definido como mostrado no seguinte objeto:
+A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, `name` `initialRun` `value` `true` com o campo definido como e definido como conforme mostrado no seguinte objeto:
 
 ```json
 {
@@ -414,16 +414,16 @@ A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regul
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Exemplo de nome           | Descrição | .NET    | Node.js   |
+| Nome do exemplo           | Descrição | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams ação de extensão de mensagens| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams de extensão de mensagens   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams de extensão de mensagem| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams de extensão de mensagem   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Adicionar autenticação a uma extensão de mensagens](~/messaging-extensions/how-to/add-authentication.md)
+> [Adicionar autenticação a uma extensão de mensagem](~/messaging-extensions/how-to/add-authentication.md)
 
 ## <a name="see-also"></a>Confira também
 
-[Adicionar configuração a uma extensão de mensagens](~/get-started/first-message-extension.md)
+[Adicionar configuração a uma extensão de mensagem](~/get-started/first-message-extension.md)

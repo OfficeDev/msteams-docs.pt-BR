@@ -4,12 +4,12 @@ description: Documentação do Desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
-ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
+ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2022
-ms.locfileid: "63625995"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103990"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -19,8 +19,8 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Comando de ação](../messaging-extensions/how-to/action-commands/define-action-command.md) | Um tipo de aplicativo de extensão de mensagens que usa um pop-up para coletar ou exibir informações. <br>**Consulte também**: [Extensão de mensagem](#m); [Comandos de busca](#s) |
-| [Cartões Adaptáveis](../task-modules-and-cards/what-are-cards.md) | Um snippet de conteúdo acionável adicionado a uma conversa por um bot ou extensão de mensagens. Use texto, elementos gráficos e botões com essas placas para comunicação avançada. |
+| [Comando de ação](../messaging-extensions/how-to/action-commands/define-action-command.md) | Um tipo de aplicativo de extensão de mensagem que utiliza um pop-up para coletar ou exibir informações. <br>**Consulte também**: [Extensão de mensagem](#m); [Comandos de pesquisa](#s) |
+| [Cartões Adaptáveis](../task-modules-and-cards/what-are-cards.md) | Um trecho de conteúdo acionável adicionado a uma conversa por um bot ou extensão de mensagem. Use texto, elementos gráficos e botões com essas placas para comunicação avançada. |
 | [Usuário anônimo](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Um tipo de participante em uma reunião do Teams que não tem uma identidade do Azure AD e não é federado com um locatário. Ele é como usuários externos em uma reunião.<br>**Consulte também**: [Usuário federado](#f) |
 | [Catálogo de Aplicativos](../toolkit/publish.md) | Um site que armazena aplicativos do SharePoint e do Office para uso interno de uma organização. <br>**Consulte também**: [SPFx](#s) |
 | [Manifesto do aplicativo](../resources/schema/manifest-schema.md) | O manifesto do Teams descreve como o aplicativo se integra ao produto Microsoft Teams. Seu manifesto deve estar de acordo com o [esquema de manifesto](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
@@ -49,14 +49,14 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | Termo | Definição |
 | --- | --- |
 | [Bot de chamada](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Um bot que participa de chamadas de áudio ou vídeo e reuniões online. <br> **Confira também**: [Bot de chat](#c); [Bot de reunião](#m) |
-| [Recursos](../toolkit/add-capability.md) | Um recurso do Teams que você pode criar em seu aplicativo para interagir com os usuários do aplicativo. Uma funcionalidade de aplicativo é usada para estender o Teams para atender às suas necessidades de aplicativo. Um aplicativo pode ter um ou mais recursos principais, como tab, bot e extensão de mensagens. <br>**Consulte também**: [Funcionalidade do dispositivo](#d); [Funcionalidade de mídia](#m) |
+| [Recursos](../toolkit/add-capability.md) | Um recurso do Teams que você pode criar em seu aplicativo para interagir com os usuários do aplicativo. Uma funcionalidade de aplicativo é usada para estender o Teams para atender às suas necessidades de aplicativo. Um aplicativo pode ter uma ou mais funcionalidades principais, tais como guias, bots e extensão de mensagem. <br>**Consulte também**: [Funcionalidade do dispositivo](#d); [Funcionalidade de mídia](#m) |
 | [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas simples e repetitivas por usuários, como atendimento ao cliente ou equipe de suporte. <br> **Consulte também**: [Bot de conversa](#c) |
 | Canal | Um único local para uma equipe compartilhar mensagens, ferramentas e arquivos. Você pode usar um canal para trabalho em equipe e comunicação. <br>**Consulte também**: [Conversa](#c) |
 | [Segredo do cliente](../bots/how-to/authentication/add-authentication.md) | O segredo/senha do cliente ou um par de chaves pública ou privada que é Certificado. Não é necessário para aplicativos nativos. <br> **Consulte também**: [Bot](#b) |
 | [Recursos de nuvem](../toolkit/add-resource.md) | Um serviço que está disponível na nuvem por meio da Internet que seu aplicativo Teams pode usar. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
 | [Aplicativo de colaboração](../concepts/extensibility-points.md) | Um aplicativo com funcionalidades para um usuário trabalhar em um workspace colaborativo com outros usuários. <br> **Consulte também**: [ Aplicativo autônomo](#s) |
-| [Extensão Compose](../resources/schema/manifest-schema.md#composeextensions) | Uma propriedade no manifesto do aplicativo (`composeExtensions`) que se refere à funcionalidade de extensão de mensagens. Ele é usado quando sua extensão precisa ser autenticada ou configurada para continuar. <br>**Consulte também**: [Manifesto do aplicativo](#a); [Extensão de mensagem](#m) |
-| [Caixa de comando](../resources/schema/manifest-schema.md) | Um tipo de contexto no manifesto do aplicativo (`commandBox`) que você pode configurar para invocar uma extensão de mensagens na caixa de comando do Teams. |
+| [Extensão Compose](../resources/schema/manifest-schema.md#composeextensions) | Uma propriedade no manifesto do aplicativo (`composeExtensions`) que se refere à funcionalidade de extensão de mensagem. Ele é usado quando sua extensão precisa ser autenticada ou configurada para continuar. <br>**Consulte também**: [Manifesto do aplicativo](#a); [Extensão de mensagem](#m) |
+| [Caixa de comando](../resources/schema/manifest-schema.md) | Um tipo de contexto no manifesto do aplicativo (`commandBox`) que você pode configurar para invocar uma extensão de mensagem da caixa de comando Teams. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Os conectores permitem que os usuários se inscrevam para receber notificações e mensagens dos serviços Web. Eles expõem o ponto de extremidade HTTPS do serviço para postar mensagens nos canais do Teams, geralmente na forma de cartões. <br> **Consulte também**: [Webhook](#w) |
 | Conversa | Uma série de mensagens enviadas entre o aplicativo Microsoft Teams (guia ou bot) e um ou mais usuários. Uma conversa pode ter três escopos: canal, pessoal e chat em grupo. <br>**Consulte também**: [Chat um a um](#o); [Chat em grupo](#g); [Canal](#c) |
 | [Bot de conversa](../bots/how-to/conversations/conversation-messages.md) |  Ele permite que um usuário interaja com seu serviço Web usando texto, cartões interativos e módulos de tarefa. <br>**Consulte também** [Bot de chat](#c) |
@@ -108,7 +108,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Desenrolamento de link](../messaging-extensions/how-to/link-unfurling.md) | Um recurso usado com extensão de mensagens e reunião para revelar links colados em uma área de mensagem de redação. Os links se expandem para mostrar informações adicionais sobre o link no Cartões Adaptáveis ou no modo de exibição do estágio da reunião. |
+| [Desenrolamento de link](../messaging-extensions/how-to/link-unfurling.md) | Um recurso usado com a extensão de mensagem e reunião para desdobrar links colados em uma área para redigir mensagens. Os links se expandem para mostrar informações adicionais sobre o link no Cartões Adaptáveis ou no modo de exibição do estágio da reunião. |
 | [Ambiente local](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Um ambiente de desenvolvimento padrão criado pelo Kit de Ferramentas do Teams.  <br>**Consulte tambérm**: [Ambiente](#e); [Ambiente de desenvolvimento](#d) |
 | [Workbench local](../sbs-gs-spfx.yml) | A opção padrão para executar e depurar um aplicativo do Teams no Visual Studio Code criado usando SPFx. <br>**Consulte também**: [Workbench](#w); [Workbench do Teams](#t) |
 | [Funcionalidade de localização](../concepts/device-capabilities/location-capability.md) | Uma funcionalidade de dispositivo que você pode integrar ao seu aplicativo para saber a localização geográfica do usuário do aplicativo para obter uma experiência colaborativa aprimorada. Atualmente, esse recurso está disponível somente para clientes móveis do Teams.<br>**Consute também**: [Funcionalidade](#c); [Funcionalidade de mídia](#m); [Funcionalidade do dispositivo](#d); [Teams para dispositivos móveis](#t) |
@@ -122,7 +122,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Bot de reunião](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interagem com chamadas e reuniões do Teams usando voz, vídeo e compartilhamento de tela em tempo real. <br>**Consulte também**: [Bot de chamada](#c); [Bot de chat](#c) |
 | [Ciclo de vida da reunião](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abrange desde a experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião. <br>**Consulte também**: [Experiências em reunião](#i) |
 | [Estágio da reunião](../sbs-meetings-stage-view.yml) | Um recurso do aplicativo de extensão de reunião. É um espaço compartilhado acessível a todos os participantes durante a reunião. Ele ajuda os participantes a interagir e colaborar com o conteúdo do aplicativo em tempo real. <br>**Consulte também**: [Exibição do estágio](#s) |
-| [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md) | Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou agir em uma mensagem. É possível usar uma extensão de mensagem sem sair da conversa.<br>**Consulte também**: [Comandos de pesquisa](#s); [Comandos de ação](#a) |
+| [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md) | As extensões de mensagem são atalhos para inserir o conteúdo do aplicativo ou agir em uma mensagem. Você pode utilizar uma extensão de mensagem sem sair da conversa. <br>**Consulte também**: [Comandos de pesquisa](#s); [Comandos de ação](#a) |
 | [Extensão da reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Um aplicativo projetado para ser usado durante o ciclo de vida da reunião para torná-lo mais produtivo, como quadro de comunicações, painel e muito mais. |
 | [Conta do Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | Uma conta do Microsoft 365 inclui 25 licenças de usuário, incluindo o administrador, apenas para fins de desenvolvimento. |
 | [Programa para desenvolvedores do Microsoft 365](../toolkit/accounts.md)| O Programa para desenvolvedores do Microsoft 365 te ajuda a criar aplicativos que estendem o Microsoft 365. |
@@ -138,7 +138,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | --- | --- |
 | [Conector do Office 365](../webhooks-and-connectors/how-to/connectors-creating.md) | Permitem que você crie uma página de configuração personalizada para seu Webhook de entrada e os empacote como parte de um aplicativo do Teams. Você envia mensagens principalmente usando cartões do Conector do Office 365 e tem a capacidade de adicionar um conjunto limitado de ações de cartão a elas. |
 | [Webhook de saída](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | O Webhook de Saída atua como um bot e pesquisa mensagens em canais usando @mencionar. Ele envia notificações para serviços Web externos e responde com mensagens avançadas, que incluem cartões e imagens. <br>**Consulte também**: [Webhook](#w); [Webhook de entrada](#i) |
-| [Canal do Outlook](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Um recurso do aplicativo de extensão de mensagens do Teams que permite que os usuários interajam com ele do Microsoft Outlook. |
+| [Canal do Outlook](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Um recurso do aplicativo de extensão de mensagem do Teams que permite que os usuários interajam com ele a partir do Microsoft Outlook. |
 | [Chat um a um](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | Um tipo de chat entre um aplicativo de bot pessoal do Teams e um único usuário. <br>**Consulte também**: [Chat de grupo](#g); [Bot de chat](#c) |
 
 ## <a name="p"></a>P
@@ -163,7 +163,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) | Um tipo de aplicativo de extensão de mensagens que permite aos usuários pesquisar sistemas externos e incluir o resultado da pesquisa em uma mensagem usando um cartão. <br>**Consulte também**: [Extensões de mensagem](#m); [Comandos de ação](#a) |
+| [Comandos de pesquisa](../messaging-extensions/how-to/search-commands/define-search-command.md) | Um tipo de aplicativo de extensão de mensagem que permite que os usuários pesquisem sistemas externos e incluam o resultado da pesquisa em uma mensagem usando um cartão. <br>**Consulte também**: [Extensões de mensagens](#m); [Comandos de ação](#a) |
 | [Fluxo de trabalho sequencial](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | Um fluxo de trabalho que permite que um bot execute uma conversa com um usuário com base na resposta do usuário. |
 | [Aplicativo compartilhado](../concepts/extensibility-points.md#shared-app-experiences) | Um aplicativo que existe em uma equipe, canal ou chat em que os usuários podem colaborar e interagir. <br>**Consulte também:** Aplicativo pessoal |
 | [Site de coleta do SharePoint](../sbs-gs-spfx.yml) | Um site de coleta para aplicativos do SharePoint. Você precisa ter uma conta de administrador para este site antes de implantar seu aplicativo baseado em SPFx no site do SharePoint.<br>**Consulte também**: SPFx |
@@ -184,7 +184,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Chat da guia](../tabs/how-to/conversational-tabs.md) | Um tipo de guia que permite que um usuário tenha uma experiência de conversa focada em guias dinâmicas. |
 | [Módulos de tarefas](../task-modules-and-cards/what-are-task-modules.md) | Um recurso do aplicativo Teams para criar pop-up modal para concluir tarefas, exibir vídeos ou dashboard. |
 | [Discussão da thread](../tabs/design/tabs.md#thread-discussion) | Uma conversa postada em um canal ou chat entre usuários. <br>**Consulte também** [Canal](#c);[de conversa](#c) |
-| [Teams](../overview.md) | O Microsoft Teams é o melhor aplicativo de mensagens para a sua organização. É um espaço de trabalho para colaboração, comunicação, reuniões e compartilhamento de arquivos e aplicativos em tempo real. |
+| [Teams](../overview.md) | O Microsoft Teams é o melhor aplicativo de mensagens da sua organização. É um espaço de trabalho para colaboração e comunicação em tempo real, reuniões, compartilhamento de arquivos e aplicativos. |
 | [Kit de ferramentas do Teams](../toolkit/teams-toolkit-fundamentals.md) | O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados do Teams diretamente no ambiente do Visual Studio Code.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | O TeamsFx é uma interface de linha de comando baseada em texto que acelera o desenvolvimento de aplicativos do Teams. Ele também é chamado de CLI do TeamsFx.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | O SDK do TeamsFx é pré-configurado no projeto com scaffolding usando o Kit de Ferramentas do TeamsFx ou a CLI. |

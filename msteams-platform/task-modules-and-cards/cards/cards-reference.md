@@ -4,12 +4,12 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571492"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104137"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -26,7 +26,7 @@ Para criar um cartão de destaque, cartão de miniatura ou Cartão Adaptável do
 1. Selecione **Criar um novo cartão**.
 1. Selecione **Criar** para um dos cartões entre **Cartão Hero**, **Cartão de miniatura** ou **Cartão Adaptável**. Os detalhes de metadados, botões e exemplos de código json, csharp e nó são mostrados para esse cartão.
 
-    ![Detalhes do cartão Hero](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Detalhes do cartão Hero":::
 
 1. Selecione **Me envie este cartão**. O cartão é enviado para você como uma mensagem de chat.
 
@@ -123,8 +123,8 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 
 > [!NOTE]
 >
-> * A plataforma Teams dá suporte à v1.4 ou anterior aos recursos de Cartão Adaptável para cartões enviados por bot e extensões de mensagens baseadas em ação.
-> * A plataforma Teams é compatível com a versão 1.3 ou anterior dos recursos do Cartão Adaptável para outros recursos, como cartões enviados pelo usuário (extensões de mensagens baseadas em pesquisa e abertura de link), guias e módulos de tarefa.
+> * A plataforma Teams dá suporte à v1.4 ou anterior aos recursos do Cartão Adaptável para cartões enviados por bot e extensões de mensagens baseadas em ação.
+> * A plataforma Teams dá suporte à v1.3 ou anterior aos recursos do Cartão Adaptável para outras capacidades, tais como cartões enviados pelo usuário (extensões de mensagens baseadas em pesquisa e abertura de link), guias e módulos de tarefa.
 > * Não há suporte para o estilo de ação positiva ou destrutiva Cartões Adaptáveis na plataforma do Teams.
 > * No momento, não há suporte para elementos de mídia no Cartão Adaptável na plataforma do Teams.
 
@@ -269,7 +269,7 @@ O código a seguir mostra um exemplo de um Cartão Adaptável:
 
 #### <a name="additional-information-on-adaptive-cards"></a>Informações adicionais sobre Cartões Adaptáveis
 
-Você pode passar valores dinâmicos em um Cartão Adaptável usando o símbolo de cifrão ($) e chaves. Para obter mais informações, consulte [Modelagem de Cartões Adaptáveis](/adaptive-cards/templating/).
+Você pode passar valores dinâmicos em um Cartão Adaptável usando o símbolo do dólar ($) e chavetas.Para mais informações, consulte [Modelos de Cartões Adaptáveis](/adaptive-cards/templating/).
 
 Exemplo:
 
@@ -319,7 +319,7 @@ A tabela a seguir fornece as propriedades de um cartão hero:
 
 ### <a name="example-of-a-hero-card"></a>Exemplo de um cartão hero
 
-![Exemplo de um cartão hero](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="cartão Hero":::
 
 O código a seguir mostra um exemplo de um cartão hero:
 
@@ -573,7 +573,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões de recibo:
 
 ### <a name="example-of-a-receipt-card"></a>Exemplo de um cartão de confirmação
 
-![Exemplo de um cartão de confirmação](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="Cartão de recibo":::
 
 O código a seguir mostra um exemplo de um cartão de recibo:
 
@@ -664,7 +664,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões em miniatura:
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Exemplo de um cartão em miniatura](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Cartão de miniatura":::
 
 ### <a name="properties-of-a-thumbnail-card"></a>Propriedades de um cartão em miniatura
 
@@ -756,7 +756,7 @@ As propriedades de um cartão de carrossel são as mesmas dos cartões hero e mi
 
 #### <a name="example-of-a-carousel-collection"></a>Exemplo de uma coleção de carrossel
 
-![Exemplo de um carrossel de cartões](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Coleção de carrossel":::
 
 O código a seguir mostra um exemplo de uma coleção de carrossel:
 
@@ -943,7 +943,7 @@ A tabela a seguir fornece os recursos que dão suporte a coleções de listas:
 
 #### <a name="example-of-a-list-collection"></a>Exemplo de uma coleção de listas
 
-![Exemplo de uma lista de cartões](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="Listar coleção":::
 
 As propriedades das coleções de listas são as mesmas que os cartões hero ou miniatura.
 

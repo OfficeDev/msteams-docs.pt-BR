@@ -1,15 +1,15 @@
 ---
 title: Aplicativos de reuniões unificadas
 author: surbhigupta
-description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente desktop e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
+description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente de área de trabalho e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838467"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103331"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -19,11 +19,11 @@ Teams aplicativos unificados de reuniões são baseados nos seguintes conceitos:
 * Há três funções distintas de participante em uma reunião: organizador, apresentador e participante. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Há vários tipos [de usuário](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) em uma reunião: no locatário, [convidado](/microsoftteams/guest-access), [federado](/microsoftteams/manage-external-access) e usuários anônimos.
 
-Este artigo aborda as informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagens. Ele identifica diferentes funções de participante e tipos de usuário.
+Este artigo aborda as informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagem. Ele identifica diferentes funções de participante e tipos de usuário.
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida da reunião
 
-Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
+Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagem em cada estágio do ciclo de vida da reunião.
 
 > [!NOTE]
 > Há suporte para extensões de reunião, como bots, cartões, extensões de mensagem e ações de mensagem no cliente Web. No entanto, as experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
@@ -152,9 +152,9 @@ A imagem a seguir exibe a **guia Contoso** com os resultados da votação e come
 
 Os bots habilitados no escopo do chat em grupo começam a funcionar em reuniões. Para implementar bots, comece com a [compilação](../build-your-first-app/build-bot.md) de um bot e continue com a criação [de aplicativos para Teams reuniões](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrar extensões de mensagens ao ciclo de vida da reunião
+### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>Integrar extensões de mensagem ao ciclo de vida da reunião
 
-Para implementar a extensão de mensagens, comece com [a criação](../messaging-extensions/how-to/create-messaging-extension.md) de uma extensão de mensagens e continue com a criação de [aplicativos para Teams reuniões](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Para implementar a extensão de mensagem, comece com [a criação de uma extensão](../messaging-extensions/how-to/create-messaging-extension.md) de mensagem e continue com a criação [de aplicativos para Teams reuniões](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 Os Teams de reuniões unificadas permitem que você projete seu aplicativo com base nas funções de participantes em uma reunião.
 
@@ -210,7 +210,7 @@ Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar ap
 
 A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
 
-| Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
+| Tipo de usuário | Guias | Bots | Extensões de mensagem | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Não disponível |
 | Convidado, parte do locatário do Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no Teams da área de trabalho |

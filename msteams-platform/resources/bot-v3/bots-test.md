@@ -1,93 +1,93 @@
 ---
 title: Testar e depurar seu bot
 description: Descreve como testar bots no Microsoft Teams
-keywords: teste de bots do teams
+keywords: testes de bots do Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 71d70aef3adeb3d351223e918aec21d0d2dea440
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: df403343aab60ebd802b4da0e871649ded8b8a7e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720117"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103429"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testar e depurar seu Microsoft Teams bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Ao testar seu bot, você precisa levar em consideração os contextos em que deseja que seu bot seja executado, bem como qualquer funcionalidade que você possa ter adicionado ao bot que exija dados específicos para Microsoft Teams. Certifique-se de que o método escolhido para testar seu bot se alinhe com sua funcionalidade.
+Ao testar o bot, você precisa levar em consideração os contextos em que deseja que o bot seja executado, bem como qualquer funcionalidade que você possa ter adicionado ao bot que exija dados específicos de Microsoft Teams. Verifique se o método escolhido para testar o bot está alinhado com sua funcionalidade.
 
-## <a name="test-by-uploading-to-teams"></a>Teste carregando no Teams
+## <a name="test-by-uploading-to-teams"></a>Testar carregando no Teams
 
-A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Este é o único método para testar a funcionalidade completa disponível para o bot, em todos os escopos.
+A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o para Teams. Esse é o único método para testar a funcionalidade completa disponível para o bot em todos os escopos.
 
-Há dois métodos para carregar seu aplicativo. Você pode usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) ou criar manualmente um pacote [de aplicativos](~/concepts/build-and-test/apps-package.md) e [carregar seu aplicativo.](~/concepts/deploy-and-publish/apps-upload.md) Se você precisar alterar seu manifesto e recarregar seu aplicativo, exclua seu [bot](#deleting-a-bot-from-teams) antes de carregar seu pacote de aplicativo alterado.
+Há dois métodos para carregar seu aplicativo. Você pode usar o [App Studio ou](~/concepts/build-and-test/app-studio-overview.md) criar manualmente [um pacote de aplicativos](~/concepts/build-and-test/apps-package.md) e [carregar seu aplicativo](~/concepts/deploy-and-publish/apps-upload.md). Se precisar alterar o manifesto e recarregar o aplicativo, exclua o [bot](#deleting-a-bot-from-teams) antes de carregar o pacote do aplicativo alterado.
 
-## <a name="debug-your-bot-locally"></a>Depurar seu bot localmente
+## <a name="debug-your-bot-locally"></a>Depurar o bot localmente
 
-Se você estiver hospedando seu bot localmente durante o desenvolvimento, precisará usar um serviço de túnel como [o ngrok](https://ngrok.com/) para testar seu bot. Depois de baixar e instalar o ngrok, execute o comando abaixo para iniciar o serviço de túnel. Talvez seja necessário adicionar ngrok ao seu caminho.
+Se você estiver hospedando seu bot localmente durante o desenvolvimento, precisará usar um serviço de túnel como [o ngrok](https://ngrok.com/) para testar o bot. Depois de baixar e instalar o ngrok, execute o comando abaixo para iniciar o serviço de túnel. Talvez seja necessário adicionar o ngrok ao seu caminho.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo. Se você fechar a janela de comando e reiniciar, você obterá uma nova URL e precisará atualizar seu endereço de ponto de extremidade do bot para usá-la também.
+Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo. Se você fechar a janela de comando e reiniciar, obterá uma nova URL e precisará atualizar o endereço do ponto de extremidade do bot para usá-la também.
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>Testar seu bot sem carregar no Teams
 
-Ocasionalmente, é necessário testar seu bot sem instalá-lo como um aplicativo Teams. Fornecemos dois métodos para teste. Testar seu bot sem instalá-lo como um aplicativo pode ser útil para garantir que o bot está disponível e respondendo, no entanto, ele não permitirá que você teste a amplitude completa da funcionalidade Microsoft Teams que você pode ter adicionado ao bot. Se você precisar testar completamente seu bot, siga as instruções de [teste carregando](#test-by-uploading-to-teams).
+Ocasionalmente, é necessário testar seu bot sem instalá-lo como um aplicativo no Teams. Fornecemos dois métodos para teste. Testar o bot sem instalá-lo como um aplicativo pode ser útil para garantir que o bot esteja disponível e respondendo Microsoft Teams, no entanto, ele não permitirá que você teste a amplitude completa da funcionalidade que você pode ter adicionado ao bot. Se você precisar testar o bot completamente, siga as instruções [para teste carregando](#test-by-uploading-to-teams).
 
-### <a name="use-the-bot-emulator"></a>Use o bot Emulator
+### <a name="use-the-bot-emulator"></a>Usar o bot Emulator
 
-O Bot Framework Emulator é um aplicativo de área de trabalho que permite aos desenvolvedores de bot testar e depurar seus bots, localmente ou remotamente. Usando o emulador, você pode conversar com seu bot e inspecionar as mensagens que seu bot envia e recebe. Isso pode ser útil para verificar se o bot está disponível e respondendo, no entanto, o emulador não permitirá que você teste nenhuma funcionalidade específica do Teams que você adicionou ao bot, nem as respostas do bot serão uma representação visual precisa de como elas são renderizadas no Teams. Se você precisar testar uma dessas coisas, não é melhor carregar [seu bot](#test-by-uploading-to-teams).
+O Bot Framework Emulator é um aplicativo da área de trabalho que permite que os desenvolvedores de bot testem e depurem seus bots localmente ou remotamente. Usando o emulador, você pode conversar com seu bot e inspecionar as mensagens que seu bot envia e recebe. Isso pode ser útil para verificar se o bot está disponível e respondendo, no entanto, o emulador não permitirá que você teste nenhuma funcionalidade específica do Teams que você adicionou ao bot, nem as respostas do bot serão uma representação visual precisa de como eles são renderizados no Teams. Se você precisar testar qualquer uma dessas coisas, não é melhor [carregar seu bot](#test-by-uploading-to-teams).
 
 Instruções completas sobre o Bot Framework Emulator podem ser [encontradas aqui](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
 ### <a name="talk-to-your-bot-directly-by-id"></a>Fale com seu bot diretamente por ID
 
 >[!Important]
->Conversar com seu bot por ID destina-se apenas a fins de teste.
+>Conversar com seu bot por ID destina-se apenas para fins de teste.
 
-Você também pode iniciar uma conversa com seu bot usando sua ID. Dois métodos para fazer isso são dados abaixo. Quando um bot tiver sido adicionado por meio de um desses métodos, ele não poderá ser abordada em conversas de canal e você não poderá tirar proveito de outros recursos do aplicativo Microsoft Teams como guias ou extensões de mensagens.
+Você também pode iniciar uma conversa com o bot usando sua ID. Dois métodos para fazer isso são fornecidos abaixo. Quando um bot tiver sido adicionado por meio de um desses métodos, ele não poderá ser enderecável em conversas de canal e você não poderá aproveitar outras funcionalidades de aplicativo do Microsoft Teams, como guias ou extensões de mensagem.
 
-1. Na página [Painel de Bot](https://dev.botframework.com/bots) para seu bot, em **Canais,** selecione **Adicionar a Microsoft Teams**. Microsoft Teams iniciará com um chat pessoal com seu bot.
-2. Fazer referência direta à ID do aplicativo do bot de dentro Microsoft Teams:
-   * Na página [Painel de Bot](https://dev.botframework.com/bots) para seu bot, em **Detalhes**, copie a **ID** do Aplicativo microsoft para seu bot.
+1. Na página [Painel de Bot](https://dev.botframework.com/bots) do bot, em **Canais**, selecione **Adicionar ao Microsoft Teams**. Microsoft Teams iniciará com um chat pessoal com seu bot.
+2. Faça referência direta à ID do aplicativo do bot de dentro Microsoft Teams:
+   * Na página [Painel do Bot](https://dev.botframework.com/bots) do bot, em **Detalhes**, copie a **ID do Aplicativo microsoft** para o bot.
   
-     ![Obter o AppID para o bot](~/assets/images/bots_appid_botframework.png)
+     ![Obtendo o AppID para o bot](~/assets/images/bots_appid_botframework.png)
   
-   * De dentro Microsoft Teams, no painel **Chat,** selecione o **ícone Adicionar chat.** **Para:**, colar a ID do aplicativo Microsoft do seu bot.
+   * De dentro Microsoft Teams, no painel **Chat**, selecione o ícone **Adicionar chat**. Para **:**, cole a ID do aplicativo Microsoft do bot.
   
      ![Carregando o AppID para o bot](~/assets/images/bots_uploading.png)
 
-     A ID do aplicativo deve ser resolvida com o nome do bot.
+     A ID do aplicativo deve ser resolvida para o nome do bot.
 
    * Selecione seu bot e envie uma mensagem para iniciar uma conversa.
-   * Como alternativa, você pode colar a ID do aplicativo do bot na caixa de pesquisa na parte superior esquerda Microsoft Teams. Na página resultados da pesquisa, navegue até a guia Pessoas para ver seu bot e começar a conversar com ele.
+   * Como alternativa, você pode colar a ID do aplicativo do bot na caixa de pesquisa na parte superior esquerda Microsoft Teams. Na página de resultados da pesquisa, navegue até a guia Pessoas para ver seu bot e começar a conversar com ele.
 
-Seu bot receberá o `conversationUpdate` evento da mesma forma que bots adicionados a uma equipe, mas sem as informações da equipe no `channelData` objeto.
+Seu bot receberá o evento `conversationUpdate` assim como os bots adicionados a uma equipe, mas sem as informações da equipe no `channelData` objeto.
 
-## <a name="blocking-a-bot-in-personal-chat"></a>Bloquear um bot no chat pessoal
+## <a name="blocking-a-bot-in-personal-chat"></a>Bloqueando um bot no chat pessoal
 
-Observe que os usuários podem optar por impedir que seu bot envie mensagens de chat pessoais. Eles podem alternar isso clicando com o botão direito do mouse no bot no canal de chat e escolhendo **Bloquear conversa bot**. Isso significa que seus bots continuarão a enviar mensagens, mas o usuário não receberá essas mensagens.
+Observe que os usuários podem optar por impedir que o bot envie mensagens de chat pessoais. Eles podem alternar isso clicando com o botão direito do mouse no bot no canal de chat e escolhendo **Bloquear conversa de bot**. Isso significa que seus bots continuarão a enviar mensagens, mas o usuário não receberá essas mensagens.
 
 ![Bloqueando um bot](~/assets/images/bots/botdisable.png)
 
-## <a name="removing-a-bot-from-a-team"></a>Remover um bot de uma equipe
+## <a name="removing-a-bot-from-a-team"></a>Removendo um bot de uma equipe
 
-Os usuários podem excluir o bot escolhendo o ícone de lixeira na lista de bots no seu exibição de equipes. Observe que isso remove apenas o bot do uso dessa equipe, os usuários individuais podem interagir no contexto pessoal.
+Os usuários podem excluir o bot escolhendo o ícone de lixeira na lista de bots no modo de exibição de equipes. Observe que isso remove apenas o bot do uso dessa equipe, e os usuários individuais podem interagir no contexto pessoal.
 
-Os bots no contexto pessoal não podem ser desabilitados ou removidos por um usuário, além de remover completamente o bot do Teams.
+Os bots no contexto pessoal não podem ser desabilitados ou removidos por um usuário, sem remover completamente o bot do Teams.
 
 ## <a name="disabling-a-bot-in-teams"></a>Desabilitar um bot no Teams
 
-Para interromper o recebimento de mensagens do bot, vá para o Painel de Bot e edite o canal Microsoft Teams. **Desativer a opção Habilitar Microsoft Teams.** Isso impede que os usuários interajam com o bot, mas ele ainda será descoberto e os usuários podem adicioná-lo às equipes.
+Para interromper o recebimento de mensagens pelo bot, vá para o Painel de Bot e edite o Microsoft Teams canal. **Desmarque a opção Habilitar Microsoft Teams** configuração. Isso impede que os usuários interajam com o bot, mas ele ainda será detectável e os usuários poderão adicioná-lo às equipes.
 
-## <a name="deleting-a-bot-from-teams"></a>Excluir um bot de Teams
+## <a name="deleting-a-bot-from-teams"></a>Excluindo um bot do Teams
 
-Para remover completamente o bot do Teams, vá para o Painel de Bot e edite o canal Microsoft Teams de bot. Escolha o **botão Excluir** na parte inferior. Isso impede que os usuários descubram, adicionem ou interajam com seu bot. Observe que isso não remove o bot das instâncias de Teams outros usuários, embora ele também deixe de funcionar para eles.
+Para remover completamente o bot do Teams, vá para o Painel de Bot e edite o Microsoft Teams canal. Escolha o **botão** Excluir na parte inferior. Isso impede que os usuários descubram, adicionem ou interajam com seu bot. Observe que isso não remove o bot das instâncias de Teams de outros usuários, embora ele deixe de funcionar para eles também.
 
 ## <a name="removing-your-bot-from-appsource"></a>Removendo seu bot do AppSource
 
-Se você deseja remover seu bot do seu aplicativo Teams no AppSource (anteriormente Office Store), você deve remover o bot do manifesto do aplicativo e reabrir seu aplicativo para validação. Para obter mais informações, [consulte Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md).
+Se você quiser remover seu bot do aplicativo Teams no AppSource (anteriormente Office Store), deverá remover o bot do manifesto do aplicativo e reenviar seu aplicativo para validação. Para obter mais informações, [consulte Publicar seu Microsoft Teams aplicativo no AppSource](~/concepts/deploy-and-publish/apps-publish.md).

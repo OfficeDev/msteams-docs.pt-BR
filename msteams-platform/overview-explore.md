@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398964"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104424"
 ---
 # <a name="explore-teams-platform-features"></a>Explore os recursos da plataforma Microsoft Teams
 
@@ -25,7 +25,7 @@ Com o Teams, você pode criar seu aplicativo em um ambiente rico em recursos. Us
 | --- | --- | --- |
 |Guias | As guias são páginas da Web com reconhecimento de Equipes inseridas no Microsoft Teams. Você pode adicioná-los como parte de um canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual. | Guia pessoal, guia de canal ou grupo, exibição estendida e pré-visualização de links. |
 | Bots | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas automatizadas simples e repetitivas feitas pelos usuários. Uma interação de bot pode ser perguntas e respostas rápidas ou pode ser uma conversa complexa que fornece acesso aos serviços. | Atendimento ao cliente, informações sobre o clima, fazem reservas de jantar ou fornecem informações de viagem. |
-| Extensões de mensagens | As extensões de mensagens permitem que os usuários interajam com o cliente do Teams do serviço Web. Eles pesquisam ou iniciam ações em um sistema externo. Você pode enviar o resultado da interação para o cliente do Teams como um cartão com formatação avançada. | Reserve um recurso e permita que o canal saiba o intervalo de tempo reservado. Pesquise um item de trabalho e compartilhe-o com o grupo como um Cartão Adaptável. Crie um bug no seu sistema de acompanhamento com base em uma mensagem do Teams, atribua esse bug a um usuário e envie um cartão para o thread da conversa com os detalhes do bug. |
+| Extensão de mensagem | As extensões de mensagem permitem que os usuários interajam com seu cliente do Teams do serviço Web. Eles pesquisam ou iniciam ações em um sistema externo. Você pode enviar o resultado da interação para o cliente do Teams como um cartão com formatação avançada. | Reserve um recurso e permita que o canal saiba o intervalo de tempo reservado. Pesquise um item de trabalho e compartilhe-o com o grupo como um Cartão Adaptável. Crie um bug no seu sistema de acompanhamento com base em uma mensagem do Teams, atribua esse bug a um usuário e envie um cartão para o thread da conversa com os detalhes do bug. |
 |Extensões de reunião | Você pode criar aplicativos para tornar as reuniões mais produtivas. | Peça que as pessoas concluam uma pesquisa durante uma chamada ou enviem um lembrete rápido que não interrompa o fluxo da reunião. |
 | Aplicativo pessoal | Um aplicativo pessoal é um espaço (guia) dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles. | O OneNote é um aplicativo pessoal que fornece um espaço de trabalho privado no Teams. O Planner oferece uma visão geral de todas as suas tarefas, em todos os painéis que você ou sua equipe adicionaram como guias de canal. |
 | Webhooks e conectores | Comunique-se com aplicativos externos e envie ou receba notificações e mensagens de outros aplicativos. | Inscreva-se para receber notificações e mensagens dos serviços da Web. |

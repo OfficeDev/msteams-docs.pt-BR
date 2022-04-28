@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerações para a integração do Microsoft Teams
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+title: Considerações sobre a Teams integração
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685594"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104347"
 ---
-# <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
+# <a name="considerations-for-teams-integration"></a>Considerações sobre a Teams integração
 
 Você pode tornar os aplicativos Web adequados Teams recursos sociais e colaborativos, integrando-os corretamente com Teams.
   
@@ -35,8 +35,8 @@ Seu Teams aplicativo deve incluir recursos colaborativos necessários e esperado
 |Recursos comuns do aplicativo   |Teams da plataforma   |
 |----------|-----------|
 |Página da Web inserida, home page ou modo de exibição da Web  |[Guias](../tabs/what-are-tabs.md)  |
-|Compartilhar atalhos e extensões  |[Extensões de Mensagens](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Atalhos e extensões de ação  |[Extensões de Mensagens](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Compartilhar atalhos e extensões  |[Extensões de mensagem](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Atalhos e extensões de ação  |[Extensões de mensagem](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Notificações de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks de entrada](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Conectores de Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Serviços externos de mensagem  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks de saída](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
@@ -129,6 +129,6 @@ Quando uma equipe é criada, um [conjunto SharePoint site](/microsoftteams/share
 
 * [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)
 * [Soluções de código baixo e sem código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Compartilhar com Teams de aplicativos Web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Compartilhar no Teams a partir de aplicativos Web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Atributos de cookie SameSite](~/resources/samesite-cookie-update.md)
 * [Integrar Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

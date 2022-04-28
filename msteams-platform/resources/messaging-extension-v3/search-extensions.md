@@ -1,24 +1,24 @@
 ---
-title: Pesquisar com extensões de mensagens
-description: Descreve como desenvolver extensões de mensagens baseadas em pesquisa
-keywords: Pesquisa de extensões de mensagens de mensagens do teams
+title: Pesquisar com extensões de mensagem
+description: Descreve como desenvolver extensões de mensagem baseadas em pesquisa
+keywords: pesquisa de extensões de mensagem de extensões de mensagem do Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453709"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104396"
 ---
-# <a name="search-with-messaging-extensions"></a>Pesquisar com extensões de mensagens
+# <a name="search-with-message-extensions"></a>Pesquisar com extensões de mensagem
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Extensões de mensagens baseadas em pesquisa permitem que você consulte seu serviço e poste essas informações na forma de um cartão, direto em sua mensagem.
+As extensões de mensagem baseadas em pesquisa permitem que você consulte seu serviço e poste essas informações na forma de um cartão, diretamente em sua mensagem.
 
-![Exemplo de cartão de extensão de mensagens](~/assets/images/compose-extensions/ceexample.png)
+![Exemplo de cartão de extensão de mensagem](~/assets/images/compose-extensions/ceexample.png)
 
 As seções a seguir descrevem como fazer isso:
 
@@ -26,7 +26,7 @@ As seções a seguir descrevem como fazer isso:
 
 ## <a name="search-type-message-extensions"></a>Extensões de mensagem de tipo de pesquisa
 
-Para a extensão de mensagens baseada em pesquisa, de definir o `type` parâmetro como `query`. Veja a seguir um exemplo de um manifesto com um único comando de pesquisa. Uma única extensão de mensagens pode ter até 10 comandos diferentes associados a ela. Isso pode incluir vários comandos baseados em ação e pesquisa.
+Para a extensão de mensagem baseada em pesquisa, defina `type` o parâmetro como `query`. Veja abaixo um exemplo de um manifesto com um único comando de pesquisa. Uma única extensão de mensagem pode ter até 10 comandos diferentes associados a ela. Isso pode incluir várias pesquisas e vários comandos baseados em ação.
 
 ### <a name="complete-app-manifest-example"></a>Exemplo de manifesto completo do aplicativo
 
@@ -85,67 +85,67 @@ Para a extensão de mensagens baseada em pesquisa, de definir o `type` parâmetr
 }
 ```
 
-## <a name="test-via-uploading"></a>Testar por meio do carregamento
+## <a name="test-via-uploading"></a>Testar por meio do upload
 
-Você pode testar sua extensão de mensagens carregando seu aplicativo.
+Você pode testar sua extensão de mensagem carregando seu aplicativo.
 
-Para abrir sua extensão de mensagens, navegue até qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagens.
+Para abrir sua extensão de mensagem, navegue até qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagem.
 
 ## <a name="add-event-handlers"></a>Adicionar manipuladores de eventos
 
-A maior parte do seu trabalho envolve o `onQuery` evento, que lida com todas as interações na janela de extensão de mensagens.
+A maior parte do seu trabalho envolve o `onQuery` evento, que manipula todas as interações na janela de extensão de mensagem.
 
-Se você definir `canUpdateConfiguration` como `true` no manifesto, habilita o item **de menu Configurações** para sua extensão de mensagens e também deve manipular `onQuerySettingsUrl` e `onSettingsUpdate`.
+Se você definir `canUpdateConfiguration` como `true` no manifesto, habilitará o item **de menu Configurações para sua** extensão de mensagem e também deverá manipular `onQuerySettingsUrl` e .`onSettingsUpdate`
 
 ## <a name="handle-onquery-events"></a>Manipular eventos onQuery
 
-Uma extensão de mensagens recebe um evento `onQuery` quando algo acontece na janela de extensão de mensagens ou é enviado para a janela.
+Uma extensão de mensagem recebe um `onQuery` evento quando algo acontece na janela de extensão da mensagem ou é enviado para a janela.
 
-Se sua extensão de mensagens usa uma página de configuração, `onQuery` seu manipulador deve primeiro verificar se há informações de configuração armazenadas; se a extensão de mensagens não estiver configurada, `config` retorne uma resposta com um link para sua página de configuração. Esteja ciente de que a resposta da página de configuração também é manipulada por `onQuery`. A única exceção é quando a página de configuração é chamada pelo manipulador para `onQuerySettingsUrl`; consulte a seção a seguir:
+Se a extensão de mensagem usar uma página de configuração, `onQuery` o manipulador deverá primeiro verificar se há informações de configuração armazenadas; se a `config` extensão da mensagem não estiver configurada, retorne uma resposta com um link para a página de configuração. Lembre-se de que a resposta da página de configuração também é tratada por `onQuery`. A única exceção é quando a página de configuração é chamada pelo manipulador para `onQuerySettingsUrl`; consulte a seção a seguir:
 
-Se sua extensão de mensagens exigir autenticação, verifique as informações de estado do usuário; se o usuário não estiver assinado, siga as instruções na seção [Autenticação](#authentication) posteriormente neste tópico.
+Se a extensão de mensagem exigir autenticação, verifique as informações de estado do usuário; se o usuário não estiver conectado, siga as instruções [na seção](#authentication) Autenticação mais adiante neste tópico.
 
-Em seguida, verifique se `initialRun` está definido; em caso afirmativa, tome as medidas apropriadas, como fornecer instruções ou uma lista de respostas.
+Em seguida, verifique se `initialRun` está definido; nesse caso, execute a ação apropriada, como fornecer instruções ou uma lista de respostas.
 
 O restante do manipulador solicita `onQuery` informações ao usuário, exibe uma lista de cartões de visualização e retorna o cartão selecionado pelo usuário.
 
 ## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Manipular eventos onQuerySettingsUrl e onSettingsUpdate
 
-Os `onQuerySettingsUrl` eventos e `onSettingsUpdate` funcionam juntos para habilitar o **item Configurações** menu.
+Os `onQuerySettingsUrl` eventos e `onSettingsUpdate` os eventos funcionam juntos para habilitar **o Configurações** item de menu.
 
-![Capturas de tela de locais de Configurações item de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Capturas de tela de locais do Configurações item de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-Seu manipulador para `onQuerySettingsUrl` retorna a URL da página de configuração; depois que a página de configuração é fechado, `onSettingsUpdate` o manipulador aceita e salva o estado retornado. Esse é o único caso em que `onQuery` *não recebe* a resposta da página de configuração.
+O manipulador para `onQuerySettingsUrl` retorna a URL para a página de configuração; depois que a página de configuração é fechado, `onSettingsUpdate` o manipulador para aceita e salva o estado retornado. Esse é o único caso em que `onQuery` *não recebe* a resposta da página de configuração.
 
 ## <a name="receive-and-respond-to-queries"></a>Receber e responder a consultas
 
-Todas as solicitações para sua extensão de mensagens são feitas por meio `Activity` de um objeto postado em sua URL de retorno de chamada. A solicitação contém informações sobre o comando do usuário, como ID e valores de parâmetro. A solicitação também fornece metadados sobre o contexto no qual sua extensão foi invocada, incluindo iD de usuário e locatário, juntamente com ID de chat ou canal e IDs de equipe.
+Todas as solicitações para a extensão de mensagem são feitas por meio `Activity` de um objeto que é postado na URL de retorno de chamada. A solicitação contém informações sobre o comando do usuário, como valores de parâmetro e ID. A solicitação também fornece metadados sobre o contexto no qual sua extensão foi invocada, incluindo id de usuário e locatário, juntamente com ID de chat ou canal e IDs de equipe.
 
 ### <a name="receive-user-requests"></a>Receber solicitações de usuário
 
-Quando um usuário executa uma consulta, o Microsoft Teams envia ao seu serviço um objeto Da Estrutura `Activity` de Bot padrão. Seu serviço deve executar sua lógica para um `Activity` `type` que tenha definido `invoke` `name` como e definido `composeExtension` como um tipo com suporte, conforme mostrado na tabela a seguir.
+Quando um usuário executa uma consulta, o Microsoft Teams envia ao serviço um objeto padrão do Bot Framework`Activity`. Seu serviço deve executar sua lógica para um `Activity` que `type` foi definido `invoke` `name` como e definido `composeExtension` como um tipo com suporte, conforme mostrado na tabela a seguir.
 
 Além das propriedades de atividade de bot padrão, a carga contém os seguintes metadados de solicitação:
 
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação; deve ser `invoke`. |
-|`name`| Tipo de comando emitido ao seu serviço. Atualmente, os seguintes tipos são suportados: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`name`| Tipo de comando emitido para seu serviço. Atualmente, há suporte para os seguintes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) do objeto ID do usuário que enviou a solicitação. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (ID de locatário do Azure AD). |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) do objeto do usuário que enviou a solicitação. |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) ID de locatário. |
 |`channelData.channel.id`| ID do canal (se a solicitação foi feita em um canal). |
 |`channelData.team.id`| ID da equipe (se a solicitação foi feita em um canal). |
-|`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado pelo usuário.<br>O `platform` campo descreve a plataforma de cliente de mensagens. <br>Para obter informações adicionais, *consulte* [Tipos de entidade não IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado pelo usuário.<br>O `platform` campo descreve a plataforma do cliente de mensagens. <br>Para obter informações adicionais, *consulte tipos* [de entidade não IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
-Os parâmetros de solicitação em si são encontrados no objeto value, que inclui as seguintes propriedades:
+Os parâmetros de solicitação em si são encontrados no objeto de valor, que inclui as seguintes propriedades:
 
 | Nome da propriedade | Objetivo |
 |---|---|
 | `commandId` | O nome do comando invocado pelo usuário, correspondendo a um dos comandos declarados no manifesto do aplicativo. |
-| `parameters` | Matriz de parâmetros: Cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
-| `queryOptions` | Parâmetros paginação: <br>`skip`: ignorar a contagem dessa consulta <br>`count`: número de elementos a retornar |
+| `parameters` | Matriz de parâmetros: cada objeto de parâmetro contém o nome do parâmetro, juntamente com o valor do parâmetro fornecido pelo usuário. |
+| `queryOptions` | Parâmetros de paginação: <br>`skip`: ignorar contagem para esta consulta <br>`count`: número de elementos a serem retornados |
 
 #### <a name="request-example"></a>Exemplo de solicitação
 
@@ -195,11 +195,11 @@ Os parâmetros de solicitação em si são encontrados no objeto value, que incl
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Receber solicitações de links inseridos na caixa de mensagem de redação
 
-Como alternativa (ou além disso) à pesquisa do seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de redação para consultar seu serviço e retornar um cartão. Na captura de tela abaixo, um usuário foi colar em uma URL para um item de trabalho em Azure DevOps que a extensão de mensagens resolveu em um cartão.
+Como alternativa (ou além disso) à pesquisa de seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de composição para consultar seu serviço e retornar um cartão. Na captura de tela abaixo, um usuário cole uma URL para um item de trabalho Azure DevOps que a extensão de mensagem resolveu em um cartão.
 
-![Exemplo de desfraldamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Exemplo de desarmamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-Para permitir que sua extensão de mensagens interaja com links dessa forma, `messageHandlers` primeiro você precisará adicionar a matriz ao manifesto do aplicativo, como no exemplo abaixo:
+Para permitir que a extensão de mensagem interaja com links dessa maneira, `messageHandlers` primeiro você precisará adicionar a matriz ao manifesto do aplicativo, como no exemplo abaixo:
 
 ```json
 "composeExtensions": [
@@ -219,7 +219,7 @@ Para permitir que sua extensão de mensagens interaja com links dessa forma, `me
 ]
 ```
 
-Depois de adicionar o domínio para ouvir o manifesto do aplicativo, você precisará alterar seu código bot para responder à solicitação de invocação abaixo.[](#respond-to-user-requests)
+Depois de adicionar o domínio para escutar o manifesto do aplicativo, você precisará alterar o código do bot para responder à solicitação de [](#respond-to-user-requests) invocação abaixo.
 
 ```json
 {
@@ -231,48 +231,48 @@ Depois de adicionar o domínio para ouvir o manifesto do aplicativo, você preci
 }
 ```
 
-Se seu aplicativo retornar vários itens, apenas o primeiro será usado.
+Se o aplicativo retornar vários itens, somente o primeiro será usado.
 
-### <a name="respond-to-user-requests"></a>Responder a solicitações de usuário
+### <a name="respond-to-user-requests"></a>Responder às solicitações do usuário
 
-Quando o usuário executa uma consulta, Microsoft Teams emite uma solicitação HTTP síncrona ao seu serviço. Nesse ponto, seu código tem 5 segundos para fornecer uma resposta HTTP à solicitação. Durante esse tempo, seu serviço pode realizar uma consulta adicional ou qualquer outra lógica de negócios necessária para atender à solicitação.
+Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para seu serviço. Nesse ponto, seu código tem 5 segundos para fornecer uma resposta HTTP à solicitação. Durante esse tempo, seu serviço pode executar uma pesquisa adicional ou qualquer outra lógica de negócios necessária para atender à solicitação.
 
-Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um objeto application/json válido com o seguinte corpo:
+Seu serviço deve responder com os resultados correspondentes à consulta do usuário. A resposta deve indicar um código de status HTTP e `200 OK` um objeto json/aplicativo válido com o seguinte corpo:
 
 |Nome da propriedade|Objetivo|
 |---|---|
 |`composeExtension`|Envelope de resposta de nível superior.|
-|`composeExtension.type`|Tipo de resposta. Os seguintes tipos são suportados: <br>`result`: exibe uma lista de resultados da pesquisa <br>`auth`: pede ao usuário para autenticar <br>`config`: pede ao usuário para configurar a extensão de mensagens <br>`message`: exibe uma mensagem de texto simples |
-|`composeExtension.attachmentLayout`|Especifica o layout dos anexos. Usado para respostas do tipo `result`. <br>Atualmente, os seguintes tipos são suportados: <br>`list`: uma lista de objetos de cartão que contêm campos de miniatura, título e texto <br>`grid`: uma grade de imagens em miniatura |
-|`composeExtension.attachments`|Matriz de objetos de anexo válidos. Usado para respostas do tipo `result`. <br>Atualmente, os seguintes tipos são suportados: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Tipo de resposta. Há suporte para os seguintes tipos: <br>`result`: exibe uma lista de resultados da pesquisa <br>`auth`: solicita que o usuário se autentique <br>`config`: solicita que o usuário configure a extensão de mensagem <br>`message`: exibe uma mensagem de texto simples |
+|`composeExtension.attachmentLayout`|Especifica o layout dos anexos. Usado para respostas do tipo `result`. <br>Atualmente, há suporte para os seguintes tipos: <br>`list`: uma lista de objetos de cartão que contêm campos de miniatura, título e texto <br>`grid`: uma grade de imagens em miniatura |
+|`composeExtension.attachments`|Matriz de objetos de anexo válidos. Usado para respostas do tipo `result`. <br>Atualmente, há suporte para os seguintes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Ações sugeridas. Usado para respostas de tipo `auth` ou `config`. |
 |`composeExtension.text`|Mensagem a ser exibida. Usado para respostas do tipo `message`. |
 
 #### <a name="response-card-types-and-previews"></a>Tipos de cartão de resposta e visualizações
 
-Suportamos os seguintes tipos de anexo:
+Damos suporte aos seguintes tipos de anexo:
 
 * [cartão de Miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [cartão Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [cartão do Conector do Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Cartão adaptável](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Para obter mais informações, consulte [Cartões](~/task-modules-and-cards/what-are-cards.md) para obter uma visão geral.
+Para obter mais informações, consulte [Cartões para](~/task-modules-and-cards/what-are-cards.md) obter uma visão geral.
 
-Para saber como usar os tipos de miniatura e cartão de herói, consulte [Adicionar ações de cartões e cartões](~/task-modules-and-cards/cards/cards-actions.md).
+Para saber como usar os tipos de cartão em miniatura e hero, consulte [Adicionar cartões e ações de cartão](~/task-modules-and-cards/cards/cards-actions.md).
 
-Para obter documentação adicional sobre o Office 365 conector, consulte [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Para obter documentação adicional sobre o cartão Office 365 Connector, consulte [Usando cartões Office 365 Connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-A lista de resultados é exibida na interface do usuário Microsoft Teams com uma visualização de cada item. A visualização é gerada de duas maneiras:
+A lista de resultados é exibida na interface Microsoft Teams interface do usuário com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
 
 * Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão Hero ou Thumbnail.
-* Extraído das propriedades básicas `title`, `text`e `image` do anexo. Eles são usados somente se a `preview` propriedade não estiver definida e essas propriedades estarão disponíveis.
+* Extraído do básico `title`, e `text`propriedades `image` do anexo. Eles serão usados somente se a `preview` propriedade não estiver definida e essas propriedades estarão disponíveis.
 
-Você pode exibir uma visualização de um cartão Conector adaptável ou Office 365 na lista de resultados simplesmente definindo sua propriedade de visualização; isso não é necessário se os resultados já são cartões de miniatura ou herói. Se você usar o anexo de visualização, ele deve ser um cartão Hero ou Thumbnail. Se nenhuma propriedade de visualização for especificada, a visualização do cartão falhará e nada será exibido.
+Você pode exibir uma visualização de um cartão Adaptável ou conector Office 365 na lista de resultados simplesmente definindo sua propriedade de visualização; isso não será necessário se os resultados já forem cartões hero ou miniatura. Se você usar o anexo de visualização, ele deverá ser um cartão Hero ou Thumbnail. Se nenhuma propriedade de visualização for especificada, a visualização do cartão falhará e nada será exibido.
 
 #### <a name="response-example"></a>Exemplo de resposta
 
-Este exemplo mostra uma resposta com dois resultados, misturando diferentes formatos de cartão: Office 365 Conector e Adaptável. Embora você provavelmente queira manter um formato de cartão em sua resposta, `preview` `attachments` ele mostra como a propriedade de cada elemento na coleção deve definir explicitamente uma visualização no formato hero ou miniatura, conforme descrito acima.
+Este exemplo mostra uma resposta com dois resultados, combinando formatos de cartão diferentes: Office 365 Connector e Adaptável. Embora você provavelmente queira manter um formato de cartão em sua resposta, `preview` `attachments` ele mostra como a propriedade de cada elemento na coleção deve definir explicitamente uma visualização em formato hero ou miniatura, conforme descrito acima.
 
 ```json
 {
@@ -406,9 +406,9 @@ Este exemplo mostra uma resposta com dois resultados, misturando diferentes form
 
 ### <a name="default-query"></a>Consulta padrão
 
-Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta "padrão" quando o usuário abrir pela primeira vez a extensão de mensagens. Seu serviço pode responder a essa consulta com um conjunto de resultados pré-populados. Isso pode ser útil para exibir, por exemplo, itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
+Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta "padrão" quando o usuário abre a extensão de mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados pré-preenchidos. Isso pode ser útil para exibir, por exemplo, itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
 
-A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, exceto com um parâmetro `initialRun` cujo valor de cadeia de caracteres é `true`.
+A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, exceto com um parâmetro cujo `initialRun` valor de cadeia de caracteres é `true`.
 
 #### <a name="request-example-for-a-default-query"></a>Exemplo de solicitação para uma consulta padrão
 
@@ -435,7 +435,7 @@ A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regul
 
 ## <a name="identify-the-user"></a>Identificar o usuário
 
-Todas as solicitações aos seus serviços incluem a ID ofuscada do usuário que realizou a solicitação, bem como o nome de exibição do usuário e a ID do objeto Microsoft Azure Active Directory (Azure AD).
+Cada solicitação para seus serviços inclui a ID ofuscada do usuário que executou a solicitação, bem como o nome de exibição do usuário e a ID de objeto do Microsoft Azure Active Directory (Azure AD).
 
 ```json
 "from": {
@@ -445,28 +445,28 @@ Todas as solicitações aos seus serviços incluem a ID ofuscada do usuário que
 },
 ```
 
-Os `id` valores `aadObjectId` e são garantidos como os do usuário Teams autenticado. Elas podem ser usadas como chaves para procurar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação se originou.
+O `id` e `aadObjectId` os valores são garantidos como os do usuário Teams autenticado. Eles podem ser usados como chaves para pesquisar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário do Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação foi originada.
 
 ## <a name="authentication"></a>Autenticação
 
-Se o serviço exigir autenticação do usuário, você precisará entrar no usuário antes que ele possa usar a extensão de mensagens. Se você tiver escrito um bot ou uma guia que assina no usuário, esta seção deve ser familiar.
+Se o serviço exigir autenticação de usuário, você precisará entrar no usuário antes que ele possa usar a extensão de mensagem. Se você tiver escrito um bot ou uma guia que conecte o usuário, esta seção deverá ser familiar.
 
 A sequência é a seguinte:
 
 1. O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.
-2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando Teams ID do usuário.
-3. Se o usuário não tiver sido autenticado, envie uma `auth` resposta com uma `openUrl` ação sugerida, incluindo a URL de autenticação.
-4. O Microsoft Teams cliente inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação determinada.
-5. Depois que o usuário entrar, você deve fechar a janela e enviar um "código de autenticação" para o cliente Teams cliente.
-6. O Teams cliente, em seguida, reeditará a consulta para o seu serviço, que inclui o código de autenticação passado na etapa 5.
+2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando a ID Teams usuário.
+3. Se o usuário não tiver sido autenticado, envie uma resposta com `auth` uma ação `openUrl` sugerida, incluindo a URL de autenticação.
+4. O Microsoft Teams cliente inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação fornecida.
+5. Depois que o usuário entrar, você deverá fechar a janela e enviar um "código de autenticação" para o Teams cliente.
+6. O Teams em seguida, emiti a consulta para o serviço, que inclui o código de autenticação passado na etapa 5.
 
-Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente fazer a spoof ou comprometer o fluxo de login. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
+Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
-### <a name="respond-with-a-sign-in-action"></a>Responder com uma ação de login
+### <a name="respond-with-a-sign-in-action"></a>Responder com uma ação de entrada
 
 Para solicitar que um usuário não autenticado entre, responda com uma ação sugerida do tipo que inclui a `openUrl` URL de autenticação.
 
-#### <a name="response-example-for-a-sign-in-action"></a>Exemplo de resposta para uma ação de login
+#### <a name="response-example-for-a-sign-in-action"></a>Exemplo de resposta para uma ação de entrada
 
 ```json
 {
@@ -486,24 +486,24 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
-> Para que a experiência de login seja hospedada em um Teams pop-up, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
+> Para que a experiência de entrada seja hospedada em um pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
 
-### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de login
+### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de entrada
 
-Sua experiência de login deve ser responsiva e adequada dentro de uma janela pop-up. Ele deve se integrar ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
+Sua experiência de entrada deve ser responsiva e se ajustar em uma janela pop-up. Ele deve se integrar ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como com outras experiências incorporadas em execução dentro Microsoft Teams, seu código dentro da janela precisa chamar primeiro `microsoftTeams.initialize()`. Se seu código executar um fluxo OAuth, você poderá passar a ID do usuário Teams para sua janela, que poderá passá-lo para a URL de entrada do OAuth.
+Assim como com outras experiências inseridas em execução Microsoft Teams, seu código dentro da janela precisa primeiro chamar`microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que poderá passá-la para a URL de entrada do OAuth.
 
-### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de login
+### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de entrada
 
-Quando a solicitação de login for concluída e redirecionar para sua página, ela deverá executar as seguintes etapas:
+Quando a solicitação de entrada for concluída e redirecionada de volta para sua página, ela deverá executar as seguintes etapas:
 
-1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de logon, como tokens OAuth 2.0.
+1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
 2. Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
 
-Neste ponto, a janela fecha e o controle é passado para o cliente Teams cliente. O cliente agora pode reeditar a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para procurar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e concluir a solicitação do usuário.
+Neste ponto, a janela fecha e o controle é passado para o Teams cliente. O cliente agora pode emitir novamente a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.
 
-#### <a name="reissued-request-example"></a>Exemplo de solicitação reemissão
+#### <a name="reissued-request-example"></a>Exemplo de solicitação emitida novamente
 
 ```json
 {
@@ -556,9 +556,9 @@ Neste ponto, a janela fecha e o controle é passado para o cliente Teams cliente
 
 ### <a name="net"></a>.NET
 
-Para receber e manipular consultas com o SDK do Construtor de Bots para .NET, `invoke` você pode verificar o tipo de ação na atividade de entrada e usar o método auxiliar no pacote NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) para determinar se é uma atividade de extensão de mensagens.
+Para receber e manipular consultas com o SDK do Bot Builder para .NET, `invoke` você pode verificar o tipo de ação na atividade de entrada e usar o método auxiliar no pacote NuGet [Microsoft.Bot.Connector.Teams para](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) determinar se é uma atividade de extensão de mensagem.
 
-#### <a name="example-code-in-net"></a>Exemplo de código no .NET
+#### <a name="example-code-in-net"></a>Código de exemplo no .NET
 
 ```csharp
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
@@ -602,7 +602,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-#### <a name="example-code-in-nodejs"></a>Exemplo de código Node.js
+#### <a name="example-code-in-nodejs"></a>Código de exemplo no Node.js
 
 ```javascript
 require('dotenv').config();
@@ -660,4 +660,4 @@ app.run();
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplos da Estrutura de Bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Exemplos do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

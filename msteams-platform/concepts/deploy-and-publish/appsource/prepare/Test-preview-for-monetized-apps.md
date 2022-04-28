@@ -6,17 +6,14 @@ ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
 keywords: aplicativos Saas do teams oferecem visualização oferecem teste de visualização para saas monetizado
-ms.openlocfilehash: a9427ba61d1432485e1630eb42f72106c0e842ca
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501953"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073813"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Teste de visualização para aplicativos monetizados
-
-> [!NOTE]
-> A visualização de teste para aplicativos monetizados está disponível apenas na [**Visualização do desenvolvedor**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 Você pode criar uma oferta de Software como Serviço (SaaS) e testar a experiência de compra de ponta a ponta para seus aplicativos monetizados no Teams. Os usuários adicionados como audiência de visualização para o aplicativo do Teams podem revisar sua oferta SaaS antes de publicar.
 
@@ -43,7 +40,7 @@ Você pode gerar a ID da oferta de visualização a partir do link de **visualiz
 
 Antes de começar, entre no **Portal do Desenvolvedor** usando uma conta de desenvolvedor com **audiência de visualização** para que os usuários vejam seus planos de assinatura no repositório do Teams.
 
-Depois de gerar a ID da oferta de visualização, vincule a ID da oferta ao seu aplicativo do Teams. Para vincular a ID da oferta:
+Depois de gerar a ID da oferta de Visualização, vincule a ID da oferta ao aplicativo Teams. Para vincular a ID da oferta:
 
 1. Acesse o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) e entre usando suas credenciais de desenvolvedor.
 1. Selecione **Aplicativos** no painel esquerdo.

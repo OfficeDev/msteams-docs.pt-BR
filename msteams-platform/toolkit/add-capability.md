@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073528"
+ms.locfileid: "65103268"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Adicionar recursos aos aplicativos do Teams
 
@@ -21,7 +21,7 @@ Durante o desenvolvimento de aplicativos, você pode criar um novo Teams com Tea
 |--------|-------------|
 | Guias |  As guias são marcas HTML simples que apontam para domínios declarados no manifesto do aplicativo. Você pode adicionar guias como parte do canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual|
 | Bots |  Os bots ajudam a interagir com o serviço Web por meio de texto, cartões interativos e módulos de tarefa|
-| Extensões de mensagens | As extensões de mensagens ajudam a interagir com seu serviço Web por meio de botões e formulários no Microsoft Teams cliente|
+| Extensões de mensagem | As extensões de mensagem ajudam a interagir com seu serviço Web por meio de botões e formulários no Microsoft Teams cliente|
 
 ## <a name="prerequisite"></a>Pré-requisito
 
@@ -35,7 +35,8 @@ Durante o desenvolvimento de aplicativos, você pode criar um novo Teams com Tea
 As limitações do TeamsFx ao adicionar mais recursos são as seguintes:
 
 * Você pode adicionar guias até 16 instâncias
-* Você pode adicionar o bot e a extensão de mensagens para uma instância cada
+* Você pode adicionar o bot e a extensão de mensagem para uma instância cada
+
 ## <a name="add-capabilities"></a>Adicionar recursos
 
 > [!Note]
@@ -69,7 +70,7 @@ Os recursos selecionados são adicionados com êxito ao seu projeto. O Teams Too
    |-----------------------|----------|
    |Para adicionar guia|`teamsfx capability add tab`|
    |Para adicionar bot|`teamsfx capability add bot`|
-   |Para adicionar a extensão de mensagens|`teamsfx capability add messaging-extension`|
+   |Para adicionar a extensão de mensagem|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>Recursos compatíveis
 
@@ -77,18 +78,18 @@ Além dos recursos que seu Teams aplicativo já tem, você pode optar por adicio
 
 |Funcionalidades existentes|Outros recursos com suporte|
 |--------------------|--------------------|
-|Guias com SPFx|Nenhum|
-|Guias com o Azure|Extensão de bot e mensagens|
+|Guias com SPFx|Nenhuma|
+|Guias com o Azure|Extensão de bot e mensagem|
 |Bot|Guias|
 |Extensão de mensagem|Guias e bot|
 |Guias e bot|Guias e extensão de mensagem|
-|Guias e extensão de mensagens|Guias e bot|
-|Guias, bot e extensão de mensagens|Guias|
+|Guias e extensão de mensagem|Guias e bot|
+|Guias, bot e extensão de mensagem|Guias|
 |Guias |Extensão de bot e mensagem|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>Adicionar extensão de bot, guia e mensagens
+## <a name="add-bot-tab-and-message-extension"></a>Adicionar extensão de bot, guia e mensagem
 
-Depois de adicionar um bot e uma extensão de mensagens, as alterações em seu projeto são as seguintes:
+Depois de adicionar um bot e uma extensão de mensagem, as alterações em seu projeto são as seguintes:
 
 * Um código de modelo de bot é adicionado a uma subpasta com caminho `yourProjectFolder/bot`. Isso inclui um modelo **de aplicativo de bot hello world** em seu projeto
 * `launch.json`e `task.json` na `.vscode` pasta são atualizados, o que inclui os scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente
@@ -108,7 +109,6 @@ Depois de adicionar a guia, as alterações em seu projeto são as seguintes:
   * Os escopos das guias
 * Os arquivos sob `templates/azure/teamsfx` serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado
 * O arquivo abaixo `.fx/config` é regenerado, o que garante que seu projeto seja definido com as configurações corretas para a funcionalidade recém-adicionada
-
 
 
 ## <a name="see-also"></a>Confira também

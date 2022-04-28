@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar e configurar seus aplicativos para reuniões Teams diferentes cenários de reunião, atualizar o manifesto do aplicativo, configurar recursos, como caixa de diálogo na reunião, estágio de reunião compartilhado, sidepanel de reunião e muito mais
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4c3f571797df2810e76fc7145e9e9441adbd1e9b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826975"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103345"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para Teams reuniões
 
@@ -93,7 +93,7 @@ Teams reuniões fornecem uma experiência colaborativa para sua organização. C
 
 ### <a name="before-a-meeting"></a>Antes de uma reunião
 
-Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de mensagens. Os usuários com funções de organizador e apresentador podem adicionar guias a uma reunião.
+Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de mensagem. Os usuários com funções de organizador e apresentador podem adicionar guias a uma reunião.
 
 Para adicionar uma guia a uma reunião:
 
@@ -104,10 +104,10 @@ Para adicionar uma guia a uma reunião:
 
 1. Na galeria de guias exibida, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
-Para adicionar uma extensão de mensagens a uma reunião:
+Para adicionar uma extensão de mensagem a uma reunião:
 
 1. Selecione as reticências &#x25CF;&#x25CF;&#x25CF; localizadas na área de mensagem de composição no chat.
-1. Selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma extensão de mensagens.
+1. Selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma extensão de mensagem.
 
 Para adicionar um bot a uma reunião:
 
@@ -129,7 +129,7 @@ Isso `meetingSidePanel` permite que você personalize experiências em uma reuni
 
 Para usar a `userContext` API para rotear solicitações, [consulte Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obter mais informações, [consulte Teams de autenticação para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Para obter mais informações, [consulte plataforma de identidade da Microsoft fluxo de código de autorização do OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-A extensão de mensagens funciona conforme o esperado quando um usuário está em uma exibição em reunião. O usuário pode postar cartões de extensão de mensagem de composição. AppName em reunião é uma dica de ferramenta que indica o nome do aplicativo na U-bar da reunião.
+A extensão de mensagem funciona conforme o esperado quando um usuário está em uma exibição em reunião. O usuário pode postar cartões de extensão de mensagem de composição. AppName em reunião é uma dica de ferramenta que indica o nome do aplicativo na U-bar da reunião.
 
 > [!NOTE]
 > Use a versão 1.7.0 ou superior do [SDK do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), pois as versões anteriores a ele não dão suporte ao painel lateral.

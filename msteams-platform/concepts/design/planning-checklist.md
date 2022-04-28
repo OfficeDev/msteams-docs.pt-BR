@@ -5,12 +5,12 @@ description: Perguntas a serem consideradas enquanto você planeja seu aplicativ
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765929"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104305"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 

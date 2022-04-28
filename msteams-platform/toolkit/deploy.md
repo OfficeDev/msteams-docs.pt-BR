@@ -6,20 +6,20 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614527"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104144"
 ---
 # <a name="deploy-to-the-cloud"></a>Implantar na nuvem
 
-Teams Toolkit ajuda você a implantar ou carregar o código front-end e back-end em seu aplicativo para seus recursos de nuvem provisionados no Azure.
+Teams Toolkit ajuda você a implantar ou carregar o código de front-end e back-end em seu aplicativo para seus recursos de nuvem provisionados no Azure.
 
-* A guia, como aplicativos front-end, é implantada no armazenamento do Azure e configurada para hospedagem estática da Web ou um site do sharepoint.
+* A guia, como aplicativos de front-end, é implantada no armazenamento do Azure e configurada para hospedagem na Web estática ou um site do SharePoint.
 * As APIs de back-end são implantadas nas funções do Azure.
-* O bot ou extensão de mensagens é implantado no serviço de aplicativo do Azure.
+* O bot ou a extensão de mensagem é implantado no serviço de aplicativo do Azure.
 
 ## <a name="prerequisite"></a>Pré-requisito
 
@@ -27,33 +27,33 @@ Teams Toolkit ajuda você a implantar ou carregar o código front-end e back-end
 
 > [!NOTE]
 >
-> * Verifique se você Teams projeto de aplicativo aberto em código VS.
+> * Verifique se você Teams projeto de aplicativo aberto no VS Code.
 > * Antes de implantar o código do projeto na nuvem, [provisione os recursos de nuvem](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implantar Teams aplicativos usando Teams Toolkit
 
-As guias de início ajudam você a implantar usando Teams Toolkit. Você pode usar o seguinte para implantar seu Teams aplicativo:
+Os guias de introdução ajudam você a implantar usando Teams Toolkit. Você pode usar o seguinte para implantar seu Teams aplicativo:
 
 * [Implantar seu aplicativo no Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [Implantar seu aplicativo para SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [Implantar seu aplicativo no SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>Detalhes sobre a carga de trabalho Teams aplicativo
+## <a name="details-on-teams-app-workload"></a>Detalhes sobre a carga Teams do aplicativo
 
-| Teams carga de trabalho do aplicativo | Código-fonte | Artefato de com build| Recurso Target |
+| Teams de trabalho do aplicativo | Código-fonte | Artefato de build| Recurso de destino |
 |-------------|----------|---------------|---------------|
-|Guias com React </br> A carga de trabalho front-end| `yourProjectFolder/tabs`| `tabs/build` |Armazenamento do Azure |
-|Guias com SharePoint </br> A carga de trabalho front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint catálogo de aplicativos |
-|APIs em funções do Azure </br> A carga de trabalho de back-end | `yourProjectFolder/api`| Não aplicável |Funções do Azure |
-|Bots e extensões de mensagens </br> A carga de trabalho de back-end | `yourProjectFolder/bot` | Não aplicável | Serviço de aplicativo do Azure |
+|Guias com React </br> A carga de trabalho de front-end| `yourProjectFolder/tabs`| `tabs/build` |Armazenamento do Azure |
+|Guias com SharePoint </br> A carga de trabalho de front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint de aplicativos |
+|APIs no Azure Functions </br> A carga de trabalho de back-end | `yourProjectFolder/api`| Não aplicável |Azure Functions |
+|Bots e extensões de mensagem </br> A carga de trabalho de back-end | `yourProjectFolder/bot` | Não aplicável | Serviço de aplicativo do Azure |
 
 > [!NOTE]
-> Quando você inclui o recurso de gerenciamento da API do Azure em seu projeto e dispara a implantação. Você pode publicar suas APIs nas funções do Azure no serviço de gerenciamento de API do Azure.
+> Quando você inclui o recurso de gerenciamento de API do Azure em seu projeto e dispara a implantação. Você pode publicar suas APIs no Azure Functions no serviço de gerenciamento de API do Azure.
 
 ## <a name="see-also"></a>Confira também
 
 * [Adicionar mais recursos de nuvem](add-resource.md)
 * [Criar e implantar um serviço de nuvem do Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Adicionar mais recursos Teams aplicativos](add-capability.md)
-* [Implantar código de projeto com pipelines CI/CD](use-CICD-template.md)
+* [Adicionar mais recursos Teams aplicativo](add-capability.md)
+* [Implantar o código do projeto com pipelines de CI/CD](use-CICD-template.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)
 * [Colaborar com outros desenvolvedores no projeto do Teams](TeamsFx-collaboration.md)

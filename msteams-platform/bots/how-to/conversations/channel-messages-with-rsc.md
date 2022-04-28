@@ -4,41 +4,43 @@ author: surbhigupta12
 description: Receber todas as mensagens de canal com permissões RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b18b4f64d34abc1dec71c526c1f604978dc77cdf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a78910b083943e5296f3e0d50eae00a713f194aa
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453450"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102056"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 
-O modelo de permissões de consentimento específico do recurso (RSC), originalmente desenvolvido para APIs Teams Graph, é estendido para cenários de bot.
+O modelo de permissões de RSC (consentimento específico do recurso), originalmente desenvolvido para APIs de Teams Graph, é estendido para cenários de bot.
 
-Usando o RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens de usuário nos canais padrão em uma equipe sem @mentioned. Esse recurso é habilitado especificando a `ChannelMessage.Read.Group` permissão no manifesto de um aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
+Usando a RSC, agora você pode solicitar que os proprietários da equipe consentam para que um bot receba mensagens do usuário entre canais padrão em uma equipe sem ser @mentioned. Essa funcionalidade é habilitada especificando `ChannelMessage.Read.Group` a permissão no manifesto de um aplicativo Teams RSC habilitado. Após a configuração, os proprietários da equipe podem conceder consentimento durante o processo de instalação do aplicativo.
 
-Para obter mais informações sobre a habilitação do RSC para seu aplicativo, consulte [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
+Para obter mais informações sobre como habilitar o RSC para seu aplicativo, consulte [o consentimento específico do recurso em Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>Habilitar bots para receber todas as mensagens de canal
 
-A `ChannelMessage.Read.Group` permissão RSC é estendida para bots. Com o consentimento do usuário, essa permissão permite que os aplicativos gráficos recebam todas as mensagens em uma conversa e bots recebam todas as mensagens de canal sem serem @mentioned.
+A `ChannelMessage.Read.Group` permissão RSC é estendida para bots. Com o consentimento do usuário, essa permissão permite que os aplicativos de grafo obtenham todas as mensagens em uma conversa e os bots recebam todas as mensagens de canal sem serem @mentioned.
 
 > [!NOTE]
 >
 > * Os serviços que precisam de acesso a todos os Teams de mensagens devem usar as APIs de Graph que também fornecem acesso a dados arquivados em canais e chats.
-> * Os bots devem usar a `ChannelMessage.Read.Group` permissão RSC adequadamente para criar e aprimorar a experiência envolvente para os usuários na equipe ou eles não passarão na aprovação do armazenamento. A descrição do aplicativo deve incluir como o bot usa os dados lidos.
+> * Os bots devem usar `ChannelMessage.Read.Group` a permissão RSC adequadamente para criar e aprimorar a experiência envolvente para os usuários na equipe ou eles não passarão na aprovação da loja. A descrição do aplicativo deve incluir como o bot usa os dados lidos.
 > * A `ChannelMessage.Read.Group` permissão RSC pode não ser usada por bots como uma maneira de extrair grandes quantidades de dados do cliente.
 
 ## <a name="update-app-manifest"></a>Atualizar manifesto do aplicativo
 
-Para que o bot receba todas as mensagens de canal, o RSC `ChannelMessage.Read.Group` deve ser configurado no manifesto do aplicativo Teams com a permissão especificada na `webApplicationInfo` propriedade.
+Para que o bot receba todas as mensagens de canal, o RSC `ChannelMessage.Read.Group` deve ser configurado no manifesto Teams aplicativo com a permissão especificada na `webApplicationInfo` propriedade.
+
 ![Atualizar manifesto do aplicativo](~/bots/how-to/conversations/Media/appmanifest.png)
 
-Veja a seguir um exemplo do `webApplicationInfo` objeto:
 
-* **id**: Sua Microsoft Azure Active Directory (ID do aplicativo do Azure AD). Isso pode ser o mesmo que sua ID de bot.
-* **resource**: Qualquer cadeia de caracteres. Este campo não tem nenhuma operação no RSC, mas deve ser adicionado e ter um valor para evitar a resposta de erro.
-* **applicationPermissions**: as permissões RSC para seu aplicativo com `ChannelMessage.Read.Group` devem ser especificadas. Para obter mais informações, consulte [permissões específicas do recurso](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+A seguir está um exemplo do `webApplicationInfo` objeto:
+
+* **id**: sua Microsoft Azure Active Directory (Azure AD) ID do aplicativo. Isso pode ser o mesmo que a ID do bot.
+* **resource**: qualquer cadeia de caracteres. Esse campo não tem nenhuma operação na RSC, mas deve ser adicionado e ter um valor para evitar a resposta de erro.
+* **applicationPermissions**: as permissões de RSC para seu aplicativo com `ChannelMessage.Read.Group` devem ser especificadas. Para obter mais informações, consulte [permissões específicas do recurso](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
 O código a seguir fornece um exemplo do manifesto do aplicativo:
 
@@ -54,33 +56,35 @@ O código a seguir fornece um exemplo do manifesto do aplicativo:
 
 ## <a name="sideload-in-a-team"></a>Sideload em uma equipe
 
-Para fazer sideload em uma equipe para testar, se todas as mensagens de canal em uma equipe com RSC são recebidas sem @mentioned:
+Para realizar o sideload em uma equipe para testar se todas as mensagens de canal em uma equipe com RSC são recebidas sem serem @mentioned:
 
 1. Selecione ou crie uma equipe.
-1. Selecione as releições &#x25CF;&#x25CF;&#x25CF; no painel esquerdo. O menu suspenso é exibido.
-1. Selecione **Gerenciar equipe** no menu suspenso. Os detalhes aparecem.
+1. Selecione as reticências &#x25CF;&#x25CF;&#x25CF; no painel esquerdo. O menu suspenso é exibido.
+1. Selecione **Gerenciar equipe** no menu suspenso. Os detalhes são exibidos.
 
-   ![Gerenciando aplicativos em equipe](~/bots/how-to/conversations/Media/managingteam.png)
+   ![Gerenciando aplicativos na equipe](~/bots/how-to/conversations/Media/managingteam.png)
 
-1. Selecione **Aplicativos**. Vários aplicativos aparecem.
+      :::image type="content" source="Media/managingteam.png" alt-text="gerenciando a equipe"border="true":::
+
+1. Selecione **Aplicativos**. Vários aplicativos são exibidos.
 1. Selecione **Upload um aplicativo personalizado** no canto inferior direito.
 
-    ![Carregando aplicativo personalizado](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
-
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="carregando aplicativo personalizado":::
+  
 1. Selecione o pacote do aplicativo na **caixa de diálogo** Abrir.
 1. Selecione **Abrir**.
 
-    ![Selecionar pacote de aplicativos](~/bots/how-to/conversations/Media/selectapppackage.png)
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Selecione o pacote do aplicativo"lightbox="Media/selectapppackage.png"border="true":::
 
-1. Selecione **Adicionar** no pop-up de detalhes do aplicativo, para adicionar o bot à sua equipe selecionada.
+1. Selecione **Adicionar** no pop-up de detalhes do aplicativo para adicionar o bot à equipe selecionada.
 
-    ![Adicionando o bot](~/bots/how-to/conversations/Media/addingbot.png)
+      :::image type="content" source="Media/addingbot.png" alt-text="Adicionando bot"lightbox="Media/addingbot.png"border="true":::
 
-1. Selecione um canal e insira uma mensagem no canal do bot.
+1. Selecione um canal e insira uma mensagem no canal para o bot.
 
     O bot recebe a mensagem sem ser @mentioned.
 
-    ![Bot recebe mensagem](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Mensagem de recebimento de bot"lightbox="Media/botreceivingmessage.png"border="true":::
 
 ## <a name="code-snippets"></a>Trechos de código
 
@@ -116,7 +120,7 @@ this.onMessage(async (context, next) => {
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Mensagens de canal com permissões RSC| Microsoft Teams exemplo de aplicativo demonstrando como um bot pode receber todas as mensagens de canal com RSC sem @mentioned.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|Mensagens de canal com permissões RSC| Microsoft Teams aplicativo de exemplo demonstrando como um bot pode receber todas as mensagens de canal com RSC sem ser @mentioned.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

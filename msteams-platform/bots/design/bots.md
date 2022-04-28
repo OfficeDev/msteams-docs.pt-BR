@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475822"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104382"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -92,7 +92,7 @@ Não se esqueça: no menu de comandos do bot (**O que posso fazer?**), você tam
 
 ### <a name="tours"></a>Tours
 
-Você pode incluir um tour com mensagens de boas-vindas e se o bot responder a algo como um comando de "ajuda". Um tour é a maneira mais eficaz de descrever o que o bot pode fazer. Se aplicável, eles também são ótimos para descrever outros recursos do seu aplicativo. Por exemplo, inclua capturas de tela da extensão de mensagem.
+Você pode incluir um tour com mensagens de boas-vindas e se o bot responder a algo como um comando de "ajuda". Um tour é a maneira mais eficaz de descrever o que o bot pode fazer. Se aplicável, eles também são ótimos para descrever outros recursos do seu aplicativo. Por exemplo, inclua capturas de tela da extensão de sua mensagem.
 
 > [!IMPORTANT]
 > Os tours devem estar acessíveis sem que o usuário precise se conectar.
@@ -159,8 +159,8 @@ Você pode usar bots nos seguintes contextos:
 |3|**Guias personalizadas**: abre outros conteúdos relacionados ao aplicativo.|
 |4|**Guia Sobre**: exibe informações básicas sobre o aplicativo.|
 |5|**Balão de chat**: as conversas do bot usam a estrutura de mensagens do Microsoft Teams.|
-|6|**Cartão Adaptável**: se as respostas do bot incluírem Cartões Adaptáveis, o cartão ocupará toda a largura do balão de chat.|
-|7|**Menu de comando**: exibe os comandos padrão do bot (definidos por você).|
+|6 |**Cartão Adaptável**: se as respostas do bot incluírem Cartões Adaptáveis, o cartão ocupará toda a largura do balão de chat.|
+|7 |**Menu de comando**: exibe os comandos padrão do bot (definidos por você).|
 
 ### <a name="command-menu"></a>Menu de comando
 

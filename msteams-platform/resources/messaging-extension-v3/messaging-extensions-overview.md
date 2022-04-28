@@ -1,37 +1,37 @@
 ---
-title: Desenvolver extensões de mensagens
-description: Descreve como começar a usar extensões de mensagens em Microsoft Teams
+title: Desenvolver extensões de mensagem
+description: Descreve como começar a usar extensões de mensagem no Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: extensões de mensagens do teams messaging extensions
-ms.openlocfilehash: ea07ae8c7a7a16f5187adfe6dbe5f52d8bf47056
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: extensões de mensagem de extensões de mensagem do Teams
+ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155186"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104327"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>Desenvolver extensões de mensagens para Microsoft Teams
+# <a name="develop-message-extensions-for-microsoft-teams"></a>Desenvolver extensões de mensagem para Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Extensões de mensagens são uma maneira poderosa de os usuários se envolverem com seu aplicativo Microsoft Teams. Com essa funcionalidade, os usuários podem consultar ou postar informações de e para o serviço e postar essas informações, na forma de cartões, em uma mensagem.
+As extensões de mensagem são uma maneira eficiente para os usuários se envolverem com seu aplicativo Microsoft Teams. Com essa funcionalidade, os usuários podem consultar ou postar informações de e para seu serviço e postar essas informações, na forma de cartões, diretamente em uma mensagem.
 
-![Exemplo de cartão de extensão de mensagens](~/assets/images/compose-extensions/ceexample.png)
+![Exemplo de cartão de extensão de mensagem](~/assets/images/compose-extensions/ceexample.png)
 
-As extensões de mensagens aparecem ao longo da parte inferior da caixa de redação. Alguns são integrados, como Emoji, Giphy e Sticker. Escolha o **botão Mais Opções** (**&#8943;**) para ver outras extensões de mensagens, incluindo aquelas que você adiciona na galeria de aplicativos ou carrega você mesmo.
+As extensões de mensagem aparecem na parte inferior da caixa de redação. Alguns são internos, como Emoji, Giphy e Sticker. Escolha o **botão Mais Opções** (**&#8943;**) para ver outras extensões de mensagem, incluindo aquelas que você adiciona da galeria de aplicativos ou carrega por conta própria.
 
-Como você usaria extensões de mensagens? Aqui estão algumas possibilidades:
+Como você usaria extensões de mensagem? Aqui estão algumas possibilidades:
 
 * Itens de trabalho e bugs
 * Tíquetes de suporte ao cliente
-* Gráficos de uso e relatórios
+* Gráficos e relatórios de uso
 * Imagens e conteúdo de mídia
-* Oportunidades de vendas e leads
+* Oportunidades de vendas e clientes potenciais
 
-## <a name="types-of-messaging-extensions"></a>Tipos de extensões de mensagens
+## <a name="types-of-message-extensions"></a>Tipos de extensões de mensagem
 
-Há basicamente dois tipos de extensões de mensagens que você pode criar para Teams hoje. Os tópicos a seguir orientarão você durante o processo de criação deles:
+Há principalmente dois tipos de extensões de mensagem que você pode criar para Teams hoje. Os tópicos a seguir orientarão você durante o processo de criação deles:
 
-* [Extensões de mensagens baseadas em pesquisa:](~/resources/messaging-extension-v3/search-extensions.md)consulte seu serviço para obter informações e insira-as em uma mensagem. Exemplo: Procure um item de trabalho
-* [Extensões de mensagens baseadas em](~/resources/messaging-extension-v3/create-extensions.md)ação : Coletar informações do usuário e postar em um serviço de terceiros. Exemplo: Criar um item de trabalho
+* [Extensões de mensagem baseadas em pesquisa](~/resources/messaging-extension-v3/search-extensions.md): consulte seu serviço para obter informações e insira-as em uma mensagem. Exemplo: Pesquisar um item de trabalho
+* [Extensões de mensagem baseadas em ação](~/resources/messaging-extension-v3/create-extensions.md): colete informações do usuário e poste em um serviço de terceiros. Exemplo: Criar um item de trabalho

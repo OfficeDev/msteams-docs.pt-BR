@@ -4,12 +4,12 @@ description: Saiba como seus aplicativos Microsoft Teams podem interagir com os 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: chamadas de chamadas de áudio vídeo IVR voz online reuniões em tempo real fluxos de mídia bot
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073820"
+ms.locfileid: "65102492"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Chamadas e bots de reuniões online
 
@@ -45,7 +45,7 @@ As chamadas Teams podem ser apenas áudio ou áudio e vídeo. Em vez de chamada 
 
 As chamadas são ponto a ponto entre uma pessoa e seu bot ou são multiparte entre o bot e duas ou mais pessoas em uma chamada em grupo.
 
-![Tipos de chamada](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Tipos de chamada"border="true":::
 
 A seguir estão os diferentes tipos de chamada e permissões necessárias para a chamada:
 
@@ -63,7 +63,7 @@ Há dois tipos de sinais, chamada de entrada e em chamada. A seguir estão os di
 
 * Para receber uma chamada de entrada, insira um ponto de extremidade nas configurações do bot. Esse ponto de extremidade recebe uma notificação quando uma chamada de entrada é iniciada. Você pode atender a chamada, rejeitá-la ou redirecioná-la para outra pessoa.
 
-    ![Tratamento de chamadas](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Tratamento de chamadas"border="true":::
 
 * Quando um bot está em uma chamada, há APIs para desativar e desativar o bot e iniciar ou parar de compartilhar conteúdo de vídeo ou área de trabalho com outros participantes.
 * O bot também pode acessar a lista de participantes, convidar novos participantes e silenciá-los.

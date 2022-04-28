@@ -6,12 +6,12 @@ keywords: webhook de saída das guias do Teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685622"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104018"
 ---
 # <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
 
@@ -39,7 +39,7 @@ A tabela a seguir fornece os recursos e a descrição de um Webhook de Entrada:
 
 > [!NOTE]
 >
-> * Bots do Teams, extensões de mensagens, Webhook de entrada e Bot Framework suporte Cartões Adaptáveis. Os Cartões Adaptáveis são uma estrutura de plataforma de cartão cruzado aberta que é usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, os [Conectores Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) não suportam os Cartões Adaptáveis. No entando, é impossível criar um [fluxo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publicam Cartões Adaptáveis para um canal Teams.
+> * Bots do Teams, extensões de mensagens, Webhook de entrada e Bot Framework suporte a Cartões Adaptáveis. Os Cartões Adaptáveis são uma estrutura de plataforma de cartão cruzado aberta que é usada em todas as plataformas, como Windows, Android, iOS e assim por diante. Atualmente, os [Conectores Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) não suportam os Cartões Adaptáveis. No entando, é impossível criar um [fluxo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publicam Cartões Adaptáveis para um canal Teams.
 > * Para mais informações sobre cartões e webhooks, veja [Cartões Adaptáveis e Webhooks de Entrada](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
@@ -95,5 +95,5 @@ Para remover um Webhook de Entrada de um canal do Teams, siga as seguintes etapa
 * [Criar um Webhook de Saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Compartilhar com Teams de aplicativos Web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Compartilhar no Teams a partir de aplicativos Web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrar aplicativos Web](~/samples/integrate-web-apps-overview.md)

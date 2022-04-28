@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: casos de uso funcionalidade do dispositivo de extensibilidade pontos de entrada
-ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766034"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104025"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -56,7 +56,7 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams." border="true":::
 
-    Seus aplicativos aparecem no Teams como guias, bots, extensões de mensagens, conectores e webhooks ou como um aplicativo de vários recursos. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
+    Seus aplicativos aparecem no Teams como Guias, Bots, Extensões de Mensagem, Conectores e Webhooks ou como um aplicativo de várias funcionalidades. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
 
     Juntos, essas funcionalidades dão vida à sua solução de aplicativo.
 
@@ -67,10 +67,9 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 * Integre seu aplicativo com o Teams e outros aplicativos, tais como o Microsoft 365, Microsoft Graph e muito mais.
 * Utilize o Portal do Desenvolvedor para configurar, gerenciar e implantar seu aplicativo.
 
-<details>
-<summary><b>Saiba mais sobre o Nuvem da Comunidade Governamental (GCC)</b></summary>
+#### <a name="government-community-cloud"></a>Nuvem da Comunidade Governamental
 
-Nuvem da Comunidade Governamental é uma cópia do ambiente comercial focada no governo. O Departamento de Defesa (DOD) e os prestadores de serviço federais devem atender aos rigorosos requisitos de segurança cibernética e conformidade. Para esse fim, a GCC-High foi criada para atender às necessidades dos prestadores de serviços Federais e do DOD. A GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberano. A nuvem do DOD foi criada somente para o Departamento de Defesa.
+Nuvem da Comunidade Governamental (GCC) é uma cópia do ambiente comercial focada no governo. O Departamento de Defesa (DOD) e os prestadores de serviço federais devem atender aos rigorosos requisitos de segurança cibernética e conformidade. Para esse fim, a GCC-High foi criada para atender às necessidades dos prestadores de serviços Federais e do DOD. A GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberano. A nuvem do DOD foi criada somente para o Departamento de Defesa.
 
 A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GCC-High e o DOD:
 
@@ -83,7 +82,7 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 | Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️ | ✔️ |
 | Sideload de aplicativos | ✔️ | ❌ | ❌ |
 | Bots personalizados ou Lob | ✔️ | ❌ | ❌ |
-| Extensões de mensagens personalizadas | ❌ | ❌ | ❌ |
+| Extensões de mensagem personalizadas | ❌ | ❌ | ❌ |
 | Conectores personalizados | ❌ | ❌ | ❌ |
 
 A lista a seguir ajuda a identificar a disponibilidade da GCC, GCC High e do DOD para os recursos:

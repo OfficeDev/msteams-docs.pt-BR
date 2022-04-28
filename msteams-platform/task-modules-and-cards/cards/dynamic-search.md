@@ -5,12 +5,12 @@ description: Descreve a pesquisa typeahead com o controle Input.ChoiceSet em Car
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073786"
+ms.locfileid: "65103436"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Pesquisa de preenchimento automático em cartões adaptáveis
 
@@ -61,7 +61,7 @@ A imagem a seguir ilustra a experiência móvel da pesquisa typeahead:
 ---
 
 > [!NOTE]
-> Você não pode obter experiências avançadas de cartão com pesquisa dinâmica, como extensões de mensagens baseadas em consulta.
+> Você não pode obter experiências avançadas de cartão com pesquisa dinâmica, como extensões de mensagem baseadas em consulta.
 
 ## <a name="implement-typeahead-search"></a>Implementar a pesquisa typeahead
 
@@ -88,7 +88,7 @@ As propriedades a seguir são as novas adições ao esquema [`Input.ChoiceSet`](
 | Propriedade| Tipo | Obrigatório | Descrição |
 |-----------|------|----------|-------------|
 | type | Data.Query | Sim | Especifica que é um objeto Data.Query.|
-| Dataset | String | Sim | Especifica o tipo de dados que é buscado dinamicamente. |
+| Dataset | Cadeia de caracteres | Sim | Especifica o tipo de dados que é buscado dinamicamente. |
 | value | String | Não | Popula a solicitação de invocação para o bot com a entrada que o usuário forneceu ao `ChoiceSet`. |
 | count | Número | Não | Popula a solicitação de invocação para o bot para especificar o número de elementos que devem ser retornados. O bot o ignorará se os usuários desejarem enviar um valor diferente. |
 | skip | Número | Não | Popula a solicitação de invocação para o bot para indicar que os usuários querem paginar e avançar na lista. |

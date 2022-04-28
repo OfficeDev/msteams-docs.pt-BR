@@ -5,12 +5,12 @@ keywords: recebimento de envio de arquivos de bots do Teams
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 22c88a435628c34942eb8f5652b9170f861a0446
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820297"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102514"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar e receber arquivos por meio do bot
 
@@ -99,7 +99,7 @@ Para carregar um arquivo para um usuário:
 
 A seguinte mensagem da área de trabalho contém um objeto de anexo simples solicitando permissão do usuário para carregar o arquivo:
 
-![Cartão de consentimento solicitando permissão do usuário para carregar arquivo](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Cartão de consentimento solicitando permissão do usuário para carregar arquivo"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 A seguinte mensagem móvel contém um objeto de anexo solicitando permissão do usuário para carregar o arquivo:
 
@@ -200,7 +200,7 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 
 Busque imagens embutidas que fazem parte da mensagem usando o token de acesso do Bot.
 
-![Imagem embutida](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Imagem embutida"border="true":::
 
 O código a seguir mostra um exemplo de busca de imagens embutidas da mensagem:
 
