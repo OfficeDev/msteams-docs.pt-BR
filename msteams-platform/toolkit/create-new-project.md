@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910547"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104151"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 
@@ -25,7 +25,7 @@ Para criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams, v
 1. Abra o Visual Studio Code.
 1. Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: na barra Visual Studio Code lateral.
 1. Selecione **Criar um novo aplicativo do Teams**.
-1. Selecione na guia de recursos disponíveis, bot, extensão de mensagens ou uma guia usando a Estrutura do SharePoint (SPFx). 
+1. Selecione na guia recursos disponíveis, bot, extensão de mensagem ou uma guia usando a Estrutura do SharePoint (SPFx). 
 1. Selecione pelo menos uma opção para começar a criar o aplicativo Teams.
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>Criar um novo aplicativo do Teams usando exemplos de exibição

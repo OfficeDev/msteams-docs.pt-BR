@@ -136,7 +136,7 @@
       href: m365-apps/using-teams-client-sdk-preview.md
     - name: Bot Framework do Node.js para bots e extensões de mensagens (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
-    - name: SDK do Bot Framework do .NET para bots e extensões de mensagens(GitHub)
+    - name: Bot Framework do .NET para bots e extensões de mensagens(GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: SDKs do Microsoft Graph
       href: /graph/sdks/sdks-overview
@@ -176,9 +176,9 @@
               href: resources/bot-v3/bots-text-formats.md
             - name: Testar um bot
               href: resources/bot-v3/bots-test.md
-        - name: Extensões de Mensagens - SDK (v3)
+        - name: Extensões de mensagens SDK (v3)
           items:
-            - name: Extensões de Mensagens - SDK (v3)
+            - name: Extensões de mensagens SDK (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: Extensões de pesquisa
               href: resources/messaging-extension-v3/search-extensions.md
@@ -265,7 +265,7 @@
           href: resources/media-formats.md
     - name: Alterações na API de bot para membros da equipe/chat
       href: resources/team-chat-member-api-changes.md
-- name: Construir extensões de mensagens
+- name: Compilar extensões de mensagens.
   items:
     - name: Visão Geral
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -379,7 +379,7 @@
       items:
         - name: Adicionar autenticação à sua extensão de mensagens
           href: messaging-extensions/how-to/add-authentication.md
-        - name: Habilitar SSO para extensões de mensagens
+        - name: Habilitar Logon único para extensões de mensagens
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Integrar as funcionalidades do dispositivo
   items:
