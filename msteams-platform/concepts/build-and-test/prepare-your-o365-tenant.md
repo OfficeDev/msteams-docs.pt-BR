@@ -1,66 +1,66 @@
 ---
 title: Preparar o locatário do Microsoft 365
-description: Como começar a usar Teams no Microsoft 365
+description: Como começar a usar o Teams no Microsoft 365
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Configurar Microsoft 365 locatário Teams carregamento
-ms.openlocfilehash: 9543ef4fcd3065def2f25aa8180c157a55b1d2ba
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Configurar Microsoft 365 de Teams de locatário que está carregando
+ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399125"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111392"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 
-Microsoft 365 assinantes podem desenvolver aplicativos para Microsoft Teams com um dos seguintes planos:
+Assinantes do Microsoft 365 podem desenvolver aplicativos para Microsoft Teams com um dos seguintes planos:
 
 * Básico
 * Padrão
 * Enterprise E1, E3 e E5
-* Desenvolvedor
+* Developer
 * Education, Education Plus e Education E5
 
 > [!NOTE]
 >
-> * Para obter mais informações sobre Microsoft 365 assinaturas, consulte [planos](https://products.office.com/business/compare-more-office-365-for-business-plans).
-> * Teams também está disponível para clientes que assinaram o E4 antes de sua [aposentadoria](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
+> * Para obter mais informações sobre assinaturas do Microsoft 365, consulte [planos](https://products.office.com/business/compare-more-office-365-for-business-plans).
+> * Teams também está disponível para clientes que assinaram o E4 antes de sua [desativação](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
 
-## <a name="create-your-development-environment"></a>Criar seu ambiente de desenvolvimento
+## <a name="create-your-development-environment"></a>Preparar seu ambiente de desenvolvimento
 
-Se você não tiver uma conta Microsoft 365, você deve se inscrever para uma assinatura Microsoft 365 [programa de desenvolvedor](https://developer.microsoft.com/microsoft-365/dev-program). A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a use para atividades de desenvolvimento. Se você tiver uma assinatura Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura Microsoft 365 [desenvolvedor gratuita](https://aka.ms/MyVisualStudioBenefits). Ele está ativo enquanto sua assinatura Visual Studio está ativa. Para obter mais informações, [consulte configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
+Se você não tiver uma conta do Microsoft 365, deverá assinar o [programa para desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program). A assinatura é gratuita por 90 dias e continua a ser renovada desde que você a esteja usando em atividades de desenvolvimento. Se você tiver uma assinatura do Visual Studio Enterprise ou Professional, ambos os programas incluem uma assinatura de [desenvolvedor gratuita](https://aka.ms/MyVisualStudioBenefits) do Microsoft 365. Ele estará ativo desde que sua assinatura do Visual Studio esteja ativa. Para mais informações, confira [Configurar uma assinatura de desenvolvedor do Microsoft 365](/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-teams-for-your-organization"></a>Habilitar Teams para sua organização
 
-Enable Teams for your organization and for more information, see [enableing Teams for your organization](/microsoftteams/enable-features-office-365).
+Habilite Teams para sua organização e, para obter mais informações, confira [Como habilitar o Teams para sua organização](/microsoftteams/enable-features-office-365).
 
-## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Habilitar Teams aplicativos personalizados e ativar o carregamento personalizado de aplicativos
+## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Habilitar aplicativos personalizados do Teams e ativar o carregamento de aplicativo personalizado
 
-Para ativar o carregamento ou sideload de aplicativos personalizados para o locatário do desenvolvedor:
+Para ativar o carregamento ou sideload de aplicativo personalizado para seu locatário de desenvolvedor:
 
-1. Entre [no Centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com suas credenciais de administrador.
+1. Acessar o [Centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com suas credenciais de administrador.
 
-2. Selecione **Mostrar Tudo** >  **Teams**.
+2. Selecione **Mostrar Tudo** > **Teams**.
 
-    ![Menu centro de administração](~/assets/images/prepare-test-tenant/admin-center.png)
+    ![Menu do Centro de administração](~/assets/images/prepare-test-tenant/admin-center.png)
 
     > [!Note]
-    > Pode levar até 24 horas para que a opção **Teams** apareça. Você pode [carregar seu aplicativo personalizado em um ambiente Teams para](/microsoftteams/upload-custom-apps#validate) teste e validação nesse momento.
+    > Pode levar até 24 horas para a opção **Teams** ser exibida. Você pode [carregar seu aplicativo personalizado em um ambiente do Teams](/microsoftteams/upload-custom-apps#validate) para teste e validação naquele momento.
 
-3. Navegue **até Teams** **appsSetup** >  **PoliciesGlobal** > .
+3. Navegue até **Aplicativos do Teams** > **Políticas de Configuração** > **Global**.
 
-   ![Ativar o exibição de sideload](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+   ![Ativar o modo de exibição de sideload](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
-4. Alterne **Upload aplicativos personalizados** para a **posição** On.
+4. Alterne **Carregar aplicativos personalizados** para a posição **On**.
 
 5. Selecione **Salvar**. Seu locatário de teste pode permitir o sideload de aplicativo personalizado.
 
     > [!Note]
-    > Pode levar até 24 horas para que o sideload seja ativo. Nesse ínterim, você pode usar **o upload para \<your tenant>** testar seu aplicativo. Para carregar o arquivo .zip pacote do aplicativo, consulte [carregar aplicativos personalizados](/microsoftteams/upload-custom-apps#upload).
+    > Pode levar até 24 horas para que o sideload esteja ativo. Nesse ínterim, você pode usar o **upload para \<your tenant>** testar seu aplicativo. Para carregar o arquivo do pacote .zip do aplicativo, consulte [Carregar aplicativos personalizados](/microsoftteams/upload-custom-apps#upload).
 
-    ![Upload de aplicativo](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+    ![Carregar modo de exibição do aplicativo](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-Para obter informações completas sobre como essas configurações interagem, consulte [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
+Para obter informações completas sobre como essas configurações interagem, consulte [gerenciar políticas e configurações de aplicativo personalizadas no Teams](/microsoftteams/teams-custom-app-policies-and-settings) e [gerenciar políticas de configuração de aplicativo no Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="next-step"></a>Próxima etapa
 
