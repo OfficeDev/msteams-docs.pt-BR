@@ -4,16 +4,16 @@ description: Descreve opções para testar e depurar aplicativos do Microsoft Te
 keywords: as equipes executam aplicativos de depuração host hospedado na nuvem local
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 957d673bfd3f7bbfaab05fd035e8de809fd66983
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111532"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135756"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolher uma configuração para testar e depurar seu aplicativo Microsoft Teams
 
-Os aplicativos do Microsoft Teams contêm um ou mais recursos e as maneiras de executá-los ou até mesmo hospedá-los são diferentes. Para depuração, use uma das seguintes maneiras:
+Os aplicativos do Microsoft Teams contêm um ou mais recursos e as maneiras de executar ou até mesmo hospedá-los são diferentes. Para depuração, use uma das seguintes maneiras:
 
 * **Puramente local**: para bots, você pode testar sua experiência no Bot Emulator. Para outros conteúdos, você pode executar localmente em seu navegador e endereçar o conteúdo por meio de `http://localhost`.
 * **Hospedado localmente no Teams**: envolve executar o aplicativo localmente no software de encapsulamento e [criar um pacote](~/concepts/build-and-test/apps-package.md) para [carregar](~/concepts/deploy-and-publish/apps-upload.md) no Teams. Isso permite que você execute e depure facilmente seu aplicativo no cliente do Teams.
@@ -59,18 +59,19 @@ Para usar o ngrok em seu projeto com base nos recursos que você está usando, v
 Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar se o ngrok está funcionando testando a resposta do bot na janela de chat de teste do portal do Bot Framework. Novamente, como o emulador, este teste não permite que você acesse a funcionalidade específica do Teams.
 
 > [!NOTE]
-> Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> * Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> * Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
 
 ## <a name="cloud-hosted"></a>Hospedado na nuvem
 
 Você pode usar qualquer serviço endereçável externamente para hospedar seu código de desenvolvimento e produção e seus pontos de externamente HTTPS. Não há expectativa de que seus recursos residam no mesmo serviço. Exigimos que todos os domínios sejam acessados ​​de seus aplicativos do Microsoft Teams listados no objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) no arquivo `manifest.json`.
 
 > [!NOTE]
-> Para garantir um ambiente seguro, seja explícito sobre o domínio e os subdomínios exatos aos quais você faz referência e esses domínios devem estar sob seu controle. Por exemplo, `*.azurewebsites.net` não é recomendado, mas `contoso.azurewebsites.net` é recomendado.
+> Para garantir um ambiente seguro, seja claro sobre o domínio e os subdomínios exatos que você referencia e esses domínios devem estar em seu controle. Por exemplo, `*.azurewebsites.net` não é recomendado, mas `contoso.azurewebsites.net` é recomendado.
 
 ## <a name="load-and-run-your-experience"></a>Carregar e executar a experiência
 
-Para carregar e executar sua experiência no Microsoft Teams, você precisa criar um pacote e carregá-lo no Teams. Para saber mais, confira:
+Para carregar e executar sua experiência no Microsoft Teams, crie um pacote e carregue-o no Teams. Para obter mais informações, confira:
 
 * [Criar o pacote para o aplicativo Microsoft Teams](~/concepts/build-and-test/apps-package.md).
 * [Carregar seu aplicativo no Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

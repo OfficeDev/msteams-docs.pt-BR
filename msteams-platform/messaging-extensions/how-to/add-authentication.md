@@ -5,12 +5,12 @@ description: Saiba como adicionar autenticação a uma extensão de mensagem usa
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1aa64241c85617bec9a116ab3ff9357b93bd2c44
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111602"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135707"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -68,8 +68,8 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 
 > [!NOTE]
 >
-> * Para que a experiência de entrada seja hospedada em uma janela pop-up do Teams, a parte do domínio da URL deve estar na lista de domínios válidos do seu aplicativo. Para obter mais informações, confira [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
-> * O tamanho do pop-up de autenticação pode ser definido incluindo parâmetros da cadeia de caracteres de consulta de largura e altura, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`.
+> * Para que a experiência de entrada seja hospedada em uma janela pop-up do Teams, a parte do domínio da URL deve estar na lista de aplicativos de domínios válidos. Para obter mais informações, confira [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema do manifesto.
+> * O tamanho do pop-up de autenticação pode ser definido incluindo parâmetros da cadeia de caracteres de consulta de largura e altura, `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"`.
 
 ### <a name="start-the-sign-in-flow"></a>Inicie o fluxo de entrada
 
@@ -81,7 +81,7 @@ Assim como com outras experiências inseridas em execução no Microsoft Teams, 
 
 Quando a solicitação de entrada for concluída e redirecionada de volta para sua página, ela deverá executar as seguintes etapas:
 
-1. Gerar um código de segurança, um número aleatório. Você deve armazenar esse código em cache em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
+1. Gere um código de segurança, um número aleatório. Você deve armazenar esse código em cache em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
 1. Chamar `microsoftTeams.authentication.notifySuccess` e passar o código de segurança.
 
 Nesse ponto, a janela é fechada e o controle é passado para o cliente do Teams. O cliente agora emiti novamente a consulta do usuário original, juntamente com o código de segurança na propriedade `state`. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.

@@ -6,16 +6,16 @@ keywords: conector do Office365 para equipes
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9381fb9a55b6a48126e8c157040745d56708e9f8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
+ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111609"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65136965"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
-Com os aplicativos do Microsoft Teams, você pode adicionar seu Conector do Office 365 existente ou criar um novo no Teams. Para saber mais, veja [compilar seu próprio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+Com os aplicativos do Microsoft Teams, você pode adicionar seu Conector do Office 365 existente ou criar um novo dentro do Teams. Para saber mais, confira [Criar seu próprio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 ## <a name="add-a-connector-to-teams-app"></a>Adicionar um conector ao aplicativo Teams
 
@@ -52,7 +52,7 @@ Para integrar a experiência de configuração:
     > Você deve chamar `microsoftTeams.settings.setValidityState(true)` como uma resposta à seleção do usuário ou à atualização de campo.
 
 1. Registre `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos, que é chamado quando o usuário seleciona **Salvar**.
-1. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. As configurações salvas também serão mostradas na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
+1. Chame `microsoftTeams.settings.setSettings()` para salvar as configurações do conector. As configurações salvas também são mostradas na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
 1. Chame `microsoftTeams.settings.getSettings()` para buscar propriedades de webhook, incluindo a URL.
 
     > [!NOTE]
@@ -206,28 +206,9 @@ O seguinte arquivo manifest.json contém os elementos necessários para testar e
 }
 ```
 
-## <a name="enable-or-disable-connectors-in-teams"></a>Habilitar ou desabilitar conectores no Teams
-
-O módulo PowerShell V2 do Exchange Online usa autenticação moderna e funciona com a autenticação multifator, chamada MFA para se conectar a todos os ambientes do PowerShell relacionados ao Exchange Microsoft 365. Os administradores podem usar o PowerShell do Exchange Online para desabilitar conectores para um locatário inteiro ou uma caixa de correio de grupo específica, afetando todos os usuários nesse locatário ou caixa de correio. Não é possível desabilitar para alguns e não para outros. Além disso, os conectores são desabilitados por padrão para Nuvem da Comunidade Governamental, chamados de locatários GCC.
-
-A configuração de nível de locatário substitui a configuração de nível de grupo. Por exemplo, se um administrador habilitar conectores para o grupo e desabilitá-los no locatário, os conectores do grupo serão desabilitados. Para habilitar um conector no Teams, [conectar-se ao PowerShell do Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) usando autenticação moderna com ou sem MFA.
-
-### <a name="commands-to-enable-or-disable-connectors"></a>Comandos para habilitar ou desabilitar conectores
-
-Execute os seguintes comandos no PowerShell do Exchange Online:
-
-* Para desabilitar conectores para o locatário: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
-* Para desabilitar mensagens acionáveis para o locatário: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
-* Para habilitar conectores para o Teams, execute os seguintes comandos:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
-  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
-
-Para obter mais informações sobre a troca de módulos do PowerShell, consulte [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar ou desabilitar conectores do Outlook, [conectar aplicativos aos seus grupos no Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab).
-
 ## <a name="test-your-connector"></a>Testar seu conector
 
-Para testar seu conector, carregue-o em uma equipe com qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto dos dois arquivos de ícone e conectores do Painel do Desenvolvedor, modificados conforme indicado em [Incluir o conector em seu Manifesto](#include-the-connector-in-your-manifest).
+Para testar seu conector, carregue-o para uma equipe com qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto dos dois arquivos de ícone e conectores do Painel do Desenvolvedor, modificado conforme indicado em [Incluir o conector no seu manifesto](#include-the-connector-in-your-manifest).
 
 Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. Role até a parte inferior para ver o aplicativo na seção **Carregado**:
 
@@ -239,26 +220,6 @@ Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. R
 Para verificar se a ação `HttpPOST` está funcionando corretamente, [envie mensagens ao conector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 Siga a [guia passo a passo](../../sbs-teams-connectors.yml) para criar e testar os conectores no Microsoft Teams.
-
-## <a name="publish-connectors-for-the-organization"></a>Publicar conectores para a organização
-
-Se quiser que o conector esteja disponível apenas para os usuários em sua organização, você pode carregar seu aplicativo de conector personalizado para seu [catálogo de Aplicativos da organização](~/concepts/deploy-and-publish/apps-publish.md).
-
-Depois de carregar o pacote do aplicativo para configurar e usar o conector em uma equipe, instale o conector do catálogo de aplicativos da organização.
-
-Para configurar um conector:
-
-1. Selecione **Aplicativos** na barra de navegação à esquerda.
-1. Na seção **Aplicativos**, selecione **Conectores**.
-1. Selecione o conector que você deseja adicionar. Uma janela de diálogo pop-up é exibida.
-1. No menu suspenso, selecione **Adicionar uma equipe**.
-1. Na caixa de pesquisa, digite um nome de equipe ou canal.
-1. Selecione **Configurar um Conector** no menu suspenso no canto inferior direito da janela de diálogo.
-
-> [!IMPORTANT]
-> Atualmente, os conectores personalizados não estão disponíveis no Nuvem da Comunidade Governamental (GCC), GCC-High e DoD (Departamento de Defesa).
-
-O conector está disponível na seção ●●● > **Mais opções** > **Conectores** > **Todos** > **Conectores para sua equipe** para essa equipe. Você pode navegar navegando até esta seção ou pesquisar o aplicativo do conector. Para configurar ou modificar o conector, selecione **Configurar**.
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuir webhook e conector
 
@@ -284,3 +245,5 @@ Siga o a [guia passo a passo](../../sbs-teams-connectors.yml) para criar e testa
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Criar um webhook de Entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Como os administradores podem habilitar ou desabilitar conectores](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [Como os administradores podem publicar conectores personalizados na sua organização](/MicrosoftTeams/office-365-custom-connectors)

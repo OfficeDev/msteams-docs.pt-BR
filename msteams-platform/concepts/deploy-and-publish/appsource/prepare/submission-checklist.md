@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: armazenamento loja distribuir validar aplicativo pacote orientações localizar
-ms.openlocfilehash: 4d3116a305ee1b5d353310bdc047c282822af173
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501988"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135749"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio para a loja do Microsoft Teams
 
@@ -24,14 +24,14 @@ Antes de enviar seu aplicativo para o [Partner Center](/office/dev/store/use-par
 Embora seu aplicativo possa estar funcionando em um ambiente de teste, você deve verificar o pacote do aplicativo para evitar ter problemas durante o processo de envio.
 
 > [!NOTE]
-> O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos do Teams com o novo [Portal do Desenvolvedor](https://dev.teams.microsoft.com/)
+ > Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor[Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 A ferramenta de validação de aplicativos do Microsoft Teams ajuda você a identificar e corrigir problemas antes de enviar para o Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo comparando-as aos mesmos casos de teste usados durante a validação do repositório.
 
 1. Vá para a [Ferramenta de validação de aplicativos do Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Observação: a ferramenta também está disponível no [App Studio](../../../build-and-test/app-studio-overview.md).)
 1. Carregue o pacote do aplicativo para executar os testes automatizados.
 1. Vá para a **Lista de verificação preliminar** e analise os casos de teste que são difíceis de automatizar.
-1. [Corrija os problemas com suas configurações](~/resources/schema/manifest-schema.md) ou aplicativo em geral. Esses problemas ocorrem quando os testes automatizados retornam erros ou se você não tiver cumprido todos os critérios da lista de verificação.
+1. [Corrigir problemas com suas configurações](~/resources/schema/manifest-schema.md) ou aplicativo em geral. Esses problemas ocorrerão se os testes automatizados apresentarem erros ou se você não tiver atendido a todos os critérios da lista de verificação.
 
 ## <a name="compile-testing-instructions"></a>Compilar as instruções de teste
 
@@ -95,7 +95,7 @@ Você deve ter uma descrição curta e longa do seu aplicativo.
 
 #### <a name="short-description"></a>Descrição curta
 
-Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcionado ao seu público-alvo. Limite a descrição curta a uma frase.
+Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcionado ao seu público-alvo. Mantenha a descrição curta em uma frase.
 
 :::row:::
 
@@ -165,7 +165,7 @@ Para obter informações sobre práticas recomendadas, consulte os seguintes rec
 
 ### <a name="create-a-video"></a>Criar um vídeo
 
-Incluir um vídeo na sua listagem pode ser a maneira mais eficaz de comunicar por que as pessoas devem usar seu aplicativo. Aborde as seguintes questões no seu vídeo:
+Um vídeo em sua listagem pode ser a maneira mais eficaz de comunicar por que as pessoas devem usar seu aplicativo. Responda as seguintes perguntas em um vídeo:
 
 * A quem seu aplicativo se destina?
 * Quais problemas seu aplicativo pode resolver?
@@ -177,7 +177,7 @@ Você pode adicionar um URL para o seu vídeo no YouTube ou no Vimeo.
 #### <a name="best-practices-for-videos"></a>Práticas recomendadas para vídeos
 
 * Limite seu vídeo a uma duração entre 60 e 90 segundos.
-* Busque a mais alta qualidade. Em uma listagem, os usuários verão seu vídeo antes das capturas de tela.
+* Garanta a qualidade. Em uma listagem, os usuários verão seu vídeo antes das capturas de tela.
 * Comunique o valor do produto de forma narrativa.
 * Demonstre como o produto funciona.
 

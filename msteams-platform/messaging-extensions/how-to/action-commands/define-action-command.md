@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens c
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ef9f1c45ec3b2d1df4bf5449885263034f19fde7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111679"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135742"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -48,13 +48,13 @@ Primeiro, você deve decidir o local de onde o comando de ação deve ser invoca
 
 A imagem a seguir exibe os locais dos quais o comando de ação é invocado:
 
-![locais de invocação de comando de ação](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Locais de invocação de comando de ação":::
 
 ## <a name="select-how-to-create-your-task-module"></a>Selecione como criar seu módulo de tarefa
 
 Além de selecionar de onde o comando pode ser invocado, você também deve selecionar como preencher o formulário no módulo de tarefa para seus usuários. Você tem as três opções a seguir para criar o formulário renderizado dentro do módulo de tarefa:
 
-* **Lista estática de parâmetros**: Esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o cliente do Teams renderiza, mas não pode controlar a formatação nesse caso.
+* **Lista estática de parâmetros**: esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o cliente do Teams renderiza, mas não pode controlar a formatação nesse caso.
 * **Cartão Adaptável**: Você pode optar por usar um Cartão Adaptável, que fornece maior controle sobre a interface do usuário, mas ainda limita você aos controles e opções de formatação disponíveis.
 * **Exibição da Web inserida**: Você pode optar por inserir uma exibição da Web personalizada no módulo de tarefa para ter um controle completo sobre a interface do usuário e os controles.
 
@@ -78,7 +78,7 @@ Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicio
 Você pode criar um comando de ação usando **App Studio** ou **Portal do Desenvolvedor**.
 
 > [!NOTE]
-> O App Studio será preterido em breve. Configure, distribua e gerencie seus aplicativos do Teams com o novo [Portal do Desenvolvedor](https://dev.teams.microsoft.com/).
+ > Se você estiver usando o App Studio, recomendamos que você tente o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
@@ -92,43 +92,46 @@ Você pode criar um comando de ação usando **App Studio** ou **Portal do Desen
 1. Depois de importar um pacote de aplicativos, selecione **Extensões de mensagem** em **Recursos**. Você obtém uma janela pop-up para configurar a extensão de mensagem.
 1. Selecione **Configurar** na janela para incluir a extensão de mensagem na experiência do aplicativo. A imagem a seguir exibe a janela de configuração da extensão de mensagem:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuração da extensão de mensagem":::
 
 1. Para criar uma extensão de mensagem, você precisa de um bot registrado pela Microsoft. Você pode usar um bot existente ou criar um novo bot. Selecione a opção **Criar novo bot**, dê um nome para o novo bot e selecione **Criar**. A imagem a seguir exibe a criação do bot para a extensão de mensagem:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Criar bot para extensão de mensagem":::
 
-1. Selecione **Adicionar** na **seção Comando** da página de extensões de mensagem para incluir os comandos que decidem o comportamento da extensão de mensagem.
-A imagem a seguir exibe a adição de comando para a extensão de mensagem:
+1. Para usar um bot existente, selecione **Usar bot existente** e selecione **Selecionar em um dos meus bots existentes** para escolher os bots existentes na lista suspensa, dê um **nome de Bot** e selecione **Salvar** ou selecione **Conectar-se a uma ID de bot diferente** se você já tiver uma ID de bot criada, dê um **nome de Bot** e selecione **Salvar**.
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Usar o bot existente para a extensão de mensagem":::
+
+1. Selecione **Adicionar** na **seção Comando** da página de extensões de mensagem para incluir os comandos que decidem o comportamento da extensão de mensagem. A imagem a seguir exibe a adição de comando para a extensão de mensagem:
+
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Comando Incluir":::
 
 1. Selecione **Permitir que os usuários disparem ações em serviços externos dentro do Teams**. A imagem a seguir exibe a seleção do comando de ação:
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Seleção de comando de ação":::
 
 1. Para usar um conjunto estático de parâmetros para criar seu módulo de tarefa, selecione **Defina um conjunto de parâmetros estáticos para o comando**.
 
     A imagem a seguir exibe a seleção de parâmetro estático do comando de ação:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Seleção de parâmetro estático do comando de ação":::
 
     A imagem a seguir exibe um exemplo de configuração de parâmetro estático:
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Configuração do parâmetro estático do comando de ação":::
 
     A imagem a seguir exibe um exemplo de teste de parâmetro estático:
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Teste de parâmetro estático do comando de ação":::
 
 1. Para usar parâmetros dinâmicos, selecione **Buscar um conjunto dinâmico de parâmetros do bot**. A imagem a seguir exibe a seleção de parâmetro de comando de ação:
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Seleção de parâmetro dinâmico do comando de ação":::
 
 1. Adicione uma **ID de Comando** e um **Título**.
 1. Selecione o local de onde você deseja invocar o comando de ação. A imagem a seguir exibe o local de invocação do comando de ação:
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Local da invocação do comando de ação":::
 
 1. Selecione **Salvar**.
 1. Para adicionar mais parâmetros, selecione o botão **Add** na seção **Parameters**.
