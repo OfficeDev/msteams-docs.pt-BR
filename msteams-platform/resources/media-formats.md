@@ -1,19 +1,19 @@
 ---
 title: Formatos de mídia com suporte para bots
-description: Os bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo.
+description: Os bots no Microsoft Teams dão suporte apenas aos seguintes formatos de mídia para conteúdo de áudio e vídeo.
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: formatos de mídia de bots do teams
-ms.openlocfilehash: da134568cb714580ad4f67b993d5ee467db39710
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: a6de2ab9ef6c27716276ab530516599d6df05331
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155397"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111924"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formatos de mídia com suporte para bots
 
-Os bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para conteúdo de áudio e vídeo:
+Os bots Microsoft Teams dão suporte apenas aos seguintes formatos de mídia para conteúdo de áudio e vídeo:
 
 | Formatar | Mais informações |
 | --- | --- |
@@ -31,4 +31,4 @@ Os bots no Microsoft Teams suportam apenas os seguintes formatos de mídia para 
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Alterações nas APIs Teams bot para buscar membros de equipe ou chat](~/resources/team-chat-member-api-changes.md)
+> [Alterações nas APIs do bot do Teams para buscar membros de Equipe ou chat](~/resources/team-chat-member-api-changes.md)

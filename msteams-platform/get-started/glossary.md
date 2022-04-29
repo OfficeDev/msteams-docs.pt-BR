@@ -4,12 +4,12 @@ description: Documentação do Desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103990"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135721"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -27,7 +27,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Pacote do aplicativo](../concepts/build-and-test/apps-package.md) | Um pacote de aplicativos do Teams é um arquivo zip que contém o arquivo de manifesto do aplicativo, o ícone de cor e o ícone de estrutura de tópicos. |
 | [Permissão de aplicativo](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Uma opção em um aplicativo do Teams para habilitar permissões de dispositivo. Ele só estará disponível quando o arquivo de manifesto do aplicativo declarar que o aplicativo precisa de permissões de dispositivo. <br> **Consulte também**: Permissões de dispositivo |
 | [Escopo do aplicativo](../concepts/design/app-structure.md) | Uma área no Teams em que as pessoas podem usar seu aplicativo. Os aplicativos podem ter um ou vários escopos, incluindo pessoal, canais, chats e reuniões. Um aplicativo teams pode existir entre escopos. |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Um aplicativo para começar a criar ou integrar seus próprios aplicativos do Microsoft Teams. Agora ele evoluiu para Portal do Desenvolvedor. <br> **Consulte também**: [Portal do Desenvolvedor](#d) |
+| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Um aplicativo para começar a criar ou integrar seus próprios aplicativos do Microsoft Teams. Agora ele evoluiu para Portal do Desenvolvedor. <br> > Se você estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022<br> **Consulte também**: [Portal do Desenvolvedor](#d) |
 | Bandeja de aplicativos | Uma bandeja de aplicativos localizada na barra inferior de um aplicativo móvel do Teams. Ela coleta todos os aplicativos abertos, mas não usados no momento ou ativos. <br>**Consulte também**: [Teams para dispositivos móveis](#t) |
 | [Recurso do Azure](../toolkit/provision.md) | Um serviço que está disponível por meio do Azure que seu aplicativo Teams pode usar para implantação do Azure. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | É o serviço de gerenciamento de identidades e acesso baseado na nuvem da Microsoft. Ele ajuda os usuários autenticados a acessar recursos internos e externos do Azure. |
