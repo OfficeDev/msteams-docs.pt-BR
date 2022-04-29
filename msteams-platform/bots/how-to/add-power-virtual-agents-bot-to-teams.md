@@ -1,78 +1,78 @@
 ---
-title: Adicionar Power Virtual Agents chatbot ao Teams
+title: Adicionar um chatbot do Power Virtual Agents ao Teams
 author: surbhigupta
-description: Aprenda a integrar um chatbot Power Virtual Agents na plataforma Teams para criar chatbots de conversa e integrá-lo ao Teams
+description: Aprenda a integrar um chatbot do Power Virtual Agents na plataforma do Teams para criar chatbots de conversa e integrá-lo ao Teams
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a95b3fe3b9191facc2554262444bc4b558c372ed
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 53a938ca4a195ba6f477de130a8290242709cb19
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453835"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111770"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia
 
-Power Virtual Agents é uma solução de interface gráfica sem código e orientada que capacita todos os membros da sua equipe a criar chatbots ricos e conversacionais que se integram facilmente à plataforma Teams. Todo o conteúdo Power Virtual Agents renderiza naturalmente em Teams. Power Virtual Agents bots se envolvem com usuários na tela Teams de chat nativa. Os administradores de TI, analistas de negócios, especialistas em domínio e desenvolvedores de aplicativos qualificados podem projetar, desenvolver e publicar agentes virtuais inteligentes para Teams sem precisar configurar um ambiente de desenvolvimento. Eles podem criar um serviço Web ou se registrar diretamente com a Estrutura de Bots.
+Uma solução de interface gráfica guiada sem código que capacita todos os membros da sua equipe a criar bots de chat avançados e conversacionais que se integram facilmente à plataforma do Teams. Todo o conteúdo criado no Power Virtual Agents renderiza naturalmente no Teams. Os bots do Power Virtual Agents interagem com usuários na tela de chat nativa do Teams. Os administradores de TI, analistas de negócios, especialistas de domínio e desenvolvedores de aplicativos qualificados podem projetar, desenvolver e publicar agentes virtuais inteligentes para o Teams sem precisar configurar um ambiente de desenvolvimento. Eles podem criar um serviço Web ou se registrar diretamente no Bot Framework.
 
-Este documento orienta você sobre como disponibilizar seu chatbot no Teams por meio do portal Power Virtual Agents e adicionar seu bot ao Teams usando o App Studio.
+Este documento orienta você sobre como disponibilizar seu chatbot no Teams por meio do portal do Power Virtual Agents e adicionar seu bot ao Teams usando o App Studio.
 
-Power Virtual Agents permite criar chatbots poderosos que podem responder a perguntas feitas por seus clientes, outros funcionários ou visitantes do seu site ou serviço.
+O Power Virtual Agents permite criar chatbots poderosos que podem responder a perguntas feitas por seus clientes, outros funcionários ou visitantes do seu site ou serviço.
 
-Esses bots podem ser criados facilmente sem a necessidade de desenvolvedores ou desenvolvedores de dados.
+Esses bots podem ser criados facilmente sem a necessidade de cientistas de dados ou desenvolvedores.
 
 > [!NOTE]
-> * Ao adicionar seu chatbot Microsoft Teams, alguns dos dados, como conteúdo de bot e conteúdo de chat do usuário, são compartilhados com Microsoft Teams. Isso significa que seus dados fluem fora da conformidade [da sua organização e dos limites geográficos ou regionais](/power-virtual-agents/data-location). <br/>
-> * Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados no Teams de aplicativos. Os aplicativos da Plataforma Microsoft Power só podem ser publicados no armazenamento de aplicativos de uma organização.
+> * Ao adicionar seu chatbot ao Microsoft Teams, alguns dos dados, como conteúdo de bot e conteúdo de chat do usuário, são compartilhados com o Microsoft Teams. Isso significa que seus dados fluem fora da [conformidade e limites geográficos ou regionais da sua organização](/power-virtual-agents/data-location). <br/>
+> * Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados na loja de aplicativos do Teams. Os aplicativos do Microsoft Power Platform podem ser publicados somente na loja de aplicativos de uma organização.
 
-## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Disponibilizar seu chatbot no Teams por meio do portal Power Virtual Agents.
+## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Disponibilize seu chatbot no Teams por meio do portal do Power Virtual Agents
 
-Para disponibilizar seu chatbot no Teams por meio do portal Power Virtual Agents, execute as seguintes etapas de processo:
+Para disponibilizar seu chatbot no Teams por meio do portal do Power Virtual Agents, você deve executar as seguintes etapas de processo:
 
-Para disponibilizar o chatbot em Teams:
+Para disponibilizar o chatbot no Teams:
 
-1. **Publicar o conteúdo de bot mais recente**  
-Depois de criar um chatbot no portal Power Virtual Agents, você deve publicar seu bot antes Teams os usuários possam interagir com ele. Para obter mais informações, consulte [Publicar o conteúdo de bot mais recente](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
+1. **Publicar o conteúdo mais recente do bot**  
+Depois de criar um chatbot no portal Power Virtual Agents, você deve publicar seu bot antes que os usuários do Teams possam interagir com ele. Para obter mais informações, consulte [Publicar o conteúdo mais recente do bot](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
 
-   ![publicar no portal de agentes virtuais de energia](../../assets/images/pva-publish.png)
+   ![publicar no portal do power virtual agents](../../assets/images/pva-publish.png)
 
-1. **Configurar o Teams canal**  
-Depois de publicar seu bot, adicione o canal Teams para disponibilizar o bot para Teams usuários.
+1. **Configurar o canal do Teams**  
+Depois de publicar seu bot, adicione o canal do Teams para disponibilizar o bot aos usuários do Teams.
 
-   ![canais no portal de agentes virtuais de energia](../../assets/images/pva-channels.png)
+   ![canais no portal do power virtual agents](../../assets/images/pva-channels.png)
 
-1. **Gerar uma ID de aplicativo para seu chatbot**  
-Depois de adicionar o Teams ao chatbot, uma **ID de** aplicativo é gerada na caixa de diálogo. A ID do aplicativo é um identificador gerado pela Microsoft exclusivo para seu bot. Salve a ID do aplicativo para criar um pacote de aplicativos para Teams.
+1. **Gere uma ID de aplicativo para seu chatbot**  
+Depois de adicionar o canal do Teams ao chatbot, uma **ID de aplicativo** é gerada na caixa de diálogo. A ID é um identificador exclusivo gerado pela Microsoft para o aplicativo. Salve a ID do aplicativo para criar um pacote de aplicativos para o Teams.
 
 ## <a name="add-your-bot-to-teams-using-app-studio"></a>Adicionar seu bot ao Teams usando o App Studio
 
-Se [o carregamento de aplicativos](/microsoftteams/admin-settings) personalizados estiver habilitado em sua instância Teams, você poderá usar Teams App Studio para carregar diretamente seu chatbot e começar a usá-lo imediatamente. Para compartilhar seu chatbot, você pode solicitar que o administrador disponibilizar seu bot no catálogo de aplicativos de locatário ou pode enviar seu pacote de aplicativos para outras pessoas e pedir que eles o carreguem independentemente.
+Se [carregar aplicativos personalizados estiver habilitado](/microsoftteams/admin-settings)na sua instância do Teams, você poderá usar o Teams App Studio para carregar diretamente seu chatbot e começar a usá-lo imediatamente. Para compartilhar seu chatbot, você pode solicitar que o administrador disponibilize seu bot no catálogo de aplicativos do locatário ou pode enviar o pacote do aplicativo para outras pessoas e pedir para carregá-lo de forma independente.
 
 1. **Instalar o App Studio no Teams**  
-O App Studio é um Teams aplicativo. Instale o App Studio no Teams que simplifica o processo de criação e registro de bots Teams:
+O App Studio é um aplicativo do Teams. Instale o App Studio da loja do Teams que simplifica o processo de criação e registro de bots no Teams:
 
-   1. Selecione o ícone da loja de aplicativos Teams instância e pesquise **o App Studio**.
+   1. Selecione o ícone da loja de aplicativos na instância do Teams e pesquise por **App Studio**.
 
       &emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>
 
-   1. Selecione o **grupo App Studio** e selecione **Instalar** na caixa de diálogo pop-up.
+   1. Selecione o bloco **App Studio** e selecione **Instalar** na caixa de diálogo pop-up.
 
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
-1. **Criar o Teams de aplicativo no App Studio**  
-Bots no Teams são definidos por um arquivo JSON de manifesto de aplicativo que fornece as informações básicas sobre seu bot e seus recursos. No **App Studio**, selecione **Editor de manifesto** e selecione **Criar um novo aplicativo**.
+1. **Crie o manifesto do aplicativo Teams no App Studio**  
+Os bots no Teams são definidos por um arquivo JSON de manifesto do aplicativo que fornece as informações básicas sobre seu bot e seus recursos. No **App Studio**, selecione **Editor de manifesto** e selecione **Criar um novo aplicativo**.
 
     ![criar um novo aplicativo](../../assets/images/get-started/create-new-app.png)
 
-1. **Adicionar detalhes do bot**  
-Conclua todos os campos necessários. Para uma descrição completa de cada campo, consulte [definição de esquema de manifesto](../../resources/schema/manifest-schema.md).
+1. **Adicione detalhes do bot**  
+Preencha todos os campos obrigatórios. Para obter uma descrição completa de cada campo, consulte [definição de esquema de manifesto](../../resources/schema/manifest-schema.md).
 
     ![adicionar detalhes do aplicativo](../../assets/images/get-started/add-app-details.png)
 
-1. **Configurar seu bot** Para configurar o bot, execute as seguintes etapas:
-     1. Abra a **guia Bots** .
-     1. Selecione **SetupExisting**  >  bot e insira o nome do bot.
+1. **Configure o seu bot** para configurar o bot, execute as seguintes etapas:
+     1. Abra a guia **Bots**.
+     1. Selecione **Configurar** > **Bot existente** e insira o nome do bot.
 
    ![Configuração de bot](../../assets/images/get-started/bot-set-up.png)
 
@@ -80,24 +80,24 @@ Conclua todos os campos necessários. Para uma descrição completa de cada camp
 
    ![configuração de bot existente](../../assets/images/get-started/existing-bot-set-up.png)
 
-1. **Adicionar sua ID do aplicativo**  
+1. **Adicione a ID de seu aplicativo**  
 Para adicionar a ID do aplicativo, execute as seguintes etapas:  
-    1. Selecione **Conexão para uma id de bot** diferente e colar a **ID do aplicativo** que você copiou anteriormente.
-    1. Selecione **ScopePersonalSave** >  > .
+    1. Selecione **Conectar-se a uma ID de bot diferente** e cole a **ID do aplicativo** que você copiou anteriormente.
+    1. Selecione **Escopo** > **Pessoal** > **Salvar**.
 
-    ![adicionar id do aplicativo](../../assets/images/get-started/add-app-id.png)
+    ![adicionar a id do aplicativo](../../assets/images/get-started/add-app-id.png)
 
-1. **Adicionar domínios válidos para seu bot**  
-Esta etapa só será necessária se o bot exigir que o usuário entre. Selecione **Domínios e permissões** e, no campo **Domínios Válidos** , forneça a seguinte entrada:
+1. **Adicione domínios válidos para seu bot**  
+Essa etapa só será necessária se o bot exigir que o usuário entre. Selecione **Domínios e permissões** e, no campo **Domínios válidos**, forneça a seguinte entrada:
 
     ```bash
        token.botframework.com
     ```
 
-1. **Testar e distribuir seu bot**  
-Abra **a guia Testar e** distribua e selecione **Instalar** para adicionar seu bot diretamente à sua Teams instância. Como alternativa, você pode baixar o pacote de aplicativos concluído para compartilhar com Teams usuários ou fornecer ao administrador para disponibilizar seu bot no catálogo de aplicativos de locatário.
+1. **Teste e distribua seu bot**  
+Abra a guia **Testar e distribuir** e selecione **Instalar** para adicionar seu bot diretamente à instância do Teams. Como alternativa, você pode baixar o pacote de aplicativos concluído para compartilhar com usuários do Teams ou for fornecido ao administrador para disponibilizar seu bot no catálogo de aplicativos de locatários.
 
-1. **Iniciar um chat** O processo de configuração para adicionar seu Power Virtual Agents de chat ao Teams está concluído. Agora você pode iniciar uma conversa com seu bot em um chat pessoal.
+1. **Inicie um chat** o processo de configuração para adicionar seu chatbot do Power Virtual Agents ao Teams está concluído. Agora você pode iniciar uma conversa com seu bot em um chat pessoal.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -107,7 +107,7 @@ Abra **a guia Testar e** distribua e selecione **Instalar** para adicionar seu b
 ## <a name="see-also"></a>Confira também
 
 * [Agentes virtuais do Power](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Criar um chatbot para Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
-* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-* [Publicar seu Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Criar um chatbot para o Teams com o Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
+* [ Portal do Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+* [Publicar seu bot do Power Virtual Agents](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Segurança e conformidade no Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
