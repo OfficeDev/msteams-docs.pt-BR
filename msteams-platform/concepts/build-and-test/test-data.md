@@ -1,16 +1,16 @@
 ---
 title: Adicionar dados de teste ao seu locatário Microsoft 365 teste
-description: Configurar sua assinatura de programa Office 365 desenvolvedor para testes bem-sucedidos de aplicativos Microsoft Teams usando trechos de código
+description: Configure sua assinatura do programa para desenvolvedores do Office 365 para testes bem-sucedidos dos Aplicativos do Microsoft Teams usando trechos de código
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: testar equipes de programa de desenvolvedores de aplicativos
+ms.localizationpriority: high
+keywords: testando equipes do programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: eca2c87b92e6dfdcce869ac1fd207b2149055070
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452701"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111966"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
@@ -18,10 +18,10 @@ Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma as
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. [Participe do Microsoft 365 de desenvolvedores](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
-2. [Configurar uma assinatura Microsoft 365 desenvolvedor.](/office/developer-program/office-365-developer-program-get-started)
-3. [Use pacotes de dados de exemplo com sua assinatura Microsoft 365 desenvolvedor para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs).
-4. [Instale o módulo Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+1. [Ingresse no Programa para Desenvolvedores do Microsoft 365](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
+2. [Configure uma assinatura de desenvolvedor Microsoft 365](/office/developer-program/office-365-developer-program-get-started).
+3. [Use pacotes de dados de exemplo com sua assinatura de desenvolvedor do Microsoft 365 para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs).
+4. [Instale o módulo PowerShell do Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
 5. [Instale o módulo do PowerShell do Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
@@ -29,11 +29,11 @@ Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma as
 
 ## <a name="allow-users-to-upload-apps"></a>Permitir que os usuários carreguem aplicativos
 
-Por padrão, somente administradores globais ou Teams de serviço podem carregar aplicativos (sideload) em um locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste. Para obter mais informações, consulte [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
+Por padrão, somente administradores globais ou administradores de serviço do Teams podem carregar (sideload) aplicativos em um locatário. Você também pode permitir que os usuários carreguem aplicativos personalizados para uso próprio ou para equipes para teste. Para obter mais informações, consulte [gerenciar as políticas e configurações personalizadas de aplicativos no Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## <a name="create-teams-and-channels-for-testing"></a>Criar equipes e canais para teste
 
-1. Salve o trecho a seguir como um **arquivo.xml** e anote o caminho do arquivo. Este XML define a estrutura da equipe e do canal criado juntamente com seus membros:
+1. Salve o trecho a seguir como um arquivo **.xml** e anote o caminho do arquivo. Esse XML define a estrutura da equipe e do canal que é criado juntamente com seus membros:
 
     ```xml
     <?xml version="1.0"?>
@@ -147,7 +147,7 @@ Por padrão, somente administradores globais ou Teams de serviço podem carregar
     </Teams>
     ```
 
-2. Salve o trecho a seguir como um script do PowerShell (.ps1) e observe onde você o salvou. Este script executa as etapas para criar a equipe e o canal e adicionar membros a eles:
+2. Salve o trecho a seguir como um script do PowerShell (.ps1) e observe onde você o salvou. Esse script executa as etapas para criar a equipe e o canal e adicionar membros a eles:
 
     ```powershell
     Param(
@@ -239,12 +239,12 @@ Por padrão, somente administradores globais ou Teams de serviço podem carregar
     ```
 
 3. Abra uma Windows PowerShell no modo Administrador e execute o script que você acabou de salvar.
-4. Quando você for solicitado a fornecer as credenciais, insira as credenciais de Administrador Global recebidas quando se inscreveu pela primeira vez na assinatura do desenvolvedor.
+4. Quando você for solicitado a fornecer as credenciais, insira as credenciais de Administrador Global recebidas quando se inscreveu pela primeira vez em sua assinatura de desenvolvedor.
 
     > [!Note]
-    > Não feche sua sessão do PowerShell, pois o script leva vários minutos para ser executado. Se você modificou os usuários em sua assinatura do que é criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados ao Teams. À medida que o script é executado, ele exibe ações bem-sucedidas ou com falha.
+    > Não feche a sessão do PowerShell, pois o script leva vários minutos para ser executado. Se você modificou os usuários em sua assinatura do que é criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados ao Teams. À medida que o script é executado, ele exibe ações bem-sucedidas ou com falha.
 
-5. Após a execução do script, você pode entrar no cliente Teams com uma das contas de usuário e exibir as equipes recém-criadas.
+5. Depois que o script terminar a execução, você poderá entrar no cliente do Teams com uma das contas de usuário e exibir as equipes recém-criadas.
 
 ## <a name="see-also"></a>Confira também
 
