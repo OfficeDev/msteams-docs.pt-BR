@@ -1,78 +1,78 @@
 ---
-title: Adicionar bots a Microsoft Teams aplicativos
+title: Adicionar bots a aplicativos do Microsoft Teams
 description: Descreve como começar a desenvolver bots no Microsoft Teams
 ms.topic: conceptual
-keywords: desenvolvimento de bots do Teams
-ms.localizationpriority: medium
+keywords: desenvolvimento de bots do teams
+ms.localizationpriority: high
 ms.date: 05/20/2018
-ms.openlocfilehash: 164c8e518e38d506bbaf80f59edebfb18c07acec
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: a9a3ad2e4e60b43e6730c06b8bd8d2cee824b3fc
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103422"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111700"
 ---
-# <a name="add-bots-to-microsoft-teams-apps"></a>Adicionar bots a Microsoft Teams aplicativos
+# <a name="add-bots-to-microsoft-teams-apps"></a>Adicionar bots a aplicativos do Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Crie e conecte bots inteligentes para interagir com Microsoft Teams usuários naturalmente por meio do chat. Ou forneça um bot simples baseado em comandos, a ser usado como sua interface de "linha de comando" para sua experiência mais Teams aplicativo. Você pode criar um bot somente notificação, que pode enviar por push informações relevantes para seus usuários diretamente para eles em um canal ou mensagem direta. Você pode até mesmo trazer seu bot baseado no Bot Framework existente e adicionar Teams suporte específico para fazer sua experiência brilhar.
+Crie e conecte bots inteligentes para interagir com os usuários do Microsoft Teams naturalmente por meio do chat. Ou forneça um bot simples baseado em comandos, a ser usado como sua interface de "linha de comando" para ter uma experiência mais ampla do aplicativo do Teams. Você pode criar um bot somente notificação, que pode enviar por push informações relevantes para seus usuários diretamente para eles em um canal ou mensagem direta. Você pode até mesmo trazer sua Bot Framework existente e adicionar suporte específico do Teams para fazer sua experiência se destacar.
 
 > [!IMPORTANT]
-> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis no GCC-High e departamento de defesa (DOD).
+> Atualmente, os bots estão disponíveis na Nuvem da Comunidade Governamental (GCC) e não estão disponíveis na GCC-High e departamento de defesa (DOD).
 
-![Exemplo de um bot que ajuda um usuário](~/assets/images/bot_example.png)
+![Exemplo de um bot ajudando um usuário](~/assets/images/bot_example.png)
 
-## <a name="what-you-need-to-know-bots"></a>O que você precisa saber: Bots
+## <a name="what-you-need-to-know-bots"></a>O que você precisa saber: bots
 
 Um bot aparece como qualquer outro membro da equipe com o qual você interage em uma conversa, exceto que ele tem um ícone de avatar hexagonal e está sempre online.
 
-Um bot se comporta de maneira diferente dependendo do tipo de conversa em que ele está envolvido. Os bots Teams dão suporte a vários tipos de conversas chamadas escopos no manifesto [do aplicativo](~/resources/schema/manifest-schema.md).
+Um bot se comporta ligeiramente diferente dependendo do tipo de conversa na qual ele está envolvido. Os bots no Teams dão suporte a vários tipos de conversas chamadas escopos no [manifesto do aplicativo](~/resources/schema/manifest-schema.md).
 
-* `teams` Também chamadas de conversas de canal.
-* `personal` Conversas entre um bot e um único usuário.
+* `teams` Também chamado de conversas de canal.
+* `personal` Conversas entre bots e um único usuário.
 * `groupChat` Uma conversa entre um bot e dois ou mais usuários.
 
-Para obter mais informações, [consulte Ter uma conversa com um Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
+Para obter mais informações, [Converse com um bot do Microsoft Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Com Microsoft Teams aplicativos, você pode tornar o bot a estrela de sua experiência ou apenas um auxiliar. Os bots são distribuídos como parte do pacote mais amplo do aplicativo, que pode incluir outros recursos, como [guias](~/tabs/what-are-tabs.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
+Com os aplicativos do Microsoft Teams, você pode tornar o bot a estrela de sua experiência ou apenas um auxiliar. Os bots são distribuídos como parte do pacote de aplicativos mais amplo, que pode incluir outros recursos, como [guias](~/tabs/what-are-tabs.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
 
-## <a name="bot-apis"></a>Bot APIs
+## <a name="bot-apis"></a>APIs de bot
 
-Microsoft Teams dá suporte à maioria dos [Microsoft Bot Framework](https://dev.botframework.com/). (Se você já tiver um bot baseado no Bot Framework, poderá adaptá-lo facilmente para trabalhar no Microsoft Teams.) Recomendamos que você use C# ou Node.js para aproveitar nossos [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos básicos SDK do Construtor de Bot:
+O Microsoft Teams dá suporte à maioria dos [Bot Framework da Microsoft](https://dev.botframework.com/). (Se você já tiver um bot baseado no Bot Framework, poderá adaptá-lo facilmente para trabalhar no Microsoft Teams). Recomendamos que você use C# ou Node.js para aproveitar nosso [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos básicos SDK do Construtor de Bot:
 
-* Usando tipos de cartão especializados, como o cartão Office 365 Connector.
-* Consumindo e definindo Teams dados de canal específicos em atividades.
+* Usando tipos de cartão especializados, como o cartão do Conector do Office 365.
+* Consumindo e definindo dados de canal específicos do Teams em atividades.
 * Processando solicitações de extensão de mensagem.
 
-As extensões do SDK instalam dependências, incluindo o SDK do Bot Builder.
+As extensões do SDK instalam dependências, incluindo o Bot Builder SDK.
 
-* **.NET** Para usar as extensões Microsoft Teams para o SDK do Bot Builder para .NET, instale o pacote [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet em seu projeto Visual Studio. Para Node.js desenvolvimento, o BotBuilder para Microsoft Teams funcionalidade foi incorporado ao [SDK do Bot Framework](https://github.com/microsoft/botframework-sdk) desde a v4.6.
+* **.NET** Para usar as extensões do Microsoft Teams para o SDK do Bot Builder para .NET, instale o pacote NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) em seu projeto do Visual Studio. Para o desenvolvimento do Node.js, a funcionalidade BotBuilder para Microsoft Teams foi incorporada ao [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) a partir da v4.6.
 
 > [!IMPORTANT]
-> Você pode desenvolver Teams aplicativos em qualquer outra tecnologia de programação na Web e chamar as [APIs REST do Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) diretamente, mas deve executar todo o tratamento de token por conta própria.
+> Você pode desenvolver aplicativos do Teams em qualquer outra tecnologia de programação na Web e chamar as[APIs REST do Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) diretamente, mas deve executar todo o tratamento de token por conta própria.
 
-*Teams App Studio ajuda* você a criar e configurar o manifesto do aplicativo e pode criar seu bot do Bot Framework para você. Ele também contém uma biblioteca React controle e um construtor de cartões interativo.
+O *Teams App Studio* ajuda você a criar e configurar o manifesto do aplicativo e pode criar seu bot do Bot Framework para você. Ele também contém uma biblioteca de controle React e um construtor de cartões interativo.
 
 ## <a name="outgoing-webhooks"></a>Webhooks de saída
 
-Os webhooks de saída permitem que você crie um bot simples para interação básica, como o início de um fluxo de trabalho ou outros comandos simples que você possa precisar. Os webhooks de saída vivem apenas na equipe na qual você os cria e são destinados a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, consulte [webhooks de saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
+Os webhooks de saída permitem que você crie um bot simples para interação básica, como iniciar um fluxo de trabalho ou outros comandos simples que você possa precisar. Os webhooks de saída só existem na equipe na qual você os cria e se destinam a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, consulte [hooks de saída](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
-## <a name="build-a-great-teams-bot"></a>Criar um bot de Teams excelente
+## <a name="build-a-great-teams-bot"></a>Crie um ótimo bot do Teams
 
-Os tópicos a seguir orientarão você pelo processo de criação de um ótimo bot para Teams:
+Os tópicos a seguir orientarão você pelo processo de criação de um ótimo bot para o Teams:
 
-* [Criar um bot](~/resources/bot-v3/bots-create.md): aproveite as excelentes ferramentas, a documentação e a comunidade fornecidas pela equipe do Bot Framework.
-* [Fale com seu bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): adicione o fluxo de conversa básico e aproveite a funcionalidade específica do canal. Se você desenvolver no .NET ou Node.js, use nossas extensões para o SDK do Bot Builder para simplificar seu trabalho.
+* [Crie um bot](~/resources/bot-v3/bots-create.md): aproveite as excelentes ferramentas, documentação e comunidade fornecidas pela equipe do Bot Framework.
+* [Converse com seu bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): adicione o fluxo de conversa básico e aproveite a funcionalidade específica do canal. Se você desenvolve no .NET ou node.js, use nossas extensões para o SDK do Bot Builder para simplificar seu trabalho.
 * [Usando cartões em seu bot](~/resources/bot-v3/bots-cards.md): crie cartões para se comunicar e aceitar a resposta do usuário.
 * [Responder a eventos de bot](~/resources/bot-v3/bots-notifications.md)
-* [Bots somente notificação](~/resources/bot-v3/bots-notification-only.md): usando bots para enviar notificações para seu aplicativo.
-* [Obter contexto](~/resources/bot-v3/bots-context.md): obter informações sobre o usuário.
+* [Bots somente para notificação](~/resources/bot-v3/bots-notification-only.md): usando bots para enviar notificações para seu aplicativo.
+* [Obtenha contexto](~/resources/bot-v3/bots-context.md): obtenha informações sobre o usuário.
 * [Menus de bot](~/resources/bot-v3/bots-menus.md): usando menus em bots.
 * [Bots e arquivos](~/resources/bot-v3/bots-files.md): enviando e recebendo arquivos de bots.
-* [Usando guias com bots](~/resources/bot-v3/bots-with-tabs.md): fazer guias e bots funcionarem juntos.
+* [Usando guias com bots](~/resources/bot-v3/bots-with-tabs.md): fazendo com que guias e bots funcionem juntos.
 * [Teste seu bot](~/resources/bot-v3/bots-test.md): adicione seu bot para conversas pessoais ou de equipe para vê-lo em ação.
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplos do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Amostras do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

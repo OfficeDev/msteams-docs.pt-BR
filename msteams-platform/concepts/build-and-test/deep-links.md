@@ -4,12 +4,12 @@ description: Descreve links profundos e como usá-los em seus aplicativos
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: link profundo do link do teams
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399307"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103920"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -174,20 +174,20 @@ Para usar esse link profundo com o bot, especifique-o como o destino da URL no b
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Gerar links profundos para o arquivo no canal
 
-O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens:
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: 
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 Os parâmetros de consulta são:
 
-* `fileId`: ID de arquivo exclusivo do Sharepoint Online, também conhecida como `sourcedoc`. Por exemplo,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: ID de arquivo exclusivo do Sharepoint Online, também conhecida como `sourcedoc`. Por exemplo, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: tipo de arquivo compatível, como .docx, .pptx, .xlsx e .pdf.
 * `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: nome do serviço, ID do aplicativo. Por exemplo, `teams`.
 * `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId`: ID do grupo do arquivo. Por exemplo, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
+* `groupId`: ID do grupo do arquivo. Por exemplo `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Você pode ver `threadId` e `groupId` na URL do canal.  
@@ -286,7 +286,7 @@ No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará
   
 Estes são os parâmetros de consulta:
 
-* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
+* `users`: a lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams.
 * `Source`: esse é um parâmetro opcional, que informa sobre a origem do link profundo.
 

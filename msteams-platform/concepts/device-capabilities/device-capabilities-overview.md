@@ -1,48 +1,48 @@
 ---
-title: Recursos do dispositivo - Visão geral
+title: Funcionalidades do dispositivo – Visão geral
 author: Rajeshwari-v
-description: Visão geral dos recursos de dispositivo nativo, como câmera, imagem, mídia, microfone, microfone, código qr e muito mais.
+description: Visão geral dos recursos nativos do dispositivo, como câmera, imagem, mídia, microfone, microfone, código qr e muito mais.
 ms.author: surbhigupta
-keywords: câmera imagem microfone microfone de microfone qr code qrcode barra de código de barras código de barras de verificação do scanner de localização de mapa de recursos nativos do dispositivo permissões de dispositivo
-ms.localizationpriority: medium
+keywords: imagem da câmera microfone microfone microfone qr code qrcode código de barras código de barras digitalizar local do scanner de verificação permissões nativas do dispositivo
+ms.localizationpriority: high
 ms.topic: overview
-ms.openlocfilehash: 4febce3868df9fbba90cb4a94e67f6d0856606c9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452687"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111749"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
-Microsoft Teams plataforma está aprimorando continuamente os recursos do desenvolvedor alinhando com experiências de primeira parte. A plataforma Teams aprimorada permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e local com seus aplicativos Web. Essa integração reduz a barreira ao desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
+A plataforma Microsoft Teams está aprimorando continuamente os recursos do desenvolvedor, alinhando-se com experiências internas. A plataforma aprimorada do Teams permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e localização com seus aplicativos Web. Essa integração reduz a barreira para o desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
 
-As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipulava como conceder permissões de acesso e agora essas permissões são tratadas em Microsoft Teams. Para obter mais informações, consulte [browser device permissions](browser-device-permissions.md).
+As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipula como conceder permissões de acesso e agora essas permissões são tratadas no Microsoft Teams. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
 
-## <a name="native-device-capabilities"></a>Recursos de dispositivo nativo
+## <a name="native-device-capabilities"></a>Funcionalidades nativas do dispositivo
 
-Um celular ou desktop tem dispositivos integrados, como câmera e microfone, chamados de recursos. Você pode acessar os seguintes recursos de dispositivo em dispositivo móvel ou desktop por meio de APIs dedicadas disponíveis [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+Uma área de trabalho ou móvel tem dispositivos internos, como câmera e microfone, chamados de funcionalidades. Você pode acessar os seguintes recursos de dispositivo em dispositivos móveis ou desktop por meio de APIs dedicadas disponíveis no [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
 
 * Recursos de mídia, como
   * Câmera
   * Microfone
   * Galeria
-  * QR ou scanner de código de barras
+  * Scanner de QR ou código de barras
 * Local
 
 Depois de obter acesso aos recursos do dispositivo, você pode integrá-los à plataforma Teams para aprimorar a experiência colaborativa.
 
 ## <a name="request-device-permissions"></a>Solicitar permissões do dispositivo
 
-Use as ferramentas presentes no [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) para solicitar as permissões necessárias para acessar [](native-device-permissions.md) os recursos de dispositivo nativo. Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, você deve informar Teams sobre os recursos que você está usando atualizando o manifesto do aplicativo. Essa atualização permite que você solicite permissões enquanto seu aplicativo é executado Teams clientes móveis ou desktop.
+Use as ferramentas presentes no [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) para solicitar as [permissões](native-device-permissions.md) necessárias para acessar os recursos nativos do dispositivo. Embora o acesso a esses recursos seja padrão em navegadores da Web modernos, você deve informar o Teams sobre os recursos que está usando atualizando o manifesto do aplicativo. Essa atualização permite que você solicite permissões enquanto seu aplicativo é executado em clientes móveis ou de área de trabalho do Teams.
 
 ## <a name="integrate-device-capabilities"></a>Integrar as funcionalidades do dispositivo
 
-Depois de obter acesso aos recursos do dispositivo, use Teams APIs de recursos de mídia para [](mobile-camera-image-permissions.md) integrar recursos de mídia com a plataforma Teams para aprimorar a experiência do usuário. Esses recursos integrados permitem que seu aplicativo:
+Depois de obter acesso aos recursos do dispositivo, use as APIs de funcionalidade de mídia do Teams para [Integrar recursos de mídia](mobile-camera-image-permissions.md) com a plataforma Teams para aprimorar a experiência do usuário. Esses recursos integrados permitem que seu aplicativo:
 
 * Capturar e compartilhar imagens.
-* Verificar QR ou código de barras usando o [controle de scanner](qr-barcode-scanner-capability.md).
-* Gravar áudio por microfone.
-* Compartilhar local usando [o selador de local](location-capability.md).
+* Digitalize o QR ou código de barras usando [controle de scanner](qr-barcode-scanner-capability.md).
+* Grave áudio por meio do microfone.
+* Compartilhe a localização [seletor de localização](location-capability.md).
 
-Além disso, você pode integrar o controle Teams seletor de pessoas nativas que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.[](people-picker-capability.md)
+Além disso, você pode integrar o controle [seletor de pessoas](people-picker-capability.md) nativas do Teams que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.

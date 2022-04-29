@@ -1,26 +1,26 @@
 ---
-title: Processo de design de aplicativo
+title: Processo de criação do aplicativo
 author: heath-hamilton
-description: Tenha uma ideia geral de como e quando você pode usar ferramentas e recursos da Microsoft para projetar um aplicativo Microsoft Teams eficaz.
-ms.localizationpriority: medium
+description: Tenha uma ideia geral de como e quando você pode usar as ferramentas e os recursos da Microsoft para criar um aplicativo eficaz do Microsoft Teams.
+ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 95af942973b25a085662eb303077dff6cba815e5
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948597"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111266"
 ---
-# <a name="design-process-for-microsoft-teams-apps"></a>Processo de design para Microsoft Teams aplicativos
+# <a name="design-process-for-microsoft-teams-apps"></a>Processo de criação para aplicativos do Microsoft Teams
 
-Há várias ferramentas e recursos para projetar seu Microsoft Teams app. As etapas a seguir descrevem quando e como você pode usá-los durante o processo de design. (Algumas das etapas podem estar tecnicamente fora do processo de design, mas estão incluídas para contexto adicional.)
+Há várias ferramentas e recursos para criar seu aplicativo Microsoft Teams. As etapas a seguir descrevem quando e como você pode usá-lo durante o processo de design. (Algumas das etapas podem estar tecnicamente fora do processo de criação, mas estão incluídas para contexto adicional.)
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama mostrando um exemplo do processo de design Teams aplicativo." border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama mostrando um exemplo do processo de design do aplicativo Teams." border="false":::
 
-## <a name="plan-your-app"></a>Planejar seu aplicativo
+## <a name="plan-your-app"></a>Planeje seu aplicativo
 
-Projetar um aplicativo de alta qualidade Teams requer a compreensão do que você deseja que o aplicativo faça e como você acha que as pessoas o usarão. Antes de começar a projetar, no entanto, responda às seguintes perguntas:
+A criação de um aplicativo do Teams de alta qualidade requer a compreensão do que você deseja que o aplicativo faça e como você acha que as pessoas o usarão. No entanto, antes de começar a criar, responda às seguintes perguntas:
 
 * Quem são os seus usuários?
 * Qual é o problema deles?
@@ -29,93 +29,93 @@ Projetar um aplicativo de alta qualidade Teams requer a compreensão do que voc�
 * Quantas pessoas usarão seu aplicativo?
 * Que tipo de retorno sobre o investimento seu aplicativo pode fornecer?
 
-Para obter mais informações, consulte [understand your app's use cases and](~/concepts/design/understand-use-cases.md) [mape use cases to Teams](~/concepts/design/map-use-cases.md).
+Para obter mais informações, consulte [Entender’ os casos de uso dos aplicativos](~/concepts/design/understand-use-cases.md) e [Mapear casos de uso para o Teams](~/concepts/design/map-use-cases.md).
 
-## <a name="get-teams-design-tools"></a>Obter Teams de design
+## <a name="get-teams-design-tools"></a>Obter ferramentas de criação do Teams
 
-A Microsoft fornece ferramentas para facilitar o design do Teams app. No mínimo, é recomendável usar o kit Microsoft Teams interface do usuário.
+A Microsoft fornece ferramentas para facilitar a criação do aplicativo Teams. No mínimo, é altamente recomendável usar o Kit de Interface do Usuário do Microsoft Teams.
 
-### <a name="get-the-microsoft-teams-ui-kit"></a>Obter o Microsoft Teams de interface do usuário
+### <a name="get-the-microsoft-teams-ui-kit"></a>Obter o Kit de IU do Microsoft Teams
 
-O Microsoft Teams kit de interface do usuário pode ajudá-lo a desenvolver um aplicativo Teams no menor período de tempo. O kit de interface do usuário tem tudo o que você vê nesses documentos relacionados Teams design do aplicativo e muito mais, incluindo exemplos e variações abrangentes.
+O Kit de Interface do Usuário do Microsoft Teams pode ajudá-lo a desenvolver um aplicativo do Teams eficaz no menor período de tempo. O kit de IU tem tudo o que você vê nesses documentos relacionados à criação de aplicativos do Teams e muito mais, incluindo exemplos e variações abrangentes.
 
-O kit de interface do usuário também tem modelos e componentes pré-construídos que você pode copiar e modificar conforme necessário, para que você possa gastar mais tempo projetando a melhor experiência do usuário em vez de se preocupar com a aparência de um botão.
+O kit de IU também tem modelos e componentes pré-criados que você pode copiar e modificar conforme necessário, para que você possa gastar mais tempo projetando a melhor experiência do usuário em vez de se preocupar com a aparência de um botão.
 
 > [!TIP]
-> **O kit de interface do usuário é para mim?** Se você tiver alguma parte na criação de um aplicativo Teams, sim. Entender como criar um aplicativo Teams não é útil apenas para designers, mas gerentes de produto, desenvolvedores usando IDEs e criadores criando com ferramentas de baixo código (como a Plataforma do Microsoft Power).
+> **O kit de IU é para mim?** Se você tiver alguma participação na criação de um aplicativo do Teams, sim. Entender como criar um aplicativo do Teams não é útil apenas para designers, mas gerentes de produtos, desenvolvedores que usam IDEs e criadores que criam com ferramentas de pouco código (como o Microsoft Power Platform).
 
-1. Vá para a [página Microsoft Teams kit de interface](https://www.figma.com/community/file/916836509871353159)do usuário .
-1. Selecione **Duplicar** para abrir o kit de interface do usuário. (Você pode ter que primeiro criar uma conta do Figma.)
+1. Vá para [Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159).
+1. Selecione **Duplicar** para abrir o kit de IU. (Talvez seja necessário criar uma conta do Figma primeiro.)
 
 ### <a name="try-the-sample-app"></a>Experimente o aplicativo de exemplo
 
-Você pode carregar um aplicativo de exemplo para ver como os aplicativos devem parecer e se comportar no Teams cliente.
+Você pode carregar um aplicativo de exemplo para ver a aparência e o comportamento dos aplicativos no cliente do Teams.
 
 > [!div class="nextstepaction"]
 > [Obter o aplicativo de exemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="learn-teams-design-system"></a>Aprender Teams design do sistema
+## <a name="learn-teams-design-system"></a>Aprenda sobre o sistema de criação do Teams
 
-Leia detalhadamente ou, pelo menos, familiarize-se com os [fundamentos](design-teams-app-fundamentals.md)do design do aplicativo Teams , incluindo layout, esquemas de cores e muito mais.
+Leia detalhadamente ou, pelo menos, familiarize-se com os[Conceitos básicos da criação de aplicativos do Teams](design-teams-app-fundamentals.md), incluindo layout, esquemas de cores e muito mais.
 
 ## <a name="choose-app-capabilities"></a>Escolher recursos do aplicativo
 
-Após a fase de planejamento, você pode determinar quais Teams recursos se encaixam nos casos de uso do aplicativo. Por exemplo, se você quiser notificar proativamente as pessoas, um bot pode ser o recurso certo.
+Após a fase de planejamento, você pode determinar quais recursos do Teams se ajustam aos casos de uso do seu aplicativo. Por exemplo, se você quiser notificar as pessoas proativamente, um bot pode ser a funcionalidade certa.
 
-O kit de interface do usuário tem designs pré-construídos que mostram como as pessoas normalmente adicionam, configuram, usam e gerenciam cada recurso. Para referência rápida, essas informações também estão nesses documentos, mas com o kit de interface do usuário você pode copiar e colar qualquer um desses designs no design do aplicativo.
+O kit de IU tem designs pré-criados que mostram como as pessoas normalmente adicionam, configuram, usam e gerenciam cada funcionalidade. Para referência rápida, essas informações também estão nesses documentos, mas com o kit de interface do usuário, você pode copiar e colar qualquer um desses designs no design do aplicativo.
 
-1. Na interface do usuário do kit de interface do usuário à esquerda, acesse Recursos **do** aplicativo e selecione o recurso que você deseja para seu aplicativo.
-1. Copie o que você precisa dessa página para projetar seu aplicativo.<br />
-   Por exemplo, se seu aplicativo dá suporte à autenticação com um único login, copie e colar o design para lidar com esse cenário exato.
+1. Na navegação esquerda do kit de IU, acesse **Funcionalidades do aplicativo** e selecione a funcionalidade desejada para seu aplicativo.
+1. Copie o que você precisa dessa página para criar seu aplicativo.<br />
+   Por exemplo, se seu aplicativo der suporte à autenticação com logon único, copie e cole o design para lidar com esse cenário exato.
 
-## <a name="design-your-ux-flow"></a>Projetar seu fluxo deux
+## <a name="design-your-ux-flow"></a>Projetar seu fluxo de experiência do usuário
 
-Depois de ter um design de aplicativo básico Teams, você pode modificá-lo e refiná-lo o quanto quiser, copiando modelos de interface do usuário e componentes básicos do kit de interface do usuário.
+Depois de ter um design de aplicativo básico, você pode modificá-lo e refiná-lo o quanto quiser copiando modelos de interface do usuário do Teams e componentes básicos do kit de IU.
 
-### <a name="design-with-ui-templates"></a>Projetar com modelos de interface do usuário
+### <a name="design-with-ui-templates"></a>Criação com modelos de IU
 
-Os modelos de interface do usuário são designs complexos e de alta fidelidade para Teams casos de uso e fluxos de trabalho comuns. Em vez de começar de baixo para cima com componentes básicos, recomendamos que você use esses modelos para simplificar e acelerar o processo de design.
+Os modelos de IU são designs complexos e de alta fidelidade para fluxos de trabalho e casos de uso comuns do Teams. Em vez de começar de baixo para cima com componentes básicos, recomendamos que você use esses modelos para simplificar e acelerar o processo de design.
 
-1. Na interface do usuário do kit de interface do usuário à esquerda, vá para modelos **de interface do usuário**.
+1. Na navegação esquerda do kit de interface do usuário, vá para **modelos de UI**.
 1. Copie modelos que fazem sentido para o design do aplicativo.<br />
-   Por exemplo, se você estiver projetando um aplicativo pessoal, talvez queira usar um modelo de Painel.
+   Por exemplo, se você estiver criando um aplicativo pessoal, convém usar um modelo de Painel.
 
-### <a name="design-with-basic-ui-components"></a>Projetar com componentes básicos da interface do usuário
+### <a name="design-with-basic-ui-components"></a>Design com componentes básicos da IU
 
-Com base Fluent interface do usuário, esses são os elementos principais para criar interfaces Teams familiares. Use esses componentes se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja projetar seu aplicativo do zero.
+Com base na Fluent UI, esses são os principais elementos para criar interfaces conhecidas do Teams. Use esses componentes se um modelo de interface do usuário não tiver algo de que você precisa ou se você quiser apenas projetar seu aplicativo do zero.
 
-1. Na interface do usuário do kit de interface do usuário à esquerda, vá para **Componentes básicos da interface do usuário**.
-1. Copie os componentes necessários para o design do aplicativo (por exemplo, um botão ou alternância).
+1. Na navegação esquerda do kit de IU, vá para **Componentes básicos de UI**.
+1. Copie os componentes necessários para o design do aplicativo (por exemplo, um botão ou um botão de alternância).
 
-## <a name="implement-your-design"></a>Implementar seu design
+## <a name="implement-your-design"></a>Implemente seu design
 
-O design foi feito e você está pronto para começar a construir. As ferramentas a seguir podem ajudar a simplificar o desenvolvimento front-end do seu aplicativo.
+O design foi concluído e você está pronto para começar a criar. As ferramentas a seguir podem ajudar a simplificar o desenvolvimento de front-end do seu aplicativo.
 
-### <a name="build-with-ui-templates"></a>Criar com modelos de interface do usuário
+### <a name="build-with-ui-templates"></a>Crie com modelos de IU
 
-Se você usou modelos de interface do usuário em seu design, poderá implementar esses modelos com a biblioteca de interface do usuário Microsoft Teams (uma biblioteca de componentes React com base em Fluent interface do usuário).
+Se você usou modelos de interface do usuário em seu design, poderá implementar esses modelos com a Biblioteca de IU do Microsoft Teams (uma biblioteca de componentes do React com base na Fluent UI).
 
-Atualmente, nem todos os modelos listados no kit de interface do usuário estão disponíveis na biblioteca.
+Atualmente, nem todos os modelos listados no kit de IU estão disponíveis na biblioteca.
 
 > [!div class="nextstepaction"]
 > [Obter a biblioteca (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
-### <a name="build-with-basic-ui-components"></a>Criar com componentes básicos da interface do usuário
+### <a name="build-with-basic-ui-components"></a>Crie com componentes básicos da IU
 
-Diferentemente da fase de design, você pode usar esses Fluent de interface do usuário em seu projeto de aplicativo se um modelo de interface do usuário estiver faltando algo que você precisa ou você só deseja criar o aplicativo do zero. 
+Diferentemente da fase de criação, você pode usar esses componentes da Fluent UI em seu projeto de aplicativo se um modelo de IU não tiver algo de que você precisa ou se quiser apenas compilar o aplicativo do zero. 
 
-(Observação: se você notar algo faltando ou tiver uma ideia para um modelo, considere contribuir para o Teams de biblioteca de interface do usuário.)
+(Observação: se você observar algo ausente ou tiver uma ideia para um modelo, considere contribuir para o repositório da Biblioteca de IU do Teams.)
 
 > [!div class="nextstepaction"]
-> [Obter a biblioteca (Fluent interface do usuário)](https://fluentsite.z22.web.core.windows.net/)
+> [Obter a biblioteca (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
-## <a name="review-design-resources"></a>Revisar recursos de design
+## <a name="review-design-resources"></a>Examinar recursos de design
 
-Se você está apenas começando em seu aplicativo ou perto de um aplicativo pronto para produção, recomendamos que você revise periodicamente os seguintes recursos:
+Se você está apenas começando em seu aplicativo ou perto de um aplicativo pronto para produção, recomendamos que você examine periodicamente os seguintes recursos:
 
-* Microsoft Teams diretrizes de validação da loja : fornece padrões que todos os Teams aplicativos devem se esforçar e não apenas os **aplicativos** listados na loja. Para obter mais informações, consulte as [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
-* **Práticas recomendadas de** design: esses documentos e o kit de interface do usuário fornecem práticas recomendadas para projetar aplicativos de alta qualidade. Por exemplo, consulte as [práticas recomendadas para projetar bots](~/bots/design/bots.md#best-practices).
+* **Diretrizes de validação da loja do Microsoft Teams**: fornece padrões que todos os aplicativos do Teams devem buscar e não apenas os aplicativos listados na loja. Para obter mais informações, consulte [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Práticas recomendadas de design**: esses documentos e o kit de IU fornecem práticas recomendadas para a criação de aplicativos de alta qualidade. Por exemplo, consulte as [práticas recomendadas para criar bots](~/bots/design/bots.md#best-practices).
 
 ## <a name="see-also"></a>Confira também
 
-[Projetando notificações de feed de atividade](~/concepts/design/activity-feed-notifications.md)
+[Criando notificações de feed de atividades](~/concepts/design/activity-feed-notifications.md)

@@ -1,69 +1,69 @@
 ---
-title: Chamadas de mídia em tempo real e reuniões online com Microsoft Teams
-description: Entenda os principais conceitos na criação de bot que podem conduzir chamadas de áudio e vídeo em tempo real e reuniões online. Saiba mais sobre sessões de mídia, taxa de quadros, formato de áudio/vídeo e referência aos recursos do desenvolvedor
+title: Chamadas de mídia em tempo real e reuniões online com o Microsoft Teams
+description: Entenda os principais conceitos na construção de bots que podem realizar chamadas de áudio e vídeo em tempo real e reuniões online. Saiba mais sobre sessões de mídia, taxa de quadros, formato de áudio/vídeo e referência aos recursos de desenvolvedor
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: áudio stream vídeo stream audio/video calling meeting real-time media application-hosted media service-hosted media hosted media
-ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: fluxo de áudio fluxo de vídeo chamada de áudio/vídeo reunião em tempo real mídia hospedada pelo aplicativo mídia hospedada pelo serviço de mídia
+ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948548"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111987"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Chamadas de mídia em tempo real e reuniões com Microsoft Teams
 
-A Plataforma de Mídia em tempo real permite que os bots interajam com Microsoft Teams chamadas e reuniões usando compartilhamento de voz, vídeo e tela em tempo real. A Plataforma de Mídia em Tempo Real é um recurso avançado que permite que o bot envie e receba o conteúdo de voz e vídeo quadro a quadro. O bot tem acesso bruto aos fluxos de mídia de compartilhamento de voz, vídeo e tela. Há bots de mídia hospedados por serviço mais simples que dependem da Plataforma de Mídia em tempo real para todo o processamento de mídia. Os bots que processam a mídia por conta própria são chamados de bots de mídia hospedados pelo aplicativo.
+A Plataforma de Mídia em Tempo Real permite que os bots interajam com as chamadas e reuniões do Microsoft Teams usando voz, vídeo e compartilhamento de tela em tempo real. A Plataforma de Mídia em Tempo Real é um recurso avançado que permite que o bot envie e receba conteúdos de voz e vídeo quadro a quadro. O bot tem acesso bruto aos fluxos de mídia de voz, vídeo e compartilhamento de tela. Existem bots mais simples de mídia hospedada pelo serviço que dependem da Plataforma de Mídia em Tempo Real para todo o processamento de mídia. Os bots que processam mídia são chamados de bots de mídia hospedada pelo aplicativo.
 
-Por exemplo, em uma chamada 1:1 com um bot, conforme o usuário fala, o bot recebe 50 quadros de áudio por segundo. O bot recebe quadros de áudio com cada quadro de 20 milissegundos (ms) de áudio. Um bot de mídia hospedado por aplicativo pode fazer o reconhecimento de fala em tempo real à medida que os quadros de áudio são recebidos. Não é necessário aguardar uma gravação depois que o usuário parou de falar. O bot também pode enviar e receber vídeo de alta resolução, incluindo conteúdo de compartilhamento de tela baseado em vídeo.
+Por exemplo, em uma chamada individual com um bot, enquanto o usuário fala, o bot recebe 50 quadros de áudio por segundo. O bot recebe os quadros de áudio com cada quadro de 20 milissegundos (ms) de áudio. Um bot de mídia hospedada pelo aplicativo pode fazer o reconhecimento de fala em tempo real à medida que os quadros de áudio são recebidos. Não é necessário esperar por uma gravação depois que o usuário tiver parado de falar. O bot também pode enviar e receber vídeos de alta definição, incluindo conteúdos de compartilhamento de tela baseado em vídeo.
 
-A plataforma fornece uma API simples como soquete para o bot enviar e receber mídia. Ele lida com a codificação em tempo real e a decodificação de pacotes de áudio ou vídeo. Ele usa codecs como SILK e G.722 para áudio e H.264 para vídeo. A plataforma também lida com toda a criptografia de pacotes de mídia ou descriptografia e transmissão de rede de pacotes. O bot só está preocupado com o conteúdo real de áudio ou vídeo. Um bot de mídia em tempo real participa de chamadas 1:1 e reuniões com vários participantes.
+A plataforma fornece uma API simples semelhante a um soquete para que o bot envie e receba mídia. Ele lida com a codificação e decodificação em tempo real de pacotes de áudio ou vídeo. Ele utiliza codecs como SILK e G.722 para áudio e H.264 para vídeo. A plataforma também manipula toda a criptografia ou descriptografia de pacotes de mídia e da transmissão de rede de pacotes. O bot só está preocupado com o conteúdo real de áudio ou vídeo. Um bot de mídia em tempo real participa de chamadas individuais e reuniões com vários participantes.
 
 ## <a name="media-session"></a>Sessão de mídia
 
-Um bot de mídia em tempo real deve declarar quais modalidades ele deve suportar. O bot de mídia em tempo real deve declarar suporte quando atender uma chamada de entrada ou ingressar em uma Teams reunião. Para cada modalidade suportada, o bot declara se pode enviar e receber mídia, receber somente ou enviar somente. Por exemplo, um bot projetado para lidar com chamadas de 1:1 Teams, exige enviar e receber áudio. Mas o bot só precisa enviar vídeo, pois ele não precisa receber o vídeo do chamador. O conjunto de modalidades de áudio e vídeo estabelecidas entre o bot e o Teams chamador ou reunião é chamado de sessão de mídia.
+Um bot de mídia em tempo real deve declarar quais modalidades ele deve suportar. O bot de mídia em tempo real deve declarar suporte ao responder a uma chamada recebida ou ingressar em uma reunião do Teams. Para cada modalidade suportada, o bot declara se pode enviar e receber mídia, receber apenas ou enviar apenas. Por exemplo, um bot projetado para lidar com chamadas individuais do Teams exige o envio e recebimento de áudio. Mas o bot precisa apenas enviar o vídeo, pois ele não precisa receber o vídeo do chamador. O conjunto de modalidades de áudio e vídeo estabelecido entre o bot e o chamador ou reunião do Teams é chamado de sessão de mídia.
 
-Há suporte para dois tipos de modalidades de vídeo, vídeo principal e compartilhamento de tela baseado em vídeo. O vídeo principal é usado para transportar o vídeo da webcam de um usuário. O compartilhamento de tela baseado em vídeo permite que um usuário compartilhe a tela. A plataforma permite que um bot envie e receba ambos os tipos de vídeo.
+Dois tipos de modalidades de vídeo são suportados, vídeo principal e compartilhamento de tela baseado em vídeo. O vídeo principal é usado para transportar o vídeo a partir da webcam de um usuário. O compartilhamento de tela baseado em vídeo permite ao usuário compartilhar a tela. A plataforma permite que um bot envie e receba os dois tipos de vídeo.
 
-Quando ingressou em uma reunião Teams, um bot pode receber vários fluxos de vídeos principais simultaneamente até 10 por sessão de mídia. O bot pode ver mais de um participante na reunião.
+Ao participar de uma reunião do Teams, um bot pode receber vários fluxos de vídeos principais simultaneamente até 10 por sessão de mídia. O bot pode ver mais de um participante na reunião.
 
 A próxima seção fornece detalhes sobre o bot enviando e recebendo mídia como uma sequência de quadros.
 
 ## <a name="frames-and-frame-rate"></a>Quadros e taxa de quadros
 
-Um bot de mídia em tempo real interage diretamente com as modalidades de áudio e vídeo de uma sessão de mídia. O bot está enviando e recebendo mídia como uma sequência de quadros e cada quadro é uma unidade de conteúdo. Um segundo de áudio é transmitido como uma sequência de 50 quadros. Cada quadro contém 20 ms que é 1/50 de um segundo de conteúdo de fala. Um segundo do vídeo é transmitido como uma sequência de 30 imagens ainda. Cada imagem destina-se a ser exibida por apenas 33,3 ms que é 1/30 de um segundo antes do próximo quadro de vídeo. O número de quadros transmitidos ou renderizados por segundo é chamado de taxa de quadros.
+Um bot de mídia em tempo real interage diretamente com as modalidades de áudio e vídeo de uma sessão de mídia. O bot está enviando e recebendo mídia como uma sequência de quadros e cada quadro é uma unidade de conteúdo. Um segundo de áudio é transmitido como uma sequência de 50 quadros. Cada quadro contém 20 ms que é 1/50 de um segundo de conteúdo de fala. Um segundo de vídeo é transmitido como uma sequência de 30 imagens estáticas. Cada imagem deve ser visualizada por apenas 33,3 ms, ou seja, 1/30 de segundo antes do próximo quadro de vídeo. O número de quadros transmitidos ou renderizados por segundo é chamado de taxa de quadros.
 
-A próxima seção fornece detalhes sobre o formato de áudio e vídeo usado em chamadas e reuniões de mídia em tempo real.
+A próxima seção fornece detalhes sobre o formato de áudio e vídeo usado em chamadas de mídia e reuniões em tempo real.
 
 ## <a name="audio-and-video-format"></a>Formato de áudio e vídeo
 
-No formato de áudio, cada segundo de áudio é representado como 16.000 amostras, com cada amostra contendo 16 bits de dados. Um quadro de áudio de 20 ms contém 320 amostras de 640 bytes de dados.
+No formato de áudio, cada segundo de áudio é representado por 16.000 amostras, com cada amostra contendo 16 bits de dados. Um quadro de áudio de 20 ms contém 320 amostras que são 640 bytes de dados.
 
-No formato de vídeo, há suporte para vários formatos. Duas propriedades principais de um formato de vídeo são o tamanho do quadro e o formato de cor. Os tamanhos de quadros com suporte incluem 640x360 que é 360 pixels, 1280x720 que é 720 pixels e 1920x1080 que é 1080 pixels. Os formatos de cores com suporte incluem NV12 que é 12 bits por pixel e RGB24 que é 24 bits por pixel.
+No formato de vídeo, vários formatos são suportados. Duas propriedades chave de um formato de vídeo são seu tamanho de quadro e formato de cor. Os tamanhos de quadro suportados incluem 640x360 ou seja, 360 pixels, 1280x720 ou seja, 720 pixels e 1920x1080 ou seja, 1080 pixels. Os formatos de cor suportados incluem NV12 que é de 12 bits por pixel e RGB24 que é de 24 bits por pixel.
 
-Um quadro de vídeo de 720 p contém 921.600 pixels que é 1280 vezes 720. No formato de cor RGB24, cada pixel é representado como 3 bytes que são 24 bits, incluindo 1 byte cada um dos componentes de cor vermelho, verde e azul. Um único quadro de vídeo RGB24 de 720p requer 2.764.800 bytes de dados que são 921.600 pixels vezes 3 bytes por pixel. Em uma taxa de quadros variável, enviar quadros de vídeo RGB24 de 720p significa processar aproximadamente 80 megabytes por segundo de conteúdo. 80 megabytes é substancialmente compactado pelo codec de vídeo H.264 antes da transmissão de rede.
+Um quadro de vídeo de 720-p contém 921.600 pixels, ou seja, 1280 vezes 720. No formato de cor RGB24, cada pixel é representado por 3 bytes que são 24 bits, incluindo 1 byte de cada um dos componentes de cores vermelho, verde e azul. Um único quadro de vídeo RGB24 de 720p requer 2.764.800 bytes de dados, ou seja, 921.600 pixels vezes 3 bytes por pixel. Em uma taxa de quadros variável, o envio de quadros de vídeo RGB24 de 720p significa processar aproximadamente 80 megabytes por segundo de conteúdo. Os 80 megabytes são substancialmente compactados pelo codec de vídeo H.264 antes da transmissão de rede.
 
-Um recurso avançado da plataforma permite que um bot envie ou receba vídeo como quadros H.264 codificados. Os bots que fornecem seu próprio codificador H.264 ou decodificador são suportados, ou o fluxo de vídeo decodificado em bitmaps RGB24 ou NV12 brutos não é necessário.
+Uma funcionalidade avançada da plataforma permite que um bot envie ou receba vídeos como quadros H.264 codificados. Bots que fornecem seu próprio codificador ou decodificador H.264 são suportados, ou o fluxo de vídeo decodificado em mapas de bits RGB24 ou NV12 brutos não é necessário.
 
-A próxima seção fornece detalhes sobre quais participantes da reunião estão falando que são falantes ativos e dominantes.
+A próxima seção fornece detalhes sobre quais participantes da reunião estão falando, ou seja, quais são o palestrantes ativos e dominantes.
 
-## <a name="active-and-dominant-speakers"></a>Alto-falantes ativos e dominantes
+## <a name="active-and-dominant-speakers"></a>Palestrantes ativos e dominantes
 
-Quando ingressado em uma reunião Teams que consiste em vários participantes, um bot pode identificar quais participantes da reunião estão atualmente falando. Os alto-falantes ativos identificam quais participantes estão sendo ouvidos em cada quadro de áudio recebido. Os alto-falantes dominantes identificam quais participantes estão mais ativos ou dominantes na conversa de grupo, embora sua voz não seja ouvida em todos os quadros de áudio. O conjunto de alto-falantes dominantes pode mudar à medida que diferentes participantes se revezam falando.
+Ao participar de uma reunião do Teams composta por vários participantes, um bot pode identificar quais participantes da reunião estão falando no momento. Os palestrantes ativos identificam quais participantes estão sendo ouvidos em cada quadro do áudio recebido. Os palestrantes dominantes identificam quais participantes são atualmente mais ativos ou dominantes na conversa em grupo, embora sua voz não seja ouvida em todos os quadros de áudio. O conjunto de palestrantes dominantes pode ser alterado à medida que diferentes participantes se revezam para falar.
 
-A próxima seção fornece detalhes sobre solicitações de assinatura de vídeo feitas por um bot.
+A próxima seção fornece detalhes sobre as solicitações de assinatura de vídeo feitas por um bot.
 
-## <a name="video-subscription"></a>Assinatura de vídeo
+## <a name="video-subscription"></a>Assinatura de vídeos
 
-Em uma chamada 1:1, o bot recebe automaticamente o vídeo do chamador se o bot estiver habilitado para receber o vídeo. Em uma Teams, o bot deve indicar para a plataforma quais participantes ele deseja ver. Uma assinatura de vídeo é uma solicitação do bot para receber o conteúdo principal de vídeo ou compartilhamento de tela de um participante. À medida que os participantes da reunião conduzem a conversa, o bot modifica suas assinaturas de vídeo necessárias. O bot modifica assinaturas de vídeo com base em atualizações do conjunto de alto-falantes dominante ou notificações que indicam qual participante está compartilhamento de tela no momento.
+Em uma chamada individual, o bot recebe automaticamente o vídeo do chamador se o bot estiver habilitado para receber o vídeo. Em uma reunião do Teams, o bot deve indicar à plataforma quais participantes ele deseja ver. Uma assinatura de vídeo é uma solicitação feita pelo bot para receber o conteúdo principal de vídeo ou compartilhamento de tela de um participante. À medida que os participantes da reunião conduzem a conversa, o bot modifica as assinaturas de vídeo necessárias. O bot modifica as assinaturas de vídeo com base nas atualizações do conjunto dominante de palestrantes ou notificações que indicam qual participante está compartilhando a tela no momento.
 
-A próxima seção fornece detalhes sobre o que você deve instalar e os requisitos para desenvolver um bot de mídia hospedado pelo aplicativo.
+A próxima seção fornece detalhes sobre o que você deve instalar e os requisitos para desenvolver um bot de mídia hospedada pelo aplicativo.
 
 ## <a name="developer-resources"></a>Recursos de desenvolvedor
 
-Para desenvolver um bot de mídia hospedado por aplicativo, você deve instalar o [Microsoft.Graph. Biblioteca Calls.Media .NET NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pacote em seu Visual Studio projeto.
+Para desenvolver um bot de mídia hospedada pelo aplicativo, você deve instalar a [biblioteca Microsoft.Graph.Calls.Media .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) do pacote NuGet no seu projeto do Visual Studio.
 
-Os bots de mídia hospedados pelo aplicativo exigem .NET ou C# e Windows Server. Para obter mais informações, consulte [requisitos e considerações para bots de mídia hospedados pelo aplicativo.](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)
+Os bots de mídia hospedada pelo aplicativo exigem .NET ou C# e o Windows Server. Para obter mais informações, consulte os [requisitos e considerações para bots de mídia hospedada pelo aplicativo](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
 ## <a name="next-step"></a>Próxima etapa
 

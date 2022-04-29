@@ -1,29 +1,29 @@
 ---
 title: Criar uma página de configuração
 author: surbhigupta
-description: Saiba como criar uma página de configuração para definir um canal ou chat em grupo para configurações, como obter dados de contexto, inserir espaços reservados e autenticação usando exemplos de código.
-keywords: canal de grupo de guias do teams configurável
-ms.localizationpriority: medium
+description: Saiba como criar uma página de configuração para configurar um canal ou chat em grupo para configurações, como obter dados de contexto, inserir espaços reservados e autenticação usando exemplos de código.
+keywords: equipes guias grupo canal configurável
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dc1c5c7c8852d13ab490ae0782be0a01eef3fbea
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 912e38fc63d8c897f086d27362ad249688ce7ce9
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103415"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111637"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
 Uma página de configuração é um tipo especial de [página de conteúdo](content-page.md). Os usuários configuram alguns aspectos do aplicativo Microsoft Teams usando a página de configuração e usam essa configuração como parte do seguinte:
 
-* Uma guia de chat de canal ou grupo: colete informações dos usuários e defina `contentUrl` a página de conteúdo a ser exibida.
+* Um canal ou guia de chat em grupo: colete informações dos usuários e defina o `contentUrl` da página de conteúdo a ser exibida.
 * Uma [extensão de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
-* Um [Office 365 conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+* Um [Conector do Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar uma guia de chat de canal ou grupo
+## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar um canal ou guia de chat em grupo
 
-O aplicativo deve fazer referência [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e chamar`microsoft.initialize()`. As URLs usadas devem ser pontos de extremidade HTTPS protegidos e estar disponíveis na nuvem.
+O aplicativo deve fazer referência ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e chamar `microsoft.initialize()`. Os URLs usados ​​devem ser pontos de extremidade HTTPS seguros e disponíveis na nuvem.
 
 ### <a name="example"></a>Exemplo
 
@@ -88,43 +88,43 @@ O código a seguir é um exemplo de código correspondente para a página de con
 </body>
 ```
 
-Escolha o **botão Selecionar** Cinza **ou Selecionar Vermelho** na página de configuração para exibir o conteúdo da guia com um ícone cinza ou vermelho.
+Escolha o botão **Selecionar cinza** ou **Selecionar vermelho** na página de configuração para exibir o conteúdo da guia com um ícone cinza ou vermelho.
 
-A imagem a seguir exibe o conteúdo da guia com **o ícone** Cinza selecionado:
+A imagem a seguir exibe o conteúdo da guia com o ícone **Cinza** selecionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-A imagem a seguir exibe o conteúdo da guia com **o ícone** Vermelho selecionado:
+A imagem a seguir exibe o conteúdo da guia com o ícone **Vermelho** selecionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-Escolher os gatilhos de botão apropriados `saveGray()` ou `saveRed()`, e invoca o seguinte:
+Escolher o botão apropriado aciona `saveGray()` ou `saveRed()` e invoca o seguinte:
 
-* Definido `settings.setValidityState(true)` como true.
-* O `microsoftTeams.settings.registerOnSaveHandler()` manipulador de eventos é disparado.
-* **Salvar** na página de configuração do aplicativo está habilitado.
+* Defina `settings.setValidityState(true)` como verdadeiro.
+* O manipulador de eventos `microsoftTeams.settings.registerOnSaveHandler()` é acionado.
+* **Salvar** na página de configuração do aplicativo, está habilitado.
 
-O código da página de configuração Teams que os requisitos de configuração são atendidos e que a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros são `settings.setSettings()` definidos, conforme definido pela `Settings` interface. Para obter mais informações, consulte [a interface de configurações](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e a instalação pode prosseguir. Quando o usuário seleciona **Salvar**, os parâmetros de `settings.setSettings()` são definidos, conforme definido pela interface `Settings`. Para obter mais informações, consulte a [interface de configurações](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
 
 >[!NOTE]
 >
->* Você tem 30 segundos para concluir a operação de salvamento (o retorno de chamada para registerOnSaveHandler) antes do tempo limite. Após o tempo limite, uma mensagem de erro genérica será exibida.
->* Se você registrar um manipulador de salvamento usando `microsoftTeams.settings.registerOnSaveHandler()`, o retorno de chamada deverá invocar `saveEvent.notifySuccess()` ou `saveEvent.notifyFailure()` indicar o resultado da configuração.
->* Se você não registrar um manipulador de salvamento, `saveEvent.notifySuccess()` a chamada será feita automaticamente quando o usuário selecionar **Salvar**.
+>* Você tem 30 segundos para concluir a operação de salvamento (o retorno de chamada para registerOnSaveHandler) antes do tempo limite. Após o tempo limite, uma mensagem de erro genérica é exibida.
+>* Se você registrar um manipulador de salvamento usando `microsoftTeams.settings.registerOnSaveHandler()`, o retorno de chamada deverá invocar `saveEvent.notifySuccess()` ou `saveEvent.notifyFailure()` para indicar o resultado da configuração.
+>* Se você não registrar um manipulador de salvamento, a chamada `saveEvent.notifySuccess()` será feita automaticamente quando o usuário selecionar **Salvar**.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obter dados de contexto para suas configurações de guia
 
-Sua guia requer informações contextuais para exibir conteúdo relevante. As informações contextuais aprimoram ainda mais o apelo da guia, fornecendo uma experiência de usuário mais personalizada.
+Sua guia requer informações contextuais para exibir conteúdo relevante. As informações contextuais aprimoram ainda mais o apelo de sua guia, fornecendo uma experiência de usuário mais personalizada.
 
-Para obter mais informações sobre as propriedades usadas para a configuração de tabulação, consulte a [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Colete os valores das variáveis de dados de contexto das duas maneiras a seguir:
+Para obter mais informações sobre as propriedades usadas para configuração de guias, consulte [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Colete os valores das variáveis ​​de dados de contexto das duas maneiras a seguir:
 
-* Inserir espaços reservados da cadeia de caracteres de consulta de URL no manifesto.`configurationURL`
+* Insira marcadores de cadeia de caracteres de consulta de URL no `configurationURL` do seu manifesto.
 
-* Use o [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)`microsoftTeams.getContext((context) =>{})`.
+* Use o método [SDK do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`.
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Inserir espaços reservados no `configurationUrl`
 
-Adicione espaços reservados de interface de contexto à sua base `configurationUrl`. Por exemplo:
+Adicione marcadores de interface de contexto à sua base `configurationUrl`. Por exemplo:
 
 ##### <a name="base-url"></a>Base URL
 
@@ -142,7 +142,7 @@ Adicione espaços reservados de interface de contexto à sua base `configuration
 ...
 ```
 
-Depois que a página for carregada, Teams os espaços reservados da cadeia de caracteres de consulta com valores relevantes. Inclua lógica na página de configuração para recuperar e usar esses valores. Para obter mais informações sobre como trabalhar com cadeias de caracteres de consulta de URL, consulte [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) no MDN Web Docs. O exemplo de código a seguir fornece a maneira de extrair um valor da `configurationUrl` propriedade:
+Depois que a página é carregada, o Teams atualiza os espaços reservados da cadeia de caracteres de consulta com valores relevantes. Inclua lógica na página de configuração para recuperar e usar esses valores. Para obter mais informações sobre como trabalhar com cadeias de caracteres de consulta de URL, consulte [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) em MDN Web Docs. O exemplo de código a seguir fornece a maneira de extrair um valor da propriedade `configurationUrl`:
 
 ```html
 <script>
@@ -157,11 +157,11 @@ document.write(getId());
 </script>
 ```
 
-### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar a função `getContext()` para recuperar o contexto
+### <a name="use-the-getcontext-function-to-retrieve-context"></a>Use a função `getContext()` para recuperar o contexto
 
-A `microsoftTeams.getContext((context) => {})` função recupera a [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) quando invocada.
+A função `microsoftTeams.getContext((context) => {})` recupera a [interface de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) quando invocada.
 
-O código a seguir fornece um exemplo de como adicionar essa função à página de configuração para recuperar valores de contexto:
+O código a seguir fornece um exemplo de adição dessa função à página de configuração para recuperar valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -179,13 +179,13 @@ O código a seguir fornece um exemplo de como adicionar essa função à página
 
 ## <a name="context-and-authentication"></a>Contexto e autenticação
 
-Autentique antes de permitir que um usuário configure seu aplicativo. Caso contrário, seu conteúdo pode incluir fontes que têm seus protocolos de autenticação. Para obter mais informações, [consulte autenticar um usuário em uma Microsoft Teams guia](~/tabs/how-to/authentication/auth-flow-tab.md). Use informações de contexto para construir as solicitações de autenticação e as URLs da página de autorização. Verifique se todos os domínios usados em suas páginas de guia estão listados na matriz `manifest.json` e na `validDomains` matriz.
+Autentique antes de permitir que um usuário configure seu aplicativo. Caso contrário, seu conteúdo pode incluir fontes que tenham seus protocolos de autenticação. Para obter mais informações, consulte [autenticar um usuário em uma guia do Microsoft Teams](~/tabs/how-to/authentication/auth-flow-tab.md). Use as informações de contexto para construir as solicitações de autenticação e os URLs da página de autorização. Certifique-se de que todos os domínios usados ​​em suas páginas de guia estejam listados na matriz `manifest.json` e `validDomains`.
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar ou remover uma guia
 
-Defina a propriedade do `canUpdateConfiguration` manifesto como `true`, que permite aos usuários modificar, reconfigurar ou renomear uma guia de canal ou grupo. Além disso, indique o que acontece com o conteúdo quando uma guia é removida, incluindo uma página de opções de remoção no aplicativo e definindo um valor para a `removeUrl` propriedade na configuração  `setSettings()` . O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, [consulte criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
+Defina a propriedade `canUpdateConfiguration` do seu manifesto como `true`, que permite que os usuários modifiquem, reconfigurem ou renomeiem um canal ou guia de grupo. Além disso, indique o que acontece com o conteúdo quando uma guia é removida, incluindo uma página de opções de remoção no aplicativo e definindo um valor para a propriedade `removeUrl` na configuração `setSettings()`. O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setSettings()` Microsoft Teams configuração da página de remoção:
+Configuração do Microsoft Teams `setSettings()` para página de remoção:
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -199,7 +199,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clientes móveis
 
-Se você optar por exibir seu canal ou guia de grupo Teams clientes móveis, `setSettings()` a configuração deverá ter um valor para `websiteUrl`. Para obter mais informações, [consulte as diretrizes para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md).
+Se você optar por exibir sua guia de canal ou grupo nos clientes móveis do Teams, a configuração `setSettings()` deve ter um valor para `websiteUrl`. Para obter mais informações, consulte [orientação para guias em dispositivos móveis](~/tabs/design/tabs-mobile.md).
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -208,7 +208,7 @@ Se você optar por exibir seu canal ou guia de grupo Teams clientes móveis, `se
 
 ## <a name="see-also"></a>Confira também
 
-* [Teams guias](~/tabs/what-are-tabs.md)
+* [Guias de equipes](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar uma guia de canal ou grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)

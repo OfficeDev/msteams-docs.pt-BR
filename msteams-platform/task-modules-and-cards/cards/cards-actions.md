@@ -1,19 +1,19 @@
 ---
 title: Adicionar ações de cartão em um bot
 description: Descreve ações de cartão no Microsoft Teams e como usá-las em seus bots
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103906"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111574"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
-Os cartões usados por bots e extensões de mensagem Teams dão suporte aos seguintes tipos de [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) atividade:
+Os cartões usados por bots e extensões de mensagem no Teams são compatíveis com os seguintes tipos de atividade [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
 
 > [!NOTE]
 > As ações `CardAction` são diferentes das `potentialActions` para Cartões conectores do Office 365 quando usadas de conectores.
@@ -23,7 +23,7 @@ Os cartões usados por bots e extensões de mensagem Teams dão suporte aos segu
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Envia uma mensagem separada para o fluxo de chat. |
 | `imBack`| Envia uma mensagem para o bot do usuário que selecionou o botão ou tocou no cartão. Essa mensagem do usuário para o bot é visível para todos os participantes da conversa. |
-| `invoke` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Esta mensagem não está visível. |
+| `invoke` | Envia uma mensagem e carga para o bot do usuário que selecionou o botão ou tocou no cartão. Esta mensagem não está visível. |
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
@@ -31,7 +31,7 @@ Os cartões usados por bots e extensões de mensagem Teams dão suporte aos segu
 >* O Teams não dá suporte aos tipos `CardAction` não listados na tabela anterior.
 >* O Teams não dá suporte à propriedade `potentialActions`.
 >* As ações de cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou Serviço de Bot do Azure. Não há suporte para ações sugeridas no Microsoft Teams. Se você quiser que os botões apareçam em uma mensagem de bot do Teams, use um cartão.
->* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagem, as ações não funcionarão até que o cartão seja enviado para o canal. As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.
+>* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagem, as ações não funcionarão até que o cartão seja enviado ao canal. As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.
 
 ## <a name="action-type-openurl"></a>Tipo de ação openUrl
 

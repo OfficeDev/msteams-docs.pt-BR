@@ -1,94 +1,94 @@
 ---
 title: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
 author: zyxiaoyuer
-description: publicar Teams aplicativos
+description: publicar aplicativos do Teams
 ms.author: yanjiang
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: c705e9fe724a21d5159092f813157cee78d6dbe9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 4b997f9bf9dd7c27b497691b34b2e1978ebe1857
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453590"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111322"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
 
-Depois de criar o aplicativo, você pode distribuir seu aplicativo para escopos diferentes, como individual, equipe, organização ou qualquer pessoa. A distribuição depende de vários fatores, incluindo necessidades, requisitos técnicos e comerciais e sua meta para o aplicativo. A distribuição para escopos diferentes pode precisar de um processo de revisão diferente. Em geral, quanto maior o escopo, mais o aplicativo precisa passar por questões de segurança e conformidade.
+Após criar o aplicativo, você poderá distribuí-lo para diferentes escopos, tais como individual, equipe, organização ou qualquer pessoa. A distribuição depende de vários fatores, incluindo necessidades, requisitos comerciais e técnicos e sua meta para o aplicativo. A distribuição para diferentes escopos pode precisar de um processo de análise diferente. Em geral, quanto maior o escopo, mais análises precisam ser feitas no aplicativo por questões de segurança e conformidade.
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-* [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
+* [Instalar o Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
 > [!TIP]
-> Verifique se você Teams projeto de aplicativo no código VS.
+> Certifique-se de ter o projeto do aplicativo do Teams no VS code.
 
-## <a name="publish-to-individual-scope-or-sideload-permission"></a>Publicar em escopo individual ou permissão de sideload
+## <a name="publish-to-individual-scope-or-sideload-permission"></a>Publicar para um escopo individual ou permissão de sideload
 
-Os usuários podem adicionar aplicativos personalizados Teams carregando um pacote de aplicativo em um arquivo *.zip diretamente para uma equipe ou em contexto pessoal. Adicionar um aplicativo personalizado carregando um pacote de aplicativo é conhecido como sideload e permite que você teste o aplicativo enquanto está sendo desenvolvido, antes que o aplicativo esteja pronto para ser amplamente distribuído, conforme mencionado nos seguintes cenários:
+Os usuários podem adicionar um aplicativo personalizado ao Teams fazendo upload de um pacote do aplicativo em um arquivo *.zip diretamente para uma equipe ou em um contexto pessoal. Adicionar um aplicativo personalizado por meio do upload de um pacote do aplicativo é conhecido como sideload e permite que você teste o aplicativo durante o desenvolvimento, antes que o aplicativo esteja pronto para ser amplamente distribuído, conforme mencionado nos seguintes cenários:
 
-* Teste e depure um aplicativo localmente.
-* Crie um aplicativo para si mesmo, como para automatizar um fluxo de trabalho.
-* Crie um aplicativo para um pequeno conjunto de usuários, como seu grupo de trabalho.
+* Testar e depurar um aplicativo localmente.
+* Crie um aplicativo para você mesmo, como automatizar um fluxo de trabalho.
+* Construa um aplicativo para pequenos conjuntos de usuários, como, por exemplo, seu grupo de trabalho.
 
-Você pode criar um aplicativo apenas para uso interno e compartilhá-lo com sua equipe sem Teams ao catálogo de aplicativos do Teams app store.
+Você pode criar um aplicativo apenas para uso interno e compartilhá-lo com sua equipe sem enviá-lo ao catálogo de aplicativos do Teams na loja de aplicativos do Teams.
 
-**Para criar seu aplicativo para.zip *de pacote de aplicativos**
+**Para criar seu aplicativo para o arquivo *.zip do pacote do aplicativo**
 
-Você pode criar o pacote de aplicativo selecionando em `Zip Teams metadata package` **DEPLOYMENT** em Treeview of Teams Toolkit. Você precisa executar primeiro `Provision in the cloud` . O pacote de aplicativo gerado estará localizado em `{your project folder}/build/appPackage/appPackage.{env}.zip`.
+Você pode criar o pacote do aplicativo selecionando `Zip Teams metadata package` de **IMPLANTAÇÃO** no Treeview do Kit de Ferramentas do Teams. É necessário executar `Provision in the cloud` primeiro. O pacote do aplicativo gerado estará localizado em `{your project folder}/build/appPackage/appPackage.{env}.zip`.
 
-Execute as seguintes etapas para carregar o pacote de aplicativos:
+Execute as seguintes etapas para fazer upload do pacote do aplicativo:
 
-1. No cliente Teams, selecione **Aplicativos** na barra esquerda.
+1. No cliente do Teams, selecione **Aplicativos** na barra esquerda.
 2. Selecione **Gerenciar seus aplicativos**.
 3. Selecione **publicar um aplicativo**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 
-4. Selecione **Upload um aplicativo personalizado**:
+4. Selecione **Fazer o upload de um aplicativo personalizado**:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="upload":::
 
 ## <a name="publish-to-your-organization"></a>Publicar em sua organização
 
-Quando o aplicativo estiver pronto para uso em produção, você poderá enviar o aplicativo usando a API de envio de aplicativos do Teams, chamada da API Graph, um ambiente de desenvolvimento integrado (IDE), como o código Microsoft Visual Studio instalado com Teams kit de ferramentas. Você pode selecionar **Publicar no Teams** de **IMPLANTAÇÃO** no TreeView do Teams Toolkit ou Teams **: Publicar** no Teams da paleta de comandos. Em seguida **, selecione Instalar para sua organização**:
+Quando o aplicativo estiver pronto para uso em produção, você pode enviar o aplicativo usando a API de envio de aplicativos do Teams, chamada de API do Graph, um ambiente de desenvolvimento integrado (IDE), como o Microsoft Visual Studio Code, instalado com o kit de ferramentas do Teams. Você pode selecionar **Publicar no Teams** da **IMPLANTAÇÃO** no TreeView do Kit de Ferramentas do Teams ou o gatilho **Teams: Publicar no Teams** na paleta de comandos. Em seguida, selecione **Instalar para sua organização**:
 
 ![Instalar para sua organização](./images/installforyourorganization.png)
 
-O aplicativo está disponível no Centro de administração **Gerenciar aplicativos** Microsoft Teams, onde você e o administrador podem revisá-lo e aprove-o.
+O aplicativo está disponível em **Gerenciar aplicativos** no Centro de administração do Microsoft Teams, onde você e o administrador podem examiná-lo e aprová-lo.
 
-Como administrador, **Gerenciar aplicativos** no centro [](https://admin.teams.microsoft.com/policies/manage-apps) de administração Microsoft Teams é onde você pode exibir e gerenciar todos os Teams aplicativos para sua organização. Você pode ver o status e as propriedades do nível da organização dos aplicativos, aprovar ou carregar novos aplicativos personalizados no armazenamento de aplicativos da sua organização, bloquear ou permitir aplicativos no nível da organização, adicionar [aplicativos às equipes](https://admin.teams.microsoft.com/policies/manage-apps), comprar serviços para aplicativos de terceiros, exibir permissões solicitadas por aplicativos, conceder consentimento de administrador a aplicativos e gerenciar configurações de aplicativos de toda a organização.
+Como administrador, **Gerenciar aplicativos** no [Centro de administração do Microsoft Teams](https://admin.teams.microsoft.com/policies/manage-apps) é onde você pode exibir e gerenciar todos os aplicativos do Teams da sua organização. Você pode ver o status e as propriedades dos aplicativos em nível organizacional, aprovar ou carregar novos aplicativos personalizados para a loja de aplicativos da sua organização, bloquear ou permitir aplicativos no nível organizacional, adicionar aplicativos a equipes, comprar serviços para aplicativos de terceiros, visualizar permissões solicitadas por aplicativos, dar consentimento do administrador a aplicativos e [gerenciar configurações de aplicativos em toda a organização ](https://admin.teams.microsoft.com/policies/manage-apps).
 
-Teams kit de ferramentas para Visual Studio Code criado sobre Teams API de Envio de Aplicativos do Teams e permite automatizar o processo de envio para aprovação para aplicativos personalizados no Teams.
+O kit de ferramentas do Teams para Visual Studio Code, criado sobre a API de Envio de Aplicativos do Teams, permite automatizar o processo de envio para aprovação de aplicativos personalizados no Teams.
 
 > [!NOTE]
-> O aplicativo ainda não publica na loja de aplicativos da sua organização. A etapa envia o aplicativo para o Microsoft Teams de administração, onde você pode aprove-lo para publicação na loja de aplicativos da sua organização.
+> O aplicativo ainda não está publicado na loja de aplicativos da sua organização. A etapa envia o aplicativo para o Centro de administração do Microsoft Teams, onde você pode aprová-lo para publicação na loja de aplicativos da sua organização.
 
-## <a name="admin-approval-for-teams-apps"></a>Aprovação do administrador para Teams aplicativos
+## <a name="admin-approval-for-teams-apps"></a>Aprovação do administrador para aplicativos do Teams
 
-O administrador do seu locatário Teams pode, em seguida, ir para  o Centro de administração gerenciar aplicativos no centro de administração do Microsoft Teams, na navegação à esquerda, vá para Teams aplicativos > Gerenciar aplicativos. Você pode exibir todos os Teams aplicativos para sua organização. No widget de aprovação pendente na parte superior da página permite que você saiba quando um aplicativo personalizado é enviado para aprovação.
-Na tabela, um aplicativo recém-enviado publica automaticamente o status de aplicativos enviados e bloqueados. Você pode classificar a coluna de status de publicação em ordem decrescente para encontrar o aplicativo:
+O administrador do seu locatário do Teams pode então acessar **Gerenciar aplicativos** no Centro de administração do Microsoft Teams, no painel de navegação à esquerda, vá para Aplicativos do Teams > Gerenciar aplicativos. Você pode exibir todos os aplicativos do Teams da sua organização. No widget de Aprovação Pendente, na parte superior da página, você saberá quando um aplicativo personalizado será enviado para aprovação.
+Na tabela, um aplicativo recém-enviado publica automaticamente o status dos aplicativos enviados e bloqueados. Você pode classificar a coluna de status de publicação em ordem decrescente para encontrar o aplicativo:
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="aprovação":::
 
-Selecione o nome do aplicativo para ir para a página de detalhes do aplicativo. Na guia Sobre, você pode exibir detalhes sobre o aplicativo, incluindo descrição, status e ID do aplicativo:
+Selecione o nome do aplicativo para acessar a página de detalhes do aplicativo. Na guia Sobre, você pode exibir os detalhes sobre o aplicativo, incluindo a descrição, o status e a ID do aplicativo:
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="aplicativo enviado":::
 
-Execute as etapas a seguir para publicar o aplicativo :
+Execute as seguintes etapas para publicar o aplicativo :
 
-1. Na navegação à esquerda do centro de administração Microsoft Teams, acesse Teams aplicativos > **Gerenciar aplicativos**.
-2. Selecione o nome do aplicativo para ir para a página de detalhes do aplicativo e, na caixa status, selecione **Publicar**.
-Depois de publicar o aplicativo, o status de publicação muda para publicado e o status muda automaticamente para permitido.
+1. Na navegação à esquerda do Centro de administração do Microsoft Teams, vá para Aplicativos do Teams > **Gerenciar aplicativos**.
+2. Selecione o nome do aplicativo para ir para a página de detalhes do aplicativo, e então na caixa de status, selecione **Publicar**.
+Após a publicação do aplicativo, o status de publicação é alterado para publicado e o status é automaticamente alterado para permitido.
 
 ## <a name="publish-to-microsoft-store"></a>Publicar na Microsoft Store
 
-Você pode distribuir seu aplicativo diretamente na loja do Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial. Os aplicativos publicados na Teams também são listados automaticamente no Microsoft AppSource, que é o marketplace oficial para Microsoft 365 aplicativos e soluções.
+Você pode distribuir seu aplicativo diretamente na loja do Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial. Os aplicativos publicados na loja do Teams também são listados automaticamente no Microsoft AppSource, que é o mercado oficial para aplicativos e soluções do Microsoft 365.
 
-Para obter mais informações, consulte [publish to microsoft Teams store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
+Para saber mais, confira [publicar na loja do Microsoft Teams ]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 
 ## <a name="see-also"></a>Confira também
 
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)
-* [Colaborar com outros desenvolvedores no Teams projeto](TeamsFx-collaboration.md)
+* [Colaborar com outros desenvolvedores no projeto do Teams](TeamsFx-collaboration.md)

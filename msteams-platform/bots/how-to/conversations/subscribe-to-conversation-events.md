@@ -1,50 +1,50 @@
 ---
 title: Eventos de conversa
 author: WashingtonKayaker
-description: Como trabalhar com eventos de conversa do bot Microsoft Teams, atualizações de eventos de canal, eventos de membro da equipe e eventos de reação de mensagem com exemplos de código.
+description: Como trabalhar com eventos de conversa a partir do bot do Microsoft Teams, atualizações de eventos de canal, eventos de membro da equipe e eventos de reação de mensagem com Exemplos de código.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-keywords: eventos de conversa de reação de mensagem do canal bot
-ms.openlocfilehash: c089843d82ff7c722dd8c867b5866405ee4dae40
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
-ms.translationtype: MT
+keywords: conversa reação mensagem canal bot eventos
+ms.openlocfilehash: 6d086ef2896a6fd19a128bcf4f1c8b363a21c5b3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102267"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111539"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Ao criar seus bots de conversa para Microsoft Teams, você pode trabalhar com eventos de conversa. Teams envia notificações ao bot para eventos de conversa que ocorrem em escopos em que o bot está ativo. Você pode capturar esses eventos em seu código e executar as seguintes ações:
+Ao criar seus bots de conversa do Microsoft Teams, você poderá trabalhar com eventos de conversa. O Teams envia notificações ao bot de eventos de conversa que ocorrem em escopos onde o bot está ativo. Você poderá capturar esses eventos em seu código e executar as seguintes ações:
 
-* Dispare uma mensagem de boas-vindas quando o bot for adicionado a uma equipe.
+* Dispare uma mensagem de boas-vindas quando seu bot for adicionado a uma equipe.
 * Dispare uma mensagem de boas-vindas quando um novo membro da equipe for adicionado ou removido.
 * Dispare uma notificação quando um canal for criado, renomeado ou excluído.
 * Dispare uma notificação quando uma mensagem de bot for curtida por um usuário.
 
 ## <a name="conversation-update-events"></a>Eventos de atualização de conversa
 
-Você pode usar eventos de atualização de conversa para fornecer notificações melhores e ações de bot mais eficazes.
+Você poderá usar eventos de atualização da conversa para fornecer melhores notificações e ações de bot mais eficazes.
 
 > [!IMPORTANT]
 >
-> * Você pode adicionar novos eventos a qualquer momento e o bot começa a recebê-los.
+> * Você poderá adicionar novos eventos a qualquer momento e seu bot começará a recebê-los.
 > * Você deve projetar seu bot para receber eventos inesperados.
-> * Se você estiver usando o SDK do Bot Framework, o bot responderá automaticamente com um evento `200 - OK` que você optar por não manipular.
+> * Se estiver usando o SDK do Bot Framework, o bot responderá automaticamente com um `200 - OK` a todos os eventos que você escolher não manipular.
 
-Um bot recebe um `conversationUpdate` evento em qualquer um dos seguintes casos:
+Um bot receberá um evento `conversationUpdate` em um dos seguintes casos:
 
 * Quando o bot foi adicionado a uma conversa.
 * Outros membros são adicionados ou removidos de uma conversa.
 * Os metadados da conversa foram alterados.
 
-O evento `conversationUpdate` é enviado ao seu bot quando ele recebe informações sobre atualizações de membros para as equipes onde foi adicionado. Ele também recebe uma atualização quando é adicionada pela primeira vez para conversas pessoais.
+O evento `conversationUpdate` é enviado ao seu bot quando ele recebe informações sobre atualizações de membros para as equipes onde foi adicionado. Ele também receberá uma atualização quando for adicionado pela primeira vez para conversas pessoais.
 
-A tabela a seguir mostra uma lista de eventos Teams atualização de conversa com mais detalhes:
+A tabela a seguir mostra uma lista de eventos de atualização de conversa do Teams com mais detalhes:
 
-| Ação executada        | EventType         | Método chamado              | Descrição                | Escopo |
+| Ação realizada        | EventType         | Método chamado              | Descrição                | Escopo |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Canal criado     | channelCreated    | OnTeamsChannelCreatedAsync | [Um canal é criado](#channel-created). | Equipe |
 | Canal renomeado     | channelRenamed    | OnTeamsChannelRenamedAsync | [Um canal é renomeado](#channel-renamed). | Equipe |
@@ -55,14 +55,14 @@ A tabela a seguir mostra uma lista de eventos Teams atualização de conversa co
 | Equipe renomeada        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Uma equipe é renomeada](#team-renamed).       | Equipe |
 | Equipe excluída        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Uma equipe é excluída](#team-deleted).       | Equipe |
 | Equipe arquivada        | teamArchived       | OnTeamsTeamArchivedAsync    | [Uma equipe é arquivada](#team-archived).       | Equipe |
-| Equipe desarquivada        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Uma equipe está sem arquitetura](#team-unarchived).       | Equipe |
+| Equipe desarquivada        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Uma equipe é desarquivada](#team-unarchived).       | Equipe |
 | Equipe restaurada        | teamRestored      | OnTeamsTeamRestoredAsync    | [Uma equipe é restaurada](#team-restored)       | Equipe |
 
 ### <a name="channel-created"></a>Canal criado
 
-O evento criado pelo canal é enviado ao bot sempre que um novo canal é criado em uma equipe em que o bot está instalado.
+O evento criado pelo canal será enviado ao bot sempre que um novo canal for criado em uma equipe onde o bot estiver instalado.
 
-O código a seguir mostra um exemplo de evento criado pelo canal:
+O código a seguir mostra um exemplo do evento Canal criado:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -149,9 +149,9 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>Canal renomeado
 
-O evento renomeado do canal é enviado para o bot sempre que um canal é renomeado em uma equipe em que o bot está instalado.
+O evento renomeado pelo canal será enviado ao bot sempre que um canal for renomeado em uma equipe onde o bot estiver instalado.
 
-O código a seguir mostra um exemplo de evento de canal renomeado:
+O código a seguir mostra um exemplo do evento Canal renomeado:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -231,9 +231,9 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Canal excluído
 
-O evento excluído do canal é enviado ao bot sempre que um canal é excluído em uma equipe em que o bot está instalado.
+O evento excluído pelo canal será enviado ao bot sempre que um canal for excluído em uma equipe onde o bot estiver instalado.
 
-O código a seguir mostra um exemplo de evento excluído do canal:
+O código a seguir mostra um exemplo do evento Canal excluído:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -315,9 +315,9 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Canal restaurado
 
-O evento restaurado do canal é enviado para o bot sempre que um canal que foi excluído anteriormente é restaurado em uma equipe em que o bot já está instalado.
+O evento restaurado pelo canal será enviado ao bot sempre que um canal excluído anteriormente for restaurado em uma equipe onde o bot já estiver instalado.
 
-O código a seguir mostra um exemplo de evento restaurado do canal:
+O código a seguir mostra um exemplo do evento Canal restaurado:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -404,9 +404,9 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
-O `teamMemberAdded` evento é enviado ao bot na primeira vez que é adicionado a uma conversa. O evento é enviado ao bot sempre que um novo usuário é adicionado a uma equipe ou chat em grupo em que o bot está instalado. As informações do usuário que são IDs são exclusivas para seu bot e podem ser armazenadas em cache para uso futuro pelo seu serviço, como enviar uma mensagem para um usuário específico.
+O evento `teamMemberAdded` será enviado ao bot na primeira vez que ele for adicionado a uma conversa. O evento será enviado ao bot sempre que um novo usuário for adicionado a um chat de equipe ou grupo onde o bot estiver instalado. As informações do usuário, sua ID, são exclusivas do bot e podem ser armazenadas em cache para uso futuro pelo serviço, como enviar uma mensagem para um usuário específico.
 
-O código a seguir mostra um exemplo de evento adicionado aos membros da equipe:
+O código a seguir mostra um exemplo do evento Membros da equipe adicionados:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -455,7 +455,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Essa é a mensagem que seu bot recebe quando o bot é adicionado a uma equipe.
+Esta é a mensagem que seu bot receberá quando o bot for adicionado a uma equipe.
 
 ```json
 {
@@ -494,7 +494,7 @@ Essa é a mensagem que seu bot recebe quando o bot é adicionado a uma equipe.
 }
 ```
 
-Essa é a mensagem que seu bot recebe quando o bot é adicionado a um chat um-para-um.
+Esta é a mensagem que seu bot receberá quando o bot for adicionado a um chat individual.
 
 ```json
 {
@@ -548,12 +548,12 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>Membros da equipe removidos
 
-O `teamMemberRemoved` evento será enviado ao bot se for removido de uma equipe. O evento é enviado ao bot sempre que qualquer usuário é removido de uma equipe em que o bot é membro. Para determinar se o novo membro removido foi o próprio bot ou um usuário, verifique o `Activity` objeto do `turnContext`.  Se o `Id` campo do objeto `MembersRemoved` for `Id` `Recipient` o mesmo que o campo do objeto, o membro removido será o bot, caso contrário, será um usuário. O bot geralmente `Id` é `28:<MicrosoftAppId>`.
+O evento `teamMemberRemoved` será enviado ao bot se ele for removido de uma equipe. O evento será enviado ao bot sempre que qualquer usuário for removido de uma equipe em que o bot é membro. Para determinar se o novo membro removido foi o próprio bot ou um usuário, verifique o objeto `Activity` do `turnContext`.  Se o campo `Id` do objeto `MembersRemoved` for o mesmo que o campo `Id` do objeto `Recipient`, então o membro removido será o bot, caso contrário, será um usuário. A `Id` do bot geralmente é `28:<MicrosoftAppId>`.
 
 > [!NOTE]
-> Quando um usuário é excluído permanentemente de um locatário, `membersRemoved conversationUpdate` o evento é disparado.
+> Quando um usuário for excluído permanentemente de um locatário, o evento `membersRemoved conversationUpdate` será disparado.
 
-O código a seguir mostra um exemplo de evento removido dos membros da equipe:
+O código a seguir mostra um exemplo do evento Membros da equipe removidos:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -602,7 +602,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-O `channelData` objeto no exemplo de conteúdo a seguir baseia-se na adição de um membro a uma equipe em vez de um chat em grupo ou no início de uma nova conversa um-para-um:
+O objeto `channelData` no exemplo de conteúdo a seguir baseia-se na adição de um membro a uma equipe em vez de um chat em grupo ou ao iniciar uma nova conversa individual:
 
 ```json
 {
@@ -660,9 +660,9 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Equipe renomeada
 
-Seu bot é notificado quando a equipe é renomeada. Ele recebe um `conversationUpdate` evento com `eventType.teamRenamed` o objeto `channelData` .
+Seu bot será notificado quando a equipe for renomeada. Ele receberá um evento `conversationUpdate` com `eventType.teamRenamed` no objeto `channelData`.
 
-O código a seguir mostra um exemplo de evento renomeado pela equipe:
+O código a seguir mostra um exemplo do evento Equipe renomeada:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -740,9 +740,9 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Equipe excluída
 
-Seu bot é notificado quando a equipe é excluída. Ele recebe um `conversationUpdate` evento com `eventType.teamDeleted` o objeto `channelData` .
+Seu bot será notificado quando a equipe for excluída. Ele receberá um evento `conversationUpdate` com `eventType.teamDeleted` no objeto `channelData`.
 
-O código a seguir mostra um exemplo de evento excluído pela equipe:
+O código a seguir mostra um exemplo do evento Equipe excluída:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -816,9 +816,9 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>Equipe restaurada
 
-O bot recebe uma notificação quando uma equipe é restaurada após ser excluída. Ele recebe um `conversationUpdate` evento com `eventType.teamrestored` o objeto `channelData` .
+O bot receberá uma notificação quando uma equipe for restaurada após ser excluída. Ele receberá um evento `conversationUpdate` com `eventType.teamrestored` no objeto `channelData`.
 
-O código a seguir mostra um exemplo de evento restaurado pela equipe:
+O código a seguir mostra um exemplo do evento Equipe restaurada:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -896,9 +896,9 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>Equipe arquivada
 
-O bot recebe uma notificação quando a equipe é instalada e arquivada. Ele recebe um `conversationUpdate` evento com `eventType.teamarchived` o objeto `channelData` .
+O bot receberá uma notificação quando a equipe for instalada e arquivada. Ele receberá um evento `conversationUpdate` com `eventType.teamarchived` no objeto `channelData`.
 
-O código a seguir mostra um exemplo de evento arquivado pela equipe:
+O código a seguir mostra um exemplo do evento Equipe arquivada:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -976,9 +976,9 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Equipe desarquivada
 
-O bot recebe uma notificação quando a equipe é instalada e não configurada. Ele recebe um `conversationUpdate` evento com `eventType.teamUnarchived` o objeto `channelData` .
+O bot receberá uma notificação quando a equipe for instalada e desarquivada. Ele receberá um evento `conversationUpdate` com `eventType.teamUnarchived` no objeto `channelData`.
 
-O código a seguir mostra um exemplo de evento não configurado pela equipe:
+O código a seguir mostra um exemplo do evento Equipe desarquivada:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1054,20 +1054,20 @@ async def on_teams_team_unarchived(
 
 ---
 
-Agora que você trabalhou com os eventos de atualização de conversa, pode entender os eventos de reação de mensagem que ocorrem para diferentes reações a uma mensagem.
+Agora que trabalhou com os eventos de atualização de conversa, você entenderá os eventos de reação de mensagem que ocorrem em diferentes reações a uma mensagem.
 
 ## <a name="message-reaction-events"></a>Eventos de reação de mensagem
 
-O `messageReaction` evento é enviado quando um usuário adiciona ou remove reações a uma mensagem que foi enviada pelo bot. Contém `replyToId` a ID da mensagem e o tipo `Type` de reação no formato de texto. Os tipos de reações incluem raiva, coração, risada, tipo, triste e surpresa. Esse evento não contém o conteúdo da mensagem original. Se o processamento de reações às suas mensagens for importante para o bot, você deverá armazenar as mensagens ao enviá-las. A tabela a seguir fornece mais informações sobre o tipo de evento e objetos de conteúdo:
+O evento `messageReaction` será enviado quando um usuário adicionar ou remover reações a uma mensagem que foi enviada pelo bot. O `replyToId` contém a ID da mensagem e o `Type` é o tipo de reação no formato de texto. Os tipos de reações incluem irritado, coração, gargalhada, curtir, triste e surpreso. Este evento não contém o conteúdo da mensagem original. Se o processamento de reações às suas mensagens for importante para o bot, você deverá armazenar as mensagens ao enviá-las. A tabela a seguir fornece mais informações sobre o tipo de evento e os objetos do conteúdo:
 
-| EventType       | Objeto Payload   | Descrição                                                             | Escopo |
+| EventType       | Objeto do conteúdo   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reaçõesAdded   | [Reações adicionadas à mensagem do bot](#reactions-added-to-bot-message).           | Tudo   |
+| messageReaction | reactionsAdded   | [Reações adicionadas à mensagem do bot](#reactions-added-to-bot-message).           | Tudo   |
 | messageReaction | reactionsRemoved | [Reações removidas da mensagem do bot](#reactions-removed-from-bot-message). | Tudo |
 
 ### <a name="reactions-added-to-bot-message"></a>Reações adicionadas à mensagem do bot
 
-O código a seguir mostra um exemplo de reações a uma mensagem de bot:
+O código a seguir mostra um exemplo de reações a uma mensagem do bot:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1287,14 +1287,14 @@ async def on_reactions_removed(
 
 ## <a name="installation-update-event"></a>Evento de atualização de instalação
 
-O bot recebe um evento `installationUpdate` quando você instala um bot em um thread de conversa. A desinstalação do bot do thread também dispara o evento. Ao instalar um bot, o campo  de ação no evento é definido para adicionar *e, quando* o bot é desinstalado, o campo **de ação é** *definido para remover*.
+O bot receberá um evento `installationUpdate` quando você instalar um bot em uma thread da conversa. A desinstalação do bot da thread também disparará o evento. Ao instalar um bot, o campo **ação** no evento será definido como *adicionar*, e quando o bot for desinstalado, o campo **ação** será definido como *remover*.
 
 > [!NOTE]
-> Quando você atualiza um aplicativo e, em seguida, adiciona ou remove um bot, a ação também dispara o `installationUpdate` evento. O **campo** de ação será definido *como add-upgrade* se você adicionar um bot ou *remover a atualização* se remover um bot.
+> Quando você atualiza um aplicativo e, em seguida, adiciona ou remove um bot, a ação também dispara o evento `installationUpdate`. O campo **ação** será definido como *add-upgrade* se você adicionar um bot ou *remove-upgrade* se você remover um bot.
 
-### <a name="install-update-event"></a>Instalar evento de atualização
+### <a name="install-update-event"></a>Evento Instalar atualização
 
-Use o `installationUpdate` evento para enviar uma mensagem introdutória do bot na instalação. Esse evento ajuda você a atender aos seus requisitos de privacidade e retenção de dados. Você também pode limpar e excluir dados de usuário ou thread quando o bot for desinstalado.
+Use o evento `installationUpdate` para enviar uma mensagem introdutória do bot na instalação. Esse evento ajuda você a atender aos seus requisitos de privacidade e retenção. Você também poderá limpar e excluir dados de usuário ou thread quando o bot for desinstalado.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1310,7 +1310,7 @@ else
 } return; }
 ```
 
-Você também pode usar um manipulador dedicado para *adicionar ou* *remover* cenários como um método alternativo para capturar um evento.
+Você também poderá usar um manipulador dedicado para cenários *adicionar* ou *remover* como um método alternativo para capturar um evento.
 
 ```csharp
 protected override async Task
@@ -1403,27 +1403,24 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>Comportamento de desinstalação do aplicativo pessoal com o bot
 
-> [!NOTE]
-> No momento, o comportamento de desinstalação do aplicativo pessoal com bot só está disponível na [versão prévia do desenvolvedor público](../../../resources/dev-preview/developer-preview-intro.md).
+Quando você desinstalar um aplicativo, o bot também será desinstalado. Quando um usuário enviar uma mensagem para seu aplicativo, ele receberá um código de resposta 403. Seu bot receberá um código de resposta 403 para novas mensagens postadas pelo bot. O comportamento pós-desinstalação de bots no escopo pessoal com os escopos do Teams e do groupChat agora está alinhado. Você não poderá enviar ou receber mensagens depois que um aplicativo for desinstalado.
 
-Quando você desinstala um aplicativo, o bot também é desinstalado. Quando um usuário envia uma mensagem para seu aplicativo, ele recebe um código de resposta 403. Seu bot recebe um código de resposta 403 para novas mensagens postadas pelo bot. O comportamento pós-desinstalação para bots no escopo pessoal com os escopos Teams e groupChat agora está alinhado. Você não pode enviar ou receber mensagens depois que um aplicativo é desinstalado.
-
-:::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Desinstalar o código de resposta"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
+:::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Código de resposta de desinstalação"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>Manipulação de eventos para instalar e desinstalar eventos
 
-Quando você usa esses eventos de instalação e desinstalação, há algumas instâncias em que os bots oferecem exceções ao receber eventos inesperados de Teams. Isso ocorre nos seguintes casos:
+Quando você usa esses eventos de instalação e desinstalação, há algumas instâncias em que os bots oferecem exceções ao receber eventos inesperados do Teams. Isso ocorre nos seguintes casos:
 
-* Você cria seu bot sem o SDK do Microsoft Bot Framework e, como resultado, o bot fornece uma exceção ao receber um evento inesperado.
-* Você cria seu bot com o SDK do Microsoft Bot Framework e seleciona alterar o comportamento do evento padrão substituindo o identificador de evento base.
+* Você projeta seu bot sem o SDK do Microsoft Bot Framework e, como resultado, o bot fornece uma exceção ao receber um evento inesperado.
+* Você projeta seu bot com o SDK do Microsoft Bot Framework e seleciona alterar o comportamento padrão do evento substituindo o identificador de evento base.
 
-É importante saber que novos eventos podem ser adicionados a qualquer momento no futuro e seu bot começa a recebê-los. Portanto, você deve projetar para a possibilidade de receber eventos inesperados. Se você estiver usando o SDK do Bot Framework, o bot responderá automaticamente com um 200 – OK para todos os eventos que você não escolher manipular.
+É importante saber que novos eventos poderão ser adicionados a qualquer momento no futuro e seu bot começará a recebê-los. Portanto, você deve projetar considerando a possibilidade de receber eventos inesperados. Se estiver usando o SDK do Bot Framework, o bot responderá automaticamente com 200 – OK a todos os eventos que você não escolher manipular.
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Bot de conversa | Código de exemplo para eventos de conversa de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversa | Código de exemplo de eventos de conversa de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 

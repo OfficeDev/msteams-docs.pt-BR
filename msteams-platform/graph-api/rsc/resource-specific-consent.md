@@ -1,51 +1,51 @@
 ---
-title: Habilitar o consentimento específico do recurso Teams
-description: Descreve o consentimento específico do recurso Teams e como tirar proveito dele.
-ms.localizationpriority: medium
+title: Habilitar o consentimento específico do recurso no Teams
+description: Descreve o consentimento específico de recursos no Teams e como tirar proveito dele.
+ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: autorização do teams OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 071ad1a7f7c8263bafdfb0d2521676d0e6992d8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+keywords: microsoft teams authorization OAuth SSO Azure AD rsc Graph
+ms.openlocfilehash: 8a90d1280f94de099543d879028a84d538c588ac
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399279"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111504"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
 > [!NOTE]
-> O consentimento específico do recurso para o escopo de chat está disponível apenas na [visualização do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md) público.
+> O consentimento específico do recurso para o escopo do chat está disponível [Visualização do desenvolvedor público](../../resources/dev-preview/developer-preview-intro.md) somente.
 
-O RSC (consentimento específico de recursos) é uma integração de API Microsoft Teams e microsoft Graph que permite que seu aplicativo use pontos de extremidade da API para gerenciar recursos específicos, equipes ou chats, dentro de uma organização. O modelo de permissões RSC permite que *proprietários de* equipe e proprietários de *chat* concedam consentimento para que um aplicativo acesse e modifique os dados de uma equipe e os dados de um chat, respectivamente.
+O RSC (consentimento específico do recurso) é uma integração do Microsoft Teams e da API do Microsoft Graph que permite que seu aplicativo use pontos de extremidade de API para gerenciar recursos específicos, equipes ou chats, dentro de uma organização. O modelo de permissões RSC permite que *proprietários de equipe* e *proprietários de chat* concedam consentimento para que um aplicativo acesse e modifique os dados de uma equipe e os dados de um chat, respectivamente.
 
-**Observação:** Se um chat tiver uma reunião ou uma chamada associada a ela, as permissões de RSC relevantes também se aplicam a esses recursos.
+**Observação:** Se um chat tiver uma reunião ou uma chamada associada a ele, as permissões RSC relevantes também se aplicarão a esses recursos.
 
-## <a name="resource-specific-permissions"></a>Permissões específicas de recursos
+## <a name="resource-specific-permissions"></a>Permissões específicas do recurso
 
-As permissões granulares, Teams RSC específicas definem o que um aplicativo pode fazer em um recurso específico.
+As permissões granulares, específicas do Teams e da RSC definem o que um aplicativo pode fazer dentro de um recurso específico.
 
 ### <a name="resource-specific-permissions-for-a-team"></a>Permissões específicas de recursos para uma equipe
 
 |Permissão do aplicativo| Action |
 | ----- | ----- |
-|TeamSettings.Read.Group | Obter as configurações dessa equipe.|
-|TeamSettings.ReadWrite.Group|Atualize as configurações dessa equipe.|
-|ChannelSettings.Read.Group|Obter nomes de canal dessa equipe, descrições de canal e configurações de canal.|
-|ChannelSettings.ReadWrite.Group|Atualize os nomes de canal dessa equipe, descrições de canal e configurações de canal.|
+|TeamSettings.Read.Group | Obtenha as configurações desta equipe.|
+|TeamSettings.ReadWrite.Group|Atualize as configurações desta equipe.|
+|ChannelSettings.Read.Group|Obtenha os nomes de canal, as descrições de canal e as configurações de canal desta equipe.|
+|ChannelSettings.ReadWrite.Group|Atualize os nomes de canal, as descrições de canal e as configurações de canal desta equipe.|
 |Channel.Create.Group|Criar canais nesta equipe. |
-|Channel.Delete.Group|Exclua canais nesta equipe. |
-|ChannelMessage.Read.Group |Receba as mensagens de canal dessa equipe. |
-|TeamsAppInstallation.Read.Group|Obter uma lista dos aplicativos instalados dessa equipe.|
-|TeamsTab.Read.Group|Obter uma lista das guias dessa equipe.|
+|Channel.Delete.Group|Exclua canais desta equipe. |
+|ChannelMessage.Read.Group |Obtenha as mensagens de canal desta equipe. |
+|TeamsAppInstallation.Read.Group|Obtenha uma lista dos aplicativos instalados desta equipe.|
+|TeamsTab.Read.Group|Obtenha uma lista das guias desta equipe.|
 |TeamsTab.Create.Group|Criar guias nesta equipe. |
 |TeamsTab.ReadWrite.Group|Atualize as guias desta equipe. |
 |TeamsTab.Delete.Group|Excluir as guias dessa equipe. |
-|TeamMember.Read.Group|Obter os membros dessa equipe. |
-|TeamsActivity.Send.Group|Crie novas notificações nos feeds de atividade dos usuários nesta equipe. |
+|TeamMember.Read.Group|Obtenha os membros desta equipe. |
+|TeamsActivity.Send.Group|Crie novas notificações nos feeds de atividades dos usuários nesta equipe. |
 
-Para obter mais detalhes, consulte [permissões de consentimento específicas do recurso de equipe](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+Para obter mais detalhes, consulte [permissões de consentimento específicas do recurso da equipe](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Permissões específicas de recursos para um chat
 
@@ -53,94 +53,94 @@ A tabela a seguir fornece permissões específicas de recursos para um chat:
 
 |Permissão do aplicativo| Action |
 | ----- | ----- |
-| ChatSettings.Read.Chat         | Obter as configurações desse chat.                                    |
-| ChatSettings.ReadWrite.Chat    | Atualize as configurações desse chat.                          |
-| ChatMessage.Read.Chat          | Receba as mensagens desse chat.                                    |
-| ChatMember.Read.Chat           | Obter membros desse chat.                                     |
+| ChatSettings.Read.Chat         | Obtenha as configurações deste chat.                                    |
+| ChatSettings.ReadWrite.Chat    | Atualize as configurações deste chat.                          |
+| ChatMessage.Read.Chat          | Obtenha as mensagens deste chat.                                    |
+| ChatMember.Read.Chat           | Obtenha os membros deste chat.                                     |
 | Chat.Manage.Chat               | Gerenciar este chat                                             |
-| TeamsTab.Read.Chat             | Obter as guias desse chat.                                        |
+| TeamsTab.Read.Chat             | Obtenha as guias deste chat.                                        |
 | TeamsTab.Create.Chat           | Criar as guias neste chat.                                     |
 | TeamsTab.Delete.Chat           | Exclua as guias deste chat.                                      |
 | TeamsTab.ReadWrite.Chat        | Gerenciar as guias deste chat.                                      |
-| TeamsAppInstallation.Read.Chat | Obter quais aplicativos estão instalados neste chat.                   |
-| OnlineMeeting.ReadBasic.Chat   | Leia as propriedades básicas, como nome, agendamento, organizador, link de associação e notificações de início/término de uma reunião associada a esse chat. |
+| TeamsAppInstallation.Read.Chat | Obtenha quais aplicativos estão instalados neste chat.                   |
+| OnlineMeeting.ReadBasic.Chat   | Leia as propriedades básicas, como nome, agenda, organizador, link de ingresso e notificações de início/término de uma reunião associada a este chat. |
 | Calls.AccessMedia.Chat         | Acesse fluxos de mídia em chamadas associadas a esse chat ou reunião.                                    |
 | Calls.JoinGroupCalls.Chat         | Participe de chamadas associadas a esse chat ou reunião.                                    |
-| TeamsActivity.Send.Chat         | Crie novas notificações nos feeds de atividade dos usuários neste chat. |
+| TeamsActivity.Send.Chat         | Crie novas notificações nos feeds de atividades dos usuários neste chat. |
 
 Para obter mais detalhes, consulte [permissões de consentimento específicas do recurso de chat](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
 > [!NOTE]
-> Permissões específicas de recursos estão disponíveis apenas para Teams aplicativos instalados no cliente Teams e atualmente não fazem parte do portal Azure Active Directory (AAD).
+> As permissões específicas de recursos só estão disponíveis para aplicativos do Teams instalados no cliente do Teams e atualmente não fazem parte do portal Azure Active Directory (AAD).
 
 ## <a name="enable-rsc-in-your-application"></a>Habilitar o RSC em seu aplicativo
 
-1. [Configure as configurações de consentimento no portal do Azure AD](#configure-consent-settings-in-the-azure-ad-portal).
-    1. [Configure as configurações de consentimento do proprietário do grupo para o RSC em uma equipe](#configure-group-owner-consent-settings-for-rsc-in-a-team).
-    1. [Configure as configurações de consentimento do usuário para RSC em um chat](#configure-user-consent-settings-for-rsc-in-a-chat).
-1. [Registre seu aplicativo com plataforma de identidade da Microsoft usando o portal do Azure AD](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Revise suas permissões de aplicativo no portal do Azure AD](#review-your-application-permissions-in-the-azure-ad-portal).
-1. [Obtenha um token de acesso da plataforma de identidade](#obtain-an-access-token-from-the-microsoft-identity-platform).
-1. [Atualize seu Teams de aplicativo.](#update-your-teams-app-manifest)
+1. [Configurar configurações de consentimento no portal do Azure AD](#configure-consent-settings-in-the-azure-ad-portal).
+    1. [Configurar configurações de consentimento do proprietário do grupo para RSC em uma equipe](#configure-group-owner-consent-settings-for-rsc-in-a-team).
+    1. [Configurar configurações de consentimento do usuário para RSC em um chat](#configure-user-consent-settings-for-rsc-in-a-chat).
+1. [Register seu aplicativo com a plataforma de identidade da Microsoft usando o portal do Azure AD](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Exibir suas permissões de aplicativo no portal do Azure AD](#review-your-application-permissions-in-the-azure-ad-portal).
+1. [Obter um token de acesso da plataforma de identidade](#obtain-an-access-token-from-the-microsoft-identity-platform).
+1. [Atualize o manifesto do aplicativo Teams](#update-your-teams-app-manifest).
 1. [Instale seu aplicativo diretamente no Teams](#sideload-your-app-in-teams).
-1. [Verifique se o aplicativo tem permissões RSC adicionadas](#check-your-app-for-added-rsc-permissions).
-    1. [Verifique se o aplicativo adicionou permissões RSC em uma equipe](#check-your-app-for-added-rsc-permissions-in-a-team).
-    1. [Verifique se o aplicativo adicionou permissões RSC em um chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
+1. [Verifique seu aplicativo para obter permissões de RSC adicionadas](#check-your-app-for-added-rsc-permissions).
+    1. [Verifique seu aplicativo para obter permissões de RSC adicionadas em uma equipe](#check-your-app-for-added-rsc-permissions-in-a-team).
+    1. [Verifique seu aplicativo para obter permissões de RSC adicionadas em um chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
 
-## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>Configurar configurações de consentimento no portal do Azure AD
+## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>Definir configurações de consentimento no portal do Azure AD
 
-### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Configurar configurações de consentimento do proprietário do grupo para RSC em uma equipe
+### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Definir configurações de consentimento do proprietário do grupo para RSC em uma equipe
 
-Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) proprietário do grupo diretamente no Microsoft Azure portal:
+Você pode habilitar ou desabilitar o [consentimento do proprietário do grupo](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) diretamente no portal do Microsoft Azure:
 
-1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
-1. Selecione **Azure Active Directory** >  **Enterprise consent** >  **e permissõesConsulções** >  [**de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado consentimento do proprietário **do grupo para aplicativos que acessam dados**. O padrão é **Permitir consentimento do proprietário do grupo para todos os proprietários do grupo**. Para que o proprietário da equipe instale um aplicativo usando o RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
+1. Entre no [portal do Azure](https://portal.azure.com) como [Administrador Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Selecione **Azure Active Directory** > **Aplicações Enterprise** > **Consentimento e permissões** > [**Configurações de consentimento do usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
+1. Habilite, desabilite ou limite o consentimento do usuário com o controle rotulado **Consentimento do proprietário do grupo para aplicativos que acessam dados**. O padrão é **Permitir o consentimento do proprietário do grupo para todos os proprietários do grupo**. Para que um proprietário de equipe instale um aplicativo usando RSC, o consentimento do proprietário do grupo deve ser habilitado para esse usuário.
 
-    ![Configuração da equipe RSC do Azure](../../assets/images/azure-rsc-team-configuration.png)
+    ![Configuração da equipe do RSC do Azure](../../assets/images/azure-rsc-team-configuration.png)
 
-Além disso, você pode habilitar ou desabilitar o consentimento do proprietário do grupo usando o PowerShell, siga as etapas descritas em configurar o consentimento do proprietário do grupo [usando o PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
+Além disso, você pode habilitar ou desabilitar o consentimento do proprietário do grupo usando o PowerShell, siga as etapas descritas em [configurar o consentimento do proprietário do grupo usando o PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
-### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurar configurações de consentimento do usuário para RSC em um chat
+### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Definir configurações de consentimento do usuário para RSC em um chat
 
-Você pode habilitar ou [desabilitar o consentimento do](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) usuário diretamente no portal do Azure:
+Você pode habilitar ou desabilitar o [conteúdo de usuário](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) diretamente dentro do portal do Azure:
 
-1. Entre no [portal do Azure](https://portal.azure.com) como Administrador [Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
-1. Selecione **Azure Active Directory** >  **Enterprise consent** >  **e permissõesConsulções** >  [**de consentimento do Usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Habilitar, desabilitar ou limitar o consentimento do usuário com o controle rotulado **consentimento do usuário para aplicativos**. O padrão é **Permitir o consentimento do usuário para aplicativos**. Para um membro do chat instalar um aplicativo usando o RSC, o consentimento do usuário deve ser habilitado para esse usuário.
+1. Entre no [portal do Azure](https://portal.azure.com) como [Administrador Global ou Administrador da Empresa](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Selecione **Azure Active Directory** > **Aplicações Enterprise** > **Consentimento e permissões** > [**Configurações de consentimento do usuário**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
+1. Habilite, desabilite ou limite o consentimento do usuário com o controle rotulado Consentimento do usuário para aplicativos **Consentimento do usuário para aplicativos**. O padrão é **Permitir o consentimento do usuário para aplicativos**. Para um membro do chat instalar um aplicativo usando RSC, o consentimento do usuário deve ser habilitado para esse usuário.
 
-    ![Configuração de chat RSC do Azure](../../assets/images/azure-rsc-chat-configuration.png)
+    ![Configuração de chat do RSC do Azure](../../assets/images/azure-rsc-chat-configuration.png)
 
-Além disso, você pode habilitar ou desabilitar o consentimento do usuário usando o PowerShell, siga as etapas descritas em configurar o consentimento [do usuário usando o PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
+Além disso, você pode habilitar ou desabilitar o consentimento do usuário usando o PowerShell, siga as etapas descritas em [configurar o consentimento do usuário usando o PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
 
-## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Registrar seu aplicativo com plataforma de identidade da Microsoft usando o portal do Azure AD
+## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Registrar seu aplicativo na plataforma de identidade da Microsoft usando o portal do Azure AD
 
-O portal do Azure AD fornece uma plataforma central para você registrar e configurar seus aplicativos. Seu aplicativo deve ser registrado no portal do Azure AD para se integrar à plataforma de identidade e chamar as APIs Graph Microsoft. Para obter mais informações, [consulte register an application with the identity platform](/graph/auth-register-app-v2).
+O portal do Azure AD fornece uma plataforma central para você registrar e configurar seus aplicativos. Seu aplicativo deve ser registrado no portal do Azure AD para integrar-se à plataforma de identidade e chamar Microsoft Graph APIs. Para obter mais informações, consulte [registrar um aplicativo com a plataforma de identidade](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> Uma ID de aplicativo do Azure AD não deve ser compartilhada em vários Teams aplicativos. Deve haver um mapeamento 1:1 entre um aplicativo Teams e um aplicativo do Azure AD. As tentativas de instalar vários Teams que estão associados à mesma ID do aplicativo do Azure AD causarão falhas de instalação ou tempo de execução.
+> Uma ID de aplicativo do Azure AD não deve ser compartilhada entre vários aplicativos do Teams. Deve haver um mapeamento 1:1 entre um aplicativo do Teams e um aplicativo do Azure AD. As tentativas de instalar vários aplicativos do Teams associados à mesma ID de aplicativo do Azure AD causarão falhas de instalação ou de runtime.
 
-## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Revise suas permissões de aplicativo no portal do Azure AD
+## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Examinar suas permissões de aplicativo no portal do Azure AD
 
-1. Vá para a página **Registros do HomeApp** >  e selecione seu aplicativo RSC.
-1. Escolha **permissões de API** no painel esquerdo e vá até a lista de **permissões configuradas** para seu aplicativo. Se seu aplicativo fizer apenas chamadas de API RSC Graph, exclua todas as permissões nessa página. Se seu aplicativo também fizer chamadas não RSC, mantenha essas permissões conforme necessário.
+1. Vá para a página **Inicial** > **Registros de aplicativo** e selecione seu aplicativo RSC.
+1. Escolha **permissões API** no painel esquerdo e percorra a lista de **Permissões configuradas** para seu aplicativo. Se seu aplicativo fizer apenas chamadas API do Graph RSC, exclua todas as permissões nessa página. Se seu aplicativo também fizer chamadas não RSC, mantenha essas permissões conforme necessário.
 
 > [!IMPORTANT]
-> O portal do Azure AD não pode ser usado para solicitar permissões RSC. As permissões RSC atualmente são exclusivas Teams aplicativos instalados no cliente Teams e são declaradas no arquivo JSON (manifesto do aplicativo Teams).
+> O portal do Azure AD não pode ser usado para solicitar permissões de RSC. No momento, as permissões RSC são exclusivas para aplicativos do Teams instalados no cliente do Teams e são declaradas no arquivo JSON (manifesto do aplicativo Teams).
 
-## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obtenha um token de acesso do plataforma de identidade da Microsoft
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obter um token de acesso da plataforma de identidade da Microsoft
 
-Para fazer Graph de API, você deve obter um token de acesso para seu aplicativo na plataforma de identidade. Para que seu aplicativo possa obter um token da plataforma de identidade, ele deve ser registrado no portal do Azure AD. O token de acesso contém informações sobre seu aplicativo e as permissões que ele possui para os recursos e APIs disponíveis no Microsoft Graph.
+Para fazer API do Graph chamadas, você deve obter um token de acesso para seu aplicativo da plataforma de identidade. Antes que seu aplicativo possa obter um token da plataforma de identidade, ele deve ser registrado no portal do Azure AD. O token de acesso contém informações sobre seu aplicativo e as permissões que ele possui para os recursos e APIs disponíveis no Microsoft Graph.
 
 Você deve ter os seguintes valores do processo de registro do Azure AD para recuperar um token de acesso da plataforma de identidade:
 
-* A **ID do aplicativo** atribuída pelo portal de registro do aplicativo. Se seu aplicativo oferece suporte a SSO (login único), você deve usar a mesma ID do Aplicativo para seu aplicativo e SSO.
-* O **segredo/senha do cliente** ou um par de chaves públicas ou privadas que é **Certificate**. Isso não é necessário para aplicativos nativos.
+* O **ID de Aplicativo** atribuída pelo portal de registro do aplicativo. Se seu aplicativo der suporte ao SSO (logon único), você deverá usar a mesma ID do Aplicativo para seu aplicativo e SSO.
+* O **segredo/senha do cliente** ou um par de chaves pública ou privada que é **Certificado**. Isso não é necessário para aplicativos nativos.
 * Um **URI de redirecionamento** ou URL de resposta para seu aplicativo receber respostas do Azure AD.
 
-Para obter mais informações, [consulte obter acesso em nome de um usuário](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) e [obter acesso sem um usuário](/graph/auth-v2-service).
+Para obter mais informações, consulte [Obter acesso em nome de um usuário](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) e [Obtenha acesso sem um usuário](/graph/auth-v2-service).
 
-## <a name="update-your-teams-app-manifest"></a>Atualizar seu manifesto Teams aplicativo
+## <a name="update-your-teams-app-manifest"></a>Atualizar o manifesto do aplicativo Teams
 
 As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo.
 
@@ -153,20 +153,20 @@ As permissões RSC são declaradas no arquivo JSON do manifesto do aplicativo.
 
 <details>
 
-<summary><b>Permissões RSC para manifesto do aplicativo versão 1.12</b></summary>
+<summary><b>Permissões RSC para o manifesto do aplicativo versão 1.12</b></summary>
 
-Adicione uma [chave webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
-
-|Nome| Tipo | Descrição|
-|---|---|---|
-|`id` |Cadeia de caracteres |Sua ID do aplicativo do Azure AD. Para obter mais informações, [consulte register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Cadeia de caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
-
-Especifique as permissões necessárias pelo aplicativo.
+Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
 |Nome| Tipo | Descrição|
 |---|---|---|
-|`authorization`|Objeto|Lista de permissões que o aplicativo precisa para funcionar. Para obter mais informações, consulte [placeholder for link-authorization in manifest]
+|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, [registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|Cadeia de caracteres| Este campo não tem nenhuma operação na RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará isso.|
+
+Especifique as permissões necessárias para o aplicativo.
+
+|Nome| Tipo | Descrição|
+|---|---|---|
+|`authorization`|Objeto|Lista de permissões que o aplicativo precisa para funcionar. Para obter mais informações, consulte [espaço reservado para autorização de link no manifesto]
 
 Exemplo de RSC em uma equipe
 
@@ -311,7 +311,7 @@ Exemplo de RSC em um chat
 ```
 
 > [!NOTE]
-> Se o aplicativo tiver o objetivo de dar suporte à instalação em escopos de equipe e chat, as permissões de equipe e de chat poderão ser especificadas no mesmo manifesto em `authorization`.
+> Se o aplicativo tiver o objetivo de dar suporte à instalação nos escopos de equipe e chat, as permissões de equipe e chat poderão ser especificadas no mesmo manifesto em `authorization`.
 
 <br>
 
@@ -321,15 +321,15 @@ Exemplo de RSC em um chat
 
 <details>
 
-<summary><b>Permissões RSC para manifesto do aplicativo versão 1.11 ou anterior</b></summary>
+<summary><b>Permissões RSC para o manifesto do aplicativo versão 1.11 ou anterior</b></summary>
 
-Adicione uma [chave webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
+Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
 |Nome| Tipo | Descrição|
 |---|---|---|
-|`id` |Cadeia de caracteres |Sua ID do aplicativo do Azure AD. Para obter mais informações, [consulte register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Cadeia de caracteres| Este campo não tem operação no RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará.|
-|`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
+|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, [registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|Cadeia de caracteres| Este campo não tem nenhuma operação na RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará isso.|
+|`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [ permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
 
 Exemplo de RSC em uma equipe
 
@@ -382,7 +382,7 @@ Exemplo de RSC em um chat
 ```
 
 > [!NOTE]
-> Se o aplicativo tiver o objetivo de dar suporte à instalação em escopos de equipe e chat, as permissões de equipe e de chat poderão ser especificadas no mesmo manifesto em `applicationPermissions`.
+> Se o aplicativo tiver o objetivo de dar suporte à instalação nos escopos de equipe e chat, as permissões de equipe e chat poderão ser especificadas no mesmo manifesto em `applicationPermissions`.
 
 <br>
 
@@ -390,53 +390,53 @@ Exemplo de RSC em um chat
 
 ## <a name="sideload-your-app-in-teams"></a>Faça o sideload do seu aplicativo do Teams
 
-Se o administrador Teams permite carregamentos de aplicativos personalizados, você pode [fazer sideload do aplicativo](~/concepts/deploy-and-publish/apps-upload.md) diretamente em uma equipe ou chat específico.
+Se o administrador do Teams permitir uploads de aplicativos personalizados, você poderá fazer o [sideload do aplicativo](~/concepts/deploy-and-publish/apps-upload.md) diretamente para uma equipe ou chat específico.
 
-## <a name="check-your-app-for-added-rsc-permissions"></a>Verifique se o aplicativo tem permissões RSC adicionadas
+## <a name="check-your-app-for-added-rsc-permissions"></a>Verifique seu aplicativo para obter permissões de RSC adicionadas
 
 > [!IMPORTANT]
-> As permissões RSC não são atribuídas a um usuário. As chamadas são feitas com permissões de aplicativo, não permissões delegadas pelo usuário. O aplicativo pode ter permissão para executar ações que o usuário não pode, como excluir uma guia. Você deve revisar a intenção do proprietário da equipe ou do proprietário do chat para seu uso antes de fazer chamadas de API RSC. Para obter mais informações, [consulte Microsoft Teams visão geral da API](/graph/teams-concept-overview).
+> As permissões RSC não são atribuídos a um usuário. As chamadas são feitas com permissões de aplicativo, não com permissões delegadas pelo usuário. O aplicativo pode ter permissão para executar ações que o usuário não pode, como excluir uma guia. Você deve examinar a intenção do proprietário da equipe ou do proprietário do chat para seu uso antes de fazer chamadas à API RSC. Para obter mais informações, consulte [Visão geral da API do Microsoft Teams](/graph/teams-concept-overview).
 
-Depois que o aplicativo for instalado em um recurso, você poderá usar o [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) para exibir as permissões que foram concedidas ao aplicativo no recurso.
+Depois que o aplicativo for instalado em um recurso, você poderá usar o [Explorador do Graph](https://developer.microsoft.com/graph/graph-explorer) para exibir as permissões que foram concedidas ao aplicativo no recurso.
 
-### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>Verifique se o aplicativo adicionou permissões RSC em uma equipe
+### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>Verifique seu aplicativo para obter permissões de RSC adicionadas em uma equipe
 
-1. Obter **groupId da equipe Teams**.
-1. Em Teams, selecione **Teams** no painel mais à esquerda.
-1. Selecione a equipe onde o aplicativo deve ser instalado.
-1. Selecione as releições &#x25CF;&#x25CF;&#x25CF; para essa equipe.
+1. Obtenha o **groupId** do Teams.
+1. No Teams, selecione **Microsoft Teams** no painel mais à esquerda.
+1. Selecione a equipe em que o aplicativo deve ser instalado.
+1. Selecione as reticências ●●● para essa equipe.
 1. Selecione **Obter link para a equipe** no menu suspenso da equipe.
-1. Copie e salve o **valor groupId** **da caixa de diálogo Obter um link para a** caixa de diálogo pop-up da equipe.
-1. Entre no Graph **Explorer**.
-1. Faça uma **chamada GET** para este ponto de extremidade: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`. O `clientAppId` campo na resposta será mapeado para o `webApplicationInfo.id` especificado no manifesto Teams aplicativo.
+1. Copie e salve o valor **groupId** da caixa de diálogo pop-up **Obter link para a equipe**.
+1. Entre no **Explorador do Graph**.
+1. Faça uma chamada **GET** para este ponto de extremidade: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`. O campo `clientAppId` na resposta será mapeado para o `webApplicationInfo.id` especificado no manifesto do aplicativo Teams.
 
-    ![Graph de explorer para obter chamada para permissões RSC de equipe](../../assets/images/team-graph-permissions.png)
+    ![Explorador do Graph resposta à chamada GET para permissões RSC da equipe](../../assets/images/team-graph-permissions.png)
 
-Para obter mais informações sobre como obter detalhes dos aplicativos instalados em uma equipe específica, consulte obter os nomes e outros detalhes dos aplicativos instalados na [equipe especificada](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
+Para obter mais informações sobre como obter detalhes dos aplicativos instalados em uma equipe específica, consulte [obter os nomes e outros detalhes dos aplicativos instalados na equipe especificada](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
 
-### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>Verifique se o aplicativo tem permissões RSC adicionadas em um chat
+### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>Verifique seu aplicativo para obter permissões de RSC adicionadas em um chat
 
-1. Obter a ID do thread de chat do cliente Teams *Web*.
-1. No cliente Teams Web, selecione **Chat** no painel mais à esquerda.
+1. Obtenha a ID do encadeamento de bate-papo do cliente *Web* do Teams.
+1. No cliente Web do Teams, selecione **Chat** no painel mais à esquerda.
 1. Selecione o chat em que o aplicativo está instalado no menu suspenso.
-1. Copie a URL da Web e salve a ID do thread de chat da cadeia de caracteres.
+1. Copie o URL da web e salve o ID do tópico de chat da string.
 
-    ![ID do thread de chat da URL da Web](../../assets/images/chat-thread-id.png)
+    ![ID da conversa de chat da URL da Web](../../assets/images/chat-thread-id.png)
 
-1. Entre no Graph **Explorer**.
-1. Faça uma **chamada GET** para o seguinte ponto de extremidade: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. O `clientAppId` campo na resposta será mapeado para o `webApplicationInfo.id` especificado no manifesto Teams aplicativo.
+1. Entre no **Explorador do Graph**.
+1. Faça uma chamada **GET** para o seguinte ponto de extremidade: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. O campo `clientAppId` na resposta será mapeado para o `webApplicationInfo.id` especificado no manifesto do aplicativo Teams.
 
-    ![Graph de explorer para obter chamada para permissões RSC de chat](../../assets/images/chat-graph-permissions.png)
+    ![Explorador do Graph resposta à chamada GET para permissões RSC de chat](../../assets/images/chat-graph-permissions.png)
 
-Para obter mais informações sobre como obter detalhes dos aplicativos instalados em um chat específico, consulte obter os nomes e outros detalhes dos aplicativos instalados [no chat especificado](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
+Para obter mais informações sobre como obter detalhes de aplicativos instalados em um chat específico, consulte [obter os nomes e outros detalhes dos aplicativos instalados no chat especificado](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | **Nome de exemplo** | **Descrição** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific Consentimento (RSC) | Use RSC para chamar Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| RSC (Consentimento Específico do Recurso) | Use o RSC para chamar APIs do Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>Confira também
 
-* [Testar permissões de consentimento específicas do recurso Teams](test-resource-specific-consent.md)
+* [Teste permissões de consentimento específicas do recurso no Teams](test-resource-specific-consent.md)
 * [Consentimento específico do recurso no Microsoft Teams para administradores](/MicrosoftTeams/resource-specific-consent)
