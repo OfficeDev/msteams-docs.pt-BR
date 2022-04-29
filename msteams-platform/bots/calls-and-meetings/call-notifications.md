@@ -2,50 +2,50 @@
 title: Notificações de chamadas recebidas
 description: Saiba mais sobre informações técnicas detalhadas sobre como lidar com notificações de chamadas de entrada, redirecionar e autenticar chamadas usando exemplos de código
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: afinidade de região de retorno de chamada de chamadas
+ms.localizationpriority: high
+keywords: chamadas notificações de chamadas retorno de chamada afinidade de região
 ms.date: 04/02/2019
-ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
-ms.translationtype: MT
+ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63783992"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111546"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
-Ao [registrar um bot de chamadas e reuniões](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities) para Microsoft Teams, o Webhook para chamar URL é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot.
+Ao [registrar um bot de chamadas e reuniões para o Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), o Webhook para a URL de chamada é mencionado. Essa URL é o ponto de extremidade do webhook para todas as chamadas de entrada para o seu bot.
 
-## <a name="protocol-determination"></a>Determinação do protocolo
+## <a name="protocol-determination"></a>Determinação de protocolo
 
-A notificação de entrada é fornecida em um formato herdado para compatibilidade com o protocolo [Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para converter a chamada para o protocolo microsoft Graph, seu bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
+A notificação de entrada é fornecida em um formato herdado para compatibilidade com o [protocolo Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)anterior. Para converter a chamada para o protocolo Microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Seu bot recebe a notificação novamente, mas desta vez no protocolo microsoft Graph.
+Seu bot recebe a notificação novamente, mas desta vez no Microsoft Graph protocolo.
 
-Em uma versão futura da Plataforma de Mídia em tempo real, você pode configurar o protocolo compatível com o aplicativo para evitar receber o retorno de chamada inicial no formato herddo.
+Em uma versão futura da Plataforma de Mídia em Tempo Real, você pode configurar o protocolo compatível com seu aplicativo para evitar o recebimento do retorno de chamada inicial no formato herdado.
 
-A próxima seção fornece detalhes sobre notificações de chamadas de entrada redirecionadas para afinidade de região para sua implantação.
+A próxima seção fornece detalhes sobre as notificações de chamada de entrada redirecionadas para afinidade de região para sua implantação.
 
 ## <a name="redirects-for-region-affinity"></a>Redirecionamentos para afinidade de região
 
-Você chama seu webhook do data-center que hospeda a chamada. A chamada começa em qualquer data center e não leva em conta as afinidades de região. A notificação é enviada para sua implantação, dependendo da resolução GeoDNS. Se o aplicativo determinar, inspecionando a carga de notificação inicial ou de outra forma, que ele precisa ser executado em uma implantação diferente, o aplicativo fornece a seguinte resposta:
+Você chama o webhook do data center que hospeda a chamada. A chamada começa em qualquer data center e não leva em conta as afinidades de região. A notificação é enviada para sua implantação, dependendo da resolução do GeoDNS. Se o aplicativo determinar, inspecionando a carga de notificação inicial ou de outra forma, que ele precisa ser executado em uma implantação diferente, o aplicativo fornecerá a seguinte resposta:
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Habilita o bot a responder a uma chamada de entrada usando a API [de resposta](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) . Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias de estado em que sua chamada é manipulada por uma partição específica e `callbackUri` você deseja inserir essas informações no roteamento para a instância certa.
+Habilite o bot para responder a uma chamada de entrada usando a API [de resposta](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true). Você pode especificar o `callbackUri` para manipular essa chamada específica. Isso é útil para instâncias com estado em que sua chamada é tratada por uma partição específica e você deseja inserir essas informações no `callbackUri` para roteamento para a instância certa.
 
-A próxima seção fornece detalhes sobre a autenticação do retorno de chamada inspecionando o token postado em seu webhook.
+A próxima seção fornece detalhes sobre como autenticar o retorno de chamada inspecionando o token postado no webhook.
 
 ## <a name="authenticate-the-callback"></a>Autenticar o retorno de chamada
 
-Seu bot deve inspecionar o token postado no webhook para validar a solicitação. Sempre que a API posta no webhook, a mensagem HTTP POST contém um token OAuth no cabeçalho Autorização como um token de portador, com a audiência como iD do aplicativo.
+Seu bot deve inspecionar o token postado no webhook para validar a solicitação. Sempre que a API posta no webhook, a mensagem HTTP POST contém um token OAuth no cabeçalho de Autorização como um token de portador, com a audiência como a ID do aplicativo.
 
 Seu aplicativo deve validar esse token antes de aceitar a solicitação de retorno de chamada.
 
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-O token OAuth tem os seguintes valores e é assinado por Skype:
+O token OAuth tem os seguintes valores e é assinado pelo Skype:
 
 ```json
 {
@@ -81,15 +81,15 @@ O token OAuth tem os seguintes valores e é assinado por Skype:
 }
 ```
 
-A configuração OpenID publicada em <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> pode ser usada para verificar o token. Cada valor de token OAuth é usado da seguinte forma:
+A configuração openID publicada em <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> pode ser usada para verificar o token. Cada valor de token OAuth é usado da seguinte maneira:
 
-* `aud` onde audiência é o URI de ID do aplicativo especificado para o aplicativo.
-* `tid` é a ID do locatário para Contoso.com.
-* `iss` é o emissor de token, `https://api.botframework.com`.
+* `aud` em que audiência é o URI da ID do Aplicativo especificado para o aplicativo.
+* `tid` é a ID do locatário Contoso.com.
+* `iss` é o emissor do token, `https://api.botframework.com`.
 
-Para a manipulação de código, o webhook deve validar o token, garantir que ele não expirou e verificar se ele foi assinado pela configuração OpenID publicada. Você também deve verificar se a aud corresponde à ID do aplicativo antes de aceitar a solicitação de retorno de chamada.
+Para a manipulação de código, o webhook deve validar o token, garantir que ele não expirou e verificar se ele foi assinado pela configuração de OpenID publicada. Você também deve verificar se a aud corresponde à ID do aplicativo antes de aceitar a solicitação de retorno de chamada.
 
-Para obter mais informações, consulte [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
+Para obter mais informações, consulte [validar solicitações de entrada](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -99,4 +99,4 @@ Para obter mais informações, consulte [validate inbound requests](https://gith
 ## <a name="see-also"></a>Confira também
 
 * [Configurar um atendedor automático](/microsoftteams/create-a-phone-system-auto-attendant)
-* [Configurar a resposta automática para Salas do Microsoft Teams em dispositivos de telefone de Teams Android e vídeo](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Configurar a resposta automática para Salas do Microsoft Teams em Android e em dispositivos de telefone com vídeo Teams](/microsoftteams/set-up-auto-answer-on-teams-android)

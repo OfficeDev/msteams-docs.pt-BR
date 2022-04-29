@@ -481,6 +481,8 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Parâmetros de classificação da loja do Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+        - name: Motivos comuns para falhas na validação do aplicativo
+          href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: Monetize seu aplicativo
   items:
     - name: Visão Geral

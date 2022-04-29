@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104046"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132706"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|28/04/2022| Motivos comuns para falhas na validação do aplicativo | Distribuir seu aplicativo > Publicar na loja do Teams > [Motivos comuns para falha na validação do aplicativo](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Configurar pipelines de CI/CD | Ferramentas e SDKs > Conjunto de Ferramentas do Teams para o Visual Studio Code > [Configurar pipelines de CI/CD ](toolkit/use-CICD-template.md)|
 |19/04/2022 | Carregar seu aplicativo no Microsoft Teams | Distribuir seu aplicativo > [Carregar seu aplicativo](concepts/deploy-and-publish/apps-upload.md)|
 |06/04/2022| Compartilhar com o Teams a partir do aplicativo pessoal ou da guia (visualização do desenvolvedor) | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

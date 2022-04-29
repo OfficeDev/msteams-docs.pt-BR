@@ -1,25 +1,25 @@
 ---
-title: Referência do esquema de manifesto da versão prévia do desenvolvedor público
-description: Arquivo de manifesto de exemplo e descrição de todos os seus componentes com suporte para Microsoft Teams
+title: Referência do esquema de manifesto do Developer Preview público
+description: Arquivo de manifesto de exemplo e descrição de todos os seus componentes com suporte para o Microsoft Teams
 ms.topic: reference
-keywords: Versão prévia do desenvolvedor do esquema de manifesto do Teams
-ms.localizationpriority: medium
+keywords: Developer Preview do esquema de manifesto do Teams
+ms.localizationpriority: high
 ms.date: 11/15/2021
-ms.openlocfilehash: e388dc955acbe3ba0c116f2a5d5f610d3cbdc3c3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104060"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110327"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: Esquema de manifesto de visualização do desenvolvedor público para Microsoft Teams
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
 
-Para obter informações sobre como habilitar a visualização do desenvolvedor, consulte [a versão prévia do desenvolvedor público para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+Para obter informações sobre como habilitar o Developer Preview, confira [Developer Preview público para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Se você não estiver usando recursos de versão prévia do desenvolvedor, incluindo a execução de guias pessoais e extensões de mensagem do [Teams no Outlook e no Office](../../m365-apps/overview.md), use o manifesto do aplicativo para recursos [de GA](~/resources/schema/manifest-schema.md).
+> Se você não estiver usando recursos do Developer Preview, incluindo a execução de [guias pessoais e extensões de mensagem do Teams no Outlook e no Office](../../m365-apps/overview.md), use o [manifesto do aplicativo para recursos de GA](~/resources/schema/manifest-schema.md).
 
-O Microsoft Teams de dados descreve como o aplicativo se integra à Microsoft Teams plataforma. O seu manifesto deve estar em conformidade com o esquema hospedado em [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
+O manifesto do Microsoft Teams descreve como o aplicativo se integra à plataforma do Microsoft Teams. O seu manifesto deve estar em conformidade com o esquema hospedado em [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
 ## <a name="sample-full-manifest"></a>Amostra de manifesto completo
 
@@ -276,48 +276,48 @@ O esquema define as seguintes propriedades:
 
 ## <a name="schema"></a>$esquema
 
-*Opcional, mas recomendado* &ndash; String
+*Opcional, mas recomendado* &ndash; Cadeia de caracteres
 
-A `https://` URL que faz referência ao esquema JSON para o manifesto.
+A URL `https://` referenciando o esquema JSON para o manifesto.
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**Necessário** &ndash; String
+**Obrigatório** &ndash; Cadeia de caracteres
 
-A versão do esquema de manifesto que este manifesto está usando. Use `m365DevPreview` somente se você estiver visualizando [Teams aplicativos em execução Office e Outlook](../../m365-apps/overview.md). Caso contrário, use `devPreview` para todos os outros recursos Teams versão prévia.
+A versão do esquema do manifesto que este manifesto está usando. Use `m365DevPreview` somente se você estiver visualizando [aplicativos do Teams em execução no Office e no Outlook](../../m365-apps/overview.md). Caso contrário, use `devPreview` para todos os outros recursos de versão prévia do Teams.
 
 ## <a name="version"></a>versão
 
-**Necessário** &ndash; String
+**Obrigatório** &ndash; Cadeia de caracteres
 
-A versão do aplicativo específico. Se você atualizar algo em seu manifesto, a versão também deverá ser incrementada. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente, e o usuário recebe a nova funcionalidade. Se esse aplicativo tiver sido enviado para a loja, o novo manifesto precisará ser enviado novamente e validado novamente. Em seguida, os usuários desse aplicativo receberão o novo manifesto atualizado automaticamente em algumas horas, depois que ele for aprovado.
+A versão do aplicativo específico. Se você atualiza algo no seu manifesto, a versão deve ser incrementada também. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente e o usuário recebe a nova funcionalidade. Se esse aplicativo foi enviado para o repositório, o novo manifesto precisa ser enviado e validado novamente. Depois, usuários desse aplicativo obterão o novo manifesto atualizado automaticamente em algumas horas, depois da aprovação.
 
-Se as permissões solicitadas pelo aplicativo mudarem, os usuários serão solicitados a atualizar e consentir novamente com o aplicativo.
+Se as permissões solicitadas do aplicativo mudarem, os usuários serão solicitados a atualizar e concordar novamente com o aplicativo.
 
 Esta cadeia de caracteres da versão deve seguir o padrão [semver](http://semver.org/) (MAJOR.MINOR.PATCH).
 
 ## <a name="id"></a>id
 
-**Necessário** &ndash; ID do aplicativo da Microsoft
+**Obrigatório** &ndash; ID do aplicativo da Microsoft
 
-O identificador exclusivo gerado pela Microsoft para este aplicativo. Se você registrou um bot por meio do Microsoft Bot Framework ou o aplicativo Web da guia já entra com a Microsoft, você já deve ter uma ID e deve inseri-la aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da [Microsoft (Meus](https://apps.dev.microsoft.com) Aplicativos), inseri-la aqui e reutilizá-la quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
+O identificador exclusivo gerado pela Microsoft para esse aplicativo. Se você registrou um bot por meio do Microsoft Bot Framework ou o aplicativo Web da guia já entra com a Microsoft, você já deve ter uma ID e deve inseri-la aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus Aplicativos](https://apps.dev.microsoft.com)), insira-a aqui e depois a use novamente quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
-**Necessário** &ndash; String
+**Obrigatório** &ndash; Cadeia de caracteres
 
-Um identificador exclusivo para este aplicativo na notação de domínio reverso; por exemplo, com.example.myapp.
+Um identificador exclusivo para esse aplicativo em notação de domínio reverso, por exemplo, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
-Necessário:
+Obrigatório:
 
-Especifica informações sobre a sua empresa. Para aplicativos enviados ao AppSource (anteriormente Office Store), esses valores devem corresponder às informações em sua entrada do AppSource.
+Especifica informações sobre a sua empresa. Para aplicativos enviados ao AppSource (anteriormente Office Store), esses valores devem corresponder às informações na entrada do AppSource.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`name`|32 caracteres|✔|O nome de exibição do desenvolvedor.|
-|`websiteUrl`|2048 caracteres|✔|A URL https:// para o site do desenvolvedor. Esse link deve levar os usuários para a sua empresa ou página de aterrissagem específica do produto.|
+|`websiteUrl`|2048 caracteres|✔|A URL https:// para o site do desenvolvedor. Esse link deve levar os usuários à página de aterrissagem específica da sua empresa ou do produto.|
 |`privacyUrl`|2048 caracteres|✔|A URL https:// para a política de privacidade do desenvolvedor.|
 |`termsOfUseUrl`|2048 caracteres|✔|A URL https:// para os termos de uso do desenvolvedor.|
 |`mpnId`|10 caracteres|✔|**Opcional** A ID do Microsoft Partner Network que identifica a organização parceira criadora do aplicativo.|
@@ -326,7 +326,7 @@ Especifica informações sobre a sua empresa. Para aplicativos enviados ao AppSo
 
 Opcional:
 
-Permite a especificação de um idioma padrão, bem como ponteiros para arquivos de idioma adicionais. Consulte [a localização](~/concepts/build-and-test/apps-localization.md).
+Permite a especificação de um idioma padrão, bem como ponteiros para arquivos de idioma adicionais. Consulte a [localização](~/concepts/build-and-test/apps-localization.md).
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -334,7 +334,7 @@ Permite a especificação de um idioma padrão, bem como ponteiros para arquivos
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
-Uma matriz de objetos que especifica traduções de idioma adicionais.
+Uma matriz de objetos especificando traduções de idiomas adicionais.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -343,7 +343,7 @@ Uma matriz de objetos que especifica traduções de idioma adicionais.
 
 ## <a name="name"></a>nome
 
-Necessário:
+Obrigatório:
 
 O nome da sua experiência de aplicativo, exibido aos usuários na experiência do Teams. Para aplicativos enviados ao AppSource, esses valores devem corresponder às informações na entrada do AppSource. Os valores de `short` e `full` não devem ser os mesmos.
 
@@ -354,11 +354,11 @@ O nome da sua experiência de aplicativo, exibido aos usuários na experiência 
 
 ## <a name="description"></a>descrição
 
-Necessário:
+Obrigatório:
 
 Descreve o seu aplicativo para os usuários. Para aplicativos enviados ao AppSource, esses valores devem corresponder às informações na entrada do AppSource.
 
-Certifique-se de que sua descrição descreva com precisão sua experiência e forneça informações para ajudar os clientes potenciais a entender o que sua experiência faz. Você também deve observar, na descrição completa, se uma conta externa for necessária para uso. Os valores de `short` e `full` não devem ser os mesmos.  Sua breve descrição não deve ser repetida dentro da descrição longa e não deve incluir nenhum outro nome de aplicativo.
+Certifique-se de que a sua descrição detalhe corretamente a sua experiência e forneça informações para ajudar clientes em potencial a entender o que sua experiência faz. Você também deve observar, na descrição completa, se uma conta externa é necessária para uso. Os valores de `short` e `full` não devem ser os mesmos.  A sua descrição curta não deve ser repetida na descrição longa e não deve incluir nenhum outro nome de aplicativo.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -367,7 +367,7 @@ Certifique-se de que sua descrição descreva com precisão sua experiência e f
 
 ## <a name="icons"></a>ícones
 
-Necessário:
+Obrigatório:
 
 Ícones usados no aplicativo Teams. Os arquivos de ícone devem ser incluídos como parte do pacote de upload.
 
@@ -378,9 +378,9 @@ Necessário:
 
 ## <a name="accentcolor"></a>accentColor
 
-**Necessário** &ndash; String
+**Obrigatório** &ndash; Cadeia de caracteres
 
-Uma cor a ser usada em conjunto com e como plano de fundo para seus ícones de estrutura de tópicos.
+Uma cor para usar em conjunto e como plano de fundo para os seus ícones de contorno.
 
 O valor deve ser um código de cor HTML válido começando com '#', por exemplo `#4464ee`.
 
@@ -388,18 +388,18 @@ O valor deve ser um código de cor HTML válido começando com '#', por exemplo 
 
 Opcional:
 
-Usado quando a sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis têm suporte apenas no escopo das equipes e, atualmente, há suporte para apenas uma guia por aplicativo.
+Usado quando a sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis têm suporte apenas no escopo das equipes e, atualmente, há suporte apenas para uma guia por aplicativo.
 
 O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma solução de guia de canal configurável.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔|A URL https:// a ser usada ao configurar a guia.|
-|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
+|`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
-|`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`e `meetingStage`.|
+|`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`.|
 |`sharePointPreviewImage`|Cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opção são `sharePointFullPage` e`sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opções são `sharePointFullPage` e `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -407,7 +407,7 @@ Opcional:
 
 Define um conjunto de guias que podem ser "fixadas" por padrão, sem que o usuário as adicione manualmente. As guias estáticas declaradas no escopo `personal` são sempre vinculadas à experiência pessoal do aplicativo. As guias estáticas declaradas no escopo `team` não são suportadas no momento.
 
-Renderize guias com Cartões Adaptáveis especificando em `contentBotId` vez de `contentUrl` no **bloco staticTabs** .
+Renderize guias com Cartões Adaptáveis especificando `contentBotId` em vez de `contentUrl` no bloco **staticTabs**.
 
 O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma solução de guia estática.
 
@@ -416,8 +416,8 @@ O objeto é uma matriz (máximo de 16 elementos) com todos os elementos do tipo 
 |`entityId`|String|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
 |`name`|Cadeia de caracteres|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
 |`contentUrl`|Cadeia de caracteres|2048 caracteres|✔|A URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
-|`contentBotId`|   | | | A Microsoft Teams ID do aplicativo especificada para o bot no portal do Bot Framework. |
-|`websiteUrl`|Cadeia de caracteres|2048 caracteres||A https:// URL para apontar se um usuário optar por exibir em um navegador.|
+|`contentBotId`|   | | | A ID do Aplicativo do Microsoft Teams especificada para o bot no portal do Bot Framework. |
+|`websiteUrl`|Cadeia de caracteres|2048 caracteres||A URL https:// para apontar se um usuário optar por visualizar em um navegador.|
 |`scopes`|Matriz de enumeração|1|✔|Atualmente, as guias estáticas oferecem suporte apenas ao escopo `personal`, o que significa que elas podem ser provisionadas apenas como parte da experiência pessoal.|
 
 ## <a name="bots"></a>bots
@@ -426,19 +426,19 @@ Opcional:
 
 Define uma solução de bot, juntamente com informações opcionais, como propriedades de comando padrão.
 
-O objeto é uma matriz (no máximo apenas 1 elemento&mdash; atualmente, apenas um bot é permitido por aplicativo) com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma experiência de bot.
+O objeto é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas um bot é permitido por aplicativo) com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma experiência de bot.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|String|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a [ID geral do aplicativo](#id).|
+|`botId`|String|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
 |`needsChannelSelector`|Boolean|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: `false`|
-|`isNotificationOnly`|Booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: `false`|
+|`isNotificationOnly`|Boolean|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: `false`|
 |`supportsFiles`|Boolean|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: `false`|
 |`scopes`|Matriz de enumeração|3|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de 2 elementos) `object`com todos os elementos do tipo; você deve definir uma lista de comandos separada para cada escopo ao qual o bot dá suporte. Para obter mais informações, consulte [menus de Bot](~/bots/how-to/create-a-bot-commands-menu.md).
+Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de dois elementos) com todos os elementos do tipo `object`. Você deve definir uma lista de comandos separada para cada escopo que o seu bot oferece suporte. Para obter mais informações, confira [Menus de Bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -451,7 +451,7 @@ Opcional:
 
 O bloco `connectors` define um conector do Office 365 para o aplicativo.
 
-O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `object`. Este bloco é necessário apenas para soluções que fornecem um Conector.
+O objeto é uma matriz (máximo de um elemento) com todos os elementos do tipo `object`. Este bloco é necessário apenas para soluções que fornecem um Conector.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -466,15 +466,15 @@ Opcional:
 Define uma extensão de mensagem para o aplicativo.
 
 > [!NOTE]
-> O nome do recurso foi alterado de "extensão de composição" para "extensão de mensagem" em novembro de 2017, mas o nome do manifesto permanece o mesmo para que as extensões existentes continuem a funcionar.
+> O nome do recurso foi alterado de “extensão de texto” para “extensão de mensagem” em novembro de 2017, mas o nome do manifesto permanece o mesmo para que as extensões existentes continuem funcionando.
 
-O objeto é uma matriz (máximo de 1 elemento) com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma extensão de mensagem.
+O objeto é uma matriz (máximo de um elemento) com todos os elementos do tipo `object`. Este bloco é necessário apenas para soluções que fornecem uma extensão de mensagem.
 
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|String|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagem, conforme registrado com o Bot Framework. Isso pode ser o mesmo que a [ID geral do aplicativo](#id).|
-|`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário. O padrão é `false`.|
-|`commands`|Matriz de objeto|10 |✔|Matriz de comandos compatíveis com a extensão de mensagem|
+|`botId`|Cadeia de caracteres|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagem, conforme registrado no Bot Framework. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
+|`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário. O padrão é `false`.|
+|`commands`|Matriz de objeto|10|✔|Matriz de comandos com suporte da extensão de mensagem.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -489,41 +489,41 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`title`|Cadeia de caracteres|32 caracteres|✔|O nome do comando amigável.|
 |`description`|Cadeia de caracteres|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
 |`initialRun`|Booliano|||Um valor booliano que indica se o comando deve ser executado inicialmente sem parâmetros. Padrão: `false`|
-|`context`|Matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação de `compose`, `commandBox`, `message`. O padrão é `["compose", "commandBox"]`|
-|`fetchTask`|Booliano|||Um valor booliano que indica se ele deve buscar o módulo de tarefa dinamicamente.|
+|`context`|Matriz de cadeias de caracteres|3||Define de onde a extensão da mensagem pode ser invocada. Qualquer combinação de `compose`, `commandBox` e `message`. O padrão é `["compose", "commandBox"]`|
+|`fetchTask`|Boolean|||Um valor booliano que indica se deve buscar o módulo de tarefa dinamicamente.|
 |`taskInfo`|Objeto|||Especifique o módulo de tarefa a ser pré-carregado ao usar um comando de extensão de mensagem.|
 |`taskInfo.title`|Cadeia de caracteres|64||Título inicial da caixa de diálogo.|
-|`taskInfo.width`|String|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
-|`taskInfo.height`|String|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
+|`taskInfo.width`|Cadeia de caracteres|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
+|`taskInfo.height`|Cadeia de caracteres|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.url`|Cadeia de caracteres|||URL inicial da webview.|
-|`messageHandlers`|Matriz de objetos|5||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas. Os domínios também devem ser listados em `validDomains`.|
+|`messageHandlers`|Matriz de Objetos|5||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas. Os domínios também devem ser listados em `validDomains`.|
 |`messageHandlers.type`|Cadeia de caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadeias de caracteres|||Matriz de domínios para os quais o manipulador de mensagens de link pode se registrar.|
-|`parameters`|Matriz de objeto|5|✔|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5|
-|`parameter.name`|String|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. Isso está incluído na solicitação do usuário.|
+|`parameters`|Matriz de objeto|5|✔|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5.|
+|`parameter.name`|String|64 caracteres|✔|O nome do parâmetro como aparece no cliente. Isso está incluído na solicitação de usuário.|
 |`parameter.title`|Cadeia de caracteres|32 caracteres|✔|Título amigável para o parâmetro.|
 |`parameter.description`|Cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
-|`parameter.inputType`|Cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true`. Um de `text`, `textarea``number`, , `date`, `time`, , `toggle`. `choiceset`|
-|`parameter.choices`|Matriz de objetos|10 ||As opções de escolha para o `choiceset`. Use somente quando `parameter.inputType` for `choiceset`.|
-|`parameter.choices.title`|String|128||Títulor da escolha.|
+|`parameter.inputType`|Cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true`. Um de `text`, `textarea`, `number`, `date`, `time`, `toggle` e `choiceset`.|
+|`parameter.choices`|Matriz de Objetos|10||As opções de escolha para `choiceset`. Use apenas quando `parameter.inputType` for `choiceset`.|
+|`parameter.choices.title`|Cadeia de caracteres|128||Títulor da escolha.|
 |`parameter.choices.value`|Cadeia de caracteres|512||O valor da escolha.|
 
 ## <a name="permissions"></a>permissões
 
 Opcional:
 
-Uma matriz que `string` especifica quais permissões o aplicativo solicita, o que permite que os usuários finais saibam como a extensão será executada. As seguintes opções não são exclusivas:
+Uma matriz de `string`, que especifica quais permissões o aplicativo solicita, que permite que os usuários finais saibam como a extensão funcionará. As seguintes opções não são exclusivas:
 
 * `identity`&emsp; Requer informações de identidade do usuário.
 * `messageTeamMembers`&emsp; Requer permissão para enviar mensagens diretas aos membros da equipe.
 
-Alterar essas permissões ao atualizar seu aplicativo fará com que os usuários repitam o processo de consentimento na primeira vez que executarem o aplicativo atualizado.
+Alterar essas permissões ao atualizar o aplicativo fará com que seus usuários repitam o processo de consentimento na primeira vez que executam o aplicativo atualizado.
 
 ## <a name="devicepermissions"></a>devicePermissions
 
 **Opcional** Matriz de cadeias de caracteres
 
-Especifica os recursos nativos no dispositivo de um usuário aos quais seu aplicativo pode solicitar acesso. As opções são:
+Especifica os recursos nativos no dispositivo de um usuário aos quais o seu aplicativo pode solicitar acesso. As opções são:
 
 * `geolocation`
 * `media`
@@ -533,14 +533,14 @@ Especifica os recursos nativos no dispositivo de um usuário aos quais seu aplic
 
 ## <a name="validdomains"></a>validDomains
 
-**Opcional**, exceto **Obrigatório,** quando especificado
+**Opcional**, exceto **Obrigatório** onde indicado.
 
-Uma lista de domínios válidos dos quais o aplicativo espera carregar qualquer conteúdo. As listagem de domínio podem incluir caracteres curinga, por exemplo `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder, `a.b.example.com` use `*.*.example.com`. Se a configuração da guia ou a interface do usuário do conteúdo precisar navegar para qualquer outro domínio além do que é usado para a configuração de tabulação, esse domínio deverá ser especificado aqui.
+Uma lista de domínios válidos dos quais o aplicativo espera carregar qualquer conteúdo. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com`, use `*.*.example.com`. Se a sua configuração de guias ou interface do usuário de conteúdo precisa navegar para qualquer outro domínio além do usado para a configuração de guias, esse domínio deve ser especificado aqui.
 
-No entanto **,** não é necessário incluir os domínios dos provedores de identidade aos quais você deseja dar suporte em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para o accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]`.
+Entretanto, **não** é necessário incluir os domínios dos provedores de identidade aos quais você deseja oferecer suporte em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]`.
 
 > [!IMPORTANT]
-> Não adicione domínios que estão fora do seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido.
+> Não adicione domínios que estão fora de seu controle, seja diretamente ou por meio de curingas. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido.
 
 O objeto é uma matriz com todos os elementos do tipo `string`.
 
@@ -548,12 +548,12 @@ O objeto é uma matriz com todos os elementos do tipo `string`.
 
 Opcional:
 
-Especifique Microsoft Azure Active Directory ID do aplicativo do Azure AD (Azure AD) e Graph informações para ajudar os usuários a entrar diretamente em seu aplicativo do Auzre AD.
+Especifique sua ID do aplicativo do Microsoft Azure Active Directory (Azure AD) e informações do Graph para ajudar os usuários a entrarem no seu aplicativo do Azure AD diretamente.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|Cadeia de caracteres|36 caracteres|✔|ID de aplicativo do Microsoft Azure Active Directory (Azure AD) do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|Cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para adquirir o token de autenticação para SSO.|
+|`resource`|Cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para logon único.|
 |`applicationPermissions`|Matriz|Máximo de 100 itens|✔|Permissões de recurso para o aplicativo.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -569,10 +569,10 @@ Você pode definir qualquer uma das seguintes propriedades:
 
 * `name`: O nome de exibição do aplicativo.
 * `shortDescription`: A breve descrição do aplicativo.
-* `longDescription`: a descrição detalhada do aplicativo.
+* `longDescription`: descrição detalhada do aplicativo.
 * `smallImageUrl`: O ícone de contorno do aplicativo.
 * `largeImageUrl`: O ícone de cor do aplicativo.
-* `accentColor`: a cor a ser usada em conjunto com e como plano de fundo para seus ícones de estrutura de tópicos.
+* `accentColor`: a cor para usar em conjunto e como plano de fundo para os seus ícones de contorno.
 * `developerUrl`: A URL HTTPS do site do desenvolvedor.
 * `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
@@ -601,7 +601,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
