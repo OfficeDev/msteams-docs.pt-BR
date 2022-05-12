@@ -5,12 +5,12 @@ description: Uma visão geral dos bots do Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102408"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191247"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -63,7 +63,7 @@ Você pode usar as APIs do bot do Teams para obter informações dos membros de 
 
 ## <a name="see-also"></a>Confira também
 
-* [Criar um bot para o Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Criar um bot para o Teams](../resources/bot-v3/bots-create.md)
 * [Como os bots do Microsoft Teams funcionam](/azure/bot-service/bot-builder-basics-teams)
 * [Registrar chamadas e reuniões do bot do Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Adicionar autenticação ao seu bot do Teams](~/bots/how-to/authentication/add-authentication.md)

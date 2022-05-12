@@ -2,14 +2,14 @@
 title: Escolhendo uma configuração para testar e depurar seu aplicativo
 description: Descreve opções para testar e depurar aplicativos do Microsoft Teams no ambiente local e hospedado na nuvem.
 keywords: as equipes executam aplicativos de depuração host hospedado na nuvem local
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135756"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296991"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolher uma configuração para testar e depurar seu aplicativo Microsoft Teams
 

@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102107"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191177"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
-Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, Teams posta a mensagem no bot. Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. O bot examina a mensagem para determinar seu tipo e responde adequadamente.
+Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, Teams posta a mensagem no bot. Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. Seu bot examina a mensagem para determinar seu tipo e responde adequadamente.
 
 As conversas básicas são tratadas por meio do conector do Bot Framework, uma única API REST. Essa API permite que o bot se comunique com Teams e outros canais. O SDK do Construtor de Bot fornece os seguintes recursos:
 
@@ -195,7 +195,7 @@ async def on_members_added_activity(
 
 As mensagens enviadas entre usuários e bots incluem dados internos do canal dentro da mensagem. Esses dados permitem que o bot se comunique corretamente nesse canal. O SDK do Construtor de Bot permite modificar a estrutura da mensagem.
 
-## <a name="teams-channel-data"></a>Teams de canal
+## <a name="teams-channel-data"></a>Dados do canal do Teams
 
 O `channelData` objeto contém Teams informações específicas e é uma fonte definitiva para IDs de equipe e canal. Opcionalmente, você pode armazenar em cache e usar essas IDs como chaves para armazenamento local. O `TeamsActivityHandler` SDK extrai informações importantes do objeto `channelData` para torná-lo facilmente acessível. No entanto, você sempre pode acessar os dados originais do `turnContext` objeto.
 
@@ -204,10 +204,10 @@ O `channelData` objeto não está incluído em mensagens em conversas pessoais, 
 Um objeto `channelData` típico em uma atividade enviada ao bot contém as seguintes informações:
 
 * `eventType`: Teams tipo de evento passado somente em casos de eventos [de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory ID de locatário do Azure AD (Azure) passada em todos os contextos.
+* `tenant.id`: Microsoft Azure Active Directory (Azure AD) de locatário passada em todos os contextos.
 * `team`: passado somente em contextos de canal, não no chat pessoal.
   * `id`: GUID para o canal.
-  * `name`: nome da equipe passado somente em casos de [eventos de renomeação de equipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `name`: nome da equipe passado somente em casos de [eventos de renomeação de equipe](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: passado somente em contextos de canal, quando o bot é mencionado ou para eventos em canais em equipes, em que o bot foi adicionado.
   * `id`: GUID para o canal.
   * `name`: nome do canal passado somente em casos de eventos [de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -238,10 +238,10 @@ O código a seguir mostra um exemplo do objeto channelData:
 
 As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de conteúdo de mensagem.
 
-| Formatar    | De usuário para bot | De bot para usuário | Observações                                                                                   |
+| Formatar    | Do usuário para o bot | Do bot para o usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, imagens e cartões. Os usuários podem enviar rich text e imagens para seu bot.                                                                                        |
-| Imagens  | ✔                | ✔                | Máximo de 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.  |
+| Imagens  | ✔                | ✔                | Máximo de 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.  |
 | Cartões     | ✖                | ✔                | Consulte a [referência Teams cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
 | Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio de UTF-16, como U+1F600 para sorriso facial. |
 
@@ -329,9 +329,9 @@ Para aprimorar sua mensagem, você pode incluir imagens como anexos para essa me
 
 ## <a name="picture-messages"></a>Mensagens de imagem
 
-As imagens são enviadas adicionando anexos a uma mensagem. Para obter mais informações sobre anexos, consulte a [documentação do Bot Framework](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+As imagens são enviadas adicionando anexos a uma mensagem. Para obter mais informações sobre anexos, [consulte adicionar anexos de mídia às mensagens](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-As imagens podem ter no máximo 1024×1024 e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIFs animados.
+As imagens podem ter no máximo 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.
 
 Especifique a altura e a largura de cada imagem usando XML. No markdown, o tamanho da imagem assume como padrão 256×256. Por exemplo:
 
@@ -409,7 +409,7 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -421,4 +421,4 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 * [Enviar mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md)
-* [Enviar ID de locatário e ID de conversa para os cabeçalhos de solicitação do bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Enviar o ID do locatário e o ID da conversa para os cabeçalhos de solicitação do bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)

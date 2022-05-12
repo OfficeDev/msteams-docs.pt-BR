@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104151"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191261"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 
@@ -53,6 +53,6 @@ Para obter mais informações, [Criar um novo aplicativo guia do Teams (React)](
 
 * [Provisionar recursos de nuvem](provision.md)
 * [Implantar o aplicativo Teams na nuvem](deploy.md)
-* [Publicar seu aplicativo Teams](TeamsFx-collaboration.md)
+* [Publicar seu aplicativo Teams](../concepts/deploy-and-publish/appsource/publish.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)
 * [Colaborar com outros desenvolvedores no projeto do Teams](TeamsFx-collaboration.md)

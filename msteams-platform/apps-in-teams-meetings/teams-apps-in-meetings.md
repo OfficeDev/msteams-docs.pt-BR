@@ -4,14 +4,14 @@ author: surbhigupta
 description: visão geral dos aplicativos nas reuniões do Teams com base na função do participante e do usuário
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: api de funções dos usuários participantes de reuniões de aplicativos do teams
-ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111301"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296949"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para reuniões do Teams
 
@@ -38,7 +38,7 @@ O novo recurso personalizado de cenas do Modo Conferência permite que os usuár
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Extensibilidade do aplicativo de reunião](meeting-app-extensibility.md)
+> [Aplicativos de reuniões unificadas](meeting-app-extensibility.md)
 
 ## <a name="see-also"></a>Confira também
 
