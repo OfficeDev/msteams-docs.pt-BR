@@ -2,15 +2,15 @@
 title: Conversas um-para-um com bots
 description: Descreve o cenário de ponta a ponta de ter uma conversa um-para-um com um bot no Microsoft Teams
 keywords: cenários de equipes 1on1 1to1 bot de conversa
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: d38285c212416d81a2108524946f0f9732a8dae9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: eb08b542c707d9f520912cd04ca5b1b2b740d81c
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111938"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297188"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Ter uma conversa pessoal (um para um) com um bot do Microsoft Teams
 
@@ -33,4 +33,4 @@ Dependendo da experiência que você deseja criar, talvez o bot precise trabalha
 
 ## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Prática recomendada: mensagens de boas-vindas em conversas pessoais
 
-Seu bot deve [enviar proativamente](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) uma mensagem de boas-vindas para um chat pessoal na primeira vez (e somente na primeira vez) que um usuário iniciar um chat pessoal com seu bot. Essa recomendação não se aplica aos contatos de primeira vez em um canal.
+Seu bot deve [enviar proativamente](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) uma mensagem de boas-vindas para um chat pessoal na primeira vez (e apenas na primeira vez) que um usuário iniciar um chat pessoal com seu bot. Esta recomendação não se aplica a contatos pela primeira vez em um canal.

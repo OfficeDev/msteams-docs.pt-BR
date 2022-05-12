@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952311"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191198"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
@@ -59,7 +59,7 @@ Se o aplicativo não conseguir realizar o sideload ou se houver problemas para c
 
 ## <a name="manage-your-apps"></a>Gerenciar seus aplicativos
 
-Gerenciar seus aplicativos permite que os usuários tenham um local dedicado para gerenciar, atualizar e remover seus aplicativos, permissões e assinaturas no cliente do Teams. Os usuários podem instalar os aplicativos a partir de **Gerenciar seus aplicativos**.
+Gerenciar seus aplicativos permite que os usuários tenham um lugar dedicado para gerenciar, atualizar e remover seus aplicativos, permissões e assinaturas no cliente do Teams. Os usuários podem instalar seus aplicativos a partir de **Gerenciar seus aplicativos**.
 
 ### <a name="access-your-app"></a>Acessar seus aplicativos
 
@@ -81,7 +81,7 @@ O Teams fornece várias maneiras de abrir aplicativos. Para obter mais informaç
 
 Você não precisará realizar o sideload do aplicativo novamente se fizer alterações de código (elas são refletidas no Teams em tempo real). No entanto, você deverá reinstalar se alterar as configurações do aplicativo.
 
-Se uma atualização estiver disponível para seu aplicativo, a opção **Atualização disponível** está habilitada. Para atualizar, siga estas etapas:
+Se uma atualização estiver disponível para seu aplicativo, então a opção **Atualização disponível** está habilitada Para atualizar, siga as etapas:
 
 1. Selecione **Atualização disponível** para exibir a atualização.
 
@@ -115,7 +115,7 @@ Para remover o aplicativo do Teams, siga as etapas:
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Use seu aplicativo Teams](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[Crie aplicativos para reuniões do Teams](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## <a name="see-also"></a>Confira também
 

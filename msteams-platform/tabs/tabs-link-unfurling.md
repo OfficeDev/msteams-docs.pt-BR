@@ -4,13 +4,13 @@ author: Rajeshwari-v
 description: Saiba como desenrolar um link, abra o Modo de Exibição de Estágio e fixar uma guia com o aplicativo Microsoft Teams. Saiba mais sobre o modo de exibição de estágio e invocá-lo usando o Cartão adaptável usando exemplo e código de exemplo.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: high
-ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.localizationpriority: medium
+ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110292"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296956"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -82,12 +82,12 @@ O tipo de solicitação `invoke` deve ser `composeExtension/queryLink`.
 
 Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 
-* Quando o usuário seleciona **Exibir**, o bot recebe uma solicitação `invoke`. O tipo de solicitação `composeExtension/queryLink`.
+* Quando o usuário seleciona **Exibir**, o bot recebe uma solicitação `invoke`. O tipo de solicitação é `composeExtension/queryLink`. 
 * `invoke` resposta do bot contém um Cartão Adaptável com o tipo `tab/tabInfoAction` nele.
 * O bot responde com um `200` código.
 
 > [!NOTE]
-> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio do [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro `websiteUrl` do objeto `TabInfo`.
+> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
@@ -138,8 +138,8 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
 | `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL que aponta para a entidade IU a ser exibida na tela do Teams. Esse é um campo obrigatório.|
-| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL a ser apontada, se um usuário seleciona para exibir em um navegador. Esse é um campo obrigatório.|
+| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL que aponta para a entidade IU a ser exibida na tela do Teams. Este é um arquivo obrigatório.|
+| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL a ser apontada, se um usuário seleciona exibir em um navegador. Este é um campo obrigatório.|
 | `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL que aponta para a IU a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código

@@ -4,12 +4,12 @@ description: Descreve cartões e como eles são usados em bots, conectores e ext
 ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104452"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191254"
 ---
 # <a name="cards"></a>Cartões
 
@@ -36,7 +36,7 @@ O Teams usa cartões em três locais diferentes:
 
 ## <a name="cards-in-connectors"></a>Cartões em conectores
 
-Os cartões foram definidos pela primeira vez como parte do Outlook e Office 365 e já são usados como parte dos Conectores do Office 365. Como muitos aplicativos do Office 365, o Teams dá suporte aos conectores. Para obter mais informações, consulte [Conectores do Office 365 do Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Você pode encontrar a especificação para cartões nos conectores em [referência de cartão de mensagens acionáveis](/outlook/actionable-messages/card-reference).
+Os cartões foram definidos pela primeira vez como parte do Outlook e Office 365 e já são usados como parte dos Conectores do Office 365. Como muitos aplicativos do Office 365, o Teams dá suporte aos conectores. Para obter mais informações, consulte [Criar Conectores do Office 365](../webhooks-and-connectors/how-to/connectors-creating.md). Você pode encontrar a especificação para cartões nos conectores em [referência de cartão de mensagens acionáveis](/outlook/actionable-messages/card-reference).
 
 ## <a name="cards-in-bots"></a>Cartões em bots
 

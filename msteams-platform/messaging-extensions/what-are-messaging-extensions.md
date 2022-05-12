@@ -2,23 +2,25 @@
 title: Extensões de mensagens
 author: surbhigupta
 description: Uma visão geral das extensões de mensagens na plataforma Microsoft Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110383"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297139"
 ---
 # <a name="message-extensions"></a>Extensões de mensagens
 
-As extensões de mensagens permitem que os usuários interajam com seu serviço da Web por meio de botões e formulários no cliente Microsoft Teams. Eles podem pesquisar ou iniciar ações em um sistema externo a partir da área de composição da mensagem, da caixa de comando ou diretamente de uma mensagem. Em seguida, você pode enviar os resultados dessa interação de volta ao cliente Microsoft Teams, geralmente na forma de um cartão ricamente formatado. Este documento fornece uma visão geral da extensão de mensagem, das tarefas executadas em diferentes cenários, do trabalho da extensão de mensagem, dos comandos de ação e de pesquisa e do desenrolamento de link.
+As extensões de mensagens permitem que os usuários interajam com seu serviço da Web por meio de botões e formulários no cliente Microsoft Teams. Eles podem pesquisar ou iniciar ações em um sistema externo a partir da área de composição da mensagem, da caixa de comando ou diretamente de uma mensagem. Em seguida, você pode enviar os resultados dessa interação de volta ao cliente Microsoft Teams, geralmente na forma de um cartão ricamente formatado.
+
+Este documento fornece uma visão geral da extensão de mensagem, das tarefas executadas em diferentes cenários, do trabalho da extensão de mensagem, dos comandos de ação e de pesquisa e do desenrolamento de link.
 
 A imagem a seguir exibe os locais dos quais as extensões de mensagem são invocadas:
 
-![localizações de invocação de extensão de mensagem](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="localizações de invocação de extensão de mensagem":::
 
 > [!NOTE]
 > @mencionar extensões de mensagem não tem mais suporte na caixa de redação.
@@ -48,7 +50,9 @@ Há dois tipos de comandos de extensão de mensagem: comando de ação e comando
 
 Os comandos de ação permitem apresentar a seus usuários um pop-up modal para coletar ou exibir informações. Quando o usuário envia o formulário, o serviço Web responde inserindo uma mensagem diretamente na conversa ou inserindo uma mensagem na área de redação da mensagem. Depois disso, o usuário pode enviar a mensagem. Você pode encadear vários formulários para fluxos de trabalho mais complexos.
 
-Os comandos de ação podem ser acionados na área de composição da mensagem, na caixa de comando ou em uma mensagem. Quando o comando é invocado de uma mensagem, a carga JSON inicial enviada ao bot inclui a mensagem inteira da qual ele foi invocado. A imagem a seguir exibe o módulo de tarefa do comando de ação de extensão de mensagem: ![módulo de tarefa do comando de ação de extensão de mensagem](~/assets/images/task-module.png)
+Os comandos de ação podem ser acionados na área de composição da mensagem, na caixa de comando ou em uma mensagem. Quando o comando é invocado de uma mensagem, a carga JSON inicial enviada ao bot inclui a mensagem inteira da qual ele foi invocado. A imagem a seguir exibe o módulo de tarefa de comando de ação de extensão de mensagem:
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="Módulo de tarefa de comando de ação de extensão de mensagem":::
 
 ### <a name="search-commands"></a>Comandos de pesquisa
 
@@ -57,7 +61,7 @@ Os comandos de pesquisa permitem que seus usuários pesquisem informações em u
 Os cartões são disparados da área de mensagem de redação ou da caixa de comando e não são disparados de uma mensagem. Eles não podem ser disparados de uma mensagem.
 A imagem a seguir exibe o módulo de tarefa de comando de pesquisa de extensão de mensagem:
 
-![Comando de pesqusisa da extensão de mensagem](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="Comando de pesquisa da extensão de mensagem":::
 
 > [!NOTE]
 > Para obter mais informações sobre cartões, consulte [o que são cartões](../task-modules-and-cards/what-are-cards.md).
@@ -67,7 +71,7 @@ A imagem a seguir exibe o módulo de tarefa de comando de pesquisa de extensão 
 Um serviço Web é invocado quando uma URL é colada na área de mensagem de redação. Essa funcionalidade é conhecida como desenrolamento de link. Você pode assinar para receber uma invocação quando as URLs que contêm um domínio específico são coladas na área de mensagem de redação. Seu serviço Web pode "desenrolar" a URL em um cartão detalhado, fornecendo mais informações do que o cartão de visualização do site padrão. Você pode adicionar botões para permitir que os usuários executem ações imediatamente sem sair do cliente do Microsoft Teams.
 As imagens a seguir exibem o recurso de desenrolamento de link quando um link é colado na extensão de mensagem:
 
-![desenrolar link](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="desenrolar link":::
 
 ![Desenrolamento de link](../assets/images/messaging-extension/link-unfurl.gif)
 
