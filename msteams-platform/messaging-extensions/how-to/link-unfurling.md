@@ -2,15 +2,15 @@
 title: Desenrolamento de link
 author: surbhigupta
 description: Saiba como adicionar desenrolamento de link com a extensão de mensagens em um aplicativo do Microsoft Teams com manifesto do aplicativo ou manualmente usando exemplos e exemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111245"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297181"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
@@ -25,7 +25,7 @@ Este documento orienta você sobre como adicionar desenrolamento de link ao mani
 
 A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário colou uma URL para um item de trabalho no Azure DevOps, que a extensão de mensagem resolveu em um cartão:
 
-![Exemplo de desenrolamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemplo de desenrolamento de link":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Adicionar desenrolamento de link ao manifesto do aplicativo
 
@@ -38,9 +38,9 @@ Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma
 
 1. Abra **App Studio** no cliente do Microsoft Teams e selecione a guia **Editor de Manifesto**.
 1. Carregue o manifesto do aplicativo.
-1. Na página **Extensão de Mensagem**, adicione o domínio que você deseja procurar na seção **Manipuladores de mensagem**. A imagem a seguir explica o processo:
+1. Na página **Extensão de Mensagens**, adicione o domínio que você deseja procurar na seção **Manipuladores de Mensagens**. A imagem a seguir explica o processo:
 
-    ![seção manipuladores de mensagens no App Studio](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Seção Manipuladores de Mensagens no App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldando manualmente
 

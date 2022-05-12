@@ -2,15 +2,15 @@
 title: Processo de criação do aplicativo
 author: heath-hamilton
 description: Tenha uma ideia geral de como e quando você pode usar as ferramentas e os recursos da Microsoft para criar um aplicativo eficaz do Microsoft Teams.
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111266"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297216"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processo de criação para aplicativos do Microsoft Teams
 
@@ -20,7 +20,7 @@ Há várias ferramentas e recursos para criar seu aplicativo Microsoft Teams. As
 
 ## <a name="plan-your-app"></a>Planeje seu aplicativo
 
-A criação de um aplicativo do Teams de alta qualidade requer a compreensão do que você deseja que o aplicativo faça e como você acha que as pessoas o usarão. No entanto, antes de começar a criar, responda às seguintes perguntas:
+A criação de um aplicativo do Teams de alta qualidade exige a compreensão do que você deseja que o aplicativo faça e como você acha que as pessoas o usarão. Antes de começar a projetar, no entanto, responda às seguintes perguntas:
 
 * Quem são os seus usuários?
 * Qual é o problema deles?
@@ -113,7 +113,7 @@ Diferentemente da fase de criação, você pode usar esses componentes da Fluent
 
 Se você está apenas começando em seu aplicativo ou perto de um aplicativo pronto para produção, recomendamos que você examine periodicamente os seguintes recursos:
 
-* **Diretrizes de validação da loja do Microsoft Teams**: fornece padrões que todos os aplicativos do Teams devem buscar e não apenas os aplicativos listados na loja. Para obter mais informações, consulte [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Diretrizes de validação da loja do Microsoft Teams**: Fornece padrões pelos quais todos os aplicativos do Teams devem se esforçar, e não apenas os aplicativos listados na loja. Para obter mais informações, consulte as [diretrizes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Práticas recomendadas de design**: esses documentos e o kit de IU fornecem práticas recomendadas para a criação de aplicativos de alta qualidade. Por exemplo, consulte as [práticas recomendadas para criar bots](~/bots/design/bots.md#best-practices).
 
 ## <a name="see-also"></a>Confira também
