@@ -2,15 +2,15 @@
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
 description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens com mensagem proativa, outro módulo de tarefa, bot de cartão adaptável e muito mais usando exemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dfd8b04c07c60231ed5dfdae4cc5acac2346fe2c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111490"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297195"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -204,7 +204,7 @@ O método de resposta é o mesmo que [ responder ao evento `fetchTask` inicial](
 ## <a name="bot-response-with-adaptive-card"></a>Resposta do bot com Cartão Adaptável
 
 > [!NOTE]
-> O pré-requisito para obter a resposta do bot com um cartão Adaptável é que você deve adicionar o objeto `bot` ao manifesto do aplicativo e definir o escopo necessário para o bot. Use a mesma ID da extensão de mensagem para o bot.
+> O pré-requisito para obter a resposta do bot com um Cartão adaptável é que você deve adicionar o objeto `bot` ao manifesto do aplicativo e definir o escopo necessário para o bot. Use a mesma ID da extensão de mensagem para o bot.
 
 Você também pode responder ao `submitAction` inserindo uma mensagem com um Cartão Adaptável no canal com um bot. O usuário pode visualizar a mensagem antes de enviá-la. Isso é útil em cenários em que você coleta informações dos usuários antes de criar uma resposta de Cartão Adaptável ou quando atualiza o cartão depois que alguém interage com ele.
 
@@ -548,7 +548,7 @@ Em cenários em que um bot envia mensagens em nome de um usuário, atribuir a me
 
 Na imagem a seguir, à esquerda está uma mensagem de cartão enviada por um bot sem atribuição do usuário e à direita está um cartão enviado por um bot com atribuição de usuário.
 
-![bots de atribuição de usuário](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="Bots de atribuição de usuário":::
 
 Para usar a atribuição de usuário em equipes, você deve adicionar a entidade de menção `OnBehalfOf` à carga de trabalho `ChannelData` na carga do `Activity` enviada ao Teams.
 

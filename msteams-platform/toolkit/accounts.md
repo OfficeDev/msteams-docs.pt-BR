@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464290"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191191"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar contas para criar o aplicativo Teams
 
@@ -28,7 +28,7 @@ Se você tiver uma assinatura do Visual Studio Enterprise ou Professional, ambos
 
 ### <a name="microsoft-365-developer-program"></a>Programa para desenvolvedores do Microsoft 365
 
-Para obter uma conta de desenvolvedor gratuita do Teams, ingresse no desenvolvedor do Microsoft 365 e execute as seguintes etapas:
+Para obter uma conta de desenvolvedor gratuita do Teams, ingresse no programa para desenvolvedores do Microsoft 365 e execute as seguintes etapas:
 
 1. Acesse o [Programa para desenvolvedores do Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Selecione **Ingressar agora**.
@@ -53,7 +53,7 @@ Você pode se inscrever no programa para desenvolvedores usando um dos seguintes
 
 - **ID de usuário do Visual Studio**
 
-    A ID de usuário criada para usar a assinatura do Visual Studio Professional ou Enterprise pode ser usada para ingressar no programa de desenvolvedor na Galeria do Visual Studio para aproveitar todos os benefícios como assinante do Visual Studio.
+    A ID de usuário criada para usar a assinatura do Visual Studio Professional ou Enterprise pode ser usada para ingressar no programa para desenvolvedores na Galeria do Visual Studio para aproveitar todos os benefícios como assinante do Visual Studio.
 
 ## <a name="azure-account-to-host-backend-resources"></a>Conta do Azure para hospedar recursos de back-end
 
@@ -66,14 +66,14 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
 ## <a name="teams-custom-app-upload-or-sideload-permission"></a>Permissão de carregamento de aplicativos personalizados ou sideload do Teams
 
 > [!IMPORTANT]
-> Depois de criar o aplicativo, você deve carregar seu aplicativo no Teams sem distribuí-lo. Esse processo é conhecido como **sideload**.
+> Depois de criar o aplicativo, carregue seu aplicativo no Teams sem distribuí-lo. Esse processo é conhecido como **sideload**.
 
    Você pode verificar se a permissão de sideload está habilitada usando o Visual Studio Code ou cliente do Teams.
 
 * **Verificar a permissão de sideload usando o Visual Studio Code**
 
     1. Abra o **Visual Studio Code**.
-    1. Selecione **Kit de ferramentas do Teams** no painel esquerdo. Se você não conseguir ver a opção, verifique se instalou a extensão do Kit de Ferramentas do Teams.
+    1. Selecione **Kit de ferramentas do Teams** no painel esquerdo. Se não conseguir ver a opção, verifique se instalou a extensão do Kit de Ferramentas do Teams.
     1. Selecione **Contas** e faça logon da sua conta Microsoft 365.
     1. Verifique se você pode exibir a opção **Sideload habilitado** conforme mostrado na imagem a seguir:
 
@@ -91,7 +91,7 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Carregar um aplicativo personalizado" border="true":::.
 
-        Se você não conseguir exibir a opção **Carregar um aplicativo personalizado**, isso indicará que você não tem a permissão necessária para sideload.
+        Se você não conseguir exibir a opção Carregar um aplicativo personalizado,** isso indicará que você não tem a permissão necessária para sideload.
         * Quanto a um administrador de locatários, habilite a configuração do sideload do seu locatário ou organização no Centro de administração do Teams.
         * Se você não for um administrador de locatários, precisará entrar em contato com o administrador do locatário para habilitar o sideload.
 
@@ -131,5 +131,5 @@ Para obter mais informações, consulte [Gerenciar configurações e políticas 
 * [Criar um novo aplicativo Teams usando o Kit de Ferramentas do Teams](create-new-project.md)
 * [Provisionar recursos de nuvem](provision.md)
 * [Implantar o aplicativo Teams na nuvem](deploy.md)
-* [Publique seu aplicativo Teams](TeamsFx-collaboration.md)
+* [Publicar seu aplicativo Teams](../concepts/deploy-and-publish/appsource/publish.md)
 * [Gerenciar vários ambientes](TeamsFx-multi-env.md)

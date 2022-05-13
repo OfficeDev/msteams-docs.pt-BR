@@ -1,21 +1,21 @@
 ---
 title: Criar seu aplicativo pessoal
-description: Saiba como criar um aplicativo pessoal do Teams e obter o Kit de Interface do Usuário do Microsoft Teams, criar componentes, como painel, formulário, quadro de tarefas para experiência móvel e Desktop. Aprenda as práticas recomendadas para desenvolver aplicativos pessoais.
+description: Saiba como criar um aplicativo pessoal do Teams e obter o Kit de Interface do Usuário do Microsoft Teams, criar componentes, como painel, formulário, quadro de tarefas para experiência móvel e Desktop. Conheça as práticas recomendadas para desenvolver aplicativos pessoais.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: modelo de formulário do painel do iframe da guia do iframe do aplicativo pessoal do kit de interface do usuário
-ms.openlocfilehash: 51087d0f055130e822d837d9e78eda5b1b28966a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111812"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297230"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetando seu aplicativo pessoal para o Microsoft Teams
 
-Um aplicativo pessoal pode ser um bot, um espaço de trabalho privado ou ambos. Às vezes funciona como um local para criar ou visualizar conteúdo, outras vezes oferece ao usuário uma visão panorâmica de tudo o que é seu quando o aplicativo foi configurado como uma guia em vários canais.
+Um aplicativo pessoal pode ser um bot, um espaço de trabalho privado ou ambos. Às vezes, ele funciona como um local para criar ou exibir conteúdo, outras vezes oferece ao usuário uma visão geral de tudo o que é seu quando o aplicativo foi configurado como uma guia em vários canais.
 
 Para orientar o design do seu aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar aplicativos pessoais no Teams.
 
@@ -36,7 +36,7 @@ Os usuários podem adicionar um aplicativo pessoal da loja do Teams ou do submen
 
 Com um espaço de trabalho privado, os usuários podem exibir o conteúdo do aplicativo que é significativo para eles em um local central sem sair do Teams.
 
-(Observação de implementação: o espaço de trabalho privado é baseado no recurso [*guia pessoal*](../../build-your-first-app/build-personal-tab.md).)
+(Observação de implementação: o espaço de trabalho privado é baseado no recurso [*guia pessoal*](../../tabs/how-to/create-personal-tab.md).)
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomia: aplicativo pessoal (espaço de trabalho privado)
 
@@ -89,7 +89,7 @@ Use um dos seguintes modelos e componentes do Teams para ajudar a criar sua guia
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
 
-Os aplicativos pessoais podem incluir um bot para conversas individuais e notificações privadas (por exemplo, quando um colega publica um comentário na prancheta). Os usuários interagem com o bot em uma guia que você especifica.
+Os aplicativos pessoais podem incluir um bot para conversas individuais e notificações privadas (por exemplo, quando um colega publica um comentário na artboard). Os usuários interagem com o bot em uma guia que você especifica.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
 

@@ -2,14 +2,14 @@
 title: Registrar chamadas e reuniões do bot do Microsoft Teams
 description: Saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams, criar um bot, adicionar uma funcionalidade de chamada e adicionar permissões do Graph.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: chamar mídia de vídeo e áudio do áudio/vídeo do bot
-ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111413"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297160"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
@@ -78,7 +78,7 @@ A tabela a seguir fornece uma lista de permissões de aplicativo para reuniões 
 
 ### <a name="assign-permissions"></a>Atribuir permissões
 
-Você deve configurar as permissões de aplicativo para o bot com antecedência usando o [portal do Microsoft Azure](https://aka.ms/aadapplist) se preferir usar o [ponto de extremidade do Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Você deve configurar as permissões de aplicativo para o bot com antecedência usando o [portal do Microsoft Azure](https://portal.azure.com) se preferir usar o [ponto de extremidade do Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obter consentimento do administrador de locatários
 
@@ -96,7 +96,7 @@ Solicite a um administrador para conceder as permissões que seu aplicativo prec
 
 | **Nome de exemplo** | **Descrição** | **Graph** |
 |---------------|----------|--------|
-| Bot de chamada e reunião | O aplicativo de exemplo demonstra como o Bot pode criar chamadas, ingressar na reunião e transferir chamadas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Bot de chamada e reunião | O aplicativo de amostra demonstra como o Bot pode criar chamadas, ingressar na reunião e transferir chamadas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
