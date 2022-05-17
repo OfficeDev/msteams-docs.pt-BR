@@ -1,17 +1,17 @@
 ---
-title: Compartilhar com Teams de aplicativo pessoal ou guia
+title: Compartilhar com o Teams a partir do aplicativo ou guia pessoal
 description: Saiba como adicionar o Compartilhamento no Teams inserido em seu aplicativo pessoal ou guia
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Compartilhar Teams compartilhar com Teams
-ms.openlocfilehash: 7ece44c3b0a48ad2ce0ad72aed5ba9efc9cf57c2
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+keywords: Compartilhar a opção Compartilhar no Teams no Teams
+ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685662"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439360"
 ---
-# <a name="share-to-teams-from-personal-app-or-tab"></a>Compartilhar com Teams de aplicativo pessoal ou guia
+# <a name="share-to-teams-from-personal-app-or-tab"></a>Compartilhar com o Teams a partir do aplicativo ou guia pessoal
 
 > [!NOTE]
 > O compartilhamento Teams está disponível atualmente apenas na versão prévia [do desenvolvedor público](../../resources/dev-preview/developer-preview-intro.md).
@@ -43,6 +43,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box',
             preview: true
           }
         ]
@@ -51,10 +52,11 @@ microsoftTeams.sharing.shareWebContent({
 
 A carga contém os seguintes parâmetros:
 
-| Nome da propriedade | Finalidade |
+| Nome da propriedade | Objetivo |
 |---|---|
 | `type` | O tipo deve ser `URL` |
 | `url` | `URL` a ser compartilhado |
+|`message`| Mensagem padrão a ser carregada na caixa de composição |
 | `preview` | Definido para habilitar `true` a visualização de URL |
 
 A imagem a seguir mostra a opção Teams compartilhar:
@@ -71,7 +73,7 @@ A tabela a seguir fornece os códigos de resposta:
 | **404** | O arquivo especificado não foi encontrado no local especificado. |
 | **500** | Erro interno encontrado ao executar a operação necessária. |
 | **501** | Não há suporte para a API no contexto atual. |
-| **1000** | Permissões negadas pelo usuário. |
+| **1.000** | Permissões negadas pelo usuário. |
 | **2000** | Problema de rede. |
 | **3000** | O hardware subjacente não dá suporte à funcionalidade. |
 | **4000** | Um ou mais argumentos são inválidos. |
@@ -114,5 +116,5 @@ Depois de habilitar o botão Compartilhar com o Teams no aplicativo pessoal ou n
 
 ## <a name="see-also"></a>Confira também
 
-* [Compartilhar com Teams de aplicativos Web](share-to-teams-from-web-apps.md)
+* [Compartilhar no Teams a partir de aplicativos Web](share-to-teams-from-web-apps.md)
 * [Criar uma guia pessoal](../../tabs/how-to/create-personal-tab.md)
