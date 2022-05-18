@@ -3,15 +3,15 @@ title: Criar um menu de comandos para o seu bot
 author: surbhigupta
 description: Saiba como criar um menu de comando para seu bot do Microsoft Teams com exemplos de código.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: menu de comando redigir mensagem conversa @menção
-ms.openlocfilehash: 37d4c5f451efe9fe2caf137a89d12cdbbdb178d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111840"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296963"
 ---
 # <a name="bot-command-menus"></a>Menus de comando do bot
 
@@ -43,13 +43,15 @@ Um pré-requisito para criar um menu de comando para o bot é que você deve edi
    > [!NOTE]
    > Se você não tiver o **App Studio**, poderá baixá-lo. Para obter mais informações, consulte [instalação do App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
-    :::image type="content" source="/media/AppStudio.png" alt-text="Instalação do App Studio"lightbox="media/AppStudio.png"border="true":::
+  > Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
 
-2. No **App Studio**, selecione a guia **Editor de manifesto**. Se você não tiver um pacote de aplicativo existente, poderá criar ou importar um aplicativo existente. Para obter mais informações, consulte [atualizar um pacote de aplicativo](~/get-started/deploy-csharp-app-studio.md).
+  :::image type="content" source="/media/AppStudio.png" alt-text="Instalação do App Studio"lightbox="media/AppStudio.png"border="true":::
+
+2. No **App Studio**, selecione a guia **Editor de manifesto**. Se você não tiver um pacote de aplicativo existente, poderá criar ou importar um aplicativo existente.Para saber mais, confira [atualizar um pacote de aplicativo](~/get-started/deploy-csharp-app-studio.md).
 
 3. No painel esquerdo do **Editor de manifesto** e na seção **Recursos**, selecione **Bots**.
 
-4. No painel direito do **Editor de manifesto** e na seção **Comandos**, selecione **Adicionar**. A tela **Novo conector** é exibida.
+4. No painel direito do **Editor de manifesto** e na seção **Comandos**, selecione **Adicionar**. A tela **Novo Comando** é exibida.
 
     :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="Selecione o pacote de aplicativo"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
@@ -190,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Você pode analisar a parte **@Mention** parte do texto da mensagem usando um método estático fornecido com o Bot Framework. É um método da classe `TurnContext` chamado `remove_recipient_mention`.
+Você pode analisar a parte **@Menção** parte do texto da mensagem usando um método estático fornecido com o Bot Framework. É um método da classe `TurnContext` chamado `remove_recipient_mention`.
 
 O código Python para analisar a parte **\@Menção** do texto da mensagem é o seguinte:
 
