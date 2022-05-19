@@ -2,19 +2,19 @@
 title: Requisitos e considerações para bots de mídia hospedados em aplicativos
 description: Entenda os requisitos e considerações importantes e as considerações de escalabilidade e desempenho relacionadas à criação de bots de mídia hospedados em aplicativos para o Microsoft Teams usando exemplos e exemplos de código.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: VM do Azure do Windows Server hospedada por aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: 35ad133d898b53538f51c2ae4c699cd19368f9af
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111980"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296977"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados em aplicativos
 
-Um bot de mídia hospedado por aplicativo requer a [`Microsoft.Graph.Communications.Calls.Media` biblioteca .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo. O bot deve ser implantado em uma máquina local do Windows Server ou em um sistema operacional (SO) convidado do Windows Server no Azure.
+Um bot de mídia hospedado por aplicativo requer a [`Microsoft.Graph.Communications.Calls.Media` biblioteca .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acessar os fluxos de mídia de áudio e vídeo. O bot deve ser implantado em um computador local do Windows Server ou em um Sistema Operacional (SO) convidado do Windows Server no Azure.
 
 > [!NOTE]
 >
@@ -51,7 +51,7 @@ Os bots de mídia hospedados em aplicativos devem estar diretamente acessíveis 
 * Cada instância de VM que hospeda um bot de mídia hospedado por aplicativo no Azure deve ser acessível diretamente da Internet usando um endereço IP público no nível da instância (ILPIP).
   * Para obter e configurar um ILPIP para um Serviço de Nuvem do Azure, consulte [visão geral clássica de IP público em nível de instância](/azure/virtual-network/virtual-networks-instance-level-public-ip).
   * Para configurar um ILPIP para um Conjunto de Dimensionamento de VM, consulte [IPv4 público por computador](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
-* O serviço que hospeda um bot de mídia hospedado por aplicativo também deve configurar cada instância de VM com uma porta voltada para o público que mapeia para a instância específica.
+* O serviço que hospeda um bot de mídia hospedado por aplicativo também deve configurar cada instância de VM com uma porta voltada para o público, que mapeia para a instância específica.
   * Para um Serviço de Nuvem do Azure, isso requer um ponto de extremidade de entrada de instância. Para obter mais informações, consulte [habilitar comunicação para instâncias de função no Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * Para um conjunto de dimensionamento de VM, uma regra NAT no balanceador de carga deve ser configurada. Para obter mais informações, consulte [redes virtuais e máquinas virtuais no Azure](/azure/virtual-machines/windows/network-overview).
 
@@ -84,7 +84,7 @@ Os exemplos de bots de mídia hospedados pelo aplicativo são os seguintes:
 ## <a name="see-also"></a>Confira também
 
 * [Documentação do SDK de Chamada de Gráfico](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-* Os bots exigem mais capacidade de computação e largura de banda de rede do que os bots de mensagens e incorrem em custos operacionais significativamente mais altos. Um desenvolvedor de bot de mídia em tempo real deve medir cuidadosamente a escalabilidade do bot e garantir que o bot não aceite mais chamadas simultâneas do que ele pode gerenciar. Um bot habilitado para vídeo pode sustentar apenas uma ou duas sessões de mídia simultâneas por núcleo de CPU se estiver usando os formatos de vídeo RGB24 ou NV12 brutos.
+* Os bots exigem mais capacidade de computação e largura de banda de rede do que os bots de mensagens e incorrem em custos operacionais significativamente mais altos. Um desenvolvedor de bot de mídia em tempo real deve medir cuidadosamente a escalabilidade do bot e garantir que o bot não aceite mais chamadas simultâneas do que pode gerenciar. Um bot habilitado para vídeo pode sustentar apenas uma ou duas sessões de mídia simultâneas por núcleo de CPU se estiver usando os formatos de vídeo RGB24 ou NV12 brutos.
 * Atualmente, a Plataforma de Mídia em Tempo Real não aproveita nenhuma Unidade de Processamento Gráfico (GPU) disponível na VM para descarregar a codificação ou decodificação de vídeo H.264. Em vez disso, a codificação e a decodificação de vídeo são feitas em software na CPU. Se uma GPU estiver disponível, o bot a aproveitará para sua própria renderização de gráficos, por exemplo, se o bot estiver usando um mecanismo de gráficos 3D.
 * A instância de VM que hospeda o bot de mídia em tempo real deve ter pelo menos 2 núcleos de CPU. Para o Azure, uma máquina virtual da série Dv2 é recomendada. Para outros tipos de VM do Azure, um sistema com 4 CPUs virtuais (vCPU) é o tamanho mínimo necessário. Para obter mais informações sobre os tipos de VM do Azure, consulte a [documentação do Azure](/azure/virtual-machines/windows/sizes-general).
 

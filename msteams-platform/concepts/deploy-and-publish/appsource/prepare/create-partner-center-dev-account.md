@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
+ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501911"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65443898"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 
@@ -207,6 +207,18 @@ Os recursos a seguir também podem ajudar:
 <br>
 
 </details>
+
+## <a name="update-apple-developer-id-on-partner-center"></a>Atualizar a ID de Desenvolvedor do Partner Center da Apple
+
+Para permitir que os usuários instalem seu aplicativo na plataforma do Teams iOS, você deve atualizar sua ID de Desenvolvedor da Apple no Microsoft Partner Center. Para atualizar sua ID de Desenvolvedor da Apple, siga estas etapas:
+
+1. Faça logon no [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) usando as credenciais de administrador global.
+1. Selecione o ícone de configurações no canto superior direito da página.
+1. Acesse a seção **Informações legais** em **Perfil da organização** no painel esquerdo.
+1. Selecione a guia **Desenvolvedor**.
+1. Digite sua ID de Desenvolvedor da Apple.
+1. Acesse a página da oferta e republique seu aplicativo do Teams.
+   Sua ID de Desenvolvedor da Apple agora está atualizada no Microsoft Partner Center.
 
 ## <a name="next-step"></a>Próxima etapa
 
