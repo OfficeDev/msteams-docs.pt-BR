@@ -5,16 +5,19 @@ description: Uma visão geral das extensões de mensagens na plataforma Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297139"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602254"
 ---
 # <a name="message-extensions"></a>Extensões de mensagens
 
 As extensões de mensagens permitem que os usuários interajam com seu serviço da Web por meio de botões e formulários no cliente Microsoft Teams. Eles podem pesquisar ou iniciar ações em um sistema externo a partir da área de composição da mensagem, da caixa de comando ou diretamente de uma mensagem. Em seguida, você pode enviar os resultados dessa interação de volta ao cliente Microsoft Teams, geralmente na forma de um cartão ricamente formatado.
+
+> [!IMPORTANT]
+> As extensões de mensagem estão disponíveis Nuvem da Comunidade Governamental (GCC) e GCC-High ambientes, mas não no ambiente do DoD (Departamento de Defesa).
 
 Este documento fornece uma visão geral da extensão de mensagem, das tarefas executadas em diferentes cenários, do trabalho da extensão de mensagem, dos comandos de ação e de pesquisa e do desenrolamento de link.
 
