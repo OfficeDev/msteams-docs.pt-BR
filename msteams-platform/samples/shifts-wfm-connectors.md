@@ -4,15 +4,15 @@ description: Saiba mais sobre os benefícios de usar conectores de Turnos de ger
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Conectores Kronos do Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111763"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604261"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 
@@ -41,34 +41,6 @@ Abrir o modo de exibição de turnos no Teams:
 O modo de exibição turnos no Teams é mostrado na imagem a seguir:
 
 ![Turnos abertos no Teams](../assets/images/teams-open-shifts-view.png)
-
-## <a name="kronos-to-teams-shifts-connector"></a>Conector de Shifts Kronos para o Teams
-
-Com o código de software livre, você pode integrar o Kronos Workforce Central versão 8.1 e superior, como  Teams Shifts, como aplicativos de área de trabalho ou móveis do Teams para os seguintes cenários de gerente e trabalho de primeira linha:
-
-* Exibir agenda.
-
-* Publicar e solicitar turnos abertos.
-
-* Trocar turnos.
-
-* Solicitar folga.
-
-* Oferecer turnos.
-
-Para obter mais informações sobre a implantação do conector de Turnos Kronos para Teams, consulte [Obter no GitHub](https://aka.ms/KronosShiftsConnector).
-
-## <a name="jda-to-teams-shifts-connector"></a>Conector de Turnos JDA para o Teams
-
-Com o código de software livre, você pode integrar o JDA, como o BlueYonder versão 17.2 e superior, com o Teams Shifts, como o aplicativo Teams para área de trabalho ou móvel, para os seguintes cenários de gerente e trabalho de primeira linha:
-
-* Publique turnos e agende grupos no JDA e exiba-os no Teams.
-
-* Habilite cenários de agendamento avançados, incluindo solicitação de trocas de turno e folga.
-
-* Defina a disponibilidade do usuário usando a [ API do Microsoft Graph para Turnos](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
-
-Para obter mais informações sobre contribuição e sugestão, consulte [Obter no GitHub](https://aka.ms/JDAShiftsConnector).
 
 ## <a name="see-also"></a>Confira também
 
