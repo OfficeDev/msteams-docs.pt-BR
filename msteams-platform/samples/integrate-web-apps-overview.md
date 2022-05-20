@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 keywords: power platform power apps seletor de pessoas link profundo assistente de agente virtual compartilhar com o Teams
-ms.openlocfilehash: cb818d660705b3526e6cbe8e4b16172fc4a5cd4b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c700755051eebbdb827a0fb9aba0ea51d31dbcf8
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111455"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604268"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -60,10 +60,6 @@ O Assistente Virtual é um modelo de software livre da Microsoft que permite cri
 
 Você pode usar o modelo de aplicativo para criar aplicativos personalizados para atender às suas necessidades organizacionais. Os modelos de aplicativos são aplicativos prontos para produção para o Microsoft Teams orientadas pela comunidade, software livre e disponíveis no GitHub. Cada modelo contém instruções detalhadas para implantar e instalar o aplicativo para sua organização. Ele fornece um aplicativo pronto para uso que você pode instalar e começar a usar imediatamente.
 
-## <a name="teams-shifts-work-force-management-connectors"></a>Conectores de Gerenciamento de Mão de Obra do Teams Shifts
-
-Os conectores de Gerenciamento de Mão de Obra do Teams Shifts são integrações prontas para produção, de software livre e controladas pela comunidade. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital de trabalhadores de linha de frente com o Teams Shifts.
-
 ## <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
 O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre popular. Agora, ele está integrado ao Microsoft Teams. Esta integração ajuda educadores e professores a colaborarem em cursos do Moodle, fazerem perguntas sobre suas notas e suas tarefas e permanecerem atualizados com as notificações diretamente dentro do Teams.
@@ -82,7 +78,7 @@ Você pode criar links profundos para entidades no Teams. Você pode criar links
 
 ## <a name="integrate-device-capabilities"></a>Integrar as funcionalidades do dispositivo
 
-A plataforma Microsoft Teams está aprimorando continuamente os recursos do desenvolvedor, alinhando-se com experiências internas. A plataforma aprimorada do Teams permite que os parceiros acessem e integrem os recursos nativos do dispositivo, como câmera, leitor de código QR ou de código de barras, galeria de fotos, microfone e localização usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
+A plataforma do Microsoft Teams está aprimorando continuamente as funcionalidades do desenvolvedor, alinhando-se com as experiências internas de primeira pessoa. A plataforma avançada do Teams permite que os parceiros acessem e integrem as funcionalidades nativas do dispositivo, como câmera, scanner de código QR ou código de barras, galeria de fotos, microfone e localização usando as APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
 
 ## <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 

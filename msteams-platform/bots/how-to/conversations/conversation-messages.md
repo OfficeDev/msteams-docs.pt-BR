@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191177"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611463"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -23,6 +23,8 @@ As conversas básicas são tratadas por meio do conector do Bot Framework, uma �
 * Maneiras simples de incorporar serviços cognitivos, como nLP (processamento de linguagem natural).
 
 O bot recebe mensagens de Teams usando `Text` a propriedade e envia respostas de mensagem única ou múltipla aos usuários.
+
+Para obter mais informações, consulte [Atribuição de usuário para mensagens de bot](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
 ## <a name="receive-a-message"></a>Receber uma mensagem
 
@@ -409,7 +411,7 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
