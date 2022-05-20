@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132706"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602282"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Atualizar | Encontre aqui |
 | --- | --- | --- |
+|05/19/2022|Bots e extensões de mensagem para GCC e GCCH| • Criar bots > [Visão geral](bots/what-are-bots.md) </br> • Criar extensões de mensagem > [Visão geral](messaging-extensions/what-are-messaging-extensions.md) |
 |28/04/2022| Motivos comuns para falhas na validação do aplicativo | Distribuir seu aplicativo > Publicar na loja do Teams > [Motivos comuns para falha na validação do aplicativo](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Configurar pipelines de CI/CD | Ferramentas e SDKs > Conjunto de Ferramentas do Teams para o Visual Studio Code > [Configurar pipelines de CI/CD ](toolkit/use-CICD-template.md)|
 |19/04/2022 | Carregar seu aplicativo no Microsoft Teams | Distribuir seu aplicativo > [Carregar seu aplicativo](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|05/19/2022|Bots e extensões de mensagem para GCC e GCCH| • Criar bots > [Visão geral](bots/what-are-bots.md) </br> • Criar extensões de mensagem > [Visão geral](messaging-extensions/what-are-messaging-extensions.md) |
 |26/04/2022|Comportamento de desinstalação do aplicativo pessoal com o bot | Criar bots > Conversas de bot > [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| Teste de visualização para aplicativos monetizados | Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |04/22/2022| Fluxo de compras no aplicativo para a monetização de aplicativos | Monetize seu aplicativo > [Compras no aplicativo](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)

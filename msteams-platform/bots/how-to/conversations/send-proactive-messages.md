@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: Enviar mensagem, obter ID do usuário, obter ID do canal, obter ID da conversa
-ms.openlocfilehash: ec41ec08af9c7e3b7280995f8abc66b3a5a7baa0
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590714"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602268"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -21,6 +21,13 @@ Uma mensagem proativa é qualquer mensagem enviada por um bot que não esteja em
 * Mensagem de boas-vindas
 * Notificações
 * Mensagens agendadas
+
+> [!IMPORTANT]
+> Atualmente, os bots estão disponíveis na Nuvem da Comunidade Governamental (GCC) e no GCC-High, mas não no Departamento de Defesa (DOD).
+>
+> Para mensagens proativas, os bots devem usar os seguintes pontos de extremidade para ambientes de nuvem governamentais:
+>    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+>    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Para que seu bot envie uma mensagem proativa a um usuário, chat em grupo ou equipe, ele precisa ter acesso para enviar a mensagem. O aplicativo que contém seu bot deve ser instalado primeiro onde houver um chat em grupo ou equipe.
 Você pode [instalar seu aplicativo de forma proativa usando o Microsoft Graph](#proactively-install-your-app-using-graph) em uma equipe, se necessário, ou usar uma [política de aplicativo](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicativos para equipes e usuários em seu locatário. Se for um usuário, você deve ter o aplicativo instalado ou ser um membro da equipe na qual o aplicativo está instalado.

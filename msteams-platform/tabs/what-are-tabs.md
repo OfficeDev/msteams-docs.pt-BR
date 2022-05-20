@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103289"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602275"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -18,6 +18,8 @@ As guias são páginas da Web compatíveis com o Microsoft Teams incorporadas ao
 
 > [!IMPORTANT]
 > Atualmente, as guias personalizadas estão disponíveis Nuvem da Comunidade Governamental (GCC), GCC-High e DoD (Departamento de Defesa).
+>
+> Recomendamos que você use o SDK de cliente do Teams através do [pacote npm](https://www.npmjs.com/package/@microsoft/teams-js) e agrupe-o com seu aplicativo, pois atualmente o SDK de cliente do Teams não está disponível na CDN da Nuvem Governamental.
 
 A imagem a seguir mostra guias pessoais:
 

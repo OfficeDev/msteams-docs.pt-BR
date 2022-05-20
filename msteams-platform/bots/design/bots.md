@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104382"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602296"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
 Bots são aplicativos de conversa que executam um conjunto específico de tarefas. Com base no <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, os bots se comunicam com os usuários, respondem às suas dúvidas e os notificam de forma proativa sobre alterações e outros eventos. Eles são uma ótima maneira de se comunicar.
 
 > [!IMPORTANT]
-> Os bots estão disponíveis em ambientes de Nuvem da Comunidade Governamental (GCC), mas não em ambientes de GCC High do Departamento de Defesa (DoD).
+> Os bots estão disponíveis em ambientes de Nuvem da Comunidade Governamental (GCC) e GCC High, mas não em ambientes do Departamento de Defesa (DoD).
 
 Para orientar a criação do seu aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar bots no Mirosoft Teams.
 
