@@ -1,15 +1,14 @@
 ---
 title: Criar links detalhados
-description: Descreve links profundos e como usá-los em seus aplicativos
+description: Saiba como descrever os links profundos do Teams e como usá-los no seus aplicativos.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: link profundo do link do teams
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103920"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611451"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -69,7 +68,7 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 
 > [!NOTE]
 > Se o bot enviar uma mensagem contendo um `TextBlock` com um link profundo, uma nova guia do navegador será aberta quando o usuário selecionar o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams, ambos em execução no Linux.
-> Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta na guia atual do navegador quando o usuário selecionar o link. Uma nova guia do navegador não está aberta.
+> Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta na guia atual do navegador quando o usuário selecionar o link. Uma nova aba do navegador não foi aberta.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
@@ -79,19 +78,19 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 Os parâmetros de consulta são:
 
 | Nome do parâmetro | Descrição | Exemplo |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | A ID do manifesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | A ID do Centro de Administração do Teams. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | A ID do item na guia, que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
 | `entityWebUrl` ou `subEntityWebUrl`&emsp; | Um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo. | Task List 123 ou "Task 456 |
 | `context.subEntityId`&emsp; | Uma ID do item na guia. |Tarefa456 |
-| `context.channelId`&emsp; | ID do canal do Microsoft Teams que está disponível na guia [contexto](~/tabs/how-to/access-teams-context.md). Essa propriedade só está disponível em guias configuráveis com um escopo de **equipe**. Ele não está disponível em guias estáticas, que têm um escopo de **pessoal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | ID do canal do Microsoft Teams que está disponível na guia [contexto](~/tabs/how-to/access-teams-context.md). Essa propriedade só está disponível em guias configuráveis com um escopo de **equipe**. Não está disponível em guias estáticas, que têm um escopo de **pessoal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | A ChatId que está disponível na guia [contexto](~/tabs/how-to/access-teams-context.md) para o chat em grupo e reunião | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  O chat é o único contextType compatível para reuniões | chat |
 
@@ -167,10 +166,30 @@ Exemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 Os parâmetros de consulta são:
 
 * `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes do chat. O usuário que executa a ação é sempre incluído como um participante. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), como apenas um endereço de email.
-* `topicName`: Um campo opcional para o nome de exibição do chat, em chats com três ou mais usuários. Se esse campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
+* `topicName`: um campo opcional para o nome de exibição do chat, no caso de um chat com três ou mais usuários. Se este campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
 * `message`: Um campo opcional para o texto da mensagem que você deseja inserir na caixa de redação do usuário atual enquanto o chat está em um estado de rascunho.
 
 Para usar esse link profundo com o bot, especifique-o como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
+
+## <a name="generate-deep-links-to-channel-conversation"></a>Gerar links profundos para a conversa do canal
+
+Use este formato de link profundo para navegar até uma conversa específica dentro da thread do canal:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Exemplo: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+Os parâmetros de consulta são:
+
+* `channelId`: ID do Canal da conversa. Por exemplo, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: ID do grupo do arquivo. Por exemplo `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: ID da mensagem pai da conversa.
+* `teamName`: nome da equipe.
+* `channelName`: nome do canal da equipe.
+
+> [!NOTE]
+> Você pode ver `channelId` e `groupId` na URL do canal.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Gerar links profundos para o arquivo no canal
 
@@ -196,7 +215,7 @@ O seguinte formato de link profundo é usado em um bot, conector ou cartão de e
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-O seguinte formato de exemplo mostra o link profundo para os arquivos:
+O formato de exemplo a seguir ilustra link profundo para arquivos:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
@@ -232,7 +251,7 @@ Os parâmetros de consulta são:
 * `appID`: sua ID de manifesto, por exemplo, `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
 * `entityID`: a ID do item que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, `tasklist123`.
-* `entityWebUrl`: Um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
+* `entityWebUrl`: um campo opcional com uma URL de fallback para usar se o cliente não suportar a renderização da guia - `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
 * `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, Task List 123 ou Task 456.
 
 Exemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
@@ -262,7 +281,7 @@ Os parâmetros de consulta são:
 * `content`: Um campo opcional para o campo de detalhes da reunião.
 
 > [!NOTE]
-> Atualmente, não é possível especificar o local. Você deve especificar o deslocamento UTC, ou seja, os fusos horários ao gerar os horários de início e de término.
+> Atualmente, a especificação do local não é suportada. Você deve especificar o deslocamento UTC, significa fusos horários ao gerar seus horários de início e término.
 
 Para usar esse link profundo com o bot, você pode especificá-lo como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
 

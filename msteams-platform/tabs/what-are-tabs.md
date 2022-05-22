@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602275"
+ms.locfileid: "65611447"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -75,6 +75,9 @@ Você pode usar um dos seguintes métodos para criar guias:
 Uma guia personalizada é declarada no manifesto do aplicativo do pacote do aplicativo. Para cada página da web que você deseja incluir como uma guia em seu aplicativo, defina uma URL e um escopo. Além disso, você pode adicionar o [SDK cliente JavaScript do Teams](/javascript/api/overview/msteams-client) à sua página, e ligar `microsoftTeams.initialize()` após o carregamento de sua página. O Teams exibe sua página e fornece acesso a informações específicas do Teams, por exemplo, o cliente do Teams está executando o tema escuro.
 
 Se você optar por expor sua guia dentro do canal ou grupo, ou escopo pessoal, você deve apresentar uma \>página de conteúdo[ HTML ](~/tabs/how-to/create-tab-pages/content-page.md)<iframe em sua guia. Para as guias pessoais, a URL de conteúdo é definida diretamente em seu manifesto de aplicativos do Microsoft Teams pela `contentUrl`propriedade na `staticTabs` matriz. O conteúdo de sua guia é o mesmo para todos os usuários.
+
+> [!Note]
+> O aplicativo Teams não reconhece subiframes. Portanto, ele não será carregado se houver um iframe dentro do aplicativo da guia.
 
 Para guias de canal ou grupo, você também pode criar uma página de configuração adicional. Esta página permite configurar a URL da página de conteúdo, normalmente usando parâmetros de cadeia de caracteres de consulta de URL para carregar o conteúdo apropriado para esse contexto. Isso ocorre porque seu canal ou guia de grupo pode ser adicionado a várias equipes ou chats em grupo. Em cada instalação subsequente, os usuários podem configurar a guia, permitindo que você personalize a experiência conforme necessário. Quando os usuários adicionam ou configuram uma guia, uma URL é associada à guia apresentada na interface do usuário do Teams. Configurar uma guia simplesmente adiciona parâmetros adicionais a essa URL. Por exemplo, quando você adiciona a guia Azure Boards, a página de configuração permite que você escolha qual placa a guia carrega. A URL da página de configuração é especificada pela `configurationUrl` propriedade na `configurableTabs` matriz em seu manifesto de aplicação.
 
