@@ -1,12 +1,14 @@
 ## <a name="deploy-your-app-to-azure"></a>Implantar seu aplicativo no Azure.
 
 A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necessários são criados (também conhecidos como provisionamento). Em seguida, o código do aplicativo é copiado para os recursos de nuvem criados. Para este tutorial, você implantará o aplicativo guia.
-
-> <details>
-> <summary>Qual é a diferença entre Provisionar e Implantar?</summary>
->
-> A **etapa Provisionar** cria recursos no Azure e Microsoft 365 para seu aplicativo, mas nenhum código (HTML, CSS, JavaScript etc.) é copiado para os recursos. A **etapa** Implantar copia o código do aplicativo para os recursos criados durante a etapa de provisionamento. É comum implantar várias vezes sem provisionar novos recursos. Como a etapa de provisionamento pode levar algum tempo para ser concluída, ela é separada da etapa de implantação.
+<br> 
+<br>
+<details>
+<summary>Qual é a diferença entre Provisionar e Implantar?</summary>
+<br>
+A <b>etapa Provisionar</b> cria recursos no Azure e Microsoft 365 para seu aplicativo, mas nenhum código (HTML, CSS, JavaScript etc.) é copiado para os recursos. A <b>etapa</b> Implantar copia o código do aplicativo para os recursos criados durante a etapa de provisionamento. É comum implantar várias vezes sem provisionar novos recursos. Como a etapa de provisionamento pode levar algum tempo para ser concluída, ela é separada da etapa de implantação.
 </details>
+<br>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -31,7 +33,7 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
    O processo de provisionamento cria recursos na nuvem do Azure. Pode levar algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída." border="false":::
 
     Se desejar, você poderá exibir os recursos provisionados. Para este tutorial, você não precisa exibir recursos.
 
@@ -45,6 +47,7 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
    Assim como acontece com o provisionamento, a implantação leva algum tempo. Você pode monitorar o processo observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá um aviso de conclusão.
 
+Agora, você pode usar o mesmo processo para implantar seus aplicativos de Bot e Extensão de Mensagem no Azure.
 
 # <a name="command-line"></a>[Linha de comando](#tab/cli)
 
@@ -81,10 +84,21 @@ Depois que as etapas de provisionamento e implantação forem concluídas:
 
 1. Selecione **Adicionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
+
+   O kit de ferramentas exibe uma mensagem para indicar que o aplicativo foi adicionado Teams.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde" border="true":::
+ 
+    - Se você selecionar **Obter,** poderá experimentar o aplicativo mais tarde na lista de aplicativos de Sideload.
+    - Se você selecionar **Experimentar**, Teams carregará seu aplicativo.
 
    Seu aplicativo é carregado no site do Azure.
+   
+1. Selecione **Experimentar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
+   O aplicativo extensão de mensagem é carregado em um aplicativo de chatbot.
 
-    Parabéns! Seu aplicativo de guia agora está sendo executado remotamente no Azure!
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de tela que mostra o sideload do aplicativo Teams" border="false":::
+
+
