@@ -1,25 +1,22 @@
 ---
 title: Estender um aplicativo de guia pessoal do Teams Microsoft 365
 description: Estender um aplicativo de guia pessoal do Teams Microsoft 365
-ms.date: 02/11/2022
+ms.date: 05/24/2022
 ms.topic: tutorial
-ms.custom: Microsoft 365 apps
-ms.localizationpriority: high
-ms.openlocfilehash: 873a6fa6207d122581e18cef0ae922ffca87762f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.custom: m365apps
+ms.localizationpriority: medium
+ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111518"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653798"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
-> [!NOTE]
-> *Extendindo uma guia pessoal do Teams em Microsoft 365* está disponível atualmente apenas em [Visualização do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md). Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
-
 As guias pessoais fornecem uma ótima maneira de aprimorar a experiência do Microsoft Teams. Usando guias pessoais, você pode fornecer a um usuário acesso ao aplicativo diretamente no Teams, sem que o usuário precise sair da experiência ou entrar novamente. Com essa versão prévia, as guias pessoais podem se acender em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de pegar uma guia pessoal existente do Teams e atualizá-la para ser executada em experiências da área de trabalho e da Web do Outlook e também do Office na Web (office.com).
 
-Atualizar seu aplicativo pessoal para ser executado no Outlook e no Office Home envolve estas etapas:
+Atualizar seu aplicativo pessoal para ser executado em Outlook e Office envolve estas etapas:
 
 > [!div class="checklist"]
 >
@@ -27,16 +24,9 @@ Atualizar seu aplicativo pessoal para ser executado no Outlook e no Office Home 
 > * Atualizar suas referências do SDK do TeamsJS
 > * Corrigir os cabeçalhos da Política de Segurança de Conteúdo
 > * Atualize seu Microsoft Azure Active Directory (Azure AD) registro de aplicativo para SSO (logon único)
-
-Testar seu aplicativo exigirá as seguintes etapas:
-
-> [!div class="checklist"]
->
-> * Registre seu locatário Microsoft 365 no *Versões direcionadas do Office 365*
-> * Configurar sua conta para acessar as versões prévias dos aplicativos do Outlook e do Office
 > * Realizar sideload do aplicativo atualizado no Teams
 
-Após essas etapas, seu aplicativo deverá aparecer nas versões prévias do Outlook e dos aplicativos do Office.
+O restante deste guia explicará essas etapas e mostrará como visualizar sua guia pessoal em outros Microsoft 365 aplicativos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -52,70 +42,79 @@ Para concluir este tutorial, você precisará de:
 
 ## <a name="prepare-your-personal-tab-for-the-upgrade"></a>Preparar sua guia pessoal para a atualização
 
-Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma ramificação do projeto de produção para testar e atualizar a ID do aplicativo no manifesto do aplicativo para usar um novo identificador (diferente da ID do aplicativo de produção).
+Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma ramificação do projeto de produção para testar e atualizar a ID do aplicativo no manifesto do aplicativo para usar um novo identificador (diferente da ID do aplicativo de produção, para teste).
 
-Se você quiser usar o código de exemplo para concluir este tutorial, siga as etapas de configuração em [Introdução ao exemplo de lista de tarefas](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para criar um aplicativo de guia pessoal usando a extensão kit de ferramentas do Teams para Visual Studio Code. Ou você pode começar com o mesmo exemplo de [Lista de tarefas atualizada para a visualização de TeamsJS SDK v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) e prosseguir para [Visualização sua guia pessoal em outras experiências do Microsoft 365](#preview-your-personal-tab-in-other-microsoft-365-experiences). O exemplo atualizado também está disponível na extensão Kit de ferramentas do Teams: *Desenvolvimento* > *Ver amostras* > **Lista de tarefas (funciona no Teams, Outlook e Office)**.
+Se você quiser usar o código de exemplo para concluir este tutorial, siga as etapas de configuração no [](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) Exemplo de Lista de Tarefas Pendentes para criar um aplicativo de guia pessoal usando a extensão Teams Toolkit para Visual Studio Code e, em seguida, retorne a este artigo para atualizá-lo para Microsoft 365.
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text="Amostra de Lista de tarefas (Funciona no Teams, Outlook e Office) no Kit de Ferramentas do Teams":::
+Como alternativa, você pode usar um aplicativo Hello *World* do Sign-On básico já habilitado Microsoft 365 na seção de início rápido a seguir e, em seguida, pular para [Sideload](#sideload-your-app-in-teams) do aplicativo no Teams.
+
+### <a name="quickstart"></a>Início rápido
+
+Para começar com uma [guia pessoal](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) que já está habilitada para execução no Outlook e Office, use Teams Toolkit extensão para Visual Studio Code.
+
+1. No Visual Studio Code, abra a paleta de comandos (`Ctrl+Shift+P`), digite `Teams: Create a new Teams app`.
+1. Selecione **a guia pessoal habilitada para SSO**.
+
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Amostra de Lista de tarefas (Funciona no Teams, Outlook e Office) no Kit de Ferramentas do Teams":::
+
+1. Selecione um local no computador local para a pasta do workspace.
+1. Abra a paleta de comandos (`Ctrl+Shift+P`) `Teams: Provision in the cloud` e digite para criar os recursos de aplicativo necessários (Serviço de Aplicativo plano, Armazenamento conta, Aplicativo de Funções, Identidade Gerenciada) em sua conta do Azure.
+1. Abra a paleta de comandos (`Ctrl+Shift+P`) e digite `Teams: Deploy to the cloud` para implantar o código de exemplo nos recursos provisionados no Azure e inicie o aplicativo.
+
+A partir daqui, você pode pular para [Sideload do aplicativo no Teams](#sideload-your-app-in-teams) e visualizar seu aplicativo no Outlook e Office. (O manifesto do aplicativo e as chamadas à API do TeamsJS já foram atualizados para Microsoft 365.)
 
 ## <a name="update-the-app-manifest"></a>Atualizar o manifesto do aplicativo
 
-Você precisará usar o esquema [Manifesto de visualização do desenvolvedor do Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) e o manifesto `Microsoft 365 DevPreview` para permitir que sua guia pessoal do Teams seja executada no Office e no Outlook.
+Você precisará usar a versão [](../resources/schema/manifest-schema.md) `1.13` do esquema de manifesto Teams desenvolvedor para habilitar sua guia pessoal do Teams para ser executada Outlook e Office.
 
-Você pode usar o Kit de Ferramentas do Teams para atualizar o manifesto do aplicativo ou aplicar as alterações manualmente:
+Você tem duas opções para atualizar o manifesto do aplicativo:
 
 # <a name="teams-toolkit"></a>[Kit de ferramentas do Teams](#tab/manifest-teams-toolkit)
 
-1. Abra a *paleta de Comando*: `Ctrl+Shift+P`
-1. Execute o `Teams: Upgrade Teams manifest to support Outlook and Office apps` e selecione o arquivo de manifesto do aplicativo. As alterações serão feitas em vigor.
+1. Abra a paleta de comandos: `Ctrl+Shift+P`.
+1. Execute o `Teams: Upgrade Teams manifest` e selecione o arquivo de manifesto do aplicativo. As alterações serão feitas em vigor.
 
 # <a name="manual-steps"></a>[Etapas manuais](#tab/manifest-manual)
 
-Abra o manifesto do aplicativo Teams e atualize o `$schema` e `manifestVersion` com os seguintes valores:
+Abra o Teams manifesto do aplicativo e atualize o `$schema` e `manifestVersion` com os seguintes valores:
 
 ```json
 {
-    "$schema" : "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion" : "m365DevPreview"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.13"
 }
 ```
 
 ---
 
-Se você usou o Teams Toolkit para criar seu aplicativo pessoal, também poderá usá-lo para validar as alterações no arquivo de manifesto e identificar erros. Abra a paleta de comandos `Ctrl+Shift+P` e localize **Teams: Validar arquivo de manifesto** ou selecione a opção no menu Implantação do Kit de Ferramentas do Teams (procure o ícone do Teams no lado esquerdo do Visual Studio Code).
-
-:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Kit de ferramentas do Teams 'Validar arquivo de manifesto' no menu 'Implantação'":::
+Se você usou o kit de ferramentas do Teams para criar seu aplicativo pessoal, também poderá usá-lo para validar as alterações no arquivo de manifesto e identificar erros. Abra a paleta de comandos (`Ctrl+Shift+P`) e **localize Teams: Validar arquivo de manifesto**.
 
 ## <a name="update-sdk-references"></a>Atualizar referências do SDK
 
-Para ser executado no Outlook e no Office, seu aplicativo precisará depender do pacote npm `@microsoft/teams-js@2.0.0-beta.1` (ou de uma versão *beta* posterior). Embora o código com versões de nível inferior do `@microsoft/teams-js` seja compatível com o Outlook e o Office, os avisos de reprovação serão registrados e o suporte para versões de nível inferior do `@microsoft/teams-js` no Outlook e no Office acabará.
+Para ser executado Outlook e Office, seu aplicativo precisará fazer referência ao npm pacote `@microsoft/teams-js@2.0.0` (ou superior). Embora o código com versões de nível inferior tenha suporte no Outlook e no Office, os avisos de substituição serão registrados e o suporte para versões de nível inferior do TeamsJS no Outlook e no Office eventualmente será interrompida.
 
-Você pode usar o Kit de Ferramentas do Teams para ajudar a automatizar algumas das alterações de código para adotar a próxima versão do `@microsoft/teams-js` mas se você quiser executar as etapas manualmente, consulte [Visualização do SDK do cliente JavaScript do Microsoft Teams](using-teams-client-sdk-preview.md) para obter detalhes.
+Você pode usar Teams Toolkit para ajudar a identificar e automatizar as alterações de código necessárias para atualizar das versões do TeamsJS 1.x para o TeamsJS versão 2.0.0. Como alternativa, você pode executar as mesmas etapas manualmente; consulte o [Microsoft Teams SDK do cliente JavaScript](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para obter detalhes.
 
-1. Abra a *paleta de Comando*: `Ctrl+Shift+P`
-1. Execute o comando `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
+1. Abra a *paleta comando*: `Ctrl+Shift+P`.
+1. Execute o comando `Teams: Upgrade Teams JS SDK and code references`.
 
-Após a conclusão, o utilitário terá atualizado o arquivo `package.json` com a dependência da Visualização do TeamsJS SDK (`@microsoft/teams-js@2.0.0-beta.1` ou posterior), e seus arquivos `*.js/.ts` e `*.jsx/.tsx` serão atualizados com:
+Após a conclusão, *o arquivo package.json* fará referência `@microsoft/teams-js@2.0.0` (ou superior) `*.js/.ts` `*.jsx/.tsx` e seus arquivos serão atualizados com:
 
 > [!div class="checklist"]
->
-> * `package.json` à Visualização do SDK do TeamsJS
-> * Instruções de importação para Visualização do SDK do TeamsJS
-> * [Função, enumeração e chamadas de interface](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) para a Visualização do SDK do TeamsJS
-> * `TODO` comentar lembretes para revisar áreas que podem ser afetadas por alterações de interface [Contexto](using-teams-client-sdk-preview.md#updates-to-the-context-interface)
-> * `TODO` lembretes de comentário para garantir que [a conversão para funções de promessas de funções de estilo de retorno de chamada](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) tenha ido bem em todos os sites de chamadas que a ferramenta encontrou
+> * Instruções de importação para teams-js@2.0.0
+> * [Chamadas de função, enumeração e interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para teams-js@2.0.0
+> * `TODO` lembretes de comentário sinalizando áreas que podem ser afetadas por alterações [de interface de](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) contexto
+> * `TODO` lembretes de comentário para [converter funções de retorno de chamada em promessas](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > O código *.html* não tem suporte nas ferramentas de atualização e exigirá alterações manuais.
 
-> [!NOTE]
-> Se você quiser atualizar manualmente seu código, consulte [Visualização do SDK do cliente JavaScript do Microsoft Teams](using-teams-client-sdk-preview.md) para saber mais sobre as alterações necessárias.
 
 ## <a name="configure-content-security-policy-headers"></a>Configurar cabeçalhos de Política de Segurança de Conteúdo
 
-[Assim como no Microsoft Teams](/microsoftteams/platform/tabs/what-are-tabs), os aplicativos de guia são hospedados em ([elementos iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)) nos clientes Web do Office e Outlook.
+Como no Microsoft Teams, os aplicativos de tabulação são hospedados em elementos [de iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) Office e Outlook web.
 
-Se seu aplicativo usa cabeçalhos de [Política de segurança de conteúdo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP), verifique se você está permitindo todos os seguintes [ancestrais de quadro](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) em seus cabeçalhos de CSP:
+Se seu aplicativo usa cabeçalhos [CSP (Política](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) de Segurança de Conteúdo), [certifique-se](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) de permitir todos os seguintes ancestrais de quadro em seus cabeçalhos CSP:
 
 |Microsoft 365 host| permissão de ancestral de quadro|
 |--|--|
@@ -125,7 +124,7 @@ Se seu aplicativo usa cabeçalhos de [Política de segurança de conteúdo](http
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Atualizar o registro de aplicativo do Azure AD para SSO
 
-Azure Active Directory o SSO (logon único) para guias pessoais funciona da mesma maneira no Office e no Outlook [como no Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), no entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro de aplicativo do Azure AD de seu aplicativo de guia no portal *Registros de aplicativo* do locatário.
+[Azure Active Directory (AD) SSO (](../tabs/how-to/authentication/auth-aad-sso.md)logon único) para guias pessoais funciona da mesma maneira no Office e no Outlook como no Teams. No entanto, você precisará adicionar vários identificadores de aplicativo cliente ao registro Azure AD aplicativo de Azure AD do aplicativo guia *no portal de* Registros de aplicativo locatário.
 
 1. Entre no [portal do Microsoft Azure](https://portal.azure.com) com sua conta de locatário da área restrita.
 1. Abra a folha **Registros de aplicativo**.
@@ -148,40 +147,42 @@ Na seção **Aplicativos do cliente autorizados**, verifique se todos os valores
 
 ## <a name="sideload-your-app-in-teams"></a>Faça o sideload do seu aplicativo do Teams
 
-A etapa final é realizar o sideload da guia pessoal atualizada ([pacote de aplicativos](/microsoftteams/platform/concepts/build-and-test/apps-package)) no Microsoft Teams. Depois de concluído, seu aplicativo estará disponível para execução no Office e no Outlook, além do Teams.
+A etapa final para executar seu aplicativo no Office e Outlook é fazer sideload do pacote de aplicativos de guia pessoal atualizado no [](..//concepts/build-and-test/apps-package.md) Microsoft Teams.
 
-1. Empacote seu aplicativo do Teams ([ícones de manifesto e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, pode fazer isso facilmente usando a opção de **pacote de metadados Zip Teams** no menu *Implantação* do Kit de Ferramentas do Teams ou na paleta de comandos `Ctrl+Shift+P` do Visual Studio Code:
+1. Empacote seu Teams aplicativo ([ícones](../resources/schema/manifest-schema.md) de manifesto [e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, poderá fazer isso facilmente usando a opção **Compactar o pacote de metadados do Teams** no menu *Implantação* do Kit de Ferramentas do Teams:
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' na extensão do Kit de Ferramentas do Teams para Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Pacote de metadados do Zip Teams' na extensão do Kit de Ferramentas do Teams para Visual Studio Code":::
 
-1. Faça logon no Teams com sua conta de locatário da área restrita e verifique se você está na Visualização pública do desenvolvedor. Você pode verificar se está na Visualização no cliente do Teams clicando nas reticências (**...**) pelo seu perfil de usuário e abrindo **Sobre** para verificar se a opção *Visualização do Desenvolvedor* está ativada.
+1. Entre no Teams com sua conta de locatário de área restrita e alterne para o modo *de Visualização do* Desenvolvedor. Selecione o menu de reticências (**...**) pelo perfil do usuário e, em seguida, selecione: Sobre > **Desenvolvedor.**
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Do menu de reticências do Teams, abra 'Sobre' e verifique se a opção 'Visualização do Desenvolvedor' está marcada":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="No Teams de reticências, abra 'Sobre' e selecione a opção 'Visualização do Desenvolvedor'":::
 
-1. Abra o painel *Aplicativos*, e clique em **Carregue um aplicativo personalizado** e, em seguida, **Carregue para mim ou minhas equipes**.
+1. Selecione *Aplicativos* para abrir **o painel Gerenciar seus** aplicativos. Em seguida, **selecione Publicar um aplicativo**.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Carregar um aplicativo personalizado' no painel 'Aplicativos' do Teams":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra o painel 'Gerenciar seus aplicativos' e selecione 'Publicar um aplicativo'":::
 
-1. Selecione o pacote do aplicativo e clique em *Open*.
+1. Escolha **Upload uma opção de aplicativo personalizado** e selecione o pacote do aplicativo.
 
-Após o sideload por meio do Teams, sua guia pessoal estará disponível no Outlook e no Office. Certifique-se de entrar com as mesmas credenciais usadas para fazer o sideload do aplicativo no Teams.
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload um aplicativo personalizado' no Teams":::
 
-Você pode fixar o aplicativo para acesso rápido ou encontrar seu aplicativo nas reticências (**...**) entre aplicativos recentes na barra lateral à esquerda.
+Após o sideload para Teams, sua guia pessoal estará disponível no Outlook e Office. Certifique-se de entrar com as mesmas credenciais usadas para entrar no Teams sideload do aplicativo.
 
-> [!NOTE]
-> Fixar um aplicativo no Teams não o fixará como um aplicativo no Office.com ou no Outlook.
+Você pode fixar o aplicativo para acesso rápido ou encontrar seu aplicativo nas reticências (**...**) entre aplicativos recentes na barra lateral à esquerda. Fixar um aplicativo no Teams não o fixará como um aplicativo no Office ou Outlook.
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Visualizar sua guia pessoal em outras Microsoft 365 experiências
 
-Quando você atualiza sua guia pessoal do Teams e a faz sideload no Teams, ela é executada no Outlook no Windows, na Web, no Office no Windows e na Web (office.com). Veja como visualizar essas experiências de Microsoft 365.
+Veja como visualizar seu aplicativo em execução no Office e Outlook, web e Windows desktop.
+
+> [!NOTE]
+> Desinstalar seu aplicativo Teams também o removerá dos catálogos mais  aplicativos no Outlook e Office. Se você estiver usando o aplicativo de exemplo Teams Toolkit fornecido acima
 
 ### <a name="outlook-on-windows"></a>Outlook no Windows
 
 Para exibir seu aplicativo em execução no Outlook na área de trabalho do Windows:
 
 1. Inicie o Outlook e entre usando sua conta de locatário de desenvolvimento.
-1. Clique nas reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
-1. Clique no ícone do aplicativo para iniciar seu aplicativo no Outlook.
+1. Na barra lateral, selecione  **Mais Aplicativos**. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
+1. Selecione o ícone do aplicativo para iniciar seu aplicativo Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Outlook para ver suas guias pessoais instaladas":::
 
@@ -190,8 +191,8 @@ Para exibir seu aplicativo em execução no Outlook na área de trabalho do Wind
 Para exibir seu aplicativo no Outlook na Web:
 
 1. Navegue até [Outlook na Web](https://outlook.office.com) e entre usando sua conta de locatário de desenvolvimento.
-1. Clique nas reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
-1. Clique no ícone do aplicativo para iniciar e visualizar seu aplicativo em execução no Outlook na Web.
+1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
+1. Selecione o ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do outlook.com para ver as guias pessoais instaladas":::
 
@@ -200,8 +201,8 @@ Para exibir seu aplicativo no Outlook na Web:
 Para exibir seu aplicativo em execução no Office na área de trabalho do Windows:
 
 1. Inicie o Office e entre usando sua conta de locatário de desenvolvimento.
-1. Clique nas reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
-1. Clique no ícone do aplicativo para iniciar seu aplicativo no Office.
+1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
+1. Selecione o ícone do aplicativo para iniciar seu aplicativo Office.
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Office para ver suas guias pessoais instaladas":::
 
@@ -210,31 +211,46 @@ Para exibir seu aplicativo em execução no Office na área de trabalho do Windo
 Para visualizar seu aplicativo em execução no Office na Web:
 
 1. Faça logon office.com credenciais de locatário de teste.
-1. Clique nas reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
-1. Clique no ícone do aplicativo para iniciar seu aplicativo no Office na Web.
+1. Selecione o **ícone Aplicativos** na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
+1. Selecione o ícone do aplicativo para iniciar seu aplicativo Office na Web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do office.com para ver as guias pessoais instaladas":::
+:::image type="content" source="images/office-web-more-apps.png" alt-text="Clique na opção 'Mais aplicativos' na barra lateral do office.com para ver as guias pessoais instaladas":::
+
+## <a name="troubleshooting"></a>Solução de problemas
+
+Atualmente, um subconjunto de Teams tipos de aplicativos e funcionalidades tem suporte em Outlook e Office clientes. Esse suporte se expandirá ao longo do tempo. 
+
+Consulte o [Microsoft 365 para verificar](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) o suporte ao host para vários recursos do TeamsJS.
+
+Para obter um resumo geral Microsoft 365 suporte de host e plataforma para aplicativos Teams, consulte [Estender Teams aplicativos](overview.md) em Microsoft 365.
+
+Você pode verificar o suporte de host de um determinado recurso em runtime `isSupported()` chamando a função nesse recurso (namespace) e ajustando o comportamento do aplicativo conforme apropriado. Isso permite que seu aplicativo ilumine a interface do usuário e a funcionalidade em hosts que dão suporte a ele e forneça uma experiência de fallback normal em hosts que não dão suporte. Para obter mais informações, consulte [Diferenciar sua experiência de aplicativo](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+
+Use os canais [Microsoft Teams comunidade de desenvolvedores para](/microsoftteams/platform/feedback) relatar problemas e fornecer comentários.
+
+### <a name="debugging"></a>Depuração
+
+No Teams Toolkit, você pode depurar (`F5`) seu aplicativo guia em execução no Office e Outlook, além de Teams.
+
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Escolha entre Teams, Outlook e Office destinos de depuração no Teams Toolkit":::
+
+Na primeira execução da depuração local para Office ou Outlook, você será solicitado a entrar em sua conta de locatário do Microsoft 365 e instalar um certificado de teste autoassinado. Você também será solicitado a instalar manualmente Teams. Selecione **Instalar no Teams** para abrir uma janela do navegador e instalar manualmente seu aplicativo. Em seguida, **clique em Continuar** para continuar a depurar seu aplicativo Office/Outlook.
+
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+
+Forneça comentários e relate quaisquer problemas com a experiência Teams Toolkit depuração no [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-As guias pessoais habilitadas para Outlook e Office estão em versão prévia e não têm suporte para uso em produção. Veja como distribuir seu aplicativo de guia pessoal para visualizar audiências para fins de teste.
+Publique seu aplicativo para ser detectável Teams, Outlook e Office:
 
-### <a name="single-tenant-distribution"></a>Distribuição de locatário único
+> [!div class="nextstepaction"]
+> [Publicar Teams aplicativos para Outlook e Office](publish.md)
 
-As guias pessoais habilitadas para Outlook e Office podem ser distribuídas para um público-alvo de visualização em um locatário de teste (ou produção) de uma das três maneiras:
+## <a name="code-sample"></a>Exemplo de código
 
-#### <a name="teams-client"></a>Cliente do Teams
-
-No menu *Aplicativos*, selecione *Gerenciar seus aplicativos* > **Enviar um aplicativo para sua organização**. Isso requer a aprovação do seu administrador de TI.
-
-#### <a name="microsoft-teams-admin-center"></a>Centro de Administração do Microsoft Teams
-
-Como administrador do Teams, você pode carregar e pré-instalar o pacote de aplicativos para o locatário da sua organização a partir de [administrador de Teams](https://admin.teams.microsoft.com/). Consulte [Carregue seus aplicativos personalizados no centro de administração do Microsoft Teams](/MicrosoftTeams/upload-custom-apps) para obter detalhes.
-
-#### <a name="microsoft-admin-center"></a>Centro de Administração da Microsoft
-
-Como administrador global, você pode carregar e pré-instalar o pacote do aplicativo do [administrador de Microsoft](https://admin.microsoft.com/). Consulte [Testar e implantar aplicativos do Microsoft 365 por parceiros no portal de aplicativos integrados](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obter detalhes.
-
-### <a name="multitenant-distribution"></a>Distribuição multilocatário
-
-A distribuição Microsoft AppSource não tem suporte durante essa visualização inicial do desenvolvedor das guias pessoais do Outlook e do Office.
+| **Nome de exemplo** | **Descrição** | **Node.js** |
+|---------------|--------------|--------|
+| Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Lista de tarefas pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona em Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona em Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
