@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 1404ad66f8ce221f2f94186636cba7d7722d8f6e
-  ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+  ms.openlocfilehash: bc3bbdcb9afe75311f126a686a397eada38c573c
+  ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
   ms.translationtype: MT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65656100"
+  ms.locfileid: "65656835"
 landingContent:
 - title: Microsoft Build 2022
   linkLists:
@@ -56,9 +56,9 @@ landingContent:
     - text: Criar aplicativo com Node.js
       url: sbs-gs-nodejs.yml
     - text: Criar bot de comando com JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Criar um bot de notificação com JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
 - title: Monetize seu aplicativo
   linkLists:
   - linkListType: concept
@@ -119,8 +119,6 @@ landingContent:
       url: ~/sbs-teams-conversation-bot.yml
     - text: Criar um bot de chamada e reunião
       url: ~/sbs-calling-and-meeting.yml
-    - text: Conceder permissões de dispositivo de guia
-      url: ~/sbs-tab-device-permissions.yml
     - text: Configurar o SSO para guias e extensões de mensagem
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
     - text: Criar guias com cartões adaptáveis
@@ -136,9 +134,9 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Criar bot de comando com JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Criar um bot de notificação com JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
     - text: Upload arquivos para Teams de um bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Gerar bolha de conteúdo de reunião
@@ -162,7 +160,7 @@ landingContent:
     - text: Cenários de build para Teams aplicativo
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Práticas recomendadas para Teams cenários de aplicativo
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explorar aplicativos de baixo código para Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publicar e distribuir

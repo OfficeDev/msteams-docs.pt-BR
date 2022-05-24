@@ -87,4 +87,4 @@ Depois que as etapas de provisionamento e implantação forem concluídas:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
 
-    Parabéns! Seu aplicativo de bot agora está sendo executado remotamente no Azure!
+    Parabéns! Seu aplicativo de guia agora está sendo executado remotamente no Azure!

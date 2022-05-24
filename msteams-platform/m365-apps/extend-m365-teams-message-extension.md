@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: a2f509aa56606c0e0afb07c1e74903d8b4e515f6
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654876"
+ms.locfileid: "65656142"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão de mensagem do Teams Microsoft 365
 
@@ -57,7 +57,7 @@ Para começar com uma [extensão de mensagem de exemplo](https://github.com/Offi
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Digite a paleta de comandos &quot;Criar um novo aplicativo Teams&quot; do VS Code para listar as opções de exemplo do Teams":::
 
     O exemplo também está disponível como *Conector de Pesquisa do NPM* na galeria de Exemplos do Kit de Ferramentas do Teams. No painel kit de ferramentas do Teams, selecione *Desenvolvimento* > *Exibir exemplos* > **Conector de pesquisa do NPM**.
-    
+
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Exemplo de conector de pesquisa do NPM na gleria de exemplos do Teams Toolkit":::
 
 1. Selecione um local no computador local para a pasta do workspace.
@@ -121,8 +121,7 @@ O logon único (SSO) do Azure Active Directory (AD) para extensões de mensagem 
 1. Abra **Registros de aplicativo**.
 1. Selecione o nome do aplicativo para abrir o registro do aplicativo.
 1. Selecionar **Expor uma API** (em *Gerenciar*).
-
-Na seção **Aplicativos do cliente autorizados**, certifique-se de que todos os valores `Client Id` a seguir estejam listados:
+1. Na seção **Aplicativos do cliente autorizados**, certifique-se de que todos os valores `Client Id` a seguir estejam listados:
 
 |Microsoft 365 aplicativo cliente | ID do cliente |
 |--|--|
@@ -168,7 +167,7 @@ Para visualizar seu aplicativo em execução no Outlook na Web:
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Clique no menu 'Mais aplicativos' na parte inferior da janela de composição de email para usar a extensão de mensagem":::
 
-Sua extensão de mensagem será listada. Você pode invocá-lo de lá e usá-lo da mesma forma que faria ao redigir uma mensagem no Teams.
+Sua extensão de mensagem está listada. Você pode invocá-la de lá e usá-la da mesma forma que faria ao redigir uma mensagem no Teams.
 
 ### <a name="outlook"></a>Outlook
 
@@ -180,14 +179,14 @@ Para visualizar seu aplicativo em execução no Outlook na área de trabalho do 
 
     :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Clique em 'Mais Aplicativos' na faixa de opções da janela de composição para usar a extensão de mensagem":::
 
-Sua extensão de mensagem será listada. Invocá-lo abrirá um painel adjacente para exibir os resultados da pesquisa.
+Sua extensão de mensagem está listada. Ela abre um painel adjacente para exibir os resultados da pesquisa.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
  Embora sua extensão de mensagem atualizada continue a ser executada no Teams com um [suporte de recurso para extensões de mensagem](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), há limitações nesta visualização inicial da experiência habilitada para Outlook para estar ciente de:
 
 * As extensões de mensagem no Outlook são limitadas ao contexto de [*composição* de email](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Mesmo que sua extensão de mensagem do Teams inclua `commandBox` como um *contexto* em seu manifesto, a visualização atual é limitada à opção de composição de email (`compose`). Não há suporte para invocar uma extensão de mensagem da caixa global de *Pesquisa* do Outlook.
-* [A extensão de mensagem baseada em ação](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) comandos não têm suporte no Outlook. Se o aplicativo tiver comandos baseados em pesquisa e ação, ele será exibido no Outlook, mas o menu de ação não estará disponível.
+* O comando [extensão de mensagem baseado em ação](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) não tem suporte no Outlook. Se o aplicativo tiver comandos baseados em pesquisa e ação, ele será exibido no Outlook, mas o menu de ação não estará disponível.
 * Não há suporte para a inserção de mais de cinco [Cartões Adaptáveis](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) em um email; Cartões Adaptáveis v1.4 e posterior não têm suporte.
 * [As ações de cartão](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) do tipo `messageBack`, `imBack`, `invoke` e `signin` não têm suporte para cartões inseridos. O suporte é limitado a `openURL`: ao clicar, o usuário será redirecionado para a URL especificada em uma nova guia.
 
@@ -201,7 +200,7 @@ Ao testar sua extensão de mensagem, você pode identificar a origem (originada 
 
 | **Nome de exemplo** | **Descrição** | **Node.js** |
 |---------------|--------------|--------|
-| Conector de Pesquisa do NPM | Use o Kit de Ferramentas do Teams para criar um aplicativo de extensão de mensagem. Funciona no Teams, Outlook. |  [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Conector de Pesquisa do NPM | Use o Kit de Ferramentas do Teams para criar um aplicativo de extensão de mensagem. Funciona no Teams e no Outlook. |  [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
 
 ## <a name="next-step"></a>Próxima etapa
 

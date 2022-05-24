@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 4067b86bc3a8de0ed891e84ceef68f5f95741479
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655098"
+ms.locfileid: "65656772"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD manifesto
 
@@ -29,9 +29,9 @@ Você pode personalizar Azure AD de manifesto para atualizar Azure AD aplicativo
 
 2. Atualize o modelo diretamente ou [faça referência a valores de outro arquivo](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Você pode ver vários cenários de personalização aqui:
   
-* [Adicionar uma permissão de aplicativo](#customize-requiredresourceaccess)
-* [Pré-autorizar um aplicativo cliente](#customize-preauthorizedapplications)
-* [Atualizar a URL de redirecionamento para resposta de autenticação](#customize-redirect-urls)
+   * [Adicionar uma permissão de aplicativo](#customize-requiredresourceaccess)
+   * [Pré-autorizar um aplicativo cliente](#customize-preauthorizedapplications)
+   * [Atualizar a URL de redirecionamento para resposta de autenticação](#customize-redirect-urls)
 
 3. [Implante Azure AD de aplicativo para o ambiente local](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -223,8 +223,8 @@ A lente de código mostra o nome do aplicativo para a ID do aplicativo por autor
 
 2. Vá para [portal do Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e faça logon na Microsoft 365 conta.
   
-> [!NOTE]
-> Verifique se as credenciais de logon Teams aplicativo e conta M365 são iguais.
+   > [!NOTE]
+   > Verifique se as credenciais de logon Teams aplicativo e conta M365 são iguais.
 
 3. Abra [a página de registros de aplicativo](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), pesquise o aplicativo Azure AD usando a ID do cliente que você copiou antes.
   
@@ -313,5 +313,4 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
 ## <a name="see-also"></a>Confira também
 
-* [Personalizar o manifesto do aplicativo no Kit de Ferramentas](TeamsFx-manifest-customization.md)
-* [Visualizar manifesto do aplicativo no Kit de Ferramentas](TeamsFx-manifest-preview.md)
+* [Visualizar e personalizar o manifesto do aplicativo Toolkit](TeamsFx-preview-and-customize-app-manifest.md)

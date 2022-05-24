@@ -6,14 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 133ec7fa80950fde59529a2e1abe0415d6620171
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655079"
+ms.locfileid: "65656765"
 ---
-# <a name="connect-to-existing-apis"></a>Conexão apIs existentes
+# <a name="add-api-connection-to-teams-app"></a>Adicionar conexão de API ao Teams aplicativo
 
 Teams Toolkit ajuda você a acessar APIs existentes para criar Teams aplicativos. Essas APIs são desenvolvidas pela sua organização ou por terceiros.
 
@@ -78,7 +78,7 @@ O comando base desse recurso é `teamsfx add api-connection [authentication type
  > [!Tip]
  > Você pode usar para `teamsfx add api-connection [authentication type] -h` obter o documento de ajuda.
 
-   |**Tipo de autenticação**|**Comando de exemplo**|
+   |**Tipo de autenticação**|**Comando de amostra**|
    |-----------------------|------------------|
    |Básico|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
    |Chave de API|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|

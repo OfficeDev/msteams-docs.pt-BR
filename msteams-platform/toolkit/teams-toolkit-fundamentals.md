@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654605"
+ms.locfileid: "65656856"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
 
@@ -127,35 +127,35 @@ Ele ajuda você a reduzir tarefas de implementação de identidade e acesso a re
 ## <a name="help-and-feedback"></a>Ajuda e Comentários
 
 Nesta seção, você pode encontrar a documentação e os recursos necessários. Você pode selecionar **Relatar problemas sobre o GitHub** no Kit de ferramentas do Teams para obter **Suporte rápido** do especialista em produtos. Procure o problema antes de criar um novo ou visite o [rótulo StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) para enviar comentários.
+<!--  
+Let's explore Teams Toolkit features.
 
-Vamos explorar os recursos do Kit de Ferramentas do Teams.
-
-| Recursos do Kit de ferramentas do Teams | Contém... | O que você pode fazer |
+| Teams Toolkit Features | Includes | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | Conta do Microsoft 365 | Use sua conta Microsoft 365 com uma assinatura válida do E5 para criar seu aplicativo. |
-| &nbsp; | Conta do Azure | Use sua conta do Azure para implantar o aplicativo no Azure. |
-| **Ambiente** | &nbsp; | &nbsp; |
-| &nbsp; | local | Implante seu aplicativo no ambiente local padrão com configurações de ambiente de computador local. |
-| &nbsp; | dev | Implante seu aplicativo no ambiente de desenvolvimento padrão com configurações de ambiente remoto ou de nuvem. Você pode criar mais ambientes, conforme necessário. |
-| **Desenvolvimento** | &nbsp; | &nbsp; |
-| &nbsp; | Criar um novo aplicativo do Teams | Use o assistente do kit de ferramentas para preparar a estrutura do projeto para o desenvolvimento de aplicativos. |
-| &nbsp; | Exibir amostras | Selecione qualquer um dos 12 aplicativos de exemplo do Kit de ferramentas do Teams. O kit de ferramentas baixa o código do aplicativo do GitHub e você pode criar o aplicativo de exemplo. |
-| &nbsp; | Adicionar recursos | – Adicione outros recursos Teams necessários ao aplicativo Teams durante o processo de desenvolvimento. </br> – Adicione recursos de nuvem opcionais adequados para seu aplicativo. |
-| &nbsp; | Editar arquivo de manifesto | Edite a integração do aplicativo Teams ao cliente do Teams. |
-| **Implantação** | &nbsp; | &nbsp; |
-| &nbsp; | Provisionar na nuvem | Atribua recursos do Azure para seu aplicativo. O Kit de ferramentas do Teams está integrado ao Gerenciador de Recursos do Teams. |
-| &nbsp; | Pacote de metadados do Zip Teams | Crie o pacote do aplicativo que pode ser carregado no Teams ou Portal do Desenvolvedor. Ele contém o manifesto do aplicativo e os ícones do aplicativo.  |
-| &nbsp; | Implantar na nuvem | Implante o código-fonte no Azure. |
-| &nbsp; | Publicar no Teams | Publique seu aplicativo desenvolvido e distribua-o para escopos, como pessoal, equipe, canal ou organização. |
-| &nbsp; | Portal do Desenvolvedor do Teams | Use o Portal do Desenvolvedor para configurar e gerenciar seu aplicativo do Teams. |
-| **Ajuda e Comentários** | &nbsp; | &nbsp; |
-| &nbsp; | Início rápido | Exiba a Teams Toolkit de início rápido no Visual Studio Code.  |
-| &nbsp; | Tutorial | Selecione para acessar tutoriais diferentes. |
-| &nbsp; | Documentação | Selecione para acessar a Documentação do Desenvolvedor do Microsoft Teams. |
-| &nbsp; | Relatar problemas no GitHub | Selecione para acessar a página do GitHub e gere problemas. |
+| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
+| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
+| **Environment** | &nbsp; | &nbsp; |
+| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
+| **Development** | &nbsp; | &nbsp; |
+| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
+| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
+| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
+| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
+| **Deployment** | &nbsp; | &nbsp; |
+| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
+| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
+| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
+| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
+| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
+| **Help and Feedback** | &nbsp; | &nbsp; |
+| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
+| &nbsp; | Tutorial | Select to access different tutorials. |
+| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
+| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 
-
+-->
 > [!TIP]
 > Navegue pelos problemas existentes antes de criar um novo ou visite [o rótulo StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) para enviar comentários.
 
