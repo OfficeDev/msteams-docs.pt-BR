@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103268"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654541"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Adicionar recursos aos aplicativos do Teams
 
@@ -21,14 +21,14 @@ Durante o desenvolvimento de aplicativos, você pode criar um novo Teams com Tea
 |--------|-------------|
 | Guias |  As guias são marcas HTML simples que apontam para domínios declarados no manifesto do aplicativo. Você pode adicionar guias como parte do canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual|
 | Bots |  Os bots ajudam a interagir com o serviço Web por meio de texto, cartões interativos e módulos de tarefa|
-| Extensões de mensagem | As extensões de mensagem ajudam a interagir com seu serviço Web por meio de botões e formulários no Microsoft Teams cliente|
+| Extensões de mensagens | As extensões de mensagem ajudam a interagir com seu serviço Web por meio de botões e formulários no Microsoft Teams cliente|
 
 ## <a name="prerequisite"></a>Pré-requisito
 
 * Instalar a [versão mais recente do Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
-> Verifique se você Teams projeto de aplicativo aberto no VS Code.
+> Certifique-se de ter o projeto do aplicativo Teams aberto no VS code.
 
 ## <a name="limitations"></a>Limitações
 
@@ -42,6 +42,7 @@ As limitações do TeamsFx ao adicionar mais recursos são as seguintes:
 > [!Note]
 > Você precisa executar o provisionamento para cada ambiente, depois de adicionar recursos com êxito ao Teams aplicativo.
 * Você pode adicionar recursos usando Teams Toolkit no Visual Studio Code
+
     1. Abrir **Microsoft Visual Studio código**
     1. Selecione **Teams Toolkit** no painel esquerdo
     1. Selecionar **Adicionar funcionalidades**
@@ -78,7 +79,7 @@ Além dos recursos que seu Teams aplicativo já tem, você pode optar por adicio
 
 |Funcionalidades existentes|Outros recursos com suporte|
 |--------------------|--------------------|
-|Guias com SPFx|Nenhuma|
+|Guias com SPFx|Nenhum|
 |Guias com o Azure|Extensão de bot e mensagem|
 |Bot|Guias|
 |Extensão de mensagem|Guias e bot|
@@ -110,6 +111,11 @@ Depois de adicionar a guia, as alterações em seu projeto são as seguintes:
 * Os arquivos sob `templates/azure/teamsfx` serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado
 * O arquivo abaixo `.fx/config` é regenerado, o que garante que seu projeto seja definido com as configurações corretas para a funcionalidade recém-adicionada
 
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+* Siga o [guia passo a passo](../sbs-gs-commandbot.yml) para criar o bot de comando no Microsoft Teams
+
+* Siga o [guia passo a passo para criar](../sbs-gs-notificationbot.yml) o bot de notificação no Microsoft Teams.
 
 ## <a name="see-also"></a>Confira também
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653697"
+ms.locfileid: "65656073"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publicar Teams aplicativos para Microsoft 365
 
@@ -26,7 +26,7 @@ Outlook de mensagens habilitadas para Outlook podem ser distribuídas para locat
 
 ### <a name="teams-client"></a>Cliente do Teams
 
-No menu *Aplicativos*, selecione *Gerenciar seus* *aplicativosPublicar* >  um appSubmit  > **um aplicativo para sua organização**. Isso requer aprovação do administrador de TI.
+No menu *Aplicativos* , selecione *Gerenciar seus aplicativos* > *Publicar um aplicativo* > **Enviar um aplicativo para sua organização**. Isso requer aprovação do administrador de TI.
 
 ### <a name="teams-developer-portal"></a>Teams Portal do Desenvolvedor
 
@@ -42,7 +42,7 @@ Como administrador global, você pode carregar e pré-instalar o pacote do aplic
 
 ## <a name="multitenant-distribution"></a>Distribuição multilocatário
 
-O processo de envio do [Microsoft AppSource](https://appsource.microsoft.com/) (marketplace comercial da Microsoft) para aplicativos do Teams habilitados para Outlook e Office é o mesmo para aplicativos Teams tradicionais; a única diferença é que você precisará usar o manifesto do aplicativo do Teams versão [1.13](../tabs/how-to/using-teams-client-sdk.md) no pacote do aplicativo, o que introduz suporte para Teams  aplicativos que são executados Microsoft 365.
+O [processo de envio do Microsoft AppSource](https://appsource.microsoft.com/) (marketplace comercial da Microsoft) para aplicativos Teams habilitados para Outlook e Office é o mesmo que os aplicativos Teams tradicionais. A única diferença é que você precisará usar o manifesto do aplicativo Teams versão [1.13](../tabs/how-to/using-teams-client-sdk.md) no pacote do aplicativo, que introduz suporte para aplicativos Teams executados em Microsoft 365.
 
 > [!TIP]
 > Use Teams Portal do Desenvolvedor para validar [](https://dev.teams.microsoft.com/validation) o pacote do aplicativo para resolver erros ou avisos antes de enviá-lo ao repositório Teams (por meio [do Microsoft Partner Network](https://partner.microsoft.com/)).

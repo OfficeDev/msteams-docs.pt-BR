@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653798"
+ms.locfileid: "65654564"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -131,9 +131,9 @@ Se seu aplicativo usa cabeçalhos [CSP (Política](https://developer.mozilla.org
 1. Selecione o nome do aplicativo de guia pessoal para abrir o registro do aplicativo.
 1. Selecionar **Expor uma API** (em *Gerenciar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs do cliente da folha *Registros de aplicativo* no portal do Azure":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar IDs do cliente da folha *Registros de aplicativo* no portal do Azure":::
 
-Na seção **Aplicativos do cliente autorizados**, verifique se todos os valores a seguir `Client Id` foram adicionados:
+1. Na seção **Aplicativos do cliente autorizados**, verifique se todos os valores a seguir `Client Id` foram adicionados:
 
 |Microsoft 365 aplicativo cliente | ID do cliente |
 |--|--|
@@ -184,7 +184,7 @@ Para exibir seu aplicativo em execução no Outlook na área de trabalho do Wind
 1. Na barra lateral, selecione  **Mais Aplicativos**. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar seu aplicativo Outlook.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Outlook para ver suas guias pessoais instaladas":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Outlook para ver suas guias pessoais instaladas":::
 
 ### <a name="outlook-on-the-web"></a>Outlook na Web
 
@@ -194,7 +194,7 @@ Para exibir seu aplicativo no Outlook na Web:
 1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do outlook.com para ver as guias pessoais instaladas":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do outlook.com para ver as guias pessoais instaladas":::
 
 ### <a name="office-on-windows"></a>Office no Windows
 
@@ -204,7 +204,7 @@ Para exibir seu aplicativo em execução no Office na área de trabalho do Windo
 1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar seu aplicativo Office.
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Office para ver suas guias pessoais instaladas":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Office para ver suas guias pessoais instaladas":::
 
 ### <a name="office-on-the-web"></a>Office na Web
 
@@ -214,7 +214,7 @@ Para visualizar seu aplicativo em execução no Office na Web:
 1. Selecione o **ícone Aplicativos** na barra lateral. O título do aplicativo com sideload aparecerá entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar seu aplicativo Office na Web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Clique na opção 'Mais aplicativos' na barra lateral do office.com para ver as guias pessoais instaladas":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Clique na opção 'Mais aplicativos' na barra lateral do office.com para ver as guias pessoais instaladas":::
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -236,7 +236,7 @@ No Teams Toolkit, você pode depurar (`F5`) seu aplicativo guia em execução no
 
 Na primeira execução da depuração local para Office ou Outlook, você será solicitado a entrar em sua conta de locatário do Microsoft 365 e instalar um certificado de teste autoassinado. Você também será solicitado a instalar manualmente Teams. Selecione **Instalar no Teams** para abrir uma janela do navegador e instalar manualmente seu aplicativo. Em seguida, **clique em Continuar** para continuar a depurar seu aplicativo Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit diálogo Teams instalação":::
 
 Forneça comentários e relate quaisquer problemas com a experiência Teams Toolkit depuração no [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 

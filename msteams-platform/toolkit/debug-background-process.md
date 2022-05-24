@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104011"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656156"
 ---
 # <a name="debug-background-process"></a>Depurar processo em segundo plano
 
@@ -33,21 +33,21 @@ O Kit de Ferramentas do Teams verifica os seguintes pré-requisitos durante o pr
 
   |Tipo de projeto|Versão LTS do Node.js|
   |----------|--------------------------------|
-  |Guia sem Azure Functions | 10, 12, **14 (recomendado)**, 16 |
-  |Guia com Azure Functions | 10, 12, **14 (recomendado)**|
-  |Bot |  10, 12, **14 (recomendado)**, 16|
-  |Extensão de mensagem | 10, 12, **14 (recomendado)**, 16 |
+  |Guia | 14, 16 (recomendado) |
+  |Guia SPFx | 10, 12, 14 (recomendado)|
+  |Bot |  14, 16 (recomendado)|
+  |Extensão de mensagem | 14, 16 (recomendado) |
 
    
 * Conta do Microsoft 365 com credenciais válidas, o kit de ferramentas do Teams solicita que você entre na conta do Microsoft 365, se ainda não tiver entrado
 
 * O upload ou sideload de aplicativos personalizados para o locatário do desenvolvedor está ativado; caso contrário, a depuração local será encerrada
 
-* A versão binária Ngrok 2.3 é aplicável ao bot e à extensão de mensagem, se o Ngrok não estiver instalado ou se a versão não corresponder ao requisito, o kit de ferramentas do Teams instalará o pacote NPM `ngrok@4.2.2` do Ngrok em `~/.fx/bin/ngrok`. O binário Ngrok é gerenciado pelo pacote NPM do Ngrok em `/.fx/bin/ngrok/node modules/ngrok/bin`
+* O binário Ngrok versão 2.3 é aplicável ao bot e à extensão de mensagem, se o Ngrok não estiver instalado ou a versão não corresponder ao requisito, o kit de ferramentas do Teams instalará o pacote NPM `ngrok@4.2.2` do Ngrok em `~/.fx/bin/ngrok`. O binário Ngrok é gerenciado pelo pacote NPM do Ngrok em `/.fx/bin/ngrok/node modules/ngrok/bin`
 
-* Azure Functions Core Tools versão 3, se o Azure Functions Core Tools não estiver instalado ou se a versão não corresponder aos requisitos, o Kit de Ferramentas do Teams instala o pacote NPM do Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** e para **macOs** em `~/.fx/bin/func`. O Azure Functions Core Tools pacote NPM no `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` gerencia Azure Functions Core Tools binário. Para Linux, a depuração local será encerrada
+* O Azure Functions Core Tools versão 4, se o Azure Functions Core Tools não estiver instalado ou se a versão não corresponder aos requisitos, o Kit de Ferramentas do Teams instala o pacote NPM do Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** e para **macOs** em `~/.fx/bin/func`. O Azure Functions Core Tools pacote NPM no `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` gerencia Azure Functions Core Tools binário. Para Linux, a depuração local será encerrada
 
-* Versão do SDK do .NET Core aplicável ao Azure Functions, se o SDK do .NET Core não estiver instalado ou a versão  não corresponder ao requisito, o Kit de Ferramentas do Teams instala o SDK do .NET Core para Windows e MacOS no `~/.fx/bin/dotnet`. Para Linux, a depuração local será encerrada
+* A versão SDK do .NET Core aplicável ao Azure Functions, se o SDK do .NET Core não estiver instalado ou a versão não corresponder ao requisito, o Kit de Ferramentas do Teams instala o SDK do .NET Core para Windows e MacOS em `~/.fx/bin/dotnet`. Para Linux, a depuração local termina
 
   A tabela a seguir lista as versões do .NET Core:
 

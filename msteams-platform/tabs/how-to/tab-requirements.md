@@ -3,15 +3,15 @@ title: Pré-requisitos
 author: surbhigupta
 description: Todas as guias do Microsoft Teams devem atender a esses requisitos.
 keywords: guias de grupos do canal de grupo configurável
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110278"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654895"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -44,7 +44,7 @@ Certifique-se de aderir aos seguintes pré-requisitos ao criar sua guia pessoal 
 | &nbsp; | Instalar | Para usar... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do v14 LTS.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do v16 LTS.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/) | Um navegador com ferramentas de desenvolvedor. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Ambientes de compilação JavaScript, TypeScript ou Estrutura do SharePoint (SPFx). |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET e desenvolvimento Web** ou carga de trabalho de **desenvolvimento de Plataforma Cruzada .NET Core** | .NET. Você pode instalar a edição gratuita da comunidade do Visual Studio 2019. |

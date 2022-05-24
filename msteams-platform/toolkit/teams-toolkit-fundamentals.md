@@ -3,20 +3,18 @@ title: Visão geral do Kit de ferramentas do Microsoft Teams
 author: zyxiaoyuer
 description: Visão geral do Kit de ferramentas do Teams, Instalação do Kit de ferramentas do Teams e Tour dos recursos do Kit de ferramentas
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: de249f060581c2d8e1f90408c8431fe451125ef2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.date: 05/17/2022
+ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111420"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654605"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
 
-> [!NOTE]
-> No momento, esse recurso está disponível somente em **visualização pública do desenvolvedor**.
 
 O Kit de ferramentas do Teams para o Microsoft Visual Studio Code ajuda você a criar e implantar aplicativos do Teams com identidade integrada, acesso ao armazenamento em nuvem, dados do Microsoft Graph e outros serviços no Azure e Microsoft 365 com abordagem de configuração zero. Para o desenvolvimento de aplicativos do Teams, semelhante ao Kit de Ferramentas do Teams para o Visual Studio, você pode usar a [Ferramenta CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), que consiste no Kit de ferramentas `teamsfx`.
 O Kit de Ferramentas do Teams permite que você crie, depure e implante seu aplicativo Teams diretamente do Visual Studio Code. O desenvolvimento de aplicativos com o kit de ferramentas tem as vantagens de:
@@ -27,8 +25,6 @@ O Kit de Ferramentas do Teams permite que você crie, depure e implante seu apli
 * Azure e serviços Microsoft 365 com abordagem de configuração zero
 
 O Kit de ferramentas do Teams traz todas as ferramentas necessárias para criar um aplicativo do Teams em um só lugar.
-
-Para o desenvolvimento de aplicativos do Teams, semelhante ao Kit de ferramentas do Teams para Visual Studio Code, você pode usar a [ferramenta CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), que consiste no Kit de ferramentas `teamsfx`.
 
 ## <a name="user-journey-of-teams-toolkit"></a>Percurso do usuário do Kit de ferramentas do Teams
 
@@ -47,17 +43,17 @@ Os principais marcos desta jornada são:
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Instale o Kit de ferramentas do Teams para o Visual Studio Code
 
 1. Abra o **Visual Studio Code.**
-1. Selecione a exibição de Extensões (**Ctrl+Shift+X** / **⌘⇧-X** ou **Exibir > Extensões**):
+1. Selecione o modo de exibição Extensões (**Ctrl+Shift+X** / **⌘⇧-X** ou **Exibir > Extensões**).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="Instalar":::
 
-1. Insira **Kit de ferramentas** na caixa de pesquisa:
+1. Insira **Teams Toolkit** na caixa de pesquisa.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-2.png" alt-text="Kit de ferramentas":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Kit de ferramentas":::
 
-1. Selecione **Instalar**:
+1. Selecionar **Instalar**.
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="Instalar kit de ferramentas":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="instalar o kit de ferramentas 4.0.0":::
 
 > [!TIP]
 > Você pode instalar o Kit de ferramentas do Teams do [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
@@ -66,17 +62,17 @@ Os principais marcos desta jornada são:
 
 Após a instalação do Kit de ferramentas, você verá a interface do usuário (IU) do Kit de ferramentas do Teams, conforme mostrado na imagem a seguir:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini funções":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini funções":::
 
-Você pode selecionar **Início Rápido** para explorar o Kit de ferramentas do Teams, o selecione **Criar um novo Aplicativo do Teams** para criar um projeto do Teams. Se você tiver um projeto do Teams criado pelo Kit de ferramentas do Teams v2.+ aberto no Visual Studio Code, Você verá a interface do usuário do Kit de ferramentas do Teams com todas as funcionalidades, conforme mostrado na imagem a seguir: você pode selecionar **Início Rápido** para explorar o Kit de Ferramentas do Teams ou selecionar **Criar um novo Aplicativo Teams** para criar um projeto do Teams. Você pode exibir uma lista de todos os recursos do Kit de ferramentas ao criar ou abrir um projeto existente na barra lateral do Visual Studio Code.
+Você pode selecionar **Introdução** para explorar o Teams Toolkit ou selecionar Criar um novo aplicativo **Teams para criar** um Teams projeto. Se você tiver um projeto Teams criado pelo Teams Toolkit aberto no Visual Studio Code, verá uma interface do usuário Teams Toolkit com todas as funcionalidades, conforme mostrado na imagem a seguir:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="funções":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Captura de tela do kit de ferramentas de equipes":::
 
-Vamos fazer um tour pelos tópicos abordados neste documento:
+Vamos fazer um tour pelos tópicos abordados neste documento.
 
 ## <a name="accounts"></a>Contas
 
-Para desenvolver um aplicativo Teams, você precisa de pelo menos uma Microsoft 365 com uma assinatura válida. Se você quiser hospedar seus recursos de back-end no Azure, uma conta do Azure também será necessária. O Kit de Ferramentas do Teams dá suporte à experiência integrada para entrar, provisionar e implantar recursos do Azure. Você pode [criar uma conta gratuita do Azure](https://azure.microsoft.com/free/) antes de começar.
+Para desenvolver um aplicativo Teams, você precisa de pelo menos uma Microsoft 365 com uma assinatura válida. Se você quiser hospedar seus recursos de back-end no Azure, uma conta do Azure também será necessária. Teams Toolkit dá suporte à experiência integrada para entrar, provisionar e implantar recursos do Azure. Você pode [criar uma conta gratuita do Azure](https://azure.microsoft.com/free/) antes de começar.
 
 ## <a name="environment"></a>Ambiente
 
@@ -86,21 +82,19 @@ O Kit de ferramentas do Teams te ajuda a criar e gerenciar vários ambientes, pr
 
 Ele permite que os desenvolvedores e o proprietário do projeto convidem outros colaboradores para o projeto TeamsFx para depurar, provisionar e implantar o mesmo projeto TeamsFx.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Projeto teamsfx":::
+
 ## <a name="development"></a>Desenvolvimento
 
 O Kit de Ferramentas do Teams ajuda você a criar e personalizar seu projeto de aplicativo do Teams que simplifica o trabalho de desenvolvimento de aplicativos do Teams.
 
 ### <a name="create-a-new-teams-app"></a>Criar um novo aplicativo do Teams
 
-Ele ajuda você a começar com o desenvolvimento de aplicativos do Teams criando um novo projeto do Teams usando o Kit de Ferramentas do Teams usando **Criar novo projeto** ou **Criar dos exemplos**.
+Ele ajuda você a começar Teams desenvolvimento de aplicativos criando um novo projeto Teams usando Teams Toolkit usando Criar novo projeto ou **Iniciar de um exemplo**.
 
-### <a name="add-capabilities"></a>Adicionar recursos
+### <a name="add-features"></a>Adicionar recursos
 
-Ele ajuda a adicionar outros recursos necessários do Teams ao aplicativo do Teams durante o processo de desenvolvimento.
-
-### <a name="add-cloud-resources"></a>Adicionar recursos da nuvem
-
-Você também pode adicionar opcionalmente recursos de nuvem que atendam às suas necessidades de desenvolvimento.
+Ele ajuda você a adicionar incrementalmente recursos adicionais do Teams, como **Tab** ou **Bot**, ou, opcionalmente, adicionar recursos do Azure, como **o Banco de Dados SQL do Azure** ou o **Azure Key Vault**, que atendem às suas necessidades de desenvolvimento ao seu aplicativo Teams atual. Você também pode adicionar **fluxos de trabalho de Logon** Único ou **CI/CD** para seu Teams aplicativo. 
 
 ### <a name="edit-manifest-file"></a>Editar arquivo de manifesto
 
@@ -121,10 +115,6 @@ Ele se integra aos recursos do gerenciador do Azure que permite provisionar recu
 ### <a name="publish-to-teams"></a>Publicar no Teams
 
 Após criar o aplicativo, você poderá distribuí-lo para diferentes escopos, tais como individual, equipe, organização ou qualquer pessoa. Publicar no Teams ajuda você a publicar seu aplicativo desenvolvido.
-
-### <a name="cicd-guide"></a>Guia de CI/CD
-
-Ele ajuda a automatizar seu desenvolvimento do fluxo de trabalho durante a criação de aplicativos do Teams. O guia de CI/CD fornece ferramentas e modelos para você começar a configurar pipelines de CI ou CD.
 
 #### <a name="teamsfx-cli"></a>TeamsFx CLI
 
@@ -151,8 +141,7 @@ Vamos explorar os recursos do Kit de Ferramentas do Teams.
 | **Desenvolvimento** | &nbsp; | &nbsp; |
 | &nbsp; | Criar um novo aplicativo do Teams | Use o assistente do kit de ferramentas para preparar a estrutura do projeto para o desenvolvimento de aplicativos. |
 | &nbsp; | Exibir amostras | Selecione qualquer um dos 12 aplicativos de exemplo do Kit de ferramentas do Teams. O kit de ferramentas baixa o código do aplicativo do GitHub e você pode criar o aplicativo de exemplo. |
-| &nbsp; | Adicionar recursos | Adicione outros recursos necessários do Teams ao aplicativo Teams durante o processo de desenvolvimento. |
-| &nbsp; | Adicionar recursos da nuvem | Adicione recursos de nuvem opcionais adequados para seu aplicativo. |
+| &nbsp; | Adicionar recursos | – Adicione outros recursos Teams necessários ao aplicativo Teams durante o processo de desenvolvimento. </br> – Adicione recursos de nuvem opcionais adequados para seu aplicativo. |
 | &nbsp; | Editar arquivo de manifesto | Edite a integração do aplicativo Teams ao cliente do Teams. |
 | **Implantação** | &nbsp; | &nbsp; |
 | &nbsp; | Provisionar na nuvem | Atribua recursos do Azure para seu aplicativo. O Kit de ferramentas do Teams está integrado ao Gerenciador de Recursos do Teams. |
@@ -160,12 +149,12 @@ Vamos explorar os recursos do Kit de Ferramentas do Teams.
 | &nbsp; | Implantar na nuvem | Implante o código-fonte no Azure. |
 | &nbsp; | Publicar no Teams | Publique seu aplicativo desenvolvido e distribua-o para escopos, como pessoal, equipe, canal ou organização. |
 | &nbsp; | Portal do Desenvolvedor do Teams | Use o Portal do Desenvolvedor para configurar e gerenciar seu aplicativo do Teams. |
-| &nbsp; | Guia de CI/CD | Automatize seu fluxo de trabalho de desenvolvimento enquanto constrói a aplicação do Teams. |
 | **Ajuda e Comentários** | &nbsp; | &nbsp; |
-| &nbsp; | Início Rápido | Exiba o Kit de ferramentas do Teams ajuda de Início Rápido dentro do Visual Studio Code.  |
+| &nbsp; | Início rápido | Exiba a Teams Toolkit de início rápido no Visual Studio Code.  |
+| &nbsp; | Tutorial | Selecione para acessar tutoriais diferentes. |
 | &nbsp; | Documentação | Selecione para acessar a Documentação do Desenvolvedor do Microsoft Teams. |
 | &nbsp; | Relatar problemas no GitHub | Selecione para acessar a página do GitHub e gere problemas. |
-|
+
 
 > [!TIP]
 > Navegue pelos problemas existentes antes de criar um novo ou visite [o rótulo StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) para enviar comentários.

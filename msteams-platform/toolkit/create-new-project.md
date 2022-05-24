@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191261"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656149"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams
 
@@ -25,8 +25,19 @@ Para criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams, v
 1. Abra o Visual Studio Code.
 1. Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: na barra Visual Studio Code lateral.
 1. Selecione **Criar um novo aplicativo do Teams**.
-1. Selecione na guia recursos disponíveis, bot, extensão de mensagem ou uma guia usando a Estrutura do SharePoint (SPFx). 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Barra lateral do kit de ferramentas do Teams":::
+
+1. Você pode selecionar **Criar um novo aplicativo Teams** ou **Iniciar a partir de um exemplo**.
+   
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Criar um aplicativo":::
+   
+1. Se você selecionar **Criar um novo aplicativo Teams,** a imagem a seguir será exibida com modelos de três categorias: Aplicativo Teams baseado em cenário, Aplicativo Teams básico e Aplicativos Teams estendidos no Microsoft 365: 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Recursos para aplicativo Teams":::
+
 1. Selecione pelo menos uma opção para começar a criar o aplicativo Teams.
+
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>Criar um novo aplicativo do Teams usando exemplos de exibição
 
@@ -34,13 +45,20 @@ Você pode criar um novo aplicativo explorando **Exibir amostras** e selecionand
 
  1. Abra o **Kit de ferramentas do Teams** do Microsoft Visual Studio Code.
  1. Selecione a seção **DESENVOLVIMENTO** em Treeview.
- 1. Selecione **Amostras de exibição**. A galeria de amostra aparece conforme mostrado na imagem a seguir:
+ 1. Selecione **Exibir amostras**. 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Exibir amostras":::
 
-Você pode explorar e baixar amostras e executar seu aplicativo local ou remotamente para visualizar no cliente Web do Teams. Siga as instruções para cada amostra ou selecione **Exibir no GitHub** para abrir a amostra no `TeamsFx Samples repository` e navegar pelo código-fonte.
+    A galeria de amostra aparece conforme mostrado na imagem a seguir:
+   
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Galeria de exemplos":::
 
-Para obter mais informações, [Criar um novo aplicativo guia do Teams (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
+  Você pode explorar a galeria de exemplo da seguinte maneira:
+
+  1. Selecione um exemplo para procurar informações detalhadas.
+  1. Selecione **Criar** na página de informações de cada exemplo para baixá-lo. 
+  1. Execute seu aplicativo localmente ou remotamente para visualizar o cliente Web do Teams seguindo as instruções abertas automaticamente após o download do exemplo.
+  1. Se você não quiser baixar os exemplos, poderá selecionar **Exibir no GitHub** para abrir o exemplo no repositório GitHub Samples e procurar o código-fonte.
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Guias passo a passo usando o Kit de Ferramentas do Teams
 
@@ -48,6 +66,8 @@ Para obter mais informações, [Criar um novo aplicativo guia do Teams (React)](
 * [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
 * [Criar um aplicativo Teams com SPFx](../sbs-gs-spfx.yml)
 * [Criar um aplicativo Teams com C# ou .NET](../sbs-gs-csharp.yml)
+* [Enviar notificação para o Teams](../sbs-gs-notificationbot.yml)
+* [Criar bot de comando](../sbs-gs-commandbot.yml)
 
 ## <a name="see-also"></a>Confira também
 
