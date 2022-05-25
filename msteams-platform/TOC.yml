@@ -20,8 +20,12 @@
   items:
     - name: Visão geral da introdução
       href: get-started/get-started-overview.md
-    - name: Criar seu primeiro aplicativo usando o JavaScript
+    - name: Crie seu primeiro aplicativo de guia usando JavaScript
       href: sbs-gs-javascript.yml
+    - name: Crie seu primeiro aplicativo de bot usando JavaScript
+      href: sbs-gs-bot.yml
+    - name: Crie seu primeiro aplicativo de extensão de mensagens usando JavaScript
+      href: sbs-gs-msgext.yml
     - name: Criar seu primeiro aplicativo usando o Blazor
       href: sbs-gs-blazorupdate.yml
     - name: Criar seu primeiro aplicativo usando o SPFx
@@ -110,9 +114,9 @@
           href: toolkit/add-capability.md
         - name: Adicionar recursos de nuvem ao aplicativo Teams
           href: toolkit/add-resource.md
-        - name: Adicionar logon único ao aplicativo Teams
+        - name: Adicionar o logon único ao aplicativo do Teams
           href: toolkit/add-single-sign-on.md
-        - name: Adicionar conexão de API ao aplicativo Teams
+        - name: Adicionar uma conexão de API ao aplicativo do Teams
           href: toolkit/add-API-connection.md
         - name: Configurar pipelines de CI/CD
           href: toolkit/use-CICD-template.md
