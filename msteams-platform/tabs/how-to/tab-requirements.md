@@ -6,12 +6,12 @@ keywords: guias de grupos do canal de grupo configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654895"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672926"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,13 +31,15 @@ Certifique-se de aderir aos seguintes pré-requisitos ao criar sua guia pessoal 
 
 * Estilize suas guias com base no tema, design e intenção do cliente do Teams. As guias funcionam melhor quando são criadas para atender a uma necessidade específica e se concentram em um pequeno conjunto de tarefas ou um subconjunto de dados relevantes para o local do canal da guia.
 
-* Dentro da sua página de conteúdo, adicione uma referência ao [SDK do cliente JavaScript do Microsoft Teams ](/javascript/api/overview/msteams-client) usando marcas de script. Após o carregamento da página, faça uma chamada para `microsoftTeams.initialize()`, caso contrário, sua página não será exibida.
+* Dentro da sua página de conteúdo, adicione uma referência ao [SDK do cliente JavaScript do Microsoft Teams ](/javascript/api/overview/msteams-client) usando marcas de script. Depois que a página for carregada, faça uma chamada `app.initialize()`para, caso contrário, sua página não será exibida.
 
 * Para que a autenticação funcione em clientes móveis, você deve atualizar para o SDK JavaScript 1.4.1 do Teams e posterior.
 
-* Se você optar por fazer com que seu canal ou guia de grupo apareça no cliente móvel do Teams, a configuração de `setSettings()` deve ter um valor para a propriedade `websiteUrl`.
+* Se você optar por fazer com que seu canal ou guia de grupo apareça no cliente móvel do Teams, a configuração de `setConfig()` deve ter um valor para a propriedade `websiteUrl`.
 
-* A guia do Microsoft Teams não suporta a capacidade de carregar sites da intranet que utilizam certificados autoassinados.
+* Microsoft Teams guia não dá suporte à capacidade de carregar sites da intranet que usam certificados autoassinados.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>Ferramentas para criar guias
 

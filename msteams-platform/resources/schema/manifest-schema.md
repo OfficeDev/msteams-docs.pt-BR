@@ -2,20 +2,22 @@
 title: Referência de esquema de manifesto
 description: Descreve o esquema de manifesto para o Microsoft Teams
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104004"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672905"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
-O manifesto do Teams descreve como o aplicativo se integra ao produto Microsoft Teams. O seu manifesto deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,... e 1.12 também são suportadas (usando “v1.x” no URL).
+O manifesto do aplicativo Microsoft Teams descreve como seu aplicativo se integra ao produto Microsoft Teams. O manifesto do seu aplicativo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,...,1.12 e a versão 1.13 atual (veja a nota abaixo) são suportadas (usando "v1.x" no URL).
 Para obter mais informações sobre as alterações feitas em cada versão, consulte o [registro de alterações do manifesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+
+> [!Important]
+> A versão `1.13` do esquema de manifesto do aplicativo Microsoft Teams permite suporte para [estender aplicativos do Teams para Outlook e Office](../../m365-apps/overview.md). Para aplicativos somente para equipes, use a versão `1.12` (ou anterior). Os esquemas 1.12 e 1.13 são os mesmos. Consulte a visão geral do [SDK do cliente JavaScript do Teams](../../m365-apps/overview.md) para obter mais orientações.
 
 A amostra do esquema a seguir mostra todas as opções de extensibilidade:
 
@@ -23,8 +25,8 @@ A amostra do esquema a seguir mostra todas as opções de extensibilidade:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ A URL https:// referenciando o esquema JSON para o manifesto.
 
 **Obrigatório**—cadeia de caracteres
 
-A versão do esquema do manifesto que este manifesto está usando.
+A versão do esquema de manifesto que este manifesto está usando. Use `1.13` para habilitar o suporte ao aplicativo Teams no Outlook e no Office; use `1.12` (ou anterior) para aplicativos somente para equipes.
 
 ## <a name="version"></a>versão
 
@@ -630,6 +632,16 @@ Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsof
 |`id`|string|36 caracteres|✔|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, https://notapplicable para evitar uma resposta de erro. |
 
+## <a name="graphconnector"></a>graphConnector
+
+**Opcional**—objeto
+
+Especifique a configuração do conector de gráfico do aplicativo. Se estiver presente, [webApplicationInfo.id](#webapplicationinfo) também deve ser especificado.
+
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 caracteres|✔|A URL para a qual as notificações do conector do Graph para o aplicativo devem ser enviadas.|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **Opcional**—booliano
@@ -642,7 +654,7 @@ Indica se deve ou não mostrar o indicador de carregamento quando um aplicativo 
 
  **Opcional**—booliano
 
-Indique onde um aplicativo pessoal é renderizado com ou sem uma barra de cabeçalho de guia. O padrão é **false**.
+Indica se um aplicativo pessoal é renderizado sem uma barra de cabeçalho de guia (significando o modo de tela inteira). O padrão é **false**.
 
 > [!NOTE]
 > `isFullScreen` funciona apenas para aplicativos publicados em sua organização.
@@ -735,8 +747,8 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

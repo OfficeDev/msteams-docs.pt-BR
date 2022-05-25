@@ -6,15 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 1b65fedbc34cb00771dde279a19ab1d6b4d8b16a
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656856"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673010"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
-
 
 O Kit de ferramentas do Teams para o Microsoft Visual Studio Code ajuda você a criar e implantar aplicativos do Teams com identidade integrada, acesso ao armazenamento em nuvem, dados do Microsoft Graph e outros serviços no Azure e Microsoft 365 com abordagem de configuração zero. Para o desenvolvimento de aplicativos do Teams, semelhante ao Kit de Ferramentas do Teams para o Visual Studio, você pode usar a [Ferramenta CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), que consiste no Kit de ferramentas `teamsfx`.
 O Kit de Ferramentas do Teams permite que você crie, depure e implante seu aplicativo Teams diretamente do Visual Studio Code. O desenvolvimento de aplicativos com o kit de ferramentas tem as vantagens de:

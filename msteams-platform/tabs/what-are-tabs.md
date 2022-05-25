@@ -5,12 +5,12 @@ description: Uma visão geral das guias personalizadas na plataforma do Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611447"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672968"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
 
@@ -20,6 +20,8 @@ As guias são páginas da Web compatíveis com o Microsoft Teams incorporadas ao
 > Atualmente, as guias personalizadas estão disponíveis Nuvem da Comunidade Governamental (GCC), GCC-High e DoD (Departamento de Defesa).
 >
 > Recomendamos que você use o SDK de cliente do Teams através do [pacote npm](https://www.npmjs.com/package/@microsoft/teams-js) e agrupe-o com seu aplicativo, pois atualmente o SDK de cliente do Teams não está disponível na CDN da Nuvem Governamental.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 A imagem a seguir mostra guias pessoais:
 
@@ -33,7 +35,7 @@ Há alguns pré-requisitos pelos quais você deve passar antes de trabalhar nas 
 
 Há dois tipos de guias disponíveis no Teams, pessoal e canal ou grupo. [Guias pessoais](~/tabs/how-to/create-personal-tab.md), junto com bots de conversação direta, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados na barra de navegação à esquerda para facilitar o acesso. [Canal ou guias de grupo](~/tabs/how-to/create-channel-group-tab.md) forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
 
-Você pode [criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) como parte de uma guia pessoal, canal ou guia de grupo ou módulo de tarefa. Você pode [criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) que permite aos usuários configurar o aplicativo Microsoft Teams e usá-lo para configurar uma guia de chat de canal ou grupo, uma extensão de mensagens ou um Conector do Office 365. Você pode permitir que os usuários reconfigurem sua guia após a instalação e [criar uma página de remoção de guia](~/tabs/how-to/create-tab-pages/removal-page.md) para seu aplicativo. Ao criar um aplicativo do Teams que inclui uma guia, você deve testar como seu [guia nos clientes do Teams para Android e iOS](~/tabs/design/tabs-mobile.md). Sua guia deve [ter contexto](~/tabs/how-to/access-teams-context.md) por meio de informações básicas, informações de localidade e tema e `entityId` ou `subEntityId` que identifica o que está na guia.
+Você pode [criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) como parte de uma guia pessoal, canal ou guia de grupo ou módulo de tarefa. Você pode [criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) que permite aos usuários configurar o aplicativo Microsoft Teams e usá-lo para configurar uma guia de chat de canal ou grupo, uma extensão de mensagens ou um Conector do Office 365. Você pode permitir que os usuários reconfigurem sua guia após a instalação e [criar uma página de remoção de guia](~/tabs/how-to/create-tab-pages/removal-page.md) para seu aplicativo. Ao criar um aplicativo do Teams que inclui uma guia, você deve testar como seu [guia nos clientes do Teams para Android e iOS](~/tabs/design/tabs-mobile.md). Sua guia deve [ter contexto](~/tabs/how-to/access-teams-context.md) por meio de informações básicas, informações de localidade e tema e `app.Context.page.id` ou `app.Context.page.subPageId` que identifica o que está na guia.
 
 Você pode criar guias com Cartões Adaptáveis centralizar todos os recursos de aplicativo do Teams eliminando a necessidade de um back-end diferente para seus bots e guias. O [Modo de exibição de Estágio](~/tabs/tabs-link-unfurling.md) é um novo componente de Interface do Usuário que permite renderizar o conteúdo aberto em tela inteira no Teams e fixado como uma guia. O serviço [desenrolamento de link](~/tabs/tabs-link-unfurling.md) existente é atualizado, para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Você pode [criar guias de conversação](~/tabs/how-to/conversational-tabs.md) usando subentidades de conversa que permitem que os usuários tenham conversas sobre subentidades em sua guia, como tarefa específica, paciente e oportunidade de vendas, em vez de discutir a guia inteira. Você pode fazer alterações na [margens da guia](~/resources/removing-tab-margins.md) para aprimorar a experiência do desenvolvedor ao criar aplicativos. Você pode arrastar a guia e colocá-la na posição desejada para alternar as posições da guia em seus aplicativos pessoais e chats de canal ou grupo.
 
@@ -72,7 +74,7 @@ Você pode usar um dos seguintes métodos para criar guias:
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>Declarar guia personalizada no manifesto do aplicativo
 
-Uma guia personalizada é declarada no manifesto do aplicativo do pacote do aplicativo. Para cada página da web que você deseja incluir como uma guia em seu aplicativo, defina uma URL e um escopo. Além disso, você pode adicionar o [SDK cliente JavaScript do Teams](/javascript/api/overview/msteams-client) à sua página, e ligar `microsoftTeams.initialize()` após o carregamento de sua página. O Teams exibe sua página e fornece acesso a informações específicas do Teams, por exemplo, o cliente do Teams está executando o tema escuro.
+Uma guia personalizada é declarada no manifesto do aplicativo do pacote do aplicativo. Para cada página da web que você deseja incluir como uma guia em seu aplicativo, defina uma URL e um escopo. Além disso, você pode adicionar o [SDK cliente JavaScript do Teams](/javascript/api/overview/msteams-client) à sua página, e ligar `app.initialize()` após o carregamento de sua página. O Teams exibe sua página e fornece acesso a informações específicas do Teams, por exemplo, o cliente do Teams está executando o tema escuro.
 
 Se você optar por expor sua guia dentro do canal ou grupo, ou escopo pessoal, você deve apresentar uma \>página de conteúdo[ HTML ](~/tabs/how-to/create-tab-pages/content-page.md)<iframe em sua guia. Para as guias pessoais, a URL de conteúdo é definida diretamente em seu manifesto de aplicativos do Microsoft Teams pela `contentUrl`propriedade na `staticTabs` matriz. O conteúdo de sua guia é o mesmo para todos os usuários.
 
