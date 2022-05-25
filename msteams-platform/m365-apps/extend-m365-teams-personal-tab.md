@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656170"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668134"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -148,15 +148,15 @@ Se seu aplicativo usa cabeçalhos [CSP (Política](https://developer.mozilla.org
 
 A etapa final para executar seu aplicativo no Office e Outlook é fazer sideload do pacote de aplicativos de guia pessoal atualizado no [](..//concepts/build-and-test/apps-package.md) Microsoft Teams.
 
-1. Empacote seu Teams aplicativo ([ícones](../resources/schema/manifest-schema.md) de manifesto [e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, poderá fazer isso facilmente usando a opção **Compactar o pacote de metadados do Teams** no menu *Implantação* do Kit de Ferramentas do Teams:
+1. Empacote seu Teams aplicativo ([ícones](../resources/schema/manifest-schema.md) de manifesto [e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou Teams Toolkit para criar seu aplicativo, poderá fazer isso facilmente usando a opção de pacote de metadados do **Zip Teams** **no menu** Implantação do Teams Toolkit.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Pacote de metadados do Zip Teams' na extensão do Kit de Ferramentas do Teams para Visual Studio Code":::
 
-1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) pelo seu perfil de usuário e, em seguida, selecione: Sobre > **Versão prévia do desenvolvedor**.
+1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) pelo perfil do usuário e, em seguida, selecione: **Sobre a visualização** > **do Desenvolvedor**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="No menu de reticências do Teams, abra 'Sobre' e selecione a opção 'Visualização do Desenvolvedor'":::
 
-1. Selecione *Aplicativos* para abrir o painel **Gerenciar seus aplicativos**. Selecione **Publicar um aplicativo**.
+1. Selecione **Aplicativos** para abrir o painel **Gerenciar seus aplicativos**. Selecione **Publicar um aplicativo**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra o painel 'Gerenciar seus aplicativos' e selecione 'Publicar um aplicativo'":::
 

@@ -82,23 +82,13 @@ Depois que as etapas de provisionamento e implantação forem concluídas:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de tela mostrando o aplicativo de inicialização remotamente." border="false":::
 
-1. Selecione **Adicionar**.
+1. Selecione **Adicionar** quando solicitado a fazer sideload do aplicativo Teams em seu computador local.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Captura de tela mostrando que o bot está sendo adicionado Teams cliente.":::
 
-   O kit de ferramentas exibe uma mensagem para indicar que o aplicativo foi adicionado Teams.
+   Você pode digitar para `welcome` mostrar um cartão de introdução e digitar para `learn` ir para a documentação de comando de bot e cartão adaptável.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde" border="true":::
- 
-    - Se você selecionar **Obter,** poderá experimentar o aplicativo mais tarde na lista de aplicativos de Sideload.
-    - Se você selecionar **Experimentar**, Teams carregará seu aplicativo.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de tela mostrando o cartão de aprendizado no bot Teams cliente.":::       
 
-   Seu aplicativo é carregado no site do Azure.
-   
-1. Selecione **Experimentar**.
-
-   O aplicativo extensão de mensagem é carregado em um aplicativo de chatbot.
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de tela que mostra o sideload do aplicativo Teams" border="false":::
 
 

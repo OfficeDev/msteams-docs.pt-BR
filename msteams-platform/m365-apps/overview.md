@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7b82d4a0c984f1db94c770be28d0bcda71c8e6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 9cc0d88d5f992aa596509a6206a26baa413bdcf1
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656087"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668141"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Estender aplicativos do Teams pelo Microsoft 365
 
@@ -69,7 +69,7 @@ Junte-se ao número crescente de aplicativos de Teams de produção no repositó
 
 Depois de publicado como um aplicativo Teams habilitado para Teams, seu aplicativo será detectável como um aplicativo inserível nas lojas Outlook e Aplicativo do Office, além da Teams Store. Microsoft 365 Ao executar em Outlook e Office, seu aplicativo usa as mesmas permissões concedidas no Teams. Teams administradores podem [gerenciar o acesso a Teams aplicativos em](/MicrosoftTeams/manage-third-party-teams-apps) Microsoft 365 para usuários em sua organização.
 
-Para obter mais informações, [consulte Publicar Teams aplicativos para Microsoft 365](publish.md)
+Para obter mais informações, [consulte Publicar Teams aplicativos para Microsoft 365](publish.md).
 
 ## <a name="next-step"></a>Próxima etapa
 

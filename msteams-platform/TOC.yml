@@ -104,18 +104,24 @@
           href: toolkit/deploy.md
         - name: Visualizar e personalizar o manifesto do aplicativo Teams
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
-          href: toolkit/publish.md
+        - name: Personalizar o manifesto do Azure AD
+          href: toolkit/AAD-manifest-customization.md
         - name: Adicionar recursos ao aplicativo Teams
           href: toolkit/add-capability.md
         - name: Adicionar recursos de nuvem ao aplicativo Teams
           href: toolkit/add-resource.md
+        - name: Adicionar logon único ao aplicativo Teams
+          href: toolkit/add-single-sign-on.md
+        - name: Adicionar conexão de API ao aplicativo Teams
+          href: toolkit/add-API-connection.md
+        - name: Configurar pipelines de CI/CD
+          href: toolkit/use-CICD-template.md
+        - name: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
+          href: toolkit/publish.md
         - name: Gerenciar vários ambientes
           href: toolkit/TeamsFx-multi-env.md
         - name: Colaborando com outros desenvolvedores no Kit de Ferramentas do Teams
           href: toolkit/TeamsFx-collaboration.md
-        - name: Configurar pipelines de CI/CD
-          href: toolkit/use-CICD-template.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
     - name: CLI do Kit de Ferramentas do Teams

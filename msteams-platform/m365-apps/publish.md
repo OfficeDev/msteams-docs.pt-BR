@@ -1,18 +1,18 @@
 ---
-title: Publicar Teams aplicativos para Microsoft 365
+title: Publicar aplicativos do Teams para o Microsoft 365
 description: Torne seus Microsoft 365 aplicativos Teams habilitados para usuários no Teams, Outlook e Office
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656073"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668057"
 ---
-# <a name="publish-teams-apps-for-microsoft-365"></a>Publicar Teams aplicativos para Microsoft 365
+# <a name="publish-teams-apps-for-microsoft-365"></a>Publicar aplicativos do Teams para o Microsoft 365
 
 Microsoft 365 aplicativos Teams habilitados para uso em Microsoft Teams. Você pode distribuir esses aplicativos para públicos-alvo que usam  as versões de Lançamento Direcionado do outlook.com e do office.com e a compilação do Canal *Beta* do Outlook para Windows área de trabalho. As opções de distribuição e os processos Microsoft 365 aplicativos Teams habilitados são os mesmos para aplicativos Teams tradicionais.
 
@@ -26,7 +26,7 @@ Outlook de mensagens habilitadas para Outlook podem ser distribuídas para locat
 
 ### <a name="teams-client"></a>Cliente do Teams
 
-No menu *Aplicativos* , selecione *Gerenciar seus aplicativos* > *Publicar um aplicativo* > **Enviar um aplicativo para sua organização**. Isso requer aprovação do administrador de TI.
+No menu **Aplicativos** , selecione **Gerenciar seus aplicativos** > **Publicar um aplicativo** > **Enviar um aplicativo para sua organização**. Isso requer aprovação do administrador de TI.
 
 ### <a name="teams-developer-portal"></a>Teams Portal do Desenvolvedor
 

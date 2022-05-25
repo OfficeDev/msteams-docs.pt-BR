@@ -3,14 +3,14 @@ title: Referência do esquema de manifesto do Developer Preview público
 description: Arquivo de manifesto de exemplo e descrição de todos os seus componentes com suporte para o Microsoft Teams
 ms.topic: reference
 keywords: Developer Preview do esquema de manifesto do Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110327"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668127"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
 
@@ -284,7 +284,7 @@ A URL `https://` referenciando o esquema JSON para o manifesto.
 
 **Obrigatório** &ndash; Cadeia de caracteres
 
-A versão do esquema do manifesto que este manifesto está usando. Use `m365DevPreview` somente se você estiver visualizando [aplicativos do Teams em execução no Office e no Outlook](../../m365-apps/overview.md). Caso contrário, use `devPreview` para todos os outros recursos de versão prévia do Teams.
+A versão do esquema do manifesto que este manifesto está usando.
 
 ## <a name="version"></a>versão
 
@@ -443,7 +443,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeração|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opções são `team`, `personal` e `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando do bot (cadeia de caracteres, 32).<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
+|`items.commands`|matriz de objetos|10|✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando do bot (cadeia de caracteres, 32).<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ## <a name="connectors"></a>conectores
 
@@ -555,6 +555,97 @@ Especifique sua ID do aplicativo do Microsoft Azure Active Directory (Azure AD) 
 |`id`|Cadeia de caracteres|36 caracteres|✔|ID de aplicativo do Microsoft Azure Active Directory (Azure AD) do aplicativo. Essa ID deve ser um GUID.|
 |`resource`|Cadeia de caracteres|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para logon único.|
 |`applicationPermissions`|Matriz|Máximo de 100 itens|✔|Permissões de recurso para o aplicativo.|
+
+## <a name="graphconnector"></a>graphConnector
+
+**Opcional**—objeto
+
+Especifique a configuração do conector Graph aplicativo. Se isso estiver presente [, webApplicationInfo.id](#webapplicationinfo) também deverá ser especificado.
+
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 caracteres|✔|A URL para a qual Graph notificações do conector para o aplicativo deve ser enviada.|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+**Opcional**—booliano
+
+Indica se o indicador de carregamento deve ou não ser mostrado quando um aplicativo ou guia está sendo carregado. O padrão é **false**.
+> [!NOTE]
+> Se você selecionar `showLoadingIndicator` como true no manifesto do aplicativo, para carregar a página corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa conforme descrito em [Mostrar um documento de indicador de carregamento nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+
+## <a name="isfullscreen"></a>isFullScreen
+
+ **Opcional**—booliano
+
+Indique onde um aplicativo pessoal é renderizado com ou sem uma barra de cabeçalho de guia. O padrão é **false**.
+
+> [!NOTE]
+> `isFullScreen` funciona apenas para aplicativos publicados em sua organização.
+
+## <a name="activities"></a>activities
+
+**Opcional**—objeto
+
+Defina as propriedades que o seu aplicativo usa para postar um feed de atividades do usuário..
+
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|---|---|---|---|---|
+|`activityTypes`|matriz de Objetos|128 itens| | Forneça os tipos de atividades que seu aplicativo pode postar no feed de atividades de um usuário.|
+
+### <a name="activitiesactivitytypes"></a>activities.activityTypes
+
+|Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
+|---|---|---|---|---|
+|`type`|string|32 caracteres|✔|O tipo de notificação. *Confira a seguir*.|
+|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
+|`templateText`|string|128 caracteres|✔|Ex: "{actor} criou a tarefa {taskId} para você"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -688,6 +779,15 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |**Name**|**Descrição**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que o aplicativo mostrar as ofertas do marketplace do usuário e conclua as compras do usuário dentro do aplicativo, em nome do usuário conectado.|
+
+* **Permissões específicas de recursos para Teams compartilhamento ao vivo**
+
+   |Nome| Descrição |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>Confira também
 

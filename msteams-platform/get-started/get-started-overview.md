@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135763"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654775"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -58,6 +58,11 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 > [Criar um aplicativo Teams com C# ou .NET](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [Criar um aplicativo Teams com Node.js](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [Compilar um bot de notificação com JavaScript](../sbs-gs-notificationbot.yml)
+> [!div class="nextstepaction"]
+> [Compilar um bot de comando com JavaScript](../sbs-gs-commandbot.yml)
+> [!div class="nextstepaction"]
 
 ## <a name="see-also"></a>Confira também
 
