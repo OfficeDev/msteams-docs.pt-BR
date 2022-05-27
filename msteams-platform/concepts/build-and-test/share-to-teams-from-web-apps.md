@@ -4,12 +4,12 @@ description: Saiba como adicionar o botão Compartilhar no Teams incorporado em 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar a opção Compartilhar no Teams no Teams
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439297"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757056"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartilhar no Teams a partir de aplicativos Web
 
@@ -55,7 +55,7 @@ A imagem a seguir exibe a experiência de pop-up Compartilhar no Teams:
     </div>
     ```
 
-1. Se o link compartilhado exigir a autenticação do usuário e a visualização da URL do link a ser compartilhado não renderizar bem no Teams, você poderá desabilitar a visualização da URL adicionando o atributo `data-preview` definido como `false`.
+1. Se o link compartilhado exigir autenticação de usuário e a visualização da URL do link a ser compartilhada não renderizar bem no Teams, você poderá desabilitar a visualização da URL `data-preview` adicionando o atributo definido como `false`.
 
     ```html
     <div
@@ -99,7 +99,7 @@ Você pode usar as versões padrão HTML ou a versão Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Compartilhar no Teams para Educação
 
-Para professores que usam o botão Compartilhar no Teams, há uma opção adicional para `Create an Assignment`. Isso permite que você crie rapidamente uma tarefa na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe a opção Compartilhar no Teams para Educação:
+Para professores que usam o botão Compartilhar para Teams, `Create an Assignment` há uma opção adicional para que você possa criar rapidamente uma tarefa na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe a opção Compartilhar no Teams para Educação:
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Pop-up Compartilhar no Teams para Edução":::
 

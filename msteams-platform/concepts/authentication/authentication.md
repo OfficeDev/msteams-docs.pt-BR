@@ -2,14 +2,14 @@
 title: Autenticação de usuários de aplicativos
 description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: autenticação de equipes OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: f5aecf2791d03795229d3b37c5fc8784de992326
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 53f258769140a2b40bb59a1232250f74ec693bee
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111399"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757154"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
@@ -25,7 +25,7 @@ No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execut
 Use o fluxo de autenticação baseado na web para [guias](~/tabs/what-are-tabs.md) e opte por usá-lo com [bots de conversação](~/bots/what-are-bots.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md). Use o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) em uma página de conteúdo da web para ativar a autenticação. Depois de habilitar a autenticação, insira a página de conteúdo em uma guia, uma página de configuração ou um módulo de tarefa. Para obter mais informações sobre o fluxo de autenticação baseado na Web, consulte:
 
 * [Adicionar autenticação ao bot do Teams](~/bots/how-to/authentication/add-authentication.md) descreve como usar o fluxo de autenticação baseado na Web com um bot conversacional.
-* [Fluxo de autenticação em guias](~/tabs/how-to/authentication/auth-flow-tab.md) descreve como a autenticação de guia funciona no Teams. Isso mostra um fluxo de autenticação baseado na Web típico usado para guias.
+* [O fluxo de autenticação](~/tabs/how-to/authentication/auth-flow-tab.md) em guias descreve como a autenticação de tabulação funciona no Teams, que mostra um fluxo de autenticação baseado na Web típico usado para guias.
 * [Autenticação do Azure Active Directory em guias](~/tabs/how-to/authentication/auth-tab-AAD.md) descreve como se conectar ao Azure Active Directory de dentro de uma guia no aplicativo no Teams.
 * [Autenticação silenciosa Azure Active Directory](~/tabs/how-to/authentication/auth-silent-AAD.md) descreve como reduzir os prompts de entrada ou consentimento no aplicativo usando o Azure Active Directory.
 * [.Net ou C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) ou [JavaScript ou Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) fornece exemplos de autenticação baseada na web.
@@ -36,7 +36,7 @@ O OAuthPrompt do Bot Framework Azure facilita a autenticação para aplicativos 
 
 Para obter mais informações sobre como usar o OAuthPrompt, consulte:
 
-* [Visão geral do fluxo de autenticação de bot](~/bots/how-to/authentication/auth-flow-bot.md) descreve como a autenticação funciona em um bot no aplicativo no Teams. Isso mostra um fluxo de autenticação não baseado na Web usado para bots na Web do Teams, no aplicativo de desktop e nos aplicativos móveis.
+* A visão geral do fluxo de autenticação de [bot](~/bots/how-to/authentication/auth-flow-bot.md) descreve como a autenticação funciona em um bot no aplicativo no Teams, que mostra um fluxo de autenticação não baseado na Web usado para bots na Web, aplicativo da área de trabalho e aplicativos móveis do Teams.
 * [Autenticação de bot](~/bots/how-to/authentication/add-authentication.md) descreve como adicionar autenticação OAuth ao bot do Teams.
 
 ## <a name="code-sample"></a>Exemplo de código
@@ -46,7 +46,7 @@ fornece amostra de SDK de autenticação de bot v3.
 | **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Autenticação de bot | Esta amostra mostra como começar com a autenticação em um bot para o Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
+| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisar, ação, vincular desfral. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
 
 ## <a name="configure-the-identity-provider"></a>Configurar o provedor de identidade
 
@@ -56,7 +56,7 @@ Para obter mais informações, consulte [como configurar um provedor de identida
 
 ## <a name="third-party-cookies-on-ios"></a>Cookies de terceiros no iOS
 
-Após a atualização do iOS 14, a Apple bloqueou o acesso de [cookies de terceiros](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) para todos os aplicativos por padrão. Portanto, os aplicativos que utilizam cookies de terceiros para autenticação em suas guias de canal ou bate-papo e aplicativos pessoais não poderão concluir seus fluxos de trabalho de autenticação em clientes do Teams iOS. Para estar em conformidade com os requisitos de privacidade e segurança, você deve migrar para um sistema baseado em token ou usar cookies primários para os fluxos de trabalho de autenticação do usuário.
+Após a atualização do iOS 14, a Apple bloqueou o acesso de [cookies de terceiros](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) para todos os aplicativos por padrão. Portanto, os aplicativos que aproveitam cookies de terceiros para autenticação em suas guias canal ou chat e aplicativos pessoais não poderão concluir seus fluxos de trabalho de autenticação em Teams iOS clientes. Para estar em conformidade com os requisitos de privacidade e segurança, você deve migrar para um sistema baseado em token ou usar cookies primários para os fluxos de trabalho de autenticação do usuário.
 
 ## <a name="see-also"></a>Confira também
 

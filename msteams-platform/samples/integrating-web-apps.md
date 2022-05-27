@@ -3,21 +3,21 @@ author: heath-hamilton
 description: Práticas recomendadas ou considerações para integrar aplicativos Web existentes com o Microsoft Teams
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações para a integração do Microsoft Teams
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111658"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757637"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
 
 Você pode tornar os aplicativos Web adequados aos recursos sociais e colaborativos do Teams, integrando-os corretamente com o Teams.
   
-Os diferentes tipos de aplicativos que você pode integrar ao Teams são os seguintes:
+Os diferentes tipos de aplicativos, que você pode integrar ao Teams são os seguintes:
 
 * **Aplicativos autônomos**: um aplicativo autônomo é um aplicativo de página única ou grande e complexo. O usuário pode usar alguns aspectos dele no Teams.
 * **Aplicativos de colaboração**: um aplicativo já criado para os recursos sociais e colaborativos inerentes ao Teams.
@@ -30,7 +30,7 @@ Este documento fornece uma visão geral dos recursos do Teams, requisitos de pon
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração, SharePoint*
 
-Seu aplicativo Teams deve incluir recursos colaborativos necessários e esperados. Para trabalhar com a integração de aplicativos, é importante se familiarizar com a terminologia de desenvolvimento do Teams.
+Seu aplicativo Teams deve incluir recursos colaborativos necessários e esperados. Para trabalhar com a integração de aplicativos, é importante se familiarizar com Teams de desenvolvimento.
 
 |Recursos comuns do aplicativo   |Funcionalidades da plataforma Teams   |
 |----------|-----------|
@@ -90,7 +90,7 @@ O Teams tem mecanismos de SSO (logon único) com o Azure AD para aplicativos de 
 > [!IMPORTANT]
 > Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e DoD (Departamento de Defesa). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [gerenciar políticas de permissão de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
 
-Para páginas do SharePoint, você só poderá usar o SSO e não poderá adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo do SharePoint.
+Para SharePoint, você só poderá usar o SSO e não poderá adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o SharePoint aplicativo.
 
 Saiba mais sobre [autenticação no Teams](../concepts/authentication/authentication.md).
 
@@ -98,7 +98,7 @@ Saiba mais sobre [autenticação no Teams](../concepts/authentication/authentica
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração*
 
-Siga as [Diretrizes de design do Teams](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo do Teams. Não é possível migrar um conteúdo de aplicativo existente para uma guia do Teams. Para obter mais informações sobre o design do aplicativo, consulte [Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
+Siga as [Diretrizes de design do Teams](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo do Teams. Você não pode migrar um conteúdo de aplicativo existente para uma Teams configuração. Para obter mais informações sobre o design do aplicativo, [consulte Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar a vinculação profunda
 
@@ -116,7 +116,7 @@ Os bots também permitem que você envie **mensagens proativas** para usuários 
 
 O envio de mensagens proativas requer identificadores específicos do Teams. Você pode capturar as informações [buscando lista de participantes ou dados de perfil de usuário](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [assinando eventos de conversa](../bots/how-to/conversations/subscribe-to-conversation-events.md)ou usando o [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-Não gere spam para usuários com mensagens excessivas. Se a funcionalidade do Teams tiver suporte, os usuários poderão definir as configurações de notificação para seu aplicativo.
+Não spam para usuários com mensagens excessivas. Se a funcionalidade do Teams tiver suporte, os usuários poderão definir as configurações de notificação para seu aplicativo.
 Veja a seguir um exemplo de uma mensagem de notificação: **Não me enviar mensagens não solicitadas**.
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Usar o SharePoint para armazenamento de arquivos e dados

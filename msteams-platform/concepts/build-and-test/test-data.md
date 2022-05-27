@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: testando equipes do programa de desenvolvedores de aplicativos
 ms.date: 11/01/2019
-ms.openlocfilehash: 5c8848196f5c5493c49f3446f788181f4123120d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296984"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757021"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
 
@@ -18,7 +18,7 @@ Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma as
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. [Ingresse no Programa para Desenvolvedores do Microsoft 365](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
+1. [Ingresse Microsoft 365 programa de desenvolvedores](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
 2. [Configure uma assinatura de desenvolvedor Microsoft 365](/office/developer-program/office-365-developer-program-get-started).
 3. [Use pacotes de dados de exemplo com sua assinatura de desenvolvedor do Microsoft 365 para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs).
 4. [Instale o módulo PowerShell do Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
@@ -147,7 +147,7 @@ Por padrão, somente administradores globais ou administradores de serviço do T
     </Teams>
     ```
 
-2. Salve o trecho a seguir como um script do PowerShell (.ps1) e observe onde você o salvou. Esse script executa as etapas para criar a equipe e o canal e adicionar membros a eles:
+2. Salve o snippet a seguir como um script do PowerShell (.ps1) e observe onde você o salvou. Esse script executa as etapas para criar a equipe e o canal e adicionar membros a eles:
 
     ```powershell
     Param(
@@ -238,8 +238,8 @@ Por padrão, somente administradores globais ou administradores de serviço do T
     }
     ```
 
-3. Abra uma Windows PowerShell no modo Administrador e execute o script que você acabou de salvar.
-4. Quando você for solicitado a fornecer as credenciais, insira as credenciais de Administrador Global recebidas quando se inscreveu pela primeira vez em sua assinatura de desenvolvedor.
+3. Abra uma Windows PowerShell no modo Administrador e execute o script que você salvou.
+4. Quando for solicitado que você forneça as credenciais, insira as credenciais de Administrador Global recebidas quando se inscreveu pela primeira vez em sua assinatura de desenvolvedor.
 
     > [!Note]
     > Não feche a sessão do PowerShell, pois o script leva vários minutos para ser executado. Se você modificou os usuários em sua assinatura do que é criado no pacote de conteúdo padrão, alguns usuários podem não ser adicionados ao Teams. À medida que o script é executado, ele exibe ações bem-sucedidas ou com falha.

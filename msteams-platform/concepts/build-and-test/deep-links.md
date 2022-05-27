@@ -3,26 +3,30 @@ title: Criar links detalhados
 description: Saiba como descrever os links profundos do Teams e como usá-los no seus aplicativos.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611451"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672954"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
-Você pode criar links de informações e recursos no Teams. Os cenários em que a criação de links profundos são úteis são os seguintes:
+Links profundos são um mecanismo de navegação que você pode usar para conectar usuários com informações e recursos no Teams e em aplicativo Teams. Os cenários em que a criação de links profundos são úteis são os seguintes:
 
 * Levar o usuário até o conteúdo dentro de uma das guias do aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário de uma atividade importante. Quando o usuário toca na notificação, o link profundo navega até a guia para que o usuário possa exibir mais detalhes sobre a atividade.
 * Seu aplicativo automatiza ou simplifica determinadas tarefas do usuário, como criar um chat ou agendar uma reunião, preenchendo previamente os links profundos com os parâmetros necessários. Isso evita a necessidade de os usuários inserirem informações manualmente.
 
+O SDK do cliente JavaScript do Microsoft Teams (TeamsJS) simplifica o processo de navegação. Para muitos cenários, como navegar até conteúdo e informações em sua guia ou até mesmo iniciar uma caixa de diálogo de chat, o SDK fornece APIs fortemente tipadas que proporcionam uma experiência aprimorada e podem substituir o uso de links profundos. Essas APIs são recomendadas para aplicativos Teams que podem ser executados em outros hosts (Outlook, Office), pois também fornecem uma maneira de verificar se o recurso que está sendo usado tem suporte desse host. As seções a seguir mostram informações sobre vinculação profunda, mas também realçam como os cenários que antes exigiam isso foram alterados com a versão v2 do TeamsJS.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 > [!NOTE]
 >
-> Um link profundo inicia o navegador antes de navegar até o conteúdo. O comportamento de links profundos em entidades do Teams é o seguinte:
+> O comportamento dos links profundos depende de vários fatores. A lista a seguir descreve o comportamento de links profundos em entidades do Teams.
 >
 > **Tab**:  
-> ✔ navega diretamente para a URL do link profundo.
+> ✔ Navega diretamente para a URL do link profundo.
 >
 > **Bot**:  
 > ✔ Link profundo no corpo do cartão: abre primeiro no navegador.  
@@ -32,10 +36,50 @@ Você pode criar links de informações e recursos no Teams. Os cenários em que
 > **Chat**:  
 > ✔ Markdown de hiperlink de mensagem de texto: navega diretamente para a URL de link profundo.  
 > ✔ Link colado na conversa de chat geral: navega diretamente para a URL de link profundo.
+>
+>
+>O comportamento de navegação de um aplicativo Teams com extensão para o Microsoft 365 (Outlook/Office) depende de dois fatores:
+>
+> * O destino para o qual o link profundo aponta
+> * O host em que o aplicativo Teams está em execução
+>
+> Se o aplicativo Teams estiver em execução no host em que o link profundo é direcionado, seu aplicativo será aberto diretamente dentro do host. No entanto, se o aplicativo Teams estiver em execução em um host diferente do qual o link profundo é direcionado, o aplicativo será aberto primeiro no navegador.
 
-## <a name="deep-linking-to-your-tab"></a>Vinculação profunda à sua guia
+## <a name="deep-link-to-your-tab"></a>Link profundo para sua guia
 
-Você pode criar links profundos para entidades no Teams. Isso é usado para criar links que navegam até o conteúdo e as informações na sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Ao selecionar o link, ele navega até a guia que se concentra no item específico. Para implementar isso, adicione uma ação **copiar link** a cada item, da maneira mais adequada à interface do usuário. Quando o usuário executa essa ação, você chama `shareDeepLink()` para exibir uma caixa de diálogo que contém um link que o usuário pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para o item. Você o obtém de volta no [contexto](~/tabs/how-to/access-teams-context.md) quando o link é seguido e sua guia é recarregada.
+Você pode criar links profundos para entidades no Teams. Isso é usado para criar links que navegam até conteúdo e informações na sua guia. Por exemplo, se sua guia contiver uma lista de tarefas, os membros da equipe poderão criar e compartilhar links para tarefas individuais. Ao selecionar o link, ele navega até a guia que se concentra no item específico.
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+Para implementar isso, adicione uma ação **copiar link** a cada item, da maneira mais adequada à interface do usuário. Quando o usuário executa essa ação, você chama [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) para exibir uma caixa de diálogo que contém um link que o usuário pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para o item. Você o obtém de volta no [contexto](~/tabs/how-to/access-teams-context.md) quando o link é seguido e sua guia é recarregada.
+
+```javascript
+pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
+```
+
+Você precisará substituir os campos com as informações apropriadas:
+
+* `subPageId`: um identificador exclusivo para o item da sua página à qual você tem uma vinculação profunda.
+* `subPageLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
+* `subPageWebUrl`: uma URL de fallback a ser usada se o cliente não puder renderizar a página.
+
+Para obter mais informações, confira [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true).
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
+Para implementar isso, adicione uma ação **copiar link** a cada item, da maneira mais adequada à interface do usuário. Quando o usuário executa essa ação, você chama `shareDeepLink()` para exibir uma caixa de diálogo que contém um link que o usuário pode copiar para a área de transferência. Ao fazer essa chamada, você também passa uma ID para o item. Você o obtém de volta no [contexto](~/tabs/how-to/access-teams-context.md) quando o link é seguido e sua guia é recarregada.
+
+```javascript
+microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
+```
+
+Você precisará substituir os campos com as informações apropriadas:
+
+* `subEntityId`: um identificador exclusivo para o item da sua guia à qual você tem uma vinculação profunda.
+* `subEntityLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
+* `subEntityWebUrl`: um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia.
+
+---
 
 Como alternativa, é possível gerar links profundos programaticamente, usando o formato que será especificado posteriormente neste artigo. Você pode usar links profundos nas mensagens do [bot](~/bots/what-are-bots.md) e do [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informam os usuários sobre alterações em sua guia ou em itens dentro dela.
 
@@ -45,17 +89,15 @@ Como alternativa, é possível gerar links profundos programaticamente, usando o
 >[!IMPORTANT]
 > Atualmente, o shareDeepLink não funciona em plataformas móveis.
 
-### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Mostrar um link profundo para um item dentro de sua guia
+### <a name="consume-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
 
-Para mostrar uma caixa de diálogo que contém um link profundo para um item em sua guia, chame `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`.
+Ao navegar até um link profundo, o Microsoft Teams navega até a guia e fornece um mecanismo por meio da biblioteca JavaScript do Microsoft Teams para recuperar a ID da sub-entidade, se ela existir.
 
-Forneça os seguintes campos:
-
-* `subEntityId`: um identificador exclusivo para o item da sua guia à qual você tem uma vinculação profunda.
-* `subEntityLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
-* `subEntityWebUrl`: um campo opcional com uma URL de fallback a ser usada se o cliente não for compatível com a renderização da guia.
+A [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) chamada (`microsoftTeams.getContext()`) no TeamsJS v1) retorna uma promessa que será resolvida com o contexto que inclui a propriedade `subPageId` (subEntityId para TeamsJS v1) se a guia for navegada por um link profundo. Para obter mais informações, confira[ Interface do PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
 ### <a name="generate-a-deep-link-to-your-tab"></a>Gerar um link profundo para sua guia
+
+Embora seja recomendável usar `shareDeepLink()` para gerar um link profundo para sua guia, também é possível criá-lo manualmente.
 
 > [!NOTE]
 >
@@ -125,147 +167,80 @@ Os parâmetros de consulta são:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consume-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
+## <a name="navigation-from-your-tab"></a>Navegação a partir da sua guia
 
-Ao navegar até um link profundo, o Microsoft Teams navega até a guia e fornece um mecanismo por meio da biblioteca JavaScript do Microsoft Teams para recuperar a ID da sub-entidade, se ela existir.
+Você pode navegar até o conteúdo no Teams da guia usando o TeamsJS ou links profundos. Isso será útil se sua guia precisar conectar usuários a outro conteúdo no Teams, como a um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Anteriormente, a navegação poderia exigir um link profundo, mas agora ela pode ser realizada em muitas instâncias usando o SDK. As seções a seguir mostram os dois métodos, mas é recomendável usar as funcionalidades fortemente tipadas do SDK.
 
-A chamada [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) retornará um contexto que inclui o campo `subEntityId` se a guia for navegada por um link profundo.
+Um dos benefícios de usar o TeamsJS, especialmente para aplicativos do Teams que podem ser executados em outros hosts (Outlook e Office), é que é possível verificar se o host dá suporte ao recurso que você está tentando usar. Para verificar o suporte de um host de uma funcionalidade, você pode usar a função `isSupported()` associada ao namespace da API. A Versão Prévia do SDK do TeamsJS v2 organiza APIs em funcionalidades por meio de namespaces. Por exemplo, antes do uso de uma API no namespace `pages` você pode verificar o valor booliano retornado de `pages.isSupported()` e executar a ação apropriada no contexto da interface do usuário do aplicativo e dos aplicativos.  
 
-## <a name="deep-linking-from-your-tab"></a>Vinculação profunda de sua guia
+Para obter informações adicionais sobre as funcionalidades e as APIs no TeamsJS, consulte [Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
-Você pode criar um link profundo para o conteúdo do Teams a partir da sua guia. Isso será útil se sua guia precisar ser vinculada a outro conteúdo do Teams, como a um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Para disparar um link profundo da guia, chame:
+### <a name="navigate-within-your-app"></a>Navegar em seu aplicativo
 
-```Javascript
+É possível navegar em um aplicativo usando o TeamsJS. O código a seguir demonstra como navegar para uma entidade específica dentro do aplicativo Teams.
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+Você pode disparar uma navegação da sua guia usando a função [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) conforme mostrado no código a seguir:
+
+```javascript
+if (pages.isSupported()) {
+  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
+  navPromise.
+     then((result) => {/*Successful navigation*/}).
+     catch((error) => {/*Failed navigation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+Para obter mais informações sobre como usar a funcionalidade páginas, consulte [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) e o namespace [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) para outras opções de navegação. Se necessário, também é possível abrir diretamente um link profundo usando a função [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true).
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
+Para disparar um link profundo da sua guia, chame:
+
+```javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Essa chamada navega até a URL correta ou dispara uma ação do cliente, como abrir uma caixa de diálogo de agendamento ou de instalação de aplicativo. Confira o exemplo a seguir:
+---
 
-```Javascript
-// Open a scheduling dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent");
+### <a name="open-a-scheduling-dialog"></a>Abrir uma caixa de diálogo de agendamento
 
-// Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
-```
+Você pode abrir uma caixa de diálogo de agendamento do aplicativo Teams, conforme mostrado no código a seguir. Isso é especialmente útil se seu aplicativo ajuda o usuário a concluir o calendário ou agendar tarefas relacionadas.
 
-## <a name="deep-linking-to-a-chat"></a>Vinculação profunda a um chat
-
-Você pode criar links profundos para chats privados entre usuários especificando o conjunto de participantes. Se não houver um chat com os participantes especificados, o link direcionará o usuário para um novo chat vazio. Novos chats são criados em estado de rascunho até que o usuário envie a primeira mensagem. Caso contrário, você poderá especificar o nome do chat se ele ainda não existir, juntamente com o texto que deve ser inserido na caixa de texto do usuário. Você pode pensar nesse recurso como um atalho para o usuário executar a ação manual de navegar ou criar o chat e, em seguida, digitar a mensagem.
-
-Como exemplo de caso de uso, se estiver retornando um perfil do Office 365 do seu bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa.
-
-### <a name="generate-a-deep-link-to-a-chat"></a>Gerar link profundo para um chat
-
-Use este formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens:
-
-`https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
-
-Exemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
-Os parâmetros de consulta são:
-
-* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes do chat. O usuário que executa a ação é sempre incluído como um participante. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), como apenas um endereço de email.
-* `topicName`: um campo opcional para o nome de exibição do chat, no caso de um chat com três ou mais usuários. Se este campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
-* `message`: Um campo opcional para o texto da mensagem que você deseja inserir na caixa de redação do usuário atual enquanto o chat está em um estado de rascunho.
-
-Para usar esse link profundo com o bot, especifique-o como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
-
-## <a name="generate-deep-links-to-channel-conversation"></a>Gerar links profundos para a conversa do canal
-
-Use este formato de link profundo para navegar até uma conversa específica dentro da thread do canal:
-
-`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
-
-Exemplo: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
-
-Os parâmetros de consulta são:
-
-* `channelId`: ID do Canal da conversa. Por exemplo, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
-* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
-* `groupId`: ID do grupo do arquivo. Por exemplo `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
-* `parentMessageId`: ID da mensagem pai da conversa.
-* `teamName`: nome da equipe.
-* `channelName`: nome do canal da equipe.
-
-> [!NOTE]
-> Você pode ver `channelId` e `groupId` na URL do canal.
-
-## <a name="generate-deep-links-to-file-in-channel"></a>Gerar links profundos para o arquivo no canal
-
-O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: 
-
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
-
-Os parâmetros de consulta são:
-
-* `fileId`: ID de arquivo exclusivo do Sharepoint Online, também conhecida como `sourcedoc`. Por exemplo, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
-* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
-* `fileType`: tipo de arquivo compatível, como .docx, .pptx, .xlsx e .pdf.
-* `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
-* `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`.
-* `serviceName`: nome do serviço, ID do aplicativo. Por exemplo, `teams`.
-* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId`: ID do grupo do arquivo. Por exemplo `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
-
-> [!NOTE]
-> Você pode ver `threadId` e `groupId` na URL do canal.  
-
-O seguinte formato de link profundo é usado em um bot, conector ou cartão de extensão de mensagens: 
-
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
-
-O formato de exemplo a seguir ilustra link profundo para arquivos:
-
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
-
-### <a name="serialization-of-this-object"></a>Serialização deste objeto
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-{
-fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
-tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
-filetype: = "pptx",
-objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
-baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
-serviceName: "teams",
-threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
-groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00"
+      startTime: "2018-10-24T10:00:00-07:00"
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
 }
+else { /* handle case where capability isn't supported */ }
 ```
 
-## <a name="deep-linking-to-an-app"></a>Vinculação profunda a um aplicativo
+Para obter mais informações sobre como trabalhar com o calendário, consulte o namespace [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) na documentação de referência da API.
 
-Crie link profundos para o aplicativo depois que ele for listado na loja do Teams. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar o aplicativo.
-  
-## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
-O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+```javascript
+// Open a scheduling dialog from your tab
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent");
+```
 
-> [!NOTE]
-> Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams em execução no Linux.
-> Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta no navegador atual quando o usuário selecionar o link. Nenhuma nova guia do navegador está aberta.
+---
 
-Os parâmetros de consulta são:
+#### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Gerar um link profundo para a caixa de diálogo de agendamento
 
-* `appID`: sua ID de manifesto, por exemplo, `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
-
-* `entityID`: a ID do item que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, `tasklist123`.
-* `entityWebUrl`: um campo opcional com uma URL de fallback para usar se o cliente não suportar a renderização da guia - `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
-* `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, Task List 123 ou Task 456.
-
-Exemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
-
-## <a name="deep-linking-to-the-scheduling-dialog"></a>Vinculação profunda à caixa de diálogo de agendamento
-
-> [!NOTE]
-> Esse recurso está atualmente na versão prévia do desenvolvedor.
-
-Você pode criar links profundos para a caixa de diálogo de agendamento interna do Teams. Isso é especialmente útil se seu aplicativo ajuda o usuário a concluir o calendário ou agendar tarefas relacionadas.
-
-### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Gerar um link profundo para a caixa de diálogo de agendamento
-
-Use o seguinte formato para um link profundo que você pode usar em um bot, Conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Embora seja recomendável usar as APIs fortemente tipadas do TeamsJS, é possível criar manualmente links profundos para a caixa de diálogo de agendamento interna do Teams. Use o seguinte formato para um link profundo que você pode usar em um bot, Conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -285,16 +260,174 @@ Os parâmetros de consulta são:
 
 Para usar esse link profundo com o bot, você pode especificá-lo como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
 
-## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Vinculação profunda a uma chamada de áudio ou chamada de vídeo com áudio.
+### <a name="open-an-app-install-dialog"></a>Abrir uma caixa de diálogo de instalação de aplicativo
 
-Você pode criar links profundos para invocar somente chamadas de áudio ou áudio/vídeo para um único usuário ou um grupo de usuários, especificando o tipo de chamada, como *áudio* ou *av* e os participantes. Depois que o link profundo é invocado e antes de fazer a chamada, o cliente do Teams solicita uma confirmação para fazer a chamada. No caso de chamada em grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de link profundo.
+Você pode abrir uma caixa de diálogo de instalação de aplicativo do aplicativo Teams, conforme mostrado no código a seguir.
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open an app install dialog from your tab
+if(appInstallDialog.isSupported()) {
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appID: <appId>});
+    dialogPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+Para obter mais informações sobre a caixa de diálogo de instalação, consulte a função [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) na documentação de referência da API.
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
+```javascript
+// Open an app install dialog from your tab
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
+```
+
+---
+
+### <a name="navigate-to-a-chat"></a>Navegar até um chat
+
+Você pode navegar ou criar chats privados entre usuários com o TeamsJS especificando o conjunto de participantes. Se não houver um chat com os participantes especificados, o link direcionará o usuário para um novo chat vazio. Novos chats são criados em estado de rascunho até que o usuário envie a primeira mensagem. Caso contrário, você poderá especificar o nome do chat se ele ainda não existir, juntamente com o texto que deve ser inserido na caixa de texto do usuário. Você pode pensar nesse recurso como um atalho para o usuário executar a ação manual de navegar ou criar o chat e, em seguida, digitar a mensagem.
+
+Como exemplo de caso de uso, se estiver retornando um perfil do Office 365 do seu bot como um cartão, esse link profundo poderá permitir que o usuário converse facilmente com essa pessoa. O exemplo a seguir demonstra como abrir uma mensagem de chat para um grupo de participantes com uma mensagem inicial.
+
+```javascript
+if(chat.isSupported()) {
+    const chatPromise = chat.openGroupChat({ users: ["joe@contoso.com","bob@contoso.com"], topic: "Prep For Meeting Tomorrow", message: "Hi folks kicking off chat about our meeting tomorrow"});
+    chatPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+Embora o uso das APIs fortemente tipadas seja recomendado, você pode usar o seguinte formato para um link profundo criado manualmente que pode ser usado em um bot, conector ou cartão de extensão de mensagem:
+
+`https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
+
+Exemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+
+Os parâmetros de consulta são:
+
+* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes do chat. O usuário que executa a ação é sempre incluído como um participante. Atualmente, o campo ID do usuário dá suporte ao UserPrincipalName do Microsoft Azure Active Directory (Azure AD), como apenas um endereço de email.
+* `topicName`: um campo opcional para o nome de exibição do chat, no caso de um chat com três ou mais usuários. Se este campo não for especificado, o nome de exibição do chat será baseado nos nomes dos participantes.
+* `message`: Um campo opcional para o texto da mensagem que você deseja inserir na caixa de redação do usuário atual enquanto o chat está em um estado de rascunho.
+
+Para usar esse link profundo com o bot, especifique-o como o destino da URL no botão do cartão ou toque em ação por meio do tipo de ação`openUrl`.
+
+### <a name="generate-deep-links-to-channel-conversation"></a>Gerar links profundos para a conversa do canal
+
+Use este formato de link profundo para navegar até uma conversa específica dentro da thread do canal:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Exemplo: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+Os parâmetros de consulta são:
+
+* `channelId`: ID do Canal da conversa. Por exemplo, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: ID do grupo do arquivo. Por exemplo `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: ID da mensagem pai da conversa.
+* `teamName`: nome da equipe.
+* `channelName`: nome do canal da equipe.
+
+> [!NOTE]
+> Você pode ver `channelId` e `groupId` na URL do canal.
+
+### <a name="generate-deep-links-to-file-in-channel"></a>Gerar links profundos para o arquivo no canal
+
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: 
+
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+
+Os parâmetros de consulta são:
+
+* `fileId`: ID de arquivo exclusivo do Sharepoint Online, também conhecida como `sourcedoc`. Por exemplo, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `fileType`: tipo de arquivo compatível, como .docx, .pptx, .xlsx e .pdf.
+* `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`.
+* `serviceName`: Nome do serviço, ID do aplicativo. Por exemplo, `teams`.
+* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: ID do grupo do arquivo. Por exemplo `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
+
+> [!NOTE]
+> Você pode ver `threadId` e `groupId` na URL do canal.  
+
+O seguinte formato de link profundo é usado em um bot, conector ou cartão de extensão de mensagens: 
+
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+
+O formato de exemplo a seguir ilustra link profundo para arquivos:
+
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+
+#### <a name="serialization-of-this-object"></a>Serialização deste objeto
+
+```javascript
+{
+fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
+tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
+filetype: = "pptx",
+objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
+baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
+serviceName: "teams",
+threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
+groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
+}
+```
+
+### <a name="deep-linking-to-an-app"></a>Vinculação profunda a um aplicativo
+
+Criar link profundos para o aplicativo depois que ele for listado na Teams store. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar o aplicativo.
+  
+### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
+
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams em execução no Linux.
+> Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta no navegador atual quando o usuário selecionar o link. Nenhuma nova guia do navegador está aberta.
+
+Os parâmetros de consulta são:
+
+* `appID`: sua ID de manifesto, por exemplo, `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
+
+* `entityID`: a ID do item que você forneceu ao [configurar a guia](~/tabs/how-to/create-tab-pages/configuration-page.md). Por exemplo, `tasklist123`.
+* `entityWebUrl`: um campo opcional com uma URL de fallback para usar se o cliente não suportar a renderização da guia - `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
+* `entityName`: Um rótulo para o item em sua guia, a ser usado ao exibir o link profundo, Task List 123 ou Task 456.
+
+Exemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
+
+### <a name="navigate-to-an-audio-or-audio-video-call"></a>Navegue até uma chamada de áudio ou áudio/vídeo
+
+Você pode invocar somente chamadas de áudio ou áudio/vídeo para um único usuário ou um grupo de usuários, especificando o tipo de chamada e os participantes. Antes de fazer a chamada, o cliente do Teams solicita uma confirmação para fazer a chamada. No caso de chamada em grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de link profundo.
 
 No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará o vídeo do chamador para a chamada. O receptor da chamada tem a opção de responder somente por áudio ou áudio e vídeo, por meio da janela de notificação de chamada do Teams.
 
 > [!NOTE]
-> Este link profundo não pode ser usado para invocar uma reunião.
+> Este método não pode ser usado para invocar uma reunião.
 
-### <a name="generate-a-deep-link-to-a-call"></a>Gerar um link profundo para uma chamada
+O código a seguir demonstra o uso do SDK do TeamsJS para iniciar uma chamada:
+
+```javascript
+if(call.isSupported()) {
+    const callPromise = call.startCall({ targets: ["joe@contoso.com","bob@contoso.com","4:9876543210"], requestedModalities: [call.CallModalities.Audio], source: "demoApp"});
+    callPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+
+```
+
+#### <a name="generate-a-deep-link-to-a-call"></a>Gerar um link profundo para uma chamada
+
+Embora o uso das APIs fortemente tipadas do TeamsJS seja recomendado, você também pode usar um link profundo criado manualmente para iniciar uma chamada.
 
 | Link profundo | Formatar | Exemplo |
 |-----------|--------|---------|

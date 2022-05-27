@@ -1,19 +1,19 @@
 ---
 title: Guias do DevTools para o Microsoft Teams
 description: Descreve como acessar o DevTools ao usar o cliente Microsoft Teams Desktop e a depuração
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: guia ferramentas de desenvolvedor do cliente de devtools debug mobile chrome desktop
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111441"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757476"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Guias do DevTools para o Microsoft Teams
 
-Quando Teams eatá em execução em um navegador, é fácil acessar o DevTools do navegador: pressione F12 no Windows ou Command-Option-I no MacOS. O DevTools fornece acesso a:
+Quando Teams em execução em um navegador, é fácil acessar o DevTools do navegador: F12 no Windows ou Command-Option-I no MacOS. O DevTools fornece acesso a:
 
 1. Exibir logs do console.
 1. Exiba ou modifique solicitações de HTML, CSS e rede durante o runtime.

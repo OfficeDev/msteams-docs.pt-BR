@@ -2,20 +2,20 @@
 title: Configurar provedores de identidade OAuth 2.0
 description: Descreve como configurar provedores de identidade com foco no Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: autenticação do teams provedor de identidade oauth do Azure AD
-ms.openlocfilehash: c21be68ef76568ea4c5bb534f329f725d599b1ac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6ab95958c66fcf680cdab54d3307eab5dc66fa57
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111798"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757049"
 ---
 # <a name="configure-identity-providers"></a>Configurar provedores de identidade
 
 ## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Configurando um aplicativo para usar o Azure AD como um provedor de identidade
 
-Provedores de identidade que dão suporte ao OAuth 2.0 não autenticam solicitações de aplicativos desconhecidos; os aplicativos devem ser registrados antecipadamente. Para fazer isso com o Azure AD, siga estas etapas:
+Os provedores de identidade que dão suporte ao OAuth 2.0 não autenticam solicitações de aplicativos desconhecidos; os aplicativos devem ser registrados antecipadamente. Para fazer isso com o Azure AD, siga estas etapas:
 
 1. Abra o [Portal de Registro do Aplicativo](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 

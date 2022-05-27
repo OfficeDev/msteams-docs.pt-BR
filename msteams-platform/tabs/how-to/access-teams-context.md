@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672913"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755941"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -109,6 +109,9 @@ Além dessas alterações de campo, há dois novos campos disponíveis para cana
 * `hostTeamTenantId`: defina como o `tenantId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode ser referenciada cruzadamente com a ID `tid` `getContext` de locatário do usuário atual encontrada no campo para determinar se o usuário é interno ou externo ao locatário da equipe de hospedagem.
 
 Se sua página usa qualquer um desses valores, `channelType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
+
+> [!NOTE]
+> Sempre que um usuário reinicia ou recarrega o cliente web ou da área de trabalho do Teams, uma nova sessionID é criada, que é controlada por uma sessão do Teams, enquanto que, quando um usuário sai dos aplicativos do Teams e o recarrega na plataforma Teams, uma nova sessionID de aplicativo é criada, que é controlada pela sessão de aplicativo.
 
 ## <a name="handle-theme-change"></a>Manipular alteração de tema
 

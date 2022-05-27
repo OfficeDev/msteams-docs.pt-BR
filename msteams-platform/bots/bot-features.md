@@ -3,14 +3,14 @@ title: Bots e SDKs
 author: surbhigupta
 description: Visão geral das ferramentas e SDKs para criar bots do Microsoft Teams.
 ms.topic: overview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b579444f23a629b58497e27245807e7086ad8c75
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111280"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756860"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -20,6 +20,7 @@ Você pode criar um bot que funcione no Microsoft Teams com uma das seguintes fe
 * [Agentes virtuais do Power](#bots-with-power-virtual-agents)
 * [Assistente Virtual](~/samples/virtual-assistant.md)
 * [Webhooks e conectores](#bots-with-webhooks-and-connectors)
+* [Serviço de bot do Azure](#azure-bot-service)
 
 ## <a name="bots-with-the-microsoft-bot-framework"></a>Bots com o Microsoft Bot Framework
 
@@ -50,7 +51,106 @@ O [Bot Framework](https://dev.botframework.com/) é um SDK avançado usado para 
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots com webhooks e conectores
 
-Webhooks e conectores conectam seu bot aos seus serviços Web. Usando webhooks e conectores, você pode criar um bot para interação básica, como criar um fluxo de trabalho ou outros comandos simples. Eles estão disponíveis apenas na equipe em que você os cria e se destinam a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, confira [o que são webhooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks e conectores conectam seu bot aos seus serviços Web. Usando webhooks e conectores, você pode criar um bot para interação básica, como criar um fluxo de trabalho ou outros comandos simples. Eles estão disponíveis apenas na equipe em que você os cria e são destinados a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, confira [o que são webhooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+
+## <a name="azure-bot-service"></a>Serviço de bot do Azure
+
+O serviço de bot do Azure, juntamente com o Bot Framework, fornece ferramentas para criar, testar, implantar e gerenciar bots inteligentes, tudo em um só lugar. Você também pode criar seu bot no serviço de bot do Azure.
+
+> [!IMPORTANT]
+> Os aplicativos de bot no Microsoft Teams estão disponíveis no GCC-High através do [Serviço de bot do Azure](/azure/bot-service/channel-connect-teams).
+
+> [!NOTE]
+> * Os bots no GCCH dão suporte apenas à versão de manifesto v1.10.
+> * Não há suporte para URLs de imagem em Cartões Adaptáveis no ambiente GCCH. Você pode substituir uma URL de imagem pelo DataUri codificado em Base64.
+> * O registro de canal de bot no Azure Governamental provisionará o bot do aplicativo Web, o serviço de aplicativo (plano do serviço de aplicativo) e o Application Insights também, mas não dá suporte para provisionar apenas o serviço de bot do Azure (sem serviço de aplicativo).
+>   <details>
+>   <summary><b>Se você quiser apenas fazer o registro de bot</b></summary>
+>
+>   * Vá para o grupo de recursos e exclua manualmente os recursos não utilizados. Como o serviço de aplicativo, o plano do serviço de aplicativo (se você criou durante o registro do bot) e o application insights (se você optar por habilita-lo durante o registro do bot).
+>   * Você também pode usar az-cli para fazer o registro de bot:
+>
+>     1. Entre no Azure e defina a assinatura <br> 
+>           &nbsp; az cloud set –name "AzureUSGovernment" <br> 
+>           &nbsp; az account set –name "`subscriptionname/id`".<br>
+>     1. Criar registro de aplicativo  
+>           &nbsp; az ad app create --display-name "`name`" <br> 
+>           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
+>           A ID do aplicativo seria criada aqui.<br>
+>     1. Criar recurso de bot <br>
+>           &nbsp; az bot create –resource-group "`resource-group`"<br>
+>           &nbsp; --appid "`appid`"<br>
+>           &nbsp; --name "`botid`"<br>
+>           &nbsp; --tipo "registro".<br>
+>
+> </details>
+
+Para o ambiente GCCH, você precisa registrar um bot [usando Azure Governamental portal](https://portal.azure.us).
+
+:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Governamental portal":::
+<br>
+<br>
+As seguintes alterações são necessárias no bot para GCC-High ambiente:
+<br>
+<br>
+<details>
+<summary><b>Alterações de configuração</b></summary>
+
+À medida que o registro do bot ocorre Azure Governamental portal, atualize as configurações do bot para se conectar às instâncias do Govermnet do Azure. Veja a seguir os detalhes de configuração:
+
+| Nome da configuração | Valor |
+|----|----|
+| ChannelService | `https://botframework.azure.us` |
+| OAuthUrl | `https://tokengcch.botframework.azure.us` |
+| ToChannelFromBotLoginUrl | `https://login.microsoftonline.us/MicrosoftServices.onmicrosoft.us` |
+| ToChannelFromBotoAuthScope | `https://api.botframework.us` |
+| ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
+| BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
+
+</details>
+<br>
+<details>
+<summary><b>Atualizar para appsettings.json & startup.cs</b></summary>
+
+1. **Atualizar appsettings.json:**
+
+    * Defina `ConnectionName` como o nome da configuração de conexão OAuth que você adicionou ao seu bot.
+
+    * Defina `MicrosoftAppId` e `MicrosoftAppPassword` como a ID do aplicativo e o segredo do aplicativo do seu bot.
+    
+    Dependendo dos caracteres do segredo do seu bot, talvez seja necessário que o XML escape da senha. Por exemplo, qualquer e comercial (&) precisa ser codificado como `&amp;`.
+
+    ```json
+    {
+      "MicrosoftAppType": "",
+      "MicrosoftAppId": "",
+      "MicrosoftAppPassword": "",
+      "MicrosoftAppTenantId": "",
+      "ConnectionName": ""
+    }
+    ```
+2. **Atualizar Startup.cs:**
+
+    Para usar o OAuth em nuvens não públicas do *Azure*, como a nuvem governamental ou em bots com residência de dados, você deve adicionar o código a seguir no arquivo **Startup.cs** .
+    
+    ```csharp
+    string uri = "<uri-to-use>";
+    MicrosoftAppCredentials.TrustServiceUrl(uri);
+    OAuthClientConfig.OAuthEndpoint = uri;
+    ```
+    
+    Onde \<uri-to-use\> está um dos seguintes URIs:
+
+    |**URI**|**Descrição**|
+    |---|---|
+    |`https://europe.api.botframework.com`|Para bots de nuvem pública com residência de dados na Europa.|
+    |`https://unitedstates.api.botframework.com`|Para bots de nuvem pública com residência de dados no Estados Unidos.|
+    |`https://apiGCCH.botframework.azure.us`|Para Estados Unidos bots de nuvem governamental sem residência de dados.|
+    |`https://api.botframework.com`|Para bots de nuvem pública sem residência de dados. Esse é o URI padrão e não requer uma alteração em **Startup.cs**.|
+
+3. A URL de redirecionamento para o registro de aplicativo do Azure deve ser atualizada para `https://tokengcch.botframework.azure.us/.auth/web/redirect`.
+
+</details>
 
 ## <a name="advantages-of-bots"></a>Vantagens dos bots
 
@@ -64,7 +164,7 @@ Os bots no Microsoft Teams podem fazer parte de uma conversa privadas, um chat e
 
 ### <a name="in-a-channel"></a>Em um canal.
 
-Os canais contêm conversas encadeadas entre várias pessoas até dois mil. Isso potencialmente dá ao seu bot um alcance enorme, mas as interações individuais devem ser concisas. As interações tradicionais de vários turnos não funcionam. Em vez disso, procure usar cartões interativos ou módulos de tarefas, ou mover a conversa para uma conversa privada se precisar coletar muitas informações. Seu bot só tem acesso às mensagens em que ele está `@mentioned`. Você pode recuperar mensagens adicionais da conversa usando as permissões do Microsoft Graph no nível da organização.
+Os canais contêm conversas encadeadas entre várias pessoas até dois mil. Isso potencialmente dá ao seu bot um alcance enorme, mas as interações individuais devem ser concisas. As interações tradicionais de vários turnos não funcionam. Em vez disso, procure usar cartões interativos ou módulos de tarefas, ou mover a conversa para uma conversa privada se precisar coletar muitas informações. Seu bot só tem acesso a mensagens em que está `@mentioned`. Você pode recuperar mensagens adicionais da conversa usando as permissões do Microsoft Graph no nível da organização.
 
 Os bots funcionam melhor em um canal nos seguintes casos:
 
@@ -75,7 +175,7 @@ Os bots funcionam melhor em um canal nos seguintes casos:
 
 ### <a name="in-a-group-chat"></a>Em um chat em grupo
 
-Os chats de grupo são conversas não-encadeadas entre três ou mais pessoas. Tendem a ter menos membros do que um canal e são mais temporários. Semelhante a um canal, seu bot só tem acesso a mensagens em que ele é `@mentioned` diretamente.
+Os chats de grupo são conversas não-encadeadas entre três ou mais pessoas. Tendem a ter menos membros do que um canal e são mais temporários. Semelhante a um canal, seu bot só tem acesso a mensagens em que ele está `@mentioned` diretamente.
 
 Nos casos em que os bots funcionam melhor em um canal também funcionam melhor em um chat em grupo.
 
@@ -90,11 +190,11 @@ O chat privado é a maneira tradicional de um bot de conversação interagir com
 
 ## <a name="disadvantages-of-bots"></a>Desvantagens dos bots
 
-Uma caixa de diálogo extensa entre o bot e o usuário é uma maneira lenta e complexa de concluir uma tarefa. Um bot que dá suporte a comandos excessivos, especialmente uma ampla variedade de comandos, não é bem-sucedido ou visto positivamente pelos usuários.
+Uma caixa de diálogo extensa entre o bot e o usuário é uma maneira lenta e complexa de concluir uma tarefa. Um bot que dá suporte a comandos excessivos, especialmente uma ampla variedade de comandos, não é bem-sucedido ou exibido positivamente pelos usuários.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Ter experiências de vários turnos no chat
 
-Uma caixa de diálogo extensa exige que o desenvolvedor mantenha o estado. Para sair desse estado, um usuário deve expirar ou selecionar **Cancelar**. Além disso, o processo é entediante. Por exemplo, consulte o seguinte cenário de conversa:
+Uma caixa de diálogo extensa exige que o desenvolvedor mantenha o estado. Para sair desse estado, um usuário deve ter um tempo limite ou selecionar **Cancelar**. Além disso, o processo é entediante. Por exemplo, consulte o seguinte cenário de conversa:
 
 USER: Agende uma reunião com Sara.
 
@@ -114,7 +214,7 @@ Como há apenas seis comandos visíveis no menu do bot atual, é improvável que
 
 ### <a name="maintain-a-large-knowledge-base"></a>Manter uma grande base de dados de conhecimento
 
-Uma das desvantagens dos bots é que é difícil manter uma grande base de dados de conhecimento de recuperação com respostas não listadas. Os bots são mais adequados para interações rápidas e curtas e não passam por listas longas em busca de uma resposta.
+Uma das desvantagens dos bots é que é difícil manter uma grande recuperação base de dados de conhecimento respostas não listadas. Os bots são mais adequados para interações rápidas e curtas e não passam por listas longas em busca de uma resposta.
 
 ## <a name="code-snippets"></a>Trechos de código
 

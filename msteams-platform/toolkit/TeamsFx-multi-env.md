@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653277"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756930"
 ---
 # <a name="manage-multiple-environments"></a>Gerenciar vários ambientes
 
@@ -45,9 +45,9 @@ Depois de criar um novo projeto, o Teams Toolkit por padrão cria:
 1. Selecione o ícone do **Teams** na barra lateral
 2. Selecione **+Teams: criar novo ambiente** na seção Ambiente, conforme mostrado na imagem a seguir:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="criar":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="criar":::
 
-Se você tiver mais de um ambiente, precisará selecionar um ambiente existente para criar o mesmo. O comando copia o conteúdo do arquivo de `config.<newEnv>.json` e `azure.parameters.<newEnv>.json` do ambiente existente que você selecionou para o novo ambiente criado.
+   Se você tiver mais de um ambiente, precisará selecionar um ambiente existente para criar o mesmo. O comando copia o conteúdo do arquivo de `config.<newEnv>.json` e `azure.parameters.<newEnv>.json` do ambiente existente que você selecionou para o novo ambiente criado.
 
 ## <a name="select-target-environment"></a>Selecionar ambiente de destino
 
@@ -204,18 +204,21 @@ Como o modelo de manifesto do aplicativo Teams é compartilhado em todos os ambi
     },
     ...
   }
- ```
-3. Execute o comando de provisão em **todos** os ambientes para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando de provisão com o Teams Toolkit, confira [provisionar](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Execute o comando de provisão em **todos** os ambientes para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com Teams Toolkit, consulte [provisionar](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>Cenário 4: personalizar recursos do Azure para um ambiente diferente</b></summary>
 Você pode personalizar os recursos do Azure para cada ambiente, por exemplo, especificar o nome da Função do Azure editando o ambiente correspondente para fx/configs/azure.parameters. {env}.json. arquivo.
 
-Para obter mais informações sobre arquivos de parâmetro e modelo Bicep, confira [provisionar recursos de nuvem](provision.md)
-</details> <br
-
-
+Para obter mais informações sobre arquivos de parâmetro e modelo Bicep, consulte [provisionar recursos de nuvem](provision.md)
+</details>
+</br>
 
 ## <a name="see-also"></a>Confira também
 

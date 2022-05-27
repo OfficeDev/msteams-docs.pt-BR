@@ -5,12 +5,12 @@ ms.topic: how-to
 keywords: criação de bots do Teams
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: e531b8058581c6c3e005bb6beb2e16c1b74bfebc
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 92d4593290d1332b86b370a49b20daaf43868a51
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135693"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757385"
 ---
 # <a name="create-a-bot"></a>Criar um bot
 
@@ -50,7 +50,9 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
 > * Se você registrar seu bot usando Microsoft Azure, o código do bot não precisará ser *hospedado no Microsoft Azure*.
 > * Se você registrar um bot usando portal do Azure, deverá ter uma conta Microsoft Azure cliente. Você pode [criar uma gratuitamente](https://azure.microsoft.com/free/). Para verificar sua identidade ao criar uma, você deve fornecer um cartão de crédito, mas ele não será cobrado; É sempre gratuito criar e usar bots com Microsoft Teams.
 > * Agora você pode usar o App Studio para registrar/atualizar informações do aplicativo e do bot diretamente no Microsoft Teams. Você só precisará usar o portal do Azure para adicionar ou configurar outros canais do Bot Framework, como Direct Line, Webchat, Skype e Facebook Messenger.
->* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
+
+> [!WARNING]
+>* Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
 
 ## <a name="see-also"></a>Confira também
 

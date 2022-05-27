@@ -4,12 +4,12 @@ description: Descreve opções para testar e depurar aplicativos do Microsoft Te
 keywords: as equipes executam aplicativos de depuração host hospedado na nuvem local
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296991"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757007"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolher uma configuração para testar e depurar seu aplicativo Microsoft Teams
 
@@ -56,15 +56,17 @@ Para configurar o ngrok em preparação para executar seu aplicativo Microsoft T
 
 Para usar o ngrok em seu projeto com base nos recursos que você está usando, você deve substituir todas as referências de URL em seu código, configuração e arquivo manifest.json para usar esse ponto de extremidade de URL.
 
-Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar se o ngrok está funcionando testando a resposta do bot na janela de chat de teste do portal do Bot Framework. Novamente, como o emulador, este teste não permite que você acesse a funcionalidade específica do Teams.
+Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar se o ngrok está funcionando testando a resposta do bot na janela de chat de teste do portal do Bot Framework. Novamente, como o emulador, esse teste não permite que você acesse Teams funcionalidade específica.
 
 > [!NOTE]
 > * Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+> [!WARNING]
 > * Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
 
 ## <a name="cloud-hosted"></a>Hospedado na nuvem
 
-Você pode usar qualquer serviço endereçável externamente para hospedar seu código de desenvolvimento e produção e seus pontos de externamente HTTPS. Não há expectativa de que seus recursos residam no mesmo serviço. Exigimos que todos os domínios sejam acessados ​​de seus aplicativos do Microsoft Teams listados no objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) no arquivo `manifest.json`.
+Você pode usar qualquer serviço endereçável externamente para hospedar seu código de desenvolvimento e produção e seus pontos de externamente HTTPS. Não há nenhuma expectativa de que seus recursos residam no mesmo serviço. Exigimos que todos os domínios sejam acessados ​​de seus aplicativos do Microsoft Teams listados no objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) no arquivo `manifest.json`.
 
 > [!NOTE]
 > Para garantir um ambiente seguro, seja claro sobre o domínio e os subdomínios exatos que você referencia e esses domínios devem estar em seu controle. Por exemplo, `*.azurewebsites.net` não é recomendado, mas `contoso.azurewebsites.net` é recomendado.

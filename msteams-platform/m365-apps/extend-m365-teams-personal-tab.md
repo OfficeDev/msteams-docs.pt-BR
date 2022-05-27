@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668134"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755948"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -148,11 +148,11 @@ Se seu aplicativo usa cabeçalhos [CSP (Política](https://developer.mozilla.org
 
 A etapa final para executar seu aplicativo no Office e Outlook é fazer sideload do pacote de aplicativos de guia pessoal atualizado no [](..//concepts/build-and-test/apps-package.md) Microsoft Teams.
 
-1. Empacote seu Teams aplicativo ([ícones](../resources/schema/manifest-schema.md) de manifesto [e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou Teams Toolkit para criar seu aplicativo, poderá fazer isso facilmente usando a opção de pacote de metadados do **Zip Teams** **no menu** Implantação do Teams Toolkit.
+1. Empacote seu Teams aplicativo ([ícones](../resources/schema/manifest-schema.md) de manifesto [e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, pode fazer isso facilmente usando a opção de pacote de metadados **Zip Teams** no menu **Implantação** do Kit de Ferramentas do Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Pacote de metadados do Zip Teams' na extensão do Kit de Ferramentas do Teams para Visual Studio Code":::
 
-1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) pelo perfil do usuário e, em seguida, selecione: **Sobre a visualização** > **do Desenvolvedor**.
+1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) em seu perfil de usuário e selecione: **sobre** > **Visualização do desenvolvedor**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="No menu de reticências do Teams, abra 'Sobre' e selecione a opção 'Visualização do Desenvolvedor'":::
 
@@ -239,13 +239,6 @@ Na primeira execução da depuração local para Office ou Outlook, você será 
 
 Forneça comentários e relate quaisquer problemas com a experiência Teams Toolkit depuração no [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## <a name="next-step"></a>Próxima etapa
-
-Publique seu aplicativo para ser detectável no Teams, no Outlook e no Office:
-
-> [!div class="nextstepaction"]
-> [Publicar aplicativos do Teams para Outlook e Office](publish.md)
-
 ## <a name="code-sample"></a>Exemplo de código
 
 | **Nome de exemplo** | **Descrição** | **Node.js** |
@@ -253,3 +246,10 @@ Publique seu aplicativo para ser detectável no Teams, no Outlook e no Office:
 | Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista de tarefas pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona em Teams, Outlook, Office. | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona em Teams, Outlook, Office. | [Exibir](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>Próxima etapa
+
+Publique seu aplicativo para ser detectável no Teams, no Outlook e no Office:
+
+> [!div class="nextstepaction"]
+> [Publicar aplicativos do Teams para Outlook e Office](publish.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversa reação mensagem canal bot eventos
-ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297153"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757567"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -404,7 +404,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membros da equipe adicionados
 
-O evento `teamMemberAdded` será enviado ao bot na primeira vez que ele for adicionado a uma conversa. O evento será enviado ao bot sempre que um novo usuário for adicionado a um chat de equipe ou grupo onde o bot estiver instalado. As informações do usuário, sua ID, são exclusivas do bot e podem ser armazenadas em cache para uso futuro pelo serviço, como enviar uma mensagem para um usuário específico.
+O `teamMemberAdded` evento é enviado ao bot na primeira vez que é adicionado a uma conversa. O evento será enviado ao bot sempre que um novo usuário for adicionado a um chat de equipe ou grupo onde o bot estiver instalado. As informações do usuário, sua ID, são exclusivas do bot e podem ser armazenadas em cache para uso futuro pelo serviço, como enviar uma mensagem para um usuário específico.
 
 O código a seguir mostra um exemplo do evento Membros da equipe adicionados:
 
@@ -548,7 +548,7 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>Membros da equipe removidos
 
-O evento `teamMemberRemoved` será enviado ao bot se ele for removido de uma equipe. O evento será enviado ao bot sempre que qualquer usuário for removido de uma equipe em que o bot é membro. Para determinar se o novo membro removido foi o próprio bot ou um usuário, verifique o objeto `Activity` do `turnContext`.  Se o campo `Id` do objeto `MembersRemoved` for o mesmo que o campo `Id` do objeto `Recipient`, então o membro removido será o bot, caso contrário, será um usuário. A `Id` do bot geralmente é `28:<MicrosoftAppId>`.
+O `teamMemberRemoved` evento será enviado ao bot se for removido de uma equipe. O evento será enviado ao bot sempre que qualquer usuário for removido de uma equipe em que o bot é membro. Para determinar se o novo membro removido foi o próprio bot ou um usuário, verifique o objeto `Activity` do `turnContext`.  Se o `Id` campo do objeto `MembersRemoved` for `Id` `Recipient` o mesmo que o campo do objeto, o membro removido será o bot, caso contrário, será um usuário. A `Id` do bot geralmente é `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > Quando um usuário for excluído permanentemente de um locatário, o evento `membersRemoved conversationUpdate` será disparado.
@@ -1054,11 +1054,11 @@ async def on_teams_team_unarchived(
 
 ---
 
-Agora que trabalhou com os eventos de atualização de conversa, você entenderá os eventos de reação de mensagem que ocorrem em diferentes reações a uma mensagem.
+Agora que você trabalhou com os eventos de atualização de conversa, você pode entender os eventos de reação de mensagem que ocorrem para diferentes reações a uma mensagem.
 
 ## <a name="message-reaction-events"></a>Eventos de reação de mensagem
 
-O evento `messageReaction` será enviado quando um usuário adicionar ou remover reações a uma mensagem que foi enviada pelo bot. O `replyToId` contém a ID da mensagem e o `Type` é o tipo de reação no formato de texto. Os tipos de reações incluem irritado, coração, gargalhada, curtir, triste e surpreso. Este evento não contém o conteúdo da mensagem original. Se o processamento de reações às suas mensagens for importante para o bot, você deverá armazenar as mensagens ao enviá-las. A tabela a seguir fornece mais informações sobre o tipo de evento e os objetos do conteúdo:
+O `messageReaction` evento é enviado quando um usuário adiciona ou remove reações a uma mensagem, que foi enviada pelo bot. O `replyToId` contém a ID da mensagem e o `Type` é o tipo de reação no formato de texto. Os tipos de reações incluem irritado, coração, gargalhada, curtir, triste e surpreso. Esse evento não contém o conteúdo da mensagem original. Se o processamento de reações às suas mensagens for importante para o bot, você deverá armazenar as mensagens ao enviá-las. A tabela a seguir fornece mais informações sobre o tipo de evento e os objetos do conteúdo:
 
 | EventType       | Objeto do conteúdo   | Descrição                                                             | Escopo |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1414,7 +1414,7 @@ Quando você usa esses eventos de instalação e desinstalação, há algumas in
 * Você projeta seu bot sem o SDK do Microsoft Bot Framework e, como resultado, o bot fornece uma exceção ao receber um evento inesperado.
 * Você projeta seu bot com o SDK do Microsoft Bot Framework e seleciona alterar o comportamento padrão do evento substituindo o identificador de evento base.
 
-É importante saber que novos eventos poderão ser adicionados a qualquer momento no futuro e seu bot começará a recebê-los. Portanto, você deve projetar considerando a possibilidade de receber eventos inesperados. Se estiver usando o SDK do Bot Framework, o bot responderá automaticamente com 200 – OK a todos os eventos que você não escolher manipular.
+É importante saber que novos eventos podem ser adicionados a qualquer momento no futuro e seu bot começa a recebê-los. Portanto, você deve projetar considerando a possibilidade de receber eventos inesperados. Se você estiver usando o SDK do Bot Framework, o bot responderá automaticamente com um 200 – OK para todos os eventos que você não escolher manipular.
 
 ## <a name="code-sample"></a>Exemplo de código
 

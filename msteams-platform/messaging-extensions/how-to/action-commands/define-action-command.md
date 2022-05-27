@@ -5,12 +5,12 @@ description: Uma visão geral dos comandos de ação de extensão de mensagens c
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297209"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756895"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -54,7 +54,7 @@ A imagem a seguir exibe os locais dos quais o comando de ação é invocado:
 
 Além de selecionar de onde o comando pode ser invocado, você também deve selecionar como preencher o formulário no módulo de tarefa para seus usuários. Você tem as três opções a seguir para criar o formulário renderizado dentro do módulo de tarefa:
 
-* **Lista estática de parâmetros**: esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o cliente do Teams renderiza, mas não pode controlar a formatação nesse caso.
+* **Lista estática de parâmetros**: Esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o Teams cliente renderiza, mas não pode controlar a formatação nesse caso.
 * **Cartão Adaptável**: Você pode optar por usar um Cartão Adaptável, que fornece maior controle sobre a interface do usuário, mas ainda limita você aos controles e opções de formatação disponíveis.
 * **Exibição da Web inserida**: Você pode optar por inserir uma exibição da Web personalizada no módulo de tarefa para ter um controle completo sobre a interface do usuário e os controles.
 
@@ -62,7 +62,7 @@ Se você optar por criar o módulo de tarefa com uma lista estática de parâmet
 
 ## <a name="select-how-the-final-message-is-sent"></a>Selecione como a mensagem final é enviada
 
-Na maioria dos casos, o comando de ação resulta em um cartão inserido na caixa de mensagem de redação. O usuário pode enviá-lo para o canal ou chat. Nesse caso, a mensagem vem do usuário e o bot não pode editar ou atualizar o cartão ainda mais.
+Na maioria dos casos, o comando de ação resulta em um cartão inserido na caixa de mensagem de redação. O usuário pode enviá-lo para o canal ou chat. Nesse caso, a mensagem vem do usuário e o bot não pode editar nem atualizar o cartão ainda mais.
 
 Se a extensão da mensagem for invocada da caixa de redação ou diretamente de uma mensagem, o serviço Web poderá inserir a resposta final diretamente no canal ou chat. Nesse caso, o Cartão Adaptável vem do bot, o bot o atualiza e responde ao thread de conversa, se necessário. Você deve adicionar o objeto `bot` ao manifesto do aplicativo usando a mesma ID e definindo os escopos apropriados.
 
@@ -77,7 +77,7 @@ Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicio
 
 Você pode criar um comando de ação usando **App Studio** ou **Portal do Desenvolvedor**.
 
-> [!NOTE]
+> [!WARNING]
  > Se você estiver usando o App Studio, recomendamos que experimente o Portal do Desenvolvedor [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
@@ -88,7 +88,7 @@ Você pode criar um comando de ação usando **App Studio** ou **Portal do Desen
 **Para criar um comando de ação**
 
 1. Abra **App Studio** no cliente do Microsoft Teams e selecione a guia **Editor de manifesto**.
-1. Se você já criou o pacote do aplicativo no **App Studio**, selecione-o na lista. Se você não tiver criado um pacote de aplicativos, importe um existente.
+1. Se você já criou o pacote do aplicativo no **App Studio**, selecione-o na lista. Se você não tiver criado um pacote do aplicativo, importe um existente.
 1. Depois de importar um pacote de aplicativos, selecione **Extensões de mensagem** em **Recursos**. Você obtém uma janela pop-up para configurar a extensão de mensagem.
 1. Selecione **Configurar** na janela para incluir a extensão de mensagem na experiência do aplicativo. A imagem a seguir exibe a janela de configuração da extensão de mensagem:
 
@@ -158,7 +158,7 @@ Se você estiver usando uma lista estática de parâmetros, também deverá adic
 | `parameter.title` | Essa propriedade é um título ou rótulo curto de parâmetro amigável. | Sim | 1.0 |
 | `parameter.inputType` | Essa propriedade é definida como o tipo de entrada necessário. Os valores possíveis incluem `text`, `textarea`, `number`, `date`, `time`, `toggle`. O valor padrão é definido como `text`. | Não | 1.4 |
 
-Se você estiver usando uma exibição da Web inserida, opcionalmente, poderá adicionar o objeto `taskInfo` para buscar o modo de exibição da Web sem chamar o bot diretamente. Se você selecionar essa opção, o comportamento será semelhante ao do uso de uma lista estática de parâmetros. Já que a primeira interação com o bot é [responder à ação de envio do módulo de tarefa](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Se você estiver usando um objeto `taskInfo`, deverá definir o parâmetro `fetchTask` como `false`.
+Se você estiver usando um modo de exibição da Web inserido, opcionalmente, `taskInfo` poderá adicionar o objeto para buscar o modo de exibição da Web sem chamar o bot diretamente. Se você selecionar essa opção, o comportamento será semelhante ao do uso de uma lista estática de parâmetros. Já que a primeira interação com o bot é [responder à ação de envio do módulo de tarefa](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Se você estiver usando um objeto `taskInfo` , deverá definir o parâmetro `fetchTask` como `false`.
 
 | Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
@@ -232,12 +232,12 @@ Siga o [guia passo a passo](../../../sbs-meetingextension-action.yml) para criar
 
 ## <a name="next-step"></a>Próxima etapa
 
-Se você estiver usando um Cartão Adaptável ou uma exibição da Web inserida sem um objeto `taskInfo`, a próxima etapa será:
+Se você estiver usando um Cartão Adaptável ou uma exibição da Web inserida sem um objeto, a `taskInfo` próxima etapa será:
 
 > [!div class="nextstepaction"]
 > [Criar e responder com um módulo de tarefa](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Se você estiver usando os parâmetros ou uma exibição da Web inserida com um objeto `taskInfo`, a próxima etapa será:
+Se você estiver usando os parâmetros ou uma exibição da Web inserida com um objeto, a `taskInfo` próxima etapa será:
 
 > [!div class="nextstepaction"]
 > [Responder ao envio do módulo de tarefa](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

@@ -1,15 +1,14 @@
 ---
 title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
-keywords: 'recursos de aplicativos do teams permissões de dispositivo escanear qt código de barra nativo imagem áudio vídeo '
-description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem o consentimento do usuário, como escanear qr, código de barras, imagem, áudio, recursos de vídeo
-ms.localizationpriority: high
+description: Saiba como atualizar o manifesto do aplicativo e solicitar acesso a recursos nativos que envolvem consentimento do usuário, localização, código QR e código de barras, imagem, áudio e recursos de vídeo
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cccf527c3abf3a1674b2d1350dd15633ba35c7a8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111959"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757602"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
 
@@ -234,7 +233,7 @@ Por exemplo:
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportamento de permissão entre sessões de logon
 
-As permissões do dispositivo são armazenadas para cada sessão de logon. Isso significa que, se você entrar em outra instância do Teams, por exemplo, em outro computador, as permissões do dispositivo das sessões anteriores não estarão disponíveis. Portanto, você deve consentir novamente com as permissões do dispositivo para a nova sessão. Isso também significa que, se você sair do Teams ou mudar de locatário no Teams, as permissões do dispositivo serão excluídas da sessão de logon anterior.  
+As permissões do dispositivo são armazenadas para cada sessão de logon. Isso significa que, se você entrar em outra instância do Teams, por exemplo, em outro computador, as permissões de dispositivo de suas sessões anteriores não estarão disponíveis. Portanto, você deve consentir novamente com as permissões do dispositivo para a nova sessão. Isso também significa que, se você sair do Teams ou mudar de locatário no Teams, as permissões do dispositivo serão excluídas da sessão de logon anterior.  
 
 > [!NOTE]
 > Quando você consente com as permissões de dispositivo nativo, ela é válida somente para a sessão de entrada _atual_.

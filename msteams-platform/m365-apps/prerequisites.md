@@ -4,12 +4,12 @@ description: Estes são os pré-requisitos para estender seus aplicativos do Tea
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656177"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668022"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de desenvolvimento para estender os aplicativos do Teams pelo Microsoft 365:
 
@@ -31,9 +31,9 @@ Você precisa de uma área restrita de assinatura de desenvolvedor do Microsoft 
 
 Você também precisará habilitar o sideload para o seu locatário:
 
-1. Entre no centro de administração do Microsoft 365 (https://admin.microsoft.com)com as suas credenciais de locatário de teste e selecione **Teams** no painel lateral para abrir o *centro de administração do Microsoft Teams*
-1. Selecione: Aplicativos do Teams > Gerenciar aplicativos > **Configurações do aplicativo em toda a organização**
-1. Em **Aplicativos personalizados**, ative a opção *Interação com aplicativos personalizados*
+1. Entre no Centro de administração do Microsoft 365 (https://admin.microsoft.com)com as suas credenciais de locatário de teste e selecione **Teams** no painel lateral para abrir o *Centro de administração do Microsoft Teams*.
+1. Selecione: Aplicativos do Teams > Gerenciar aplicativos > **Configurações do aplicativo em toda a organização**.
+1. Em **Aplicativos personalizados**, ative a opção *Interação com aplicativos personalizados*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Habilitar o sideload para aplicativos personalizados no centro de administração do Teams":::
 
@@ -99,5 +99,7 @@ A extensão [Kit de Ferramentas do Teams para Visual Studio Code](https://aka.ms
 
 Criar ou atualizar um aplicativo do Teams para ser executado no Microsoft 365:
 
-* [Habilitar uma guia pessoal do Teams para Office e Outlook](extend-m365-teams-personal-tab.md)
-* [Habilitar uma extensão de mensagens do Teams para o Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Habilitar uma guia pessoal do Teams para Office e Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Habilitar uma extensão de mensagens do Teams para o Outlook](extend-m365-teams-message-extension.md)

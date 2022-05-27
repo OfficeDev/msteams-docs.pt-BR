@@ -6,12 +6,12 @@ description: Visão geral do SDK do cliente JavaScript do Microsoft Teams, que p
 ms.localizationpriority: high
 keywords: equipes guias grupo canal configurável estático SDK JavaScript pessoal m365
 ms.topic: conceptual
-ms.openlocfilehash: 2a1c827913759d49ba721251d4a6f5382d8eb3a4
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653284"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757616"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams
 
@@ -20,7 +20,7 @@ O SDK do cliente JavaScript do Microsoft Teams pode ajudá-lo a criar experiênc
 * [Guias](../../tabs/what-are-tabs.md)
 * [Diálogos (módulos de tarefa)](../../task-modules-and-cards/what-are-task-modules.md)
 
-A partir da versão `2.0.0`, o SDK do cliente Teams existente (`@microsoft/teams-js`, ou simplesmente `TeamsJS`) foi reconfigurado para permitir que [aplicativos do Teams sejam executados no Outlook e no Office](/m365-apps/overview.md), além do Microsoft Teams. De uma perspectiva funcional, a versão mais recente do TeamsJS dá suporte a todas as funcionalidades existentes do aplicativo Teams (v.1.x.x) enquanto adiciona a capacidade opcional de hospedar aplicativos do Teams no Outlook e no Office.
+A partir da versão `2.0.0`, o SDK do cliente Teams existente (`@microsoft/teams-js`, ou simplesmente `TeamsJS`) foi reconfigurado para permitir que [aplicativos do Teams sejam executados no Outlook e no Office](/microsoftteams/platform/m365-apps/overview), além do Microsoft Teams. De uma perspectiva funcional, a versão mais recente do TeamsJS dá suporte a todas as funcionalidades existentes do aplicativo Teams (v.1.x.x) enquanto adiciona a capacidade opcional de hospedar aplicativos do Teams no Outlook e no Office.
 
 Aqui estão as diretrizes de controle de versão atuais para vários cenários de aplicativo:
 

@@ -5,12 +5,12 @@ description: Saiba como habilitar o suporte a SSO para suas extensões de mensag
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296942"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757420"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Suporte de logon único para extensões de mensagem
 
@@ -43,7 +43,7 @@ Para habilitar o SSO:
     > [!NOTE]
     > Não há suporte para outros manipuladores SSO, exceto `OnTeamsMessagingExtensionQueryAsync` e `OnTeamsAppBasedLinkQueryAsync` do arquivo TeamsMessagingExtensionsSearchAuthConfigBot.cs.
 
-4. Você recebe o token no `OnTeamsMessagingExtensionQueryAsync` manipulador no `turnContext.Activity.Value` conteúdo ou no `OnTeamsAppBasedLinkQueryAsync`, dependendo de qual cenário você está habilitando o SSO para:
+4. Você recebe o token no `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` manipulador no conteúdo `OnTeamsAppBasedLinkQueryAsync`ou no , dependendo de qual cenário você está habilitando o SSO para:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

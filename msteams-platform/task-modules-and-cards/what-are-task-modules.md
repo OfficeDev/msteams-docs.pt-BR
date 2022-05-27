@@ -5,12 +5,12 @@ description: Adicionar experiências pop-up modais para coletar ou exibir inform
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073545"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756594"
 ---
 # <a name="task-modules"></a>Módulos de tarefas
 
@@ -46,7 +46,7 @@ Um módulo de tarefa inclui o seguinte, conforme mostrado na imagem anterior:
     > [!NOTE]
     > No momento, não é possível detectar o evento `err` quando um módulo de tarefa é invocado de um bot.
 
-5. O retângulo azul é onde sua página da Web será exibida se você estiver carregando sua própria página da Web `url` usando a propriedade do [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Para obter mais informações, consulte [o dimensionamento do módulo de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
+5. O retângulo azul é onde sua página da Web é exibida se você estiver carregando sua própria página da Web `url` usando a propriedade do [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Para obter mais informações, consulte [dimensionamento do módulo de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
 6. Se você estiver exibindo um Cartão Adaptável `card` usando a propriedade do objeto [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) , o preenchimento será adicionado para você. Para obter mais informações, consulte [o módulo de tarefa CSS para módulos de tarefa HTML ou JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
 7. Os botões cartão adaptável são renderizados depois que você **seleciona Inscrever-se**. Ao usar sua própria página, crie seus próprios botões.
 

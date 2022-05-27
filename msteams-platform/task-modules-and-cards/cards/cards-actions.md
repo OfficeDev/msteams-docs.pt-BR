@@ -1,15 +1,15 @@
 ---
 title: Adicionar ações de cartão em um bot
 description: Descreve ações de cartão no Microsoft Teams e como usá-las em seus bots
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111574"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756482"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -23,7 +23,7 @@ Os cartões usados por bots e extensões de mensagem no Teams são compatíveis 
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Envia uma mensagem separada para o fluxo de chat. |
 | `imBack`| Envia uma mensagem para o bot do usuário que selecionou o botão ou tocou no cartão. Essa mensagem do usuário para o bot é visível para todos os participantes da conversa. |
-| `invoke` | Envia uma mensagem e carga para o bot do usuário que selecionou o botão ou tocou no cartão. Esta mensagem não está visível. |
+| `invoke` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Esta mensagem não está visível. |
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
@@ -94,7 +94,7 @@ Com `messageBack`, você pode criar uma ação totalmente personalizada com as s
 | Propriedade | Descrição |
 | --- | --- |
 | `title` | Aparece como o rótulo do botão. |
-| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Este texto não é enviado ao bot. |
+| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Esse texto não é enviado para o bot. |
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots. Seu código pode verificar uma única propriedade de nível superior para expedir a lógica do bot. |
 
@@ -427,7 +427,7 @@ Os Cartões Adaptáveis dão suporte a quatro tipos de ação:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-Você também pode modificar a carga do Cartão Adaptável `Action.Submit` para dar suporte a ações de Bot Framework existentes usando uma propriedade `msteams` no objeto `data` de `Action.Submit`. A próxima seção fornece detalhes sobre como usar ações Bot Framework existentes com Cartões Adaptáveis.
+Você também pode modificar a carga do Cartão Adaptável `Action.Submit` para dar suporte a ações de Bot Framework existentes usando uma propriedade `msteams` no objeto `data` de `Action.Submit`. A próxima seção fornece detalhes sobre como usar ações existentes do Bot Framework com Cartões Adaptáveis.
 
 > [!NOTE]
 > Adicionar `msteams` a dados com uma Bot Framework não funciona com um módulo de tarefa de Cartão Adaptável.
@@ -442,7 +442,7 @@ Para incluir uma ação`messageBack` com um Cartão Adaptável, inclua os seguin
 | Propriedade | Descrição |
 | --- | --- |
 | `type` | Definido como `messageBack` |
-| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Este texto não é enviado ao bot. |
+| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Esse texto não é enviado para o bot. |
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots. Seu código pode verificar uma única propriedade de nível superior para expedir a lógica do bot. |
 

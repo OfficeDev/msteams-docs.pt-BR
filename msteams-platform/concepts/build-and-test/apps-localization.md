@@ -2,15 +2,15 @@
 title: Localizar o aplicativo
 description: Descreve as considerações para localizar seu aplicativo do Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams publicar store office publicação AppSource localização idioma
 ms.date: 05/15/2018
-ms.openlocfilehash: 000a448a467e3ed8244413be0c3b68c7eee02ea5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111973"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757042"
 ---
 # <a name="localize-your-app"></a>Localizar o aplicativo
 
@@ -22,7 +22,7 @@ Considere os seguintes fatores para localizar seu aplicativo do Microsoft Teams:
 
 ## <a name="localize-your-appsource-listing"></a>Criar sua listagem do AppSource
 
-Se você estiver publicando o aplicativo na loja, forneça metadados (descrições, capturas de tela, nome) nos idiomas em que deseja que seu aplicativo seja listado e especifique explicitamente esses idiomas na página de **listagem do Marketplace** no Partner Center. Para obter mais informações, consulte as [frentes do Microsoft AppSource localizadas](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Para dar suporte a listagem localizada na loja de aplicativos, você pode adicionar idiomas adicionais à sua listagem. As informações de idioma padrão fornecidas no [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) para sua listagem aparecem na listagem do [site do AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "O AppSource é um local para todas as necessidades da sua equipe. Reúna tudo, incluindo chats, reuniões, chamadas, arquivos e ferramentas para habilitar o trabalho em equipe mais produtivo.") para seu aplicativo. Atualmente, o idioma padrão é inglês.
+Se você estiver publicando o aplicativo na loja, forneça metadados (descrições, capturas de tela, nome) nos idiomas em que deseja que seu aplicativo seja listado e especifique explicitamente esses idiomas na página **de listagem do Marketplace** no Partner Center. Para obter mais informações, consulte as [frentes do Microsoft AppSource localizadas](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Para dar suporte a listagem localizada na loja de aplicativos, você pode adicionar idiomas adicionais à sua listagem. As informações de idioma padrão fornecidas no [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) para sua listagem aparecem na listagem do [site do AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "O AppSource é um local para todas as necessidades da sua equipe. Reúna tudo, incluindo chats, reuniões, chamadas, arquivos e ferramentas para habilitar o trabalho em equipe mais produtivo.") para seu aplicativo. Atualmente, o idioma padrão é inglês.
 
 ### <a name="configure-localization"></a>Configurar localização
 
@@ -150,7 +150,7 @@ O `manifest.json` é mostrado no exemplo a seguir:
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>Manipular envios de texto localizados de seus usuários
 
-Se você fornecer versões localizadas do aplicativo, os usuários responderão com o mesmo idioma. Como Teams não converte os envios de usuário de volta para o idioma padrão, seu aplicativo deve lidar com as respostas de idioma localizadas. Por exemplo, se você fornecer `commandList` um localizado, as respostas ao bot serão o texto localizado do comando, não o idioma padrão. Seu aplicativo deve responder adequadamente.
+Se você fornecer versões localizadas do seu aplicativo, os usuários responderão com o mesmo idioma. Como Teams não converte os envios de usuário de volta para o idioma padrão, seu aplicativo deve lidar com as respostas de idioma localizadas. Por exemplo, se você fornecer `commandList` um localizado, as respostas ao bot serão o texto localizado do comando, não o idioma padrão. Seu aplicativo deve responder adequadamente.
 
 ## <a name="code-sample"></a>Exemplo de código
 

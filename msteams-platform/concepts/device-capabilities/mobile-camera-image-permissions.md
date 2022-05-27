@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar recursos de mídia usando exemplos de código
 keywords: api de mídia de permissões nativas do dispositivo de recursos do microfone da imagem da câmera
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111259"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756755"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
@@ -24,11 +24,11 @@ Para integrar recursos de mídia, você deve atualizar o arquivo de manifesto do
 
 Para uma integração eficaz, você deve ter uma boa compreensão de [Trechos de código](#code-snippets) para chamar as respectivas APIs, que permitem que você use recursos de mídia nativa.
 
-É importante se familiarizar com os [Erros de resposta da API](#error-handling) para lidar com os erros em seu aplicativo Teams.
+É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams aplicativo.
 
 > [!NOTE]
 >
-> * Atualmente, o suporte do Microsoft Teams para recursos de mídia está disponível apenas para clientes móveis.
+> * Atualmente, o Microsoft Teams suporte para recursos de mídia está disponível somente para clientes móveis.
 > * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel lateral da reunião.
 > * As permissões do dispositivo são diferentes no navegador. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
 
@@ -43,7 +43,7 @@ Atualize o arquivo [manifest.json](../../resources/schema/manifest-schema.md#dev
 ```
 
 > [!NOTE]
-> O prompt de **solicitar permissões** é exibido automaticamente quando uma API do Teams relevante é iniciada. Para obter mais informações, consulte [Solicitar permissões de dispositivo](native-device-permissions.md).
+> O prompt de **Solicitar Permissões** é exibido automaticamente quando uma API do Teams relevante é iniciada. Para obter mais informações, consulte [Solicitar permissões de dispositivo](native-device-permissions.md).
 
 ## <a name="media-capability-apis"></a>APIs de funcionalidade de mídia
 
@@ -59,7 +59,7 @@ As APIs [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.m
   
 > [!IMPORTANT]
 >
-> * As APIs `selectMedia`, `getMedia` e `viewImages` podem ser invocadas de várias superfícies do Teams, como módulos de tarefas, guias e aplicativos pessoais. Para obter mais detalhes, consulte [Pontos de entrada para aplicativos do Teams](../extensibility-points.md).
+> * As APIs `selectMedia`, `getMedia` e `viewImages` podem ser invocadas de várias superfícies do Teams, como módulos de tarefas, guias e aplicativos pessoais. Para obter mais informações, consulte [Pontos de entrada para Teams aplicativos](../extensibility-points.md).
 > * `selectMedia` API foi estendida para dar suporte às propriedades de microfone e áudio.
 
 Você deve usar o seguinte conjunto de APIs para habilitar os recursos de mídia do seu dispositivo:
@@ -81,14 +81,14 @@ A imagem a seguir ilustra a experiência do aplicativo Web `selectMedia` API par
 
 ## <a name="error-handling"></a>Tratamento de erros
 
-Você deve certificar-se de lidar com esses erros adequadamente em seu aplicativo teams. A tabela a seguir lista os códigos de erro e as condições sob as quais os erros são gerados:
+Você deve garantir que lide com esses erros adequadamente em seu aplicativo do Teams. A tabela a seguir lista os códigos de erro e as condições sob quais os erros são gerados:
 
 |Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
-| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportada na plataforma atual.|
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não tem suporte na plataforma atual.|
 | **404** | FILE_NOT_FOUND | O arquivo especificado não foi encontrado no local especificado.|
-| **500** | INTERNAL_ERROR | Erro interno ao executar a operação necessária.|
-| **1000** | PERMISSION_DENIED |A permissão foi negada pelo usuário.|
+| **500** | INTERNAL_ERROR | Erro interno encontrado durante a execução da operação necessária.|
+| **1.000** | PERMISSION_DENIED |A permissão foi negada pelo usuário.|
 | **3000** | NO_HW_SUPPORT | O hardware subjacente não dá suporte à funcionalidade.|
 | **4000**| ARGUMENTOS_INVÁLIDOS | Um ou mais argumentos são inválidos.|
 |  **8000** | ABORTAR_USUÁRIO |O usuário anula a operação.|

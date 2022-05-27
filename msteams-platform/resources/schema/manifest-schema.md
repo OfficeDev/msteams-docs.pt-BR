@@ -4,12 +4,12 @@ description: Descreve o esquema de manifesto para o Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672905"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755878"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -17,7 +17,7 @@ O manifesto do aplicativo Microsoft Teams descreve como seu aplicativo se integr
 Para obter mais informações sobre as alterações feitas em cada versão, consulte o [registro de alterações do manifesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 > [!Important]
-> A versão `1.13` do esquema de manifesto do aplicativo Microsoft Teams permite suporte para [estender aplicativos do Teams para Outlook e Office](../../m365-apps/overview.md). Para aplicativos somente para equipes, use a versão `1.12` (ou anterior). Os esquemas 1.12 e 1.13 são os mesmos. Consulte a visão geral do [SDK do cliente JavaScript do Teams](../../m365-apps/overview.md) para obter mais orientações.
+> A versão `1.13` do esquema de manifesto do aplicativo Microsoft Teams permite suporte para [estender aplicativos do Teams para Outlook e Office](../../m365-apps/overview.md). Para aplicativos somente para equipes, use a versão `1.12` (ou anterior). Os esquemas 1.12 e 1.13 são os mesmos. Consulte a visão geral do [SDK do cliente JavaScript do Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) para obter mais orientações.
 
 A amostra do esquema a seguir mostra todas as opções de extensibilidade:
 
@@ -747,8 +747,8 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

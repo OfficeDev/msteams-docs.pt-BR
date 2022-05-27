@@ -3,16 +3,16 @@ title: Visão geral das Ações Universais para Cartões Adaptáveis
 description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis, como exibições específicas do usuário, suporte a fluxo de trabalho sequencial e muito mais para ambientes de área de trabalho e móveis
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103408"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756468"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
-As Ações Universais para Cartões Adaptáveis evoluíram dos comentários do desenvolvedor de que, embora o layout e a renderização para Cartões Adaptáveis fosse universal, o tratamento de ação não era. Mesmo que um desenvolvedor queira enviar o mesmo cartão para locais diferentes, ele precisa lidar com ações de maneira diferente.
+As Ações Universais para Cartões Adaptáveis evoluíram dos comentários do desenvolvedor de que, embora o layout e a renderização para Cartões Adaptáveis fosse universal, a manipulação de ações não era. Mesmo que um desenvolvedor queira enviar o mesmo cartão para locais diferentes, ele precisa lidar com ações de maneira diferente.
 
 As Ações Universais para Cartões Adaptáveis trazem o bot como o back-end comum para lidar com ações e introduz um novo tipo de ação, `Action.Execute`que funciona em aplicativos, como Teams e Outlook.
 

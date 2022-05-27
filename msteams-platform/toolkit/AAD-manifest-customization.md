@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656772"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755934"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD manifesto
 
@@ -260,31 +260,31 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
     Teams Toolkit executa as seguintes funções durante o desenvolvimento local (conhecido como F5):
 
-    * Leia o `state.local.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo
+    * Leia o `state.local.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
 
     * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem contexto adicional (como a propriedade replyUrls que requer um ponto de extremidade de depuração local) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto.
 
-    * Após a inicialização do ambiente de desenvolvimento local com êxito, os identifierUris do aplicativo Azure AD, replyUrls e outras propriedades que não estão disponíveis durante o estágio de criação são atualizados adequadamente
+    * Após a inicialização do ambiente de desenvolvimento local com êxito, os identifierUris do aplicativo Azure AD, replyUrls e outras propriedades que não estão disponíveis durante o estágio de criação são atualizados adequadamente.
 
-    * As alterações feitas em seu aplicativo Azure AD serão carregadas durante a próxima sessão de depuração local. Você pode ver as [Azure AD do aplicativo para](https://github.com/OfficeDev/TeamsFx/wiki/) aplicar as alterações manualmente Azure AD do aplicativo
+    * As alterações feitas em seu aplicativo Azure AD serão carregadas durante a próxima sessão de depuração local. Você pode ver as [Azure AD do aplicativo para](https://github.com/OfficeDev/TeamsFx/wiki/) aplicar as alterações manualmente Azure AD do aplicativo.
 
 4. **Para provisionar recursos de nuvem**
 
       Você precisa provisionar recursos de nuvem e implantar seu aplicativo ao mover seu aplicativo para a nuvem. Nos estágios, como o desenvolvimento local, Teams Toolkit será:
 
-      * Leia o `state.{env}.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo
+      * Leia o `state.{env}.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
 
-      * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem contexto adicional (como a propriedade replyUrls requer front-end ou ponto de extremidade do bot) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto
+      * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem contexto adicional (como a propriedade replyUrls requer front-end ou ponto de extremidade do bot) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto.
 
-      * Depois que o provisionamento de outros recursos for concluído, Azure AD identifierUris e replyUrls do aplicativo serão atualizados de acordo com os pontos de extremidade corretos
+      * Depois que o provisionamento de outros recursos for concluído, Azure AD identifierUris e replyUrls do aplicativo serão atualizados de acordo com os pontos de extremidade corretos.
 
 5. **Para criar aplicativo**
 
-    * Implantar no comando de nuvem implanta seu aplicativo nos recursos provisionados. Ele não inclui a implantação de Azure AD de aplicativo que você fez
+    * Implantar no comando de nuvem implanta seu aplicativo nos recursos provisionados. Ele não inclui a implantação de Azure AD de aplicativo que você fez.
 
-    * Você pode ver, Implantar [alterações Azure AD aplicativo para](#deploy-azure-ad-application-changes-for-remote-environment) o ambiente remoto para implantar Azure AD de aplicativo para o ambiente remoto
+    * Você pode ver, Implantar [alterações Azure AD aplicativo para](#deploy-azure-ad-application-changes-for-remote-environment) o ambiente remoto para implantar Azure AD de aplicativo para o ambiente remoto.
 
-    * Teams Toolkit atualiza o aplicativo Azure AD de acordo com o arquivo de modelo Azure AD manifesto
+    * Teams Toolkit atualiza o aplicativo Azure AD de acordo com o arquivo de modelo Azure AD manifesto.
 
 ## <a name="limitations"></a>Limitações
 
@@ -306,10 +306,10 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
 2. Atualmente, a propriedade `requiredResourceAccess` pode usar o nome do aplicativo de recurso legível pelo usuário ou cadeias de caracteres de nome de permissão somente para `Microsoft Graph` `Office 365 SharePoint Online` APIs. Para outras APIs, você precisa usar o UUID. Você pode seguir estas etapas para recuperar IDs de portal do Azure:
 
-    * Registrar um novo Azure AD aplicativo no [portal do Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-    * Selecione `API permissions` na página Azure AD aplicativo
-    * Selecione `add a permission` para adicionar a permissão desejada
-    * Selecione `Manifest`, na `requiredResourceAccess` propriedade, você pode encontrar as IDs de API e permissões
+    * Registre um novo Azure AD aplicativo no [portal do Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    * Selecione `API permissions` na página Azure AD aplicativo.
+    * Selecione `add a permission` para adicionar a permissão desejada.
+    * Selecione `Manifest`, na `requiredResourceAccess` propriedade, você pode encontrar as IDs de API e permissões.
 
 ## <a name="see-also"></a>Confira também
 

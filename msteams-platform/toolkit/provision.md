@@ -3,15 +3,15 @@ title: Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 author: MuyangAmigo
 description: Provisionar recursos de nuvem
 ms.author: shenwe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3e95f4d544c0cddc98afbb4aa5f3f36de3afb12c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111616"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757455"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 
@@ -21,8 +21,9 @@ O TeamsFx integra-se ao Azure e à nuvem do Microsoft 365, o que permite que voc
 
 * Pré-requisitos da conta Para provisionar recursos de nuvem, você deve ter as seguintes contas:
 
-  * Conta com assinatura válida do Microsoft 365
-  * Azure com assinatura válida Para obter mais informações, confira [como preparar contas para a criação de aplicativos do Teams](accounts.md).
+  * Microsoft 365 conta com assinatura válida.
+  * Azure com assinatura válida.
+  Para obter mais informações, [consulte como preparar contas para criar Teams aplicativo](accounts.md).
 
 * [Instalar o Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
 
@@ -39,9 +40,9 @@ O provisionamento é executado com um único comando no Kit de Ferramentas do Te
 
 Ao disparar o comando provisionar no Kit de Ferramentas do Teams ou na CLI do TeamsFx, é possível obter os seguintes recursos:
 
-* Aplicativo do Microsoft Azure Active Directory (Azure AD) em seu locatário do Microsoft 365
-* Registro de aplicativo Teams na plataforma do Teams do locatário do Microsoft 365
-* Recursos do Azure em sua assinatura do Azure selecionada
+* Microsoft Azure Active Directory (Azure AD) em seu Microsoft 365 locatário.
+* Teams registro de aplicativo na plataforma Microsoft 365 locatário Teams locatário.
+* Recursos do Azure em sua assinatura do Azure selecionada.
 
 Ao criar um novo projeto, é possível usar todos os recursos do Azure. O modelo do ARM define todos os recursos do Azure e ajuda a criar recursos necessários do Azure durante o provisionamento. Quando você [adiciona um novo recurso de funcionalidade](./add-resource.md) a um projeto existente, o modelo do ARM atualizado reflete a alteração mais recente.
 
@@ -262,7 +263,7 @@ As etapas a seguir são:
 
 1. Abra `.fx/configs/azure.parameters.{env}.json` para seu ambiente atual.
 2. Adicione uma nova propriedade `functionAppName` ao valor do parâmetro `provisionParameters`.
-3. Insira `contosoteamsappapi` como valor de `functionAppName`
+3. Insira `contosoteamsappapi` como valor de `functionAppName`.
 4. O arquivo de parâmetro final é mostrado no trecho de código a seguir:
 
     ```json
@@ -343,7 +344,7 @@ Se você receber mensagens de erro com o Kit de Ferramentas do Teams no Visual S
 
 <summary><b>Como posso alterar o grupo de recursos durante o provisionamento?</b></summary>
 
-Antes de provisionar, a ferramenta perguntará se você deseja criar um novo grupo de recursos ou usar um existente. É possível fornecer um novo nome de grupo de recursos ou escolher um existente nesta etapa.
+Antes de provisionar, a ferramenta pergunta se você deseja criar um novo grupo de recursos ou usar um existente. É possível fornecer um novo nome de grupo de recursos ou escolher um existente nesta etapa.
 
 <br>
 

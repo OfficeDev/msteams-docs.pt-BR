@@ -5,20 +5,20 @@ description: Saiba como desenrolar um link, abra o Modo de Exibição de Estági
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296956"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756734"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
-O Modo de Exibição de Estágio é um novo componente de interface do usuário (IU), que permite renderizar o conteúdo que é aberto em tela inteira no Teams e fixado como uma guia.
+O Modo de Exibição de Estágio é um novo componente de interface do usuário. Ele permite renderizar o conteúdo que é aberto em tela inteira Teams e fixado como uma guia.
 
 ## <a name="stage-view"></a>Modo de Exibição de Estágio
 
-O Modo de Exibição de Estágio é um componente de interface do usuário IU de tela inteira que você pode invocar para exibir o conteúdo da web. O serviço de desenrolamento de link existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia um URL em um chat ou canal, a URL é desfralda para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Modo de Exibição de Estágio.
+O Modo de Exibição de Estágio é um componente de interface do usuário IU de tela inteira que você pode invocar para exibir o conteúdo da web. O serviço de desatar vínculo existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia um URL em um chat ou canal, a URL é desfralda para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Modo de Exibição de Estágio.
 
 ## <a name="advantage-of-stage-view"></a>Vantagem do Modo de Exibição de Estágio
 
@@ -101,7 +101,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
  
 ### <a name="examples"></a>Exemplos
 
-Quando um usuário insere uma URL, ele é desenrolado em um Cartão adaptável.
+Quando um usuário insere uma URL, ela é desfralda em um cartão adaptável.
 
 A seguir estão os exemplos de link profundo para invocar o Modo de Exibição de Estágio:
 
@@ -109,7 +109,7 @@ A seguir estão os exemplos de link profundo para invocar o Modo de Exibição d
 
 URL não Codificada:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","título":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 URL Codificada:
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 URL não Codificada:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","título":" Aspas:Diversos"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: Miscellaneous"}
 
 Codificado
 

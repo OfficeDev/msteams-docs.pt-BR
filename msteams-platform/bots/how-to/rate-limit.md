@@ -2,14 +2,14 @@
 title: Otimizar seu bot com limitação de fluxo no Teams
 description: Saiba mais sobre como lidar com o limite de taxa para bots com o limite de threads por bot e o limite para todos os bots usando exemplos de código. Além disso, aprenda as práticas recomendadas de limitação de taxa no Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: limitação da taxa de bots do Teams
-ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111805"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757147"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -46,7 +46,7 @@ Depois de lidar com os limites de taxa para bots, você pode lidar com respostas
 
 Em geral, você deve tomar precauções simples para evitar receber respostas `HTTP 429`. Por exemplo, evite emitir várias solicitações para a mesma conversa pessoal ou de canal. Em vez disso, crie um lote de solicitações de API.
 
-Usar uma retirada exponencial com um jitter aleatório é a maneira recomendada de lidar com 429s. Isso garante que várias solicitações não introduzam colisões em repetições.
+Usar uma retirada exponencial com um jitter aleatório é a maneira recomendada de lidar com 429s. Isso garante que várias solicitações não introduzam colisões em novas tentativas.
 
 Depois de lidar com as respostas `HTTP 429`, você pode percorrer o exemplo para detectar exceções transitórias.
 
@@ -120,7 +120,7 @@ Você também pode lidar com o limite de taxa usando o limite de threads por bot
 
 ## <a name="per-bot-per-thread-limit"></a>Limite de threads por bot
 
-O limite de threads por bot controla o tráfego que um bot tem permissão para gerar em uma única conversa. Uma conversa é 1:1 entre o bot e o usuário, um chat em grupo ou um canal em uma equipe. Portanto, se o aplicativo enviar uma mensagem de bot para cada usuário, o limite de threads não será suprimido.
+O limite de threads por bot controla o tráfego que um bot tem permissão para gerar em uma única conversa. Uma conversa é 1:1 entre o bot e o usuário, um chat em grupo ou um canal em uma equipe. Portanto, se o aplicativo enviar uma mensagem de bot para cada usuário, o limite de threads não será limitado.
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ A tabela a seguir fornece os limites de thread por bot:
 | Criar conversa | 2 | 8  |
 | Criar conversa | 30 | 60 |
 | Criar conversa | 3600 | 1800 |
-| Obter membros da conversa| 1 | 14  |
+| Obter membros da conversa| 1 | 14 |
 | Obter membros da conversa| 2 | 16 |
 | Obter membros da conversa| 30 | 120 |
 | Obter membros da conversa| 3600 | 3600 |
-| Conversas de bot | 1 | 14  |
+| Conversas de bot | 1 | 14 |
 | Conversas de bot | 2 | 16 |
 | Conversas de bot | 30 | 120 |
 | Conversas de bot | 3600 | 3600 |
@@ -162,11 +162,11 @@ A tabela a seguir fornece o limite de thread para todos os bots:
 
 | Cenário | Tempo em segundos | Máximo de operações permitidas |
 | --- | --- | --- |
-| Enviar para conversa | 1 | 14  |
+| Enviar para conversa | 1 | 14 |
 | Enviar para conversa | 2 | 16 |
-| Criar conversa | 1 | 14  |
+| Criar conversa | 1 | 14 |
 | Criar conversa | 2 | 16 |
-| Criar conversa| 1 | 14  |
+| Criar conversa| 1 | 14 |
 | Criar conversa| 2 | 16 |
 | Obter membros da conversa| 1 | 28 |
 | Obter membros da conversa| 2 | 32 |

@@ -3,14 +3,14 @@ title: Contribuir com a documentação do Teams
 description: etapas para criar e publicar a documentação do Teams
 author: surbhigupta
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 480b8bc1692672023171f3b6e67e0ee526cbe509
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 047a3c84b99fd832cde0531a9a9197c880f294e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111896"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757679"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir com a documentação do Teams
 
@@ -22,9 +22,8 @@ A documentação do Teams faz parte da documentação técnica de **Microsoft Do
 >
 > * Instalar [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Instalar [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
-> * Instalar [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) diretamente do VS Code Marketplace.
-<br>&emsp;&emsp; ou
-> [!div class="checklist"]
+> * Instalar [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) diretamente do VS Code Marketplace.<br>&emsp;&emsp; ou
+[!div class="checklist"]
 >
 > * Instalar dentro VS Code:
 
@@ -50,7 +49,7 @@ As páginas do **Microsoft Docs** são escritas na sintaxe **MarkDown** e analis
 
 ## <a name="file-paths"></a>Caminhos de Arquivo
 
-Ao usar caminhos relativos e criar links para outros docsets, é importante definir um caminho de arquivo válido para hiperlinks em sua documentação. Seu build será bem-sucedido no GitHub somente se o caminho do arquivo estiver correto ou válido.
+Ao usar caminhos relativos e criar links para outros conjuntos de documentos, é importante definir um caminho de arquivo válido para hiperlinks em sua documentação. Seu build será bem-sucedido no GitHub somente se o caminho do arquivo estiver correto ou válido.
 
 Para obter mais informações sobre hiperlinks e caminhos de arquivo, consulte [use links na documentação](/contribute/how-to-write-links).
 
@@ -60,8 +59,7 @@ Para obter mais informações sobre hiperlinks e caminhos de arquivo, consulte [
 > &emsp;✔ Inclua a extensão de arquivo Markdown.<br>
 >Ex:  **parent directory/directory/path-to-article.md** —> [Compilando um aplicativo para o Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > Para referenciar um Microsoft Docs de biblioteca que **não faz parte do** conjunto de documentos da plataforma Teams:<br>
-> &emsp;✔ Use um caminho relativo que comece com uma barra.<br>
-> &emsp;✔ Não inclua a extensão de arquivo. <br>
+> &emsp;✔ Use um caminho relativo que comece com uma barra.<br>&emsp;✔ Não inclua a extensão de arquivo.<br>
 > Ex:  **/docset/address-to-file-location** —> [Use a API do Microsoft Graph para trabalhar com o Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Para fazer referência a uma página fora da biblioteca Microsoft Docs, como o GitHub, use o caminho completo do arquivo `https`.<br>
 

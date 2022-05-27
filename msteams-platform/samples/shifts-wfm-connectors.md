@@ -7,16 +7,16 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Conectores Kronos do Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604261"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757350"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 
-Os conectores de WFM (gerenciamento de mão de obra) são integrações prontas para produção, de software livre e controladas pela comunidade, úteis para trabalhadores de primeira linha. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital de trabalhadores de linha de frente com o Teams Shifts.
+Teams do WFM (gerenciamento de força de trabalho) shifts são integrações prontas para produção, de software livre e orientadas pela comunidade, úteis para trabalhadores de linha de frente. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital dos Trabalhadores de Linha de Frente com Teams Turnos.
 
 Cada conector fornece diretrizes detalhadas para implantação e integração à sua organização. O código-fonte completo está disponível no repositório GitHub. Você pode explorar detalhadamente ou bifurcar e personalizar para atender às suas necessidades específicas.
 
@@ -34,7 +34,7 @@ A seguir estão os principais benefícios dos conectores WFM do Teams Shifts:
 
 * **Documentação detalhada:** todos os modelos de aplicativo são acompanhados pela documentação de ponta a ponta sobre as etapas de arquitetura, implantação e configuração da solução. Os repositórios de conectores são monitorados, para que você possa relatar problemas, desafios ou dificuldades encontrados por meio do rastreador de Problemas do repositório GitHub. 
 
-* **Integração perfeita:** a integração entre as soluções de WFM e o Teams Shifts permite que os funcionários de primeira linha usem o aplicativo Teams Shifts para exibir ou gerenciar suas agendas e horários de turnos e usar todos os outros recursos avançados de colaboração fornecidos no Teams diretamente de seu dispositivo móvel ou área de trabalho sem precisar alternar o contexto para outro aplicativo.  
+* **Integração perfeita:** A integração entre as soluções do WFM e o Teams Shifts permite que os Trabalhadores da Linha de Frente usem o aplicativo shifts do Teams para exibir ou gerenciar seus horários de turnos e agendas e usar todos os outros recursos avançados de colaboração fornecidos no Teams diretamente de seu dispositivo móvel ou da área de trabalho sem precisar alternar o contexto para outro aplicativo.  
 
 Abrir o modo de exibição de turnos no Teams:
 

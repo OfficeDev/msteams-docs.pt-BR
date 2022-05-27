@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: armazenamento loja distribuir validar aplicativo pacote orientações localizar
-ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135749"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756776"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio para a loja do Microsoft Teams
 
@@ -23,8 +23,8 @@ Antes de enviar seu aplicativo para o [Partner Center](/office/dev/store/use-par
 
 Embora seu aplicativo possa estar funcionando em um ambiente de teste, você deve verificar o pacote do aplicativo para evitar ter problemas durante o processo de envio.
 
-> [!NOTE]
- > Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor[Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
+> [!WARNING]
+> Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor[Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 A ferramenta de validação de aplicativos do Microsoft Teams ajuda você a identificar e corrigir problemas antes de enviar para o Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo comparando-as aos mesmos casos de teste usados durante a validação do repositório.
 
@@ -75,15 +75,15 @@ A listagem na loja pode ser a primeira impressão que uma pessoa tem do seu apli
 
 ### <a name="specify-a-short-name"></a>Especificar um nome curto
 
-O nome do seu aplicativo (especificamente o [*nome curto*](~/resources/schema/manifest-schema.md#name)) desempenha um papel crucial na forma como os usuários irão descobri-lo na loja.
+O nome do seu aplicativo (especificamente o *[nome curto](~/resources/schema/manifest-schema.md#name)*) desempenha um papel crucial na forma como os usuários irão descobri-lo na loja.
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="A amostra de captura de tela destaca onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="A amostra de captura de tela destaca onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -99,11 +99,11 @@ Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcion
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição curta de um aplicativo aparece em uma listagem na loja.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição curta de um aplicativo aparece em uma listagem na loja.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -121,11 +121,11 @@ Embora essa descrição possa ter até 4.000 caracteres, a maioria dos usuários
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição longa de um aplicativo aparece em uma listagem na loja.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição longa de um aplicativo aparece em uma listagem na loja.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -143,11 +143,11 @@ As capturas de tela fornecem uma visualização panorâmica proeminente do seu a
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="A amostra de captura de tela destaca onde as capturas de tela do aplicativo aparecem em uma listagem na loja.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="A amostra de captura de tela destaca onde as capturas de tela do aplicativo aparecem em uma listagem na loja.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -212,7 +212,6 @@ Um [Atestado do Publisher](/microsoft-365-app-certification/docs/attestation) ta
 > Se estiver enviando um aplicativo novo, você não pode obter oficialmente o Atestado do Publisher antes de seu aplicativo estar listado na Teams Store. Se estiver atualizando um aplicativo listado, obtenha o Atestado do Publisher antes de enviar a versão mais recente do aplicativo para validação.
 
 ## <a name="next-step"></a>Próxima etapa
-
 > [!div class="nextstepaction"]
 > [Enviar seu aplicativo](/office/dev/store/add-in-submission-guide)
 

@@ -3,22 +3,22 @@ title: Conversas em canais e em grupos com um bot
 author: surbhigupta
 description: Como enviar, receber e manipular mensagens de um bot em um canal ou chat em grupo. Saiba mais sobre diretrizes de design, criar threads de conversa, usando @menções usando Exemplos de código
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2262e52e15bbd5598a0e0dad89bb38a6f0078eac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111553"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757175"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Para instalar o bot do Microsoft Teams em uma equipe ou chat em grupo, adicione o escopo `teams` ou `groupchat` ao seu bot. Isso permite que todos os membros da conversa interajam com o seu bot. Depois que o bot é instalado, ele tem acesso aos metadados sobre a conversa, como a lista de membros da conversa. Além disso, ao ser instalado em uma equipe, o bot tem acesso a detalhes sobre essa equipe e a lista completa de canais.
+Para instalar o bot do Microsoft Teams em uma equipe ou chat em grupo, adicione o escopo `teams` ou `groupchat` ao seu bot. Isso permite que todos os membros da conversa interajam com o seu bot. Depois que o bot é instalado, ele tem acesso aos metadados sobre a conversa, como a lista de membros da conversa. Além disso, quando ele é instalado em uma equipe, o bot tem acesso a detalhes sobre essa equipe e a lista completa de canais.
 
-Os bots em um grupo ou canal só recebem mensagens quando são mencionados o @nomedobot. Eles não recebem nenhuma outra mensagem enviada para a conversa. O bot deve ser @mencionado diretamente. Seu bot não receberá uma mensagem quando a equipe ou canal forem mencionados, ou quando alguém responder a uma mensagem de seu bot sem @mencioná-lo.
+Os bots em um grupo ou canal só recebem mensagens quando são mencionados @botname. Eles não recebem nenhuma outra mensagem enviada para a conversa. O bot deve ser @mencionado diretamente. O bot não recebe uma mensagem quando a equipe ou canal é mencionado ou quando alguém responde a uma mensagem do bot sem @mentioning ela.
 
 > [!NOTE]
 > No momento, esse recurso está disponível somente em [visualização pública do desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md).
@@ -47,7 +47,7 @@ Você também deve remover as @menções do conteúdo da mensagem que seu bot re
 
 ### <a name="retrieve-mentions"></a>Recupere menções
 
-As menções são retornadas no objeto `entities` do conteúdo e contêm a ID exclusiva do usuário e o nome do usuário mencionado. O texto da mensagem também inclui a menção, como `<at>@John Smith<at>`. No entanto, não confie no texto da mensagem para recuperar informações sobre o usuário. É possível que a pessoa que está enviando a mensagem a altere. Portanto, use o objeto `entities`.
+As menções são retornadas no objeto `entities` do conteúdo e contêm a ID exclusiva do usuário e o nome do usuário mencionado. O texto da mensagem também inclui a menção, como `<at>@John Smith<at>`. No entanto, não dependa do texto na mensagem para recuperar informações sobre o usuário. É possível que a pessoa que envia a mensagem a altere. Portanto, use o objeto `entities`.
 
 Você pode recuperar todas as menções na mensagem chamando a função `GetMentions` no SDK Bot Builder, que retorna uma matriz de objetos `Mention`.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Developer Preview do esquema de manifesto do Teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668127"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757490"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
 
@@ -290,7 +290,7 @@ A versão do esquema do manifesto que este manifesto está usando.
 
 **Obrigatório** &ndash; Cadeia de caracteres
 
-A versão do aplicativo específico. Se você atualiza algo no seu manifesto, a versão deve ser incrementada também. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente e o usuário recebe a nova funcionalidade. Se esse aplicativo foi enviado para o repositório, o novo manifesto precisa ser enviado e validado novamente. Depois, usuários desse aplicativo obterão o novo manifesto atualizado automaticamente em algumas horas, depois da aprovação.
+A versão do aplicativo específico. Se você atualizar algo em seu manifesto, a versão também deverá ser incrementada. Dessa forma, quando o novo manifesto é instalado, ele substitui o existente, e o usuário recebe a nova funcionalidade. Se esse aplicativo tiver sido enviado para a loja, o novo manifesto precisará ser enviado novamente e validado novamente. Em seguida, os usuários desse aplicativo receberão o novo manifesto atualizado automaticamente em algumas horas, depois que ele for aprovado.
 
 Se as permissões solicitadas do aplicativo mudarem, os usuários serão solicitados a atualizar e concordar novamente com o aplicativo.
 
@@ -300,7 +300,7 @@ Esta cadeia de caracteres da versão deve seguir o padrão [semver](http://semve
 
 **Obrigatório** &ndash; ID do aplicativo da Microsoft
 
-O identificador exclusivo gerado pela Microsoft para esse aplicativo. Se você registrou um bot por meio do Microsoft Bot Framework ou o aplicativo Web da guia já entra com a Microsoft, você já deve ter uma ID e deve inseri-la aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da Microsoft ([Meus Aplicativos](https://apps.dev.microsoft.com)), insira-a aqui e depois a use novamente quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
+O identificador exclusivo gerado pela Microsoft para esse aplicativo. Se você registrou um bot por meio do Microsoft Bot Framework ou o aplicativo Web da guia já entra com a Microsoft, você já deve ter uma ID e deve inseri-la aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da [Microsoft (Meus](https://apps.dev.microsoft.com) Aplicativos), inseri-la aqui e reutilizá-la quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -326,7 +326,7 @@ Especifica informações sobre a sua empresa. Para aplicativos enviados ao AppSo
 
 Opcional:
 
-Permite a especificação de um idioma padrão, bem como ponteiros para arquivos de idioma adicionais. Consulte a [localização](~/concepts/build-and-test/apps-localization.md).
+Permite a especificação de um idioma padrão e ponteiros para arquivos de idioma adicionais. Consulte a [localização](~/concepts/build-and-test/apps-localization.md).
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -339,7 +339,7 @@ Uma matriz de objetos especificando traduções de idiomas adicionais.
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
 |`languageTag`|4 caracteres|✔|A marca de idioma das cadeias de caracteres no arquivo fornecido.|
-|`file`|4 caracteres|✔|Um caminho de arquivo relativo para um arquivo .json que contém as cadeias de caracteres traduzidas.|
+|`file`|4 caracteres|✔|Um caminho de arquivo relativo para o arquivo .json que contém as cadeias de caracteres traduzidas.|
 
 ## <a name="name"></a>nome
 
@@ -380,7 +380,7 @@ Obrigatório:
 
 **Obrigatório** &ndash; Cadeia de caracteres
 
-Uma cor para usar em conjunto e como plano de fundo para os seus ícones de contorno.
+Uma cor a ser usada com e como plano de fundo para seus ícones de estrutura de tópicos.
 
 O valor deve ser um código de cor HTML válido começando com '#', por exemplo `#4464ee`.
 
@@ -388,7 +388,7 @@ O valor deve ser um código de cor HTML válido começando com '#', por exemplo 
 
 Opcional:
 
-Usado quando a sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis têm suporte apenas no escopo das equipes e, atualmente, há suporte apenas para uma guia por aplicativo.
+Usado quando sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis têm suporte apenas no escopo das equipes e, atualmente, há suporte apenas para uma guia por aplicativo.
 
 O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco é necessário apenas para soluções que fornecem uma solução de guia de canal configurável.
 
@@ -512,7 +512,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 
 Opcional:
 
-Uma matriz de `string`, que especifica quais permissões o aplicativo solicita, que permite que os usuários finais saibam como a extensão funcionará. As seguintes opções não são exclusivas:
+Uma matriz de `string`, que especifica quais permissões o aplicativo solicita, que permite que os usuários finais saibam como a extensão será executada. As seguintes opções não são exclusivas:
 
 * `identity`&emsp; Requer informações de identidade do usuário.
 * `messageTeamMembers`&emsp; Requer permissão para enviar mensagens diretas aos membros da equipe.
@@ -537,7 +537,7 @@ Especifica os recursos nativos no dispositivo de um usuário aos quais o seu apl
 
 Uma lista de domínios válidos dos quais o aplicativo espera carregar qualquer conteúdo. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com`, use `*.*.example.com`. Se a sua configuração de guias ou interface do usuário de conteúdo precisa navegar para qualquer outro domínio além do usado para a configuração de guias, esse domínio deve ser especificado aqui.
 
-Entretanto, **não** é necessário incluir os domínios dos provedores de identidade aos quais você deseja oferecer suporte em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]`.
+Entretanto, **não** é necessário incluir os domínios dos provedores de identidade aos quais você deseja oferecer suporte em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para o accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]`.
 
 > [!IMPORTANT]
 > Não adicione domínios que estão fora de seu controle, seja diretamente ou por meio de curingas. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido.
@@ -548,7 +548,7 @@ O objeto é uma matriz com todos os elementos do tipo `string`.
 
 Opcional:
 
-Especifique sua ID do aplicativo do Microsoft Azure Active Directory (Azure AD) e informações do Graph para ajudar os usuários a entrarem no seu aplicativo do Azure AD diretamente.
+Especifique Microsoft Azure Active Directory (Azure AD) id do aplicativo e Graph informações para ajudar os usuários a entrar diretamente em seu Azure AD aplicativo.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -560,11 +560,11 @@ Especifique sua ID do aplicativo do Microsoft Azure Active Directory (Azure AD) 
 
 **Opcional**—objeto
 
-Especifique a configuração do conector Graph aplicativo. Se isso estiver presente [, webApplicationInfo.id](#webapplicationinfo) também deverá ser especificado.
+Especifique a configuração do conector de gráfico do aplicativo. Se estiver presente, [webApplicationInfo.id](#webapplicationinfo) também deve ser especificado.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 caracteres|✔|A URL para a qual Graph notificações do conector para o aplicativo deve ser enviada.|
+|`notificationUrl`|string|2048 caracteres|✔|A URL para a qual as notificações do conector do Graph para o aplicativo devem ser enviadas.|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -663,7 +663,7 @@ Você pode definir qualquer uma das seguintes propriedades:
 * `longDescription`: descrição detalhada do aplicativo.
 * `smallImageUrl`: O ícone de contorno do aplicativo.
 * `largeImageUrl`: O ícone de cor do aplicativo.
-* `accentColor`: a cor para usar em conjunto e como plano de fundo para os seus ícones de contorno.
+* `accentColor`: a cor a ser usada com e como plano de fundo para seus ícones de estrutura de tópicos.
 * `developerUrl`: A URL HTTPS do site do desenvolvedor.
 * `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
@@ -692,8 +692,8 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 

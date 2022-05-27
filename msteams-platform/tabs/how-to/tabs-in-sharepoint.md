@@ -3,15 +3,15 @@ title: Adicionar uma guia do Teams ao SharePoint
 author: surbhigupta
 description: Saiba como implantar sua guia do Teams existente no SharePoint como uma Web part da Estrutura do SharePoint usando exemplos de código.
 keywords: guias do teams no desenvolvimento da estrutura do sharepoint
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111686"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757308"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint
 
@@ -74,7 +74,7 @@ Você também pode implementar suas guias do Microsoft Teams usando a Estrutura 
 
 A guia usada aqui já está hospedada no Azure, para se concentrar no trabalho de integração necessário.
 
-O aplicativo de exemplo que está sendo utilizado é um aplicativo de Gerenciamento de Talentos. Ele gerencia o processo de contratação de candidatos para cargos em aberto em uma equipe. Crie um aplicativo de exemplo do Teams e carregue-o no Teams. Não criar um aplicativo real de gerenciamento de talentos.
+O aplicativo de exemplo que está sendo utilizado é um aplicativo de Gerenciamento de Talentos. Ele gerencia o processo de contratação de candidatos para cargos em aberto em uma equipe. Crie um aplicativo de exemplo do Teams e carregue-o no Teams. Não crie um aplicativo de gerenciamento de talentos de verdade.
 
 ### <a name="benefits-of-this-approach"></a>Benefícios desta abordagem
 
@@ -118,7 +118,7 @@ A imagem a seguir exibe a tela correspondente:
 
 1. Você pode ver a experiência de criação de páginas do SharePoint. Nomeie sua página como **Minha Guia do Teams**.
 
-1. Abra a caixa de ferramentas da Web part selecionando o botão `+` e selecione a guia do Teams, chamada **Contoso HR**. As Web parts são classificadas alfabeticamente. Se for uma lista longa, você pode utilizar a barra de pesquisa para encontrá-la. Isso cria uma Web part na tela que contém sua guia do Teams. A imagem a seguir exibe a o modo de exibição de guias:
+1. Abra a caixa de ferramentas da Web part selecionando o botão `+` e selecione a guia do Teams, chamada **Contoso HR**. As Web parts são classificadas alfabeticamente. Se for uma lista longa, você poderá usar a barra de pesquisa para encontrá-la. Isso cria uma Web part na tela que contém sua guia do Teams. A imagem a seguir exibe a o modo de exibição de guias:
 
    ![Modo de exibição de guias](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

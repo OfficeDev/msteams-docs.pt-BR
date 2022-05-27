@@ -6,12 +6,12 @@ keywords: canal de grupo de guias do teams configurável remover exclusão
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672933"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757462"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -21,7 +21,7 @@ Você pode estender e aprimorar a experiência do usuário dando suporte a opç�
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar a reconfiguração da guia após a instalação
 
-Seu `manifest.json` define os recursos e funcionalidades da guia. A propriedade `canUpdateConfiguration` usa um valor booliano que indica se um usuário pode modificar ou reconfigurar a guia após sua criação. A tabela a seguir fornece os detalhes da propriedade:
+Seu `manifest.json` define os recursos e funcionalidades da guia. A propriedade da instância `canUpdateConfiguration` de tabulação usa um valor booliano que indica se um usuário pode modificar ou reconfigurar a guia depois de criada. A tabela a seguir fornece os detalhes da propriedade:
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ Quando sua guia é carregada para um canal ou chat em grupo, o Teams adiciona um
 | ----------------------- | :----: | ----- | ----------- |
 |     Configurações            |   √    |       |A página `configurationUrl` é recarregada em um IFrame, permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme ele aparece na barra de guias.          |
-|     Remover              |   √    |   √   |  Se a propriedade `removeURL` e o valor forem incluídos na **página de configuração**, a **página de remoção** será carregada em um IFrame e apresentada ao usuário. Se uma página de remoção não for incluída, o usuário verá uma caixa de diálogo confirmar.          |
+|     Remover              |   √    |   √   |  Se a propriedade `removeURL` e o valor forem incluídos na **página de configuração**, a **página de remoção** será carregada em um IFrame e apresentada ao usuário. Se uma página de remoção não estiver incluída, o usuário receberá uma caixa de diálogo de confirmação.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Criar uma página de remoção de guia para seu aplicativo
 

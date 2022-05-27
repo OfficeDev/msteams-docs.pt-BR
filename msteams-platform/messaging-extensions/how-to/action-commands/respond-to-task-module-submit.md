@@ -5,12 +5,12 @@ description: Descreve como responder à ação de envio do módulo de tarefa de 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297195"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757560"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -21,14 +21,14 @@ Depois que um usuário envia o módulo de tarefa, seu serviço Web recebe uma me
 
 Você tem as seguintes opções para responder:
 
-* Sem resposta: use a ação de envio para disparar um processo em um sistema externo e não fornecer comentários ao usuário. É útil para processos de execução longa e para fornecer comentários como alternativa. Por exemplo, você pode enviar comentários com um [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
+* Sem resposta: use a ação de envio para disparar um processo em um sistema externo e não fornecer comentários ao usuário. É útil para processos de execução longa e fornecer comentários como alternativa. Por exemplo, você pode enviar comentários com um [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Outro módulo de tarefa](#respond-with-another-task-module): você pode responder com um módulo de tarefa adicional como parte de uma interação de várias etapas.
 * [Resposta do cartão](#respond-with-a-card-inserted-into-the-compose-message-area): você pode responder com um cartão com o qual o usuário pode interagir ou inserir em uma mensagem.
 * [Cartão Adaptável do bot](#bot-response-with-adaptive-card): insira um Cartão Adaptável diretamente na conversa.
 * [Solicite o usuário para autenticar](~/messaging-extensions/how-to/add-authentication.md).
 * [Solicite ao usuário fornecer configuração adicional](~/get-started/first-message-extension.md).
 
-Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original será reenviada para seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis com base no local de invocação `commandContext` da extensão de mensagem:
+Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original será reenviada para seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis, com base no local `commandContext` de invocação da extensão de mensagem:
 
 |Tipo de Resposta | Escrever | Barra de comando | Mensagem |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -215,18 +215,18 @@ Para configurar a votação:
 1. O usuário seleciona a extensão de mensagem para invocar o módulo de tarefa.
 1. O usuário configura a votação com o módulo de tarefa.
 1. Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para criar a votação como um Cartão Adaptável e a envia como uma resposta `botMessagePreview` ao cliente.
-1. Em seguida, o usuário pode visualizar a mensagem cartão adaptável antes que o bot a insira no canal. Se o aplicativo não for membro do canal, selecione `Send` para adicioná-lo.
+1. Em seguida, o usuário pode visualizar a mensagem cartão adaptável antes que o bot a insira no canal. Se o aplicativo não for membro do canal, selecione adicioná-lo `Send` .
 
     > [!NOTE]
     >
     > * Os usuários também podem selecionar `Edit` a mensagem, que os retorna para o módulo de tarefa original.
     > * A interação com o Cartão Adaptável altera a mensagem antes de enviá-la.
     >
-1. Depois que o usuário selecionar `Send` o bot postará a mensagem no canal.
+1. Depois que o usuário selecionar `Send`, o bot postará a mensagem no canal.
 
 ## <a name="respond-to-initial-submit-action"></a>Responder à ação de envio inicial
 
-Seu módulo de tarefa deve responder à mensagem inicial `composeExtension/submitAction` com uma visualização do cartão que o bot envia para o canal. O usuário pode verificar o cartão antes de enviar e tentar instalar o bot na conversa se o bot ainda não estiver instalado.
+Seu módulo de tarefa deve responder à mensagem inicial `composeExtension/submitAction` com uma visualização do cartão que o bot envia para o canal. O usuário pode verificar o cartão antes de enviar e tentar instalar o bot na conversa se o bot já estiver instalado.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -601,7 +601,7 @@ A seção a seguir é uma descrição das entidades na matriz `OnBehalfOf`:
 
 | Nome de exemplo           | Descrição | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Ação de extensão de mensagem do Teams| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Ação de extensão de mensagem do Teams| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Pesquisa de extensão de mensagem do Teams   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Próxima etapa

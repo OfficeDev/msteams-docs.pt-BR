@@ -4,12 +4,12 @@ description: Descreve todos os recursos de desenvolvedor novos ou mais recentes 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: as atualizações mais recentes do teams ou a visualização e os recursos do desenvolvedor
-ms.openlocfilehash: 0ce0de2efd6c38e610226db48a6a463942a7ccc6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 2150c0dba509a1dc9c46d149538e1951cafcc955
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656163"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672961"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -19,9 +19,11 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Data | Recurso | Encontrar aqui |
 | --- | --- | --- |
+| 24/05/2022| [*Visualização do desenvolvedor*] <br> Colaboração aprimorada com o SDK do Live Share |  Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 |24/05/2022| Envie para a loja Teams seus aplicativos habilitados para Outlook e Office | Estenda seu aplicativo no Microsoft 365 > [Visão Geral](m365-apps/overview.md) |
 |24/05/2022| Diretrizes do aplicativo e as novidades do TeamsJS versão 2.0.0| Ferramentas e SDKs > [SDK do cliente JavaScript do Teams](tabs/how-to/using-teams-client-sdk.md)  |
 | 24/05/2022 | O Kit de Ferramentas do Teams versão 4.0.0 para Visual Studio Code agora é GA | Ferramentas e SDKs > Kit de Ferramentas do Teams para o Visual Studio Code > <br> • [Visão geral do Kit de Ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Criar um bot de comando com JavaScript](toolkit/add-capability.md) <br> • [Criar um bot de notificação com JavaScript](toolkit/add-capability.md) <br> • [Visualizar e personalizar o manifesto do aplicativo Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar às APIs existentes](toolkit/add-API-connection.md) <br> • [Adicionar recursos aos seus aplicativos do Teams](toolkit/add-capability.md) <br> • [Adicionar a experiência de logon único](toolkit/add-single-sign-on.md) <br> • [Adicionar recursos de nuvem ao aplicativo do Teams](toolkit/add-resource.md) |
+| 24/05/2022 | Apresentado o manifesto do aplicativo versão 1.13 | Manifesto do > [de aplicativo para Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24/05/2022 | Extensões de Bots e Mensagens no GCC e GCCH | • Planejar seu aplicativo > [Visão Geral](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Criar bots > [Visão geral](bots/what-are-bots.md) </br> • Criar extensões de mensagem > [Visão geral](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
@@ -29,6 +31,7 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
@@ -73,9 +76,11 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+|24/05/2022| Dicas adicionais para aprovação rápida ao publicar seu aplicativo vinculado a uma oferta de SaaS | Publicar na loja do Teams > Visão geral > [Dicas adicionais para aprovação rápida para publicar seu aplicativo vinculado a uma oferta de SaaS](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 |24/05/2022| Envie para a loja Teams seus aplicativos habilitados para Outlook e Office | Estenda seu aplicativo no Microsoft 365 > [Visão Geral](m365-apps/overview.md) |
 |24/05/2022| Diretrizes do aplicativo e as novidades do TeamsJS versão 2.0.0| Ferramentas e SDKs > [SDK do cliente JavaScript do Teams](tabs/how-to/using-teams-client-sdk.md)  |
 | 24/05/2022 | O Kit de Ferramentas do Teams versão 4.0.0 para Visual Studio Code agora é GA | Ferramentas e SDKs > Kit de Ferramentas do Teams para o Visual Studio Code > <br> •  [Visão geral do Kit de Ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Criar um bot de comando com JavaScript](toolkit/add-capability.md) <br> • [Criar um bot de notificação com JavaScript](toolkit/add-capability.md) <br> • [Visualizar e personalizar o manifesto do aplicativo Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar às APIs existentes](toolkit/add-API-connection.md) <br> • [Adicionar recursos aos seus aplicativos do Teams](toolkit/add-capability.md) <br> • [Adicionar a experiência de logon único](toolkit/add-single-sign-on.md) <br> • [Adicionar recursos de nuvem ao aplicativo do Teams](toolkit/add-resource.md) |
+| 24/05/2022 | Apresentado o manifesto do aplicativo versão 1.13 | Manifesto do > [de aplicativo para Microsoft Teams](resources/schema/manifest-schema.md) |
 |24/05/2022|Extensões de Bots e Mensagens no GCC e GCCH| • Planejar seu aplicativo > [Visão Geral](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Criar bots > [Visão geral](bots/what-are-bots.md) </br> • Criar extensões de mensagem > [Visão geral](messaging-extensions/what-are-messaging-extensions.md) |
 |26/04/2022|Comportamento de desinstalação do aplicativo pessoal com o bot | Criar bots > Conversas de bot > [Desinstalar atualizações de comportamento em aplicativos pessoais com bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| Teste de visualização para aplicativos monetizados | Monetize seu aplicativo > [Teste de visualização para aplicativos monetizados](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
@@ -162,7 +167,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 |13/05/2021| Adicionadas informações sobre mConnect e Skooler | Integrar com Teams > Moodle LMS > [Sistema de gerenciamento de aprendizagem Moodle](resources/moodle-overview.md)|
 |10/05/2021| Manifesto do aplicativo v1.10 lançado | Manifesto do aplicativo > [Esquema do manifesto](resources/schema/manifest-schema.md) |
 |10/05/2021| Novo recurso de personalização de aplicativo | Projetar seu aplicativo > [Habilitar organizações para personalizar seu aplicativo](concepts/design/enable-app-customization.md) |
-|07/05/2021| Links profundos para chamadas de áudio e vídeo no chat | Integrar com o Teams > [Links profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|07/05/2021| Links profundos para chamadas de áudio e vídeo no chat | Integrar com o Teams > [Links profundos](concepts/build-and-test/deep-links.md#navigate-to-an-audio-or-audio-video-call) |
 |30/04/2021|Novas diretrizes sobre como publicar aplicativos na Teams Store | • Publicar na Teams Store > [Publicar seu aplicativo na Teams Store](concepts/deploy-and-publish/appsource/publish.md)</br> • Publicar na Teams Store > [Diretrizes de validação da Teams Store](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |29/04/2021 | Suporte para Ações Universais para Cartões Adaptáveis v1.4 | Criar cartões e módulo de tarefa > Criar cartões > Ações Universais para Cartões Adaptáveis > [Ações Universais para Cartões Adaptáveis](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |29/04/2021 | Exibições Específicas do Usuário | Criar cartões e módulo de tarefa > criar cartões > ações Universais para Cartões Adaptáveis > [Exibições Específicas do Usuário](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -237,7 +242,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | 06/05/2019 | Programa de Certificação de Aplicativos para aplicativos da loja. | [Certificação de aplicativos](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 06/05/2019 | Os Modelos de Aplicativo agora estão disponíveis | [Modelos de aplicativos](~/samples/app-templates.md) |
 | 23/04/2019 | As extensões de mensagens baseadas em ação já estão disponíveis. | [Extensões de mensagem baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
-| 18/02/2019 | Criando links profundos para o chat privado. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 18/02/2019 | Criando links profundos para o chat privado. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 23/01/2019 | Identificando informações de SKU e de tipo de licença no contexto da guia. | [Contexto da guia](~/concepts/tabs/tabs-context.md) |
 |
 </details>
@@ -251,7 +256,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | -------- | --------- | ------------------ |
 | 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams. Como parte desse trabalho, a seção de guias foi retrabalhada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | A introdução ao Node JS e ao .NET/C# foi atualizada para usar o App Studio no Teams, e uma nova seção foi adicionada na hospedagem de aplicativos do Teams baseados em Nó no Azure. | [Introdução à plataforma Microsoft Teams com C#/.NET e App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Introdução à plataforma Microsoft Teams com Node JS e App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hospede seu aplicativo Node Teams no Azure](~/get-started/get-started-nodejs-in-azure.md)|
-| 09/11/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 09/11/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | A Estrutura do SharePoint 1.7 enviou e com ela um novo recurso para usar a guia Microsoft Teams como uma Web Part da Estrutura do SharePoint. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 05/11/2018 | O recurso **módulo de tarefa** foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo Teams, tanto de bots como de guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget `<iframe>`como um vídeo do YouTube ou Microsoft Stream ou exibir um [Cartão adaptável](/adaptive-cards/). | [Visão geral do módulo tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
 | 05/10/2018 | As informações de formatação para cartões foram atualizadas e testadas na área de trabalho, iOS e clientes Android para o Teams. | [Cartões](~/concepts/cards/cards.md), [Formatação de cartão](~/concepts/cards/cards-format.md) |
@@ -287,6 +292,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|24/05/2022| Colaboração aprimorada com o SDK do Live Share |  Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
 | 03/02/2022 | Apresentado o manifesto do aplicativo versão 1.12 | • Manifesto do aplicativo > [Esquema do manifesto de aplicativo](resources/schema/manifest-schema.md) </br> • Manifesto do aplicativo > Visualização do desenvolvedor público > [Esquema de manifesto](resources/schema/manifest-schema-dev-preview.md) |

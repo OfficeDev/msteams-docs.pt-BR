@@ -2,15 +2,15 @@
 title: Depurar seus chamados e o bot de reunião localmente
 description: Saiba como você também pode usar o ngrok para desenvolver chamadas e bots de reunião online no computador local.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: túnel ngrok de desenvolvimento local
 ms.date: 11/18/2018
-ms.openlocfilehash: 7e5f9de7177c847352b0e2768b52553455989443
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111994"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757112"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desenvolver bots de chamadas e reuniões online no computador local
 
@@ -46,7 +46,7 @@ tunnels:
 
 A mídia hospedada pelo aplicativo usa certificados e túneis TCP. As etapas a seguir são necessárias:
 
-1. Os pontos de extremidade TCP públicos do mngrok têm URLs fixas. Eles são `0.tcp.ngrok.io`, `1.tcp.ngrok.io` e assim por diante. Você deve ter uma entrada DNS CNAME para seu serviço que aponte para essas URLs. Por exemplo, digamos que `0.bot.contoso.com` se refere a `0.tcp.ngrok.io`, `1.bot.contoso.com` refere-se `1.tcp.ngrok.io`a e assim por diante.
+1. Os pontos de extremidade TCP públicos do mngrok têm URLs fixas. Eles são `0.tcp.ngrok.io`, `1.tcp.ngrok.io`e assim por diante. Você deve ter uma entrada DNS CNAME para seu serviço que aponte para essas URLs. Por exemplo, digamos que `0.bot.contoso.com` se refere a `0.tcp.ngrok.io`, `1.bot.contoso.com` refere-se `1.tcp.ngrok.io`a e assim por diante.
 2. Um certificado SSL é necessário para suas URLs. Para facilitar, use um certificado SSL emitido para um domínio curinga. Nesse caso, seria a partir da pasta `*.bot.contoso.com`. Esse certificado SSL é validado pelo SDK de mídia, portanto, ele deve corresponder à URL pública do bot. Anote a impressão digital e instale-a nos certificados do computador.
 3. Agora, configure um túnel TCP para encaminhar o tráfego para o localhost. Grave as seguintes linhas em seu ngrok.yml:
 
@@ -62,7 +62,7 @@ Agora que a configuração do ngrok está pronta, inicie-a:
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-Isso inicia o ngrok e define as URLs públicas que fornecem os túneis para o localhost. A seguir, um exemplo de saída:
+Isso inicia o ngrok e define as URLs públicas, que fornecem os túneis para o localhost. A seguir, um exemplo de saída:
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -119,5 +119,5 @@ var mediaPlatform = new MediaPlatformSettings
 ## <a name="caveats"></a>Advertências
 
 * As contas gratuitas do Ngrok **não** fornecem criptografia de ponta a ponta. Os dados HTTPS terminam na URL do ngrok e os fluxos de dados não criptografados de ngrok para `localhost`. Se você precisar de criptografia de ponta a ponta, considere uma conta ngrok paga. Consulte usar [túneis TLS](https://ngrok.com/docs#tls) obter etapas sobre como configurar túneis seguros de ponta a ponta.
-* Como a URL de retorno de chamada do bot é dinâmica, os cenários de chamada de entrada exigem que você atualize com frequência seus pontos de extremidade ngrok. Uma maneira de corrigir isso é usar uma conta ngrok paga que fornece subdomínios fixos para os quais você pode apontar seu bot e a plataforma.
+* Como a URL de retorno de chamada do bot é dinâmica, os cenários de chamada de entrada exigem que você atualize com frequência seus pontos de extremidade ngrok. Uma maneira de corrigir isso é usar uma conta ngrok paga, que fornece subdomínios fixos para os quais você pode apontar seu bot e a plataforma.
 * Os túneis Ngrok também podem ser usados com o [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Para obter um exemplo de como fazer isso, consulte o aplicativo [de exemplo HueBot](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).

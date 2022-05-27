@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: 'Pacote MVC do Yeoman ASP.NET do repositório de permissão de domínio de conversa appmanifest '
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111238"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673017"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
 Guias pessoais, junto com bots de conversação direta, fazem parte de aplicativos pessoais e têm como escopo um único usuário. Eles podem ser fixados no painel esquerdo para facilitar o acesso. Você também pode [reordenar](#reorder-static-personal-tabs) suas guias pessoais.
 
-Verifique se você tem todos os [pré-requisitos](~/tabs/how-to/tab-requirements.md) para criar sua guia pessoal.
+Certifique-se de ter todos os [pré-requisitos](~/tabs/how-to/tab-requirements.md) para criar sua guia pessoal.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -116,7 +118,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
     * **Você gostaria de usar o Azure Application Insights para telemetria? (S/N)**
 
-      Escolha **não** para incluir o [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview) O padrão é não, insira **n**.
+      Escolha **não** para incluir o [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). O padrão é não, insira **n**.
 
     * **Nome da guia padrão (máximo de 16 caracteres)**:Guia SSO
 
@@ -366,10 +368,10 @@ No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mo
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Páginas** e adicione `microsoftTeams.initialize()` nas marcas `<script>` e salve.
+1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Páginas** e adicione `app.initialize()` nas marcas `<script>` e salve.
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente.
 
@@ -531,10 +533,10 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Visualizações** > **PersonalTab** e adicione `microsoftTeams.initialize()` nas marcas `<script>` e salve.
+1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Visualizações** > **PersonalTab** e adicione `app.initialize()` nas marcas `<script>` e salve.
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente.
 

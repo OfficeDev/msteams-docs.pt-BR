@@ -4,14 +4,14 @@ author: laujan
 description: Saiba mais sobre Tipos de cookies, incluindo cookies SameSite, seus atributos, suas implicações em guias do Teams, módulos de tarefas e extensões de mensagem e sua autenticação no Teams
 keywords: atributos de cookie samesite
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110334"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756986"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookie SameSite
 
@@ -25,7 +25,7 @@ Os tipos de cookie e seus escopos correspondentes são os seguintes:
 | ------ | ------ |
 |Cookie primário|Um cookie primário é criado por sites que um usuário visita. Ele é usado para salvar dados, como itens de carrinho de compras, credenciais de entrada. Por exemplo, cookies de autenticação e outras análises.|
 |Cookie secundário|Um cookie secundário é tecnicamente o mesmo que um cookie primário. A diferença é que os dados são compartilhados com uma outra parte por meio de um contrato de parceria de dados. Por exemplo, [Análise e relatórios do Microsoft Teams](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
-|Cookie de terceiros|Um cookie de terceiros é instalado por um domínio diferente daquele que o usuário visitou explicitamente e é usado principalmente para acompanhamento. Por exemplo, os botões **Curtir**, serviço de anúncios e chats ao vivo.|
+|Cookie de terceiros|Um cookie de terceiros é instalado por um domínio diferente do que o usuário visitou explicitamente e é usado para acompanhamento. Por exemplo, os botões **Curtir**, serviço de anúncios e chats ao vivo.|
 
 ## <a name="cookies-and-http-requests"></a>Cookies e solicitações HTTP
 
@@ -47,7 +47,7 @@ Os atributos do cookie SameSite são os seguintes:
 | -------- | ----------- | --------|--------|
 | **Lax**  | Os cookies são enviados automaticamente apenas em um contexto **primário** e com solicitações HTTP GET. Os cookies SameSite são retidos em subsolicitações entre sites, como chamadas para carregar imagens ou iframes. Eles são enviados quando um usuário navega pela URL de um site externo, por exemplo, seguindo um link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estrito** |O navegador envia apenas cookies para solicitações de contexto primário. Essas são solicitações originadas do site que define o cookie. Se a solicitação tiver sido originada de uma URL diferente da localização atual, nenhum dos cookies marcados com o atributo `Strict` será enviado.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
-| **Nenhum** | Os cookies são enviados em solicitações de contexto primário e entre origens; no entanto, o valor deve ser definido explicitamente como **`None`** e todas as solicitações do navegador **devem seguir o protocolo HTTPS** e incluir o atributo **`Secure`** que requer uma conexão criptografada. Os cookies que não cumprem esse requisito **rejeitados**. <br/>**Ambos os atributos são necessários juntos**. Se **`None`** for especificado sem **`Secure`** ou se o protocolo HTTPS não for usado, os cookies de terceiros serão rejeitados.| Opcional, mas, se definido, o protocolo HTTPS é obrigatório. |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **Nenhum** | Os cookies são enviados em solicitações de contexto de primeira parte e entre origens; no entanto, o valor deve **`None`** ser definido explicitamente como e todas as solicitações do navegador devem seguir o protocolo **HTTPS** **`Secure`** e incluir o atributo, que requer uma conexão criptografada. Os cookies que não aderem a esse requisito são **rejeitados**. <br/>**Ambos os atributos são necessários juntos**. Se  **`None`** for especificado sem ou **`Secure`**  se o protocolo HTTPS não for usado, os cookies de terceiros serão rejeitados.| Opcional, mas, se definido, o protocolo HTTPS é obrigatório. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Implicações e ajustes do Teams
 
@@ -74,11 +74,11 @@ Você deve usar o fluxo de autenticação baseado na Web para o seguinte:
 * Página de configuração, módulo de tarefa e extensão de mensagem.
 * Bot de conversação com um módulo de tarefa.
 
-De acordo com as restrições atualizadas do SameSite, um navegador não adicionará um cookie a um site já autenticado se o link derivar de um site externo. Você deve garantir que os cookies de autenticação estejam marcados para uso entre sites `SameSite=None; Secure` ou verificar se um fallback está em vigor.
+De acordo com as restrições do SameSite atualizadas, um navegador não adicionará um cookie a um site já autenticado se o link derivar de um site externo. Você deve garantir que os cookies de autenticação estejam marcados para uso entre sites `SameSite=None; Secure` ou verificar se um fallback está em vigor.
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-O Android WebView é um componente do sistema Chrome que permite que aplicativos Android exibam o conteúdo da Web. Embora as novas restrições sejam padrão, começando com o Chrome 80, elas não são impostas imediatamente em modos de exibição da Web. Elas serão aplicadas no futuro. Para se preparar, o Android permite que aplicativos nativos definam cookies diretamente por meio da [API CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
+O Android WebView é um componente do sistema Chrome que permite que aplicativos Android exibam o conteúdo da Web. Embora as novas restrições sejam padrão, começando com o Chrome 80, elas não são impostas imediatamente em WebViews. Eles serão aplicados no futuro. Para se preparar, o Android permite que aplicativos nativos definam cookies diretamente por meio da [API CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
 >

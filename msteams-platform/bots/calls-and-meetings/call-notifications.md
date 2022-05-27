@@ -2,15 +2,15 @@
 title: Notificações de chamadas recebidas
 description: Saiba mais sobre informações técnicas detalhadas sobre como lidar com notificações de chamadas de entrada, redirecionar e autenticar chamadas usando exemplos de código
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: chamadas notificações de chamadas retorno de chamada afinidade de região
 ms.date: 04/02/2019
-ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111546"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757140"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
@@ -18,7 +18,7 @@ Ao [registrar um bot de chamadas e reuniões para o Microsoft Teams](./registeri
 
 ## <a name="protocol-determination"></a>Determinação de protocolo
 
-A notificação de entrada é fornecida em um formato herdado para compatibilidade com o [protocolo Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)anterior. Para converter a chamada para o protocolo Microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornecer a seguinte resposta:
+A notificação de entrada é fornecida em um formato herdado para compatibilidade com o [protocolo Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)anterior. Para converter a chamada para o protocolo microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornece a seguinte resposta:
 
 ```http
 HTTP/1.1 204 No Content
@@ -32,7 +32,7 @@ A próxima seção fornece detalhes sobre as notificações de chamada de entrad
 
 ## <a name="redirects-for-region-affinity"></a>Redirecionamentos para afinidade de região
 
-Você chama o webhook do data center que hospeda a chamada. A chamada começa em qualquer data center e não leva em conta as afinidades de região. A notificação é enviada para sua implantação, dependendo da resolução do GeoDNS. Se o aplicativo determinar, inspecionando a carga de notificação inicial ou de outra forma, que ele precisa ser executado em uma implantação diferente, o aplicativo fornecerá a seguinte resposta:
+Você chama o webhook do data center que hospeda a chamada. A chamada é iniciada em qualquer data center e não leva em conta as afinidades de região. A notificação é enviada para sua implantação, dependendo da resolução do GeoDNS. Se o aplicativo determinar, inspecionando a carga de notificação inicial ou de outra forma, que ele precisa ser executado em uma implantação diferente, o aplicativo fornecerá a seguinte resposta:
 
 ```http
 HTTP/1.1 302 Found
@@ -87,7 +87,7 @@ A configuração openID publicada em <https://api.aps.skype.com/v1/.well-known/O
 * `tid` é a ID do locatário Contoso.com.
 * `iss` é o emissor do token, `https://api.botframework.com`.
 
-Para a manipulação de código, o webhook deve validar o token, garantir que ele não expirou e verificar se ele foi assinado pela configuração de OpenID publicada. Você também deve verificar se a aud corresponde à ID do aplicativo antes de aceitar a solicitação de retorno de chamada.
+Para o tratamento de código, o webhook deve validar o token, verificar se ele não expirou e verificar se ele foi assinado pela configuração do OpenID publicada. Você também deve verificar se a aud corresponde à ID do aplicativo antes de aceitar a solicitação de retorno de chamada.
 
 Para obter mais informações, consulte [validar solicitações de entrada](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 

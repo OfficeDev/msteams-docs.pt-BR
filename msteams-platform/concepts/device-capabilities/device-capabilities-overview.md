@@ -1,17 +1,16 @@
 ---
 title: Funcionalidades do dispositivo – Visão geral
 author: Rajeshwari-v
-description: Visão geral dos recursos nativos do dispositivo, como câmera, imagem, mídia, microfone, microfone, código qr e muito mais.
+description: Saiba como integrar recursos de dispositivo nativos, como câmera, imagem, mídia, microfone, código QR e muito mais com Microsoft Teams aplicativo.
 ms.author: surbhigupta
-keywords: imagem da câmera microfone microfone microfone qr code qrcode código de barras código de barras digitalizar local do scanner de verificação permissões nativas do dispositivo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111749"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757028"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 

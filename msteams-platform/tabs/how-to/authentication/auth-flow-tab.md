@@ -2,14 +2,14 @@
 title: Fluxo de autenticação para guias
 description: Descreve o fluxo de autenticação em guias, OAuth pelo Azure Active Directory e fornece amostra de código
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: guias de fluxo de autenticação de equipes
-ms.openlocfilehash: 2589489598f51393f2a429f8701e9101cf80b273
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111448"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756489"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Fluxo de autenticação do Microsoft Teams para guias
 
@@ -27,7 +27,7 @@ Por exemplo, o fluxo de autenticação para guias e bots usando Node e o [tipo d
 ![Diagrama de sequência de autenticação de tabulação](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. O usuário interage com o conteúdo na configuração da guia ou na página de conteúdo, geralmente um botão **Entrar** ou **Fazer login**.
-2. A guia constrói o URL para sua página inicial de autenticação. Opcionalmente, ele usa informações de marcadores de URL ou chama o método `microsoftTeams.getContext()` do SDK do cliente do Teams para simplificar a experiência de autenticação para o usuário. Por exemplo, ao autenticar com um Azure Active Directory, se o parâmetro `login_hint` estiver definido para o endereço de email do usuário, o usuário não precisará entrar se tiver feito isso recentemente. Isso ocorre porque o Azure Active Directory usa as credenciais em cache do usuário. A janela pop-up é mostrada brevemente e depois desaparece.
+2. A guia constrói o URL para sua página inicial de autenticação. Opcionalmente, ele usa informações de marcadores de URL ou chama o método `microsoftTeams.getContext()` do SDK do cliente do Teams para simplificar a experiência de autenticação para o usuário. Por exemplo, ao autenticar com um Azure AD, `login_hint` se o parâmetro estiver definido como o endereço de email do usuário, o usuário não precisará entrar se tiver feito isso recentemente. Isso ocorre porque o Azure Active Directory usa as credenciais em cache do usuário. A janela pop-up é mostrada brevemente e depois desaparece.
 3. Em seguida, a guia chama o `microsoftTeams.authentication.authenticate()` geral e registra as `successCallback` e `failureCallback` funções.
 4. O Teams abre a página inicial em um iframe em uma janela pop-up. A página inicial gera dados `state` aleatórios, salva-os para validação futura e redireciona para o ponto de extremidade `/authorize` do provedor de identidade, como `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` para Azure Active Directory. Substitua `<tenant id>` pelo seu próprio ID de locatário que é context.tid.
 Semelhante a outros fluxos de autenticação de aplicativo no Teams, a página inicial deve estar em um domínio que esteja em sua lista `validDomains` e no mesmo domínio que a página de redirecionamento de entrada de postagem.
@@ -46,7 +46,7 @@ Semelhante a outros fluxos de autenticação de aplicativo no Teams, a página i
 
 ## <a name="treat-tab-context-as-hints"></a>Tratar o contexto da guia como dicas
 
-Embora o contexto da guia forneça informações úteis sobre o usuário, não use essas informações para autenticar o usuário. Autentique o usuário mesmo se você obtiver as informações como parâmetros de URL para a URL de conteúdo da guia ou chamando a função `microsoftTeams.getContext()` no SDK do cliente do Microsoft Teams. Um ator mal-intencionado pode invocar a URL de conteúdo da guia com seus próprios parâmetros. O ator também pode invocar uma página da Web representando o Microsoft Teams para carregar a URL de conteúdo da guia em um iframe e retornar seus próprios dados para a função `getContext()`. Você deve tratar as informações relacionadas à identidade no contexto da guia como uma dica e validá-las antes de usar. Consulte as notas em [navegar até a página de autorização na sua página pop-up](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+Embora o contexto de guia forneça informações úteis sobre o usuário, não use essas informações para autenticar o usuário. Autentique o usuário mesmo se você obtiver as informações como parâmetros de URL para a URL de conteúdo da guia ou chamando a função `microsoftTeams.getContext()` no SDK do cliente do Microsoft Teams. Um ator mal-intencionado pode invocar a URL de conteúdo da guia com seus próprios parâmetros. O ator também pode invocar uma página da Web representando o Microsoft Teams para carregar a URL de conteúdo da guia em um iframe e retornar seus próprios dados para a função `getContext()`. Você deve tratar as informações relacionadas à identidade no contexto da guia como uma dica e validá-las antes de usar. Consulte as notas em [navegar até a página de autorização na sua página pop-up](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 ## <a name="code-sample"></a>Exemplo de código
 

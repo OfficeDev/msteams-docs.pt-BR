@@ -1,15 +1,15 @@
 ---
 title: Usar módulos de tarefa nas guias do Microsoft Teams
 description: Explica como invocar módulos de tarefa das guias do Teams e enviar seu resultado usando o SDK do cliente do Microsoft Teams. Ele inclui exemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: módulos de tarefas guias teams cliente sdk
-ms.openlocfilehash: eb199842a60832e6eb77575a7438cc9f52db6e09
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111224"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756693"
 ---
 # <a name="use-task-modules-in-tabs"></a>Usar módulos de tarefas nas guias
 
@@ -35,8 +35,8 @@ Você pode ver como a invocação de um módulo de tarefa de uma guia e o envio 
 
 Para invocar um módulo de tarefa de uma guia, use `microsoftTeams.tasks.startTask()`passando um [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) e uma função de retorno de chamada `submitHandler` opcional. Existem dois casos a serem considerados:
 
-* O valor de `TaskInfo.url` é definido como uma URL. A janela do módulo de tarefa é exibida e `TaskModule.url` é carregado como um `<iframe>` dentro dela. O JavaScript nessa página chama `microsoftTeams.initialize()`. Se houver uma função `submitHandler` na página e houver um erro ao invocar `microsoftTeams.tasks.startTask()`, em seguida, `submitHandler` é invocado com `err` definido como a cadeia de caracteres de erro que indica o mesmo. Para obter mais informações, consulte [erros de invocação do módulo de tarefas](#task-module-invocation-errors).
-* O valor de `taskInfo.card` é o [JSON para um cartão adaptável](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). Não há nenhuma função javaScript `submitHandler` para chamar quando o usuário fechar ou pressionar um botão no Cartão Adaptável. A única maneira de receber o que o usuário inseriu é passando o resultado para um bot. Para usar um módulo de tarefa cartão adaptável de uma guia, seu aplicativo deve incluir um bot para obter qualquer resposta do usuário.
+* O valor de `TaskInfo.url` é definido como uma URL. A janela do módulo de tarefa é exibida e `TaskModule.url` é carregado como um `<iframe>` dentro dela. O JavaScript nessa página chama `microsoftTeams.initialize()`. Se houver uma função na página e houver um erro ao invocar, `err` `submitHandler` ele será invocado com definido como a `submitHandler` `microsoftTeams.tasks.startTask()`cadeia de caracteres de erro indicando o mesmo. Para obter mais informações, consulte [erros de invocação do módulo de tarefas](#task-module-invocation-errors).
+* O valor de `taskInfo.card` é o [JSON para um cartão adaptável](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). Não há nenhuma função JavaScript `submitHandler` a ser chamada quando o usuário fecha ou pressiona um botão no Cartão Adaptável. A única maneira de receber o que o usuário inseriu é passando o resultado para um bot. Para usar um módulo de tarefa cartão adaptável de uma guia, seu aplicativo deve incluir um bot para obter qualquer resposta do usuário.
 
 A próxima seção fornece um exemplo de invocação de um módulo de tarefa.
 
@@ -70,11 +70,11 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-O `submitHandler` é muito simples e ecoa o valor de `err` ou `result` no console.
+É `submitHandler` simples e ecoa o valor de `err` ou `result` para o console.
 
 ## <a name="submit-the-result-of-a-task-module"></a>Enviar o resultado de um módulo de tarefa
 
-A função `submitHandler` reside na página da Web `TaskInfo.url` e é usada com `TaskInfo.url`. Se houver um erro ao invocar o módulo de tarefa, sua função `submitHandler` será invocada imediatamente com uma cadeia de caracteres `err` indicando qual [erro ocorreu](#task-module-invocation-errors). A função `submitHandler` também é chamada com uma cadeia de caracteres `err` quando o usuário seleciona X no canto superior direito do módulo de tarefa para fechar.
+A função `submitHandler` reside na página da Web `TaskInfo.url` e é usada com `TaskInfo.url`. Se houver um erro ao invocar o módulo de tarefa, `submitHandler` `err` sua função será invocada imediatamente com uma cadeia de caracteres indicando qual [erro ocorreu](#task-module-invocation-errors). A função `submitHandler` também é chamada com uma cadeia de caracteres `err` quando o usuário seleciona X no canto superior direito do módulo de tarefa para fechar.
 
 Se não houver nenhum erro de invocação e o usuário não selecionar X para ignorá-lo, o usuário escolherá um botão quando terminar. Dependendo se é uma URL ou um Cartão Adaptável no módulo de tarefa, as próximas seções fornecem detalhes sobre o que ocorre.
 
@@ -86,7 +86,7 @@ Passe o resultado como o primeiro parâmetro. O Teams invoca `submitHandler` em 
 
 ### <a name="adaptive-card-taskinfocard"></a>Cartão adaptável `TaskInfo.card`
 
-Quando você invoca o módulo de tarefa com um botão `submitHandler` e o usuário seleciona um botão `Action.Submit`, os valores no cartão são retornados como o valor de `result`. Se o usuário selecionar a tecla Esc ou X no canto superior direito, `err` será retornado. Se seu aplicativo contiver um bot além de uma guia, você poderá simplesmente incluir o `appId` do bot como o valor de `completionBotId` no objeto `TaskInfo`. O corpo do Cartão adaptável conforme preenchido pelo usuário é enviado ao bot usando uma mensagem `task/submit invoke` quando o usuário seleciona um botão `Action.Submit`. O esquema para o objeto que você recebe é muito semelhante ao [esquema recebido para tarefa/busca e tarefa/envio de mensagens](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). A única diferença é que o esquema do objeto JSON é um objeto cartão adaptável em vez de um objeto que contém um objeto cartão adaptável como [quando Cartões adaptáveis são usados com bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+Quando você invoca o módulo de tarefa com um botão `submitHandler` e o usuário seleciona um botão `Action.Submit`, os valores no cartão são retornados como o valor de `result`. Se o usuário selecionar a tecla Esc ou X no canto superior direito, `err` será retornado. Se seu aplicativo contiver um bot além de uma guia, `appId` você poderá incluir o bot como o `completionBotId` valor do `TaskInfo` objeto. O corpo do Cartão adaptável conforme preenchido pelo usuário é enviado ao bot usando uma mensagem `task/submit invoke` quando o usuário seleciona um botão `Action.Submit`. O esquema do objeto que você recebe é semelhante ao esquema recebido para mensagens [de tarefa/busca e tarefa/envio](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). A única diferença é que o esquema do objeto JSON é um objeto cartão adaptável em vez de um objeto que contém um objeto cartão adaptável como [quando Cartões adaptáveis são usados com bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 A próxima seção fornece um exemplo de envio do resultado de um módulo de tarefa.
 
@@ -131,7 +131,7 @@ A tabela a seguir fornece os valores possíveis de `err` que podem ser recebidos
 
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Guias de exemplo do módulo de tarefa e bots-V3 | Exemplos para criar módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Guias de exemplo do módulo de tarefa e bots-V3 | Exemplos para criar módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 

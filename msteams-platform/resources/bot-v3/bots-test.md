@@ -3,14 +3,14 @@ title: Testar e depurar seu aplicativo
 description: Descreve como testar bots no Microsoft Teams
 keywords: teste bots teams
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7eae460614f33456748b2546e36c10924f49b25d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111469"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755906"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testar e depurar seu bot do Microsoft Teams
 
@@ -55,11 +55,11 @@ Você também pode iniciar uma conversa com seu bot usando sua ID. Dois métodos
 2. Faça referência direta à ID do aplicativo do bot de dentro do Microsoft Teams:
    * Na página [Painel do bot](https://dev.botframework.com/bots) para seu bot, em **Detalhes**, copie a **ID do aplicativo da Microsoft** para o bot.
   
-     ![Obtendo o AppID para o bot](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Painel do Bot":::
   
    * No Microsoft Teams, no painel de **Chat**, selecione o **ícone Adicionar chat**. Em **Para**, cole a ID do Aplicativo da Microsoft de seu bot.
   
-     ![Carregando o AppID para o bot](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Carregando o AppID para o bot"border="true":::
 
      A ID do aplicativo deve ser resolvida para o nome do bot.
 
@@ -72,7 +72,7 @@ Seu bot receberá o evento `conversationUpdate` assim como bots adicionados a um
 
 Observe que os usuários podem optar por impedir que seu bot envie mensagens de chat pessoais. Eles podem alternar isso clicando com o botão direito do mouse no bot no canal de chat e escolhendo **Bloquer conversas com bot**. Isso significa que seus bots continuarão a enviar mensagens, mas o usuário não receberá essas mensagens.
 
-![Bloqueando um bot](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Bloqueando um bot"border="true":::
 
 ## <a name="removing-a-bot-from-a-team"></a>Removendo um bot de uma equipe
 

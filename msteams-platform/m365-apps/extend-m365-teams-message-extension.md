@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656142"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668071"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão de mensagem do Teams Microsoft 365
 
@@ -106,7 +106,7 @@ Para que os usuários interajam com sua extensão de mensagem do Outlook, você 
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Adicione um canal de 'Extensões de Mensagem' do Outlook para seu bot no painel Canais de Bot do Azure":::
 
-1. Confirme se o canal do Outlook está listado junto com o Microsoft Teams no painel **Canais** do bot:
+1. Confirme se o seu canal do Outlook está listado junto com o Microsoft Teams no painel **Canais** do seu bot.
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="O painel Canais de Bot do Azure listando os canais do Microsoft Teams e do Outlook":::
 
@@ -123,27 +123,27 @@ O logon único (SSO) do Azure Active Directory (AD) para extensões de mensagem 
 1. Selecionar **Expor uma API** (em *Gerenciar*).
 1. Na seção **Aplicativos do cliente autorizados**, certifique-se de que todos os valores `Client Id` a seguir estejam listados:
 
-|Microsoft 365 aplicativo cliente | ID do cliente |
-|--|--|
-|Área de trabalho e dispositivos móveis do Teams |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Web do Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Outlook para área de trabalho | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Microsoft 365 aplicativo cliente | ID do cliente |
+   |--|--|
+   |Área de trabalho e dispositivos móveis do Teams |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+   |Web do Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Outlook para área de trabalho | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Realizar sideload da extensão de mensagem atualizada no Teams
 
 A etapa final é realizar o sideload da extensão de mensagem atualizada ([pacote de aplicativos](/microsoftteams/platform/concepts/build-and-test/apps-package)) no Microsoft Teams. Depois de concluído, sua extensão de mensagem aparecerá em seus *Aplicativos* instalados na área de composição de mensagem.
 
-1. Empacote seu aplicativo do Teams (ícones de manifesto [ e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Teams Toolkit para criar seu aplicativo, pode fazer isso facilmente usando a opção de **pacote de metadados Zip Teams** no menu *Desenvolvimento* no menu de implantação do Teams:
+1. Empacote seu aplicativo do Teams ([ícones de manifesto e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, pode fazer isso facilmente usando a opção de pacote de metadados **Zip Teams** no menu *Implantação* do Kit de Ferramentas do Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Pacote de metadados do Zip Teams' na extensão do Kit de Ferramentas do Teams para Visual Studio Code":::
 
-1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) pelo seu perfil de usuário e, em seguida, selecione: Sobre > **Versão prévia do desenvolvedor**.
+1. Entre no Teams com sua conta de locatário da área restrita e alterne para o modo de *Visualização do Desenvolvedor*. Selecione o menu de reticências (**...**) em seu perfil de usuário e selecione: **sobre** > **Visualização do desenvolvedor**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="No menu de reticências do Teams, abra 'Sobre' e selecione a opção 'Visualização do Desenvolvedor'":::
 
-1. Selecione *Aplicativos* para abrir o painel **Gerenciar seus aplicativos**. Selecione **Publicar um aplicativo**.
+1. Selecione **Aplicativos** para abrir o painel **Gerenciar seus aplicativos**. Selecione **Publicar um aplicativo**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra o painel 'Gerenciar seus aplicativos' e selecione 'Publicar um aplicativo'":::
 

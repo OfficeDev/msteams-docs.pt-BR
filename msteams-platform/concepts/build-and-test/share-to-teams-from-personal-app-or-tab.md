@@ -4,12 +4,12 @@ description: Saiba como adicionar o Compartilhamento no Teams inserido em seu ap
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar a opção Compartilhar no Teams no Teams
-ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439360"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757259"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartilhar com o Teams a partir do aplicativo ou guia pessoal
 
@@ -72,7 +72,7 @@ A tabela a seguir fornece os códigos de resposta:
 | **100** | A API não tem suporte na plataforma atual. |
 | **404** | O arquivo especificado não foi encontrado no local especificado. |
 | **500** | Erro interno encontrado ao executar a operação necessária. |
-| **501** | Não há suporte para a API no contexto atual. |
+| **501** | A API não tem suporte no contexto atual. |
 | **1.000** | Permissões negadas pelo usuário. |
 | **2000** | Problema de rede. |
 | **3000** | O hardware subjacente não dá suporte à funcionalidade. |

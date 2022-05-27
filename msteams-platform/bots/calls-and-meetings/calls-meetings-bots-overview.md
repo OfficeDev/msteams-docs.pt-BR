@@ -4,12 +4,12 @@ description: Saiba como seus aplicativos do Microsoft Teams podem interagir com 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: bot de fluxos de mídia em tempo real de chamadas de chamadas de vídeo IVR de voz online
-ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 48c5283a1552c2f04651fe67254def0e6d60a8e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297167"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756727"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -23,7 +23,7 @@ Para usar essas APIs do Graph em um aplicativo do Teams, crie um bot e especifiq
 
 Além disso, a plataforma de mídia em tempo real permite que os bots interajam com chamadas e reuniões do Teams usando voz, vídeo e compartilhamento de tela em tempo real. Um bot que participa de chamadas de áudio ou vídeo e reuniões online é um bot regular do Microsoft Teams com alguns recursos extras usados ​​para registrar o bot.
 
-O manifesto do aplicativo Teams com duas configurações adicionais `supportsCalling` e `supportsVideo`, permissões do Graph para a ID do aplicativo Microsoft do bot e consentimento do administrador de locatários permitem que você registre o bot. Ao registrar um bot de chamadas e reuniões para o Teams, a URL do Webhook é mencionada, que é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot. Um bot de mídia hospedado pelo aplicativo requer a biblioteca .NET Microsoft.Graph.Communications.Calls.Media para acessar os fluxos de mídia de áudio e vídeo, e o bot deve ser implantado em um computador Windows Server ou sistema operacional convidado (SO) do Windows Server no Azure. Os bots no Teams dão suporte apenas a um conjunto específico de formatos de mídia para conteúdo de áudio e vídeo.
+O manifesto do aplicativo Teams com duas configurações adicionais `supportsCalling` e `supportsVideo`, permissões do Graph para a ID do aplicativo Microsoft do bot e consentimento do administrador de locatários permitem que você registre o bot. Ao registrar um bot de chamadas e reuniões para o Teams, a URL do Webhook é mencionada, que é o ponto de extremidade do webhook para todas as chamadas de entrada para seu bot. Um bot de mídia hospedado pelo aplicativo requer a biblioteca .NET Microsoft.Graph.Communications.Calls.Media para acessar os fluxos de mídia de áudio e vídeo, e o bot deve ser implantado em um computador Windows Server ou sistema operacional convidado (SO) do Windows Server no Azure. Os bots Teams suporte apenas a um conjunto específico de formatos de mídia para conteúdo de áudio e vídeo.
 
 Agora, você deve entender alguns conceitos principais, terminologia e convenções.
 
@@ -49,12 +49,12 @@ As chamadas são ponto a ponto entre uma pessoa e seu bot ou várias partes entr
 
 A seguir estão os diferentes tipos de chamada e permissões necessárias para a chamada:
 
-* Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multiparte existente. A chamada com várias partes ainda não está habilitada na interface do usuário do Teams.
+* Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multiparte existente. A chamada de várias partes ainda não está habilitada na interface do Teams usuário.
 
     > [!NOTE]
     > Atualmente, não há suporte para chamadas iniciadas pelo usuário para um bot na plataforma móvel do Microsoft Teams.
 
-* As permissões de grafo não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada com várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
+* Graph permissões não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada com várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
 * Uma chamada pode começar como ponto a ponto e, eventualmente, se tornar uma chamada com várias partes. Seu bot pode iniciar chamadas com várias partes convidando outras pessoas, desde que seu bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas em grupo e se um participante adicionar outro participante à chamada, o bot será removido da chamada.
 
 ### <a name="signals"></a>Sinais
@@ -74,11 +74,11 @@ Da perspectiva de um usuário do Teams, há dois tipos de reuniões online, ad h
 
 ### <a name="real-time-media"></a>Mídia em tempo real
 
-Quando um bot está participando de uma chamada ou reunião online, ele deve lidar com fluxos de áudio e vídeo. Quando os usuários falam em uma chamada, se mostram em uma webcam ou apresentam suas telas em uma reunião, para um bot, isso é mostrado como fluxos de áudio e vídeo. Se um bot quiser dizer algo tão simples como **pressionar 0 para alcançar o operador** em um cenário de resposta de voz interativa (IVR), é necessário reproduzir um arquivo .WAV. Coletivamente, isso é conhecido como mídia ou mídia em tempo real.
+Quando um bot está participando de uma chamada ou reunião online, ele deve lidar com fluxos de áudio e vídeo. Quando os usuários falam em uma chamada, se mostram em uma webcam ou apresentam suas telas em uma reunião para um bot, ele é mostrado como fluxos de áudio e vídeo. Se um bot quiser dizer algo tão simples como **pressionar 0 para alcançar o operador** em um cenário de resposta de voz interativa (IVR), é necessário reproduzir um arquivo .WAV. Coletivamente, isso é conhecido como mídia ou mídia em tempo real.
 
-A mídia em tempo real refere-se a cenários em que a mídia deve ser processada em tempo real, em vez da reprodução de áudio ou vídeo gravado anteriormente. Lidar com fluxos de mídia, especialmente fluxos de mídia em tempo real, é extremamente complexo. A Microsoft criou a Plataforma de Mídia em Tempo Real para lidar com esses cenários e descarregar o máximo possível do trabalho pesado tradicional de processamento de mídia em tempo real. Quando o bot responde a uma chamada de entrada ou ingressa em uma chamada nova ou existente, ele precisa informar à Plataforma de Mídia em tempo real como a mídia é tratada. Se você estiver criando um aplicativo IVR, poderá descarregar o processamento de áudio caro para a Microsoft. Como alternativa, se o bot exigir acesso direto a fluxos de mídia, esse cenário também será compatível. Há dois tipos de processamento de mídia:
+A mídia em tempo real refere-se a cenários em que a mídia deve ser processada em tempo real, em vez da reprodução de áudio ou vídeo gravado anteriormente. Lidar com fluxos de mídia, especialmente fluxos de mídia em tempo real, é complexo. A Microsoft criou a Plataforma de Mídia em Tempo Real para lidar com esses cenários e descarregar o máximo possível do trabalho pesado tradicional de processamento de mídia em tempo real. Quando o bot responde a uma chamada de entrada ou ingressa em uma chamada nova ou existente, ele precisa informar à Plataforma de Mídia em tempo real como a mídia é tratada. Se você estiver criando um aplicativo IVR, poderá descarregar o processamento de áudio caro para a Microsoft. Como alternativa, se o bot exigir acesso direto a fluxos de mídia, esse cenário também será compatível. Há dois tipos de processamento de mídia:
 
-* **Mídia hospedada pelo serviço**: os bots se concentram no gerenciamento do fluxo de trabalho do aplicativo, como roteamento de chamadas e descarregamento de processamento de áudio para a Plataforma de Mídia em Tempo Real da Microsoft. Com a mídia hospedada pelo serviço, você tem várias opções para implementar e hospedar seu bot. Um bot mídia hospedada pelo serviço pode ser implementado como um serviço sem estado já que não processa mídia localmente. Os bots de mídia hospedados pelo serviço podem usar as seguintes APIs:
+* **Mídia hospedada pelo serviço**: os bots se concentram no gerenciamento do fluxo de trabalho do aplicativo, como roteamento de chamadas e descarregamento de processamento de áudio para a Plataforma de Mídia em Tempo Real da Microsoft. Com a mídia hospedada pelo serviço, você tem várias opções para implementar e hospedar seu bot. Um bot de mídia hospedado pelo serviço pode ser implementado como um serviço sem estado, pois ele não processa a mídia localmente. Os bots de mídia hospedados pelo serviço podem usar as seguintes APIs:
 
   * `PlayPrompt` para reproduzir um clipe de áudio.
   * `Record` para gravar clipes de áudio.

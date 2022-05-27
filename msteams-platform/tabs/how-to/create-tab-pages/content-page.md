@@ -6,16 +6,16 @@ keywords: equipes guias grupo canal configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673024"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757469"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Criar uma página de conteúdo para sua guia
 
-Uma página de conteúdo é uma página da Web renderizada dentro do cliente do Teams. Eles fazem parte de:
+Uma página de conteúdo é uma página da Web renderizada no Teams cliente, que faz parte de:
 
 * Uma guia personalizada com escopo pessoal: nesse caso, a página de conteúdo é a primeira página que o usuário encontra.
 * Uma guia personalizada de canal ou grupo: a página de conteúdo é exibida depois que o usuário fixa e configura a guia no contexto apropriado.
@@ -27,9 +27,9 @@ Este artigo é específico para usar páginas de conteúdo como guias; no entant
 
 ## <a name="tab-content-and-design-guidelines"></a>Diretrizes de design e conteúdo da guia
 
-O objetivo geral da guia é fornecer acesso a conteúdo significativo e envolvente que tenha valor prático e uma finalidade evidente. Você deve se concentrar em tornar seu design de guia limpo, intuitivo de navegação e imersivo de conteúdo.
+O objetivo geral da guia é fornecer acesso ao conteúdo significativo e envolvente que tem um valor prático e uma finalidade evidente. 
 
-Para obter mais informações, consulte [diretrizes de design de guia](~/tabs/design/tabs.md) e [diretrizes de validação da loja do Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Você precisa se concentrar em tornar seu design de guia limpo, intuitivo de navegação e imersivo de conteúdo. Para obter mais informações, consulte [diretrizes de design de guia](~/tabs/design/tabs.md) [e Microsoft Teams de validação do repositório](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar seu código com o Teams
 
@@ -89,11 +89,11 @@ A [SDK JavaScript do cliente do Teams](~/tabs/how-to/using-teams-client-sdk.md) 
 
 ### <a name="deep-links"></a>Links profundos
 
-Você pode criar links profundos para entidades no Teams. Eles são usados para criar links que navegam para conteúdo e informações em sua guia. Para obter mais informações, consulte [criar links profundos para conteúdo e recursos no Teams](~/concepts/build-and-test/deep-links.md).
+Você pode criar links profundos para entidades no Teams. Eles são usados para criar links que navegam para conteúdo e informações em sua guia. Para obter mais informações, [consulte criar links profundos para conteúdo e recursos no Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Módulos de tarefas
 
-Um módulo de tarefa é uma experiência pop-up modal que você pode disparar na guia. Em uma página de conteúdo, você pode usar módulos de tarefa para apresentar formulários para coletar informações adicionais, exibir os detalhes de um item em uma lista ou apresentar ao usuário informações adicionais. Os próprios módulos de tarefa podem ser páginas de conteúdo adicionais ou criados completamente usando Cartões adaptáveis. Para obter mais informações, consulte [usando módulos de tarefas em bots do Microsoft Teams](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Um módulo de tarefa é uma experiência pop-up modal que você pode disparar na guia. Em uma página de conteúdo, use módulos de tarefa para apresentar formulários para coletar informações adicionais, exibir os detalhes de um item em uma lista ou apresentar ao usuário informações adicionais. Os próprios módulos de tarefa podem ser páginas de conteúdo adicionais ou criados completamente usando Cartões adaptáveis. Para obter mais informações, consulte [usando módulos de tarefas em bots do Microsoft Teams](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Domínios válidos
 
@@ -116,7 +116,7 @@ Para mostrar o indicador de carregamento:
 
 1. Adicione `"showLoadingIndicator": true` ao manifesto.
 1. Chamar `app.initialize();`.
-1. Como etapa **obrigatória**, chame `app.notifySuccess()` para notificar o Teams de que seu aplicativo foi carregado com êxito. Em seguida, Teams oculta o indicador de carregamento, se aplicável. Se `notifySuccess` não for chamado dentro de 30 segundos, Teams pressupõe que seu aplicativo tenha tempo limite e exibe uma tela de erro com uma opção de repetição.
+1. Como etapa **obrigatória**, chame `app.notifySuccess()` para notificar o Teams de que seu aplicativo foi carregado com êxito. Em seguida, Teams oculta o indicador de carregamento, se aplicável. Se `notifySuccess` não for chamado dentro de 30 segundos, Teams o aplicativo tiver tempo limite e exibirá uma tela de erro com uma opção de repetição.
 1. **Opcionalmente**, se você estiver pronto para imprimir na tela e desejar carregar lentamente o restante do conteúdo do aplicativo, poderá ocultar o indicador de carregamento manualmente `app.notifyAppLoaded();`chamando.
 1. Se o aplicativo não for carregado, `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` você poderá ligar para Teams sobre a falha e, opcionalmente, fornecer uma mensagem de falha. Uma tela de erro é mostrada para o usuário. O código a seguir mostra a enumeração que define os possíveis motivos pelos quais você pode indicar a falha de carregamento do aplicativo:
 

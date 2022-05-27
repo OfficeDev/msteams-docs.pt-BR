@@ -3,15 +3,15 @@ title: Integrar QR ou capacidade de leitura de código de barras
 author: Rajeshwari-v
 description: Como usar o SDK do cliente JavaScript do Teams para aproveitar a funcionalidade de scanner de código de barras ou QR
 keywords: mídia da câmera qr code qrcode código de barras scanner de código de barras capacidades de digitalização permissões do dispositivo nativo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 32d707202a28789a720dd83905b462451533ff55
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111784"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757714"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras
 
@@ -27,7 +27,7 @@ A seguir estão as vantagens da integração dos recursos de QR ou scanner de c�
 * Com esse recurso, o usuário só precisa alinhar um QR ou código de barras dentro de um quadro no centro da interface do usuário do scanner e o código é verificado automaticamente. Os dados armazenados são compartilhados novamente com o aplicativo Web de chamada. Isso evita o inconveniente e os erros humanos de inserir códigos de produto longos ou outras informações relevantes manualmente.
 
 Para integrar o recurso de scanner de código de barras ou QR, você deve atualizar o arquivo de manifesto do aplicativo e chamar a API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_). Para uma integração eficaz, você deve ter um bom entendimento do [trecho de código](#code-snippet) para chamar a API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_), que permite usar o recurso de scanner de código de barras ou QR nativo. A API fornece um erro para um padrão de código de barras sem suporte.
-É importante se familiarizar com os [erros de resposta da API](#error-handling) para lidar com os erros em seu aplicativo do Teams.
+É importante se familiarizar com os erros de resposta da [API](#error-handling) para lidar com os erros em seu Teams aplicativo.
 
 > [!NOTE]
 > Atualmente, o suporte do Microsoft Teams para o recurso QR ou scanner de código de barras está disponível apenas para clientes móveis.
@@ -74,12 +74,12 @@ A imagem a seguir descreve a experiência do aplicativo da web com o recurso de 
 
 ## <a name="error-handling"></a>Tratamento de erros
 
-Você deve garantir o tratamento adequado desses erros em seu aplicativo Teams. A tabela a seguir lista os códigos de erro e as condições sob as quais os erros são gerados:
+Você deve garantir que lide com esses erros adequadamente em seu aplicativo do Teams. A tabela a seguir lista os códigos de erro e as condições sob quais os erros são gerados:
 
 |Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
-| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportada na plataforma atual.|
-| **500** | INTERNAL_ERROR | Erro interno ao executar a operação necessária.|
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não tem suporte na plataforma atual.|
+| **500** | INTERNAL_ERROR | Erro interno encontrado durante a execução da operação necessária.|
 | **1.000** | PERMISSION_DENIED |A permissão foi negada pelo usuário.|
 | **3000** | NO_HW_SUPPORT | O hardware subjacente não dá suporte à funcionalidade.|
 | **4000** | ARGUMENTOS_INVÁLIDOS | Um ou mais argumentos são inválidos.|

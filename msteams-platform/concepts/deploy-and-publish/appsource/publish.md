@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
-ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
+ms.openlocfilehash: ebde2818fc11bfcd3316a3ae8c9cdd2cbfea0edd
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64793794"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668169"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -89,7 +89,7 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 
 * **Durante a fase de projeto**
 
-  Revise as diretrizes de [validação do repositório](prepare/teams-store-validation-guidelines.md) no início do ciclo de vida do seu aplicativo (fase de design) para garantir que você crie seu aplicativo de acordo com os requisitos da loja. Se você criar seu aplicativo de acordo com essas diretrizes, isso impedirá qualquer retrabalho devido à não adesão às políticas de armazenamento.
+  Revise as diretrizes de [validação do repositório](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) no início do ciclo de vida do seu aplicativo (fase de design) para garantir que você crie seu aplicativo de acordo com os requisitos da loja. Se você criar seu aplicativo de acordo com essas diretrizes, isso impedirá qualquer retrabalho devido à não adesão às políticas de armazenamento.
 
 * **Antes do envio de aplicativo**
 
@@ -103,23 +103,23 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Validação do aplicativo da loja do Microsoft Teams no Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. Teste seu aplicativo completamente antes do envio do aplicativo para garantir que ele siga as políticas da loja. Faça sideload do aplicativo no Teams e teste os fluxos de usuário de ponta a ponta para seu aplicativo. Verifique se a funcionalidade funciona conforme o esperado, se os links não estão quebrados, se a experiência do usuário não está bloqueada e se há limitações claramente realçadas.
+     1. Teste seu aplicativo completamente antes do envio do aplicativo para garantir que ele siga as políticas da loja. Faça o sideload do aplicativo no Teams e teste os fluxos de usuário de ponta a ponta para o seu aplicativo. Verifique se a funcionalidade funciona conforme o esperado, se os links não estão quebrados, se a experiência do usuário não está bloqueada e se há limitações claramente realçadas.
 
      1. Teste seu aplicativo na área de trabalho, na Web e em clientes móveis. Verifique se o aplicativo está respondendo entre diferentes fatores forma.
-
+  
   1. Conclua a [verificação do editor](/azure/active-directory/develop/publisher-verification-overview) antes de enviar seu aplicativo. Se você tiver algum problema, poderá criar um [tíquete de suporte](/azure/marketplace/partner-center-portal/support) para resolução.
 
   1. Ao se preparar para o envio do aplicativo, [siga a lista de verificação](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) e inclua os seguintes detalhes como parte do pacote de envio:
 
-      1. Pacote do aplicativo verificado por completo.
+        1. Pacote do aplicativo verificado por completo.
 
-      1. Credenciais de usuário administrador e não administrador em funcionamento para testar a funcionalidade do seu aplicativo (se seu aplicativo oferecer um modelo de assinatura premium).
+        1. Credenciais de usuário administrador e não administrador em funcionamento para testar a funcionalidade do seu aplicativo (se seu aplicativo oferecer um modelo de assinatura premium).
 
-      1. Instruções de teste detalhando a funcionalidade do aplicativo e os cenários com suporte.
+        1. Instruções de teste detalhando a funcionalidade do aplicativo e os cenários com suporte.
 
-      1. Instruções de configuração se seu aplicativo exigir configuração adicional para acessar a funcionalidade do aplicativo. Como alternativa, se seu aplicativo exigir configuração complexa, você também poderá fornecer um [locatário de demonstração provisionado](/office/developer-program/microsoft-365-developer-program-get-started) com acesso de administrador para que nossos validadores possam ignorar as etapas de configuração.
+        1. Instruções de configuração se seu aplicativo exigir configuração adicional para acessar a funcionalidade do aplicativo. Como alternativa, se seu aplicativo exigir configuração complexa, você também poderá fornecer um [locatário de demonstração provisionado](/office/developer-program/microsoft-365-developer-program-get-started) com acesso de administrador para que nossos validadores possam ignorar as etapas de configuração.
 
-      1. Link para um fluxo de usuário chave de gravação de vídeo de demonstração para seu aplicativo. Isso é altamente recomendado.
+        1. Link para um fluxo de usuário chave de gravação de vídeo de demonstração para seu aplicativo. Isso é altamente recomendado.
 
 * **Postar envio de aplicativo**
 
@@ -130,6 +130,44 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
   * Certifique-se de ter resolvido [todos os problemas relatados](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) a você pelo serviço de concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) antes de compartilhar seu pacote de aplicativos para testes adicionais. Isso ajuda a reduzir o número de iterações necessárias para validar seu aplicativo e, consequentemente, o tempo necessário para aprovar seu aplicativo.
   
   * Evite alterar a funcionalidade do aplicativo durante o processo de validação. Isso pode levar à descoberta de novos problemas e aumentar o tempo necessário para aprovar seu aplicativo.
+
+## <a name="additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer"></a>Dicas adicionais para aprovação rápida ao publicar seu aplicativo vinculado a uma oferta de SaaS
+
+* **Durante a fase de projeto**
+
+  Leia as diretrizes de [validação da loja específicas para aplicativos publicados vinculadas a ofertas de SaaS](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) no início do ciclo de vida do aplicativo (fase de design), para garantir que seu aplicativo seja desenvolvido de acordo com os requisitos da loja e com as [políticas do Marketplace Comercial da Microsoft aplicáveis aos aplicativos do Teams vinculados a ofertas de SaaS](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). Se você criar seu aplicativo de acordo com essas diretrizes, isso impedirá qualquer retrabalho devido à não adesão às políticas de armazenamento.
+
+* **Antes do envio de aplicativo**
+
+  1. Ao se preparar para o envio do aplicativo, verifique:
+
+      1. Se o seu aplicativo está vinculado a uma oferta de SaaS ativa (já publicada) no AppSource com pelo menos um plano contendo informações de preços.
+
+      1. Se você mencionou corretamente os detalhes da `subscriptionOffer` no manifesto do seu aplicativo no formato `publisherId.offerId`.
+
+      1. Você deve se certificar de que a oferta de SaaS vinculada tenha sido projetada para dar suporte a licenças atribuídas em um [modelo por usuário](/azure/marketplace/create-new-saas-offer-plans). As ofertas de SaaS vinculadas que dão suporte a outros modelos de preços, como uma tarifa fixa, não são aceitas atualmente para publicação na loja do Teams.
+
+      1. Inclua instruções de teste ou de configuração, ou o link para um vídeo de demonstração detalhando a funcionalidade do aplicativo e as situações com suporte, além de quaisquer informações adicionais para permitir que nossos testadores entendam facilmente os fluxos de trabalho no portal de SaaS.
+
+  1. Você deve [autotestar](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) minuciosamente os fluxos de trabalho de gerenciamento de licenças e compras de ponta a ponta antes de enviar seu aplicativo vinculado a uma oferta de SaaS para validação, certificando-se de que:
+
+     1. Tanto usuários administradores e não administradores possam fazer um pedido e confirmar a compra da uma assinatura. Os compradores possam navegar até a página inicial do aplicativo de SaaS selecionando **Configurar Agora** no Centro de Administração da Microsoft. Teste e se certifique, ainda, que seus compradores possam ativar e configurar a respectiva assinatura em seu aplicativo de SaaS. As mensagens no seu aplicativo de SaaS devem fornecer informações claras e suficientes sobre o caminho que um comprador deve seguir.
+
+     1. A seção **Gerenciar Assinaturas** no Centro de Administração da Microsoft mostra os detalhes corretos das assinaturas adicionadas pelos usuários de teste. O status da assinatura, o número de licenças e outros detalhes devem ser precisos.
+
+     1. A compra e a remoção de fluxos de trabalho de licenças devem estar funcionando conforme o esperado. Verifique se os compradores conseguem aumentar o número de licenças a partir do Centro de Administração da Microsoft. Certifique-se de que o número de licenças e atribuições do seu aplicativo de SaaS reflitam as respectivas licenças e os destinatários corretos. Além disso, certifique-se de que o aplicativo de SaaS forneça uma maneira de cancelar a licença de um usuário. Após o cancelamento de uma licença, certifique-se de que o número de licenças e atribuições restantes permaneçam intactos no seu aplicativo de SaaS e que os detalhes corretos estejam refletidos no Centro de Administração da Microsoft.
+
+     1. O cancelamento da assinatura deve estar funcionando conforme o esperado. Os compradores devem ser capazes de cancelar uma assinatura. Após o cancelamento, verifique se o status correto da assinatura está refletido no Centro de Administração da Microsoft e no aplicativo de SaaS. Verifique se o comprador perdeu o acesso à assinatura após um cancelamento bem-sucedido.
+
+     1. A nova compra de uma assinatura deve ocorrer sem obstáculos. Após o cancelamento de uma assinatura ativa, teste o aplicativo minuciosamente para garantir que os compradores possam comprar a assinatura novamente.
+
+     1. Os compradores devem ser capazes de alterar o plano que assinaram. Após o plano ter sido alterado, os usuários devem poder acessar os recursos do plano incluídos no upgrade ou downgrade.
+
+     1. Seu aplicativo de SaaS deve conter recursos de gerenciamento de licenças. Os compradores devem ser capazes de atribuir, modificar e reatribuir as licenças disponíveis aos usuários. Verifique se os compradores podem adicionar ou remover usuários para gerenciar as licenças.
+  
+  1. Você precisa testar e garantir que tanto os fluxos de compra mínima quanto em massa estejam funcionando conforme o esperado.
+  
+  1. Você deve garantir que os usuários com licenças atribuídas tenham acesso exatamente aos recursos do plano comprado, conforme descritos na listagem do plano.
 
 ## <a name="see-also"></a>Confira também
 
