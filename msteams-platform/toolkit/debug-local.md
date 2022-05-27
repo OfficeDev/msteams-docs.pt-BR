@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104438"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756629"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
 
@@ -102,22 +102,22 @@ O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome, dep
 <details>
 <summary><b>macOS</b></summary>
 
-1. Selecione **Depurar o Edge** ou **Depurar o Chrome** na **Executar e Depurar** na barra de atividades
+1. Selecione **Depurar o Edge** ou **Depurar o Chrome** em **Executar e Depurar** na barra de atividades.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listas de navegadores" border="false":::
 
-1. Selecione **Iniciar depuração (F5)** ou  **Executar** para executar seu aplicativo Teams no modo de depuração
+1. Selecione **Iniciar Depuração (F5)** ou **Executar** para executar seu aplicativo Teams no modo de depuração.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Depurar seu aplicativo" border="false":::
 
-3. Selecione **Entrar** na conta do Microsoft 365
+3. Selecione **Entrar** para sua conta Microsoft 365.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Entrar na conta M365" border="true":::
 
    > [!TIP]
    > Você pode selecionar **Ler mais** para saber mais sobre o Programa para Desenvolvedores do Microsoft 365. O navegador da Web padrão é aberto para permitir que você entre na sua conta Microsoft 365 usando suas credenciais.
 
-4. Selecione **Instalar** para instalar o certificado de desenvolvimento para localhost
+4. Selecione **Instalar** para instalar o certificado de desenvolvimento para localhost.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
 
@@ -128,18 +128,16 @@ O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome, dep
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="logon do mac" border="true":::
 
-O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome, dependendo da seleção e abre uma página da Web para carregar o cliente do Teams. 
+O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome, dependendo da seleção e abre uma página da Web para carregar o cliente do Teams.
 
 </details>
-
 
 #### <a name="2-debug-your-app"></a>2. Depurar seu aplicativo
 
 Após o processo de configuração inicial, o Kit de Ferramentas do Teams inicia os seguintes processos:
 
 a. [Inicia serviços de aplicativo](#starts-app-services) </br>
-b. [Inicia depuradores](#launches-debuggers)   </br>
-      c. [Faz o sideload do aplicativo Teams](#sideloads-the-teams-app)
+b. [Inicia depuradores](#launches-debuggers)   </br>c. [Faz o sideload do aplicativo Teams](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>Inicia serviços de aplicativo
 
@@ -194,9 +192,9 @@ O Kit de Ferramentas do Teams permite personalizar as configurações de depura�
 <details>
 <summary><b>Usar o ponto de extremidade do bot</b></summary>
 
-1. Nas configurações do Visual Studio Code, desmarque **Verificar se o Ngrok está instalado e foi iniciado (ngrok)**
+1. Nas configurações do Visual Studio Code, desmarque **Verificar se Ngrok está instalado e foi iniciado (ngrok)**.
 
-1. Defina a configuração do siteEndpoint em `.fx/configs/config.local.json` para o seu ponto de extremidade
+1. Defina a configuração do siteEndpoint em `.fx/configs/config.local.json` para seu ponto de extremidade.
 
 ```json
 {
@@ -214,9 +212,9 @@ O Kit de Ferramentas do Teams permite personalizar as configurações de depura�
 <details>
 <summary><b>Usar seu certificado de desenvolvimento</b></summary>
 
-1. Nas configurações do Visual Studio Code, desmarque **Verificar se o certificado de desenvolvimento é confiável (devCert)**
+1. Nas configurações do Visual Studio Code, desmarque **Verificar se o certificado de desenvolvimento é confiável (devCert)**.
 
-1. Defina a configuração `sslCertFile` e `sslKeyFile` em `.fx/configs/config.local.json` para o caminho do arquivo de certificado e o caminho do arquivo de chave
+1. Defina a configuração `sslCertFile` e `sslKeyFile` em `.fx/configs/config.local.json` para o caminho do arquivo de certificado e o caminho do arquivo de chave.
 
 ```json
 {
@@ -234,11 +232,11 @@ O Kit de Ferramentas do Teams permite personalizar as configurações de depura�
 <details>
 <summary><b>Use seus scripts de início para iniciar os serviços de aplicativo</b></summary>
 
-1. Para a guia, atualize o script `dev:teamsfx` em `tabs/package.json`
+1. Para guia, atualize o script `dev:teamsfx` em `tabs/package.json`.
 
-1. Para o bot ou extensão de mensagem, atualize o script `dev:teamsfx` em `bot/package.json`
+1. Para o bot ou extensão de mensagem, atualize o script `dev:teamsfx` em `bot/package.json`.
 
-1. Para o Azure Functions, atualize o script `dev:teamsfx` em `api/package.json` e para o script de atualização do TypeScript `watch:teamsfx`
+1. Para o Azure Functions, atualize o script `dev:teamsfx` em `api/package.json` e para o TypeScript, atualize o script `watch:teamsfx`.
 
    > [!NOTE]
    > Atualmente, a guia, o bot, os aplicativos de extensão de mensagem e as portas do Azure Functions não suportam a personalização.
@@ -261,7 +259,7 @@ Você pode adicionar variáveis de ambiente ao arquivo `.env.teamsfx.local` para
 
 O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visual Studio Code para depurar a guia, o bot, a extensão de mensagem e o Azure Functions ao mesmo tempo. Você pode atualizar `.vscode/launch.json` e `.vscode/tasks.json` para depurar componente parcial. Se você quiser depurar a guia somente em uma guia mais bot com o projeto do Azure Functions, use as seguintes etapas:
 
-1. Comentário **Anexar ao Bot** e **Anexar ao Back-end** do composto de depuração em `.vscode/launch.json`
+1. Comentário ao **Anexar ao Bot** e **Anexar ao Back-end** do composto de depuração em `.vscode/launch.json`.
 
    ```json
    {
@@ -281,7 +279,7 @@ O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visua
    }
    ```
 
-2. Comentário **Iniciar Back-end** e Iniciar Bot a partir da tarefa Iniciar Tudo em .vscode/tasks.json
+2. Comentário ao **Iniciar Back-end** e Iniciar o Bot da tarefa Iniciar Tudo em .vscode/tasks.json.
 
    ```json
    {
@@ -298,7 +296,6 @@ O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visua
    ```
 
 </details>
-
 
 ## <a name="next-step"></a>Próxima etapa
 

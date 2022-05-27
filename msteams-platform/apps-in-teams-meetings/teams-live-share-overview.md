@@ -4,12 +4,12 @@ description: Neste módulo, saiba o que é o SDK do Microsoft Live Share e seus 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 48133785ff29e5b1721585869b293008d4cbc12d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
+ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668192"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759652"
 ---
 ---
 
@@ -18,7 +18,7 @@ ms.locfileid: "65668192"
 > [!Note]
 > O SDK do Live Share está disponível atualmente apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md). Você precisa fazer parte da Versão Prévia do Desenvolvedor Público do Microsoft Teams para usar o SDK do Live Share.
 
-O Live Share é um SDK projetado para transformar aplicativos do Teams em experiências colaborativas de vários usuários sem escrever nenhum código de back-end dedicado. O SDK do Live Share integra perfeitamente as reuniões ao [Fluid Framework](https://fluidframework.com/). Fluid Framework é uma coleção de bibliotecas de cliente para distribuir e sincronizar o estado compartilhado. Live Share fornece uma versão gratuita, totalmente gerenciada e pronta para usar o [Azure Fluid Relay](/azure/azure-relay/relay-what-is-it) suportado pela segurança e escala global do Teams.
+O Live Share é um SDK projetado para transformar aplicativos do Teams em experiências colaborativas de vários usuários sem escrever nenhum código de back-end dedicado. O SDK do Live Share integra perfeitamente as reuniões ao [Fluid Framework](https://fluidframework.com/). Fluid Framework é uma coleção de bibliotecas de cliente para distribuir e sincronizar o estado compartilhado. Live Share fornece uma versão gratuita, totalmente gerenciada e pronta para usar o [Azure Fluid Relay](/azure/azure-fluid-relay/) suportado pela segurança e escala global do Teams.
 
 > [!div class="nextstepaction"]
 > [Introdução](teams-live-share-quick-start.md)

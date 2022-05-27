@@ -5,12 +5,12 @@ description: Identifique as referências da API de aplicativos de reunião com e
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755829"
+ms.locfileid: "65756580"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -535,7 +535,7 @@ A tabela a seguir fornece os códigos de resposta:
 |---|---|
 | **500** | Erro interno. |
 | **501** | A API não tem suporte no contexto atual.|
-| **1000** | O aplicativo não tem as permissões adequadas para permitir que o compartilhamento seja preparado.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obter API de estado de compartilhamento do estágio de conteúdo do aplicativo
 
@@ -575,7 +575,7 @@ A tabela a seguir fornece os códigos de resposta:
 |---|---|
 | **500** | Erro interno. |
 | **501** | A API não tem suporte no contexto atual.|
-| **1000** | O aplicativo não tem as permissões adequadas para permitir que o compartilhamento seja preparado.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>Obter a API de recursos de compartilhamento do estágio de conteúdo do aplicativo
 
@@ -614,7 +614,7 @@ A tabela a seguir fornece os códigos de resposta:
 |Código da resposta|Descrição|
 |---|---|
 | **500** | Erro interno. |
-| **1000** | O aplicativo não tem permissões para permitir que o compartilhamento seja preparado.|
+| **1000** | O aplicativo não tem permissões para permitir o compartilhamento em estágios.|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>Obter API de eventos de reunião do Teams em tempo real
 

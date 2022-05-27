@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de funcionalidades do mapa de locali
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111182"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757168"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização
 
@@ -26,13 +26,13 @@ A principal vantagem da integração de recursos de localização em seus aplica
 Os exemplos a seguir mostram como a integração de recursos de localização é usada em cenários diferentes:
 
 * Em uma fábrica, o supervisor pode acompanhar a participação dos trabalhadores solicitando que eles tirem uma selfie nas proximidades da fábrica e compartilhe-a por meio do aplicativo especificado. Os dados de localização também são capturados e enviados junto com a imagem.
-* Os recursos de localização permitem que a equipe de manutenção de um provedor de serviços compartilhe dados de integridade autenticados de torres celulares com o gerenciamento. O gerenciamento pode comparar qualquer incompatibilidade entre as informações de localização capturadas e os dados enviados pela equipe de manutenção.
+* As funcionalidades de localização permitem que a equipe de manutenção de um provedor de serviços compartilhe dados de integridade autênticos das torres de celular com o gerenciamento. O gerenciamento pode comparar qualquer incompatibilidade entre as informações de localização capturadas e os dados enviados pela equipe de manutenção.
 
 Para integrar os recursos de localização, você deve atualizar o arquivo de manifesto do aplicativo e chamar as APIs. Para uma integração eficaz, você deve ter uma boa compreensão dos [snippets de código](#code-snippets) para chamar as APIs de localização.
-É importante se familiarizar com os [erros de resposta da API](#error-handling) para lidar com os erros em seu aplicativo do Teams.
+É importante se familiarizar com os [erros de resposta da API](#error-handling) para lidar com os erros no seu aplicativo do Teams.
 
 > [!NOTE]
-> Atualmente, o suporte do Microsoft Teams para recursos de localização está disponível apenas para clientes móveis.
+> Atualmente, o suporte do Microsoft Teams para funcionalidades de localização está disponível somente para clientes de dispositivos móveis.
 
 ## <a name="update-manifest"></a>Atualizar manifesto
 
@@ -98,12 +98,12 @@ Você deve garantir que lide com esses erros adequadamente em seu aplicativo do 
 
 |Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
-| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportada na plataforma atual.|
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportado na plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno encontrado durante a execução da operação necessária.|
-| **1.000** | PERMISSION_DENIED |O usuário negou permissões de localização ao Aplicativo do Teams ou ao aplicativo Web .|
+| **1.000** | PERMISSION_DENIED |O usuário negou permissões de localização para o aplicativo do Teams ou o aplicativo Web.|
 | **4000** | ARGUMENTOS_INVÁLIDOS | A API foi invocada com argumentos obrigatórios incorretos ou insuficientes.|
 | **8000** | ABORTAR_USUÁRIO |O usuário cancelou a operação.|
-| **9000** | ANTIGA_PLATAFORMA | O usuário está em uma compilação antiga da plataforma em que a implementação da API não está presente. A atualização do build deve resolver o problema.|
+| **9000** | ANTIGA_PLATAFORMA | O usuário está na build da plataforma antiga onde a implementação da API está ausente. A atualização do build deve resolver o problema.|
 
 ### <a name="code-sample"></a>Exemplo de código
 

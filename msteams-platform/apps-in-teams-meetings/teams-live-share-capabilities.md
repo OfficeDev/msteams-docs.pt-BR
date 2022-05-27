@@ -4,12 +4,12 @@ description: Neste módulo, saiba mais sobre as funcionalidades do SDK do Live S
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5b0d805dc84c49784aaaf04e2a6a7e1f3348661c
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668196"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756601"
 ---
 ---
 
@@ -128,7 +128,7 @@ O SDK do Live Share dá suporte a qualquer [estrutura de dados distribuída](htt
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | Uma estrutura de dados semelhante à lista para armazenar um conjunto de itens (chamados segmentos) em posições definidas.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Sequência de cadeia de caracteres distribuída otimizada para edição de texto do documento.                                                                     |
 
-Vamos ver como o `SharedMap` funciona. Neste exemplo, usamos `SharedMap` para criar um recurso de playlist simples.
+Vamos ver como o `SharedMap` funciona. Neste exemplo, usamos `SharedMap` para criar um recurso de playlist.
 
 ```javascript
 import { SharedMap } from "fluid-framework";

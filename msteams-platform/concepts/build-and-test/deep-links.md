@@ -3,12 +3,12 @@ title: Criar links detalhados
 description: Saiba como descrever os links profundos do Teams e como usá-los no seus aplicativos.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672954"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756764"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -57,13 +57,13 @@ Para implementar isso, adicione uma ação **copiar link** a cada item, da manei
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
 ```
 
-Você precisará substituir os campos com as informações apropriadas:
+Você precisará substituir os campos pelas informações apropriadas:
 
 * `subPageId`: um identificador exclusivo para o item da sua página à qual você tem uma vinculação profunda.
 * `subPageLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
 * `subPageWebUrl`: uma URL de fallback a ser usada se o cliente não puder renderizar a página.
 
-Para obter mais informações, confira [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true).
+Para obter mais informações, consulte [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true).
 
 # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
@@ -73,7 +73,7 @@ Para implementar isso, adicione uma ação **copiar link** a cada item, da manei
 microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
 ```
 
-Você precisará substituir os campos com as informações apropriadas:
+Você precisará substituir os campos pelas informações apropriadas:
 
 * `subEntityId`: um identificador exclusivo para o item da sua guia à qual você tem uma vinculação profunda.
 * `subEntityLabel`: Um rótulo para o item a ser usado para exibir o link profundo.
@@ -93,15 +93,15 @@ Como alternativa, é possível gerar links profundos programaticamente, usando o
 
 Ao navegar até um link profundo, o Microsoft Teams navega até a guia e fornece um mecanismo por meio da biblioteca JavaScript do Microsoft Teams para recuperar a ID da sub-entidade, se ela existir.
 
-A [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) chamada (`microsoftTeams.getContext()`) no TeamsJS v1) retorna uma promessa que será resolvida com o contexto que inclui a propriedade `subPageId` (subEntityId para TeamsJS v1) se a guia for navegada por um link profundo. Para obter mais informações, confira[ Interface do PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+A [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) chamada (`microsoftTeams.getContext()`) no TeamsJS v1) retorna uma promessa que será resolvida com o contexto que inclui a propriedade `subPageId` (subEntityId para TeamsJS v1) se a guia for navegada por um link profundo. Para obter mais informações, consulte a [interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
 ### <a name="generate-a-deep-link-to-your-tab"></a>Gerar um link profundo para sua guia
 
-Embora seja recomendável usar `shareDeepLink()` para gerar um link profundo para sua guia, também é possível criá-lo manualmente.
+Embora seja recomendado usar `shareDeepLink()` para gerar um link direto para sua guia, também é possível criar um manualmente.
 
 > [!NOTE]
 >
-> * As guias pessoais têm um escopo `personal`, enquanto as guias de canal e grupo usam escopos `team` ou `group`. Os dois tipos de guia têm uma sintaxe ligeiramente diferente, pois apenas a guia configurável possui uma propriedade `channel` associada ao seu objeto de contexto. Para obter mais informações, consulte a [referência do manifesto](~/resources/schema/manifest-schema.md).
+> * As guias pessoais têm um escopo `personal`, enquanto as guias de canal e grupo usam escopos `team` ou `group`. Os dois tipos de guia têm uma sintaxe ligeiramente diferente, pois apenas a guia configurável possui uma propriedade `channel` associada ao seu objeto de contexto. Para obter mais informações sobre escopos de guias, consulte a referência do [manifesto](~/resources/schema/manifest-schema.md).
 > * Os links profundos só funcionarão corretamente se a guia tiver sido configurada usando a biblioteca v0.4 ou posterior e, por isso, tiver uma ID de entidade. Links profundos para guias sem IDs de entidade ainda navegam até a guia, mas não podem fornecer a ID da sub-entidade para a guia.
 
 Use o seguinte formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens:
@@ -171,9 +171,9 @@ Os parâmetros de consulta são:
 
 Você pode navegar até o conteúdo no Teams da guia usando o TeamsJS ou links profundos. Isso será útil se sua guia precisar conectar usuários a outro conteúdo no Teams, como a um canal, mensagem, outra guia ou até mesmo para abrir uma caixa de diálogo de agendamento. Anteriormente, a navegação poderia exigir um link profundo, mas agora ela pode ser realizada em muitas instâncias usando o SDK. As seções a seguir mostram os dois métodos, mas é recomendável usar as funcionalidades fortemente tipadas do SDK.
 
-Um dos benefícios de usar o TeamsJS, especialmente para aplicativos do Teams que podem ser executados em outros hosts (Outlook e Office), é que é possível verificar se o host dá suporte ao recurso que você está tentando usar. Para verificar o suporte de um host de uma funcionalidade, você pode usar a função `isSupported()` associada ao namespace da API. A Versão Prévia do SDK do TeamsJS v2 organiza APIs em funcionalidades por meio de namespaces. Por exemplo, antes do uso de uma API no namespace `pages` você pode verificar o valor booliano retornado de `pages.isSupported()` e executar a ação apropriada no contexto da interface do usuário do aplicativo e dos aplicativos.  
+Um dos benefícios de usar o TeamsJS, principalmente para o aplicativo Teams que pode ser executado em outros hosts (Outlook e Office), é que é possível verificar se o host oferece suporte ao recurso que você está tentando usar. Para verificar o suporte de um host de uma funcionalidade, você pode usar a função `isSupported()` associada ao namespace da API. A Versão Prévia do SDK do TeamsJS v2 organiza APIs em funcionalidades por meio de namespaces. Por exemplo, antes do uso de uma API no namespace `pages` você pode verificar o valor booliano retornado de `pages.isSupported()` e executar a ação apropriada no contexto da interface do usuário do aplicativo e dos aplicativos.  
 
-Para obter informações adicionais sobre as funcionalidades e as APIs no TeamsJS, consulte [Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+Para obter mais informações sobre recursos e APIs no TeamsJS, consulte [Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
 ### <a name="navigate-within-your-app"></a>Navegar em seu aplicativo
 
@@ -181,7 +181,7 @@ Para obter informações adicionais sobre as funcionalidades e as APIs no TeamsJ
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Você pode disparar uma navegação da sua guia usando a função [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) conforme mostrado no código a seguir:
+Você pode acionar a navegação de sua guia usando a função [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) conforme mostrado no código a seguir:
 
 ```javascript
 if (pages.isSupported()) {
@@ -193,7 +193,7 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Para obter mais informações sobre como usar a funcionalidade páginas, consulte [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) e o namespace [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) para outras opções de navegação. Se necessário, também é possível abrir diretamente um link profundo usando a função [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true).
+Para obter mais informações sobre como usar a funcionalidade páginas, consulte [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) e o namespace [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) para outras opções de navegação. Se necessário, também é possível abrir diretamente um link direto usando a função [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true).
 
 # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
@@ -227,7 +227,7 @@ if(calendar.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Para obter mais informações sobre como trabalhar com o calendário, consulte o namespace [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) na documentação de referência da API.
+Para obter mais informações sobre como trabalhar com o calendário, consulte o namespace do [calendário](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) na documentação de referência da API.
 
 # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
@@ -240,7 +240,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Gerar um link profundo para a caixa de diálogo de agendamento
 
-Embora seja recomendável usar as APIs fortemente tipadas do TeamsJS, é possível criar manualmente links profundos para a caixa de diálogo de agendamento interna do Teams. Use o seguinte formato para um link profundo que você pode usar em um bot, Conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Embora seja recomendado usar as APIs fortemente tipadas do TeamsJS, é possível criar manualmente links diretos para a caixa de diálogo de agendamento interna do Teams. Use o seguinte formato para um link profundo que você pode usar em um bot, Conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -330,7 +330,7 @@ Os parâmetros de consulta são:
 
 * `channelId`: ID do Canal da conversa. Por exemplo, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
 * `tenantId`: ID de locatário, como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
-* `groupId`: ID do grupo do arquivo. Por exemplo `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `groupId`: ID do grupo do arquivo. Por exemplo, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
 * `parentMessageId`: ID da mensagem pai da conversa.
 * `teamName`: nome da equipe.
 * `channelName`: nome do canal da equipe.
@@ -352,8 +352,8 @@ Os parâmetros de consulta são:
 * `objectUrl`: URL do objeto do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por exemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: URL base do arquivo. O formato é `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por exemplo, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Nome do serviço, ID do aplicativo. Por exemplo, `teams`.
-* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. Ela é opcional e não pode ser definida para arquivos armazenados na pasta do OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId`: ID do grupo do arquivo. Por exemplo `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
+* `threadId`: threadId é a ID da equipe em que o arquivo está armazenado. É opcional e não pode ser definido para arquivos armazenados na pasta OneDrive de um usuário. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: ID do grupo do arquivo. Por exemplo, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Você pode ver `threadId` e `groupId` na URL do canal.  
@@ -407,7 +407,7 @@ Exemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 Você pode invocar somente chamadas de áudio ou áudio/vídeo para um único usuário ou um grupo de usuários, especificando o tipo de chamada e os participantes. Antes de fazer a chamada, o cliente do Teams solicita uma confirmação para fazer a chamada. No caso de chamada em grupo, você pode chamar um conjunto de usuários VoIP e um conjunto de usuários PSTN na mesma invocação de link profundo.
 
-No caso de uma chamada de vídeo, o cliente solicitará confirmação e ativará o vídeo do chamador para a chamada. O receptor da chamada tem a opção de responder somente por áudio ou áudio e vídeo, por meio da janela de notificação de chamada do Teams.
+Em uma chat com vídeo, o cliente solicitará a confirmação e habilitará o vídeo do chamador para a chamada. O receptor da chamada tem a opção de responder somente por áudio ou áudio e vídeo, por meio da janela de notificação de chamada do Teams.
 
 > [!NOTE]
 > Este método não pode ser usado para invocar uma reunião.
@@ -438,7 +438,7 @@ Embora o uso das APIs fortemente tipadas do TeamsJS seja recomendado, você tamb
   
 Estes são os parâmetros de consulta:
 
-* `users`: a lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de Usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email ou, no caso de uma chamada PSTN, ele dá suporte a um pstn mri 4:&lt;phonenumber&gt;.
+* `users`: A lista separada por vírgulas de IDs de usuário que representam os participantes da chamada. Atualmente, o campo ID de usuário dá suporte ao UserPrincipalName do Azure AD, normalmente um endereço de email, ou em uma chamada PSTN, ele dá suporte a um pstn mri 4: &lt;phonenumber&gt;.
 * `withVideo`: Esse é um parâmetro opcional, que você pode usar para fazer uma chamada de vídeo. Definir esse parâmetro só ativará a câmera do chamador. O receptor da chamada tem a opção de responder por meio de chamada de áudio ou áudio e vídeo por meio da janela de notificação de chamada do Teams.
 * `Source`: esse é um parâmetro opcional, que informa sobre a origem do link profundo.
 

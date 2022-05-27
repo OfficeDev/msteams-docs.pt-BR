@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: links profundos de moodle LMS mConnect
-ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453120"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757343"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de gerenciamento de aprendizagem do Moodle
 
@@ -36,15 +36,15 @@ O Moodle LMS ajuda os usuários a acessar os seguintes aplicativos:
 
 * **Plug-ins do Microsoft 365**: os plug-ins do Microsoft 365 são projetados para garantir a integração entre sites do Moodle e do Microsoft Teams. Esses plug-ins podem ser usados de forma independente ou em parceria para garantir os requisitos de usuário distintos. Para mais informações, confira [Plug-ins doMicrosoft 365](m365-plugins/m365-plugins-overview.md).
 
-* **Aplicativos de parceiros do Moodle**: todo o conjunto de aplicativos parceiros para o Moodle e o Teams estão disponíveis na Microsoft Store. Para obter mais informações, confira, [Aplicativos de parceiros do Moodle](partner-apps-for-moodle.md).
+* **Aplicativos de parceiros do Moodle**: todo o conjunto de aplicativos parceiros para o Moodle e o Teams estão disponíveis na Microsoft Store. Para saber mais, confira [Aplicativos de parceiros do Moodle](partner-apps-for-moodle.md).
 
 ## <a name="user-requirement-scenarios"></a>Cenários de requisitos do usuário
 
 Os cenários a seguir descrevem o potencial de aprendizado acelerado combinando os serviços de nuvem da Microsoft com os cursos do Moodle:
 
-* **Facilitar reuniões remotas híbridas**: as reuniões e os serviços de extensibilidade do Teams permitem que os professores deem aula pessoalmente e remotamente aos alunos. Para os alunos, é obrigatório ter acesso a exibições compartilhadas, aplicativos e votações para reuniões remotas. As tarefas de acompanhamento proporcionam transcrição de vários idiomas e gravações de curso de áudio ou vídeo. O Teams e o Moodle trabalham juntos para compartilhar apresentações, atividades e tarefas.
+* **Facilite reuniões remotas híbridas**: as reuniões do Teams e os serviços de extensibilidade permitem que os professores se apresentem presencialmente e remotamente com os alunos. Para os alunos, é obrigatório ter acesso a exibições compartilhadas, aplicativos e votações para reuniões remotas. As tarefas de acompanhamento fornecem transcrição em vários idiomas e gravações de cursos de áudio ou vídeo. O Teams e o Moodle trabalham juntos para compartilhar apresentações, atividades e tarefas.
 
-* **Personalizar painéis de reunião**: crie experiências exclusivas de aprendizado colaborativas usando os pontos de extremidade da API do Graph do Teams. Para outros planos ou projetos adicionais, os usuários podem entrevistar todos os novos recrutas e categorizar os resultados usando votações personalizadas. O compartilhamento de testes é facilitado diretamente no Teams ao entregar atualizações ao site do Moodle de forma assíncrona.
+* **Personalizar painéis de reunião**: crie experiências exclusivas de aprendizado colaborativas usando os pontos de extremidade da API do Graph do Teams. Para outros planos ou projetos adicionais, os usuários podem entrevistar todos os novos recrutas e categorizar os resultados usando votações personalizadas. Há a possibilidade de compartilhar testes diretamente no Teams enquanto atualiza o site do Moodle de forma assíncrona.
 
 * **Facilidade de automação**: para configurar as instalações automatizadas para instituições quando um novo aluno ingressar, o usuário pode adicionar o curso do Moodle, enviar um Cartão Adaptável ao aluno com links relevantes e sugerir materiais de curso de leitura importantes. O conector personalizado do Teams para o Moodle ajuda a criar evento de calendário do Moodle sempre que uma reunião de curso for agendada.
 
@@ -55,4 +55,4 @@ Os cenários a seguir descrevem o potencial de aprendizado acelerado combinando 
 
 * [Plug-ins do Microsoft 365](m365-plugins/m365-plugins-overview.md)
 * [Aplicativos de parceiros do Moodle](partner-apps-for-moodle.md)
-* [Perguntas frequentes sobre o Moodle](faqs.md)
+* [Perguntas frequentes do Moodle](faqs.md)

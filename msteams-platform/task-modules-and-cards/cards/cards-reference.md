@@ -4,16 +4,16 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104137"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757196"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
-Cartões adaptáveis, hero, lista, Conector do Office 365, recibo, entrada e cartões de miniatura e coleções de cartões são compatíveis com bots para o Microsoft Teams. Eles são baseados em cartões definidos pelo Bot Framework, mas o Teams não dá suporte a todos os Bot Framework e adicionou alguns de seus próprios cartões.
+Cartões adaptáveis, hero, lista, Conector do Office 365, recibo, entrada e cartões de miniatura e coleções de cartões são compatíveis com bots para o Microsoft Teams. Eles são baseados em cartões definidos pelo Bot Framework, mas o Teams não oferece suporte a todos os cartões de Bot Framework e adicionou alguns próprios.
 
 Antes de identificar os diferentes tipos de cartão, entenda como criar um cartão hero, um cartão em miniatura ou um Cartão Adaptável.
 
@@ -85,7 +85,7 @@ O cartão pode conter uma imagem embutida, incluindo um link para a imagem dispo
 
 As imagens são dimensionadas para cima ou para baixo para manter a taxa de proporção para cobrir a área da imagem. As imagens são cortadas do centro para obter a taxa de proporção apropriada para o cartão.
 
-As imagens devem ter no máximo 1024×1024 e no formato PNG, JPEG ou GIF. GIF animado não é suportado.
+As imagens devem ter no máximo 1024×1024 e no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.
 
 A tabela a seguir fornece as propriedades de imagens de cartão embutidas:
 
@@ -486,7 +486,7 @@ Para especificar o estilo de renderização para `activityImage`, você pode def
 | `avatar` | Padrão, `activityImage` é cortada como um círculo. |
 | `article` | `activityImage` é exibido como um retângulo e mantém sua taxa de proporção. |
 
-Para obter todos os outros detalhes sobre as propriedades do cartão do conector, consulte [referência de cartão de mensagem acionável](/outlook/actionable-messages/card-reference). As únicas propriedades de cartão de conector que o Teams não dá suporte no momento são as seguintes:
+Para obter todos os outros detalhes sobre as propriedades do cartão do conector, consulte [referência de cartão de mensagem acionável](/outlook/actionable-messages/card-reference). As únicas propriedades do cartão de conector que o Teams não suporta atualmente são as seguintes:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -561,7 +561,7 @@ O código a seguir mostra um exemplo de um cartão do Conector do Office 365:
 
 ## <a name="receipt-card"></a>Cartão de recibo
 
-O Teams dá suporte ao cartão de confirmação. É um cartão que permite que um bot forneça um recibo ao usuário. Normalmente, ele contém a lista de itens a serem incluídos no recibo, como informações fiscais e totais.
+O Teams oferece suporte a cartão de recibo, que permite que um bot forneça um recibo ao usuário. Normalmente, ele contém a lista de itens a serem incluídos no recibo, como informações fiscais e totais.
 
 ### <a name="support-for-receipt-cards"></a>Suporte para cartões de recibo
 
@@ -958,7 +958,7 @@ Uma lista pode exibir no máximo dez cartões por mensagem.
 
 ## <a name="cards-not-supported-in-teams"></a>Cartões sem suporte no Teams
 
-Os cartões a seguir são implementados pelo Bot Framework, mas não têm suporte do Teams:
+Os seguintes cartões são implementados pelo Bot Framework, mas não são suportados pelo Teams:
 
 * Cartões de animação
 * Cartões de áudio

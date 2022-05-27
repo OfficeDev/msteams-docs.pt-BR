@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 keywords: power platform power apps seletor de pessoas link profundo assistente de agente virtual compartilhar com o Teams
-ms.openlocfilehash: c700755051eebbdb827a0fb9aba0ea51d31dbcf8
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604268"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757665"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -46,11 +46,11 @@ A plataforma Microsoft Power combina quatro tecnologias robustas da Microsoft, c
 
 ### <a name="power-apps"></a>Power Apps
 
-Com o Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados corporativos e são adaptados às necessidades da sua organização. O Power Apps permite uma ampla variedade de cenários de aplicativo para resolver desafios de negócios por meio de aplicativos de tela. Depois de compilar o aplicativo, você pode exportá-lo do portal do Power Apps Maker e inserir no Microsoft Teams.
+Com o Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados corporativos e são adaptados às necessidades da sua organização. O Power Apps permite uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos Canvas. Depois de compilar o aplicativo, você pode exportá-lo do portal do Power Apps Maker e inserir no Microsoft Teams.
 
 ### <a name="power-virtual-agents"></a>Agentes virtuais do Power
 
-O Power Virtual Agent é uma solução de interface gráfica guiada sem código. Ele é criado com base no Microsoft Power Platform e no Bot Framework. Ele permite que todos os membros da sua equipe criem e mantenham chatbots de conversação avançados que se integram facilmente à plataforma do Teams. Você pode projetar, desenvolver e publicar agentes virtuais inteligentes para o Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou se registrar diretamente com o Bot Framework.
+O Power Virtual Agent é uma solução de interface gráfica guiada sem código. Ele foi desenvolvido no Microsoft Power Platform e no Bot Framework. Ele permite que todos os membros da sua equipe criem e mantenham chatbots de conversação avançados que se integram facilmente à plataforma do Teams. Você pode projetar, desenvolver e publicar agentes virtuais inteligentes para o Teams sem precisar configurar um ambiente de desenvolvimento, criar um serviço Web ou se registrar diretamente com o Bot Framework.
 
 ### <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
@@ -62,7 +62,7 @@ Você pode usar o modelo de aplicativo para criar aplicativos personalizados par
 
 ## <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
-O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre popular. Agora, ele está integrado ao Microsoft Teams. Esta integração ajuda educadores e professores a colaborarem em cursos do Moodle, fazerem perguntas sobre suas notas e suas tarefas e permanecerem atualizados com as notificações diretamente dentro do Teams.
+O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre popular. Agora está integrado ao Microsoft Teams. Esta integração ajuda educadores e professores a colaborarem em cursos do Moodle, fazerem perguntas sobre suas notas e suas tarefas e permanecerem atualizados com as notificações diretamente dentro do Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Criar um botão Compartilhar no Teams para o seu site
 

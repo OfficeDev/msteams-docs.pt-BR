@@ -4,12 +4,12 @@ description: Descrever como obter o contexto do usuário para suas guias
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexto do usuário das guias equipes
-ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 0539f1dc3f31a2b068e80b4ff12b93a26e09b766
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755941"
+ms.locfileid: "65757357"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -26,7 +26,7 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil quando:
 
 * Você cria ou associa recursos em seu aplicativo ao usuário ou à equipe especificado.
-* Você inicia um fluxo de autenticação Microsoft Azure Active Directory (Azure AD) ou outro provedor de identidade e não exige que o usuário insira o nome de usuário novamente.
+* Você inicia um fluxo de autenticação Microsoft Azure Active Directory (Azure AD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente.
 
 Para obter mais informações, [consulte autenticar um usuário em seu Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -70,7 +70,53 @@ Quando eles configuram a guia, Teams chama a seguinte URL:
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca Microsoft Teams JavaScript
 
+git-issue-clarify-the-full-set-of-values-any-context-object-property-can-take Você também pode recuperar as informações listadas acima usando o [SDK](/javascript/api/overview/msteams-client) `microsoftTeams.getContext(function(context) { /* ... */ })`do cliente JavaScript do Microsoft Teams chamando .
+
+O código a seguir fornece um exemplo de variável de contexto:
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
+
 Você também pode recuperar as informações listadas acima usando [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client) chamando a `app.getContext()` função. Para obter informações adicionais, consulte as propriedades da [interface de contexto](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
