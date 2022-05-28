@@ -4,12 +4,12 @@ description: Visão geral para Introdução à Documentação do Desenvolvedor d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654775"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757707"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -23,7 +23,7 @@ Tenha uma ideia do que você aprenderá:
 - Obter experiência com os Kit de ferramentas e SDKs.
 - Configure e crie diferentes tipos de aplicativos do Teams.
 
-Vamos dar uma olhada rápida nas opções de ambiente de compilação que você pode escolher e o roteiro para criar e implantar um aplicativo Teams.
+Vamos dar uma olhada rápida nas opções de ambiente de compilação que você pode escolher e no roteiro para criar e implantar um aplicativo do Teams.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um aplicativo do Teams":::
 
@@ -41,7 +41,7 @@ Dependendo dos recursos que você deseja para seu aplicativo, escolha um conjunt
 
 Se você já estiver familiarizado com o fluxo de trabalho Yeoman, talvez prefira usar o [Gerador YoTeams Yeoman](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) para criar seus aplicativos.
 
-> [!NOTE]
+> [!WARNING]
 > Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams.<br> O App Studio será preterido até 30 de junho de 2022.
 
 ## <a name="build-your-first-teams-app"></a>Crie seu primeiro aplicativo do Teams
@@ -49,7 +49,11 @@ Se você já estiver familiarizado com o fluxo de trabalho Yeoman, talvez prefir
 Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idioma (ou estrutura) e prepare seu ambiente de desenvolvimento.
 
 > [!div class="nextstepaction"]
-> [Criar um Teams com JavaScript usando React](../sbs-gs-javascript.yml)
+> [Criar um aplicativo de guia do Teams com JavaScript usando React](../sbs-gs-javascript.yml)
+> [!div class="nextstepaction"]
+> [Criar um aplicativo de bot do Teams com JavaScript usando React](../sbs-gs-bot.yml)
+> [!div class="nextstepaction"]
+> [Criar um aplicativo de extensão de mensagem do Teams com JavaScript usando React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
 > [Criar um aplicativo do Teams com o Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]

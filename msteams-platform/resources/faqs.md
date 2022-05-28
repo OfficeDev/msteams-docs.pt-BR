@@ -4,12 +4,12 @@ description: Veja respostas a algumas perguntas comuns.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 587451e3a0e89206a4ea49aaca3c682ab290ac5b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453899"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757546"
 ---
 # <a name="moodle-faq"></a>Perguntas frequentes sobre o Moodle
 
@@ -35,7 +35,7 @@ Cada instância do curso de equipe deve ter um proprietário e a sincronização
 
 Os usuários têm várias opções de entrada na página de logon do Moodle.
 
-* Para entrar exclusivamente usando credenciais Microsoft 365, habilite as definições de configuração do **Force redirect** para o plug-in **auth_oidc**. Se o serviço estiver habilitado, o usuário poderá ver a página de entrada da Microsoft.
+* Para entrar exclusivamente usando as credenciais do Microsoft 365, habilite as definições de configuração **Forçar redirecionamento** para o **plug-in auth_oidc**. Se o serviço estiver habilitado, o usuário poderá ver a página de entrada da Microsoft.
 * Para entrar manualmente no portal do Moodle, consulte [Moodle](https://moodle.org/login/index.php).
 
 <br>
@@ -94,7 +94,7 @@ A tabela a seguir fornece as ações e dependências a serem executadas e verifi
 | Versão estável| Verifique se a versão do Moodle está listada como **estável**.| Para saber mais, confira[Suporte de versão](https://docs.moodle.org/dev/Releases#Version_support).|
 |Permissões| Verifique se o aplicativo do Azure tem as permissões necessárias para executar a sincronização.| Para mais informações, confira [Permissões da Microsoft](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
 | Sincronização Completa| Verifique se **Executar uma sincronização completa a cada execução** está habilitada e examine os **Logs de tarefa** para **Sincronizar com o Azure AD**.| Para obter mais informações, confira [Habilitar a sincronização completa](https://docs.moodle.org/311/en/local_o365).</br>Para obter mais informações, confira[Verificar os logs de tarefa](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
-|Atualização de token|Limpe o **Token delta de sincronização do usuário** no plug-in local_o365.| Para obter mais informações, confira [Atualizar de token](https://docs.moodle.org/38/en/Office365).|
+|Atualização de token|Limpe o **Token delta de sincronização do usuário** no plug-in local_o365.| Para obter mais informações, consulte [Atualização de token](https://docs.moodle.org/38/en/Office365).|
 <!-- |Atualização de token|Limpe o **Token delta de sincronização do usuário** no plug-in local_o365.| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
 
@@ -119,7 +119,7 @@ O motivo para inconsistências com os usuários que não conseguem assinar usand
 
 <summary><b>Nenhum usuário consegue entrar usando suas credenciais do Microsoft 365. O que podemos fazer para resolver isso?</b></summary>
 
-Os usuários que não conseguiram entrar no início precisam relatar o problema e verificar se o aplicativo **Segredo do cliente** não expirou.
+Os usuários que não conseguiram entrar no início precisam relatar o problema e verificar se o **segredo do cliente** do aplicativo não expirou.
 
 A imagem a seguir mostra a mensagem de erro recebida quando o usuário entra usando suas credenciais do Microsoft 365:
 
@@ -176,7 +176,7 @@ Para obter mais informações sobre como editar a barra de ferramentas do Atto, 
 
 <summary><b>As reuniões agendadas por meio da integração da Microsoft aparecem no Outlook ou nos calendários do Teams? Qual é a linha do tempo padrão para as reuniões serem exibidas?</b></summary>
 
-As reuniões agendadas por meio do aplicativo não aparecem no calendário do agendador do Outlook ou do Teams pois são semelhantes às Reuniões do Canal. Todos os membros no canal do curso podem participar da reunião diretamente do link do canal inserido. Para saber mais, confira [Reuniões de canal](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+As reuniões agendadas por meio do aplicativo não aparecem no calendário do Outlook ou do Teams do agendador, pois são semelhantes às reuniões do canal. Todos os membros no canal do curso podem participar da reunião diretamente do link do canal inserido. Para saber mais, confira [Reuniões de canal](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
 No entanto, você pode acessar o convite e adicionar manualmente os nomes de participantes aos campos **Obrigatório** ou **Opcional** do convite para reunião para exibir a reunião remota em seus calendários. As linhas do tempo padrão são baseadas na data em que o usuário especifica quando a reunião é criada. Para obter mais informações, confira [Limites e especificações para o Microsoft Teams](/microsoftteams/limits-specifications-teams).
 
