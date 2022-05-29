@@ -4,16 +4,16 @@ description: Introdução aos aplicativos de parceiros
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 7ff5d15b0fcc3ef10b89470e98e3fd1d15af03d9
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910526"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757000"
 ---
 # <a name="partner-apps-for-moodle"></a>Aplicativos de parceiros para o Moodle
 
-A Microsoft Store fornece todos os aplicativos de parceiros certificados para o Moodle, que valida as ofertas de SaaS (Softwares como Serviço). O mConnec, um aplicativo de parceiro para o Microsoft integra cursos do Moodle ao Teams.
+A Microsoft Store fornece todos os aplicativos de parceiros certificados para Moodle, que validam as ofertas de Software como Serviço (SaaS). O mConnec, um aplicativo de parceiro para o Microsoft integra cursos do Moodle ao Teams.
 
 ## <a name="key-benefits-of-partner-apps-for-moodle"></a>Principais benefícios dos aplicativos de parceiros para moodle
 
@@ -26,7 +26,11 @@ A tabela a seguir mostra as vantagens de usar aplicativos de parceiros:
 
 ## <a name="mconnect"></a>mConnect
 
-O aplicativo mConnect integra cursos e atividades do Moodle ao Teams para aprimorar a experiência de aprendizagem dos usuários. A Skooler, um parceiro confiável da Microsoft Gold em educação, desenvolveu o aplicativo mConnect e fornece o suporte necessário. O mConnect permite que os administradores do Moodle configurem automaticamente o curso do Teams para Moodle e disponibilizem todos os recursos para cada curso no Moodle.
+O aplicativo mConnect integra cursos e atividades do Moodle ao Teams para aprimorar a experiência de aprendizagem dos usuários. 
+
+A Skooler, um parceiro confiável da Microsoft Gold em educação, desenvolveu o aplicativo mConnect e fornece o suporte necessário. 
+
+O mConnect permite que os administradores do Moodle configurem automaticamente o curso do Teams para Moodle e disponibilizem todos os recursos para cada curso no Moodle.
 
 >[!NOTE]
 >Este aplicativo está disponível na Microsoft Store para usuários que têm uma conta pré-existente com o Skooler e exige direitos de acesso de administrador para configurá-lo diretamente do site do Moodle.

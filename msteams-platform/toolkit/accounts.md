@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191191"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756951"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar contas para criar o aplicativo Teams
 
@@ -91,7 +91,7 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Carregar um aplicativo personalizado" border="true":::.
 
-        Se você não conseguir exibir a opção Carregar um aplicativo personalizado,** isso indicará que você não tem a permissão necessária para sideload.
+        Se você não conseguir visualizar a opção **Carregar um aplicativo personalizado**, isso indica que você não tem a permissão necessária para sideload.
         * Quanto a um administrador de locatários, habilite a configuração do sideload do seu locatário ou organização no Centro de administração do Teams.
         * Se você não for um administrador de locatários, precisará entrar em contato com o administrador do locatário para habilitar o sideload.
 
