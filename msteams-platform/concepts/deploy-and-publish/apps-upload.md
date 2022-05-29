@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191198"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756784"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Carregar seu aplicativo no Microsoft Teams
 
@@ -47,13 +47,13 @@ Você pode fazer o sideload do aplicativo para uma equipe, chat, reunião ou par
 
    a. Selecione **Adicionar** para adicionar seu aplicativo pessoal.</br>b. Use o menu suspenso para adicionar seu aplicativo a uma Equipe ou chat.
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Criar um aplicativo do Teams" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Descrição do aplicativo" border="true":::
 
 ## <a name="troubleshoot"></a>Solução de problemas
 
 Se o aplicativo não conseguir realizar o sideload ou se houver problemas para carregar, verifique as seguintes opções:
 
-1. Verifique se você seguiu todas as instruções para [criar pacote do aplicativo](../../concepts/build-and-test/apps-package.md).
+1. Certifique-se de ter seguido todas as instruções para [criar seu pacote de aplicativos](../../concepts/build-and-test/apps-package.md).
 1. [Validar seu pacote de aplicativos](https://dev.teams.microsoft.com/appvalidation.html).
 1. Verifique se o manifesto do aplicativo corresponde ao [esquema](../../resources/schema/manifest-schema.md).
 
@@ -63,7 +63,7 @@ Gerenciar seus aplicativos permite que os usuários tenham um lugar dedicado par
 
 ### <a name="access-your-app"></a>Acessar seus aplicativos
 
-Para acessar aplicativos através de **Gerenciar seus aplicativos** siga as etapas:
+Para acessar aplicativos por meio de **Gerenciar seus aplicativos**, siga as etapas:
 
 1. Acesse **Aplicativos** e selecione **Gerenciar seus aplicativos** no Teams para exibir os aplicativos instalados em todos os seus canais ou para uso pessoal em um formato de lista.
 
@@ -73,7 +73,7 @@ Para acessar aplicativos através de **Gerenciar seus aplicativos** siga as etap
     
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Escopo do aplicativo Acessar equipes" border="true":::
     
-1. Selecione o escopo do aplicativo para ir para o aplicativo no canal ou no modo de exibição pessoal. A lista de escopos consiste apenas em escopo pessoal e escopo de equipes. Os aplicativos instalados no escopo do chat em grupo não são exibidos neste modo de exibição no momento.
+1. Selecione o escopo do aplicativo para ir para o aplicativo no canal ou no modo de exibição pessoal. A lista de escopos consiste apenas em escopo pessoal e escopo de equipes. Os aplicativos instalados no escopo do chat em grupo não são exibidos nessa exibição no momento.
     
 O Teams fornece várias maneiras de abrir aplicativos. Para obter mais informações, consulte [acessar seus aplicativos no Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
@@ -81,7 +81,7 @@ O Teams fornece várias maneiras de abrir aplicativos. Para obter mais informaç
 
 Você não precisará realizar o sideload do aplicativo novamente se fizer alterações de código (elas são refletidas no Teams em tempo real). No entanto, você deverá reinstalar se alterar as configurações do aplicativo.
 
-Se uma atualização estiver disponível para seu aplicativo, então a opção **Atualização disponível** está habilitada Para atualizar, siga as etapas:
+Se uma atualização estiver disponível para seu aplicativo, a opção **Atualização disponível** está habilitada. Para atualizar, siga as etapas:
 
 1. Selecione **Atualização disponível** para exibir a atualização.
 

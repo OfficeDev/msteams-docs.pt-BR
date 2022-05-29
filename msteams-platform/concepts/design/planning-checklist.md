@@ -5,12 +5,12 @@ description: Perguntas a serem consideradas enquanto você planeja seu aplicativ
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104305"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756748"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
@@ -78,7 +78,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | # | Considere: |
 | --- | --- |
 | 1 | O que acontece quando um usuário configura sua guia pela primeira vez em um canal? |
-| 2 | Se você estiver compartilhando cartões com uma extensão de mensagens, faz sentido adicionar um pequeno link a uma página Saiba mais para ajudar a apresentar aos usuários o que mais seu aplicativo pode fazer? |
+| 2 | Se você estiver compartilhando cartões com uma extensão de mensagem, faz sentido adicionar um pequeno link a uma página de saber mais para ajudar a apresentar aos usuários o que mais seu aplicativo pode fazer? |
 | 3 | Você espera que a maioria das pessoas já tenha algum contexto sobre o objetivo do seu aplicativo ou que já tenha usado seus serviços em outro contexto? |
 | 4 | Eles estão chegando ao seu aplicativo sem conhecimento prévio? |
 
@@ -90,7 +90,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | # | Considere: |
 | --- | --- |
 | 1 | Existem interações individuais com o aplicativo necessárias por razões de privacidade ou outros? Por exemplo, verificar o saldo da licença ou outras informações privadas. |
-| 2 | Haverá colaboração entre usuários que podem não ter equipes comuns? Por exemplo, encontrar os próximos eventos em toda a organização em uma empresa. |
+| 2 | Eles serão uma colaboração entre usuários que podem não ter equipes comuns? Por exemplo, encontrar os próximos eventos em toda a organização em uma empresa. |
 | 3 | Existem notificações ou mensagens personalizadas que precisam ser enviadas a um usuário em toda a experiência do aplicativo Teams? |
 
 </details>
@@ -101,7 +101,7 @@ Aqui está uma lista de verificação de perguntas a serem consideradas ao plane
 | # | Considere: |
 | --- | --- |
 | 1 | As informações apresentadas pelo aplicativo, seja na guia ou através de um bot, são relevantes e úteis para a maioria dos membros de uma Equipe? Por exemplo, o aplicativo Scrum. |
-| 2 | O contexto do aplicativo pode alterar dependendo da equipe à qual ele é adicionado? Por exemplo, as tarefas do Planner são diferentes em equipes diferentes. |
+| 2 | O contexto do aplicativo pode mudar dependendo da equipe na qual ele é adicionado? Por exemplo, as tarefas do Planner são diferentes em equipes diferentes. |
 | 3 | É possível que todos os membros de uma persona que precisam colaborar façam parte de uma única equipe? Por exemplo, os agentes que trabalham em um ticket. |
 
 </details>

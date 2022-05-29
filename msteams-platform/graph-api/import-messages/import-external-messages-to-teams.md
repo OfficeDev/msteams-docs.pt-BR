@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 72e33ae6c8792016394c7a464f132260a5231112
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111742"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756917"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensagens de plataforma de terceiros para o Teams usando o Microsoft Graph
 
@@ -46,7 +46,7 @@ Em um nível elevado, o processo de importação consiste no seguinte:
 
 ## <a name="step-1-create-a-team"></a>Etapa 1: Criar uma equipe
 
-Como você está migrando dados existentes, manter os carimbos de data/hora da mensagem original e impedir a atividade de mensagens durante o processo de migração é fundamental para recriar o fluxo de mensagens existente do usuário no Teams. Isso é feito da seguinte maneira:
+Como você está migrando dados existentes, manter os carimbos de data/hora da mensagem original e impedir a atividade de mensagens durante o processo de migração são fundamentais para recriar o fluxo de mensagens existente do usuário no Teams. Isso é feito da seguinte maneira:
 
 > [Crie uma nova equipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) com um carimbo de data/hora back-in-time usando a propriedade de recurso da `createdDateTime` equipe. Coloque a nova equipe em `migration mode`, um estado especial que restringe os usuários da maioria das atividades dentro da equipe até que o processo de migração seja concluído. Inclua o `teamCreationMode` atributo de instância com o `migration` valor na solicitação POST para identificar explicitamente a nova equipe como sendo criada para migração.  
 
@@ -354,7 +354,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Depois que `completeMigration` a solicitação for feita, você não poderá importar mais mensagens para a equipe.
+* Depois que a solicitação `completeMigration` for feita, você não poderá importar mais mensagens para a equipe.
 
 * Você só pode adicionar membros da equipe à nova equipe depois que a `completeMigration` solicitação tiver retornado uma resposta bem-sucedida.
 

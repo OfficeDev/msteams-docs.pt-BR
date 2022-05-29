@@ -1,15 +1,15 @@
 ---
 title: Cartões
-description: Descreve cartões e como eles são usados em bots, conectores e extensões de mensagens
+description: Descreve os cartões e como eles são usados em bots, conectores e extensões de mensagem
 ms.localizationpriority: high
 keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191254"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756475"
 ---
 # <a name="cards"></a>Cartões
 
@@ -54,7 +54,7 @@ Todos os cartões usados pelo Teams estão listados em [tipos de cartões](~/tas
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-Os [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) são uma nova especificação de produto cruzado de cartões nos produtos da Microsoft, incluindo bots, Cortana, Outlook e Windows. Eles são o tipo de cartão recomendado do novo desenvolvimento do Teams. Para obter informações gerais da equipe dos Cartões Adaptáveis, consulte [Visão geral dos Cartões Adaptáveis](/adaptive-cards). Você pode usar os Cartões Adaptáveis em qualquer lugar que você usar os cartões hero, cartões do Office 365 e cartões em miniatura existentes.
+Os [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) são uma nova especificação de produto cruzado de cartões nos produtos da Microsoft, incluindo bots, Cortana, Outlook e Windows. Eles são o tipo de cartão recomendado para o novo desenvolvimento do Teams. Para obter informações gerais da equipe dos Cartões Adaptáveis, consulte [Visão geral dos Cartões Adaptáveis](/adaptive-cards). Você pode usar os Cartões Adaptáveis em qualquer lugar que você usar os cartões hero, cartões do Office 365 e cartões em miniatura existentes.
 
 Além dos Cartões Adaptáveis, o Teams oferece suporte a dois outros tipos de cartões:
 
@@ -76,7 +76,7 @@ Pesquisa de preenchimento automático adicionado como um controle de entrada nos
 > * Todos os elementos de esquema dos Cartões Adaptáveis nativos, exceto `Action.Submit`, são totalmente suportados.
 > * As ações com suporte são [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Os Cartões Adaptáveis com Webhooks de entrada permitem que você use os recursos avançados e flexíveis dos Cartões Adaptáveis. Ele envia dados usando os Webhooks de entrada no Teams do seu serviço Web.
+Os Cartões Adaptáveis com Webhooks de Entrada permitem que você use os recursos avançados e flexíveis dos Cartões Adaptáveis. Ele envia dados usando os Webhooks de entrada no Teams do seu serviço Web.
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Suporte para ID de Objeto do Azure Active Directory e UPN na menção do usuário
 

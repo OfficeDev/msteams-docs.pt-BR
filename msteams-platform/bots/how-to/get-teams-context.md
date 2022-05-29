@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: lista de canais do perfil do usuário da lista de contexto do bot
-ms.openlocfilehash: acbf33a235fdaa4e4e8929eaec3801bbccb7ccd3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 8bbbf7af5fd9d86ec1019a5c3b4ec76dce4085f2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111819"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756587"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenha o contexto específico do Teams para seu bot
 
