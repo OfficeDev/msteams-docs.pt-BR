@@ -1,15 +1,14 @@
 ---
 title: Introdução - Visão geral
-description: Visão geral para Introdução à Documentação do Desenvolvedor do Microsoft Teams
+description: Com esse roteiro de aprendizagem, comece a usar a documentação do desenvolvedor do Microsoft Teams, que apresenta ferramentas comuns, conceitos fundamentais e recursos avançados.
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Exemplos de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757707"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795151"
 ---
 # <a name="get-started"></a>Introdução
 

@@ -1,19 +1,18 @@
 ---
-title: 'Documentação do Desenvolvedor do Microsoft Teams: Glossário'
-description: Documentação do Desenvolvedor do Microsoft Teams
+title: Documentação do desenvolvedor do Microsoft Teams - Glossário
+description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Definição de desenvolvedor do Microsoft Teams
-ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135721"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795137"
 ---
 # <a name="glossary"></a>Glossário
 
-Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
+Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 ## <a name="a"></a>A
 
@@ -188,7 +187,7 @@ Termos e definições comuns usados na Documentação do Desenvolvedor do Teams.
 | [Kit de ferramentas do Teams](../toolkit/teams-toolkit-fundamentals.md) | O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados do Teams diretamente no ambiente do Visual Studio Code.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | O TeamsFx é uma interface de linha de comando baseada em texto que acelera o desenvolvimento de aplicativos do Teams. Ele também é chamado de CLI do TeamsFx.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | O SDK do TeamsFx é pré-configurado no projeto com scaffolding usando o Kit de Ferramentas do TeamsFx ou a CLI. |
-| [SDK do TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | O SDK do TeamsJS permite que você crie experiências hospedadas no Teams. Os recursos da [versão mais recente](~/m365-apps/using-teams-client-sdk-preview.md) estendem o aplicativo Teams para execução no Outlook e no Office. |
+| [SDK do TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | O SDK do TeamsJS permite que você crie experiências hospedadas no Teams. A partir do TeamsJS v.2.0.0, você pode estender os aplicativos do Teams para execução no Outlook e no Office. |
 | [Teams para dispositivos móveis](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | O Microsoft Teams disponível como um aplicativo móvel. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | Uma página de aterrissagem da loja que leva aplicativos para os usuários em um único lugar. Os aplicativos são categorizados por uso, setor e muito mais. Um aplicativo deve seguir as diretrizes de validação da Store e obter uma aprovação antes que ele seja disponibilizado aos usuários por meio da loja do Teams.  <br>**Consulte também**: [Diretrizes de validação da loja](#s) |
 | [Workbench do Teams](../sbs-gs-spfx.yml) | Um workbench no Visual Studio Code usado no build para aplicativos do Teams criados usando o SPFx e o Kit de Ferramentas do Teams. <br>**Consulte também**: [Workbench](#w); [Workbench local](#l) |
