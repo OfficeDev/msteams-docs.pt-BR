@@ -1,44 +1,44 @@
 ---
-title: Adicionar logon único aos aplicativos Teams aplicativos
+title: Adicionar logon único aos aplicativos do Teams
 author: zyxiaoyuer
-description: Descreve Adicionar logon único do Teams Toolkit
+description: Descreve Adicionar logon único do Kit de Ferramentas do Teams
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 3b83104dd07d34989f85fa0b96182c5c43408d98
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656842"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887587"
 ---
-# <a name="add-single-sign-on-to-teams-app"></a>Adicionar logon único ao Teams aplicativo
+# <a name="add-single-sign-on-to-teams-app"></a>Adicionar o logon único ao aplicativo do Teams
 
-Microsoft Teams fornece a função de logon único para que o aplicativo obtenha um token de usuário Teams conectado para acessar o Microsoft Graph e outras APIs. Teams Toolkit facilita a interação abstraindo alguns dos fluxos Azure AD e integrações por trás de algumas APIs simples. Isso permite que você adicione recursos de SSO (logon único) facilmente ao Teams aplicativo.
+O Microsoft Teams fornece a função de logon único para que o aplicativo obtenha o token de usuário do Teams conectado para acessar o Microsoft Graph e outras APIs. O Kit de Ferramentas do Teams facilita a interação abstraindo alguns dos fluxos e integrações do Azure AD por trás de algumas APIs simples. Isso permite que você adicione recursos de SSO (logon único) facilmente ao aplicativo Teams.
 
-Para aplicativos que interagem com o usuário em um chat, uma equipe ou um canal, o SSO se manifesta como um Cartão Adaptável com o qual o usuário pode interagir para invocar o fluxo de consentimento Azure AD usuário.
+Para aplicativos que interagem com o usuário em um chat, uma equipe ou um canal, o SSO se manifesta como um Cartão Adaptável com o qual o usuário pode interagir para invocar o fluxo de consentimento do Azure AD.
 
 ## <a name="enable-sso-support"></a>Habilitar suporte a SSO
 
-Teams Toolkit ajuda você a adicionar o SSO aos seguintes Teams recursos:
+O Kit de Ferramentas do Teams ajuda você a adicionar o SSO aos seguintes recursos do Teams:
 
 * Guia
 * Bot
 * Bot de notificação: restify server
 * Bot de comando
 
-### <a name="add-sso-using-visual-studio-code"></a>Adicionar SSO usando Visual Studio Code
+### <a name="add-sso-using-visual-studio-code"></a>Adicionar SSO usando o Visual Studio Code
 
-As etapas a seguir ajudam você a adicionar o SSO usando Teams Toolkit no Visual Studio Code
+As etapas a seguir ajudam você a adicionar o SSO usando o Kit de Ferramentas do Teams no Visual Studio Code
 
 1. Abra o **Microsoft Visual Studio Code**.
-2. Selecione Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="adicionar barra lateral do SSO na"::: barra de navegação esquerda.
+2. Selecione Adicionar barra lateral :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="do SSO do Kit"::: de Ferramentas do Teams na barra de navegação esquerda.
 3. Selecione **Adicionar recursos em** **DESENVOLVIMENTO**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="recursos de adição de SSO":::
 
-    * Você também pode abrir a paleta de comandos e **selecionar Teams: Adicionar recursos**
+    * Você também pode abrir a paleta de comandos e selecionar **Teams: Adicionar recursos**
 
 4. Selecione **Logon Único**.
 
@@ -51,19 +51,19 @@ Você pode executar o `teamsfx add sso`  comando no diretório **raiz do projeto
 > [!Note]
 > O recurso habilita o SSO para todos os recursos aplicáveis existentes. Siga as mesmas etapas para habilitar o SSO se você adicionar funcionalidade posteriormente ao projeto.
 
-## <a name="customize-your-project-using-teams-toolkit"></a>Personalizar seu projeto usando Teams Toolkit
+## <a name="customize-your-project-using-teams-toolkit"></a>Personalizar seu projeto usando o Kit de Ferramentas do Teams
 
-A tabela a seguir lista as alterações Teams Toolkit feitas em seu projeto:
+A tabela a seguir lista as alterações que o Kit de Ferramentas do Teams faz em seu projeto:
 
    |**Tipo**|**Arquivo**|**Objetivo**|
    |--------|--------|-----------|
-   |Criar|`aad.template.json` Sob `template/appPackage`|Azure AD manifesto do aplicativo representa seu Azure AD aplicativo. `template/appPackage`ajuda a registrar um aplicativo Azure AD durante o estágio local de depuração ou provisionamento.|
-   |Modificar|`manifest.template.json` Sob `template/appPackage`|Um `webApplicationInfo` objeto é adicionado ao seu modelo Teams manifesto do aplicativo. Teams requer esse campo para habilitar o SSO. A alteração está em vigor quando você dispara a depuração ou provisionamento local.|
+   |Criar|`aad.template.json` Sob `template/appPackage`|O manifesto do aplicativo do Azure AD representa seu aplicativo do Azure AD. `template/appPackage` ajuda a registrar um aplicativo do Azure AD durante o estágio de depuração ou provisionamento local.|
+   |Modificar|`manifest.template.json` Sob `template/appPackage`|Um `webApplicationInfo` objeto é adicionado ao modelo de manifesto do aplicativo Teams. O Teams requer esse campo para habilitar o SSO. A alteração está em vigor quando você dispara a depuração ou provisionamento local.|
    |Criar|`auth/tab`|O código de referência, as páginas de redirecionamento de autenticação e um `README.md` arquivo são gerados nesse caminho para um projeto de guia.|
    |Criar|`auth/bot`|O código de referência, as páginas de redirecionamento de autenticação e um `README.md` arquivo são gerados nesse caminho para um projeto de bot.|
 
 > [!Note]
-> Ao adicionar o SSO, Teams Toolkit não altera nada na nuvem até que você dispare a depuração local. Atualize seu código para garantir que o SSO esteja funcionando no projeto.
+> Ao adicionar o SSO, o Teams Toolkit não altera nada na nuvem até que você dispare a depuração local. Atualize seu código para garantir que o SSO esteja funcionando no projeto.
 
 ## <a name="update-your-application-to-use-sso"></a>Atualizar seu aplicativo para usar o SSO
 
@@ -77,13 +77,13 @@ As etapas a seguir ajudam você a habilitar o SSO em seu aplicativo.
 <br><details>
 <summary><b>Projeto de guia </b></summary>
 
-1. Copiar `auth-start.html` e `auth-end.htm`** na `auth/public` pasta para `tabs/public/`. Teams Toolkit registra esses dois pontos de extremidade no Azure AD para Azure AD fluxo de redirecionamento do cliente.
+1. Copiar `auth-start.html` e `auth-end.htm`** na `auth/public` pasta para `tabs/public/`. O Kit de Ferramentas do Teams registra esses dois pontos de extremidade no Azure AD para o fluxo de redirecionamento do Azure AD.
 
 2. Copiar `sso` pasta em `auth/tab` .`tabs/src/sso/`
 
     * `InitTeamsFx`: o arquivo implementa uma função que inicializa o SDK `GetUserProfile` do TeamsFx e abre o componente após a inicialização do SDK
 
-    * `GetUserProfile`: o arquivo implementa uma função que chama o Microsoft API do Graph para obter informações do usuário
+    * `GetUserProfile`: o arquivo implementa uma função que chama a API do Microsoft Graph para obter informações do usuário
 
 3. Executar `npm install @microsoft/teamsfx-react` em `tabs/`.
 
@@ -185,7 +185,7 @@ As etapas a seguir ajudam você a habilitar o SSO em seu aplicativo.
 
    ```
 
-9. Registre seu comando no manifesto Teams aplicativo. Abra `templates/appPackage/manifest.template.json`e adicione as seguintes linhas em `command` seu `commandLists` bot:
+9. Registre seu comando no manifesto do aplicativo Teams. Abra `templates/appPackage/manifest.template.json`e adicione as seguintes linhas em `command` seu `commandLists` bot:
 
    ```JSON
 
@@ -195,6 +195,7 @@ As etapas a seguir ajudam você a habilitar o SSO em seu aplicativo.
    }
 
    ```
+
 </details>
 <details>
 <summary><b>Adicionar um novo comando ao bot </b></summary>
@@ -204,7 +205,7 @@ As etapas a seguir ajudam você a habilitar o SSO em seu aplicativo.
 
 As etapas a seguir ajudam você a adicionar um novo comando, depois de adicionar o SSO ao seu projeto:
 
-1. Crie um novo arquivo (`todo.ts`ou`todo.js`) em `bot/src/` e adicione sua própria lógica de negócios para chamar API do Graph:
+1. Crie um novo arquivo (`todo.ts` ou `todo.js`) em `bot/src/` e adicione sua própria lógica de negócios para chamar a API do Graph:
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
@@ -299,7 +300,7 @@ export async function showUserImage(context, ssoToken, param) {
 
      ```
 
-3. Registre seu comando no manifesto Teams aplicativo. Abra `templates/appPackage/manifest.template.json`e adicione as seguintes linhas em `command` seu `commandLists` bot:
+3. Registre seu comando no manifesto do aplicativo Teams. Abra `templates/appPackage/manifest.template.json`e adicione as seguintes linhas em `command` seu `commandLists` bot:
 
    ```JSON
 
@@ -309,17 +310,18 @@ export async function showUserImage(context, ssoToken, param) {
    }
 
    ```
+
 </details>
 <br>
 
 ## <a name="debug-your-application"></a>Depurar seu aplicativo
 
-Pressione F5 para depurar seu aplicativo. Teams Toolkit usa o arquivo Azure AD manifesto para registrar um aplicativo Azure AD para SSO. Para Teams Toolkit de depuração local, consulte [Depurar seu aplicativo Teams localmente](debug-local.md).
+Pressione F5 para depurar seu aplicativo. O Teams Toolkit usa o arquivo de manifesto do Azure AD para registrar um aplicativo do Azure AD para SSO. Para funcionalidades locais de depuração do Kit de Ferramentas do Teams, consulte [Depurar seu aplicativo teams localmente](debug-local.md).
 
-## <a name="customize-azure-ad-application-registration"></a>Personalizar Azure AD registro de aplicativo
+## <a name="customize-azure-ad-application-registration"></a>Personalizar o registro de aplicativo do Azure AD
 
-O [Azure AD do aplicativo](/azure/active-directory/develop/reference-app-manifest) permite que você personalize vários aspectos do registro do aplicativo. Você pode atualizar o manifesto conforme necessário. Se você precisar incluir permissões de API adicionais para acessar as APIs desejadas, consulte as permissões de [API para acessar as APIs desejadas](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-Para exibir seu Azure AD aplicativo no Portal do Azure, consulte [Exibir Azure AD aplicativo no portal do Azure](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal). 
+O [manifesto do aplicativo do Azure AD](/azure/active-directory/develop/reference-app-manifest) permite que você personalize vários aspectos do registro de aplicativo. Você pode atualizar o manifesto conforme necessário. Se você precisar incluir permissões de API adicionais para acessar as APIs desejadas, consulte as permissões de [API para acessar as APIs desejadas](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+Para exibir seu aplicativo do Azure AD no Portal do Azure, consulte Exibir o aplicativo [do Azure AD no portal do Azure](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## <a name="sso-authentication-concepts"></a>Conceitos de autenticação de SSO
 
@@ -329,9 +331,9 @@ Os seguintes conceitos ajudam você a autenticação de SSO:
 
 A autenticação de SSO (logon único) no Microsoft Azure Active Directory (Azure AD) atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisarão fornecer consentimento novamente em outro dispositivo, pois eles são conectados automaticamente.
 
-Teams guias e bots têm um fluxo semelhante para suporte a SSO. Para obter mais informações, consulte:
+Guias e bots do Teams têm um fluxo semelhante para suporte a SSO. Para obter mais informações, consulte:
 
-1. [Autenticação de SSO (logon único) no Tabs](../tabs/how-to/authentication/auth-aad-sso.md)
+1. [Autenticação de SSO (logon único) no Tabs](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [Autenticação de SSO (logon único) no Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ### <a name="simplified-sso-with-teamsfx"></a>SSO simplificado com o TeamsFx
@@ -340,14 +342,14 @@ O TeamsFx ajuda a reduzir as tarefas do desenvolvedor usando o SSO e acessando r
 
 Com o SDK do TeamsFx, você pode escrever código de autenticação de usuário de maneira simplificada usando Credenciais:
 
-1. Identidade do usuário no ambiente do navegador: `TeamsUserCredential` Teams identidade do usuário atual.
+1. Identidade do usuário no ambiente do navegador: `TeamsUserCredential` representa a identidade do usuário atual do Teams.
 2. Identidade do usuário Node.js ambiente: `OnBehalfOfUserCredentail` usa o fluxo On-Behalf-Of e o token de SSO.
 3. Identidade do aplicativo Node.js ambiente: `AppCredential` representa a identidade do aplicativo.
 
 Para obter mais informações sobre o SDK do TeamsFx, consulte:
 
 * [Referência de API ou SDK do TeamsFx](TeamsFx-SDK.md) [](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
-* [Microsoft Teams de exemplo do TeamsFx (Framework)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
+* [Galeria de exemplos do Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
 ## <a name="see-also"></a>Confira também
 

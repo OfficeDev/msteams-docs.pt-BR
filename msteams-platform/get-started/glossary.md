@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795137"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887622"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -31,7 +31,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | [Recurso do Azure](../toolkit/provision.md) | Um serviço que está disponível por meio do Azure que seu aplicativo Teams pode usar para implantação do Azure. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | É o serviço de gerenciamento de identidades e acesso baseado na nuvem da Microsoft. Ele ajuda os usuários autenticados a acessar recursos internos e externos do Azure. |
 | [Autenticação](../concepts/authentication/authentication.md) | Um processo para validar o acesso do usuário para o uso do aplicativo. Isso pode ser feito usando APIs do Microsoft Graph ou autenticação baseada na Web. <br> **Consulte também**: [Provedores de identidade](#i); [SSO](#s) |
-| [Fluxo de autenticação](../concepts/authentication/authentication.md#web-based-authentication-flow) | No Teams, há dois fluxos de autenticação para autenticar um usuário para usar um aplicativo: autenticação baseada na Web e fluxo OAuthPrompt. |
+| [Fluxo de autenticação](../concepts/authentication/authentication.md) | No Teams, há dois fluxos de autenticação para autenticar um usuário para usar um aplicativo: autenticação baseada na Web e fluxo OAuthPrompt. |
 
 ## <a name="b"></a>B
 

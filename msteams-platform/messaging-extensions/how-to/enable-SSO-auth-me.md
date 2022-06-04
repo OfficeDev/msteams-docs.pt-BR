@@ -5,12 +5,12 @@ description: Saiba como habilitar o suporte a SSO para suas extensões de mensag
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 900723ca77d4178a6a2ded46617ed53d985d83e3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757420"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887699"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Suporte de logon único para extensões de mensagem
 
@@ -116,6 +116,15 @@ Para habilitar o SSO:
         }
     
     ```
+
+## <a name="code-sample"></a>Exemplo de código
+
+Esta seção fornece um exemplo de SDK de autenticação de bot v3.
+
+| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Autenticação de bot | Esta amostra mostra como começar com a autenticação em um bot para o Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
 
 ## <a name="see-also"></a>Confira também
 

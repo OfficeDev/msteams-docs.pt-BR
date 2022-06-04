@@ -2,14 +2,14 @@
 title: Autenticação silenciosa
 description: Descreve a autenticação silenciosa, logon único, Azure AD para guias
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: autenticação do teams logon único tab do Azure AD
-ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111644"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887790"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111644"
 > [!NOTE]
 > Para que a autenticação funcione para sua guia em dispositivos móveis clientes, é necessário garantir que você esteja usando a versão 1.4.1 ou posterior do SDK JavaScript do Teams.
 
-A autenticação silenciosa no Azure AD minimiza o número de vezes que um usuário insere suas credenciais atualizando silenciosamente o token de autenticação. Para obter suporte para logon único verdadeiro, consulte [Documentação do logon único](~/tabs/how-to/authentication/auth-aad-sso.md).
+A autenticação silenciosa no Azure AD minimiza o número de vezes que um usuário insere suas credenciais atualizando silenciosamente o token de autenticação. Para obter suporte para logon único verdadeiro, consulte [Documentação do logon único](~/tabs/how-to/authentication/tab-sso-overview.md).
 
 Para manter seu código no lado do cliente, use a [Biblioteca de autenticação do Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obter um token de acesso do Microsoft Azure Active Directory (Azure AD) silenciosamente. Se o usuário tiver entrado recentemente, ele não verá uma caixa de diálogo pop-up.
 

@@ -6,12 +6,12 @@ keywords: equipes guias grupo canal configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672940"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887629"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Use a função `getContext()` para recuperar o contexto
 
-A `app.getContext()` função retorna uma promessa que é resolvida com o objeto [de interface de](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) contexto.
+A `app.getContext()` função retorna uma promessa que é resolvida com o objeto [de interface de](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) contexto.
 
 O código a seguir fornece um exemplo de adição dessa função à página de configuração para recuperar valores de contexto:
 
@@ -294,7 +294,7 @@ Autentique antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem, reconfigurem ou renomeiem uma guia de canal ou grupo. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anteriormente`setSettings()`) para página de remoção:
+Configuração do Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para página de remoção:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

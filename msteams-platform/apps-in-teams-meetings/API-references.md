@@ -1,16 +1,16 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Identifique as referências da API de aplicativos de reunião com exemplos e exemplos de código, Teams consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos.
+description: Identifique as referências à API de aplicativos de reunião com exemplos e exemplos de código, consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos do Teams.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756580"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887573"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -53,7 +53,7 @@ A API `GetParticipant` deve ter um registro de bot e uma ID para gerar tokens de
 ### <a name="query-parameters"></a>Parâmetros de consulta
 
 > [!TIP]
-> Obtenha IDs de participantes e IDs de locatários na [guia Autenticação SSO](../tabs/how-to/authentication/auth-aad-sso.md).
+> Obtenha IDs de participantes e IDs de locatários na [guia Autenticação SSO](../tabs/how-to/authentication/tab-sso-overview.md).
 
 A API `Meeting` deve ter `meetingId`, `participantId` e `tenantId` como parâmetros de URL. Os parâmetros estão disponíveis como parte da atividade de bot e SDK do Cliente do Teams.
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nome da propriedade | Objetivo |
 |---|---|
 | **user.id** | ID do usuário. |
-| **user.aadObjectId** | Azure Active Directory ID de objeto do usuário. |
+| **user.aadObjectId** | ID de objeto do Azure Active Directory do usuário. |
 | **user.name** | Nome do usuário. |
 | **user.givenName** | Nome do usuário.|
 | **user.surname** | Sobrenome do usuário. |
@@ -406,7 +406,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | Nome da propriedade | Objetivo |
 |---|---|
 | **details.id** | A ID da reunião, codificada como uma cadeia de caracteres BASE64. |
-| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas de API do Graph MS. |
+| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas à API do MS Graph. |
 | **details.scheduledStartTime** | A hora de início agendada da reunião, em UTC. |
 | **details.scheduledEndTime** | A hora de término agendada da reunião, em UTC. |
 | **details.joinUrl** | A URL usada para ingressar na reunião. |
@@ -416,8 +416,8 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | **conversation.conversationType** | O tipo de conversa. |
 | **conversation.id** | A ID de chat da reunião. |
 | **organizer.id** | A ID de usuário do Organizador. |
-| **organizer.aadObjectId** | A ID do objeto Azure Active Directory organizador. |
-| **organizer.tenantId** | A ID de locatário Azure Active Directory organizador. |
+| **organizer.aadObjectId** | A ID de objeto do Azure Active Directory do Organizador. |
+| **organizer.tenantId** | A ID de locatário do Azure Active Directory do Organizador. |
 
 No caso de tipo de reunião recorrente,
 
@@ -487,7 +487,7 @@ A API `shareAppContentToStage` permite que você compartilhe partes específicas
 
 ### <a name="prerequisite"></a>Pré-requisito
 
-*  Para usar a API `shareAppContentToStage`, você deve obter as permissões de RSC. No manifesto do aplicativo, configure a propriedade `authorization`, e `name` e `type` no campo `resourceSpecific`. Por exemplo:
+* Para usar a API `shareAppContentToStage`, você deve obter as permissões de RSC. No manifesto do aplicativo, configure a propriedade `authorization`, e `name` e `type` no campo `resourceSpecific`. Por exemplo:
 
     ```json
     "authorization": {
@@ -501,7 +501,8 @@ A API `shareAppContentToStage` permite que você compartilhe partes específicas
     }
     }
     ```
-*  `appContentUrl` deve ser permitido pela matriz `validDomains` dentro de manifest.json; caso contrário, a API retornaria 501.
+
+* `appContentUrl` deve ser permitido pela matriz `validDomains` dentro de manifest.json; caso contrário, a API retornaria 501.
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -818,7 +819,7 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **from.id** | ID do usuário que enviou a solicitação. |
 | **from.aadObjectId** | ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
-| **conversation.tenantId** | Azure Active Directory ID do locatário da conversa ou reunião. |
+| **conversation.tenantId** | ID do locatário do Azure Active Directory da conversa ou reunião. |
 | **conversation.id** | A ID de chat da reunião. |
 | **recipient.id** | ID do usuário que recebe a solicitação. |
 | **recipient.name** | Nome do usuário que recebe a solicitação. |

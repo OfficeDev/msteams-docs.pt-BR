@@ -4,62 +4,87 @@ description: Descreve a autenticação no Teams e como usá-la nos aplicativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: autenticação de equipes OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 53f258769140a2b40bb59a1232250f74ec693bee
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: db1a16959755668ec9aa298ed355ef657503ca03
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757154"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887719"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuários no Microsoft Teams
 
-> [!Note]
-> A autenticação baseada na Web em clientes móveis requer a versão 1.4.1 ou posterior do SDK do cliente JavaScript do Teams.
+A autenticação se trata de validar usuários de aplicativos e proteger os usuários do aplicativo e do aplicativo contra acesso injustificável. Você pode usar um método de autenticação adequado para seu aplicativo para validar os usuários do aplicativo que desejam usar o aplicativo Teams.
 
-Para acessar as informações do usuário protegidas pelo Azure Active Directory e acessar dados de serviços como Facebook e Twitter, o aplicativo estabelece uma conexão confiável com esses provedores. Se o aplicativo usar APIs do Microsoft Graph no escopo do usuário, autentique o usuário para recuperar os tokens de autenticação apropriados.
+Escolha adicionar autenticação para seu aplicativo de uma das duas maneiras:
 
-No Teams, há dois fluxos de autenticação diferentes para o aplicativo. Execute um fluxo de autenticação tradicional baseado na web em uma [página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md) incorporada em uma guia, página de configuração ou módulo de tarefa. Se o aplicativo contiver um bot de conversação, use o fluxo OAuthPrompt e, opcionalmente, o serviço de token do Bot Framework do Azure para autenticar um usuário como parte de uma conversa.
+- **Habilitar o SSO (** logon único) em um aplicativo do Teams: o SSO no Teams é um método de autenticação que usa a identidade do Teams de um usuário do aplicativo para fornecer acesso ao seu aplicativo. Um usuário que fez logon no Teams não precisa fazer logon novamente em seu aplicativo no ambiente do Teams. Com apenas um consentimento necessário do usuário do aplicativo, o aplicativo Teams recupera detalhes de acesso do Azure AD (Azure Active Directory). Depois que o usuário do aplicativo tiver dado consentimento, ele poderá acessar o aplicativo mesmo de outros dispositivos sem precisar ser validado novamente.
 
-## <a name="web-based-authentication-flow"></a>Fluxo de autenticação baseado na Web
+- **Habilitar** a autenticação usando o provedor OAuth de terceiros: você pode usar um provedor de identidade OAuth (IdP) de terceiros para autenticar os usuários do aplicativo. O usuário do aplicativo é registrado com o provedor de identidade, que tem uma relação de confiança com seu aplicativo. Quando o usuário tenta fazer logon, o provedor de identidade valida o usuário do aplicativo e fornece acesso ao seu aplicativo. O Azure AD é um provedor OAuth de terceiros. Você pode usar outros provedores, como Google, Facebook, GitHub ou qualquer outro provedor.
 
-Use o fluxo de autenticação baseado na web para [guias](~/tabs/what-are-tabs.md) e opte por usá-lo com [bots de conversação](~/bots/what-are-bots.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md). Use o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) em uma página de conteúdo da web para ativar a autenticação. Depois de habilitar a autenticação, insira a página de conteúdo em uma guia, uma página de configuração ou um módulo de tarefa. Para obter mais informações sobre o fluxo de autenticação baseado na Web, consulte:
+## <a name="select-authentication-method"></a>Selecionar método de autenticação
 
-* [Adicionar autenticação ao bot do Teams](~/bots/how-to/authentication/add-authentication.md) descreve como usar o fluxo de autenticação baseado na Web com um bot conversacional.
-* [O fluxo de autenticação](~/tabs/how-to/authentication/auth-flow-tab.md) em guias descreve como a autenticação de tabulação funciona no Teams, que mostra um fluxo de autenticação baseado na Web típico usado para guias.
-* [Autenticação do Azure Active Directory em guias](~/tabs/how-to/authentication/auth-tab-AAD.md) descreve como se conectar ao Azure Active Directory de dentro de uma guia no aplicativo no Teams.
-* [Autenticação silenciosa Azure Active Directory](~/tabs/how-to/authentication/auth-silent-AAD.md) descreve como reduzir os prompts de entrada ou consentimento no aplicativo usando o Azure Active Directory.
-* [.Net ou C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) ou [JavaScript ou Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) fornece exemplos de autenticação baseada na web.
+Habilite a autenticação com IdPs OAuth de terceiros ou SSO em seu aplicativo de guia, aplicativo de bot e aplicativo de extensão de mensagens. Selecione um dos dois métodos para adicionar autenticação em seu aplicativo:
 
-## <a name="the-oauthprompt-flow-for-conversational-bots"></a>O fluxo OAuthPrompt para bots de conversação
+:::row:::
+    :::column span="1":::
+        SSO
+    :::column-end:::
+    :::column span="1":::
+        &nbsp;
+    :::column-end:::
+    :::column span="1":::
+        OAuth
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO para aplicativo guia" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-O OAuthPrompt do Bot Framework Azure facilita a autenticação para aplicativos que usam bots de conversa. Use o serviço Bot Framework token do Azure para auxiliar no cache de tokens.
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Aplicativo tab**  
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Autenticação com provedor OAuth de terceiros para aplicativo guia." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO para aplicativo de bot" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-Para obter mais informações sobre como usar o OAuthPrompt, consulte:
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Aplicativo de bot**
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Autenticação com provedor OAuth de terceiros para aplicativo de bot." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO para aplicativo de extensão de mensagens" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
+        <br>
 
-* A visão geral do fluxo de autenticação de [bot](~/bots/how-to/authentication/auth-flow-bot.md) descreve como a autenticação funciona em um bot no aplicativo no Teams, que mostra um fluxo de autenticação não baseado na Web usado para bots na Web, aplicativo da área de trabalho e aplicativos móveis do Teams.
-* [Autenticação de bot](~/bots/how-to/authentication/add-authentication.md) descreve como adicionar autenticação OAuth ao bot do Teams.
+        &nbsp;&nbsp; &nbsp; **Aplicativo de extensão de mensagem**
+        
+    :::column-end:::
+    :::column span="1":::
+        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Autenticação com IdPs oAuth de terceiros para o aplicativo de extensão de mensagens." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
+    :::column-end:::
+:::row-end:::
 
-## <a name="code-sample"></a>Exemplo de código
-
-fornece amostra de SDK de autenticação de bot v3.
-
-| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Autenticação de bot | Esta amostra mostra como começar com a autenticação em um bot para o Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisar, ação, vincular desfral. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
-
-## <a name="configure-the-identity-provider"></a>Configurar o provedor de identidade
-
-Independentemente do fluxo de autenticação do aplicativo, configure o provedor de identidade para se comunicar com o aplicativo Teams. A maioria das amostras e orientações lidam principalmente com o uso do Azure Active Directory como provedor de identidade. Os conceitos, no entanto, se aplicam independentemente do provedor de identidade.
-
-Para obter mais informações, consulte [como configurar um provedor de identidade](~/concepts/authentication/configure-identity-provider.md).
-
-## <a name="third-party-cookies-on-ios"></a>Cookies de terceiros no iOS
-
-Após a atualização do iOS 14, a Apple bloqueou o acesso de [cookies de terceiros](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) para todos os aplicativos por padrão. Portanto, os aplicativos que aproveitam cookies de terceiros para autenticação em suas guias canal ou chat e aplicativos pessoais não poderão concluir seus fluxos de trabalho de autenticação em Teams iOS clientes. Para estar em conformidade com os requisitos de privacidade e segurança, você deve migrar para um sistema baseado em token ou usar cookies primários para os fluxos de trabalho de autenticação do usuário.
+> [!NOTE]
+> A página autenticação silenciosa é movida para o módulo Recursos. Para obter mais informações, consulte [Autenticação silenciosa](../../tabs/how-to/authentication/auth-silent-aad.md).
 
 ## <a name="see-also"></a>Confira também
 
-* [Fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md)
-* [Suporte de logon único para bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
-* [Adicionar autenticação à sua extensão de mensagens](~/messaging-extensions/how-to/add-authentication.md)
+- [Habilitar o logon único em um aplicativo de guia](../../tabs/how-to/authentication/tab-sso-overview.md)
+- [Fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md)
+- [Suporte de logon único para bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+- [Adicionar autenticação à sua extensão de mensagens](~/messaging-extensions/how-to/add-authentication.md)
