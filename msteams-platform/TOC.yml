@@ -381,20 +381,30 @@
   items:
     - name: Visão Geral
       href: concepts/authentication/authentication.md
-    - name: Configurar provedores de identidade
-      href: concepts/authentication/configure-identity-provider.md
     - name: Guias
       items:
-        - name: Fluxo de autenticação em guias
-          href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: Adicionar autenticação do Azure AD
-          href: tabs/how-to/authentication/auth-tab-aad.md
-        - name: Usar a autenticação silenciosa
-          href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: Usar autenticação SSO
-          href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Usar provedores OAuth externos
-          href: tabs/how-to/authentication/auth-oauth-provider.md
+        - name: Habilitar o logon único para o aplicativo de guia
+          items:
+            - name: Visão Geral
+              href: tabs/how-to/authentication/tab-sso-overview.md
+            - name: Registrar o aplicativo de guia no Azure AD
+              href: tabs/how-to/authentication/tab-sso-register-aad.md
+            - name: Adicionar código para habilitar o logon único
+              href: tabs/how-to/authentication/tab-sso-code.md
+            - name: Atualizar o manifesto do aplicativo para logon único e pré-visualização
+              href: tabs/how-to/authentication/tab-sso-manifest.md
+            - name: Conceder permissões e escopos ao Microsoft Graph
+              href: tabs/how-to/authentication/tab-sso-graph-api.md
+            - name: Solução de problemas
+              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        - name: Usar autenticação OAuth IdP de terceiros
+          items:
+            - name: Visão Geral
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Configurar autenticação OAuth IdP de terceiros
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Usar provedores OAuth externos
+              href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Fluxo de autenticação em bots
@@ -583,6 +593,8 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar referências do esquema JSON
           href: resources/schema/localization-schema.md
+    - name: Usar a autenticação silenciosa
+      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Atributo de cookie SameSite
       href: resources/samesite-cookie-update.md
     - name: Contribuir com a documentação do Teams
