@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887594"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906251"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte de logon único (SSO) para bots
 
@@ -385,4 +385,4 @@ Abra [exemplo de autenticação do Teams](https://github.com/microsoft/BotBuilde
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
-Siga o [guia passo a passo](../../../sbs-bots-with-sso.yml) que ajuda você a criar um bot com a autenticação de SSO habilitada.
+Siga o [guia passo a passo](../../../sbs-bots-with-sso.yml) para criar um bot com autenticação de SSO.

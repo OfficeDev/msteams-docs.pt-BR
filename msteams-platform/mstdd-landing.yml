@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Microsoft Teams para desenvolvedores
-summary: Bem-vindo à visão geral Microsoft Teams documentação do desenvolvedor. Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas se reúnem, aprendem e trabalham cada vez mais.
+title: Documentação do desenvolvedor do Microsoft Teams
+summary: Bem-vindo à visão geral da documentação do desenvolvedor do Microsoft Teams. Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas se reúnem, aprendem e trabalham cada vez mais.
 metadata:
-  title: Microsoft Teams para desenvolvedores
-  description: Introdução à criação de aplicativos para Teams
+  title: Documentação do desenvolvedor do Microsoft Teams
+  description: Introdução à criação de aplicativos para o Teams
   ms.service: msteams
   ms.subservice: subservice
   ms.topic: landing-page
@@ -12,26 +12,28 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 29c27dd095d3519ff78ed985f365f85999b3ae6e
-  ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+  ms.openlocfilehash: 8f1997bc2a3b51c16f1cd3fa3489bbf6aff6fe93
+  ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/25/2022
-  ms.locfileid: "65673003"
+  ms.lasthandoff: 06/06/2022
+  ms.locfileid: "65906236"
 landingContent:
 - title: 'Microsoft Build 2022 '
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Colaboração aprimorada com Live Share SDK [versão prévia do desenvolvedor]
+    - text: Colaboração aprimorada com o SDK do Live Share [versão prévia do desenvolvedor]
       url: apps-in-teams-meetings/teams-live-share-overview.md
+    - text: Atualizar eventos de conversa e instalação no bot do Teams [versão prévia do desenvolvedor]
+      url: bots/how-to/conversations/subscribe-to-conversation-events.md
     - text: Envie para a loja Teams seus aplicativos habilitados para Outlook e Office
       url: m365-apps/overview.md
     - text: Diretrizes do aplicativo e as novidades do TeamsJS versão 2.0.0
       url: tabs/how-to/using-teams-client-sdk.md
     - text: O Kit de Ferramentas do Teams versão 4.0.0 para Visual Studio Code agora é GA
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: Introdução ao manifesto do aplicativo versão 1.13
+    - text: Apresentado o manifesto do aplicativo versão 1.13
       url: resources/schema/manifest-schema.md
     - text: Extensões de Bots e Mensagens no GCC e GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
@@ -39,9 +41,9 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Introdução com a criação de aplicativos
+    - text: Introdução à criação de aplicativos
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: Introdução com GitHub
+    - text: Introdução ao GitHub
       url: /contribute/additional-resources
     - text: Glossário
       url: ~/get-started/glossary.md
@@ -77,7 +79,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: Teste de visualização para aplicativos monetizados
       url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
-    - text: Dicas adicionais para aprovação rápida para publicar seu aplicativo vinculado a uma oferta de SaaS
+    - text: Dicas adicionais para aprovação rápida ao publicar seu aplicativo vinculado a uma oferta de SaaS
       url: ~/concepts/deploy-and-publish/appsource/publish.md
 - title: Criar aplicativos para o Teams
   linkLists:
@@ -121,7 +123,7 @@ landingContent:
     links:
     - text: Conceder permissões de dispositivo de guia
       url: ~/sbs-tab-device-permissions.yml
-    - text: Criar Teams de conversa
+    - text: Criar um bot de conversa do Teams
       url: ~/sbs-teams-conversation-bot.yml
     - text: Criar um bot de chamada e reunião
       url: ~/sbs-calling-and-meeting.yml
@@ -143,7 +145,7 @@ landingContent:
       url: sbs-gs-commandbot.yml
     - text: Compilar um bot de notificação com JavaScript
       url: sbs-gs-notificationbot.yml
-    - text: Upload arquivos para Teams de um bot
+    - text: Carregar arquivos no Teams de um bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Gerar bolha de conteúdo de reunião
       url: ~/sbs-meeting-content-bubble.yml
@@ -155,19 +157,19 @@ landingContent:
       url: ~/sbs-meetingextension-action.yml
     - text: Criar webhooks de saída
       url: ~/sbs-outgoing-webhooks.yml
-    - text: Unfurl links no Teams usando o bot
+    - text: Desfralar links no Teams usando o bot
       url: ~/sbs-botbuilder-linkunfurling.yml
-    - text: Criar Teams conectores
+    - text: Criar conectores do Teams
       url: ~/sbs-teams-connectors.yml
-- title: Teams de aplicativo
+- title: Cenários de aplicativo do Teams
   linkLists:
   - linkListType: reference
     links:
-    - text: Cenários de build para Teams aplicativo
+    - text: Criar cenários para o aplicativo Teams
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: Práticas recomendadas para Teams cenários de aplicativo
+    - text: Práticas recomendadas para cenários de aplicativos do Teams
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
-    - text: Explorar aplicativos de baixo código para Teams
+    - text: Explorar aplicativos de baixo código para o Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publicar e distribuir
   linkLists:
@@ -177,7 +179,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Carregar seu aplicativo no Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publicar na Teams Store
+    - text: Publicar na Loja do Teams
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: Diretrizes de validação da loja
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
