@@ -3,12 +3,12 @@ title: Novidades para desenvolvedores no Teams
 description: Saiba mais sobre os novos recursos de desenvolvedor e aprimoramentos para esses recursos no Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887762"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906285"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -264,6 +264,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+| 06/06/2022| Atualize conversas e eventos de instalação em seu bot do Teams |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share |  Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
