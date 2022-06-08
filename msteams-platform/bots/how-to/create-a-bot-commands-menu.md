@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: menu de comando redigir mensagem conversa @menção
-ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757693"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938936"
 ---
 # <a name="bot-command-menus"></a>Menus de comando do bot
 
@@ -40,13 +40,11 @@ Um pré-requisito para criar um menu de comando para o bot é que você deve edi
 **Para criar um menu de comando para o bot usando o App Studio**
 
 1. Abra o Teams e selecione **Aplicativos** no painel esquerdo. Na página **Aplicativos**, busque o **App Studio** e selecione **Abrir**.
-   > [!NOTE]
-   > Se você não tiver o **App Studio**, poderá baixá-lo. Para obter mais informações, consulte [instalação do App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
-  
+    
    > [!WARNING]
    > Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
 
-  :::image type="content" source="/media/AppStudio.png" alt-text="Instalação do App Studio"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="/media/AppStudio.png" alt-text="Instalação do App Studio"lightbox="media/AppStudio.png"border="true":::
 
 2. No **App Studio**, selecione a guia **Editor de manifesto**. Se você não tiver um pacote de aplicativo existente, poderá criar ou importar um aplicativo existente.Para saber mais, confira [atualizar um pacote de aplicativo](~/get-started/deploy-csharp-app-studio.md).
 

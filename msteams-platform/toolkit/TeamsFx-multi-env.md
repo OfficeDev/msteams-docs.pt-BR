@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 284cc455cdbb7a0c5b859fd4909f0c3a1a99b037
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756930"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938944"
 ---
 # <a name="manage-multiple-environments"></a>Gerenciar vários ambientes
 
@@ -19,16 +19,16 @@ ms.locfileid: "65756930"
 
  Você pode executar o seguinte com os vários ambientes:
 
-1. **Testar antes da produção**: você pode configurar vários ambientes, como desenvolvimento, teste e preparo antes de publicar um aplicativo Teams para o ambiente de produção no ciclo de vida de desenvolvimento de um aplicativo moderno
+1. **Teste antes da produção**: você pode configurar vários ambientes, como desenvolvimento, teste e preparo antes de publicar um Aplicativo do Teams no ambiente de produção no ciclo de vida de desenvolvimento de aplicativos modernos.
 
-2. **Gerenciar comportamentos de aplicativo em ambientes diferentes**: você pode configurar comportamentos diferentes para vários ambientes, como habilitar a telemetria no ambiente de produção, mas desabilitá-la no ambiente de desenvolvimento
+2. **Gerenciar comportamentos de aplicativo em ambientes** diferentes: você pode configurar comportamentos diferentes para vários ambientes, como habilitar a telemetria no ambiente de produção, mas desabilitá-la no ambiente de desenvolvimento.
 
 ## <a name="prerequisite"></a>Pré-requisito
 
 * Instalar a [versão mais recente do Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
-> Verifique se você projeto de aplicativo Teams aberto no código do Microsoft Visual Studio.
+> Verifique se você tem um projeto de aplicativo do Teams aberto no código do Visual Studio.
 
 ## <a name="create-a-new-environment"></a>Criar um novo ambiente
 
@@ -42,8 +42,8 @@ Depois de criar um novo projeto, o Teams Toolkit por padrão cria:
 
 **Para adicionar outro ambiente remoto**:
 
-1. Selecione o ícone do **Teams** na barra lateral
-2. Selecione **+Teams: criar novo ambiente** na seção Ambiente, conforme mostrado na imagem a seguir:
+1. Selecione a barra **lateral de** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="adição do SSO do Teams na"::: barra de navegação esquerda.
+2. Selecione **+Teams: crie um novo ambiente** na **seção** Ambiente, conforme mostrado na imagem a seguir:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="criar":::
 
@@ -57,15 +57,15 @@ Você pode selecionar o ambiente de destino para todas as operações relacionad
 
 ## <a name="project-folder-structure"></a>Estrutura da pasta do projeto
 
-Depois de criar o projeto, você pode exibir as pastas e arquivos do projeto na área do Visual Studio Code. Além dos códigos personalizados, alguns arquivos são usados pelo Teams Toolkit para manter a configuração, o estado e o modelo do aplicativo. A lista a seguir fornece arquivos e descreve sua relação com vários ambientes.
+Depois de criar o projeto, você pode exibir as pastas e os arquivos do projeto no **Explorer** no VS Code. Além dos códigos personalizados, o Kit de Ferramentas do Teams usa alguns arquivos para manter a configuração, o estado e o modelo do aplicativo. A lista a seguir fornece arquivos e descreve sua relação com vários ambientes.
 
 * `.fx/configs`: configurar arquivos que o usuário pode personalizar para o aplicativo Teams
-  * `config.<envName>.json`: arquivo de configuração por ambiente 
-  * `azure.parameters.<envName>.json`: por arquivo de parâmetros de ambiente para provisionamento do Bicep do Azure
-  * `projectSettings.json`: configurações globais do projeto, que se aplicam a todos os ambientes
-* `.fx/states`: resultado de provisionamento gerado pelo Toolkit
-  * `state.<envName>.json`: arquivo de saída de provisionamento por ambiente
-  * `<env>.userdata`: dados de usuário confidenciais por ambiente para saída de provisionamento
+  * `config.<envName>.json`: arquivo de configuração por ambiente
+  * `azure.parameters.<envName>.json`: arquivo de parâmetros para provisionamento do bicep do Azure por ambiente
+  * `projectSettings.json`: configurações globais de projeto que se aplicam a todos os ambientes
+* `.fx/states`: resultado de provisionamento gerado pelo Kit de Ferramentas
+  * `state.<envName>.json`: provisionar o arquivo de saída por ambiente
+  * `<env>.userdata`: dados do usuário para a saída de provisionamento por ambiente
 * `templates`
   * `appPackage`: arquivos de modelo de manifesto do aplicativo
   * `azure`: arquivos de modelo Bicep
@@ -86,18 +86,18 @@ A tabela a seguir lista os cenários comuns para provisionamento de recursos per
 
 ## <a name="scenarios"></a>Cenários
 
-Há quatro cenários para personalizar o provisionamento de recursos em ambientes diferentes.
+Você pode ver os cenários a seguir para personalizar o provisionamento de recursos em ambientes diferentes.
 <br>
 
 <br><details>
-<summary><b>Cenário 1: personalizar o aplicativo Teams para um ambiente diferente</b></summary>
+<summary><b>Cenário 1: Personalizar o nome do aplicativo Teams para um ambiente diferente </b></summary>
 
-Você pode definir o nome do aplicativo Teams para `myapp(dev)` dos ambientes padrões `dev` e `myapp(staging)` para o ambiente de preparo `staging`.
+Você pode definir o nome do aplicativo Teams para `myapp(dev)` o ambiente padrão `dev` e para `myapp(staging)` o ambiente de preparo `staging`.
 
-Execute as seguintes etapas para personalização:
+Siga as etapas para personalização:
 
-1. Abrir arquivo de configuração `.fx/configs/config.dev.json`
-2. Atualizar a propriedade de *manifesto > appName > abreviação* para `myapp(dev)`
+1. Abra o arquivo de configuração `.fx/configs/config.dev.json`.
+2. Atualize a propriedade do *> appName > abreviada* como `myapp(dev)`.
 
   As atualizações para `.fx/configs/config.dev.json` são as seguintes:
 
@@ -115,26 +115,25 @@ Execute as seguintes etapas para personalização:
   }
   ```
 
-3. Criar um novo ambiente e nomeá-lo `staging` se ele não existir
-4. Abrir arquivo de configuração `.fx/configs/config.staging.json`
-5. Atualizar a mesma propriedade `myapp(staging)`
-6. Execute o comando de provisão nos ambientes `dev` e `staging` para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com o Teams Toolkit, confira[provisionar](provision.md#provision-using-teams-toolkit)
-</details>
-<br>
+3. Crie um novo ambiente e nomeie-o `staging` se ele não existir.
+4. Abra o arquivo de configuração `.fx/configs/config.staging.json`.
+5. Atualize a mesma propriedade `myapp(staging)`.
+6. Execute o comando de provisão nos ambientes `dev` e `staging` para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com o Kit de Ferramentas do Teams, consulte [provisionar](provision.md#provision-using-teams-toolkit).
 
+</details>
 
 <details>
 <summary><b>Cenário 2: personalizar a descrição do aplicativo Teams para um ambiente diferente</b></summary>
 
-Nesse cenário, você aprenderá a definir diferentes descrições do aplicativo Teams para os diferentes ambientes:
+Você pode definir uma descrição diferente do aplicativo Teams para os diferentes ambientes:
 
 * Para o ambiente padrão `dev`, a descrição é `my app description for dev`
 * Para o ambiente de preparo `staging`, a descrição é `my app description for staging`
 
-Execute as seguintes etapas para personalização:
+Siga as etapas para personalização:
 
-1. Abrir arquivo de configuração `.fx/configs/config.dev.json`
-2. Adicionar nova propriedade de *manifesto > descrição > abreviação* com valor `my app description for dev`
+1. Abra o arquivo de configuração `.fx/configs/config.dev.json`.
+2. Adicione uma nova propriedade do *manifesto > descrição > abreviada* com valor `my app description for dev`.
 
   As atualizações para `.fx/configs/config.dev.json` são as seguintes:
 
@@ -153,11 +152,11 @@ Execute as seguintes etapas para personalização:
   }
   ```
 
-3. Criar um novo ambiente e nomeá-lo `staging` se ele não existir
-4. Abrir arquivo de configuração `.fx/configs/config.staging.json`
-5. Adicionar a mesma propriedade para `my app description for staging`
-6. Abrir o modelo de manifesto do aplicativo Teams`templates/appPackage/manifest.template.json`
-7. Atualizar a propriedade `description > short` para usar a **variável** definida em configurar arquivos com sintaxe de mustache `{{config.manifest.description.short}}`
+3. Crie um novo ambiente e nomeie-o `staging` se ele não existir.
+4. Abra o arquivo de configuração `.fx/configs/config.staging.json`.
+5. Adicione a mesma propriedade a `my app description for staging`.
+6. Abra o modelo de manifesto do aplicativo Teams `templates/appPackage/manifest.template.json`.
+7. Atualize a propriedade para `description > short` usar a **variável definida** em arquivos de configuração com sintaxe de bigode `{{config.manifest.description.short}}`.
   
   As atualizações para `manifest.template.json` são as seguintes:
 
@@ -175,20 +174,19 @@ Execute as seguintes etapas para personalização:
   }
   ```
 
-8. Execute o comando de provisão nos ambientes `dev` e `staging` para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando de provisão com o Teams Toolkit, confira [provisionar](provision.md#provision-using-teams-toolkit)
+8. Execute o comando de provisão nos ambientes `dev` e `staging` para atualizar o nome do aplicativo em ambientes remotos.
 
 </details>
-<br>
 
 <details>
 <summary><b>Cenário 3: personalizar a descrição do aplicativo Teams para todos os ambientes</b></summary>
 
-Nesse cenário, você aprenderá a definir a descrição do aplicativo Teams para `my app description` em todos os ambientes.
+Você pode definir a descrição do aplicativo Teams para `my app description` todos os ambientes.
 
 Como o modelo de manifesto do aplicativo Teams é compartilhado em todos os ambientes, podemos atualizar o valor de descrição nele para nosso destino:
 
-1. Abrir o modelo de manifesto do aplicativo Teams`templates/appPackage/manifest.template.json`
-2. Atualizar a propriedade `description > short` com **cadeia de caracteres codificada** `my app description`
+1. Abra o modelo de manifesto do aplicativo Teams `templates/appPackage/manifest.template.json`.
+2. Atualize a propriedade `description > short` com **cadeia de caracteres embutida em código**`my app description`.
   
   As atualizações para `manifest.template.json` são as seguintes:
 
@@ -207,14 +205,13 @@ Como o modelo de manifesto do aplicativo Teams é compartilhado em todos os ambi
 
   ```
 
-3. Execute o comando de provisão em **todos** os ambientes para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com Teams Toolkit, consulte [provisionar](provision.md#provision-using-teams-toolkit).
+3. Execute o comando de provisão em **todos** os ambientes para atualizar o nome do aplicativo em ambientes remotos.
 
-<br></details>
-<br>
+</details>
 
 <details>
 <br><summary><b>Cenário 4: personalizar recursos do Azure para um ambiente diferente</b></summary>
-Você pode personalizar os recursos do Azure para cada ambiente, por exemplo, especificar o nome da Função do Azure editando o ambiente correspondente para fx/configs/azure.parameters. {env}.json. arquivo.
+Você pode personalizar os recursos do Azure para cada ambiente, por exemplo, editar o ambiente correspondente a fx/configs/azure.parameters. Arquivo {env}.json para especificar o nome da Função do Azure.
 
 Para obter mais informações sobre arquivos de parâmetro e modelo Bicep, consulte [provisionar recursos de nuvem](provision.md)
 </details>
