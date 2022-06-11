@@ -5,12 +5,12 @@ keywords: pesquisa de extensões de mensagem de extensões de mensagem do Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104396"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032939"
 ---
 # <a name="search-with-message-extensions"></a>Pesquisar com extensões de mensagem
 
@@ -130,11 +130,11 @@ Além das propriedades de atividade de bot padrão, a carga contém os seguintes
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação; deve ser `invoke`. |
-|`name`| Tipo de comando emitido para seu serviço. Atualmente, há suporte para os seguintes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`name`| Tipo de comando que é emitido para o serviço. Atualmente, há suporte para os seguintes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) do objeto do usuário que enviou a solicitação. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) ID de locatário. |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) do locatário. |
 |`channelData.channel.id`| ID do canal (se a solicitação foi feita em um canal). |
 |`channelData.team.id`| ID da equipe (se a solicitação foi feita em um canal). |
 |`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado pelo usuário.<br>O `platform` campo descreve a plataforma do cliente de mensagens. <br>Para obter informações adicionais, *consulte tipos* [de entidade não IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -197,7 +197,7 @@ Os parâmetros de solicitação em si são encontrados no objeto de valor, que i
 
 Como alternativa (ou além disso) à pesquisa de seu serviço externo, você pode usar uma URL inserida na caixa de mensagem de composição para consultar seu serviço e retornar um cartão. Na captura de tela abaixo, um usuário cole uma URL para um item de trabalho Azure DevOps que a extensão de mensagem resolveu em um cartão.
 
-![Exemplo de desarmamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Exemplo de desenrolamento de link](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 Para permitir que a extensão de mensagem interaja com links dessa maneira, `messageHandlers` primeiro você precisará adicionar a matriz ao manifesto do aplicativo, como no exemplo abaixo:
 
@@ -433,9 +433,9 @@ A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regul
 }
 ```
 
-## <a name="identify-the-user"></a>Identificar o usuário
+## <a name="identify-the-user"></a>Identifique o usuário
 
-Cada solicitação para seus serviços inclui a ID ofuscada do usuário que executou a solicitação, bem como o nome de exibição do usuário e a ID de objeto do Microsoft Azure Active Directory (Azure AD).
+Cada solicitação para seus serviços inclui a ID ofuscada do usuário que executou a solicitação, bem como o nome de exibição do usuário e a ID de objeto Microsoft Azure Active Directory (Azure AD).
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ Cada solicitação para seus serviços inclui a ID ofuscada do usuário que exec
 },
 ```
 
-O `id` e `aadObjectId` os valores são garantidos como os do usuário Teams autenticado. Eles podem ser usados como chaves para pesquisar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário do Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação foi originada.
+O `id` e `aadObjectId` os valores são garantidos como os do usuário Teams autenticado. Eles podem ser usados como chaves para pesquisar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação foi originada.
 
 ## <a name="authentication"></a>Autenticação
 
@@ -460,11 +460,11 @@ A sequência é a seguinte:
 5. Depois que o usuário entrar, você deverá fechar a janela e enviar um "código de autenticação" para o Teams cliente.
 6. O Teams em seguida, emiti a consulta para o serviço, que inclui o código de autenticação passado na etapa 5.
 
-Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
+O serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responder com uma ação de entrada
 
-Para solicitar que um usuário não autenticado entre, responda com uma ação sugerida do tipo que inclui a `openUrl` URL de autenticação.
+Para solicitar que um usuário não autenticado entre, responda com uma ação sugerida do tipo `openUrl` que inclui a URL de autenticação.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemplo de resposta para uma ação de entrada
 
@@ -486,24 +486,24 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
-> Para que a experiência de entrada seja hospedada em um pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, [consulte validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
+> Para que a experiência de entrada seja hospedada em um pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, confira [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de entrada
 
-Sua experiência de entrada deve ser responsiva e se ajustar em uma janela pop-up. Ele deve se integrar ao [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
+Sua experiência de entrada deve ser responsiva e se ajustar em uma janela pop-up. Ela deve se integrar ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como com outras experiências inseridas em execução Microsoft Teams, seu código dentro da janela precisa primeiro chamar`microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que poderá passá-la para a URL de entrada do OAuth.
+Assim como com outras experiências inseridas em execução no Microsoft Teams, o código dentro da janela precisa primeiro chamar `microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que poderá passá-la para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de entrada
 
 Quando a solicitação de entrada for concluída e redirecionada de volta para sua página, ela deverá executar as seguintes etapas:
 
 1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
-2. Chame `microsoftTeams.authentication.notifySuccess` e passe o código de segurança.
+2. Chamar `microsoftTeams.authentication.notifySuccess` e passar o código de segurança.
 
 Neste ponto, a janela fecha e o controle é passado para o Teams cliente. O cliente agora pode emitir novamente a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.
 
-#### <a name="reissued-request-example"></a>Exemplo de solicitação emitida novamente
+#### <a name="reissued-request-example"></a>Exemplo de solicitação reemitida
 
 ```json
 {
@@ -660,4 +660,4 @@ app.run();
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplos do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Amostras do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

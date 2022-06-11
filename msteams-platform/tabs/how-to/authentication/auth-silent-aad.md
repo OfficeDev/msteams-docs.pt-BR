@@ -4,17 +4,17 @@ description: Descreve a autenticação silenciosa, logon único, Azure AD para g
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: autenticação do teams logon único tab do Azure AD
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887790"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033019"
 ---
 # <a name="silent-authentication"></a>Autenticação silenciosa
 
 > [!IMPORTANT]
-> O suporte e o desenvolvimento da Microsoft para Biblioteca de Autenticação do Active Directory (ADAL), incluindo as correções de segurança, termina em **30 de junho de 2022**. Atualize seus aplicativos para usar a MSAL (Biblioteca de Autenticação da Microsoft) para continuar recebendo suporte. Consulte [Migrar aplicativos para a biblioteca de autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-migration).
+> O suporte e o desenvolvimento da Microsoft para Biblioteca de Autenticação do Active Directory (ADAL), incluindo as correções de segurança, termina em **30 de junho de 2022**. Para continuar recebendo suporte, atualize seus aplicativos para usar a MSAL (Biblioteca de Autenticação da Microsoft). Consulte [Migrar aplicativos para a MSAL (Biblioteca](/azure/active-directory/develop/msal-migration) de Autenticação da Microsoft).
 
 > [!NOTE]
 > Para que a autenticação funcione para sua guia em dispositivos móveis clientes, é necessário garantir que você esteja usando a versão 1.4.1 ou posterior do SDK JavaScript do Teams.

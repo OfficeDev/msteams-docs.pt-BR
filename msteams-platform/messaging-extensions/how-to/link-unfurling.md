@@ -5,25 +5,25 @@ description: Saiba como adicionar desenrolamento de link com a extensão de mens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297181"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032970"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento orienta você sobre como adicionar desenrolamento de link ao manifesto do aplicativo usando o App Studio e manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. O `invoke` contém a URL completa que foi colada na área de mensagem de redação, e você pode responder com um cartão que o usuário pode descompor, fornecendo informações ou ações adicionais. Isso funciona de forma semelhante a um comando de pesquisa com a URL que serve como o termo de pesquisa.
+Este documento orienta você sobre como adicionar link desfralhamento ao manifesto do aplicativo usando o App Studio ou manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. Contém `invoke` a URL completa que foi colada na área de mensagem de composição. Você pode responder com um cartão que o usuário pode desafralar para obter informações ou ações adicionais. Isso funciona como um comando de pesquisa com a URL como o termo de pesquisa.
 
 > [!NOTE]
 >
 > * Atualmente, não há suporte para desenrolamento de link em clientes móveis.
 > * O resultado da desenrolamento de link é armazenado em cache por 30 minutos.
 
-A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário colou uma URL para um item de trabalho no Azure DevOps, que a extensão de mensagem resolveu em um cartão:
+A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão da mensagem resolveu em um cartão:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemplo de desenrolamento de link":::
 
@@ -32,7 +32,7 @@ A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs colad
 Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma nova matriz `messageHandlers` à seção `composeExtensions` do manifesto do aplicativo JSON. Você pode adicionar a matriz com a ajuda do App Studio ou manualmente. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com` use `*.*.example.com`.
 
 > [!NOTE]
-> Não adicione domínios que não estão em seu controle, diretamente ou por meio de curingas. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Além disso, os domínios de nível superior são proibidos. Por exemplo, `*.com`, `*.org`.
+> Não adicione domínios que não estão em seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Os domínios de nível superior são proibidos, por exemplo, `*.com`, `*.org`.
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Adicionar desenrolamento de link usando o App Studio
 
@@ -43,6 +43,9 @@ Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Seção Manipuladores de Mensagens no App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldando manualmente
+
+> [!NOTE]
+> Se a autenticação for adicionada Azure AD, [unfurl links em Teams usando o bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Para habilitar sua extensão de mensagem para interagir com links, primeiro você deve adicionar a matriz `messageHandlers` ao manifesto do aplicativo. O exemplo a seguir explica como adicionar o link desfraldamento manualmente:
 

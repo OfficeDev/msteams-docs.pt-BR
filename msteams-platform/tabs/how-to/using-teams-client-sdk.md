@@ -6,12 +6,12 @@ description: Visão geral do SDK do cliente JavaScript do Microsoft Teams, que p
 ms.localizationpriority: high
 keywords: equipes guias grupo canal configurável estático SDK JavaScript pessoal m365
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757616"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033040"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams
 
@@ -24,13 +24,7 @@ A partir da versão `2.0.0`, o SDK do cliente Teams existente (`@microsoft/teams
 
 Aqui estão as diretrizes de controle de versão atuais para vários cenários de aplicativo:
 
-|                  |Versão do [TeamsJS](/javascript/api/overview/msteams-client) | Versão do [Manifesto do aplicativo](../../resources/schema/manifest-schema.md)| Próximas etapas|
-|------------------|---------|--------|---|
-|**Aplicativos do Teams estendidos para o Office/Outlook**| TeamsJS v.2.0 ou posterior  | **1.13** ou posterior | [Estender um aplicativo do Teams para ser executado no Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) ou [Criar um novo aplicativo do Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Aplicativos apenas Teams existentes**| Atualizar para o TeamsJS v.2.0 quando possível (a v.1.12 ainda tem suporte*)  | 1.12 | [Entender a compatibilidade com versões anteriores do TeamsJS](#backwards-compatibility)e [Atualizar para o TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**Novos aplicativos apenas Teams**| TeamsJS v.2.0 ou posterior | 1.12 | [Criar um novo aplicativo Teams usando o Kit de Ferramentas do Teams](../../toolkit/create-new-project.md) |
-
-**A prática recomendada é usar o TeamsJS mais recente (v.2.0 ou posterior) sempre que possível, para se beneficiar das melhorias mais recentes e do novo suporte a recursos (mesmo para aplicativos apenas Teams). O TeamsJS v.1.12 continuará a ter suporte, mas nenhum novo recurso ou melhoria será adicionado.*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 O restante deste artigo explicará a estrutura e as atualizações mais recentes do SDK do cliente JavaScript do Teams.
 
@@ -66,14 +60,14 @@ A tabela a seguir lista as guias e os recursos de diálogos do Teams (módulos d
 
 #### <a name="app-permissions"></a>Permissões de aplicativos
 
-Os recursos do aplicativo que exigem que o usuário conceda [permissões de dispositivo](../../concepts/device-capabilities/device-capabilities-overview.md) (como *localização*) ainda não têm suporte para aplicativos em execução fora do Teams. No momento, não há como verificar as permissões do aplicativo em Configurações ou no cabeçalho do aplicativo ao executar no Outlook ou no Office. Se um aplicativo do Teams em execução no Office ou no Outlook chamar uma API teamsJS (ou HTML5) que dispare permissões de dispositivo, essa API gerará um erro e não exibirá uma caixa de diálogo do sistema solicitando o consentimento do usuário.
+Os recursos do aplicativo que exigem que o usuário conceda [permissões de dispositivo](../../concepts/device-capabilities/device-capabilities-overview.md) (como *localização*) ainda não têm suporte para aplicativos em execução fora do Teams. No momento, não há como verificar as permissões do aplicativo em Configurações ou no cabeçalho do aplicativo ao executar no Outlook ou no Office. Se um aplicativo do Teams em execução no Office ou no Outlook chamar uma API teamsJS (ou HTML5) que dispare permissões de dispositivo, essa API gera um erro e não exibe uma caixa de diálogo do sistema solicitando o consentimento do usuário.
 
 Por enquanto, as diretrizes atuais são modificar seu código para detectar a falha:
 
 * Verifique [isSupported()](#differentiate-your-app-experience) em um recurso antes de usá-lo. `media`, `meeting` e `files` ainda não dão suporte a chamadas *isSupported* e ainda não funcionam fora do Teams.
 * Capture e manipule erros ao chamar APIs TeamsJS e HTML5.
 
-Quando uma API não tem suporte ou gera um erro, adicione lógica para falhar normalmente ou forneça uma solução alternativa. Por exemplo:
+Quando uma API não tem suporte ou gera um erro, adiciona lógica para falhar normalmente ou fornece uma solução alternativa. Por exemplo:
 
 * Direcione o usuário para o site do seu aplicativo.
 * Direcione o usuário a usar o aplicativo no Teams para concluir o fluxo.
@@ -231,7 +225,7 @@ async function example() {
 
 Uma *funcionalidade é* um agrupamento lógico de APIs que fornecem funcionalidade semelhante. Você pode pensar no Microsoft Teams, no Outlook e no Office, como hosts do seu aplicativo de guia. Um host dá suporte a uma determinada funcionalidade se ele dá suporte a todas as APIs definidas dentro dessa funcionalidade. Um host não pode implementar parcialmente uma funcionalidade. Os recursos podem ser baseados em recursos ou conteúdo, como diálogo *autenticação* ou *caixa de diálogo*. Também há recursos para tipos de aplicativo, como *páginas* e outros agrupamentos.
 
-Na Versão Prévia do SDK do TeamsJS v2.0, as APIs são definidas como funções em um namespace JavaScript cujo nome corresponde à funcionalidade necessária. Se um aplicativo estiver em execução em um host que dê suporte à funcionalidade *caixa de diálogo*, o aplicativo poderá chamar APIs com segurança, como `dialog.open` (além de outras APIs relacionadas à caixa de diálogo definidas no namespace). Se um aplicativo tentar chamar uma API que não tem suporte nesse host, a API gerará uma exceção. Para verificar se o host atual que está executando seu aplicativo dá suporte a uma determinada funcionalidade, chame a função [isSupported()](#differentiate-your-app-experience) de seu namespace.
+Na Versão Prévia do SDK do TeamsJS v2.0, as APIs são definidas como funções em um namespace JavaScript cujo nome corresponde à funcionalidade necessária. Se um aplicativo estiver em execução em um host que dê suporte à funcionalidade *caixa de diálogo*, o aplicativo poderá chamar APIs com segurança, como `dialog.open` (além de outras APIs relacionadas à caixa de diálogo definidas no namespace). Se um aplicativo tentar chamar uma API que não tem suporte nesse host, a API gera uma exceção. Para verificar se o host atual que está executando seu aplicativo dá suporte a uma determinada funcionalidade, chame a função [isSupported()](#differentiate-your-app-experience) de seu namespace.
 
 #### <a name="differentiate-your-app-experience"></a>Diferenciar sua experiência de aplicativo
 

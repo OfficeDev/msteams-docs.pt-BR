@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: evento do canal de consentimento do cartão bot da estrutura do manipulador de atividades
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757427"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032918"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
@@ -24,6 +24,9 @@ Para organizar a lógica de conversação do seu bot, é usado um manipulador de
 O manipulador de atividades do Teams é derivado do manipulador de atividades do Microsoft Bot Framework. Ele roteia todas as atividades do Teams antes de permitir que as atividades específicas que não sejam do Teams sejam tratadas.
 
 Quando um bot Teams recebe uma atividade, ele é roteado para os manipuladores de atividade. Todas as atividades são roteadas por meio de um manipulador base chamado manipulador de turnos. O manipulador de turnos chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da classe `TeamsActivityHandler`, que é derivada da classe `ActivityHandler` do Bot Framework.
+
+> [!NOTE]
+> Se a atividade do bot levar mais de 15 segundos para ser processda, Teams uma solicitação de repetição para o ponto de extremidade do bot. Portanto, você verá solicitações duplicadas em seu bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 

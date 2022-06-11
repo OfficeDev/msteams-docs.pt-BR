@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611463"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033012"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -382,13 +382,31 @@ A mensagem de conclusão do formulário aparece nos Cartões Adaptáveis ao envi
 
 * **Êxito**: quando uma resposta enviada ao bot é bem-sucedida, **sua resposta foi enviada para a mensagem do** aplicativo.
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Mensagem de êxito"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Mensagem de êxito"border="true":::
 
-Você pode selecionar **Fechar** ou alternar o chat para ignorar a mensagem.
+     Você pode selecionar **Fechar** ou alternar o chat para ignorar a mensagem.
 
-**Resposta no celular**:
-
-A mensagem de erro aparece na parte inferior do Cartão Adaptável.
+     Se você não quiser exibir a mensagem de êxito, defina o atributo `hide` como `true` na `msTeams` `feedback` propriedade. A seguir está um exemplo:
+    
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+    
 
 Para obter mais informações sobre cartões e cartões em bots, consulte a [documentação dos cartões](~/task-modules-and-cards/what-are-cards.md).
 

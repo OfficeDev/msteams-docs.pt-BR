@@ -5,12 +5,12 @@ description: Saiba como desenrolar um link, abra o Modo de Exibição de Estági
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756734"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033033"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -87,7 +87,7 @@ Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 * O bot responde com um `200` código.
 
 > [!NOTE]
-> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
+> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
@@ -146,7 +146,7 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 

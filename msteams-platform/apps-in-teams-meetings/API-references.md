@@ -1,16 +1,16 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Identifique as referências à API de aplicativos de reunião com exemplos e exemplos de código, consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos do Teams.
+description: Identifique as referências da API de aplicativos de reunião com exemplos e exemplos de código, Teams consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887573"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032785"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nome da propriedade | Objetivo |
 |---|---|
 | **user.id** | ID do usuário. |
-| **user.aadObjectId** | ID de objeto do Azure Active Directory do usuário. |
+| **user.aadObjectId** | Azure Active Directory ID de objeto do usuário. |
 | **user.name** | Nome do usuário. |
 | **user.givenName** | Nome do usuário.|
 | **user.surname** | Sobrenome do usuário. |
@@ -406,7 +406,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | Nome da propriedade | Objetivo |
 |---|---|
 | **details.id** | A ID da reunião, codificada como uma cadeia de caracteres BASE64. |
-| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas à API do MS Graph. |
+| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas de API do Graph MS. |
 | **details.scheduledStartTime** | A hora de início agendada da reunião, em UTC. |
 | **details.scheduledEndTime** | A hora de término agendada da reunião, em UTC. |
 | **details.joinUrl** | A URL usada para ingressar na reunião. |
@@ -416,8 +416,8 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | **conversation.conversationType** | O tipo de conversa. |
 | **conversation.id** | A ID de chat da reunião. |
 | **organizer.id** | A ID de usuário do Organizador. |
-| **organizer.aadObjectId** | A ID de objeto do Azure Active Directory do Organizador. |
-| **organizer.tenantId** | A ID de locatário do Azure Active Directory do Organizador. |
+| **organizer.aadObjectId** | A ID do objeto Azure Active Directory organizador. |
+| **organizer.tenantId** | A ID de locatário Azure Active Directory organizador. |
 
 No caso de tipo de reunião recorrente,
 
@@ -540,7 +540,7 @@ A tabela a seguir fornece os códigos de resposta:
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obter API de estado de compartilhamento do estágio de conteúdo do aplicativo
 
-A API `getAppContentStageSharingState` permite que você busque informações sobre o compartilhamento de aplicativos no estágio da reunião.
+A `getAppContentStageSharingState` API permite que você busque informações sobre o compartilhamento de aplicativos no estágio da reunião para dispositivos móveis e desktop.
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -819,7 +819,7 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **from.id** | ID do usuário que enviou a solicitação. |
 | **from.aadObjectId** | ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
-| **conversation.tenantId** | ID do locatário do Azure Active Directory da conversa ou reunião. |
+| **conversation.tenantId** | Azure Active Directory ID do locatário da conversa ou reunião. |
 | **conversation.id** | A ID de chat da reunião. |
 | **recipient.id** | ID do usuário que recebe a solicitação. |
 | **recipient.name** | Nome do usuário que recebe a solicitação. |

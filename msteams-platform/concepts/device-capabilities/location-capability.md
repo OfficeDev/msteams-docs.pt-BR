@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de funcionalidades do mapa de locali
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757168"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033047"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização
 
@@ -58,7 +58,7 @@ Você deve usar o seguinte conjunto de APIs para habilitar os recursos de locali
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Mostra a localização no mapa. |
 
 > [!NOTE]
-> A `getLocation()`API vem com as seguintes [configurações de entrada](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` e `showMap`. <br/> Se o valor de `allowChooseLocation`for *verdadeiro*, os usuários poderão escolher qualquer localização de sua escolha.<br/>  Se o valor for *falso*, os usuários não poderão alterar o localização atual.<br/> Se o valor de `showMap`for *falso*, a localização atual será buscada sem exibir o mapa. `showMap` será ignorada se `allowChooseLocation` estiver definida omo *verdadeira*.
+> A `getLocation()`API vem com as seguintes [configurações de entrada](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops), `allowChooseLocation` e `showMap`. <br/> Se o valor de `allowChooseLocation`for *verdadeiro*, os usuários poderão escolher qualquer localização de sua escolha.<br/>  Se o valor for *falso*, os usuários não poderão alterar o localização atual.<br/> Se o valor de `showMap`for *falso*, a localização atual será buscada sem exibir o mapa. `showMap` será ignorada se `allowChooseLocation` estiver definida omo *verdadeira*.
 
 A imagem a seguir ilustra a experiência do aplicativo Web de funcionalidades de localização:
 
@@ -98,7 +98,7 @@ Você deve garantir que lide com esses erros adequadamente em seu aplicativo do 
 
 |Código de erro |  Nome do erro     | Condição|
 | --------- | --------------- | -------- |
-| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportado na plataforma atual.|
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é compatível com a plataforma atual.|
 | **500** | INTERNAL_ERROR | Erro interno encontrado durante a execução da operação necessária.|
 | **1.000** | PERMISSION_DENIED |O usuário negou permissões de localização para o aplicativo do Teams ou o aplicativo Web.|
 | **4000** | ARGUMENTOS_INVÁLIDOS | A API foi invocada com argumentos obrigatórios incorretos ou insuficientes.|
