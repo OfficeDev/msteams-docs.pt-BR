@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
-ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
+ms.openlocfilehash: f83083524a4d49761e6c69683b66d34a0988d789
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65443898"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033026"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Criar uma conta de desenvolvedor do Partner Center
 
@@ -208,17 +208,23 @@ Os recursos a seguir também podem ajudar:
 
 </details>
 
-## <a name="update-apple-developer-id-on-partner-center"></a>Atualizar a ID de Desenvolvedor do Partner Center da Apple
+## <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>Atualizar a ID da Equipe no App Store Connect da Apple na Central de Parceiros
 
-Para permitir que os usuários instalem seu aplicativo na plataforma do Teams iOS, você deve atualizar sua ID de Desenvolvedor da Apple no Microsoft Partner Center. Para atualizar sua ID de Desenvolvedor da Apple, siga estas etapas:
+Para permitir que os usuários instalem seu aplicativo na plataforma iOS do Teams, você deve atualizar sua ID da Equipe no App Store Connect da Apple na Central de Parceiros da Microsoft. Para atualizar sua ID da Equipe no App Store Connect da Apple, siga estas etapas:
 
 1. Faça logon no [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) usando as credenciais de administrador global.
 1. Selecione o ícone de configurações no canto superior direito da página.
 1. Acesse a seção **Informações legais** em **Perfil da organização** no painel esquerdo.
 1. Selecione a guia **Desenvolvedor**.
-1. Digite sua ID de Desenvolvedor da Apple.
+1. Digite sua ID da Equipe no App Store Connect da Apple.
 1. Acesse a página da oferta e republique seu aplicativo do Teams.
-   Sua ID de Desenvolvedor da Apple agora está atualizada no Microsoft Partner Center.
+   Sua ID da Equipe no App Store Connect da Apple agora está atualizada e os usuários podem instalar seu aplicativo na plataforma iOS do Teams.
+
+Para obter a ID da Equipe no App Store Connect no portal do Desenvolvedor da Apple, siga estas etapas:
+
+1. Faça logon em [Centro de Desenvolvedor da Apple](https://developer.apple.com/).
+1. Selecione **Conta** e vá para **Afiliação**.
+1. Você encontrará a **ID da Equipe no App Store Connect da Apple** em **Afiliação**.
 
 ## <a name="next-step"></a>Próxima etapa
 

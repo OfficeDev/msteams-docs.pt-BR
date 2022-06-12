@@ -6,25 +6,31 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: armazenamento loja distribuir validar aplicativo pacote orientações localizar
-ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756776"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033005"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio para a loja do Microsoft Teams
 
 Você projetou, compilou e testou seu aplicativo do Microsoft Teams. Agora você está pronto para listá-lo e permitir que as pessoas descubram e comecem a usar seu aplicativo.
 
-Antes de enviar seu aplicativo para o [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), certifique-se de ter feito o seguinte.
+Veja o vídeo a seguir para saber mais sobre a publicação de seu aplicativo na loja de aplicativos do Microsoft Teams:
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+<br>
+
+Antes de enviar seu aplicativo para a [Central de Parceiros](/office/dev/store/use-partner-center-to-submit-to-appsource), certifique-se de ter feito o seguinte.
 
 ## <a name="validate-your-app-package"></a>Validar seu pacote de aplicativos
 
 Embora seu aplicativo possa estar funcionando em um ambiente de teste, você deve verificar o pacote do aplicativo para evitar ter problemas durante o processo de envio.
 
 > [!WARNING]
-> Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor[Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
+> Se você estiver usando o App Studio, recomendamos que você tente o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 A ferramenta de validação de aplicativos do Microsoft Teams ajuda você a identificar e corrigir problemas antes de enviar para o Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo comparando-as aos mesmos casos de teste usados durante a validação do repositório.
 
@@ -212,6 +218,7 @@ Um [Atestado do Publisher](/microsoft-365-app-certification/docs/attestation) ta
 > Se estiver enviando um aplicativo novo, você não pode obter oficialmente o Atestado do Publisher antes de seu aplicativo estar listado na Teams Store. Se estiver atualizando um aplicativo listado, obtenha o Atestado do Publisher antes de enviar a versão mais recente do aplicativo para validação.
 
 ## <a name="next-step"></a>Próxima etapa
+
 > [!div class="nextstepaction"]
 > [Enviar seu aplicativo](/office/dev/store/add-in-submission-guide)
 

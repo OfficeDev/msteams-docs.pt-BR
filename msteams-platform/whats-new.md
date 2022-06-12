@@ -3,12 +3,12 @@ title: Novidades para desenvolvedores no Teams
 description: Saiba mais sobre os novos recursos de desenvolvedor e aprimoramentos para esses recursos no Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906285"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032977"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -47,6 +47,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 08/06/2022 | Comentários opcionais do cartão para mensagem de sucesso| Compilar bots > Conversas de bot > [Mensagens em conversas de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03/06/2022 | Atualizado Adicionar módulo de autenticação para habilitar o logon único para aplicativo de guia com nova estrutura e procedimentos | Adicionar autenticação > Tabs > [Habilitar logon único em um aplicativo de guia](tabs/how-to/authentication/tab-sso-overview.md) |
 | 24/05/2022 | Dicas adicionais para aprovação rápida ao publicar seu aplicativo vinculado a uma oferta de SaaS | Publicar na loja do Teams > Visão geral > [Dicas adicionais para aprovação rápida para publicar seu aplicativo vinculado a uma oferta de SaaS](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 24/05/2022 | Envie para a loja Teams seus aplicativos habilitados para Outlook e Office | Estenda seu aplicativo no Microsoft 365 > [Visão Geral](m365-apps/overview.md) |

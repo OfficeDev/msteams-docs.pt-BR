@@ -599,5 +599,7 @@
       href: resources/samesite-cookie-update.md
     - name: Contribuir com a documentação do Teams
       href: resources/teams-contributor-reference.md
+    - name: Solucionar problemas em seu aplicativo Microsoft Teams
+      href: resources/troubleshoot.md
 - name: Suporte e comentários
   href: feedback.md

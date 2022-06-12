@@ -4,20 +4,21 @@ description: Descreve o esquema de manifesto para o Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: esquema de manifesto do teams
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887832"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032926"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
 O manifesto do aplicativo Microsoft Teams descreve como seu aplicativo se integra ao produto Microsoft Teams. O manifesto do seu aplicativo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,...,1.12 e a versão 1.13 atual (veja a nota abaixo) são suportadas (usando "v1.x" no URL).
 Para obter mais informações sobre as alterações feitas em cada versão, consulte o [registro de alterações do manifesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-> [!Important]
-> A versão `1.13` do esquema de manifesto do aplicativo Microsoft Teams permite suporte para [estender aplicativos do Teams para Outlook e Office](../../m365-apps/overview.md). Para aplicativos somente para equipes, use a versão `1.12` (ou anterior). Os esquemas 1.12 e 1.13 são os mesmos. Consulte a visão geral do [SDK do cliente JavaScript do Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) para obter mais orientações.
+A tabela a seguir lista as versões do TeamsJS e do manifesto do aplicativo de acordo com diferentes cenários de aplicativo:
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 A amostra do esquema a seguir mostra todas as opções de extensibilidade:
 
@@ -594,6 +595,9 @@ Uma matriz de `string`, que especifica quais permissões o aplicativo solicita, 
 
 Alterar essas permissões durante a atualização do aplicativo faz com que seus usuários repitam o processo de consentimento depois de executar o aplicativo atualizado. Para saber mais, veja [atualizando seu aplicativo](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
+> [!NOTE]
+> As permissões estão preteridas agora.
+
 ## <a name="devicepermissions"></a>devicePermissions
 
 **Opcional**—matriz de cadeias de caracteres
@@ -748,7 +752,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

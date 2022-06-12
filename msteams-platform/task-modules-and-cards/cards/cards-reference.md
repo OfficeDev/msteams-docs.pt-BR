@@ -4,12 +4,12 @@ description: Descreve todos os cartões e ações de cartão disponíveis para b
 ms.localizationpriority: high
 keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757196"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032984"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -21,13 +21,15 @@ Antes de identificar os diferentes tipos de cartão, entenda como criar um cart�
 
 Para criar um cartão de destaque, cartão de miniatura ou Cartão Adaptável do App Studio:
 
-1. Acesse o **App Studio** do Teams.
-1. Selecione **Editor de cartão**.
-1. Selecione **Criar um novo cartão**.
-1. Selecione **Criar** para um dos cartões entre **Cartão Hero**, **Cartão de miniatura** ou **Cartão Adaptável**. Os detalhes de metadados, botões e exemplos de código json, csharp e nó são mostrados para esse cartão.
+1. Vá para [Portal do Desenvolvedor para Teams](https://dev.teams.microsoft.com/home).
+1. Selecione **Projetar e compilar cartões Adaptáveis**.
+1. Selecione **Novo cartão**.
+1. Insira o nome do cartão e selecione **Salvar**.
+1. Selecione um dos cartões através de **Cartão Destaque**, **Cartão Miniatura**, ou **Cartão Adaptável**.
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Detalhes do cartão Hero":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Selecione **Salvar**.
 1. Selecione **Me envie este cartão**. O cartão é enviado para você como uma mensagem de chat.
 
 ## <a name="card-examples"></a>Exemplos de cartão
