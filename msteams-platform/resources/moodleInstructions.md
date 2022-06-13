@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033054"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049001"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -287,7 +287,7 @@ Para permitir a criação automática de guias do Moodle:
 Quando um curso do Moodle é sincronizado, o Microsoft Teams instala automaticamente o aplicativo Moodle na equipe, cria uma guia Moodle no canal Geral do Teams e configura-o para conter a página do curso do Moodle do qual ele está sincronizado. Agora você pode começar a trabalhar com seus cursos do Moodle diretamente Microsoft Teams.
 
 > [!NOTE]
-> Para compartilhar solicitações de recursos ou comentários conosco, visite nossa página [voz do usuário](https://microsoftteams.uservoice.com/forums/916759-moodle).
+> Para compartilhar solicitações de recursos ou comentários conosco, visite nossa página [voz do usuário](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,12 +6,12 @@ keywords: equipes guias grupo canal configurável
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887629"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048973"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -21,7 +21,7 @@ Uma página de configuração é um tipo especial de [página de conteúdo](cont
 * Uma [extensão de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
 * Um [Conector do Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar um canal ou guia de chat em grupo
 
@@ -171,7 +171,7 @@ Escolher o botão apropriado aciona `saveGray()` ou `saveRed()` e invoca o segui
 * O manipulador de eventos `pages.config.registerOnSaveHandler()` é acionado.
 * **Salvar** na página de configuração do aplicativo, está habilitado.
 
-O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e a instalação pode prosseguir. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [a interface de configuração](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
+O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e a instalação pode prosseguir. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [a interface de configuração](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ Autentique antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem, reconfigurem ou renomeiem uma guia de canal ou grupo. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Configuração do Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para página de remoção:
+`setConfig()` Microsoft Teams (anteriormente`setSettings()`) para página de remoção:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
