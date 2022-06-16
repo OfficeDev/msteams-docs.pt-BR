@@ -3,12 +3,12 @@ title: Novidades para desenvolvedores no Teams
 description: Saiba mais sobre os novos recursos de desenvolvedor e aprimoramentos para esses recursos no Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048966"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118967"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -24,7 +24,6 @@ Descubra recursos da plataforma Microsoft Teams que têm disponibilidade geral (
 | 24/05/2022 | O Kit de Ferramentas do Teams versão 4.0.0 para Visual Studio Code agora é GA | Ferramentas e SDKs > Kit de Ferramentas do Teams para o Visual Studio Code > <br> • [Visão geral do Kit de Ferramentas do Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Criar um bot de comando com JavaScript](toolkit/add-capability.md) <br> • [Criar um bot de notificação com JavaScript](toolkit/add-capability.md) <br> • [Visualizar e personalizar o manifesto do aplicativo Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar às APIs existentes](toolkit/add-API-connection.md) <br> • [Adicionar recursos aos seus aplicativos do Teams](toolkit/add-capability.md) <br> • [Adicionar a experiência de logon único](toolkit/add-single-sign-on.md) <br> • [Adicionar recursos de nuvem ao aplicativo do Teams](toolkit/add-resource.md) |
 | 24/05/2022 | Apresentado o manifesto do aplicativo versão 1.13 | Manifesto do > [de aplicativo para Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24/05/2022 | Extensões de Bots e Mensagens no GCC e GCCH | • Planejar seu aplicativo > [Visão Geral](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Criar bots > [Visão geral](bots/what-are-bots.md) </br> • Criar extensões de mensagem > [Visão geral](messaging-extensions/what-are-messaging-extensions.md) |
-
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -266,6 +265,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+| 16/06/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web| Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Atualize conversas e eventos de instalação em seu bot do Teams |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share |  Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

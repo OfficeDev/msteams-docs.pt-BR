@@ -4,25 +4,36 @@ description: Saiba como adicionar o botão Compartilhar no Teams incorporado em 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartilhar a opção Compartilhar no Teams no Teams
-ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9a2223ebe89575d81db23ca696f88a2f2d519d31
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757056"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118932"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartilhar no Teams a partir de aplicativos Web
 
-Sites de terceiros podem usar o script do inicializador para inserir botões Compartilhar no Teams em suas páginas da Web. Quando você seleciona, ele inicia a experiência Compartilhar com o Teams em uma janela pop-up. Isso permite que você compartilhe um link diretamente com qualquer pessoa ou canal do Microsoft Teams sem alternar o contexto. Este documento orienta você sobre como criar e incorporar um botão Compartilhar no Teams para o seu site, criar a visualização do site e estender o Compartilhar no Teams para Educação.
+Sites de terceiros podem usar o script do inicializador para inserir botões Compartilhar no Teams em suas páginas da Web. Quando você seleciona Compartilhar para Teams, ele inicia a experiência compartilhar para Teams em uma janela pop-up. Isso permite que você compartilhe um link diretamente com qualquer pessoa ou canal do Microsoft Teams sem alternar o contexto.
+
+A imagem a seguir exibe a janela pop-up para Compartilhar para Teams de visualização:
+
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Pop-up compartilhar Teams dados" border="true":::
 
 > [!NOTE]
 >
 > * Há suporte apenas para as versões para desktop do Microsoft&nbsp;Edge e Google Chrome.
-> * Não há suporte para o uso de contas de convidado ou Freemium.  
+> * Não há suporte para o uso de contas de convidado ou Freemium.
 
-A imagem a seguir exibe a experiência de pop-up Compartilhar no Teams:
+Você também pode adicionar um link desfralhamento para os links compartilhados por meio do botão Compartilhar Teams o botão hospedado no aplicativo Web, no aplicativo pessoal ou na guia. Para obter mais informações, consulte [o link desfraldamento](~/messaging-extensions/how-to/link-unfurling.md).
 
-:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="Pop-up Compartilhar no Teams":::
+A imagem a seguir exibe a experiência de desfralização de link por meio do botão Compartilhar para Teams:
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Compartilhamento para Teams desfralhamento" border="true":::
+
+> [!NOTE]
+> O link desfralamento em compartilhamento Teams está disponível atualmente apenas na versão prévia do desenvolvedor público.
+
+Este artigo orienta você sobre como criar e inserir um botão Compartilhar Teams para seu site, criar sua visualização de site e estender o Compartilhamento para Teams para Educação.
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorpore um botão Compartilhar no Teams
 
@@ -43,9 +54,9 @@ A imagem a seguir exibe a experiência de pop-up Compartilhar no Teams:
 
     Depois de concluir essas etapas, o ícone do Microsoft Teams é adicionado ao seu site. A imagem a seguir mostra o ícone Compartilhar no Teams:
 
-    ![Ícone Compartilhar no Teams](~/assets/icons/share-to-teams-icon.png)
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Ícone Compartilhar no Teams" border="true":::
 
-1. Como alternativa, se você quiser um tamanho de ícone diferente para o botão Compartilhar no Teams, use o atributo `data-icon-px-size`.
+1. Como alternativa, se você quiser um tamanho de ícone diferente para o botão Compartilhar Teams, use o `data-icon-px-size` atributo.
 
     ```html
     <div
