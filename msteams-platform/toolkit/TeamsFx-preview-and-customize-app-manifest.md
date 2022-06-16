@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755857"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123651"
 ---
 # <a name="edit-teams-app-manifest"></a>Editar Teams manifesto do aplicativo
 
@@ -32,7 +32,7 @@ Você pode visualizar o arquivo de manifesto em ambientes locais e remotos.
 
 * [Visualizar arquivo de manifesto no ambiente local](#preview-manifest-file-in-local-environment)
 * [Visualizar arquivo de manifesto no ambiente remoto](#preview-manifest-file-in-remote-environment)
- 
+
 ### <a name="preview-manifest-file-in-local-environment"></a>Visualizar arquivo de manifesto no ambiente local
 
 Para visualizar o arquivo de manifesto no ambiente local, você pode pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e o pacote do aplicativo e o manifesto de visualização são compilados na `build/appPackage` pasta.
@@ -53,7 +53,7 @@ A visualização local é exibida conforme mostrado na imagem:
 
 * Selecione **Provisionar na nuvem em** **DESENVOLVIMENTO** Teams Toolkit extensão ou
 * Gatilho **Teams: provisionar na nuvem da** paleta de comandos.
- 
+
 Ele gera a configuração para o aplicativo Teams remoto e compila o pacote e o manifesto de visualização na `build/appPackage` pasta.
 
 Você também pode visualizar o arquivo de manifesto no ambiente remoto seguindo estas etapas:
@@ -127,7 +127,6 @@ O Kit de Ferramentas do Teams consiste nos seguintes arquivos de modelo de manif
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 Durante a depuração ou provisionamento local, `manifest.template.json`Teams Toolkit carrega o manifesto de , `state.{env}.json`com as configurações de , `config.{env}.json`e cria Teams aplicativo no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>Espaços reservados com suporte em manifest.template.json
@@ -191,4 +190,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

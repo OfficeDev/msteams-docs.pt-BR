@@ -1,17 +1,16 @@
 ---
 title: Visão geral – Distribuir seu aplicativo
-description: Descreve as opções para publicar seu aplicativo Microsoft Teams, carregar seu aplicativo e GCC.
+description: Neste artigo, conheça as opções para publicar seu aplicativo Microsoft Teams, carregar e implantar seu aplicativo e GCC.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: implantar gcc de upload do aplicativo de publicação
-ms.openlocfilehash: e2c0af75b7cfb2e27255c9f6f194b5d9ab959093
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111952"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123528"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir seu aplicativo Microsoft Teams
 

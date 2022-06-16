@@ -1,15 +1,14 @@
 ---
 title: Developer Preview
-description: Descreve os recursos na Pré-visualização pública do Desenvolvedor do Microsoft Teams
+description: Neste artigo, conheça os recursos que estão na Visualização Pública do Desenvolvedor do Microsoft Teams e do aplicativo de visualização do desenvolvedor.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: recursos da pré-visualização do desenvolvedor do teams
-ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a0f053020db1f703de5abf7d64accf5816422c9
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756874"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123917"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Pré-visualização pública do desenvolvedor para o Microsoft Teams
 

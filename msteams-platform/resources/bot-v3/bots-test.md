@@ -1,16 +1,16 @@
 ---
 title: Testar e depurar seu aplicativo
-description: Descreve como testar bots no Microsoft Teams
+description: Este artigo descreve como testar bots no Microsoft Teams
 keywords: teste bots teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755906"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123451"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testar e depurar seu bot do Microsoft Teams
 

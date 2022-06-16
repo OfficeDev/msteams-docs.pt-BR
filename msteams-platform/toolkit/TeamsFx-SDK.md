@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ae533039c8a0af5719dd884628d600ae3be11410
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: ed110f95d8f25ba4595d8b96e08c5e49a0c9225e
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654880"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123763"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -23,8 +23,8 @@ O TeamsFx ajuda a reduzir as tarefas do desenvolvedor usando o SSO do Teams e ac
 
 Você pode usar o SDK do TeamsFx para:
 
-* Acessar as principais funcionalidades no ambiente de cliente e servidor 
-* Escrever código de autenticação de usuário de maneira simplificada
+* Acesse as principais funcionalidades no ambiente de cliente e servidor.
+* Escreva o código de autenticação do usuário de maneira simplificada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -105,7 +105,9 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>Classe TeamsFx
 
-A instância da classe TeamsFx acessa todas as configurações do TeamsFx de variáveis de ambiente por padrão. Você também pode definir valores de configuração personalizados para substituir os valores padrão. Verifique a [configuração de substituição](#override-configuration) para obter detalhes. Ao criar uma instância do TeamsFx, você também precisa especificar o tipo de identidade. Há dois tipos de identidade:
+A instância da classe TeamsFx acessa todas as configurações do TeamsFx de variáveis de ambiente por padrão. Você também pode definir valores de configuração personalizados para substituir os valores padrão. Verifique a [configuração de substituição](#override-configuration) para obter detalhes.
+Ao criar uma instância do TeamsFx, você também precisa especificar o tipo de identidade.
+Há dois tipos de identidade:
 
 * Identidade do Usuário
 * Identidade do Aplicativo
@@ -141,16 +143,19 @@ Há três classes de credenciais para simplificar a autenticação. [pasta de cr
 Aqui estão os cenários correspondentes para cada meta de classe de credencial.
 
 #### <a name="user-identity-in-browser-environment"></a>Identidade do Usuário no ambiente do navegador
+
 `TeamsUserCredential` representa a identidade do usuário atual do Teams. O uso dessa credencial solicitará o consentimento do usuário na primeira vez. Ele aproveita o SSO do Teams e o fluxo On-Behalf-Of para fazer a troca de tokens. O SDK usa esta credencial quando os desenvolvedores escolhem a identidade do usuário no ambiente do navegador.
 
 Configuração necessária: `initiateLoginEndpoint`, `clientId`.
 
 #### <a name="user-identity-in-nodejs-environment"></a>Identidade do Usuário no ambiente do Node.js
+
 `OnBehalfOfUserCredential` usa o fluxo On-Behalf-Of e precisa do token de SSO do Teams. Ele foi projetado para ser usado em cenários de função ou bot do Azure. O SDK usa esta credencial quando os desenvolvedores escolhem a identidade do usuário no ambiente Node.js.
 
 Configuração necessária: `authorityHost`, `tenantId`, `clientId`, `clientSecret` ou `certificateContent`.
 
 #### <a name="application-identity-in-nodejs-environment"></a>Identidade do Aplicativo no ambiente do Node.js
+
 `AppCredential` representa a identidade do aplicativo. Ele é usado quando o usuário não está envolvido como um trabalho de automação acionado por tempo. O SDK usa esta credencial quando os desenvolvedores escolhem a identidade do aplicativo no ambiente Node.js.
 
 Configuração necessária: `tenantId`, `clientId`, `clientSecret` ou `certificateContent`.
@@ -167,10 +172,11 @@ Configuração necessária: `initiateLoginEndpoint`, `tenantId`, `clientId` e `a
 
 O SDK do TeamsFx fornece várias funções para facilitar a configuração de bibliotecas de terceiros. Eles estão localizados na [pasta principal](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
-*  Serviço Microsoft Graph:`createMicrosoftGraphClient` e `MsGraphAuthProvider` ajudam a criar uma instância autenticada do Graph.
-*  SQL:`getTediousConnectionConfig` retorna uma configuração de conexão entediante.
+* Serviço Microsoft Graph:`createMicrosoftGraphClient` e `MsGraphAuthProvider` ajudam a criar uma instância autenticada do Graph.
+* SQL:`getTediousConnectionConfig` retorna uma configuração de conexão entediante.
 
 Configuração necessária:
+
 * `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` se quiser usar a identidade do usuário
 * `sqlServerEndpoint`, `sqlIdentityId` se quiser usar a identidade MSI
 
@@ -217,7 +223,7 @@ A seção a seguir fornece vários trechos de código para cenários comuns:
 
 <details>
 <summary><b>Use API do Graph no aplicativo guia</b></summary>
- 
+
 Use `TeamsFx` e `createMicrosoftGraphClient`.
 
 ```ts
@@ -234,7 +240,6 @@ const profile = await graphClient.api("/me").get();
 <summary><b>Criar um cliente de API para chamar a API existente no Bot ou no Azure Functions</b></summary>
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Criar cliente de API" border="false":::
-
 
 </details>
 
@@ -259,7 +264,6 @@ const response = await apiClient.get("/api/" + functionName);
 
 <details>
 <summary><b>Acessar ao Banco de dados SQL in Função do Azure</b></summary>
-
 
 Use a biblioteca `tedious` para acessar o SQL e aproveitar `DefaultTediousConnectionConfiguration` que gerencia a autenticação.
 Além de `tedious`, você também pode compor a configuração de conexão de outras bibliotecas SQL com base no resultado de `sqlConnectionConfig.getConfig()`.
@@ -398,9 +402,10 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 ## <a name="override-configuration"></a>Substituir configuração
+
 Você pode passar a configuração personalizada ao criar a instância do TeamsFx para substituir a configuração padrão ou definir campos obrigatórios quando as variáveis de ambiente estão ausentes.
 
-- Se você tiver criado um projeto de guia usando o Kit de Ferramentas do VS Code, os seguintes valores de configuração serão usados de variáveis de ambiente pré-configuradas:
+* Se você tiver criado um projeto de guia usando o Kit de Ferramentas do VS Code, os seguintes valores de configuração serão usados de variáveis de ambiente pré-configuradas:
   * authorityHost (REACT_APP_AUTHORITY_HOST)
   * tenantId (REACT_APP_TENANT_ID)
   * clientId (REACT_APP_CLIENT_ID)
@@ -409,7 +414,7 @@ Você pode passar a configuração personalizada ao criar a instância do TeamsF
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
   * apiName (REACT_APP_FUNC_NAME)
 
-- Se você tiver criado a Função do Azure/projeto de bot usando o Kit de Ferramentas do VS Code, os seguintes valores de configuração serão usados de variáveis de ambiente pré-configuradas:
+* Se você tiver criado a Função do Azure/projeto de bot usando o Kit de Ferramentas do VS Code, os seguintes valores de configuração serão usados de variáveis de ambiente pré-configuradas:
   * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
   * authorityHost (M365_AUTHORITY_HOST)
   * tenantId (M365_TENANT_ID)
@@ -426,6 +431,7 @@ Você pode passar a configuração personalizada ao criar a instância do TeamsF
 ## <a name="upgrade-latest-sdk-version"></a>Atualizar a versão mais recente do SDK
 
 Se você estiver usando a versão do SDK que tem `loadConfiguration()`, siga estas etapas para atualizar para a versão mais recente do SDK.
+
 1. Remova `loadConfiguration()` e passe as configurações personalizadas usando `new TeamsFx(IdentityType.User, { ...customConfig })`
 2. Substituir `new TeamsUserCredential()` por `new TeamsFx()`
 3. Substituir `new M365TenantCredential()` por `new TeamsFx(IdentityType.App)`

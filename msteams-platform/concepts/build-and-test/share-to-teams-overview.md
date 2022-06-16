@@ -1,15 +1,14 @@
 ---
 title: Visão geral do compartilhamento com o Teams
-description: Descreve como criar o botão compartilhar com equipes
+description: Aprenda a compartilhar com Teams visão geral e onde você pode criar o botão compartilhar com as equipes nos aplicativos Teams aplicativos e aplicativos de guia.
 ms.topic: how-to
 ms.localizationpriority: mediumss
-keywords: Visão geral do compartilhamento com o Teams
-ms.openlocfilehash: 1bc840c5b85042ef109d544a3b94cd55f6eae2ad
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: caf75bed6c741e5d504c91e2c7df5739ec786cbb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297125"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123770"
 ---
 # <a name="share-to-teams"></a>Compartilhar com o Teams
 

@@ -1,14 +1,14 @@
 ---
 title: Empacote o seu aplicativo
-description: Saiba como empacotar seu aplicativo do Microsoft Teams para testar, carregar e armazenar a publicação.
+description: Saiba como empacotar seu aplicativo Microsoft Teams com ícones para teste, carregamento e publicação na loja.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d0315f641d345faf58429729d01e187899a4790f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104088"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123987"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Criar um pacote de aplicativo do Microsoft Teams
 

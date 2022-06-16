@@ -5,12 +5,12 @@ description: Saiba como integrar recursos de dispositivo nativos, como câmera, 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757028"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123833"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
@@ -45,3 +45,9 @@ Depois de obter acesso aos recursos do dispositivo, use as APIs de funcionalidad
 * Compartilhe a localização [seletor de localização](location-capability.md).
 
 Além disso, você pode integrar o controle [seletor de pessoas](people-picker-capability.md) nativas do Teams que permite que os usuários pesquisem e selecionem pessoas na experiência do aplicativo Web.
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Nome de exemplo           | Descrição | Node.js    |
+|:---------------------|:--------------|:---------|
+|Permissões de dispositivos | Descreve como demonstrar um aplicativo de exemplo Microsoft Teams guia para permissões de dispositivo. |[Exibir](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

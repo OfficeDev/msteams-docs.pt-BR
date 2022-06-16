@@ -1,16 +1,15 @@
 ---
 title: Referência do esquema de manifesto do Developer Preview público
-description: Arquivo de manifesto de exemplo e descrição de todos os seus componentes com suporte para o Microsoft Teams
+description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição de todos os seus componentes com suporte para Microsoft Teams.
 ms.topic: reference
-keywords: Developer Preview do esquema de manifesto do Teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757490"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123038"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
 
@@ -693,7 +692,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -755,9 +754,9 @@ As permissões do aplicativo permitem que o aplicativo acesse dados sem um usuá
 
 #### <a name="resource-specific-delegated-permissions"></a>Permissões delegadas específicas do recurso
 
-As permissões delegadas permitem que o aplicativo acesse dados em nome do usuário conectado. 
+As permissões delegadas permitem que o aplicativo acesse dados em nome do usuário conectado.
 
-* **Permissões delegadas específicas de recursos para equipes** 
+* **Permissões delegadas específicas de recursos para equipes**
 
     |**Name**|**Descrição**|
     |---|---|

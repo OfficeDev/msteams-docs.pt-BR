@@ -1,19 +1,19 @@
 ---
 title: Conexão apIs existentes
 author: MuyangAmigo
-description: Descreve a conexão com APIs existentes
+description: Neste artigo, saiba como o kit de ferramentas ajuda você a inicializar o acesso de exemplo às APIs existentes. Ele fornece uma lista de tipos de autenticação diferentes.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 2e00991f42b85e0e053fd94e68298c819a14a730
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656765"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124001"
 ---
-# <a name="add-api-connection-to-teams-app"></a>Adicionar conexão de API ao Teams aplicativo
+# <a name="add-api-connection-to-teams-app"></a>Adicionar uma conexão de API ao aplicativo do Teams
 
 Teams Toolkit ajuda você a acessar APIs existentes para criar Teams aplicativos. Essas APIs são desenvolvidas pela sua organização ou por terceiros.
 
@@ -25,9 +25,9 @@ Teams Toolkit o código de exemplo de inicialização para acessar as APIs se vo
 
 Quando você usa Teams Toolkit para se conectar a uma API existente, Teams Toolkit executa a seguinte função:
 
-* Gerar código de exemplo em `./bot` ou pasta `./api`
-* Adicionar uma referência ao `@microsoft/teamsfx` pacote a `package.json`
-* Adicionar configurações de aplicativo para sua API que  `.env.teamsfx.local` define a depuração local
+* Gere código de exemplo em `./bot` ou pasta `./api` .
+* Adicione uma referência ao `@microsoft/teamsfx` pacote a `package.json`.
+* Adicione configurações de aplicativo para sua API que  `.env.teamsfx.local` define a depuração local.
 
 ### <a name="connect-to-api-in-visual-studio-code"></a>Conexão à API no Visual Studio Code
 
@@ -80,7 +80,7 @@ O comando base desse recurso é `teamsfx add api-connection [authentication type
 
    |**Tipo de autenticação**|**Comando de amostra**|
    |-----------------------|------------------|
-   |Básico|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |Básico|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |Chave de API|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificado|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
@@ -121,7 +121,7 @@ As etapas a seguir ajudam a testar a conexão de API no ambiente Teams Toolkit l
     O cliente de API gerado é um cliente da API do Axios. Use o cliente Axios para fazer solicitações à API.
 
      > [!Note]
-     >[O Axios](https://www.npmjs.com/package/axios) é um pacote nodejs popular que ajuda você com solicitações http(s). Para obter mais informações sobre como fazer solicitações http(s), consulte a documentação de exemplo do [Axios](https://axios-http.com/docs/example) para saber como fazer http(s).
+     > [O Axios](https://www.npmjs.com/package/axios) é um pacote nodejs popular que ajuda você com solicitações http(s). Para obter mais informações sobre como fazer solicitações http(s), consulte a documentação de exemplo do [Axios](https://axios-http.com/docs/example) para saber como fazer http(s).
 
 ## <a name="deploy-your-application-to-azure"></a>Implantar seu aplicativo no Azure
 
@@ -160,6 +160,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Conexão a APIs para Azure AD permissões</b></summary>
@@ -204,6 +205,7 @@ Você pode seguir as etapas para acessar essas APIs ao usar:
 
         > [!NOTE]
         > Para permissão de aplicativo, use a ID do cliente.
+        >
 </details>
 
 ## <a name="see-also"></a>Confira também

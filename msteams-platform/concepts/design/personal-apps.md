@@ -1,17 +1,17 @@
 ---
 title: Criar seu aplicativo pessoal
-description: Saiba como criar um aplicativo pessoal do Teams e obter o Kit de Interface do Usuário do Microsoft Teams, criar componentes, como painel, formulário, quadro de tarefas para experiência móvel e Desktop. Conheça as práticas recomendadas para desenvolver aplicativos pessoais.
+description: Saiba como criar um aplicativo pessoal do Teams e obter o Kit de Interface do Usuário do Microsoft Teams, criar componentes, como painel, formulário, quadro de tarefas para experiência móvel e Desktop.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: modelo de formulário do painel do iframe da guia do iframe do aplicativo pessoal do kit de interface do usuário
-ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297230"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123924"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetando seu aplicativo pessoal para o Microsoft Teams
 

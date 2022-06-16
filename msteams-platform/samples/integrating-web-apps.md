@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: Práticas recomendadas ou considerações para integrar aplicativos Web existentes com o Microsoft Teams
+description: Conheça as práticas recomendadas ou considerações para integrar aplicativos Web existentes com Microsoft Teams. Ele fornece informações sobre requisitos de API, autenticação e vinculação profunda de seu aplicativo com Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações para a integração do Microsoft Teams
-ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757637"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123798"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
 

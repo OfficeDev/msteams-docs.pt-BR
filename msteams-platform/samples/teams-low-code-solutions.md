@@ -1,16 +1,16 @@
 ---
 title: Criar aplicativos personalizados de baixo código para o Microsoft Teams
 author: surbhigupta
-description: Saiba mais sobre as soluções de código disponíveis da Microsoft baixa e nenhuma solução de código com o Teams e o Microsoft Power Platform. Saiba mais sobre soluções, como Power Apps, Power Automate, Assistente Virtual e muito mais.
-ms.localizationpriority: high
+description: Saiba mais sobre as soluções de código disponíveis da Microsoft baixa e nenhuma solução de código com o Teams e o Microsoft Power Platform.
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 651af8d4eeddc48a8ecfe7488892f851c81ba711
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 04fc4537969d3866e31e9c35e8484326b0ccbb56
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111588"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123171"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Criar aplicativos personalizados de baixo código para o Microsoft Teams
 

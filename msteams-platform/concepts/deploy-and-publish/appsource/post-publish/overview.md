@@ -1,16 +1,16 @@
 ---
 title: Manter e dar suporte ao seu aplicativo publicado
-description: O que pensar depois que sua loja estiver listada na loja do Teams e no AppSource.
+description: Saiba como manter seu aplicativo Microsoft Teams publicado e o que pensar depois que sua loja estiver listada na loja do Teams e no AppSource.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887804"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123045"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -64,7 +64,18 @@ Crie o link usando a seguinte URL acrescentada à ID do aplicativo: `https://tea
 
 ## <a name="complete-microsoft-365-certification"></a>Certificação Microsoft 365 Completa
 
-[Certificação Microsoft 365](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos e protegidos quando um aplicativo ou suplemento do Office de terceiros é instalado em seu ecossistema Microsoft 365. A certificação confirma que uma solução de aplicativo é compatível com as tecnologias da Microsoft, compatível com as práticas recomendadas de segurança de aplicativos na nuvem e com suporte da Microsoft.
+[Certificação Microsoft 365](/microsoft-365-app-certification/docs/certification) oferece garantias de que os dados e a privacidade são adequadamente protegidos quando um aplicativo do Office ou um suplemento de terceiros é instalado em seu ecossistema Microsoft 365. A certificação confirma que seu aplicativo é compatível com as tecnologias da Microsoft, está em conformidade com as práticas recomendadas do Cloud App Security e tem suporte da Microsoft.
+
+## <a name="stop-app-distribution"></a>Parar distribuição de aplicativos
+
+Você pode remover um aplicativo do [Marketplace comercial da Microsoft](/azure/marketplace/overview) para impedir sua descoberta e uso.
+
+Para interromper a distribuição de um aplicativo após a publicação, siga as etapas:
+
+1. Na página **Visão geral do produto**, selecione **Parar de vender**. Ele remove o aplicativo do Microsoft AppSource.
+1. Para iniciar a de-listagem do aplicativo, no **Partner Center**, selecione a página **Visão geral** e, em seguida, selecione **Parar de vender**.
+
+Depois de interromper a distribuição de um aplicativo, você ainda poderá vê-lo no Partner Center com um status **Não disponível**. Se você decidir listar o aplicativo novamente, siga as instruções para [Publicar seu aplicativo na loja do Microsoft Teams](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## <a name="see-also"></a>Confira também
 

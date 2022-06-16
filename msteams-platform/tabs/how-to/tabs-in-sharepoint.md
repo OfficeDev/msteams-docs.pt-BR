@@ -2,16 +2,15 @@
 title: Adicionar uma guia do Teams ao SharePoint
 author: surbhigupta
 description: Saiba como implantar sua guia do Teams existente no SharePoint como uma Web part da Estrutura do SharePoint usando exemplos de código.
-keywords: guias do teams no desenvolvimento da estrutura do sharepoint
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f889a4e1932feb02eeb502ab2f85f051093a5b58
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757308"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123644"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint
 

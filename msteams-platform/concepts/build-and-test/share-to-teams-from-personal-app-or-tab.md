@@ -1,15 +1,14 @@
 ---
 title: Compartilhar com o Teams a partir do aplicativo ou guia pessoal
-description: Saiba como adicionar o Compartilhamento no Teams inserido em seu aplicativo pessoal ou guia
+description: Saiba como habilitar o botão Compartilhar Teams em seu aplicativo pessoal ou guia, limitações e experiência do usuário final.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Compartilhar a opção Compartilhar no Teams no Teams
-ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757259"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123931"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartilhar com o Teams a partir do aplicativo ou guia pessoal
 

@@ -1,14 +1,14 @@
 ---
 title: Criar links detalhados
-description: Saiba como descrever os links profundos do Teams e como usá-los no seus aplicativos.
+description: Saiba como criar links profundos e como usá-los e navegar por eles em seus aplicativos do Microsoft Teams com guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756764"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123714"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -245,7 +245,7 @@ Embora seja recomendado usar as APIs fortemente tipadas do TeamsJS, é possível
 Exemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> Os parâmetros de pesquisa não dão suporte ao sinal `+` no lugar do espaço em branco (` `). Verifique se o código de codificação de URI retorna `%20` para espaços, por exemplo, `?subject=test%20subject` é bom, mas `?subject=test+subject` é ruim.
+> Os parâmetros de pesquisa não dão suporte ao sinal `+` no lugar do espaço em branco (``). Verifique se o código de codificação de URI retorna `%20` para espaços, por exemplo, `?subject=test%20subject` é bom, mas `?subject=test+subject` é ruim.
 
 Os parâmetros de consulta são:
 

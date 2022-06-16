@@ -4,12 +4,12 @@ description: Descreve como obter um token de usuário. Atualmente, um desenvolve
 keywords: token, token de usuário, suporte a SSO para bots, permissão, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906251"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123465"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Suporte de logon único (SSO) para bots
 
@@ -96,7 +96,7 @@ As etapas para registrar seu aplicativo por meio do portal do Azure AD são seme
    >
    > Você deve estar ciente das seguintes restrições importantes:
    >
-   > * Há suporte apenas para Microsoft Graph de API de nível de usuário, como email, perfil, offline_access e OpenId. Se você precisar de acesso a outros escopos do Microsoft Graph, `User.Read` como ou `Mail.Read`, consulte Estender aplicativo guia com permissões e escopo do [Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Há suporte apenas para Microsoft Graph de API de nível de usuário, como email, perfil, offline_access e OpenId. Se você precisar de acesso a outros escopos do Microsoft Graph, `User.Read` `Mail.Read`como ou, consulte Estender aplicativo de guia com permissões e escopo do [Microsoft Graph microsoft](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * O nome de domínio do aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo do Azure AD.
    > * Não há suporte para vários domínios por aplicativo no momento.
    > * Não há suporte para aplicativos que usam o domínio `azurewebsites.net` porque é comum e pode ser um risco à segurança.
@@ -379,9 +379,9 @@ Abra [exemplo de autenticação do Teams](https://github.com/microsoft/BotBuilde
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|**Nome de exemplo** | **Descrição** |**.NET** |
-|----------------|-----------------|--------------|
-|SDK do Bot framework | Exemplo para usar o SDK da estrutura de bot. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**Nome de exemplo** | **Descrição** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|SDK do Bot framework | Este código de exemplo demonstra como começar a usar a autenticação em um bot para Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 

@@ -1,16 +1,16 @@
 ---
 title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
-description: Saiba como desenrolar um link, abra o Modo de Exibição de Estágio e fixar uma guia com o aplicativo Microsoft Teams. Saiba mais sobre o modo de exibição de estágio e invocá-lo usando o Cartão adaptável usando exemplo e código de exemplo.
+description: Saiba como desatar um link, abrir o Modo de Exibição de Estágio e fixar uma guia com Teams aplicativo. Saiba como invoá-lo usando cartão adaptável usando exemplo de código e exemplo.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: d752e55777a07834663f564632bd6a9ff220fdaf
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048980"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122905"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -146,7 +146,7 @@ Codificado
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 
