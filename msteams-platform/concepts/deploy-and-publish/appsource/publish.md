@@ -1,16 +1,16 @@
 ---
 title: Visão geral – Publicar seu aplicativo na loja do Microsoft Teams
-description: Descreve o processo para enviar seu aplicativo ao Partner Center e publicá-lo na loja do Microsoft Teams (e AppSource).
+description: Saiba como enviar seu aplicativo para o Partner Center e publicá-lo na loja do Microsoft Teams (e no AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757280"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124029"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -20,7 +20,7 @@ Os aplicativos publicados na loja do Teams também são listados automaticamente
 
 ## <a name="understand-the-publishing-process"></a>Compreender o processo de publicação
 
-Quando achar que seu aplicativo está pronto para produção, você poderá começar o processo de listá-lo na loja do Teams.
+Se seu aplicativo estiver pronto para produção, você poderá começar o processo de listá-lo na loja Teams.
 
 > [!TIP]
 > Seguir as etapas de pré-envio pode aumentar a possibilidade de que a Microsoft aprove seu aplicativo para publicação.
@@ -51,7 +51,7 @@ Quando achar que seu aplicativo está pronto para produção, você poderá come
 
 * **Testes funcionais e de experiência profundos**
 
-  Seu aplicativo é cuidadosamente examinado por um validador para garantir a conformidade com as [políticas de certificação do Marketplace Commercial da Microsoft](/legal/marketplace/certification-policies). 
+  Seu aplicativo é cuidadosamente examinado por um validador para garantir a conformidade com as [políticas de certificação do Marketplace Commercial da Microsoft](/legal/marketplace/certification-policies).
   Haverá um foco em testes funcionais profundos e de experiência do usuário, verificações de usabilidade e verificações de metadados. A validação do aplicativo é executada em clientes móveis, da Web e da área de trabalho. Trabalhamos duro para fornecer a você um relatório de teste detalhado em 24 horas úteis após o envio.
 
 * **Publicação de aplicativo guiado por meio do serviço de concierge**

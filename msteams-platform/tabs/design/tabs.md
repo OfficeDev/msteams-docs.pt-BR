@@ -1,17 +1,17 @@
 ---
 title: Projete guias para desktop, Web e dispositivos móveis
-description: Saiba como criar uma guia para desktop, Web e dispositivos móveis do Teams e obter o Kit de Interface do Usuário do Microsoft Teams. Saiba mais sobre a funcionalidade e a aparência da guia, criando autenticação do usuário, notificações de tabulação e vinculação profunda em guias.
+description: Saiba como criar uma guia para desktop, Web e dispositivos móveis do Teams e obter o Kit de Interface do Usuário do Microsoft Teams. Saiba mais sobre a guia, como criar autenticação de usuário, notificações de guia e vinculação profunda.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Discussão do thread do modo de exibição baseado em função do kit de interface do usuário gerenciar a configuração de guia de logon único
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948583"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123255"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para o Microsoft Teams
 
@@ -78,7 +78,7 @@ Você pode adicionar uma etapa na qual os usuários devem primeiro entrar com su
 Use um dos seguintes modelos de interface do usuário do Teams para ajudar a projetar sua experiência de configuração de guia:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
-* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários servem para coletar, validar e submeter a entrada do usuário de forma estruturada.
+* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários são para coletar, validar e enviar a entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo logon, experiências de primeira execução, mensagens de erro e muito mais.
 
 ## <a name="view-a-tab"></a>Exibir uma guia

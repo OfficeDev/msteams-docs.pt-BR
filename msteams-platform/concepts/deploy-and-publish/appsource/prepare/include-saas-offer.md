@@ -1,16 +1,16 @@
 ---
 title: Incluir uma oferta SaaS com seu aplicativo
-description: Saiba como monetizar seu aplicativo do Microsoft Teams com planos de assinatura.
+description: Saiba como monetizar seu aplicativo do Microsoft Teams com planos de assinatura e incluir uma oferta SaaS com o aplicativo do Microsoft Teams.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: aa2aacb781909720bdb6a0bc27d593f9c73d11b0
-ms.sourcegitcommit: a4b3b2fb265142155508f9b396609da1280df35d
+ms.openlocfilehash: 0fdfb097def9b39e099536c2054cfaab21610770
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65696456"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123637"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu aplicativo
 

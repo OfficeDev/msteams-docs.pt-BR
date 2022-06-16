@@ -1,16 +1,15 @@
 ---
 title: Sistema de gerenciamento de aprendizagem do Moodle
-description: Visão geral da integração do Moodle LMS com o Teams
+description: Saiba mais sobre a integração do sistema de gerenciamento de aprendizagem Moodle com o Teams, gerenciamento de aprendizado do Moodle, mConnect e links profundos, acessibilidade e cenários de requisitos do usuário. Essa integração fornece áudio, chamadas de vídeo, chat, gerenciamento de atividades e cursos, insights analíticos e muito mais.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: links profundos de moodle LMS mConnect
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757343"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124022"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de gerenciamento de aprendizagem do Moodle
 
@@ -55,4 +54,4 @@ Os cenários a seguir descrevem o potencial de aprendizado acelerado combinando 
 
 * [Plug-ins do Microsoft 365](m365-plugins/m365-plugins-overview.md)
 * [Aplicativos de parceiros do Moodle](partner-apps-for-moodle.md)
-* [Perguntas frequentes do Moodle](faqs.md)
+* [Perguntas frequentes sobre o Moodle](faqs.md)

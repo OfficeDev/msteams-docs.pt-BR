@@ -5,12 +5,12 @@ description: Saiba como integrar recursos de dispositivo nativos, como câmera, 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123833"
+ms.locfileid: "66130427"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
@@ -37,7 +37,7 @@ Use as ferramentas presentes no [SDK do cliente JavaScript do Microsoft Teams](/
 
 ## <a name="integrate-device-capabilities"></a>Integrar as funcionalidades do dispositivo
 
-Depois de obter acesso aos recursos do dispositivo, use as APIs de funcionalidade de mídia do Teams para [Integrar recursos de mídia](mobile-camera-image-permissions.md) com a plataforma Teams para aprimorar a experiência do usuário. Esses recursos integrados permitem que seu aplicativo:
+Depois de obter acesso aos recursos do dispositivo, use as APIs de funcionalidade de mídia do Teams para [Integrar recursos de mídia](media-capabilities.md) com a plataforma Teams para aprimorar a experiência do usuário. Esses recursos integrados permitem que seu aplicativo:
 
 * Capturar e compartilhar imagens.
 * Digitalize o QR ou código de barras usando [controle de scanner](qr-barcode-scanner-capability.md).

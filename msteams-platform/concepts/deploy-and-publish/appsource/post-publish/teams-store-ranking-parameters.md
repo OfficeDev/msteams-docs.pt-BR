@@ -1,16 +1,16 @@
 ---
 title: Parâmetros de classificação da loja do Microsoft Teams
-description: A loja do Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer resultados de pesquisa relevantes aos usuários.
+description: Saiba como a Loja do Microsoft Teams classifica os resultados da pesquisa de aplicativos na loja usando um conjunto de parâmetros de classificação para fornecer relevantes resultados de pesquisa aos usuários.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 10b637c388a862f7085216361ecb60d4d0bd72c4
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501932"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123847"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Parâmetros de classificação da loja do Microsoft Teams
 

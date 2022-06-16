@@ -6,12 +6,12 @@ keywords: permissões de dispositivo nativo de funcionalidades do mapa de locali
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048994"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130449"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar os recursos de localização
 
@@ -114,6 +114,6 @@ Você deve garantir que lide com esses erros adequadamente em seu aplicativo do 
 
 ## <a name="see-also"></a>Confira também
 
-* [Integrar funcionalidades de mídia no Teams](mobile-camera-image-permissions.md)
+* [Integrar recursos de mídia](media-capabilities.md)
 * [Integrar a funcionalidade do código QR ou o verificador de código de barras no Teams](qr-barcode-scanner-capability.md)
 * [Integrar o Seletor de Pessoas no Teams](people-picker-capability.md)

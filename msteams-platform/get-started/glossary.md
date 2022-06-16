@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887622"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130421"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -117,7 +117,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Funcionalidade de mídia](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Funcionalidades nativas do dispositivo, como câmera e microfone, que você pode integrar ao seu aplicativo Teams. <br>**Consulte também**: [Funcionalidade](#c); [Funcionalidade do dispositivo](#d) |
+| [Funcionalidade de mídia](../concepts/device-capabilities/media-capabilities.md) | Funcionalidades nativas do dispositivo, como câmera e microfone, que você pode integrar ao seu aplicativo Teams. <br>**Consulte também**: [Funcionalidade](#c); [Funcionalidade do dispositivo](#d) |
 | [Bot de reunião](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interagem com chamadas e reuniões do Teams usando voz, vídeo e compartilhamento de tela em tempo real. <br>**Consulte também**: [Bot de chamada](#c); [Bot de chat](#c) |
 | [Ciclo de vida da reunião](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abrange desde a experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião. <br>**Consulte também**: [Experiências em reunião](#i) |
 | [Estágio da reunião](../sbs-meetings-stage-view.yml) | Um recurso do aplicativo de extensão de reunião. É um espaço compartilhado acessível a todos os participantes durante a reunião. Ele ajuda os participantes a interagir e colaborar com o conteúdo do aplicativo em tempo real. <br>**Consulte também**: [Exibição do estágio](#s) |

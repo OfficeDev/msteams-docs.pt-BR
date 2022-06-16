@@ -428,7 +428,7 @@
     - name: Permissões do dispositivo para o navegador
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Integrar recursos de mídia
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+      href: concepts/device-capabilities/media-capabilities.md
     - name: Integrar QR ou capacidade de leitura de código de barras
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integrar os recursos de localização

@@ -1,17 +1,16 @@
 ---
 title: Preparar o envio para a Microsoft Store
-description: Descreve as etapas finais antes de enviar seu aplicativo do Microsoft Teams para ser listado na loja. Saiba como validar o pacote do aplicativo, compilar instruções de teste e criar os detalhes da listagem na loja.
+description: Aprenda as etapas finais antes de enviar seu aplicativo do Microsoft Teams para ser listado na loja. Saiba como validar seu pacote de aplicativos e muito mais.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: armazenamento loja distribuir validar aplicativo pacote orientações localizar
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033005"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123164"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar seu envio para a loja do Microsoft Teams
 
@@ -20,7 +19,7 @@ Você projetou, compilou e testou seu aplicativo do Microsoft Teams. Agora você
 Veja o vídeo a seguir para saber mais sobre a publicação de seu aplicativo na loja de aplicativos do Microsoft Teams:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Antes de enviar seu aplicativo para a [Central de Parceiros](/office/dev/store/use-partner-center-to-submit-to-appsource), certifique-se de ter feito o seguinte.

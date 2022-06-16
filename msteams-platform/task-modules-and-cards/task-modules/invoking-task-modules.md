@@ -4,12 +4,12 @@ description: Saiba mais sobre como invocar e ignorar módulos de tarefa, objeto 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757301"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130407"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar e ignorar módulos de tarefas
 
@@ -227,7 +227,7 @@ O Microsoft Teams garante que a navegação por teclado funcione corretamente do
 |Nome do exemplo | Descrição | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
 |Bots de exemplo do módulo de tarefa -V4 | Exemplos para criar módulos de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Guias de exemplo do módulo de tarefa e bots-V3 | Exemplos para criar módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Guias de exemplo do módulo de tarefa e bots-V3 | Exemplos para criar módulos de tarefa. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -237,6 +237,6 @@ O Microsoft Teams garante que a navegação por teclado funcione corretamente do
 ## <a name="see-also"></a>Confira também
 
 * [Solicitar permissões do dispositivo](~/concepts/device-capabilities/native-device-permissions.md)
-* [Integrar recursos de mídia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrar recursos de mídia](~/concepts/device-capabilities/media-capabilities.md)
 * [Integre o recurso de scanner QR ou de código de barras no Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar funcionalidades de localização no Teams](~/concepts/device-capabilities/location-capability.md)

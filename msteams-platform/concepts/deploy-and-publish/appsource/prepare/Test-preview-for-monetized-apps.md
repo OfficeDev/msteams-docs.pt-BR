@@ -1,17 +1,16 @@
 ---
 title: Teste de visualização para aplicativos monetizados
 author: v-ypalikila
-description: Crie e teste ofertas de Visualização de SaaS para o aplicativo Teams antes de enviar a oferta ao vivo.
+description: Saiba como criar e testar ofertas de Visualização do SaaS no aplicativo Teams antes de enviar a oferta ao vivo. Você pode testar a experiência de compra de ponta a ponta nos seus aplicativos monetizados no Teams.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: aplicativos Saas do teams oferecem visualização oferecem teste de visualização para saas monetizado
-ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073813"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123700"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Teste de visualização para aplicativos monetizados
 

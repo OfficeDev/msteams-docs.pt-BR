@@ -1,15 +1,15 @@
 ---
 title: Perguntas frequentes
-description: Veja respostas a algumas perguntas comuns.
+description: Neste artigo de aprendizagem, busque respostas para algumas das perguntas frequentes ao usar o Moodle LMS.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757546"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123479"
 ---
 # <a name="moodle-faq"></a>Perguntas frequentes sobre o Moodle
 
@@ -65,7 +65,7 @@ A imagem a seguir mostra as opções de restrições de criação do usuário:
 
 <summary><b>Queremos que nossos docentes possam sincronizar cursos com o Teams? Os administradores do Moodle são os únicos que podem controlar a sincronização de cursos?</b></summary>
 
-Por padrão, somente os administradores do Moodle podem configurar a sincronização. O proprietário da equipe pode controlar se um curso está sincronizado com o Teams e **Permitir a configuração da sincronização do curso no curso** está habilitado. Nesse caso, o proprietário da equipe é o corpo docente. O bloco exibe a opção de configuração para indivíduos com as permissões de proprietário apropriadas. 
+Por padrão, somente os administradores do Moodle podem configurar a sincronização. O proprietário da equipe pode controlar se um curso está sincronizado com o Teams e **Permitir a configuração da sincronização do curso no curso** está habilitado. Nesse caso, o proprietário da equipe é o corpo docente. O bloco exibe a opção de configuração para indivíduos com as permissões de proprietário apropriadas.
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -189,5 +189,3 @@ No entanto, você pode acessar o convite e adicionar manualmente os nomes de par
 <summary><b>Há algum site de suporte em que possamos obter mais ajuda sobre produtos e outros problemas?</b></summary>
 
 Para obter suporte e ajuda sobre os problemas de produtos e serviços ou ajuda da comunidade de desenvolvedores, consulte [Suporte e comentários](/microsoftteams/platform/feedback).
-
-
