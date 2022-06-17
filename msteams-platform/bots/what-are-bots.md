@@ -1,16 +1,16 @@
 ---
 title: Bots no Microsoft Teams
 author: surbhigupta
-description: Uma visão geral dos bots do Microsoft Teams.
+description: Com esse roteiro de aprendizagem, comece a usar bots de conversa no Microsoft Teams e seus exemplos de código.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602289"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143708"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
 
@@ -39,7 +39,7 @@ Cada interação entre o usuário e o bot é representada como uma atividade. Qu
 
 Bots são aplicativos que têm uma interface de conversa. Você pode interagir com um bot usando texto, cartões interativos e fala. Um bot se comporta de forma diferente em uma conversa de chat de canal ou grupo e em uma conversa individual. As conversas são manipuladas pelo conector da Estrutura do Bot. Consulte [noções básicas de conversa](~/bots/how-to/conversations/conversation-basics.md).
 
-Seu bot requer informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Confira [obter o contexto do Teams](~/bots/how-to/get-teams-context.md).
+Seu bot exige informações contextuais, como detalhes do perfil do usuário para acessar conteúdo relevante e aprimorar a experiência do bot. Consulte [obter o contexto do Teams](~/bots/how-to/get-teams-context.md).
 
 Você pode enviar e receber arquivos pelo bot usando as APIs do Graph ou as APIs do bot do Teams. Consulte [enviar e receber arquivos pelo bot](~/bots/how-to/bots-filesv4.md).
 

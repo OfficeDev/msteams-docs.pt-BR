@@ -1,15 +1,15 @@
 ---
-title: Perguntas frequentes
-description: Neste artigo de aprendizagem, busque respostas para algumas das perguntas frequentes ao usar o Moodle LMS.
+title: Perguntas frequentes sobre o Moodle
+description: Neste artigo, busque respostas a algumas perguntas frequentes enquanto usa o Moodle LMS.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123479"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143099"
 ---
 # <a name="moodle-faq"></a>Perguntas frequentes sobre o Moodle
 

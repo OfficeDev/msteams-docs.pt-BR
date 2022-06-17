@@ -1,15 +1,14 @@
 ---
 title: Usar provedores OAuth externos
-description: Descreve a autenticação usando provedores OAuth externo
+description: Neste módulo, você aprenderá a fazer a autenticação usando provedores OAuth externos e como adicioná-la ao navegador externo
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Autenticação no Teams usando um provedor OAuth externo
-ms.openlocfilehash: dc47163b58bcf2ce39820b0ba9db4e6cb05774ef
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826961"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142273"
 ---
 # <a name="use-external-oauth-providers"></a>Usar provedores OAuth externos
 

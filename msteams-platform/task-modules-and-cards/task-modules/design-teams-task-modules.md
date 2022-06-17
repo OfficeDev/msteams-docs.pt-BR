@@ -1,16 +1,16 @@
 ---
 title: Criar módulos de tarefa
 author: heath-hamilton
-description: Aprenda a projetar módulos de tarefas para os aplicativos do Teams e a obter o Kit de IU do Microsoft Teams.
+description: Neste módulo, saiba como projetar módulos de tarefas para seus aplicativos do Teams e obter o Kit de interface do usuário do Microsoft Teams.
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104130"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143015"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Criando módulos de tarefa para o seu aplicativo do Microsoft Teams
 
@@ -71,7 +71,7 @@ Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../..
 Considere usar modelos para layouts comuns dentro dos seus módulos de tarefas. Cada um é formado por componentes menores para criar um design elegante e responsivo que pode ser usado fora da caixa ou personalizado ao seu cenário ou com a aparência da sua marca.
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
-* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários servem para coletar, validar e submeter a entrada do usuário de forma estruturada.
+* [Formulário](../../concepts/design/design-teams-app-ui-templates.md#form): os formulários são para coletar, validar e enviar a entrada do usuário de forma estruturada.
 * [Estado vazio](../../concepts/design/design-teams-app-ui-templates.md#empty-state): o modelo de estado vazio pode ser usado para muitos cenários, incluindo entrar, experiências de primeira execução, mensagens de erro, e muito mais.
 
 ## <a name="examples"></a>Exemplos

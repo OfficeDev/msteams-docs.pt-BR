@@ -1,16 +1,16 @@
 ---
 title: Depurar seu aplicativo Teams
-description: Depurar seu aplicativo Teams localmente no Kit de Ferramentas do Teams
+description: 'Neste módulo, você aprenderá a depurar seu aplicativo Teams localmente no Kit de Ferramentas do Teams e conhecerá os principais recursos desse kit '
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123973"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142224"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
 
@@ -58,7 +58,7 @@ Ao concluir a depuração local, você pode selecionar **Parar** ou **Desconecta
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="parar a depuração":::
 
-## <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
+## <a name="debug-your-app-locally"></a>Depurar seu aplicativo localmente
 
 As etapas a seguir ajudarão você a depurar seu aplicativo do Teams localmente:
 

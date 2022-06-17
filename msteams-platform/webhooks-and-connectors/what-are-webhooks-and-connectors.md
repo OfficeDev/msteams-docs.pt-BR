@@ -1,16 +1,16 @@
 ---
 title: Webhooks e conectores
 author: clearab
-description: Entenda como os webhooks e conectores podem conectar seus serviços Web ao cliente do Teams.
+description: Neste módulo, entenda como os webhooks e conectores podem conectar seus serviços Web ao cliente do Teams.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 27b1647620291b278cc76491da13fe8687c4e314
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059669"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142175"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks e conectores
 
@@ -49,6 +49,6 @@ As mensagens acionáveis permitem que os usuários executem ações sem sair do 
 
 ## <a name="see-also"></a>Confira também
 
-* [Criar um Webhook de Entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Criar um webhook de Entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)

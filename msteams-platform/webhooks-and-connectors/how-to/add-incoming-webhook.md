@@ -6,12 +6,12 @@ keywords: webhook de saída das guias do Teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: fab709bc8a6fe35db527b911567dab0b6a20717d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104018"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123777"
 ---
 # <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
 
@@ -89,6 +89,12 @@ Para remover um Webhook de Entrada de um canal do Teams, siga as seguintes etapa
 1. Preencha os campos da caixa de diálogo e as caixas de seleção e selecione **Remover**.
 
     ![Remoção Final](~/assets/images/finalremove.png)
+
+## <a name="code-sample"></a>Exemplo de código
+
+| Nome de exemplo           | Descrição | C#    | Node.js   |
+|:---------------------|:--------------|:---------|:--------|
+|Webhook de entrada|Este código de exemplo demonstra como enviar o cartão usando um webhook de entrada. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

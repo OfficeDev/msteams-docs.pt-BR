@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668071"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142098"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão de mensagem do Teams Microsoft 365
 
@@ -20,9 +20,9 @@ O processo para atualizar sua extensão de mensagem do Teams baseada em pesquisa
 
 > [!div class="checklist"]
 >
-> * Atualizar o manifesto do aplicativo
-> * Adicionar um canal do Outlook para seu bot
-> * Realizar sideload do aplicativo atualizado no Teams
+> * Atualize seu manifesto do aplicativo.
+> * Adicione um canal do Outlook para seu bot.
+> * Realize sideload do aplicativo atualizado no Teams.
 
 O restante deste guia orientará você durante essas etapas e mostrará como visualizar sua extensão de mensagem no Outlook para Área de Trabalho do Windows e no outlook.com.
 
@@ -30,10 +30,10 @@ O restante deste guia orientará você durante essas etapas e mostrará como vis
 
 Para concluir este tutorial, você precisará de:
 
-* Um locatário Microsoft 365 área restrita do Programa para Desenvolvedores
-* Registro em *versões direcionadas do Office 365* para seu locatário de área restrita
-* Um ambiente de teste com aplicativos do Office instalados do *Canal beta* do Microsoft 365 Apps
-* (Opcional) Código do Microsoft Visual Studio com a extensão Teams Toolkit
+* Um locatário de área restrita do Programa para Desenvolvedores do Microsoft 365.
+* Registro em *versões direcionadas do Office 365* para seu locatário de área restrita.
+* Um ambiente de teste com aplicativos Office instalados do *Canal beta* dos Aplicativos do Microsoft 365.
+* (Opcional) Código do Microsoft Visual Studio com a extensão Kit de Ferramentas do Teams.
 
 > [!div class="nextstepaction"]
 > [Publicar aplicativos do Teams estendidos para Microsoft 365](publish.md)

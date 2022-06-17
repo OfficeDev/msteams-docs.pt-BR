@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 2c7637f8ec3bd161827a2bd79f73b7374378e55b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130505"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142721"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referência: esquema de manifesto para o Microsoft Teams
 
@@ -375,10 +375,10 @@ Especifica informações sobre a sua empresa. Para aplicativos enviados à loja 
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`name`|32 caracteres|✔|O nome de exibição do desenvolvedor.|
-|`websiteUrl`|2048 caracteres|✔|A URL https:// para o site do desenvolvedor. Esse link deve levar os usuários à página de destino específica da sua empresa ou do produto.|
-|`privacyUrl`|2048 caracteres|✔|A URL https:// para a política de privacidade do desenvolvedor.|
-|`termsOfUseUrl`|2048 caracteres|✔|A URL https:// para os termos de uso do desenvolvedor.|
+|`name`|32 caracteres|✔️|O nome de exibição do desenvolvedor.|
+|`websiteUrl`|2048 caracteres|✔️|A URL https:// para o site do desenvolvedor. Esse link deve levar os usuários à página de destino específica da sua empresa ou do produto.|
+|`privacyUrl`|2048 caracteres|✔️|A URL https:// para a política de privacidade do desenvolvedor.|
+|`termsOfUseUrl`|2048 caracteres|✔️|A URL https:// para os termos de uso do desenvolvedor.|
 |`mpnId`|10 caracteres| |**Opcional** A ID do Microsoft Partner Network que identifica a organização parceira criadora do aplicativo.|
 
 ## <a name="name"></a>nome
@@ -389,7 +389,7 @@ O nome da sua experiência de aplicativo, exibido aos usuários na experiência 
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`short`|30 caracteres|✔|O nome de exibição curto para o aplicativo.|
+|`short`|30 caracteres|✔️|O nome de exibição curto para o aplicativo.|
 |`full`|100 caracteres||O nome completo do aplicativo, utilizado se o nome completo do aplicativo exceder 30 caracteres.|
 
 ## <a name="description"></a>descrição
@@ -402,8 +402,8 @@ Certifique-se de que a sua descrição detalhe a sua experiência e ajude os cli
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`short`|80 caracteres|✔|Uma descrição curta da experiência do seu aplicativo, usada quando o espaço é limitado.|
-|`full`|4000 caracteres|✔|A descrição completa do seu aplicativo.|
+|`short`|80 caracteres|✔️|Uma descrição curta da experiência do seu aplicativo, usada quando o espaço é limitado.|
+|`full`|4000 caracteres|✔️|A descrição completa do seu aplicativo.|
 
 ## <a name="packagename"></a>packageName
 
@@ -419,7 +419,7 @@ Permite a especificação de um idioma padrão e fornece ponteiros para mais arq
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`defaultLanguageTag`||✔|A marca de idioma das cadeia de caracteres neste arquivo de manifesto de nível superior.|
+|`defaultLanguageTag`||✔️|A marca de idioma das cadeia de caracteres neste arquivo de manifesto de nível superior.|
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
@@ -427,8 +427,8 @@ Uma matriz de objetos especificando mais traduções de idiomas.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`languageTag`||✔|A marca de idioma das cadeias de caracteres no arquivo fornecido.|
-|`file`||✔|Um caminho de arquivo relativo para o arquivo .json que contém as cadeias de caracteres traduzidas.|
+|`languageTag`||✔️|A marca de idioma das cadeias de caracteres no arquivo fornecido.|
+|`file`||✔️|Um caminho de arquivo relativo para o arquivo .json que contém as cadeias de caracteres traduzidas.|
 
 ## <a name="icons"></a>ícones
 
@@ -438,8 +438,8 @@ Uma matriz de objetos especificando mais traduções de idiomas.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
-|`outline`|32 x 32 pixels|✔|Um caminho de arquivo relativo para um ícone de contorno PNG transparente de 32x32.|
-|`color`|192 x 192 pixels|✔|Um caminho de arquivo relativo para um ícone PNG colorido de 192x192.|
+|`outline`|32 x 32 pixels|✔️|Um caminho de arquivo relativo para um ícone de contorno PNG transparente de 32x32.|
+|`color`|192 x 192 pixels|✔️|Um caminho de arquivo relativo para um ícone PNG colorido de 192x192.|
 
 ## <a name="accentcolor"></a>accentColor
 
@@ -457,8 +457,8 @@ Usado quando a sua experiência de aplicativo tem uma experiência de guia de ca
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 caracteres|✔|A URL https:// a ser usada ao configurar a guia.|
-|`scopes`|matriz de enumerações|1|✔|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
+|`configurationUrl`|string|2048 caracteres|✔️|A URL https:// a ser usada ao configurar a guia.|
+|`scopes`|matriz de enumerações|1|✔️|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
 |`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
@@ -474,12 +474,12 @@ Este item é uma matriz (máximo de 16 elementos) com todos os elementos do tipo
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`entityId`|string|64 caracteres|✔|Um identificador exclusivo para a entidade que a guia exibe.|
-|`name`|string|128 caracteres|✔|O nome de exibição da guia na interface de canal.|
-|`contentUrl`|string||✔|A URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
+|`entityId`|string|64 caracteres|✔️|Um identificador exclusivo para a entidade que a guia exibe.|
+|`name`|string|128 caracteres|✔️|O nome de exibição da guia na interface de canal.|
+|`contentUrl`|string||✔️|A URL https:// que aponta para a interface do usuário da entidade a ser exibida na tela do Teams.|
 |`websiteUrl`|string|||A URL https:// para apontar se um usuário optar por visualizar em um navegador.|
 |`searchUrl`|string|||A URL https:// para apontar para as consultas de pesquisa de um usuário.|
-|`scopes`|matriz de enumerações|1|✔|Atualmente, as guias estáticas oferecem suporte apenas ao escopo `personal`, o que significa que elas podem ser provisionadas apenas como parte da experiência pessoal.|
+|`scopes`|matriz de enumerações|1|✔️|Atualmente, as guias estáticas oferecem suporte apenas ao escopo `personal`, o que significa que elas podem ser provisionadas apenas como parte da experiência pessoal.|
 |`context` | matriz de enumerações| 2|| O conjunto de `contextItem` escopos em que uma guia é compatível.|
 
 > [!NOTE]
@@ -495,8 +495,8 @@ O item é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas u
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|string|64 caracteres|✔|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. A ID pode ser igual a [ID do aplicativo](#id) geral.|
-|`scopes`|matriz de enumerações|3|✔|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`botId`|string|64 caracteres|✔️|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. A ID pode ser igual a [ID do aplicativo](#id) geral.|
+|`scopes`|matriz de enumerações|3|✔️|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
 |`needsChannelSelector`|Booliano|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: **`false`**|
 |`isNotificationOnly`|Booliano|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: **`false`**|
 |`supportsFiles`|Booliano|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: **`false`**|
@@ -509,15 +509,15 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumerações|3|✔|Especifica o escopo para o qual a lista de comandos é válida. As opções são `team`, `personal` e `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
+|`items.scopes`|matriz de enumerações|3|✔️|Especifica o escopo para o qual a lista de comandos é válida. As opções são `team`, `personal` e `groupchat`.|
+|`items.commands`|matriz de objetos|10|✔️|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando bot (cadeia, 32)<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|title|string|12 |✔|O nome do comando do bot.|
-|description|string|128 caracteres|✔|Uma descrição de texto simples ou um exemplo da sintaxe do comando e seus argumentos.|
+|title|string|12 |✔️|O nome do comando do bot.|
+|description|string|128 caracteres|✔️|Uma descrição de texto simples ou um exemplo da sintaxe do comando e seus argumentos.|
 
 ## <a name="connectors"></a>conectores
 
@@ -529,9 +529,9 @@ O objeto é uma matriz (máximo de 2 elementos) com todos os elementos do tipo `
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 caracteres|✔|A URL https:// a ser usada ao configurar o conector.|
-|`scopes`|matriz de enumerações|1|✔|Especifica se o Conector oferece uma experiência no contexto de um canal em um `team`, ou uma experiência com escopo apenas para um usuário individual (`personal`). Atualmente, somente o escopo `team` é compatível.|
-|`connectorId`|string|64 caracteres|✔|Um identificador exclusivo para o Conector que corresponde a sua ID no [Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard).|
+|`configurationUrl`|string|2048 caracteres|✔️|A URL https:// a ser usada ao configurar o conector.|
+|`scopes`|matriz de enumerações|1|✔️|Especifica se o Conector oferece uma experiência no contexto de um canal em um `team`, ou uma experiência com escopo apenas para um usuário individual (`personal`). Atualmente, somente o escopo `team` é compatível.|
+|`connectorId`|string|64 caracteres|✔️|Um identificador exclusivo para o Conector que corresponde a sua ID no [Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -546,8 +546,8 @@ O item é uma matriz (máximo de um elemento) com todos os elementos do tipo `ob
 
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|string|64|✔|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. A ID pode ser igual à ID geral do aplicativo.|
-|`commands`|matriz de objetos|10 |✔|Matriz de comandos com suporte da extensão de mensagens.|
+|`botId`|string|64|✔️|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. A ID pode ser igual à ID geral do aplicativo.|
+|`commands`|matriz de objetos|10|✔️|Matriz de comandos com suporte da extensão de mensagens.|
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se a configuração de uma extensão do sistema de mensagens pode ser atualizada pelo usuário. Padrão: **false**.|
 |`messageHandlers`|matriz de Objetos|5||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas.|
 |`messageHandlers.type`|string|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
@@ -561,8 +561,8 @@ Cada item de comando é um objeto com a seguinte estrutura:
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|64 caracteres|✔|A ID do comando.|
-|`title`|string|32 caracteres|✔|O nome do comando amigável.|
+|`id`|string|64 caracteres|✔️|A ID do comando.|
+|`title`|string|32 caracteres|✔️|O nome do comando amigável.|
 |`type`|string|64 caracteres||O tipo do comando. Um de `query` ou `action`. Padrão: **consulta**.|
 |`description`|string|128 caracteres||A descrição que aparece para os usuários para indicar a finalidade deste comando.|
 |`initialRun`|Booliano|||Um valor booleano indica se o comando é executado inicialmente sem parâmetros. O padrão é **false**.|
@@ -573,15 +573,15 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`taskInfo.width`|string|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.height`|string|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.url`|string|||URL inicial da webview.|
-|`parameters`|matriz de objeto|5 itens|✔|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5.|
-|`parameters.name`|string|64 caracteres|✔|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
-|`parameters.title`|string|32 caracteres|✔|Título amigável para o parâmetro.|
+|`parameters`|matriz de objeto|5 itens|✔️|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5.|
+|`parameters.name`|string|64 caracteres|✔️|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
+|`parameters.title`|string|32 caracteres|✔️|Título amigável para o parâmetro.|
 |`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
 |`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro. Atualmente o valor não é suportado|
 |`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para`fetchTask: true`. Um de `text, textarea, number, date, time, toggle, choiceset`.|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset`. Use apenas quando `parameter.inputType` for `choiceset`.|
-|`parameters.choices.title`|string|128 caracteres|✔|Títulor da escolha.|
-|`parameters.choices.value`|string|512 caracteres|✔|O valor da escolha.|
+|`parameters.choices.title`|string|128 caracteres|✔️|Títulor da escolha.|
+|`parameters.choices.value`|string|512 caracteres|✔️|O valor da escolha.|
 
 ## <a name="permissions"></a>permissões
 
@@ -632,8 +632,8 @@ Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsof
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|string|2048 caracteres|✔|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, <https://notapplicable> para evitar uma resposta de erro. |
+|`id`|string|36 caracteres|✔️|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
+|`resource`|string|2048 caracteres|✔️|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, <https://notapplicable> para evitar uma resposta de erro. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -643,7 +643,7 @@ Especifique a configuração do conector de gráfico do aplicativo. Se estiver p
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 caracteres|✔|A URL para a qual as notificações do conector do Graph para o aplicativo devem ser enviadas.|
+|`notificationUrl`|string|2048 caracteres|✔️|A URL para a qual as notificações do conector do Graph para o aplicativo devem ser enviadas.|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -676,9 +676,9 @@ Defina as propriedades que o seu aplicativo usa para postar um feed de atividade
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`type`|string|32 caracteres|✔|O tipo de notificação. *Confira a seguir*.|
-|`description`|string|128 caracteres|✔|Uma breve descrição da notificação. *Veja abaixo*.|
-|`templateText`|string|128 caracteres|✔|Ex: "{actor} criou a tarefa {taskId} para você"|
+|`type`|string|32 caracteres|✔️|O tipo de notificação. *Confira a seguir*.|
+|`description`|string|128 caracteres|✔️|Uma breve descrição da notificação. *Veja abaixo*.|
+|`templateText`|string|128 caracteres|✔️|Ex: "{actor} criou a tarefa {taskId} para você"|
 
 ```json
 {
@@ -751,7 +751,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -796,7 +796,7 @@ Especifica a oferta de SaaS associada ao seu aplicativo.
 
 |Nome| Tipo|Tamanho máximo|Obrigatório|Descrição|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 caracteres | ✔ | Um identificador exclusivo que inclui a sua ID de editor e ID de oferta, que você pode encontrar no [Partner Center](https://partner.microsoft.com/dashboard). Você deve formatar a cadeia de caracteres como `publisherId.offerId`.|
+|`offerId`| string | 2,048 caracteres | ✔️ | Um identificador exclusivo que inclui a sua ID de editor e ID de oferta, que você pode encontrar no [Partner Center](https://partner.microsoft.com/dashboard). Você deve formatar a cadeia de caracteres como `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
@@ -812,12 +812,12 @@ Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no 
 
 |Nome| Tipo|Tamanho máximo|Obrigatório |Descrição|
 |---|---|---|---|---|
-|`id`|||✔| O identificador exclusivo para a cena. Essa ID deve ser um GUID. |
-|`name`| string | 128 caracteres |✔| O nome da cena. |
-|`file`|||✔| O caminho do arquivo relativo para o arquivo JSON de metadados das cenas. |
-|`preview`|||✔| O caminho do arquivo relativo para o ícone de visualização PNG das cenas. |
-|`maxAudience`| inteiro | 50  |✔| O número máximo de audiências suportadas na cena. |
-|`seatsReservedForOrganizersOrPresenters`| inteiro | 50 |✔| O número de assentos reservados para organizadores ou apresentadores.|
+|`id`|||✔️| O identificador exclusivo para a cena. Essa ID deve ser um GUID. |
+|`name`| string | 128 caracteres |✔️| O nome da cena. |
+|`file`|||✔️| O caminho do arquivo relativo para o arquivo JSON de metadados das cenas. |
+|`preview`|||✔️| O caminho do arquivo relativo para o ícone de visualização PNG das cenas. |
+|`maxAudience`| inteiro | 50  |✔️| O número máximo de audiências suportadas na cena. |
+|`seatsReservedForOrganizersOrPresenters`| inteiro | 50 |✔️| O número de assentos reservados para organizadores ou apresentadores.|
 
 ## <a name="authorization"></a>autorização
 
@@ -842,8 +842,8 @@ Especifique e consolide as informações relacionadas à autorização para o ap
 
 |Nome| Tipo|Tamanho máximo|Obrigatório |Descrição|
 |---|---|---|---|---|
-|`type`|string||✔| O tipo da permissão específica do recurso. Opções: `Application` e `Delegated`.|
-|`name`|string|128 caracteres|✔|O nome da permissão específica do recurso. Para obter mais informações, consulte [Permissões de aplicativo específicas do recurso](#resource-specific-application-permissions) e [Permissões delegadas específicas do recurso](#resource-specific-delegated-permissions)|
+|`type`|string||✔️| O tipo da permissão específica do recurso. Opções: `Application` e `Delegated`.|
+|`name`|string|128 caracteres|✔️|O nome da permissão específica do recurso. Para obter mais informações, consulte [Permissões de aplicativo específicas do recurso](#resource-specific-application-permissions) e [Permissões delegadas específicas do recurso](#resource-specific-delegated-permissions)|
 
 #### <a name="resource-specific-application-permissions"></a>Permissões de aplicativo específicas do recurso
 
