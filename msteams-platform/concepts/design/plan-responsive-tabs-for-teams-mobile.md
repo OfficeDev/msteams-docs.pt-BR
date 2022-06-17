@@ -1,16 +1,16 @@
 ---
 title: Planejar o Teams para dispositivos móveis
 author: surbhigupta
-description: Guia para planejar a criação de um aplicativo no Teams Mobile
+description: Com este módulo de aprendizado, você aprenderá a planejar a criação de um aplicativo no Teams móvel e a entender diferentes estágios para criar o aplicativo.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111721"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143183"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
@@ -61,9 +61,9 @@ No primeiro estágio, você pode implementar a experiência de consumo mais bás
 
 Você pode mostrar as seguintes informações:
 
-* Dashboards e resumos
-* Visuais de dados, mapas e infográficos
-* Gráficos, gráficos e tabelas
+* Dashboards e resumos.
+* Visuais de dados, mapas e infográficos.
+* Gráficos, gráficos e tabelas.
 
 ![Consumo de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -71,9 +71,9 @@ Ações rápidas:
 
 No segundo estágio, os usuários podem trabalhar nos gráficos e visuais existentes da experiência desktop. Você pode introduzir as seguintes ações:
 
-* Conteúdo da pesquisa
-* Filtrar dados
-* Criar indicadores
+* Pesquisar conteúdo.
+* Filtrar dados.
+* Criar indicadores.
 
 ![Ações rápidas de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -83,9 +83,9 @@ No terceiro estágio, permita que os usuários criem conteúdo como gráficos e 
 
 Você pode fornecer o seguinte acesso aos usuários:
 
-* Modificar título e descrição
-* Inserir itens de dados para criar visualizações
-* Compartilhar visualizações em um canal ou chat em grupo
+* Modifique o título e a descrição.
+* Inserir itens de dados para criar visualizações.
+* Compartilhe visualizações em um canal ou chat em grupo.
 
 ![Habilitação de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -111,12 +111,12 @@ Ações rápidas:
 
 No segundo estágio, você pode fornecer o seguinte acesso de aplicativo aos usuários:
 
-* Criar tarefas ou itens com os campos obrigatórios para reduzir a carga cognitiva dos usuários
-* Alterar o tipo ou modo de exibição do quadro
-* Examine as tarefas expandindo a exibição
-* Usar módulos de tarefa para ver a exibição detalhada
-* Mover as tarefas para categorias diferentes
-* Compartilhar tarefas relevantes em chats e canais por meio de emails e feed de atividades
+* Crie tarefas ou itens com os campos obrigatórios para reduzir a carga cognitiva dos usuários.
+* Altere o tipo de quadro ou o modo de exibição.
+* Examine as tarefas expandindo a exibição.
+* Use módulos de tarefa para ver a exibição detalhada.
+* Mova as tarefas para categorias diferentes.
+* Compartilhe tarefas relevantes em chats e canais por meio de emails e feed de atividades.
 
 ![Ações rápidas de aplicativos de integração de tarefas](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -124,9 +124,9 @@ Capacitação:
 
 No terceiro estágio, você pode habilitar a experiência dos usuários com as seguintes atividades:
 
-* Adicionar novos projetos e quadros
-* Adicione e modifique diferentes categorias, como **Proposta**, **Ativa** e **Fechada**
-* Configurar as tarefas para comentários, anexos e outros recursos complexos
+* Adicione novos projetos e quadros.
+* Adicione e modifique categorias diferentes, como **Proposta**, **Ativa** e **Fechada**.
+* Configure as tarefas para comentários, anexos e outros recursos complexos.
 
 ![Habilitação de aplicativos de integração de tarefas](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -145,9 +145,9 @@ Consumo:
 
 No primeiro estágio, você pode considerar a experiência desktop para mostrar o conteúdo e os ativos em seu aplicativo.  Você pode mostrar as seguintes funções:
 
-* Comentários ou comentários
-* Ampliar ou reduzir
-* Estágio atual ou progresso de um documento pendente
+* Comentários ou comentários.
+* Ampliar ou reduzir.
+* Estágio atual ou progresso de um documento pendente.
 
 ![Consumo de aplicativos de coautoria e quadro de comunicações](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -155,9 +155,9 @@ Ações Rápidas:
 
 No segundo estágio, você pode introduzir as seguintes ações:
 
-* Criar um novo quadro para colaboração ou novos documentos para assinatura
-* Compartilhar quadros internamente e também com convidados
-* Configurar permissões de administrador
+* Crie um novo quadro para colaboração ou novos documentos para assinatura.
+* Compartilhe quadros internamente e também com convidados.
+* Configurar permissões de administrador.
 
 > [!TIP]
 > Você expõe ações, que podem ser mostradas facilmente nas telas pequenas.
@@ -168,10 +168,10 @@ Capacitação:
 
 No terceiro estágio, forneça experiência completa aos usuários. Você pode habilitar a experiência dos usuários com as seguintes atividades:
 
-* Adicionando texto, formas e anotações rápidas
-* Navegar pelo conteúdo
-* Adicionar camadas e filtros
-* Excluir, desfazer e refazer operações
+* Adicionando texto, formas e anotações rápidas.
+* Navegue pelo conteúdo.
+* Adicionar camadas e filtros.
+* Excluir, desfazer e refazer operações.
 * Acesse a câmera e o microfone usando APIs do SDK do JS. Para obter mais informações sobre os recursos do dispositivo, consulte [visão geral dos recursos de dispositivo](../device-capabilities/device-capabilities-overview.md).
 
 ![Habilitação de aplicativos de coautoria e quadro de comunicações](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

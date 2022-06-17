@@ -1,16 +1,15 @@
 ---
 title: Testar e depurar seu aplicativo
-description: Este artigo descreve como testar bots no Microsoft Teams
-keywords: teste bots teams
+description: Neste artigo, você saberá como testar e depurar seus bots no Microsoft Teams e testar seu bot sem carregar no Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123451"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143694"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testar e depurar seu bot do Microsoft Teams
 
@@ -26,7 +25,7 @@ Há dois métodos para carregar seu aplicativo. Você pode usar o [App Studio](~
 
 ## <a name="debug-your-bot-locally"></a>Depurar seu bot localmente
 
-Se você estiver hospedando seu bot localmente durante o desenvolvimento, precisará usar um serviço de túnel como o [ngrok](https://ngrok.com/) para testar o bot. Depois de baixar e instalar o ngrok, execute o comando abaixo para iniciar o serviço de túnel. Talvez seja necessário adicionar o ngrok ao caminho.
+Se você estiver hospedando seu bot localmente durante o desenvolvimento, precisará usar um serviço de túnel como [o ngrok](https://ngrok.com/) para testar o bot. Depois de baixar e instalar o ngrok, execute o comando abaixo para iniciar o serviço de túnel. Talvez seja necessário adicionar o ngrok ao caminho.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -70,7 +69,7 @@ Seu bot receberá o evento `conversationUpdate` assim como bots adicionados a um
 
 ## <a name="blocking-a-bot-in-personal-chat"></a>Bloqueando um bot no chat pessoal
 
-Observe que os usuários podem optar por impedir que seu bot envie mensagens de chat pessoais. Eles podem alternar isso clicando com o botão direito do mouse no bot no canal de chat e escolhendo **Bloquer conversas com bot**. Isso significa que seus bots continuarão a enviar mensagens, mas o usuário não receberá essas mensagens.
+Observe que os usuários podem optar por impedir que seu bot envie mensagens de chat pessoais. Eles podem alternar isso clicando com o botão direito do mouse no bot no canal de chat e escolhendo **Bloquear conversas com bot**. Isso significa que seus bots continuarão a enviar mensagens, mas o usuário não receberá essas mensagens.
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Bloqueando um bot"border="true":::
 
@@ -78,7 +77,7 @@ Observe que os usuários podem optar por impedir que seu bot envie mensagens de 
 
 Os usuários podem excluir o bot escolhendo o ícone de lixeira na lista de bots no modo de exibição de equipes. Observe que isso apenas remove o bot do uso dessa equipe, os usuários individuais podem interagir no contexto pessoal.
 
-Os bots no contexto pessoal não podem ser desabilitados ou removidos por um usuário, além de remover completamente o bot do Teams.
+Os bots no contexto pessoal não podem ser desabilitados ou removidos por um usuário, faltando remover completamente o bot do Teams.
 
 ## <a name="disabling-a-bot-in-teams"></a>Desabilitando um bot no Teams
 
@@ -86,7 +85,7 @@ Para interromper o recebimento de mensagens pelo bot, acesse o Painel de Bot e e
 
 ## <a name="deleting-a-bot-from-teams"></a>Excluindo um bot do Teams
 
-Para remover completamente o bot do Teams, acesse o Painel de Bot e edite o canal do Microsoft Teams. Escolha o botão **Excluir** na parte inferior. Isso impede que os usuários descubram, adicionem ou interajam com seu bot. Observe que isso não remove o bot das instâncias do Teams de outros usuários, embora ele deixe de funcionar para eles também.
+Para remover completamente o bot do Teams, acesse o Painel de Bot e edite o canal do Microsoft Teams. Escolha o botão **Excluir** na parte inferior. Isso impede que os usuários descubram, adicionem ou interajam com seu bot. Isso não remove o bot das instâncias de Teams outros usuários, embora ele deixe de funcionar para eles também.
 
 ## <a name="removing-your-bot-from-appsource"></a>Removendo seu bot do AppSource
 

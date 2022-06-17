@@ -1,15 +1,14 @@
 ---
 title: Testar a visão geral de seu aplicativo
-description: Descreve o processo para testar e depurar seu aplicativo personalizado do Teams no Microsoft 365
+description: Neste módulo, aprenda o processo para testar e depurar seu aplicativo personalizado Teams no Microsoft 365 e adicionar dados de teste ao seu locatário Microsoft 365
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurar o locatário do Microsoft 365 Teams que está carregando oaplicativo de teste
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111525"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144380"
 ---
 # <a name="test-your-app"></a>Testar seu aplicativo
 

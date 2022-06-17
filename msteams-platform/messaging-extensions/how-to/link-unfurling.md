@@ -1,16 +1,16 @@
 ---
 title: Desenrolamento de link
 author: surbhigupta
-description: Saiba como adicionar desenrolamento de link com a extensão de mensagens em um aplicativo do Microsoft Teams com manifesto do aplicativo ou manualmente usando exemplos e exemplos de código.
+description: Neste módulo, saiba como adicionar link desfralizando com a extensão de mensagens em um aplicativo Teams com manifesto do aplicativo ou manualmente usando exemplos de código e exemplos.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032970"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142812"
 ---
 # <a name="link-unfurling"></a>Desenrolamento de link
 

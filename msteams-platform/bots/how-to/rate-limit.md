@@ -1,15 +1,14 @@
 ---
 title: Otimizar seu bot com limitação de fluxo no Teams
-description: Saiba mais sobre como lidar com o limite de taxa para bots com o limite de threads por bot e o limite para todos os bots usando exemplos de código. Além disso, aprenda as práticas recomendadas de limitação de taxa no Microsoft Teams.
+description: Saiba mais sobre como lidar com o limite de taxa para bots com o limite por thread e por limite para todos os bots usando exemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: limitação da taxa de bots do Teams
-ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757147"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143729"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 

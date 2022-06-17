@@ -6,17 +6,17 @@ ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 7f423cfd33fdca9d40f2adfe32b59ace26d39adc
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 15b5837fb8155d8b34b2c337a550ecbaaae9d86a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737220"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142518"
 ---
 # <a name="update-nodejs-app-package-in-app-studio"></a>Atualizar Node.js pacote do aplicativo no App Studio
 
 > [!TIP]
-> **Experimente o Portal do Desenvolvedor**: o App Studio evoluiu. Configure, distribua e gerencie seus Teams com o novo [Portal do Desenvolvedor](https://dev.teams.microsoft.com/).
+> **Experimente o Portal do Desenvolvedor**: o App Studio evoluiu. Configure, distribua e gerencie seus aplicativos do Teams com o novo [Portal do Desenvolvedor](https://dev.teams.microsoft.com/).
 
 O App Studio é um Teams aplicativo que você pode instalar da Teams armazenamento. Ele simplifica a criação e o registro de um aplicativo.
 
@@ -217,13 +217,13 @@ Se você estiver executando o aplicativo usando o ngrok, precisará configurar v
 Onde:
 
 * As credenciais de autorização para o bot são as seguintes:
-  * MICROSOFT_APP_ID is ID
-  * MICROSOFT_APP_PASSWORD senha
+  * MICROSOFT_APP_ID é a ID.
+  * MICROSOFT_APP_PASSWORD é senha.
 * NODE_DEBUG mostrar o que está acontecendo no bot no console Visual Studio Code depuração
 * NODE_CONFIG_DIR aponta para o diretório na raiz do repositório (por padrão, quando o aplicativo é executado localmente, ele procura o diretório raiz na `src` pasta).
 
 > [!Note]
-> Se você não tiver interrompido o npm no início do tutorial, `npm stop` precisará executar para que o Visual Studio Code suas variáveis de configuração de inicialização corretamente.
+> Se você não parou de npm anteriormente no tutorial, `npm stop` será necessário executar para que Visual Studio Code suas variáveis de configuração de inicialização corretamente.
 
 <a name="ConfigureTheAppTab"></a>
 

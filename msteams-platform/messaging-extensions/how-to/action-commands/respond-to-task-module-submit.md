@@ -1,16 +1,16 @@
 ---
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
-description: Descreve como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens com mensagem proativa, outro módulo de tarefa, bot de cartão adaptável e muito mais usando exemplos de código.
+description: Neste módulo, saiba como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens com mensagem proativa e muito mais
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757560"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144023"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -32,10 +32,10 @@ Para autenticação ou configuração, depois que o usuário concluir o processo
 
 |Tipo de Resposta | Escrever | Barra de comando | Mensagem |
 |--------------|:-------------:|:-------------:|:---------:|
-|Resposta do cartão | ✔ | ✔ | ✔ |
-|Outro módulo de tarefa | ✔ | ✔ | ✔ |
-|Bot com Cartão Adaptável | ✔ | x | ✔ |
-| Sem resposta | ✔ | ✔ | ✔ |
+|Resposta do cartão | ✔️ | ✔️ | ✔️ |
+|Outro módulo de tarefa | ✔️ | ✔️ | ✔️ |
+|Bot com Cartão Adaptável | ✔️ | ❌ | ✔️ |
+| Sem resposta | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

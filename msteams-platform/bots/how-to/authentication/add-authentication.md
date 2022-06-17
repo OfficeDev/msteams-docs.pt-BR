@@ -1,17 +1,16 @@
 ---
 title: Adicionar autenticação ao seu bot do Teams
 author: surbhigupta
-description: Como adicionar a autenticação OAuth a um bot no Microsoft Teams usando o Azure Active Directory. Aprenda como criar, implantar e integrar bots habilitados para autenticação.
+description: Saiba como adicionar a autenticação OAuth a um bot Teams usando Azure Active Directory. Aprenda como criar, implantar e integrar bots habilitados para autenticação.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: recurso grupo registro bot Azure emulador manifesto implantar
-ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756944"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142560"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu bot do Teams
 
@@ -340,7 +339,7 @@ Alternativamente, enquanto estiver no Visual Studio você pode seguir as etapas 
 1. No painel esquerdo, selecione **Configurações**.
 1. Na caixa **Ponto de extremidade de mensagens**, digite o URL obtido acima, seguido de `api/messages`. Esse é um exemplo: `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
-    > É permitido somente um ponto de extremidade de mensagens para cada bot
+    > Somente um ponto de extremidade de mensagens é permitido para um bot.
 1. Selecione o botão **Salvar** no canto superior esquerdo.
 
 ## <a name="test-the-bot-using-the-emulator"></a>Testar o bot usando o Emulador
@@ -629,6 +628,15 @@ Na etapa de diálogo a seguir, verifique a presença de um token no resultado da
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## <a name="code-sample"></a>Exemplo de código
+
+Esta seção fornece um exemplo de SDK de autenticação de bot v3.
+
+| **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Autenticação de bot | Esta amostra mostra como começar com a autenticação em um bot para o Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Não disponível |
 
 ## <a name="see-also"></a>Confira também
 

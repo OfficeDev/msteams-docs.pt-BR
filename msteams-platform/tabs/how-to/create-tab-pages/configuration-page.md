@@ -1,17 +1,16 @@
 ---
 title: Criar uma página de configuração
 author: surbhigupta
-description: Saiba como criar uma página de configuração para configurar um canal ou chat em grupo para configurações, como obter dados de contexto, inserir espaços reservados e autenticação usando exemplos de código.
-keywords: equipes guias grupo canal configurável
+description: Neste módulo, saiba como criar uma página de configuração para definir um canal ou chat em grupo para configurações, como obter dados de contexto e muito mais
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048973"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143953"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 

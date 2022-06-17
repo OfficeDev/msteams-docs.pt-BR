@@ -1,17 +1,16 @@
 ---
 title: Alterações na margem da guia
 author: surbhigupta
-description: Descreve como a remoção de margens de tabulação aprimora a experiência de criação de aplicativos.
-keywords: guia removendo o preenchimento de margens
+description: Neste módulo, saiba como a remoção de margens de tabulação melhora a experiência de criação de aplicativos.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2bfa74e95a84314e261f8865c5581d4e1738e12a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757182"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143316"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 

@@ -1,16 +1,16 @@
 ---
 title: Responder aos comandos de pesquisa
 author: surbhigupta
-description: Saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo Microsoft Teams usando exemplos de código e exemplos
+description: Neste módulo, saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo Microsoft Teams usando exemplos de código e exemplos
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e7dbfb6eed724fb56e7ae1e03a2132d7450947a
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032799"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143701"
 ---
 # <a name="respond-to-search-command"></a>Responder aos comandos de pesquisa
 

@@ -1,16 +1,16 @@
 ---
 title: Testar e depurar seu bot localmente
 author: surbhigupta
-description: Saiba mais sobre como testar e depurar seu bot localmente com um IDE no ambiente do Teams por meio do sideload, fora do Teams usando o Bot Emulador e falando diretamente com seu bot.
+description: Saiba mais sobre como testar e depurar seu bot localmente com um IDE dentro Teams ambiente por meio de sideload e muito mais
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757595"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142889"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Testar e depurar seu bot localmente
 

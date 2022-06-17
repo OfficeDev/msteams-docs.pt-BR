@@ -1,17 +1,16 @@
 ---
-title: Iniciar ações com extensões de mensagem
-description: Criar extensões de mensagem baseadas em ação para permitir que os usuários disparem serviços externos
+title: 'Iniciar ações com extensões de mensagem '
+description: Neste módulo, saiba como criar extensões de mensagem baseadas em ação para permitir que os usuários disparem serviços externos
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: pesquisa de extensões de mensagem de extensões de mensagem do Teams
-ms.openlocfilehash: a29d1a5b49845d930ac4efbdd3967bd6b4446891
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104362"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143673"
 ---
-# <a name="initiate-actions-with-message-extensions"></a>Iniciar ações com extensões de mensagem
+# <a name="initiate-actions-with-message-extensions"></a>Iniciar ações com extensões de mensagem 
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
@@ -309,7 +308,7 @@ Assim como no fluxo de cartão adaptável, seu serviço envia `fetchTask` um eve
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>Solicitação para instalar o bot de conversa
+### <a name="request-to-install-your-conversational-bot"></a>Solicitação para instalar o bot de conversação
 
 Se o aplicativo contiver um bot de conversa, verifique se ele está instalado na conversa antes de carregar o módulo de tarefa. Isso pode ser útil em situações em que você precisa obter contexto adicional para o módulo de tarefa. Por exemplo, talvez seja necessário buscar a lista de participantes para popular um controle de seletor de pessoas ou a lista de canais em uma equipe.
 
@@ -715,4 +714,4 @@ public class MessagesController : ApiController
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplos do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Amostras de estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

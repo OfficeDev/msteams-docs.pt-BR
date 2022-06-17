@@ -1,16 +1,15 @@
 ---
 title: Mensagens em conversas de bot
-description: Descreve maneiras de ter uma conversa com um Microsoft Teams bot. Saiba mais sobre Teams de canal, notificação para sua mensagem, mensagens de imagem, cartões adaptáveis usando exemplos de código.
+description: Aprenda as maneiras de ter uma conversa com um bot Teams e dados de canal do Teams, notificação para sua mensagem, mensagens de imagem, cartões adaptáveis usando exemplos de código
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033012"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142448"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -242,10 +241,10 @@ As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de cont
 
 | Formatar    | Do usuário para o bot | Do bot para o usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text  | ✔                | ✔                | Seu bot pode enviar rich text, imagens e cartões. Os usuários podem enviar rich text e imagens para seu bot.                                                                                        |
-| Imagens  | ✔                | ✔                | Máximo de 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.  |
-| Cartões     | ✖                | ✔                | Consulte a [referência Teams cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
-| Emojis    | ✔                | ✔                | Teams atualmente dá suporte a emojis por meio de UTF-16, como U+1F600 para sorriso facial. |
+| Rich text  | ✔️                | ✔️                | Seu bot pode enviar rich text, imagens e cartões. Os usuários podem enviar rich text e imagens para seu bot.                                                                                        |
+| Imagens  | ✔️                | ✔️                | Máximo de 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.  |
+| Cartões     | ❌                | ✔️                | Consulte a [referência Teams cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
+| Emojis    | ✔️                | ✔️                | Teams atualmente dá suporte a emojis por meio de UTF-16, como U+1F600 para sorriso facial. |
 
 ## <a name="notifications-to-your-message"></a>Notificações para sua mensagem
 
@@ -387,7 +386,7 @@ A mensagem de conclusão do formulário aparece nos Cartões Adaptáveis ao envi
      Você pode selecionar **Fechar** ou alternar o chat para ignorar a mensagem.
 
      Se você não quiser exibir a mensagem de êxito, defina o atributo `hide` como `true` na `msTeams` `feedback` propriedade. A seguir está um exemplo:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -406,7 +405,6 @@ A mensagem de conclusão do formulário aparece nos Cartões Adaptáveis ao envi
             ]
         } 
      ```
-    
 
 Para obter mais informações sobre cartões e cartões em bots, consulte a [documentação dos cartões](~/task-modules-and-cards/what-are-cards.md).
 

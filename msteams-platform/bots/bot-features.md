@@ -1,16 +1,16 @@
 ---
 title: Bots e SDKs
 author: surbhigupta
-description: Visão geral das ferramentas e SDKs para criar bots do Microsoft Teams.
+description: Neste artigo, aprenda ferramentas e SDKs para Microsoft Teams bots e bots com o Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756860"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142462"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -294,7 +294,7 @@ this.onMessage(async (context, next) => {
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Exemplos de bot | Conjunto de exemplos de bot | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Exemplos de bot | Conjunto de exemplos de bot | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>Próxima etapa
 

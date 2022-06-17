@@ -1,17 +1,17 @@
 ---
 title: Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 author: MuyangAmigo
-description: Provisionar recursos de nuvem
+description: Neste módulo, saiba como provisionar recursos de nuvem usando Teams Toolkit, criar recursos e personalizar o provisionamento de recursos
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1c4232cfe51ae900414f474bcdd05c9a67d5c4c6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757455"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144114"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem
 

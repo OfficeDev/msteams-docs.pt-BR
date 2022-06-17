@@ -1,16 +1,16 @@
 ---
 title: Formatar suas mensagens de bot
 author: surbhigupta
-description: Adicione a formatação avançada às suas mensagens de bot, como tachado, lista ordenada e não ordenada, hiperlink, link de imagem, e muito mais.
+description: Neste módulo, saiba como adicionar formatação avançada às mensagens do bot, como tachado, lista ordenada e não ordenada, hiperlink, link de imagem e muito mais.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d8697cf25b0cc08f880f8849ea152d1c30d4c146
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111825"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143477"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
@@ -44,17 +44,17 @@ Atualmente, não há suporte para alguns estilos em todas as plataformas. A tabe
 
 | Style                     | Mensagens somente texto | Cartões avançados – somente XML |
 | ---                       | :---: | :---: |
-| Negrito                      | ✔ | ✖ |
-| Itálico                    | ✔ | ✔ |
-| Cabeçalho (níveis 1&ndash;3) | ✖ | ✔ |
-| Tachado             | ✖ | ✔ |
-| Régua horizontal           | ✖ | ✖ |
-| Lista não ordenada            | ✖ | ✔ |
-| Lista ordenada              | ✖ | ✔ |
-| Texto pré-formatado         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hiperlink                 | ✔ | ✔ |
-| Link da imagem                | ✔ | ✖ |
+| Negrito                      | ✔️️ | ❌ |
+| Itálico                    | ✔️ | ✔️ |
+| Cabeçalho (níveis 1&ndash;3) | ❌ | ✔️ |
+| Tachado             | ❌ | ✔️ |
+| Régua horizontal           | ❌ | ❌ |
+| Lista não ordenada            | ❌ | ✔️ |
+| Lista ordenada              | ❌ | ✔️ |
+| Texto pré-formatado         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hiperlink                 | ✔️ | ✔️ |
+| Link da imagem                | ✔️ | ❌ |
 
 Depois de verificar o suporte de plataforma cruzada, verifique se o suporte por plataformas individuais também está disponível.
 
@@ -68,17 +68,17 @@ A tabela a seguir fornece uma lista de estilos com suporte na área de trabalho,
 
 | Style                     | Área de trabalho | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Negrito                      | ✔ | ✔ | ✔ |
-| Itálico                    | ✔ | ✔ | ✔ |
-| Cabeçalho (níveis 1&ndash;3) | ✖ | ✖ | ✖ |
-| Tachado             | ✔ | ✔ | ✖ |
-| Régua horizontal           | ✖ | ✖ | ✖ |
-| Lista não ordenada            | ✔ | ✖ | ✖ |
-| Lista ordenada              | ✔ | ✖ | ✖ |
-| Texto pré-formatado         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hiperlink                 | ✔ | ✔ | ✔ |
-| Link da imagem                | ✔ | ✔ | ✔ |
+| Negrito                      | ✔️ | ✔️ | ✔️ |
+| Itálico                    | ✔️ | ✔️ | ✔️ |
+| Cabeçalho (níveis 1&ndash;3) | ❌ | ❌ | ❌ |
+| Tachado             | ✔️ | ✔️ | ❌ |
+| Régua horizontal           | ❌ | ❌ | ❌ |
+| Lista não ordenada            | ✔️ | ❌ | ❌ |
+| Lista ordenada              | ✔️ | ❌ | ❌ |
+| Texto pré-formatado         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hiperlink                 | ✔️ | ✔️ | ✔️ |
+| Link da imagem                | ✔️ | ✔️ | ✔️ |
 
 ### <a name="cards"></a>Cartões
 

@@ -1,17 +1,16 @@
 ---
 title: Aplicativos para reuniões do Teams
 author: surbhigupta
-description: visão geral dos aplicativos nas reuniões do Teams com base na função do participante e do usuário
+description: Neste artigo, saiba como os aplicativos funcionam em reuniões Microsoft Teams com base na extensibilidade do aplicativo e da função de usuário e do participante.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: api de funções dos usuários participantes de reuniões de aplicativos do teams
-ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668043"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142504"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para reuniões do Teams
 
@@ -47,4 +46,4 @@ O novo recurso personalizado de cenas do Modo Conferência permite que os usuár
 * [Cenas personalizadas do Modo Conferência](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Ative e configure seus aplicativos para reuniões do Teams](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Ciclo de vida da reunião](meeting-app-extensibility.md#meeting-lifecycle)
-* [Colaboração aprimorada com Live Share SDK](teams-live-share-overview.md)
+* [Colaboração aprimorada com o SDK do Live Share](teams-live-share-overview.md)

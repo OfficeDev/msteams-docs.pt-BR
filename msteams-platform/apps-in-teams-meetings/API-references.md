@@ -1,16 +1,16 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Identifique as referências da API de aplicativos de reunião com exemplos e exemplos de código, Teams consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos.
+description: Saiba como identificar as referências de API de aplicativos de reunião com exemplos e exemplos de código, Teams consulta de sinal de notificação de contexto de usuário de função de usuário de reuniões de aplicativos.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032785"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142945"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 

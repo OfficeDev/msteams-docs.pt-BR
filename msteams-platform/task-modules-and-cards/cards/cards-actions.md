@@ -1,15 +1,14 @@
 ---
 title: Adicionar ações de cartão em um bot
-description: Descreve ações de cartão no Microsoft Teams e como usá-las em seus bots
+description: Neste módulo, saiba o que são ações de cartão Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: ações de cartões de bots do teams
-ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756482"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144170"
 ---
 # <a name="card-actions"></a>Ações do cartão
 

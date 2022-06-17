@@ -1,16 +1,15 @@
 ---
 title: Notificações de chamadas recebidas
-description: Saiba mais sobre informações técnicas detalhadas sobre como lidar com notificações de chamadas de entrada, redirecionar e autenticar chamadas usando exemplos de código
+description: Neste módulo, saiba mais sobre informações técnicas detalhadas sobre como lidar com notificações de chamadas de entrada, redirecionar e autenticar chamadas usando exemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: chamadas notificações de chamadas retorno de chamada afinidade de região
 ms.date: 04/02/2019
-ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757140"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143827"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 

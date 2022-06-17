@@ -1,16 +1,16 @@
 ---
 title: Suporte de SSO para extensões de mensagem
 author: KirtiPereira
-description: Saiba como habilitar o suporte a SSO para suas extensões de mensagens com exemplos de código.
+description: Neste módulo, saiba como habilitar o suporte ao SSO (logon único) para suas extensões de mensagens com exemplos de Código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 900723ca77d4178a6a2ded46617ed53d985d83e3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887699"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142847"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Suporte de logon único para extensões de mensagem
 

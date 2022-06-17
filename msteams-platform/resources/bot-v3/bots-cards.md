@@ -1,22 +1,21 @@
 ---
 title: Usando cartões em bots
-description: Descreve os cartões e como eles são usados em mensagens de bot
-keywords: mensagens de cartões de bots
+description: Com esse roteiro de aprendizagem, comece a usar cartões e como eles são usados em mensagens de bot no Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: ea00eb0edc28330a7ef21ea6b0c75d3673f6e57a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: cd9ead59eeae9e6ec7eddd8842299eb98d4823ae
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104480"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142763"
 ---
 # <a name="cards-in-bot-conversations"></a>Cartões em conversas de bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Um *cartão* é um contêiner de interface do usuário para informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos. Teams suporte a cartões em bots, conectores e extensões de mensagem. Consulte [Cartões](~/task-modules-and-cards/what-are-cards.md) para obter uma visão geral do que são cartões e Teams usá-los.
+Um *cartão* é um contêiner de interface do usuário para informações curtas ou relacionadas. Os cartões podem ter várias propriedades e anexos. Teams dá suporte a cartões em bots, conectores e extensões de mensagem. Consulte [Cartões](~/task-modules-and-cards/what-are-cards.md) para obter uma visão geral do que são cartões e Teams usá-los.
 
 Os bots usam cartões como parte das conversas. Para obter mais informações, consulte [Conversas de Bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 

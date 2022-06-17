@@ -1,17 +1,16 @@
 ---
 title: Projete seu aplicativo - Entenda a estrutura do aplicativo
-description: Entenda o que você pode e não pode personalizar no Microsoft Teams ao projetar seu aplicativo.
+description: Neste módulo, saiba o que você pode ou não personalizar no Microsoft Teams ao projetar a estrutura do aplicativo.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: área de trabalho móvel de extensões de mensagem de reunião de chat do canal de diagrama vetorial
-ms.openlocfilehash: 5bda408a015c646f993fe2c70efa0b7904b64842
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111378"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144394"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Compreender a estrutura do aplicativo Microsoft Teams
 

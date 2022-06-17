@@ -5,24 +5,23 @@ description: Saiba como criar aplicativos em reuniões Teams e obter o kit de in
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: Estágio de reunião compartilhada do modelo de kit de interface do usuário na reunião
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122996"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142679"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
 Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemplo, peça que as pessoas concluam uma pesquisa durante uma reunião ou enviem um lembrete rápido que não interrompa o fluxo da reunião.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que podem ser pegos e modificados conforme necessário, no kit de interface do usuário do Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Adicionar uma extensão de reunião
 
@@ -36,7 +35,7 @@ Nos detalhes da reunião, os usuários podem selecionar Adicionar **uma guia +**
 
 ### <a name="add-during-a-meeting"></a>Adicionar durante uma reunião
 
-#### <a name="mobile"></a>Celular
+#### <a name="mobile"></a>Dispositivo móvel
 
 Depois que o aplicativo for adicionado (por exemplo, na área de trabalho), os usuários poderão acessar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
@@ -87,7 +86,7 @@ As pessoas podem usar a guia na reunião para:
 * Crie uma pesquisa, uma pesquisa ou um item de tarefa para os participantes da reunião.
 * Exibir anotações relevantes para a reunião. Por exemplo, informações sobre um cliente potencial de vendas.
 
-#### <a name="mobile"></a>Celular
+#### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="O exemplo mostra como você pode apresentar conteúdo de votação em uma guia na reunião no celular." border="false":::
 
@@ -143,7 +142,7 @@ As caixas de diálogo na reunião são disparadas por um usuário (como o organi
 * Enviar aprovações
 * Receber lembretes
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="O exemplo mostra como você pode usar uma caixa de diálogo na reunião no celular." border="false":::
 
@@ -187,11 +186,11 @@ As caixas de diálogo na reunião podem variar de tamanho para levar em conta ce
 
 Você pode permitir que os usuários compartilhem e interajam com algum ou todo o conteúdo do aplicativo no estágio da reunião. Aqui estão exemplos de como as pessoas podem usar esse recurso durante uma reunião:
 
-* Editando um documento
+* Editando um documento.
 * Quadro de comunicações
-* Revisando um painel
-* Assistindo a um vídeo
-* Jogando um jogo
+* Revisando um painel.
+* Assistindo a um vídeo.
+* Jogando um jogo.
 
 Os aplicativos compartilhados com o estágio de reunião ocupam o mesmo espaço que uma tela compartilhada. A fase também é reorientada para todos os participantes da reunião.
 

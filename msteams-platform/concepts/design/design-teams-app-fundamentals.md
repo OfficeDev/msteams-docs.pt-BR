@@ -2,16 +2,15 @@
 title: Projetar seu aplicativo – Entender o sistema de design
 description: Saiba mais sobre os conceitos básicos de criação do Microsoft Teams, incluindo avatares, layout, ícones, esquema de cores e muito mais.
 author: heath-hamilton
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: layout grid avatars icons segoe ui typography
-ms.openlocfilehash: d4b8d610de0575024db5d7140c0452b00655ef91
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111294"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142882"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de design de aplicativo
 

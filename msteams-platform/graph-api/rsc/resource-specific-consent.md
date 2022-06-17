@@ -1,17 +1,16 @@
 ---
 title: Habilitar o consentimento específico do recurso no Teams
-description: Descreve o consentimento específico de recursos no Teams e como tirar proveito dele.
-ms.localizationpriority: high
+description: Neste módulo, aprenda o consentimento específico do recurso Microsoft Teams e como tirar proveito dele.
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: microsoft teams authorization OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 8a90d1280f94de099543d879028a84d538c588ac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111504"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144352"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 
@@ -159,7 +158,7 @@ Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.m
 
 |Nome| Tipo | Descrição|
 |---|---|---|
-|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, [registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, consulte[registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|Cadeia de caracteres| Este campo não tem nenhuma operação na RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará isso.|
 
 Especifique as permissões necessárias para o aplicativo.
@@ -327,9 +326,9 @@ Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.m
 
 |Nome| Tipo | Descrição|
 |---|---|---|
-|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, [registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |Cadeia de caracteres |Sua ID de aplicativo do Azure AD. Para obter mais informações, consulte[registrar seu aplicativo no portal do Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|Cadeia de caracteres| Este campo não tem nenhuma operação na RSC, mas deve ser adicionado e ter um valor para evitar uma resposta de erro; qualquer cadeia de caracteres fará isso.|
-|`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [ permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
+|`applicationPermissions`|Matriz de cadeias de caracteres|Permissões RSC para seu aplicativo. Para obter mais informações, consulte [permissões específicas do recurso](resource-specific-consent.md#resource-specific-permissions).|
 
 Exemplo de RSC em uma equipe
 

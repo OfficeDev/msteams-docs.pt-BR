@@ -1,16 +1,16 @@
 ---
 title: Pesquisa de preenchimento automático em cartões adaptáveis
 author: Rajeshwari-v
-description: Descreve a pesquisa typeahead com o controle Input.ChoiceSet em Cartões Adaptáveis
+description: Neste módulo, saiba o que é a pesquisa typeahead em cartões adaptáveis com o controle Input.ChoiceSet e implemente a pesquisa typeahead
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 205da5ca0171182047ccd06f7f2926f731ceb94d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103436"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143890"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Pesquisa de preenchimento automático em cartões adaptáveis
 
@@ -42,7 +42,7 @@ A pesquisa de typeahead dinâmico é útil para pesquisar e selecionar dados de 
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-Os clientes móveis Android e iOS dão suporte à pesquisa de typeahead em Cartões Adaptáveis.
+Android e iOS clientes móveis dão suporte à pesquisa de typeahead em Cartões Adaptáveis.
 
 **Cenário**
 

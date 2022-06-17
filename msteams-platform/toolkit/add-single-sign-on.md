@@ -1,23 +1,23 @@
 ---
 title: Adicionar logon único aos aplicativos Teams aplicativos
 author: zyxiaoyuer
-description: Descreve Adicionar logon único do Teams Toolkit
+description: Neste módulo, saiba como adicionar o SSO (logon único) do Teams Toolkit, habilitar o suporte ao SSO, atualizar seu aplicativo para usar o SSO
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123444"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144128"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Adicionar o logon único ao aplicativo do Teams
 
 Microsoft Teams fornece a função de logon único para que o aplicativo obtenha um token de usuário Teams conectado para acessar o Microsoft Graph e outras APIs. Teams Toolkit facilita a interação abstraindo alguns dos fluxos Azure AD e integrações por trás de algumas APIs simples. Isso permite que você adicione recursos de SSO (logon único) facilmente ao Teams aplicativo.
 
-Para aplicativos que interagem com o usuário em um chat, uma equipe ou um canal, o SSO se manifesta como um Cartão Adaptável com o qual o usuário pode interagir para invocar o fluxo de consentimento Azure AD usuário.
+Para aplicativos que interagem com o usuário em um chat, uma equipe ou um canal, o SSO se manifesta como um Cartão Adaptável, com o qual o usuário pode interagir para invocar o fluxo de consentimento do Azure AD.
 
 ## <a name="enable-sso-support"></a>Habilitar suporte a SSO
 

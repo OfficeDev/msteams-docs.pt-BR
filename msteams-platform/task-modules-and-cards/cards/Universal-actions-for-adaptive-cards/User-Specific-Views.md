@@ -1,22 +1,24 @@
 ---
 title: Exibições Específicas do Usuário
-description: Saiba mais sobre exibições específicas do usuário usando ações universais com exemplo de código
+description: Neste módulo, saiba mais sobre exibições específicas do usuário usando ações universais com exemplo de código e cartão de resposta adaptiveCard/action invoke
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e5b8d6dd00104fab819ba7d05d5913bb891d83
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a3fdc937ba1528a2bf9aa304bf484bbcae68b5c6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073677"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143918"
 ---
 # <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
-Anteriormente, se os Cartões Adaptáveis fossem enviados em uma Teams, todos os usuários verão exatamente o mesmo conteúdo do cartão. Com a introdução do modelo de Ações Universais `refresh` e para Cartões Adaptáveis, os desenvolvedores de bot agora podem fornecer exibições específicas do usuário de Cartões Adaptáveis aos usuários. O mesmo Cartão Adaptável agora pode ser atualizado para um Cartão Adaptável Específico do Usuário. No máximo 60 usuários diferentes podem ver uma versão diferente do cartão com informações ou ações adicionais. O Cartão Adaptável fornece cenários avançados, como aprovações, controles de criador de sondagem, tíquetes, gerenciamento de incidentes e cartões de gerenciamento de projetos.
+Anteriormente, se os Cartões Adaptáveis fossem enviados em uma Teams, todos os usuários veriam exatamente o mesmo conteúdo do cartão. Com a introdução do modelo de Ações Universais `refresh` e para Cartões Adaptáveis, os desenvolvedores de bot agora podem fornecer exibições específicas do usuário de Cartões Adaptáveis aos usuários. O mesmo Cartão Adaptável agora pode ser atualizado para um Cartão Adaptável Específico do Usuário. O Cartão Adaptável fornece cenários avançados, como aprovações, controles de criador de sondagem, tíquetes, gerenciamento de incidentes e cartões de gerenciamento de projetos.
 
 > [!NOTE]
-> A Exibição Específica do Usuário tem suporte para Cartões Adaptáveis enviados por um bot e depende das Ações Universais.
+>
+> * A Exibição Específica do Usuário tem suporte para Cartões Adaptáveis enviados por um bot e depende das Ações Universais.
+> * No máximo 60 usuários diferentes podem ver uma versão diferente do cartão com informações ou ações adicionais.
 
 Por exemplo, Megan, uma inspetora de segurança da Contoso, deseja criar um incidente e atribuí-lo a Alex. Megan também quer que todos da equipe sejam cientes do incidente. Sara usa a extensão de mensagem de relatório de incidentes da Contoso da plataforma Ações Universais para Cartões Adaptáveis.
 
@@ -218,19 +220,32 @@ const cardRes = {
 
 ***
 
-Diretrizes de design de cartão para ter em mente durante a criação de exibições específicas do usuário:
+A lista a seguir fornece diretrizes de design de cartão para exibições específicas do usuário:
 
-* Você pode criar no máximo **60** Exibições Específicas do Usuário para um cartão específico enviado para um chat `userIds` ou canal especificando-os na `refresh` seção.
-* **Cartão Base:** A versão base do cartão que o desenvolvedor do bot envia para o chat. A versão base é a versão do Cartão Adaptável para todos os usuários que não estão especificados na `userIds` seção.
-* Uma atualização de mensagem pode ser usada para atualizar o cartão base e atualizar simultaneamente o Cartão Específico do Usuário. Abrir o chat ou canal também atualiza o cartão para usuários com a atualização habilitada.
-* Para cenários com grupos maiores em que os usuários alternam para um modo de exibição em ação, que precisa de atualizações dinâmicas para respondentes, você pode continuar adicionando até 60 usuários à `userIds` lista. Você pode remover o primeiro respondente da lista quando o 61º usuário responder. Para os usuários removidos `userIds` da lista, você pode fornecer um botão de atualização manual ou usar o botão atualizar no menu de opções de mensagem para obter o resultado mais recente.
+* Comportamento de atualização: você pode criar um máximo de 60 Exibições Específicas do Usuário para um cartão específico enviado a `userIds` uma conversa especificando-os na `Refresh` propriedade.
+
+  * Se o `userIds` campo não `Refresh` for especificado na propriedade, Teams cliente poderá disparar automaticamente a atualização para todos os usuários quando houver menos ou igual a 60 membros na conversa.
+
+  * Para que os usuários disparem manualmente a atualização do cartão, eles podem selecionar **Atualizar** no menu de opções de mensagem. Isso acontece com todos os usuários quando há menos de 60 `userIds` membros em uma conversa ou com o conjunto de usuários não especificado na lista quando há todos ou menos de 60 usuários em uma conversa.
+
+* Cartão base: o bot envia a mensagem, que é inserida com a versão base do cartão. Todos os membros da conversa podem exibir o mesmo. Posteriormente, o bot busca o Cartão Específico do Usuário por meio da atualização para os usuários especificados na `userIds` seção.
+
+* Tempo limite de atualização: Teams cliente dispara uma atualização de duas maneiras, seja por meio de **Atualizar** ou selecionando **Executar**. A atualização será disparada somente se o cartão da última invocação tiver mais de um minuto. Você pode controlar o comportamento de atualização adicionando um carimbo de data/hora ao recipiente de dados e verificando-o antes de enviar o cartão atualizado.
+
+* Uma atualização de mensagem pode ser usada para atualizar o cartão base e atualizar simultaneamente o Cartão Específico do Usuário. Abrir o chat ou canal também atualiza o cartão para usuários com **a Atualização** habilitada.
+
+* Para cenários com grupos maiores em que os usuários alternam para um modo de exibição em ação, que precisa de atualizações dinâmicas para respondentes, você pode continuar adicionando até 60 usuários à `userIds` lista. Você pode remover o primeiro respondente da lista quando o 61º usuário responder. Para os usuários removidos da lista `userIds` , você pode fornecer uma **Atualização manual para** obter o resultado mais recente.
+
 * Forneça um prompt aos usuários para obter uma Exibição Específica do Usuário, em que eles veem apenas uma exibição específica do cartão ou algumas ações.
+
+> [!NOTE]
+> O Cartão Específico do Usuário retornado pelo bot é enviado somente para o cliente específico que solicitou. Por exemplo, se um usuário alternar para um cliente diferente, como da área de trabalho para o celular, outro evento de invocação será disparado para buscar o cartão atualizado.
 
 ## <a name="code-sample"></a>Exemplo de código
 
 |Nome do exemplo | Descrição | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Cartões adaptáveis de fluxos de trabalho sequenciais | Demonstrar como implementar fluxos de trabalho sequenciais, exibições específicas do usuário e cartões adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Cartões Adaptáveis de Fluxos de Trabalho Sequenciais | Demonstre como implementar Fluxos de Trabalho Sequenciais, Exibições Específicas do Usuário e Cartões Adaptáveis atualizados em bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Confira também
 

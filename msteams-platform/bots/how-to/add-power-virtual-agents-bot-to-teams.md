@@ -1,16 +1,16 @@
 ---
-title: Adicionar um chatbot do Power Virtual Agents ao Teams
+title: Adicionar um chatbot de Agentes Virtuais de Energia
 author: surbhigupta
 description: Aprenda a integrar um chatbot do Power Virtual Agents na plataforma do Teams para criar chatbots de conversa e integrá-lo ao Teams
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 53a938ca4a195ba6f477de130a8290242709cb19
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: efcf87f490d923ce5c5c5e0c675063defce40a1c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111770"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143246"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia
 

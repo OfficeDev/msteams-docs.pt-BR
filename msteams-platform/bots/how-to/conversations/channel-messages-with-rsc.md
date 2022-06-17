@@ -1,15 +1,15 @@
 ---
 title: Receber todas as mensagens do canal com RSC
 author: surbhigupta12
-description: Receber todas as mensagens do canal com permissões RSC
+description: Neste módulo, saiba como receber todas as mensagens de canal com permissões RSC e como permitir que os bots recebam todas as mensagens do canal
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 6b4c2add73c54aadd068c16171a0d340a0c79075
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111203"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143512"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Receber todas as mensagens do canal com RSC
 

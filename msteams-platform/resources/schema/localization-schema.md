@@ -2,15 +2,14 @@
 title: Localizar referências do esquema JSON
 description: Descreve o esquema de localização compatível com o arquivo de localização do Microsoft Teams usando um esquema de exemplo
 ms.topic: reference
-ms.localizationpriority: high
-keywords: localização do esquema de manifesto do teams
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: cf55754b5f9b30508bc01184d75f489dc2a5b7b7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 23d02e845e4fcdc1c2fc76d8e9c376479fe1fa1f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111910"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144273"
 ---
 # <a name="localize-json-schema-reference"></a>Localizar referências do esquema JSON
 

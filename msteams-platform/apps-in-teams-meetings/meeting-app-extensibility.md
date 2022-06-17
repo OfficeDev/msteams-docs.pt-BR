@@ -1,22 +1,22 @@
 ---
 title: Aplicativos de reuniões unificadas
 author: surbhigupta
-description: Saiba mais Teams ciclo de vida da reunião e a experiência de reunião do usuário no ambiente de área de trabalho e móvel, funções e tipos de participantes e usuários, integre bots e extensão de mensagens no ciclo de vida da reunião.
+description: Saiba mais sobre Teams ciclo de vida de reunião e experiência de reunião de usuários na área de trabalho e dispositivos móveis, tipos de usuário, integração de bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111343"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142574"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
 Teams aplicativos unificados de reuniões são baseados nos seguintes conceitos:
 
 * O ciclo de vida da reunião tem diferentes estágios: pré-reunião, reunião e pós-reunião.  
-* Há três funções distintas de participante em uma reunião: organizador, apresentador e participante. Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
+* Há três funções distintas de participante em uma reunião: organizador, apresentador e participante. Para obter mais informações, consulte [funções em uma reunião do Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Há vários tipos [de usuário](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) em uma reunião: no locatário, [convidado](/microsoftteams/guest-access), [federado](/microsoftteams/manage-external-access) e usuários anônimos.
 
 Este artigo aborda as informações sobre o ciclo de vida da reunião e como integrar guias, bots e extensões de mensagem. Ele identifica diferentes funções de participante e tipos de usuário.
@@ -33,7 +33,7 @@ Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reu
 As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e os dados disponíveis nas guias. Na Teams, você pode adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e selecione o aplicativo que você deseja instalar.
 
 > [!IMPORTANT]
-> Se você tiver integrado uma guia à sua reunião, seu aplicativo deverá seguir o Teams de autenticação de [logon único (SSO) para guias](../tabs/how-to/authentication/auth-aad-sso.md).
+> Se você tiver integrado uma guia à sua reunião, seu aplicativo deverá seguir o Teams de autenticação de [logon único (SSO) para guias](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
 >
@@ -47,7 +47,7 @@ Com a experiência de aplicativo de pré-reunião, os usuários podem encontrar 
 Para adicionar guias a uma reunião existente:
 
 1. Em seu calendário, selecione uma reunião à qual você deseja adicionar uma guia.
-1. Selecione a **guia Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. A galeria de guias é exibida.
+1. Selecione a guia **Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. A galeria de guias é exibida.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Experiência de aplicativo de pré-reunião":::
 
@@ -87,7 +87,6 @@ Para usar guias durante uma reunião:
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Modo de exibição da área de trabalho":::
-
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
@@ -178,7 +177,7 @@ As configurações de participante padrão são determinadas pelo administrador 
 > [!NOTE]
 > Somente um organizador ou apresentador pode adicionar, remover ou desinstalar aplicativos.
 
-Para obter mais informações, [consulte funções em uma Teams reunião](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+Para obter mais informações, consulte [funções em uma reunião do Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 Depois de projetar seu aplicativo com base nas funções de participante em uma reunião, você pode identificar cada tipo de usuário para reuniões e selecionar o que eles podem acessar.
 
@@ -199,7 +198,7 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
     > Seus Teams podem adicionar aplicativos quando hospedam reuniões ou chats com outras organizações. Os usuários podem usar aplicativos compartilhados por usuários externos quando seus usuários ingressam em reuniões ou chats hospedados por outras organizações. As políticas de dados da organização do usuário de hospedagem, bem como as práticas de compartilhamento de dados dos aplicativos de terceiros compartilhados pela organização desse usuário, estarão em vigor.
 
     > [!IMPORTANT]
-    > Atualmente, aplicativos de terceiros estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e Departamento de Defesa (DOD). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte gerenciar políticas de permissão [de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
+    > Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e DoD (Departamento de Defesa). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [gerenciar políticas de permissão de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
 
 * **Anônimo**: os usuários anônimos não têm uma Azure AD identidade e não são federados com um locatário. Os participantes anônimos são como usuários externos, mas sua identidade não é mostrada na reunião. Os usuários anônimos não podem acessar aplicativos em uma janela de reunião e em um estágio de reunião. Um usuário anônimo não pode ser um organizador, mas pode ser um apresentador ou participante.
 
@@ -219,7 +218,7 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Habilitar e configurar seus aplicativos para Teams reuniões](enable-and-configure-your-app-for-teams-meetings.md)
+> [Ative e configure seus aplicativos para reuniões do Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Confira também
 

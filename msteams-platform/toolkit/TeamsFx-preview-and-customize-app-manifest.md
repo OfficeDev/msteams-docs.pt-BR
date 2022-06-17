@@ -1,17 +1,17 @@
 ---
 title: Teams manifesto do aplicativo no Teams Toolkit
 author: zyxiaoyuer
-description: Teams manifesto do aplicativo
+description: Neste módulo, saiba como editar, visualizar e personalizar Teams Manifesto do Aplicativo no ambiente diferente.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123651"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143869"
 ---
 # <a name="edit-teams-app-manifest"></a>Editar Teams manifesto do aplicativo
 
@@ -33,7 +33,7 @@ Você pode visualizar o arquivo de manifesto em ambientes locais e remotos.
 * [Visualizar arquivo de manifesto no ambiente local](#preview-manifest-file-in-local-environment)
 * [Visualizar arquivo de manifesto no ambiente remoto](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>Visualizar arquivo de manifesto no ambiente local
+## <a name="preview-manifest-file-in-local-environment"></a>Visualizar arquivo de manifesto no ambiente local
 
 Para visualizar o arquivo de manifesto no ambiente local, você pode pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e o pacote do aplicativo e o manifesto de visualização são compilados na `build/appPackage` pasta.
 
@@ -47,7 +47,7 @@ A visualização local é exibida conforme mostrado na imagem:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Visualização":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>Visualizar arquivo de manifesto no ambiente remoto
+## <a name="preview-manifest-file-in-remote-environment"></a>Visualizar arquivo de manifesto no ambiente remoto
 
 **Para visualizar o arquivo de manifesto no ambiente remoto**
 
@@ -112,7 +112,7 @@ Você também pode disparar **Teams: atualizar o manifesto para Teams plataforma
 > [!NOTE]
 > As atualizações de alteração no Portal de Desenvolvimento. Todas as atualizações manuais no Portal de Desenvolvimento são substituídas.
 
-Se o arquivo de manifesto estiver desatualizado por causa da alteração do arquivo de configuração ou da alteração do modelo, selecione uma das seguintes ações:
+Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo de configuração ou à alteração do modelo, selecione qualquer uma das seguintes ações:
 
 * **Somente visualização**: o arquivo de manifesto local é substituído de acordo com a configuração atual.
 * **Versão prévia e atualização**: o arquivo de manifesto local é substituído de acordo com a configuração atual e também atualizado para Teams plataforma.
@@ -150,7 +150,7 @@ A lista a seguir fornece espaços reservados com suporte em `manifest.template.j
      }
      ```
 
-2. Você pode navegar até o arquivo de configuração selecionando qualquer um dos espaços reservados de configuração **Ir** para o arquivo de configuração ou **Exibir o arquivo de estado** em `manifest.template.json`.
+2. Você pode navegar até o arquivo de configuração selecionando qualquer um dos espaços **reservados de** configuração Ir para o arquivo de configuração ou **exibir o arquivo de estado** em `manifest.template.json`.
 
 ### <a name="validate-manifest"></a>Validar manifesto
 

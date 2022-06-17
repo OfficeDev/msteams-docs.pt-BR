@@ -1,16 +1,15 @@
 ---
 title: Enviar e receber mensagens com um bot
-description: Descreve como enviar e receber mensagens com bots no Microsoft Teams
+description: Neste módulo, aprenda a ter uma conversa com um bot de Microsoft Teams, mensagens proativas, noções básicas de conversa, conteúdo da mensagem e formatação
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: mensagens de bots do teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fdf408a9e9d49c9c5c862a6b4dda3c7db7de93e8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296970"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143386"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Conversar com um bot do Microsoft Teams
 
@@ -74,7 +73,7 @@ Para obter mais informações sobre formatação de cartões em mensagens, consu
 
 As imagens são enviadas adicionando anexos a uma mensagem. Você pode encontrar mais informações sobre anexos na [Bot Framework documentação](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).
 
-As imagens podem ter no máximo 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF; não há suporte para GIF animado.
+As imagens podem ter no máximo 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF; NÃO há suporte para GIF animado.
 
 Recomendamos que você especifique a altura e a largura de cada imagem usando XML. Se você usar Markdown, o tamanho da imagem usará como padrão 256×256. Por exemplo:
 
@@ -219,7 +218,7 @@ A nova mensagem não precisa corresponder ao original no tipo. Por exemplo, se a
 
 ### <a name="rest-api"></a>API do REST
 
-Para emitir uma atualização de mensagem, basta executar uma solicitação PUT no ponto de extremidade `/v3/conversations/<conversationId>/activities/<activityId>/` usando uma determinada ID de atividade. Para concluir esse cenário, você deve armazenar em cache a ID da atividade retornada pela chamada POST original.
+Para emitir uma atualização de mensagem, execute uma solicitação PUT no ponto `/v3/conversations/<conversationId>/activities/<activityId>/` de extremidade usando uma determinada ID de atividade. Para concluir esse cenário, você deve armazenar em cache a ID da atividade retornada pela chamada POST original.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

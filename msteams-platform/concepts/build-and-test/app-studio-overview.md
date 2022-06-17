@@ -1,15 +1,14 @@
 ---
 title: Introdução ao App Studio para Microsoft Teams
-description: Comece a criar ótimos aplicativos no Microsoft Teams usando o App Studio
-keywords: introdução ao app studio teams
+description: Neste módulo, saiba como criar e gerenciar seus aplicativos com o App Studio para Microsoft Teams e instalar o App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 65c6ad9d5f4eafef80e2ec75d95d9d4a5ff1694b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757070"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143449"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gerenciar seus aplicativos com o App Studio para Microsoft Teams
 
@@ -27,7 +26,7 @@ O App Studio torna fácil começar a criar ou integrar seus próprios aplicativo
 
 ## <a name="installing-app-studio"></a>Instalando o App Studio
 
-O App Studio é um aplicativo do Teams que pode ser encontrado na loja do Teams. Siga este link para baixar diretamente [o App Studio](https://aka.ms/InstallTeamsAppStudio). Você também pode encontrar o aplicativo na loja de aplicativos.
+O App Studio é um Teams aplicativo, que pode ser encontrado na Teams armazenamento. Siga este link para baixar diretamente [o App Studio](https://aka.ms/InstallTeamsAppStudio). Você também pode encontrar o aplicativo na loja de aplicativos.
 
 Na loja, procure pelo App Studio.
 
@@ -41,7 +40,7 @@ Selecione **Instalar**.
 
 ![app Studio](~/assets/images/get-started/teamsappstudio.png)
 
-Quando estiver no App Studio, clique na guia **Editor de manifesto**, na qual você pode importar um aplicativo existente ou criar um novo aplicativo.
+Quando estiver no App Studio, selecione na guia **Editor** de manifesto, na qual você pode importar um aplicativo existente ou criar um novo aplicativo.
 
 ## <a name="app-studio-features"></a>Recursos do App Studio
 
@@ -55,11 +54,11 @@ Esta seção aborda recursos, como conversa, editor de manifesto, detalhes e fun
 
 Conforme mencionado anteriormente, a parte mais significativa de um pacote de aplicativos do Microsoft Teams é seu arquivo manifest.json. Este arquivo, que deve estar em conformidade com o [ esquema do Teams App](~/resources/schema/manifest-schema.md), contém metadados que permitem ao Teams apresentar corretamente seu aplicativo aos usuários.
 
-A guia Editor de Manifestos no App Studio simplifica a criação do manifesto, permitindo que você descreva o aplicativo, carregue seus ícones, adicione recursos do aplicativo e produza um arquivo .zip que pode ser facilmente carregado no Teams para teste ou distribuído para outras pessoas usarem. Observe que o App Studio não produz código funcional para seu aplicativo nem hospeda seu aplicativo. Seu aplicativo já deve estar hospedado e sendo executado na URL listada no manifesto para que o processo de carregamento do aplicativo resulte em um aplicativo funcional.
+A guia Editor de Manifesto no App Studio simplifica a criação do manifesto, permitindo que você descreva o aplicativo, carregue seus ícones, adicione recursos de aplicativo e produza um arquivo .zip, que pode ser carregado facilmente no Teams para teste ou distribuído para outras pessoas usarem. Observe que o App Studio não produz código funcional para seu aplicativo ou hospeda seu aplicativo. Seu aplicativo já deve estar hospedado e sendo executado na URL listada no manifesto para que o processo de carregamento do aplicativo resulte em um aplicativo funcional.
 
 #### <a name="details"></a>Detalhes
 
-A seção de detalhes do Editor de Manifesto define a descrição de alto nível do aplicativo que você está fazendo. Isso inclui coisas como o nome, a descrição e a identidade visual do aplicativo. Você pode gerar automaticamente um GUID para seu aplicativo e fornecer URLs para sua política de privacidade e termos de uso.
+A seção de detalhes do Editor de Manifesto define a descrição de alto nível do aplicativo que você está criando. Isso inclui coisas como o nome, a descrição e a identidade visual do aplicativo. Você pode gerar automaticamente um GUID para seu aplicativo e fornecer URLs para sua política de privacidade e termos de uso.
 
 #### <a name="capabilities"></a>Recursos
 
@@ -70,7 +69,7 @@ A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo s
 
 ##### <a name="tabs"></a>Guias
 
-* **Guias da Equipe.** Uma guia de equipe torna-se parte de um canal e fornece acesso rápido a informações e recursos da equipe. Por exemplo, a guia Planner para um canal contém um único plano. A guia Power BI mapeia para um relatório específico. Os usuários podem fazer uma busca detalhada pelo contexto relevante, mas eles não devem ser capazes de navegar fora da guia. Por exemplo, a guia Power BI não habilita a navegação para outros relatórios do Power BI, mas habilita o botão *Ir para o site* que inicia o relatório no site principal do Power BI.
+* **Guias da Equipe.** Uma guia de equipe torna-se parte de um canal e fornece acesso rápido a informações e recursos da equipe. Por exemplo, a guia Planner para um canal contém um único plano. A guia Power BI mapeia para um relatório específico. Os usuários podem fazer drill down para o contexto relevante, mas não devem ser capazes de navegar para fora da guia. A guia Power BI, por exemplo, não habilita a navegação para outros relatórios do Power BI, mas habilita o botão Ir para o site  que inicia o relatório no site Power BI principal.
 
   Para guias de equipe, você deve fornecer uma *URL de configuração* apresentar opções e reunir informações para que os usuários possam personalizar o conteúdo e a experiência da guia. Essa página HTML iframed é exibida quando um usuário adiciona a guia pela primeira vez a um canal.
 
@@ -82,24 +81,24 @@ A seção de recursos do Editor de Manifesto é onde os recursos do aplicativo s
 
 Esta seção permite que você adicione um [bot de conversação](~/bots/what-are-bots.md) ao seu aplicativo. Se você já tiver um bot registrado com o Bot Framework, poderá adicionar esse bot clicando em *Configurar* e fornecendo o nome do bot, a ID do Bot Framework e definindo os escopos em que o bot funcionará.
 
-Se você ainda não registrou um bot com o Bot Framework, clique em **Register** para criar um novo. Depois de terminar de registrar seu bot, volte a esta seção do Editor de Manifesto para inserir seu nome e a ID do Bot Framework.
+Se você ainda não registrou um bot com o Bot Framework, selecione **Registrar** para criar um novo. Depois de terminar de registrar seu bot, volte a esta seção do Editor de Manifesto para inserir seu nome e a ID do Bot Framework.
 
-Depois de ter fornecido as informações do bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando que indica sua sintaxe e argumentos, e o(s) escopo(s) ao qual este comando deve ser aplicado.
+Depois de ter fornecido as informações do bot, agora você pode definir opcionalmente uma lista de comandos que seu bot pode sugerir aos usuários. Adicione o nome do comando, uma descrição do comando, que indica sua sintaxe e argumentos e os escopos aos quais esse comando deve se aplicar.
 
 > [!NOTE]
 > Se você tiver definido o bot para dar suporte apenas a um escopo, os comandos especificados para o escopo sem suporte serão ignorados. Você pode editar os escopos que seu bot oferece suporte a qualquer momento.
 
 ##### <a name="connectors"></a>Conectores
 
-Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha **Configurar** e insira o nome e a ID do conector. Se quiser um novo conector clique em **Registrar** para ser levado até o Painel do Desenvolvedor do Conector em seu navegador.
+Esta seção permite adicionar um conector ao aplicativo. Se você já registrou um conector do Office 365, escolha **Configurar** e insira o nome e a ID do conector. Se você quiser que um novo conector selecione **Registrar** para ser levado para o Painel do Desenvolvedor do Conector em seu navegador.
 
 ##### <a name="message-extensions"></a>Extensões de mensagem
 
 [As extensões de](~/messaging-extensions/what-are-messaging-extensions.md) mensagem são uma maneira poderosa para os usuários se envolverem com seu aplicativo Microsoft Teams. Os usuários podem consultar informações do seu serviço e postar essas informações na forma de cartões, bem no canal ou na conversa de chat.
 
-As extensões de mensagem são alimentadas por bots do Bot Framework, portanto, elas exigem um bot configurado para operar. Se você tiver o nome e a ID do Bot Framework do bot que deseja ligar a extensão de mensagem, insira-a. Caso contrário, clique em **Registrar** para criar um registro e insira as informações posteriormente. Selecione se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário.
+As extensões de mensagem são alimentadas por bots do Bot Framework, portanto, elas exigem um bot configurado para operar. Se você tiver o nome e a ID do Bot Framework do bot que deseja ligar a extensão de mensagem, insira-a. Caso contrário, **selecione Registrar** para criar um e insira as informações posteriormente. Selecione se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário.
 
-Depois de configurar o bot subjacente, defina os comandos e parâmetros que a extensão de mensagem pode aceitar.
+Depois de configurar o bot subjacente, defina os comandos e os parâmetros que a extensão de mensagem pode aceitar.
 
 Cada comando requer um título e uma ID. O comando pode conter, opcionalmente, uma descrição para o usuário. Cada comando pode dar suporte a até cinco parâmetros, cada um dos quais requer:
 
@@ -112,7 +111,7 @@ Cada comando requer um título e uma ID. O comando pode conter, opcionalmente, u
 
 #### <a name="test-and-distribute"></a>Testar e Distribuir
 
-Depois que você terminar de definir o aplicativo, a seção Testar e Distribuir permite exportar a definição do aplicativo como um arquivo zip, que pode ser compartilhado e carregado no cliente do Teams para teste. Clicar em exportar baixa o arquivo zip como *appname.zip* no seu diretório de download padrão.
+Depois de terminar de definir seu aplicativo, a seção Testar e Distribuir permite exportar a definição do aplicativo como um arquivo zip, que pode ser compartilhado e carregado no cliente Teams para teste. Clicar em exportar baixa o arquivo zip como *appname.zip* no seu diretório de download padrão.
 
 ##### <a name="publish-your-app-to-teams"></a>Publicar seu aplicativo no Teams
 
@@ -131,7 +130,7 @@ Se você já tiver um cartão que gostaria de verificar no Teams, poderá colar 
 >[!Note]
 > Essa React de controle de banco de dados é preterida no futuro. Considere usar os [controles Fluent-UI react como uma interface do](https://microsoft.github.io/fluent-ui-react/) usuário alternativa anteriormente stardust.
 
-Criar um aplicativo que acompanhe as práticas recomendadas do Teams é uma ótima maneira de dar ao seu aplicativo uma aparência e sensação que se encaixem  perfeitamente com a experiência do cliente do Teams. Os controles da interface do usuário que você usa são essenciais para alcançar esse fim. Para facilitar a criação de uma interface de usuário consistente, o App Studio fornece várias categorias de controles de interface do usuário que seguem princípios de design do Teams.
+Criar um aplicativo que acompanhe as práticas recomendadas do Teams é uma ótima maneira de dar ao seu aplicativo uma aparência e sensação que se encaixem  perfeitamente com a experiência do cliente do Teams. Os controles da interface do usuário que você usa são essenciais para alcançar esse fim. Para facilitar a criação de uma interface do usuário consistente, o App Studio fornece várias categorias de controles de interface do usuário, que seguem Teams de design.
 
 Exemplos de controles e componentes de Reação correspondentes são fornecidos e estão prontos para usar na criação do aplicativo.
 

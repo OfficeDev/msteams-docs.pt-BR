@@ -1,16 +1,15 @@
 ---
 title: Gerencie seus aplicativos com o Portal do Desenvolvedor
-description: Saiba como configurar, distribuir e gerenciar seus aplicativos usando o Portal do Desenvolvedor para o Microsoft Teams.
-keywords: introdução às equipes do portal do desenvolvedor
+description: Neste módulo, saiba como configurar, distribuir e gerenciar seus aplicativos usando o Portal do Desenvolvedor para Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c7ca898cd411028dffa6c8a197c78cd796f823e5
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439304"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142364"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Gerenciar seus aplicativos Teams usando o Portal do Desenvolvedor
 
@@ -27,8 +26,8 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 
 A Portal do Desenvolvedor fornece algumas maneiras de registrar um aplicativo do Teams:
 
-* Registrar um novo aplicativo
-* Importar um pacote de aplicativo existente
+* Registre um aplicativo novo.
+* Importe um pacote de aplicativo existente.
 
 > [!NOTE]
 > Se você criar um aplicativo usando o [Kit de ferramentas do Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), poderá gerenciar esse aplicativo no Portal do Desenvolvedor.
@@ -103,7 +102,7 @@ Ao explorar métricas individuais nesta página, você pode usar o botão  Filtr
 * Sistema operacional
 * Área
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filtro":::
 
 Depois de selecionar os filtros desejados, você pode explorar os seguintes widgets individuais:
 

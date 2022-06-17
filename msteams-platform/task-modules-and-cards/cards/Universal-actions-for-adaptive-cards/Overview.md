@@ -1,14 +1,14 @@
 ---
 title: Visão geral das Ações Universais para Cartões Adaptáveis
-description: Uma visão geral rápida das Ações Universais para Cartões Adaptáveis, como exibições específicas do usuário, suporte a fluxo de trabalho sequencial e muito mais para ambientes de área de trabalho e móveis
+description: Conheça as Ações Universais para Cartões Adaptáveis, como exibições específicas do usuário, suporte a fluxo de trabalho sequencial e muito mais para ambientes de área de trabalho e móveis
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756468"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142084"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
@@ -109,7 +109,7 @@ Agora, você pode entender como os Cartões Adaptáveis podem ser transformados 
 
 Cartões Adaptáveis são uma combinação de conteúdo, como texto e elementos gráficos, e ações que podem ser executadas por um usuário. Para obter mais informações, [Cartões Adaptáveis](http://adaptivecards.io/). As novas Ações Universais para Cartões Adaptáveis permitem uma manipulação comum das ações de Cartão Adaptável em plataformas e aplicativos. Para obter mais informações, consulte [Modelo de Ação Universal](/adaptive-cards/authoring-cards/universal-action-model).
 
-Você pode começar atualizando cenários usando o guia [de início](Work-with-universal-actions-for-adaptive-cards.md) rápido e aproveitar as Ações Universais.
+Você pode começar atualizando cenários usando o [guia de início rápido]. (Work-with-universal-actions-for-adaptive-cards.md) e aproveite as Ações Universais.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -121,4 +121,4 @@ Você pode começar atualizando cenários usando o guia [de início](Work-with-u
 * [O que são bots](~/bots/what-are-bots.md)
 * [Visão geral dos Cartões Adaptáveis](~/task-modules-and-cards/what-are-cards.md)
 * [Cartões Adaptáveis @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Cartões Adaptáveis @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [Cartões Adaptáveis @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).

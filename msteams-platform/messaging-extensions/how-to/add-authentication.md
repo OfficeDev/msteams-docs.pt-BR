@@ -1,16 +1,16 @@
 ---
 title: Adicionar autenticação à sua extensão de mensagens
 author: surbhigupta
-description: Saiba como adicionar autenticação a uma extensão de mensagem usando amostra e exemplos de código
+description: Neste módulo, saiba como adicionar autenticação a uma extensão de mensagens usando exemplos de código e exemplos
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887608"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143540"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Adicionar autenticação à sua extensão de mensagens
 

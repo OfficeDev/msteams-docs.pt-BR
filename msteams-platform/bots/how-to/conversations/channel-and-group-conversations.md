@@ -1,16 +1,16 @@
 ---
 title: Conversas em canais e em grupos com um bot
 author: surbhigupta
-description: Como enviar, receber e manipular mensagens de um bot em um canal ou chat em grupo. Saiba mais sobre diretrizes de design, criar threads de conversa, usando @menções usando Exemplos de código
+description: Saiba como enviar, receber e manipular mensagens para um bot em um canal ou chat em grupo. Saiba mais sobre diretrizes de design e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757175"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144408"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 

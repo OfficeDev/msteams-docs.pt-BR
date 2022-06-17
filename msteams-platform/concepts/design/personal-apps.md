@@ -5,13 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: modelo de formulário do painel do iframe da guia do iframe do aplicativo pessoal do kit de interface do usuário
-ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a939217f31feb957cc9f3205a99d8b235de56d8e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123924"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142399"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetando seu aplicativo pessoal para o Microsoft Teams
 

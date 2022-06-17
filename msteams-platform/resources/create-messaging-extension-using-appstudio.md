@@ -5,12 +5,12 @@ description: Saiba como criar uma extensão Microsoft Teams de mensagens usando 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032778"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142336"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032778"
 
 Em um alto nível, você precisará concluir as etapas a seguir para criar uma extensão de mensagens.
 
-1. Preparar seu ambiente de desenvolvimento
-2. Criar e implantar seu serviço Web (durante o desenvolvimento, use um serviço de túnel como o ngrok para ser executado localmente)
-3. Registrar seu serviço Web com a estrutura bot
-4. Criar um pacote do aplicativo
-5. Carregar um pacote do aplicativo para o Microsoft Teams
+1. Preparar seu ambiente de desenvolvimento.
+2. Crie e implante seu serviço Web (durante o desenvolvimento, use um serviço de túnel como o ngrok para ser executado localmente).
+3. Registre seu serviço Web com o Bot Framework.
+4. Crie o pacote do aplicativo.
+5. Carregar seu pacote do aplicativo para o Microsoft Teams.
 
 Criar seu serviço Web, criar seu pacote de aplicativos e registrar seu serviço Web com o Bot Framework pode ser feito em qualquer ordem. Como essas três peças estão tão entrelaçadas, não importa em qual ordem você as faça, você precisará retornar para atualizar as outras. Seu registro precisa do ponto de extremidade de mensagens do serviço Web implantado e seu serviço Web precisa da ID e da senha criadas com base no registro. O manifesto do aplicativo também precisa dessa ID para se conectar Teams seu serviço Web.
 

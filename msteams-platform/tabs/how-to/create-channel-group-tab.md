@@ -1,17 +1,17 @@
 ---
 title: Criar uma guia de canal ou grupo
 author: laujan
-description: Um guia de início rápido para criar uma guia de canal e uma guia de grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
+description: Neste módulo, saiba como criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672947"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142672"
 ---
 # <a name="channel-or-group-tab"></a>Guias de canal ou grupo
 

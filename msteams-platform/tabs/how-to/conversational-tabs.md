@@ -1,17 +1,16 @@
 ---
 title: Criar abas para conversação
 author: surbhigupta
-description: Saiba como criar um chat de subentidade de conversa para suas guias de canal, para gerenciar conversas usando exemplos de código
-keywords: canal de guias do Teams configurável
+description: Neste módulo, aprenda a criar um chat de subentidade de conversa para suas guias de canal, para gerenciar conversas usando exemplos de código
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111651"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142077"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -103,7 +102,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="see-also"></a>Confira também
 
-* [Teams guias](~/tabs/what-are-tabs.md)
+* [Guias do Teams](~/tabs/what-are-tabs.md)
 * [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
 * [Criar uma guia de canal ou grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)

@@ -4,12 +4,12 @@ description: Neste módulo, saiba como começar a usar o SDK do Live Share e com
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668205"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143561"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Ingressar em um contêiner do Fluid
 
-Nem todos os modos de exibição de seus aplicativos precisarão ser colaborativos. O modo de exibição `stage` _sempre_ precisa de recursos colaborativos, o modo de exibição `content` _pode_ precisar de recursos colaborativos e o modo de exibição `config` _nunca_ deve precisar de recursos colaborativos. Para os modos de exibição que precisam de recursos colaborativos, você precisará ingressar em um contêiner do Fluid associado à reunião atual.
+Nem todos os modos de exibição de seus aplicativos precisarão ser colaborativos. O modo de exibição `stage` *sempre* precisa de recursos colaborativos, o modo de exibição `content` *pode* precisar de recursos colaborativos e o modo de exibição `config` *nunca* deve precisar de recursos colaborativos. Para os modos de exibição que precisam de recursos colaborativos, você precisará ingressar em um contêiner do Fluid associado à reunião atual.
 
 Ingressar no contêiner da reunião é tão simples quanto criar um novo [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) e, em seguida, chamá-lo de método [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer).  Ao executar localmente, você precisará passar uma configuração de conexão personalizada com um `LOCAL_MODE_TENANT_ID` especial, mas, caso contrário, ingressar em um contêiner local é o mesmo que ingressar em um contêiner no Teams.
 
@@ -192,15 +192,15 @@ A próxima alteração que precisa ser feita é alterar a função `updateDice` 
 
 ### <a name="handle-remote-changes"></a>Manipular alterações remotas
 
-Os valores retornados de `diceMap` são apenas um instantâneo do momento. Para manter os dados atualizados à medida que eles são alterados, um manipulador de eventos deve ser definido no `diceMap` para chamar `updateDice` cada vez que o evento `valueChanged` for enviado. Para obter uma lista de eventos disparados e os valores passados para esses eventos, consulte [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
+Os valores retornados de `diceMap` são apenas um instantâneo do momento. Para manter os dados atualizados à medida que eles são alterados, um manipulador de eventos deve ser definido no `diceMap` para chamar `updateDice` cada vez que o evento `valueChanged` for enviado. Para obter uma lista de eventos disparados e os valores passados para esses eventos, consulte [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>Gravar o modo de exibição do painel lateral
 
-O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo desse modo de exibição é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhá-lo no estágio de reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio _e o modo de exibição do painel lateral_ de todos.
+O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo desse modo de exibição é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhá-lo no estágio de reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio *e o modo de exibição do painel lateral* de todos.
 
 O modo de exibição do painel lateral do exemplo solicita que o usuário selecione o botão Compartilhar na janela de conteúdo compartilhado.
 
@@ -359,7 +359,7 @@ Depois de se preparar para implantar seu código, você pode usar o [Kit de Ferr
 
 | Nome do exemplo | Descrição                                                      | JavaScript                                                                           |
 | :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Permita que todos os clientes conectados rolem um dado e exibam o resultado. | [Exibir](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Dice Roller | Habilite todos os clientes conectados para rolar um dado e exibir o resultado. | [Exibir](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>Próxima etapa
 

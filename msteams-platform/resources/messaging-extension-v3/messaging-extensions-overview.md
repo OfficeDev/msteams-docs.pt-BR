@@ -1,15 +1,14 @@
 ---
 title: Desenvolver extensões de mensagem
-description: Descreve como começar a usar extensões de mensagem no Microsoft Teams
+description: Neste módulo, saiba como começar a usar extensões de mensagem no Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: extensões de mensagens de extensões de mensagens do teams
-ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c81df30b71bbdba19842e45f06b4c9bb930e4c0d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111917"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143974"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>Desenvolver extensões de mensagem para Microsoft Teams
 
@@ -19,15 +18,15 @@ As extensões de mensagem são uma maneira eficiente para os usuários se envolv
 
 ![Exemplo de cartão de extensão de mensagem](~/assets/images/compose-extensions/ceexample.png)
 
-As extensões de mensagem aparecem na parte inferior da caixa de redação. Alguns são internos, como Emoji, Giphy e Sticker. Escolha o **botão Mais Opções** (**&#8943;**) para ver outras extensões de mensagem, incluindo aquelas que você adiciona da galeria de aplicativos ou carrega por conta própria.
+As extensões de mensagem aparecem na parte inferior da caixa de redação. Alguns são internos, como Emoji, gif e Sticker. Escolha o **botão Mais Opções** (**&#8943;**) para ver outras extensões de mensagem, incluindo aquelas que você adiciona da galeria de aplicativos ou carrega por conta própria.
 
 Como você usaria extensões de mensagem? Aqui estão algumas possibilidades:
 
-* Itens de trabalho e bugs
-* Tíquetes de suporte ao cliente
-* Gráficos e relatórios de uso
-* Imagens e conteúdo de mídia
-* Oportunidades de vendas e clientes potenciais
+* Itens de trabalho e bugs.
+* Tíquetes de suporte ao cliente.
+* Gráficos e relatórios de uso.
+* Imagens e conteúdo de mídia.
+* Oportunidades de vendas e clientes potenciais.
 
 ## <a name="types-of-message-extensions"></a>Tipos de extensões de mensagens
 

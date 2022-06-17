@@ -5,13 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: Discussão do thread do modo de exibição baseado em função do kit de interface do usuário gerenciar a configuração de guia de logon único
-ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123255"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144331"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para o Microsoft Teams
 

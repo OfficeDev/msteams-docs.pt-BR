@@ -5,23 +5,23 @@ description: Saiba mais sobre os Teams da interface do usuário, como trilhas, b
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123416"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143421"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Criando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
 Os componentes a seguir são uma [combinação de](~/concepts/design/design-teams-app-basic-ui-components.md) componentes básicos da interface do usuário que você pode usar para situações Teams de design comuns, como navegação.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface</a> do usuário, o kit de interface do usuário do Microsoft Teams inclui componentes e padrões que são projetados especificamente para criar Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Trilha
 
@@ -32,7 +32,7 @@ Trilhas são um auxílio de navegação que transmite a hierarquia do aplicativo
 * Hierarquia de comunicação
 * Navegação
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="O exemplo mostra um modelo de trilha no celular." border="false":::
 
@@ -49,7 +49,7 @@ Use a navegação à esquerda para navegar por várias páginas em sua Teams gui
 * Navegue por várias páginas em uma Teams guia.
 * Dividir aplicativos complexos em várias páginas.
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda no celular." border="false":::
 
@@ -69,7 +69,7 @@ Você pode implementar uma barra de notificação usando o Fluent de alerta [da 
 * Mensagens de êxito
 * Mensagens informativas ou promocionais
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="O exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
 
@@ -88,7 +88,7 @@ Veja como implementar o modo [de exibição de estágio](~/tabs/tabs-link-unfurl
 * Exibir conteúdo em uma superfície grande dentro Teams em vez de outro aplicativo ou navegador
 * Mídia em destaque ou outro conteúdo avançado
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, link compartilhado ou componentes visuais (como um gráfico).
 
@@ -104,11 +104,11 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Ações contextuais no conteúdo do aplicativo
-* Filtro contextual e localização
-* Navegação e trilhas
+* Ações contextuais no conteúdo do aplicativo.
+* Filtro contextual e localização.
+* Navegação e trilhas.
 
-### <a name="mobile"></a>Celular
+### <a name="mobile"></a>Dispositivo móvel
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="O exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
 

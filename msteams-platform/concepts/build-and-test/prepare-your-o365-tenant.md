@@ -1,15 +1,14 @@
 ---
 title: Preparar o locatário do Microsoft 365
-description: Como começar a usar o Teams no Microsoft 365
+description: Neste módulo, saiba como começar a usar o Teams no Microsoft 365 e criar seu ambiente de desenvolvimento
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurar Microsoft 365 de Teams de locatário que está carregando
-ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111392"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144387"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 

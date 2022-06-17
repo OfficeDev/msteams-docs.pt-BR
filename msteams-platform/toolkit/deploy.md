@@ -1,17 +1,17 @@
 ---
 title: Implantar na nuvem
 author: MuyangAmigo
-description: Implantar aplicativo na nuvem, no Azure ou no SharePoint
+description: Neste módulo, saiba como implantar o aplicativo na nuvem, no Azure ou no SharePoint e implantar aplicativos Teams usando Teams Toolkit
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3e9368dcaa87003da2872a500ffaa281092774df
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111567"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142049"
 ---
 # <a name="deploy-to-the-cloud"></a>Implantar na nuvem
 

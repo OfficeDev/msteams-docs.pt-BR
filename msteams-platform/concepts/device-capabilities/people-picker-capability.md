@@ -1,16 +1,15 @@
 ---
 title: Integrar o Seletor de Pessoas
-description: Como usar o SDK do cliente JavaScript do Teams para integrar o controle do Seletor de Pessoas
-keywords: controle do seletor de pessoas
+description: Neste artigo, saiba como usar o SDK do cliente JavaScript Teams para integrar o controle Seletor de Pessoas e as vantagens de usar o seletor de pessoas.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757588"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130442"
 ---
 # <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
@@ -52,7 +51,7 @@ A imagem a seguir mostra a experiência do Seletor de Pessoas em dispositivos m�
 O controle de entrada do Seletor de Pessoas permite que o usuário pesquise e adicione pessoas usando as seguintes etapas:
 
 1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
-1. Selecione o nome da pessoa obrigatória na lista. 
+1. Selecione o nome da pessoa obrigatória na lista.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Selecionador do Seletor de Dispositivos Móveis" border="true":::
 
@@ -61,7 +60,7 @@ O controle de entrada do Seletor de Pessoas permite que o usuário pesquise e ad
 O controle do Seletor de Pessoas na Web ou na área de trabalho é iniciado em uma janela modal na parte superior do aplicativo Web e, para adicionar pessoas, siga as seguintes etapas:
 
 1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
-1. Selecione o nome da pessoa obrigatória na lista. 
+1. Selecione o nome da pessoa obrigatória na lista.
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Seletor de pessoas por nome de área de trabalho" border="true":::
 
@@ -106,6 +105,6 @@ A tabela a seguir lista os códigos de erro e suas descrições:
 
 ## <a name="see-also"></a>Confira também
 
-* [Integrar funcionalidades de mídia no Teams](mobile-camera-image-permissions.md)
+* [Integrar recursos de mídia](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrar a funcionalidade do código QR ou o verificador de código de barras no Teams](qr-barcode-scanner-capability.md)
 * [Integrar funcionalidades de localização no Teams](location-capability.md)

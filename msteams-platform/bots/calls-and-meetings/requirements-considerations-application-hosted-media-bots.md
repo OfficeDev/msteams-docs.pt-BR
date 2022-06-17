@@ -1,16 +1,15 @@
 ---
 title: Requisitos e considerações para bots de mídia hospedados em aplicativos
-description: Entenda os requisitos e considerações importantes e as considerações de escalabilidade e desempenho relacionadas à criação de bots de mídia hospedados em aplicativos para o Microsoft Teams usando exemplos e exemplos de código.
+description: Conheça os requisitos e considerações importantes e considerações de escalabilidade e desempenho relacionadas à criação de bots de mídia hospedados pelo aplicativo para Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: VM do Azure do Windows Server hospedada por aplicativo
 ms.date: 11/16/2018
-ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756608"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142483"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados em aplicativos
 

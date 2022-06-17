@@ -1,15 +1,14 @@
 ---
 title: Escolhendo uma configuração para testar e depurar seu aplicativo
-description: Descreve opções para testar e depurar aplicativos do Microsoft Teams no ambiente local e hospedado na nuvem.
-keywords: as equipes executam aplicativos de depuração host hospedado na nuvem local
+description: Neste módulo, conheça as opções para testar e depurar Microsoft Teams aplicativos no ambiente local e hospedado na nuvem.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757007"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143414"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Escolher uma configuração para testar e depurar seu aplicativo Microsoft Teams
 
@@ -59,10 +58,12 @@ Para usar o ngrok em seu projeto com base nos recursos que você está usando, v
 Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar se o ngrok está funcionando testando a resposta do bot na janela de chat de teste do portal do Bot Framework. Novamente, como o emulador, esse teste não permite que você acesse Teams funcionalidade específica.
 
 > [!NOTE]
+>
 > * Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 > [!WARNING]
-> * Se estiver usando o App Studio, recomendamos que tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022
+>
+> * Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
 
 ## <a name="cloud-hosted"></a>Hospedado na nuvem
 

@@ -1,16 +1,15 @@
 ---
 title: Enviar e receber arquivos de um bot
-description: Saiba como enviar e receber arquivos por meio do bot usando APIs do Graph para escopos pessoais, de canal e de chat de grupo. Use AS APIs de bot do Teams usando exemplos de código com base no SDK de Bot Framework v3.
-keywords: enviar e receber de arquivos de bots do teams
+description: Saiba como enviar e receber arquivos por meio do bot usando apIs Graph para escopos de chat pessoal, canal e grupo.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755899"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143365"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Enviar e receber arquivos por meio do seu bot
 
@@ -165,7 +164,7 @@ Da mesma forma, se o usuário recusar o arquivo, seu bot receberá o seguinte ev
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notificando o usuário sobre um arquivo carregado
 
-Depois de carregar um arquivo no OneDrive do usuário, se você usar o mecanismo descrito acima ou as APIs delegadas pelo usuário do OneDrive, deverá enviar uma mensagem de confirmação ao usuário. Esta mensagem deve conter um anexo `FileCard` no qual o usuário pode clicar para visualizar, abri-lo no OneDrive ou baixá-lo localmente.
+Depois de carregar um arquivo no OneDrive do usuário, se você usar o mecanismo descrito acima ou as APIs delegadas pelo usuário do OneDrive, deverá enviar uma mensagem de confirmação ao usuário. Essa mensagem deve conter um `FileCard` anexo no qual o usuário pode selecionar, seja para visualizar, abri-lo no OneDrive ou baixar localmente.
 
 ```json
 {

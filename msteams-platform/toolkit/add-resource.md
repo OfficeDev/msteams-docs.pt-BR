@@ -1,17 +1,17 @@
 ---
 title: Adicionar recursos a Teams aplicativos
 author: MuyangAmigo
-description: Descreve Adicionar Recursos do Kit de ferramentas do Teams
+description: Neste módulo, saiba como adicionar recursos de Teams Toolkit, vantagens, limitações e funcionalidades
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656646"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143855"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Adicionar recursos de nuvem ao aplicativo Teams
 

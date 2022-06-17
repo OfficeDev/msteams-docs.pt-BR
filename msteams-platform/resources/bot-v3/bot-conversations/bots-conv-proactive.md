@@ -1,15 +1,14 @@
 ---
 title: Mensagens proativas para bots
-description: Saiba como usar mensagens proativas para bots no Microsoft Teams
+description: Neste módulo, saiba como usar mensagens proativas para bots e práticas recomendadas para mensagens proativas no Microsoft Teams
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: bot de conversa proativa de mensagens de cenários de equipes
-ms.openlocfilehash: 12c6f9ad79d7e28f31e3985930557339e75ccbbf
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee193cd7dfcfec20f501483eabc3a485cff0caab
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111483"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143127"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensagens proativas para bots
 
@@ -17,10 +16,9 @@ ms.locfileid: "65111483"
 
 Uma mensagem proativa é uma mensagem enviada por um bot para iniciar uma conversa. Talvez você queira que seu bot inicie uma conversa por vários motivos, incluindo:
 
-* Mensagens de boas-vindas para conversas pessoais do bot
-* Respostas a votações
-* Notificações de eventos externos
-
+* Mensagens de boas-vindas para conversas pessoais de bot.
+* Respostas de sondagem.
+* Notificações de eventos externos.
 Enviar uma mensagem para iniciar um novo thread de conversa é diferente de enviar uma mensagem em resposta a uma conversa existente: quando o bot inicia uma nova conversa, não há nenhuma conversa pré-existente para postar a mensagem. Para enviar uma mensagem proativa, você precisa:
 
 1. [Decidir o que você vai dizer](#best-practices-for-proactive-messaging)
@@ -71,7 +69,7 @@ Ocasionalmente, pode ser necessário enviar mensagens proativas aos usuários qu
 
 Você só pode instalar aplicativos que estão em no catálogo de aplicativos da sua organização ou na Loja de aplicativos do Teams.
 
-Consulte [Instalar aplicativos para usuários](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) na documentação do Graph para obter detalhes completos. Também há um [exemplo em .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Consulte [Instalar aplicativos para usuários](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) na documentação do Graph para obter detalhes completos. Também há um exemplo [no .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Exemplos
 
@@ -210,4 +208,4 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 ## <a name="see-also"></a>Confira também
 
-[Exemplos do Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Amostras de estrutura de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

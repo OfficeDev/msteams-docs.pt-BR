@@ -2,7 +2,7 @@
 title: Criar seu primeiro aplicativo usando o Node.js
 metadata:
   title: Olá, Mundo com Node.js
-  description: Neste tutorial, você aprenderá a criar um aplicativo Olá, Mundo com Node.js.
+  description: Neste tutorial, você aprenderá a criar um aplicativo Olá, Mundo com o Node.js configurando um novo projeto, compilar e implantar aplicativos de guia, bot e extensão de mensagem.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Voltar à Introdução geral
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 4902a06355878f8d4bc7bbe892271f54f10c6060
-  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+  ms.openlocfilehash: 983c55c7f59d01dace8f3a192d6b56942e5994c8
+  ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/16/2022
-  ms.locfileid: "66122982"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66143778"
 items:
 - durationInMinutes: 1
   content: >

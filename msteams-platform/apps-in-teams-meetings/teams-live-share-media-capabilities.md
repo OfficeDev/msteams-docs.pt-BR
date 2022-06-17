@@ -4,12 +4,12 @@ description: Neste módulo, saiba mais sobre os recursos de mídia, suspensões 
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 420b312425f8784ad42038c58639bdc31e1a4e93
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668193"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142476"
 ---
 ---
 
@@ -121,8 +121,8 @@ document.getElementById("change-track-button").onclick = () => {
 };
 ```
 
-> [!Note]
-> Embora você possa usar o objeto `EphemeralMediaSession` para sincronizar a mídia diretamente, use o `MediaPlayerSynchronizer`, a menos que você queira um controle mais afinado da lógica de sincronização. Dependendo do player usado no seu aplicativo, talvez você queira criar um shim delegado para fazer com que a interface do seu web player corresponda à interface de mídia em HTML.
+ > [!Note]
+ > Embora você possa usar o objeto `EphemeralMediaSession` para sincronizar a mídia diretamente, use o `MediaPlayerSynchronizer`, a menos que você queira um controle mais afinado da lógica de sincronização. Dependendo do player usado no seu aplicativo, talvez você queira criar um shim delegado para fazer com que a interface do seu web player corresponda à interface de mídia em HTML.
 
 ## <a name="suspensions-and-wait-points"></a>Suspensões e pontos de espera
 
