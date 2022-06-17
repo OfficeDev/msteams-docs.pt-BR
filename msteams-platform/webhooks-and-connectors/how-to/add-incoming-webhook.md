@@ -1,17 +1,16 @@
 ---
 title: Criar um webhook de entrada
 author: laujan
-description: Adicionar um Webhook de Entrada ao aplicativo Teams e postar quaisquer solicitações externas ao Teams usando-o
-keywords: webhook de saída das guias do Teams
+description: Neste módulo, saiba como adicionar o Webhook de Entrada ao aplicativo do Teams e postar quaisquer solicitações externas para o Teams usando-o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fab709bc8a6fe35db527b911567dab0b6a20717d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123777"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142189"
 ---
 # <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
 

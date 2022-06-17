@@ -1,15 +1,15 @@
 ---
 title: Habilitar e configurar seus aplicativos para reuniões do Teams
 author: surbhigupta
-description: Habilitar e configurar seus aplicativos para reuniões do Teams e diferentes cenários de reunião, atualizar o manifesto do aplicativo, configurar recursos, como caixa de diálogo na reunião, estágio de reunião compartilhado, painel lateral de reunião e muito mais
+description: Saiba como habilitar e configurar seus aplicativos para reuniões do Teams e diferentes cenários de reuniões, atualizar o manifesto de aplicativos, configurar recursos e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111315"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142588"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para reuniões do Teams
 
@@ -37,10 +37,10 @@ As funcionalidades do aplicativo de reuniões são declaradas no manifesto do ap
 
 > [!NOTE]
 >
-> * Você deve atualizar o manifesto do aplicativo com o [esquema de manifesto](../resources/schema/manifest-schema-dev-preview.md).
 > * Os aplicativos em reuniões exigem `groupchat` escopo. O `team` escopo funciona apenas para guias em canais.
+> * Os aplicativos em reuniões podem utilizar os seguintes contextos: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`
 
-O manifesto do aplicativo deve incluir o seguinte snippet de código:
+O trecho do código a seguir é um exemplo de guia configurável utilizada em um aplicativo para reuniões do Teams:
 
 ```json
 
@@ -114,8 +114,9 @@ Para adicionar um bot a uma reunião:
 Em um chat de reunião, insira a **@** chave e selecione **Obter bots**.
 
 > [!NOTE]
+>
 > * A caixa de diálogo na reunião exibe uma caixa de diálogo em uma reunião e posta simultaneamente um Cartão Adaptável no chat de reunião que os usuários podem acessar. O Cartão Adaptável no chat de reunião ajuda os usuários durante a reunião ou se o aplicativo do Teams está minimizado.
-> * A identidade do usuário deve ser confirmada usando as [Guias do Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
+> * A identidade do usuário deve ser confirmada usando as [Guias do Tabs](../tabs/how-to/authentication/tab-sso-overview.md). Após a autenticação, o aplicativo pode recuperar a função de usuário usando a `GetParticipant` API.
 > * Com base na função de usuário, o aplicativo tem a capacidade de fornecer experiências específicas de função. Por exemplo, um aplicativo de sondagem permite que apenas organizadores e apresentadores criem uma nova votação.
 > * As atribuições de função podem ser alteradas enquanto uma reunião está em andamento. Para obter mais informações, consulte [funções em uma reunião do Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -184,6 +185,7 @@ Os participantes podem compartilhar partes específicas do aplicativo para o est
 Para compartilhar partes específicas do aplicativo para preparar, você deve invocar as APIs relacionadas na biblioteca SDK do cliente do Teams. Para obter mais informações, consulte a [referência da API](API-references.md).
 
 > [!NOTE]
+>
 > * Para compartilhar partes específicas do aplicativo para preparar, use a versão 1.12 ou posterior do manifesto do Teams.
 > * Há suporte para o compartilhamento de partes específicas do aplicativo para estágio somente dos clientes da área de trabalho do Teams.
 
