@@ -1,18 +1,17 @@
 ---
 title: Criar uma guia pessoal
 author: laujan
-description: Um guia de início rápido para criar uma guia pessoal com o Gerador Yeoman, o ASP.NET Core ou o ASP.NET Core MVC para Microsoft Teams usando Node.js e atualizar o manifesto do aplicativo.
+description: Neste módulo, saiba como criar uma guia pessoal com o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC para o Microsoft Teams usando Node.js e atualizando o manifesto do aplicativo.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: 'Pacote MVC do Yeoman ASP.NET do repositório de permissão de domínio de conversa appmanifest '
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673017"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143988"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -296,10 +295,10 @@ A seguir estão as etapas para criar uma guia pessoal:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>
@@ -449,10 +448,10 @@ A seguir estão as etapas para criar uma guia pessoal:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>

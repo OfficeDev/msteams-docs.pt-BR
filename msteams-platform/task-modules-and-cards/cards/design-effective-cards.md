@@ -1,15 +1,15 @@
 ---
 title: Projetando Cartões Adaptáveis para seu aplicativo
-description: Aprenda a projetar Cartões Adaptáveis para o Teams e obtenha o Kit de IU do Microsoft Teams.
+description: Neste módulo, saiba como criar Cartões Adaptáveis para seu aplicativo do Teams e obter o Kit de Interface do Usuário do Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103899"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142658"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -398,7 +398,7 @@ Aqui está o código para implementar o exemplo de projeto que você deve seguir
 
 # <a name="design"></a>[Design](#tab/design)
 
-Quando o tamanho de algo que você está exibindo não precisa ser alterado, defina as colunas com uma largura de pixel específica. Este exemplo mostra a coluna esquerda com tamanho de 50 pixels, enquanto as descrições ao lado das miniaturas estendem o comprimento do cartão
+Quando o tamanho de algo que você está exibindo não precisa ser alterado, defina as colunas com uma largura de pixel específica. Esse exemplo mostra a coluna esquerda dimensionada em 50 pixels, enquanto as descrições ao lado das miniaturas estendem o comprimento do cartão.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="A imagem mostra como definir a largura da coluna em Cartões Adaptáveis.":::
 

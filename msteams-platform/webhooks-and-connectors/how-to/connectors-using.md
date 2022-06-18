@@ -1,16 +1,15 @@
 ---
 title: Criar e enviar mensagens
 author: laujan
-description: Descreve como usar Conectores do Office 365 no Microsoft Teams
+description: Neste módulo, saiba como usar os Conectores do Office 365 e criar e enviar mensagens acionáveis no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: conector do Office365 para equipes
-ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104074"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143260"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 

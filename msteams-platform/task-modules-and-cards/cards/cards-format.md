@@ -1,16 +1,15 @@
 ---
 title: Formatação de texto em cartões
-description: Descreve a formatação de texto dos cartões no Microsoft Teams
-keywords: formato de cartões de bots do teams
+description: Neste módulo, saiba o que é a formatação de texto de cartão no Microsoft Teams e formatar cartões com markdown.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103948"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144205"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
