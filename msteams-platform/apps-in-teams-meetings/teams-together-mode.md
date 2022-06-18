@@ -3,12 +3,12 @@ title: Cenas personalizadas no Modo Conferência
 description: Trabalhar com cenas personalizadas do Modo Conferência
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736868"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150642"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -24,7 +24,7 @@ O processo a seguir fornece uma visão geral para criar um aplicativo somente de
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Criar aplicativo somente de cena" border="false":::
 
-Um aplicativo somente de cena ainda é um aplicativo no Microsoft Teams. O estúdio Scene lida com a criação do pacote de aplicativos em segundo plano. Várias cenas em um único pacote de aplicativos aparecem como uma lista simples para os usuários.
+Um aplicativo somente de cena ainda é um aplicativo no Teams. O estúdio Scene lida com a criação do pacote de aplicativos em segundo plano. Várias cenas em um único pacote de aplicativos aparecem como uma lista simples para os usuários.
 
 > [!NOTE]
 > Os usuários não podem iniciar o Modo Conferência no celular. No entanto, depois que um usuário ingressar em uma reunião por meio de dispositivo móvel e o Modo Conferência for ligado da área de trabalho, os usuários móveis que tenham ligado o vídeo aparecerão no Modo Conferência na área de trabalho.
@@ -34,7 +34,7 @@ Um aplicativo somente de cena ainda é um aplicativo no Microsoft Teams. O estú
 Você deve ter uma compreensão básica do seguinte para usar cenas personalizadas do Modo Conferência:
 
 * Defina cena e assentos em uma cena.
-* Tenha uma conta do Desenvolvedor Microsoft e conheça o [Portal do Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md) do Microsoft Teams e do App Studio.
+* Tenha uma conta do Desenvolvedor Microsoft e familiarize-se com o [Portal do Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md) do Teams e do App Studio.
 * Entenda o [conceito de sideload de aplicativo](../concepts/deploy-and-publish/apps-upload.md).
 * Verifique se o Administrador concedeu permissão para [**Carregar um aplicativo personalizado**](../concepts/deploy-and-publish/apps-upload.md) e selecionar todos os filtros como parte das políticas de Configuração de Aplicativo e Reunião, respectivamente.
 
@@ -50,7 +50,7 @@ Considere as seguintes práticas para uma experiência de construção de cena:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Criar uma cena usando o estúdio Scene
 
-A Microsoft tem um estúdio Scene que permite que você crie cenas. Ele está disponível no [Editor de Cenas - Portal do Desenvolvedor Teams](https://dev.teams.microsoft.com/scenes). Este documento refere-se ao estúdio Scene no Portal do Desenvolvedor do Microsoft Teams. A interface e as funcionalidades são todas iguais no Designer de Cena do App Studio.
+A Microsoft tem um estúdio Scene que permite que você crie cenas. Ele está disponível no [Editor de Cenas - Portal do Desenvolvedor Teams](https://dev.teams.microsoft.com/scenes). Este documento se refere ao estúdio Scene no Portal do Desenvolvedor do Teams. A interface e as funcionalidades são todas iguais no Designer de Cena do App Studio.
 
 Uma cena no contexto do estúdio Scene é um artefato que contém os seguintes elementos:
 
@@ -106,9 +106,9 @@ Para criar uma cena usando o estúdio Scene, siga estas etapas:
 
     ![Atribuir local](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Selecione **Salvar** e selecione **Exibir no Teams** para testar rapidamente sua cena no Microsoft Teams.
+1. Selecione **Salvar** e selecione **Exibir no Teams** para testar rapidamente sua cena no Teams.
 
-    * Selecionar **Exibir no Teams** cria automaticamente um aplicativo Microsoft Teams que pode ser exibido na página **Aplicativos** no Portal do Desenvolvedor Teams.
+    * Selecionar **Exibir no Teams** cria automaticamente um aplicativo Teams que pode ser exibido na página **Aplicativos** no Portal do Desenvolvedor do Teams.
     * Selecionar **Exibir no Teams** cria automaticamente um pacote de aplicativos que é appmanifest.json por trás da cena. Você pode acessar **Aplicativos** no menu e acessar o pacote de aplicativos criado automaticamente.
     * Para excluir uma cena criada, selecione **Excluir cena** na barra superior.
 
@@ -217,7 +217,7 @@ Para selecionar cenas e ativar cenas personalizadas do Modo Conferência, siga e
 1. Crie uma nova reunião de teste.
 
     >[!NOTE]
-    > Ao selecionar **Visualização** no estúdio Scene, a cena é instalada como um aplicativo no Microsoft Teams. Este é o modelo para um desenvolvedor testar e experimentar cenas do estúdio Scene. Depois que uma cena é enviada como um aplicativo, os usuários veem essas cenas na galeria de cena.
+    > Ao selecionar **Visualização** no estúdio Scene, a cena é instalada como um aplicativo no Teams. Este é o modelo para um desenvolvedor testar e experimentar cenas do estúdio Scene. Depois que uma cena é enviada como um aplicativo, os usuários veem essas cenas na galeria de cena.
 
 1. No menu suspenso **Galeria** no canto superior esquerdo, selecione **Modo Conferência**. A caixa de diálogo **Seletor** é exibida e a cena adicionada está disponível.
 

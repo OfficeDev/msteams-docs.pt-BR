@@ -5,12 +5,12 @@ description: Apresente os elementos de planejamento de um aplicativo, compreens�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142420"
+ms.locfileid: "66150684"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -91,7 +91,7 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 | Sideload de aplicativos | ✔️ | ❌ | ❌ |
 | Conectores personalizados | ❌ | ❌ | ❌ |
 
-****Interface do Usuário de Conformidade***: Ao habilitar as comunicações de terceiros, os clientes aceitam que tal comunicação esteja sendo processada por terceiros e não pela Microsoft. O cliente é o único responsável por mitigar os riscos associados à conexão com bots de terceiros em seus serviços. A Microsoft não endossa e não oferece garantias, expressas ou implícitas em relação à segurança de terceiros que o cliente permite que se conectem ao seu serviço. Habilitar os bots estenderá o limite do seu sistema além desse locatário com base no bot que você escolher para aproveitar. É sua responsabilidade garantir que isso atenda aos seus requisitos de conformidade, incluindo FedRAMP, DFARS, ITAR, etc. É sua responsabilidade avaliar o risco e a conformidade de qualquer ponto de extremidade e URL ao qual você se conectar.
+****Interface do Usuário de Conformidade***: Ao habilitar as comunicações de terceiros, os clientes aceitam que tal comunicação esteja sendo processada por terceiros e não pela Microsoft. O cliente é o único responsável por mitigar os riscos associados à conexão com bots de terceiros em seus serviços. A Microsoft não endossa e não oferece garantias, expressas ou implícitas, em relação à segurança de terceiros que o cliente permite que se conectem ao seu serviço. Habilitar os bots estenderá o limite do seu sistema além desse locatário com base no bot que você escolher para aproveitar. É sua responsabilidade garantir que isso atenda aos seus requisitos de conformidade, incluindo FedRAMP, DFARS, ITAR, etc. É sua responsabilidade avaliar o risco e a conformidade de qualquer ponto de extremidade e URL ao qual você se conectar.
 
 A lista a seguir ajuda a identificar a disponibilidade da GCC, GCC High e do DOD para os recursos:
 

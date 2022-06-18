@@ -3,12 +3,12 @@ title: Criar links detalhados
 description: Saiba como criar links profundos e como usá-los e navegar por eles em seus aplicativos do Microsoft Teams com guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123714"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150677"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -91,7 +91,7 @@ Como alternativa, é possível gerar links profundos programaticamente, usando o
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Consumir um link profundo de uma guia
 
-Ao navegar até um link profundo, o Microsoft Teams navega até a guia e fornece um mecanismo por meio da biblioteca JavaScript do Microsoft Teams para recuperar a ID da sub-entidade, se ela existir.
+Ao navegar até um link aprofundado, o Microsoft Teams simplesmente navega até a guia e fornece um mecanismo através da biblioteca JavaScript do Teams para recuperar a ID da sub-página, se ela existir.
 
 A [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) chamada (`microsoftTeams.getContext()`) no TeamsJS v1) retorna uma promessa que será resolvida com o contexto que inclui a propriedade `subPageId` (subEntityId para TeamsJS v1) se a guia for navegada por um link profundo. Para obter mais informações, consulte a [interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -109,7 +109,7 @@ Use o seguinte formato para um link profundo que você pode usar em um bot, cone
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Se o bot enviar uma mensagem contendo um `TextBlock` com um link profundo, uma nova guia do navegador será aberta quando o usuário selecionar o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams, ambos em execução no Linux.
+> Se o bot enviar uma mensagem contendo um `TextBlock` com um link profundo, uma nova guia do navegador será aberta quando o usuário selecionar o link. Isto acontece no Chrome e no aplicativo da área de trabalho do Teams, ambos em execução no Linux.
 > Se o bot enviar a mesma URL de link profundo para um `Action.OpenUrl`, a guia do Teams será aberta na guia atual do navegador quando o usuário selecionar o link. Uma nova aba do navegador não foi aberta.
 
 <!--- TBD: Edit this article.
@@ -446,7 +446,7 @@ Estes são os parâmetros de consulta:
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|ID de Subentidade de Consumo de Link Profundo  |Aplicativo de exemplo do Microsoft Teams para demonstrar o link profundo do chat do bot para a ID de Subentidade de consumo de guias.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|ID de Subentidade de Consumo de Link Profundo  | O aplicativo de amostra do Teams para demonstrar o link aprofundado do chat do bot para a guia que consome a ID da Subentidade.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Confira também
 
