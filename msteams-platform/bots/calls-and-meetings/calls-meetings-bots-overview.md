@@ -3,12 +3,12 @@ title: Bots de chamadas e reuniões online
 description: Neste módulo, saiba como seus aplicativos Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online e saiba mais sobre fluxos de mídia em tempo real
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bbeca082a561386d6c64d08e1d303975f9746f0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143848"
+ms.locfileid: "66150824"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -51,7 +51,7 @@ A seguir estão os diferentes tipos de chamada e permissões necessárias para a
 * Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multiparte existente. A chamada com várias partes ainda não está habilitada na interface do usuário do Teams.
 
     > [!NOTE]
-    > Atualmente, não há suporte para chamadas iniciadas pelo usuário para um bot na plataforma móvel do Microsoft Teams.
+    > Atualmente, não há suporte para chamadas iniciadas pelo usuário para um bot Teams plataforma móvel.
 
 * As permissões de grafo não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada com várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
 * Uma chamada pode começar como ponto a ponto e, eventualmente, se tornar uma chamada com várias partes. Seu bot pode iniciar chamadas com várias partes convidando outras pessoas, desde que seu bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas em grupo e se um participante adicionar outro participante à chamada, o bot será removido da chamada.

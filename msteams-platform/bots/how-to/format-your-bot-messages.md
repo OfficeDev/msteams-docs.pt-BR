@@ -5,12 +5,12 @@ description: Neste módulo, saiba como adicionar formatação avançada às mens
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143477"
+ms.locfileid: "66150782"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
@@ -36,7 +36,7 @@ Atualmente, as seguintes limitações se aplicam à formatação:
 * Os cartões avançados dão suporte à formatação somente na propriedade de texto, não nas propriedades de título ou subtítulo.
 * Os cartões avançados não dão suporte a formatação de markdown ou de tabela.
 
-Depois de formatar o conteúdo do texto, verifique se a formatação funciona em todas as plataformas compatíveis com o Microsoft Teams.
+Depois de formatar o conteúdo do texto, verifique se a formatação funciona em todas as plataformas compatíveis com Teams.
 
 ## <a name="cross-platform-support"></a>Suporte à plataforma cruzada.
 

@@ -1,15 +1,14 @@
 ---
 title: Tipos de cartões
-description: Descreve todos os cartões e ações de cartão disponíveis para bots no Teams
+description: Neste módulo, aprenda o que são os cartões e as ações de cartão disponíveis para bots no Teams e crie um destaque, uma miniatura e cartões adaptáveis
 ms.localizationpriority: high
-keywords: referência de cartões de bots
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032984"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142623"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -63,13 +62,13 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 
 | Tipo de cartão | Bots | Visualizações da extensão de mensagem | Resultados da extensão de mensagem | Módulos de tarefas | Webhooks de saída | Webhooks de entrada | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Cartão Adaptável | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Cartão do Conector do Office 365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Cartão Hero | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Cartão em miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Cartão de lista | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Cartão de recibo | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Cartão de entrada | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Cartão Adaptável | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Cartão do Conector do Office 365 | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Cartão Hero | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Cartão em miniatura | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Cartão de lista | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Cartão de recibo | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Cartão de entrada | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit`, têm suporte total. As ações com suporte [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -121,7 +120,7 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões hero:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>Propriedades de um cartão hero
 
@@ -371,7 +370,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões de lista:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>Propriedades de um cartão de lista
 
@@ -449,7 +448,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões do Conector do
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Propriedades do cartão do Conector do Office 365
 
@@ -571,7 +570,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões de recibo:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>Exemplo de um cartão de confirmação
 
@@ -645,7 +644,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões de entrada:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>Informações adicionais sobre cartões de entrada
 
@@ -664,7 +663,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões em miniatura:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Cartão de miniatura":::
 
@@ -747,7 +746,7 @@ A tabela a seguir fornece os recursos que dão suporte a coleções de carrossel
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > Um carrossel pode exibir no máximo dez cartões por mensagem.
@@ -941,7 +940,7 @@ A tabela a seguir fornece os recursos que dão suporte a coleções de listas:
 
 | Bots no Teams | Extensões de mensagens  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>Exemplo de uma coleção de listas
 

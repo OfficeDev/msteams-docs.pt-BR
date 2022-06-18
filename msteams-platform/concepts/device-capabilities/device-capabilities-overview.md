@@ -5,18 +5,18 @@ description: Saiba como integrar recursos de dispositivo nativos, como câmera, 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130427"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150670"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 A plataforma Microsoft Teams está aprimorando continuamente os recursos do desenvolvedor, alinhando-se com experiências internas. A plataforma aprimorada do Teams permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e localização com seus aplicativos Web. Essa integração reduz a barreira para o desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
 
-As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipula como conceder permissões de acesso e agora essas permissões são tratadas no Microsoft Teams. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
+As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipulava como conceder permissões de acesso e agora essas permissões são tratadas Teams. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Funcionalidades nativas do dispositivo
 
@@ -50,4 +50,4 @@ Além disso, você pode integrar o controle [seletor de pessoas](people-picker-c
 
 | Nome de exemplo           | Descrição | Node.js    |
 |:---------------------|:--------------|:---------|
-|Permissões de dispositivos | Descreve como demonstrar um aplicativo de exemplo Microsoft Teams guia para permissões de dispositivo. |[Exibir](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Permissões de dispositivos | Descreve como demonstrar um aplicativo de exemplo Teams guia para permissões de dispositivo. |[Exibir](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

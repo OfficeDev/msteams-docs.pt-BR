@@ -3,12 +3,12 @@ title: Compartilhar no Teams a partir de aplicativos Web
 description: Saiba como adicionar o botão Compartilhar no Teams incorporado em seu site, com uma visualização de site, usando Exemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: d08086d01132d86605137bb6b622821239695c84
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123458"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150831"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartilhar no Teams a partir de aplicativos Web
 
@@ -51,7 +51,7 @@ Este artigo orienta você sobre como criar e inserir um botão Compartilhar Team
     </div>
     ```
 
-    Depois de concluir essas etapas, o ícone do Microsoft Teams é adicionado ao seu site. A imagem a seguir mostra o ícone Compartilhar no Teams:
+    Depois de concluir isso, o Teams ícone é adicionado ao seu site. A imagem a seguir mostra o ícone Compartilhar no Teams:
 
     :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Ícone Compartilhar no Teams" border="true":::
 

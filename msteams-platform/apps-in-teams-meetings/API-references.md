@@ -5,12 +5,12 @@ description: Saiba como identificar as referências de API de aplicativos de reu
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142945"
+ms.locfileid: "66150656"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -27,7 +27,7 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs do Microsoft T
 
 |Método| Descrição| Source|
 |---|---|----|
-|[**Get contexto do usuário**](#get-user-context-api)| Obtenha informações contextuais para exibir conteúdo relevante em uma guia do Teams.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Get contexto do usuário**](#get-user-context-api)| Obtenha informações contextuais para exibir conteúdo relevante em uma Microsoft Teams guia.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Obter participante**](#get-participant-api)| Buscar informações do participante por ID de reunião e ID do participante. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Enviar notificação na reunião**](#send-an-in-meeting-notification)| Forneça sinais de reunião usando a API de notificação de conversa existente para chat de bot de usuário e permite notificar a ação do usuário que mostra uma notificação na reunião. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Obter metadados estáticos de uma reunião. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -427,11 +427,11 @@ No caso de tipo de reunião recorrente,
 
 ## <a name="send-real-time-captions-api"></a>API de envio de legendas em tempo real
 
-A API de envio de legendas em tempo real expõe um ponto de extremidade POST para legendas de tradução em tempo real (CART) de acesso de comunicação do Microsoft Teams, legendas fechadas de tipo humano. O conteúdo de texto enviado para esse ponto de extremidade aparece para os usuários finais em uma reunião do Microsoft Teams quando eles têm legendas habilitadas.
+A API de envio de legendas em tempo real expõe um ponto de extremidade Teams POST para legendas DE CART (conversão em tempo real) de acesso de comunicação, legendas ocultas com tipo humano. O conteúdo de texto enviado para esse ponto de extremidade aparece para os usuários finais em uma reunião Teams quando eles têm legendas habilitadas.
 
 ### <a name="cart-url"></a>URL DO CART
 
-Você pode obter a URL do CART para o ponto de extremidade POST na página **opções de Reunião** em uma reunião do Microsoft Teams. Para obter mais informações, consulte [legendas CART em uma reunião do Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL do CART para usar legendas CART.
+Você pode obter a URL do CART para o ponto de extremidade POST na página **de** opções de Reunião em uma Teams reunião. Para obter mais informações, consulte [legendas CART em uma reunião do Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL do CART para usar legendas CART.
 
 #### <a name="query-parameter"></a>Parâmetro de Consulta
 
@@ -841,10 +841,10 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 
 |Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilidade de reuniões | Exemplo de extensibilidade de reunião do Microsoft Teams para passar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bolha de conteúdo de reunião | Exemplo de extensibilidade de reunião do Microsoft Teams para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel de reunião | Exemplo de extensibilidade de reunião do Microsoft Teams para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Guia Detalhes na Reunião | Exemplo de extensibilidade de reunião do Microsoft Teams para interagir com a guia Detalhes na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Extensibilidade de reuniões | Teams exemplo de extensibilidade de reunião para passar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bot de bolha de conteúdo de reunião | Teams exemplo de extensibilidade de reunião para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| MeetingSidePanel de reunião | Teams exemplo de extensibilidade de reunião para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Guia Detalhes na Reunião | Teams exemplo de extensibilidade de reunião para interagir com a guia Detalhes na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Exemplo de eventos de reunião|Aplicativo de exemplo para mostrar eventos de reunião do Teams em tempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Exemplo de convite de reunião|Aplicativo de exemplo para mostrar a experiência de reunião para cenário de recrutamento.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Instalação de aplicativo usando código QR|Aplicativo de exemplo que gera o código QR e instala o aplicativo usando o código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|

@@ -4,12 +4,12 @@ keywords: permissões de funcionalidades de aplicativos do teams
 description: Traga de volta, de forma segura, o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756741"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150810"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 
@@ -29,7 +29,7 @@ Depois que a opção **Permissões do aplicativo** for selecionada, um pop-up se
 Um usuário precisará habilitar essas permissões no navegador para que essas permissões entrem em vigor. Depois que o usuário alterar as permissões do dispositivo do aplicativo no navegador, ele será solicitado a recarregar o aplicativo no Teams.
 
 > [!IMPORTANT]
-> Você deve tornar os usuários cientes de onde ir para habilitar essas **Permissões de aplicativo** no Microsoft Teams.
+> Você deve tornar os usuários cientes de onde ir para habilitar essas **permissões de aplicativo** Teams.
 
 ## <a name="recommendation"></a>Recomendação
 
@@ -46,7 +46,7 @@ Teams aplicativo que exige permissões de dispositivo no navegador deve mostrar 
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
-Siga o [guia passo a passo](../../sbs-tab-device-permissions.yml) para conceder permissão de guia de dispositivo no Microsoft Teams.
+Siga o [guia passo a passo para](../../sbs-tab-device-permissions.yml) conceder permissão de dispositivo guia Teams.
 
 ## <a name="see-also"></a>Confira também
 

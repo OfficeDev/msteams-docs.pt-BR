@@ -4,12 +4,12 @@ description: Neste módulo, saiba o que é o SDK do Microsoft Live Share e seus 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759652"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142497"
 ---
 ---
 
@@ -33,12 +33,12 @@ Criar aplicativos colaborativos pode ser difícil, demorado, caro e inclui requi
 
 Aqui estão alguns dos principais benefícios do SDK do Live Share:
 
-* Gerenciamento e segurança de sessão sem complicações
-* Estruturas de dados distribuídos com e sem estado
-* Extensões de mídia para sincronizar facilmente vídeo e áudio
-* Respeitar os privilégios de reunião usando a verificação de função
-* Serviço gratuito e totalmente gerenciado com baixa latência
-* Atenuação automática de áudio inteligente
+* Gerenciamento e segurança de sessão sem complicações.
+* Estruturas de dados distribuídos com e sem estado.
+* Extensões de mídia para sincronizar facilmente vídeo e áudio.
+* Respeitar os privilégios de reunião usando a verificação de função.
+* Serviço gratuito e totalmente gerenciado com baixa latência.
+* Atenuação automática de áudio inteligente.
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 

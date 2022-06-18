@@ -4,12 +4,12 @@ description: Conheça os requisitos e considerações importantes e consideraç�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142483"
+ms.locfileid: "66150783"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos e considerações para bots de mídia hospedados em aplicativos
 
@@ -39,7 +39,7 @@ A próxima seção fornece detalhes sobre onde as chamadas de mídia em tempo re
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>As chamadas de mídia em tempo real permanecem onde são criadas
 
-As chamadas de mídia em tempo real permanecem no computador em que foram criadas. Uma chamada de mídia em tempo real é fixada na instância de máquina virtual (VM) que aceitou ou iniciou a chamada. A mídia de uma chamada ou reunião do Microsoft Teams flui para essa instância de VM e a mídia que o bot envia de volta para o Microsoft Teams também deve ser originada dessa VM. Se houver chamadas de mídia em tempo real em andamento quando a VM for interrompida, essas chamadas serão encerradas abruptamente. Se o bot tiver conhecimento prévio do desligamento pendente da VM, ele poderá encerrar as chamadas.
+As chamadas de mídia em tempo real permanecem no computador em que foram criadas. Uma chamada de mídia em tempo real é fixada na instância de máquina virtual (VM) que aceitou ou iniciou a chamada. A mídia de uma Teams ou fluxos de reunião para essa instância de VM, e a mídia que o bot envia de volta para Teams também deve se originar dessa VM. Se houver chamadas de mídia em tempo real em andamento quando a VM for interrompida, essas chamadas serão encerradas abruptamente. Se o bot tiver conhecimento prévio do desligamento pendente da VM, ele poderá encerrar as chamadas.
 
 A próxima seção fornece detalhes sobre acessibilidade de bots de mídia hospedados em aplicativos.
 
@@ -73,7 +73,7 @@ Os exemplos de bots de mídia hospedados pelo aplicativo são os seguintes:
 | **Nome de exemplo** | **Descrição** | **Graph** |
 |------------|-------------|-----------|
 | Amostra de mídia local | Exemplo que ilustra diferentes cenários de mídia local. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Exemplo de mídia remota | Exemplo que ilustra diferentes cenários de mídia remota. | [Exibir](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Exemplo de mídia remota | Exemplo que ilustra diferentes cenários de mídia remota. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="next-step"></a>Próxima etapa
 

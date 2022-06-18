@@ -1,15 +1,15 @@
 ---
 title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Teams
 keywords: 'recursos de aplicativos do teams permissões de dispositivo escanear qt código de barra nativo imagem áudio vídeo '
-description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que geralmente exigem o consentimento do usuário, como escanear qr, código de barras, imagem, áudio, recursos de vídeo
+description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que exigem consentimento do usuário, como recursos de QR de verificação, código de barras, imagem, áudio e vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c346eaf880fd6a0a3847441f674fcfa72f2c5ed7
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130470"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150817"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Solicitar permissões de dispositivo para seu Teams aplicativo
 
@@ -19,7 +19,7 @@ Você pode enriquecer seu aplicativo Teams com recursos nativos do dispositivo, 
 >
 > * Para integrar recursos de mídia em seu Microsoft Teams web, área de trabalho e dispositivos móveis, consulte [Integrar recursos de mídia](media-capabilities.md).
 > * Para integrar a funcionalidade de leitor de código de barras ou QR em seu aplicativo móvel do Microsoft Teams, consulte [Integrar funcionalidade de leitor QR ou de código de barras no Teams](qr-barcode-scanner-capability.md).
-> * Para integrar funcionalidades de localização Microsoft Teams cliente Web, área de trabalho e dispositivos móveis, consulte [Integrar funcionalidades de localização](location-capability.md).
+> * Para integrar as funcionalidades de localização Teams cliente Web, área de trabalho e dispositivos móveis, consulte [Integrar recursos de localização](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Permissões de dispositivo nativo
 
@@ -36,7 +36,7 @@ Ao acessar os recursos do dispositivo, você pode criar experiências mais avan�
 >
 > * Atualmente, o Teams não dá suporte a permissões de dispositivo para aplicativos de várias janelas, guias e o painel lateral da reunião.
 > * As permissões do dispositivo são diferentes no navegador. Para saber mais, consulte [permissões de dispositivo do navegador](browser-device-permissions.md).
-> * Atualmente, o Microsoft Teams para o recurso de scanner de código de barras QR só está disponível para clientes móveis.
+> * Atualmente, o Teams suporte para a funcionalidade de scanner de código de barras QR só está disponível para clientes móveis.
 
 ## <a name="access-device-permissions"></a>Acesse Permissões de acesso
 

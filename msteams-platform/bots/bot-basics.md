@@ -5,18 +5,18 @@ description: Neste artigo, saiba mais sobre manipuladores de atividade do bot, e
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143834"
+ms.locfileid: "66150859"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
 Este documento se baseia no artigo sobre [como os bots funcionam](https://aka.ms/how-bots-work) na principal [Documentação Bot Framework](https://aka.ms/azure-bot-service-docs). A principal diferença entre os bots desenvolvidos para o Microsoft Teams e o Bot Framework principal está nos recursos fornecidos no Teams.
 
-Para organizar a lógica de conversação do seu bot, é usado um manipulador de atividades. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O manipulador de atividades do Teams adiciona suporte para interações e eventos específicos do Microsoft Teams. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
+Para organizar a lógica de conversação do seu bot, é usado um manipulador de atividades. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O Teams de atividades adiciona suporte Teams eventos e interações específicos. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
 
 ## <a name="teams-activity-handlers"></a>Manipuladores de atividades do Teams
 
