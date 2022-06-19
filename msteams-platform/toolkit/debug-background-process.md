@@ -1,17 +1,17 @@
 ---
 title: Depurar processos em segundo plano
 author: zyxiaoyuer
-description: Função do Visual Studio Code e do Kit de Ferramentas do Teams durante a depuração local
+description: Neste módulo, aprenda a função do código do Visual Studio e do Kit de ferramentas do Teams durante a depuração local e registre e configure seu aplicativo do Teams
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938923"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143582"
 ---
 # <a name="debug-background-processes"></a>Depurar processos em segundo plano
 
@@ -51,8 +51,8 @@ O Kit de Ferramentas do Teams verifica os seguintes pré-requisitos durante o pr
 
   | Plataforma  | Software|
   | --- | --- |
-  |Windows, macOs (x64) e Linux | **3.1 (recomendado)**, 5.0, 6.0 |
-  |macOs (arm64) |6.0 |
+  |Windows, macOS (x64) e Linux | **3.1 (recomendado)**, 5.0, 6.0 |
+  |macOS (arm64) |6.0 |
 
 * Certificado de desenvolvimento, se o certificado de desenvolvimento para localhost não estiver instalado para a guia no Windows ou MacOS, o Kit de Ferramentas do Teams solicitará que você o instale.
 * Extensões de associação do Azure Functions definidas em `api/extensions.csproj`, se as extensões de associação do Azure Functions não estiverem instaladas, o Kit de Ferramentas do Teams instalará as extensões de associação do Azure Functions.

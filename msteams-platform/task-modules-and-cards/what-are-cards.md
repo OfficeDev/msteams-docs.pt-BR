@@ -1,15 +1,14 @@
 ---
 title: Cartões
-description: Descreve os cartões e como eles são usados em bots, conectores e extensões de mensagem
+description: Neste módulo, saiba o que são cartões e como eles são usados ​​em bots, conectores e extensões de mensagem
 ms.localizationpriority: high
-keywords: conectores de mensagens de cartões de bots
 ms.topic: overview
-ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9ee24e4d66597cca4d614e21fde070ea65aa1825
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756475"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144135"
 ---
 # <a name="cards"></a>Cartões
 

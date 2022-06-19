@@ -1,17 +1,16 @@
 ---
 title: Criar guias de cartão adaptável
 author: KirtiPereira
-description: Saiba mais sobre como criar guias usando Cartões Adaptáveis exemplos de código, incluindo atividades de invocação, compreensão do fluxo de trabalho do módulo de tarefas e autenticação.
+description: Neste módulo, saiba mais sobre como criar guias usando Cartões Adaptáveis ​​com exemplos de Código, incluindo atividades de invocação, compreensão do fluxo de trabalho do módulo de tarefas e autenticação.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: fluxo de dados de autenticação de aplicativo pessoal de cartão adaptável
-ms.openlocfilehash: 3c919cb6185481306985adfe9402ba0c31aac584
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110285"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143995"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -430,7 +429,7 @@ O código a seguir mostra um exemplo de solicitação reemitida:
 
 |**Nome de exemplo** | **Descrição** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar Cartões Adaptáveis na guia Teams | Código de exemplo de guia do Microsoft Teams, que demonstra como mostrar Cartões Adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar Cartões Adaptáveis na guia Teams | Código de exemplo de guia do Microsoft Teams, que demonstra como mostrar Cartões Adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 
