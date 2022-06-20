@@ -4,12 +4,12 @@ description: Neste módulo, saiba como configurar, distribuir e gerenciar seus a
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142364"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164238"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Gerenciar seus aplicativos Teams usando o Portal do Desenvolvedor
 
@@ -21,6 +21,31 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 >
 > * Atualmente, Portal do Desenvolvedor está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou DOD (Departamento de Defesa).
 > * No entanto, você pode usar um locatário regular para criar um aplicativo no Portal do Desenvolvedor, baixar o aplicativo e carregar o aplicativo usando [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) para uma nuvem nacional. Para obter mais informações, consulte [Implantações de nuvem nacional](/graph/deployments).
+
+> [!IMPORTANT]
+> Se você estiver migrando do App Studio para o Portal do Desenvolvedor, a tabela a seguir fornecerá as informações detalhadas dos recursos com suporte no Portal do Desenvolvedor:
+
+| Recursos | App Studio | Portal do Desenvolvedor |
+| --- | --- | --- |
+| Análise de aplicativo* | ❌ | ✔️ |
+| Funcionalidades do aplicativo – Bots | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Conectores | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Extensão de mensagens | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Extensão de reunião | ❌ | ✔️ |
+| Funcionalidades do aplicativo – Aplicativos pessoais | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Guias | ✔️ | ✔️ |
+| Ambientes de aplicativo | ❌ | ✔️ |
+| Idiomas do aplicativo | ✔️ | ✔️ |
+| Visualização e download do manifesto do aplicativo | ✔️ | ✔️ |
+| Planos de aplicativo e preços | ❌ | ✔️ |
+| Publicação de aplicativos | ✔️ | ✔️ |
+| Permissões de aplicativos | ❌ | ✔️ |
+| Compartilhamento de aplicativos com co-desenvolvedores | ❌ | ✔️ |
+| Validação de aplicativo | ✔️ | ✔️ |
+| Criar um novo aplicativo | ✔️ | ✔️ |
+| Inserir um pacote zip | ✔️ | ✔️ |
+
+\**A análise de aplicativos estará disponível para GA em breve.*
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 
@@ -161,7 +186,7 @@ A **tabela do painel** Meu Aplicativo mostra os dados mais recentes do R30 (30 d
 
 Você pode selecionar cada um desses nomes **de métrica** para ver tendências ao longo do tempo.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="App":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="aplicativo":::
 
 ## <a name="use-tools-to-create-app-features"></a>Usar ferramentas para criar recursos de aplicativo
 

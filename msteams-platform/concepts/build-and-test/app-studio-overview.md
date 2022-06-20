@@ -3,12 +3,12 @@ title: Introdução ao App Studio para Microsoft Teams
 description: Neste artigo, você aprenderá a criar e gerenciar seus aplicativos com o App Studio para Microsoft Teams e instalar o App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150698"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164248"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gerenciar seus aplicativos com o App Studio para Microsoft Teams
 
@@ -30,15 +30,15 @@ O App Studio é um Teams aplicativo, que pode ser encontrado na Teams armazename
 
 Na loja, procure pelo App Studio.
 
-![Entrada da loja para o app studio](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="Entrada da loja para o app studio":::
 
 Selecione o bloco App Studio para abrir a página de instalação do aplicativo:
 
-![Configurar o app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="Configurar o app studio":::
 
 Selecione **Instalar**.
 
-![app Studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="app Studio":::
 
 Quando estiver no App Studio, selecione na guia **Editor** de manifesto, na qual você pode importar um aplicativo existente ou criar um novo aplicativo.
 
@@ -148,6 +148,32 @@ Os controles incluem:
 * Guias
 * Tabelas
 * Ícones
+
+## <a name="app-studio-to-developer-portal"></a>App Studio para Portal do Desenvolvedor
+
+O App Studio será preterido, você pode usar o Portal do Desenvolvedor. A tabela a seguir fornece as informações detalhadas dos recursos com suporte no Portal do Desenvolvedor:
+
+| Recursos | App Studio | Portal do Desenvolvedor |
+| --- | --- | --- |
+| Análise de aplicativo* | ❌ | ✔️ |
+| Funcionalidades do aplicativo – Bots | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Conectores | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Extensão de mensagens | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Extensão de reunião | ❌ | ✔️ |
+| Funcionalidades do aplicativo – Aplicativos pessoais | ✔️ | ✔️ |
+| Funcionalidades do aplicativo – Guias | ✔️ | ✔️ |
+| Ambientes de aplicativo | ❌ | ✔️ |
+| Idiomas do aplicativo | ✔️ | ✔️ |
+| Visualização e download do manifesto do aplicativo | ✔️ | ✔️ |
+| Planos de aplicativo e preços | ❌ | ✔️ |
+| Publicação de aplicativos | ✔️ | ✔️ |
+| Permissões de aplicativos | ❌ | ✔️ |
+| Compartilhamento de aplicativos com co-desenvolvedores | ❌ | ✔️ |
+| Validação de aplicativo | ✔️ | ✔️ |
+| Criar um novo aplicativo | ✔️ | ✔️ |
+| Inserir um pacote zip | ✔️ | ✔️ |
+
+\**A análise de aplicativos estará disponível para GA em breve.*
 
 ## <a name="see-also"></a>Confira também
 
