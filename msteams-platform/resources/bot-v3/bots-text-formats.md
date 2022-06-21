@@ -4,12 +4,12 @@ description: Neste módulo, aprenda o suporte à formatação de texto em conver
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: 2bec542b678f371e20317d1ea7d11b4e97f52338
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0aea1472a323c0161567c4661c02956568cb2187
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142329"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189731"
 ---
 # <a name="formatting-bot-messages"></a>Formatar mensagens de bot
 
@@ -27,7 +27,7 @@ O Microsoft Teams dá suporte às seguintes opções de formatação:
 
 ## <a name="formatting-text-content"></a>Formatando conteúdo de texto
 
-Microsoft Teams dá suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
+Teams dá suporte a um subconjunto de marcas de formatação Markdown e XML (HTML).
 
 Atualmente, as seguintes limitações se aplicam:
 * As mensagens somente texto não dão suporte à formatação da tabela.
@@ -36,7 +36,7 @@ Para obter informações sobre formatação em cartões, [consulte Teams Referê
 
 ### <a name="cross-platform-support"></a>Suporte à plataforma cruzada.
 
-Para garantir que sua formatação funcione em todas as plataformas compatíveis com o Microsoft Teams, lembre-se de que alguns estilos não têm suporte atualmente em todas as plataformas.
+Para garantir que sua formatação funcione em todas as plataformas compatíveis com o Teams, lembre-se de que alguns estilos atualmente não têm suporte em todas as plataformas.
 
 | Style                     | Mensagens somente texto | Cartões (somente XML) |
 |---------------------------|--------------------|------------------|

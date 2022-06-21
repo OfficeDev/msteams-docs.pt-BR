@@ -4,12 +4,12 @@ description: Neste artigo, você aprenderá a usar guias e bots juntos, construi
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: f8199b65fded8c43af45cb303a400652e5516db2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47a8ba3081fa629c650dfdf588e4b0c60600561e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142091"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189739"
 ---
 # <a name="combine-bots-with-tabs"></a>Combinar bots com guias
 
@@ -28,9 +28,9 @@ Esse fluxo funcionará melhor se o provedor de identidade implementar o protocol
 
 ## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Construindo links profundos para guias em mensagens do bot
 
-Você deseja usar guias para mostrar mais conteúdo do que pode caber dentro de um cartão ou fornecer uma maneira de concluir tarefas complexas de preenchimento de formulário usando a tela da guia. Por exemplo, considere navegar até a guia do usuário quando ele clicar no cartão do bot. Para que isso aconteça, você precisará codificar a mensagem do bot para incluir uma URL de [link](~/concepts/build-and-test/deep-links.md) profundo, seja por meio da marcação ou como o destino da ação openUrl.
+Você deseja usar guias para mostrar mais conteúdo que possa caber dentro de um cartão ou fornecer uma maneira de concluir tarefas complexas de preenchimento de formulário usando a tela da guia. Por exemplo, considere navegar pelo usuário até a guia quando o usuário selecionar o cartão do bot. Para que isso aconteça, você precisará codificar a mensagem do bot para incluir uma URL de [link](~/concepts/build-and-test/deep-links.md) profundo, seja por meio da marcação ou como o destino da ação openUrl.
 
-Os links profundos dependem de uma entityId, que é um valor opaco que mapeia para uma entidade exclusiva em seu sistema. Quando a guia é criada, o ideal é armazenar algum estado simples. Por exemplo, sinalizador no back-end indicando que a guia foi criada no canal. Quando o bot constrói uma mensagem, ele pode direcionar a entityId associada a essa guia.
+Os links profundos dependem de uma entityId, que é um valor opaco que mapeia para uma entidade exclusiva em seu sistema. Quando a guia é criada, você armazena algum estado simples. Por exemplo, sinalizador no back-end indicando que a guia é criada no canal. Quando o bot constrói uma mensagem, ele pode direcionar a entityId associada a essa guia.
 
 > [!NOTE]
 > em chats pessoais, como as guias são "estáticas" e instaladas com o aplicativo, você sempre pode assumir sua existência e, portanto, construir links profundos adequadamente.

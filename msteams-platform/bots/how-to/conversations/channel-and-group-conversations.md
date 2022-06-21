@@ -5,12 +5,12 @@ description: Saiba como enviar, receber e manipular mensagens para um bot em um 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144408"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190265"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
@@ -26,6 +26,12 @@ Os bots em um grupo ou canal só recebem mensagens quando são mencionados @botn
 > Usando o RSC (consentimento específico do recurso), os bots podem receber todas as mensagens de canal em equipes onde ele está instalado sem ser @mencionado. Para obter mais informações, confira [receber todas as mensagens de canal com o RSC](channel-messages-with-rsc.md).
 >
 > No momento, não há suporte para postar uma mensagem ou um cartão adaptável em um canal privado.
+
+Confira o vídeo a seguir para saber mais sobre conversas de chat em grupo e canal com um bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 

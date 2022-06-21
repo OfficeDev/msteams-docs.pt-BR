@@ -5,12 +5,12 @@ description: Neste módulo, saiba como adicionar o Webhook de Entrada ao aplicat
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142189"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189903"
 ---
 # <a name="create-an-incoming-webhook"></a>Criar um webhook de entrada
 
@@ -19,6 +19,10 @@ Um Webhook de Entrada permite que aplicativos externos compartilhem conteúdos n
 * Bots
 * Extensões de mensagens
 * Conectores
+
+Veja o vídeo a seguir para saber como criar um Webhooks de entrada:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Principais recursos de um Webhook de Entrada
 

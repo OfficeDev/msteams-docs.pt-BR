@@ -5,12 +5,12 @@ description: Saiba como identificar as referências de API de aplicativos de reu
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150656"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189439"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -267,7 +267,7 @@ Para usar a API de Detalhes da Reunião, você deve obter uma permissão RSC dif
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.12</b></summary>
+<summary><b>Para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
 
 Use o exemplo a seguir para configurar as propriedades `webApplicationInfo` e `authorization` para qualquer reunião privada:
 
@@ -315,7 +315,7 @@ Use o exemplo a seguir para configurar as propriedades `webApplicationInfo` e `a
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.11 ou anterior</b></summary>
+<summary><b>Para o manifesto do aplicativo versão 1.11 e anterior</b></summary>
 
 Use o exemplo a seguir para configurar a propriedade `webApplicationInfo` do manifesto do aplicativo para qualquer reunião privada:
 
@@ -631,7 +631,7 @@ O manifesto do aplicativo deve ter a propriedade `webApplicationInfo` para receb
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.12</b></summary>
+<summary><b>Para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -658,7 +658,7 @@ O manifesto do aplicativo deve ter a propriedade `webApplicationInfo` para receb
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.11 ou anterior</b></summary>
+<summary><b>Para o manifesto do aplicativo versão 1.11 e anterior</b></summary>
 
 ```json
 "webApplicationInfo": {

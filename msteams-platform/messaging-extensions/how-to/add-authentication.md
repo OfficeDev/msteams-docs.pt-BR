@@ -1,16 +1,16 @@
 ---
 title: Adicionar autenticação à sua extensão de mensagens
 author: surbhigupta
-description: Neste módulo, saiba como adicionar autenticação a uma extensão de mensagens usando exemplos de código e exemplos
+description: Neste artigo, você aprenderá a adicionar autenticação a uma extensão de mensagens usando exemplos de código e exemplos
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143540"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190271"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
@@ -41,11 +41,11 @@ Se o serviço exigir autenticação de usuário, os usuários deverão entrar an
 1. Depois que o usuário entrar, você deverá fechar a janela e enviar um **código de autenticação** para o cliente do Teams.
 1. Em seguida, o cliente do Teams emiti novamente a consulta ao seu serviço, que inclui o código de autenticação passado na Etapa 5.
 
-O serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5. Isso garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
+Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde à etapa 5. As etapas garantem que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. O fluxo efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responda com uma ação de entrada
 
-Para solicitar que um usuário não autenticado entre, responda com uma ação sugerida do tipo `openUrl` que inclui a URL de autenticação.
+Para solicitar um usuário não autenticado, para entrar, responda com uma ação sugerida do tipo que inclui a `openUrl` URL de autenticação.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemplo de resposta para uma ação de entrada
 

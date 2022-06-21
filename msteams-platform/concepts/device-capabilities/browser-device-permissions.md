@@ -1,15 +1,14 @@
 ---
 title: Permissões do dispositivo para o navegador
-keywords: permissões de funcionalidades de aplicativos do teams
-description: Traga de volta, de forma segura, o suporte a permissões de dispositivo para aplicativos em nosso cliente Web
+description: Saiba como trazer permissões de dispositivo de volta com segurança, como acesso à câmera ou microfone para aplicativos no cliente Web.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 72c185257097ec739380bc2cc8390320beb24134
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150810"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190171"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 

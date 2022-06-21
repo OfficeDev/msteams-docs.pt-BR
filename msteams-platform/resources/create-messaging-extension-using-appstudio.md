@@ -5,12 +5,12 @@ description: Saiba como criar uma extensão Microsoft Teams de mensagens usando 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142336"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190026"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Criar uma extensão de mensagem usando o App Studio
 
@@ -23,7 +23,7 @@ Em um alto nível, você precisará concluir as etapas a seguir para criar uma e
 2. Crie e implante seu serviço Web (durante o desenvolvimento, use um serviço de túnel como o ngrok para ser executado localmente).
 3. Registre seu serviço Web com o Bot Framework.
 4. Crie o pacote do aplicativo.
-5. Carregar seu pacote do aplicativo para o Microsoft Teams.
+5. Upload seu pacote para Teams.
 
 Criar seu serviço Web, criar seu pacote de aplicativos e registrar seu serviço Web com o Bot Framework pode ser feito em qualquer ordem. Como essas três peças estão tão entrelaçadas, não importa em qual ordem você as faça, você precisará retornar para atualizar as outras. Seu registro precisa do ponto de extremidade de mensagens do serviço Web implantado e seu serviço Web precisa da ID e da senha criadas com base no registro. O manifesto do aplicativo também precisa dessa ID para se conectar Teams seu serviço Web.
 
@@ -56,7 +56,7 @@ Você pode usar o aplicativo Studio para ajudá-lo a criar seu manifesto de apli
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>Criar o manifesto do aplicativo usando o App Studio
 
-Você pode usar o aplicativo do App Studio de dentro do Microsoft Teams cliente para ajudar a criar o manifesto do aplicativo.
+Você pode usar o aplicativo App Studio de dentro do Teams cliente para ajudar a criar o manifesto do aplicativo.
 
 1. No cliente do Teams, abra o aplicativo Studio no menu de estouro **...** no trilho de navegação à esquerda. Se ele ainda não estiver instalado, você poderá fazer isso pesquisando-o.
 2. Na guia **Editor** de manifesto, selecione Criar um novo **aplicativo (ou** se você estiver adicionando uma extensão de mensagens a um aplicativo existente, você pode importar o pacote do aplicativo)
@@ -71,7 +71,7 @@ Na guia **Concluir =>** teste e distribuição, você pode baixar o pacote  do a
 
 ### <a name="create-your-app-manifest-manually"></a>Criar o manifesto do aplicativo manualmente
 
-Assim como com bots e guias, você atualiza [o manifesto do](~/resources/schema/manifest-schema.md#composeextensions) aplicativo do aplicativo para incluir as propriedades da extensão de mensagens. Essas propriedades regem como sua extensão de mensagens aparece e se comporta no Microsoft Teams cliente. Há suporte para extensões de mensagens a partir da v1.0 do manifesto.
+Assim como com bots e guias, você atualiza [o manifesto do](~/resources/schema/manifest-schema.md#composeextensions) aplicativo do aplicativo para incluir as propriedades da extensão de mensagens. Essas propriedades regem como sua extensão de mensagens aparece e se comporta no Teams cliente. Há suporte para extensões de mensagens a partir da v1.0 do manifesto.
 
 #### <a name="declare-your-messaging-extension"></a>Declarar sua extensão de mensagens
 

@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre os comandos de pesquisa de extensã
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142805"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189615"
 ---
 # <a name="define-message-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagem
 
@@ -20,6 +20,12 @@ Os comandos de pesquisa de extensão de mensagem permitem que os usuários pesqu
 
 > [!NOTE]
 > O limite de tamanho do cartão de resultado é de 28 KB. O cartão não será enviado se seu tamanho exceder 28 KB.
+
+Confira o vídeo a seguir para saber como definir comandos de pesquisa de extensão de mensagem:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
 
 ## <a name="select-search-command-invoke-locations"></a>Selecionar locais de invocação de comando de pesquisa
 

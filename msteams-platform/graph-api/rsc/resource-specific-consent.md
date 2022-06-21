@@ -1,16 +1,16 @@
 ---
 title: Habilitar o consentimento específico do recurso no Teams
-description: Neste módulo, aprenda o consentimento específico do recurso Microsoft Teams e como tirar proveito dele.
+description: Neste artigo, você aprenderá o consentimento específico do recurso Microsoft Teams e como tirar proveito dele.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144352"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189913"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 

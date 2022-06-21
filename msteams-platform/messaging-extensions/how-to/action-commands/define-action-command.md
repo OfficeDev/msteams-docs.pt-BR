@@ -5,12 +5,12 @@ description: Neste módulo, saiba como definir comandos de ação de extensão d
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143428"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189620"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -23,6 +23,12 @@ Antes de criar o comando de ação, você deve decidir os seguintes fatores:
 1. [De onde o comando de ação pode ser disparado?](#select-action-command-invoke-locations)
 1. [Como o módulo de tarefa será criado?](#select-how-to-create-your-task-module)
 1. [A mensagem final ou o cartão será enviado para o canal de um bot ou a mensagem ou o cartão será inserido na área de mensagem de redação para o usuário enviar?](#select-how-the-final-message-is-sent)
+
+Confira o vídeo a seguir para saber como definir comandos de ação de extensão de mensagem:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>Selecionar locais de invocação de comando de ação
 
@@ -185,7 +191,7 @@ A seção a seguir é um exemplo de um objeto `composeExtensions` definindo dois
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ A seção a seguir é um exemplo de um objeto `composeExtensions` definindo dois
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

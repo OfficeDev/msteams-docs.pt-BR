@@ -3,19 +3,19 @@ title: Pré-visualização pública do desenvolvedor para o Microsoft Teams
 description: Neste artigo, conheça os recursos que estão na Visualização Pública do Desenvolvedor do Microsoft Teams e do aplicativo de visualização do desenvolvedor.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143981"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190252"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Pré-visualização pública do desenvolvedor para o Microsoft Teams
 
 >[!NOTE]
 >Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.
 
-O Developer Preview é um programa público para desenvolvedores, que fornece acesso antecipado a recursos não lançados no Microsoft Teams. Isso permite que você explore e teste os recursos futuros para uma possível inclusão em seu aplicativo Microsoft Teams. Também agradecemos o [feedback](~/feedback.md) sobre qualquer recurso em pré-visualizações do desenvolvedor. A pré-visualização do desenvolvedor está habilitada por cliente do Microsoft Teams, portanto, você não precisa se preocupar em afetar toda sua organização.
+O Developer Preview é um programa público para desenvolvedores, que fornece acesso antecipado a recursos não lançados no Microsoft Teams. Isso permite que você explore e teste os próximos recursos para uma possível inclusão em seu aplicativo Teams. Também agradecemos o [feedback](~/feedback.md) sobre qualquer recurso em pré-visualizações do desenvolvedor. A pré-visualização do desenvolvedor está habilitada por cliente do Microsoft Teams, portanto, você não precisa se preocupar em afetar toda sua organização.
 
 ## <a name="developer-preview-app-manifest"></a>Manifesto do aplicativo de pré-visualização do desenvolvedor
 

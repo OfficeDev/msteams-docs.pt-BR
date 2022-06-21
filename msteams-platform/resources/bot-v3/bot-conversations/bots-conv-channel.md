@@ -4,12 +4,12 @@ description: Neste módulo, aprenda o cenário de ponta a ponta de ter uma conve
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142777"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190183"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
@@ -25,7 +25,7 @@ Os bots adicionados a uma equipe se tornam outro membro da equipe e podem ser @m
 
 Um bot em um grupo ou canal deve fornecer informações relevantes e apropriadas para todos os membros. Embora seu bot certamente possa fornecer qualquer informação relevante para a experiência, lembre-se de que as conversas com ele são visíveis para todos. Portanto, um ótimo bot em um grupo ou canal deve agregar valor a todos os usuários e, certamente, não compartilhar inadvertidamente informações mais apropriadas para uma conversa individual.
 
-Seu bot, assim como está, pode ser totalmente relevante em todos os escopos sem exigir mais trabalho. No Microsoft Teams, não há nenhuma expectativa de que o bot funcione em todos os escopos, mas você deve garantir que seu bot forneça valor de usuário em qualquer escopo que você optar por dar suporte. Para obter mais informações sobre escopos, consulte [Aplicativos no Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Seu bot, assim como está, pode ser totalmente relevante em todos os escopos sem exigir mais trabalho. No Teams, não há nenhuma expectativa de que o bot funcione em todos os escopos, mas você deve garantir que seu bot forneça valor de usuário em qualquer escopo que você optar por dar suporte. Para obter mais informações sobre escopos, consulte [Aplicativos no Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 O desenvolvimento de um bot que funciona em grupos ou canais usa muito da mesma funcionalidade das conversas pessoais. Eventos e dados adicionais na carga útil fornecem informações de grupo e canal do Teams. Essas diferenças, bem como as principais diferenças na funcionalidade comum, são descritas nas seções a seguir.
 

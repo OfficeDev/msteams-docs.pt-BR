@@ -1,17 +1,16 @@
 ---
 title: Use Microsoft Graph para autorizar a instalação proativa de bots e mensagens no Teams
-description: Descreve mensagens proativas no Teams e como implementá-lo. Saiba mais sobre como habilitar a instalação proativa de aplicativos e mensagens usando o exemplo de código.
+description: Este artigo descreve as mensagens proativas no Teams e como implementá-lo. Saiba mais sobre como habilitar a instalação proativa de aplicativos e mensagens usando o exemplo de código.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: Gráfico de instalação proativa de chat de mensagens do teams
-ms.openlocfilehash: 7a133b91aabe920b109b644331bc6526cd950858
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 832dfe6ddce7710d506c480fc1195c426b8da0df
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757700"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189587"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalação proativa de aplicativos usando Graph API para enviar mensagens
 

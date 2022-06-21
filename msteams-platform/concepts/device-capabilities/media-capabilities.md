@@ -1,17 +1,16 @@
 ---
 title: Integrar recursos de mídia
 author: Rajeshwari-v
-description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar recursos de mídia usando exemplos de código
-keywords: api de mídia de permissões nativas do dispositivo de recursos do microfone da imagem da câmera
+description: Saiba como usar o Teams SDK do cliente JavaScript para habilitar recursos de mídia usando exemplos de código e também aprender a vantagem de integrar recursos de mídia.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130519"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190233"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
@@ -94,7 +93,7 @@ A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API 
 
 ---
 
-## <a name="error-handling"></a>Tratamento de erro
+## <a name="error-handling"></a>Tratamento de erros
 
 Certifique-se de lidar com esses erros adequadamente em seu Teams aplicativo. A tabela a seguir lista os códigos de erro e as descrições sob as quais os erros são gerados:
 

@@ -5,12 +5,12 @@ description: Neste módulo, você aprenderá a criar um Webhook de Saída no Mic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143281"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189895"
 ---
 # <a name="create-outgoing-webhook"></a>Criar Webhook de saída
 
@@ -25,6 +25,12 @@ O Webhook de Saída atua como um bot e pesquisa mensagens em canais usando **@me
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
+
+Veja o vídeo a seguir para saber como criar um Webhooks de saída:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+<br>
 
 ## <a name="key-features-of-outgoing-webhook"></a>Principais recursos do Webhook de Saída
 
@@ -109,7 +115,7 @@ Seu código sempre deve validar a assinatura HMAC incluída na solicitação da 
 
 **Criar um método para enviar uma resposta de êxito ou falha**
 
-As respostas de seus Webhooks de Saída aparecem na mesma cadeia de resposta que a mensagem original. Quando o usuário executa uma consulta, o Microsoft Teams emite uma solicitação HTTP síncrona para seu serviço e seu código obtém cinco segundos para responder à mensagem antes que a conexão termine e termine.
+As respostas de seus Webhooks de Saída aparecem na mesma cadeia de resposta que a mensagem original. Quando o usuário realiza uma consulta, o Teams emite uma solicitação HTTP síncrona para seu serviço e seu código recebe cinco segundos para responder à mensagem antes que a conexão expire e termine.
 
 ### <a name="example-response"></a>Resposta de exemplo
 
@@ -232,7 +238,7 @@ var responseMsg = JSON.stringify({
 
 |**Nome de exemplo** | **Descrição** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhooks de Saída | Exemplos de criação de bots personalizados para uso no Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhooks de Saída | Exemplos para criar bots personalizados a serem usados no Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 

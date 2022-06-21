@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795158"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189608"
 ---
 # <a name="teams-app-that-fits"></a>Aplicativo do Microsoft Teams que se ajusta
 
@@ -39,7 +39,7 @@ Você pode criar aplicativos com a plataforma de Desenvolvedores do Teams estend
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>Criar aplicativos para a plataforma Microsoft Teams
 
-Os aplicativos do Microsoft Teams ajudam seu espaço de trabalho colaborativo a ser mais produtivo trazendo informações importantes, ferramentas comuns e processos confiáveis para o local onde as pessoas coletam, aprendem e trabalham cada vez mais. Aplicativos são como você estende os recursos da plataforma Teams para se ajustar aos seus requisitos. Crie algo novo ou integre um aplicativo existente e use os benefícios da plataforma Microsoft Teams para suas necessidades comerciais específicas.
+Os aplicativos do Teams ajudam seu espaço de trabalho colaborativo a ser mais produtivo, trazendo informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas se reúnem, aprendem e trabalham cada vez mais. Aplicativos são como você estende os recursos da plataforma Teams para se ajustar aos seus requisitos. Crie algo totalmente novo ou integre um aplicativo existente e você utilizará os benefícios da plataforma Teams para suas necessidades comerciais específicas.
 
 Os benefícios da criação de aplicativos vão desde atingir as metas organizacionais até o aumento da produtividade interna.
 
@@ -75,7 +75,7 @@ Veja por que o Teams é mais adequado para suas necessidades de aplicativo:
 
 - **Aplicativos pessoais com guias e bots**
 
-    Bots de conversa individual são um dos recursos mais ilimitados no Microsoft Teams. A conversa é apenas entre o bot e seu usuário. Você tem a flexibilidade de incluir módulos de tarefa para simplificar conjuntos complexos de informações.
+    Os bots de conversação um para um são um dos recursos mais abertos do Teams. A conversa é apenas entre o bot e seu usuário. Você tem a flexibilidade de incluir módulos de tarefa para simplificar conjuntos complexos de informações.
 
     Por exemplo, se seu aplicativo for uma ferramenta de design com vários colaboradores, um bot compartilhado que notifica todos os usuários ajuda a aumentar o envolvimento do usuário.
 

@@ -3,12 +3,12 @@ title: Otimizar seu bot com limitação de fluxo no Teams
 description: Saiba mais sobre como lidar com o limite de taxa para bots com o limite por thread e por limite para todos os bots usando exemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143729"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190246"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Otimizar seu bot com limitação de fluxo no Teams
 
@@ -176,3 +176,7 @@ A tabela a seguir fornece o limite de thread para todos os bots:
 
 > [!div class="nextstepaction"]
 > [Bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## <a name="see-also"></a>Confira também
+
+[Gerenciar uma operação de execução longa](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

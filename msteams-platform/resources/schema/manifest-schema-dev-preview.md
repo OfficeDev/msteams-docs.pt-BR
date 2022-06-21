@@ -4,12 +4,12 @@ description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142734"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189872"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
 
@@ -471,13 +471,13 @@ O objeto é uma matriz (máximo de um elemento) com todos os elementos do tipo `
 
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`botId`|Cadeia de caracteres|64|✔️|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagem, conforme registrado no Bot Framework. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
+|`botId`|Cadeia de caracteres|64|✔️|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
 |`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário. O padrão é `false`.|
 |`commands`|Matriz de objeto|10|✔️|Matriz de comandos com suporte da extensão de mensagem.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Sua extensão de mensagem deve declarar um ou mais comandos. Cada comando aparece no Microsoft Teams como uma interação potencial do ponto de entrada baseado na interface do usuário. Há um máximo de 10 comandos.
+Sua extensão de mensagem deve declarar um ou mais comandos. Cada comando aparece no Teams como uma interação potencial do ponto de entrada baseado na interface do usuário. Há um máximo de 10 comandos.
 
 Cada item de comando é um objeto com a seguinte estrutura:
 
@@ -691,8 +691,8 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 

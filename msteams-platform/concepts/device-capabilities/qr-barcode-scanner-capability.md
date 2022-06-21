@@ -1,17 +1,16 @@
 ---
 title: Integrar QR ou capacidade de leitura de código de barras
 author: Rajeshwari-v
-description: Como usar o SDK do cliente JavaScript do Teams para aproveitar a funcionalidade de scanner de código de barras ou QR
-keywords: mídia da câmera qr code qrcode código de barras scanner de código de barras capacidades de digitalização permissões do dispositivo nativo
+description: Saiba como usar Teams SDK do cliente JavaScript para aproveitar a funcionalidade de scanner de código de barras ou QR e conhecer os benefícios da integração da capacidade do scanner de código de barras ou QR.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d9dc35002398be047f4cd84d7600b3d149677bd3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130498"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189626"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar QR ou capacidade de leitura de código de barras
 

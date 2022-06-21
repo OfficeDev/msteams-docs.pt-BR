@@ -3,12 +3,12 @@ title: Criar um Assistente Virtual
 description: Saiba como criar um bot Assistente Virtual para Teams usando exemplos de código e snippets com recursos como cartões adaptáveis, manipulação de interrupções e muito mais.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123059"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189512"
 ---
 # <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
@@ -263,7 +263,11 @@ O trecho do arquivo de manifesto de uma habilidade é mostrado na seção a segu
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 O trecho de código do arquivo de manifesto correspondente do Assistente Virtual é mostrado na seção a seguir:
@@ -277,7 +281,11 @@ O trecho de código do arquivo de manifesto correspondente do Assistente Virtual
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 Depois que os comandos são invocados por um usuário, o Assistente Virtual pode identificar uma habilidade associada analisando a ID do comando, atualizando a atividade removendo o sufixo extra `:<skill_id>` da ID de comando e encaminhando-o para a habilidade correspondente. O código de uma habilidade não precisa lidar com o sufixo extra. Portanto, conflitos entre IDs de comando entre habilidades são evitados. Com essa abordagem, todos os comandos de pesquisa e ação de uma habilidade em todos os contextos, como **compose**, **commandBox** e **message** são alimentados por um Assistente Virtual.
@@ -334,7 +342,7 @@ Algumas atividades de extensão de mensagem não incluem a ID do comando. Por ex
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como converter o modelo de aplicativo Agendar uma sala em uma habilidade do Assistente Virtual: Agendar uma sala é um Microsoft Teams que permite que os usuários localizem e reservem rapidamente uma sala de reunião por 30, 60 ou 90 minutos a partir da hora atual. O tempo padrão é de 30 minutos. O bot agendar uma sala tem escopos para conversas pessoais ou 1:1.
+O exemplo a seguir mostra como converter o modelo de aplicativo book-a-room em uma habilidade do Assistente Virtual: Book-a-room é um Teams que permite aos usuários localizar e reservar rapidamente uma sala de reunião por 30, 60 ou 90 minutos a partir da hora atual. O tempo padrão é de 30 minutos. O bot agendar uma sala tem escopos para conversas pessoais ou 1:1.
 A imagem a seguir exibe um Assistente Virtual com uma habilidade **agendar uma sala**:
 
 ![Assistente Virtual com uma habilidade "agendar uma sala"](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ A seguir estão as alterações delta introduzidas para convertê-lo em uma habi
 
 ### <a name="skill-manifest"></a>Manifesto de habilidade
 
-Um manifesto de habilidade é um arquivo JSON que expõe o ponto de extremidade de mensagens, a ID, o nome e outros metadados relevantes de uma habilidade. Esse manifesto é diferente do manifesto usado para sideload de um aplicativo no Microsoft Teams. Um Assistente Virtual requer um caminho para esse arquivo como uma entrada para anexar uma habilidade. Adicionamos o manifesto a seguir à pasta wwwroot do bot.
+Um manifesto de habilidade é um arquivo JSON que expõe o ponto de extremidade de mensagens, a ID, o nome e outros metadados relevantes de uma habilidade. Esse manifesto é diferente do manifesto usado para sideload de um aplicativo Teams. Um Assistente Virtual requer um caminho para esse arquivo como uma entrada para anexar uma habilidade. Adicionamos o manifesto a seguir à pasta wwwroot do bot.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

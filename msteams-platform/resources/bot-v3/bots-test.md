@@ -4,24 +4,24 @@ description: Neste artigo, você saberá como testar e depurar seus bots no Micr
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 71045071666ecc21cdc376590deef90223694d15
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143694"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189750"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Testar e depurar seu bot do Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Ao testar o bot, você precisa levar em consideração os contextos em que deseja que o bot seja executado, bem como qualquer funcionalidade que você tenha adicionado ao bot que exija dados específicos do Microsoft Teams. Verifique se o método escolhido para testar o bot está alinhado com sua funcionalidade.
+Ao testar o bot, você precisa levar em consideração os contextos em que deseja que o bot seja executado, bem como qualquer funcionalidade que você possa ter adicionado ao bot que exija dados específicos do Microsoft Teams. Verifique se o método escolhido para testar o bot está alinhado com sua funcionalidade.
 
 ## <a name="test-by-uploading-to-teams"></a>Testar carregando no Teams
 
 A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o no Teams. Esse é o único método para testar a funcionalidade completa disponível para seu bot, em todos os escopos.
 
-Há dois métodos para carregar seu aplicativo. Você pode usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) ou criar [manualmente um pacote de aplicativos](~/concepts/build-and-test/apps-package.md) e [carregar seu aplicativo](~/concepts/deploy-and-publish/apps-upload.md). Se você precisar alterar o manifesto e recarregar o aplicativo, deverá [excluir o bot](#deleting-a-bot-from-teams) antes de carregar o pacote do aplicativo alterado.
+Há dois métodos para carregar seu aplicativo. Você pode usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) ou criar [manualmente um pacote de aplicativos](~/concepts/build-and-test/apps-package.md) e [carregar seu aplicativo](~/concepts/deploy-and-publish/apps-upload.md). Se você precisar alterar o manifesto e recarregar o aplicativo, exclua o [bot](#deleting-a-bot-from-teams) antes de carregar o pacote do aplicativo alterado.
 
 ## <a name="debug-your-bot-locally"></a>Depurar seu bot localmente
 
@@ -31,11 +31,11 @@ Se você estiver hospedando seu bot localmente durante o desenvolvimento, precis
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo. Se você fechar a janela de comando e reiniciar, receberá uma nova URL e precisará atualizar o endereço do ponto de extremidade do bot para usá-lo também.
+Use o ponto de extremidade https fornecido pelo ngrok no manifesto do aplicativo. Se você fechar a janela de comando e reiniciar, obterá uma nova URL e precisará atualizar o endereço do ponto de extremidade do bot para usá-lo também.
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>Testando seu bot sem carregar no Teams
 
-Ocasionalmente, é necessário testar seu bot sem instalá-lo como um aplicativo no Teams. Fornecemos dois métodos para teste. Testar o bot sem instalá-lo como um aplicativo pode ser útil para garantir que o bot esteja disponível e respondendo, no entanto, ele não permitirá que você teste toda a amplitude da funcionalidade do Microsoft Teams que você pode ter adicionado ao bot. Se você precisar testar o bot completamente, siga as instruções para [testar carregando](#test-by-uploading-to-teams).
+Ocasionalmente, é necessário testar seu bot sem instalá-lo como um aplicativo no Teams. Fornecemos dois métodos para teste. Testar o bot sem instalá-lo como um aplicativo pode ser útil para garantir que o bot esteja disponível e respondendo Teams, no entanto, ele não permitirá que você teste a amplitude completa da funcionalidade que você pode ter adicionado ao bot. Se você precisar testar o bot completamente, siga as instruções para [testar carregando](#test-by-uploading-to-teams).
 
 ### <a name="use-the-bot-emulator"></a>Usar o Bot Emulator
 
@@ -48,22 +48,23 @@ Instruções completas sobre o Bot Framework Emulator podem ser encontradas [aqu
 >[!Important]
 >Conversar com seu bot por ID destina-se apenas para fins de teste.
 
-Você também pode iniciar uma conversa com seu bot usando sua ID. Dois métodos para fazer isso são fornecidos abaixo. Quando um bot tiver sido adicionado por meio de um desses métodos, ele não poderá ser endereçável em conversas de canal e você não poderá aproveitar outros recursos de aplicativo do Microsoft Teams, como guias ou extensões de mensagem.
+Você também pode iniciar uma conversa com seu bot usando sua ID. Dois métodos para fazer isso são fornecidos abaixo. Quando um bot é adicionado por meio de um desses métodos, ele não pode ser enderecável em conversas de canal e você não pode tirar proveito de outros recursos do aplicativo Microsoft Teams como guias ou extensões de mensagem.
 
-1. Na página [Painel de bot](https://dev.botframework.com/bots) para seu o bot, em **Canais**, selecione **Adicionar ao Microsoft Teams**. O Microsoft Teams será iniciado com um chat pessoal com seu bot.
-2. Faça referência direta à ID do aplicativo do bot de dentro do Microsoft Teams:
+1. Na página [Painel de bot](https://dev.botframework.com/bots) para seu o bot, em **Canais**, selecione **Adicionar ao Microsoft Teams**. Teams iniciará com um chat pessoal com seu bot.
+2. Faça referência direta à ID do aplicativo do bot de dentro Teams:
    * Na página [Painel do bot](https://dev.botframework.com/bots) para seu bot, em **Detalhes**, copie a **ID do aplicativo da Microsoft** para o bot.
   
       :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Painel do Bot":::
   
-   * No Microsoft Teams, no painel de **Chat**, selecione o **ícone Adicionar chat**. Em **Para**, cole a ID do Aplicativo da Microsoft de seu bot.
+   * De dentro Teams, no painel **Chat**, selecione o ícone **Adicionar chat**. Em **Para**, cole a ID do Aplicativo da Microsoft de seu bot.
   
       :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Carregando o AppID para o bot"border="true":::
 
      A ID do aplicativo deve ser resolvida para o nome do bot.
 
    * Selecione seu bot e envie uma mensagem para iniciar uma conversa.
-   * Como alternativa, você pode colar a ID do aplicativo do bot na caixa de pesquisa no canto superior esquerdo do Microsoft Teams. Na página de resultados da pesquisa, navegue até a guia Pessoas para ver seu bot e começar a conversar com ele.
+
+   * Como alternativa, você pode colar a ID do aplicativo do bot na caixa de pesquisa no canto superior esquerdo do Microsoft Teams. Na página de resultados da pesquisa, vá para a guia Pessoas para ver seu bot e começar a conversar com ele.
 
 Seu bot receberá o evento `conversationUpdate` assim como bots adicionados a uma equipe, mas sem as informações da equipe no objeto `channelData`.
 

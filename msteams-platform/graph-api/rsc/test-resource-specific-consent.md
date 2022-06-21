@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: microsoft teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757441"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189882"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso no Teams
 
@@ -28,7 +28,7 @@ Verifique se as seguintes alterações de manifesto do aplicativo para consentim
 
 <details>
 
-<summary><b>Permissões RSC para o manifesto do aplicativo versão 1.12</b></summary>
+<summary><b>Permissões de RSC para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
 
 Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
@@ -186,7 +186,7 @@ Exemplo de RSC em um chat
 ```
 
 > [!NOTE]
-> Se o aplicativo tiver o objetivo de dar suporte à instalação nos escopos de equipe e chat, as permissões de equipe e chat poderão ser especificadas no mesmo manifesto em `authorization`.
+> Se o aplicativo tiver o objetivo de dar suporte à instalação nos escopos de equipe e chat, as permissões de equipe e chat poderão ser especificadas no mesmo manifesto em `authorization`
 
 </details>
 
@@ -194,7 +194,7 @@ Exemplo de RSC em um chat
 
 <details>
 
-<summary><b>Permissões RSC para o manifesto do aplicativo versão 1.11 ou anterior</b></summary>
+<summary><b>Permissões de RSC para o manifesto do aplicativo versão 1.11 e anteriores</b></summary>
 
 Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 

@@ -5,16 +5,16 @@ description: Neste módulo, saiba como a remoção de margens de tabulação mel
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143316"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190146"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 
-Este documento descreve como a remoção de margens em torno de todas as guias no Microsoft Teams aprimora sua experiência de criação de aplicativos. Esse é um aprimoramento introduzido no Microsoft Teams em 2021.
+Este documento descreve como a remoção de margens em torno de todas as guias no Microsoft Teams aprimora sua experiência de criação de aplicativos. Esse é um aprimoramento introduzido no Teams em 2021.
 Você pode criar aplicativos que parecem mais nativos Teams removendo as margens ao redor de todas as guias. As guias com margens removidas se alinham Microsoft Teams designs de [kit de interface do usuário](~/tabs/design/tabs.md). A maioria dos aplicativos tem uma aparência aprimorada sem margens.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Inteligência de tabulação e sem margens" border="false":::

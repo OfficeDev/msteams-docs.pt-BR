@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142672"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189602"
 ---
 # <a name="channel-or-group-tab"></a>Guias de canal ou grupo
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Carregar seu aplicativo no Teams
 
-1. Vá para o Microsoft Teams e selecione **Aplicativos**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Loja do Teams":::.
+1. Vá para Teams e selecione **Aplicativos**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package**, selecione a pasta zip do pacote de aplicativo e escolha **Abrir**.
 
@@ -248,9 +248,9 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>
@@ -291,7 +291,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone transparente de contorno** medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, o Microsoft Teams carrega o `configurationUrl` especificado no manifesto, insere-o em um IFrame e renderiza-o em sua guia.
+Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, `configurationUrl` Teams carrega o especificado em seu manifesto, insere-o em um IFrame e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -335,10 +335,10 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > Não copie e cole as URLs `<script src="...">` desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, acesse sempre a[API JavaScript do Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Insira uma chamada para `microsoftTeams.initialize();` na marca `script`.
 
 1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Páginas** e abra **Tab.cshtml**
@@ -394,7 +394,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualize seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Acessar o Microsoft Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
+1. Vá para Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
 
 1. Vá para [**Portal do Desenvolvimento**](https://dev.teams.microsoft.com/home).
 
@@ -434,7 +434,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 1. Selecione **Adicionar à equipe** para configurar a guia em uma equipe. Configure sua guia e selecione **Salvar**. Sua guia agora está disponível no Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="guia Cana dal ASPNET carregada" border="true":::
-    
+
     Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
 
 ::: zone-end
@@ -468,9 +468,9 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>
@@ -563,15 +563,15 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > Não copie e cole as URLs `<script src="...">` desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, acesse sempre a[API JavaScript do Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Insira uma chamada para `microsoftTeams.initialize();` na marca `script`.
 
 1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Guia** e abra **Tab.cshtml**
 
-    Dentro de **Tab.cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher o botão **Selecionar cinza** ou **Selecionar vermelho** aciona `saveGray()` ou `saveRed()`, respectivamente, define `settings.setValidityState(true)` e ativa o botão **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito. 
+    Dentro de **Tab.cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher o botão **Selecionar cinza** ou **Selecionar vermelho** aciona `saveGray()` ou `saveRed()`, respectivamente, define `settings.setValidityState(true)` e ativa o botão **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -617,7 +617,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualize seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Acessar o Microsoft Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
+1. Vá para Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
 
 1. Vá para [**Portal do Desenvolvimento**](https://dev.teams.microsoft.com/home).
 
@@ -652,7 +652,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 1. Selecione **Adicionar à equipe** para configurar a guia em uma equipe. Configure sua guia e selecione **Salvar**. Sua guia agora está disponível no Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia de canal do ASPNET MVC carregado" border="true":::
-    
+
     Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
 
 ::: zone-end

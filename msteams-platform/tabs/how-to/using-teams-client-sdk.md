@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Neste módulo, Conheça o SDK do cliente JavaScript do Microsoft Teams, que pode ajudar você a criar experiências de aplicativo hospedadas em um <iframe> no Teams, no Office e no Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144212"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189508"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams
 
@@ -235,7 +235,7 @@ O nome do host no qual seu aplicativo está sendo executado é exposto como uma 
 * **Não** suponha que determinada funcionalidade esteja ou não esteja disponível em um host com base no valor da propriedade *hostName*. Em vez disso, verifique se a funcionalidade tem suporte (`isSupported`).
 * **Não** use *hostName* para enviar chamadas à API. Em vez disso, verifique se há suporte para funcionalidades (`isSupported`).
 * **Use** *hostName* para diferenciar o tema do seu aplicativo com base no host em que ele está sendo executado. Por exemplo, você pode usar Microsoft Teams púrpura como a cor de destaque principal ao executar em Teams e Outlook azul ao executar em Outlook.
-* **Use** *hostName* para diferenciar as mensagens mostradas para o usuário com base no host em que ele está sendo executado. Por exemplo, mostre *Gerenciar suas tarefas no Office* ao executar no Office na Web e *Gerenciar suas tarefas no Teams* ao executar no Microsoft Teams.
+* **Use** *hostName* para diferenciar as mensagens mostradas para o usuário com base no host em que ele está sendo executado. Por exemplo, mostre *Gerenciar suas tarefas no Office* ao executar no Office na Web e *Gerenciar suas tarefas no Teams* ao executar no Teams.
 
 #### <a name="namespaces"></a>Namespaces
 
@@ -243,7 +243,7 @@ A partir do TeamsJS v.2.0, as APIs são organizadas em *funcionalidades* por mei
 
 ##### <a name="app-namespace"></a>*namespace* do aplicativo
 
-O namespace `app` contém APIs de nível superior necessárias para o uso geral do aplicativo, entre Microsoft Teams, Office e Outlook. Todas as APIs de vários outros namespaces do TeamsJS foram movidas para o namespace `app` a partir do TeamsJS v2.0:
+O namespace `app` contém APIs de nível superior necessárias para o uso geral do aplicativo no Teams, Office e Outlook. Todas as APIs de vários outros namespaces do TeamsJS foram movidas para o namespace `app` a partir do TeamsJS v2.0:
 
 | Namespace original `global (window)` | Novo namespace `app` |
 | - | - |

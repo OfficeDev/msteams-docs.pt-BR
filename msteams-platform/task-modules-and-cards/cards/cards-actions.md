@@ -3,12 +3,12 @@ title: Adicionar ações de cartão em um bot
 description: Neste módulo, saiba o que são ações de cartão Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144170"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189760"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -556,6 +556,16 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
   }
 }
 ```
+
+## <a name="code-samples"></a>Exemplos de código
+
+|S.no|Cartão| description|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|Usando cartões|Apresenta todos os tipos de cartão, incluindo miniatura, áudio, mídia etc. Compila o welcomeing user + multi-prompt bot apresentando um cartão com botões na mensagem de boas-vindas que roteiam para a caixa de diálogo apropriada.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Cartões adaptáveis|Demonstra como a caixa de diálogo de vários turnos pode usar um cartão para obter a entrada do usuário para nome e idade.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> Não há suporte para elementos de mídia para cartão adaptável no Teams
 
 ## <a name="next-step"></a>Próximas etapas
 

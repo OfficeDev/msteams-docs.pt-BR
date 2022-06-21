@@ -3,12 +3,12 @@ title: Compartilhar no Teams a partir de aplicativos Web
 description: Saiba como adicionar o botão Compartilhar no Teams incorporado em seu site, com uma visualização de site, usando Exemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150831"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190018"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartilhar no Teams a partir de aplicativos Web
 
@@ -33,6 +33,12 @@ A imagem a seguir exibe a experiência de desfralização de link por meio do bo
 > O link desfralamento em compartilhamento Teams está disponível atualmente apenas na versão prévia do desenvolvedor público.
 
 Este artigo orienta você sobre como criar e inserir um botão Compartilhar Teams para seu site, criar sua visualização de site e estender o Compartilhamento para Teams para Educação.
+
+Confira o vídeo a seguir para saber como inserir o botão Compartilhar Teams:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+<br>
+
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorpore um botão Compartilhar no Teams
 
