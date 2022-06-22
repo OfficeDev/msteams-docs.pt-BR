@@ -1,16 +1,16 @@
 ---
 title: Estender uma extensão de mensagem do Teams Microsoft 365
-description: Veja como atualizar a extensão de mensagem do Teams baseada em pesquisa para ser executada no Outlook
+description: Saiba como atualizar a extensão de mensagem do Teams baseada em pesquisa para execução no Outlook atualizando o manifesto do aplicativo, adicionando um canal do Outlook e carregando o aplicativo atualizado.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142098"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190203"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão de mensagem do Teams Microsoft 365
 
@@ -106,9 +106,9 @@ Para que os usuários interajam com sua extensão de mensagem do Outlook, você 
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Adicione um canal de 'Extensões de Mensagem' do Outlook para seu bot no painel Canais de Bot do Azure":::
 
-1. Confirme se o seu canal do Outlook está listado junto com o Microsoft Teams no painel **Canais** do seu bot.
+1. Confirme se seu canal do Outlook está listado junto com o Teams no painel **Canais** do seu bot.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="O painel Canais de Bot do Azure listando os canais do Microsoft Teams e do Outlook":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Painel de Canais de bot do Azure listando os canais do Teams e do Outlook":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Atualizar Microsoft Azure Active Directory aplicativo do Azure AD (Azure AD) para SSO
 
@@ -133,7 +133,7 @@ O logon único (SSO) do Azure Active Directory (AD) para extensões de mensagem 
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Realizar sideload da extensão de mensagem atualizada no Teams
 
-A etapa final é realizar o sideload da extensão de mensagem atualizada ([pacote de aplicativos](/microsoftteams/platform/concepts/build-and-test/apps-package)) no Microsoft Teams. Depois de concluído, sua extensão de mensagem aparecerá em seus *Aplicativos* instalados na área de composição de mensagem.
+A etapa final é fazer o sideload de sua extensão de mensagem atualizada ( [pacote de aplicativos](/microsoftteams/platform/concepts/build-and-test/apps-package)) no Teams. Depois de concluído, sua extensão de mensagem aparecerá em seus *Aplicativos* instalados na área de composição de mensagem.
 
 1. Empacote seu aplicativo do Teams ([ícones de manifesto e aplicativo](/microsoftteams/platform/resources/schema/manifest-schema#icons)) em um arquivo zip. Se você usou o Kit de Ferramentas do Teams para criar seu aplicativo, pode fazer isso facilmente usando a opção de pacote de metadados **Zip Teams** no menu *Implantação* do Kit de Ferramentas do Teams.
 
