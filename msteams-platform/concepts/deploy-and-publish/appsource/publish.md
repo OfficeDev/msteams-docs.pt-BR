@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124029"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189928"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
 Você pode distribuir seu aplicativo diretamente na loja do Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial.
 
-Os aplicativos publicados na loja do Teams também são listados automaticamente no [Microsoft AppSource](https://appsource.microsoft.com), que é o marketplace oficial para aplicativos e soluções do Microsoft 365.
+Os aplicativos publicados na loja do Teams também são listados automaticamente no [mercado comercial da Microsoft](https://appsource.microsoft.com), que é o mercado oficial para aplicativos e soluções do Microsoft 365.
 
 ## <a name="understand-the-publishing-process"></a>Compreender o processo de publicação
 
@@ -74,7 +74,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
   * Recomendações para corrigir os problemas relatados com links para documentos de orientação.
 
-  Depois de examinar a lista de problemas, corrija todos os problemas relatados e compartilhe o pacote de aplicativo atualizado por email, para que a equipe de validação valide seu aplicativo completamente. Se você tiver alguma consulta relacionada aos problemas relatados, entre em contato com a equipe de validação em [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
+  Depois de examinar a lista de problemas, corrija todos os problemas relatados e compartilhe o pacote do aplicativo atualizado por email para que a equipe de validação revalida seu aplicativo completamente. Se você tiver alguma consulta relacionada aos problemas relatados, entre em contato com a equipe de validação em [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
   Se houver problemas restantes ou de regressão observados em seu aplicativo, a equipe de validação compartilhará um relatório de validação atualizado com você. Se o aplicativo tiver bloqueadores, você poderá ver novos problemas relatados quando o aplicativo for validado depois que os bloqueadores forem resolvidos. Às vezes, a equipe de validação também observou problemas de regressão em aplicativos após a implantação de correções. São necessários alguns reenvios para fechar todos os problemas de um aplicativo que consiste em bugs e obtê-lo aprovado para publicação na loja do Teams.
 
@@ -96,7 +96,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
   1. [Crie sua conta do Partner Center com antecedência](prepare/create-partner-center-dev-account.md). Se você encontrar algum desafio com sua [conta do Partner Center](prepare/create-partner-center-dev-account.md), crie um [tíquete de suporte](/azure/marketplace/partner-center-portal/support).
 
-  1. Revise as [diretrizes de validação do repositório](prepare/teams-store-validation-guidelines.md) novamente para garantir que seu aplicativo esteja alinhado com os requisitos da loja. Isso ajuda a reduzir o número de problemas observados no seu aplicativo e, portanto, o tempo necessário para aprová-lo.
+  1. Revise as [diretrizes de validação do repositório](prepare/teams-store-validation-guidelines.md) novamente para garantir que seu aplicativo esteja alinhado com os requisitos da loja. A revisão ajuda a reduzir o número de problemas observados em seu aplicativo e, portanto, o tempo necessário para aprovar seu aplicativo.
 
   1. Teste e teste novamente seu aplicativo:
 
@@ -124,7 +124,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
 * **Postar envio de aplicativo**
 
-  * Depois de examinar o relatório de validação, responda ao thread de emails com quaisquer dúvidas relacionadas ao relatório de validação ou se você precisar de algum suporte extra para resolver os problemas relatados.
+  * Depois de analisar o relatório de validação, responda ao thread de emails com quaisquer dúvidas relacionadas ao relatório de validação ou se precisar de suporte extra para resolver os problemas relatados.
 
   * Certifique-se de ter largura de banda adequada para o desenvolvedor para resolver quaisquer problemas relatados até que o aplicativo seja aprovado.
 
@@ -160,11 +160,11 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
      1. O cancelamento da assinatura deve estar funcionando conforme o esperado. Os compradores devem ser capazes de cancelar uma assinatura. Após o cancelamento, verifique se o status correto da assinatura está refletido no Centro de Administração da Microsoft e no aplicativo de SaaS. Verifique se o comprador perdeu o acesso à assinatura após um cancelamento bem-sucedido.
 
-     1. A nova compra de uma assinatura deve ocorrer sem obstáculos. Após o cancelamento de uma assinatura ativa, teste o aplicativo minuciosamente para garantir que os compradores possam comprar a assinatura novamente.
+     1. A recompra de uma assinatura é perfeita. Após o cancelamento de uma assinatura ativa, teste o aplicativo minuciosamente para garantir que os compradores possam comprar a assinatura novamente.
 
      1. Os compradores devem ser capazes de alterar o plano que assinaram. Após o plano ter sido alterado, os usuários devem poder acessar os recursos do plano incluídos no upgrade ou downgrade.
 
-     1. Seu aplicativo de SaaS deve conter recursos de gerenciamento de licenças. Os compradores devem ser capazes de atribuir, modificar e reatribuir as licenças disponíveis aos usuários. Verifique se os compradores podem adicionar ou remover usuários para gerenciar as licenças.
+     1. Seu aplicativo de SaaS deve conter recursos de gerenciamento de licenças. Os compradores devem ser capazes de atribuir, modificar e reatribuir licenças disponíveis aos usuários. Verifique se os compradores podem adicionar ou remover usuários para gerenciar as licenças.
   
   1. Você precisa testar e garantir que tanto os fluxos de compra mínima quanto em massa estejam funcionando conforme o esperado.
   
