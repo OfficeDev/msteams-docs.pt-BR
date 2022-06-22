@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143988"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189465"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Carregar seu aplicativo no Teams
 
-1. Vá para o Microsoft Teams e selecione **Aplicativos**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Loja do Teams":::.
+1. Vá para o Teams e selecione **Aplicativos**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Loja do Teams":::.
 1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package** , selecione a pasta zip e escolha **Abrir**.
 
@@ -335,7 +335,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um ícone de contorno transparente medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Microsoft Teams carrega o `contentUrl` especificado em seu manifesto, insere-o em um <iframe\> e o renderiza em sua guia.
+Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Teams carrega o `contentUrl` especificado no manifesto, insere-o em um <iframe\> e renderiza-o em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone transparente de contorno** medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Microsoft Teams carrega o `contentUrl` especificado no manifesto, insere-o em um IFrame e renderiza-o em sua guia.
+Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Teams carrega o `contentUrl` especificado no manifesto, insere-o em um IFrame e renderiza-o em sua guia.
 
 #### <a name="csproj"></a>.csproj
 

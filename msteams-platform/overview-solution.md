@@ -6,16 +6,17 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123542"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190119"
 ---
 # <a name="the-teams-solution"></a>A solução do Microsoft Teams
 
-A Plataforma Microsoft Teams é uma plataforma poderosa e flexível para a criação de aplicativos do Microsoft Teams. Ela fornece um amplo conjunto de ambientes de desenvolvimento e ferramentas para dar suporte ao desenvolvimento de aplicativos.
+
+A Plataforma Microsoft Teams é uma plataforma poderosa e flexível para a criação de aplicativos do Teams. Ela fornece um amplo conjunto de ambientes de desenvolvimento e ferramentas para dar suporte ao desenvolvimento de aplicativos.
 
 ## <a name="the-user-story"></a>A história do usuário
 
@@ -31,19 +32,19 @@ Requisitos de agrupamento e mapeamento de recursos do Teams:
 | Requisitos do aplicativo do usuário | Verificar previsão | Notificação antes da viagem | Usuário registrado |
 | --- |:---:|:---:|:---:|
 | **Recursos** | Bot | &nbsp; | &nbsp; |
-| **Integração** | &nbsp; | &nbsp; | Microsoft Graph, API do Clima |
+| **Integração** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, API do Clima |
 | **Escopo** | &nbsp; | Aplicativo pessoal | &nbsp; |
 | **Ponto de integração** | &nbsp; | Chat | &nbsp; |
 
 **Solução de aplicativo do Teams**: um aplicativo de *bot de chat pessoal* do Teams que verifica e *envia notificação de previsão* para *usuários registrados* antes da data da viagem.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Um desenvolvedor de uma agência de viagens cria um bot para o Microsoft Teams que envia a previsão do tempo aos clientes para eles se planejarem antes de suas viagens" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Um desenvolvedor de uma agência de viagens cria um bot para o Teams que envia a previsão do tempo aos clientes para eles se planejarem antes de suas viagens" border="false":::
 
 O Teams oferece essas e muito mais funcionalidades para trazer aos usuários uma solução de aplicativos com recursos avançados. Para desenvolver este aplicativo:
 
 1. Crie um aplicativo de bot de chat pessoal.
 1. Integre com uma API externa de previsão do tempo para conectar e solicitar previsões para datas e localizações específicas.
-1. Integre com o Microsoft Graph para usuários registrados.
+1. Integre com o :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph para usuários registrados.
 1. Verifique e envie detalhes da previsão com base na data de viagem e no local de viagem do usuário.
 
 ## <a name="choose-what-suits-you"></a>Escolha o que combina com você
@@ -71,7 +72,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
 1. Planejar seu projeto e descobrir o requisito.
 1. Crie o aplicativo. Use o Kit de Interface do Usuário do Teams e a Biblioteca de Interface do Usuário para criar a interface do usuário das guias.
 1. Criar o aplicativo com JavaScript usando o kit de ferramentas do Teams.
-1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o Microsoft Graph.
+1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
 1. Testar o aplicativo em um locatário de desenvolvedor com dados de usuário de exemplo.
 1. Implantar o aplicativo no Azure.
 1. Gerenciar e publicar os aplicativos na Microsoft Store com o Portal do Desenvolvedor. Monetize seu aplicativo com opções, como ofertas de SaaS, compras no aplicativo e muito mais.
@@ -109,7 +110,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
         **Criar seu aplicativo**
     :::column-end:::
     :::column span="2":::
-        Projete a interface do usuário do aplicativo com o kit de interface do usuário do Microsoft Teams.
+        Projete a interface do usuário do aplicativo com o kit de interface do usuário do Teams.
 
         > [!div class="nextstepaction"]
         > [Design seu aplicativo do Teams](~/concepts/design/design-teams-app-process.md)
@@ -133,7 +134,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
         **Estender seu aplicativo entre Microsoft 365**
     :::column-end:::
     :::column span="2":::
-        Você pode visualizar seus aplicativos do Teams em execução em outras experiências de Microsoft 365 com o SDK do cliente JavaScript do Microsoft Teams v2 Preview.
+Você pode visualizar seus aplicativos do Teams em execução em outras experiências de Microsoft 365 com o SDK do cliente JavaScript do Teams v2 Preview.
 
         > [!div class="nextstepaction"]
         > [Extender seu aplicativo](m365-apps/overview.md)
@@ -145,7 +146,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
         **Testar seu aplicativo**
     :::column-end:::
     :::column span="2":::
-        Depois de integrar seu aplicativo como o Microsoft Teams, teste-o antes de publicá-lo.
+        Depois de integrar seu aplicativo como o Teams, teste-o antes de publicá-lo.
 
         > [!div class="nextstepaction"]
         > [Testar seu aplicativo](concepts/build-and-test/test-app-overview.md)
@@ -157,7 +158,7 @@ Desde o design até a criação e a distribuição de um aplicativo do Teams, vo
         **Distribuir seu aplicativo**
     :::column-end:::
     :::column span="2":::
-        Você pode fornecer seu aplicativo Microsoft Teams para um indivíduo, equipe, organização ou qualquer pessoa que queira usá-lo.
+        Você pode fornecer seu aplicativo Teams para um indivíduo, equipe, organização ou qualquer pessoa que queira usá-lo.
 
         > [!div class="nextstepaction"]
         > [Distribuir seu aplicativo](~/concepts/deploy-and-publish/apps-publish-overview.md)
