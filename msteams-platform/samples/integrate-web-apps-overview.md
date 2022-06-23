@@ -5,17 +5,17 @@ description: Neste artigo, você vai começar a integrar aplicativos Web e recur
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144262"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189777"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
 Você pode fornecer uma experiência de usuário enriquecida integrando os recursos de um aplicativo Web existente na plataforma do Microsoft Teams. Siga as [Diretrizes de design do Teams](~/concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo do Teams.
-Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos Web ao Teams, Power Platform para criar aplicativos do Power, Power Virtual Agents, Assistente Virtual, modelos de aplicativo, conectores do Shift, Moodle LMS, criação de um botão Compartilhar com o Teams para seu site, adição de uma guia do Microsoft Teams no SharePoint, criação de links profundos e integração de recursos de dispositivo.
+Este documento fornece uma visão geral dos pré-requisitos para integrar aplicativos da Web com o Teams, plataforma Power para criar aplicativos Power, Power Virtual Agents, Virtual Assistant, modelos de aplicativos, conectores Shift, Moodle LMS, criação de um botão Share-to-Teams para o seu site, adição uma guia do Teams no SharePoint, criando links diretos e integrando recursos do dispositivo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -45,7 +45,7 @@ A plataforma Microsoft Power combina quatro tecnologias robustas da Microsoft, c
 
 ### <a name="power-apps"></a>Power Apps
 
-Com o Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados corporativos e são adaptados às necessidades da sua organização. O Power Apps permite uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos Canvas. Depois de compilar o aplicativo, você pode exportá-lo do portal do Power Apps Maker e inserir no Microsoft Teams.
+Com o Power Apps, você pode criar aplicativos de negócios que se conectam aos seus dados corporativos e são adaptados às necessidades da sua organização. O Power Apps permite uma ampla variedade de cenários de aplicativos para resolver desafios de negócios por meio de aplicativos Canvas. Depois de criar o aplicativo, você pode exportá-lo do portal do criador do Power Apps e incorporá-lo no Teams.
 
 ### <a name="power-virtual-agents"></a>Agentes virtuais do Power
 
@@ -61,7 +61,7 @@ Você pode usar o modelo de aplicativo para criar aplicativos personalizados par
 
 ## <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
-O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre popular. Agora está integrado ao Microsoft Teams. Esta integração ajuda educadores e professores a colaborarem em cursos do Moodle, fazerem perguntas sobre suas notas e suas tarefas e permanecerem atualizados com as notificações diretamente dentro do Teams.
+O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre popular. Agora está integrado ao Teams. Esta integração ajuda educadores e professores a colaborarem em cursos do Moodle, fazerem perguntas sobre suas notas e suas tarefas e permanecerem atualizados com as notificações diretamente dentro do Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Criar um botão Compartilhar no Teams para o seu site
 
@@ -69,7 +69,7 @@ Sites de terceiros podem usar o script do inicializador para inserir botões Com
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Adicionar uma guia do Microsoft Teams no SharePoint
 
-Você pode obter uma experiência de integração rica entre o Microsoft Teams e o SharePoint adicionando uma guia do Microsoft Teams no SharePoint como uma Web part SPFx.
+Você pode obter uma experiência de integração avançada entre o Teams e o SharePoint adicionando uma guia do Teams no SharePoint como uma Web Part SPFx.
 
 ## <a name="create-deep-link"></a>Criar links profundos
 
@@ -77,7 +77,7 @@ Você pode criar links profundos para entidades no Teams. Você pode criar links
 
 ## <a name="integrate-device-capabilities"></a>Integrar as funcionalidades do dispositivo
 
-A plataforma do Microsoft Teams está aprimorando continuamente as funcionalidades do desenvolvedor, alinhando-se com as experiências internas de primeira pessoa. A plataforma avançada do Teams permite que os parceiros acessem e integrem as funcionalidades nativas do dispositivo, como câmera, scanner de código QR ou código de barras, galeria de fotos, microfone e localização usando as APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
+A plataforma Teams está aprimorando continuamente os recursos do desenvolvedor, alinhando-se às experiências internas integradas. A plataforma aprimorada do Teams permite que os parceiros acessem e integrem os recursos nativos do dispositivo, como câmera, leitor de código QR ou de código de barras, galeria de fotos, microfone e localização usando APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams.
 
 ## <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
@@ -85,9 +85,9 @@ Além disso, você pode integrar o controle seletor de pessoas nativo do Teams q
 
 ## <a name="integrate-teams-in-your-external-app"></a>Integrar o Teams em seu aplicativo externo
 
-Você pode inserir suas próprias experiências no Microsoft Teams criando aplicativos do Teams. Se você quiser *reverter* esse modelo e integrar o Teams ou outros recursos de comunicação em sua própria experiência de aplicativo externo, consulte [Serviços de Comunicação do Azure](/azure/communication-services/overview). Os serviços de Comunicação do Azure são serviços baseados em nuvem com APIs REST e SDKs de biblioteca de clientes para ajudá-lo a integrar a comunicação em seus próprios aplicativos personalizados. Você pode inserir componentes web genéricos ou no estilo do Teams para chamar e conversar com a ajuda da [ biblioteca de IU](https://azure.github.io/communication-ui-library/).
+Você pode incorporar suas próprias experiências no Teams criando aplicativos do Teams. Se você quiser *reverter* esse modelo e integrar o Teams ou outros recursos de comunicação em sua própria experiência de aplicativo externo, consulte [Serviços de Comunicação do Azure](/azure/communication-services/overview). Os serviços de Comunicação do Azure são serviços baseados em nuvem com APIs REST e SDKs de biblioteca de clientes para ajudá-lo a integrar a comunicação em seus próprios aplicativos personalizados. Você pode inserir componentes web genéricos ou no estilo do Teams para chamar e conversar com a ajuda da [ biblioteca de IU](https://azure.github.io/communication-ui-library/).
 
-Os aplicativos dos Serviços de Comunicação do Azure podem usar a funcionalidade de visualização pública para [interoperar com o Teams](/azure/communication-services/concepts/teams-interop) e permitir que seu aplicativo personalizado ingresse em reuniões do Teams anonimamente. Por exemplo, você pode integrar chamadas de vídeo em um aplicativo bancário móvel e permitir que os usuários finais se reúnam virtualmente com funcionários do banco usando o Microsoft Teams.
+Os aplicativos dos Serviços de Comunicação do Azure podem usar a funcionalidade de visualização pública para [interoperar com o Teams](/azure/communication-services/concepts/teams-interop) e permitir que seu aplicativo personalizado ingresse em reuniões do Teams anonimamente. Por exemplo, você pode integrar chamadas de vídeo em um aplicativo de banco móvel e permitir que os usuários finais se reúnam virtualmente com funcionários do banco usando o Teams.
 
 Você também pode integrar a identidade do Microsoft 365 para criar aplicativos externos que incorporam chamadas PSTN e de vídeo em nome de um usuário do Teams. Se você já usou [SDKs do Skype for Business](/skype-sdk/appsdk/skypeappsdk) no passado, esses recursos como parte do Serviços de Comunicação do Azure são recomendados como uma substituição.
 
