@@ -5,14 +5,14 @@ description: Com esse roteiro de aprendizagem, comece a usar bots de conversa no
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150838"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503757"
 ---
-# <a name="bots-in-microsoft-teams"></a>Bots no Microsoft Teams
+# <a name="build-bots-for-teams"></a>Criar bots para o Teams
 
 Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas simples e repetitivas por usuários, como atendimento ao cliente ou equipe de suporte. O uso diário de bots inclui bots que fornecem informações sobre o clima, fazem reservas de jantar ou fornecem informações de viagem. As interações com bots podem ser perguntas e respostas rápidas ou conversas complexas.
 

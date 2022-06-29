@@ -3,12 +3,12 @@ title: Introdução - Visão geral
 description: Neste módulo, saiba como começar a usar a documentação do desenvolvedor do Microsoft Teams que apresenta ferramentas comuns, conceitos fundamentais e recursos avançados.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4a53466aab1a896e99b91210dbc93d8467df52d1
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143155"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503897"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -24,7 +24,7 @@ Tenha uma ideia do que você aprenderá:
 
 Vamos dar uma olhada rápida nas opções de ambiente de compilação que você pode escolher e no roteiro para criar e implantar um aplicativo do Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um aplicativo do Teams":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustração mostrando etapas básicas para criar e implantar um aplicativo do Teams" border="true":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Recursos de aplicativo e ferramentas de desenvolvimento
 
@@ -50,7 +50,7 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 > [!div class="nextstepaction"]
 > [Criar um aplicativo de guia do Teams com JavaScript usando React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Criar um aplicativo de bot do Teams com JavaScript usando React](../sbs-gs-bot.yml)
+> [Criar um aplicativo de bot do Teams com JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Criar um aplicativo de extensão de mensagem do Teams com JavaScript usando React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]

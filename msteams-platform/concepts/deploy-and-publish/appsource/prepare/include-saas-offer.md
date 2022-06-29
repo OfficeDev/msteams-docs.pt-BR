@@ -5,14 +5,14 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 0fdfb097def9b39e099536c2054cfaab21610770
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 7a5647c940f6f20babf4f0704b5b7781f4d065c4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123637"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503323"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir uma oferta SaaS com seu aplicativo
+# <a name="include-a-saas-offer-with-your-teams-app"></a>Incluir uma oferta de SaaS com seu aplicativo Teams
 
 :::row:::
    :::column span="3":::
@@ -47,7 +47,7 @@ Para obter diretrizes abrangentes, [consulte como planejar uma oferta de SaaS pa
 
 Ao planejar como monetizar seu aplicativo do Teams, aqui estão algumas coisas a considerar:
 
-* Decida o modelo de assinatura. Uma oferta SsaaS transacional pode incluir vários planos de assinatura. Os planos de assinatura pública disponíveis para qualquer pessoa são mais comuns, mas você também pode querer direcionar clientes específicos com ofertas apenas para eles. Para obter mais informações, consulte [ofertas privadas no marketplace comercial da Microsoft](/azure/marketplace/private-offers).
+* Decida o modelo de assinatura. Uma oferta SsaaS transacional pode incluir vários planos de assinatura. Os planos de assinatura pública disponíveis para qualquer pessoa são mais comuns, mas você também pode querer direcionar clientes específicos com ofertas apenas para eles. Para obter mais informações, consulte [planos privados no marketplace comercial da Microsoft](/azure/marketplace/private-plans).
 * Leia sobre a opção [*Vender por meio da Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para sua oferta do SaaS, que é necessária se você quiser que os usuários comprem planos de assinatura para seu aplicativo diretamente por meio da loja do Teams.
 * Saiba como o [Azure Active Directory SSO (login único)](/azure/marketplace/azure-ad-saas) ajuda seus clientes a comprar e gerenciar assinaturas. (Microsoft Azure Active Directory (Azure AD) SSO é necessário para aplicativos do Teams com ofertas SaaS.)
 * Entenda que você é responsável pelo gerenciamento e pagamento da infraestrutura necessária para dar suporte ao uso da oferta de SaaS dos seus clientes.
