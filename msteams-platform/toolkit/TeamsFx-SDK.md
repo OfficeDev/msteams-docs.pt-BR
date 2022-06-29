@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7e2ecb4c64153a2ed06d235146165705227ef102
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e530adfc92f4edc1e25946a5af7c38300ae67777
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142182"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485633"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -177,8 +177,8 @@ O SDK do TeamsFx fornece várias funções para facilitar a configuração de bi
 
 Configuração necessária:
 
-* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` se quiser usar a identidade do usuário
-* `sqlServerEndpoint`, `sqlIdentityId` se quiser usar a identidade MSI
+* `sqlServerEndpoint`, `sqlUsername`se `sqlPassword` você quiser usar a identidade do usuário.
+* `sqlServerEndpoint`, `sqlIdentityId` se você quiser usar a identidade MSI.
 
 ### <a name="error-handling"></a>Tratamento de erros
 

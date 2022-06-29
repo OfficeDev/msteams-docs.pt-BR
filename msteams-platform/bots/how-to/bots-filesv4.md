@@ -1,17 +1,17 @@
 ---
-title: Enviar e receber arquivos pelo bot
+title: Enviar e receber arquivos usando o bot
 description: Saiba como enviar e receber arquivos por meio do bot usando APIs do Graph para escopos pessoais, de canal e de chat de grupo.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189646"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503876"
 ---
-# <a name="send-and-receive-files-through-the-bot"></a>Enviar e receber arquivos pelo bot
+# <a name="send-and-receive-files-using-bot"></a>Enviar e receber arquivos usando o bot
 
 > [!IMPORTANT]
 > Os artigos neste documento se baseiam no SDK do Bot Framework v4.

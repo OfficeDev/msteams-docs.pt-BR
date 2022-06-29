@@ -3,13 +3,13 @@ title: Estender o aplicativo guia com permissões do Microsoft Graph
 description: Descreve como configurar permissões de API com o Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do Microsoft Azure Active Directory (Azure AD) Escopo do token de acesso de permissão delegado da API do Graph
-ms.openlocfilehash: 76b474f69b31d9c9b9925803ee7c0240f9e5a7c4
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph de token de acesso de permissão delegado
+ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887886"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485290"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Estender o aplicativo guia com permissões e escopo do Microsoft Graph
 
@@ -25,11 +25,11 @@ Nesta seção, você aprenderá a:
 
 ## <a name="configure-api-permissions-in-azure-ad"></a>Configurar permissões de API no Azure AD
 
-Você pode configurar escopos adicionais do Graph no Azure AD para seu aplicativo. Essas são permissões delegadas, que são usadas por aplicativos que exigem acesso conectado. Um usuário ou administrador de aplicativo conectado deve consentir com ele. Seu aplicativo guia pode consentir em nome do usuário conectado quando ele chama o Microsoft Graph.
+Você pode configurar escopos adicionais do Graph Azure AD para seu aplicativo. Essas são permissões delegadas, que são usadas por aplicativos que exigem acesso conectado. Um usuário ou administrador de aplicativo conectado deve consentir com ele. Seu aplicativo guia pode consentir em nome do usuário conectado quando ele chama o Microsoft Graph.
 
 ### <a name="to-configure-api-permissions"></a>Para configurar permissões de API
 
-1. Abra o aplicativo registrado no [portal do Azure](https://ms.portal.azure.com/).
+1. Abra o aplicativo que você registrou [no portal do Azure](https://ms.portal.azure.com/).
 
 2. Selecione **Gerenciar** > **permissão de API** no painel esquerdo.
 
@@ -37,7 +37,7 @@ Você pode configurar escopos adicionais do Graph no Azure AD para seu aplicativ
 
     A **página de permissões de API** é exibida.
 
-3. Selecione **+ Adicionar permissões para** adicionar permissões de API do Microsoft Graph.
+3. Selecione **+ Adicionar permissões para** adicionar permissões API do Graph Microsoft.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Página de permissões do aplicativo." border="true":::
 
@@ -82,7 +82,7 @@ Você pode configurar a autenticação para várias plataformas, desde que a URL
 
 ### <a name="to-configure-authentication-for-a-platform"></a>Para configurar a autenticação para uma plataforma
 
-1. Abra o aplicativo registrado no [portal do Azure](https://ms.portal.azure.com/).
+1. Abra o aplicativo que você registrou no [portal do Azure](https://ms.portal.azure.com/).
 
 1. Selecione **Gerenciar** > **Autenticação** no painel esquerdo.
 
@@ -113,7 +113,7 @@ Você pode configurar a autenticação para várias plataformas, desde que a URL
 
     1. Insira o URI de redirecionamento. O URI deve ser exclusivo.
     2. Insira a URL de logoff do canal frontal.
-    3. Selecione os tokens que você deseja que o Azure AD envie para seu aplicativo.
+    3. Selecione os tokens que você Azure AD enviar para seu aplicativo.
 
 1. Selecione **Configurar**.
 
@@ -121,11 +121,11 @@ Você pode configurar a autenticação para várias plataformas, desde que a URL
 
 ## <a name="acquire-access-token-for-ms-graph"></a>Adquirir token de acesso para o MS Graph
 
-Você precisará adquirir o token de acesso para o Microsoft Graph. Você pode fazer isso usando o fluxo OBO do Azure AD.
+Você precisará adquirir o token de acesso para o Microsoft Graph. Você pode fazer isso usando o Azure AD OBO.
 
 A implementação atual do SSO concede consentimento apenas para permissões de nível de usuário que não são utilizáveis para fazer chamadas do Graph. Para obter as permissões (escopos) necessárias para fazer uma chamada do Graph, os aplicativos de SSO devem implementar um serviço Web personalizado para trocar o token recebido do SDK javaScript do Teams por um token que inclua os escopos necessários. Você pode usar a MSAL (Biblioteca de Autenticação da Microsoft) para buscar o token do lado do cliente.
 
-Depois de configurar as permissões do Graph no Azure AD:
+Depois de configurar as permissões do Graph Azure AD:
 
 - [Configurar o código do lado do cliente para buscar o token de acesso usando a MSAL](#configure-code-to-fetch-access-token-using-msal)
 - [Passe o token de acesso para o código ao lado do servidor](#pass-the-access-token-to-server-side-code)
@@ -198,7 +198,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 Se você precisar acessar os dados do Microsoft Graph, configure o código do lado do servidor para:
 
 1. Valide o token de acesso. Para saber mais, confira [Validar o token de acesso](tab-sso-code.md#validate-the-access-token).
-1. Inicie o fluxo OBO do OAuth 2.0 com uma chamada para a plataforma de identidade da Microsoft que inclui o token de acesso, alguns metadados sobre o usuário e as credenciais do aplicativo guia (a ID do aplicativo e o segredo do cliente). A plataforma de identidade da Microsoft retornará um novo token de acesso que pode ser usado para acessar o Microsoft Graph.
+1. Inicie o fluxo OBO do OAuth 2.0 com uma chamada para o plataforma de identidade da Microsoft que inclui o token de acesso, alguns metadados sobre o usuário e as credenciais do aplicativo guia (a ID do aplicativo e o segredo do cliente). A plataforma de identidade da Microsoft retornará um novo token de acesso que pode ser usado para acessar o Microsoft Graph.
 1. Obter os dados do Microsoft Graph usando o novo token.
 1. Use a serialização de cache de token MSAL.NET cache para armazenar em cache o novo token de acesso para vários, se necessário.
 
@@ -214,10 +214,10 @@ Você pode solicitar consentimento usando a API de Autenticação. Outra abordag
 <details>
 <summary>Para solicitar consentimento adicional usando a API Auth, siga estas etapas:</summary>
 
-1. O token recuperado usando deve `getAuthToken()` ser trocado no lado do servidor usando o fluxo em nome do Azure [AD para](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) obter acesso a essas outras APIs do Graph. Certifique-se de usar o ponto de extremidade v2 Graph para esta troca.
+1. O token recuperado usando deve `getAuthToken()` ser trocado no lado do servidor usando Azure AD fluxo em nome de para obter [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) acesso a essas outras APIs do Graph. Certifique-se de usar o ponto de extremidade v2 Graph para esta troca.
 2. Se a troca falhar, o Microsoft Azure AD retornará uma exceção de concessão inválida. Normalmente, ele responde com uma das duas mensagens de erro ou `invalid_grant` `interaction_required`.
-3. Quando a troca falhar, você deve solicitar consentimento. Use a interface do usuário para solicitar que o usuário do aplicativo conceda outro consentimento. Essa interface do usuário deve incluir um botão que dispara uma caixa de diálogo de consentimento do Azure AD usando [a autenticação silenciosa](~/concepts/authentication/auth-silent-aad.md).
-4. Ao solicitar mais consentimento do Azure AD, `prompt=consent` você deve incluir em seu [parâmetro de](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) cadeia de caracteres de consulta para o Azure AD, caso contrário, o Azure AD não solicitaria outros escopos.
+3. Quando a troca falhar, você deve solicitar consentimento. Use a interface do usuário para solicitar que o usuário do aplicativo conceda outro consentimento. Essa interface do usuário deve incluir um botão que dispara uma caixa Azure AD de consentimento usando [a autenticação silenciosa](~/concepts/authentication/auth-silent-aad.md).
+4. Ao solicitar mais consentimento do Azure AD, `prompt=consent` você deve incluir em seu parâmetro [de](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) cadeia de caracteres de consulta para Azure AD, caso contrário, Azure AD não solicitaria outros escopos.
     - Em vez de `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Verifique se `{scopes}` isso inclui todos os escopos que você está solicitando ao usuário, por exemplo, `Mail.Read` ou `User.Read`.
 5. Depois que o usuário do aplicativo conceder mais permissões, tente novamente o fluxo OBO para obter acesso a essas outras APIs.
@@ -229,3 +229,4 @@ Você pode solicitar consentimento usando a API de Autenticação. Outra abordag
 - [Fluxo on-Behalf-Of do OAuth 2.0](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Obter acesso ao MS Graph](/graph/auth-v2-user)
 - [Serialização de cache de token no MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Provedor MSAL2 do Microsoft Teams](/graph/toolkit/providers/teams-msal2)

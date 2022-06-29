@@ -1,23 +1,23 @@
 ---
-title: Gerenciar Azure Active Directory aplicativo no Teams Toolkit
+title: Gerenciar aplicativo do Azure Active Directory no Kit de Ferramentas do Teams
 author: zyxiaoyuer
-description: Descreve o gerenciamento Azure Active Directory aplicativo no Teams Toolkit
+description: Descreve o gerenciamento de aplicativos do Azure Active Directory no Kit de Ferramentas do Teams
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755934"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503785"
 ---
-# <a name="azure-ad-manifest"></a>Azure AD manifesto
+# <a name="customize-azure-ad-manifest"></a>Personalizar o manifesto do Azure AD
 
-O [Azure Active Directory (Azure AD)](/azure/active-directory/develop/reference-app-manifest) contém definições de todos os atributos de um objeto Azure AD aplicativo no plataforma de identidade da Microsoft.
+O [manifesto do Azure Active Directory (Azure AD)](/azure/active-directory/develop/reference-app-manifest) contém definições de todos os atributos de um objeto Azure AD aplicativo no plataforma de identidade da Microsoft.
 
-Teams Toolkit agora gerencia um Azure AD com o arquivo de manifesto como a origem da verdade durante os ciclos de vida de Teams de desenvolvimento de aplicativos.
+O Kit de Ferramentas do Teams agora gerencia Azure AD aplicativo com o arquivo de manifesto como a fonte da verdade durante os ciclos de vida de desenvolvimento de aplicativos do Teams.
 
 ## <a name="customize-azure-ad-manifest-template"></a>Personalizar Azure AD de manifesto
 
@@ -39,7 +39,7 @@ Você pode personalizar Azure AD de manifesto para atualizar Azure AD aplicativo
 
 ### <a name="customize-requiredresourceaccess"></a>Personalizar requiredResourceAccess
 
-Se o Teams requer mais permissões para chamar a API com permissões adicionais, `requiredResourceAccess` você precisará atualizar a propriedade no modelo Azure AD manifesto. Você pode ver o exemplo a seguir para esta propriedade:
+Se o aplicativo Teams exigir mais permissões para chamar a API com permissões adicionais, `requiredResourceAccess` você precisará atualizar a propriedade no modelo Azure AD manifesto. Você pode ver o exemplo a seguir para esta propriedade:
 
 ```JSON
 
@@ -181,7 +181,7 @@ A lente de código do argumento de espaço reservado ajuda você a examinar rapi
 
 ### <a name="required-resource-access-code-lens"></a>Lente de código de acesso de recurso necessária
 
-Ele é diferente do esquema de [](/azure/active-directory/develop/reference-app-manifest) manifesto Azure AD oficial que e a ID `requiredResourceAccess` na propriedade só dá suporte a UUID, modelo de manifesto Azure AD no Teams Toolkit também dá suporte a cadeias de caracteres e permissões que podem ser lidas `Microsoft Graph` `Office 365 SharePoint Online` pelo usuário.`resourceAppId` `resourceAccess` Se você inserir UUID, a lente de código mostrará cadeias de caracteres legível pelo usuário; caso contrário, ela mostrará UUID.
+É diferente do esquema de manifesto [](/azure/active-directory/develop/reference-app-manifest) Azure AD oficial que e a ID `requiredResourceAccess` na propriedade só dá suporte a UUID, o modelo de manifesto Azure AD no Kit de Ferramentas do Teams também dá suporte a cadeias de caracteres e permissões que podem ser lidas `Microsoft Graph` `Office 365 SharePoint Online` pelo usuário.`resourceAppId` `resourceAccess` Se você inserir UUID, a lente de código mostrará cadeias de caracteres legível pelo usuário; caso contrário, ela mostrará UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Addresource":::
 
@@ -221,10 +221,10 @@ A lente de código mostra o nome do aplicativo para a ID do aplicativo por autor
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
 
-2. Vá para [portal do Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e faça logon na Microsoft 365 conta.
+2. Acesse [portal do Azure e](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) faça logon na conta do Microsoft 365.
   
    > [!NOTE]
-   > Verifique se as credenciais de logon Teams aplicativo e conta M365 são iguais.
+   > Verifique se as credenciais de logon do aplicativo Teams e da conta M365 são as mesmas.
 
 3. Abra [a página de registros de aplicativo](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), pesquise o aplicativo Azure AD usando a ID do cliente que você copiou antes.
   
@@ -232,7 +232,7 @@ A lente de código mostra o nome do aplicativo para a ID do aplicativo por autor
 
 4. Selecione Azure AD aplicativo no resultado da pesquisa para exibir as informações detalhadas.
   
-5. Na Azure AD informações do aplicativo, selecione `Manifest` o menu para exibir o manifesto deste aplicativo. O esquema do manifesto é o mesmo do arquivo `aad.template.json` . Para obter mais informações sobre o manifesto, [consulte Azure Active Directory manifesto do aplicativo](/azure/active-directory/develop/reference-app-manifest).
+5. Na Azure AD informações do aplicativo, selecione `Manifest` o menu para exibir o manifesto deste aplicativo. O esquema do manifesto é o mesmo do arquivo `aad.template.json` . Para obter mais informações sobre o manifesto, consulte o [manifesto do aplicativo do Azure Active Directory](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -240,27 +240,27 @@ A lente de código mostra o nome do aplicativo para a ID do aplicativo por autor
   
 ## <a name="use-an-existing-azure-ad-application"></a>Usar um aplicativo Azure AD existente
 
-Você pode usar o aplicativo Azure AD existente para o projeto Teams, para obter mais informações, consulte Usar um aplicativo Azure AD existente para seu Teams [aplicativo](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app).
+Você pode usar o aplicativo Azure AD existente para o projeto do Teams. Para obter mais informações, consulte Usar um aplicativo Azure AD [existente para](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app) seu aplicativo teams.
 
-## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Azure AD aplicativo no ciclo de vida Teams desenvolvimento de aplicativos
+## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Azure AD aplicativo no ciclo de vida de desenvolvimento de aplicativos do Teams
 
-Você precisa interagir com o Azure AD durante vários estágios do ciclo de vida Teams desenvolvimento de aplicativos.
+Você precisa interagir com o aplicativo Azure AD durante vários estágios do ciclo de vida de desenvolvimento de aplicativos do Teams.
 
-1. **Para criar Project**
+1. **Para criar o Project**
 
-      Você pode criar um projeto com Teams Toolkit que vem com suporte a SSO por padrão, como `SSO-enabled tab`. Para obter mais informações para criar um novo aplicativo, consulte [criar Teams aplicativo usando Teams Toolkit](create-new-project.md). Um Azure AD de manifesto é criado automaticamente para você: `templates\appPackage\aad.template.json`. Teams Toolkit cria ou atualiza o aplicativo Azure AD durante o desenvolvimento local ou enquanto você move o aplicativo para a nuvem.
+      Você pode criar um projeto com o Kit de Ferramentas do Teams que vem com suporte a SSO por padrão, como `SSO-enabled tab`. Para obter mais informações sobre como criar um novo aplicativo, consulte [criar um novo aplicativo do Teams usando o Kit de Ferramentas do Teams](create-new-project.md). Um Azure AD de manifesto é criado automaticamente para você: `templates\appPackage\aad.template.json`. O Kit de Ferramentas do Teams cria ou atualiza o aplicativo Azure AD durante o desenvolvimento local ou enquanto você move o aplicativo para a nuvem.
 
 2. **Para adicionar o SSO ao bot ou à guia**
 
-      Depois de criar um Teams sem SSO interno, o Teams Toolkit ajuda a adicionar o SSO ao projeto de forma incremental. Como resultado, um Azure AD de manifesto é criado automaticamente para você: `templates\appPackage\aad.template.json`.
+      Depois de criar um aplicativo do Teams sem SSO interno, o Kit de Ferramentas do Teams ajuda você a adicionar o SSO ao projeto de forma incremental. Como resultado, um Azure AD de manifesto é criado automaticamente para você: `templates\appPackage\aad.template.json`.
 
-      Teams Toolkit criar ou atualizar o aplicativo Azure AD durante a próxima sessão de depuração local ou enquanto você move o aplicativo para a nuvem.
+      O Kit de Ferramentas do Teams cria ou atualiza o aplicativo Azure AD durante a próxima sessão de depuração local ou enquanto você move o aplicativo para a nuvem.
 
 3. **Para compilar localmente**
 
-    Teams Toolkit executa as seguintes funções durante o desenvolvimento local (conhecido como F5):
+    O Kit de Ferramentas do Teams executa as seguintes funções durante o desenvolvimento local (conhecido como F5):
 
-    * Leia o `state.local.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
+    * Leia o `state.local.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, o Kit de Ferramentas do Teams reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
 
     * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem contexto adicional (como a propriedade replyUrls que requer um ponto de extremidade de depuração local) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto.
 
@@ -270,9 +270,9 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
 4. **Para provisionar recursos de nuvem**
 
-      Você precisa provisionar recursos de nuvem e implantar seu aplicativo ao mover seu aplicativo para a nuvem. Nos estágios, como o desenvolvimento local, Teams Toolkit será:
+      Você precisa provisionar recursos de nuvem e implantar seu aplicativo ao mover seu aplicativo para a nuvem. Nos estágios, como o desenvolvimento local, o Kit de Ferramentas do Teams:
 
-      * Leia o `state.{env}.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, Teams Toolkit reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
+      * Leia o `state.{env}.json` arquivo para localizar um aplicativo Azure AD existente. Se um Azure AD já existir, o Kit de Ferramentas do Teams reutilize o aplicativo Azure AD existente, caso contrário, você precisará criar um novo aplicativo usando o `aad.template.json` arquivo.
 
       * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem contexto adicional (como a propriedade replyUrls requer front-end ou ponto de extremidade do bot) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto.
 
@@ -284,13 +284,13 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
     * Você pode ver, Implantar [alterações Azure AD aplicativo para](#deploy-azure-ad-application-changes-for-remote-environment) o ambiente remoto para implantar Azure AD de aplicativo para o ambiente remoto.
 
-    * Teams Toolkit atualiza o aplicativo Azure AD de acordo com o arquivo de modelo Azure AD manifesto.
+    * O Kit de Ferramentas do Teams atualiza Azure AD aplicativo de acordo com o arquivo Azure AD modelo de manifesto.
 
 ## <a name="limitations"></a>Limitações
 
-1. Teams Toolkit extensão não dá suporte a todas as propriedades listadas no esquema Azure AD manifesto.
+1. A extensão do Kit de Ferramentas do Teams não dá suporte a todas as propriedades listadas Azure AD esquema de manifesto.
   
-      A tabela a seguir lista as propriedades que não têm suporte Teams Toolkit extensão:
+      A tabela a seguir lista as propriedades que não têm suporte na extensão do Kit de Ferramentas do Teams:
 
       |**Propriedades sem suporte**|**Motivo**|
       |-----------|----------|
@@ -313,4 +313,4 @@ Você precisa interagir com o Azure AD durante vários estágios do ciclo de vid
 
 ## <a name="see-also"></a>Confira também
 
-* [Visualizar e personalizar o manifesto do aplicativo Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
+* [Visualizar e personalizar o manifesto do aplicativo no Kit de Ferramentas](TeamsFx-preview-and-customize-app-manifest.md)

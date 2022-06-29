@@ -1,19 +1,19 @@
 ---
 title: Implantar na nuvem
 author: MuyangAmigo
-description: Neste módulo, saiba como implantar o aplicativo na nuvem, no Azure ou no SharePoint e implantar aplicativos Teams usando Teams Toolkit
+description: Neste módulo, saiba como implantar o aplicativo na nuvem, no Azure ou no SharePoint e implantar aplicativos do Teams usando o Kit de Ferramentas do Teams
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142049"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503330"
 ---
-# <a name="deploy-to-the-cloud"></a>Implantar na nuvem
+# <a name="deploy-teams-app-to-the-cloud"></a>Implantar o aplicativo Teams na nuvem
 
 O Kit de Ferramentas do Teams o ajuda a implantar ou carregar o código de front-end e back-end no seu aplicativo para seus recursos na nuvem provisionados no Azure.
 

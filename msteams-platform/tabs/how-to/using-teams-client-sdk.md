@@ -1,18 +1,18 @@
 ---
-title: Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams
+title: SDK do cliente JavaScript do Teams
 author: heath-hamilton
 ms.author: surbhigupta
 description: Neste módulo, Conheça o SDK do cliente JavaScript do Microsoft Teams, que pode ajudar você a criar experiências de aplicativo hospedadas em um <iframe> no Teams, no Office e no Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189508"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503918"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Criando guias e outras experiências hospedadas com o SDK do cliente JavaScript do Microsoft Teams
+# <a name="teams-javascript-client-sdk"></a>SDK do cliente JavaScript do Teams
 
 O SDK do cliente JavaScript do Microsoft Teams pode ajudá-lo a criar experiências hospedadas no Teams, no Office e no Outlook, onde o conteúdo do aplicativo está hospedado em um [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). O SDK é útil para desenvolver aplicativos com qualquer um dos seguintes recursos do Teams:
 
@@ -42,7 +42,7 @@ A tabela a seguir lista as guias e os recursos de diálogos do Teams (módulos d
 | appInitialization| | Depreciado. Substituído pelo namespace `app`. |
 | appInstallDialog | Teams||
 | autenticação | Teams, Outlook, Office | |
-| calendar | Teams, Outlook ||
+| calendar | Outlook ||
 | call | Teams||
 | chat |Teams||
 | caixa de diálogo | Teams, Outlook, Office | Namespace que representa diálogos (anteriormente denominados *módulos de tarefas*. Consulte as anotações [Caixas de Diálogo](#dialogs). |

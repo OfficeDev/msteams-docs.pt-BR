@@ -1,16 +1,16 @@
 ---
 title: Personalizar seu aplicativo Teams
 author: heath-hamilton
-description: Neste módulo, entenda como Teams administradores podem personalizar seu aplicativo Teams para sua organização e ocultar Teams aplicativo até que o administrador aprove.
+description: Neste módulo, entenda como os administradores do Teams podem personalizar seu aplicativo teams para sua organização e ocultar o aplicativo Teams até que o administrador aprove.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143197"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503442"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar seu aplicativo Teams
 
@@ -44,7 +44,7 @@ Para aprimorar a experiência do aplicativo Teams, você pode ocultar um aplicat
 
 Para ocultar o aplicativo, no arquivo de manifesto do aplicativo, defina a propriedade `defaultBlockUntilAdminAction` como `true`. Quando a propriedade é definida como `true`, no Centro de administração do Teams > **Gerenciar aplicativos**, **Bloqueado pelo publicador** aparece no **Estado**:
 
-![Gerenciar aplicativos bloqueados pelo editor](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Gerenciar aplicativos bloqueados pelo editor.":::
 
 O administrador obtém uma solicitação para executar uma ação antes que um usuário possa acessar o aplicativo. Em **Gerenciar aplicativos**, os administradores podem selecionar **Permitir** para permitir que o aplicativo com o estado **Bloqueado pelo publicador**:
 

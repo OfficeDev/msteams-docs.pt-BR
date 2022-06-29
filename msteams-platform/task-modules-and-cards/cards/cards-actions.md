@@ -1,14 +1,14 @@
 ---
 title: Adicionar ações de cartão em um bot
-description: Neste módulo, saiba o que são ações de cartão Microsoft Teams, tipos de ação e como usá-las em seus bots
+description: Neste módulo, saiba o que são ações de cartão no Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189760"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483967"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -429,7 +429,9 @@ Os Cartões Adaptáveis dão suporte a quatro tipos de ação:
 Você também pode modificar a carga do Cartão Adaptável `Action.Submit` para dar suporte a ações de Bot Framework existentes usando uma propriedade `msteams` no objeto `data` de `Action.Submit`. A próxima seção fornece detalhes sobre como usar ações existentes do Bot Framework com Cartões Adaptáveis.
 
 > [!NOTE]
-> Adicionar `msteams` a dados com uma Bot Framework não funciona com um módulo de tarefa de Cartão Adaptável.
+>* Adicionar `msteams` a dados com uma Bot Framework não funciona com um módulo de tarefa de Cartão Adaptável.
+> 
+>* Não há suporte para primário ou desativel `ActionStyle` no Microsoft Teams. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartões Adaptáveis com a ação messageBack
 
@@ -559,7 +561,7 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
 
 ## <a name="code-samples"></a>Exemplos de código
 
-|S.no|Cartão| description|.NET|Javascript|Python|Java|
+|S.no|Cartão| descrição|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|Usando cartões|Apresenta todos os tipos de cartão, incluindo miniatura, áudio, mídia etc. Compila o welcomeing user + multi-prompt bot apresentando um cartão com botões na mensagem de boas-vindas que roteiam para a caixa de diálogo apropriada.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|Cartões adaptáveis|Demonstra como a caixa de diálogo de vários turnos pode usar um cartão para obter a entrada do usuário para nome e idade.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|

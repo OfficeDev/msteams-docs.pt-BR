@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144163"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503484"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Seletor de Pessoas em Cartões Adaptáveis
 
 >[!NOTE]
-> Atualmente, o Seletor de Pessoas em Cartões Adaptáveis está disponível [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) na versão prévia do desenvolvedor público somente para dispositivos móveis e ga (disponibilidade geral) para área de trabalho.
+> Atualmente, o Seletor de Pessoas em Cartões Adaptáveis está disponível na visualização do desenvolvedor público para [o Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) apenas para dispositivos móveis e ga (disponibilidade geral) para área de trabalho.
 
 O Seletor de Pessoas ajuda os usuários a pesquisar e selecionar usuários no Cartão Adaptável. Você pode adicionar o Seletor de Pessoas como controle de entrada ao Cartão Adaptável, que funciona em chats, canais, módulos de tarefas e guias. O People Picker dá suporte aos seguintes recursos:
 
@@ -58,9 +58,9 @@ A imagem a seguir mostra o cenário de reatribuição:
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
 > [!NOTE]
-> No momento, esse recurso está disponível somente em [visualização pública do desenvolvedor](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams).
+> Atualmente, esse recurso está disponível apenas na visualização  [do desenvolvedor público para o Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) .
 
-Android e iOS clientes móveis dão suporte ao Seletor de Pessoas em Cartões Adaptáveis. Você pode usar o Seletor de Pessoas no celular para pesquisar e selecionar o usuário para aprimorar a experiência do usuário. A experiência de pesquisa é semelhante a qualquer outra experiência de seleção de usuário no celular.
+Os clientes móveis Android e iOS dão suporte ao Seletor de Pessoas em Cartões Adaptáveis. Você pode usar o Seletor de Pessoas no celular para pesquisar e selecionar o usuário para aprimorar a experiência do usuário. A experiência de pesquisa é semelhante a qualquer outra experiência de seleção de usuário no celular.
 
 ### <a name="reassignment-scenario-example"></a>Exemplo de cenário de reatribuição
 

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123840"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503736"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -317,7 +317,7 @@ O manifesto do aplicativo Teams define a configuração do seu aplicativo.
 
 [*Correção Obrigatória*]
 
-Os ícones são um dos principais elementos que as pessoas visualizam ao navegar na loja do Teams. 
+Os ícones são um dos principais elementos que as pessoas visualizam ao navegar na loja do Teams.
 <br></br>
 <details><summary>Expanda para saber mais</summary>
 

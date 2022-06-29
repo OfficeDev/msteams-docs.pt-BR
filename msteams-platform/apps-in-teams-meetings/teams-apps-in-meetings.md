@@ -1,16 +1,16 @@
 ---
 title: Aplicativos para reuniões do Teams
 author: surbhigupta
-description: Neste artigo, saiba como os aplicativos funcionam em reuniões Microsoft Teams com base na extensibilidade do aplicativo e da função de usuário e do participante.
+description: Neste artigo, saiba como os aplicativos funcionam em reuniões do Microsoft Teams com base na extensibilidade de aplicativos e funções de usuário e participantes.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142504"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484548"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicativos para reuniões do Teams
 

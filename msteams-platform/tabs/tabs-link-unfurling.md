@@ -1,20 +1,20 @@
 ---
 title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
-description: Saiba como desatar um link, abrir o Modo de Exibição de Estágio e fixar uma guia com Teams aplicativo. Saiba como invoá-lo usando cartão adaptável usando exemplo de código e exemplo.
+description: Saiba como desenrolar um link, abra o Modo de Exibição de Estágio e fixar uma guia com o aplicativo Microsoft Teams. Saiba mais sobre o modo de exibição de estágio e invocá-lo usando o Cartão adaptável usando exemplo e código de exemplo.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122905"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484921"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
-O Modo de Exibição de Estágio é um novo componente de interface do usuário. Ele permite renderizar o conteúdo que é aberto em tela inteira Teams e fixado como uma guia.
+O Modo de Exibição de Estágio é um novo componente de interface do usuário. Ele permite renderizar o conteúdo que é aberto em tela inteira no Teams e fixado como uma guia.
 
 ## <a name="stage-view"></a>Modo de Exibição de Estágio
 
@@ -87,7 +87,7 @@ Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 * O bot responde com um `200` código.
 
 > [!NOTE]
-> Em Teams clientes móveis, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio do aplicativo [Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para moblie abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no parâmetro `websiteUrl` do objeto `TabInfo`.
+> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
@@ -146,7 +146,7 @@ Codificado
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 

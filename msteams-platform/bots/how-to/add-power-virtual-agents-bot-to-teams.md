@@ -5,12 +5,12 @@ description: Aprenda a integrar um chatbot do Power Virtual Agents na plataforma
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 0f66a42cecbac25f82980c16e7f979c5d613816d
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 310b7d8a5e04259a205763b45cb2d2315c19c72a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150845"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485199"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Adicionar um chatbot de Agentes Virtuais de Energia
 
@@ -24,7 +24,7 @@ Esses bots podem ser criados facilmente sem a necessidade de cientistas de dados
 
 > [!NOTE]
 >
-> * Ao adicionar seu chatbot Microsoft Teams, alguns dos dados, como conteúdo do bot e conteúdo de chat do usuário, são compartilhados com Teams. Isso significa que seus dados fluem fora da [conformidade e limites geográficos ou regionais da sua organização](/power-virtual-agents/data-location). <br/>
+> * Ao adicionar seu chatbot ao Microsoft Teams, alguns dos dados, como conteúdo do bot e conteúdo de chat do usuário, são compartilhados com o Teams. Isso significa que seus dados fluem fora da [conformidade e limites geográficos ou regionais da sua organização](/power-virtual-agents/data-location). <br/>
 > * Você não deve usar o Microsoft Power Platform para criar aplicativos que devem ser publicados na loja de aplicativos do Teams. Os aplicativos do Microsoft Power Platform podem ser publicados somente na loja de aplicativos de uma organização.
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Disponibilize seu chatbot no Teams por meio do portal do Power Virtual Agents
@@ -112,3 +112,4 @@ Abra a guia **Testar e distribuir** e selecione **Instalar** para adicionar seu 
 * [ Portal do Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 * [Publicar seu bot do Power Virtual Agents](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Segurança e conformidade no Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+* [Bot de Power Virtual Agents de recursos humanos](/power-virtual-agents/teams/fundamentals-get-started-teams)

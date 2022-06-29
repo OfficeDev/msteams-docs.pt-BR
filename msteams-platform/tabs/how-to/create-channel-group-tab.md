@@ -1,19 +1,19 @@
 ---
-title: Criar uma guia de canal ou grupo
+title: Criar uma guia de canal
 author: laujan
 description: Neste módulo, saiba como criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189602"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503645"
 ---
-# <a name="channel-or-group-tab"></a>Guias de canal ou grupo
+# <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
 Canal ou guias de grupo forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Carregar seu aplicativo no Teams
 
-1. Vá para Teams e selecione **Aplicativos**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Vá para o Teams e selecione **Aplicativos**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Loja do Teams":::.
 1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package**, selecione a pasta zip do pacote de aplicativo e escolha **Abrir**.
 
@@ -291,7 +291,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone transparente de contorno** medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, `configurationUrl` Teams carrega o especificado em seu manifesto, insere-o em um IFrame e o renderiza em sua guia.
+Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, o Teams `configurationUrl` carrega o especificado em seu manifesto, insere-o em um IFrame e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -394,7 +394,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualize seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Vá para Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
+1. Vá para o Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
 
 1. Vá para [**Portal do Desenvolvimento**](https://dev.teams.microsoft.com/home).
 
@@ -617,7 +617,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Atualize seu pacote de aplicativos com o Portal do Desenvolvedor
 
-1. Vá para Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
+1. Vá para o Teams. Se você usar [versão baseada na Web](https://teams.microsoft.com), poderá inspecionar seu código front-end usando as [ferramentas de desenvolvedor](~/tabs/how-to/developer-tools.md) do navegador.
 
 1. Vá para [**Portal do Desenvolvimento**](https://dev.teams.microsoft.com/home).
 

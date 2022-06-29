@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143589"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485619"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Criar um bot do Microsoft Teams
 
@@ -190,7 +190,7 @@ Use um dicionário de sinônimos e receba pessoas de todas as origens para ajuda
 
 ### <a name="extract-intent-and-data-from-messages"></a>Extrair intenção e dados de mensagens
 
-Projete seu bot para reconhecer intenções, o que interpreta o que alguém deseja de um bot em resposta a uma mensagem ou consulta. A intenção classifica uma mensagem ou consulta como uma única ação com um ou mais objetos de dados que são afetados por essa ação. 
+Projete seu bot para reconhecer intenções, o que interpreta o que alguém deseja de um bot em resposta a uma mensagem ou consulta. A intenção classifica uma mensagem ou consulta como uma única ação com um ou mais objetos de dados que são afetados por essa ação.
 
 Os exemplos a seguir descrevem as intenções e os dados do usuário em mensagens enviadas para bots:
 

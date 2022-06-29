@@ -1,18 +1,18 @@
 ---
 title: Desenrolamento de link
 author: surbhigupta
-description: Neste módulo, saiba como adicionar link desfralizando com a extensão de mensagens em um aplicativo Teams com manifesto do aplicativo ou manualmente usando exemplos de código e exemplos.
+description: Neste módulo, saiba como adicionar link desfralizando com a extensão de mensagens em um aplicativo do Teams com manifesto do aplicativo ou manualmente usando exemplos de código e exemplos.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189997"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503610"
 ---
-# <a name="link-unfurling"></a>Desenrolamento de link
+# <a name="add-link-unfurling"></a>Adicionar desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -23,7 +23,7 @@ Este documento orienta você sobre como adicionar link desfralhamento ao manifes
 > * Atualmente, não há suporte para desenrolamento de link em clientes móveis.
 > * O resultado da desenrolamento de link é armazenado em cache por 30 minutos.
 
-A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão da mensagem resolveu em um cartão:
+A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão de mensagem resolveu em um cartão:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemplo de desenrolamento de link":::
 
@@ -50,7 +50,7 @@ Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldando manualmente
 
 > [!NOTE]
-> Se a autenticação for adicionada Azure AD, [unfurl links em Teams usando o bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+> Se a autenticação for adicionada por meio Azure AD, [desfasar links no Teams usando o bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Para habilitar sua extensão de mensagem para interagir com links, primeiro você deve adicionar a matriz `messageHandlers` ao manifesto do aplicativo. O exemplo a seguir explica como adicionar o link desfraldamento manualmente:
 

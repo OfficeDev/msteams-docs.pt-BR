@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagem
 author: surbhigupta
-description: Neste módulo, saiba mais sobre os comandos de pesquisa de extensão de mensagem Teams aplicativos, para criar um comando de pesquisa por meio do manifesto do aplicativo e manualmente.
+description: Neste módulo, saiba mais sobre os comandos de pesquisa de extensão de mensagem para aplicativos do Teams, para criar um comando de pesquisa por meio do manifesto do aplicativo e manualmente.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189615"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503939"
 ---
 # <a name="define-message-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagem
 
@@ -24,7 +24,7 @@ Os comandos de pesquisa de extensão de mensagem permitem que os usuários pesqu
 Confira o vídeo a seguir para saber como definir comandos de pesquisa de extensão de mensagem:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Selecionar locais de invocação de comando de pesquisa
@@ -94,7 +94,7 @@ Para adicionar manualmente o comando de pesquisa de extensão de mensagem ao man
 |`initialRun` | Se essa propriedade for definida como **true**, ela indicará que esse comando deverá ser executado assim que o usuário selecionar esse comando na interface do usuário. | Não | 1.0 |
 | `context` | Essa propriedade é uma matriz opcional de valores que define o contexto em que a ação de pesquisa está disponível. Os valores possíveis são `message`, `compose` ou `commandBox`. O padrão é `["compose", "commandBox"]`. | Não | 1,5 |
 
-Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no Teams cliente.
+Você deve adicionar os detalhes do parâmetro de pesquisa, que define o texto visível para o usuário no cliente do Teams.
 
 | Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|

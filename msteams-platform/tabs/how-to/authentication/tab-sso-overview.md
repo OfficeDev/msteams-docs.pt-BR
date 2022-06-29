@@ -1,21 +1,21 @@
 ---
-title: Visão geral da autenticação para guias usando o SSO no Teams com o Azure AD
+title: Visão geral da autenticação para guias usando o SSO no Teams com Azure AD
 description: Visão geral da autenticação de SSO no Teams e como usá-la em guias
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: guias de autenticação do Microsoft Azure Active Directory (Azure AD) Manifesto do aplicativo de token de acesso de SSO do Microsoft Azure Active Directory
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) manifesto do aplicativo de token de acesso de SSO
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887878"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503764"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>Habilitar o logon único em um aplicativo de guia
+# <a name="enable-sso-for-tab-app"></a>Habilitar o logon único para o aplicativo de guia
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
-Com o SSO no Teams, os usuários do aplicativo têm a vantagem de usar o Teams para acessar aplicativos. Depois de fazer logon no Teams usando a conta da Microsoft ou do Microsoft 365, os usuários do aplicativo podem usar seu aplicativo sem precisar entrar novamente. Seu aplicativo está disponível para usuários de aplicativos em qualquer dispositivo com acesso concedido por meio do Azure AD.
+Com o SSO no Teams, os usuários do aplicativo têm a vantagem de usar o Teams para acessar aplicativos. Depois de fazer logon no Teams usando a conta da Microsoft ou do Microsoft 365, os usuários do aplicativo podem usar seu aplicativo sem precisar entrar novamente. Seu aplicativo está disponível para usuários de aplicativos em qualquer dispositivo com acesso concedido por meio Azure AD.
 
 Veja o que você aprenderá nesta seção:
 
@@ -42,7 +42,7 @@ Você pode exibir aqui um exemplo de experiência do usuário com o SSO em um ap
 
 Veja o que os usuários do aplicativo obtêm com a experiência de SSO:
 
-- O Teams obtém o token de acesso para o usuário atual do aplicativo do Azure AD. Essa interação com o Azure AD é invisível para o usuário do aplicativo. Isso se traduz em obter acesso ao aplicativo sem precisar sair do ambiente do Teams.
+- O Teams obtém o token de acesso para o usuário atual do aplicativo Azure AD. Essa interação com Azure AD é invisível para o usuário do aplicativo. Isso se traduz em obter acesso ao aplicativo sem precisar sair do ambiente do Teams.
 - Um usuário do aplicativo precisa consentir apenas em um ambiente multilocatário. Se o usuário do aplicativo e o aplicativo residirem no mesmo locatário, o usuário do aplicativo não precisará dar consentimento para usar o aplicativo.
 - Depois de consentir com o Teams pela primeira vez, o usuário do aplicativo pode usar seu aplicativo sem mais necessidade de consentimento, mesmo em qualquer outro dispositivo. Por esse motivo, ele oferece uma melhor experiência do usuário.
   - Como alternativa, o administrador do locatário pode conceder consentimento em nome dos usuários do aplicativo. Nesse cenário, quando o administrador do locatário consente com os usuários do aplicativo no locatário, os usuários do aplicativo não precisam ser solicitados a dar consentimento. Isso significa que os usuários do aplicativo não veem as caixas de diálogo de consentimento e podem acessar o aplicativo diretamente.
@@ -56,7 +56,7 @@ Agora, vamos ver o que acontece no back-end durante o runtime para obter a exper
 
 ## <a name="sso-in-teams-at-runtime"></a>SSO no Teams em runtime
 
-Obtenha o SSO em um aplicativo guia obtendo o token de acesso para o usuário do aplicativo Teams que está conectado no momento. Esse processo envolve o cliente e o servidor do aplicativo tab, o cliente do Teams e o Azure AD. Durante essa interação, o usuário do aplicativo deve dar consentimento para usar a identidade do Teams para obter o token de acesso em um ambiente multilocatário.
+Obtenha o SSO em um aplicativo guia obtendo o token de acesso para o usuário do aplicativo Teams que está conectado no momento. Esse processo envolve o cliente e o servidor do aplicativo tab, o cliente do Teams e Azure AD. Durante essa interação, o usuário do aplicativo deve dar consentimento para usar a identidade do Teams para obter o token de acesso em um ambiente multilocatário.
 
 A imagem a seguir mostra como o SSO funciona quando um usuário do aplicativo Teams tenta acessar o aplicativo guia:
 
@@ -65,9 +65,9 @@ A imagem a seguir mostra como o SSO funciona quando um usuário do aplicativo Te
 | # | Interação | O que está acontecendo |
 | --- | --- | --- |
 | 1 | Aplicativo tab → Teams Client | O aplicativo guia faz uma chamada javaScript `getAuthToken()`para, que informa ao Teams para obter um token de acesso. |
-| 2 | Cliente do Teams → Azure AD | O Teams solicita o ponto de extremidade do Azure AD para o token de acesso para o usuário atual do aplicativo com base na identidade do Teams. |
-| 3 | Formulário de Consentimento → Azure AD | Se o usuário atual do aplicativo estiver usando seu aplicativo guia pela primeira vez, o Teams exibirá a solicitação de consentimento se o aplicativo precisar acessar alguns dados protegidos. O usuário do aplicativo (ou o administrador) deve dar consentimento ao Teams para usar a identidade do Teams do usuário do aplicativo para obter o token de acesso do Azure AD. <br> Como alternativa, haverá uma solicitação para lidar com a autenticação step-up, como a autenticação de dois fatores. |
-| 4 | Cliente do Azure AD → Teams | O Azure AD envia o token de acesso para o Cliente do Teams. O token é um JWT (Token Web JSON) e sua validação funciona exatamente como a validação de token na maioria dos fluxos OAuth padrão. O Teams armazena em cache o token em seu nome para que chamadas futuras retornem `getAuthToken()` o token armazenado em cache. |
+| 2 | Cliente do Teams → Azure AD | O Teams solicita Azure AD ponto de extremidade para o token de acesso para o usuário atual do aplicativo com base na identidade do Teams. |
+| 3 | Azure AD → de consentimento | Se o usuário atual do aplicativo estiver usando seu aplicativo guia pela primeira vez, o Teams exibirá a solicitação de consentimento se o aplicativo precisar acessar alguns dados protegidos. O usuário do aplicativo (ou o administrador) deve dar consentimento ao Teams para usar a identidade do Teams do usuário do aplicativo para obter o token de acesso do Azure AD. <br> Como alternativa, haverá uma solicitação para lidar com a autenticação step-up, como a autenticação de dois fatores. |
+| 4 | Azure AD → Teams | Azure AD envia o token de acesso para o cliente do Teams. O token é um JWT (Token Web JSON) e sua validação funciona exatamente como a validação de token na maioria dos fluxos OAuth padrão. O Teams armazena em cache o token em seu nome para que chamadas futuras retornem `getAuthToken()` o token armazenado em cache. |
 | 5 | Cliente cliente do Teams → guia cliente | O Teams envia o token de acesso para o aplicativo guia como parte do objeto de resultado retornado pela `getAuthToken()` chamada. |
 | 6  | Aplicativo tab (entre o servidor & cliente) | O aplicativo guia analisa o token de acesso usando JavaScript para extrair as informações necessárias, como o endereço de email do usuário do aplicativo. O token retornado para o aplicativo guia é um token de acesso e um token de identidade. |
 
@@ -80,11 +80,11 @@ As guias são páginas da Web com reconhecimento de Equipes. Para habilitar o SS
 
 ### <a name="use-cases-for-enabling-sso"></a>Casos de uso para habilitar o SSO
 
-Você pode habilitar o SSO no Teams para todos os aplicativos que dão suporte ao Azure AD como um provedor de identidade. Além de usar o SSO para autenticar usuários de aplicativos em um aplicativo guia, você também pode usá-lo para habilitar o acesso contínuo no Teams.
+Você pode habilitar o SSO no Teams para todos os aplicativos que dão suporte Azure AD como um provedor de identidade. Além de usar o SSO para autenticar usuários de aplicativos em um aplicativo guia, você também pode usá-lo para habilitar o acesso contínuo no Teams.
 
 Alguns cenários em que você pode usar a API de SSO para autenticar os usuários do aplicativo são:
 
-- Se você quiser autenticar os usuários do aplicativo em um aplicativo de guia do Teams, a API de SSO permitirá que os usuários do aplicativo usem seu aplicativo no Teams sem a necessidade de autenticação adicional. Com base na identidade do Teams do usuário do aplicativo, você pode obter o token de acesso para eles do Azure AD.
+- Se você quiser autenticar os usuários do aplicativo em um aplicativo de guia do Teams, a API de SSO permitirá que os usuários do aplicativo usem seu aplicativo no Teams sem a necessidade de autenticação adicional. Com base na identidade do Teams do usuário do aplicativo, você pode obter o token de acesso para eles Azure AD.
 - Se seu aplicativo usar o módulo de tarefa de dentro de um bot, uma guia, uma extensão de mensagem ou Cartões Adaptáveis, você poderá usar a API de SSO para autenticar os usuários do aplicativo.
 - Você também pode usar a API de SSO para autenticar os usuários do aplicativo que desejam acessar o modo de exibição de Estágio sem precisar ser validados novamente.
 
@@ -101,7 +101,7 @@ Para habilitar o SSO para um aplicativo de guia:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Etapas para habilitar o SSO para a guia" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
-1. **Registre-se no Azure AD**: crie um aplicativo do Azure AD para gerar uma ID do aplicativo e o URI da ID do aplicativo. Para gerar o token de acesso, configure escopos e autorize aplicativos cliente confiáveis.
+1. **Registre-Azure AD**: crie um aplicativo Azure AD para gerar uma ID do aplicativo e o URI da ID do aplicativo. Para gerar o token de acesso, configure escopos e autorize aplicativos cliente confiáveis.
 2. **Código** de atualização: adicione o código para manipular o token de acesso, `getAuthToken()` chamando quando um usuário do aplicativo acessar seu aplicativo guia, enviando esse token para o código do servidor do aplicativo no cabeçalho autorização e validando o token de acesso quando ele é recebido.
 3. **Atualizar** o manifesto do aplicativo Teams: atualize o manifesto do aplicativo Cliente do Teams com a ID do aplicativo e o URI da ID do aplicativo gerados no Azure AD para permitir que o Teams solicite tokens de acesso em nome do seu aplicativo.
 

@@ -3,12 +3,12 @@ title: Preparar o locatário do Microsoft 365
 description: Neste módulo, saiba como começar a usar o Teams no Microsoft 365 e criar seu ambiente de desenvolvimento
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144387"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484884"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar o locatário do Microsoft 365
 
@@ -68,4 +68,5 @@ Para obter informações completas sobre como essas configurações interagem, c
 
 ## <a name="see-also"></a>Confira também
 
-[Adicionar dados de teste ao seu locatário Microsoft 365 teste](~/concepts/build-and-test/test-data.md)
+* [Adicionar dados de teste ao seu locatário Microsoft 365 teste](~/concepts/build-and-test/test-data.md)
+* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

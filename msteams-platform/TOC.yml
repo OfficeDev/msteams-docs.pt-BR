@@ -18,7 +18,7 @@
 - name: Introdução
   expanded: false
   items:
-    - name: Visão geral da introdução
+    - name: Visão Geral
       href: get-started/get-started-overview.md
     - name: Crie seu primeiro aplicativo de guia usando JavaScript
       href: sbs-gs-javascript.yml
@@ -44,9 +44,9 @@
   items:
     - name: Visão Geral
       href: concepts/app-fundamentals-overview.md
-    - name: Entenda seu caso de uso
+    - name: Entender o caso de uso
       href: concepts/design/understand-use-cases.md
-    - name: Mapeie seu caso de uso para recursos do Microsoft Teams
+    - name: Mapear caso de uso para recursos do Teams
       href: concepts/design/map-use-cases.md
     - name: Lista de verificação de planejamento de aplicativos do Teams
       href: concepts/design/planning-checklist.md
@@ -58,7 +58,7 @@
   items:
     - name: Visão Geral
       href: concepts/design/design-teams-app-overview.md
-    - name: Compreenda o processo de design
+    - name: Entender o processo de design
       href: concepts/design/design-teams-app-process.md
     - name: Sistema de design
       href: concepts/design/design-teams-app-fundamentals.md
@@ -104,13 +104,13 @@
           href: toolkit/accounts.md
         - name: Depurar seu aplicativo Teams localmente
           href: toolkit/debug-local.md
-        - name: Depurar processos em segundo plano
+        - name: Depurar processo em segundo plano
           href: toolkit/debug-background-process.md
         - name: Provisionar recursos de nuvem
           href: toolkit/provision.md
         - name: Implantar o aplicativo Teams na nuvem
           href: toolkit/deploy.md
-        - name: Visualizar e personalizar o manifesto do aplicativo Teams
+        - name: Editar manifesto do aplicativo Teams
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Personalizar o manifesto do Azure AD
           href: toolkit/AAD-manifest-customization.md
@@ -128,7 +128,7 @@
           href: toolkit/publish.md
         - name: Gerenciar vários ambientes
           href: toolkit/TeamsFx-multi-env.md
-        - name: Colaborando com outros desenvolvedores no Kit de Ferramentas do Teams
+        - name: Colaborar no projeto do Teams
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
@@ -164,7 +164,7 @@
               items:
                 - name: Conversas pessoais com bots
                   href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-                - name: Conversas em canais e em grupos com bots
+                - name: Bot de conversa de chat em grupo e canal
                   href: resources/bot-v3/bot-conversations/bots-conv-channel.md
                 - name: Iniciar uma conversa
                   href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
@@ -208,9 +208,9 @@
       href: tabs/how-to/create-channel-group-tab.md
     - name: Criar uma página de conteúdo
       href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Criar uma página de configuração
+    - name: Criar página de configuração
       href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Criar uma página de remoção
+    - name: Criar página de remoção
       href: tabs/how-to/create-tab-pages/removal-page.md
     - name: Guias em dispositivos móveis
       href: tabs/design/tabs-mobile.md
@@ -241,9 +241,9 @@
           items:
             - name: Receber todas as mensagens do canal com RSC
               href: bots/how-to/conversations/channel-messages-with-rsc.md
-        - name: Criar um menu de comandos para o seu bot
+        - name: Criar um menu de comandos
           href: bots/how-to/create-a-bot-commands-menu.md
-        - name: Conversas em canal e em grupo
+        - name: Canais e conversas de chat em grupo com um bot do Microsoft Teams
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Eventos de conversa em seu bot do Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
@@ -251,13 +251,13 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Formatar suas mensagens de bot
           href: bots/how-to/format-your-bot-messages.md
-        - name: Atualizar e excluir mensagens de bot
+        - name: Atualizar e excluir mensagens enviadas do bot
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: Solicite cabeçalhos do bot
           href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Obter contexto para o bot
+    - name: Obtenha o contexto específico do Teams para seu bot
       href: bots/how-to/get-teams-context.md
-    - name: Enviar e receber arquivos
+    - name: Enviar e receber arquivos usando o bot
       href: bots/how-to/bots-filesv4.md
     - name: Otimizar seu bot com limitação de fluxo no Teams
       href: bots/how-to/rate-limit.md
@@ -271,11 +271,11 @@
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notificações de chamadas recebidas
           href: bots/calls-and-meetings/call-notifications.md
-        - name: Mídia hospedada pelo aplicativo
+        - name: Requisitos e considerações para bots de mídia hospedados em aplicativos
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-        - name: Formatos de mídia suportados
+        - name: Formatos de mídia com suporte para bots
           href: resources/media-formats.md
-    - name: Alterações na API de bot para membros da equipe/chat
+    - name: Alterações na API do bot do Teams para buscar membros da equipe ou chat
       href: resources/team-chat-member-api-changes.md
 - name: Compilar extensões de mensagens.
   items:
@@ -285,9 +285,9 @@
       items:
         - name: Definir comandos de ação
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-        - name: Criar um módulo de tarefa
+        - name: Criar e enviar o módulo de tarefas
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-        - name: Responder aos comandos de ação
+        - name: Responder à ação de envio do módulo de tarefas
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: Comandos de pesquisa
       items:
@@ -313,7 +313,7 @@
           href: apps-in-teams-meetings/teams-live-share-overview.md
         - name: Introdução
           items:
-            - name: Início rápido
+            - name: Guia de início rápido
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Tutorial de Rolo de Dados
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
@@ -393,11 +393,11 @@
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: Adicionar código para habilitar o logon único
               href: tabs/how-to/authentication/tab-sso-code.md
-            - name: Atualizar o manifesto do aplicativo para logon único e pré-visualização
+            - name: Atualizar o manifesto do aplicativo para SSO e aplicativo de visualização
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: Conceder permissões e escopos ao Microsoft Graph
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-            - name: Solução de problemas
+            - name: Solucionar problemas de autenticação de SSO
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
         - name: Usar autenticação OAuth IdP de terceiros
           items:
@@ -425,7 +425,7 @@
   items:
     - name: Visão Geral
       href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: Solicitar permissões do dispositivo
+    - name: Solicitar permissões de dispositivo para o aplicativo Teams
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Permissões do dispositivo para o navegador
       href: concepts/device-capabilities/browser-device-permissions.md
@@ -469,7 +469,7 @@
       href: concepts/build-and-test/test-app-overview.md
     - name: Preparar o locatário do Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: Escolher uma configuração de teste
+    - name: Escolher uma configuração para testar e depurar seu aplicativo Microsoft Teams
       href: concepts/build-and-test/debug.md
     - name: Adicione dados de teste ao seu ambiente
       href: concepts/build-and-test/test-data.md
@@ -479,7 +479,7 @@
           href: tabs/how-to/developer-tools.md
     - name: Bots
       items:
-        - name: Depurar o bot localmente usando um IDE
+        - name: Testar e depurar seu bot localmente com o IDE
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: Depurar o bot com o middleware de inspeção
           href: /azure/bot-service/bot-service-debug-inspection-middleware
@@ -497,11 +497,11 @@
   items:
     - name: Visão Geral
       href: concepts/deploy-and-publish/apps-publish-overview.md
-    - name: Configurar opções de instalação padrão
+    - name: Configurar opções de instalação padrão para o aplicativo Teams
       href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: Criar um pacote do aplicativo
+    - name: Criar pacote de aplicativos do Teams
       href: concepts/build-and-test/apps-package.md
-    - name: Carregar seu aplicativo
+    - name: Carregar seu aplicativo no Teams
       href: concepts/deploy-and-publish/apps-upload.md
     - name: Publicar na sua organização
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -511,13 +511,13 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: 'Revisar as diretrizes de validação da Microsoft Store '
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-        - name: Criar uma conta do Partner Center
+        - name: Criar uma conta de desenvolvedor do Partner Center
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-        - name: Preparar o envio para a Microsoft Store
+        - name: Preparar o envio da loja do Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
         - name: Enviar seu aplicativo
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-        - name: Resolver problemas se o envio para a Microsoft Store falhar
+        - name: Resolver problemas se o envio da loja do Teams falhar
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Manter seu aplicativo publicado
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
@@ -529,7 +529,7 @@
   items:
     - name: Visão Geral
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Incluir uma oferta SaaS com seu aplicativo
+    - name: Incluir uma oferta de SaaS com seu aplicativo Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - name: Compras no aplicativo
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
@@ -537,13 +537,13 @@
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifesto do aplicativo
   items:
-    - name: Esquema de manifesto do aplicativo
+    - name: Esquema de manifesto do aplicativo para o Teams
       href: resources/schema/manifest-schema.md
     - name: Pré-visualização do desenvolvedor público
       items:
         - name: Visão Geral
           href: resources/dev-preview/developer-preview-intro.md
-        - name: Esquema de manifesto
+        - name: Esquema de manifesto de visualização do desenvolvedor público para o Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integrar com o Teams
   items:
@@ -595,7 +595,7 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar referências do esquema JSON
           href: resources/schema/localization-schema.md
-    - name: Usar a autenticação silenciosa
+    - name: Usar a autenticação silenciosa no Azure AD
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Atributo de cookie SameSite
       href: resources/samesite-cookie-update.md

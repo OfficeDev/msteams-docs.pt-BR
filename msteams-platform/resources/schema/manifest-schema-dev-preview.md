@@ -1,17 +1,17 @@
 ---
 title: Referência do esquema de manifesto do Developer Preview público
-description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição de todos os seus componentes com suporte para Microsoft Teams.
+description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição de todos os componentes compatíveis com o Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189872"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503470"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referência: esquema do manifesto do Developer Preview público para o Microsoft Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
 Para obter informações sobre como habilitar o Developer Preview, confira [Developer Preview público para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -547,7 +547,7 @@ O objeto é uma matriz com todos os elementos do tipo `string`.
 
 Opcional:
 
-Especifique Microsoft Azure Active Directory (Azure AD) id do aplicativo e Graph informações para ajudar os usuários a entrar diretamente em seu Azure AD aplicativo.
+Especifique Microsoft Azure Active Directory (Azure AD) id do aplicativo e informações do Graph para ajudar os usuários a entrar diretamente em seu Azure AD aplicativo.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que o aplicativo mostrar as ofertas do marketplace do usuário e conclua as compras do usuário dentro do aplicativo, em nome do usuário conectado.|
 
-* **Permissões específicas de recursos para Teams compartilhamento ao vivo**
+* **Permissões específicas de recursos para o compartilhamento ao vivo do Teams**
 
    |Nome| Descrição |
    | ----- | ----- |

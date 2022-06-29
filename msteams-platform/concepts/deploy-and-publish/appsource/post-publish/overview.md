@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123045"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484842"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -75,7 +75,7 @@ Para interromper a distribuição de um aplicativo após a publicação, siga as
 1. Na página **Visão geral do produto**, selecione **Parar de vender**. Ele remove o aplicativo do Microsoft AppSource.
 1. Para iniciar a de-listagem do aplicativo, no **Partner Center**, selecione a página **Visão geral** e, em seguida, selecione **Parar de vender**.
 
-Depois de interromper a distribuição de um aplicativo, você ainda poderá vê-lo no Partner Center com um status **Não disponível**. Se você decidir listar o aplicativo novamente, siga as instruções para [Publicar seu aplicativo na loja do Microsoft Teams](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
+Depois de interromper a distribuição de um aplicativo, você ainda poderá vê-lo no Partner Center com um status **Não disponível**. Se você decidir listar o aplicativo novamente, siga as instruções para [Publicar seu aplicativo na loja do Microsoft Teams](../publish.md).
 
 ## <a name="see-also"></a>Confira também
 

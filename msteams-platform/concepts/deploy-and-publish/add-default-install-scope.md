@@ -1,17 +1,17 @@
 ---
 title: Configurar opções de instalação padrão para seu aplicativo
-description: Saiba como especificar as opções de instalação padrão Teams seu aplicativo e a funcionalidade padrão para escopos compartilhados.
+description: Saiba como especificar as opções de instalação padrão do aplicativo Teams e a funcionalidade padrão para escopos compartilhados.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 75ea4dbae2379e6d6e7e2cc707314207cd7186ca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122898"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503449"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurar opções de instalação padrão para seu Microsoft Teams aplicativo
+# <a name="configure-default-install-options-for-teams-app"></a>Configurar opções de instalação padrão para o aplicativo Teams
 
 É comum um aplicativo dar suporte a vários cenários no Teams, mas talvez você o tenha projetado com um escopo e funcionalidade específicos em mente. Por exemplo, se seu aplicativo for principalmente para uso de equipe ou canal, você poderá garantir que a primeira opção de instalação que os usuários veem na loja seja Adicionar **a uma equipe**.
 

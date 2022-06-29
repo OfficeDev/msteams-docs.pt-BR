@@ -1,15 +1,15 @@
 ---
 title: Cartões e módulos de tarefa
-description: Saiba mais sobre os tipos de cartões com suporte em bots para Teams, como cartão Adaptável, Hero e Miniatura e suas ações.
+description: Saiba mais sobre os tipos de cartões com suporte em bots para o Teams, como cartão Adaptável, Hero e Miniatura e suas ações.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 04cdcfedd98bee67babf63231ffdeae6679f7331
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143932"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485444"
 ---
 # <a name="cards-and-task-modules"></a>Cartões e módulos de tarefa
 
@@ -38,7 +38,7 @@ Você pode adicionar e responder a ações de cartões que:
 * Envie mensagens e conteúdo para o bot.
 * Inicie o fluxo OAuth.
 
-Você pode fornecer uma experiência de [pesquisa dinâmica](~/task-modules-and-cards/cards/dynamic-search.md) em um conjunto de dados grande usando o controle de digitação antecipada em Cartões Adaptáveis e realizar a pesquisa estática de digitação antecipada em um número limitado de opções. Invoque os módulos de tarefa em guias de canal ou pessoais, bots ou links profundos. Sua experiência do usuário dos fluxos de trabalho que exigem a entrada de dados pode ser aprimorada adicionando um módulo de tarefa à guia do usuário. Você pode invocar os módulos de tarefas de bots do Teams usando os botões nos cartões de Cartões Adaptáveis e Bot Framework cartões.
+Você pode fornecer experiência [de](~/task-modules-and-cards/cards/dynamic-search.md) pesquisa dinâmica em um conjunto de dados grande usando o controle typeahead em Cartões Adaptáveis e executar a pesquisa estática typeahead dentro do número limitado de opções. Invoque os módulos de tarefa em guias de canal ou pessoais, bots ou links profundos. Sua experiência do usuário dos fluxos de trabalho que exigem a entrada de dados pode ser aprimorada adicionando um módulo de tarefa à guia do usuário. Você pode invocar os módulos de tarefas de bots do Teams usando os botões nos cartões de Cartões Adaptáveis e Bot Framework cartões.
 
 ## <a name="see-also"></a>Confira também
 

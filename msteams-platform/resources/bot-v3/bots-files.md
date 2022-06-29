@@ -1,17 +1,18 @@
 ---
 title: Enviar e receber arquivos de um bot
-description: Saiba como enviar e receber arquivos por meio do bot usando apIs Graph para escopos de chat pessoal, canal e grupo.
+description: Saiba como enviar e receber arquivos por meio do bot usando APIs do Graph para escopos pessoais, de canal e de chat de grupo. Use AS APIs de bot do Teams usando exemplos de código com base no SDK de Bot Framework v3.
+keywords: enviar e receber de arquivos de bots do teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143365"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503582"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>Enviar e receber arquivos por meio do seu bot
+# <a name="send-and-receive-files-using-bots"></a>Enviar e receber arquivos usando bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -164,7 +165,7 @@ Da mesma forma, se o usuário recusar o arquivo, seu bot receberá o seguinte ev
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notificando o usuário sobre um arquivo carregado
 
-Depois de carregar um arquivo no OneDrive do usuário, se você usar o mecanismo descrito acima ou as APIs delegadas pelo usuário do OneDrive, deverá enviar uma mensagem de confirmação ao usuário. Essa mensagem deve conter um `FileCard` anexo no qual o usuário pode selecionar, seja para visualizar, abri-lo no OneDrive ou baixar localmente.
+Depois de carregar um arquivo no OneDrive do usuário, se você usar o mecanismo descrito acima ou as APIs delegadas pelo usuário do OneDrive, deverá enviar uma mensagem de confirmação ao usuário. Essa mensagem deve conter um `FileCard` anexo no qual o usuário pode selecionar, seja para visualizar, abri-lo no OneDrive ou baixá-lo localmente.
 
 ```json
 {
@@ -187,7 +188,7 @@ A tabela a seguir descreve as propriedades de conteúdo do anexo:
 | `uniqueId` | ID do item da unidade do OneDrive/SharePoint. |
 | `fileType` | Tipo de arquivo, como pdf ou docx. |
 
-### <a name="basic-example-in-c"></a>Exemplo básico em C#
+### <a name="basic-example-in-c"></a>Exemplo básico em C #
 
 O exemplo a seguir mostra como você pode lidar com uploads de arquivos e enviar solicitações de consentimento de arquivo na caixa de diálogo do bot:
 
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>Confira também
+
+[Trabalhando com arquivos no Microsoft Graph](/graph/api/resources/onedrive)

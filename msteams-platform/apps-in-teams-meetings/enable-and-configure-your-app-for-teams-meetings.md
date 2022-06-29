@@ -4,14 +4,14 @@ author: surbhigupta
 description: Saiba como habilitar e configurar seus aplicativos para reuniões do Teams e diferentes cenários de reuniões, atualizar o manifesto de aplicativos, configurar recursos e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142588"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503358"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar e configurar seus aplicativos para reuniões do Teams
+# <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
 Cada equipe tem uma maneira diferente de comunicar e colaborar tarefas. Para realizar essas tarefas diferentes, personalize Teams com aplicativos para reuniões. Habilite seus aplicativos de reuniões do Teams e configure os aplicativos para que eles sejam disponibilizados no escopo da reunião no manifesto do aplicativo.
 

@@ -1,16 +1,16 @@
 ---
 title: Criar Conectores do Office 365
 author: laujan
-description: Neste módulo, saiba como começar a usar o Office 365 Connectors e adicionar conector ao aplicativo Teams no Microsoft Teams
+description: Neste módulo, saiba como começar a usar os conectores Office 365 e adicionar conector ao aplicativo Teams no Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189328"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485340"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -29,7 +29,7 @@ Você pode criar um [pacote](~/concepts/build-and-test/apps-package.md) e [publi
 
 Para distribuir o conector, registre-o no [Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard).
 
-Para que um conector funcione somente Teams, siga as instruções para enviar o conector ao publicar seu aplicativo no Microsoft Teams [store](~/concepts/deploy-and-publish/appsource/publish.md). Caso contrário, um conector registrado funciona em todos os produtos do Office 365 que dão suporte a aplicativos, incluindo o Outlook e o Teams.
+Para que um conector funcione somente no Teams, siga as instruções para enviar o conector ao [publicar seu aplicativo no artigo da loja do Microsoft Teams](~/concepts/deploy-and-publish/appsource/publish.md) . Caso contrário, um conector registrado funciona em todos os produtos do Office 365 que dão suporte a aplicativos, incluindo o Outlook e o Teams.
 
 > [!IMPORTANT]
 > Seu conector é registrado depois que você seleciona **Salvar** no Painel do Desenvolvedor de Conectores. Se você quiser publicar seu conector no AppSource, siga as instruções em [publique seu aplicativo Microsoft Teams no AppSource](~/concepts/deploy-and-publish/apps-publish.md). Se você não quiser publicar seu aplicativo no AppSource, distribua-o diretamente para a organização. Após publicar os conectores para sua organização, nenhuma ação adicional será necessária no Painel do Conector.
@@ -47,7 +47,7 @@ Os usuários podem concluir toda a experiência de configuração do conector se
     > * O código pode processar o evento de salvamento recuperando as configurações do webhook. Seu código armazena o webhook para postar eventos mais tarde.
     > * A experiência de configuração é carregada embutida no Teams.
 
-Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente no Teams. Seu código deve incluir o Teams SDK do JavaScript. Isso dá ao seu código acesso às APIs para executar operações comuns, como obter o usuário atual, canal ou contexto de equipe e iniciar fluxos de autenticação.
+Você pode reutilizar sua experiência de configuração da Web existente ou criar uma versão separada para ser hospedada especificamente no Teams. Seu código deve incluir o SDK do JavaScript do Teams. Isso fornece acesso de código a APIs para executar operações comuns, como obter o usuário atual, canal ou contexto de equipe e iniciar fluxos de autenticação.
 
 Para integrar a experiência de configuração:
 
@@ -143,7 +143,7 @@ A tabela a seguir fornece os parâmetros e os detalhes de `GetSetting` proprieda
 | `configName`  | O nome da configuração, conforme definido pelo código ao chamar `setSettings()`. |
 | `contentUrl` | A URL da página de configuração, conforme definido pelo código ao chamar `setSettings()`. |
 | `webhookUrl` | A URL do webhook criada para o conector. Use a URL do webhook para POSTAR JSON estruturado para enviar cartões para o canal. O `webhookUrl` é retornado somente quando o aplicativo retorna dados com êxito. |
-| `appType` | Os valores retornados podem ser `mail`, `groups`ou `teams` correspondentes ao Office 365 Mail, Office 365 Grupos ou Teams respectivamente. |
+| `appType` | Os valores retornados podem ser `mail`, `groups`ou `teams` correspondentes ao Office 365 Mail, Office 365 Grupos ou Teams, respectivamente. |
 | `userObjectId` | A ID exclusiva correspondente ao usuário do Office 365 que iniciou a configuração do conector. Ele deve ser protegido. Esse valor pode ser usado para associar o usuário no Office 365, que configurou a configuração em seu serviço. |
 
 #### <a name="handle-edits"></a>Manipular edições
@@ -221,11 +221,11 @@ Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. R
 ![Captura de tela de uma seção carregada na caixa de diálogo do conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> O fluxo ocorre inteiramente dentro Teams como uma experiência hospedada.
+> O fluxo ocorre inteiramente no Teams como uma experiência hospedada.
 
 Para verificar se a ação `HttpPOST` está funcionando corretamente, [envie mensagens ao conector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Siga o [guia passo a passo](../../sbs-teams-connectors.yml) para criar e testar os conectores em seu Teams.
+Siga o [guia passo a passo para](../../sbs-teams-connectors.yml) criar e testar os conectores em seu Teams.
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuir webhook e conector
 

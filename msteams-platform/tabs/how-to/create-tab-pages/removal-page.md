@@ -5,14 +5,14 @@ description: Neste módulo, saiba como criar uma página de remoção de guia e 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142630"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485213"
 ---
-# <a name="create-a-removal-page"></a>Criar uma página de remoção
+# <a name="tab-re-configuration-and-removal-page"></a>Página de nova configuração e remoção de tabulação
 
 Você pode estender e aprimorar a experiência do usuário dando suporte a opções de remoção e modificação em seu aplicativo. O Teams permite que os usuários renomeiem ou removam uma guia de canal ou grupo e você pode permitir que os usuários reconfigurem sua guia após a instalação. Além disso, a experiência de remoção de guia fornece aos usuários opções pós-remoção para excluir ou arquivar conteúdo.
 

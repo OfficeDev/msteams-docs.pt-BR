@@ -1,16 +1,16 @@
 ---
 title: Planejar o Teams para dispositivos móveis
 author: surbhigupta
-description: Com este módulo de aprendizado, você aprenderá a planejar a criação de um aplicativo no Teams móvel e a entender diferentes estágios para criar o aplicativo.
+description: Com este módulo de aprendizagem, você aprenderá a planejar a criação de um aplicativo no Teams Mobile e a entender diferentes estágios para criar o aplicativo.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143183"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483988"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
@@ -65,7 +65,7 @@ Você pode mostrar as seguintes informações:
 * Visuais de dados, mapas e infográficos.
 * Gráficos, gráficos e tabelas.
 
-![Consumo de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Mostrar os dados na forma de visualização.":::
 
 Ações rápidas:
 
@@ -75,7 +75,7 @@ No segundo estágio, os usuários podem trabalhar nos gráficos e visuais existe
 * Filtrar dados.
 * Criar indicadores.
 
-![Ações rápidas de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Ações rápidas no gráfico e visuais existentes.":::
 
 Capacitação:
 
@@ -87,7 +87,7 @@ Você pode fornecer o seguinte acesso aos usuários:
 * Inserir itens de dados para criar visualizações.
 * Compartilhe visualizações em um canal ou chat em grupo.
 
-![Habilitação de aplicativos de visualização de dados e criação de painéis](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Permitir que os usuários criem conteúdo, como gráficos gráficos.":::
 
 <br>
 
@@ -105,7 +105,7 @@ Consumo:
 
 No primeiro estágio, seu aplicativo pode mostrar a lista de tarefas para o usuário em uma pilha vertical. Se houver várias categorias de tarefas, como **Proposta**, **Ativa** e **Fechada**, forneça filtros para mostrar tarefas agrupadas ou como cabeçalhos para ver as tarefas agrupadas.
 
-![Consumo de aplicativos de integração de tarefas](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Mostra a lista de tarefas em uma pilha vertical.":::
 
 Ações rápidas:
 
@@ -118,7 +118,7 @@ No segundo estágio, você pode fornecer o seguinte acesso de aplicativo aos usu
 * Mova as tarefas para categorias diferentes.
 * Compartilhe tarefas relevantes em chats e canais por meio de emails e feed de atividades.
 
-![Ações rápidas de aplicativos de integração de tarefas](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Crie tarefas para reduzir a carga cognitiva dos usuários.":::
 
 Capacitação:
 
@@ -128,7 +128,8 @@ No terceiro estágio, você pode habilitar a experiência dos usuários com as s
 * Adicione e modifique categorias diferentes, como **Proposta**, **Ativa** e **Fechada**.
 * Configure as tarefas para comentários, anexos e outros recursos complexos.
 
-![Habilitação de aplicativos de integração de tarefas](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Habilite a experiência do usuário adicionando projetos e quadros.":::
+
 <br>
 
 </details>
@@ -149,7 +150,7 @@ No primeiro estágio, você pode considerar a experiência desktop para mostrar 
 * Ampliar ou reduzir.
 * Estágio atual ou progresso de um documento pendente.
 
-![Consumo de aplicativos de coautoria e quadro de comunicações](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Mostra conteúdo e ativos na experiência da área de trabalho.":::
 
 Ações Rápidas:
 
@@ -162,7 +163,7 @@ No segundo estágio, você pode introduzir as seguintes ações:
 > [!TIP]
 > Você expõe ações, que podem ser mostradas facilmente nas telas pequenas.
 
-![Ações rápidas de coautoria e de aplicativos de quadro de comunicações](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Apresenta a criação de uma nova placa para colaboração.":::
 
 Capacitação:
 
@@ -174,7 +175,7 @@ No terceiro estágio, forneça experiência completa aos usuários. Você pode h
 * Excluir, desfazer e refazer operações.
 * Acesse a câmera e o microfone usando APIs do SDK do JS. Para obter mais informações sobre os recursos do dispositivo, consulte [visão geral dos recursos de dispositivo](../device-capabilities/device-capabilities-overview.md).
 
-![Habilitação de aplicativos de coautoria e quadro de comunicações](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Habilite a experiência do usuário adicionando formas de texto e anotações rápidas e outros recursos.":::
 
 <br>
 

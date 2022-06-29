@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de ação de extensão de mensagem
 author: surbhigupta
-description: Neste módulo, saiba como definir comandos de ação de extensão de mensagens com o exemplo de manifesto do aplicativo Microsoft Teams.
+description: Neste módulo, aprenda a definir comandos de ação de extensão de mensagens com o exemplo de manifesto do aplicativo no Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189620"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503932"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -27,7 +27,7 @@ Antes de criar o comando de ação, você deve decidir os seguintes fatores:
 Confira o vídeo a seguir para saber como definir comandos de ação de extensão de mensagem:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Selecionar locais de invocação de comando de ação
@@ -60,7 +60,7 @@ A imagem a seguir exibe os locais dos quais o comando de ação é invocado:
 
 Além de selecionar de onde o comando pode ser invocado, você também deve selecionar como preencher o formulário no módulo de tarefa para seus usuários. Você tem as três opções a seguir para criar o formulário renderizado dentro do módulo de tarefa:
 
-* **Lista estática de parâmetros**: Esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o Teams cliente renderiza, mas não pode controlar a formatação nesse caso.
+* **Lista estática de parâmetros**: Esse é o método mais simples. Você pode definir uma lista de parâmetros no manifesto do aplicativo que o cliente do Teams renderiza, mas não pode controlar a formatação nesse caso.
 * **Cartão Adaptável**: Você pode optar por usar um Cartão Adaptável, que fornece maior controle sobre a interface do usuário, mas ainda limita você aos controles e opções de formatação disponíveis.
 * **Exibição da Web inserida**: Você pode optar por inserir uma exibição da Web personalizada no módulo de tarefa para ter um controle completo sobre a interface do usuário e os controles.
 

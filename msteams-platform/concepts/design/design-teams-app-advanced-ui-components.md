@@ -1,24 +1,24 @@
 ---
 title: Projetar seu aplicativo com componentes avançados da interface do usuário
 author: heath-hamilton
-description: Saiba mais sobre os Teams da interface do usuário, como trilhas, barra de notificação, modo de exibição de estágio, juntamente com casos de uso relevantes.
+description: Saiba mais sobre os componentes da interface do usuário do Teams, como trilhas, barra de notificação, exibição de estágio junto com casos de uso relevantes.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143421"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485717"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Criando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
-Os componentes a seguir são uma [combinação de](~/concepts/design/design-teams-app-basic-ui-components.md) componentes básicos da interface do usuário que você pode usar para situações Teams de design comuns, como navegação.
+Os componentes a seguir são uma combinação de [componentes básicos da interface](~/concepts/design/design-teams-app-basic-ui-components.md) do usuário que você pode usar para situações comuns de design do Teams, como navegação.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interface</a> do usuário, o kit de interface do usuário do Microsoft Teams inclui componentes e padrões que são projetados especificamente para criar Teams aplicativos. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
+Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">na interface do usuário fluente</a>, o Kit de Interface do Usuário do Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de aplicativos do Teams. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -42,11 +42,11 @@ Trilhas são um auxílio de navegação que transmite a hierarquia do aplicativo
 
 ## <a name="left-nav"></a>Navegação à esquerda
 
-Use a navegação à esquerda para navegar por várias páginas em sua Teams guia. No exemplo a seguir, a navegação à esquerda está entre a lista de canais e o conteúdo da guia.
+Use a navegação à esquerda para procurar várias páginas em sua guia Do Teams. No exemplo a seguir, a navegação à esquerda está entre a lista de canais e o conteúdo da guia.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Navegue por várias páginas em uma Teams guia.
+* Navegue por várias páginas em uma guia do Teams.
 * Dividir aplicativos complexos em várias páginas.
 
 ### <a name="mobile"></a>Dispositivo móvel
@@ -61,11 +61,11 @@ Use a navegação à esquerda para navegar por várias páginas em sua Teams gui
 
 Uma barra de notificação é uma área dedicada para exibir mensagens breves e importantes que não exigem que o usuário tome medidas imediatas. Cores e ícones específicos da tela de fundo são associados a tipos específicos de mensagens (veja abaixo).
 
-Você pode implementar uma barra de notificação usando o Fluent de alerta [da interface do](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) usuário.
+Você pode implementar uma barra de notificação usando o componente de alerta do [Fluent UI.](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition)
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Mensagens críticas, erros e avisos
+* Mensagens críticas, erros e avisos.
 * Mensagens de êxito
 * Mensagens informativas ou promocionais
 
@@ -85,7 +85,7 @@ Veja como implementar o modo [de exibição de estágio](~/tabs/tabs-link-unfurl
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Exibir conteúdo em uma superfície grande dentro Teams em vez de outro aplicativo ou navegador
+* Exiba conteúdo em uma superfície grande no Teams em vez de outro aplicativo ou navegador.
 * Mídia em destaque ou outro conteúdo avançado
 
 ### <a name="mobile"></a>Dispositivo móvel

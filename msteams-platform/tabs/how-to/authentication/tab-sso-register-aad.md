@@ -1,53 +1,53 @@
 ---
-title: Registrar seu aplicativo guia com o Azure AD
-description: Descreve como registrar seu aplicativo de guia com o Azure AD
+title: Registre seu aplicativo guia com Azure AD
+description: Descreve o registro do aplicativo guia com o Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do Teams no escopo de locação de token de acesso do Microsoft Azure AD (Azure Active Directory)
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do Teams Microsoft Azure Active Directory (Azure AD) escopo de locação de token de acesso
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887895"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503519"
 ---
-# <a name="register-your-app-in-azure-ad"></a>Registrar seu aplicativo no Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Registre seu aplicativo guia no Azure AD
 
-O Azure AD fornece acesso ao seu aplicativo guia com base na identidade do Teams do usuário do aplicativo. Você precisará registrar seu aplicativo de guia com o Azure AD para que o usuário do aplicativo que entrou no Teams possa ter acesso ao seu aplicativo guia.
+Azure AD fornece acesso ao seu aplicativo guia com base na identidade do Teams do usuário do aplicativo. Você precisará registrar seu aplicativo guia com o Azure AD para que o usuário do aplicativo que entrou no Teams possa ter acesso ao seu aplicativo guia.
 
 ## <a name="enabling-sso-on-azure-ad"></a>Habilitando o SSO no Azure AD
 
-Registrar seu aplicativo guia no Azure AD e habilitá-lo para SSO requer a definição de configurações de aplicativo, como a geração de ID do aplicativo, a definição do escopo da API e a pré-autorização de IDs de cliente para aplicativos confiáveis.
+Registrar seu aplicativo de guia no Azure AD e habilitá-lo para SSO requer a configuração de aplicativos, como a geração de ID do aplicativo, a definição do escopo da API e a pré-autorização de IDs de cliente para aplicativos confiáveis.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar o Azure AD para enviar token de acesso para o aplicativo Cliente do Teams" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar Azure AD para enviar o token de acesso para o aplicativo cliente do Teams" border="false":::
 
-Crie um novo registro de aplicativo no Azure AD e exponha sua API (Web) usando escopos (permissões). Configure uma relação de confiança entre a API exposta no Azure AD e seu aplicativo. Isso permite que o Cliente do Teams obtenha um token de acesso em nome do seu aplicativo e do usuário conectado. Você pode adicionar IDs de cliente para os aplicativos móveis, da área de trabalho e da Web confiáveis que você deseja pré-autorizar.
+Crie um novo registro de aplicativo no Azure AD e exponha sua API (Web) usando escopos (permissões). Configure uma relação de confiança entre a API exposta Azure AD seu aplicativo. Isso permite que o Cliente do Teams obtenha um token de acesso em nome do seu aplicativo e do usuário conectado. Você pode adicionar IDs de cliente para os aplicativos móveis, da área de trabalho e da Web confiáveis que você deseja pré-autorizar.
 
 Talvez você também precise configurar detalhes adicionais, como autenticar usuários de aplicativos na plataforma ou dispositivo para o qual você deseja direcionar seu aplicativo guia.
 
-Há suporte para permissões de API do Graph no nível do usuário, ou seja, email, perfil, offline_access e OpenId. Se você precisar de acesso a escopos adicionais do Graph, `User.Read` como ou `Mail.Read`, consulte [Obter um token de acesso com permissões do Graph](tab-sso-graph-api.md).
+Há suporte API do Graph permissões no nível do usuário, ou seja, email, perfil, offline_access e OpenId. Se você precisar de acesso a escopos adicionais do Graph, `User.Read` como ou `Mail.Read`, consulte [Obter um token de acesso com permissões do Graph](tab-sso-graph-api.md).
 
-A configuração do Azure AD habilita o SSO para seu aplicativo guia no Teams. Ele responde com um token de acesso para validar o usuário do aplicativo.
+Azure AD configuração habilita o SSO para seu aplicativo guia no Teams. Ele responde com um token de acesso para validar o usuário do aplicativo.
 
 > [!NOTE]
-> O Kit de Ferramentas do Microsoft Teams registra o aplicativo do Azure AD em um projeto de SSO.
+> O Microsoft Teams Toolkit registra o Azure AD aplicativo em um projeto de SSO.
 
 ### <a name="before-you-register-with-azure-ad"></a>Antes de se registrar no Azure AD
 
 É útil se você aprender sobre a configuração para registrar seu aplicativo no Azure AD com antecedência. Verifique se você se preparou para configurar os seguintes detalhes antes de registrar seu aplicativo:
 
 - **Opções de** locatário único ou multilocatário: seu aplicativo será usado apenas no locatário do Microsoft 365 em que ele está registrado ou muitos locatários do Microsoft 365 o usarão? Os aplicativos escritos para uma empresa normalmente são de locatário único; aplicativos escritos por um fornecedor de software independente e usados por muitos clientes precisam ser multilocatário para que o locatário de cada cliente possa acessar o aplicativo.
-- **URI da ID** do aplicativo: é um URI globalmente exclusivo que identifica a API Web que você expõe para o acesso do aplicativo por meio de escopos. Ele também é conhecido como um URI de identificador. O URI da ID do aplicativo inclui a ID do aplicativo e o subdomínio em que seu aplicativo está hospedado. O nome de domínio do aplicativo e o nome de domínio que você registra para seu aplicativo do Azure AD devem ser os mesmos. Atualmente, não há suporte para vários domínios por aplicativo.
+- **URI da ID** do aplicativo: é um URI globalmente exclusivo que identifica a API Web que você expõe para o acesso do aplicativo por meio de escopos. Ele também é conhecido como um URI de identificador. O URI da ID do aplicativo inclui a ID do aplicativo e o subdomínio em que seu aplicativo está hospedado. O nome de domínio do aplicativo e o nome de domínio que você registra para Azure AD aplicativo deve ser o mesmo. Atualmente, não há suporte para vários domínios por aplicativo.
 - **Escopo**: é a permissão que um usuário de aplicativo autorizado ou seu aplicativo pode receber para acessar um recurso exposto pela API.
 
 > [!NOTE]
 >
 > - **Aplicativos LOB**: sua organização pode disponibilizar aplicativos LOB por meio da Microsoft Store. Esses aplicativos são personalizados para sua organização. Eles são internos ou específicos em sua organização ou empresa.
-> - **Aplicativos de propriedade do** cliente: o SSO também é compatível com aplicativos de propriedade do cliente nos locatários do Azure AD B2C.
+> - **Aplicativos de propriedade do** cliente: o SSO também tem suporte para aplicativos de propriedade do cliente nos locatários Azure AD B2C.
 
 Para criar e configurar seu aplicativo no Azure AD para habilitar o SSO:
 
-- [Registre e configure o aplicativo do Azure AD.](#create-an-app-registration-in-azure-ad)
+- [Registre e configure o Azure AD aplicativo.](#create-an-app-registration-in-azure-ad)
 - [Configure o escopo para o token de acesso.](#configure-scope-for-access-token)
 - [Configurar a versão do token de acesso.](#configure-access-token-version)
 
@@ -58,23 +58,23 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
 ### <a name="to-register-a-new-app-in-azure-ad"></a>Para registrar um novo aplicativo no Azure AD
 
 1. Abra o [portal do Azure](https://ms.portal.azure.com/) no navegador da Web.
-   A página do Portal do Microsoft Azure AD é aberta.
+   A página Microsoft Azure AD Portal do Azure é aberta.
 
-2. Selecione o **ícone registros de** aplicativo.
+2. Selecione o **Registros de aplicativo** ícone.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Página do Portal do Azure AD." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD portal." border="true":::
 
-   A **página Registros de aplicativo é** exibida.
+   A **Registros de aplicativo** página é exibida.
 
 3. Selecione **+ Novo ícone de** registro.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nova página de registro no Portal do Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nova página de registro no Azure AD Portal." border="true":::
 
     A página **Registrar um aplicativo** é exibida.
 
 4. Insira o nome do aplicativo que você deseja exibir para o usuário do aplicativo. Você pode alterar esse nome em um estágio posterior, se desejar.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicativo no Portal do Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicativo Azure AD Portal." border="true":::
 
 5. Selecione o tipo de conta de usuário que pode acessar seu aplicativo. Você pode escolher entre opções de locatário único ou multilocatário ou conta Privada da Microsoft.
 
@@ -83,9 +83,9 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
 
     | Opção | Selecione esta opção para... |
     | --- | --- |
-    | Contas somente neste diretório organizacional (somente Microsoft – locatário único) | Crie um aplicativo para uso somente por usuários (ou convidados) em seu locatário. <br> Geralmente chamado de aplicativo LOB, esse aplicativo é um aplicativo de locatário único na plataforma de identidade da Microsoft. |
-    | Contas em qualquer diretório organizacional (qualquer diretório do Azure AD – multilocatário) | Permitir que os usuários em qualquer locatário do Azure AD usem seu aplicativo. Essa opção é apropriada se, por exemplo, você estiver criando um aplicativo SaaS e pretende dispo-lo para várias organizações. <br> Esse tipo de aplicativo é conhecido como um aplicativo multilocatário na plataforma de identidade da Microsoft.|
-    | Contas em qualquer diretório organizacional (qualquer diretório do Azure AD – multilocatário) e contas pessoais da Microsoft | Direções ao conjunto mais amplo de clientes. <br> Ao selecionar essa opção, você está registrando um aplicativo multilocatário que pode dar suporte a usuários de aplicativos que também têm contas pessoais da Microsoft. |
+    | Contas somente neste diretório organizacional (somente Microsoft – locatário único) | Crie um aplicativo para uso somente por usuários (ou convidados) em seu locatário. <br> Geralmente chamado de aplicativo LOB, esse aplicativo é um aplicativo de locatário único no plataforma de identidade da Microsoft. |
+    | Contas em qualquer diretório organizacional (qualquer Azure AD diretório – multilocatário) | Permitir que os usuários em qualquer locatário Azure AD usem seu aplicativo. Essa opção é apropriada se, por exemplo, você estiver criando um aplicativo SaaS e pretende dispo-lo para várias organizações. <br> Esse tipo de aplicativo é conhecido como um aplicativo multilocatário no plataforma de identidade da Microsoft.|
+    | Contas em qualquer diretório organizacional (qualquer diretório Azure AD – multilocatário) e contas pessoais da Microsoft | Direções ao conjunto mais amplo de clientes. <br> Ao selecionar essa opção, você está registrando um aplicativo multilocatário que pode dar suporte a usuários de aplicativos que também têm contas pessoais da Microsoft. |
     | Somente contas pessoais da Microsoft | Crie um aplicativo somente para usuários que têm contas pessoais da Microsoft. |
 
     </details>
@@ -96,7 +96,7 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
 7. Selecione **Registrar**.
     Uma mensagem aparece no navegador informando que o aplicativo foi criado.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre o aplicativo no Portal do Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre o aplicativo Azure AD Portal." border="true":::
 
     A página com a ID do aplicativo e outras configurações é exibida.
 
@@ -139,7 +139,7 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
     - Insira o `fully-qualified-domain-name.com` entre `api://` e `{AppID}` (que é, GUID). Por exemplo, api://example.com/{AppID}.
 
     Onde
-    - `fully-qualified-domain-name.com` é o nome de domínio legível por humanos do qual seu aplicativo guia é atendido. O nome de domínio do aplicativo e o nome de domínio que você registra para seu aplicativo do Azure AD devem ser os mesmos.
+    - `fully-qualified-domain-name.com` é o nome de domínio legível por humanos do qual seu aplicativo guia é atendido. O nome de domínio do aplicativo e o nome de domínio que você registra para Azure AD aplicativo deve ser o mesmo.
 
       Se você estiver usando um serviço de túnel, como o ngrok, deverá atualizar esse valor sempre que o subdomínio ngrok for alterado.
     - `AppID` é a ID do aplicativo (GUID) que foi gerada quando você registrou seu aplicativo. Você pode exibi-lo na seção **Visão** geral.
@@ -185,7 +185,7 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
     1. Insira o nome do escopo. Este é um campo obrigatório.
     2. Selecione o usuário que pode dar consentimento para esse escopo. A opção padrão é **somente Administradores**.
-    3. Insira o nome **de exibição de consentimento do administrador**. Este é um campo obrigatório.
+    3. Insira o nome **Administração de exibição de consentimento.** Este é um campo obrigatório.
     4. Insira a descrição do consentimento do administrador. Este é um campo obrigatório.
     5. Insira o nome **de exibição de consentimento do usuário**.
     6. Insira a descrição da descrição de consentimento do usuário.
@@ -241,15 +241,15 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
 ## <a name="configure-access-token-version"></a>Configurar a versão do token de acesso
 
-Você deve definir a versão do token de acesso que é aceitável para seu aplicativo. Essa configuração é feita no manifesto do aplicativo do Azure AD.
+Você deve definir a versão do token de acesso que é aceitável para seu aplicativo. Essa configuração é feita no manifesto Azure AD aplicativo.
 
 ### <a name="to-define-the-access-token-version"></a>Para definir a versão do token de acesso
 
 1. Selecione **Gerenciar** > **Manifesto** no painel esquerdo.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Manifesto do portal do Azure AD" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="manifesto Azure AD portal do Azure AD" border="true":::
 
-    O manifesto do aplicativo do Azure AD é exibido.
+    O Azure AD manifesto do aplicativo é exibido.
 
 1. Insira **2** como o valor da `accessTokenAcceptedVersion` propriedade.
 
@@ -261,7 +261,7 @@ Você deve definir a versão do token de acesso que é aceitável para seu aplic
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Mensagem atualizada do manifesto":::
 
-Parabéns! Você concluiu a configuração de aplicativo no Azure AD necessária para habilitar o SSO para seu aplicativo guia.
+Parabéns! Você concluiu a configuração do aplicativo Azure AD necessário para habilitar o SSO para seu aplicativo guia.
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -272,6 +272,6 @@ Parabéns! Você concluiu a configuração de aplicativo no Azure AD necessária
 
 - [Locação no Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Estender o aplicativo guia com permissões e escopo do Microsoft Graph](tab-sso-graph-api.md)
-- [Início Rápido – Registrar um aplicativo na plataforma de identidade da Microsoft](/azure/active-directory/develop/quickstart-register-app)
+- [Início Rápido – Registrar um aplicativo com o plataforma de identidade da Microsoft](/azure/active-directory/develop/quickstart-register-app)
 - [Início Rápido: Configurar um aplicativo para expor uma API Web](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [Fluxo de código de autorização do OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

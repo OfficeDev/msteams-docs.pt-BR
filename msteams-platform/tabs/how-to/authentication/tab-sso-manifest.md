@@ -3,15 +3,15 @@ title: Atualizar manifesto para habilitar o SSO para guias
 description: Descreve o manifesto de atualização para habilitar o SSO para guias
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do Microsoft Azure Active Directory (Azure AD) API do Graph
-ms.openlocfilehash: 0bc50b61d5beac45ae11ec1264cd6fc4861e0738
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph
+ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887924"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503477"
 ---
-# <a name="update-app-manifest-for-sso-and-preview-app"></a>Atualizar o manifesto do aplicativo para SSO e aplicativo de visualização
+# <a name="update-manifest-for-sso-and-preview-app"></a>Atualizar manifesto para SSO e aplicativo de visualização
 
 Antes de atualizar o manifesto do aplicativo Teams, verifique se você configurou o código para habilitar o SSO em seu aplicativo guia.
 
@@ -30,13 +30,13 @@ Configure a propriedade `webApplicationInfo` no arquivo de manifesto do aplicati
 
 | Elemento | Descrição |
 | --- | --- |
-| id | Insira a ID do aplicativo (GUID) que você criou no Azure AD. |
-| recurso | Insira o URI do subdomínio do aplicativo e o URI da ID do aplicativo que você criou no Azure AD ao criar o escopo. Você pode copiá-lo da seção Expor **uma API** **do Azure AD** > . |
+| id | Insira a ID do aplicativo (GUID) que você criou Azure AD. |
+| recurso | Insira o URI do subdomínio do aplicativo e o URI da ID do aplicativo que você criou Azure AD ao criar o escopo. Você pode copiá-lo do **Azure AD** >  **Expose de uma seção de API**. |
 
 > [!NOTE]
 > Use o manifesto versão 1.5 ou superior para implementar a `webApplicationInfo` propriedade.
 
-O URI da ID do aplicativo que você registrou no Azure AD é configurado com o escopo da API que você expôs. Configure o URI `resource` `getAuthToken()` do subdomínio do aplicativo para garantir que a solicitação de autenticação usada seja do domínio fornecido no manifesto do aplicativo Teams.
+O URI da ID do aplicativo registrado no Azure AD está configurado com o escopo da API que você expôs. Configure o URI `resource` `getAuthToken()` do subdomínio do aplicativo para garantir que a solicitação de autenticação usada seja do domínio fornecido no manifesto do aplicativo Teams.
 
 Para obter mais informações, consulte [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
@@ -62,9 +62,9 @@ Para obter mais informações, consulte [webApplicationInfo](../../../resources/
 
     Onde
     - {Azure AD AppId} é a ID do aplicativo que você criou quando registrou seu aplicativo no Azure AD. É o GUID.
-    - {{Subdomain}.app ID URI} é o URI da ID do aplicativo que você registrou ao criar o escopo no Azure AD.
+    - {{Subdomain}.app ID URI} é o URI da ID do aplicativo que você registrou ao criar o escopo Azure AD.
 
-4. Atualize a ID do aplicativo do Azure AD na **propriedade de ID** .
+4. Atualize a ID do aplicativo Azure AD na propriedade **de ID**.
 5. Atualize a URL do subdomínio nas seguintes propriedades:
    1. `contentUrl`
    2. `configurationUrl`
@@ -132,7 +132,7 @@ Para obter mais informações, consulte [webApplicationInfo](../../../resources/
 </details>
 
 > [!NOTE]
-> Durante a depuração, você pode usar o ngrok para testar seu aplicativo no Azure AD. Nesse caso, você precisa substituir o subdomínio pela `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` URL ngrok. Você precisará atualizar a URL sempre que o subdomínio ngrok for alterado, por exemplo, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> Durante a depuração, você pode usar o ngrok para testar seu aplicativo Azure AD. Nesse caso, você precisa substituir o subdomínio pela `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` URL ngrok. Você precisará atualizar a URL sempre que o subdomínio ngrok for alterado, por exemplo, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## <a name="sideload-and-preview-in-teams"></a>Sideload e visualização no Teams
 
@@ -154,8 +154,6 @@ Para visualizar seu aplicativo de guia no Teams:
 
 1. Selecione **Carregar um aplicativo personalizado para** fazer o sideload do aplicativo guia no Teams.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Aplicativo de guia de sideload no Teams":::
-
 1. Selecione o arquivo zip do pacote do aplicativo e, em seguida, **selecione Adicionar**.
 
     O aplicativo de guia é sideload e a caixa de diálogo aparece para informá-lo sobre as permissões adicionais que podem ser necessárias.
@@ -164,11 +162,11 @@ Para visualizar seu aplicativo de guia no Teams:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Caixa de diálogo do Teams informando sobre permissões adicionais necessárias" border="true":::
 
-    A caixa de diálogo de consentimento do Azure AD é exibida.
+    A caixa Azure AD de consentimento do usuário é exibida.
 
 1. Selecione **Aceitar** para dar consentimento para escopos de ID aberta.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Caixa de diálogo de consentimento do Azure AD" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD de consentimento" border="true":::
 
     O Teams abre o aplicativo guia e você pode usá-lo.
 

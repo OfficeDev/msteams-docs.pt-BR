@@ -1,20 +1,20 @@
 ---
 title: Projetando seu aplicativo com modelos de interface do usuário
 author: heath-hamilton
-description: Aprenda a projetar seu aplicativo mais rapidamente com componentes de interface do usuário padronizados, layouts e padrões normalmente vistos em Microsoft Teams.
+description: Aprenda a projetar seu aplicativo mais rapidamente com componentes de interface do usuário padronizados, layouts e padrões comumente vistos no Microsoft Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d6323baf20c733eaddc1e8797a56d63effc45eab
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142896"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484815"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Criando seu aplicativo Microsoft Teams com modelos de interface do usuário
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
-Crie seu Microsoft Teams aplicativo mais rápido com modelos de interface do usuário. Os modelos são uma coleção de componentes baseados em interface do usuário Fluent que funcionam em casos de uso comuns do Teams, dando a você mais tempo para descobrir a melhor experiência para seus usuários.
+Crie seu aplicativo Microsoft Teams mais rapidamente com modelos de interface do usuário. Os modelos são uma coleção de componentes baseados na interface do usuário do Fluent que funcionam em casos de uso comuns do Teams, dando a você mais tempo para descobrir a melhor experiência para seus usuários.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Introdução às ferramentas e exemplos
 
@@ -22,7 +22,7 @@ Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usa
 
 ### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Obtenha modelos de interface do usuário para o design do aplicativo no kit de interface do usuário do Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
+Obtenha modelos de interface do usuário para seu design de aplicativo do Kit de Interface do Usuário do Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
 > [!div class="nextstepaction"]
 > [Obter o kit de interface do usuário (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -41,19 +41,19 @@ Importe esses modelos e componentes relacionados diretamente para seu projeto do
 
 ### <a name="sample-app"></a>Aplicativo de exemplo
 
-Instale um aplicativo de exemplo para ver a aparência e o comportamento dos modelos de interface do usuário Teams contextos.
+Instale um aplicativo de exemplo para ver a aparência e o comportamento dos modelos de interface do usuário nos contextos do Teams.
 
 > [!div class="nextstepaction"]
 > [Obter o aplicativo de exemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="calendar"></a>Calendário
 
-No Teams, um calendário é onde um usuário exibe, agenda e gerencia eventos futuros e passados para si mesmo ou para um grupo.
+No Teams, um calendário é onde um usuário visualiza, agenda e gerencia eventos futuros e passados para si mesmo ou para um grupo.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Agendar reuniões e eventos
-* Obter lembretes de reuniões e eventos futuros
+* Obtenha lembretes de reuniões e eventos futuros.
 * Exibir agendas
 
 ### <a name="desktop"></a>Desktop
@@ -62,13 +62,13 @@ No Teams, um calendário é onde um usuário exibe, agenda e gerencia eventos fu
 
 ## <a name="dashboard"></a>Painel
 
-Um painel exibe diferentes tipos de conteúdo em um local central (como um Teams ou guia pessoal). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
+Um painel exibe diferentes tipos de conteúdo em um local central (como um aplicativo pessoal ou uma guia do Teams). Os usuários devem ser capazes de personalizar pelo menos parte do que veem em um painel.
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Analisar dados
 * Métricas de relatório
-* Organizar informações diferentes em um só lugar
+* Organize informações diferentes em um só lugar.
 
 ### <a name="mobile"></a>Dispositivo móvel
 
@@ -84,8 +84,8 @@ Você pode usar diferentes tamanhos de cartão (único, duplo e completo) para e
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Exibir informações complexas
-* Criar um painel
+* Exibir informações complexas.
+* Criar um painel.
 
 ### <a name="mobile"></a>Dispositivo móvel
 
@@ -102,7 +102,7 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrada
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Entrar
-* Mensagens de boas-vindas e experiências de primeira execução
+* Mensagens de boas-vindas e experiências de primeira execução.
 * Mensagens de êxito
 * Mensagens de erro
 
@@ -167,7 +167,7 @@ Você pode usar uma lista para exibir itens relacionados em um formato digitaliz
 
 ## <a name="sign-in"></a>Entrar
 
-Você pode criar fluxos de entrada de aplicativo para diferentes Teams e provedores de identidade. O exemplo a seguir inclui o SSO (logon único), que recomendamos para a experiência de autenticação mais simples.
+Você pode criar fluxos de entrada de aplicativo para diferentes contextos e provedores de identidade do Teams. O exemplo a seguir inclui o SSO (logon único), que recomendamos para a experiência de autenticação mais simples.
 
 ### <a name="top-use-case"></a>Principais casos de uso
 
@@ -183,7 +183,7 @@ Você pode criar fluxos de entrada de aplicativo para diferentes Teams e provedo
 
 ## <a name="settings"></a>Settings
 
-Configurações telas são onde os usuários podem configurar suas preferências com seu aplicativo. (Observação: Configurações é um contêiner para [componentes básicos da interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md).)
+As telas de configurações são onde os usuários podem definir suas preferências com seu aplicativo. (Observação: as configurações são um contêiner para [componentes básicos da interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
 ### <a name="top-use-case"></a>Principais casos de uso
 
@@ -229,6 +229,6 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 
 ## <a name="see-also"></a>Confira também
 
-* [Projetar seu aplicativo com componentes básicos Fluent interface do usuário](~/concepts/design/design-teams-app-basic-ui-components.md)
-* [Criando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [Projetar seu aplicativo com componentes básicos do Fluent UI](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [Formatar suas mensagens de bot](~/bots/how-to/format-your-bot-messages.md)

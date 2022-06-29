@@ -5,14 +5,14 @@ description: Neste módulo, você aprenderá a criar um Webhook de Saída no Mic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189895"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503316"
 ---
-# <a name="create-outgoing-webhook"></a>Criar Webhook de saída
+# <a name="create-outgoing-webhooks"></a>Criar Webhooks de saída
 
 O Webhook de Saída atua como um bot e pesquisa mensagens em canais usando **@mencionar**. Ele envia notificações para serviços Web externos e responde com mensagens avançadas, que incluem cartões e imagens. Ele ajuda a ignorar o processo de criação de bots por meio do [Microsoft Bot Framework](https://dev.botframework.com/).
 
@@ -107,7 +107,7 @@ Para garantir que seu serviço esteja recebendo chamadas somente de clientes rea
 Seu código sempre deve validar a assinatura HMAC incluída na solicitação da seguinte maneira:
 
 * Gere o token HMAC do corpo da solicitação da mensagem. Há bibliotecas padrão para fazer isso na maioria das plataformas, como o [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js e exemplo de webhook do [Teams](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) para C\#. O Microsoft Teams usa criptografia HMAC SHA256 padrão. Você deve converter o corpo em uma matriz de bytes em UTF8.
-* Compute o hash da matriz de bytes do token de segurança fornecido pelo Teams quando você registrou o Webhook de Saída no cliente do Teams. Consulte [criar um webhook de saída](#create-outgoing-webhook).
+* Compute o hash da matriz de bytes do token de segurança fornecido pelo Teams quando você registrou o Webhook de Saída no cliente do Teams. Consulte [criar um webhook de saída](#create-outgoing-webhooks).
 * Converta o hash em uma cadeia de caracteres usando a codificação UTF-8.
 * Compare o valor da cadeia de caracteres do hash gerado com o valor fornecido na solicitação HTTP.
 

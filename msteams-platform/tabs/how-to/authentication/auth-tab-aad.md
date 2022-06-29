@@ -1,19 +1,19 @@
 ---
 title: Configurar a autenticação OAuth de terceiros
-description: Neste artigo, saiba mais sobre Teams de autenticação Microsoft Azure AD, autenticação no Teams e como usá-la em guias.
+description: Neste artigo, aprenda as guias de autenticação do Teams Microsoft Azure AD, autenticação no Teams e como usá-la em guias.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 12146d5651fa0e975dcfdd7f60159700e1f8914e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f3a3e9d4ae848459c4804895aa2f28a66868ddb0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142266"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503463"
 ---
-# <a name="configure-third-party-oauth-authentication"></a>Configurar a autenticação OAuth de terceiros
+# <a name="configure-third-party-oauth-idp-authentication"></a>Configurar autenticação OAuth IdP de terceiros
 
 > [!Note]
-> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando a versão 1.4.1 ou posterior do SDK Teams JavaScript.
+> Para que a autenticação funcione para sua guia em clientes móveis, verifique se você está usando a versão 1.4.1 ou posterior do SDK javaScript do Teams.
 
 Existem muitos serviços que você pode querer consumir dentro do seu aplicativo do Teams, e a maioria desses serviços exige autenticação e autorização para obter acesso ao serviço. Os serviços incluem Facebook, Twitter e Teams.
 As informações de perfil do usuário do Teams são armazenadas no Azure AD usando o Microsoft Graph e este artigo se concentrará na autenticação usando o Microsoft Azure AD para obter acesso a essas informações.
@@ -49,7 +49,7 @@ O fluxo de autenticação deve ser disparado por uma ação do usuário. Você n
 
 Adicione um botão à sua configuração ou página de conteúdo para habilitar o usuário a entrar quando necessário. Isso pode ser feito na guia da página de [configuração](~/tabs/how-to/create-tab-pages/configuration-page.md) ou em qualquer página de [conteúdo](~/tabs/how-to/create-tab-pages/content-page.md).
 
-Azure AD, como a maioria dos provedores de identidade, não permite que seu conteúdo seja colocado em um `iframe`. Isso significa que você precisará adicionar uma página pop-up para hospedar o provedor de identidade. No exemplo a seguir, esta página é `/tab-auth/simple-start`. Use a `microsoftTeams.authenticate()` função do SDK do Microsoft Teams cliente para iniciar esta página quando o botão for selecionado.
+Azure AD, como a maioria dos provedores de identidade, não permite que seu conteúdo seja colocado em um `iframe`. Isso significa que você precisará adicionar uma página pop-up para hospedar o provedor de identidade. No exemplo a seguir, esta página é `/tab-auth/simple-start`. Use a `microsoftTeams.authenticate()` função do SDK do cliente do Microsoft Teams para iniciar esta página quando o botão for selecionado.
 
 ```javascript
 microsoftTeams.authentication.authenticate({

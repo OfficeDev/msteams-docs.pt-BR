@@ -1,31 +1,31 @@
 ---
 title: Manipuladores de atividade de bot
 author: surbhigupta
-description: Neste artigo, saiba mais sobre manipuladores de atividade do bot, estruturas, Teams de atividade e lógica de bot no Microsoft Teams.
+description: Neste artigo, saiba mais sobre manipuladores de atividade de bot, estruturas, manipuladores de atividade do Teams e lógica de bot no Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150859"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485570"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
 Este documento se baseia no artigo sobre [como os bots funcionam](https://aka.ms/how-bots-work) na principal [Documentação Bot Framework](https://aka.ms/azure-bot-service-docs). A principal diferença entre os bots desenvolvidos para o Microsoft Teams e o Bot Framework principal está nos recursos fornecidos no Teams.
 
-Para organizar a lógica de conversação do seu bot, é usado um manipulador de atividades. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O Teams de atividades adiciona suporte Teams eventos e interações específicos. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
+Para organizar a lógica de conversação do seu bot, é usado um manipulador de atividades. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O manipulador de atividades do Teams adiciona suporte para interações e eventos específicos do Teams. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
 
 ## <a name="teams-activity-handlers"></a>Manipuladores de atividades do Teams
 
 O manipulador de atividades do Teams é derivado do manipulador de atividades do Microsoft Bot Framework. Ele roteia todas as atividades do Teams antes de permitir que as atividades específicas que não sejam do Teams sejam tratadas.
 
-Quando um bot Teams recebe uma atividade, ele é roteado para os manipuladores de atividade. Todas as atividades são roteadas por meio de um manipulador base chamado manipulador de turnos. O manipulador de turnos chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da classe `TeamsActivityHandler`, que é derivada da classe `ActivityHandler` do Bot Framework.
+Quando um bot do Teams recebe uma atividade, ele é roteado para os manipuladores de atividade. Todas as atividades são roteadas por meio de um manipulador base chamado manipulador de turnos. O manipulador de turnos chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da classe `TeamsActivityHandler`, que é derivada da classe `ActivityHandler` do Bot Framework.
 
 > [!NOTE]
-> Se a atividade do bot levar mais de 15 segundos para ser processda, Teams uma solicitação de repetição para o ponto de extremidade do bot. Portanto, você verá solicitações duplicadas em seu bot.
+> Se a atividade do bot levar mais de 15 segundos para ser processda, o Teams enviará uma solicitação de repetição para o ponto de extremidade do bot. Portanto, você verá solicitações duplicadas em seu bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Os bots são criados usando o Bot Framework. Se os bots receberem uma atividade 
 
 Na classe do manipulador de atividades do Teams, há dois manipuladores de atividades principais do Teams, `OnConversationUpdateActivityAsync` e `OnInvokeActivityAsync`. A classe `OnConversationUpdateActivityAsync` roteia todas as atividades de atualização de conversa e a classe `OnInvokeActivityAsync` roteia todas as atividades de invocação do Teams.
 
-Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores, portanto, você deve adicionar a lógica desejada em sua substituição.
+Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
 
 Os trechos de código para manipuladores de atividades do Teams:
 
@@ -173,13 +173,13 @@ Os bots são criados usando o Bot Framework. Se os bots receberem uma atividade 
 
 Na classe do manipulador de atividades do Teams, há dois manipuladores de atividades principais do Teams, `on_conversation_update_activity` e `on_invoke_activity`. A classe `on_conversation_update_activity` roteia todas as atividades de atualização de conversa e a classe `on_invoke_activity` roteia todas as atividades de invocação do Teams.
 
-Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores, portanto, você deve adicionar a lógica desejada em sua substituição.
+Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
 
 ---
 
 ## <a name="bot-logic"></a>Lógica do bot
 
-A lógica do bot processa atividades de entrada de um ou mais de seus canais de bot e, em resposta, gera atividades de saída. Ele ainda é verdadeiro para bots derivados da classe de manipulador de Teams atividade, que primeiro verifica se há Teams atividades. Depois de verificar as atividades do Teams, ele passa todas as outras atividades para o manipulador de atividades do Bot Framework.
+A lógica do bot processa atividades de entrada de um ou mais de seus canais de bot e, em resposta, gera atividades de saída. Ele ainda é verdadeiro para bots derivados da classe de manipulador de atividades do Teams, que primeiro verifica as atividades do Teams. Depois de verificar as atividades do Teams, ele passa todas as outras atividades para o manipulador de atividades do Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -221,7 +221,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de Teams manipuladores de atividade chamados do manipulador `OnInvokeActivityAsync` de Teams de atividade inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador `OnInvokeActivityAsync` de atividades do Teams inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -234,7 +234,7 @@ A lista de Teams manipuladores de atividade chamados do manipulador `OnInvokeAct
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
 
-As atividades invoke listadas nesta seção são para bots de conversação Teams. O Bot Framework SDK também é compatível com atividades de invocação específicas para extensões de mensagem. Para saber mais, confira [o que são extensões de mensagem](https://aka.ms/azure-bot-what-are-messaging-extensions).
+As atividades invoke listadas nesta seção são para bots de conversa no Teams. O Bot Framework SDK também é compatível com atividades de invocação específicas para extensões de mensagem. Para saber mais, confira [o que são extensões de mensagem](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -273,7 +273,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de Teams manipuladores de atividade chamados do manipulador `onInvokeActivity` de Teams de atividade inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador `onInvokeActivity` de atividades do Teams inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -326,7 +326,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores da seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de Teams manipuladores de atividade chamados do manipulador `on_invoke_activity` de Teams de atividade inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador `on_invoke_activity` de atividades do Teams inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |

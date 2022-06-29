@@ -3,14 +3,14 @@ title: Suporte de logon único para bots
 description: Saiba como obter um token de usuário e um desenvolvedor de bot pode usar um cartão de entrada ou o serviço de bot do Azure com o suporte a cartão OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189727"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503652"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a>Suporte de logon único (SSO) para bots
+# <a name="use-sso-authentication-for-bots"></a>Usar a autenticação de SSO para bots
 
 A autenticação de logon único no Microsoft Azure Active Directory (Azure AD) atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisarão fornecer consentimento novamente em outro dispositivo, pois eles são conectados automaticamente. Guias e bots têm um fluxo semelhante para suporte a SSO. Mas o bot [solicita tokens](#request-a-bot-token) e [recebe respostas](#receive-the-bot-token) com um protocolo diferente.
 
@@ -19,7 +19,7 @@ A autenticação de logon único no Microsoft Azure Active Directory (Azure AD) 
 
 Confira o vídeo a seguir para saber mais sobre o suporte ao SSO (logon único) para bots:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>SSO do Bot em runtime
@@ -100,7 +100,7 @@ As etapas para registrar seu aplicativo por meio do portal do Azure AD são seme
    >
    > Você deve estar ciente das seguintes restrições importantes:
    >
-   > * Há suporte apenas para Microsoft Graph de API de nível de usuário, como email, perfil, offline_access e OpenId. Se você precisar de acesso a outros escopos do Microsoft Graph, `User.Read` `Mail.Read`como ou, consulte Estender aplicativo de guia com permissões e escopo do [Microsoft Graph microsoft](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Há suporte apenas para Microsoft Graph de API de nível de usuário, como email, perfil, offline_access e OpenId. Se você precisar de acesso a outros escopos do Microsoft Graph, `User.Read` como ou `Mail.Read`, consulte Estender aplicativo guia com permissões e escopo do [Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * O nome de domínio do aplicativo deve ser igual ao nome de domínio que você registrou para seu aplicativo do Azure AD.
    > * Não há suporte para vários domínios por aplicativo no momento.
    > * Não há suporte para aplicativos que usam o domínio `azurewebsites.net` porque é comum e pode ser um risco à segurança.
@@ -362,7 +362,7 @@ Para entender o que o bot faz quando a troca de token falha ao disparar uma soli
 
 ### <a name="update-the-auth-sample"></a>Atualizar o exemplo de autenticação
 
-Abra [exemplo de autenticação do Teams](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) e conclua as seguintes etapas para atualizá-lo:
+Abra [o exemplo de autenticação do Teams](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) e conclua as seguintes etapas para atualizá-lo:
 
 1. Atualize o TeamsBot para lidar com a eliminação da solicitação de entrada incluindo o seguinte código:
 
@@ -385,7 +385,7 @@ Abra [exemplo de autenticação do Teams](https://github.com/microsoft/BotBuilde
 
 |**Nome de exemplo** | **Descrição** |**.NET** |**C#** |**Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-|SDK do Bot framework | Este código de exemplo demonstra como começar a usar a autenticação em um bot para Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
+|SDK do Bot framework | Este código de exemplo demonstra como começar a usar a autenticação em um bot para o Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 

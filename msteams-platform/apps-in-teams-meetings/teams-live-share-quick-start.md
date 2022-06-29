@@ -4,18 +4,18 @@ description: Neste módulo, saiba como experimentar rapidamente o exemplo de Rol
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668188"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484583"
 ---
 ---
 
 # <a name="quick-start-guide"></a>Guia de início rápido
 
-Introdução ao SDK Live Share usando o exemplo de Rolo de Dados. Essa introdução é uma evolução do [Início Rápido do Fluid Framework](https://fluidframework.com/docs/start/quick-start/) e foi projetada para executar rapidamente um SDK do Live Share com base no [exemplo de Rolo de Dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) no localhost do computador.
+Introdução ao SDK do Live Share usando o exemplo de Rolo de Dados é uma evolução do [Início rápido do Fluid Framework](https://fluidframework.com/docs/start/quick-start/) e foi projetado para executar rapidamente um [exemplo de Rolo de Dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) baseado em SDK do Live Share no host local do computador.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Exemplo de Rolo de Dados":::
 
@@ -24,7 +24,7 @@ Introdução ao SDK Live Share usando o exemplo de Rolo de Dados. Essa introduç
 
 ## <a name="set-up-your-development-environment"></a>Defina seu ambiente de desenvolvimento
 
-Para começar, instale o seguinte:
+Para começar, instale:
 
 * [Node.js](https://nodejs.org/en/download): O SDK do Live Share dá suporte ao Node.js LTS versões 12.17 e posteriores.
 * [Versão mais recente do Visual Studio Code](https://code.visualstudio.com/).

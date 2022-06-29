@@ -1,16 +1,16 @@
 ---
 title: Bots e SDKs
 author: surbhigupta
-description: Neste artigo, aprenda ferramentas e SDKs para Microsoft Teams bots e bots com o Microsoft Bot Framework.
+description: Neste artigo, aprenda ferramentas e SDKs para criar bots e bots do Microsoft Teams com o Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189335"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485682"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -186,9 +186,10 @@ Nos casos em que os bots funcionam melhor em um canal também funcionam melhor e
 O chat privado é a maneira tradicional de um bot de conversação interagir com um usuário. Alguns exemplos de bots de chat ptivado são:
 
 * Bots de P e R
-* bots que iniciam fluxos de trabalho em outros sistemas
-* bots que contam piadas
-* bots que usam anotações antes de criar chatbots privados, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
+* bots que iniciam fluxos de trabalho em outros sistemas.
+* bots que contam piadas.
+* bots que anotam.
+Antes de criar chatbots um-para-um, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
 
 ## <a name="disadvantages-of-bots"></a>Desvantagens dos bots
 
@@ -296,7 +297,7 @@ this.onMessage(async (context, next) => {
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Exemplos de bot | Conjunto de exemplos de bot | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Exemplos de bot | Conjunto de exemplos de bot | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>Próxima etapa
 

@@ -5,12 +5,12 @@ description: Neste módulo, aprenda a criar um chat de subentidade de conversa p
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142077"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485656"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -20,7 +20,7 @@ As subentidades de conversa só têm suporte em canais. Eles podem ser usados de
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para dar suporte a subentidades de conversa, seu aplicativo Web de guia deve ter a capacidade de armazenar um mapeamento entre conversas de subentidades ↔ em um banco de dados de back-end. O `conversationId` é fornecido, mas você deve armazená-lo `conversationId` e de volta Teams para que os usuários continuem a conversa.
+Para dar suporte a subentidades de conversa, seu aplicativo Web de guia deve ter a capacidade de armazenar um mapeamento entre conversas de subentidades ↔ em um banco de dados de back-end. O `conversationId` é fornecido, mas você deve armazená-lo e `conversationId` de volta ao Teams para que os usuários continuem a conversa.
 
 ## <a name="start-a-new-conversation"></a>Iniciar uma nova conversa
 
@@ -47,7 +47,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 A imagem a seguir mostra o painel de conversa:
 
-![Subentidades de conversa – iniciar conversa](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="iniciar conversas":::
 
 Se o usuário iniciar uma conversa, será importante escutar o retorno de chamada desse evento para recuperar e salvar a **conversationId**:
 
@@ -65,7 +65,7 @@ Depois que uma conversa é iniciada, `openConversation()` as chamadas subsequent
 
 A imagem a seguir mostra o painel de conversa com a conversa apropriada:
 
-![Subentidades de conversa – continuar conversa](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continuar conversas":::
 
 ## <a name="enhance-a-conversation"></a>Aprimorar uma conversa
 
@@ -93,7 +93,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia Criar Conversa| Microsoft Teams aplicativo de exemplo de guia para demonstrar a guia criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Guia Criar Conversa| Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia Criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 

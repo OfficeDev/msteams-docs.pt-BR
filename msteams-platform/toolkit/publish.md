@@ -1,16 +1,16 @@
 ---
 title: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
 author: zyxiaoyuer
-description: Neste módulo, saiba como publicar aplicativos Teams usando Teams Toolkit e publicar em escopo ou permissão de sideload individuais
+description: Neste módulo, saiba como publicar aplicativos do Teams usando o Kit de Ferramentas do Teams e publicar em escopo individual ou permissão de sideload
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6c0f296549dc325548314e74f1f3ca7017b7aef0
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142602"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485353"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
 
@@ -41,7 +41,7 @@ Execute as seguintes etapas para fazer upload do pacote do aplicativo:
 
 1. No cliente do Teams, selecione **Aplicativos** na barra esquerda.
 2. Selecione **Gerenciar seus aplicativos**.
-3. Selecione **publicar um aplicativo**
+3. Selecione **publicar um aplicativo**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 
@@ -85,7 +85,7 @@ Após a publicação do aplicativo, o status de publicação é alterado para pu
 
 Você pode distribuir seu aplicativo diretamente na loja do Microsoft Teams e alcançar milhões de usuários em todo o mundo. Se seu aplicativo também estiver em destaque na loja, você poderá alcançar instantaneamente clientes em potencial. Os aplicativos publicados na loja do Teams também são listados automaticamente no Microsoft AppSource, que é o mercado oficial para aplicativos e soluções do Microsoft 365.
 
-Para obter mais informações, consulte ([Publicar seu aplicativo na Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
+Para obter mais informações, consulte ([Publicar seu aplicativo na loja do Microsoft Teams](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
 
 ## <a name="see-also"></a>Confira também
 

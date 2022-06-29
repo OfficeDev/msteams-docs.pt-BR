@@ -1,16 +1,16 @@
 ---
 title: Projetando sua extensão de reunião
 author: heath-hamilton
-description: Saiba como criar aplicativos em reuniões Teams e obter o kit de interface do usuário do Microsoft Teams, a guia na reunião, os casos de uso, o comportamento responsivo, o estágio de reunião compartilhado, o tema e a navegação.
+description: Saiba como criar extensões de reunião para seus aplicativos em reuniões do Teams. Use os modelos de interface do usuário no Kit de Interface do Usuário do Microsoft Teams para ajudá-lo a criar sua guia de reunião.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142679"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484643"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
@@ -18,14 +18,14 @@ Você pode criar aplicativos para tornar as reuniões mais produtivas. Por exemp
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
-Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que podem ser pegos e modificados conforme necessário, no kit de interface do usuário do Microsoft Teams.
+Você pode encontrar diretrizes de design mais abrangentes, incluindo elementos que podem ser pegos e modificados conforme necessário, no Kit de Interface do Usuário do Microsoft Teams.
 
 > [!div class="nextstepaction"]
 > [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Adicionar uma extensão de reunião
 
-Os usuários podem adicionar uma extensão de reunião antes e durante as reuniões. Eles também podem adicionar um aplicativo para uma reunião específica diretamente da Teams store.
+Os usuários podem adicionar uma extensão de reunião antes e durante as reuniões. Eles também podem adicionar um aplicativo para uma reunião específica diretamente da loja do Teams.
 
 ### <a name="add-before-a-meeting"></a>Adicionar antes de uma reunião
 
@@ -37,7 +37,7 @@ Nos detalhes da reunião, os usuários podem selecionar Adicionar **uma guia +**
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-Depois que o aplicativo for adicionado (por exemplo, na área de trabalho), os usuários poderão acessar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
+Depois que o aplicativo é adicionado (por exemplo, na área de trabalho), os usuários podem acessar o aplicativo em uma reunião selecionando **Mais** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="O exemplo mostra como adicionar uma extensão de reunião durante uma reunião no celular." border="false":::
 
@@ -65,7 +65,7 @@ Antes de uma reunião, seu aplicativo está disponível para os usuários em uma
 
 ### <a name="design-with-ui-templates"></a>Criação com modelos de IU
 
-Use um dos seguintes modelos de Teams de interface do usuário para ajudar a criar sua guia de reunião:
+Use um dos seguintes modelos de interface do usuário do Teams para ajudar a criar sua guia de reunião:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): as listas podem exibir itens relacionados em um formato que facilita a visualização e permite que os usuários executem ações em uma lista inteira ou itens individuais.
 * [Painel de tarefas](../../concepts/design/design-teams-app-ui-templates.md#task-board): um painel de tarefas, às vezes chamado de quadro Kanban ou raias, é uma coleção de cartões frequentemente usados para acompanhar o status de itens de trabalho ou tíquetes.
@@ -131,16 +131,16 @@ Para cenários com camadas de navegação ou conteúdo pesado, é recomendável 
 
 ## <a name="use-an-in-meeting-dialog"></a>Usar uma caixa de diálogo na reunião
 
-As caixas de diálogo na reunião são exibidas no Teams de reunião. Eles exigem a atenção, a confirmação ou a interação do usuário, mas são sutis e não interrompem a reunião. Você deve usá-lo com moderação e para cenários que são leves e orientados a tarefas.
+As caixas de diálogo na reunião são exibidas no estágio de reunião do Teams. Eles exigem a atenção, a confirmação ou a interação do usuário, mas são sutis e não interrompem a reunião. Você deve usá-lo com moderação e para cenários que são leves e orientados a tarefas.
 
 ### <a name="use-cases"></a>Casos de uso
 
 As caixas de diálogo na reunião são disparadas por um usuário (como o organizador da reunião) que pode querer que os participantes:
 
-* Fornecer comentários breves
-* Faça uma breve pesquisa ou votação
-* Enviar aprovações
-* Receber lembretes
+* Forneça comentários breves.
+* Faça uma breve pesquisa ou sondagem.
+* Enviar aprovações.
+* Obter lembretes.
 
 ### <a name="mobile"></a>Dispositivo móvel
 
@@ -261,7 +261,7 @@ O estágio de reunião compartilhada tem tudo a ver com colaboração e particip
 |Contador|Descrição|
 |----------|-----------|
 |1|**Ícone do** aplicativo: o ícone realçado indica que a guia na reunião do aplicativo está aberta.|
-|2|**Botão Compartilhar para reunião**: o ponto de entrada para compartilhar o aplicativo com a reunião. Para uma experiência consistente, sempre use o ícone de compartilhamento Teams padrão. **Compartilhar com reunião é** o texto padrão recomendado, mas você também pode personalizá-lo para seus casos de uso. Por exemplo, **jogue em conjunto** para um aplicativo de jogos ou **assista juntos** para um aplicativo de vídeo. De qualquer forma, torne claro que a ação criará uma experiência compartilhada e interativa com todos na reunião.|
+|2|**Botão Compartilhar para reunião**: o ponto de entrada para compartilhar o aplicativo com a reunião. Para uma experiência consistente, sempre use o ícone de compartilhamento padrão do Teams. **Compartilhar com reunião é** o texto padrão recomendado, mas você também pode personalizá-lo para seus casos de uso. Por exemplo, **jogue em conjunto** para um aplicativo de jogos ou **assista juntos** para um aplicativo de vídeo. De qualquer forma, torne claro que a ação criará uma experiência compartilhada e interativa com todos na reunião.|
 |3|**Atribuição do apresentador**: exibe o nome do participante que compartilhou o aplicativo.|
 |4|**iframe**: exibe o conteúdo do aplicativo.|
 |5|**Botão Parar de compartilhar**: interrompe o compartilhamento do aplicativo para o estágio da reunião. Exibe somente para o participante que iniciou o compartilhamento.|
@@ -391,7 +391,7 @@ Recomendamos posicionar a ação mais intensa visualmente no local mais à direi
 
 #### <a name="dont-left-or-center-align-actions"></a>Não: ações de alinhamento à esquerda ou centralizar
 
-Isso se desvia do padrão Teams padrão para o posicionamento de controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo atrás da parte superior.
+Isso se desvia do padrão do Teams para o posicionamento do controle em uma caixa de diálogo e pode entrar em conflito com uma caixa de diálogo por trás da parte superior.
 
    :::column-end:::
 :::row-end:::
@@ -407,7 +407,7 @@ Isso se desvia do padrão Teams padrão para o posicionamento de controle em uma
 
 #### <a name="do-scroll-vertically"></a>Fazer: rolar verticalmente
 
-Os usuários esperam rolagem vertical Teams (e em outro lugar). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de comunicações, que os usuários podem aplicar panorââ sobre os eixos x e y.
+Os usuários esperam rolagem vertical no Teams (e em outro lugar). Isso pode não se aplicar se você tiver uma tela criativa, como um quadro de comunicações, que os usuários podem aplicar panorââ sobre os eixos x e y.
 
    :::column-end:::
    :::column span="":::
@@ -455,7 +455,7 @@ Os diálogos na reunião destinam-se a interações breves.
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Foco no tema escuro
 
-Teams reuniões são otimizadas para tema escuro para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de comunicações e edição de documentos) não precisam de uma tela escura.
+As reuniões do Teams são otimizadas para o tema escuro para ajudar a reduzir o ruído visual e cognitivo para que os usuários possam se concentrar na discussão e no conteúdo compartilhado. Lembre-se de que determinados tipos de aplicativos (como quadro de comunicações e edição de documentos) não precisam de uma tela escura.
 
    :::column-end:::
    :::column span="":::
@@ -466,7 +466,7 @@ Teams reuniões são otimizadas para tema escuro para ajudar a reduzir o ruído 
 
 #### <a name="dont-use-unfamiliar-colors"></a>Não use cores desconhecidas
 
-Cores que se colidem com o ambiente de reunião podem ser distração e parecer menos nativas Teams. Saiba mais sobre a rampa Teams [de cores](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluindo os neutros do tema de chamada.
+Cores que se colidem com o ambiente de reunião podem ser distração e parecem menos nativas do Teams. Saiba mais sobre a rampa de [cores do](https://developer.microsoft.com/fluentui#/styles/web/colors/products) Teams, incluindo os neutros do tema de chamada.
 
    :::column-end:::
 :::row-end:::

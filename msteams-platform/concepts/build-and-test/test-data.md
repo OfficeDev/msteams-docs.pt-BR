@@ -1,23 +1,23 @@
 ---
 title: Adicionar dados de teste ao seu locatário Microsoft 365 teste
-description: Saiba como configurar sua assinatura do programa Office 365 desenvolvedor para testes bem-sucedidos de aplicativos Microsoft Teams usando snippets de código
+description: Saiba como configurar sua assinatura do programa Office 365 desenvolvedor para testes bem-sucedidos dos Aplicativos do Microsoft Teams usando snippets de código
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142350"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503456"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adicionar dados de teste ao seu locatário Microsoft 365 teste
+# <a name="add-test-data-to-your-environment"></a>Adicione dados de teste ao seu ambiente
 
 Você pode testar seu aplicativo Microsoft Teams com dados de exemplo com uma assinatura Microsoft 365 desenvolvedor.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. [Ingresse Microsoft 365 programa de desenvolvedores](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
+1. [Ingresse no Programa para Desenvolvedores do Microsoft 365](/office/developer-program/office-365-developer-program), se você não tiver um locatário de teste.
 2. [Configure uma assinatura de desenvolvedor Microsoft 365](/office/developer-program/office-365-developer-program-get-started).
 3. [Use pacotes de dados de exemplo com sua assinatura de desenvolvedor do Microsoft 365 para instalar o pacote de conteúdo Usuários](/office/developer-program/install-sample-packs).
 4. [Instale o módulo PowerShell do Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
