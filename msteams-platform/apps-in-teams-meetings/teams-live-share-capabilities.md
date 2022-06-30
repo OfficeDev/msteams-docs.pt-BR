@@ -4,16 +4,16 @@ description: Neste módulo, saiba mais sobre as funcionalidades do SDK do Live S
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143239"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503344"
 ---
 ---
 
-# <a name="live-share-capabilities"></a>Recursos do Live Share 
+# <a name="live-share-core-capabilities"></a>Principais recursos do Live Share 
 
 O SDK do Live Share pode ser adicionado aos contextos `sidePanel` e `meetingStage` da extensão da sua reunião com o mínimo de esforço. Este artigo se concentra em como integrar o SDK do Live Share ao seu aplicativo e aos principais recursos do SDK.
 

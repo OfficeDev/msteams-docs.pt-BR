@@ -3,14 +3,14 @@ title: Pré-visualização pública do desenvolvedor para o Microsoft Teams
 description: Neste artigo, conheça os recursos que estão na Visualização Pública do Desenvolvedor do Microsoft Teams e do aplicativo de visualização do desenvolvedor.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190252"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503911"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Pré-visualização pública do desenvolvedor para o Microsoft Teams
+# <a name="public-developer-preview-for-teams"></a>Visualização do desenvolvedor público do Teams
 
 >[!NOTE]
 >Os recursos incluídos na pré-visualização podem não estar completos e podem sofrer alterações antes de se tornarem disponíveis no lançamento público. Eles são fornecidos apenas para fins de teste e exploração. Eles não devem ser usados em aplicativos de produção.

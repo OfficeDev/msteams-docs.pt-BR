@@ -3,12 +3,12 @@ title: Cenas personalizadas no Modo Conferência
 description: Trabalhar com cenas personalizadas do Modo Conferência
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150642"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484749"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -22,7 +22,7 @@ Em cenas personalizadas do Modo Conferência, a cena é um artefato. A cena é c
 
 O processo a seguir fornece uma visão geral para criar um aplicativo somente de cena:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Criar aplicativo somente de cena" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Criar aplicativos específicos para cada cenário":::
 
 Um aplicativo somente de cena ainda é um aplicativo no Teams. O estúdio Scene lida com a criação do pacote de aplicativos em segundo plano. Várias cenas em um único pacote de aplicativos aparecem como uma lista simples para os usuários.
 
@@ -83,7 +83,7 @@ Para criar uma cena usando o estúdio Scene, siga estas etapas:
 
 1. Selecione **Adicionar imagens** para adicionar a imagem ao ambiente:
 
-    ![Adicionar imagens ao ambiente](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Adicionar imagens ao ambiente.":::
 
     >[!NOTE]
     >Você pode baixar os arquivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) e [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) com as imagens.
@@ -104,7 +104,7 @@ Para criar uma cena usando o estúdio Scene, siga estas etapas:
 
 1. Selecione **Organizador da Reunião** ou a função **Apresentador** para o participante. Em uma reunião, um participante deve ter a função de organizador da reunião:
 
-    ![Atribuir local](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Atribuir um local ao participante.":::
 
 1. Selecione **Salvar** e selecione **Exibir no Teams** para testar rapidamente sua cena no Teams.
 

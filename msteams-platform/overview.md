@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189608"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485301"
 ---
 # <a name="teams-app-that-fits"></a>Aplicativo do Microsoft Teams que se ajusta
 
@@ -51,7 +51,7 @@ Veja por que o Teams é mais adequado para suas necessidades de aplicativo:
 
 - **Interações sociais**
 
-    O Teams é uma plataforma social; os aplicativos personalizados voltados para as redes sociais incentivam sua equipe a estender a cultura da empresa para o espaço de colaboração. Use aplicativos para enviar sondagens, permitir que as pessoas compartilhem comentários umas com as outras, habilitando a conexão e a comunicação.
+    O Teams é uma plataforma social; os aplicativos personalizados voltados para as redes sociais incentivam sua equipe a estender a cultura da empresa para o espaço de colaboração. Use aplicativos para enviar pesquisas, permitir que as pessoas compartilhem comentários umas com as outras, habilitando a conexão e a comunicação.
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Aplicativo Teams para criar cultura de equipe" border="false":::
 
