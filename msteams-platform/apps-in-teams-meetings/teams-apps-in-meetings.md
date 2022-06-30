@@ -5,22 +5,41 @@ description: Neste artigo, saiba como os aplicativos funcionam em reuniões do M
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 07008b23ad9f5df32c61b417ab7f49be6dbfe6e9
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484548"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561593"
 ---
-# <a name="apps-for-teams-meetings"></a>Aplicativos para reuniões do Teams
+# <a name="apps-for-teams-meetings-and-calls"></a>Aplicativos para reuniões e chamadas do Teams
 
 As reuniões permitem colaboração, parceria, comunicação informada e comentários compartilhados. O aplicativo de reunião pode fornecer uma experiência do usuário em cada estágio do ciclo de vida da reunião. O ciclo de vida da reunião inclui a experiência de aplicativo de pré-reunião, em reunião e pós-reunião, dependendo do status do participante.
 
-Os usuários podem acessar os aplicativos durante as reuniões utilizando a galeria de guias do calendário, como:
+> [!Note]
+>
+> No momento, os aplicativos para reuniões instantâneas, um para um e chamadas de grupo estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
-* Pré-estágio de um painel Kanban.
-* Inicie um diálogo acionável na reunião.
-* Criar uma pesquisa pós-reunião.
+O Teams dá suporte ao acesso a aplicativos durante a reunião para os seguintes tipos de reunião:
+
+* [**Reuniões agendadas**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): reuniões agendadas por meio do calendário do Teams.
+* [**Chamadas um-a-um**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): chamadas iniciadas em chat um-a-um.
+* [**Chamadas em grupo**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): chamadas iniciadas no chat em grupo.
+* [**Reuniões instantâneas**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): reuniões iniciadas **por meio do botão Reunir agora** no calendário do Teams.
+
+Os usuários podem adicionar aplicativos à reunião usando a **+** opção na janela de reunião do Teams.
+
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Adicionar um aplicativo na reunião" border="true":::
+
+Visite a [loja do Teams e](https://go.microsoft.com/fwlink/p/?LinkID=2183121) explore os aplicativos projetados especificamente para reuniões.
+
+> [!Note]
+>
+> * Atualmente, não há suporte para a adição de um aplicativo em dispositivos móveis. No entanto, um usuário pode exibir o aplicativo e compartilhar o aplicativo para preparar a partir do celular.
+>
+> * Atualmente, quando uma terceira pessoa é adicionada a uma chamada um-a-um, a chamada é elevada a uma chamada de grupo que significa que uma nova sessão é iniciada. Os aplicativos adicionados à chamada um-a-um não estão disponíveis na chamada de grupo. No entanto, eles podem ser adicionados novamente.
+>
+> * Atualmente, não há suporte para experiências de aplicativo em reuniões de canal do Teams (reuniões agendadas e reuniões instantâneas).
 
 A ilustração a seguir fornece a você uma ideia dos recursos de extensibilidade do aplicativo de reuniões:
 

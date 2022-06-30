@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião do Teams e a experiência de reunião dos usuários na área de trabalho e dispositivos móveis, tipos de usuário, integração de bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a75340e375bdc4eabd386f09b19110312de16538
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484570"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561620"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -26,7 +26,10 @@ Este artigo aborda as informações sobre o ciclo de vida da reunião e como int
 Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião.
 
 > [!NOTE]
-> Há suporte para extensões de reunião, como bots, cartões, extensões de mensagem e ações de mensagem no cliente Web. No entanto, as experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
+>
+> * No momento, os aplicativos para reuniões instantâneas, um para um e chamadas de grupo estão disponíveis apenas na [versão prévia do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Há suporte para extensões de reunião, como bots, cartões, extensões de mensagem e ações de mensagem no cliente Web. No entanto, as experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar guias ao ciclo de vida da reunião
 
@@ -37,7 +40,6 @@ As guias permitem que os membros da equipe acessem serviços e conteúdo em um e
 
 > [!NOTE]
 >
-> * As reuniões agendadas privadas dão suporte apenas a aplicativos.
 > * Não há suporte para adicionar a opção de aplicativo para o aplicativo de guia de extensão de reunião do Teams no cliente Web do Teams.
 
 #### <a name="pre-meeting-app-experience"></a>Experiência de aplicativo de pré-reunião
@@ -75,6 +77,8 @@ Depois de adicionar as guias a uma reunião existente no celular, você poderá 
 Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião. Os aplicativos de reunião são hospedados na barra de ferramentas da janela de reunião como uma guia na reunião. Use a caixa de diálogo na reunião para demonstrar conteúdo acionável para os participantes nela. Para obter mais informações, consulte [Habilitar e configurar seus aplicativos para reuniões do Teams](enable-and-configure-your-app-for-teams-meetings.md).
 
 Para dispositivos móveis, os aplicativos de reunião estão disponíveis em **Aplicativos** > reticências &#x25CF;&#x25CF;&#x25CF; na reunião. Selecione **Aplicativos** para exibir todos os aplicativos disponíveis na reunião.
+
+Para área de trabalho, você pode adicionar aplicativos durante uma reunião usando **a** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: opção Adicionar um aplicativo na janela da reunião.
 
 Para usar guias durante uma reunião:
 
@@ -183,7 +187,7 @@ Depois de projetar seu aplicativo com base nas funções de participante em uma 
 
 ## <a name="user-types-in-a-meeting"></a>Tipos de usuário em uma reunião
 
-Tipos de usuário, como organizador, apresentador ou participante em uma reunião, podem fazer uma das funções [de participante em uma reunião](#participant-roles-in-a-meeting).
+Tipos de usuário, como no locatário, convidado, federado ou usuário externo em uma reunião, podem fazer uma das funções de [participante em uma reunião](#participant-roles-in-a-meeting).
 
 > [!NOTE]
 > O tipo de usuário não está incluído na API **getParticipantRole** .
@@ -205,15 +209,20 @@ A lista a seguir detalha os vários tipos de usuário, juntamente com sua acessi
     > [!NOTE]
     > Os usuários anônimos herdam a política de permissão de aplicativo padrão global no nível do usuário. Para obter mais informações, consulte [gerenciar aplicativos](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-Um usuário convidado ou anônimo não pode adicionar, remover ou desinstalar aplicativos.
-
-A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar:
+A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usuário pode acessar em reuniões agendadas:
 
 | Tipo de usuário | Guias | Bots | Extensões de mensagens | Cartões Adaptáveis | Módulos de tarefas | Caixa de diálogo na reunião | Estágio da reunião |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuário anônimo | Não disponível | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Não disponível |
 | Convidado, parte do locatário Azure AD | A interação é permitida. Criar, atualizar e excluir não são permitidos. | Não disponível | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no cliente da área de trabalho do Teams |
-| Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida. Criar, atualizar e excluir não são permitidos. | A interação é permitida. A aquisição, a atualização e a exclusão não são permitidas. | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no cliente da área de trabalho do Teams. |
+| Usuários federados, para obter mais informações, consulte [usuários não padrão](/microsoftteams/non-standard-users). | A interação é permitida em reuniões agendadas. Criar, atualizar e excluir não são permitidos. | A interação é permitida. A aquisição, a atualização e a exclusão não são permitidas. | Não disponível | Interações no chat da reunião são permitidas. | Interações no chat de reunião do Cartão Adaptável são permitidas. | Não disponível | Pode iniciar, exibir e interagir com o aplicativo no estágio da reunião somente no cliente da área de trabalho do Teams. |
+
+> [!NOTE]
+>
+> O comportamento dos vários tipos de usuário para aplicativos em chamadas é idêntico ao seu comportamento em reuniões agendadas, com exceção do seguinte:
+>
+> * Os usuários federados não podem interagir com aplicativos de tabulação em chamadas.
+> * Se os usuários federados forem adicionados a uma chamada existente com usuários no locatário ou convidados, todos os participantes perderão a capacidade de adicionar, atualizar ou remover aplicativos. No entanto, somente os usuários convidados ou no locatário existentes ainda poderão interagir com os aplicativos que foram adicionados antes de convidar usuários federados para a chamada.
 
 ## <a name="next-step"></a>Próxima etapa
 
