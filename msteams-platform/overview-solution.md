@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190119"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558671"
 ---
 # <a name="the-teams-solution"></a>A solução do Microsoft Teams
 
@@ -32,19 +32,19 @@ Requisitos de agrupamento e mapeamento de recursos do Teams:
 | Requisitos do aplicativo do usuário | Verificar previsão | Notificação antes da viagem | Usuário registrado |
 | --- |:---:|:---:|:---:|
 | **Recursos** | Bot | &nbsp; | &nbsp; |
-| **Integração** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, API do Clima |
+| **Integração** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph, API do Clima |
 | **Escopo** | &nbsp; | Aplicativo pessoal | &nbsp; |
 | **Ponto de integração** | &nbsp; | Chat | &nbsp; |
 
 **Solução de aplicativo do Teams**: um aplicativo de *bot de chat pessoal* do Teams que verifica e *envia notificação de previsão* para *usuários registrados* antes da data da viagem.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Um desenvolvedor de uma agência de viagens cria um bot para o Teams que envia a previsão do tempo aos clientes para eles se planejarem antes de suas viagens" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Um desenvolvedor de uma agência de viagens cria um bot para o Teams que envia a previsão do tempo aos clientes para eles se planejarem antes de suas viagens":::
 
 O Teams oferece essas e muito mais funcionalidades para trazer aos usuários uma solução de aplicativos com recursos avançados. Para desenvolver este aplicativo:
 
 1. Crie um aplicativo de bot de chat pessoal.
 1. Integre com uma API externa de previsão do tempo para conectar e solicitar previsões para datas e localizações específicas.
-1. Integre com o :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph para usuários registrados.
+1. Integre com o :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph para usuários registrados.
 1. Verifique e envie detalhes da previsão com base na data de viagem e no local de viagem do usuário.
 
 ## <a name="choose-what-suits-you"></a>Escolha o que combina com você
@@ -53,7 +53,7 @@ Você pode criar um aplicativo Teams de acordo com os requisitos do aplicativo. 
 
 Um aplicativo Teams oferece a flexibilidade de escolher seu ambiente de build. Inclui ferramentas, estrutura e idiomas para trabalhar no desenvolvimento do aplicativo.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="A empresa precisa de um aplicativo" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="A empresa precisa de um aplicativo":::
 
 Crie seu aplicativo Teams no ambiente que funciona para seus requisitos específicos. Você pode até mesmo selecionar uma combinação.
 
@@ -65,14 +65,14 @@ Um aplicativo Teams traz aos usuários as vantagens de um workspace colaborativo
 
 Como plataforma para criar aplicativos, o Teams oferece uma gama completa de aplicativos e kits de ferramentas. A plataforma Teams dá suporte a você em todos os estágios, desde planejar seu aplicativo até distribuí-lo.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Descrevendo um ciclo de vida do desenvolvimento do aplicativo Teams. Planejar, projetar, construir, estender, testar, implantar, distribuir. Detalhes mostrados em uma lista de marcadores abaixo." border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Descrevendo um ciclo de vida do desenvolvimento do aplicativo Teams. Planejar, projetar, construir, estender, testar, implantar, distribuir. Detalhes mostrados em uma lista de marcadores abaixo.":::
 
 Desde o design até a criação e a distribuição de um aplicativo do Teams, você pode usar várias ferramentas e serviços. Um exemplo de fluxo de desenvolvimento pode ser:
 
 1. Planejar seu projeto e descobrir o requisito.
 1. Crie o aplicativo. Use o Kit de Interface do Usuário do Teams e a Biblioteca de Interface do Usuário para criar a interface do usuário das guias.
 1. Criar o aplicativo com JavaScript usando o kit de ferramentas do Teams.
-1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
+1. Estender a funcionalidade adicionando mais recursos do Teams e dados do M365 com o :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Testar o aplicativo em um locatário de desenvolvedor com dados de usuário de exemplo.
 1. Implantar o aplicativo no Azure.
 1. Gerenciar e publicar os aplicativos na Microsoft Store com o Portal do Desenvolvedor. Monetize seu aplicativo com opções, como ofertas de SaaS, compras no aplicativo e muito mais.

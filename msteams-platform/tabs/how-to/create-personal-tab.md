@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189465"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558391"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -58,7 +58,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
 1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o arquivo `manifest.json`.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Gerador do Teams" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Gerador do Teams":::
 
     <details>
     <summary><b>Série de perguntas para atualizar seu arquivo manifest.json</b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. Insira `http://localhost:3007/<yourDefaultAppNameTab>/` em seu navegador para exibir a página inicila do seu aplicativo.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia padrão" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia padrão":::
 
 1. Navegue por `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` para exibir sua guia pessoal.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Guia html padrão" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Guia html padrão":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package** , selecione a pasta zip e escolha **Abrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adicionar sua guia pessoal" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adicionar sua guia pessoal":::
 
 1. Selecione **Adicionar** na caixa de diálogo. Sua guia é carregada no Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Guia pessoal carregada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Guia pessoal carregada":::
 
 1. No painel esquerdo do Teams, selecione reticências &#x25CF;&#x25CF;&#x25CF; e escolha seu aplicativo carregado para exibir sua guia pessoal.
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Selecione **Adicionar** para carregar a guia no Teams. Sua guia agora está disponível no Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Guia padrão" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Guia padrão":::
 
    Agora você criou e adicionou com êxito sua guia pessoal no Teams.
   
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Selecione **Adicionar** para carregar a guia no Teams. Sua guia agora está disponível no Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Guia pessoal" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Guia pessoal":::
   
    Agora você criou e adicionou com êxito sua guia pessoal no Teams.
 

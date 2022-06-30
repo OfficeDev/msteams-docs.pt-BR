@@ -4,12 +4,12 @@ description: Neste artigo, busque respostas a algumas perguntas frequentes enqua
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143099"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558293"
 ---
 # <a name="moodle-faq"></a>Perguntas frequentes sobre o Moodle
 
@@ -53,9 +53,9 @@ Use a opção **Restrição de criação do usuário** para especificar os usuá
 
 A imagem a seguir mostra as opções de restrições de criação do usuário:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="Sincronizar" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="Sincronizar":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD":::
 
 <br>
 
@@ -71,11 +71,11 @@ Por padrão, somente os administradores do Moodle podem configurar a sincroniza�
 
 A imagem a seguir mostra a opção **Permitir configurar a sincronização do curso no curso**:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="Administrador" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="Administrador":::
 
 A imagem a seguir mostra a sincronização de cursos:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="sincronização" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="sincronização":::
 
 <br>
 
@@ -123,11 +123,11 @@ Os usuários que não conseguiram entrar no início precisam relatar o problema 
 
 A imagem a seguir mostra a mensagem de erro recebida quando o usuário entra usando suas credenciais do Microsoft 365:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Relatar problema" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Relatar problema":::
 
 A imagem a seguir mostra o erro no portal do Azure:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portal do Azure" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portal do Azure":::
 
 Se o **Segredo do cliente** tiver expirado, o usuário precisará gerar um novo **Segredo do cliente** e atualizar a configuração encontrada na página. Os usuários conseguem entrar novamente depois que o **Segredo do cliente** foi atualizado, o que pode levar até 24 horas para provisionar novamente.
 
@@ -143,7 +143,7 @@ Os administradores podem alterar a instância de equipes associada a um curso po
 
 A imagem a seguir mostra a instância das equipes:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instância de equipes" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instância de equipes":::
 
 <br>
 
@@ -160,7 +160,7 @@ O usuário poderá encontrar problemas de reunião do Atto Teams se a referênci
 
 As imagens a seguir mostram o ícone da Barra de Ferramentas após o ajuste de configuração da Barra de Ferramentas:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barra de ferramentas" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barra de ferramentas":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="ícone de links":::
 

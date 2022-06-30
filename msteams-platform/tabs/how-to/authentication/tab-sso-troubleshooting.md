@@ -4,12 +4,12 @@ description: Solução de problemas de autenticação de SSO no Teams e como us�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: perguntas sobre erros de SSO Microsoft Azure Active Directory (Azure AD) do Teams
-ms.openlocfilehash: d738c992b008028456dc9318b2a0720178f6f66f
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 93365732ee284cd8cb903f7535d2770d0154d417
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503722"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558419"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Solucionar problemas de autenticação de SSO no Teams
 
@@ -101,7 +101,7 @@ Um erro genérico pode aparecer quando uma ou mais configurações de aplicativo
 
 A imagem a seguir mostra um exemplo dos detalhes do aplicativo configurados Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valores de configuração de aplicativo Azure AD" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valores de configuração de aplicativo Azure AD":::
 
 Verifique se os seguintes valores correspondem entre o Azure AD, o código do lado do cliente e o manifesto do aplicativo Teams:
 

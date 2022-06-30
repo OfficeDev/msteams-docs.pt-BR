@@ -1,20 +1,20 @@
 ---
 title: Integrar recursos de mídia
 author: Rajeshwari-v
-description: Saiba como usar o Teams SDK do cliente JavaScript para habilitar recursos de mídia usando exemplos de código e também aprender a vantagem de integrar recursos de mídia.
+description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar recursos de mídia usando exemplos de código e também aprender a vantagem de integrar recursos de mídia.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190233"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558706"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
-Você pode integrar recursos nativos de dispositivo, como câmera e microfone ao Teams aplicativo. Para integração, você pode usar [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de [dispositivo de um usuário](native-device-permissions.md). Use APIs de funcionalidade de mídia adequadas para integrar os recursos do dispositivo, como câmera e microfone à plataforma Teams em seu aplicativo Microsoft Teams, e crie uma experiência mais rica. A funcionalidade de mídia está disponível para Teams web, área de trabalho e dispositivos móveis. Para integrar recursos de mídia, você deve atualizar o arquivo de manifesto do aplicativo e chamar as APIs de funcionalidade de mídia.
+Você pode integrar funcionalidades nativas do dispositivo, como câmera e microfone ao aplicativo Teams. Para integração, você pode usar o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de [dispositivo de um usuário](native-device-permissions.md). Use APIs de funcionalidade de mídia adequadas para integrar os recursos do dispositivo, como câmera e microfone com a plataforma Teams em seu aplicativo Microsoft Teams, e crie uma experiência mais rica. A funcionalidade de mídia está disponível para cliente Web do Teams, área de trabalho e dispositivos móveis. Para integrar recursos de mídia, você deve atualizar o arquivo de manifesto do aplicativo e chamar as APIs de funcionalidade de mídia.
 
 Para uma integração eficaz, você deve ter uma boa compreensão de [Trechos de código](#code-snippets) para chamar as respectivas APIs, que permitem que você use recursos de mídia nativa. É importante se familiarizar com os [Erros de resposta da API](#error-handling) para lidar com os erros em seu aplicativo Teams.
 
@@ -22,7 +22,7 @@ Para uma integração eficaz, você deve ter uma boa compreensão de [Trechos de
 
 A principal vantagem da integração de recursos de dispositivo em seus aplicativos do Teams é que ele aproveita os controles nativos do Teams para fornecer uma experiência avançada e imersiva aos seus usuários. Os cenários a seguir mostram as vantagens dos recursos de mídia:
 
-* Permitir que o usuário capture as simulações aproximadas desenhadas em um quadro de comunicações físico por meio do telefone celular e use as imagens capturadas como opções de votação Teams chat em grupo.
+* Permita que o usuário capture as simulações aproximadas desenhadas em um quadro de comunicações físico por meio do telefone celular e use as imagens capturadas como opções de votação no chat em grupo do Teams.
 
 * Permitir que o usuário grave uma mensagem de áudio e anexe-a a um tíquete de incidente.
 
@@ -30,9 +30,9 @@ A principal vantagem da integração de recursos de dispositivo em seus aplicati
 
 > [!NOTE]
 >
-> * Atualmente, o Teams não dá suporte a permissões de dispositivo na janela pop-out do chat, nas guias e no painel lateral da reunião.</br>
+> * Atualmente, o Teams não dá suporte a permissões de dispositivo na janela de chat pop-out, nas guias e no painel lateral da reunião.</br>
 > * As permissões do dispositivo são diferentes no navegador. Para saber mais, consulte [permissões de dispositivo do navegador](browser-device-permissions.md).
-> * O prompt de permissões de solicitação é exibido automaticamente no celular quando uma API Teams relevante é iniciada. Para mais informações, consulte [solicitar permissões de dispositivos](native-device-permissions.md).
+> * O prompt de permissões de solicitação é exibido automaticamente no celular quando uma API relevante do Teams é iniciada. Para mais informações, consulte [solicitar permissões de dispositivos](native-device-permissions.md).
 
 ## <a name="update-manifest"></a>Atualizar manifesto
 
@@ -75,27 +75,27 @@ A tabela a seguir lista o conjunto de APIs para habilitar os recursos de mídia 
 
 A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API para a funcionalidade de imagem:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="A ilustração mostra a funcionalidade de imagem para dispositivos móveis." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="A ilustração mostra a funcionalidade de imagem para dispositivos móveis.":::
 
 > [!NOTE]
 >
-> Em dispositivos com Android versão inferior a 7, `selectMedia` a API inicia a experiência nativa Android câmera em vez da experiência Teams câmera nativa.
+> Em dispositivos com a versão do Android abaixo de 7, `selectMedia` a API inicia a experiência de câmera nativa do Android em vez da experiência de câmera nativa do Teams.
 
 A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API para o recurso de microfone:
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="A ilustração mostra a funcionalidade de microfone para dispositivos móveis." border="true":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="A ilustração mostra a funcionalidade de microfone para dispositivos móveis.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API para a funcionalidade de imagem:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="A ilustração mostra a funcionalidade de mídia para área de trabalho." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="A ilustração mostra a funcionalidade de mídia para área de trabalho.":::
 
 ---
 
 ## <a name="error-handling"></a>Tratamento de erros
 
-Certifique-se de lidar com esses erros adequadamente em seu Teams aplicativo. A tabela a seguir lista os códigos de erro e as descrições sob as quais os erros são gerados:
+Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A tabela a seguir lista os códigos de erro e as descrições sob as quais os erros são gerados:
 
 |Código de erro |  Nome do erro     | Descrição|
 | --------- | --------------- | -------- |

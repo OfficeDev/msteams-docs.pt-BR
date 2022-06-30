@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503645"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558573"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
@@ -173,11 +173,11 @@ gulp build
 
 1. Insira `http://localhost:3007/<yourDefaultAppNameTab>/` em seu navegador para exibir a página inicila do seu aplicativo.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia padrão" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia padrão":::
 
 1. Para exibir a página de configuração da guia, vá para `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. O seguinte é mostrado:
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuração da guia" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuração da guia":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package**, selecione a pasta zip do pacote de aplicativo e escolha **Abrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Guia de canal carregada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Guia de canal carregada":::
 
 1. Selecione **Adicionar** na caixa de diálogo. Sua guia é carregada no Teams.
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. Siga as instruções para adicionar uma guia. Há uma caixa de diálogo de configuração personalizada para seu canal ou guia de grupo.
 1. Selecione **Salvar** e sua guia será adicionada à barra de guias do canal.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Guia de canal carregada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Guia de canal carregada":::
 
     Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
 
@@ -433,7 +433,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Selecione **Adicionar à equipe** para configurar a guia em uma equipe. Configure sua guia e selecione **Salvar**. Sua guia agora está disponível no Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="guia Cana dal ASPNET carregada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="guia Cana dal ASPNET carregada":::
 
     Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
 
@@ -651,7 +651,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Selecione **Adicionar à equipe** para configurar a guia em uma equipe. Configure sua guia e selecione **Salvar**. Sua guia agora está disponível no Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia de canal do ASPNET MVC carregado" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia de canal do ASPNET MVC carregado":::
 
     Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
 

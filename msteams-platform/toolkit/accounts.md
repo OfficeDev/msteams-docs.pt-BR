@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142210"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558013"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar contas para criar o aplicativo Teams
 
@@ -77,7 +77,7 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
     3. Selecione **Contas** e faça logon da sua conta Microsoft 365.
     4. Verifique se você pode exibir a opção **Sideload habilitado** conforme mostrado na imagem a seguir:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar o sideload" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar o sideload":::
 
 * **Verificar a permissão de sideload usando o cliente Teams**
 
@@ -85,11 +85,11 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
     2. Selecione **Aplicativos** no painel esquerdo.
     3. Selecione **Publicar um aplicativo**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publicar um aplicativo" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publicar um aplicativo":::
 
     4. Verifique se você pode ver a opção **Carregar um aplicativo personalizado**, conforme mostrado na imagem a seguir:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Carregar um aplicativo personalizado" border="true":::.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Carregar um aplicativo personalizado":::.
 
         Se você não conseguir visualizar a opção **Carregar um aplicativo personalizado**, isso indica que você não tem a permissão necessária para sideload.
 
@@ -107,7 +107,7 @@ Se você quiser hospedar recursos relacionados ao aplicativo ou acessar recursos
 
   2. Selecione **Mostrar Tudo** > **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar tudo" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar tudo":::
 
      > [!Note]
      > Pode levar **até 24 horas** para a opção **Teams** ser exibida. Você pode [carregar seu aplicativo personalizado em um ambiente do Teams](/microsoftteams/upload-custom-apps) para teste e validação.

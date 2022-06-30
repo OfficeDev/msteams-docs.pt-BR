@@ -4,12 +4,12 @@ description: Neste módulo, saiba como começar a desenvolver bots no Microsoft 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189745"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558608"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Adicionar bots a aplicativos do Microsoft Teams
 
@@ -18,9 +18,9 @@ ms.locfileid: "66189745"
 Crie e conecte bots inteligentes para interagir com os usuários do Microsoft Teams naturalmente por meio do chat. Ou forneça um bot simples baseado em comandos, a ser usado como sua interface de "linha de comando" para ter uma experiência mais ampla do aplicativo do Teams. Você pode criar um bot somente notificação, que pode enviar por push informações relevantes para seus usuários diretamente para eles em um canal ou mensagem direta. Você pode até mesmo trazer sua Bot Framework existente e adicionar suporte específico do Teams para fazer sua experiência se destacar.
 
 > [!IMPORTANT]
-> Atualmente, os bots estão disponíveis no Nuvem da Comunidade Governamental (GCC) e GCC-High, mas não estão disponíveis no Departamento de Defesa (DOD).
+> Atualmente, os bots estão disponíveis na GCC (Nuvem da Comunidade Governamental) e GCC-High, mas não estão disponíveis no Departamento de Defesa (DOD).
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="Exemplo de um bot ajudando um usuário" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Exemplo de um bot ajudando um usuário":::
 
 ## <a name="what-you-need-to-know-bots"></a>O que você precisa saber: bots
 
@@ -34,11 +34,11 @@ Um bot se comporta de maneira diferente dependendo do tipo de conversa em que el
 
 Para obter mais informações, [Converse com um bot do Microsoft Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Com Teams aplicativos, você pode tornar o bot a estrela de sua experiência ou apenas um auxiliar. Os bots são distribuídos como parte do pacote de aplicativos mais amplo, que pode incluir outros recursos, como [guias](~/tabs/what-are-tabs.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
+Com os aplicativos do Teams, você pode tornar o bot a estrela de sua experiência ou apenas um auxiliar. Os bots são distribuídos como parte do pacote de aplicativos mais amplo, que pode incluir outros recursos, como [guias](~/tabs/what-are-tabs.md) ou [extensões de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="bot-apis"></a>APIs de bot
 
-Teams dá suporte à maioria [dos Microsoft Bot Framework](https://dev.botframework.com/). (Se você já tiver um bot baseado no Bot Framework, poderá adaptá-lo facilmente para trabalhar no Teams.) Recomendamos que você use C# ou Node.js para aproveitar nossos [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos básicos SDK do Construtor de Bot:
+O Teams dá suporte à maioria [dos Microsoft Bot Framework](https://dev.botframework.com/). (Se você já tiver um bot baseado no Bot Framework, poderá adaptá-lo facilmente para trabalhar no Teams.) Recomendamos que você use C# ou Node.js para aproveitar nossos [SDKs](/microsoftteams/platform/#pivot=sdk-tools). Esses pacotes estendem as classes e os métodos básicos SDK do Construtor de Bot:
 
 * Usando tipos de cartão especializados, como o cartão do Conector do Office 365.
 * Consumindo e definindo dados de canal específicos do Teams em atividades.
@@ -59,7 +59,7 @@ Os webhooks de saída permitem que você crie um bot simples para interação b�
 
 ## <a name="build-a-great-teams-bot"></a>Crie um ótimo bot do Teams
 
-Os artigos a seguir orientarão você pelo processo de criação de um ótimo bot para Teams:
+Os artigos a seguir orientarão você pelo processo de criação de um ótimo bot para o Teams:
 
 * [Crie um bot](~/resources/bot-v3/bots-create.md): aproveite as excelentes ferramentas, documentação e comunidade fornecidas pela equipe do Bot Framework.
 * [Converse com seu bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): adicione o fluxo de conversa básico e aproveite a funcionalidade específica do canal. Se você desenvolve no .NET ou node.js, use nossas extensões para o SDK do Bot Builder para simplificar seu trabalho.

@@ -3,24 +3,24 @@ title: Configuração de código para habilitar o SSO para guias
 description: Descreve a configuração de código para habilitar o SSO para guias
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do Microsoft Azure Active Directory (Azure AD) API do Graph
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887872"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558727"
 ---
-# <a name="add-code-to-enable-sso"></a>Adicionar código para habilitar o SSO
+# <a name="add-code-to-enable-sso"></a>Adicionar código para habilitar o logon único
 
 Antes de adicionar código para habilitar o SSO, verifique se você registrou seu aplicativo no Azure AD.
 
 > [!div class="nextstepaction"]
-> [Registrar-se no Azure AD](tab-sso-register-aad.md)
+> [Registre-se com Azure AD](tab-sso-register-aad.md)
 
 Você precisa configurar o código do lado do cliente do aplicativo guia para obter um token de acesso do Azure AD. O token de acesso é emitido em nome do aplicativo guia. Se seu aplicativo guia exigir permissões adicionais do Microsoft Graph, você precisará passar o token de acesso para o lado do servidor e trocar por um token do Microsoft Graph.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurar o código para manipular o token de acesso" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurar o código para manipular o token de acesso":::
 
 Esta seção cobre:
 
@@ -36,7 +36,7 @@ Para obter acesso ao aplicativo para o usuário atual do aplicativo, o código d
 <details>
 <summary>Saiba mais sobre getAuthToken()</summary>
 <br>
-`getAuthToken()` é um método no SDK javaScript do Microsoft Teams. Ele solicita que um token de acesso do Azure AD seja emitido em nome do aplicativo. O token será adquirido do cache, se ele não tiver expirado. Se ela tiver expirado, uma solicitação será enviada ao Azure AD para obter um novo token de acesso.
+`getAuthToken()` é um método no SDK javaScript do Microsoft Teams. Ele solicita que um Azure AD token de acesso seja emitido em nome do aplicativo. O token será adquirido do cache, se ele não tiver expirado. Se ela tiver expirado, uma solicitação será enviada ao Azure AD para obter um novo token de acesso.
 
  Para obter mais informações, [consulte getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
@@ -78,7 +78,7 @@ Você pode adicionar chamadas de `getAuthToken()` todas as funções e manipulad
 
 </details>
 
-Quando o Teams recebe o token de acesso, ele é armazenado em cache e reutilizados conforme necessário. Esse token pode ser usado sempre que `getAuthToken()` for chamado, até que expire, sem fazer outra chamada ao Azure AD.
+Quando o Teams recebe o token de acesso, ele é armazenado em cache e reutilizados conforme necessário. Esse token pode ser usado sempre que `getAuthToken()` for chamado, até expirar, sem fazer outra chamada para Azure AD.
 
 > [!IMPORTANT]
 > Como prática recomendada para a segurança do token de acesso:
@@ -88,17 +88,17 @@ Quando o Teams recebe o token de acesso, ele é armazenado em cache e reutilizad
 
 ### <a name="consent-dialog-for-getting-access-token"></a>Caixa de diálogo de consentimento para obter o token de acesso
 
-Quando você chama `getAuthToken()` e o consentimento do usuário do aplicativo é necessário para permissões no nível do usuário, uma caixa de diálogo do Azure AD é mostrada para o usuário do aplicativo que está conectado no momento.
+Quando você chama `getAuthToken()` e o consentimento do usuário do aplicativo é necessário para permissões no nível do usuário, uma caixa de diálogo Azure AD é mostrada para o usuário do aplicativo que está conectado no momento.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Prompt de diálogo de logon único da guia":::
 
-A caixa de diálogo de consentimento exibida é para escopos de ID aberta definidos no Azure AD. O usuário do aplicativo deve dar consentimento apenas uma vez. Após o consentimento, o usuário do aplicativo pode acessar e usar seu aplicativo guia para as permissões e escopos concedidos.
+A caixa de diálogo de consentimento exibida é para escopos de ID aberta definidos Azure AD. O usuário do aplicativo deve dar consentimento apenas uma vez. Após o consentimento, o usuário do aplicativo pode acessar e usar seu aplicativo guia para as permissões e escopos concedidos.
 
 > [!IMPORTANT]
 > Cenários em que as caixas de diálogo de consentimento não são necessárias:
 >
 > - Se o administrador do locatário tiver concedido consentimento em nome do locatário, os usuários do aplicativo não precisarão ser solicitados a dar consentimento. Isso significa que os usuários do aplicativo não veem as caixas de diálogo de consentimento e podem acessar o aplicativo diretamente.
-> - Se seu aplicativo do Azure AD estiver registrado no mesmo locatário do qual você está solicitando uma autenticação no Teams, o usuário do aplicativo não poderá ser solicitado a consentir e receberá um token de acesso imediatamente. Os usuários do aplicativo consentem com essas permissões somente se o aplicativo do Azure AD estiver registrado em um locatário diferente.
+> - Se o aplicativo Azure AD estiver registrado no mesmo locatário do qual você está solicitando uma autenticação no Teams, o usuário do aplicativo não poderá ser solicitado a consentir e receberá um token de acesso imediatamente. Os usuários do aplicativo consentem com essas permissões somente se o Azure AD aplicativo estiver registrado em um locatário diferente.
 
 Se você encontrar erros, consulte Solução [de problemas de autenticação de SSO no Teams](tab-sso-troubleshooting.md).
 
@@ -165,7 +165,7 @@ Há várias bibliotecas disponíveis que podem lidar com a validação JWT. A va
 Ao validar o token, lembre-se das seguintes diretrizes:
 
 - Os tokens de SSO válidos são emitidos pelo Azure AD. A declaração `iss` no token deve começar com esse valor.
-- O parâmetro do token será `aud1` definido como a ID do aplicativo gerada durante o registro de aplicativo do Azure AD.
+- O parâmetro do token será `aud1` definido como a ID do aplicativo gerada durante Azure AD do aplicativo.
 - O parâmetro `scp` do token será definido como `access_as_user`.
 
 #### <a name="example-access-token"></a>Token de acesso de exemplo
@@ -212,5 +212,5 @@ A seguir está uma carga decodificada típica do token de acesso.
 - [Declaração opcional do Active Directory](/azure/active-directory/develop/active-directory-optional-claims)
 - [Tokens de acesso](/azure/active-directory/develop/access-tokens)
 - [Visão geral da MSAL (Biblioteca de Autenticação da Microsoft)](/azure/active-directory/develop/msal-overview)
-- [Tokens de ID da plataforma de identidade da Microsoft](/azure/active-directory/develop/id-tokens)
+- [plataforma de identidade da Microsoft tokens de ID](/azure/active-directory/develop/id-tokens)
 - [Tokens de acesso da plataforma de identidade da Microsoft](/azure/active-directory/develop/access-tokens#validating-tokens)

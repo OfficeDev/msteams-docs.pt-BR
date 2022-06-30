@@ -5,12 +5,12 @@ description: Saiba como criar e testar ofertas de Visualização do SaaS no apli
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123700"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558741"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Teste de visualização para aplicativos monetizados
 
@@ -26,11 +26,11 @@ Você pode gerar a ID da oferta de visualização a partir do link de **visualiz
 1. Adicione uma [audiência de visualização](/azure/marketplace/create-new-saas-offer-preview) para sua oferta SaaS.
 1. Selecione o link **Visualização do AppSource** em **Go Live** para encontrar a ID da oferta de visualização na barra de endereços do navegador com o formato *publisherId.offerId-preview*.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="ID da oferta de visualização" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="ID da oferta de visualização" :::
 
 1. Copie a ID da oferta de visualização da barra de endereços do navegador.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID da oferta de visualização" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID da oferta de visualização" :::
 
     > [!NOTE]
     > Ao contrário de uma ID de oferta pública, a ID da oferta de visualização pode ser reconhecida com o sufixo *-preview*. Por exemplo, **publisherId.offerId-preview**.
@@ -68,7 +68,7 @@ Depois de configurar seu aplicativo com a ID da Oferta de visualização, crie u
 
 Se a Oferta de visualização for especificada no manifesto do aplicativo e a audiência de visualização for definida no Partner Center para a oferta, o usuário poderá ver o botão **Comprar uma assinatura**.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="comprar uma assinatura" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="comprar uma assinatura":::
 
 ### <a name="error-scenarios"></a>Cenários de erro
 
@@ -76,13 +76,13 @@ Se a Oferta de visualização for especificada no manifesto do aplicativo e a au
 
   Nenhum plano encontrado com **-preview**. Certifique-se de estar na audiência de visualização.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="nenhuma audiência de visualização" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="nenhuma audiência de visualização" :::
 
 * Se a ID da oferta especificada no manifesto do aplicativo não for uma Oferta de Visualização, o aplicativo mostrará a seguinte mensagem de aviso para o usuário e o sideload será desabilitado:
   
   Isso não é uma oferta de visualização. Certifique-se de anexar **-preview** à ID da Oferta.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="sem visualização" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="sem visualização" :::
 
 ## <a name="see-also"></a>Confira também
 

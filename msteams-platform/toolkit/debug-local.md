@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 3b6d9ee830fcf1cb50e02138cf3b9b8ca952225f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142224"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557880"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
 
@@ -70,29 +70,29 @@ Execute as seguintes etapas para depurar seu aplicativo depois de criar um novo 
 
 1. Selecione **Depurar o Edge** ou **Depurar o Chrome** em **Executar e Depurar** na barra de atividades.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Opção de navegador" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Opção de navegador":::
 
 1. Selecione **Iniciar Depuração (F5)** ou **Executar** para executar seu aplicativo Teams no modo de depuração.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Iniciar depuração" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Iniciar depuração":::
 
 3. Selecione **Entrar** para sua conta Microsoft 365.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Entrar" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Entrar":::
 
    > [!TIP]
    > Você pode selecionar **Ler mais** para saber mais sobre o Programa para Desenvolvedores do Microsoft 365. Seu navegador da Web padrão está aberto para permitir que você entre na sua conta do Microsoft 365 usando suas credenciais.
 
 4. Selecione **Instalar** para instalar o certificado de desenvolvimento para localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado":::
 
    > [!TIP]
    > Você pode selecionar **Saiba mais** para saber mais sobre o certificado de desenvolvimento.
 
 5. Selecione **Sim** se a seguinte caixa de diálogo for exibida:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="autoridade de certificação" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="autoridade de certificação":::
 
 O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome com base na sua seleção e abre uma página da Web para carregar o cliente do Teams.  
 
@@ -100,29 +100,29 @@ O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome com 
 
 1. Selecione **Depurar o Edge** ou **Depurar o Chrome** em **Executar e Depurar** na barra de atividades.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listas de navegadores" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listas de navegadores":::
 
 1. Selecione **Iniciar Depuração (F5)** ou **Executar** para executar seu aplicativo Teams no modo de depuração.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Depurar seu aplicativo" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Depurar seu aplicativo":::
 
 3. Selecione **Entrar** para sua conta Microsoft 365.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Entrar na conta M365" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Entrar na conta M365":::
 
    > [!TIP]
    > Você pode selecionar **Ler mais** para saber mais sobre o Programa para Desenvolvedores do Microsoft 365. Seu navegador da Web padrão está aberto para permitir que você entre na sua conta do Microsoft 365 usando suas credenciais.
 
 4. Selecione **Instalar** para instalar o certificado de desenvolvimento para localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado":::
 
    > [!TIP]
    > Você pode selecionar **Saiba mais** para saber mais sobre o certificado de desenvolvimento.
 
 5. Insira seu **Nome de Usuário** e **Senha** e selecione **Atualizar Configurações** na caixa de diálogo a seguir:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="logon do mac" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="logon do mac":::
 
 O Kit de Ferramentas inicia uma nova instância do navegador Edge ou Chrome, dependendo da seleção e abre uma página da Web para carregar o cliente do Teams.
 
@@ -179,7 +179,7 @@ A tabela a seguir lista os nomes e tipos de configuração de depuração do pro
 
 A configuração **Anexar ao Front-end** ou **Iniciar Bot** inicia uma nova instância do navegador Edge ou Chrome e abre uma página da Web para carregar o cliente do Teams. Depois que o cliente do Teams for carregado, o Teams faz o sideload do aplicativo do Teams controlado pela URL de sideload definida nas configurações de inicialização do [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). Quando o cliente do Teams for carregado no navegador da Web, selecione **Adicionar** ou selecione um na lista suspensa de acordo com seu requisito.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="depuração local" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="depuração local":::
 
    Seu aplicativo foi adicionado ao Teams!
 

@@ -5,12 +5,12 @@ description: Perguntas a serem consideradas ao planejar seu aplicativo, entender
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123108"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558125"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
@@ -129,7 +129,7 @@ Sugestão: Opções que ajudam a determinar o melhor modelo de distribuição.
 
 O Teams não hospeda seu aplicativo. Quando um usuário instala seu aplicativo no Teams, ele instala um pacote de aplicativo que contém um único arquivo de configuração (também conhecido como manifesto do aplicativo) e os ícones do aplicativo. A lógica e o armazenamento de dados do aplicativo são hospedados em outro lugar, como no localhost durante o desenvolvimento e nos Serviços Web do Azure. O Teams acessa esses recursos via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustração mostrando a hospedagem de aplicativos para aplicativos do Teams" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustração mostrando a hospedagem de aplicativos para aplicativos do Teams":::
 
 ## <a name="plan-beyond-app-building"></a>Planeje além da criação de aplicativos
 

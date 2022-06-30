@@ -5,12 +5,12 @@ description: Saiba como adicionar a autenticação OAuth a um bot no Teams usand
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 297307657905a1492abc68fde7d69cfbc0702497
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484968"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558853"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Adicionar autenticação ao seu bot do Teams
 
@@ -141,7 +141,7 @@ Para adicionar o canal do Microsoft Teams:
 
 1. Abra o bot, que está listado na seção **Recursos recentes**.
 
-1. Selecione **Canais** no painel esquerdo e selecione **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+1. Selecione **Canais** no painel esquerdo e selecione **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Canal do Teams":::
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Saiba como habilitar e configurar seus aplicativos para reuniões do Teams e diferentes cenários de reuniões, atualizar o manifesto de aplicativos, configurar recursos e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503358"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557733"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -141,7 +141,7 @@ A notificação na reunião é usada para envolver os participantes durante a re
 
 A notificação na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a notificação na reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="O exemplo mostra como você pode usar uma caixa de diálogo na reunião." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="O exemplo mostra como você pode usar uma caixa de diálogo na reunião.":::
 
 #### <a name="shared-meeting-stage"></a>Estágio de reunião compartilhada
 

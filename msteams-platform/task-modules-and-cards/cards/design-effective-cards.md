@@ -4,12 +4,12 @@ description: Neste módulo, saiba como criar Cartões Adaptáveis para seu aplic
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142658"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558153"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -17,7 +17,7 @@ Um Cartão Adaptável contém um corpo de elementos de cartão de forma livre e 
 
 A estrutura de Cartão Adaptável é usada em muitos produtos da Microsoft, incluindo o Teams. Você pode enviar cartões dentro de mensagens para usuários por meio de bots ou extensões de mensagens. Os usuários também podem realizar ações em cartões quando presentes.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemplo de visão geral de um Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemplo de visão geral de um Cartão Adaptável.":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
@@ -41,11 +41,11 @@ Nosso maior cartão. Uso para compartilhar artigos ou cenários onde uma imagem 
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="O exemplo mostra um cartão promocional personalizado do Cartão Adaptável.":::
 
 ### <a name="thumbnail"></a>Miniatura
 
@@ -53,11 +53,11 @@ Use para enviar uma mensagem acionável simples.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="O exemplo mostra um cartão miniatura do Cartão Adaptável.":::
 
 ### <a name="list"></a>List
 
@@ -65,11 +65,11 @@ Use em cenários em que você deseja que o usuário escolha um item de uma lista
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="O exemplo mostra um cartão de uma lista do Cartão Adaptável.":::
 
 ### <a name="digest"></a>Compilação
 
@@ -77,11 +77,11 @@ Use para resumos de notícias e postagens de referência. Observação: recomend
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável no dispositivo móvel" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável no dispositivo móvel":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="O exemplo mostra um cartão de compilação do Cartão Adaptável.":::
 
 ### <a name="media"></a>Mídia
 
@@ -89,11 +89,11 @@ Use quando quiser combinar texto e mídia, como áudio ou vídeo.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="O exemplo mostra um cartão de mídia do Cartão Adaptável.":::
 
 ### <a name="people"></a>Pessoas
 
@@ -101,11 +101,11 @@ Melhor usado para transmitir com eficiência quem está envolvido em uma tarefa.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="O exemplo mostra um cartão de pessoas do Cartão Adaptável.":::
 
 ### <a name="request-ticket"></a>Solicitar ingresso
 
@@ -113,11 +113,11 @@ Use para obter entradas rápidas de um usuário para criar automaticamente uma t
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="O exemplo mostra um cartão de tíquete de solicitação do Cartão Adaptável.":::
 
 ### <a name="imageset"></a>ImageSet
 
@@ -125,11 +125,11 @@ Use para enviar várias miniaturas de imagens.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de imagens do Cartão Adaptável.":::
 
 ### <a name="actionset"></a>ActionSet
 
@@ -137,11 +137,11 @@ Use quando quiser que o usuário selecione um botão e, em seguida, reúna a ent
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de ações do Cartão Adaptável.":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
@@ -149,11 +149,11 @@ Use para reunir várias entradas do usuário.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável no dispositivo móvel.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="O exemplo mostra um cartão de conjunto de opções do Cartão Adaptável.":::
 
 ## <a name="anatomy"></a>Anatomia
 
@@ -161,7 +161,7 @@ Os Cartões Adaptáveis têm muita flexibilidade. Mas, no mínimo, sugerimos for
 
 #### <a name="mobile"></a>Dispositivo móvel
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável no dispositivo móvel." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável no dispositivo móvel.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -171,7 +171,7 @@ Os Cartões Adaptáveis têm muita flexibilidade. Mas, no mínimo, sugerimos for
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="O exemplo mostra a anatomia do Cartão Adaptável.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -655,7 +655,7 @@ Siga essas diretrizes ao incluir imagens em seus cartões.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Prática recomendada sobre como você deve incluir apenas um pequeno conjunto de ações em um Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Prática recomendada sobre como você deve incluir apenas um pequeno conjunto de ações em um Cartão Adaptável.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Faça: Usar até seis ações principais
 
@@ -663,7 +663,7 @@ Embora os Cartões Adaptáveis possam suportar seis ações primárias, a maiori
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Prática recomendada sobre como não sobrecarregar os usuários com demasiadas ações em um Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Prática recomendada sobre como não sobrecarregar os usuários com demasiadas ações em um Cartão Adaptável.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>Não faça: Usar mais de seis ações principais
 
@@ -674,7 +674,7 @@ Os Cartões Adaptáveis devem apresentar conteúdo rápido e prático. Muitas a�
 
 ### <a name="frequency"></a>Frequência
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Práticas recomendadas sobre a frequência do Cartão Adaptável." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Práticas recomendadas sobre a frequência do Cartão Adaptável.":::
 
 #### <a name="do-be-concise"></a>Faça: Seja conciso
 

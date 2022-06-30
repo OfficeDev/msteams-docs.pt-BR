@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142882"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558832"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de design de aplicativo
 
@@ -29,7 +29,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Imagem conceitual do Teams layout." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Imagem conceitual do Teams layout.":::
    :::column-end:::
 
 :::row-end:::
@@ -47,7 +47,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Imagem conceitual de Teams avatares." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Imagem conceitual de Teams avatares.":::
 
    :::column-end:::
 :::row-end:::
@@ -68,7 +68,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Imagem conceitual de Teams ícones." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Imagem conceitual de Teams ícones.":::
 
    :::column-end:::
 :::row-end:::
@@ -87,7 +87,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Imagem conceitual da tipografia do Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Imagem conceitual da tipografia do Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Imagem de conceito das cores do Teams." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Imagem de conceito das cores do Teams.":::
    :::column-end:::
 
 :::row-end:::
@@ -124,7 +124,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceitual de forma e elevação." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceitual de forma e elevação.":::
 
    :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ Aprenda rapidamente sobre os conceitos básicos do design Teams aplicativo. Voc�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Imagem conceitual de cópia e conteúdo." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Imagem conceitual de cópia e conteúdo.":::
 
    :::column-end:::
 :::row-end:::

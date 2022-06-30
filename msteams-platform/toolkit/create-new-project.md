@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1737c55598d5963a77317a0b37869275f96a902d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6665884f4606e90c82ba0c5806641f84beded0e
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503750"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557740"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams 
 
@@ -23,7 +23,7 @@ Para criar um novo aplicativo de Equipes usando o Kit de Ferramentas do Teams, v
 ## <a name="create-a-new-teams-app"></a>Criar um novo aplicativo do Teams
 
 1. Abra o Visual Studio Code.
-1. Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: na barra Visual Studio Code lateral.
+1. Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: na barra Visual Studio Code lateral.
 1. Selecione **Criar um novo aplicativo do Teams**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Barra lateral do kit de ferramentas do Teams":::

@@ -4,12 +4,12 @@ description: Descreve como configurar permissões de API com o Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph de token de acesso de permissão delegado
-ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 474d02c5b5f90e58bfc57f72ab6ce095a0323b62
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485290"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558251"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Estender o aplicativo guia com permissões e escopo do Microsoft Graph
 
@@ -33,39 +33,39 @@ Você pode configurar escopos adicionais do Graph Azure AD para seu aplicativo. 
 
 2. Selecione **Gerenciar** > **permissão de API** no painel esquerdo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="Opção de menu permissões de aplicativo." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="Opção de menu permissões de aplicativo.":::
 
     A **página de permissões de API** é exibida.
 
 3. Selecione **+ Adicionar permissões para** adicionar permissões API do Graph Microsoft.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Página de permissões do aplicativo." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="Página de permissões do aplicativo.":::
 
     A **página Solicitar permissões de API** é exibida.
 
 4. Selecione **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Página Solicitar permissões de API." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Página Solicitar permissões de API.":::
 
     As opções para permissões do Graph são exibidas.
 
 5. Selecione **Permissões delegadas para** exibir a lista de permissões.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Permissões delegadas." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Permissões delegadas.":::
 
 6. Selecione permissões relevantes para seu aplicativo e, em seguida, **selecione Adicionar permissões**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Selecione permissões." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Selecione permissões.":::
 
     Você também pode inserir o nome da permissão na caixa de pesquisa para encontrá-lo.
 
     Uma mensagem aparece no navegador informando que as permissões foram atualizadas.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Mensagem atualizada de permissões." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Mensagem atualizada de permissões.":::
 
     As permissões adicionadas são exibidas na **página de permissões da** API.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="As permissões de API estão configuradas." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="As permissões de API estão configuradas.":::
 
     Você configurou seu aplicativo com permissões do Microsoft Graph.
 
@@ -86,19 +86,19 @@ Você pode configurar a autenticação para várias plataformas, desde que a URL
 
 1. Selecione **Gerenciar** > **Autenticação** no painel esquerdo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Autenticar para plataformas" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Autenticar para plataformas":::
 
     A **página Configurações da** plataforma é exibida.
 
 1. Selecione **+ Adicionar uma plataforma**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Adicionar uma plataforma" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Adicionar uma plataforma":::
 
     A **página Configurar plataformas** é exibida.
 
 1. Selecione a plataforma que você deseja configurar para seu aplicativo guia. Você pode escolher o tipo de plataforma da Web ou spa.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Selecionar plataforma Web" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Selecionar plataforma Web":::
 
     Você pode configurar várias plataformas para um tipo de plataforma específico. Verifique se o URI de redirecionamento é exclusivo para cada plataforma que você configurar.
 
@@ -109,7 +109,7 @@ Você pode configurar a autenticação para várias plataformas, desde que a URL
 
 1. Insira os detalhes de configuração da plataforma.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configurar a plataforma Web" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configurar a plataforma Web":::
 
     1. Insira o URI de redirecionamento. O URI deve ser exclusivo.
     2. Insira a URL de logoff do canal frontal.

@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073297"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558055"
 ---
 # <a name="in-app-purchases"></a>Compras no aplicativo
 
@@ -87,21 +87,21 @@ O exemplo a seguir mostra os usuários comprarem planos de assinatura para um ap
 
 1. Na caixa de diálogo de detalhes do aplicativo, selecione **Comprar uma assinatura** ou **Adicionar para mim**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Compre a assinatura do aplicativo selecionado." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Compre a assinatura do aplicativo selecionado.":::
 
 1. **Adicionar para mim** oferece uma versão de avaliação gratuita do aplicativo e, posteriormente, **Atualizá-lo** para uma versão paga.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Fazendo upgrade para a assinatura do aplicativo selecionado." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Fazendo upgrade para a assinatura do aplicativo selecionado." lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. Na caixa de diálogo **Escolher um plano de assinatura**, escolha o plano e selecione **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecionando o plano de assinatura apropriado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecionando o plano de assinatura apropriado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. Conclua a transação e selecione **Configurar agora para configurar sua assinatura**.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurando a assinatura." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurando a assinatura." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de destino da assinatura." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de destino da assinatura." lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>Próxima etapa
 

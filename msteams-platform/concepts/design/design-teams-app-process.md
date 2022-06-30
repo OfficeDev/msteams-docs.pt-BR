@@ -1,22 +1,22 @@
 ---
 title: Processo de criação do aplicativo
 author: heath-hamilton
-description: Saiba como e quando você pode usar as ferramentas e recursos da Microsoft para criar um aplicativo Microsoft Teams eficaz.
+description: Saiba como e quando você pode usar ferramentas e recursos da Microsoft para criar um aplicativo eficaz do Microsoft Teams.
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b9b23fc2a849df6528af224e7289bced10f9e096
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144373"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557845"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processo de criação para aplicativos do Microsoft Teams
 
 Há várias ferramentas e recursos para criar seu aplicativo Microsoft Teams. As etapas a seguir descrevem quando e como você pode usá-lo durante o processo de design. (Algumas das etapas podem estar tecnicamente fora do processo de criação, mas estão incluídas para contexto adicional.)
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama mostrando um exemplo do processo de design do aplicativo Teams." border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama mostrando um exemplo do processo de design do aplicativo Teams.":::
 
 ## <a name="plan-your-app"></a>Planeje seu aplicativo
 

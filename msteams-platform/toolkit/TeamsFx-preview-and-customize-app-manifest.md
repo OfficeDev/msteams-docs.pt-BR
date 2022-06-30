@@ -1,23 +1,23 @@
 ---
-title: Teams manifesto do aplicativo no Teams Toolkit
+title: Manifesto do aplicativo Teams no Kit de Ferramentas do Teams
 author: zyxiaoyuer
-description: Neste módulo, saiba como editar, visualizar e personalizar Teams Manifesto do Aplicativo no ambiente diferente.
+description: Neste módulo, saiba como editar, visualizar e personalizar o Manifesto do Aplicativo teams em um ambiente diferente.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143869"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557999"
 ---
-# <a name="edit-teams-app-manifest"></a>Editar Teams manifesto do aplicativo
+# <a name="edit-teams-app-manifest"></a>Editar manifesto do aplicativo Teams
 
-O arquivo de modelo do manifesto `manifest.template.json` está disponível na pasta `templates/appPackage` após o scaffolding. O arquivo de modelo com espaços reservados e `.fx/configs` os valores reais são resolvidos Teams Toolkit arquivos em e `.fx/states` para ambientes diferentes.
+O arquivo de modelo do manifesto `manifest.template.json` está disponível na pasta `templates/appPackage` após o scaffolding. O arquivo de modelo com espaços reservados e os valores reais são resolvidos pelo Kit de Ferramentas do Teams usando arquivos em `.fx/configs` e `.fx/states` para ambientes diferentes.
 
-**Para visualizar o manifesto com conteúdo real, o Teams Toolkit gera arquivos de manifesto de visualização na `build/appPackage` pasta**:
+**Para visualizar o manifesto com conteúdo real, o Kit de Ferramentas do Teams gera arquivos de manifesto de visualização na `build/appPackage` pasta**:
 
 ```text
 └───build
@@ -41,7 +41,7 @@ Você também pode visualizar o arquivo de manifesto local seguindo as etapas:
 
 1. Selecione **Visualizar** nos codelens do `manifest.template.json` arquivo e selecione **local**.
 2. Selecione **Visualizar arquivo de manifesto** na barra de menus do `manifest.template.json` arquivo.
-3. Selecione **Zip Teams de metadados** no Treeview e selecione **local**.
+3. Selecione **o pacote de metadados do Zip Teams** no Treeview e selecione **local**.
 
 A visualização local é exibida conforme mostrado na imagem:
 
@@ -51,16 +51,16 @@ A visualização local é exibida conforme mostrado na imagem:
 
 **Para visualizar o arquivo de manifesto no ambiente remoto**
 
-* Selecione **Provisionar na nuvem em** **DESENVOLVIMENTO** Teams Toolkit extensão ou
-* Gatilho **Teams: provisionar na nuvem da** paleta de comandos.
+* Selecione **Provisionar na nuvem em** **DESENVOLVIMENTO na** extensão do Kit de Ferramentas do Teams ou
+* Disparar **o Teams: provisionar na nuvem da** paleta de comandos.
 
-Ele gera a configuração para o aplicativo Teams remoto e compila o pacote e o manifesto de visualização na `build/appPackage` pasta.
+Ele gera a configuração para o aplicativo Remoto do Teams e compila o pacote e o manifesto de visualização na `build/appPackage` pasta.
 
 Você também pode visualizar o arquivo de manifesto no ambiente remoto seguindo estas etapas:
 
 1. Selecione **Visualizar** nos codelens do `manifest.template.json` arquivo.
 2. Selecione **Visualizar arquivo de manifesto** na barra de menus do `manifest.template.json` arquivo.
-3. Selecione **Zip Teams de metadados** no Treeview.
+3. Selecione **o pacote de metadados do Zip Teams** no Treeview.
 4. Selecione seu ambiente.
 
 > [!NOTE]
@@ -72,9 +72,9 @@ Você também pode visualizar o arquivo de manifesto no ambiente remoto seguindo
 
 Depois de visualizar o arquivo de manifesto, você pode sincronizar as alterações locais no Portal de Desenvolvimento das seguintes maneiras:
 
-1. Implantar Teams manifesto do aplicativo.
+1. Implantar o manifesto do aplicativo Teams.
 
-   Você pode implantar Teams manifesto do aplicativo de qualquer uma das seguintes maneiras:
+   Você pode implantar o manifesto do aplicativo Teams de qualquer uma das seguintes maneiras:
 
    * Vá para `manifest.template.json` o arquivo e clique com o botão direito do mouse para selecionar no `Deploy Teams app manifest` menu de contexto.
 
@@ -84,22 +84,22 @@ Depois de visualizar o arquivo de manifesto, você pode sincronizar as alteraç�
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Implantar da paleta de comandos":::
 
-2. Atualize para Teams plataforma.
+2. Atualizar para a plataforma teams.
 
-   Você pode atualizar para Teams plataforma de qualquer uma das seguintes maneiras:
+   Você pode atualizar para a plataforma Teams de qualquer uma das seguintes maneiras:
 
-   * Selecione **Atualizar para Teams plataforma** no canto superior esquerdo de `manifest.{env}.json`.
+   * Selecione **Atualizar para a plataforma Teams** no canto superior esquerdo de `manifest.{env}.json`.
 
-   * Gatilho **Teams: atualize o manifesto Teams plataforma** na barra de menus de `manifest.{env}.json`.
+   * Disparar **o Teams: atualizar o manifesto para a plataforma Teams** na barra de menus de `manifest.{env}.json`.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Atualizar para equipes":::
 
-Você também pode disparar **Teams: atualizar o manifesto para Teams plataforma** na paleta de comandos:
+Você também pode disparar **o Teams: atualizar o manifesto para a plataforma Teams** na paleta de comandos:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="modo de exibição em árvore":::
 
 > [!NOTE]
-> O gatilho de codelens do editor ou da barra de menus atualiza o arquivo de manifesto atual para Teams plataforma. O gatilho da paleta de comandos requer a seleção do ambiente de destino.
+> O gatilho do codelens do editor ou da barra de menus atualiza o arquivo de manifesto atual para a plataforma teams. O gatilho da paleta de comandos requer a seleção do ambiente de destino.
 
  Comando da CLI:
 
@@ -115,10 +115,10 @@ Você também pode disparar **Teams: atualizar o manifesto para Teams plataforma
 Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo de configuração ou à alteração do modelo, selecione qualquer uma das seguintes ações:
 
 * **Somente visualização**: o arquivo de manifesto local é substituído de acordo com a configuração atual.
-* **Versão prévia e atualização**: o arquivo de manifesto local é substituído de acordo com a configuração atual e também atualizado para Teams plataforma.
+* **Versão prévia e atualização**: o arquivo de manifesto local é substituído de acordo com a configuração atual e também atualizado para a plataforma Teams.
 * **Cancelar**: nenhuma ação é executada.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 ## <a name="customize-teams-app-manifest"></a>Personalizar o manifesto do aplicativo Teams
 
@@ -127,7 +127,7 @@ O Kit de Ferramentas do Teams consiste nos seguintes arquivos de modelo de manif
 * `manifest.template.json`
 * `templates/appPackage`
 
-Durante a depuração ou provisionamento local, `manifest.template.json`Teams Toolkit carrega o manifesto de , `state.{env}.json`com as configurações de , `config.{env}.json`e cria Teams aplicativo no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
+Durante a depuração ou provisionamento local, o Kit de Ferramentas do Teams `manifest.template.json`carrega o manifesto de , `state.{env}.json`com as configurações de , `config.{env}.json`e cria o aplicativo Teams no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>Espaços reservados com suporte em manifest.template.json
 
@@ -154,7 +154,7 @@ A lista a seguir fornece espaços reservados com suporte em `manifest.template.j
 
 ### <a name="validate-manifest"></a>Validar manifesto
 
-Durante operações como o **pacote Teams** zip, Teams Toolkit valida o manifesto em relação ao esquema. A lista a seguir fornece diferentes maneiras de validar o manifesto:
+Durante operações como o pacote de **metadados do Zip Teams**, o Kit de Ferramentas do Teams valida o manifesto em relação ao esquema. A lista a seguir fornece diferentes maneiras de validar o manifesto:
 
 * Na VSC, dispare da `Teams: Validate manifest file` paleta de comandos:
 

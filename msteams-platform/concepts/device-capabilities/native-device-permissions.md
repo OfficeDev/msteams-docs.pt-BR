@@ -3,12 +3,12 @@ title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Tea
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que exigem consentimento do usuário, como recursos de QR de verificação, código de barras, imagem, áudio e vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484485"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557712"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Solicitar permissões de dispositivo para seu aplicativo teams
 
@@ -25,11 +25,11 @@ Você pode enriquecer seu aplicativo Teams com recursos nativos do dispositivo, 
 Você deve solicitar as permissões do dispositivo para acessar as funcionalidades nativas do dispositivo. As permissões de dispositivo funcionam da mesma forma para todas as construções de aplicativo, como guias, módulos de tarefa ou extensões de mensagens. O usuário deve ir para a página de permissões nas configurações do Teams para gerenciar permissões de dispositivo. Você pode criar experiências mais avançadas na plataforma Teams com a ajuda de recursos do dispositivo, como: você deve solicitar as permissões do dispositivo para acessar recursos nativos do dispositivo. As permissões do dispositivo funcionam da mesma forma para todos os constructos de aplicativo, como guias, módulos de tarefa ou extensões de mensagem. O usuário deve ir para a página de permissões nas configurações do Teams para gerenciar permissões de dispositivo.
 Ao acessar os recursos do dispositivo, você pode criar experiências mais avançadas na plataforma do Teams, como:
 
-* Capturar e exibir imagens.
-* Digitalizar código QR ou de barras.
-* Gravar e compartilhe vídeos curtos.
-* Gravar memorandos de áudio e salvá-los para uso posterior.
-* Usar as informações de localização do usuário para exibir informações relevantes.
+* Capturar e exibir imagens
+* Verificar QR ou código de barras
+* Gravar e compartilhar vídeos curtos
+* Gravar memorandos de áudio e salvá-los para uso posterior
+* Usar as informações de localização do usuário para exibir informações relevantes
 
 > [!NOTE]
 >
@@ -56,7 +56,7 @@ Um usuário pode gerenciar permissões de dispositivo nas configurações do Tea
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Permissões móveis." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Permissões móveis.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -67,7 +67,7 @@ Um usuário pode gerenciar permissões de dispositivo nas configurações do Tea
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Permissão do dispositivo." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Permissão do dispositivo.":::
 
 ---
 
@@ -228,13 +228,13 @@ Por exemplo:
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Permissão de localização móvel." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Permissão de localização móvel.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Permissão do dispositivo na área de trabalho." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Permissão do dispositivo na área de trabalho.":::
 
 ---
 

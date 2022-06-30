@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144331"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558321"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para o Microsoft Teams
 
@@ -35,13 +35,13 @@ Você pode adicionar uma guia da loja do Teams (AppSource) ou em um dos seguinte
 
 Os usuários podem acessar as guias selecionando o botão **Mais** no canal (exemplo abaixo) ou no chat ao qual foram adicionados.
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Exemplo mostra uma guia de celular sendo adicionada a um canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Exemplo mostra uma guia de celular sendo adicionada a um canal.":::
 
 ### <a name="desktop"></a>Desktop
 
 O exemplo a seguir mostra como os usuários podem adicionar uma guia em um canal.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemplo mostra uma guia sendo adicionada a um canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemplo mostra uma guia sendo adicionada a um canal.":::
 
 ## <a name="set-up-a-tab"></a>Configurar uma guia
 
@@ -49,11 +49,11 @@ Há um breve processo de configuração para adicionar um aplicativo como um can
 
 ### <a name="tab-configuration-dialog"></a>Diálogo de configuração da guia
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemplo mostra um modal de configuração de guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemplo mostra um modal de configuração de guia.":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>Anatomia: diálogo de configuração da guia
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um modal de configuração de guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um modal de configuração de guia.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -70,7 +70,7 @@ Há um breve processo de configuração para adicionar um aplicativo como um can
 
 Você pode adicionar uma etapa na qual os usuários devem primeiro entrar com suas credenciais da Microsoft. Esse método de autenticação é chamado de logon único (SSO).
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemplo mostra uma tela de autenticação de guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemplo mostra uma tela de autenticação de guia.":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>Crie uma configuração de guia com modelos de interface do usuário
 
@@ -86,17 +86,17 @@ As guias fornecem uma experiência na Web em tela inteira no Teams, em que você
 
 ### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Exemplo mostra uma guia de celular com um painel de tarefas." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Exemplo mostra uma guia de celular com um painel de tarefas.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um painel de tarefas." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemplo mostra uma guia com um painel de tarefas.":::
 
 ### <a name="anatomy-tab"></a>Anatomia: guia
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de uma guia.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -106,7 +106,7 @@ As guias fornecem uma experiência na Web em tela inteira no Teams, em que você
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Esta ilustração mostra a anatomia da interface do usuário de uma guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Esta ilustração mostra a anatomia da interface do usuário de uma guia.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -136,11 +136,11 @@ Os usuários podem postar automaticamente em um canal ou chat depois de adiciona
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Exemplo mostra uma guia de celular sendo discutida em uma thread do canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Exemplo mostra uma guia de celular sendo discutida em uma thread do canal.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em uma thread do canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemplo mostra uma guia sendo discutida em uma thread do canal.":::
 
 ### <a name="tab-chat"></a>Chat da guia
 
@@ -148,11 +148,11 @@ Os usuários podem conversar ao lado do conteúdo da guia que estão exibindo. N
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia de celular com uma área de chat no contexto." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia de celular com uma área de chat no contexto.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemplo mostra uma guia com um chat aberto no lado direito.":::
 
 ### <a name="permissions-and-role-based-views"></a>Permissões e exibições baseadas na função
 
@@ -166,7 +166,7 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia de celular." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia de celular.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -178,7 +178,7 @@ Você pode incluir opções para renomear, remover ou modificar uma guia.
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustração mostrando a anatomia da interface do usuário de um menu de guia.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -203,7 +203,7 @@ Use essas recomendações para criar uma experiência de aplicativo de qualidade
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Ilustração mostra o que fazer com o design da navegação por guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Ilustração mostra o que fazer com o design da navegação por guia.":::
 
 #### <a name="do-facilitate-conversation"></a>Recomendamos: facilitar a conversa
 
@@ -211,7 +211,7 @@ Inclua conteúdo e componentes sobre os quais as pessoas possam falar. Se ele n�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Exemplo mostra o que não fazer com o design da navegação por guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Exemplo mostra o que não fazer com o design da navegação por guia.":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Não recomendamos: tratar sua guia como qualquer outra página da Web
 
@@ -224,7 +224,7 @@ Uma guia não é uma página da Web que alguém pode exibir uma vez. Uma guia de
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Exemplo mostrando o que fazer com o design da navegação por guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Exemplo mostrando o que fazer com o design da navegação por guia.":::
 
 #### <a name="do-limit-tasks-and-data"></a>Recomendamos: limitar tarefas e dados
 
@@ -232,7 +232,7 @@ As guias funcionam melhor quando atendem a necessidades específicas. Inclua um 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustração mostrando o que não fazer com o design da navegação por guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustração mostrando o que não fazer com o design da navegação por guia.":::
 
 #### <a name="dont-embed-your-entire-app"></a>Não recomendamos: inserir todo o aplicativo
 
@@ -245,7 +245,7 @@ Usar uma guia para exibir um aplicativo inteiro com navegação em vários níve
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustração mostrando o que fazer com o design de configuração da guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustração mostrando o que fazer com o design de configuração da guia.":::
 
 #### <a name="do-keep-it-simple"></a>Recomendamos: manter a simplicidade
 
@@ -253,7 +253,7 @@ Se o seu aplicativo exigir autenticação, tente integrar o logon único (SSO) d
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustração mostrando o que não fazer com o design de configuração da guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustração mostrando o que não fazer com o design de configuração da guia.":::
 
 #### <a name="dont-have-too-many-steps"></a>Não recomendamos: ter muitas etapas
 
@@ -266,7 +266,7 @@ Remova as etapas desnecessárias para adicionar uma guia.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustração mostrando o que fazer com o tema da guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustração mostrando o que fazer com o tema da guia.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Recomendamos: aproveitar os tokens de cor do Teams
 
@@ -274,7 +274,7 @@ Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alteraç
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustração mostrando o que não fazer com o tema da guia." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustração mostrando o que não fazer com o tema da guia.":::
 
 #### <a name="dont-hard-code-color-values"></a>Não recomendamos: valores de cor de código rígido
 

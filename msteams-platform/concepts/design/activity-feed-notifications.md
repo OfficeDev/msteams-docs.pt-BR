@@ -1,61 +1,61 @@
 ---
-title: Projetando notificações de feed de atividade
+title: Criando notificações de feed de atividades
 author: heath-hamilton
-description: 'Saiba como projetar notificações de feed de atividade para seu aplicativo Teams e obter o kit Teams interface do usuário. Desenvolver notificações do Teams no Visual Studio C #'
+description: 'Saiba como criar notificações do feed de atividades para seu aplicativo do Teams e obter o Kit de Interface do Usuário do Teams. Desenvolver notificações do canal do Teams no Visual Studio C #'
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 06e6b0ed28208f9ce446a0fc037b7477a562c596
-ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
+ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64612619"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558006"
 ---
-# <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Projetando notificações de feed de atividade para seu Microsoft Teams app
+# <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Criando notificações do feed de atividades para seu aplicativo Microsoft Teams
 
-O feed de atividades é uma superfície para que os usuários acessem suas notificações Microsoft Teams. O feed mantém notificações das últimas quatro semanas.
+O feed de atividades é uma superfície para que os usuários acessem suas notificações no Microsoft Teams. O feed retém notificações das últimas quatro semanas.
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Exemplo mostra uma notificação de aplicativo exibida no feed Teams atividade no celular." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="O exemplo mostra uma notificação de aplicativo exibida no feed de atividades do Teams no celular.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Exemplo mostra uma notificação de aplicativo exibida no feed Teams atividade." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="O exemplo mostra uma notificação de aplicativo exibida no feed de atividades do Teams.":::
 
 ---
 
 ## <a name="anatomy"></a>Anatomia
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="Projete a anatomia da notificação Teams feed de atividade." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="Crie a anatomia da notificação do feed de atividades do Teams.":::
 
 |Contador|Descrição|
 |----------|-----------|
 |1|**Avatar**: mostra quem iniciou a atividade.|
-|2|**Tipo de atividade/ícone de aplicativo**: representa o tipo de atividade. Para notificações de aplicativo, o ícone de linha é substituído por um ícone de aplicativo.|
+|2|**Ícone do tipo de atividade/aplicativo**: representa o tipo de atividade. Para notificações de aplicativo, o ícone de linha é substituído por um ícone de aplicativo.|
 |3|**Título (primeira linha): Ator + motivo**: *Ator*: Nome do usuário ou aplicativo que iniciou a atividade. *Motivo*: descreve a atividade.|
-|4|**Timestamp**: mostra quando a atividade aconteceu.|
-|5|**Local (segunda linha)**: mostra onde a atividade ocorreu Teams.|
+|4|**Carimbo de data/** hora: mostra quando a atividade ocorreu.|
+|5|**Local (segunda linha)**: mostra onde a atividade ocorreu no Teams.|
 |6 |**Visualização de texto (terceira linha)**: mostra uma linha truncada desde o início da notificação.|
 
-## <a name="types-of-activity-feed-notification-cards"></a>Tipos de cartões de notificação de feed de atividade
+## <a name="types-of-activity-feed-notification-cards"></a>Tipos de cartões de notificação do feed de atividades
 
-As variantes a seguir mostram os tipos de cartões de notificação de feed de atividade que você pode exibir. O logotipo do aplicativo substitui o avatar do usuário para notificações geradas pelo aplicativo.
+As variantes a seguir mostram os tipos de cartões de notificação do feed de atividades que você pode exibir. O logotipo do aplicativo substitui o avatar do usuário para notificações geradas pelo aplicativo.
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variantes de Teams de feed de atividade." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variantes de cartões de feed de atividades do Teams.":::
 
-## <a name="manage-activity-feed-notifications"></a>Gerenciar notificações de feed de atividade
+## <a name="manage-activity-feed-notifications"></a>Gerenciar notificações do feed de atividades
 
-Os usuários podem gerenciar notificações enviadas de seu aplicativo na página Teams configurações.
+Os usuários podem gerenciar notificações enviadas de seu aplicativo na página de configurações do Teams.
 
-## <a name="related-system-notifications"></a>Notificações relacionadas ao sistema
+## <a name="related-system-notifications"></a>Notificações do sistema relacionadas
 
-Cada atividade gera uma notificação do sistema. O que é exibido depende do que o usuário configura em suas configurações de notificação. Os usuários também podem escolher um estilo de notificação com base em seu sistema operacional.
+Cada atividade gera uma notificação do sistema. O que é exibido depende do que o usuário define em suas configurações de notificação. Os usuários também podem escolher um estilo de notificação com base em seu sistema operacional.
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variantes de Teams de feed de atividade no Android e iOS." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variantes de cartões de feed de atividades do Teams no Android e iOS.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -64,11 +64,11 @@ Cada atividade gera uma notificação do sistema. O que é exibido depende do qu
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams de atividade em diferentes sistemas operacionais." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de cartões de atividades do Teams em sistemas operacionais diferentes.":::
 
 |Contador|Descrição|
 |----------|-----------|
-|1|Teams personalizado|
+|1|Personalizado do Teams|
 |2|Windows|
 |3|Mac|
 
@@ -77,4 +77,4 @@ Cada atividade gera uma notificação do sistema. O que é exibido depende do qu
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Implementar notificações de feed de atividade](/graph/teams-send-activityfeednotifications)
+> [Implementar notificações do feed de atividades](/graph/teams-send-activityfeednotifications)

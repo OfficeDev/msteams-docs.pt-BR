@@ -3,12 +3,12 @@ title: Tipos de cartões
 description: Neste módulo, aprenda o que são os cartões e as ações de cartão disponíveis para bots no Teams e crie um destaque, uma miniatura e cartões adaptáveis
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142623"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558580"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -131,7 +131,7 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 
 ### <a name="example-of-adaptive-card"></a>Exemplo de cartão adaptável
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemplo de um cartão adaptável" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemplo de um cartão adaptável":::
 
 O código a seguir mostra um exemplo de um Cartão Adaptável:
 

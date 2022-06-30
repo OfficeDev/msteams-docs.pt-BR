@@ -5,18 +5,18 @@ description: Neste módulo, saiba como projetar módulos de tarefas para seus ap
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143015"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558111"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Criando módulos de tarefa para o seu aplicativo do Microsoft Teams
 
 Você pode criar experiências pop-up modais no seu aplicativo do Teams com módulos de tarefas. Use este recurso para exibir mídia e informações avançada ou concluir uma tarefa complexa.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="O exemplo apresenta um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="O exemplo apresenta um módulo de tarefas.":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
@@ -43,7 +43,7 @@ Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../..
 
 ### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da IU de um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da IU de um módulo de tarefas no celular.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -55,7 +55,7 @@ Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../..
 
 ### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da IU de um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Ilustração mostrando a anatomia da IU de um módulo de tarefas.":::
 
 |Contador|Descrição|
 |----------|-----------|
@@ -82,11 +82,11 @@ As listas funcionam bem em um módulo de tarefas porque são fáceis de examinar
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Lista de exemplos em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Lista de exemplos em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de exemplos em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de exemplos em um módulo de tarefas.":::
 
 ### <a name="form"></a>Formulário
 
@@ -94,11 +94,11 @@ Os módulos de tarefas são um ótimo lugar para criar formulários com entradas
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Formulário de exemplo em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Formulário de exemplo em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/form.png" alt-text="Formulário de exemplo em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Formulário de exemplo em um módulo de tarefas.":::
 
 ### <a name="sign-in"></a>Entrar
 
@@ -106,11 +106,11 @@ Crie um fluxo de entrada ou de assinatura focado com uma série de módulos de t
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Experiência de entrada de exemplo em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Experiência de entrada de exemplo em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Experiência de entrada de exemplo em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Experiência de entrada de exemplo em um módulo de tarefas.":::
 
 ### <a name="media"></a>Mídia
 
@@ -118,11 +118,11 @@ Incorpore conteúdo de mídia em um módulo de tarefas que permita uma experiên
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemplo de conteúdo de mídia em um módulo de tarefas.":::
 
 ### <a name="empty-state"></a>Estado vazio
 
@@ -130,11 +130,11 @@ Use para mensagens de boas-vindas, erros e sucesso.
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemplo de estado vazio em um módulo de tarefas.":::
 
 ### <a name="image-gallery"></a>Galeria de imagens
 
@@ -142,11 +142,11 @@ Incorpore um carrossel de galeria em um iframe (área de trabalho) ou modo de ex
 
 ##### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefas no celular.":::
 
 ##### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galeria de imagens de exemplo em um módulo de tarefas.":::
 
 ### <a name="poll"></a>Enquete
 
@@ -154,11 +154,11 @@ Esse exemplo apresenta os resultados da enquete iniciados de um Cartão Adaptáv
 
 #### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Enquete de exemplo em um módulo de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Enquete de exemplo em um módulo de tarefas no celular.":::
 
 #### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Enquete de exemplo em um módulo de tarefas." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Enquete de exemplo em um módulo de tarefas.":::
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
@@ -168,7 +168,7 @@ Use essas recomendações para criar uma experiência de aplicativo de qualidade
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (um módulo de tarefas por vez)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (um módulo de tarefas por vez).":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Fazer: usar um módulo de tarefas por vez
 
@@ -176,7 +176,7 @@ Afinal, o objetivo é focar o usuário na conclusão de uma tarefa!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (abrir uma caixa de diálogo sobre um módulo de tarefas)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (abrir uma caixa de diálogo sobre um módulo de tarefas).":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Não fazer: abrir uma caixa de diálogo sobre um módulo de tarefas
 
@@ -189,7 +189,7 @@ Isso cria uma experiência de usuário confusa e sem foco.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (certifique-se de que o conteúdo seja responsivo)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (certifique-se de que o conteúdo seja responsivo).":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Fazer: certifique-se de que o conteúdo seja responsivo
 
@@ -197,7 +197,7 @@ Embora os Cartões Adaptáveis hospedados em um módulo de tarefa renderizem bem
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (não use barras de rolagem horizontal)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (não use barras de rolagem horizontal).":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>Não fazer: use barras de rolagem horizontal
 
@@ -210,7 +210,7 @@ Embora os Cartões Adaptáveis hospedados em um módulo de tarefa renderizem bem
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (seja breve)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (seja breve).":::
 
 #### <a name="do-keep-it-short"></a>Fazer: seja breve
 
@@ -218,7 +218,7 @@ Você pode criar facilmente um assistente de várias etapas, mas isso não signi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (não há interações longas)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (não há interações longas).":::
 
 #### <a name="dont-have-long-interactions"></a>Não fazer: ter interações longas
 
@@ -231,7 +231,7 @@ Tente manter suas interações curtas e diretas.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemplo mostrando a prática recomendada do módulo de tarefas (use mensagens de erro em linha)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemplo mostrando a prática recomendada do módulo de tarefas (use mensagens de erro em linha).":::
 
 #### <a name="do-use-inline-error-messages"></a>Fazer: usar mensagens de erro em linha
 
@@ -239,7 +239,7 @@ Consulte o modelo de IU de formulários para obter orientações sobre o tratame
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (colocar mensagens de erro em caixas de diálogo)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemplo mostrando uma prática recomendada do módulo de tarefas (colocar mensagens de erro em caixas de diálogo).":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>Não fazer: colocar mensagens de erro em caixas de diálogo
 

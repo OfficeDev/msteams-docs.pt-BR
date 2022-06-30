@@ -5,23 +5,23 @@ description: Saiba mais sobre os componentes da interface do usuário do Teams, 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485717"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558839"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes avançados da interface do usuário
 
 Os componentes a seguir são uma combinação de [componentes básicos da interface](~/concepts/design/design-teams-app-basic-ui-components.md) do usuário que você pode usar para situações comuns de design do Teams, como navegação.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">na interface do usuário fluente</a>, o Kit de Interface do Usuário do Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de aplicativos do Teams. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtenha o Kit de IU do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenha o Kit de Interface do Usuário do Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Trilha
 
@@ -32,13 +32,13 @@ Trilhas são um auxílio de navegação que transmite a hierarquia do aplicativo
 * Hierarquia de comunicação
 * Navegação
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="O exemplo mostra um modelo de trilha no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="O exemplo mostra um modelo de trilha no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="O exemplo mostra um modelo de trilha na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="O exemplo mostra um modelo de trilha na área de trabalho.":::
 
 ## <a name="left-nav"></a>Navegação à esquerda
 
@@ -49,13 +49,13 @@ Use a navegação à esquerda para procurar várias páginas em sua guia Do Team
 * Navegue por várias páginas em uma guia do Teams.
 * Dividir aplicativos complexos em várias páginas.
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="O exemplo mostra um modelo de navegação à esquerda na área de trabalho.":::
 
 ## <a name="notification-bar"></a>Notification bar
 
@@ -65,17 +65,17 @@ Você pode implementar uma barra de notificação usando o componente de alerta 
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Mensagens críticas, erros e avisos.
+* Mensagens críticas, erros e avisos
 * Mensagens de êxito
 * Mensagens informativas ou promocionais
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="O exemplo mostra o modelo de interface do usuário da barra de notificação no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="O exemplo mostra o modelo de interface do usuário da barra de notificação no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="O exemplo mostra modelos de interface do usuário da barra de notificação na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="O exemplo mostra modelos de interface do usuário da barra de notificação na área de trabalho.":::
 
 ## <a name="stage-view"></a>Modo de exibição de estágio
 
@@ -85,18 +85,18 @@ Veja como implementar o modo [de exibição de estágio](~/tabs/tabs-link-unfurl
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Exiba conteúdo em uma superfície grande no Teams em vez de outro aplicativo ou navegador.
+* Exibir conteúdo em uma superfície grande no Teams em vez de outro aplicativo ou navegador
 * Mídia em destaque ou outro conteúdo avançado
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
 Seu aplicativo pode iniciar um estágio de um Cartão Adaptável, link compartilhado ou componentes visuais (como um gráfico).
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="O exemplo mostra um modelo de estágio no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="O exemplo mostra um modelo de estágio no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="O exemplo mostra um modelo de estágio na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="O exemplo mostra um modelo de estágio na área de trabalho.":::
 
 ## <a name="toolbar"></a>Barra de ferramentas
 
@@ -108,10 +108,10 @@ Uma barra de ferramentas é um contêiner para agrupar um conjunto de controles.
 * Filtro contextual e localização.
 * Navegação e trilhas.
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="O exemplo mostra um modelo de barra de ferramentas no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="O exemplo mostra um modelo de barra de ferramentas no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="O exemplo mostra um modelo de barra de ferramentas na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="O exemplo mostra um modelo de barra de ferramentas na área de trabalho.":::

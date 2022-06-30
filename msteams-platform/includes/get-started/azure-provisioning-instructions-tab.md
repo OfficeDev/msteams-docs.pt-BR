@@ -16,11 +16,11 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
 1. Selecione **Provisionar na Nuvem**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de tela mostrando os comandos de provisionamento" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de tela mostrando os comandos de provisionamento":::
 
 1. Selecione uma assinatura a ser usada para os recursos do Azure.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de tela mostrando recursos para provisionamento" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de tela mostrando recursos para provisionamento":::
 
    > [!NOTE]
    > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
@@ -29,21 +29,21 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
 1. Selecione **Provisionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de tela da caixa de diálogo de provisionamento." border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de tela da caixa de diálogo de provisionamento.":::
 
    O processo de provisionamento cria recursos na nuvem do Azure. Pode levar algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
 
     Se desejar, você poderá exibir os recursos provisionados. Para este tutorial, você não precisa exibir recursos.
 
     O recurso provisionado aparece na **seção Ambiente** .
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
 
 1. Selecione **Implantar na nuvem no** painel **Implantação** após a conclusão do provisionamento.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Captura de tela mostrando onde clicar para implantar na nuvem." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Captura de tela mostrando onde clicar para implantar na nuvem.":::
 
    Assim como acontece com o provisionamento, a implantação leva algum tempo. Você pode monitorar o processo observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá um aviso de conclusão.
 
@@ -76,17 +76,17 @@ Na janela do terminal:
 
 Depois que as etapas de provisionamento e implantação forem concluídas:
 
-1. Abra o painel de depuração (**Ctrl+Shift+D** / **⌘⇧-D** ou **View > Run**) do Visual Studio Code.
+1. Abra o painel de depuração (**Ctrl+Shift+D** / **⌘⇧-D** ou **View > Run**) Visual Studio Code.
 1. Selecione **Iniciar Remoto (Borda)** na lista suspensa de configuração de inicialização.
 1. Selecione a **depuração Iniciar (F5)** para iniciar seu aplicativo no Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de tela mostrando o aplicativo de inicialização remotamente." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de tela mostrando o aplicativo de inicialização remotamente.":::
 
 1. Selecione **Adicionar** quando solicitado a realizar sideload do aplicativo no Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado.":::
 
     Parabéns, seu primeiro aplicativo guia está em execução em seu ambiente do Azure!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde" border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde":::
  

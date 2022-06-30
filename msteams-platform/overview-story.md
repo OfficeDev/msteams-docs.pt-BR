@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8b5aa93548ad08f8e1114b2d4b66b92fcd7195ba
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795123"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557978"
 ---
 # <a name="from-ideas-to-teams-app"></a>A partir da ideias ao aplicativo Teams
 
@@ -19,7 +19,7 @@ Saiba como os aplicativos permitem que você ajude seus usuários no ambiente do
 
 Dê uma olhada neste cenário:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Um desenvolvedor de uma agência de viagens cria um aplicativo que envia a previsão do tempo aos clientes para que eles possam planejar com antecedência suas datas de viagem" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Um desenvolvedor de uma agência de viagens cria um aplicativo que envia a previsão do tempo aos clientes para que eles possam planejar com antecedência suas datas de viagem":::
 
 Como desenvolvedor, você deseja compartilhar informações importantes e relevantes para ajudar seus usuários. É uma história de usuário típica. Relatável? Mas como o Microsoft Teams se encaixa nesse cenário?
 
@@ -29,7 +29,7 @@ Vamos nos aprofundar nessa história e descobrir.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="História do usuário - Como desenvolvedor em uma agência de viagens, crio aplicativos para viajantes" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="História do usuário - Como desenvolvedor em uma agência de viagens, crio aplicativos para viajantes":::
    :::column-end:::
    :::column span="":::
       #### <a name="understand-your-user"></a>Entenda seu usuário
@@ -50,12 +50,12 @@ Vamos nos aprofundar nessa história e descobrir.
         - Quais problemas você deseja resolver?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Quero desenvolver um aplicativo que envie a previsão do tempo do destino para os clientes..." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Quero desenvolver um aplicativo que envie a previsão do tempo do destino para os clientes...":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...para que os clientes possam conhecer as condições climáticas e planejar com antecedência" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...para que os clientes possam conhecer as condições climáticas e planejar com antecedência":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>Listar requisitos e benefícios do aplicativo
@@ -76,7 +76,7 @@ Vamos nos aprofundar nessa história e descobrir.
         - Quais recursos seriam mais convenientes para a experiência do usuário?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Os clientes estão bem preparados para viajar!" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Os clientes estão bem preparados para viajar!":::
    :::column-end:::
 :::row-end:::
 

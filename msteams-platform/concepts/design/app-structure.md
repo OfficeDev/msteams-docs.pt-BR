@@ -1,16 +1,16 @@
 ---
 title: Projete seu aplicativo - Entenda a estrutura do aplicativo
-description: Neste módulo, saiba o que você pode ou não personalizar no Microsoft Teams ao projetar a estrutura do aplicativo.
+description: Neste módulo, saiba o que você pode ou não personalizar no Microsoft Teams ao projetar sua estrutura de aplicativos.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6a409accc5f55aa0a9c245aa061efde5b67d81f3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144394"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558755"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Compreender a estrutura do aplicativo Microsoft Teams
 
@@ -34,13 +34,13 @@ Os aplicativos pessoais fornecem uma grande tela para hospedar o conteúdo do ap
 
 A tela é um modo de exibição da Web para que você possa personalizar completamente a experiência.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para aplicativos pessoais em dispositivos móveis." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para aplicativos pessoais em dispositivos móveis.":::
 
 ### <a name="desktop"></a>Área de trabalho
 
 A tela é um iframe para que você possa personalizar completamente a experiência.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para aplicativos pessoais na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para aplicativos pessoais na área de trabalho.":::
 
 ## <a name="tabs"></a>Guias
 
@@ -52,13 +52,13 @@ As guias fornecem uma tela grande para hospedar o conteúdo do seu aplicativo pa
 
 A tela é um modo de exibição da Web para que você possa personalizar completamente a experiência.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para guias em dispositivos móveis." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para guias em dispositivos móveis.":::
 
 ### <a name="desktop"></a>Área de trabalho
 
 A tela é um iframe para que você possa personalizar completamente a experiência.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para guias na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para guias na área de trabalho.":::
 
 ## <a name="bots"></a>Bots
 
@@ -68,11 +68,11 @@ Os bots são aplicativos de conversação que se integram aos recursos de mensag
 
 ### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para bots em dispositivos móveis." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para bots em dispositivos móveis.":::
 
 ### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para bots na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para bots na área de trabalho.":::
 
 ## <a name="message-extensions"></a>Extensões de mensagens
 
@@ -82,11 +82,11 @@ Extensões de mensagens são atalhos para inserir conteúdo do aplicativo ou rea
 
 ### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagem em dispositivos móveis." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagem em dispositivos móveis.":::
 
 ### <a name="desktop"></a>Área de trabalho
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagem na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de mensagem na área de trabalho.":::
 
 ## <a name="meeting-extensions"></a>Extensões de reunião
 
@@ -98,10 +98,10 @@ As extensões de reunião são aplicativos para aprimorar as reuniões ao vivo. 
 
 A superfície é uma visualização da web, permitindo que você personalize a experiência, mas lembre-se de que durante as reuniões esses aplicativos usam o tema escuro.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de reunião em dispositivos móveis." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Imagem conceitual mostrando as áreas de front-end no Teams que os desenvolvedores podem personalizar para extensões de reunião em dispositivos móveis.":::
 
 ### <a name="desktop"></a>Área de trabalho
 
 A superfície é um iframe, permitindo que você personalize a experiência, mas lembre-se de que durante as reuniões esses aplicativos usam o tema escuro e são estreitos.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para extensões de reunião na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Imagem conceitual mostrando as áreas front-end no Teams que os desenvolvedores podem personalizar para extensões de reunião na área de trabalho.":::

@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: fe9bbbb7a6d3668f43c31322ad8099bf994051b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484598"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558328"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
 
@@ -29,7 +29,7 @@ O Kit de ferramentas do Teams traz todas as ferramentas necessárias para criar 
 
 O Kit de ferramentas do Teams automatiza o trabalho manual e fornece uma ótima integração do Teams com os recursos do Azure. A imagem a seguir mostra o percurso do usuário do Kit de ferramentas do Teams:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Percurso do usuário do Kit de Ferramentas do Teams" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Percurso do usuário do Kit de Ferramentas do Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Os principais marcos desta jornada são:
 
@@ -50,7 +50,7 @@ Os principais marcos desta jornada são:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Kit de ferramentas":::
 
-1. Selecionar **Instalar**.
+1. Selecione **Instalar**.
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="instalar o kit de ferramentas 4.0.0":::
 

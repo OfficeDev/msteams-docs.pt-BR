@@ -4,12 +4,12 @@ description: Visão geral da autenticação de SSO no Teams e como usá-la em gu
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) manifesto do aplicativo de token de acesso de SSO
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503764"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557719"
 ---
 # <a name="enable-sso-for-tab-app"></a>Habilitar o logon único para o aplicativo de guia
 
@@ -27,7 +27,7 @@ Veja o que você aprenderá nesta seção:
 
 Os usuários do aplicativo entrarão no Teams usando uma conta pessoal da Microsoft ou uma conta do Microsoft 365. Você pode aproveitar isso e usar o SSO para autenticar e autorizar os usuários do aplicativo.
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Experiência do usuário de SSO em um aplicativo de guia do Teams" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Experiência do usuário de SSO em um aplicativo de guia do Teams":::
 
 - O Teams autentica e armazena a identidade de seu usuário de aplicativo.
 - Seu aplicativo guia usa a identidade armazenada do usuário do aplicativo que já está validado pelo Teams.
@@ -60,7 +60,7 @@ Obtenha o SSO em um aplicativo guia obtendo o token de acesso para o usuário do
 
 A imagem a seguir mostra como o SSO funciona quando um usuário do aplicativo Teams tenta acessar o aplicativo guia:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagrama de SSO de logon único do Tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagrama de SSO de logon único do Tab" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | Interação | O que está acontecendo |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ Esta seção descreve as tarefas envolvidas na implementação do SSO para um ap
 
 Para habilitar o SSO para um aplicativo de guia:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Etapas para habilitar o SSO para a guia" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Etapas para habilitar o SSO para a guia" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Registre-Azure AD**: crie um aplicativo Azure AD para gerar uma ID do aplicativo e o URI da ID do aplicativo. Para gerar o token de acesso, configure escopos e autorize aplicativos cliente confiáveis.
 2. **Código** de atualização: adicione o código para manipular o token de acesso, `getAuthToken()` chamando quando um usuário do aplicativo acessar seu aplicativo guia, enviando esse token para o código do servidor do aplicativo no cabeçalho autorização e validando o token de acesso quando ele é recebido.

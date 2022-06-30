@@ -3,12 +3,12 @@ title: Empacote o seu aplicativo
 description: Saiba como empacotar seu aplicativo Microsoft Teams com ícones para teste, carregamento e publicação na loja.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: bf0cff985184a0a0d03a9f2a996182b3ea7365bc
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503617"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558559"
 ---
 # <a name="create-teams-app-package"></a>Criar pacote de aplicativos do Teams
 
@@ -21,7 +21,7 @@ Você precisa de um pacote de aplicativos, no entanto, planeja distribuir seu ap
 
 Quando um usuário instala seu aplicativo no Teams, ele instala um pacote de aplicativo que contém um único arquivo de configuração (também conhecido como manifesto do aplicativo) e os ícones do aplicativo. A lógica e o armazenamento de dados do aplicativo são hospedados em outro lugar, como no localhost durante o desenvolvimento e nos Serviços Web do Azure. O Teams acessa esses recursos via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustração mostrando a hospedagem de aplicativos para aplicativos do Teams" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustração mostrando a hospedagem de aplicativos para aplicativos do Teams":::
 
 ## <a name="app-manifest"></a>Manifesto do aplicativo
 
@@ -44,7 +44,7 @@ A versão colorida do seu ícone é exibida na maioria dos cenários do Teams e 
 
 O Teams corta automaticamente seu ícone para exibir um quadrado com cantos arredondados em vários cenários e uma forma hexagonal em cenários do bot. Para cortar o símbolo sem perder detalhes, inclua 48 pixels de preenchimento ao redor do símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams de cores e diretrizes de design." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams de cores e diretrizes de design.":::
 
 ### <a name="outline-icon"></a>Ícone de contorno
 
@@ -55,13 +55,13 @@ Um ícone de contorno é exibido em dois cenários:
 
 O ícone deve ter 32 x 32 pixels. Ele pode ser branco com um plano de fundo transparente ou transparente com um plano de fundo branco (nenhuma outra cor é permitida). O ícone de contorno não deve ter nenhum preenchimento extra ao redor do símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Diretrizes de design do ícone de estrutura do Teams." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Diretrizes de design do ícone de estrutura do Teams.":::
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustração mostrando como projetar os ícones do aplicativo." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustração mostrando como projetar os ícones do aplicativo.":::
 
 #### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Fazer: siga as diretrizes precisas do ícone de contorno
 
@@ -69,7 +69,7 @@ Os valores RGB de branco usados no seu ícone devem ser vermelho: 255, verde: 25
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustração mostrando como não projetar ícones do aplicativo." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustração mostrando como não projetar ícones do aplicativo.":::
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Não: corte em uma forma quadrada circular ou arredondada
 
@@ -88,15 +88,15 @@ Veja como os ícones de aplicativo aparecem em diferentes recursos e contextos d
 
 #### <a name="personal-app"></a>Aplicativo pessoal
 
-:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Exemplo mostrando a aparência de um ícone de aplicativo em um aplicativo pessoal." border="false":::
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Exemplo mostrando a aparência de um ícone de aplicativo em um aplicativo pessoal.":::
 
 #### <a name="bot-channel"></a>Bot (canal)
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemplo mostrando como um ícone de aplicativo fica em um bot dentro do canal." border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemplo mostrando como um ícone de aplicativo fica em um bot dentro do canal.":::
 
 #### <a name="message-extension"></a>Extensão de mensagem
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>":::
 
 ## <a name="next-step"></a>Próxima etapa
 

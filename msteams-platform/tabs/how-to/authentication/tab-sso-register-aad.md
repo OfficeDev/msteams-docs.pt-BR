@@ -4,14 +4,14 @@ description: Descreve o registro do aplicativo guia com o Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do Teams Microsoft Azure Active Directory (Azure AD) escopo de locação de token de acesso
-ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503519"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558594"
 ---
-# <a name="register-your-tab-app-in-azure-ad"></a>Registre seu aplicativo guia no Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Registrar o aplicativo de guia no Azure AD
 
 Azure AD fornece acesso ao seu aplicativo guia com base na identidade do Teams do usuário do aplicativo. Você precisará registrar seu aplicativo guia com o Azure AD para que o usuário do aplicativo que entrou no Teams possa ter acesso ao seu aplicativo guia.
 
@@ -19,7 +19,7 @@ Azure AD fornece acesso ao seu aplicativo guia com base na identidade do Teams d
 
 Registrar seu aplicativo de guia no Azure AD e habilitá-lo para SSO requer a configuração de aplicativos, como a geração de ID do aplicativo, a definição do escopo da API e a pré-autorização de IDs de cliente para aplicativos confiáveis.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar Azure AD para enviar o token de acesso para o aplicativo cliente do Teams" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar Azure AD para enviar o token de acesso para o aplicativo cliente do Teams":::
 
 Crie um novo registro de aplicativo no Azure AD e exponha sua API (Web) usando escopos (permissões). Configure uma relação de confiança entre a API exposta Azure AD seu aplicativo. Isso permite que o Cliente do Teams obtenha um token de acesso em nome do seu aplicativo e do usuário conectado. Você pode adicionar IDs de cliente para os aplicativos móveis, da área de trabalho e da Web confiáveis que você deseja pré-autorizar.
 
@@ -62,19 +62,19 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
 
 2. Selecione o **Registros de aplicativo** ícone.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD portal." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD portal.":::
 
    A **Registros de aplicativo** página é exibida.
 
 3. Selecione **+ Novo ícone de** registro.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nova página de registro no Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nova página de registro no Azure AD Portal.":::
 
     A página **Registrar um aplicativo** é exibida.
 
 4. Insira o nome do aplicativo que você deseja exibir para o usuário do aplicativo. Você pode alterar esse nome em um estágio posterior, se desejar.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicativo Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicativo Azure AD Portal.":::
 
 5. Selecione o tipo de conta de usuário que pode acessar seu aplicativo. Você pode escolher entre opções de locatário único ou multilocatário ou conta Privada da Microsoft.
 
@@ -96,11 +96,11 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
 7. Selecione **Registrar**.
     Uma mensagem aparece no navegador informando que o aplicativo foi criado.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre o aplicativo Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre o aplicativo Azure AD Portal.":::
 
     A página com a ID do aplicativo e outras configurações é exibida.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="O registro do aplicativo foi bem-sucedido." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="O registro do aplicativo foi bem-sucedido.":::
 
 8. Anote e salve a ID do aplicativo **da ID do aplicativo (cliente**). Você precisará dele para atualizar o manifesto do aplicativo Teams mais tarde.
 
@@ -120,19 +120,19 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
 1. Selecione **Gerenciar** > **Expor uma API** no painel esquerdo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expor uma opção de menu de API." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expor uma opção de menu de API.":::
 
     A **página Expor uma API** é exibida.
 
 1. Selecione **Definir** para gerar o URI da ID do aplicativo na forma de `api://{AppID}`.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Definir o URI da ID do aplicativo" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Definir o URI da ID do aplicativo":::
 
     A seção para definir o URI da ID do aplicativo é exibida.
 
 1. Insira o URI da ID do aplicativo no formato explicado aqui.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI da ID do aplicativo" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI da ID do aplicativo":::
 
     - O **URI da ID do** Aplicativo é preenchido previamente com a ID do aplicativo (GUID) no formato `api://{AppID}`.
     - O formato de URI da ID do aplicativo deve ser: `api://fully-qualified-domain-name.com/{AppID}`.
@@ -163,11 +163,11 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
     Uma mensagem aparece no navegador informando que o URI da ID do aplicativo foi atualizado.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Mensagem de URI da ID do aplicativo" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Mensagem de URI da ID do aplicativo":::
 
     O URI da ID do aplicativo é exibido na página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI da ID do aplicativo atualizado" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI da ID do aplicativo atualizado":::
 
 1. Anote e salve o URI da ID do Aplicativo. Você precisará dele para atualizar o manifesto do aplicativo Teams mais tarde.
 
@@ -175,13 +175,13 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
 1. Selecione **+ Adicionar um escopo** nos **Escopos definidos por esta seção de API** .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Selecionar escopo" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Selecionar escopo":::
 
     A **página Adicionar um escopo** é exibida.
 
 1. Insira os detalhes para configurar o escopo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Adicionar detalhes do escopo" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Adicionar detalhes do escopo":::
 
     1. Insira o nome do escopo. Este é um campo obrigatório.
     2. Selecione o usuário que pode dar consentimento para esse escopo. A opção padrão é **somente Administradores**.
@@ -194,23 +194,23 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
     Uma mensagem aparece no navegador informando que o escopo foi adicionado.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Mensagem de escopo adicionada" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Mensagem de escopo adicionada":::
 
     O novo escopo definido é exibido na página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Escopo adicionado e exibido" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Escopo adicionado e exibido":::
 
 ### <a name="to-configure-authorized-client-application"></a>Para configurar o aplicativo cliente autorizado
 
 1. Mova a página **Expor uma API para a** **seção aplicativo cliente** autorizado e selecione **+ Adicionar um aplicativo cliente**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Aplicativo cliente autorizado" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Aplicativo cliente autorizado":::
 
     A **página Adicionar um aplicativo cliente** é exibida.
 
 1. Insira a ID de cliente apropriada para o Cliente do Teams para os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Adicionar um aplicativo cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Adicionar um aplicativo cliente":::
 
     > [!NOTE]
     >
@@ -230,11 +230,11 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
     Uma mensagem aparece no navegador informando que o aplicativo cliente autorizado foi adicionado.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Mensagem adicionada pelo aplicativo cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Mensagem adicionada pelo aplicativo cliente":::
 
     A ID do cliente é exibida na página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Aplicativo cliente adicionado e exibido" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Aplicativo cliente adicionado e exibido":::
 
 > [!NOTE]
 > Você pode autorizar mais de um aplicativo cliente. Repita as etapas deste procedimento para configurar outro aplicativo cliente autorizado.
@@ -247,13 +247,13 @@ Você deve definir a versão do token de acesso que é aceitável para seu aplic
 
 1. Selecione **Gerenciar** > **Manifesto** no painel esquerdo.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="manifesto Azure AD portal do Azure AD" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="manifesto Azure AD portal do Azure AD":::
 
     O Azure AD manifesto do aplicativo é exibido.
 
 1. Insira **2** como o valor da `accessTokenAcceptedVersion` propriedade.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valor da versão do token de acesso aceito" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valor da versão do token de acesso aceito":::
 
 1. Selecione **Salvar**
 

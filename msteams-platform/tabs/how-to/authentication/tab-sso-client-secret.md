@@ -3,13 +3,13 @@ title: Criar segredo do cliente
 description: Descreve a criação de segredo do cliente
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: guias de autenticação do Microsoft Azure Active Directory (Azure AD) API do Graph
-ms.openlocfilehash: 79116a0da845cd143de695424a904cf5b5968a15
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph
+ms.openlocfilehash: 77d1c4e43c9bdfb9d2cb9e3e97ee3a26b8b0fa01
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887930"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558846"
 ---
 # <a name="create-client-secret"></a>Criar segredo do cliente
 
@@ -23,7 +23,7 @@ Um segredo do cliente é uma cadeia de caracteres que o aplicativo usa para prov
 
    A **página Adicionar um segredo do** cliente é exibida.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Adicionar uma página de segredo do cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Adicionar uma página de segredo do cliente":::
 
 3. Insira a descrição.
 4. Selecione a duração da validade do segredo.

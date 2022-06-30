@@ -5,12 +5,12 @@ description: Aprenda a projetar seu aplicativo mais rapidamente com componentes 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c4a8b0b626092e4980ccac95f98148829dc06ccd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484815"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558720"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Projetando seu aplicativo Microsoft Teams com modelos de interface do usuário
 
@@ -20,7 +20,7 @@ Crie seu aplicativo Microsoft Teams mais rapidamente com modelos de interface do
 
 Os recursos a seguir podem ajudá-lo a projetar e desenvolver seu aplicativo usando modelos de interface do usuário.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
 
 Obtenha modelos de interface do usuário para seu design de aplicativo do Kit de Interface do Usuário do Microsoft Teams, que também inclui informações abrangentes sobre uso, anatomia, acessibilidade e práticas recomendadas.
 
@@ -53,12 +53,12 @@ No Teams, um calendário é onde um usuário visualiza, agenda e gerencia evento
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Agendar reuniões e eventos
-* Obtenha lembretes de reuniões e eventos futuros.
+* Obter lembretes de reuniões e eventos futuros
 * Exibir agendas
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="O exemplo mostra um modelo de interface do usuário de calendário na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="O exemplo mostra um modelo de interface do usuário de calendário na área de trabalho.":::
 
 ## <a name="dashboard"></a>Painel
 
@@ -68,15 +68,15 @@ Um painel exibe diferentes tipos de conteúdo em um local central (como um aplic
 
 * Analisar dados
 * Métricas de relatório
-* Organize informações diferentes em um só lugar.
+* Organizar informações diferentes em um só lugar
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="O exemplo mostra um modelo de interface do usuário do painel no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="O exemplo mostra um modelo de interface do usuário do painel no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="O exemplo mostra um modelo de interface do usuário do painel na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="O exemplo mostra um modelo de interface do usuário do painel na área de trabalho.":::
 
 ## <a name="data-visualization"></a>Visualização de dados
 
@@ -84,16 +84,16 @@ Você pode usar diferentes tamanhos de cartão (único, duplo e completo) para e
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Exibir informações complexas.
-* Criar um painel.
+* Exibir informações complexas
+* Criar um painel
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="O exemplo mostra um modelo de interface do usuário de visualização de dados no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="O exemplo mostra um modelo de interface do usuário de visualização de dados no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="O exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="O exemplo mostra um modelo de interface do usuário de visualização de dados na área de trabalho.":::
 
 ## <a name="empty-state"></a>Estado vazio
 
@@ -102,17 +102,17 @@ O modelo de estado vazio pode ser usado para muitos cenários, incluindo entrada
 ### <a name="top-use-cases"></a>Principais casos de uso
 
 * Entrar
-* Mensagens de boas-vindas e experiências de primeira execução.
+* Mensagens de boas-vindas e experiências de primeira execução
 * Mensagens de êxito
 * Mensagens de erro
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário de estado vazio no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário de estado vazio no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="O exemplo mostra um modelo de interface do usuário de estado vazio na área de trabalho.":::
 
 ## <a name="filter"></a>Filter
 
@@ -127,7 +127,7 @@ Organizando conteúdo em:
 * Painéis
 * Visualização de dados
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="O exemplo mostra um modelo de filtro." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="O exemplo mostra um modelo de filtro.":::
 
 ## <a name="form"></a>Formulário
 
@@ -140,15 +140,15 @@ Os formulários são usados para coletar, validar e enviar a entrada do usuário
 * Settings
 * Coleção de entrada do usuário
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="O exemplo mostra um modelo de interface do usuário de formulário no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="O exemplo mostra um modelo de interface do usuário de formulário no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="O exemplo mostra um modelo de interface do usuário de formulário na área de trabalho." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="O exemplo mostra um modelo de interface do usuário de formulário na área de trabalho.":::
 
-## <a name="list"></a>List
+## <a name="list"></a>Lista
 
 Você pode usar uma lista para exibir itens relacionados em um formato digitalizável e permitir que os usuários executem ações em uma lista inteira ou itens individuais.
 
@@ -157,13 +157,13 @@ Você pode usar uma lista para exibir itens relacionados em um formato digitaliz
 * Exibir dados
 * Ações contextuais no conteúdo do aplicativo
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="O exemplo mostra um modelo de interface do usuário de lista no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="O exemplo mostra um modelo de interface do usuário de lista no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="O exemplo mostra um modelo de interface do usuário de lista na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="O exemplo mostra um modelo de interface do usuário de lista na área de trabalho.":::
 
 ## <a name="sign-in"></a>Entrar
 
@@ -173,13 +173,13 @@ Você pode criar fluxos de entrada de aplicativo para diferentes contextos e pro
 
 * Autenticar usuários
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de entrada no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de entrada no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de entrada na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="O exemplo mostra um modelo de interface do usuário de entrada na área de trabalho.":::
 
 ## <a name="settings"></a>Settings
 
@@ -189,7 +189,7 @@ As telas de configurações são onde os usuários podem definir suas preferênc
 
 * Gerenciar recursos do aplicativo
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="O exemplo mostra um modelo de configurações." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="O exemplo mostra um modelo de configurações.":::
 
 ## <a name="task-board"></a>Quadro de tarefas
 
@@ -201,13 +201,13 @@ Um quadro de tarefas, às vezes chamado de quadro kanban ou pistas de banho, é 
 * Brainstorming. Adicionar ideias em categorias diferentes.
 * Exercícios de classificação. Organizando qualquer tipo de informação em buckets.
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="O exemplo mostra um modelo de interface do usuário do quadro de tarefas no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="O exemplo mostra um modelo de interface do usuário do quadro de tarefas no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="O exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="O exemplo mostra um modelo de interface do usuário do quadro de tarefas na área de trabalho.":::
 
 ## <a name="wizard"></a>Assistente
 
@@ -215,17 +215,17 @@ Um assistente orienta um usuário por várias telas para concluir uma tarefa (co
 
 ### <a name="top-use-cases"></a>Principais casos de uso
 
-* Configuração
+* Configurar
 * Integração
 * Experiências de primeira execução
 
-### <a name="mobile"></a>Dispositivo móvel
+### <a name="mobile"></a>Celular
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente no celular." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente no celular.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente na área de trabalho." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="O exemplo mostra um modelo de interface do usuário do assistente na área de trabalho.":::
 
 ## <a name="see-also"></a>Confira também
 

@@ -4,12 +4,12 @@ description: Neste artigo, saiba como usar o SDK do cliente JavaScript Teams par
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130442"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557726"
 ---
 # <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
@@ -53,7 +53,7 @@ O controle de entrada do Seletor de Pessoas permite que o usuário pesquise e ad
 1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
 1. Selecione o nome da pessoa obrigatória na lista.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Selecionador do Seletor de Dispositivos Móveis" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Selecionador do Seletor de Dispositivos Móveis":::
 
 # <a name="desktop"></a>[Desktop](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ O controle do Seletor de Pessoas na Web ou na área de trabalho é iniciado em u
 1. Digite o nome da pessoa obrigatória. A lista aparece com sugestões de nome.
 1. Selecione o nome da pessoa obrigatória na lista.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Seletor de pessoas por nome de área de trabalho" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Seletor de pessoas por nome de área de trabalho":::
 
 ---
 

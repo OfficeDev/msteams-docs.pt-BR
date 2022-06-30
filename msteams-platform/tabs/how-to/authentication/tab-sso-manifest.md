@@ -4,12 +4,12 @@ description: Descreve o manifesto de atualização para habilitar o SSO para gui
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503477"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558734"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Atualizar manifesto para SSO e aplicativo de visualização
 
@@ -24,7 +24,7 @@ Você registrou seu aplicativo guia no Azure AD e obteve uma ID do aplicativo. V
 
 Configure a propriedade `webApplicationInfo` no arquivo de manifesto do aplicativo Teams. Essa propriedade permite que o SSO para seu aplicativo ajude os usuários do aplicativo a acessar seu aplicativo guia perfeitamente.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuração do manifesto do aplicativo Teams" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuração do manifesto do aplicativo Teams":::
 
 `webApplicationInfo` tem dois elementos e `id` `resource`.
 
@@ -138,7 +138,7 @@ Para obter mais informações, consulte [webApplicationInfo](../../../resources/
 
 Você configurou o aplicativo guia para habilitar o SSO no Azure AD, no código do aplicativo e no arquivo de manifesto do Teams. Agora você pode fazer o sideload do aplicativo de guias no Teams e visualiza-lo no ambiente do Teams.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicativo de SSO" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicativo de SSO":::
 
 Para visualizar seu aplicativo de guia no Teams:
 
@@ -160,17 +160,17 @@ Para visualizar seu aplicativo de guia no Teams:
 
 1. Selecione **Continuar**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Caixa de diálogo do Teams informando sobre permissões adicionais necessárias" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Caixa de diálogo do Teams informando sobre permissões adicionais necessárias":::
 
     A caixa Azure AD de consentimento do usuário é exibida.
 
 1. Selecione **Aceitar** para dar consentimento para escopos de ID aberta.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD de consentimento" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD de consentimento":::
 
     O Teams abre o aplicativo guia e você pode usá-lo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Exemplo de aplicativo de guia do Teams com SSO habilitado" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Exemplo de aplicativo de guia do Teams com SSO habilitado":::
 
     Parabéns! Você habilitou o SSO para seu aplicativo de guia.
 

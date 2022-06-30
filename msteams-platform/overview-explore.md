@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795144"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558825"
 ---
 # <a name="explore-teams-platform-features"></a>Explore os recursos da plataforma Microsoft Teams
 
 Com o Teams, você pode criar seu aplicativo em um ambiente rico em recursos. Usando o Teams como uma plataforma para criar aplicativos, você pode estender os recursos do Teams para suas soluções de aplicativos móveis e de área de trabalho. Escolha os melhores recursos para seu aplicativo.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Representação conceitual do Teams como plataforma" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Representação conceitual do Teams como plataforma":::
 
 ## <a name="teams-app-features"></a>Recursos do aplicativo Teams
 

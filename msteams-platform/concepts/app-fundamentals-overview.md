@@ -5,12 +5,12 @@ description: Apresente os elementos de planejamento de um aplicativo, compreens�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150684"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558713"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -28,7 +28,7 @@ Nesta seção, saiba como:
 
 O Microsoft Teams como plataforma oferece kits de ferramentas, bibliotecas e aplicativos em todos os estágios do desenvolvimento de aplicativos. Vamos dividi-lo para o ciclo de vida de criação de aplicativos:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="A ilustração mostra o planejamento do seu aplicativo" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="A ilustração mostra o planejamento do seu aplicativo":::
 
 * [Antes da sua build](#before-you-build)
 * [Durante a build](#during-build)
@@ -53,7 +53,7 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 
 * **Use o Microsoft Teams como uma plataforma**: A plataforma do Microsoft Teams ajuda você a criar um aplicativo único ou com vários recursos. Seu aplicativo Teams é suportado por produtos e serviços integrados que fortalecem a experiência do aplicativo.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams.":::
 
     Seus aplicativos aparecem no Teams como Guias, Bots, Extensões de Mensagem, Conectores e Webhooks ou como um aplicativo de várias funcionalidades. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
 

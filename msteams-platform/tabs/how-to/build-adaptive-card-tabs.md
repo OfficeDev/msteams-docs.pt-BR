@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre como criar guias usando Cartões Ad
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485235"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558174"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -31,7 +31,7 @@ Você pode criar suas guias com blocos de construção prontos para interface do
 
 A imagem a seguir mostra guias de build com Cartões Adaptáveis desktop e móvel:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemplo de Cartão Adaptável renderizado em guias." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemplo de Cartão Adaptável renderizado em guias.":::
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -355,7 +355,7 @@ Nas seções anteriores, você viu que a maioria dos paradigmas de desenvolvimen
 
 A imagem a seguir fornece uma visão geral de como o fluxo de dados de autenticação funciona para uma chamada `tab/fetch`.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Exemplo de fluxo de autenticação da guia cartão adaptável." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Exemplo de fluxo de autenticação da guia cartão adaptável.":::
 
 **`tab/fetch` resposta de autenticação**
 
@@ -429,7 +429,7 @@ O código a seguir mostra um exemplo de solicitação reemitida:
 
 |**Nome de exemplo** | **Descrição** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar Cartões Adaptáveis na guia Teams | Código de exemplo de guia do Microsoft Teams, que demonstra como mostrar Cartões Adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar Cartões Adaptáveis na guia Teams | Código de exemplo de guia do Microsoft Teams, que demonstra como mostrar Cartões Adaptáveis no Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 
