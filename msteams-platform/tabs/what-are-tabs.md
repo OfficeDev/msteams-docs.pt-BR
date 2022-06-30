@@ -5,14 +5,14 @@ description: Neste módulo, saiba como criar guias personalizadas na plataforma 
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143645"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503890"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>Crie Guias para o Microsoft Teams
+# <a name="build-tabs-for-teams"></a>Compilar guias para o Teams
 
 As guias são páginas da Web compatíveis com o Microsoft Teams incorporadas ao Microsoft Teams. Elas são marcas de `<iframe\>` HTML simples que apontam para domínios declarados no manifesto do aplicativo e podem ser adicionadas como parte de um canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual. Você pode incluir guias personalizadas com seu aplicativo para inserir seu próprio conteúdo da Web no Teams ou adicionar funcionalidades específicas do Teams ao conteúdo da Web. Para mais informações, veja o [Cliente SDK JavaScript do Teams](/javascript/api/overview/msteams-client).
 
@@ -25,11 +25,11 @@ As guias são páginas da Web compatíveis com o Microsoft Teams incorporadas ao
 
 A imagem a seguir mostra guias pessoais:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Guia pessoal" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Guia pessoal" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 A imagem a seguir mostra as guias do canal Contoso:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Guias de canal ou grupo" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Guias de canal ou grupo" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 Há alguns pré-requisitos pelos quais você deve passar antes de trabalhar nas guias.
 
