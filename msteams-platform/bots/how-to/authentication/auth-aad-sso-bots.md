@@ -3,12 +3,12 @@ title: Suporte de logon único para bots
 description: Saiba como obter um token de usuário e um desenvolvedor de bot pode usar um cartão de entrada ou o serviço de bot do Azure com o suporte a cartão OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
+ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503652"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611496"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Usar a autenticação de SSO para bots
 
@@ -19,7 +19,7 @@ A autenticação de logon único no Microsoft Azure Active Directory (Azure AD) 
 
 Confira o vídeo a seguir para saber mais sobre o suporte ao SSO (logon único) para bots:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>SSO do Bot em runtime
