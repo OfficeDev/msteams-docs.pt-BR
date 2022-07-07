@@ -3,12 +3,12 @@ title: Obter contexto para sua guia
 description: Neste módulo, saiba como obter o contexto do usuário para suas guias, contexto do usuário e informações de contexto do Access
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142308"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658923"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -27,7 +27,7 @@ O contexto sobre o usuário, a equipe ou a empresa pode ser especialmente útil 
 * Você cria ou associa recursos em seu aplicativo ao usuário ou à equipe especificado.
 * Você inicia um fluxo de autenticação Microsoft Azure Active Directory (Azure AD) ou outro provedor de identidade e não exige que o usuário insira seu nome de usuário novamente.
 
-Para obter mais informações, [consulte autenticar um usuário em seu Microsoft Teams](~/concepts/authentication/authentication.md).
+Para obter mais informações, [consulte autenticar um usuário no Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Embora essas informações do usuário possam ajudar a fornecer uma experiência de usuário suave, você não deve usá-la como prova de identidade.  Por exemplo, um invasor pode carregar sua página em um navegador e renderizar informações ou solicitações prejudiciais.
@@ -37,7 +37,7 @@ Para obter mais informações, [consulte autenticar um usuário em seu Microsoft
 Você pode acessar informações de contexto de duas maneiras:
 
 * Inserir valores de espaço reservado de URL.
-* Use o [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client).
+* Use o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client).
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado de URL
 
@@ -61,15 +61,15 @@ Por exemplo, no manifesto da guia para o qual você definiu `configURL` `"https:
 * O nome de usuário é **user@example.com**.
 * A ID do locatário da empresa **é e2653c-etc**.
 * Eles são membros do grupo Office 365 com a ID **00209384-etc**.
-* O usuário definiu o tema Teams como **escuro**.
+* O usuário definiu o tema do Teams como **escuro**.
 
-Quando eles configuram a guia, Teams chama a seguinte URL:
+Quando eles configuram a guia, o Teams chama a seguinte URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca Microsoft Teams JavaScript
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca JavaScript do Microsoft Teams
 
-git-issue-clarify-the-full-set-of-values-any-context-object-property-can-take Você também pode recuperar as informações listadas acima usando o [SDK](/javascript/api/overview/msteams-client) `microsoftTeams.getContext(function(context) { /* ... */ })`do cliente JavaScript do Microsoft Teams chamando .
+Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 O código a seguir fornece um exemplo de variável de contexto:
 
@@ -114,7 +114,7 @@ O código a seguir fornece um exemplo de variável de contexto:
 }
 ```
 
-Você também pode recuperar as informações listadas acima usando [Microsoft Teams SDK do cliente JavaScript](/javascript/api/overview/msteams-client) chamando a `app.getContext()` função. Para obter informações adicionais, consulte as propriedades da [interface de contexto](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando a `app.getContext()` função. Para obter informações adicionais, consulte as propriedades da [interface de contexto](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
 
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
@@ -126,9 +126,9 @@ Os campos a seguir são alterados quando sua página de conteúdo está em um ca
 * `groupId`: indefinido para canais privados
 * `teamId`: definido como o threadId do canal privado
 * `teamName`: definido como o nome do canal privado
-* `teamSiteUrl`: defina como a URL de um site SharePoint distinto para o canal privado
-* `teamSitePath`: defina como o caminho de um site SharePoint distinto para o canal privado
-* `teamSiteDomain`: definido como o domínio de um domínio de site SharePoint exclusivo para o canal privado
+* `teamSiteUrl`: definido como a URL de um site exclusivo e distinto do SharePoint para o canal privado
+* `teamSitePath`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal privado
+* `teamSiteDomain`: definido como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal privado
 
 Se sua página usa qualquer um desses valores, `channelType` `Private` o valor do campo deve ser determinar se sua página é carregada em um canal privado e pode responder adequadamente.
 
@@ -144,9 +144,9 @@ Os campos a seguir são alterados quando sua página de conteúdo está em um ca
 * `groupId`: indefinido para canais compartilhados.
 * `teamId`: definido como o `threadId` da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, ele `teamId` será definido como a equipe que hospeda (cria) o canal compartilhado.
 * `teamName`: definido como o nome da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, ele `teamName` será definido como a equipe que hospeda (cria) o canal compartilhado.
-* `teamSiteUrl`: defina como a URL de um site SharePoint distinto para o canal compartilhado.
-* `teamSitePath`: defina como o caminho de um site SharePoint exclusivo e distinto para o canal compartilhado.
-* `teamSiteDomain`: defina como o domínio de um domínio de site SharePoint exclusivo para o canal compartilhado.
+* `teamSiteUrl`: defina como a URL de um site exclusivo e distinto do SharePoint para o canal compartilhado.
+* `teamSitePath`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal compartilhado.
+* `teamSiteDomain`: defina como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal compartilhado.
 
 Além dessas alterações de campo, há dois novos campos disponíveis para canais compartilhados:
 
@@ -156,7 +156,7 @@ Além dessas alterações de campo, há dois novos campos disponíveis para cana
 Se sua página usa qualquer um desses valores, `channelType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
 
 > [!NOTE]
-> Sempre que um usuário reinicia ou recarrega o cliente web ou da área de trabalho do Teams, uma nova sessionID é criada, que é controlada por uma sessão do Teams, enquanto que, quando um usuário sai dos aplicativos do Teams e o recarrega na plataforma Teams, uma nova sessionID de aplicativo é criada, que é controlada pela sessão de aplicativo.
+> Sempre que um usuário reinicia ou recarrega a área de trabalho do Teams ou o cliente Web, uma nova sessionID é criada, que é controlada pela sessão do Teams, enquanto que, quando um usuário sai dos aplicativos do Teams e o recarrega na plataforma teams, uma nova sessionID de aplicativo é criada, que é controlada pela sessão de aplicativo.
 
 ## <a name="handle-theme-change"></a>Manipular alteração de tema
 
