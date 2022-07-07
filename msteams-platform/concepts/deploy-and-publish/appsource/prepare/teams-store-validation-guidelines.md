@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558118"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659037"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
-Seguir essas diretrizes aumenta as chances de seu aplicativo ser aprovado no processo de envio à store do Microsoft Teams. As diretrizes específicas do Teams complementam as [políticas de certificação do marketplace comercial](/legal/marketplace/certification-policies) da Microsoft e são atualizadas com frequência para refletir novos recursos, comentários do usuário e alterações nas regras de negócios.
+Seguir essas diretrizes aumenta as chances de seu aplicativo ser aprovado no processo de envio à store do Microsoft Teams. As diretrizes específicas do Teams complementam as [políticas de certificação do marketplace comercial](/legal/marketplace/certification-policies#1140-teams) da Microsoft e são atualizadas com frequência para refletir novos recursos, comentários do usuário e alterações nas regras de negócios.
 
 > [!NOTE]
 >
@@ -102,7 +102,7 @@ O nome de um aplicativo desempenha um papel fundamental na forma como os usuári
   * **Aplicativos**
   * **Help**
 * Prefixo ou sufixo substantivos comuns com o nome do desenvolvedor. Por exemplo, **Tarefas da Contoso** em vez de **Tarefas**.
-* Não deve usar **Teams** ou outros nomes de produtos da Microsoft, como Excel, PowerPoint, Word, OneDrive, Microsoft Office SharePoint Online, OneNote, Azure, Surface, Xbox e assim por diante, que possam indicar falsamente co-branding ou venda conjunta. Para obter mais informações sobre como fazer referência a produtos e serviços de software da Microsoft, confira [Marca Registrada e Diretrizes da Marca Microsoft](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
+* Não deve usar o **Teams** ou outros nomes de produtos da Microsoft, como o Excel, o PowerPoint, o Word, o OneDrive, o SharePoint, o OneNote, o Azure, o Surface, o Xbox e assim por diante, que possam indicar falsamente a co-branding ou a venda conjunta. Para obter mais informações sobre como fazer referência a produtos e serviços de software da Microsoft, confira [Marca Registrada e Diretrizes da Marca Microsoft](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
 * Se o seu aplicativo faz parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro. Por exemplo, **Conector da Contoso para Microsoft Teams**.
 * Não é preciso copiar o nome de um aplicativo listado na loja ou em outra oferta no mercado comercial.
 * Não deve conter termos profanos ou depreciativos. O nome também não deve incluir linguagem racial ou culturalmente insensível.
@@ -163,7 +163,7 @@ Se seu aplicativo autentica usuários com um serviço externo, siga estas diretr
   * Os aplicativos que exigem que o administrador do locatário conclua a configuração única devem chamar a dependência do administrador do locatário para configurar o aplicativo (antes que qualquer outro usuário locatário possa instalar e usar o aplicativo).  
   A dependência deve ser mencionada no manifesto do aplicativo, na descrição longa do AppSource, em todos os pontos de contato da primeira experiência de execução (mensagem de boas-vindas do bot, configuração da guia ou página de configuração), texto de ajuda conforme considerado necessário como parte da resposta do bot, extensão de composição ou conteúdo da guia estática.
   
-* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação de um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou descompartilhar o conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de descompartilhar o conteúdo deve estar presente no aplicativo Teams.
+* **Experiências de compartilhamento de conteúdo**: os aplicativos que requerem autenticação com um serviço externo para compartilhar conteúdo nos canais do Teams devem indicar claramente na documentação de ajuda (ou recursos semelhantes) como desconectar ou cancelar o compartilhamento de conteúdo se esse recurso for compatível com o serviço externo. Isso não significa que a capacidade de cancelar o compartilhamento de conteúdo deve estar presente no seu aplicativo do Teams.
 
 </details>
 
