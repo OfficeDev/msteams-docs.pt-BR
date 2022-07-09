@@ -1,27 +1,27 @@
 ---
 title: Mensagens em conversas de bot
-description: Aprenda as maneiras de ter uma conversa com um bot Teams e dados de canal do Teams, notificação para sua mensagem, mensagens de imagem, cartões adaptáveis usando exemplos de código
+description: Aprenda as maneiras de ter uma conversa com um bot do Teams e dados de canal do Teams, notificação para sua mensagem, mensagens de imagem, cartões adaptáveis usando exemplos de código
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142448"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695296"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
-Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, Teams posta a mensagem no bot. Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. Seu bot examina a mensagem para determinar seu tipo e responde adequadamente.
+Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, o Teams posta a mensagem em seu bot. O Teams envia um objeto JSON para o ponto de extremidade de mensagens do bot. Seu bot examina a mensagem para determinar seu tipo e responde adequadamente.
 
-As conversas básicas são tratadas por meio do conector do Bot Framework, uma única API REST. Essa API permite que o bot se comunique com Teams e outros canais. O SDK do Construtor de Bot fornece os seguintes recursos:
+As conversas básicas são tratadas por meio do conector do Bot Framework, uma única API REST. Essa API permite que seu bot se comunique com o Teams e outros canais. O SDK do Construtor de Bot fornece os seguintes recursos:
 
 * Acesso fácil ao conector do Bot Framework.
 * Funcionalidade adicional para gerenciar o estado e o fluxo da conversa.
 * Maneiras simples de incorporar serviços cognitivos, como nLP (processamento de linguagem natural).
 
-O bot recebe mensagens de Teams usando `Text` a propriedade e envia respostas de mensagem única ou múltipla aos usuários.
+Seu bot recebe mensagens do Teams usando `Text` a propriedade e envia respostas de uma ou várias mensagens aos usuários.
 
 Para obter mais informações, consulte [Atribuição de usuário para mensagens de bot](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
@@ -192,19 +192,19 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> A divisão de mensagens ocorre quando uma mensagem de texto e um anexo são enviados na mesma carga de atividade. Essa atividade é dividida em atividades separadas por Microsoft Teams, uma com apenas uma mensagem de texto e outra com um anexo. À medida que a atividade é dividida, você não recebe a ID da mensagem em resposta, que é usada para atualizar [ou](~/bots/how-to/update-and-delete-bot-messages.md) excluir a mensagem proativamente. É recomendável enviar atividades separadas em vez de depender da divisão de mensagens.
+> A divisão de mensagens ocorre quando uma mensagem de texto e um anexo são enviados na mesma carga de atividade. Essa atividade é dividida em atividades separadas pelo Microsoft Teams, uma com apenas uma mensagem de texto e a outra com um anexo. À medida que a atividade é dividida, você não recebe a ID da mensagem em resposta, que é usada para atualizar [ou](~/bots/how-to/update-and-delete-bot-messages.md) excluir a mensagem proativamente. É recomendável enviar atividades separadas em vez de depender da divisão de mensagens.
 
 As mensagens enviadas entre usuários e bots incluem dados internos do canal dentro da mensagem. Esses dados permitem que o bot se comunique corretamente nesse canal. O SDK do Construtor de Bot permite modificar a estrutura da mensagem.
 
 ## <a name="teams-channel-data"></a>Dados do canal do Teams
 
-O `channelData` objeto contém Teams informações específicas e é uma fonte definitiva para IDs de equipe e canal. Opcionalmente, você pode armazenar em cache e usar essas IDs como chaves para armazenamento local. O `TeamsActivityHandler` SDK extrai informações importantes do objeto `channelData` para torná-lo facilmente acessível. No entanto, você sempre pode acessar os dados originais do `turnContext` objeto.
+O `channelData` objeto contém informações específicas do Teams e é uma fonte definitiva para IDs de equipe e canal. Opcionalmente, você pode armazenar em cache e usar essas IDs como chaves para armazenamento local. O `TeamsActivityHandler` SDK extrai informações importantes do objeto `channelData` para torná-lo facilmente acessível. No entanto, você sempre pode acessar os dados originais do `turnContext` objeto.
 
 O `channelData` objeto não está incluído em mensagens em conversas pessoais, pois elas ocorrem fora de um canal.
 
 Um objeto `channelData` típico em uma atividade enviada ao bot contém as seguintes informações:
 
-* `eventType`: Teams tipo de evento passado somente em casos de eventos [de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `eventType`: tipo de evento do Teams passado somente em casos de [eventos de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `tenant.id`: Microsoft Azure Active Directory (Azure AD) de locatário passada em todos os contextos.
 * `team`: passado somente em contextos de canal, não no chat pessoal.
   * `id`: GUID para o canal.
@@ -242,13 +242,13 @@ As mensagens recebidas ou enviadas ao bot podem incluir diferentes tipos de cont
 | Formatar    | Do usuário para o bot | Do bot para o usuário | Observações                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text  | ✔️                | ✔️                | Seu bot pode enviar rich text, imagens e cartões. Os usuários podem enviar rich text e imagens para seu bot.                                                                                        |
-| Imagens  | ✔️                | ✔️                | Máximo de 1024×1024 MB e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.  |
-| Cartões     | ❌                | ✔️                | Consulte a [referência Teams cartão para](~/task-modules-and-cards/cards/cards-reference.md) cartões com suporte. |
-| Emojis    | ✔️                | ✔️                | Teams atualmente dá suporte a emojis por meio de UTF-16, como U+1F600 para sorriso facial. |
+| Imagens  | ✔️                | ✔️                | Máximo de 1024 × 1024 pixels e 1 MB no formato PNG, JPEG ou GIF. Não há suporte para GIF animado.  |
+| Cartões     | ❌                | ✔️                | Consulte a referência [de cartão do Teams](~/task-modules-and-cards/cards/cards-reference.md) para obter cartões com suporte. |
+| Emojis    | ✔️                | ✔️                | Atualmente, o Teams dá suporte a emojis por meio de UTF-16, como U+1F600 para rosto de sorriso. |
 
 ## <a name="notifications-to-your-message"></a>Notificações para sua mensagem
 
-Você também pode adicionar notificações à sua mensagem usando a `Notification.Alert` propriedade. As notificações alertam os usuários sobre novas tarefas, menções e comentários. Esses alertas estão relacionados ao que os usuários estão trabalhando ou ao que devem examinar inserindo um aviso no feed de atividades. Para que as notificações disparem da mensagem do bot, defina a propriedade `TeamsChannelData` de `Notification.Alert` objetos como *true*. A geração ou não de uma notificação depende das configurações de Teams usuário individual e você não pode substituir essas configurações. O tipo de notificação é uma faixa ou um banner e um email.
+Você também pode adicionar notificações à sua mensagem usando a `Notification.Alert` propriedade. As notificações alertam os usuários sobre novas tarefas, menções e comentários. Esses alertas estão relacionados ao que os usuários estão trabalhando ou ao que devem examinar inserindo um aviso no feed de atividades. Para que as notificações disparem da mensagem do bot, defina a propriedade `TeamsChannelData` de `Notification.Alert` objetos como *true*. A geração ou não de uma notificação depende das configurações do Teams do usuário individual e você não pode substituir essas configurações. O tipo de notificação é uma faixa ou um banner e um email.
 
 > [!NOTE]
 > O **campo** Resumo exibe qualquer texto do usuário como uma mensagem de notificação no feed.
@@ -343,7 +343,7 @@ Um bot de conversa pode incluir Cartões Adaptáveis que simplificam fluxos de t
 
 ## <a name="adaptive-cards"></a>Cartões Adaptáveis
 
-Os Cartões Adaptáveis podem ser criados em um bot e mostrados em vários aplicativos, como Teams, seu site e assim por diante. Para obter mais informações, [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Os Cartões Adaptáveis podem ser criados em um bot e mostrados em vários aplicativos, como o Teams, seu site e assim por diante. Para obter mais informações, [Cartões Adaptáveis](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 O código a seguir mostra um exemplo de envio de um Cartão Adaptável simples:
 

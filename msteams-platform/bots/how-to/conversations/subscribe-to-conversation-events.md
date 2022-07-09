@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversa reação mensagem canal bot eventos
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906265"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695324"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversa em seu bot do Teams
 
@@ -409,7 +409,7 @@ Um evento adicionado de membro é enviado ao bot nos seguintes cenários:
 
 1. Quando o bot, em si, é instalado e adicionado a uma conversa
 
-   > No contexto da equipe, `id` o conversation.id da atividade é definido como o canal selecionado pelo usuário durante a instalação do aplicativo ou o canal do qual o bot foi instalado (atualmente disponível na Visualização pública do [desenvolvedor).](../../../resources/dev-preview/developer-preview-intro.md)
+   > No contexto da equipe, `id` a conversation.id da atividade é definida como o canal selecionado pelo usuário durante a instalação do aplicativo ou o canal em que o bot foi instalado.
 
 2. Quando um usuário é adicionado a uma conversa em que o bot está instalado
 
@@ -1335,7 +1335,7 @@ Neste exemplo, o e `conversation.id` as atividades `conversationUpdate` `install
 ![Criar um canal selecionado](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> A ID `installationUpdate` do canal selecionado só é definida em adicionar eventos que são enviados quando um aplicativo é instalado em uma equipe (atualmente disponível na Versão Prévia [do Desenvolvedor Público](../../../resources/dev-preview/developer-preview-intro.md)).
+> A ID de canal selecionada só é definida em `installationUpdate` *adicionar* eventos que são enviados quando um aplicativo é instalado em uma equipe.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
