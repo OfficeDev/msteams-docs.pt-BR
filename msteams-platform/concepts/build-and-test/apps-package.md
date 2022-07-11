@@ -3,12 +3,12 @@ title: Empacote o seu aplicativo
 description: Saiba como empacotar seu aplicativo Microsoft Teams com ícones para teste, carregamento e publicação na loja.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: d686b30a9a5a00fd73c72dd6212ed95d935ea501
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 5d46eec7f32ccb18e861f32769bb2ecb87842abf
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659023"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695317"
 ---
 # <a name="create-teams-app-package"></a>Criar pacote de aplicativos do Teams
 
@@ -19,7 +19,7 @@ Você precisa de um pacote de aplicativos, no entanto, planeja distribuir seu ap
 
 ## <a name="teams-doesnt-host-your-app"></a>O Teams não hospeda seu aplicativo
 
-Quando um usuário instala seu aplicativo no Teams, instala um pacote de aplicativo que contém um único arquivo de configuração (também conhecido como manifesto do aplicativo) e os ícones do aplicativo. A lógica e o armazenamento de dados do aplicativo são hospedados em outro lugar, como no localhost durante o desenvolvimento e nos Serviços Web do Azure. O Teams acessa esses recursos via HTTPS.
+Quando um usuário instala seu aplicativo no Teams, instala um pacote de aplicativo que contém apenas um arquivo de configuração (também conhecido como manifesto do aplicativo) e os ícones do aplicativo. A lógica e o armazenamento de dados do aplicativo são hospedados em outro lugar, como no localhost durante o desenvolvimento e nos Serviços Web do Azure. O Teams acessa esses recursos via HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustração mostrando a hospedagem de aplicativos para aplicativos do Teams":::
 

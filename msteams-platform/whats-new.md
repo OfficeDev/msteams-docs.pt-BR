@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
-ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
+ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66680675"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695289"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -47,6 +47,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 08/07/2022| Atualizações para enviar a ID do canal selecionado pelo usuário durante a instalação do aplicativo para bots por meio de eventos de atualização de conversa e instalação |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16/06/2022 | Recursos de mídia atualizados para dar suporte à área de trabalho e dispositivos móveis| Integrar funcionalidades de dispositivo > [integrar recursos de mídia](concepts/device-capabilities/media-capabilities.md)|
 | 08/06/2022 | Comentários opcionais do cartão para mensagem de sucesso| Compilar bots > Conversas de bot > [Mensagens em conversas de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03/06/2022 | Atualizado Adicionar módulo de autenticação para habilitar o logon único para aplicativo de guia com nova estrutura e procedimentos | Adicionar autenticação > Tabs > [Habilitar logon único em um aplicativo de guia](tabs/how-to/authentication/tab-sso-overview.md) |
@@ -268,7 +269,6 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 | -------- | --------- | ------------------ |
 | 30/06/2022 | Aplicativos para reuniões instantâneas, reuniões individuais e chamadas em grupo| Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16/06/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web| Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 06/06/2022| Atualize conversas e eventos de instalação em seu bot do Teams |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share |  Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Ferramentas e SDKs |Kit de ferramentas do Teams para Visual Studio Code > </br> • Adicionar recursos ao aplicativo do Microsoft Teams> [Adicionar recursos aos seus aplicativos do Microsoft Teams](toolkit/add-capability.md) </br> • Adicionar recursos de nuvem ao aplicativo do Microsoft Teams> [Adicionar recursos de nuvem ao aplicativo do Microsoft Teams](toolkit/add-resource.md) |
