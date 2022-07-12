@@ -4,12 +4,12 @@ description: Neste módulo, saiba como criar bots usando o Microsoft Bot Framewo
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485283"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737409"
 ---
 # <a name="create-a-bot"></a>Criar um bot
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
 
 1. Crie o bot usando o [Bot Framework](https://dev.botframework.com/bots/new). **Lembre-se de adicionar o Microsoft Teams como um canal da lista de canais em destaque após criar seu bot.** Sinta-se à vontade para usar novamente o ID do aplicativo da Microsoft que você gerou, caso já tenha criado seu pacote/manifesto de aplicativos.
 
-   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Página de registro do bot Framework":::
+   ![Página de registro do bot Framework](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
 > Se você não quiser criar seu bot no Azure, **deverá usar esse** link para criar um novo bot: [o Bot Framework](https://dev.botframework.com/bots/new). Se você clicar em **Criar um bot** no portal do Bot Framework, criará seu [bot no Microsoft Azure](#bots-and-microsoft-azure) .
@@ -52,7 +52,7 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
 
 > [!WARNING]
 >
->* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 01 de agosto de 2022.
+>* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 01 de agosto de 2022
 
 ## <a name="see-also"></a>Confira também
 

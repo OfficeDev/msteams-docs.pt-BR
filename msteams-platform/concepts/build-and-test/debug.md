@@ -3,12 +3,12 @@ title: Escolhendo uma configuração para testar e depurar seu aplicativo
 description: Neste módulo, conheça as opções para testar e depurar aplicativos do Microsoft Teams no ambiente local e hospedado na nuvem.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503883"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737388"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Escolha uma configuração de teste e depure seu aplicativo teams
 
@@ -63,7 +63,7 @@ Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidad
 
 > [!WARNING]
 >
-> * Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
+> * Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 01 de agosto de 2022.
 
 ## <a name="cloud-hosted"></a>Hospedado na nuvem
 
