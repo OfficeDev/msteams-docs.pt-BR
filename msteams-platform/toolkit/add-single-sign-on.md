@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485605"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792827"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Adicionar o logon único ao aplicativo do Teams
 
@@ -23,7 +23,7 @@ Para aplicativos que interagem com o usuário em um chat, uma equipe ou um canal
 
 O Kit de Ferramentas do Teams ajuda você a adicionar o SSO aos seguintes recursos do Teams:
 
-* Guia
+* Tab
 * Bot
 * Bot de notificação: restify server
 * Bot de comando
@@ -33,7 +33,7 @@ O Kit de Ferramentas do Teams ajuda você a adicionar o SSO aos seguintes recurs
 As etapas a seguir ajudam você a adicionar o SSO usando o Teams Toolkit no Visual Studio Code
 
 1. Abra o **Microsoft Visual Studio Code**.
-2. Selecione Adicionar barra lateral :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="do SSO do Kit"::: de Ferramentas do Teams na barra de navegação esquerda.
+2. Selecione Adicionar barra lateral :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="do SSO do Kit"::: de Ferramentas do Teams na barra de navegação esquerda.
 3. Selecione **Adicionar recursos em** **DESENVOLVIMENTO**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="recursos de adição de SSO":::
@@ -351,6 +351,6 @@ Para obter mais informações sobre o SDK do TeamsFx, consulte:
 * [Referência de API ou SDK do TeamsFx](TeamsFx-SDK.md) [](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Galeria de exemplos do Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Conferir também
 
 * [Preparar contas para criar o aplicativo Teams](accounts.md)

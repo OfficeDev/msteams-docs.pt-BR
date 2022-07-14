@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: da5da86bf5e96989cf962d88105c47affa899f6e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 13b9f640c57168858ee7c48a8f9dfc83b005c05a
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485647"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66793044"
 ---
 # <a name="manage-multiple-environments"></a>Gerenciar vários ambientes
 
@@ -42,7 +42,7 @@ Depois de criar um novo projeto, o Teams Toolkit por padrão cria:
 
 **Para adicionar outro ambiente remoto**:
 
-1. Selecione a barra **lateral de** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="adição do SSO do Teams na"::: barra de navegação esquerda.
+1. Selecione a barra **lateral de** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="adição do SSO do Teams na"::: barra de navegação esquerda.
 2. Selecione **+Teams: crie um novo ambiente** na **seção** Ambiente, conforme mostrado na imagem a seguir:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="criar":::
@@ -78,7 +78,7 @@ A tabela a seguir lista os cenários comuns para provisionamento de recursos per
 
 | Cenários | Local| Descrição |
 | --- | --- | --- |
-| Personalizar o Recurso do Azure | <ul> <li>Arquivos Bicep em `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Personalizar parâmetros e modelos do ARM](provision.md#customize-arm-parameters-and-templates) |
+| Personalizar o Recurso do Azure | <ul> <li>Arquivos Bicep em `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Personalizar parâmetros e modelos do ARM](provision.md#customize-arm-template-files) |
 | Reutilizar o aplicativo Azure AD existente para o aplicativo Teams | <ul> <li>Seção `auth` em `.fx/config.<envName>.json`</li> </ul> |  [Usar um aplicativo Azure AD existente para seu aplicativo Teams](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reutilizar o aplicativo Azure AD existente para bot | <ul> <li>Seção `bot` em `.fx/config.<envName>.json`</li> </ul> | [Usar um aplicativo Azure AD existente para seu bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Ignorar a adição de usuário durante o provisionamento SQL | <ul> <li>Propriedade `skipAddingSqlUser` em `.fx/config.<envName>.json`</li> </ul> | [Ignorar a adição de usuário para o banco de dados SQL](provision.md#skip-adding-user-for-sql-database) |

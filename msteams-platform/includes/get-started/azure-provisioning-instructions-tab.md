@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>Implantar seu aplicativo no Azure.
 
 A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necessários são criados (também conhecidos como provisionamento). Em seguida, o código do aplicativo é copiado para os recursos de nuvem criados. Para este tutorial, você implantará o aplicativo guia.
-<br> 
+<br>
 <br>
 <details>
 <summary>Qual é a diferença entre Provisionar e Implantar?</summary>
@@ -33,7 +33,7 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
    O processo de provisionamento cria recursos na nuvem do Azure. Pode levar algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
 
     Se desejar, você poderá exibir os recursos provisionados. Para este tutorial, você não precisa exibir recursos.
 
