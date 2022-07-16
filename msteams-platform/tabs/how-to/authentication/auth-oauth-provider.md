@@ -3,12 +3,12 @@ title: Usar provedores OAuth externos
 description: Neste módulo, você aprenderá a fazer a autenticação usando provedores OAuth externos e como adicioná-la ao navegador externo
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a27d4fdb861ef7e893807af7a4427662a61fa021
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 487e9c07615f3ed23f5ca43e5c7e6e4a98b8d0eb
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558762"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830782"
 ---
 # <a name="use-external-oauth-providers"></a>Usar provedores OAuth externos
 
@@ -122,7 +122,7 @@ A imagem a seguir fornece o fluxo para adicionar autenticação a navegadores ex
    O aplicativo 3P gera um deeplink para o Teams para dispositivo móvel no formato a seguir e envia o código de autenticação com a ID da sessão de volta ao Teams.
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
  8. O Teams chama o retorno de chamada de sucesso e envia o resultado.

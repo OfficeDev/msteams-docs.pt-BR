@@ -1,20 +1,20 @@
 ---
 title: Formatar suas mensagens de bot
 author: surbhigupta
-description: Neste módulo, saiba como adicionar formatação avançada às mensagens do bot, como tachado, lista ordenada e não ordenada, hiperlink, link de imagem e muito mais.
+description: Neste módulo, saiba como adicionar formatação e estilos avançados às suas mensagens de bot, como tachado, lista ordenada e não ordenada, hiperlink, link de imagem e muito mais.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150782"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830796"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
-A formatação de mensagens permite que você destaque o melhor nas mensagens de bot. Você pode formatar suas mensagens de bot para incluir cartões avançados que são anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
+A formatação de mensagens permite que você destaque o melhor nas mensagens de bot. Você pode formatar suas mensagens de bot para incluir cartões avançados como anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
 
 ## <a name="format-text-content"></a>Formatar o conteúdo de texto
 
@@ -32,11 +32,11 @@ O Teams dá suporte a um subconjunto de rótulos de formatação de markdown XML
 
 Atualmente, as seguintes limitações se aplicam à formatação:
 
-* As mensagens somente texto não dão suporte à formatação da tabela.
+* As mensagens somente texto não dão suporte à formatação de tabela.
 * Os cartões avançados dão suporte à formatação somente na propriedade de texto, não nas propriedades de título ou subtítulo.
-* Os cartões avançados não dão suporte a formatação de markdown ou de tabela.
+* Os cartões avançados não dão suporte a markdown ou formatação de tabela.
 
-Depois de formatar o conteúdo do texto, verifique se a formatação funciona em todas as plataformas compatíveis com Teams.
+Depois de formatar o conteúdo do texto, verifique se a formatação funciona em todas as plataformas compatíveis com o Teams.
 
 ## <a name="cross-platform-support"></a>Suporte à plataforma cruzada.
 
@@ -54,7 +54,7 @@ Atualmente, não há suporte para alguns estilos em todas as plataformas. A tabe
 | Texto pré-formatado         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
 | Hiperlink                 | ✔️ | ✔️ |
-| Link da imagem                | ✔️ | ❌ |
+| Link da imagem                | ❌ | ❌ |
 
 Depois de verificar o suporte de plataforma cruzada, verifique se o suporte por plataformas individuais também está disponível.
 
@@ -78,7 +78,7 @@ A tabela a seguir fornece uma lista de estilos com suporte na área de trabalho,
 | Texto pré-formatado         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hiperlink                 | ✔️ | ✔️ | ✔️ |
-| Link da imagem                | ✔️ | ✔️ | ✔️ |
+| Link da imagem                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>Cartões
 

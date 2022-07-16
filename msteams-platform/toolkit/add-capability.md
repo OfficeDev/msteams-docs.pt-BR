@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557985"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830789"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adicionar recursos a aplicativos do Teams
 
@@ -61,7 +61,7 @@ A lista a seguir fornece limitações para adicionar mais recursos no TeamsFx:
    1. Insira **Teams:Adicionar recursos**.
    1. Pressione **Enter**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="recurso de equipe":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="Para adicionar recursos usando a paleta de comandos.":::
 
    1. No pop-up, selecione a funcionalidade a ser adicionada ao seu projeto.
 
@@ -88,11 +88,11 @@ A tabela a seguir lista os recursos disponíveis a serem adicionados ao seu proj
 
 |Funcionalidades existentes|Outros recursos com suporte|
 |--------------------|--------------------|
-|Guia SPFx |Nenhum(a)|
+|Guia SPFx |Nenhum|
 |Guia habilitada para SSO |Guia habilitada para SSO, bot de notificação, bot de comando, bot, extensão de mensagem|
 |Bot de notificação |Guia habilitada para SSO, guia|
 |Bot de comando |Guia habilitada para SSO, guia|
-|Tab |Guia, bot de notificação, bot de comando, bot, extensão de mensagem|
+|Guia |Guia, bot de notificação, bot de comando, bot, extensão de mensagem|
 |Bot |Extensão de mensagem, guia habilitada para SSO, guia|
 |Extensão de mensagem |Bot, guia habilitada para SSO, guia |
 
