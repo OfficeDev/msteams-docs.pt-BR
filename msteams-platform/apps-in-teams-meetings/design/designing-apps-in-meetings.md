@@ -5,12 +5,13 @@ description: Saiba como criar extensões de reunião para seus aplicativos em re
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792834"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842035"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
@@ -105,7 +106,7 @@ As pessoas podem usar a guia na reunião para:
 |3|**Cabeçalho**: inclui o nome do aplicativo.|
 |4|**Botão Fechar**: ignora a guia. Sempre use o ícone fechar no canto superior direito em vez de uma ação no rodapé.|
 |5|**Barra de notificação**: os alertas de erro são exibidos diretamente abaixo do cabeçalho e enviam o restante do conteúdo do iframe para baixo 20 pixels.|
-|6 |**iframe**: exibe o conteúdo do aplicativo.|
+|6|**iframe**: exibe o conteúdo do aplicativo.|
 
 ### <a name="spacing"></a>Espaçamento
 

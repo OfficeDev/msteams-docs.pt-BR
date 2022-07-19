@@ -5,14 +5,14 @@ description: Neste módulo, saiba como criar uma página de remoção de guia e 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485213"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841967"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>Página de nova configuração e remoção de tabulação
+# <a name="create-a-removal-page"></a>Criar uma página de remoção
 
 Você pode estender e aprimorar a experiência do usuário dando suporte a opções de remoção e modificação em seu aplicativo. O Teams permite que os usuários renomeiem ou removam uma guia de canal ou grupo e você pode permitir que os usuários reconfigurem sua guia após a instalação. Além disso, a experiência de remoção de guia fornece aos usuários opções pós-remoção para excluir ou arquivar conteúdo.
 
@@ -36,7 +36,7 @@ Quando sua guia é carregada para um canal ou chat em grupo, o Teams adiciona um
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Criar uma página de remoção de guia para seu aplicativo
 
-A página de remoção opcional é uma página HTML que você hospeda e é exibida quando a guia é removida. A URL da página de remoção é designada pelo método `setConfig()` (anteriormente `setSettings()`) na página de configuração. Assim como em todas as páginas em seu aplicativo, a página de remoção deve estar em conformidade com [pré-requisitos da guia Teams](../../../tabs/how-to/tab-requirements.md).
+A página de remoção opcional é uma página HTML que você hospeda e é exibida quando a guia é removida. A URL da página de remoção `setConfig()` é designada pelo método ( `setSettings()` ou anterior ao TeamsJS v.2.0.0) na página de configuração. Assim como em todas as páginas em seu aplicativo, a página de remoção deve estar em conformidade com [pré-requisitos da guia Teams](../../../tabs/how-to/tab-requirements.md).
 
 ### <a name="register-a-remove-handler"></a>Registrar um manipulador de remoção
 
@@ -58,7 +58,7 @@ Você pode usar `getContext()` para obter o contexto atual no qual o quadro est�
 
 #### <a name="include-authentication"></a>Incluir autenticação
 
-A autenticação é necessária antes de permitir que um usuário exclua o conteúdo da guia. Informações de contexto podem ser usadas para ajudar a construir solicitações de autenticação e URLs de página de autorização. Consulte[Fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md). Certifique-se de que todos os domínios usados ​​em suas páginas de guia estejam listados na matriz `manifest.json` e `validDomains`.
+A autenticação é necessária antes de permitir que um usuário exclua o conteúdo da guia. Informações de contexto podem ser usadas para ajudar a construir solicitações de autenticação e URLs de página de autorização. Consulte[Fluxo de autenticação do Microsoft Teams para guias](~/tabs/how-to/authentication/auth-flow-tab.md). Verifique se todos os domínios usados em suas páginas de guia estão listados na matriz `validDomains` do manifesto do aplicativo.
 
 A seguir está um bloco de código de remoção de guia de exemplo:
 
@@ -67,8 +67,9 @@ A seguir está um bloco de código de remoção de guia de exemplo:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

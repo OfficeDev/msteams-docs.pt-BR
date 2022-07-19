@@ -5,12 +5,12 @@ description: Neste módulo, aprenda a criar um chat de subentidade de conversa p
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485656"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841979"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -39,7 +39,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > A **channelId** é opcional para guias de canal. No entanto, é recomendável manter sua implementação entre canais e guias estáticas da mesma forma.
 * **título**: o título que é mostrado ao usuário no painel de chat.
 
-A maioria desses valores também pode ser recuperada da `getContext` API.
+A maioria desses valores também pode ser recuperada da [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API (`microsoftTeams.getContext()` no TeamsJS v1). Para obter mais informações, consulte [a interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});

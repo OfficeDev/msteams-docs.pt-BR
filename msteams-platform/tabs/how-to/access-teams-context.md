@@ -3,12 +3,12 @@ title: Obter contexto para sua guia
 description: Neste módulo, saiba como obter o contexto do usuário para suas guias, contexto do usuário e informações de contexto do Access
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 63bbc9c0e5f20e293f9230000597860e3f053274
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658923"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841719"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -16,7 +16,7 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 
 * Informações básicas sobre o usuário, a equipe ou a empresa.
 * Informações de localidade e tema.
-* Leia o `entityId` ou `subEntityId` que identifica o que está nessa guia.
+* O `page.id` e `page.subPageId` que identificam o que está nessa guia (conhecido `entityId` como e `subEntityId` antes do TeamsJS v.2.0.0).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -36,34 +36,34 @@ Para obter mais informações, [consulte autenticar um usuário no Microsoft Tea
 
 Você pode acessar informações de contexto de duas maneiras:
 
-* Inserir valores de espaço reservado de URL.
-* Use o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client).
+* Usando [valores de espaço reservado de URL](#get-context-by-inserting-url-placeholder-values).
+* Do objeto de contexto do SDK do cliente JavaScript [do](/javascript/api/@microsoft/teams-js/app.context) Microsoft Teams.
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado de URL
 
-Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os espaços reservados disponíveis incluem todos os campos no objeto [de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-1.12.1&preserve-view=true) contexto. Os marcadores de posição comuns incluem o seguinte:
+Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os espaços reservados disponíveis incluem todos os campos no objeto [de](/javascript/api/@microsoft/teams-js/app.context) contexto. Os espaços reservados comuns incluem as seguintes listas:
 
-* {entityId}: ID fornecida para o item nesta guia quando a [guia é configurada](~/tabs/how-to/create-tab-pages/configuration-page.md) pela primeira vez. 
-* {subEntityId}: a ID que você forneceu ao gerar um [link](~/concepts/build-and-test/deep-links.md) profundo para um item específico nessa guia. Isso deve ser usado para restaurar para um estado específico dentro de uma entidade; por exemplo, rolar para ou ativar uma parte específica do conteúdo.
-* {loginHint}: um valor adequado como uma dica de logon para Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário inicial.
-* {userPrincipalName}: o Nome UPN do usuário atual no locatário atual.
-* {userObjectId}: a ID Azure AD objeto do usuário atual no locatário atual.
-* {theme}: o tema da interface do usuário atual, como `default`, `dark`ou `contrast`.
-* {groupId}: a ID do grupo Office 365 no qual a guia reside.
-* {tid}: ID do locatário do Azure AD do usuário atual.
-* {locale}: a localidade atual do usuário formatada como languageId-countryId(en-us).
+* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): a ID exclusiva definida pelo desenvolvedor para a página definida ao [configurar a página pela primeira vez](~/tabs/how-to/create-tab-pages/configuration-page.md). (Conhecido como anterior `{entityId}` ao TeamsJS v.2.0.0).
+* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): a ID exclusiva definida pelo desenvolvedor para a subpágina que esse conteúdo aponta definido ao gerar um [link](~/concepts/build-and-test/deep-links.md) profundo para um item específico dentro da página. (Conhecido como anterior `{subEntityId}` ao TeamsJS v.2.0.0).
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): um valor adequado como uma dica de logon para Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário inicial. (Conhecido como anterior `{loginHint}` ao TeamsJS v.2.0.0).
+* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): o nome principal do usuário atual no locatário atual. (Conhecido como anterior `{userPrincipalName}` ao TeamsJS v.2.0.0).
+* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): a ID Azure AD objeto do usuário atual no locatário atual. (Conhecido como anterior `{userObjectId}` ao TeamsJS v.2.0.0).
+* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): o tema da interface do usuário atual, como `default`, `dark`ou `contrast`. (Conhecido como anterior `{theme}` ao TeamsJS v.2.0.0).
+* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): a ID do grupo Office 365 no qual a guia reside. (Conhecido como anterior `{groupId}` ao TeamsJS v.2.0.0)
+* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): a ID Azure AD locatário do usuário atual. (Conhecido como anterior `{tid}` ao TeamsJS v.2.0.0).
+* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): a localidade atual do usuário formatada como *languageId-countryId*, por exemplo `en-us`. (Conhecido como anterior `{locale}` ao TeamsJS v.2.0.0).
 
 > [!NOTE]
-> O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{loginHint}`.
+> O espaço reservado `{upn}` anterior agora está preterido. Para compatibilidade com versões anteriores, é atualmente um sinônimo para `{user.loginHint}`.
 
-Por exemplo, no manifesto da guia para o qual você definiu `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`o atributo, o usuário conectado tem os seguintes atributos:
+Por exemplo, no manifesto do aplicativo, se você definir o atributo *tab configurationUrl* como `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` e o usuário conectado tiver os seguintes atributos:
 
 * O nome de usuário é **user@example.com**.
 * A ID do locatário da empresa **é e2653c-etc**.
 * Eles são membros do grupo Office 365 com a ID **00209384-etc**.
 * O usuário definiu o tema do Teams como **escuro**.
 
-Quando eles configuram a guia, o Teams chama a seguinte URL:
+. . . Em seguida, o Teams chamará a seguinte URL ao configurar a guia:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -71,51 +71,116 @@ Quando eles configuram a guia, o Teams chama a seguinte URL:
 
 Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-O código a seguir fornece um exemplo de variável de contexto:
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-```json
-{
-    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
-    "teamName": "The name of the current team",
-    "channelId": "The channel ID in the format 19:[id]@thread.skype",
-    "channelName": "The name of the current channel",
-    "chatId": "The chat ID in the format 19:[id]@thread.skype",
-    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
-    "entityId": "The developer-defined unique ID for the entity this content points to",
-    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
-    "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
-    "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current Office 365 Group ID",
-    "theme": "The current UI theme: default | dark | contrast",
-    "isFullScreen": "Indicates if the tab is in full-screen",
-    "teamType": "The type of team",
-    "teamSiteUrl": "The root SharePoint site associated with the team",
-    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
-    "teamSitePath": "The relative path to the SharePoint site associated with the team",
-    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
-    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
-    "userTeamRole": "The user's role in the team",
-    "isTeamArchived": "Indicates if team is archived",
-    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
-    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
-    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
-    "userLicenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
-    "parentMessageId": "The parent message ID from which this task module is launched",
-    "ringId": "The current ring ID",
-    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
-    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
-    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
-    "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
-    "isMultiWindow": "The indication whether the tab is in a pop out window"
+## <a name="typescript"></a>TypeScript
+
+```TypeScript
+import { app, Context } from "@microsoft/teams-js";
+
+app.getContext().then((context: Context) => {
+    /*...*/
+});
+```
+
+Padrão `async/await` equivalente:
+
+```TypeScript
+import { app, Context } from "@microsoft/teams-js";
+
+async function example() {
+  const context: Context = await app.getContext();
+  /*...*/
 }
 ```
 
-Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando a `app.getContext()` função. Para obter informações adicionais, consulte as propriedades da [interface de contexto](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+## <a name="javascript"></a>JavaScript
 
+```js
+import { app, Context } from "@microsoft/teams-js";
+
+app.getContext().then((context) => {
+    /*...*/
+});
+```
+
+Padrão `async/await` equivalente:
+
+```js
+import { app, Context } from "@microsoft/teams-js";
+
+async function example() {
+  const context = await app.getContext();
+  /*...*/
+}
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
+## <a name="typescript"></a>TypeScript
+
+```TypeScript
+import * as microsoftTeams from "@microsoft/teams-js";
+
+microsoftTeams.getContext((context: microsoftTeams.Context) => {
+  /* ... */
+});
+```
+
+## <a name="javascript"></a>JavaScript
+
+```js
+import microsoftTeams from "@microsoft/teams-js";
+
+microsoftTeams.getContext((context) => {
+  /* ... */ 
+});
+```
+
+---
+
+A tabela a seguir lista as propriedades de contexto comumente usadas do *objeto de* contexto:
+
+| Nome do TeamsJS v2 | Nome do TeamsJS v1 | Descrição |
+|-----------------|-----------------|-------------|
+| team.internalId | teamId | A ID do Microsoft Teams para a equipe à qual o conteúdo está associado. |
+| team.displayName | teamName | O nome da equipe à qual o conteúdo está associado. |
+| channel.id | channelId | A ID do Microsoft Teams para o canal ao qual o conteúdo está associado. |
+| channel.displayName | Channelname | O nome do canal ao qual o conteúdo está associado. |
+| chat.id | chatId | A ID do Microsoft Teams para o chat ao qual o conteúdo está associado. |
+| app.locale | localidade | A localidade atual que o usuário configurou para o aplicativo formatado como languageId-countryId (por exemplo, en-us). |
+| page.id | entityId | A ID exclusiva definida pelo desenvolvedor para a página para a qual esse conteúdo aponta. |
+| page.subPageId | subEntityId | A ID exclusiva definida pelo desenvolvedor para a subpágina para a qual esse conteúdo aponta. Esse campo deve ser usado para restaurar para um estado específico dentro de uma página, como rolar para ou ativar uma parte específica do conteúdo. |
+| user.loginHint | loginHint | Um valor adequado para uso como um login_hint ao autenticar com Azure AD. Como uma parte mal-intencionada pode executar seu conteúdo em um navegador, esse valor deve ser usado apenas como uma dica sobre quem é o usuário e nunca como prova de identidade. Esse campo só estará disponível quando a permissão de identidade for solicitada no manifesto. |
+| user.userPrincipalName | Upn | O UPN do usuário atual. Pode ser um UPN autenticado externamente (por exemplo, usuários convidados). Como uma parte mal-intencionada executa seu conteúdo em um navegador, esse valor deve ser usado apenas como uma dica sobre quem é o usuário e nunca como prova de identidade. Esse campo só estará disponível quando a permissão de identidade for solicitada no manifesto. |
+| user.id | userObjectId | A Azure AD ID de objeto do usuário atual. Como uma parte mal-intencionada executa seu conteúdo em um navegador, esse valor deve ser usado apenas como uma dica sobre quem é o usuário e nunca como prova de identidade. Esse campo só estará disponível quando a permissão de identidade for solicitada no manifesto. |
+| user.tenant.id | Tid | A Azure AD ID de locatário do usuário atual. Como uma parte mal-intencionada pode executar seu conteúdo em um navegador, esse valor deve ser usado apenas como uma dica sobre quem é o usuário e nunca como prova de identidade. Esse campo só estará disponível quando a permissão de identidade for solicitada no manifesto. |
+| team.groupId | groupId | A Office 365 de grupo da equipe à qual o conteúdo está associado. Esse campo só estará disponível quando a permissão de identidade for solicitada no manifesto. |
+| app.theme  | tema | O tema atual da interface do usuário: padrão, escuro, contraste |
+| page.isFullScreen | isFullScreen | Indicação se a página está no modo de tela inteira. |
+| team.type | teamType | O tipo da equipe. |
+| sharepointSite.teamSiteUrl | teamSiteUrl | O site raiz do SharePoint associado à equipe. |
+| sharepointSite.teamSiteDomain | teamSiteDomain | O domínio do site raiz do SharePoint associado à equipe. |
+| sharepointSite.teamSitePath | teamSitePath | O caminho relativo para o site do SharePoint associado à equipe. |
+| channel.relativeUrl | channelRelativeUrl | O caminho relativo para a pasta do SharePoint associada ao canal. |
+| app.host.sessionId | Sessionid | ID exclusiva para a sessão host atual para uso na correlação de dados de telemetria. |
+| team.userRole | userTeamRole | A função do usuário na equipe. Como uma parte mal-intencionada pode executar seu conteúdo em um navegador, esse valor deve ser usado apenas como uma dica sobre a função do usuário e nunca como prova de sua função. |
+| team.isArchived | isTeamArchived | Indica se a equipe está arquivada. Os aplicativos devem usá-lo como um sinal para evitar alterações no conteúdo associado a equipes arquivadas. |
+| app.host.clientType | hostClientType | O tipo do cliente host. Os valores possíveis são: android, ios, Web, desktop, rigel |
+| page.frameContext | frameContext | O contexto em que a URL da página é carregada (conteúdo, tarefa, configuração, remover, sidePanel) |
+| sharepoint | sharepoint | Contexto do SharePoint. Isso só está disponível quando hospedado no SharePoint. |
+| user.tenant.teamsSku | tenantSKU | O tipo de licença para o locatário do usuário atual. Os valores possíveis são enterprise, free, edu, unknown |
+| user.licenseType | userLicenseType | O tipo de licença para o usuário atual. Os valores possíveis são planos empresariais E1, E3 e E5 |
+| app.parentMessageId | parentMessageId | A ID da mensagem pai da qual este módulo de tarefa foi iniciado. Isso só está disponível em módulos de tarefas iniciados de cartões de bot. |
+| app.host.ringId | ringId | ID do anel atual. |
+| app.sessionId | appSessionId | ID exclusiva para a sessão host atual para uso na correlação de dados de telemetria. |
+| user.isCallingAllowed | isCallingAllowed | Representa se a chamada é permitida para o usuário conectado atual. |
+| user.isPSTNCallingAllowed | isPSTNCallingAllowed | Indica se a chamada PSTN é permitida para o usuário atual |
+| meeting.id | meetingId | A ID da reunião usada pela guia durante a execução no contexto da reunião. |
+| channel.defaultOneNoteSectionId | defaultOneNoteSectionId | A ID da seção do OneNote que está vinculada ao canal. |
+| page.isMultiWindow | isMultiWindow | A indicação se a guia está em uma janela pop-out. |
+
+Para obter mais informações, [consulte Atualizações interface *de* contexto e](using-teams-client-sdk.md#updates-to-the-context-interface) a referência da API [de interface](/javascript/api/@microsoft/teams-js/app.context) de contexto.
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
@@ -123,14 +188,14 @@ Quando sua página de conteúdo é carregada em um canal privado, `getContext` o
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
 
-* `groupId`: indefinido para canais privados
-* `teamId`: definido como o threadId do canal privado
-* `teamName`: definido como o nome do canal privado
-* `teamSiteUrl`: definido como a URL de um site exclusivo e distinto do SharePoint para o canal privado
-* `teamSitePath`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal privado
-* `teamSiteDomain`: definido como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal privado
+* `team.groupId`: indefinido para canais privados
+* `team.internalId`: definido como o threadId do canal privado
+* `team.displayName`: definido como o nome do canal privado
+* `sharepointSite.url`: definido como a URL de um site exclusivo e distinto do SharePoint para o canal privado
+* `sharepointSite.path`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal privado
+* `sharepointSite.domain`: definido como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal privado
 
-Se sua página usa qualquer um desses valores, `channelType` `Private` o valor do campo deve ser determinar se sua página é carregada em um canal privado e pode responder adequadamente.
+Se sua página usa qualquer um desses valores, `channel.membershipType` `Private` o valor do campo deve ser determinar se sua página é carregada em um canal privado e pode responder adequadamente.
 
 ## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Recuperar contexto em Conexão Microsoft Teams canais compartilhados
 
@@ -141,26 +206,26 @@ Quando sua página de conteúdo é carregada em um canal Conexão Microsoft Team
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal compartilhado:
 
-* `groupId`: indefinido para canais compartilhados.
-* `teamId`: definido como o `threadId` da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, ele `teamId` será definido como a equipe que hospeda (cria) o canal compartilhado.
-* `teamName`: definido como o nome da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, ele `teamName` será definido como a equipe que hospeda (cria) o canal compartilhado.
-* `teamSiteUrl`: defina como a URL de um site exclusivo e distinto do SharePoint para o canal compartilhado.
-* `teamSitePath`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal compartilhado.
-* `teamSiteDomain`: defina como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal compartilhado.
+* `team.groupId`: indefinido para canais compartilhados.
+* `team.internalId`: definido como o `threadId` da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, isso será definido como a equipe que hospeda (cria) o canal compartilhado.
+* `team.displayName`: definido como o nome da equipe, o canal é compartilhado para o usuário atual. Se o usuário tiver acesso a várias equipes, isso será definido como a equipe que hospeda (cria) o canal compartilhado.
+* `sharepointSite.url`: defina como a URL de um site exclusivo e distinto do SharePoint para o canal compartilhado.
+* `sharepointSite.path`: defina como o caminho de um site exclusivo e distinto do SharePoint para o canal compartilhado.
+* `sharepointSite.domain`: defina como o domínio de um domínio de site exclusivo e distinto do SharePoint para o canal compartilhado.
 
 Além dessas alterações de campo, há dois novos campos disponíveis para canais compartilhados:
 
-* `hostTeamGroupId`: defina como o `groupId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode fazer com que as chamadas API do Graph Microsoft recuperem a associação do canal compartilhado.
-* `hostTeamTenantId`: defina como o `tenantId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode ser referenciada cruzadamente com a ID `tid` `getContext` de locatário do usuário atual encontrada no campo para determinar se o usuário é interno ou externo ao locatário da equipe de hospedagem.
+* `hostTeamGroupId`: defina como o `team.groupId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode fazer com que as chamadas API do Graph Microsoft recuperem a associação do canal compartilhado.
+* `hostTeamTenantId`: defina como o `channel.ownerTenantId` associado à equipe de hospedagem ou à equipe que criou o canal compartilhado. A propriedade pode ser referenciada de modo cruzado com a ID `user.tenant.id` de locatário do usuário atual encontrada no campo do  objeto de contexto para determinar se o usuário é interno ou externo ao locatário da equipe de hospedagem.
 
-Se sua página usa qualquer um desses valores, `channelType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
+Se sua página usa qualquer um desses valores, `channel.membershipType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
 
 > [!NOTE]
 > Sempre que um usuário reinicia ou recarrega a área de trabalho do Teams ou o cliente Web, uma nova sessionID é criada, que é controlada pela sessão do Teams, enquanto que, quando um usuário sai dos aplicativos do Teams e o recarrega na plataforma teams, uma nova sessionID de aplicativo é criada, que é controlada pela sessão de aplicativo.
 
 ## <a name="handle-theme-change"></a>Manipular alteração de tema
 
-Você pode registrar seu aplicativo para ser informado se o tema for alterado chamando `app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
+Você pode registrar seu aplicativo para ser informado se o tema for alterado chamando `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 O `theme` argumento na função é uma cadeia de caracteres com um valor `default`de , `dark`ou `contrast`.
 

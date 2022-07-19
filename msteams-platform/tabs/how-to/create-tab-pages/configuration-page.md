@@ -5,12 +5,12 @@ description: Neste módulo, saiba como criar uma página de configuração para 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143953"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841698"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -20,7 +20,7 @@ Uma página de configuração é um tipo especial de [página de conteúdo](cont
 * Uma [extensão de mensagem](~/messaging-extensions/what-are-messaging-extensions.md).
 * Um [Conector do Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar um canal ou guia de chat em grupo
 
@@ -38,15 +38,15 @@ O código a seguir é um exemplo de código correspondente para a página de con
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
@@ -214,7 +214,7 @@ Depois que a página é carregada, o Teams atualiza os espaços reservados da ca
 
 ```html
 <script>
-   app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -255,7 +255,8 @@ O código a seguir fornece um exemplo de adição dessa função à página de c
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -293,11 +294,12 @@ Autentique antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem, reconfigurem ou renomeiem uma guia de canal ou grupo. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anteriormente`setSettings()`) para página de remoção:
+Configuração do Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para página de remoção:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",

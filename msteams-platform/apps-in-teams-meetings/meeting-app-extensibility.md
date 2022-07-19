@@ -4,12 +4,14 @@ author: surbhigupta
 description: Saiba mais sobre o ciclo de vida da reunião do Teams e a experiência de reunião dos usuários na área de trabalho e dispositivos móveis, tipos de usuário, integração de bots e extensão de mensagens no ciclo de vida da reunião.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.author: surbhigupta
+ms.date: 04/07/2022
+ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561620"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841901"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 

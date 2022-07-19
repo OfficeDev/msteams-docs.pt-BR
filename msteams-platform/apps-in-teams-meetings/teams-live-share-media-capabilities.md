@@ -1,18 +1,18 @@
 ---
 title: Recursos de mídia do Live Share
+author: surbhigupta
 description: Neste módulo, saiba mais sobre os recursos de mídia, suspensões e pontos de espera do Live Share, além da redução de volume de áudio e sincronização entre vídeo e áudio.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: bf9d7c071a337a56373a9c58879d23a8d2638af7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142476"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841868"
 ---
----
-
 # <a name="live-share-media-capabilities"></a>Recursos de mídia do Live Share
 
 Vídeo e áudio são partes fundamentais do local de trabalho e do mundo modernos. Ouvimos comentários abrangentes no sentido de que podemos fazer mais para aumentar a qualidade, acessibilidade e proteções de licenças quando se trata de assistir a vídeos durante as reuniões.

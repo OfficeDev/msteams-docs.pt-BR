@@ -1,18 +1,18 @@
 ---
 title: Tutorial de código do Live Share
+author: surbhigupta
 description: Neste módulo, saiba como começar a usar o SDK do Live Share e como criar um exemplo de Dice Roller usando o SDK do Live Share
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484625"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841796"
 ---
----
-
 # <a name="dice-roller-code-tutorial"></a>Tutorial de código do Dice Roller
 
 No aplicativo de exemplo Dice Roller, os usuários são mostrados como um dado com um botão para rolá-lo. Quando o dado é rolado, o SDK do Live Share usa o Fluid Framework para sincronizar os dados entre clientes, para que todos vejam o mesmo resultado. Para sincronizar dados, execute as seguintes etapas no arquivo [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js):

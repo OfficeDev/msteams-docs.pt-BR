@@ -3,12 +3,12 @@ title: Solicitar permissões de dispositivo para seu aplicativo do Microsoft Tea
 description: Como atualizar o manifesto do aplicativo para solicitar acesso a recursos nativos que exigem consentimento do usuário, como recursos de QR de verificação, código de barras, imagem, áudio e vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9950dc43bf4d2c5dcdda26a489a2c7b661739f6b
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557712"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841726"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Solicitar permissões de dispositivo para seu aplicativo teams
 
@@ -131,7 +131,7 @@ Por exemplo:
 * Para solicitar que o usuário acesse sua localização, você deve chamar `getCurrentPosition()`:
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * Para solicitar que o usuário acesse sua câmera na área de trabalho ou na Web, você deve chamar `getUserMedia()`:
@@ -216,6 +216,17 @@ Por exemplo:
 
 * Para solicitar que o usuário compartilhe o local na interface do mapa, o aplicativo Teams solicita permissão quando você chama `getLocation()`:
 
+    # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -223,6 +234,10 @@ Por exemplo:
      });
      } 
     ```
+
+    ***
+
+Veja como os prompts de permissões de dispositivo aparecem para os usuários no celular e na área de trabalho.
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 

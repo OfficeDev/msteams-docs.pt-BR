@@ -5,16 +5,18 @@ description: Saiba como desenrolar um link, abra o Modo de Exibição de Estági
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484921"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841986"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
 O Modo de Exibição de Estágio é um novo componente de interface do usuário. Ele permite renderizar o conteúdo que é aberto em tela inteira no Teams e fixado como uma guia.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>Modo de Exibição de Estágio
 
@@ -87,17 +89,18 @@ Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 * O bot responde com um `200` código.
 
 > [!NOTE]
+
 > Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
-Para invocar o Modo de Exibição de Estágio por meio do link profundo de sua guia, você deve encapsular a URL de link profundo na API `microsoftTeams.executeDeeplink(url)`. O link profundo também pode ser passado por meio de uma ação `OpenURL` no cartão.
+Para invocar o Modo de Exibição de Estágio por meio do link profundo de sua guia, você deve encapsular a URL de link profundo na API `app.openLink(url)`. O link profundo também pode ser passado por meio de uma ação `OpenURL` no cartão.
 
 ### <a name="syntax"></a>Sintaxe
 
-A seguir está a sintaxe de deeplink:
+A seguir está a sintaxe de link profundo:
 
-<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
+`<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 ### <a name="examples"></a>Exemplos
 
@@ -109,24 +112,24 @@ A seguir estão os exemplos de link profundo para invocar o Modo de Exibição d
 
 URL não Codificada:
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}`
 
 URL Codificada:
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>`
 
 **Exemplo 2: URL sem threadId**
 
 URL não Codificada:
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: Miscellaneous"}
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}`
 
 Codificado
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> Todos os deeplinks devem ser codificados antes de colar a URL. Não há suporte para URLs não codificadas.
+> Todos os links profundos devem ser codificados antes de colar a URL. Não há suporte para URLs não codificadas.
 >
 > * O `name` é opcional no link profundo. Se não estiver incluído, o nome do aplicativo o substituirá.
 > * O link profundo também pode ser passado por meio de uma ação `OpenURL`.
@@ -146,7 +149,7 @@ Codificado
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Guia no modo de exibição de estágio |Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia no modo de exibição de estágio.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 

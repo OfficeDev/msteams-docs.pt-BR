@@ -6,16 +6,18 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558573"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841705"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
 Canal ou guias de grupo forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -261,14 +263,15 @@ Este projeto foi criado com base em um modelo vazio de aplicativo Web do ASP.NET
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>pasta wwwroot
@@ -333,17 +336,17 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > Não copie e cole as URLs `<script src="...">` desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, acesse sempre a[API JavaScript do Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Insira uma chamada para `microsoftTeams.initialize();` na marca `script`.
+1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
 1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Páginas** e abra **Tab.cshtml**
 
-    Dentro de **Tab.cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher o botão **Selecionar cinza** ou **Selecionar vermelho** aciona `saveGray()` ou `saveRed()`, respectivamente, define `settings.setValidityState(true)` e ativa o botão **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml** , o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -352,27 +355,29 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
     ```javascript
         
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
             });
         }
 
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
-        });
+            });
         }
     ```
 
@@ -481,14 +486,15 @@ Este projeto foi criado com base em um modelo vazio de aplicativo Web do ASP.NET
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>pasta wwwroot
@@ -561,17 +567,17 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > Não copie e cole as URLs `<script src="...">` desta página, pois elas não representam a versão mais recente. Para obter a versão mais recente do SDK, acesse sempre a[API JavaScript do Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Insira uma chamada para `microsoftTeams.initialize();` na marca `script`.
+1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
 1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Guia** e abra **Tab.cshtml**
 
-    Dentro de **Tab.cshtml** o aplicativo apresenta ao usuário dois botões de opção para exibir a guia com um ícone vermelho ou cinza. Escolher o botão **Selecionar cinza** ou **Selecionar vermelho** aciona `saveGray()` ou `saveRed()`, respectivamente, define `settings.setValidityState(true)` e ativa o botão **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu os requisitos de configuração e que a instalação pode continuar. Os parâmetros de `settings.setSettings` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml** , o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -580,24 +586,26 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
     ```javascript
 
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
         }
     
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });

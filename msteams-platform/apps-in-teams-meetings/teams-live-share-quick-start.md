@@ -1,18 +1,18 @@
 ---
 title: Início rápido do Live Share
+author: surbhigupta
 description: Neste módulo, saiba como experimentar rapidamente o exemplo de Rolo de Dados
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 10bf4b3ce67322c25517d82af2d06a654a4d8668
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484583"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841782"
 ---
----
-
 # <a name="quick-start-guide"></a>Guia de início rápido
 
 Introdução ao SDK do Live Share usando o exemplo de Rolo de Dados é uma evolução do [Início rápido do Fluid Framework](https://fluidframework.com/docs/start/quick-start/) e foi projetado para executar rapidamente um [exemplo de Rolo de Dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) baseado em SDK do Live Share no host local do computador.
@@ -37,25 +37,25 @@ Para começar, instale:
 1. Clone o repositório [SDK do Live Share](https://github.com/microsoft/live-share-sdk) para testar o aplicativo de exemplo:
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. Execute o comando a seguir para ir para a pasta de aplicativo de exemplo do Rolo de Dados:
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. Execute o seguinte comando para instalar o pacote de dependência:
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. Execute o seguinte comando para iniciar o cliente e o servidor local:
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      Uma nova guia do navegador abre uma url `http://localhost:8080` e o jogo de Rolo de Dados é exibido.

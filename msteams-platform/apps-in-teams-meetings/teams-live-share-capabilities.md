@@ -1,18 +1,18 @@
 ---
 title: Introdução ao Live Share
+author: surbhigupta
 description: Neste módulo, saiba mais sobre as funcionalidades do SDK do Live Share, permissões RSC e estruturas de dados efêmeros.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.date: 04/07/2022
+ms.openlocfilehash: 2c60ce362810fdaf4b98342d2250ea34d9fbfbeb
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503344"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841880"
 ---
----
-
 # <a name="live-share-core-capabilities"></a>Principais recursos do Live Share 
 
 O SDK do Live Share pode ser adicionado aos contextos `sidePanel` e `meetingStage` da extensão da sua reunião com o mínimo de esforço. Este artigo se concentra em como integrar o SDK do Live Share ao seu aplicativo e aos principais recursos do SDK.
