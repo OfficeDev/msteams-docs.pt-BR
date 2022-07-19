@@ -3,13 +3,15 @@ title: Habilitar e configurar seus aplicativos para reuniões do Teams
 author: surbhigupta
 description: Saiba como habilitar e configurar seus aplicativos para reuniões do Teams e diferentes cenários de reuniões, atualizar o manifesto de aplicativos, configurar recursos e muito mais.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557733"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841894"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -126,9 +128,9 @@ Durante uma reunião, você pode usar a `meetingSidePanel` ou a notificação em
 
 #### <a name="meeting-sidepanel"></a>SidePanel da Reunião
 
-A `meetingSidePanel` permite que você personalize experiências em uma reunião que permite que organizadores e apresentadores tenham um conjunto diferente de exibições e ações. No manifesto do aplicativo, você deve adicionar à `meetingSidePanel` matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte [Interface do FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+A `meetingSidePanel` permite que você personalize experiências em uma reunião que permite que organizadores e apresentadores tenham um conjunto diferente de exibições e ações. No manifesto do aplicativo, você deve adicionar à `meetingSidePanel` matriz de contexto. Na reunião e em todos os cenários, o aplicativo é renderizado em uma guia na reunião que tem 320 pixels de largura. Para obter mais informações, consulte a [interface FrameInfo](/javascript/api/@microsoft/teams-js/frameinfo) (conhecida como `FrameContext` antes do TeamsJS v.2.0.0).
 
-Para usar a `userContext` API para rotear solicitações, consulte [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obter mais informações, consulte [Fluxo de autenticação do Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é semelhante ao fluxo de autenticação para sites. Portanto, as guias podem usar o OAuth 2.0 diretamente. Para obter mais informações, consulte [Fluxo de código de autorização OAuth 2.0 e a plataforma de identidade da Microsoft](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Você pode [usar o contexto do usuário para rotear solicitações](../tabs/how-to/access-teams-context.md#user-context). Para obter mais informações, consulte [Fluxo de autenticação do Teams para guias](../tabs/how-to/authentication/auth-flow-tab.md). O fluxo de autenticação para guias é semelhante ao fluxo de autenticação para sites. As guias podem usar o OAuth 2.0 diretamente. Para obter mais informações, consulte [Fluxo de código de autorização OAuth 2.0 e a plataforma de identidade da Microsoft](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 A extensão de mensagem funciona conforme o esperado quando um usuário está em uma exibição em reunião. O usuário pode postar cartões de extensão de mensagem de composição. AppName em reunião é uma dica de ferramenta que indica o nome do aplicativo na U-bar da reunião.
 
