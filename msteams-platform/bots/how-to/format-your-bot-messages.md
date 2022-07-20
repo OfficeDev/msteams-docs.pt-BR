@@ -5,16 +5,19 @@ description: Neste módulo, saiba como adicionar formatação e estilos avançad
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830796"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895479"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
 A formatação de mensagens permite que você destaque o melhor nas mensagens de bot. Você pode formatar suas mensagens de bot para incluir cartões avançados como anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
+
+> [!NOTE]
+> O limite de tamanho da mensagem do bot é de 40 KB. Se o limite de tamanho da mensagem do bot exceder 40 KB, o bot `413` receberá um código de status (RequestEntityTooLarge), que contém o código de erro `MessageSizeTooBig`. O limite de tamanho da mensagem do bot inclui todo o conteúdo da mensagem codificado como UTF-16 e não inclui imagens codificadas em base 64.
 
 ## <a name="format-text-content"></a>Formatar o conteúdo de texto
 

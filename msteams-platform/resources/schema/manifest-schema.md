@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503729"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895493"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -460,7 +460,7 @@ Usado quando a sua experiência de aplicativo tem uma experiência de guia de ca
 |`configurationUrl`|string|2048 caracteres|✔️|A URL https:// a ser usada ao configurar a guia.|
 |`scopes`|matriz de enumerações|1|✔️|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
 |`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: **true**.|
-|`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |matriz de enumerações|6||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|matriz de enumerações|1||Define como sua guia é disponibilizada no SharePoint. As opções são `sharePointFullPage` e `sharePointWebPart` |
 
@@ -505,7 +505,7 @@ O item é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas u
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de dois elementos) com todos os elementos do tipo `object`; você deve definir uma lista de comandos separada para cada escopo que o seu bot oferece suporte. Para obter mais informações, confira [Menus de bot](~/bots/how-to/create-a-bot-commands-menu.md).
+Uma lista de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de dois elementos) com todos os elementos do tipo `object`; você deve definir uma lista de comandos separada para cada escopo que o seu bot oferece suporte. Para obter mais informações, confira [Menus de bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -660,7 +660,10 @@ Indica se deve ou não mostrar o indicador de carregamento quando um aplicativo 
 Indica se um aplicativo pessoal é renderizado sem uma barra de cabeçalho de guia (significando o modo de tela inteira). O padrão é **false**.
 
 > [!NOTE]
-> `isFullScreen` funciona apenas para aplicativos publicados em sua organização.
+>
+> * `isFullScreen` funciona apenas para aplicativos publicados em sua organização. Aplicativos de terceiros transferidos por sideload e publicados não podem usar essa propriedade (ela é ignorada).
+>
+> * `isFullScreen=true` remove a barra de cabeçalho e o título fornecidos pelo Teams de aplicativos pessoais e das caixas de diálogo do módulo de tarefa.
 
 ## <a name="activities"></a>activities
 
@@ -750,7 +753,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
