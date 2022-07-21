@@ -5,12 +5,12 @@ description: Neste artigo, aprenda ferramentas e SDKs para criar bots e bots do 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485682"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912251"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -20,7 +20,6 @@ Você pode criar um bot que funcione no Microsoft Teams com uma das seguintes fe
 * [Agentes virtuais do Power](#bots-with-power-virtual-agents)
 * [Assistente Virtual](~/samples/virtual-assistant.md)
 * [Webhooks e conectores](#bots-with-webhooks-and-connectors)
-* [Serviço de bot do Azure](#azure-bot-service)
 
 ## <a name="bots-with-the-microsoft-bot-framework"></a>Bots com o Microsoft Bot Framework
 
@@ -52,107 +51,6 @@ O [Bot Framework](https://dev.botframework.com/) é um SDK avançado usado para 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots com webhooks e conectores
 
 Webhooks e conectores conectam seu bot aos seus serviços Web. Usando webhooks e conectores, você pode criar um bot para interação básica, como criar um fluxo de trabalho ou outros comandos simples. Eles estão disponíveis apenas na equipe em que você os cria e são destinados a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, confira [o que são webhooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
-
-## <a name="azure-bot-service"></a>Serviço de bot do Azure
-
-O serviço de bot do Azure, juntamente com o Bot Framework, fornece ferramentas para criar, testar, implantar e gerenciar bots inteligentes, tudo em um só lugar. Você também pode criar seu bot no serviço de bot do Azure.
-
-> [!IMPORTANT]
-> Os aplicativos de bot no Microsoft Teams estão disponíveis no GCC-High através do [Serviço de bot do Azure](/azure/bot-service/channel-connect-teams).
-
-> [!NOTE]
->
-> * Os bots no GCCH dão suporte apenas à versão de manifesto v1.10.
-> * Não há suporte para URLs de imagem em Cartões Adaptáveis no ambiente GCCH. Você pode substituir uma URL de imagem pelo DataUri codificado em Base64.
-> * O registro de canal de bot no Azure Governamental provisionará o bot do aplicativo Web, o serviço de aplicativo (plano do serviço de aplicativo) e o Application Insights também, mas não dá suporte para provisionar apenas o serviço de bot do Azure (sem serviço de aplicativo).
->   <details>
->   <summary><b>Se você quiser apenas fazer o registro de bot</b></summary>
->
->   * Vá para o grupo de recursos e exclua manualmente os recursos não utilizados. Como o serviço de aplicativo, o plano do serviço de aplicativo (se você criou durante o registro do bot) e o application insights (se você optar por habilita-lo durante o registro do bot).
->   * Você também pode usar az-cli para fazer o registro de bot:
->
->     1. Entre no Azure e defina a assinatura <br>
->           &nbsp; az cloud set –name "AzureUSGovernment" <br>
->           &nbsp; az account set –name "`subscriptionname/id`".<br>
->     1. Criar registro de aplicativo  
->           &nbsp; az ad app create --display-name "`name`" <br>
->           &nbsp; --password "`password`" --available-to-other-tenants.<br>
->           A ID do aplicativo seria criada aqui.<br>
->     1. Criar recurso de bot <br>
->           &nbsp; az bot create –resource-group "`resource-group`"<br>
->           &nbsp; --appid "`appid`"<br>
->           &nbsp; --name "`botid`"<br>
->           &nbsp; --tipo "registro".<br>
->
-> </details>
-
-Para o ambiente GCCH, você precisa registrar um bot [usando Azure Governamental portal](https://portal.azure.us).
-
-:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Governamental portal":::
-<br>
-<br>
-As seguintes alterações são necessárias no bot para GCC-High ambiente:
-<br>
-<br>
-<details>
-<summary><b>Alterações de configuração</b></summary>
-
-À medida que o registro do bot ocorre Azure Governamental portal, atualize as configurações do bot para se conectar às instâncias do Govermnet do Azure. Veja a seguir os detalhes de configuração:
-
-| Nome da configuração | Valor |
-|----|----|
-| ChannelService | `https://botframework.azure.us` |
-| OAuthUrl | `https://tokengcch.botframework.azure.us` |
-| ToChannelFromBotLoginUrl | `https://login.microsoftonline.us/MicrosoftServices.onmicrosoft.us` |
-| ToChannelFromBotoAuthScope | `https://api.botframework.us` |
-| ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
-| BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
-
-</details>
-<br>
-<details>
-<summary><b>Atualizar para appsettings.json & startup.cs</b></summary>
-
-1. **Atualizar appsettings.json:**
-
-    * Defina `ConnectionName` como o nome da configuração de conexão OAuth que você adicionou ao seu bot.
-
-    * Defina `MicrosoftAppId` e `MicrosoftAppPassword` como a ID do aplicativo e o segredo do aplicativo do seu bot.
-
-    Dependendo dos caracteres do segredo do seu bot, talvez seja necessário que o XML escape da senha. Por exemplo, qualquer e comercial (&) precisa ser codificado como `&amp;`.
-
-    ```json
-    {
-      "MicrosoftAppType": "",
-      "MicrosoftAppId": "",
-      "MicrosoftAppPassword": "",
-      "MicrosoftAppTenantId": "",
-      "ConnectionName": ""
-    }
-    ```
-
-2. **Atualizar Startup.cs:**
-
-    Para usar o OAuth em nuvens não públicas do *Azure*, como a nuvem governamental ou em bots com residência de dados, você deve adicionar o código a seguir no arquivo **Startup.cs** .
-
-    ```csharp
-    string uri = "<uri-to-use>";
-    MicrosoftAppCredentials.TrustServiceUrl(uri);
-    OAuthClientConfig.OAuthEndpoint = uri;
-    ```
-
-    Onde \<uri-to-use\> está um dos seguintes URIs:
-
-    |**URI**|**Descrição**|
-    |---|---|
-    |`https://europe.api.botframework.com`|Para bots de nuvem pública com residência de dados na Europa.|
-    |`https://unitedstates.api.botframework.com`|Para bots de nuvem pública com residência de dados no Estados Unidos.|
-    |`https://apiGCCH.botframework.azure.us`|Para Estados Unidos bots de nuvem governamental sem residência de dados.|
-    |`https://api.botframework.com`|Para bots de nuvem pública sem residência de dados. Esse é o URI padrão e não requer uma alteração em **Startup.cs**.|
-
-3. A URL de redirecionamento para o registro de aplicativo do Azure deve ser atualizada para `https://tokengcch.botframework.azure.us/.auth/web/redirect`.
-
-</details>
 
 ## <a name="advantages-of-bots"></a>Vantagens dos bots
 
