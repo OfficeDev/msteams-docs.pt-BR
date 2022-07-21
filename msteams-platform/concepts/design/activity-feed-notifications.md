@@ -5,12 +5,12 @@ description: 'Saiba como criar notificações do feed de atividades para seu apl
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558006"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919764"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Criando notificações do feed de atividades para seu aplicativo Microsoft Teams
 
@@ -37,7 +37,7 @@ O feed de atividades é uma superfície para que os usuários acessem suas notif
 |3|**Título (primeira linha): Ator + motivo**: *Ator*: Nome do usuário ou aplicativo que iniciou a atividade. *Motivo*: descreve a atividade.|
 |4|**Carimbo de data/** hora: mostra quando a atividade ocorreu.|
 |5|**Local (segunda linha)**: mostra onde a atividade ocorreu no Teams.|
-|6 |**Visualização de texto (terceira linha)**: mostra uma linha truncada desde o início da notificação.|
+|6|**Visualização de texto (terceira linha)**: mostra uma linha truncada desde o início da notificação.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Tipos de cartões de notificação do feed de atividades
 
@@ -73,6 +73,10 @@ Cada atividade gera uma notificação do sistema. O que é exibido depende do qu
 |3|Mac|
 
 ---
+
+## <a name="step-by-step-guide"></a>Guias passo a passo
+
+Siga o [guia passo a passo para](../../sbs-graphactivity-feedbroadcast.yml) enviar notificações do feed de atividades no Teams.
 
 ## <a name="next-step"></a>Próxima etapa
 

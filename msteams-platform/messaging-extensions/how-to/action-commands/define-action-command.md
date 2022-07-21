@@ -5,16 +5,19 @@ description: Neste módulo, aprenda a definir comandos de ação de extensão de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503932"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919841"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> Quando uma ação de mensagem é iniciada, os detalhes do anexo não são enviados como parte da atividade de `turncontext` invocação.
 
 Os comandos de ação permitem apresentar aos usuários um pop-up modal chamado módulo de tarefa no Teams. O módulo de tarefa coleta ou exibe informações, processa a interação e envia as informações de volta para o Teams. Este documento orienta você sobre como selecionar locais de invocação de comando de ação, criar seu módulo de tarefa, enviar mensagem final ou cartão, criar comando de ação usando o app studio ou criar manualmente.
 
@@ -27,7 +30,7 @@ Antes de criar o comando de ação, você deve decidir os seguintes fatores:
 Confira o vídeo a seguir para saber como definir comandos de ação de extensão de mensagem:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Selecionar locais de invocação de comando de ação
@@ -84,7 +87,7 @@ Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicio
 Você pode criar um comando de ação usando **App Studio** ou **Portal do Desenvolvedor**.
 
 > [!WARNING]
- > Se você estiver usando o App Studio, recomendamos que experimente o Portal do Desenvolvedor [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 30 de junho de 2022.
+ > Se você estiver usando o App Studio, recomendamos que você tente o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será suspenso em 01 de agosto de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
