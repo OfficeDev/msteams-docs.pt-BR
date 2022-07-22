@@ -4,12 +4,12 @@ description: Neste módulo, saiba o que é a formatação de texto de cartão no
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144205"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962430"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -22,7 +22,7 @@ Os cartões aceitam formatação somente na propriedade texto, excluindo as prop
 
 O suporte à formatação difere entre os tipos de cartão. A renderização do cartão pode diferir ligeiramente entre os clientes de desktop e do aplicativo móvel do Microsoft Teams e também do Teams no navegador para desktop.
 
-Você pode incluir uma imagem embutida em qualquer cartão do Teams. Os formatos de imagem com suporte são os formatos .png, .jpg ou .gif. Mantenha as dimensões dentro de 1024 x 1024 px e tamanho de arquivo menor que 1 MB. Não há suporte para imagens .gif animadas. Para obter mais informações, consulte [tipos de cartões](./cards-reference.md#inline-card-images).
+Você pode incluir uma imagem embutida em qualquer cartão do Teams. Os formatos de imagem com suporte são os formatos .png, .jpg ou .gif. Mantenha as dimensões dentro de 1024 x 1024 pixels e tamanho de arquivo menor que 1 MB. Não há suporte para imagens .gif animadas. Para obter mais informações, consulte [tipos de cartões](./cards-reference.md#inline-card-images).
 
 Você pode formatar Cartões Adaptáveis e cartões do Conector do Office 365 em Markdown, o que inclui o suporte a determinados estilos.
 
