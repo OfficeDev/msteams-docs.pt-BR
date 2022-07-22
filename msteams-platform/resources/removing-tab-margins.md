@@ -5,12 +5,12 @@ description: Neste módulo, saiba como a remoção de margens de tabulação mel
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558279"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962423"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 
@@ -38,9 +38,9 @@ Não, você deve fornecer seu próprio preenchimento ou margens à esquerda e à
 
 **Qual é o tamanho das margens de tabulação que o Teams aplicou anteriormente?**
 
-* Esquerda e direita: 20 px
-* Superior: 16 px
-* Inferior: 0 px
+* Esquerda e direita: 20 pixels
+* Superior: 16 pixels
+* Inferior: 0 pixels
 
 > [!IMPORTANT]
 >

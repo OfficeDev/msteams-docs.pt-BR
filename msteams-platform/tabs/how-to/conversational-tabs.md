@@ -5,12 +5,12 @@ description: Neste módulo, aprenda a criar um chat de subentidade de conversa p
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841979"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962416"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -52,9 +52,12 @@ A imagem a seguir mostra o painel de conversa:
 Se o usuário iniciar uma conversa, será importante escutar o retorno de chamada desse evento para recuperar e salvar a **conversationId**:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 O `conversationResponse` objeto contém informações relacionadas à conversa que foi iniciada. É recomendável que você salve todas as propriedades desse objeto de resposta para uso posterior.
@@ -81,19 +84,22 @@ Você pode fechar manualmente o modo de exibição de conversa chamando a `close
 microsoftTeams.conversations.closeConversation();
 ```
 
-Você também pode escutar um evento quando o modo de exibição de conversa é fechado por um usuário.
+Você também pode escutar um evento quando os usuários **selecionam Fechar (X)** no modo de exibição de conversa.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia Criar Conversa| Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia Criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Guia Criar Conversa| Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia Criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 
