@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842028"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919834"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 21/07/2022 | Introduziu o guia passo a passo para enviar notificações de feed de atividades | Projete seu aplicativo > Componentes de interface do usuário > Notificações de feed de atividade > [Enviar notificação de feed de atividade](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Atualizações para enviar a ID do canal selecionado pelo usuário durante a instalação do aplicativo para bots por meio de eventos de atualização de conversa e instalação |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16/06/2022 | Recursos de mídia atualizados para dar suporte à área de trabalho e dispositivos móveis| Integrar funcionalidades de dispositivo > [integrar recursos de mídia](concepts/device-capabilities/media-capabilities.md)|
 | 08/06/2022 | Comentários opcionais do cartão para mensagem de sucesso| Compilar bots > Conversas de bot > [Mensagens em conversas de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
