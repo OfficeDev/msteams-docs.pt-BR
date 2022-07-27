@@ -5,12 +5,12 @@ description: Neste módulo, saiba como projetar módulos de tarefas para seus ap
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 07dd0457d49b167226da2fa10e91d87e6f674b6f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558111"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035265"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Criando módulos de tarefa para o seu aplicativo do Microsoft Teams
 
@@ -64,7 +64,7 @@ Eles também podem ser construídos com a estrutura [Cartões Adaptáveis](../..
 |3|**Cabeçalho**: tornar os cabeçalhos claros e concisos. Descreva a tarefa que você quer que os usuários concluam.
 |4|**Botão Fechar**: fecha o módulo de tarefas. Não aplica alterações não salvas no conteúdo do aplicativo.|
 |5|**iframe**: espaço responsivo que hospeda o conteúdo do aplicativo.|
-|6 |**Ações (opcional)**: botões relacionados ao conteúdo do seu aplicativo.|
+|6|**Ações (opcional)**: botões relacionados ao conteúdo do seu aplicativo.|
 
 ## <a name="designing-with-ui-templates"></a>Projetando com modelos de IU
 

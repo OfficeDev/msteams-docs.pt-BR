@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737381"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035153"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -49,7 +49,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | --- | --- |
 | [Bot de chamada](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Um bot que participa de chamadas de áudio ou vídeo e reuniões online. <br> **Confira também**: [Bot de chat](#c); [Bot de reunião](#m) |
 | [Recursos](../toolkit/add-capability.md) | Um recurso do Teams que você pode criar em seu aplicativo para interagir com os usuários do aplicativo. Uma funcionalidade de aplicativo é usada para estender o Teams para atender às suas necessidades de aplicativo. Um aplicativo pode ter uma ou mais funcionalidades principais, tais como guias, bots e extensão de mensagem. <br>**Consulte também**: [Funcionalidade do dispositivo](#d); [Funcionalidade de mídia](#m) |
-| [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas simples e repetitivas por usuários, como atendimento ao cliente ou equipe de suporte. <br> **Consulte também**: [Bot de conversa](#c) |
+| [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas simples e repetitivas para usuários, como atendimento ao cliente ou equipe de suporte. <br> **Consulte também**: [Bot de conversa](#c) |
 | Canal | Um único local para uma equipe compartilhar mensagens, ferramentas e arquivos. Você pode usar um canal para trabalho em equipe e comunicação. <br>**Consulte também**: [Conversa](#c) |
 | [Segredo do cliente](../bots/how-to/authentication/add-authentication.md) | O segredo/senha do cliente ou um par de chaves pública ou privada que é Certificado. Não é necessário para aplicativos nativos. <br> **Consulte também**: [Bot](#b) |
 | [Recursos de nuvem](../toolkit/add-resource.md) | Um serviço que está disponível na nuvem por meio da Internet que seu aplicativo Teams pode usar. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
@@ -71,7 +71,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | [Funcionalidades de dispositivo](../concepts/device-capabilities/device-capabilities-overview.md) | Dispositivos internos, como câmera, microfone, scanner de código de barras, galeria de fotos, em um celular ou desktop. Você pode acessar os seguintes recursos de dispositivo em dispositivos móveis ou desktop por meio de APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams. <br>**Consulte também**: [Funcionalidade](#c); [Funcionalidade de mídia](#m); [Funcionalidade de localização](#l) |
 | [Permissão do aplicativo](../concepts/device-capabilities/browser-device-permissions.md) | Uma configuração de aplicativo do Teams que você pode definir em seu aplicativo. Use-o para solicitar permissão para seu aplicativo acessar e utilizar uma funcionalidade de dispositivo nativo. Você pode gerenciar permissões de dispositivo nas configurações do Teams. <br>**Consulte também**: [Permissões do aplicativo](#a) |
 | [Ambiente do desenvolvedor](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Um tipo de ambiente de desenvolvimento que o Kit de Ferramentas do Teams cria por padrão. Ele representa configurações de ambiente remoto ou de nuvem. Um projeto pode ter vários ambientes remotos. Você pode adicionar mais ambientes de desenvolvimento ao seu projeto usando o Kit de Ferramentas do Teams. <br>**Consulte também** [Ambiente](#e); [Ambiente local](#l) |
-| [DevTools](../tabs/how-to/developer-tools.md) | As DevTools do Navegador são usadas para exibir logs do console, exibir ou modificar solicitações de rede de runtime, adicionar pontos de interrupção ao código (JavaScript) e executar a depuração interativa para um aplicativo do Teams. O recurso só estará disponível para clientes desktop e Android depois que a Visualização do Desenvolvedor tiver sido habilitada. |
+| [DevTools](../tabs/how-to/developer-tools.md) | As DevTools do navegador são usadas para exibir os logs do console, visualizar ou modificar solicitações runtime de redes, adicionar pontos de interrupção ao código (JavaScript) e executar a depuração interativa para um aplicativo do Teams. O recurso só estará disponível para clientes desktop e Android depois que a Visualização do Desenvolvedor tiver sido habilitada. |
 | [Pesquisa dinâmica](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | Um recurso de pesquisa para Cartões Adaptáveis que é útil para pesquisar e selecionar dados de grandes conjuntos de dados. Ele ajuda a filtrar as opções à medida que o usuário insere a cadeia de caracteres de pesquisa. <br>**Consulte também**: [Pesquisa estática](#s) |
 
 ## <a name="e"></a>E
@@ -181,7 +181,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | --- | --- |
 | [Tab](../tabs/what-are-tabs.md) | As guias são páginas da Web com reconhecimento de Equipes inseridas no Microsoft Teams que apontam para domínios declarados no manifesto. Você pode adicioná-lo dentro de uma equipe, chat em grupo ou aplicativo pessoal. |
 | [Chat da guia](../tabs/how-to/conversational-tabs.md) | Um tipo de guia que permite que um usuário tenha uma experiência de conversa focada em guias dinâmicas. |
-| [Módulos de tarefas](../task-modules-and-cards/what-are-task-modules.md) | Um recurso do aplicativo Teams para criar pop-up modal para concluir tarefas, exibir vídeos ou dashboard. |
+| [Módulos de tarefas](../task-modules-and-cards/what-are-task-modules.md) | Um recurso do aplicativo do Teams para criar o pop-up modal para concluir tarefas, exibir vídeos ou o painel. |
 | [Discussão da thread](../tabs/design/tabs.md#thread-discussion) | Uma conversa postada em um canal ou chat entre usuários. <br>**Consulte também** [Canal](#c);[de conversa](#c) |
 | [Teams](../overview.md) | O Microsoft Teams é o melhor aplicativo de mensagens da sua organização. É um espaço de trabalho para colaboração e comunicação em tempo real, reuniões, compartilhamento de arquivos e aplicativos. |
 | [Kit de ferramentas do Teams](../toolkit/teams-toolkit-fundamentals.md) | O Kit de Ferramentas do Microsoft Teams permite criar aplicativos personalizados do Teams diretamente no ambiente do Visual Studio Code.  |

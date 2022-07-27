@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919834"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035174"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 26/07/2022|Ações sugeridas para bots| Compilar bots > Conversas de bot > [Mensagens em conversas de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 21/07/2022 | Introduziu o guia passo a passo para enviar notificações de feed de atividades | Projete seu aplicativo > Componentes de interface do usuário > Notificações de feed de atividade > [Enviar notificação de feed de atividade](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Atualizações para enviar a ID do canal selecionado pelo usuário durante a instalação do aplicativo para bots por meio de eventos de atualização de conversa e instalação |  Compilar bots > Conversas de bot > Eventos de conversa no seu bot do Teams > [Eventos de conversa no seu bot do Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16/06/2022 | Recursos de mídia atualizados para dar suporte à área de trabalho e dispositivos móveis| Integrar funcionalidades de dispositivo > [integrar recursos de mídia](concepts/device-capabilities/media-capabilities.md)|
@@ -223,7 +224,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | 11/11/2018 | A introdução ao Node JS e ao .NET/C# foi atualizada para usar o App Studio no Teams, e uma nova seção foi adicionada na hospedagem de aplicativos do Teams baseados em Nó no Azure. | [Introdução à plataforma Microsoft Teams com C#/.NET e App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Introdução à plataforma Microsoft Teams com Node JS e App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hospede seu aplicativo Node Teams no Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 09/11/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | A Estrutura do SharePoint 1.7 enviou e com ela um novo recurso para usar a guia Microsoft Teams como uma Web Part da Estrutura do SharePoint. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 05/11/2018 | O recurso **módulo de tarefa** foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo Teams, tanto de bots como de guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget `<iframe>`como um vídeo do YouTube ou Microsoft Stream ou exibir um [Cartão adaptável](/adaptive-cards/). | [Visão geral do módulo tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
+| 05/11/2018 | O recurso **módulo de tarefa** foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo do Teams, a partir de bots e guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado em `<iframe>`, como um vídeo do YouTube ou do Microsoft Stream, ou exibir um [Cartão adaptável](/adaptive-cards/). | [Visão geral do módulo tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
 | 05/10/2018 | As informações de formatação para cartões foram atualizadas e testadas na área de trabalho, iOS e clientes Android para o Teams. | [Cartões](~/concepts/cards/cards.md), [Formatação de cartão](~/concepts/cards/cards-format.md) |
 | 24/09/2018 | As APIs de chamadas e reuniões online Microsoft Graph foram lançadas para beta e os aplicativos do Teams agora podem interagir com os usuários de maneiras avançadas usando voz e vídeo. | [Bots de chamadas e reuniões online](~/concepts/calls-and-meetings/registering-calling-bot.md), [Conceitos de mídia em tempo real](~/concepts/calls-and-meetings/real-time-media-concepts.md), [Registro de um bot de chamada](~/concepts/calls-and-meetings/registering-calling-bot.md), [depuração e teste local](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [Mídia hospedada pelo aplicativo](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [Tratamento de notificações de chamadas de entrada](~/concepts/calls-and-meetings/call-notifications.md) |
 | 11/09/2018 | As páginas de configuração de tabulação agora estão significativamente mais altas. | [Design da guia](tabs/design/tabs.md) |
