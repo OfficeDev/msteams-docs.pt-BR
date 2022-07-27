@@ -4,12 +4,12 @@ description: Neste artigo, você aprenderá a desenvolver extensões de mensagem
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 20dbc7c5a65ee44f3b40eda29a20d6d37e8a81f0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190014"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035223"
 ---
 # <a name="search-with-message-extensions"></a>Pesquisar com extensões de mensagem
 
@@ -94,7 +94,7 @@ Para abrir sua extensão de mensagem, navegue até qualquer um dos seus chats ou
 
 A maior parte do seu trabalho envolve o `onQuery` evento, que manipula todas as interações na janela de extensão de mensagem.
 
-Se você definir `canUpdateConfiguration` como `true` no manifesto, habilitará o item de menu Configurações para sua extensão de mensagem e também deverá manipular `onQuerySettingsUrl` e `onSettingsUpdate`.
+Se você definir `canUpdateConfiguration` como `true` no manifesto, habilite o item de menu Configurações para sua extensão de mensagem e também deverá manipular `onQuerySettingsUrl` e `onSettingsUpdate`.
 
 ## <a name="handle-onquery-events"></a>Manipular eventos onQuery
 
@@ -110,9 +110,9 @@ O restante do manipulador solicita `onQuery` informações ao usuário, exibe um
 
 ## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Manipular eventos onQuerySettingsUrl e onSettingsUpdate
 
-Os `onQuerySettingsUrl` eventos e `onSettingsUpdate` os eventos funcionam juntos para habilitar **o Configurações** item de menu.
+Os `onQuerySettingsUrl` eventos e `onSettingsUpdate` os eventos funcionam juntos para habilitar **o item de menu Configurações** .
 
-![Capturas de tela de locais do Configurações item de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Capturas de tela dos locais do item de menu Configurações](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 O manipulador para `onQuerySettingsUrl` retorna a URL para a página de configuração; depois que a página de configuração é fechado, `onSettingsUpdate` o manipulador para aceita e salva o estado retornado. Esse é o único caso em que `onQuery` *não recebe* a resposta da página de configuração.
 
@@ -122,7 +122,7 @@ Todas as solicitações para a extensão de mensagem são feitas por meio `Activ
 
 ### <a name="receive-user-requests"></a>Receber solicitações de usuário
 
-Quando um usuário executa uma consulta, o Microsoft Teams envia ao serviço um objeto padrão do Bot Framework`Activity`. Seu serviço deve executar sua lógica para um `Activity` que `type` foi definido `invoke` `name` como e definido `composeExtension` como um tipo com suporte, conforme mostrado na tabela a seguir.
+Quando um usuário executa uma consulta, o Microsoft Teams envia ao seu serviço um objeto padrão do Bot Framework `Activity` . Seu serviço deve executar sua lógica para um `Activity` que `type` foi definido `invoke` `name` como e definido `composeExtension` como um tipo com suporte, conforme mostrado na tabela a seguir.
 
 Além das propriedades de atividade de bot padrão, a carga contém os seguintes metadados de solicitação:
 
@@ -136,7 +136,7 @@ Além das propriedades de atividade de bot padrão, a carga contém os seguintes
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) do locatário. |
 |`channelData.channel.id`| ID do canal (se a solicitação foi feita em um canal). |
 |`channelData.team.id`| ID da equipe (se a solicitação foi feita em um canal). |
-|`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado pelo usuário.<br>O `platform` campo descreve a plataforma do cliente de mensagens. <br>Para obter mais informações, *consulte* [tipos de entidade não IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Metadados opcionais sobre o software cliente usado para enviar a mensagem de um usuário. A entidade pode conter duas propriedades:<br>O `country` campo contém o local detectado pelo usuário.<br>O `platform` campo descreve a plataforma do cliente de mensagens. <br>Para obter mais informações, *consulte* [tipos de entidade não IRI – clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 Os parâmetros de solicitação são encontrados no objeto de valor, que inclui as seguintes propriedades:
 
@@ -262,7 +262,7 @@ Para saber como usar os tipos de cartão em miniatura e hero, consulte [Adiciona
 
 Para obter documentação adicional sobre o cartão Office 365 Connector, consulte [Usando cartões Office 365 Connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-A lista de resultados é exibida na interface Microsoft Teams interface do usuário com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
+A lista de resultados é exibida na interface do usuário do Microsoft Teams com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
 
 * Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão Hero ou Thumbnail.
 * Extraído do básico `title`, e `text`propriedades `image` do anexo. Eles serão usados somente se a `preview` propriedade não estiver definida e essas propriedades estarão disponíveis.
@@ -405,7 +405,7 @@ Este exemplo mostra uma resposta com dois resultados, combinando formatos de car
 
 ### <a name="default-query"></a>Consulta padrão
 
-Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta "padrão" quando o usuário abre a extensão de mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados pré-preenchidos. Isso pode ser útil para exibir, por exemplo, itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
+Se você definir `initialRun` como `true` no manifesto, o Microsoft Teams emite uma consulta "padrão" quando o usuário abre a extensão de mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados pré-preenchidos. Isso pode ser útil para exibir, por exemplo, itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
 
 A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, exceto com um parâmetro cujo `initialRun` valor de cadeia de caracteres é `true`.
 
@@ -444,7 +444,7 @@ Cada solicitação para seus serviços inclui a ID ofuscada do usuário que exec
 },
 ```
 
-O `id` e `aadObjectId` os valores são garantidos como os do usuário Teams autenticado. Eles podem ser usados como chaves para pesquisar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação foi originada.
+O `id` e `aadObjectId` os valores são garantidos como os do usuário autenticado do Teams. Eles podem ser usados como chaves para pesquisar credenciais ou qualquer estado armazenado em cache em seu serviço. Além disso, cada solicitação contém a ID de locatário Microsoft Azure Active Directory (Azure AD) do usuário, que pode ser usada para identificar a organização do usuário. Se aplicável, a solicitação também contém as IDs de equipe e canal das quais a solicitação foi originada.
 
 ## <a name="authentication"></a>Autenticação
 
@@ -453,11 +453,11 @@ Se o serviço exigir autenticação de usuário, você precisará entrar no usu�
 A sequência é a seguinte:
 
 1. O usuário emite uma consulta ou a consulta padrão é enviada automaticamente ao seu serviço.
-2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando a ID Teams usuário.
+2. Seu serviço verifica se o usuário foi autenticado pela primeira vez inspecionando a ID de usuário do Teams.
 3. Se o usuário não tiver sido autenticado, envie uma resposta com `auth` uma ação `openUrl` sugerida, incluindo a URL de autenticação.
-4. O Microsoft Teams cliente inicia uma janela pop-up hospedando sua página da Web usando a URL de autenticação fornecida.
-5. Depois que o usuário entrar, você deverá fechar a janela e enviar um "código de autenticação" para o Teams cliente.
-6. O Teams em seguida, emiti a consulta para o serviço, que inclui o código de autenticação passado na etapa 5.
+4. O cliente do Microsoft Teams inicia uma janela pop-up que hospeda sua página da Web usando a URL de autenticação fornecida.
+5. Depois que o usuário entrar, você deverá fechar a janela e enviar um "código de autenticação" para o cliente do Teams.
+6. Em seguida, o cliente do Teams emiti a consulta para seu serviço, que inclui o código de autenticação passado na etapa 5.
 
 Seu serviço deve verificar se o código de autenticação recebido na etapa 6 corresponde ao da etapa 5, o que garante que um usuário mal-intencionado não tente falsificar ou comprometer o fluxo de entrada. Isso efetivamente "fecha o loop" para concluir a sequência de autenticação segura.
 
@@ -485,13 +485,13 @@ Para solicitar que um usuário não autenticado entre, responda com uma ação s
 ```
 
 > [!NOTE]
-> Para que a experiência de entrada seja hospedada em um pop-up Teams, a parte de domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, confira [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
+> Para que a experiência de entrada seja hospedada em um pop-up do Teams, a parte do domínio da URL deve estar na lista de domínios válidos do aplicativo. Para obter mais informações, confira [validDomains](~/resources/schema/manifest-schema.md#validdomains) no esquema de manifesto.
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar o fluxo de entrada
 
 Sua experiência de entrada deve ser responsiva e se ajustar em uma janela pop-up. Ela deve se integrar ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como com outras experiências inseridas em execução Teams, seu código dentro da janela precisa primeiro chamar`microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que poderá passá-la para a URL de entrada do OAuth.
+Assim como com outras experiências inseridas em execução no Teams, seu código dentro da janela precisa primeiro chamar `microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que poderá passá-la para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Concluir o fluxo de entrada
 
@@ -500,7 +500,7 @@ Quando a solicitação de entrada for concluída e redirecionada de volta para s
 1. Gere um código de segurança. (Pode ser um número aleatório.) Você precisa armazenar em cache esse código em seu serviço, juntamente com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
 2. Chamar `microsoftTeams.authentication.notifySuccess` e passar o código de segurança.
 
-Neste ponto, a janela fecha e o controle é passado para o Teams cliente. O cliente agora pode emitir novamente a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.
+Neste ponto, a janela fecha e o controle é passado para o cliente do Teams. O cliente agora pode emitir novamente a consulta de usuário original, juntamente com o código de segurança na `state` propriedade. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.
 
 #### <a name="reissued-request-example"></a>Exemplo de solicitação reemitida
 
@@ -555,7 +555,7 @@ Neste ponto, a janela fecha e o controle é passado para o Teams cliente. O clie
 
 ### <a name="net"></a>.NET
 
-Para receber e manipular consultas com o SDK do Bot Builder para .NET, `invoke` você pode verificar o tipo de ação na atividade de entrada e usar o método auxiliar no pacote NuGet [Microsoft.Bot.Connector.Teams para](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) determinar se é uma atividade de extensão de mensagem.
+Para receber e manipular consultas com o SDK do Bot Builder para .NET, `invoke` você pode verificar o tipo de ação na atividade de entrada e, em seguida, usar o método auxiliar no pacote NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) para determinar se é uma atividade de extensão de mensagem.
 
 #### <a name="example-code-in-net"></a>Código de exemplo no .NET
 

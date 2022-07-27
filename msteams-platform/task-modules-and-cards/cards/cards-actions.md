@@ -3,12 +3,12 @@ title: Adicionar ações de cartão em um bot
 description: Neste módulo, saiba o que são ações de cartão no Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483967"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035300"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -29,7 +29,7 @@ Os cartões usados por bots e extensões de mensagem no Teams são compatíveis 
 >
 >* O Teams não dá suporte aos tipos `CardAction` não listados na tabela anterior.
 >* O Teams não dá suporte à propriedade `potentialActions`.
->* As ações de cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou Serviço de Bot do Azure. Não há suporte para ações sugeridas no Microsoft Teams. Se você quiser que os botões apareçam em uma mensagem de bot do Teams, use um cartão.
+>* As ações de cartão são diferentes das [ações sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) no Bot Framework ou Serviço de Bot do Azure.
 >* Se você estiver usando uma ação de cartão como parte de uma extensão de mensagem, as ações não funcionarão até que o cartão seja enviado ao canal. As ações não funcionam enquanto o cartão está na caixa de mensagem de redação.
 
 ## <a name="action-type-openurl"></a>Tipo de ação openUrl
@@ -561,7 +561,7 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
 
 ## <a name="code-samples"></a>Exemplos de código
 
-|S.no|Cartão| descrição|.NET|Javascript|Python|Java|
+|S.no|Cartão| description|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|Usando cartões|Apresenta todos os tipos de cartão, incluindo miniatura, áudio, mídia etc. Compila o welcomeing user + multi-prompt bot apresentando um cartão com botões na mensagem de boas-vindas que roteiam para a caixa de diálogo apropriada.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|Cartões adaptáveis|Demonstra como a caixa de diálogo de vários turnos pode usar um cartão para obter a entrada do usuário para nome e idade.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|

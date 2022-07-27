@@ -3,12 +3,12 @@ title: Compartilhar no Teams a partir de aplicativos Web
 description: Saiba como adicionar o botão Compartilhar no Teams incorporado em seu site, com uma visualização de site, usando Exemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558475"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035314"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartilhar no Teams a partir de aplicativos Web
 
@@ -38,7 +38,6 @@ Confira o vídeo a seguir para saber como inserir o botão Compartilhar no Teams
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
-
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorpore um botão Compartilhar no Teams
 
@@ -117,7 +116,7 @@ Você pode usar as versões padrão HTML ou a versão Open Graph.
 
 Para professores que usam o botão Compartilhar com o Teams, `Create an Assignment` há uma opção adicional que permite que você crie rapidamente uma tarefa na Equipe escolhida, com base no link compartilhado. A imagem a seguir exibe a opção Compartilhar no Teams para Educação:
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Pop-up Compartilhar no Teams para Edução":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Compartilhar com a educação pop-up do Teams":::
 
 ## <a name="full-launcherjs-definition"></a>Definição completa do launcher.js
 

@@ -1,16 +1,16 @@
 ---
 title: Módulos de tarefas
 author: surbhigupta
-description: Neste módulo, saiba como adicionar experiências de pop-up modais para coletar ou exibir informações aos usuários de seus aplicativos Microsoft Teams aplicativos
+description: Neste módulo, saiba como adicionar experiências pop-up modais para coletar ou exibir informações aos usuários de seus aplicativos do Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23d6a0f1645fefe66544c755ddb617eba9ea8f3e
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143596"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035293"
 ---
 # <a name="task-modules"></a>Módulos de tarefas
 
@@ -22,13 +22,13 @@ Os módulos de tarefas permitem que você crie experiências pop-up modais em se
 
 Os módulos de tarefa são úteis para iniciar e concluir tarefas ou exibir informações avançadas, como vídeos ou painéis do Power Business Intelligence (BI). Uma experiência pop-up geralmente é mais natural para usuários iniciando e concluindo tarefas em comparação com uma guia ou uma experiência de bot baseada em conversa.
 
-Os módulos de tarefa se baseam na base Microsoft Teams guias. Eles são essencialmente uma guia dentro de uma janela pop-up. Eles usam o mesmo SDK, portanto, se você criou uma guia, já está familiarizado com a criação de um módulo de tarefa.
+Os módulos de tarefa se baseam nas guias do Microsoft Teams. Eles são essencialmente uma guia dentro de uma janela pop-up. Eles usam o mesmo SDK, portanto, se você criou uma guia, já está familiarizado com a criação de um módulo de tarefa.
 
 Módulos de tarefa podem ser invocados de três maneiras:
 
-* Guias de canal ou pessoais: usando o SDK de guias Microsoft Teams, você pode invocar módulos de tarefa de botões, links ou menus na guia. Para obter mais informações, [consulte usando módulos de tarefa em guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-* Bots: usando botões em [cartões](~/task-modules-and-cards/cards/cards-reference.md) enviados do bot. Isso é útil quando você não precisa que todos em um canal vejam o que você está fazendo com um bot. Por exemplo, ao fazer com que os usuários respondam a uma votação em um canal, não é útil ver um registro dessa votação sendo criada. Para obter mais informações, [consulte usando módulos de tarefa Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-* Fora do Teams de um link profundo: você também pode criar URLs para invocar um módulo de tarefa de qualquer lugar. Para obter mais informações, consulte [a sintaxe de vínculo profundo do módulo de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
+* Guias de canal ou pessoal: usando o SDK de Guias do Microsoft Teams, você pode invocar módulos de tarefas de botões, links ou menus em sua guia. Para obter mais informações, [consulte usando módulos de tarefa em guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Bots: usando botões em [cartões](~/task-modules-and-cards/cards/cards-reference.md) enviados do bot. Isso é útil quando você não precisa que todos em um canal vejam o que você está fazendo com um bot. Por exemplo, ao fazer com que os usuários respondam a uma votação em um canal, não é útil ver um registro dessa votação sendo criada. Para obter mais informações, consulte [como usar módulos de tarefa de bots do Teams](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* Fora do Teams por meio de um link profundo: você também pode criar URLs para invocar um módulo de tarefa de qualquer lugar. Para obter mais informações, consulte [a sintaxe de vínculo profundo do módulo de tarefas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Componentes de um módulo de tarefa
 

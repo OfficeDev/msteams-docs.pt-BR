@@ -3,14 +3,14 @@ title: Autenticação silenciosa
 description: Neste módulo, saiba como fazer autenticação silenciosa, logon único e Azure AD para guias e como ele funciona
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503624"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035307"
 ---
-# <a name="use-silent-authentication-in-azure-ad"></a>Usar autenticação silenciosa no Azure AD
+# <a name="use-silent-authentication-in-azure-ad"></a>Usar a autenticação silenciosa no Azure AD
 
 > [!IMPORTANT]
 > O suporte e o desenvolvimento da Microsoft para Biblioteca de Autenticação do Active Directory (ADAL), incluindo as correções de segurança, termina em **30 de junho de 2022**. Para continuar recebendo suporte, atualize seus aplicativos para usar a MSAL (Biblioteca de Autenticação da Microsoft). Consulte [Migrar aplicativos para a MSAL (Biblioteca](/azure/active-directory/develop/msal-migration) de Autenticação da Microsoft).

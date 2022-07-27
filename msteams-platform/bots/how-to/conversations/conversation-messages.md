@@ -4,12 +4,12 @@ description: Aprenda as maneiras de ter uma conversa com um bot do Teams e dados
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695296"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035190"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -195,6 +195,38 @@ async def on_members_added_activity(
 > A divisão de mensagens ocorre quando uma mensagem de texto e um anexo são enviados na mesma carga de atividade. Essa atividade é dividida em atividades separadas pelo Microsoft Teams, uma com apenas uma mensagem de texto e a outra com um anexo. À medida que a atividade é dividida, você não recebe a ID da mensagem em resposta, que é usada para atualizar [ou](~/bots/how-to/update-and-delete-bot-messages.md) excluir a mensagem proativamente. É recomendável enviar atividades separadas em vez de depender da divisão de mensagens.
 
 As mensagens enviadas entre usuários e bots incluem dados internos do canal dentro da mensagem. Esses dados permitem que o bot se comunique corretamente nesse canal. O SDK do Construtor de Bot permite modificar a estrutura da mensagem.
+
+## <a name="send-suggested-actions"></a>Enviar ações sugeridas
+
+As ações sugeridas permitem que o bot apresente botões que o usuário pode selecionar para fornecer entrada. As ações sugeridas aprimoram a experiência do usuário, permitindo que o usuário responda a uma pergunta ou faça uma escolha com a seleção de um botão, em vez de digitar uma resposta com um teclado. Os botões permanecem visíveis e acessíveis para o usuário nos cartões avançados, mesmo depois que o usuário faz uma seleção, enquanto para ações sugeridas, os botões não estão disponíveis. Isso impede que o usuário escolha botões obsoletos em uma conversa.
+
+Para adicionar ações sugeridas a uma mensagem, `suggestedActions` defina a propriedade do objeto [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) para especificar a lista de objetos [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) que representam os botões a serem apresentados ao usuário. Para obter mais informações, consulte [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+Este é um exemplo de implementação e experiência de ações sugeridas:
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Ações sugeridas pelo bot" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` só têm suporte para chatbots um-para-um e mensagens baseadas em texto e não para Cartões Adaptáveis ou anexos.
+> * Atualmente é `imBack` o único tipo de ação com suporte e o Teams exibe até três ações sugeridas.
 
 ## <a name="teams-channel-data"></a>Dados do canal do Teams
 
@@ -427,7 +459,7 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 
 |Nome do exemplo | Descrição | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 
