@@ -5,28 +5,28 @@ description: Colaborando com canais compartilhados.
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 044a5189a626acfcb26631d7d8ee843264401dfe
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 96cd3014fa1cee38832724e1b50cf29db372d711
+ms.sourcegitcommit: d40ea0d504db66d49bbe0955f7031db1cd210056
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058284"
+ms.locfileid: "67060038"
 ---
 # <a name="shared-channels"></a>Canais compartilhados
 
-Os canais compartilhados no Teams permitem que os membros de um canal colaborem com usuários em outras equipes e organizações. Você pode criar e compartilhar um canal compartilhado com:
+Os canais compartilhados no Microsoft Teams permitem que os membros de um canal colaborem com usuários em outras equipes e organizações. Você pode criar e compartilhar um canal compartilhado com:
 
 * Membros de outra equipe dentro da mesma organização.
 * Indivíduos dentro da mesma organização.
 * Indivíduos e outras equipes de outras organizações.
 
-Os canais compartilhados facilitam a colaboração perfeitamente. Permite que usuários externos fora da sua organização colaborem com usuários internos no Teams sem alterar o contexto do usuário. Aprimora a experiência do usuário, ao contrário do uso de contas de convidado, por exemplo, os membros devem sair do Teams e entrar novamente usando uma conta de convidado. Os aplicativos do Teams agora podem estender o poderoso espaço de colaboração.
+Os canais compartilhados facilitam a colaboração perfeitamente. Permitir que usuários externos fora da sua organização colaborem com usuários internos no Teams sem alterar o contexto do usuário. Aprimorar a experiência do usuário, ao contrário do uso de contas de convidado, por exemplo, os membros devem sair do Teams e entrar novamente usando uma conta de convidado. Os aplicativos do Teams agora podem estender o poderoso espaço de colaboração.
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Imagem de Canal Compartilhado"border="true" :::
 
 ## <a name="manifest-update-in-shared-channels"></a>Atualização de manifesto em canais compartilhados
 
-Quando a experiência do usuário de conteúdo é carregada em um canal compartilhado, use os dados recebidos `getContext` da chamada para alterações de canal compartilhado. `getContext`a chamada publica duas novas propriedades e `hostTeamGroupID` `hostTenantID`, que são usadas para recuperar a associação de canal do Microsoft API do Graph. `hostTeam` é a equipe que criou o canal compartilhado.
+Quando a experiência do usuário de conteúdo é carregada em um canal compartilhado, use os dados recebidos `getContext` da chamada para alterações de canal compartilhado. `getContext` a chamada publica duas novas propriedades e `hostTeamGroupID` `hostTenantID`, que são usadas para recuperar a associação de canal usando APIs do Microsoft Graph. `hostTeam` é a equipe que cria o canal compartilhado.
 
 SupportedChannelTypes é uma propriedade opcional que habilita seu aplicativo em canais não padrão. Se seu aplicativo der suporte ao escopo da equipe e a propriedade for definida, o Teams habilitará seu aplicativo em cada tipo de canal adequadamente. No momento, há suporte para canais privados e compartilhados. Para obter mais informações, [consulte supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
@@ -46,7 +46,7 @@ SupportedChannelTypes é uma propriedade opcional que habilita seu aplicativo em
 
 > [!NOTE]
 >
-> * Se o aplicativo der suporte ao escopo da equipe, ele sempre funcionará em canais padrão, independentemente de quais valores são definidos nessa propriedade.
+> * Se o aplicativo der suporte ao escopo da equipe, ele funcionará em canais padrão, independentemente de quais valores são definidos nessa propriedade.
 > * Seu aplicativo pode precisar levar em conta as propriedades exclusivas de cada um desses tipos de canal para funcionar corretamente.
 
 Para obter mais informações sobre como habilitar sua guia, consulte:
@@ -93,7 +93,7 @@ Você pode classificar membros como no locatário ou fora do `tenantID` locatár
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
-2. Usando `getContext`, compare `tenantID` o membro com a `hostTenantID` propriedade.
+2. Use `getContext`, compare `tenantID` o membro com a `hostTenantID` propriedade.
 
 ## <a name="azure-ad-native-identity"></a>Azure AD identidade nativa
 
