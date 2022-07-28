@@ -3,12 +3,12 @@ title: Obter contexto para sua guia
 description: Neste módulo, saiba como obter o contexto do usuário para suas guias, contexto do usuário e informações de contexto do Access
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 63bbc9c0e5f20e293f9230000597860e3f053274
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841719"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058113"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -17,8 +17,6 @@ Sua guia requer informações contextuais para exibir conteúdo relevante:
 * Informações básicas sobre o usuário, a equipe ou a empresa.
 * Informações de localidade e tema.
 * O `page.id` e `page.subPageId` que identificam o que está nessa guia (conhecido `entityId` como e `subEntityId` antes do TeamsJS v.2.0.0).
-
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="user-context"></a>Contexto do usuário
 
@@ -41,11 +39,11 @@ Você pode acessar informações de contexto de duas maneiras:
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obter contexto inserindo valores de espaço reservado de URL
 
-Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os espaços reservados disponíveis incluem todos os campos no objeto [de](/javascript/api/@microsoft/teams-js/app.context) contexto. Os espaços reservados comuns incluem as seguintes listas:
+Usar espaços reservados em sua configuração ou URLs de conteúdo. O Microsoft Teams substitui os espaços reservados pelos valores relevantes ao determinar a configuração real ou o URL do conteúdo. Os espaços reservados disponíveis incluem todos os campos no objeto [de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) contexto. Os espaços reservados comuns incluem as seguintes propriedades:
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): a ID exclusiva definida pelo desenvolvedor para a página definida ao [configurar a página pela primeira vez](~/tabs/how-to/create-tab-pages/configuration-page.md). (Conhecido como anterior `{entityId}` ao TeamsJS v.2.0.0).
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): a ID exclusiva definida pelo desenvolvedor para a subpágina que esse conteúdo aponta definido ao gerar um [link](~/concepts/build-and-test/deep-links.md) profundo para um item específico dentro da página. (Conhecido como anterior `{subEntityId}` ao TeamsJS v.2.0.0).
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): um valor adequado como uma dica de logon para Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário inicial. (Conhecido como anterior `{loginHint}` ao TeamsJS v.2.0.0).
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): um valor adequado como uma dica de entrada para Azure AD. Geralmente, esse é o nome de logon do usuário atual em seu locatário inicial. (Conhecido como anterior `{loginHint}` ao TeamsJS v.2.0.0).
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): o nome principal do usuário atual no locatário atual. (Conhecido como anterior `{userPrincipalName}` ao TeamsJS v.2.0.0).
 * [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): a ID Azure AD objeto do usuário atual no locatário atual. (Conhecido como anterior `{userObjectId}` ao TeamsJS v.2.0.0).
 * [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): o tema da interface do usuário atual, como `default`, `dark`ou `contrast`. (Conhecido como anterior `{theme}` ao TeamsJS v.2.0.0).
@@ -70,6 +68,49 @@ Por exemplo, no manifesto do aplicativo, se você definir o atributo *tab config
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obter contexto usando a biblioteca JavaScript do Microsoft Teams
 
 Você também pode recuperar as informações listadas acima usando o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) chamando `microsoftTeams.getContext(function(context) { /* ... */ })`.
+
+O código a seguir fornece um exemplo de variável de contexto:
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
@@ -184,6 +225,9 @@ Para obter mais informações, [consulte Atualizações interface *de* contexto 
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto em canais privados
 
+> [!NOTE]
+> No momento, os canais privados estão apenas na versão prévia privada do desenvolvedor.
+
 Quando sua página de conteúdo é carregada em um canal privado, `getContext` os dados recebidos da chamada são ofuscados para proteger a privacidade do canal.
 
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal privado:
@@ -200,10 +244,9 @@ Se sua página usa qualquer um desses valores, `channel.membershipType` `Private
 ## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Recuperar contexto em Conexão Microsoft Teams canais compartilhados
 
 > [!NOTE]
-> Atualmente, os Conexão Microsoft Teams compartilhados estão apenas na versão [prévia do](../../resources/dev-preview/developer-preview-intro.md) desenvolvedor.
+> Atualmente, os Conexão Microsoft Teams compartilhados estão apenas na versão prévia do desenvolvedor.
 
 Quando sua página de conteúdo é carregada em um canal Conexão Microsoft Teams compartilhado, `getContext` os dados recebidos da chamada são alterados devido à lista exclusiva de usuários em canais compartilhados.
-
 Os campos a seguir são alterados quando sua página de conteúdo está em um canal compartilhado:
 
 * `team.groupId`: indefinido para canais compartilhados.
@@ -221,7 +264,37 @@ Além dessas alterações de campo, há dois novos campos disponíveis para cana
 Se sua página usa qualquer um desses valores, `channel.membershipType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
 
 > [!NOTE]
-> Sempre que um usuário reinicia ou recarrega a área de trabalho do Teams ou o cliente Web, uma nova sessionID é criada, que é controlada pela sessão do Teams, enquanto que, quando um usuário sai dos aplicativos do Teams e o recarrega na plataforma teams, uma nova sessionID de aplicativo é criada, que é controlada pela sessão de aplicativo.
+> `teamSiteUrl` também funciona bem para canais padrão.
+> Se sua página usa qualquer um desses valores, `channelType` `Shared` o valor do campo deve ser determinar se a página é carregada em um canal compartilhado e pode responder adequadamente.
+
+## <a name="get-context-in-shared-channels"></a>Obter contexto em canais compartilhados
+
+Quando a experiência do usuário de conteúdo é carregada em um canal compartilhado, use os dados recebidos `getContext` da chamada para alterações de canal compartilhado. Se a guia usar qualquer um dos valores a seguir, `channelType` você deverá preencher o campo para determinar se a guia é carregada em um canal compartilhado e responder adequadamente.
+Para canais compartilhados, `groupId` `null`o valor é , uma vez que a groupId da equipe host não reflete com precisão a verdadeira associação do canal compartilhado. Para resolver isso, as propriedades e as `hostTeamGroupID` propriedades `hostTenantID` são recém-adicionadas e úteis para fazer chamadas API do Graph Microsoft para recuperar a associação. `hostTeam` refere-se à Equipe que criou o canal compartilhado. `currentTeam` refere-se à Equipe da qual o usuário atual está acessando o canal compartilhado.
+
+Para obter mais informações sobre esses conceitos, consulte [Canais compartilhados](~/concepts/build-and-test/shared-channels.md).
+
+Use as seguintes propriedades `getContext` em canais compartilhados:
+
+| Propriedade | Descrição |
+|----------|--------------|
+|`channelId`| A propriedade é definida como a ID do thread do canal SC.|
+|`channelType`| A propriedade é definida como para `sharedChannel` canais compartilhados.|
+|`groupId`|A propriedade é para `null` canais compartilhados.|
+|`hostTenantId`| A propriedade é recém-adicionada e descreve a ID de locatário do host, `tid` útil para comparar com a propriedade de ID de locatário do usuário atual. |
+|`hostTeamGroupId`| A propriedade é recém-adicionada e descreve a ID do grupo de Azure AD da equipe host, útil para fazer chamadas do Microsoft API do Graph para recuperar a associação de canal compartilhado. |
+|`teamId`|A propriedade é recém-adicionada e definida como a ID de thread da equipe compartilhada atual. |
+|`teamName`|A propriedade é definida como a equipe compartilhada atual `teamName`. |
+|`teamType`|A propriedade é definida como a equipe compartilhada atual `teamType`.|
+|`teamSiteUrl`|A propriedade descreve o canal compartilhado `channelSiteUrl`.|
+|`teamSitePath`| A propriedade descreve o canal compartilhado `channelSitePath`.|
+|`teamSiteDomain`| A propriedade descreve o canal compartilhado `channelSiteDomain`.|
+|`tenantSKU`| A propriedade descreve a equipe de host `tenantSKU`.|
+|`tid`|  A propriedade descreve a ID de locatário do usuário atual.|
+|`userObjectId`|  A propriedade descreve a ID do usuário atual.|
+|`userPrincipalName`| A propriedade descreve o UPN do usuário atual.|
+
+Para obter mais informações sobre canais compartilhados, consulte [Canais compartilhados](~/concepts/build-and-test/shared-channels.md).
 
 ## <a name="handle-theme-change"></a>Manipular alteração de tema
 

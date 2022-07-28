@@ -4,12 +4,12 @@ description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503470"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058204"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -396,7 +396,7 @@ O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco é ne
 |`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔️|A URL https:// a ser usada ao configurar a guia.|
 |`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
 |`scopes`|Matriz de enumeração|1|✔️|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
-|`context` |matriz de enumerações|6 ||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`.|
+|`context` |matriz de enumerações|6||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`.|
 |`sharePointPreviewImage`|Cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opções são `sharePointFullPage` e `sharePointWebPart` |
 
@@ -667,6 +667,17 @@ Você pode definir qualquer uma das seguintes propriedades:
 * `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**Opcional** - matriz
+
+Habilita seu aplicativo em canais não padrão. Se seu aplicativo der suporte a um escopo de equipe e essa propriedade estiver definida, o Teams habilitará seu aplicativo em cada tipo de canal adequadamente. Atualmente, há suporte para os tipos de canal privado e compartilhado.
+
+> [!NOTE]
+>
+> * Se o aplicativo der suporte a um escopo de equipe, ele funcionará nos canais padrão, independentemente dos valores definidos nessa propriedade.
+> * Seu aplicativo pode levar em conta as propriedades exclusivas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar o contexto](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) em canais privados e [recuperar o contexto em canais compartilhados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
 Cadeia de caracteres - **opcional**.
@@ -692,7 +703,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -713,6 +724,7 @@ Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 itens||Cenas suportadas da reunião.|
+|`supportsStreaming`|Booliano|||Um valor que indica se um aplicativo pode transmitir o conteúdo de áudio e vídeo da reunião para um ponto de extremidade RTMP (protocolo de reunião em tempo real). O valor padrão é **falso**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

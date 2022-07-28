@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 97dcb7076797531b510b323e5d7671a8afed0961
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841887"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058246"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicativos para reuniões e chamadas do Teams
 
@@ -51,6 +51,8 @@ Este artigo fornece uma visão geral da extensibilidade do aplicativo de reuniõ
 Aprimore sua experiência de reunião ao usar o recurso de extensibilidade de reunião. Esse recurso permite que você integre seus aplicativos nas reuniões. Ele também inclui diferentes estágios do ciclo de vida de uma reunião, em que você pode integrar guias, bots e extensões de mensagens. Você pode identificar várias funções de participantes e tipos de usuário, obter eventos de reunião e gerar diálogos de reunião.
 
 Para personalizar o Teams com aplicativos para reuniões, habilite seus aplicativos para reuniões do Teams atualizando o manifesto do aplicativo e também configure os aplicativos para cenários de reunião.
+
+Personalize a permissão do aplicativo para membros externos no canal compartilhado, se o aplicativo compartilhar informações importantes. As permissões de aplicativo em [canais compartilhados](../concepts/build-and-test/Shared-channels.md) seguem a lista de aplicativos da equipe host e a política de aplicativo do locatário do host.
 
 O novo recurso personalizado de cenas do Modo Conferência permite que os usuários colaborem em uma reunião com sua equipe em um só lugar.
 
