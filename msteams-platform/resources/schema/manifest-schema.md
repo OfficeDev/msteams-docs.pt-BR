@@ -3,16 +3,16 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895493"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058211"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
-O manifesto do aplicativo Microsoft Teams descreve como seu aplicativo se integra ao produto Microsoft Teams. O manifesto do seu aplicativo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,...,1.12 e a versão 1.13 atual (veja a nota abaixo) são suportadas (usando "v1.x" no URL).
+O manifesto do aplicativo Microsoft Teams descreve como seu aplicativo se integra ao produto Microsoft Teams. O manifesto do seu aplicativo deve estar em conformidade com o esquema hospedado em [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json). As versões anteriores 1.0, 1.1,...,1.13, e a versão atual 1.14 são cada uma  suportadas (usando "v1.x" no URL).
 Para obter mais informações sobre as alterações feitas em cada versão, consulte o [registro de alterações do manifesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 A tabela a seguir lista as versões do TeamsJS e do manifesto do aplicativo de acordo com diferentes cenários de aplicativo:
@@ -25,8 +25,8 @@ A amostra do esquema a seguir mostra todas as opções de extensibilidade:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -753,7 +753,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -777,9 +777,20 @@ Você pode definir qualquer uma das seguintes propriedades:
 * `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
 * `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**Opcional** - matriz
+
+Habilita seu aplicativo em canais não-padronizados. Se seu aplicativo der suporte a um escopo de equipe e esta propriedade for definida, o Teams habilita seu aplicativo em cada tipo de canal adequadamente. Atualmente, há suporte para os tipos de canais privados e compartilhados.
+
+> [!NOTE]
+>
+> * Se seu aplicativo der suporte a um escopo de equipe, ele funciona nos canais padrão independentemente dos valores que são definidos nesta propriedade.
+> * Seu aplicativo pode levar em conta as propriedades únicas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar contexto em canais privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) e [recuperar contexto em canais compartilhados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
-**Opcional**—booliano
+**Opcional** - booliano
 
 Quando a propriedade `defaultBlockUntilAdminAction` é definida como **true**, o aplicativo fica oculto dos usuários por padrão até que o administrador permita. Se definido como **true**, o aplicativo ficará oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração do Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloqueio de aplicativos padrão, consulte [Ocultar o aplicativo Teams até a aprovação pelo administrador](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
@@ -810,6 +821,7 @@ Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 itens||Cenas suportadas da reunião.|
+|`supportsStreaming`|Booliano|||Um valor que indica se um aplicativo pode transmitir o conteúdo de áudio e vídeo da reunião para um ponto de extremidade de protocolo de reunião em tempo real (RTMP). O valor padrão é **falso**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

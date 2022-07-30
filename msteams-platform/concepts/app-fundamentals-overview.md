@@ -5,12 +5,12 @@ description: Apresente os elementos de planejamento de um aplicativo, compreens�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558713"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058239"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -55,7 +55,7 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representação conceitual da solução do Microsoft Teams.":::
 
-    Seus aplicativos aparecem no Teams como Guias, Bots, Extensões de Mensagem, Conectores e Webhooks ou como um aplicativo de várias funcionalidades. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
+    Seus aplicativos aparecem no Teams como guias, bots, extensões de mensagens, conectores e webhooks ou como um aplicativo de vários recursos. Essas funcionalidades são habilitadas no back-end pelos aplicativos Azure, Microsoft Graph, SharePoint e Power que ajudam a automatizar tarefas e processos.
 
     Juntos, essas funcionalidades dão vida à sua solução de aplicativo.
 
@@ -66,17 +66,9 @@ Entender o usuário e sua preocupação são os primeiros indicadores de como um
 * Integre seu aplicativo com o Teams e outros aplicativos, tais como o Microsoft 365, Microsoft Graph e muito mais.
 * Utilize o Portal do Desenvolvedor para configurar, gerenciar e implantar seu aplicativo.
 
-#### <a name="government-community-cloud"></a>Nuvem da Comunidade Governamental
+### <a name="government-community-cloud"></a>Nuvem da Comunidade Governamental
 
 Nuvem da Comunidade Governamental (GCC) é uma cópia do ambiente comercial focada no governo. O Departamento de Defesa (DOD) e os prestadores de serviço federais devem atender aos rigorosos requisitos de segurança cibernética e conformidade. Para esse fim, a GCC-High foi criada para atender às necessidades dos prestadores de serviços Federais e do DOD. A GCC-High é uma cópia da nuvem do DOD, mas existe em seu próprio ambiente soberano. A nuvem do DOD foi criada somente para o Departamento de Defesa.
-
-Os pontos de extremidade para nuvem governamental são:
-
-| Tenant | CCG | GCC-High | DOD |
-|-------------|---------|---|---|
-|Cliente do Teams|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Administrador do Teams |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GCC-High e o DOD:
 
@@ -85,13 +77,14 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 | Aplicativos de propriedade de Teams como em aplicativos desenvolvidos internamente | ✔️ O aplicativo está habilitado se tiverGCC | ✔️ O aplicativo está habilitado se tiver GCC-High | ✔️ O aplicativo está habilitado se tiver DOD |
 | Aplicativos da Microsoft | ✔️ Aplicativos da Microsoft compatíveis com o GCC | ✔️ Aplicativos da Microsoft compatíveis com a GCC-High. | ✔️ Aplicativos da Microsoft compatíveis com o DOD |
 | Aplicativos 3P ou de terceiros | ✔️ Aplicativos de terceiros estão disponíveis. Desabilitado por padrão e o administrador do locatário usa seu próprio critério para habilita-lo. | ❌ | ❌ |
-| Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️(****Interface do Usuário de Conformidade**_) | ✔️(_ ***Interface do Usuário de Conformidade***) |
-| Bots personalizados ou Lob | ✔️ | ✔️(****Interface do Usuário de Conformidade***) | ❌ |
-| Extensões de mensagem personalizadas | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️ | ✔️ |
 | Sideload de aplicativos | ✔️ | ❌ | ❌ |
+| Bots personalizados ou Lob | ✔️ | ❌ | ❌ |
+| Extensões de mensagens personalizadas | ❌ | ❌ | ❌ |
 | Conectores personalizados | ❌ | ❌ | ❌ |
 
-****Interface do Usuário de Conformidade***: Ao habilitar as comunicações de terceiros, os clientes aceitam que tal comunicação esteja sendo processada por terceiros e não pela Microsoft. O cliente é o único responsável por mitigar os riscos associados à conexão com bots de terceiros em seus serviços. A Microsoft não endossa e não oferece garantias, expressas ou implícitas, em relação à segurança de terceiros que o cliente permite que se conectem ao seu serviço. Habilitar os bots estenderá o limite do seu sistema além desse locatário com base no bot que você escolher para aproveitar. É sua responsabilidade garantir que isso atenda aos seus requisitos de conformidade, incluindo FedRAMP, DFARS, ITAR, etc. É sua responsabilidade avaliar o risco e a conformidade de qualquer ponto de extremidade e URL ao qual você se conectar.
+**Conformidade da Interface do Usuário**: Ao habilitar as comunicações de terceiros, os clientes aceitam que tal comunicação esteja sendo processada por terceiros e não pela Microsoft. O cliente é o único responsável por mitigar os riscos associados à conexão com bots de terceiros em seus serviços. A Microsoft não endossa e não oferece garantias, expressas ou implícitas, em relação à segurança de terceiros que o cliente permite que se conectem ao seu serviço. Habilitar os bots estenderá o limite do seu sistema além desse locatário com base no bot que você escolher para aproveitar. É sua responsabilidade garantir que isso atenda aos seus requisitos de conformidade, incluindo FedRAMP, DFARS, ITAR, etc. É sua responsabilidade avaliar o risco e a conformidade de qualquer ponto de extremidade e URL ao qual você se conectar.
 
 A lista a seguir ajuda a identificar a disponibilidade da GCC, GCC High e do DOD para os recursos:
 
