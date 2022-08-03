@@ -561,6 +561,44 @@
           href: samples/teams-low-code-solutions.md
         - name: Adicionar um chatbot de Agentes Virtuais de Energia
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: Controles de colaboração
+      items:
+        - name: Visão geral
+          href: samples/collaboration-control.md
+        - name: Instalar os Controles de colaboração
+          href: samples/install-collaboration-control.md
+        - name: Criar um aplicativo com os Controles de Colaboração
+          href: samples/app-with-collaboration-controls.md
+        - name: Implantar um aplicativo com o Controle colaboração no Teams
+          href: samples/deploy-collaboration-control-in-teams.md
+        - name: Configurações opcionais do aplicativo Controle colaboração
+          items:
+            - name: Power Automate
+              href: samples/collaboration-control-power-automate.md
+            - name: Configurar as tarefas para os clientes externos
+              href: samples/configure-tasks.md
+            - name: 'Tabelas virtuais para Tarefas, Reuniões e Arquivos'
+              items:
+                - name: Visão geral
+                  href: samples/virtual-tables-for-tasks.md
+                - name: API Web das tabelas virtuais
+                  href: samples/virtual-tables-api.md
+                - name: Referência de entidade das tabelas virtuais
+                  href: samples/virtual-table-entity-references.md
+        - name: Controles de colaboração e API das configurações
+          items:
+            - name: Visão geral
+              href: samples/collaboration-api-reference.md
+            - name: Colaboração – APIs personalizadas
+              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+            - name: Colaboração – APIs OData Padrão
+              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+            - name: Configurações – APIs personalizadas
+              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+            - name: Configurações – APIs OData Padrão
+              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+        - name: Limitações do Controle colaboração
+          href: samples/collaboration-controls-limitations.md
     - name: Modelos de aplicativos para o Teams
       href: samples/app-templates.md
     - name: Conectores de Turnos prontos para produção

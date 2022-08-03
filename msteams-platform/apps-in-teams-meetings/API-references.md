@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919757"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232257"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -37,6 +37,8 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs do Microsoft T
 |[**Obter Estado de Compartilhamento da Janela de Conteúdo**](#get-app-content-stage-sharing-state-api)| Busque informações sobre o estado de compartilhamento do aplicativo no estágio da reunião. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Obter Recursos de Compartilhamento da Janela de Conteúdo**](#get-app-content-stage-sharing-capabilities-api)| Busque os recursos do aplicativo para compartilhar com o estágio da reunião. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Obtenha eventos de reunião do Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Busque eventos de reunião em tempo real, como a hora real de início e término.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**Obter alto-falante de áudio de entrada**](#get-incoming-audio-speaker) | Permite que um aplicativo obtenha a configuração do alto-falante de áudio de entrada para o usuário da reunião.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Alternar áudio de entrada**](#toggle-incoming-audio) | Permite que um aplicativo alterne a configuração do alto-falante de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
 
@@ -144,8 +146,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | ID de email do usuário. |
 | **user.userPrincipalName** | UPN do usuário. |
 | **user.tenantId** | Locatário do Azure Active Directory. |
-| **user.userRole** | Função do usuário, por exemplo, 'admin' ou 'user'. |
-| **meeting.role** | A função do participante na reunião. por exemplo, 'Organizador' ou 'Apresentador' ou 'Participante'. |
+| **user.userRole** | Função do usuário. Por exemplo, 'admin' ou 'user'. |
+| **meeting.role** | A função do participante na reunião. Por exemplo, 'Organizador' ou 'Apresentador' ou 'Participante'. |
 | **meeting.inMeeting** | O valor que indica se o participante está na reunião. |
 | **conversation.id** | A ID de chat da reunião. |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
@@ -174,7 +176,7 @@ Todos os usuários em uma reunião recebem as notificações enviadas por meio d
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
-A tabela a seguir inclui os parâmetros de consulta:
+A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
@@ -501,7 +503,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | **details.scheduledEndTime** | A hora de término agendada da reunião, em UTC. |
 | **details.joinUrl** | A URL usada para ingressar na reunião. |
 | **details.title** | O título da reunião. |
-| **details.type** | O tipo da reunião – por exemplo, GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | O tipo da reunião (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled ou Unknown). |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
 | **conversation.conversationType** | O tipo de conversa. |
 | **conversation.id** | A ID de chat da reunião. |
@@ -634,7 +636,7 @@ A API `getAppContentStageSharingState` permite que você busque informações so
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
-A tabela a seguir inclui os parâmetros de consulta:
+A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
@@ -674,7 +676,7 @@ A API `getAppContentStageSharingCapabilities` permite que você busque os recurs
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
-A tabela a seguir inclui os parâmetros de consulta:
+A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
@@ -908,7 +910,7 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **timestamp** | Data e hora locais da mensagem, expressas no formato ISO-8601. |
 | **id** | ID da atividade. |
 | **channelId** | Canal ao qual essa atividade está associada. |
-| **Serviceurl** | URL do serviço em que as respostas a essa atividade devem ser enviadas. |
+| **serviceUrl** | URL do serviço em que as respostas a essa atividade devem ser enviadas. |
 | **from.id** | ID do usuário que enviou a solicitação. |
 | **from.aadObjectId** | ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
@@ -922,13 +924,91 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **channelData.tenant.id** | Locatário do Azure Active Directory. |
 | **channelData.source** | O nome de origem de onde o evento é acionado ou invocado. |
 | **channelData.meeting.id** | A ID padrão associada à reunião. |
-| **Valor. MeetingType** | O tipo de reunião. |
-| **Valor. Título** | O assunto da reunião. |
-| **Valor. Id** | A ID padrão associada à reunião. |
-| **Valor. JoinUrl** | A URL de ingresso da reunião. |
-| **Valor. Starttime** | A hora de início da reunião em UTC. |
-| **Valor. Endtime** | A hora de término da reunião em UTC. |
+| **valor. MeetingType** | O tipo de reunião. |
+| **valor. Título** | O assunto da reunião. |
+| **valor. Id** | A ID padrão associada à reunião. |
+| **valor. JoinUrl** | A URL de ingresso da reunião. |
+| **valor. StartTime** | A hora de início da reunião em UTC. |
+| **valor. EndTime** | A hora de término da reunião em UTC. |
 | **locale**| A localidade da mensagem definida pelo cliente. |
+
+## <a name="get-incoming-audio-speaker"></a>Obter alto-falante de áudio de entrada
+
+A `getIncomingClientAudioState` API permite que um aplicativo obtenha a configuração do alto-falante de áudio de entrada para o usuário da reunião. A API está disponível por meio do SDK do cliente do Teams.
+
+> [!NOTE]
+> No `getIncomingClientAudioState` momento, a API para dispositivos móveis está disponível apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+
+### <a name="query-parameter"></a>Parâmetro de consulta
+
+A tabela a seguir inclui o parâmetro de consulta:
+
+|Valor|Tipo|Obrigatório|Descrição|
+|---|---|----|---|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro ou `SdkError` quando `null` a busca de áudio for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso quando a busca de áudio for bem-sucedida ou nula quando a busca de áudio falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false. |
+
+### <a name="example"></a>Exemplo
+
+```typescript
+function getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+
+```
+
+### <a name="response-codes"></a>Códigos de resposta
+
+A tabela a seguir fornece os códigos de resposta:
+
+|Código da resposta|Descrição|
+|---|---|
+| **500** | Erro interno. |
+| **501** | A API não tem suporte no contexto atual.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
+
+## <a name="toggle-incoming-audio"></a>Alternar áudio de entrada
+
+A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração do alto-falante de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
+
+> [!NOTE]
+> No `toggleIncomingClientAudio` momento, a API para dispositivos móveis está disponível apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+
+### <a name="query-parameter"></a>Parâmetro de consulta
+
+A tabela a seguir inclui o parâmetro de consulta:
+
+|Valor|Tipo|Obrigatório|Descrição|
+|---|---|----|---|
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro `SdkError` ou `null` quando a alternância for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso, quando a alternância for bem-sucedida ou nula quando a alternância falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false. |
+
+### <a name="example"></a>Exemplo
+
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
+
+### <a name="response-code"></a>Código da resposta
+
+A tabela a seguir fornece os códigos de resposta:
+
+|Código da resposta|Descrição|
+|---|---|
+| **500** | Erro interno. |
+| **501** | A API não tem suporte no contexto atual.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
 
 ## <a name="code-sample"></a>Exemplo de código
 

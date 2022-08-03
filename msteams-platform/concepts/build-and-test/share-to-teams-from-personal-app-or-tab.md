@@ -1,38 +1,35 @@
 ---
 title: Compartilhar com o Teams a partir do aplicativo ou guia pessoal
-description: Saiba como habilitar o botão Compartilhar Teams em seu aplicativo pessoal ou guia, limitações e experiência do usuário final.
+description: Saiba como habilitar o botão Compartilhar com o Teams em seu aplicativo pessoal ou guia, limitações e experiência do usuário final.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123931"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232194"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartilhar com o Teams a partir do aplicativo ou guia pessoal
 
-> [!NOTE]
-> O compartilhamento Teams está disponível atualmente apenas na versão prévia [do desenvolvedor público](../../resources/dev-preview/developer-preview-intro.md).
+Compartilhar com o Teams permite que os usuários compartilhem o conteúdo do aplicativo pessoal ou da guia para outro usuário ou grupo ou canal no Teams. Os usuários podem selecionar Compartilhar com o Teams para iniciar a experiência Compartilhar com o Teams em uma janela pop-up. A janela pop-up permite que os usuários adicionem outro usuário, grupo ou canal para compartilhar o conteúdo.
 
-Compartilhar com Teams permite que os usuários compartilhem o conteúdo de aplicativo pessoal ou guia para outro usuário ou grupo ou canal dentro Teams. Os usuários podem selecionar Compartilhar Teams para iniciar o Compartilhamento Teams experiência em uma janela pop-up. A janela pop-up permite que os usuários adicionem outro usuário, grupo ou canal para compartilhar o conteúdo.
-
-A imagem a seguir mostra a janela pop-up Compartilhar Teams janela pop-up:
+A imagem a seguir mostra a janela pop-up Compartilhar com o Teams:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
 
-## <a name="enable-share-to-teams-button"></a>Habilitar Compartilhamento Teams botão
+## <a name="enable-share-to-teams-button"></a>Botão Habilitar Compartilhar no Teams
 
 > [!NOTE]
-> Verifique se você tem um [SD Microsoft Teams K do Cliente JavaScript ou um SDK](../../tabs/how-to/using-teams-client-sdk.md) do Cliente [JavaScript v2 versão](../../tabs/how-to/using-teams-client-sdk.md)`@microsoft/teams-js@1.11.0-beta.7` prévia (ou posterior) para habilitar o Compartilhamento Teams para seu aplicativo ou guia pessoal. Microsoft Teams
+> Verifique se você tem o [SDK do Cliente JavaScript do Microsoft Teams ou o SDK](../../tabs/how-to/using-teams-client-sdk.md) do Cliente [JavaScript do Microsoft Teams v2 Preview](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7` ou posterior) para habilitar o Compartilhamento com o Teams para seu aplicativo ou guia pessoal.
 
-Para habilitar o Compartilhamento Teams:
+Para habilitar o Compartilhamento com o Teams:
 
-1. Crie um aplicativo ou guia pessoal com **Teams SDK do Cliente Javascript**.
+1. Crie um aplicativo pessoal ou uma guia com o **SDK do Cliente Javascript do Teams**.
 
-2. Criar um **botão Compartilhar Teams** aplicativo.
+2. Botão **Criar um Compartilhamento com o Teams** .
 
-3. No botão Compartilhar Teams, chame com `microsoftTeams.sharing.shareWebContent` uma carga de conteúdo.
+3. No botão Compartilhar com o Teams, chame `microsoftTeams.sharing.shareWebContent` com uma carga de conteúdo.
 
 O exemplo a seguir explica como criar uma carga de conteúdo:
 
@@ -58,7 +55,7 @@ A carga contém os seguintes parâmetros:
 |`message`| Mensagem padrão a ser carregada na caixa de composição |
 | `preview` | Definido para habilitar `true` a visualização de URL |
 
-A imagem a seguir mostra a opção Teams compartilhar:
+A imagem a seguir mostra a opção Compartilhar com o Teams:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="botão compartilhar para equipes":::
 
@@ -85,16 +82,16 @@ A tabela a seguir fornece os códigos de resposta:
 
 ## <a name="limitations"></a>Limitações
 
-As limitações para adicionar o Compartilhamento Teams botão:
+As limitações para adicionar o botão Compartilhar ao Teams:
 
-* O botão Compartilhar Teams pode ser hospedado ou inserido em um aplicativo em execução dentro Teams.
-* Você pode adicionar o botão Compartilhar Teams ao aplicativo criado usando Teams **SDK do Cliente Javascript**.
+* O botão Compartilhar com o Teams pode ser hospedado ou inserido em um aplicativo em execução no Teams.
+* Você pode adicionar o botão Compartilhar ao Teams ao aplicativo criado usando o **SDK do Cliente Javascript do Teams**.
 
-## <a name="end-user-share-to-teams-experience"></a>Compartilhamento de usuário final para Teams experiência
+## <a name="end-user-share-to-teams-experience"></a>Experiência de compartilhamento do usuário final com o Teams
 
 Depois de habilitar o botão Compartilhar com o Teams no aplicativo pessoal ou na guia, você pode compartilhar o conteúdo. Para acessar, siga as etapas:
 
-1. Abra um aplicativo ou guia pessoal e selecione **Compartilhar para Teams**.
+1. Abra um aplicativo ou guia pessoal e selecione **Compartilhar com o Teams**.
 
     :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="botão compartilhar para equipes":::
 
