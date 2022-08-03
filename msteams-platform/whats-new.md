@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 02d89b8933f09e298c158afe835f5aacce137365
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058274"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178622"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -261,6 +261,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+|08/02/2022| Controles de colaboração para o Teams| Integrar com o Teams > [Controles de colaboração](samples/collaboration-control.md)|
 | 30/06/2022 | Aplicativos para reuniões instantâneas, reuniões individuais e chamadas em grupo| Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16/06/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web| Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share | Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |

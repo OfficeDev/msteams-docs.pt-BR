@@ -1,23 +1,23 @@
 ---
 author: heath-hamilton
-description: Conheça as práticas recomendadas ou considerações para integrar aplicativos Web existentes com Microsoft Teams. Ele fornece informações sobre requisitos de API, autenticação e vinculação profunda de seu aplicativo com Teams.
+description: Conheça as práticas recomendadas ou considerações para a integração de aplicativos Web existentes com o Microsoft Teams. Ele fornece informações sobre requisitos de API, autenticação e vinculação profunda de seu aplicativo com o Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações para a integração do Microsoft Teams
-ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123798"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178608"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
 
 Você pode tornar os aplicativos Web adequados aos recursos sociais e colaborativos do Teams, integrando-os corretamente com o Teams.
   
-Os diferentes tipos de aplicativos, que você pode integrar ao Teams são os seguintes:
+Os diferentes tipos de aplicativos, que você pode integrar ao Teams, são os seguintes:
 
 * **Aplicativos autônomos**: um aplicativo autônomo é um aplicativo de página única ou grande e complexo. O usuário pode usar alguns aspectos dele no Teams.
 * **Aplicativos de colaboração**: um aplicativo já criado para os recursos sociais e colaborativos inerentes ao Teams.
@@ -30,7 +30,7 @@ Este documento fornece uma visão geral dos recursos do Teams, requisitos de pon
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração, SharePoint*
 
-Seu aplicativo Teams deve incluir recursos colaborativos necessários e esperados. Para trabalhar com a integração de aplicativos, é importante se familiarizar com Teams de desenvolvimento.
+Seu aplicativo Teams deve incluir recursos colaborativos necessários e esperados. Para trabalhar com a integração de aplicativos, é importante se familiarizar com a terminologia de desenvolvimento do Teams.
 
 |Recursos comuns do aplicativo   |Funcionalidades da plataforma Teams   |
 |----------|-----------|
@@ -90,7 +90,7 @@ O Teams tem mecanismos de SSO (logon único) com o Azure AD para aplicativos de 
 > [!IMPORTANT]
 > Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e DoD (Departamento de Defesa). Aplicativos de terceiros são desativados por padrão para GCC. Para ativar aplicativos de terceiros para GCC, consulte [gerenciar políticas de permissão de aplicativo](/microsoftteams/teams-app-permission-policies) e [gerenciar aplicativos](/microsoftteams/manage-apps).
 
-Para SharePoint, você só poderá usar o SSO e não poderá adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o SharePoint aplicativo.
+Para páginas do SharePoint, você só poderá usar o SSO e não poderá adicionar outra ID do Azure AD se quiser que o SSO funcione para outro aplicativo, pois a ID é o aplicativo do SharePoint.
 
 Saiba mais sobre [autenticação no Teams](../concepts/authentication/authentication.md).
 
@@ -98,7 +98,7 @@ Saiba mais sobre [autenticação no Teams](../concepts/authentication/authentica
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração*
 
-Siga as [Diretrizes de design do Teams](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo do Teams. Você não pode migrar um conteúdo de aplicativo existente para uma Teams configuração. Para obter mais informações sobre o design do aplicativo, [consulte Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
+Siga as [Diretrizes de design do Teams](../concepts/design/understand-use-cases.md) para tornar seu aplicativo nativo do Teams. Você não pode migrar um conteúdo de aplicativo existente para uma guia do Teams. Para obter mais informações sobre o design do aplicativo, [consulte Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar a vinculação profunda
 
