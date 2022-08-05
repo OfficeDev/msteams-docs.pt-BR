@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02d89b8933f09e298c158afe835f5aacce137365
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178622"
+ms.locfileid: "67232278"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,9 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+| 03/08/2022 | Adicionado recurso para recuperar transcrições de reunião no cenário pós-reunião. | Compilar aplicativos para reuniões e chamadas do Teams > Obter transcrições de reunião usando APIs do Graph > [Visão geral](graph-api/meeting-transcripts/overview-transcripts.md) |
+| 03/08/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 07/28/2022 | Adicionar a imagem de exibição do Teams e o cartão de visita para notificação na reunião| Compilar aplicativos para reuniões e chamadas do Teams > Habilitar e configurar aplicativos para reuniões > [Notificação na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Compilar canais compartilhados no Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Canais Compartilhados](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduzindo o manifesto do aplicativo v1.14| Manifesto do aplicativo > [Esquema do manifesto de aplicativo para Teams](resources/schema/manifest-schema.md)|
@@ -261,11 +264,10 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
-|08/02/2022| Controles de colaboração para o Teams| Integrar com o Teams > [Controles de colaboração](samples/collaboration-control.md)|
+| 03/08/2022 | Ativar e desativar mudo de APIs para aplicativos na janela de conteúdo compartilhado do Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Referências da API de aplicativos de reunião](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
+| 08/02/2022| Controles de colaboração para o Teams| Integrar com o Teams > [Controles de colaboração](samples/collaboration-control.md)|
 | 30/06/2022 | Aplicativos para reuniões instantâneas, reuniões individuais e chamadas em grupo| Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-| 16/06/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web| Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share | Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
-| 06/04/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/02/2022 | Apresentado o manifesto do aplicativo versão 1.13 | Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto](resources/schema/manifest-schema-dev-preview.md) |
 | 17/01/2022 | Seletor de Pessoas em cartões adaptáveis para dispositivos móveis | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|
 | 28/10/2021 |Os bots podem ser habilitados para receber todas as mensagens de canal usando o RSC (consentimento específico do recurso) | • Criar bots > Conversas de bot > [visão geral da conversa de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Criar bots > Conversas de bot > [conversas em grupo e canal](~/bots/how-to/conversations/channel-and-group-conversations.md) |
