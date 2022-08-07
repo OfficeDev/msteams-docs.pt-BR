@@ -4,12 +4,12 @@ description: Neste módulo, saiba como criar bots usando o Microsoft Bot Framewo
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737409"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264166"
 ---
 # <a name="create-a-bot"></a>Criar um bot
 
@@ -52,7 +52,7 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
 
 > [!WARNING]
 >
->* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será preterido até 01 de agosto de 2022
+>* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio foi preterido em 01 de agosto de 2022.
 
 ## <a name="see-also"></a>Confira também
 

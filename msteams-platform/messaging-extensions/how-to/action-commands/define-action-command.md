@@ -5,12 +5,12 @@ description: Neste módulo, aprenda a definir comandos de ação de extensão de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035286"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264180"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -87,7 +87,7 @@ Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicio
 Você pode criar um comando de ação usando **App Studio** ou **Portal do Desenvolvedor**.
 
 > [!WARNING]
- > Se você estiver usando o App Studio, recomendamos que você tente o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio será suspenso em 01 de agosto de 2022.
+ > Se você estiver usando o App Studio, recomendamos que você tente o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio foi preterido em 01 de agosto de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
