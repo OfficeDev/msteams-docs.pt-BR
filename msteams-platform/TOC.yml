@@ -132,10 +132,22 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
+    - name: Kit de ferramentas do Teams para Visual Studio
+      items:
+        - name: Visão geral do Kit de ferramentas do Microsoft Teams
+          href: toolkit/teams-toolkit-overview-visual-studio.md
+        - name: Criar um novo aplicativo de Teams
+          href: toolkit/create-new-teams-app-for-Visual-Studio.md
+        - name: Depurar seu aplicativo Teams
+          href: toolkit/debug-teams-app-visual-studio.md
+        - name: Provisionar recursos de nuvem
+          href: toolkit/provision VS.md
+        - name: Implantar o aplicativo Teams na nuvem
+          href: toolkit/deploy to the cloud for VS.md
+        - name: Editar manifesto do aplicativo Teams
+          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: CLI do Kit de Ferramentas do Teams
       href: toolkit/TeamsFx-CLI.md
-    - name: Kit de ferramentas do Teams para Visual Studio
-      href: toolkit/visual-studio-overview.md
     - name: Gerador Yeoman para o Teams (GitHub)
       href: 'https://github.com/pnp/generator-teams'
     - name: Portal do Desenvolvedor do Teams
