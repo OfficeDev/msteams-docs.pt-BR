@@ -141,9 +141,9 @@
         - name: Depurar seu aplicativo Teams
           href: toolkit/debug-teams-app-visual-studio.md
         - name: Provisionar recursos de nuvem
-          href: toolkit/Provision cloud resources using Visual Studio.md
+          href: toolkit/provision-cloud-resources.md
         - name: Implantar o aplicativo Teams na nuvem
-          href: toolkit/Deploy Teams app to the cloud using Visual Studio.md
+          href: toolkit/deploy-teams-app.md
         - name: Editar manifesto do aplicativo Teams
           href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: CLI do Kit de Ferramentas do Teams
