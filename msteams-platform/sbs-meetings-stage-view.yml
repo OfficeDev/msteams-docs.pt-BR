@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Leia mais para habilitar e configurar aplicativos para reuniões
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: b8f91bb0e409c7632451af54a55dd25a968b84cb
-  ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+  ms.openlocfilehash: 8d2dd247689c2224adadd2a21a67536df4cfc81c
+  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/30/2022
-  ms.locfileid: "66558433"
+  ms.lasthandoff: 08/09/2022
+  ms.locfileid: "67286103"
 items:
 - durationInMinutes: 1
   content: >
@@ -42,7 +42,7 @@ items:
   content: "\n1. Abra [exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n1. Selecione **Código**.\n1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png\" alt-text=\"clonando o repositório\":::\n\n1. Selecione **Clonar**. \n"
 - title: Configurar o túnel para o servidor Web local
   durationInMinutes: 1
-  content: "Use o ngrok ou o Prompt de Comando para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução localmente. Execute o seguinte comando no ngrok:\n\n ```bash\n ngrok http -host-header=localhost 3978\n ``` \n   > [!TIP]\n   > Se você encontrar **ERR_NGROK_4018**, siga as etapas, conforme exibido no Prompt de Comando para se inscrever e autenticar o ngrok. Em seguida, execute o `ngrok http -host-header=localhost 3978` comando.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png\" alt-text=\"túnel usando o prompt de comando\":::\n"
+  content: "Use o ngrok ou o Prompt de Comando para criar um túnel para os pontos de extremidade HTTPS disponíveis publicamente do servidor Web em execução localmente. Execute o seguinte comando no ngrok:\n\n ```bash\n ngrok http --host-header=localhost 3978\n ``` \n   > [!TIP]\n   > Se você encontrar **ERR_NGROK_4018**, siga as etapas, conforme exibido no Prompt de Comando para se inscrever e autenticar o ngrok. Em seguida, execute o `ngrok http --host-header=localhost 3978` comando.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png\" alt-text=\"túnel usando o prompt de comando\":::\n"
 - title: Configurar o arquivo de manifesto
   durationInMinutes: 1
   content: "1. Navegue **até manifest.json** node.js pasta no repositório clonado.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png\" alt-text=\"caminho para manifest.json\":::\n\n1. Abra **manifest.json** no Visual Studio e faça as seguintes alterações:\n\n     * Substitua `<<App-ID>>` pela **ID do Aplicativo Microsoft do bot**.\n     * Substitua `<<BASE-URL>>` o nome de domínio ngrok totalmente qualificado.\n     * Substitua `<<VALID DOMAIN>>` pelo nome de domínio ngrok totalmente qualificado.\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"arquivo de manifesto\":::   \n"

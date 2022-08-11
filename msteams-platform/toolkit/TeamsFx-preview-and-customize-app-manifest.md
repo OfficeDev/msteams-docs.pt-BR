@@ -6,14 +6,14 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557999"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288140"
 ---
-# <a name="edit-teams-app-manifest"></a>Editar manifesto do aplicativo Teams
+# <a name="edit-teams-app-manifest-for-visual-studio"></a>Editar manifesto do aplicativo Teams para Visual Studio
 
 O arquivo de modelo do manifesto `manifest.template.json` está disponível na pasta `templates/appPackage` após o scaffolding. O arquivo de modelo com espaços reservados e os valores reais são resolvidos pelo Kit de Ferramentas do Teams usando arquivos em `.fx/configs` e `.fx/states` para ambientes diferentes.
 
