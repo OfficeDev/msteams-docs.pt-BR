@@ -4,12 +4,12 @@ description: Neste módulo, aprenda o cenário de ponta a ponta de ter uma conve
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ab11ad4a11769daa236e6fe10e1ef30782b2cda0
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190183"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312181"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
@@ -25,7 +25,7 @@ Os bots adicionados a uma equipe se tornam outro membro da equipe e podem ser @m
 
 Um bot em um grupo ou canal deve fornecer informações relevantes e apropriadas para todos os membros. Embora seu bot certamente possa fornecer qualquer informação relevante para a experiência, lembre-se de que as conversas com ele são visíveis para todos. Portanto, um ótimo bot em um grupo ou canal deve agregar valor a todos os usuários e, certamente, não compartilhar inadvertidamente informações mais apropriadas para uma conversa individual.
 
-Seu bot, assim como está, pode ser totalmente relevante em todos os escopos sem exigir mais trabalho. No Teams, não há nenhuma expectativa de que o bot funcione em todos os escopos, mas você deve garantir que seu bot forneça valor de usuário em qualquer escopo que você optar por dar suporte. Para obter mais informações sobre escopos, consulte [Aplicativos no Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Seu bot, assim como está, pode ser totalmente relevante em todos os escopos sem exigir mais trabalho. No Teams, não há expectativa de que o bot funcione em todos os escopos, mas você deve garantir que o bot forneça valor ao usuário em qualquer escopo que você optar por dar suporte. Para obter mais informações sobre escopos, consulte [Aplicativos no Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 O desenvolvimento de um bot que funciona em grupos ou canais usa muito da mesma funcionalidade das conversas pessoais. Eventos e dados adicionais na carga útil fornecem informações de grupo e canal do Teams. Essas diferenças, bem como as principais diferenças na funcionalidade comum, são descritas nas seções a seguir.
 
@@ -53,13 +53,13 @@ Em um canal, responder a uma mensagem é exibido como uma resposta à cadeia de 
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Prática recomendada: mensagens de boas-vindas no Teams
 
-Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, é útil enviar uma mensagem de boas-vindas apresentando o bot a todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade do bot e dos benefícios do usuário. Idealmente, a mensagem também deve incluir comandos para o usuário interagir com o aplicativo. Para fazer isso, certifique-se de que seu bot responda à mensagem `conversationUpdate`, com o eventType `teamsAddMembers` no objeto `channelData`. Certifique-se de que o ID `memberAdded` seja o próprio ID do aplicativo do bot, pois o mesmo evento é enviado quando um usuário é adicionado a uma equipe. Para obter mais informações, consulte [o membro da equipe ou adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obter mais detalhes.
+Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, é útil enviar uma mensagem de boas-vindas apresentando o bot a todos os usuários. A mensagem de boas-vindas deve fornecer uma descrição da funcionalidade do bot e dos benefícios do usuário. Idealmente, a mensagem também deve incluir comandos para o usuário interagir com o aplicativo. Para fazer isso, certifique-se de que seu bot responda à mensagem `conversationUpdate`, com o eventType `teamsAddMembers` no objeto `channelData`. Certifique-se de que o ID `memberAdded` seja o próprio ID do aplicativo do bot, pois o mesmo evento é enviado quando um usuário é adicionado a uma equipe. Para obter mais informações, consulte [Membro da equipe ou adição de bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 Você também pode enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, você pode [buscar a lista da equipe](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) e enviar a cada usuário uma [mensagem direta](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 Recomendamos que seu bot *não* envie uma mensagem de boas-vindas nas seguintes situações:
 
-* A equipe é grande (obviamente subjetiva, por exemplo, mais de 100 membros). Seu bot pode ser visto como 'spam' e a pessoa que o adicionou pode receber reclamações, a menos que você comunique claramente a proposta de valor do seu bot a todos que virem a mensagem de boas-vindas.
+* A equipe é grande (obviamente subjetivo, por exemplo, mais de 100 membros). Seu bot pode ser visto como 'spam' e a pessoa que o adicionou pode receber reclamações, a menos que você comunique claramente a proposta de valor do seu bot a todos que virem a mensagem de boas-vindas.
 * Seu bot é mencionado pela primeira vez em um grupo ou canal, em vez de ser adicionado pela primeira vez a uma equipe.
 * Um grupo ou canal é renomeado.
 * Um membro da equipe é adicionado a um grupo ou canal.
@@ -194,7 +194,7 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>Acessando o groupChat ou o escopo do canal
 
-Seu bot pode fazer mais do que enviar e receber mensagens em grupos e equipes. Por exemplo, ele também pode buscar a lista de membros, incluindo suas informações de perfil, bem como a lista de canais. Para obter mais informações, consulte [Obter contexto para seu bot do Microsoft Teams](~/resources/bot-v3/bots-context.md).
+Seu bot pode fazer mais do que enviar e receber mensagens em grupos e equipes. Por exemplo, ele também pode buscar a lista de membros, incluindo suas informações de perfil e a lista de canais. Para obter mais informações, consulte [Obter contexto para seu bot do Microsoft Teams](~/resources/bot-v3/bots-context.md).
 
 ## <a name="see-also"></a>Confira também
 

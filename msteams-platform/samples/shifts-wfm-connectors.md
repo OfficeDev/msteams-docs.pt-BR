@@ -6,20 +6,20 @@ author: surbhigupta
 ms.date: 03/09/2020
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 042b1196fb89206fc053711b117543890273ec36
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a94ccc0fd9a3b6539e362dd7f1db285667d0b8f2
+ms.sourcegitcommit: 0d349ff4ad48017143a4440776a24ebce64d543a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123854"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312371"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de Turnos prontos para produção  
 
-Teams do WFM (gerenciamento de força de trabalho) shifts são integrações prontas para produção, de software livre e orientadas pela comunidade, úteis para trabalhadores de linha de frente. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital dos Trabalhadores de Linha de Frente com Teams Turnos.
+Os conectores de gerenciamento de força de trabalho do Teams Shifts (WFM) são integrações prontas para produção e controladas pela comunidade, úteis para trabalhadores de linha de frente. Eles oferecem uma experiência perfeita e um processo rápido para a transformação digital de Trabalhadores de Linha de Frente com Turnos do Teams.
 
-Cada conector fornece diretrizes detalhadas para implantação e integração à sua organização. O código-fonte completo está disponível no repositório GitHub. Você pode explorar detalhadamente ou bifurcar e personalizar para atender às suas necessidades específicas.
+Cada conector fornece diretrizes detalhadas para implantação e integração à sua organização. Você pode explorar detalhadamente e personalizar para atender às suas necessidades específicas.
 
-Este documento fornece uma visão geral dos principais benefícios dos conectores WFM do Teams Shifts, do Conector de Turnos Kronos para Teams e do conector de Turnos JDA para o Teams.
+Este documento fornece uma visão geral dos principais benefícios do Teams Shifts WFM conectores.
 
 ## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Principais benefícios dos conectores WFM do Teams Shifts
 
@@ -31,15 +31,17 @@ A seguir estão os principais benefícios dos conectores WFM do Teams Shifts:
 
 * **Personalizável e extensível:** embora todos os conectores de Turnos para WFM estejam prontos para implantação para uso imediato, com toda a base de código e scripts de implantação prontamente disponíveis. Você pode personalizá-los ou estendê-los facilmente para atender às suas necessidades exclusivas.
 
-* **Documentação detalhada:** todos os modelos de aplicativo são acompanhados pela documentação de ponta a ponta sobre as etapas de arquitetura, implantação e configuração da solução. Os repositórios de conectores são monitorados, para que você possa relatar problemas, desafios ou dificuldades encontrados por meio do rastreador de Problemas do repositório GitHub. 
+* **Documentação detalhada:** todos os modelos de aplicativo são acompanhados pela documentação de ponta a ponta sobre as etapas de arquitetura, implantação e configuração da solução. Os repositórios do conector são monitorados, para que você possa relatar problemas, desafios ou dificuldades encontrados.
 
-* **Integração perfeita:** A integração entre as soluções do WFM e o Teams Shifts permite que os Trabalhadores da Linha de Frente usem o aplicativo shifts do Teams para exibir ou gerenciar seus horários de turnos e agendas e usar todos os outros recursos avançados de colaboração fornecidos no Teams diretamente de seu dispositivo móvel ou da área de trabalho sem precisar alternar o contexto para outro aplicativo.  
+* **Integração perfeita:** A integração entre as soluções do WFM e os Turnos do Teams permite que os Trabalhadores da Linha de Frente usem o aplicativo Turnos do Teams para exibir ou gerenciar seus horários de turnos e agendas e usar todos os outros recursos de colaboração avançados fornecidos no Teams diretamente de seu dispositivo móvel ou da área de trabalho sem precisar alternar o contexto para outro aplicativo.  
 
 Abrir o modo de exibição de turnos no Teams:
 
 O modo de exibição turnos no Teams é mostrado na imagem a seguir:
 
 ![Turnos abertos no Teams](../assets/images/teams-open-shifts-view.png)
+
+Para obter mais informações sobre conectores de gerenciamento de força de trabalho do Teams Shifts (WFM), consulte [conectores shifts](/microsoft-365/frontline/shifts-connectors).
 
 ## <a name="see-also"></a>Confira também
 

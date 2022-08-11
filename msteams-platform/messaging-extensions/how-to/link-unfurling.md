@@ -5,18 +5,18 @@ description: Neste módulo, saiba como adicionar link desfralizando com a extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503610"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312217"
 ---
 # <a name="add-link-unfurling"></a>Adicionar desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento orienta você sobre como adicionar link desfralhamento ao manifesto do aplicativo usando o App Studio ou manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. Contém `invoke` a URL completa que foi colada na área de mensagem de composição. Você pode responder com um cartão que o usuário pode desafralar para obter informações ou ações adicionais. Isso funciona como um comando de pesquisa com a URL como o termo de pesquisa.
+Este documento orienta você sobre como adicionar link desfralhamento ao manifesto do aplicativo usando o Portal do Desenvolvedor ou manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. Contém `invoke` a URL completa que foi colada na área de mensagem de composição. Você pode responder com um cartão que o usuário pode desafralar para obter informações ou ações adicionais. Isso funciona como um comando de pesquisa com a URL como o termo de pesquisa.
 
 > [!NOTE]
 >
@@ -34,18 +34,21 @@ Confira o vídeo a seguir para saber mais sobre o desaqueamento de link:
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Adicionar desenrolamento de link ao manifesto do aplicativo
 
-Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma nova matriz `messageHandlers` à seção `composeExtensions` do manifesto do aplicativo JSON. Você pode adicionar a matriz com a ajuda do App Studio ou manualmente. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com` use `*.*.example.com`.
+Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma nova matriz `messageHandlers` à seção `composeExtensions` do manifesto do aplicativo JSON. Você pode adicionar a matriz com a ajuda do Portal do Desenvolvedor ou manualmente. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com` use `*.*.example.com`.
 
 > [!NOTE]
 > Não adicione domínios que não estão em seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Os domínios de nível superior são proibidos, por exemplo, `*.com`, `*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>Adicionar desenrolamento de link usando o App Studio
+### <a name="add-link-unfurling-using-developer-portal"></a>Adicionar link desfralização usando o Portal do Desenvolvedor
 
-1. Abra **App Studio** no cliente do Microsoft Teams e selecione a guia **Editor de Manifesto**.
+1. Abra **o Portal do** Desenvolvedor no cliente do Microsoft Teams e selecione a **guia Aplicativos** .
 1. Carregue o manifesto do aplicativo.
-1. Na página **Extensão de Mensagens**, adicione o domínio que você deseja procurar na seção **Manipuladores de Mensagens**. A imagem a seguir explica o processo:
+1. Na página **Extensão de Mensagens,** em **Recursos do aplicativo**, selecione o bot existente ou crie um novo bot.
+1. Selecione **Salvar**.
+1. Selecione **Adicionar um domínio na** seção **Links de visualização** e insira um domínio válido.
+1. Selecione **Adicionar**. A imagem a seguir explica o processo:
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Seção Manipuladores de Mensagens no App Studio":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Captura de tela da seção manipuladores de mensagens no Portal do Desenvolvedor." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldando manualmente
 

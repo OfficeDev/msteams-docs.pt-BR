@@ -3,12 +3,12 @@ title: Introdução - Visão geral
 description: Neste módulo, saiba como começar a usar a documentação do desenvolvedor do Microsoft Teams que apresenta ferramentas comuns, conceitos fundamentais e recursos avançados.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264138"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312279"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -40,9 +40,6 @@ Dependendo dos recursos que você deseja para seu aplicativo, escolha um conjunt
 
 Se você já estiver familiarizado com o fluxo de trabalho Yeoman, talvez prefira usar o [Gerador YoTeams Yeoman](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) para criar seus aplicativos.
 
-> [!WARNING]
-> Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams.<br> O App Studio foi preterido em 01 de agosto de 2022.
-
 ## <a name="build-your-first-teams-app"></a>Crie seu primeiro aplicativo do Teams
 
 Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idioma (ou estrutura) e prepare seu ambiente de desenvolvimento.
@@ -69,5 +66,5 @@ Agora, vamos criar seu primeiro aplicativo Teams. Mas primeiro, escolha seu idio
 
 ## <a name="see-also"></a>Confira também
 
-* [Exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Recursos Git e GitHub](/contribute/additional-resources)
+- [Exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Recursos Git e GitHub](/contribute/additional-resources)

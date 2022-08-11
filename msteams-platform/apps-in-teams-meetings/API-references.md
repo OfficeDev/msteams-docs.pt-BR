@@ -1,17 +1,17 @@
 ---
 title: Referências à API de aplicativos de reunião
 author: surbhigupta
-description: Saiba como identificar as referências da API de aplicativos de reunião com exemplos e exemplos de código, consulta de sinal de notificação de contexto de usuário de reuniões de aplicativos do Teams.
+description: Neste artigo, aprenda as referências de API de aplicativos de reunião que estão disponíveis para o cliente do Teams e os SDK do Bot Framework com exemplos, exemplos de código e códigos de resposta.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232257"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311950"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -910,7 +910,7 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **timestamp** | Data e hora locais da mensagem, expressas no formato ISO-8601. |
 | **id** | ID da atividade. |
 | **channelId** | Canal ao qual essa atividade está associada. |
-| **serviceUrl** | URL do serviço em que as respostas a essa atividade devem ser enviadas. |
+| **Serviceurl** | URL do serviço em que as respostas a essa atividade devem ser enviadas. |
 | **from.id** | ID do usuário que enviou a solicitação. |
 | **from.aadObjectId** | ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
 | **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
@@ -924,12 +924,12 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **channelData.tenant.id** | Locatário do Azure Active Directory. |
 | **channelData.source** | O nome de origem de onde o evento é acionado ou invocado. |
 | **channelData.meeting.id** | A ID padrão associada à reunião. |
-| **valor. MeetingType** | O tipo de reunião. |
-| **valor. Título** | O assunto da reunião. |
-| **valor. Id** | A ID padrão associada à reunião. |
-| **valor. JoinUrl** | A URL de ingresso da reunião. |
-| **valor. StartTime** | A hora de início da reunião em UTC. |
-| **valor. EndTime** | A hora de término da reunião em UTC. |
+| **Valor. MeetingType** | O tipo de reunião. |
+| **Valor. Título** | O assunto da reunião. |
+| **Valor. Id** | A ID padrão associada à reunião. |
+| **Valor. JoinUrl** | A URL de ingresso da reunião. |
+| **Valor. Starttime** | A hora de início da reunião em UTC. |
+| **Valor. Endtime** | A hora de término da reunião em UTC. |
 | **locale**| A localidade da mensagem definida pelo cliente. |
 
 ## <a name="get-incoming-audio-speaker"></a>Obter alto-falante de áudio de entrada
@@ -937,7 +937,9 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 A `getIncomingClientAudioState` API permite que um aplicativo obtenha a configuração do alto-falante de áudio de entrada para o usuário da reunião. A API está disponível por meio do SDK do cliente do Teams.
 
 > [!NOTE]
-> No `getIncomingClientAudioState` momento, a API para dispositivos móveis está disponível apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+>
+> * No `getIncomingClientAudioState` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+> * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -977,7 +979,9 @@ A tabela a seguir fornece os códigos de resposta:
 A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração do alto-falante de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
 
 > [!NOTE]
-> No `toggleIncomingClientAudio` momento, a API para dispositivos móveis está disponível apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+>
+> * No `toggleIncomingClientAudio` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+> * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 

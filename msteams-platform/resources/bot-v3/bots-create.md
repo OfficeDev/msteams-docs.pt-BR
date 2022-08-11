@@ -4,12 +4,12 @@ description: Neste módulo, saiba como criar bots usando o Microsoft Bot Framewo
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 66b0557308e2d76332e1a5b0fcba06ac596822c4
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264166"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312097"
 ---
 # <a name="create-a-bot"></a>Criar um bot
 
@@ -21,7 +21,7 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
 
 ## <a name="create-a-bot-for-microsoft-teams"></a>Criar um bot para o Microsoft Teams
 
-**O Teams App Studio** é uma ferramenta que pode ajudar a criar seu bot e um pacote de aplicativo que faz referência ao bot. Ele também contém uma biblioteca de controle React e amostras configuráveis para cartões. Para obter mais informações, consulte [Introdução ao Teams App Studio](~/concepts/build-and-test/app-studio-overview.md). As etapas a seguir pressupõem que você esteja configurando seu bot manualmente e não usando o **Teams App Studio**:
+**O Portal do Desenvolvedor do Teams é** uma ferramenta que pode ajudar a criar seu bot e um pacote de aplicativos que faz referência ao bot. Ele também contém uma biblioteca de controle React e amostras configuráveis para cartões. Para obter mais informações, consulte [Introdução ao Portal do Desenvolvedor do Teams para Teams](~/concepts/build-and-test/teams-developer-portal.md). As etapas a seguir pressupõem que você esteja configurando seu bot manualmente e não usando o **Portal do Desenvolvedor do Teams para Teams**:
 
 1. Crie o bot usando o [Bot Framework](https://dev.botframework.com/bots/new). **Lembre-se de adicionar o Microsoft Teams como um canal da lista de canais em destaque após criar seu bot.** Sinta-se à vontade para usar novamente o ID do aplicativo da Microsoft que você gerou, caso já tenha criado seu pacote/manifesto de aplicativos.
 
@@ -48,11 +48,7 @@ Para obter mais informações, consulte [a Documentação do Bot Framework](/azu
    ![Editar propriedades de bot](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * Se você registrar seu bot usando o Microsoft Azure, o código do bot não precisará ser *hospedado* no Microsoft Azure.
 > * Se você registrar um bot usando portal do Azure, deverá ter uma conta do Microsoft Azure. Você pode [criar uma gratuitamente](https://azure.microsoft.com/free/). Para verificar sua identidade ao criar uma, você deve fornecer um cartão de crédito, mas ele não será cobrado; É sempre gratuito criar e usar bots com o Teams.
-> * Agora você pode usar o App Studio para registrar/atualizar informações do aplicativo e do bot diretamente no Teams. Você só precisará usar o portal do Azure para adicionar ou configurar outros canais do Bot Framework, como Direct Line, Webchat, Skype e Facebook Messenger.
-
-> [!WARNING]
->
->* Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio foi preterido em 01 de agosto de 2022.
+> * Agora você pode usar o Portal do Desenvolvedor para Teams para registrar/atualizar informações do aplicativo e do bot diretamente no Teams. Você só precisará usar o portal do Azure para adicionar ou configurar outros canais do Bot Framework, como Direct Line, Webchat, Skype e Facebook Messenger.
 
 ## <a name="see-also"></a>Confira também
 

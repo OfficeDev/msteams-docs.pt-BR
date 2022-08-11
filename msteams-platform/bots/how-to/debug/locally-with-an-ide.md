@@ -1,16 +1,16 @@
 ---
 title: Testar e depurar seu bot localmente
 author: surbhigupta
-description: Saiba mais sobre como testar e depurar seu bot localmente com um IDE no ambiente do Teams por meio de sideload e muito mais
+description: Saiba mais sobre como testar e depurar seu bot localmente com um IDE no ambiente do Teams por meio de sideload e muito mais.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c2b68279000da27aa055e591bcccc0a91e7f3769
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503715"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312202"
 ---
 # <a name="test-and-debug-your-bot-locally-with-ide"></a>Testar e depurar seu bot localmente com o IDE
 
@@ -18,11 +18,11 @@ Ao testar seu bot, você precisa considerar os contextos em que deseja que o bot
 
 ## <a name="test-by-uploading-to-teams"></a>Testar carregando no Teams
 
-A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o no Teams. Esse é o único método para testar a funcionalidade completa disponível para seu bot, em todos os escopos.
+A maneira mais abrangente de testar seu bot é criando um pacote de aplicativos e carregando-o no Teams. Carregar o pacote do aplicativo no Teams é o único método para testar a funcionalidade completa disponível para o bot em todos os escopos.
 
 Há dois métodos para carregar seu aplicativo:
 
-* Use o [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+* Use [o Portal do Desenvolvedor para o Teams](~/concepts/build-and-test/teams-developer-portal.md).
 * [Criar um pacote do aplicativo](~/concepts/build-and-test/apps-package.md) manualmente e, em seguida, [carregue seu aplicativo](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
@@ -66,7 +66,7 @@ Inicie uma conversa com seu bot usando sua ID. Quando um bot é adicionado por m
   
       ![Obtendo o AppID para o bot](~/assets/images/bots_appid_botframework.png)
   
-   2. No Microsoft Teams, no painel de **Chat**, selecione o **ícone Adicionar chat**. Em **Para**, cole a ID do aplicativo da Microsoft do seu bot.
+   2. Abra o Microsoft Teams, no painel Chat, seleciona o **ícone Adicionar chat** . Em **Para**, cole a ID do aplicativo da Microsoft do seu bot.
   
       ![Carregando bots](~/assets/images/bots_uploading.png)
 
@@ -96,7 +96,7 @@ Para impedir que o bot receba mensagens, vá para o **Painel do Bot** e edite o 
 
 ## <a name="delete-a-bot-from-teams"></a>Excluir um bot do Teams
 
-Para remover completamente o bot do Teams, acesse o **Painel do Bot** e edite o canal do Teams. Escolha o botão **Excluir** na parte inferior. Isso impede que os usuários descubram, adicionem ou interajam com seu bot. Isso não remove o bot das instâncias do Teams de outros usuários, no entanto, ele para de funcionar para eles também.
+Para remover completamente o bot do Teams, acesse o **Painel do Bot** e edite o canal do Teams. Escolha o botão **Excluir** na parte inferior. Excluir um bot do Teams impede que os usuários descubram, adicionem e interajam com seu bot. A exclusão de um bot do Teams não remove o bot das instâncias do Teams de outro usuário, no entanto, ele também para de funcionar para eles.
 
 ## <a name="see-also"></a>Confira também
 

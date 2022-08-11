@@ -3,12 +3,12 @@ title: Escolhendo uma configuração para testar e depurar seu aplicativo
 description: Neste módulo, conheça as opções para testar e depurar aplicativos do Microsoft Teams no ambiente local e hospedado na nuvem.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264131"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312188"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Escolha uma configuração de teste e depure seu aplicativo teams
 
@@ -58,12 +58,7 @@ Para usar o ngrok em seu projeto com base nos recursos que você está usando, v
 Para bots registrados no Microsoft Bot Framework, atualize o ponto de extremidade de mensagens do bot para usar esse novo ponto de extremidade ngrok. Por exemplo, `https://2d1224fb.ngrok.io/api/messages`. Você pode validar se o ngrok está funcionando testando a resposta do bot na janela de chat de teste do portal do Bot Framework. Novamente, como o emulador, esse teste não permite que você acesse a funcionalidade específica do Teams.
 
 > [!NOTE]
->
-> * Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [App Studio](~/concepts/build-and-test/app-studio-overview.md).
-
-> [!WARNING]
->
-> * Se você estiver usando o App Studio, recomendamos que você tente o Portal do Desenvolvedor para configurar, distribuir e gerenciar seus aplicativos do Teams. O App Studio foi preterido em 01 de agosto de 2022.
+> Para atualizar o ponto de extremidade de mensagens para um bot, você deve usar o Bot Framework. Selecione seu bot em [sua lista de bots no Bot Framework](https://dev.botframework.com/bots). Você não precisa migrar seu bot para o Microsoft Azure. Você também pode atualizar seu ponto de extremidade de mensagens por meio [do Portal do Desenvolvedor para Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 ## <a name="cloud-hosted"></a>Hospedado na nuvem
 
@@ -87,3 +82,5 @@ Para carregar e executar sua experiência no Teams, você precisa criar um pacot
 ## <a name="see-also"></a>Confira também
 
 [Testar e depurar seu bot localmente com o IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[Guias do DevTools para o Microsoft Teams](../../tabs/how-to/developer-tools.md)
