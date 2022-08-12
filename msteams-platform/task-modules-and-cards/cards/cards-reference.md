@@ -3,12 +3,12 @@ title: Tipos de cartões
 description: Neste módulo, aprenda o que são os cartões e as ações de cartão disponíveis para bots no Teams e crie um destaque, uma miniatura e cartões adaptáveis
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558580"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311957"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -18,7 +18,7 @@ Antes de identificar os diferentes tipos de cartão, entenda como criar um cart�
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Criar um cartão hero, um cartão em miniatura ou um Cartão Adaptável
 
-Para criar um cartão de destaque, cartão de miniatura ou Cartão Adaptável do App Studio:
+Para criar um cartão Destaque, um cartão em miniatura ou um Cartão Adaptável a partir do Portal do Desenvolvedor para Teams:
 
 1. Vá para [Portal do Desenvolvedor para Teams](https://dev.teams.microsoft.com/home).
 1. Selecione **Projetar e compilar cartões Adaptáveis**.
