@@ -232,6 +232,8 @@
       href: tabs/design/tabs-mobile.md
     - name: Obtenha contexto para sua guia
       href: tabs/how-to/access-teams-context.md
+    - name: Criar aplicativos para canais compartilhados
+      href: concepts/build-and-test/shared-channels.md
     - name: Criar guias com Cartões Adaptáveis
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: Link de guias desdobradas e Exibição de Estágio
@@ -323,8 +325,6 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Referências à API de aplicativos de reunião
       href: apps-in-teams-meetings/API-references.md
-    - name: Criar canal compartilhado
-      href: concepts/build-and-test/Shared-channels.md
     - name: Obter transcrições de reunião usando APIs do Graph
       items:
         - name: Visão geral

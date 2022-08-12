@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841789"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311964"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Cenas personalizadas no Modo Conferência no Teams
 
@@ -37,7 +37,7 @@ Um aplicativo somente de cena ainda é um aplicativo no Teams. O estúdio Scene 
 Você deve ter uma compreensão básica do seguinte para usar cenas personalizadas do Modo Conferência:
 
 * Defina cena e assentos em uma cena.
-* Tenha uma conta do Desenvolvedor Microsoft e familiarize-se com o [Portal do Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md) do Teams e do App Studio.
+* Ter uma Conta de desenvolvedor da Microsoft e estar familiarizado com o Teams [Portal do Desenvolvedor](../concepts/build-and-test/teams-developer-portal.md).
 * Entenda o [conceito de sideload de aplicativo](../concepts/deploy-and-publish/apps-upload.md).
 * Verifique se o Administrador concedeu permissão para [**Carregar um aplicativo personalizado**](../concepts/deploy-and-publish/apps-upload.md) e selecionar todos os filtros como parte das políticas de Configuração de Aplicativo e Reunião, respectivamente.
 
@@ -53,7 +53,7 @@ Considere as seguintes práticas para uma experiência de construção de cena:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Criar uma cena usando o estúdio Scene
 
-A Microsoft tem um estúdio Scene que permite que você crie cenas. Ele está disponível no [Editor de Cenas - Portal do Desenvolvedor Teams](https://dev.teams.microsoft.com/scenes). Este documento se refere ao estúdio Scene no Portal do Desenvolvedor do Teams. A interface e as funcionalidades são todas iguais no Designer de Cena do App Studio.
+A Microsoft tem um estúdio Scene que permite que você crie cenas. Ele está disponível no [Editor de Cenas - Portal do Desenvolvedor Teams](https://dev.teams.microsoft.com/scenes). Este documento se refere ao estúdio Scene no Portal do Desenvolvedor do Teams.
 
 Uma cena no contexto do estúdio Scene é um artefato que contém os seguintes elementos:
 

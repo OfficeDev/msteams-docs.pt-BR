@@ -4,12 +4,12 @@ description: Neste módulo, saiba como criar Cartões Adaptáveis para seu aplic
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558153"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312053"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Projetando Cartões Adaptáveis para seu aplicativo Microsoft Teams
 
@@ -157,7 +157,7 @@ Use para reunir várias entradas do usuário.
 
 ## <a name="anatomy"></a>Anatomia
 
-Os Cartões Adaptáveis têm muita flexibilidade. Mas, no mínimo, sugerimos fortemente incluir os seguintes componentes em cada cartão.
+Cartões Adaptáveis têm muitas flexibilidades. Mas, no mínimo, sugerimos fortemente incluir os seguintes componentes em cada cartão.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
@@ -192,7 +192,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para formata
   * **Faça**: Para cada `TextBlock`, definido `"wrap": true` já que o texto não se quebra por padrão.
   * **Não faça**: Defina `"width": "auto"` para cada contêiner de coluna. Por exemplo, se você tiver uma entrada e um botão lado a lado, o botão poderá ser cortado em algumas telas. Em vez disso, defina `auto` para a coluna com botões e outros conteúdos que sempre devem estar completamente visíveis.
 * `"width": "stretch"`: Tamanhos de colunas com base na largura `ColumnSet` disponível. Quando várias colunas usam o valor `"stretch"`, elas compartilham igualmente a largura disponível.
-  * **Faça**: Use com uma coluna se todas as outras colunas tiverem uma largura estática. Por exemplo, você tem imagens em miniatura em uma coluna com todos os 50 pixels de largura.
+  * **Faça**: Use com uma coluna se todas as outras colunas tiverem uma largura estática. Por exemplo, você tem imagens em miniatura em uma coluna, todas com 50 pixels de largura.
 * `"width": "<number>"`: dimensiona colunas usando uma proporção da largura `ColumnSet` disponível. Por exemplo, se você definir três colunas com `"width": "1"`, `"width": "4"` e `"width": "5"`, as colunas assumirão 10, 40 e 50% da largura disponível.
 * `"width": "<number>px"`: Tamanhos de colunas para uma largura de pixel específica. Essa abordagem é útil ao criar tabelas.
   * **Faça**: Use quando a largura do que você está exibindo não precisa alterar (por exemplo, números e porcentagens).
@@ -204,11 +204,11 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para formata
 
 **Faça**: Nesta tela, existem duas colunas na parte inferior do cartão. A largura do componente de entrada é definida como `stretch`, enquanto a largura do botão **Selecionar** é definida como `auto`. Isso garante que o botão permaneça completamente em exibição.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="A imagem mostra como definir a largura da coluna em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="A captura de tela mostra como definir a largura da coluna para Cartões Adaptáveis.":::
 
 **Não faça**: Nesta tela, ambas as colunas foram `width` definidas como `auto`. Isso faz com que o botão **Selecionar** à direita seja ligeiramente cortado em comparação com a entrada.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="A imagem mostra como não definir a largura da coluna em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="A captura de tela mostra como não definir a largura da coluna em Cartões Adaptáveis.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -388,11 +388,11 @@ Aqui está o código para implementar o exemplo de projeto que você deve seguir
 
 **Faça**: Layouts tendem a ser exibidos melhor em dispositivos móveis com menos colunas.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="A imagem mostra a quantidade certa de colunas em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="A captura de tela mostra o número correto de colunas nos Cartões Adaptáveis.":::
 
 **Não faça**: Uso de muitas colunas pode atrapalhar o conteúdo do cartão no celular.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="A imagem mostra como muitas colunas podem afetar negativamente o layout do Cartão Adaptável.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text=" A captura de tela mostra como muitas colunas podem afetar negativamente o layout do Cartão Adaptáveis.":::
 
 #### <a name="example-fixed-width-has-its-place"></a>Exemplo: a largura fixa tem seu lugar
 
@@ -400,7 +400,7 @@ Aqui está o código para implementar o exemplo de projeto que você deve seguir
 
 Quando o tamanho de algo que você está exibindo não precisa ser alterado, defina as colunas com uma largura de pixel específica. Esse exemplo mostra a coluna esquerda dimensionada em 50 pixels, enquanto as descrições ao lado das miniaturas estendem o comprimento do cartão.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="A imagem mostra como definir a largura da coluna em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="A captura de tela mostra como definir a largura da coluna em Cartões Adaptáveis.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -548,17 +548,17 @@ Aqui está o código para implementar o exemplo de projeto.
 
 Se você estiver usando [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) ou [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), defina a propriedade `wrap` como `true` para que o texto do cartão não trunque no celular.
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>Exemplo: certificando-se de que o texto não trunque
+#### <a name="example-making-sure-text-dont-truncate"></a>Exemplo: Verificando se o texto não é truncado
 
 # <a name="design"></a>[Design](#tab/design)
 
 **Faça**: Nesta tela, o cartão tem uma `wrap` propriedade definida como `true`. Isso permite que o texto se ajuste a qualquer tamanho de tela.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="A imagem mostra como quebrar texto em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="A captura de tela mostra como quebrar o texto em Cartões Adaptáveis.":::
 
 **Não faça**: Nesta tela, o cartão não usa a propriedade `wrap`, portanto, o texto é cortado na tela do celular..
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="A imagem mostra o que pode acontecer se você não quebra texto em Cartões Adaptáveis.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="A captura de tela mostra o que pode acontecer se você não quebrar o texto nos Cartões Adaptáveis.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -655,7 +655,7 @@ Siga essas diretrizes ao incluir imagens em seus cartões.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Prática recomendada sobre como você deve incluir apenas um pequeno conjunto de ações em um Cartão Adaptável.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="A captura de tela mostra as práticas recomendadas sobre como você deve incluir apenas um pequeno conjunto de ações em um Cartão Adaptável.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Faça: Usar até seis ações principais
 
@@ -663,7 +663,7 @@ Embora os Cartões Adaptáveis possam suportar seis ações primárias, a maiori
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Prática recomendada sobre como não sobrecarregar os usuários com demasiadas ações em um Cartão Adaptável.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="A captura de tela mostra as práticas recomendadas sobre como não sobrecarregar os usuários com demasiadas ações em um Cartão Adaptável.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>Não faça: Usar mais de seis ações principais
 
@@ -674,7 +674,7 @@ Os Cartões Adaptáveis devem apresentar conteúdo rápido e prático. Muitas a�
 
 ### <a name="frequency"></a>Frequência
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Práticas recomendadas sobre a frequência do Cartão Adaptável.":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="A captura de tela mostra as práticas recomendadas sobre a frequência do Cartão Adaptável.":::
 
 #### <a name="do-be-concise"></a>Faça: Seja conciso
 

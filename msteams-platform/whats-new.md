@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232278"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312237"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 08/09/2022 | Introduzido o Kit de ferramentas do Teams para Visual Studio 2022 | Ferramentas e SDK > Kit de ferramentas do Teams para Visual Studio > [Visão geral do Kit de ferramentas do Teams para Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Adicionado recurso para recuperar transcrições de reunião no cenário pós-reunião. | Compilar aplicativos para reuniões e chamadas do Teams > Obter transcrições de reunião usando APIs do Graph > [Visão geral](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03/08/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
@@ -227,7 +228,6 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | As guias no chat em grupo agora estão disponíveis na versão lançada do Teams. Como parte desse trabalho, a seção de guias foi retrabalhada para maior clareza.| [Guias configuráveis](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | A introdução ao Node JS e ao .NET/C# foi atualizada para usar o App Studio no Teams, e uma nova seção foi adicionada na hospedagem de aplicativos do Teams baseados em Nó no Azure. | [Introdução à plataforma Microsoft Teams com C#/.NET e App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Introdução à plataforma Microsoft Teams com Node JS e App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hospede seu aplicativo Node Teams no Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 09/11/2018 | Agora você pode criar links profundos para chats privados entre usuários. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | A Estrutura do SharePoint 1.7 enviou e com ela um novo recurso para usar a guia Microsoft Teams como uma Web Part da Estrutura do SharePoint. | [Guias no SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 05/11/2018 | O recurso **módulo de tarefa** foi lançado. Um módulo de tarefa permite que você crie experiências pop-up modais em seu aplicativo do Teams, a partir de bots e guias. Dentro do pop-up, você pode executar seu próprio código HTML/JavaScript personalizado, mostrar um widget baseado em `<iframe>`, como um vídeo do YouTube ou do Microsoft Stream, ou exibir um [Cartão adaptável](/adaptive-cards/). | [Visão geral do módulo tarefa](~/concepts/task-modules/task-modules-overview.md), [módulo de tarefa em guias](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tarefa em bots](~/concepts/task-modules/task-modules-bots.md) |
@@ -251,7 +251,6 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | 02/04/2018 | Usando bots para enviar notificações para seu aplicativo. |[Bots somente de notificação](~/concepts/bots/bots-notification-only.md)|
 | 27/03/2018 | Documentação expandida para mensagens proativas. |[Iniciar uma conversa](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 15/03/2018 | Documentação refatorada para cartões. |[Cartões](~/concepts/cards/cards.md), [Ações de cartão](~/concepts/cards/cards-actions.md), [Formatação de cartão](~/concepts/cards/cards-format.md), [Referência de cartão](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | Adição de documentação para o Teams App Studio. |[Desenvolver rapidamente aplicativos com o Teams App Studio](~/get-started/get-started-app-studio.md), [Usando a biblioteca de controle no App Studio](~/get-started/app-studio-component-library.md)|
 | 27/02/2018 | Código de exemplo adicionado para demonstrar o método AsTeamsChannelAccounts(). |[Obter contexto para o bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Tópicos adicionados para começar a usar C#. |[Introdução à plataforma do Microsoft Teams com C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 |

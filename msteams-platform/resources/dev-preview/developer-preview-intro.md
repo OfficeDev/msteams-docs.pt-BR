@@ -3,12 +3,12 @@ title: Pré-visualização pública do desenvolvedor para o Microsoft Teams
 description: Neste artigo, conheça os recursos que estão na Visualização Pública do Desenvolvedor do Microsoft Teams e do aplicativo de visualização do desenvolvedor.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503911"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312195"
 ---
 # <a name="public-developer-preview-for-teams"></a>Visualização do desenvolvedor público do Teams
 
@@ -19,9 +19,9 @@ O Developer Preview é um programa público para desenvolvedores, que fornece ac
 
 ## <a name="developer-preview-app-manifest"></a>Manifesto do aplicativo de pré-visualização do desenvolvedor
 
-Muitos recursos habilitados na pré-visualização do desenvolvedor exigirão alterações no arquivo JSON do manifesto do aplicativo. Para fazer isso, você precisará usar o [esquema de manifesto da visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md). Se usar esse esquema, não poderá usar o [App Studio](~/concepts/build-and-test/app-studio-overview.md) para fazer essas alterações nem poderá usá-lo para carregar seu aplicativo para teste. Para fazer upload de seu aplicativo, você precisará selecionar o ícone `More apps` na barra de aplicativos e, em seguida, selecionar o `Upload a custom app link`. Usando esse método, você só pode carregar uma versão compactada do pacote do aplicativo.
+Muitos recursos habilitados na pré-visualização do desenvolvedor exigirão alterações no arquivo JSON do manifesto do aplicativo. Para fazer isso, você precisará usar o [esquema de manifesto da visualização do desenvolvedor](~/resources/schema/manifest-schema-dev-preview.md). Se você usar esse esquema, não poderá usar [Portal do Desenvolvedor do Teams](~/concepts/build-and-test/teams-developer-portal.md) para fazer essas alterações, nem poderá usá-lo para carregar seu aplicativo para teste. Para fazer upload de seu aplicativo, você precisará selecionar o ícone `More apps` na barra de aplicativos e, em seguida, selecionar o `Upload a custom app link`. Usando esse método, você só pode carregar uma versão compactada do pacote do aplicativo.
 
-Você pode achar útil usar o App Studio para criar as partes de pré-visualização de não desenvolvedor do pacote de aplicativos e, em seguida, exportar esse pacote e editar manualmente o arquivo `manifest.json` para adicionar os recursos de pré-visualização do desenvolvedor que você deseja usar. Depois de adicionar recursos de visualização do desenvolvedor ao arquivo `manifest.json`, você não poderá reimportar o pacote para o App Studio.
+Você pode achar útil usar o Portal do Desenvolvedor do Teams para criar as partes de visualização que não são de desenvolvedor do pacote de aplicativos e, em seguida, exportar esse pacote e editar manualmente o arquivo `manifest.json` para adicionar os recursos de visualização do desenvolvedor que você deseja usar. Depois de adicionar recursos de visualização do desenvolvedor ao arquivo `manifest.json`, você não poderá importar novamente o pacote para o Portal do Desenvolvedor do Teams.
 
 ## <a name="enable-developer-preview"></a>Habilitar a visualização do desenvolvedor
 
