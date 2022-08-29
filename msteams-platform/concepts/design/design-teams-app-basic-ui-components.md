@@ -1,16 +1,16 @@
 ---
 title: Projetar seu aplicativo com componentes básicos do Fluent UI
 author: heath-hamilton
-description: Aprenda a criar aplicativos do Microsoft Teams usando os componentes da interface do usuário fluent do Kit de Interface do Usuário do Teams.
+description: Saiba como usar componentes de interface do usuário do kit de interface do usuário do Teams para criar aplicativos do Microsoft Teams. Saiba como usar componentes da interface do usuário, como um kit Fluent, trilha, cartão de botão, carrossel, lista suspensa e alternância.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: bf90f0979e8a7b8670af8f8295be9f913b15dc36
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962437"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338785"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Projetando seu aplicativo Microsoft Teams com componentes básicos da interface do usuário do Fluent
 
@@ -18,7 +18,7 @@ Você pode projetar e criar seu aplicativo Teams do zero com os seguintes compon
 
 As ilustrações nesta página mostram a aparência dos componentes nos temas padrão (claro) e escuro do Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de Interface do Usuário do Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU do Microsoft Teams
 
 Com base <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">na interface do usuário fluente</a>, o Kit de Interface do Usuário do Microsoft Teams inclui componentes e padrões projetados especificamente para a criação de aplicativos do Teams. No kit de interface do usuário, você pode pegar e inserir os componentes listados aqui diretamente em seu design e ver mais exemplos de como usar cada componente.
 

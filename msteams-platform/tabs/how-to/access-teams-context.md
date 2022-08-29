@@ -1,14 +1,14 @@
 ---
 title: Obter contexto para sua guia
-description: Neste módulo, saiba como obter o contexto do usuário para suas guias, contexto do usuário e informações de contexto do Access
-ms.localizationpriority: medium
+description: Aprenda a contexto para sua guia, contexto de usuário, equipe ou empresa, acessar informações, recuperar contexto em canais privados ou compartilhados e lidar com a alteração de tema.
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058113"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450384"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 

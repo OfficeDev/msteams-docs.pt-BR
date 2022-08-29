@@ -5,16 +5,19 @@ description: Neste artigo, você aprenderá a adicionar autenticação a uma ext
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190271"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435045"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> Depois de adicionar a autenticação à extensão de mensagem, o usuário deve adicionar "**token.botframework.com**" à seção "**validDomains**" no manifesto.
 
 ## <a name="identify-the-user"></a>Identifique o usuário
 
@@ -75,14 +78,14 @@ Para solicitar um usuário não autenticado, para entrar, responda com uma açã
 
 Sua experiência de entrada deve ser responsiva e se encaixar em uma janela pop-up. Ela deve se integrar ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client), que usa a passagem de mensagens.
 
-Assim como com outras experiências inseridas em execução no Microsoft Teams, o código dentro da janela precisa primeiro chamar `microsoftTeams.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que a passa para a URL de entrada do OAuth.
+Assim como com outras experiências inseridas em execução no Microsoft Teams, o código dentro da janela precisa primeiro chamar `app.initialize()`. Se o código executar um fluxo OAuth, você poderá passar a ID de usuário do Teams para sua janela, que a passa para a URL de entrada do OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Conclua o fluxo de entrada
 
 Quando a solicitação de entrada for concluída e redirecionada de volta para sua página, ela deverá executar as seguintes etapas:
 
 1. Gerar um código de segurança, um número aleatório. Você deve armazenar em cache esse código em seu serviço, com as credenciais obtidas por meio do fluxo de entrada, como tokens OAuth 2.0.
-1. Chamar `microsoftTeams.authentication.notifySuccess` e passar o código de segurança.
+1. Chamar `authentication.notifySuccess` e passar o código de segurança.
 
 Nesse ponto, a janela é fechada e o controle é passado para o cliente do Teams. O cliente agora emiti novamente a consulta do usuário original, juntamente com o código de segurança na propriedade `state`. Seu código pode usar o código de segurança para pesquisar as credenciais armazenadas anteriormente para concluir a sequência de autenticação e, em seguida, concluir a solicitação do usuário.
 

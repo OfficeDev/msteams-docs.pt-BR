@@ -1,16 +1,16 @@
 ---
 title: Criar uma página de configuração
 author: surbhigupta
-description: Neste módulo, saiba como criar uma página de configuração para definir um canal ou chat em grupo para configurações, como obter dados de contexto e muito mais
-ms.localizationpriority: medium
+description: Crie uma página de configuração para coletar informações do usuário. Além disso, obtenha dados de contexto para as guias do Microsoft Teams, saiba mais sobre autenticação, modifique ou remova guias.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841698"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450377"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -174,9 +174,10 @@ O código da página de configuração informa ao Teams que os requisitos de con
 
 >[!NOTE]
 >
->* Você tem 30 segundos para concluir a operação de salvamento (o retorno de chamada para registerOnSaveHandler) antes do tempo limite. Após o tempo limite, uma mensagem de erro genérica é exibida.
+>* Você tem 30 segundos para concluir a operação de salvamento (o retorno de chamada para `registerOnSaveHandler`) antes do tempo limite. Após o tempo limite, uma mensagem de erro genérica é exibida.
 >* Se você registrar um manipulador de salvamento usando `registerOnSaveHandler()`, o retorno de chamada deverá invocar `saveEvent.notifySuccess()` ou `saveEvent.notifyFailure()` para indicar o resultado da configuração.
 >* Se você não registrar um manipulador de salvamento, a chamada `saveEvent.notifySuccess()` será feita automaticamente quando o usuário selecionar **Salvar**.
+>* Certifique-se de ter exclusivo `entityId`. Redirecionamentos `entityId` duplicados para a primeira instância da guia.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obter dados de contexto para suas configurações de guia
 
@@ -292,7 +293,7 @@ Autentique antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar ou remover uma guia
 
-Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem, reconfigurem ou renomeiem uma guia de canal ou grupo. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
+Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem ou reconfigurem uma guia de canal ou grupo. Você só pode renomear sua guia por meio da interface do usuário do Teams. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Configuração do Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para página de remoção:
 

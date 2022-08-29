@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311950"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435010"
 ---
 # <a name="meeting-apps-api-references"></a>Referências à API de aplicativos de reunião
 
@@ -37,8 +37,8 @@ A tabela a seguir fornece uma lista de APIs disponíveis nos SDKs do Microsoft T
 |[**Obter Estado de Compartilhamento da Janela de Conteúdo**](#get-app-content-stage-sharing-state-api)| Busque informações sobre o estado de compartilhamento do aplicativo no estágio da reunião. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Obter Recursos de Compartilhamento da Janela de Conteúdo**](#get-app-content-stage-sharing-capabilities-api)| Busque os recursos do aplicativo para compartilhar com o estágio da reunião. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Obtenha eventos de reunião do Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Busque eventos de reunião em tempo real, como a hora real de início e término.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Obter alto-falante de áudio de entrada**](#get-incoming-audio-speaker) | Permite que um aplicativo obtenha a configuração do alto-falante de áudio de entrada para o usuário da reunião.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Alternar áudio de entrada**](#toggle-incoming-audio) | Permite que um aplicativo alterne a configuração do alto-falante de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Obter estado de áudio de entrada**](#get-incoming-audio-state) | Permite que um aplicativo obtenha a configuração de estado de áudio de entrada para o usuário da reunião.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Alternar áudio de entrada**](#toggle-incoming-audio) | Permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
 
@@ -932,15 +932,44 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **Valor. Endtime** | A hora de término da reunião em UTC. |
 | **locale**| A localidade da mensagem definida pelo cliente. |
 
-## <a name="get-incoming-audio-speaker"></a>Obter alto-falante de áudio de entrada
+## <a name="get-incoming-audio-state"></a>Obter estado de áudio de entrada
 
-A `getIncomingClientAudioState` API permite que um aplicativo obtenha a configuração do alto-falante de áudio de entrada para o usuário da reunião. A API está disponível por meio do SDK do cliente do Teams.
+A `getIncomingClientAudioState` API permite que um aplicativo obtenha a configuração de estado de áudio de entrada para o usuário da reunião. A API está disponível por meio do SDK do cliente do Teams.
 
 > [!NOTE]
 >
 > * No `getIncomingClientAudioState` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
 > * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
 
+### <a name="manifest"></a>Manifesto
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### <a name="example"></a>Exemplo
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
 A tabela a seguir inclui o parâmetro de consulta:
@@ -948,22 +977,7 @@ A tabela a seguir inclui o parâmetro de consulta:
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
 |**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro ou `SdkError` quando `null` a busca de áudio for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso quando a busca de áudio for bem-sucedida ou nula quando a busca de áudio falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false. |
-
-### <a name="example"></a>Exemplo
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
+  
 ### <a name="response-codes"></a>Códigos de resposta
 
 A tabela a seguir fornece os códigos de resposta:
@@ -976,34 +990,51 @@ A tabela a seguir fornece os códigos de resposta:
 
 ## <a name="toggle-incoming-audio"></a>Alternar áudio de entrada
 
-A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração do alto-falante de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
+A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
 
 > [!NOTE]
 >
 > * No `toggleIncomingClientAudio` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
 > * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
 
+### <a name="manifest"></a>Manifesto
+
+```JSON
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated"
+            }
+        ]
+    }
+}
+```
+ 
+### <a name="example"></a>Exemplo
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
 A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro `SdkError` ou `null` quando a alternância for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso, quando a alternância for bem-sucedida ou nula quando a alternância falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false. |
-
-### <a name="example"></a>Exemplo
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
-
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro `SdkError` ou `null` quando a alternância for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso, quando a alternância for bem-sucedida ou nula quando a alternância falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false.
+  
 ### <a name="response-code"></a>Código da resposta
 
 A tabela a seguir fornece os códigos de resposta:

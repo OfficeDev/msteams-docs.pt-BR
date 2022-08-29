@@ -3,12 +3,12 @@ title: Autenticação silenciosa
 description: Neste módulo, saiba como fazer autenticação silenciosa, logon único e Azure AD para guias e como ele funciona
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035307"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435038"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Usar a autenticação silenciosa no Azure AD
 
@@ -57,7 +57,7 @@ Inclua a Biblioteca de Autenticação do Active Directory nas páginas da guia e
 
 ### <a name="get-the-user-context"></a>Obter o contexto do usuário
 
-Na página de conteúdo da guia, chame `microsoftTeams.getContext()` para obter uma dica de entrada para o usuário atual. A dica é usada como um `loginHint` na chamada ao Azure AD.
+Na página de conteúdo da guia, chame `app.getContext()` para obter uma dica de entrada para o usuário atual. A dica é usada como um `loginHint` na chamada ao Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -109,16 +109,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 A Biblioteca de Autenticação do Active Directory analisa o resultado do Azure AD chamando `AuthenticationContext.handleWindowCallback(hash)` na página de retorno de chamada de entrada.
 
-Verifique se você tem um usuário válido e chame `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()` para relatar o status à página de conteúdo da guia principal.
+Verifique se você tem um usuário válido e chame `authentication.notifySuccess()` ou `authentication.notifyFailure()` para relatar o status à página de conteúdo da guia principal.
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

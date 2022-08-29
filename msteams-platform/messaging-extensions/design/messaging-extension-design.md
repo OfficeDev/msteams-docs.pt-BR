@@ -1,16 +1,16 @@
 ---
 title: Como criar sua extensão de mensagens
-description: Saiba como criar uma extensão de mensagens do Teams e obtenha o Kit de Interface do Usuário do Microsoft Teams. Descreve a prática recomendada de dicas de extensões de mensagem de referência de diretrizes de design de equipes
+description: Saiba como criar uma extensão de mensagens do Teams e obtenha o Kit de Interface do Usuário do Microsoft Teams. Descreve sobre as diretrizes de design do Teams que referenciam dicas de extensões de mensagem e práticas recomendadas.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558748"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338897"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Como criar sua extensão de mensagens do Microsoft Teams
 
@@ -57,7 +57,7 @@ Para consistência entre os aplicativos do Teams, você não pode personalizar a
 
 ## <a name="types-of-message-extensions"></a>Tipos de extensões de mensagens
 
-As extensões de mensagens podem incluir comandos de pesquisa, comandos de ação ou ambos. Seus comandos dependem dos recursos do seu aplicativo e de como eles se encaixam nos casos de uso do Teams.
+As extensões de mensagens podem incluir comandos de pesquisa, comandos de ação ou ambos. Seus comandos dependem dos recursos do aplicativo e de como eles se ajustam nos casos de uso do Teams.
 
 ### <a name="search-commands"></a>Comandos de pesquisa
 
@@ -192,7 +192,7 @@ Os exemplos a seguir mostram uma extensão de mensagem aberta na caixa de redaç
 |3|**Caixa de pesquisa**: permite que os usuários localizem o conteúdo do aplicativo que desejam inserir.|
 |4|**Menu guia (opcional)**: fornece várias categorias de conteúdo.|
 |5|**Menu de comandos de ação (opcional)**: exibe a lista de comandos de ação (se você especificar algum).|
-|6 |**Conteúdo do aplicativo**: principalmente para exibir os resultados da pesquisa.|
+|6|**Conteúdo do aplicativo**: principalmente para exibir os resultados da pesquisa.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -205,7 +205,7 @@ Os exemplos a seguir mostram uma extensão de mensagem aberta na caixa de redaç
 |3|**Ícone de menu de comandos de ação (opcional)**: abre uma lista de comandos de ação para sua extensão de mensagens (conforme sua especificação).
 |4|**Caixa de pesquisa**: permite que os usuários localizem o conteúdo do aplicativo que desejam inserir.|
 |5|**Menu guia (opcional)**: fornece várias categorias de conteúdo.|
-|6 |**Menu de comandos de ação (opcional)**: exibe a lista de comandos de ação (se você especificar algum).|
+|6|**Menu de comandos de ação (opcional)**: exibe a lista de comandos de ação (se você especificar algum).|
 |7 |**Conteúdo do aplicativo**: principalmente para exibir os resultados da pesquisa. O exemplo aqui está usando o layout da lista (o layout da grade é outra opção).|
 |8 |**Logotipo do aplicativo**: ícone de contorno do logotipo do aplicativo.|
 
@@ -259,7 +259,7 @@ Se fizer sentido para seus casos de uso, pense em criar uma extensão de mensage
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemplo de como o trabalho de design é cuidado.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Exemplo de como lidar com o trabalho de design.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Não recomendamos: inserir todo o aplicativo em um módulo de tarefa
 

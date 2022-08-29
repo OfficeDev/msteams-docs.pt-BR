@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312237"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435003"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -40,6 +40,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 | 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Adicionado recurso para recuperar transcrições de reunião no cenário pós-reunião. | Compilar aplicativos para reuniões e chamadas do Teams > Obter transcrições de reunião usando APIs do Graph > [Visão geral](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03/08/2022 | Link desdobrado para compartilhamento com equipes de aplicativos Web | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativos Web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| Aviso: o Portal do Desenvolvedor agora está em GA e o App Studio foi preterido a partir de 1º de agosto de 2022. | Ferramentas e SDK > [Portal do Desenvolvedor para Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | Adicionar a imagem de exibição do Teams e o cartão de visita para notificação na reunião| Compilar aplicativos para reuniões e chamadas do Teams > Habilitar e configurar aplicativos para reuniões > [Notificação na reunião](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Compilar canais compartilhados no Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Canais Compartilhados](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduzindo o manifesto do aplicativo v1.14| Manifesto do aplicativo > [Esquema do manifesto de aplicativo para Teams](resources/schema/manifest-schema.md)|
@@ -263,6 +264,7 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | Compartilhar aplicativos no estágio de reunião do Teams em dispositivos móveis | Criar aplicativos para reuniões e chamadas do Teams > [habilitar e configurar aplicativos para reuniões](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 03/08/2022 | Ativar e desativar mudo de APIs para aplicativos na janela de conteúdo compartilhado do Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Referências da API de aplicativos de reunião](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Controles de colaboração para o Teams| Integrar com o Teams > [Controles de colaboração](samples/collaboration-control.md)|
 | 30/06/2022 | Aplicativos para reuniões instantâneas, reuniões individuais e chamadas em grupo| Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md)|

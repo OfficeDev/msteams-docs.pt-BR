@@ -5,12 +5,12 @@ description: Neste módulo, saiba como começar a usar os conectores Office 365 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841629"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363478"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -19,7 +19,7 @@ Com os aplicativos do Microsoft Teams, você pode adicionar seu Conector do Offi
 Confira o vídeo a seguir para saber como criar um Office 365 Conectores:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -260,3 +260,5 @@ Siga o a [guia passo a passo](../../sbs-teams-connectors.yml) para criar e testa
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Como os administradores podem habilitar ou desabilitar conectores](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [Como os administradores podem publicar conectores personalizados na sua organização](/MicrosoftTeams/office-365-custom-connectors)
+* [Compilar um bot de notificação com JavaScript](../../sbs-gs-notificationbot.yml)
+* [Crie seu primeiro aplicativo de bot usando JavaScript](../../sbs-gs-bot.yml)

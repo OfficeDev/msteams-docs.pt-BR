@@ -1,16 +1,16 @@
 ---
 title: Alterações na margem da guia
 author: surbhigupta
-description: Neste módulo, saiba como a remoção de margens de tabulação melhora a experiência de criação de aplicativos.
+description: Saiba como remover margens em torno de guias no Microsoft Teams com o kit de interface do usuário. Conheça o efeito de preenchimento extra, o tamanho da margem para esquerda, direita, superior e inferior.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962423"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450440"
 ---
 # <a name="tab-margin-changes"></a>Alterações na margem da guia
 

@@ -1,16 +1,16 @@
 ---
 title: Pré-requisitos
 author: surbhigupta
-description: Neste módulo, conheça os requisitos de cada guia no Microsoft Teams deve aderir e ferramentas para criar guias.
-ms.localizationpriority: medium
+description: Neste artigo, conheça os pré-requisitos para criar a guia pessoal, canal ou grupo do Microsoft Teams. Conheça as ferramentas necessárias para criar sua guia.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142616"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450412"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -36,7 +36,7 @@ Certifique-se de aderir aos seguintes pré-requisitos ao criar sua guia pessoal 
 
 * Se você optar por fazer com que seu canal ou guia de grupo apareça no cliente móvel do Teams, a configuração de `setConfig()` deve ter um valor para a propriedade `websiteUrl`.
 
-* Microsoft Teams guia não dá suporte à capacidade de carregar sites da intranet que usam certificados autoassinados.
+* A guia Microsoft Teams não dá suporte à capacidade de carregar sites da intranet que usam certificados autoassinados.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

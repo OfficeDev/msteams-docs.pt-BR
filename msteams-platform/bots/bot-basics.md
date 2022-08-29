@@ -1,16 +1,16 @@
 ---
 title: Manipuladores de atividade de bot
 author: surbhigupta
-description: Neste artigo, saiba mais sobre manipuladores de atividade de bot, estruturas, manipuladores de atividade do Teams e lógica de bot no Microsoft Teams.
+description: Saiba mais sobre eventos e manipuladores de atividades do Microsoft Teams para mensagens, canais, equipes, membros, menções, autenticação, ações de cartão usando Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485570"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321205"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 

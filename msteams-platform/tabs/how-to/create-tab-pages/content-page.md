@@ -1,16 +1,16 @@
 ---
 title: Criar uma página de conteúdo
 author: surbhigupta
-description: Neste módulo, saiba como criar uma página de conteúdo para suas diretrizes de design e conteúdo de guia e guia
-ms.localizationpriority: medium
+description: Saiba mais sobre a página da Web no cliente do Teams e faz parte da guia personalizada pessoal, canal ou grupo. Crie a página de conteúdo e insira-a como modo de exibição da Web dentro do módulo de tarefa.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841965"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450370"
 ---
 # <a name="create-a-content-page"></a>Criar uma página de conteúdo
 
@@ -33,6 +33,9 @@ Você precisa se concentrar em tornar seu design de guia limpo, intuitivo de nav
 ## <a name="integrate-your-code-with-teams"></a>Integrar seu código com o Teams
 
 Para que sua página seja exibida no Teams, você deve incluir o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e incluir uma chamada para `app.initialize()` após o carregamento da página.
+
+> [!NOTE]
+> Leva cerca de 24 a 48 horas para que qualquer alteração de conteúdo ou interface do usuário reflita no aplicativo guia devido ao cache.
 
 O código a seguir fornece um exemplo de como sua página e o cliente do Teams se comunicam:
 

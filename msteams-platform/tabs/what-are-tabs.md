@@ -1,16 +1,16 @@
 ---
 title: Guias do Microsoft Teams
 author: surbhigupta
-description: Neste módulo, saiba como compilar uma guia personalizada na plataforma Teams, nos recursos de Guia e nos cenários de usuários de Guias
+description: Aprenda a criar guias, páginas da Web inseridas no Microsoft Teams. Crie uma página de conteúdo como parte da guia pessoal, canal ou grupo. Além disso, aprenda a criar guias com Cartões Adaptáveis.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 38781b844b9aa84c39daa4cae909ec11ad197175
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058232"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450391"
 ---
 # <a name="build-tabs-for-teams"></a>Compilar guias para o Teams
 

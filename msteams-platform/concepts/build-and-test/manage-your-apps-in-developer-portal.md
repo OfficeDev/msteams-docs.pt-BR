@@ -4,12 +4,12 @@ description: Neste artigo, saiba como configurar, distribuir e gerenciar seus ap
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232372"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435073"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Gerenciar seus aplicativos no Portal do Desenvolvedor
 
@@ -20,7 +20,7 @@ Depois de criar ou carregar seu aplicativo, você pode gerenciar seus aplicativo
 * [Avançado](#advanced)
 * [Publish](#publish)
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Na seção **Visão** geral, você pode ver os seguintes componentes para gerenciar seu aplicativo:
 
@@ -154,9 +154,9 @@ Para adicionar um bot:
 1. Na página Gerenciamento de Bot, selecione **Novo Bot**.
 1. Insira o nome e selecione **Adicionar**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="A captura de tela é um exemplo que mostra as ferramentas no portal do desenvolvedor, que ajuda você a criar os principais recursos.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="A captura de tela é um exemplo que mostra as ferramentas no portal do desenvolvedor, que ajuda você a criar os principais recursos.":::
 
-No portal do desenvolvedor, você pode acessar o portal do Bot Framework e configurar o bot para atualizar o ícone e outras propriedades.
+No Portal do Desenvolvedor, você pode acessar o Portal do Bot Framework e configurar o bot para atualizar o ícone e outras propriedades.
 
 ## <a name="see-also"></a>Confira também
 

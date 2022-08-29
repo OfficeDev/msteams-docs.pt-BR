@@ -3,18 +3,18 @@ title: 'Iniciar ações com extensões de mensagem '
 description: Neste módulo, saiba como criar extensões de mensagem baseadas em ação para permitir que os usuários disparem serviços externos
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143673"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337142"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Iniciar ações com extensões de mensagem 
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-As extensões de mensagem baseadas em ação permitem que os usuários disparem ações em serviços externos enquanto estiverem Teams.
+As extensões de mensagens baseadas em ação permitem que os usuários disparem ações em serviços externos no Teams.
 
 ![Exemplo de cartão de extensão de mensagem](~/assets/images/compose-extensions/ceexample.png)
 
@@ -25,6 +25,9 @@ As seções a seguir descrevem como fazer isso:
 ## <a name="action-type-message-extensions"></a>Extensões de mensagem de tipo de ação
 
 Para iniciar ações de uma extensão de mensagem, defina o `type` parâmetro como `action`. Veja abaixo um exemplo de um manifesto com uma pesquisa e um comando create. Uma única extensão de mensagem pode ter até 10 comandos diferentes. Isso pode incluir vários comandos baseados em ação e pesquisa múltipla.
+
+ > [!NOTE]
+ >`justInTimeInstall` funciona quando você carrega um aplicativo no catálogo de aplicativos, mas falha quando você faz o sideload de um aplicativo.
 
 ### <a name="complete-app-manifest-example"></a>Exemplo de manifesto completo do aplicativo
 
@@ -236,9 +239,9 @@ Há três maneiras de coletar informações de um usuário final no Teams.
 
 ### <a name="static-parameter-list"></a>Lista de parâmetros estáticos
 
-Nesse método, tudo o que você precisa fazer é definir uma lista estática de parâmetros no manifesto, conforme mostrado acima no comando "Criar To Do". Para usar esse método, verifique `fetchTask` se está definido como `false` e que você defina seus parâmetros no manifesto.
+Nesse método, tudo o que você precisa fazer é definir uma lista estática de parâmetros no manifesto, conforme mostrado acima no comando "Criar tarefa pendente". Para usar esse método, verifique `fetchTask` se está definido como `false` e que você defina seus parâmetros no manifesto.
 
-Quando um usuário escolhe um comando com parâmetros estáticos, o Teams gerará um formulário em um Módulo de Tarefa com os parâmetros definidos no manifesto. Ao pressionar Enviar, um `composeExtension/submitAction` é enviado para o bot. Para obter mais informações sobre o conjunto esperado de respostas, consulte [Respondendo ao envio](#responding-to-submit).
+Quando um usuário escolhe um comando com parâmetros estáticos, o Teams gera um formulário em um Módulo de Tarefa com os parâmetros definidos no manifesto. Ao pressionar Enviar, um `composeExtension/submitAction` é enviado para o bot. Para obter mais informações sobre o conjunto esperado de respostas, consulte [Respondendo ao envio](#responding-to-submit).
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>Entrada dinâmica usando um cartão adaptável
 
@@ -445,8 +448,9 @@ Responda à ação de envio inserindo uma mensagem com um Cartão Adaptável no 
 
 Para habilitar esse fluxo, o módulo de tarefa deve responder como no exemplo abaixo, que apresentará a mensagem de visualização ao usuário.
 
->[!Note]
->Deve `activityPreview` conter uma atividade `message` com exatamente 1 anexo de cartão adaptável.
+> [!NOTE]
+> Deve `activityPreview` conter uma atividade `message` com exatamente 1 anexo de cartão adaptável.
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Este exemplo mostra esse fluxo usando [o Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+Este exemplo mostra esse fluxo usando o [SDK do Microsoft.Bot.Connector.Teams (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 
 ```csharp
 public class MessagesController : ApiController

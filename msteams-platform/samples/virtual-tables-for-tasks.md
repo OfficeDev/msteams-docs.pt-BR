@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre tabelas virtuais para tarefas, reun
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 58572dc51164d18dcfcbf44012543bd5400c3921
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
+ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178712"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67314592"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Tabelas virtuais para tarefas, reuniões, arquivos
 
@@ -54,7 +54,7 @@ Para acompanhar este artigo, você precisará de:
 
 O cenário descrito neste guia usa as tabelas virtuais Plano do Planner e Tarefa. O cenário descrito é o mesmo usado pelo controle colaboração de tarefas. Da perspectiva do usuário, o cenário mostra como um Plano do Planner e várias Tarefas são criadas e associadas a um registro comercial específico. O cenário continua a mostrar como recuperar as tarefas associadas ao registro comercial e como ler, atualizar e excluir uma tarefa específica do planejador.
 
-O diagrama de sequência a seguir explica a interação entre o cliente, que pode ser o controle de colaboração Tarefas, a [API](~/samples/collaboration-api-reference.md) de Colaboração e as tabelas virtuais Plano planejador e tarefa.
+O diagrama de sequência a seguir explica a interação entre o cliente, que pode ser o controle de colaboração Tarefas, a [API](/rest/api/industry/collaboration-controls/) de Colaboração e as tabelas virtuais Plano planejador e tarefa.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Diagrama de sequência para tabelas virtuais":::
 
@@ -584,7 +584,7 @@ A `plannerTaskId` propriedade está associada a uma tarefa do planejador, que fo
 
 ---
 
-Para resolver esse problema, você deve verificar a mensagem de erro na resposta e, se ela estiver definida como a mensagem mostrada acima, isso significa que o registro virtual não está associado. Para criar uma associação para esse registro, você deve chamar [Associar Mapa de Colaboração – API REST](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map).
+Para resolver esse problema, você deve verificar a mensagem de erro na resposta e, se ela estiver definida como a mensagem mostrada acima, isso significa que o registro virtual não está associado. Para criar uma associação para esse registro, você deve chamar [Associar Mapa de Colaboração – API REST](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map).
 
 ### <a name="attempt-to-read-a-virtual-record-and-the-graph-resource-has-been-deleted"></a>Tentativa de ler um registro virtual e o recurso do Graph foi excluído
 

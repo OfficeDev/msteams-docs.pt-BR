@@ -1,16 +1,16 @@
 ---
 title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
-description: Saiba como desenrolar um link, abra o Modo de Exibição de Estágio e fixar uma guia com o aplicativo Microsoft Teams. Saiba mais sobre o modo de exibição de estágio e invocá-lo usando o Cartão adaptável usando exemplo e código de exemplo.
+description: Saiba mais sobre o modo de exibição de estágio, um componente de interface do usuário de tela inteira invocado para exibir o conteúdo da Web. O desfralamento de link é usado para transformar URLs em uma guia usando Cartões Adaptáveis.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.localizationpriority: high
+ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841986"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450447"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 

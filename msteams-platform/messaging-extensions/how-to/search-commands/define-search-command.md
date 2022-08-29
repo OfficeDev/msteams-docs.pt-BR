@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre os comandos de pesquisa de extensã
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312265"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363470"
 ---
 # <a name="define-message-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagem
 
@@ -24,7 +24,7 @@ Os comandos de pesquisa de extensão de mensagem permitem que os usuários pesqu
 Confira o vídeo a seguir para saber como definir comandos de pesquisa de extensão de mensagem:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Selecionar locais de invocação de comando de pesquisa
@@ -113,6 +113,7 @@ Você deve adicionar os detalhes do parâmetro de pesquisa que define o texto vi
 | `parameter.description` | Essa propriedade descreve as finalidades do parâmetro ou o exemplo do valor que deve ser fornecido. Esse valor aparece na interface do usuário. | Sim | 1.0 |
 | `parameter.title` | Essa propriedade é um título ou rótulo curto de parâmetro amigável. | Sim | 1.0 |
 | `parameter.inputType` | Essa propriedade é definida como o tipo de entrada necessária. Os valores possíveis `text`incluem `textarea`, `number`, , `date`, `time`. `toggle` O padrão é definido como `text`. | Não | 1.4 |
+| `parameters.value` | Valor inicial para o parâmetro. Atualmente o valor não é suportado | Não | 1,5 |
 
 #### <a name="example"></a>Exemplo
 

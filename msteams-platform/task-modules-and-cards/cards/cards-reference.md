@@ -1,14 +1,14 @@
 ---
 title: Tipos de cartões
-description: Neste módulo, aprenda o que são os cartões e as ações de cartão disponíveis para bots no Teams e crie um destaque, uma miniatura e cartões adaptáveis
+description: Neste módulo, saiba o que são cartões e ações de cartão disponíveis para bots no Teams e criar um hero, miniatura e cartões adaptáveis.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311957"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435024"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -71,7 +71,10 @@ Você pode identificar e usar diferentes tipos de cartões com base nos requisit
 | Cartão de entrada | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit`, têm suporte total. As ações com suporte [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * Para Cartões Adaptáveis em Webhooks de Entrada, todos os elementos nativos de esquema de Cartão Adaptável, exceto `Action.Submit`, têm suporte total. As ações com suporte [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), e [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * O Cartão Adaptável dá suporte apenas ao tipo de Conector O365 do Webhook de entrada e não a nenhum outro tipo de Conector do O365.
 
 ## <a name="common-properties-for-all-cards"></a>Propriedades comuns para todos os cartões
 
@@ -636,9 +639,9 @@ Referência do Bot Framework:
 
 O cartão de entrada no Teams é semelhante ao cartão de entrada no Bot Framework exceto que o cartão de entrada no Teams dá suporte apenas a duas ações `signin` e `openUrl`.
 
-A ação de entrada pode ser usada em qualquer cartão no Teams, não apenas no cartão de entrada. Para obter mais informações, consulte [Fluxo de autenticação do Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
+A ação de logon pode ser usada em qualquer cartão no Teams, não apenas no cartão de logon. Para obter mais informações, consulte [Fluxo de autenticação do Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Suporte para cartões de entrada
+### <a name="support-for-log-in-cards"></a>Suporte para cartões de logon
 
 A tabela a seguir fornece os recursos que dão suporte a cartões de entrada:
 
@@ -650,7 +653,7 @@ A tabela a seguir fornece os recursos que dão suporte a cartões de entrada:
 
 Referência do Bot Framework:
 
-* [Node.js do Cartão de entrada](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Fazer logon no cartão Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [C# do Cartão de entrada](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Cartão em miniatura

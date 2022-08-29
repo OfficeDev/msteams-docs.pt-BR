@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919848"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417504"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -38,7 +38,7 @@ Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reu
 As guias permitem que os membros da equipe acessem serviços e conteúdo em um espaço específico dentro de uma reunião. A equipe trabalha diretamente com guias e tem conversas sobre as ferramentas e os dados disponíveis nas guias. Na reunião do Teams, você pode adicionar uma guia selecionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>e selecione o aplicativo que você deseja instalar.
 
 > [!IMPORTANT]
-> Se você tiver integrado uma guia à sua reunião, seu aplicativo deverá seguir o fluxo de autenticação de SSO (logon único) do Teams [para guias](../tabs/how-to/authentication/tab-sso-overview.md).
+> Recomendamos que você siga o fluxo de autenticação de [SSO (](../tabs/how-to/authentication/tab-sso-overview.md)logon único) do Teams para guias, se tiver integrado um aplicativo guia em sua reunião.
 
 > [!NOTE]
 > Não há suporte para adicionar a opção de aplicativo para o aplicativo de guia de extensão de reunião do Teams no cliente Web do Teams.

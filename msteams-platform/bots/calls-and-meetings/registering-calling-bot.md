@@ -1,14 +1,14 @@
 ---
 title: Registrar chamadas e reuniões do bot do Microsoft Teams
-description: Neste módulo, saiba como registrar um novo bot de chamada de áudio/vídeo para Microsoft Teams, criar um bot ou adicionar funcionalidade de chamada e adicionar permissões de grafo.
+description: Neste módulo, saiba como registrar um novo bot de chamada de áudio/vídeo para o Microsoft Teams, criar um novo bot ou adicionar funcionalidade de chamada e adicionar permissões de grafo.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143792"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407571"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar chamadas e reuniões do bot do Microsoft Teams
 
@@ -58,7 +58,7 @@ A tabela a seguir fornece uma lista de permissões de aplicativo para chamadas:
 |Permissão    |Sequência de exibição   |Descrição |É necessário o consentimento do administrador |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Inicie chamadas individuais de saída a partir da visualização do aplicativo. |Permite que o aplicativo faça chamadas de saída para um único usuário e transfira chamadas para usuários no diretório da sua organização, sem um usuário conectado.|Sim|
-| Calls.InitiateGroupCall.All |Inicie chamadas de grupo de saída a partir da visualização do aplicativo. |Permite que o aplicativo faça chamadas para vários usuários e adicione participantes a reuniões em sua organização, sem um usuário conectado.|Sim|
+| Calls.InitiateGroupCall.All |Inicie as chamadas de saída 1:1 e de grupo na visualização do aplicativo. |Permite que o aplicativo coloque chamadas de saída para um único usuário, vários usuários, transfira chamadas e adicione participantes a reuniões em sua organização, sem um usuário conectado.|Sim|
 | Calls.JoinGroupCall.All |Ingresse em chamadas em grupo e reuniões como uma visualização de aplicativo. |Permite que o aplicativo ingresse em reuniões agendadas e chamadas de grupo em sua organização, sem um usuário conectado. O aplicativo será associado aos privilégios de um usuário do diretório para reuniões em seu locatário.|Sim|
 | Calls.JoinGroupCallasGuest.All |Ingresse em chamadas em grupo e reuniões como uma visualização de convidado. |Permite que o aplicativo ingresse anonimamente no grupo chamadas e em reuniões agendadas em sua organização, sem um usuário conectado. O aplicativo ingressará como convidado para reuniões em seu locatário.|Sim|
 | Calls.AccessMedia.All |Acessar fluxos de mídia em uma chamada como uma visualização de aplicativo. |Permite que o aplicativo obtenha acesso direto aos fluxos de mídia em uma chamada sem um usuário conectado.|Sim|

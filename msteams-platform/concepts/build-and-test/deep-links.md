@@ -3,26 +3,25 @@ title: Criar links detalhados
 description: Neste artigo, você aprenderá a criar links profundos e navegar por eles em seus aplicativos do Microsoft Teams usando guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302462"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452357"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
 Links profundos são um mecanismo de navegação que você pode usar para conectar usuários com informações e recursos no Teams e em aplicativo Teams. Os cenários em que a criação de links profundos são úteis são os seguintes:
 
 * Levar o usuário até o conteúdo dentro de uma das guias do aplicativo. Por exemplo, seu aplicativo pode ter um bot que envia mensagens notificando o usuário de uma atividade importante. Quando o usuário toca na notificação, o link profundo navega até a guia para que o usuário possa exibir mais detalhes sobre a atividade.
-* Seu aplicativo automatiza ou simplifica determinadas tarefas do usuário, como criar um chat ou agendar uma reunião, preenchendo previamente os links profundos com os parâmetros necessários. Evita a necessidade de os usuários inserirem informações manualmente.
+* Seu aplicativo automatiza ou simplifica determinadas tarefas do usuário. Você pode criar um chat ou agendar uma reunião preenchendo previamente os links profundos com os parâmetros necessários. Evita a necessidade de os usuários inserirem informações manualmente.
 
-O SDK do cliente JavaScript do Microsoft Teams (TeamsJS) simplifica o processo de navegação. Para muitos cenários, como navegar até conteúdo e informações em sua guia ou até mesmo iniciar uma caixa de diálogo de chat, o SDK fornece APIs digitados que proporcionam uma experiência aprimorada e podem substituir o uso de links profundos. Essas APIs são recomendadas para aplicativos Teams que podem ser executados em outros hosts (Outlook, Office), pois também fornecem uma maneira de verificar se o recurso que está sendo usado tem suporte desse host. As seções a seguir mostram informações sobre vinculação profunda, mas também realçam como os cenários que antes exigiam isso foram alterados com a versão v2 do TeamsJS.
+O SDK do cliente JavaScript do Microsoft Teams (TeamsJS) simplifica o processo de navegação. Para muitos cenários, como navegar até conteúdo e informações em sua guia ou iniciar uma caixa de diálogo de chat. O SDK fornece APIs digitadas que fornecem experiência aprimorada e podem substituir o uso de links profundos. Essas APIs são recomendadas para aplicativos Teams que podem ser executados em outros hosts (Outlook, Office), pois também fornecem uma maneira de verificar se o recurso que está sendo usado tem suporte desse host. As seções a seguir mostram informações sobre vinculação profunda, mas também realçam como os cenários que antes exigiam isso foram alterados com a versão v2 do TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > O comportamento dos links profundos depende de vários fatores. A lista a seguir descreve o comportamento de links profundos em entidades do Teams.
 >
 > **Tab**:  
@@ -389,11 +388,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Criar link profundos para o aplicativo depois que ele for listado na Teams store. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar o aplicativo.
 
 > [!NOTE]
-> Atualmente, não há suporte para a vinculação profunda a um aplicativo na plataforma móvel.
+> Se o aplicativo tiver sido aprovado para a plataforma móvel, você poderá vincular-se a um aplicativo móvel. O Apple App Store Connect Team ID é necessário além disso para que o link profundo funcione no Teams-iOS. Para obter mais informações, [confira como atualizar a ID da equipe do Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
 
-O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams em execução no Linux.

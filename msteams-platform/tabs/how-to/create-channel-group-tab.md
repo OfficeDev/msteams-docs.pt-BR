@@ -1,21 +1,23 @@
 ---
 title: Criar uma guia de canal
 author: laujan
-description: Neste módulo, saiba como criar uma guia de canal e grupo com o Gerador Yeoman para Microsoft Teams, incluindo a revisão do código-fonte com exemplos de código.
-ms.localizationpriority: medium
+description: Criar canal personalizado, guia agrupar com Node.js, ASP.NET Core, ASP.NET Core MVC. Gerar aplicativo, criar pacote, compilar e executar aplicativo, túnel secreto, carregar no Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841705"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450468"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
 Canal ou guias de grupo forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
+
+Verifique se você tem todos os [pré-requisitos para](~/tabs/how-to/tab-requirements.md) criar a guia canal ou grupo.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

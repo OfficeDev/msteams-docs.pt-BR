@@ -1,16 +1,16 @@
 ---
 title: Criar abas para conversação
 author: surbhigupta
-description: Neste módulo, aprenda a criar um chat de subentidade de conversa para suas guias de canal, para gerenciar conversas usando exemplos de código
+description: Aprenda a criar guias de conversa no Microsoft Teams para iniciar, continuar, aprimorar e fechar uma conversa.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
-ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.localizationpriority: high
+ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962416"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450419"
 ---
 # <a name="create-conversational-tabs"></a>Criar abas para conversação
 
@@ -99,7 +99,7 @@ Você também pode escutar um evento quando os usuários **selecionam Fechar (X)
 
 | Nome do exemplo | Descrição | C# |Node.js|
 |-------------|-------------|------|----|
-|Guia Criar Conversa| Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia Criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Guia Criar Conversa| Aplicativo de exemplo de guia do Microsoft Teams para demonstrar a guia Criar conversa. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 

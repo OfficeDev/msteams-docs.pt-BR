@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 1110d195be91c73f9e0f60f15a94f2cdbdfa083b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919771"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337233"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -246,6 +246,7 @@ Forneça comentários e relate quaisquer problemas com a experiência de depura�
 | Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista De Tarefas Pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Página de inicialização de exemplo (Microsoft 365) | Mostrar a autenticação de SSO e aproveitar os recursos do SDK do TeamsJS como disponíveis em hosts diferentes. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Próxima etapa
 

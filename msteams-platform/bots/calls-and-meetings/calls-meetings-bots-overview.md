@@ -1,14 +1,14 @@
 ---
 title: Bots de chamadas e reuniões online
-description: Neste módulo, saiba como seus aplicativos Microsoft Teams podem interagir com usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online e saiba mais sobre fluxos de mídia em tempo real
+description: Neste módulo, saiba como seus aplicativos do Microsoft Teams podem interagir com os usuários usando voz e vídeo usando APIs do Microsoft Graph para chamadas e reuniões online e saiba mais sobre fluxos de mídia em tempo real
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: db50d0d8228cc4241e67b9bfb48f35559402fc9d
+ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150824"
+ms.lasthandoff: 08/26/2022
+ms.locfileid: "67442988"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de chamadas e reuniões online
 
@@ -51,7 +51,7 @@ A seguir estão os diferentes tipos de chamada e permissões necessárias para a
 * Um usuário pode iniciar uma chamada ponto a ponto com seu bot ou convidar seu bot para uma chamada multiparte existente. A chamada com várias partes ainda não está habilitada na interface do usuário do Teams.
 
     > [!NOTE]
-    > Atualmente, não há suporte para chamadas iniciadas pelo usuário para um bot Teams plataforma móvel.
+    > Atualmente, não há suporte para chamadas iniciadas pelo usuário para um bot na plataforma móvel do Teams.
 
 * As permissões de grafo não são necessárias para que um usuário inicie uma chamada ponto a ponto com seu bot. Permissões adicionais são necessárias para o bot participar de uma chamada com várias partes ou para que o bot inicie uma chamada ponto a ponto com um usuário.
 * Uma chamada pode começar como ponto a ponto e, eventualmente, se tornar uma chamada com várias partes. Seu bot pode iniciar chamadas com várias partes convidando outras pessoas, desde que seu bot tenha as permissões adequadas. Se o bot não tiver permissões para participar de chamadas em grupo e se um participante adicionar outro participante à chamada, o bot será removido da chamada.
@@ -111,3 +111,4 @@ A mídia em tempo real refere-se a cenários em que a mídia deve ser processada
 * [Configurar a resposta automática para Salas do Microsoft Teams em dispositivos de telefone com vídeo Android e Teams](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Política de gravação do Teams](/MicrosoftTeams/teams-recording-policy)
 * [Trabalhar com a API de comunicações no Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Habilitar um evento como reunião online no calendário do Outlook](/graph/outlook-calendar-online-meetings?tabs=http)

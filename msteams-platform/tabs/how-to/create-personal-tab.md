@@ -1,17 +1,17 @@
 ---
 title: Criar uma guia pessoal
 author: laujan
-description: Neste módulo, saiba como criar uma guia pessoal com o Gerador Yeoman, ASP.NET Core ou ASP.NET Core MVC para o Microsoft Teams usando Node.js e atualizando o manifesto do aplicativo.
+description: Aprenda a criar uma guia pessoal. Selecione o Node.js, ASP.NET Core ou ambiente ASP.NET Core MVC. Gere o aplicativo, adicione conteúdo, crie um pacote, crie e execute o aplicativo.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: dcc000c64068cbcbd24a03da365e799e9dd1c155
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841691"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450398"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 

@@ -1,22 +1,22 @@
 ---
 title: Criar guias de cartão adaptável
 author: KirtiPereira
-description: Neste módulo, saiba mais sobre como criar guias usando Cartões Adaptáveis ​​com exemplos de Código, incluindo atividades de invocação, compreensão do fluxo de trabalho do módulo de tarefas e autenticação.
+description: Saiba como criar guias usando Cartões Adaptáveis em que o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. Explore as atividades de invocação e manipule envios.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558174"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450461"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
 > [!IMPORTANT]
 >
-> * As guias com Cartões Adaptáveis atualmente só têm suporte como aplicativos pessoais.
+> As guias com Cartões Adaptáveis atualmente só têm suporte como aplicativos pessoais.
 
 Ao desenvolver uma guia usando o método tradicional, você pode ter estes problemas:
 

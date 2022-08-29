@@ -1,16 +1,16 @@
 ---
 title: Criar uma página de remoção de guias
 author: surbhigupta
-description: Neste módulo, saiba como criar uma página de remoção de guia e como habilitar a reconfiguração da guia após a instalação
-ms.localizationpriority: medium
+description: Saiba como habilitar a reconfiguração da guia após a instalação. Estenda a experiência do usuário dando suporte a opções de remoção e modificação no aplicativo Microsoft Teams.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841967"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450405"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 

@@ -4,23 +4,24 @@ description: Neste artigo, saiba mais sobre o Portal do Desenvolvedor e como cri
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 57274333d37edd166c9c5e7bb9484131a31af904
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232286"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417497"
 ---
 # <a name="developer-portal-for-teams"></a>Portal do Desenvolvedor do Teams
 
 O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolvedor para Teams</a> é a principal ferramenta para configurar, distribuir e gerenciar seus aplicativos do Microsoft Teams. Com o Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de runtime e muito mais.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de tela mostrando a página inicial do Portal do Desenvolvedor para Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="A captura de tela é um exemplo que mostra a home page do Portal do Desenvolvedor para Teams.":::
 
 > [!NOTE]
 >
 > * Atualmente, Portal do Desenvolvedor está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou DOD (Departamento de Defesa).
 > * No entanto, você pode usar um locatário regular para criar um aplicativo no Portal do Desenvolvedor, baixar o aplicativo e carregar o aplicativo usando [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) para uma nuvem nacional. Para obter mais informações, consulte [Implantações de nuvem nacional](/graph/deployments).
+> * Atualmente, em alguns cenários, o Portal do Desenvolvedor não será carregado no navegador quando o AdBlocker estiver habilitado. Para continuar com o Portal do Desenvolvedor no navegador, desabilite o AdBlocker.
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 
