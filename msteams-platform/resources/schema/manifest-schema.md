@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058211"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363435"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -358,7 +358,7 @@ Se as solicitações de permissões do aplicativo forem alteradas, os usuários 
 
 Esta cadeia de caracteres da versão deve seguir o padrão [semver](http://semver.org/) (MAJOR.MINOR.PATCH).
 
-## <a name="id"></a>id
+## <a name="id"></a>ID
 
 **Obrigatório**—ID do aplicativo da Microsoft
 
@@ -398,7 +398,7 @@ O nome da sua experiência de aplicativo, exibido aos usuários na experiência 
 
 Descreve o seu aplicativo para os usuários. Para aplicativos enviados ao AppSource, esses valores devem corresponder às informações na entrada do AppSource.
 
-Certifique-se de que a sua descrição detalhe a sua experiência e ajude os clientes em potencial a entender o que sua experiência faz. Você deve anotar na descrição completa, se uma conta externa for necessária para uso. Os valores de `short` e `full` devem ser diferentes. A sua descrição curta não pode ser repetida na descrição longa e não deve incluir nenhum outro nome de aplicativo.
+Certifique-se de que a sua descrição detalhe a sua experiência e ajude os clientes em potencial a entender o que sua experiência faz. Você deve anotar na descrição completa, se uma conta externa for necessária para uso. Os valores de `short` e `full` devem ser diferentes. Sua breve descrição não pode ser repetida dentro da descrição longa e não deve incluir nenhum outro nome de aplicativo.
 
 |Nome| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|
@@ -453,7 +453,7 @@ O valor deve ser um código de cor HTML válido começando com '#', por exemplo 
 
 **Opcional**—matriz
 
-Usado quando a sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis são compatíveis apenas nos escopos `team` e `groupchat`, sendo que você pode configurar as mesmas guias várias vezes. No entanto, você pode defini-la no manifesto apenas uma vez.
+Usado quando sua experiência de aplicativo tem uma experiência de guia de canal de equipe que requer configuração extra antes de ser adicionada. As guias configuráveis são compatíveis apenas nos escopos `team` e `groupchat`, sendo que você pode configurar as mesmas guias várias vezes. No entanto, você pode defini-la no manifesto apenas uma vez.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -577,7 +577,7 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`parameters.name`|string|64 caracteres|✔️|O nome do parâmetro como ele aparece no cliente. O nome do parâmetro está incluído na solicitação do usuário.|
 |`parameters.title`|string|32 caracteres|✔️|Título amigável para o parâmetro.|
 |`parameters.description`|string|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
-|`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro. Atualmente o valor não é suportado|
+|`parameters.value`|string|512 caracteres||Valor inicial para o parâmetro. Atualmente, não há suporte para o valor|
 |`parameters.inputType`|string|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para`fetchTask: false`. Um de `text, textarea, number, date, time, toggle, choiceset`.|
 |`parameters.choices`|matriz de objetos|10 itens||As opções de escolha para `choiceset`. Use apenas quando `parameter.inputType` for `choiceset`.|
 |`parameters.choices.title`|string|128 caracteres|✔️|Títulor da escolha.|
@@ -633,13 +633,13 @@ Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsof
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔️|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|string|2048 caracteres|✔️|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **OBSERVAÇÃO:** Se você não estiver usando SSO, certifique-se de inserir um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, <https://notapplicable> para evitar uma resposta de erro. |
+|`resource`|string|2048 caracteres|✔️|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **NOTA:** Se você não estiver usando o SSO, insira um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, <https://notapplicable> para evitar uma resposta de erro. |
 
 ## <a name="graphconnector"></a>graphConnector
 
 **Opcional**—objeto
 
-Especifique a configuração do conector de gráfico do aplicativo. Se estiver presente, [webApplicationInfo.id](#webapplicationinfo) também deve ser especificado.
+Especifique a configuração do conector de gráfico do aplicativo. Se isso estiver presente, [webApplicationInfo.id](#webapplicationinfo) também deverá ser especificado.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ O bloco `configurableProperties` define as propriedades do aplicativo que os adm
 
 Você pode definir qualquer uma das seguintes propriedades:
 
-* `name`: O nome de exibição do aplicativo.
-* `shortDescription`: A breve descrição do aplicativo.
-* `longDescription`: A descrição longa do aplicativo.
-* `smallImageUrl`: O ícone de contorno do aplicativo.
-* `largeImageUrl`: O ícone de cor do aplicativo.
-* `accentColor`: A cor a ser usada e um plano de fundo para seus ícones de contorno.
-* `developerUrl`: A URL HTTPS do site do desenvolvedor.
-* `privacyUrl`: A URL HTTPS da política de privacidade do desenvolvedor.
-* `termsOfUseUrl`: A URL HTTPS dos termos de uso do desenvolvedor.
+* [nome](#name): o nome de exibição do aplicativo.
+* [shortDescription](#description): a breve descrição do aplicativo.
+* [longDescription](#description): a descrição longa do aplicativo.
+* [smallImageUrl](#icons): o ícone de estrutura de tópicos do aplicativo.
+* [largeImageUrl](#icons): o ícone de cor do aplicativo.
+* [accentColor](#accentcolor): a cor a ser usada e uma tela de fundo para seus ícones de estrutura de tópicos.
+* [developerUrl](#developer): a URL HTTPS do site do desenvolvedor.
+* [privacyUrl](#developer): a URL HTTPS da política de privacidade do desenvolvedor.
+* [termsOfUseUrl](#developer): a URL HTTPS dos termos de uso do desenvolvedor.
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 

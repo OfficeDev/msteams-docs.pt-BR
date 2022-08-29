@@ -5,12 +5,12 @@ description: Neste módulo, você aprenderá a criar um Webhook de Saída no Mic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: e86f3825e39340cb228b24dccc770b2d302fb848
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503316"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337156"
 ---
 # <a name="create-outgoing-webhooks"></a>Criar Webhooks de saída
 
@@ -249,3 +249,5 @@ Siga o [passo a passo para](../../sbs-outgoing-webhooks.yml) webhooks de saída 
 * [Criar um webhook de Entrada](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Criar um conector do Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Criar e enviar mensagens](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Compilar um bot de notificação com JavaScript](../../sbs-gs-notificationbot.yml)
+* [Crie seu primeiro aplicativo de bot usando JavaScript](../../sbs-gs-bot.yml)

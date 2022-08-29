@@ -4,12 +4,12 @@ author: laujan
 description: Neste módulo, saiba como usar os Conectores do Office 365 e criar e enviar mensagens acionáveis no Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 6e50877f1afbebe1e132c6461fbae30445227f43
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190101"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337212"
 ---
 # <a name="create-and-send-messages"></a>Criar e enviar mensagens
 
@@ -289,3 +289,5 @@ Esses limites existem para reduzir o spam em um canal por um conector e garantem
 * [A limitação de taxas para mensagens de bots do Teams](~/bots/how-to/rate-limit.md)
 * [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Formatar cartões no Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Compilar um bot de notificação com JavaScript](../../sbs-gs-notificationbot.yml)
+* [Crie seu primeiro aplicativo de bot usando JavaScript](../../sbs-gs-bot.yml)

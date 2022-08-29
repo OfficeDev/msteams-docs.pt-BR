@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558097"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363449"
 ---
 # <a name="upload-your-app-in-teams"></a>Carregar seu aplicativo no Teams
 
@@ -24,7 +24,9 @@ Você pode realizar o sideload de aplicativos do Microsoft Teams sem precisar pu
 > O sideload de seu aplicativo várias vezes exibe mais de uma instância para extensões de mensagens.
 
 > [!IMPORTANT]
-> Atualmente, os aplicativos de sideload estão disponíveis no Nuvem da Comunidade Governamental (GCC), mas não estão disponíveis para GCC-High e DoD (Departamento de Defesa).
+>
+> * Atualmente, o sideload de aplicativos só é possível na GCC (Nuvem da Comunidade Governamental) e não é possível no GCC-High e departamento de defesa (DOD).
+> * A instalação do aplicativo tem suporte apenas no aplicativo da área de trabalho do Teams.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
