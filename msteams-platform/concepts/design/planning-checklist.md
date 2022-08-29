@@ -1,16 +1,16 @@
 ---
 title: Perguntas para ajudar a planejar o desenvolvimento de aplicativos do Microsoft Teams
 author: heath-hamilton
-description: Perguntas a serem consideradas ao planejar seu aplicativo, entender seu usuário e suas necessidades, problemas que seu aplicativo resolve, autenticação do usuário e sua experiência de integração.
+description: Saiba como planejar seu aplicativo usando a lista de verificação para garantir que seu plano abranja os detalhes importantes do desenvolvimento de aplicativos.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 78dd40e13c3bdac359cc5201bda92a5b1daccfb8
-ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
-ms.translationtype: HT
+ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67286116"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338764"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
