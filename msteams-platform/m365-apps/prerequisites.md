@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
+ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919736"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67457288"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de desenvolvimento para estender os aplicativos do Teams pelo Microsoft 365:
 
@@ -32,15 +32,25 @@ Você precisa de uma área restrita de assinatura de desenvolvedor do Microsoft 
 
 Você também precisará habilitar o sideload para o seu locatário:
 
-1. Entre no Centro de administração do Microsoft 365 (https://admin.microsoft.com)com as suas credenciais de locatário de teste e selecione **Teams** no painel lateral para abrir o *Centro de administração do Microsoft Teams*.
-1. Selecione: Aplicativos do Teams > Gerenciar aplicativos > **Configurações do aplicativo em toda a organização**.
-1. Em **Aplicativos personalizados**, ative a opção *Interação com aplicativos personalizados*.
+ 1. Entre no Centro [de administração do Teams com](https://admin.teams.microsoft.com/dashboard) suas credenciais de locatário de teste.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Habilitar o sideload para aplicativos personalizados no centro de administração do Teams":::
+ 1. Vá para **aplicativos do Teams Gerenciar** > **aplicativos**.
+
+ 1. No canto superior direito, selecione **configurações de aplicativo em toda a organização**.
+
+ 1. Em Aplicativos personalizados, ative a **interação com o botão de alternância de aplicativo** personalizado e salve.
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="A captura de tela é um exemplo que habilita o sideload para aplicativos personalizados do Teams Administração Center":::
+
+ 1. Além das configurações de aplicativo em toda a organização, as configurações personalizadas de política de aplicativo também permitem que os usuários carreguem aplicativos personalizados no Teams. Para obter mais informações, consulte [gerenciar configurações e políticas de aplicativo personalizadas](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+ 1. No centro de administração do Teams, acesse as políticas de Instalação de aplicativos do **Teams** > **e, em** seguida, selecione **a política Global (padrão em toda a organização**).
+
+ 1. Ative **Carregar aplicativos personalizados** e selecione **Salvar**.
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Registrar seu locatário de desenvolvedor para versões direcionadas do Office 365
 
-> [!Important]
+> [!IMPORTANT]
 > Pode levar até cinco dias após a criação de um [locatário de área restrita do desenvolvedor do Microsoft 365](/office/developer-program/microsoft-365-developer-program-get-started) e a inscrição nas [versões direcionadas do Office 365](#enroll-your-developer-tenant-for-office-365-targeted-releases) para que os aplicativos de equipes sideload apareçam no Outlook e no Office.
 
 Para registrar seu locatário de teste para versões direcionadas do Office 365:
