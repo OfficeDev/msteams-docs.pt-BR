@@ -3,19 +3,21 @@ title: Suporte de logon único para bots
 description: Saiba como obter um token de usuário e um desenvolvedor de bot pode usar um cartão de entrada ou o serviço de bot do Azure com o suporte a cartão OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611496"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465376"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Usar a autenticação de SSO para bots
 
 A autenticação de logon único no Microsoft Azure Active Directory (Azure AD) atualiza silenciosamente o token de autenticação para minimizar o número de vezes que os usuários precisam inserir suas credenciais de entrada. Se os usuários concordarem em usar seu aplicativo, eles não precisarão fornecer consentimento novamente em outro dispositivo, pois eles são conectados automaticamente. Guias e bots têm um fluxo semelhante para suporte a SSO. Mas o bot [solicita tokens](#request-a-bot-token) e [recebe respostas](#receive-the-bot-token) com um protocolo diferente.
 
 >[!NOTE]
-> O OAuth 2.0 é um padrão aberto para autenticação e autorização usada pelo Azure AD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
+> * O OAuth 2.0 é um padrão aberto para autenticação e autorização usada pelo Azure AD e muitos outros provedores de identidade. Uma compreensão básica do OAuth 2.0 é um pré-requisito para trabalhar com autenticação no Teams.
+>
+> * O SSO do bot só tem suporte em chats um-para-um.
 
 Confira o vídeo a seguir para saber mais sobre o suporte ao SSO (logon único) para bots:
 <br>

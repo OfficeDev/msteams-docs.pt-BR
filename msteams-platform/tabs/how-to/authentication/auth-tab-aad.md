@@ -3,12 +3,12 @@ title: Configurar a autenticação OAuth de terceiros
 description: Neste artigo, aprenda as guias de autenticação do Teams Microsoft Azure AD, autenticação no Teams e como usá-la em guias.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 18a643af2b8a15940915145d02207f2aec93b014
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 1afc7e7512c75c9002849801cfc14fb8eb1aa726
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67434996"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465369"
 ---
 # <a name="configure-third-party-oauth-idp-authentication"></a>Configurar autenticação OAuth IdP de terceiros
 
@@ -58,7 +58,7 @@ Azure AD, como a maioria dos provedores de identidade, não permite que seu cont
 ```javascript
 import { authentication } from "@microsoft/teams-js";
 authentication.authenticate({
-    url: window.location.origin + "/tab/simple-start-v2"),
+    url: window.location.origin + "/tab/simple-start-v2",
     width: 600,
     height: 535})
 .then((result) => {
