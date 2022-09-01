@@ -4,12 +4,12 @@ description: Saiba como enviar mensagens proativas com o bot do Teams, instalar 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 964dd5bf33ab527ea1dcf5307e7d9ae94a29d9ec
-ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
+ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "67442981"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488261"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -50,9 +50,9 @@ Para criar uma nova conversa ou um thread de conversa em um canal, você deve te
 
 * Quando seu aplicativo é instalado em um contexto específico, você recebe uma [`onMembersAdded` atividade](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Quando um novo usuário é adicionado a um contexto em que seu aplicativo está instalado, você recebe uma [atividade `onMembersAdded`](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Cada evento que o bot recebe contém as informações necessárias, que você pode obter do contexto do bot (objeto TurnContext).
 * Você pode recuperar a [lista de canais](~/bots/how-to/get-teams-context.md) em uma equipe onde seu aplicativo está instalado.
 * Você pode recuperar a [lista de membros](~/bots/how-to/get-teams-context.md) de uma equipe onde seu aplicativo está instalado.
-* Todas as atividades que seu bot recebe devem conter as informações necessárias.
 
 Independentemente de como você obtém as informações, armazene `tenantId` ou `userId` crie `channelId` uma nova conversa. Você também pode usar a `teamId` para criar um novo tópico de conversa no canal geral ou padrão de uma equipe.
 
@@ -327,8 +327,8 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 |---------------|--------------|--------|-------------|--------|
 | Noções básicas de conversa do Teams  | Demonstra as noções básicas de conversas no Teams, incluindo o envio de mensagens individuais proativas.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar novo tópico em um canal | Demonstra a criação de um novo tópico em um canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs do Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
-| Mensagens proativas | Este é um exemplo que mostra como salvar as informações de referência de conversa do usuário para enviar uma mensagem de lembrete proativa usando Bots. | Em breve | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
+| Instalação proativa do aplicativo e envio de notificações proativas | Este exemplo mostra como você pode usar a instalação proativa do aplicativo para usuários e enviar notificações proativas chamando as APIs do Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Mensagens proativas | Este é um exemplo que mostra como salvar as informações de referência de conversa do usuário para enviar uma mensagem de lembrete proativa usando Bots. | Em breve | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 > [!div class="nextstepaction"]
 > [Mais exemplo de código de mensagens proativas](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
@@ -346,3 +346,4 @@ A tabela a seguir fornece um exemplo de código simples que incorpora o fluxo b�
 * [Enviar notificações proativas aos usuários](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Crie seu primeiro aplicativo de bot usando JavaScript](../../../sbs-gs-bot.yml)
 * [Criar um bot de notificação com JavaScript para enviar uma mensagem proativa](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

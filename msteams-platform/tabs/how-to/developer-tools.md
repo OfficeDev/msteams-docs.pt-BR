@@ -1,18 +1,18 @@
 ---
 title: Guias do DevTools para o Microsoft Teams
-description: Neste módulo, saiba como acessar o DevTools ao usar o Microsoft Teams Desktop e a depuração
+description: Neste módulo, saiba como acessar o DevTools ao usar o Cliente de Área de Trabalho do Microsoft Teams e a depuração
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143008"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488268"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Guias do DevTools para o Microsoft Teams
 
-Quando Teams em execução em um navegador, é fácil acessar o DevTools do navegador: F12 no Windows ou Command-Option-I no MacOS. O DevTools fornece acesso a:
+Quando o Teams está em execução em um navegador, é fácil acessar o DevTools do navegador: F12 no Windows ou Command-Option-I no MacOS. O DevTools fornece acesso a:
 
 1. Exibir logs do console.
 1. Exiba ou modifique solicitações de HTML, CSS e rede durante o runtime.
@@ -50,3 +50,7 @@ Você também pode habilitar o DevTools do cliente Teams Android. Para habilitar
 1. Selecione **inspecionar** na guia que você deseja depurar, como na imagem a seguir:
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>Confira também
+
+[Limpe o cache do cliente do Teams](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)

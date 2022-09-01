@@ -5,12 +5,12 @@ description: Neste artigo, saiba mais sobre ferramentas e SDKs do Bot Framework 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6eac34d7d767078820cdc41eb090fa2af16af76c
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321184"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488247"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -210,3 +210,4 @@ this.onMessage(async (context, next) => {
 * [Fluxo de autenticação para bots no Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Usar módulos de tarefas dos bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publicar seu bot no Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Referência de API para o serviço conector do Bot Framework](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
