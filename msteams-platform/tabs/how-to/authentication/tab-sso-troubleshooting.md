@@ -1,15 +1,15 @@
 ---
 title: Solução de problemas de autenticação para guias que usam o logon único no Teams
-description: Solução de problemas de autenticação de logon único no Teams e como usá-la em guias
+description: Solucionar problemas de autenticação de SSO (logon único) no Teams e como usá-lo no aplicativo guia.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: guias de autenticação das equipes no Microsoft Azure Active Directory (Azure AD), perguntas de erro de logon único
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658953"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586893"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Solucionar problemas de autenticação de logon único no Teams
 

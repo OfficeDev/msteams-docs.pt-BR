@@ -1,15 +1,15 @@
 ---
 title: Configuração de código para habilitar o logon único para guias
-description: Descreve a configuração de código para habilitar o logon único para guias
+description: Atualize o código em seu aplicativo guia para solicitar e receber token de acesso usando a identidade do Teams do usuário do aplicativo para habilitar o SSO (logon único).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: guias de autenticação das equipes na API do Graph do Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658936"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586781"
 ---
 # <a name="add-code-to-enable-sso"></a>Adicionar código para habilitar o logon único
 
@@ -199,7 +199,7 @@ A seguir está uma carga decodificada típica do token de acesso.
 | Nome do exemplo | Descrição | C#/.NET| Node.js |
 |---------------|---------------|------|--------------|
 | SSO de guia |Aplicativo de exemplo do Microsoft Teams para SSO de guias do Azure AD| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs) </br>[Kit de ferramentas do Teams](../../../toolkit/visual-studio-code-tab-sso.md)|
-| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
+| SSO de guia, bot e extensão de mensagem (ME) | Este exemplo mostra o SSO para Tab, Bot e ME – pesquisa, ação, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
 
 ## <a name="next-step"></a>Próxima etapa
 

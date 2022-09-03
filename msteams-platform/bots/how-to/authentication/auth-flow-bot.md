@@ -1,14 +1,14 @@
 ---
 title: Fluxo de autenticação do Microsoft Teams para bots
-description: Neste módulo, saiba como fazer o fluxo de autenticação para bots no Microsoft Teams e seu exemplo de código.
+description: Habilite a autenticação para o aplicativo de bot do Microsoft Teams com o provedor OAuth de terceiros usando exemplos de código.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de263a75b7b8077570dca2f94bf6937d9d339bbe
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 67668f11fafcc8eff878d82913f002ed8c2f96bc
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143232"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587012"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Fluxo de autenticação para bots no Microsoft Teams
 

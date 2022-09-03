@@ -4,12 +4,12 @@ description: Saiba como enviar uma mensagem, ações sugeridas, notificação, a
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363442"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586984"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -192,7 +192,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> A divisão de mensagens ocorre quando uma mensagem de texto e um anexo são enviados na mesma carga de atividade. Essa atividade é dividida em atividades separadas pelo Microsoft Teams, uma com apenas uma mensagem de texto e a outra com um anexo. À medida que a atividade é dividida, você não recebe a ID da mensagem em resposta, que é usada para atualizar [ou](~/bots/how-to/update-and-delete-bot-messages.md) excluir a mensagem proativamente. É recomendável enviar atividades separadas em vez de depender da divisão de mensagens.
+>
+>* A divisão de mensagens ocorre quando uma mensagem de texto e um anexo são enviados na mesma carga de atividade. Essa atividade é dividida em atividades separadas pelo Microsoft Teams, uma com apenas uma mensagem de texto e a outra com um anexo. À medida que a atividade é dividida, você não recebe a ID da mensagem em resposta, que é usada para atualizar [ou](~/bots/how-to/update-and-delete-bot-messages.md) excluir a mensagem proativamente. É recomendável enviar atividades separadas em vez de depender da divisão de mensagens.
+>* As mensagens enviadas podem ser localizadas para fornecer personalização. Para obter mais informações, [consulte Localizar seu aplicativo](../../../concepts/build-and-test/apps-localization.md).
 
 As mensagens enviadas entre usuários e bots incluem dados internos do canal dentro da mensagem. Esses dados permitem que o bot se comunique corretamente nesse canal. O SDK do Construtor de Bot permite modificar a estrutura da mensagem.
 
@@ -459,9 +461,10 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 
 ## <a name="code-sample"></a>Exemplo de código
 
-|Nome do exemplo | Descrição | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Nome do exemplo | Descrição | Node.js | .NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
+| Localização de aplicativos do Teams | Localização de aplicativos do Teams usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -474,3 +477,4 @@ A seguir estão os códigos de status e seu código de erro e valores de mensage
 * [Inscreva-se em eventos de conversa](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Enviar e receber arquivos por meio do bot](~/bots/how-to/bots-filesv4.md)
 * [Enviar o ID do locatário e o ID da conversa para os cabeçalhos de solicitação do bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Localizar o aplicativo](../../../concepts/build-and-test/apps-localization.md)

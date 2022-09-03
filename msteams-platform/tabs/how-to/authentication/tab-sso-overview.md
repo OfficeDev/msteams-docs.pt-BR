@@ -1,15 +1,15 @@
 ---
 title: Visão geral da autenticação para guias que usam o logon único no Teams com o Azure AD
-description: Visão geral da autenticação de logon único no Teams e como usá-la em guias
+description: Saiba mais sobre a autenticação de SSO (logon único) no Teams e como habilite-a em guias.
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: 'guias de autenticação do Teams, manifesto do aplicativo de token de acesso de logon único do Microsoft Azure Active Directory (Azure AD) '
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659017"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586991"
 ---
 # <a name="enable-sso-for-tab-app"></a>Habilitar o logon único para o aplicativo de guia
 
@@ -69,7 +69,7 @@ A imagem a seguir mostra como o logon único funciona quando um usuário do apli
 | 3 | Azure AD → Formulário de consentimento | Se o usuário atual do aplicativo estiver usando seu aplicativo de guia pela primeira vez, o Teams exibirá a solicitação de consentimento se o aplicativo precisar acessar dados protegidos. O usuário do aplicativo (ou o administrador) deve dar consentimento ao Teams para usar a identidade do Teams do usuário do aplicativo para obter o token de acesso do Azure AD. <br> Como alternativa, haverá uma solicitação para lidar com a autenticação step-up, como a autenticação de dois fatores. |
 | 4 | Azure AD → Cliente do Teams | O Azure AD envia o token de acesso para o cliente do Teams. O token é um Token Web JSON (JWT) e sua validação funciona como uma validação de token na maioria dos fluxos padrão do OAuth. O Teams armazena o token em seu nome para que futuras chamadas para `getAuthToken()` retornem o token armazenado em cache. |
 | 5 | Cliente do Teams → Cliente do aplicativo de guia | O Teams envia o token de acesso para o aplicativo de guia como parte do objeto de resultado retornado pela chamada do `getAuthToken()`. |
-| 6  | Aplicativo de guia (entre servidor e cliente) | O aplicativo de guia analisa o token de acesso usando o JavaScript para extrair as informações necessárias, como o endereço de email do usuário do aplicativo. O token devolvido para o aplicativo de guia é um token de acesso e um token de identidade. |
+| 6 | Aplicativo de guia (entre servidor e cliente) | O aplicativo de guia analisa o token de acesso usando o JavaScript para extrair as informações necessárias, como o endereço de email do usuário do aplicativo. O token devolvido para o aplicativo de guia é um token de acesso e um token de identidade. |
 
 Para obter mais informações, confira [Atualizar o código para habilitar o logon único](tab-sso-code.md).
 

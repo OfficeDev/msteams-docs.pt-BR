@@ -1,15 +1,15 @@
 ---
 title: Atualizar manifesto para habilitar o SSO para guias
-description: Descreve o manifesto de atualização para habilitar o SSO para guias
+description: Atualize o manifesto do Teams para habilitar o SSO (logon único) para guias e fazer sideload dele no cliente do Teams para testar a autenticação de SSO.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: guias de autenticação do teams Microsoft Azure Active Directory (Azure AD) API do Graph
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658963"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586998"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Atualizar manifesto para SSO e aplicativo de visualização
 

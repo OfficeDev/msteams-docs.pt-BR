@@ -1,15 +1,15 @@
 ---
 title: Registrar seu aplicativo de guia com o Azure AD.
-description: Descreve como registrar seu aplicativo de guia com o Azure AD
+description: Configure o SSO (logon único) com o Azure AD configurando o URI da ID do aplicativo, o escopo do token de acesso e pré-autorizar clientes confiáveis.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 'guias de autenticação do Teams escopo de locação de SSO (logon único) de token de acesso do Microsoft Azure Active Directory (Azure AD) '
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659000"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586795"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar o aplicativo de guia no Azure AD
 

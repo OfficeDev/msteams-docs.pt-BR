@@ -1,14 +1,14 @@
 ---
 title: Autenticação silenciosa
-description: Neste módulo, saiba como fazer autenticação silenciosa, logon único e Azure AD para guias e como ele funciona
+description: Configure seu aplicativo guia com Azure AD para guias e como ele funciona.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ef80c44e38e32666f68b13e42e1f815a4c351353
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435038"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586774"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Usar a autenticação silenciosa no Azure AD
 

@@ -4,12 +4,12 @@ description: Neste módulo, saiba o que é a formatação de texto de cartão no
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962430"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586956"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatar cartões no Microsoft Teams
 
@@ -326,6 +326,9 @@ A imagem a seguir é um exemplo de mascaramento de informações em Cartões Ada
 ### <a name="full-width-adaptive-card"></a>Cartão Adaptável com largura total
 
 Você pode usar a propriedade `msteams` para expandir a largura de um Cartão Adaptável e aproveitar um espaço de tela adicional. A próxima seção fornece informações sobre como usar a propriedade.
+
+> [!NOTE]
+> Teste seu Cartão Adaptável de largura total em fatores forma estreitos, como painéis laterares móveis e de reunião, para garantir que o conteúdo não seja truncado.
 
 #### <a name="construct-full-width-cards"></a>Como construir cartões com largura total
 

@@ -3,12 +3,12 @@ title: Tipos de cartões
 description: Neste módulo, saiba o que são cartões e ações de cartão disponíveis para bots no Teams e criar um hero, miniatura e cartões adaptáveis.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 20654804580c4e52f9355f32cd742458cccfc88c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435024"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586788"
 ---
 # <a name="types-of-cards"></a>Tipos de cartões
 
@@ -131,6 +131,7 @@ A tabela a seguir fornece os recursos que dão suporte Cartões Adaptáveis:
 > * A plataforma Teams dá suporte à v1.3 ou anterior aos recursos do Cartão Adaptável para outras capacidades, tais como cartões enviados pelo usuário (extensões de mensagens baseadas em pesquisa e abertura de link), guias e módulos de tarefa.
 > * Não há suporte para o estilo de ação positiva ou destrutiva Cartões Adaptáveis na plataforma do Teams.
 > * No momento, não há suporte para elementos de mídia no Cartão Adaptável na plataforma do Teams.
+> * Teste seu Cartão Adaptável de largura total em fatores forma estreitos, como painéis laterares móveis e de reunião, para garantir que o conteúdo não seja truncado.
 
 ### <a name="example-of-adaptive-card"></a>Exemplo de cartão adaptável
 

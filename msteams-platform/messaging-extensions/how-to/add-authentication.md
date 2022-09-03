@@ -1,16 +1,16 @@
 ---
 title: Adicionar autenticação à sua extensão de mensagens
 author: surbhigupta
-description: Neste artigo, você aprenderá a adicionar autenticação a uma extensão de mensagens usando exemplos de código e exemplos
+description: Habilite a autenticação no aplicativo de extensão de mensagem do Teams usando o provedor OAuth de terceiros com Azure AD configuração e exemplo de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 4d5288d0145e60a263b439adfff3a5ae825caf23
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435045"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586977"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Adicionar autenticação à sua extensão de mensagens
 
