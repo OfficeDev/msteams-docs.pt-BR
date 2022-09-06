@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363435"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605023"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -792,7 +792,7 @@ Habilita seu aplicativo em canais não-padronizados. Se seu aplicativo der supor
 
 **Opcional** - booliano
 
-Quando a propriedade `defaultBlockUntilAdminAction` é definida como **true**, o aplicativo fica oculto dos usuários por padrão até que o administrador permita. Se definido como **true**, o aplicativo ficará oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração do Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloqueio de aplicativos padrão, consulte [Ocultar o aplicativo Teams até a aprovação pelo administrador](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+Quando a propriedade `defaultBlockUntilAdminAction` é definida como **true**, o aplicativo fica oculto dos usuários por padrão até que o administrador permita. Se definido como **true**, o aplicativo ficará oculto para todos os locatários e usuários finais. Os administradores de locatários podem ver o aplicativo no centro de administração do Teams e tomar medidas para permitir ou bloquear o aplicativo. O valor padrão é **falso**. Para obter mais informações sobre o bloco de aplicativo padrão, consulte [Bloquear aplicativos por padrão para usuários até que um administrador aprove](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

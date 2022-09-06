@@ -5,18 +5,20 @@ description: Neste artigo, saiba mais sobre ferramentas e SDKs do Bot Framework 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6eac34d7d767078820cdc41eb090fa2af16af76c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488247"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605016"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
 Você pode criar um bot que funcione no Microsoft Teams com uma das seguintes ferramentas ou funcionalidades:
 
 * [SDK do Microsoft Bot Framework](#bots-with-the-microsoft-bot-framework)
+* [Azure Active Directory](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
+* [Portal do Desenvolvedor](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * [Agentes virtuais do Power](#bots-with-power-virtual-agents)
 * [Assistente Virtual](~/samples/virtual-assistant.md)
 * [Webhooks e conectores](#bots-with-webhooks-and-connectors)

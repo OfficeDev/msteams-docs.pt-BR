@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
-ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
+ms.openlocfilehash: e08304cb59ec78ff784c87c01ea588a53adbe21d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67465383"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604861"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -237,3 +237,4 @@ A tabela a seguir fornece os tipos de usuário e lista os recursos que cada usu�
 * [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md)
 * [Criar seu aplicativo](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Relatório de participação de reuniões do Microsoft Teams](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
+* [Configurar a opção de gravação de reuniões do OneDrive for Business e do SharePoint](/MicrosoftTeams/tmr-meeting-recording-change#set-up-the-meeting-recording-option-for-onedrive-for-business-and-sharepoint)

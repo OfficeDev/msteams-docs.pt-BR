@@ -328,60 +328,76 @@
       items:
         - name: Definir comandos de ação
           href: messaging-extensions/how-to/action-commands/define-action-command.md
+          displayName: 'Command invoke locations, static list of parameters, command to your app manifest'
         - name: Criar e enviar o módulo de tarefas
           href: messaging-extensions/how-to/action-commands/create-task-module.md
+          displayName: 'Initial invoke request, respond to fetchTask'
         - name: Responder à ação de envio do módulo de tarefas
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages'
     - name: Comandos de pesquisa
       items:
         - name: Definir comandos de pesquisa
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: Responder aos comandos de pesquisa
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
+          displayName: Handle tap actions
     - name: Adicionar desenrolamento de link
       href: messaging-extensions/how-to/link-unfurling.md
+      displayName: Through wildcards
 - name: Criar aplicativos para reuniões e chamadas do Teams
   items:
     - name: Visão Geral
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Aplicativos de reuniões unificadas
       href: apps-in-teams-meetings/meeting-app-extensibility.md
+      displayName: 'Chat tab, poll survey, guest access'
     - name: Habilitar e configurar aplicativos para reuniões
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+      displayName: 'Access, organizer, meeting token generator app, channels, organizer'
     - name: Referências à API de aplicativos de reunião
       href: apps-in-teams-meetings/API-references.md
+      displayName: 'CART URL, channel, permissions, access, audio state'
     - name: Obter transcrições de reunião usando APIs do Graph
       items:
         - name: Visão geral
           href: graph-api/meeting-transcripts/overview-transcripts.md
+          displayName: 'Access, permissions'
         - name: Buscar ID de reunião e ID de organizador
           href: graph-api/meeting-transcripts/fetch-id.md
+          displayName: 'Access, permisssions, chat entity'
         - name: Obter transcrições
           href: /graph/api/resources/calltranscript
     - name: Colaboração aprimorada com Live Share
       items:
         - name: Visão Geral
           href: apps-in-teams-meetings/teams-live-share-overview.md
+          displayName: 'Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets'
         - name: Introdução
           items:
             - name: Guia de início rápido
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Tutorial de Rolo de Dados
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
+              displayName: 'Fluid container, static view'
         - name: Principais recursos
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
+          displayName: Ephemeral data structures
         - name: Sincronização de mídia
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+          displayName: 'Audio ducking,'
         - name: Guias de instruções
           items:
             - name: Tutorial de Pôquer ágil
               href: sbs-teams-live-share.yml
             - name: Serviço personalizado do Azure Fluid Relay
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+              displayName: Access
         - name: Perguntas frequentes do Live Share
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Cenas personalizadas no Modo Conferência no Teams
       href: apps-in-teams-meetings/teams-together-mode.md
+      displayName: 'Single vitrual scene, organizer'
 - name: Criar webhooks e conectores
   items:
     - name: Visão Geral
@@ -594,8 +610,10 @@
   items:
     - name: Visão Geral
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+      displayName: 'Pricing model, SaaS offer, In-app purchases,'
     - name: Incluir uma oferta de SaaS com seu aplicativo Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      displayName: 'Transactable Software-as-a-Service, Recloud app'
     - name: Compras no aplicativo
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - name: Teste de visualização para aplicativos monetizados

@@ -3,12 +3,12 @@ title: Adicionar ações de cartão em um bot
 description: Neste módulo, saiba o que são ações de cartão no Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035300"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605009"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -37,7 +37,9 @@ Os cartões usados por bots e extensões de mensagem no Teams são compatíveis 
 O tipo de ação `openUrl` especifica uma URL a ser iniciada no navegador padrão.
 
 > [!NOTE]
-> Seu bot não recebe nenhum aviso sobre qual botão foi selecionado.
+>
+> * Seu bot não recebe nenhum aviso sobre qual botão foi selecionado.
+> * Não há suporte para nomes de computador com números na URL.
 
 Com `openUrl`, você pode criar uma ação com as seguintes propriedades:
 

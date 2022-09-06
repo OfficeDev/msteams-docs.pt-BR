@@ -1,14 +1,14 @@
 ---
 title: Usar provedores OAuth externos
-description: Neste módulo, você aprenderá a fazer a autenticação usando provedores OAuth externos e como adicioná-la ao navegador externo
+description: Autentique os usuários do aplicativo usando provedores OAuth externos e saiba como adicioná-lo ao navegador externo.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 62f056fd852eda320a180fa61cf5693ef0105b8b
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ca88471405fa06713261d56eaf94179c7896d8c4
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435066"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605051"
 ---
 # <a name="use-external-oauth-providers"></a>Usar provedores OAuth externos
 

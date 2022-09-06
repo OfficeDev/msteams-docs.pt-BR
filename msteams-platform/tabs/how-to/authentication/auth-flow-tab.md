@@ -1,14 +1,14 @@
 ---
 title: Habilitar a autenticação usando o provedor OAuth de terceiros
-description: Neste artigo, aprenda sobre o fluxo de autenticação em guias do Teams, o provedor OAuth de terceiros, o OAuth por Azure AD e exemplos de código de autenticação.
+description: Saiba mais sobre o fluxo de autenticação do Teams em guias usando o provedor OAuth de terceiros com Azure AD configuração e exemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 33300461e16f5a8ab5e1e69f5fea775adb2359aa
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c9969e154dae2f0d2439c1d8513af34970723e5c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435052"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605037"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>Habilitar a autenticação usando o provedor OAuth de terceiros
 

@@ -1,15 +1,15 @@
 ---
 title: Estender o aplicativo de guia com permissões do Microsoft Graph
-description: Descreve a configuração das permissões da API com o Microsoft Graph
+description: Configure permissões e escopos adicionais com o Microsoft Graph para habilitar o SSO (logon único).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: guias de autenticação de equipes do Microsoft Azure Active Directory (AD do Azure) do escopo do token de acesso de permissão delegada da API do Graph
-ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658995"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605086"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Estender o aplicativo de guia com permissões e escopo do Microsoft Graph
 
