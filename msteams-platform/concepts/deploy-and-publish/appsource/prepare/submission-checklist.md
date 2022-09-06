@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363547"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605745"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar o envio do repositório do Teams
 
@@ -82,7 +82,7 @@ O nome do seu aplicativo (especificamente o *[nome curto](~/resources/schema/man
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="A amostra de captura de tela destaca onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="A amostra de captura de tela destaca onde o nome curto de um aplicativo é exibido em uma listagem da loja.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -102,7 +102,7 @@ Um resumo conciso do seu aplicativo que deve ser original, envolvente e direcion
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição curta de um aplicativo aparece em uma listagem na loja.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="A amostra de captura de tela destaca onde a descrição curta de um aplicativo aparece em uma listagem na loja.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -124,7 +124,7 @@ Embora essa descrição possa ter até 4.000 caracteres, a maioria dos usuários
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="A amostra de captura de tela destaca onde a descrição longa de um aplicativo aparece em uma listagem na loja.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="A amostra de captura de tela destaca onde a descrição longa de um aplicativo aparece em uma listagem na loja.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -146,7 +146,7 @@ As capturas de tela fornecem uma visualização panorâmica proeminente do seu a
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="A amostra de captura de tela destaca onde as capturas de tela do aplicativo aparecem em uma listagem na loja.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="A amostra de captura de tela destaca onde as capturas de tela do aplicativo aparecem em uma listagem na loja.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -189,14 +189,14 @@ Durante o envio, você será solicitado a categorizar seu aplicativo. A tabela a
 
 | Categorias do Teams       | Categorias do Partner Center  |
 |:---------------------|:---------------|
-| Análise e BI | Análise, Visualização de Dados e BI |
-| Desenvolvedor e TI | Ferramentas para Desenvolvedores, Administrador de TI |
+| Visualização de dados e BI | Análise, Visualização de Dados e BI |
+| Ferramentas de desenvolvedor | Ferramentas para Desenvolvedores, Administrador de TI |
 | Educação | Educação |
-| Recursos humanos | Recursos Humanos e Recrutamento |
+| Recursos humanos & recrutando| Recursos Humanos e Recrutamento |
 | Produtividade | Gerenciamento de Conteúdo, Arquivos e documentos, Produtividade, Treinamento e Tutoriais e Utilitários |
 | Gerenciamento de projeto | Comunicação, Gerenciamento de Projeto, Fluxo de Trabalho e Gerenciamento de Negócios |
 | Vendas e suporte | Gerenciamento de Clientes e Contatos, Atendimento ao Cliente, Gerenciamento Financeiro e Vendas e Marketing |
-| Redes sociais e diversão | Galerias de Imagens e Vídeos, Estilo de Vida, Notícias e Previsão do Tempo, Redes Sociais, Viagens e Navegação |
+| Social | Galerias de Imagens e Vídeos, Estilo de Vida, Notícias e Previsão do Tempo, Redes Sociais, Viagens e Navegação |
 
 ### <a name="localize-your-store-listing"></a>Localizar sua listagem na loja
 

@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605079"
+ms.locfileid: "67605779"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 09/06/2022 | `selectMedia` API para capturar vídeos usando a câmera | Integrar funcionalidades de dispositivo > [integrar recursos de mídia](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduzido o Kit de ferramentas do Teams para Visual Studio 2022 | Ferramentas e SDK > Kit de ferramentas do Teams para Visual Studio > [Visão geral do Kit de ferramentas do Teams para Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Adicionado recurso para recuperar transcrições de reunião no cenário pós-reunião. | Compilar aplicativos para reuniões e chamadas do Teams > Obter transcrições de reunião usando APIs do Graph > [Visão geral](graph-api/meeting-transcripts/overview-transcripts.md) |

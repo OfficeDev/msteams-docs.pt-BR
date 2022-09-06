@@ -5,28 +5,30 @@ description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: b4e552f77b181d005f4a2f3da7967a0fdb1f3ac5
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841775"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605786"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
 Você pode integrar funcionalidades nativas do dispositivo, como câmera e microfone ao aplicativo Teams. Para integração, você pode usar o [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) que fornece as ferramentas necessárias para seu aplicativo acessar as permissões de [dispositivo de um usuário](native-device-permissions.md). Use APIs de funcionalidade de mídia adequadas para integrar os recursos do dispositivo, como câmera e microfone com a plataforma Teams em seu aplicativo Microsoft Teams, e crie uma experiência mais rica. A funcionalidade de mídia está disponível para cliente Web do Teams, área de trabalho e dispositivos móveis. Para integrar recursos de mídia, você deve atualizar o arquivo de manifesto do aplicativo e chamar as APIs de funcionalidade de mídia.
 
-Para uma integração eficaz, você deve ter uma boa compreensão de [Trechos de código](#code-snippets) para chamar as respectivas APIs, que permitem que você use recursos de mídia nativa. É importante se familiarizar com os [erros de resposta da API](#error-handling) para lidar com os erros no seu aplicativo do Teams.
+Para uma integração eficaz, você deve ter uma boa compreensão dos [snippets](#code-snippets) de código para chamar as respectivas APIs, o que permite usar recursos de mídia nativa. É importante se familiarizar com os [erros de resposta da API](#error-handling) para lidar com os erros no seu aplicativo do Teams.
 
 ## <a name="advantages"></a>Vantagens
 
-A principal vantagem da integração de recursos de dispositivo em seus aplicativos do Teams é que ele aproveita os controles nativos do Teams para fornecer uma experiência avançada e imersiva aos seus usuários. Os cenários a seguir mostram as vantagens dos recursos de mídia:
+A principal vantagem da integração de recursos de dispositivo em seus aplicativos do Teams é que ele usa controles nativos do Teams para fornecer uma experiência avançada e imersiva aos usuários. Os cenários a seguir mostram as vantagens dos recursos de mídia:
 
 * Permita que o usuário capture as simulações aproximadas desenhadas em um quadro de comunicações físico por meio do telefone celular e use as imagens capturadas como opções de votação no chat em grupo do Teams.
 
 * Permitir que o usuário grave uma mensagem de áudio e anexe-a a um tíquete de incidente.
 
 * Permitir que o usuário digitalize os documentos físicos do smartphone para fazer uma solicitação de seguro de carro.
+
+* Permitir que o usuário grave um vídeo em um local de trabalho e carregue para presença.
 
 > [!NOTE]
 >
@@ -49,7 +51,7 @@ Atualize seu aplicativo do Teams do arquivo [ manifest.json do](../../resources/
 As APIs [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia) e [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) permitem que você use recursos de mídia nativa da seguinte forma:
 
 * Use o **microfone** para permitir que os usuários **gravem áudio** (grave 10 minutos de conversa) do dispositivo.
-* Use o **controle da câmera** nativo para permitir que os usuários **capturem e anexem imagens** em movimento.
+* Use o **controle de** câmera nativo para permitir  que os usuários capturem e anexem imagens e capturem **vídeos (** gravem até 5 minutos de vídeo) em qualquer lugar.
 * Use o **suporte da galeria** nativo para permitir que os usuários **selecionem imagens do dispositivo** como anexos.
 * Use o **controle do visualizador de imagens** nativo para **visualizar várias imagens** ao mesmo tempo.
 * Suporta **transferência de imagens grandes** (de 1 MB a 50 MB) por meio da ponte SDK.
@@ -99,7 +101,7 @@ Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A 
 
 |Código de erro |  Nome do erro     | Descrição|
 | --------- | --------------- | -------- |
-| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é suportada na plataforma atual.|
+| **100** | NÃO_SUPORTADO_NA_PLATAFORMA | A API não é compatível com a plataforma atual.|
 | **404** | FILE_NOT_FOUND | O arquivo especificado não foi encontrado no local especificado.|
 | **500** | INTERNAL_ERROR | Erro interno encontrado durante a execução da operação necessária.|
 | **1.000** | PERMISSION_DENIED |A permissão foi negada pelo usuário.|
@@ -113,159 +115,275 @@ Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A 
 
 * Chame `selectMedia` a API para capturar imagens usando a câmera:
 
-```javascript
-let imageProp: microsoftTeams.media.ImageProps = {
-    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
-    startMode: microsoftTeams.media.CameraStartMode.Photo,
-    ink: false,
-    cameraSwitcher: false,
-    textSticker: false,
-    enableFilter: true,
-};
-let mediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Image,
-    maxMediaCount: 10,
-    imageProps: imageProp
-};
-microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+    ```javascript
+    let imageProp: microsoftTeams.media.ImageProps = {
+        sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+        startMode: microsoftTeams.media.CameraStartMode.Photo,
+        ink: false,
+        cameraSwitcher: false,
+        textSticker: false,
+        enableFilter: true,
+    };
+    let mediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.Image,
+        maxMediaCount: 10,
+        imageProps: imageProp
+    };
+    microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-    if (attachments) {
-        let y = attachments[0];
-        img.src = ("data:" + y.mimeType + ";base64," + y.preview);
-    }
-});
-```
+        if (attachments) {
+            let y = attachments[0];
+            img.src = ("data:" + y.mimeType + ";base64," + y.preview);
+        }
+    });
+    ```
+
+* Chame `selectMedia` a API para capturar vídeos usando a câmera:
+
+  * Capturando vídeos com `fullscreen: true`:
+
+       `fullscreen: true` abre a câmera no modo de gravação de vídeo. Ele fornece uma opção para usar a câmera frontal e traseira e também fornece outros atributos, conforme mencionado no exemplo a seguir:
+
+       ```javascript
+        
+         const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
+             sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+             startMode: microsoftTeams.media.CameraStartMode.Video,
+             cameraSwitcher: true,
+             maxDuration: 30
+        }
+         const defaultLensVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 6,
+             videoProps: defaultLensVideoProps
+        }
+       ```
+
+  * Capturando vídeos com `fullscreen: false`:
+
+       `fullscreen: false` abre a câmera no modo de gravação de vídeo e usa apenas a câmera frontal. Normalmente é `fullscreen: false` usado quando o usuário deseja gravar vídeo durante a leitura de conteúdo na tela do dispositivo.
+
+       Esse modo também dá suporte `isStopButtonVisible: true` ao que adiciona um botão parar na tela que permite que o usuário interrompa a gravação. Se `isStopButtonVisible: false`, a gravação pode ser interrompida chamando a API mediaController ou quando a duração da gravação tiver atingido `maxDuration` o tempo especificado.
+
+       A seguir está um exemplo para interromper a gravação com `maxDuration` o tempo especificado:
+
+       ```javascript
+          const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+             maxDuration: 30,
+             isFullScreenMode: false,
+             isStopButtonVisible: false,
+             videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+         }
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 1,
+             videoProps: defaultNativeVideoProps
+         }
+       ```
+
+       A seguir está um exemplo para interromper a gravação chamando a API mediaController:
+
+       ```javascript
+          const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+             videoController.stop(),
+             isFullScreenMode: false,
+             isStopButtonVisible: false,
+             videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+         }
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 1,
+             videoProps: defaultNativeVideoProps
+         }
+       ```
+
+* Chame `selectMedia` a API para capturar imagens e vídeo usando a câmera:
+
+  Isso permite que os usuários selecionem entre capturar uma imagem ou um vídeo.
+
+    ```javascript
+    
+      const defaultVideoAndImageProps: microsoftTeams.media.VideoAndImageProps = {
+        sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+        startMode: microsoftTeams.media.CameraStartMode.Photo,
+        ink: true,
+        cameraSwitcher: true,
+        textSticker: true,
+        enableFilter: true,
+        maxDuration: 30
+      }
+    
+      const defaultVideoAndImageMediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.VideoAndImage,
+        maxMediaCount: 6,
+        videoAndImageProps: defaultVideoAndImageProps
+      }
+    
+      let videoControllerCallback: microsoftTeams.media.VideoControllerCallback = {
+        onRecordingStarted() {
+          console.log('onRecordingStarted Callback Invoked');
+        },
+      };
+    
+      microsoftTeams.media.selectMedia(defaultVideoAndImageMediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
+        }
+        
+        var videoElement = document.createElement("video");
+        attachments[0].getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("video")) {
+                videoElement.setAttribute("src", URL.createObjectURL(blob));
+            }
+        }
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
+        }
+        });
+        });
+        
+    ```
 
 * Chame `getMedia` a API para recuperar uma mídia grande em partes:
 
-```javascript
-let media: microsoftTeams.media.Media = attachments[0]
-media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-    if (blob) {
-        if (blob.type.includes("image")) {
-            img.src = (URL.createObjectURL(blob));
+    ```javascript
+    let media: microsoftTeams.media.Media = attachments[0]
+    media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("image")) {
+                img.src = (URL.createObjectURL(blob));
+            }
         }
-    }
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-});
-```
+    });
+    ```
 
 * Chame `viewImages` a API por ID, que é retornada pela `selectMedia` API:
 
-```javascript
-// View images by id:
-// Assumption: attachmentArray = select Media API Output
-let uriList = [];
-if (attachmentArray && attachmentArray.length > 0) {
-    for (let i = 0; i < attachmentArray.length; i++) {
-        let file = attachmentArray[i];
-        if (file.mimeType.includes("image")) {
-            let imageUri = {
-                value: file.content,
-                type: 1,
+    ```javascript
+    // View images by id:
+    // Assumption: attachmentArray = select Media API Output
+    let uriList = [];
+    if (attachmentArray && attachmentArray.length > 0) {
+        for (let i = 0; i < attachmentArray.length; i++) {
+            let file = attachmentArray[i];
+            if (file.mimeType.includes("image")) {
+                let imageUri = {
+                    value: file.content,
+                    type: 1,
+                }
+                uriList.push(imageUri);
+            } else {
+                alert("File type is not image");
             }
-            uriList.push(imageUri);
-        } else {
-            alert("File type is not image");
         }
     }
-}
-if (uriList.length > 0) {
-    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
-        if (error) {
-            if (error.message) {
-                output(" ErrorCode: " + error.errorCode + error.message);
-            } else {
-                output(" ErrorCode: " + error.errorCode);
+    if (uriList.length > 0) {
+        microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+            if (error) {
+                if (error.message) {
+                    output(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    output(" ErrorCode: " + error.errorCode);
+                }
             }
-        }
-    });
-} else {
-    output("Url list is empty");
-}
-```
+        });
+    } else {
+        output("Url list is empty");
+    }
+    ```
 
 * Chamar `viewImages` API por URL:
 
-```javascript
-// View Images by URL:
-// Assumption 2 urls, url1 and url2
-let uriList = [];
-if (URL1 != null && URL1.length > 0) {
-    let imageUri = {
-        value: URL1,
-        type: 2,
-    }
-    uriList.push(imageUri);
-}
-if (URL2 != null && URL2.length > 0) {
-    let imageUri = {
-        value: URL2,
-        type: 2,
-    }
-    uriList.push(imageUri);
-}
-if (uriList.length > 0) {
-    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
-        if (error) {
-            if (error.message) {
-                output(" ErrorCode: " + error.errorCode + error.message);
-            } else {
-                output(" ErrorCode: " + error.errorCode);
-            }
+    ```javascript
+    // View Images by URL:
+    // Assumption 2 urls, url1 and url2
+    let uriList = [];
+    if (URL1 != null && URL1.length > 0) {
+        let imageUri = {
+            value: URL1,
+            type: 2,
         }
-    });
-} else {
-    output("Url list is empty");
-}
-```
+        uriList.push(imageUri);
+    }
+    if (URL2 != null && URL2.length > 0) {
+        let imageUri = {
+            value: URL2,
+            type: 2,
+        }
+        uriList.push(imageUri);
+    }
+    if (uriList.length > 0) {
+        microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+            if (error) {
+                if (error.message) {
+                    output(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    output(" ErrorCode: " + error.errorCode);
+                }
+            }
+        });
+    } else {
+        output("Url list is empty");
+    }
+    ```
 
 * Chamada `selectMedia` e `getMedia` APIs para gravação de áudio por meio do microfone:
 
-```javascript
-let mediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Audio,
-    maxMediaCount: 1,
-};
-microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+    ```javascript
+      let mediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.Audio,
+        maxMediaCount: 1,
+        };
+        microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+            if (error) {
+                if (error.message) {
+                    alert(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    alert(" ErrorCode: " + error.errorCode);
+                }
+            }
+        // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
+        let audioResult = attachments[0];
+        var videoElement = document.createElement("video");
+        videoElement.setAttribute("src", ("data:" + audioResult.mimeType + ";base64," + audioResult.preview));
+        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("video")) {
+                videoElement.setAttribute("src", URL.createObjectURL(blob));
+            }
         }
-    }
-    // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
-    let audioResult = attachments[0];
-    var videoElement = document.createElement("video");
-    videoElement.setAttribute("src", ("data:" + y.mimeType + ";base64," + y.preview));
-    //To use the audio file via get Media API for bigger audio file sizes greater than 4MB        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-    if (blob) {
-        if (blob.type.includes("video")) {
-            videoElement.setAttribute("src", URL.createObjectURL(blob));
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
-        }
-    }
-});
-```
+    });
+    });
+    ```
 
 ## <a name="see-also"></a>Confira também
 
