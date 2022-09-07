@@ -10,7 +10,7 @@ A <b>etapa Provisionar</b> cria recursos no Azure e no Microsoft 365 para seu ap
 </details>
 <br>
 
-# <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
+# <a name="visual-studio-code"></a>[Código do Visual Studio](#tab/vscode)
 
 Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: na barra Visual Studio Code lateral.
 
@@ -18,7 +18,11 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de tela mostrando os comandos de provisionamento":::
 
-1. Selecione uma assinatura a ser usada para os recursos do Azure.
+1. Selecione qualquer pessoa da assinatura existente.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Selecionar Assinatura":::
+
+1. Selecione um grupo de recursos a ser usado para os recursos do Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de tela mostrando recursos para provisionamento":::
 
@@ -29,7 +33,7 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
 1. Selecione **Provisionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de tela da caixa de diálogo de provisionamento.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Selecionar Assinatura":::
 
    O processo de provisionamento cria recursos na nuvem do Azure. Pode levar algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
@@ -89,4 +93,3 @@ Depois que as etapas de provisionamento e implantação forem concluídas:
     Parabéns, seu primeiro aplicativo guia está em execução em seu ambiente do Azure!
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde":::
- 
