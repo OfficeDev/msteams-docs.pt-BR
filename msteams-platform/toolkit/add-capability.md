@@ -1,73 +1,72 @@
 ---
 title: Adicionar recursos aos aplicativos do Teams
-author: MuyangAmigo
-description: Neste módulo, saiba como adicionar funcionalidades do Kit de Ferramentas do Teams, vantagens, limitações e funcionalidades
-ms.author: zhany
+author: surbhigupta
+description: Neste módulo, saiba como adicionar funcionalidades do Kit de Ferramentas do Teams
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830789"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616954"
 ---
-# <a name="add-capabilities-to-teams-apps"></a>Adicionar recursos a aplicativos do Teams
+# <a name="add-capabilities-to-microsoft-teams-apps"></a>Adicionar recursos aos aplicativos do Microsoft Teams
 
-Adicionar funcionalidade no Kit de Ferramentas do Teams ajuda você a adicionar funcionalidade adicional ao aplicativo Teams existente. A tabela a seguir lista os recursos do aplicativo Teams:
+Adicionar recursos com o Kit de Ferramentas do Teams ajuda você a incluir recursos adicionais ao aplicativo Teams existente. A vantagem de adicionar mais recursos é que você pode adicionar mais funções ao seu aplicativo adicionando automaticamente códigos-fonte usando o Kit de Ferramentas do Teams. Você também pode escolher diferentes recursos com base no projeto que você criou em seu aplicativo do Teams. A tabela a seguir lista os recursos do aplicativo Teams:
 
-|**Recursos**|**Descrição**|
-|--------|-------------|
-| Guias |  As guias são marcas HTML simples que se referem a domínios declarados no manifesto do aplicativo. Você pode adicionar guias como parte do canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual.|
-| Bots |  Os bots ajudam a interagir com seu serviço Web por meio de texto, cartões interativos e módulos de tarefa.|
-| Extensões de mensagens | As extensões de mensagem ajudam a interagir com seu serviço Web por meio de botões e formulários no cliente do Microsoft Teams.|
+|Funcionalidade|Descrição|Outros recursos com suporte|
+|--------|-------------|-----------------|
+|**Aplicativo Básico do Teams**|              |
+| Tab |  As guias são marcas HTML simples que se referem a domínios declarados no manifesto do aplicativo. Você pode adicionar guias como parte do canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual.|Guia, bot de notificação, bot de comando, bot, extensão de mensagem|
+|Guia SPFx| Os aplicativos da guia SPFx são hospedados no Microsoft 365 e dão suporte ao desenvolvimento e hospedagem da solução SPFx do lado do cliente|Nenhum|
+|Guia habilitada para SSO|Você pode criar um aplicativo guia habilitado para SSO que permite ao usuário o recurso de logon único|Guia habilitada para SSO, bot de notificação, bot de comando, bot, extensão de mensagem|
+| Bot |  Os bots ajudam a interagir com seu serviço Web por meio de texto, cartões interativos e módulos de tarefa.|Extensão de mensagem, guia habilitada para SSO, guia|
+| Extensão de mensagem | As extensões de mensagem ajudam a interagir com seu serviço Web por meio de botões e formulários no cliente do Microsoft Teams.|Bot, guia habilitada para SSO, guia|
+|**Aplicativo Teams baseado em cenário**|             |
+| Bot de notificação | O bot de notificação envia mensagens proativamente no canal do Teams, chat em grupo ou chat pessoal. Você pode disparar o bot de notificação com uma solicitação HTTP, como cartões ou textos. |Guia habilitada para SSO, guia|
+| Bot de comando | O bot de comando permite automatizar tarefas repetitivas usando um bot de comando. Ele responde a comandos simples enviados em chats com cartões adaptáveis. |Guia habilitada para SSO, guia|
 
-## <a name="advantages"></a>Vantagens
-
-A lista a seguir oferece vantagens para adicionar mais recursos no TeamsFx:
-
-* Fornece conveniência.
-* Adiciona mais funções ao seu aplicativo adicionando automaticamente códigos-fonte usando o Kit de Ferramentas do Teams.
-
-## <a name="limitations"></a>Limitações
-
-A lista a seguir fornece limitações para adicionar mais recursos no TeamsFx:
-
-* Você pode adicionar guias até 16 instâncias.
-* Você pode adicionar um bot e uma extensão de mensagem para uma instância cada.
+> [!NOTE]
+> Você pode adicionar guias até 16 instâncias. Quanto ao seu bot e extensão de mensagem, você pode adicionar um para cada instância por vez.
 
 ## <a name="add-capabilities"></a>Adicionar recursos
 
-**Você pode adicionar recursos pelos seguintes métodos:**
+Você pode adicionar recursos pelos seguintes métodos:
 
-* Para adicionar recursos usando o Kit de Ferramentas do Teams Visual Studio Code.
-* Para adicionar recursos usando a paleta de comandos.
+* [Usando o Kit de Ferramentas do Teams no Microsoft Visual Studio Code](#using-teams-toolkit-in-microsoft-visual-studio-code)
+* [Usando a paleta de comandos](#using-the-command-palette)
+* [Usando a CLI do TeamsFx](#using-teamsfx-cli)
 
-  > [!Note]
-  > Você precisa provisionar para cada ambiente depois de adicionar com êxito os recursos em seu aplicativo do Teams.
-
-* **Para adicionar recursos usando o Kit de Ferramentas do Teams Visual Studio Code:**
+### <a name="using-teams-toolkit-in-microsoft-visual-studio-code"></a>Usando o Kit de Ferramentas do Teams no Microsoft Visual Studio Code
 
    1. Abra o **Visual Studio Code**.
-   1. Selecione **o Kit de Ferramentas do Teams** no painel esquerdo.
+   1. Selecione **o Kit de Ferramentas do Teams** na barra de atividades.
    1. Selecione **Adicionar recursos em** **DESENVOLVIMENTO**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="um atualizado":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Adicionar recursos do Kit de Ferramentas do Teams":::
 
-* **Para adicionar recursos usando a paleta de comandos:**
+      > [!NOTE]
+      > Depois de adicionar com êxito os recursos em seu aplicativo do Teams, você precisa provisionar para cada ambiente.
 
-   1. Abra **a paleta de comandos**.
-   1. Insira **Teams:Adicionar recursos**.
-   1. Pressione **Enter**.
+### <a name="using-the-command-palette"></a>Usando a paleta de comandos
+
+   1. Selecione **Exibir** > **Paleta de Comandos...** ou **Ctrl+Shift+P**.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Adicionar recursos do paladar de comando":::
+
+   1. Insira **o Teams: adicionar recursos**.
+   1. Pressione Enter.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="Para adicionar recursos usando a paleta de comandos.":::
 
-   1. No pop-up, selecione a funcionalidade a ser adicionada ao seu projeto.
+   1. No pop-up, selecione a funcionalidade que você precisa adicionar ao seu projeto.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Notificação":::
 
-## <a name="add-capabilities-using-teamsfx-cli"></a>Adicionar recursos usando a CLI do TeamsFx
+### <a name="using-teamsfx-cli"></a>Usando a CLI do TeamsFx
 
 * Altere o diretório para seu **diretório de projeto**.
 * A tabela a seguir lista os recursos e os comandos necessários:
@@ -81,43 +80,18 @@ A lista a seguir fornece limitações para adicionar mais recursos no TeamsFx:
   |Para adicionar bot |`teamsfx add bot`|
   |Para adicionar a extensão de mensagem |`teamsfx add message extension`|
 
-## <a name="available-capabilities-to-add-for-different-teams-project"></a>Recursos disponíveis para adicionar a diferentes projetos do Teams
+## <a name="changes-after-adding-capabilities"></a>Alterações após a adição de recursos
 
-Você pode optar por adicionar recursos diferentes com base no projeto criado no aplicativo Teams.
-A tabela a seguir lista os recursos disponíveis a serem adicionados ao seu projeto:
+A tabela a seguir mostra as alterações que podem ser vistas nos arquivos do aplicativo ao adicionar os recursos:
 
-|Funcionalidades existentes|Outros recursos com suporte|
-|--------------------|--------------------|
-|Guia SPFx |Nenhum|
-|Guia habilitada para SSO |Guia habilitada para SSO, bot de notificação, bot de comando, bot, extensão de mensagem|
-|Bot de notificação |Guia habilitada para SSO, guia|
-|Bot de comando |Guia habilitada para SSO, guia|
-|Guia |Guia, bot de notificação, bot de comando, bot, extensão de mensagem|
-|Bot |Extensão de mensagem, guia habilitada para SSO, guia|
-|Extensão de mensagem |Bot, guia habilitada para SSO, guia |
-
-## <a name="add-bot-tab-and-message-extension"></a>Adicionar extensão de bot, guia e mensagem
-
-Depois de adicionar um bot e uma extensão de mensagem, as alterações em seu projeto são as seguintes:
-
-* Um código de modelo de bot é adicionado a uma subpasta com caminho `yourProjectFolder/bot`. Isso inclui um modelo **de aplicativo** de bot hello world em seu projeto.
-* `launch.json`e `task.json` na `.vscode` pasta são atualizados, o que inclui os scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente.
-* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. As alterações são:
-  * A ID do bot
-  * Os escopos do bot
-  * Os comandos aos quais o aplicativo de bot Olá, Mundo pode responder
-* Os arquivos em `templates/azure/teamsfx` baixo são atualizados e os `templates/azure/provision/xxx`arquivos .bicep são regenerados.
-* Os arquivos sob são `.fx/config` regenerados, o que garante que seu projeto seja definido com as configurações corretas para a funcionalidade recém-adicionada.
-
-Depois de adicionar a guia, as alterações em seu projeto são as seguintes:
-
-* Um código de modelo de guia de front-end é adicionado a uma subpasta `yourProjectFolder/tab`com caminho, que inclui um modelo de aplicativo da guia **Olá** , Mundo em seu projeto.
-* `launch.json`e `task.json` na `.vscode` pasta são atualizados, o que inclui os scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente.
-* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. As alterações são:
-  * As guias configuráveis e estáticas
-  * Os escopos das guias
-* Os arquivos abaixo `templates/azure/teamsfx` serão atualizados e o `templates/azure/provision/xxx`arquivo .bicep será regenerado.
-* O arquivo em `.fx/config` baixo é regenerado, o que garante que seu projeto seja definido com as configurações corretas para a funcionalidade recém-adicionada.
+|Adicionar funcionalidade|Descrição| Altera|
+|------------|------------------------|---------|
+|Bot, extensão de mensagem e guia|Inclui um modelo **de aplicativo de** guia ou bot hello world &nbsp;em seu projeto.|Um bot de front-end ou código de modelo de guia é adicionado a uma subpasta com caminho `yourProjectFolder/bot` ou `yourProjectFolder/tab` respectivamente.|
+| Bot, extensão de mensagem e guia |Inclui scripts necessários para Visual Studio Code e é executado quando você deseja depurar seu aplicativo localmente. |Os arquivos `launch.json` e `task.json` a `.vscode` pasta são atualizados.|
+| Extensão de bot e mensagem|Inclui informações relacionadas a bots ou guias no arquivo de manifesto que representa seu aplicativo na Plataforma teams.|O`manifest.template.json` arquivo `templates/appPackage` na pasta é atualizado, o que inclui informações relacionadas à guia no arquivo de manifesto que representa seu aplicativo na Plataforma teams. As alterações são visíveis na ID do bot, nos escopos do bot e nos comandos aos quais o aplicativo hello world bot ou tab pode responder.|
+|Tab|Inclui informações relacionadas a bots ou guias no arquivo de manifesto que representa seu aplicativo na Plataforma teams.|O`manifest.template.json` arquivo `templates/appPackage` na pasta é atualizado, o que inclui informações relacionadas à guia no arquivo de manifesto que representa seu aplicativo na Plataforma teams. As alterações são visíveis em guias configuráveis e estáticas e escopos das guias.|
+|Bot, extensão de mensagem e guia|Inclui informações relacionadas a bots&nbsp;ou guias no teamsfx e provisionar arquivos que são para a integração de funções do Azure.|Os arquivos em `templates/azure/teamsfx` baixo são atualizados e `templates/azure/provision/xxx`os arquivos .bicep são regenerados.|
+|Bot, extensão de mensagem e guia|Garante que seu projeto esteja definido com as configurações corretas para a funcionalidade recém-adicionada.|Os arquivos sob `.fx/config` são regenerados|
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 

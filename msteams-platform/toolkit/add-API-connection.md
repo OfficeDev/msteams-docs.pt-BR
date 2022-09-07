@@ -1,94 +1,119 @@
 ---
-title: Conexão apIs existentes
+title: Integrar APIs de terceiros existentes
 author: MuyangAmigo
 description: Neste artigo, saiba como o kit de ferramentas ajuda você a inicializar o acesso de exemplo às APIs existentes. Ele fornece uma lista de tipos de autenticação diferentes.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: dc987718233801a6855fd534d561fe2f3d964aa7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5933227f9ba4c8b684d624a8857304c044761578
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143295"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616804"
 ---
-# <a name="add-api-connection-to-teams-app"></a>Adicionar uma conexão de API ao aplicativo do Teams
+# <a name="integrate-existing-third-party-apis"></a>Integrar APIs de terceiros existentes
 
-Teams Toolkit ajuda você a acessar APIs existentes para criar Teams aplicativos. Essas APIs são desenvolvidas pela sua organização ou por terceiros.
-
-## <a name="advantage"></a>Vantagem
-
-Teams Toolkit o código de exemplo de inicialização para acessar as APIs se você não tiver SDKs apropriados para acessar essas APIs.
-
-## <a name="connect-to-the-api"></a>Conexão à API
-
-Quando você usa Teams Toolkit para se conectar a uma API existente, Teams Toolkit executa a seguinte função:
+O Kit de Ferramentas do Teams ajuda você a acessar APIs existentes para a criação de aplicativos do Teams. Essas APIs são desenvolvidas pela sua organização ou por terceiros. Quando você usa o Kit de Ferramentas do Teams para se conectar a uma API existente, o Kit de Ferramentas do Teams executa a seguinte função:
 
 * Gere código de exemplo em `./bot` ou pasta `./api` .
 * Adicione uma referência ao `@microsoft/teamsfx` pacote a `package.json`.
 * Adicione configurações de aplicativo para sua API que  `.env.teamsfx.local` define a depuração local.
 
-### <a name="connect-to-api-in-visual-studio-code"></a>Conexão à API no Visual Studio Code
+## <a name="steps-to-connect-to-api"></a>Etapas para se conectar à API
 
-* Você pode adicionar conexão de API usando Teams Toolkit no Visual Studio Code:
+Você pode adicionar conexão de API usando Visual Studio Code comando e CLI.
 
-    1. Abra o Microsoft Visual Studio Code.
-    2. Selecione Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="de API na"::: barra de navegação esquerda.
-    3. Selecione **Adicionar recursos** em **DESENVOLVIMENTO**:
+### <a name="add-api-connection-using-visual-studio-code"></a>Adicionar conexão de API usando Visual Studio Code
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+As etapas a seguir ajudam você a adicionar conexão de API usando Visual Studio Code:
 
-       * Você também pode abrir a paleta de comandos e inserir **Teams: Adicionar recursos de nuvem**.
+1. Abra o Microsoft Visual Studio Code.
+2. Selecione o ícone da :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="API do Kit de Ferramentas do"::: Teams na Visual Studio Code de ferramentas.
+3. Selecione **Adicionar recursos** em **DESENVOLVIMENTO**:
 
-    4. No pop-up, selecione a Conexão **de API** que você deseja adicionar ao seu projeto Teams aplicativo:
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="recursos de seleção de API":::
+    * Você também pode abrir a paleta de comandos e inserir **o Teams: Adicionar recursos de nuvem**.
 
-    5. Selecione **OK**.
+4. No pop-up, selecione a Conexão **de API** que você deseja adicionar ao seu projeto de aplicativo do Teams:
 
-    6. Insira o ponto de extremidade para a API. Ele é adicionado às configurações de aplicativo local do projeto e é a URL base para solicitações de API.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="recursos de seleção de API":::
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="ponto de extremidade de api":::
+5. Selecione **OK**.
 
-         > [!NOTE]
-         > Verifique se o ponto de extremidade é uma URL http(s) válida.
+6. Insira o ponto de extremidade para a API. Ele é adicionado às configurações de aplicativo local do projeto e é a URL base para solicitações de API.
 
-    7. Selecione o componente que acessa a API.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="ponto de extremidade de api":::
 
-    8. Selecione **OK**.
+     > [!NOTE]
+     > Verifique se o ponto de extremidade é uma URL http(s) válida.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="invocação de api":::
+7. Selecione o componente que acessa a API.
 
-    9. Insira um alias para a API. O alias gera um nome de configuração de aplicativo para a API que é adicionada à configuração de aplicativo local do projeto.
+8. Selecione **OK**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="alias de api":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="invocação de api":::
 
-    10. Selecione a autenticação necessária para a solicitação de API do tipo **de autenticação de API**. Ele gera o código de exemplo apropriado e adiciona as configurações de aplicativo local correspondentes com base em sua seleção.
+9. Insira um alias para a API. O alias gera um nome de configuração de aplicativo para a API que é adicionada à configuração de aplicativo local do projeto.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="autenticação de api":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="alias de api":::
 
-         > [!NOTE]
-         > Com base no tipo de autenticação selecionado, é necessária uma configuração adicional.
+10. Selecione a autenticação necessária para a solicitação de API do tipo **de autenticação de API**. Ele gera o código de exemplo apropriado e adiciona as configurações de aplicativo local correspondentes com base em sua seleção.
 
-### <a name="api-connection-in-teamsfx-cli"></a>Conexão de API na CLI do TeamsFx
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="autenticação de api":::
+
+     Com base no tipo de autenticação selecionado, as etapas a seguir são necessárias para concluir a configuração extra
+
+# <a name="basic"></a>[Básica](#tab/basic)
+
+* Insira o nome de usuário para autenticação básica.
+
+  Agora, o código de exemplo foi gerado para chamar sua API em bot\myAPI.js.
+
+# <a name="certification"></a>[Certificação](#tab/certification)
+
+   Agora, o código de exemplo foi gerado para chamar sua API em bot\myAPI.js.
+
+# <a name="azure-active-directory"></a>[Azure Active Directory](#tab/AAD)
+
+  Agora, o código de exemplo foi gerado para chamar sua API em bot\myAPI.js.
+
+# <a name="api-key"></a>[Chave de API](#tab/apikey)
+
+* Selecione a posição da chave de API necessária na solicitação.
+
+* Insira um nome de chave de API.
+
+  Agora, o código de exemplo foi gerado para chamar sua API em bot\myAPI.js.
+
+# <a name="custom-auth-implementation"></a>[Implementação de autenticação personalizada](#tab/CustomAuthImplementation)
+
+  Agora, o código de exemplo foi gerado para chamar sua API em bot\myAPI.js.
+
+---
+
+## <a name="add-api-connection-using-cli"></a>Adicionar conexão de API usando a CLI
 
 O comando base desse recurso é `teamsfx add api-connection [authentication type]`. A tabela a seguir fornece uma lista de diferentes tipos de autenticação e seus comandos de exemplo correspondentes:
 
- > [!Tip]
+ > [!TIP]
  > Você pode usar para `teamsfx add api-connection [authentication type] -h` obter o documento de ajuda.
 
    |**Tipo de autenticação**|**Comando de amostra**|
    |-----------------------|------------------|
-   |Básico|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
-   |Chave de API|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
-   |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
-   |Certificado|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
-   |Personalizado|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
+   |Básico|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name exampleuser--interactive false|
+   |Chave de API|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
+   |Microsoft Azure AD|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
+   |Certificado|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |Personalizado|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
 
-## <a name="understand-toolkit-updates-to-your-project"></a>Entender Toolkit atualizações do seu projeto
+---
 
- Teams Toolkit modificações ou `bot` pastas `api` com base em suas seleções:
+## <a name="directory-structure-updates-to-your-project"></a>Atualizações de estrutura de diretório para seu projeto
+
+ O Kit de Ferramentas do Teams modifica `bot` ou `api` pasta com base em suas seleções:
 
 1. Gerar `{your_api_alias}.js/ts` arquivo. O arquivo inicializa um cliente de API para sua API e exporta o cliente de API.
 
@@ -96,117 +121,9 @@ O comando base desse recurso é `teamsfx add api-connection [authentication type
 
 3. Adicione variáveis de ambiente a `.env.teamsfx.local`. Elas são as configurações para o tipo de autenticação selecionado. O código gerado lê valores das variáveis de ambiente.
 
-## <a name="test-api-connection-in-local-environment"></a>Testar a conexão de API no ambiente local
+## <a name="advantages"></a>Vantagens
 
-As etapas a seguir ajudam a testar a conexão de API no ambiente Teams Toolkit local:
-
- 1. **Executar npm instalação**
-
-    Execute `npm install` em ou `bot` pasta `api` para instalar pacotes adicionados.
-
- 2. **Adicionar credenciais de API às configurações do aplicativo local**
-
-    Teams Toolkit não solicita credenciais, mas deixa espaços reservados no arquivo de configurações do aplicativo local. Substitua os espaços reservados com as credenciais apropriadas para acessar a API. O arquivo de configurações do aplicativo local é `.env.teamsfx.local` o arquivo na `bot` pasta `api` ou na pasta.
-
- 3. **Usar o cliente de API para fazer solicitações de API**
-
-    Importe o cliente de API do código-fonte que precisa de acesso à API:
-
-    ```BASH
-    import { yourApiClient } from '{relative path to the generated file}'
-    ```
-
- 4. **Gerar solicitações http(s) para a API de destino (com a Axios)**
-
-    O cliente de API gerado é um cliente da API do Axios. Use o cliente Axios para fazer solicitações à API.
-
-     > [!Note]
-     > [O Axios](https://www.npmjs.com/package/axios) é um pacote nodejs popular que ajuda você com solicitações http(s). Para obter mais informações sobre como fazer solicitações http(s), consulte a documentação de exemplo do [Axios](https://axios-http.com/docs/example) para saber como fazer http(s).
-
-## <a name="deploy-your-application-to-azure"></a>Implantar seu aplicativo no Azure
-
-Para implantar seu aplicativo no Azure, você precisa adicionar a autenticação às configurações do aplicativo para o ambiente apropriado. Por exemplo, sua API pode ter credenciais diferentes para `dev` e `prod`. Com base nas necessidades do ambiente, configure Teams Toolkit.
-
-Teams Toolkit configura seu ambiente local. O código de exemplo inicializado contém comentários que informam quais configurações de aplicativo você precisa definir. Para obter mais informações sobre as configurações do aplicativo, consulte [Adicionar configurações de aplicativo](https://github.com/OfficeDev/TeamsFx/wiki/%5BDocument%5D-Add-app-settings).
-
-## <a name="advanced-scenarios"></a>Cenários avançados
-
-  A seção a seguir explica os cenários avançados:
-
-<br>
-
-<details>
-<summary><b>Provedor de autenticação personalizado</b></summary>
-
-Além do provedor de autenticação incluído no `@microsoft/teamsfx` pacote, `AuthProvider` você também pode implementar o provedor de autenticação personalizado que implementa a interface e usá-la em `createApiClient(..)` função:
-
-```Bash
-import { AuthProvider } from '@microsoft/teamsfx'
-
-class CustomAuthProvider implements AuthProvider {
-    constructor() {
-        // You can add necessary parameters for your customized logic in constructor
-    }
-
-    AddAuthenticationInfo: (config: AxiosRequestConfig) => Promise<AxiosRequestConfig> = async (
-        config
-    ) => {
-        /*
-        * The config parameter contains all the request information and can be updated to include extra authentication info.
-        * Refer https://axios-http.com/docs/req_config for detailed document for the config object.
-        * 
-        * Add your customized logic that returns updated config
-        */
-    };
-}
-```
-
-</details>
-<details>
-<summary><b>Conexão a APIs para Azure AD permissões</b></summary>
-Azure AD autentica alguns serviços. A lista a seguir ajuda a acessar esses serviços para configurar permissões de API.
-
-* [Usar acLs (listas de Controle de Acesso)](#access-control-lists-acls)
-* [Usar Azure AD de aplicativo](#azure-ad-application-permissions)
-
-A obtenção de um token com os escopos de recurso corretos para sua API depende da implementação da API.
-
-Você pode seguir as etapas para acessar essas APIs ao usar:
-
-#### <a name="access-control-lists-acls"></a>acLs (listas de Controle de Acesso)
-
-   1. Inicie a depuração local no ambiente de nuvem do seu projeto. Ele cria um registro Azure AD aplicativo em seu Teams aplicativo.
-  
-   2. Abra `.fx/states/state.{env}.json`e anote o valor da `clientId` propriedade `fx-resource-aad-app-for-teams` abaixo.
-
-   3. Forneça a ID do cliente ao provedor de API para configurar ACLs no serviço de API.
-
-#### <a name="azure-ad-application-permissions"></a>Azure AD de aplicativo
-
-  1. Abra `templates/appPackage/aad.template.json` e adicione o seguinte conteúdo à `requiredResourceAccess` propriedade:
-
-```JSON
- {
-     "resourceAppId": "The AAD App Id for the service providing the API you are connecting to",
-     "resourceAccess": [
-         {
-             "id": "Target API's application permission Id",
-             "type": "Role"
-         }
-     ]
- }
-```
-
-   2. Inicie a depuração local no ambiente de nuvem do seu projeto. Ele cria um registro Azure AD aplicativo em seu Teams aplicativo.
-
-   3. Abra `.fx/states/state.{env}.json` e anote o valor da `clientId` propriedade `fx-resource-aad-app-for-teams` abaixo. É a ID do cliente do aplicativo.
-
-   4. Conceda consentimento do administrador para a permissão de aplicativo necessária. Para obter mais informações, consulte [conceder consentimento do administrador](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
-
-        > [!NOTE]
-        > Para permissão de aplicativo, use a ID do cliente.
-        >
-</details>
+O Kit de Ferramentas do Teams ajuda você a inicializar o código de exemplo para acessar as APIs, se você não tiver SDKs apropriados para acessar essas APIs.
 
 ## <a name="see-also"></a>Confira também
 

@@ -6,33 +6,27 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503330"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616923"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Implantar o aplicativo Teams na nuvem
 
-O Kit de Ferramentas do Teams o ajuda a implantar ou carregar o código de front-end e back-end no seu aplicativo para seus recursos na nuvem provisionados no Azure.
+O Kit de Ferramentas do Teams o ajuda a implantar ou carregar o código de front-end e back-end no seu aplicativo para seus recursos na nuvem provisionados no Azure. Você pode implantar o seguinte na nuvem:
 
 * A guia, como os aplicativos de front-end, é implantada no armazenamento do Azure e configurada para hospedagem na Web estática ou um site do SharePoint.
 * As APIs de back-end são implantadas nas funções do Azure.
 * O bot ou a extensão de mensagem são implantados no serviço de aplicativo do Azure.
 
-## <a name="prerequisite"></a>Pré-requisito
-
-* [Instalar o Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versão v3.0.0+.
-
-> [!NOTE]
->
-> * Certifique-se de ter o projeto do aplicativo Teams aberto no VS code.
-> * Antes de implantar o código do projeto na nuvem, [provisione os recursos na nuvem](provision.md).
+  > [!NOTE]
+  > Antes de implantar o código do aplicativo na nuvem do Azure, você precisa concluir com [êxito o provisionamento de recursos de nuvem](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implantar os aplicativos do Teams usando o Kit de Ferramentas do Teams
 
-Os guias de introdução o ajudam a implantar usando o Kit de Ferramentas do Teams. Você pode usar o seguinte para implantar seu aplicativo do Teams:
+Os guias de introdução ajudam você a implantar usando o Kit de Ferramentas do Teams. Você pode usar o seguinte para implantar seu aplicativo do Teams:
 
 * [Implantar seu aplicativo no Azure.](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Implantar sua extensão no SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
@@ -47,13 +41,10 @@ Os guias de introdução o ajudam a implantar usando o Kit de Ferramentas do Tea
 |Bots e extensões de mensagem </br> A carga de trabalho de back-end | `yourProjectFolder/bot` | Não aplicável | Serviço do Aplicativo do Azure |
 
 > [!NOTE]
-> Quando você inclui o recurso de gerenciamento da API do Azure no seu projeto e dispara a implantação. Você pode publicar suas APIs nas Fnções do Azure no serviço de gerenciamento da API do Azure.
+> Ao incluir o recurso de gerenciamento de API do Azure em seu projeto e disparar a implantação, você pode publicar suas APIs nas funções do Azure no serviço de gerenciamento de API do Azure.
 
 ## <a name="see-also"></a>Confira também
 
-* [Adicionar mais recursos na nuvem](add-resource.md)
 * [Criar e implantar um serviço na nuvem do Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Adicionar mais recursos do aplicativo do Teams](add-capability.md)
-* [Implantar o código do projeto com pipelines de CI/CD](use-CICD-template.md)
-* [Gerenciar vários ambientes](TeamsFx-multi-env.md)
-* [Colaborar com outros desenvolvedores no projeto do Teams](TeamsFx-collaboration.md)
+* [Criar aplicativos do Teams de vários recursos](add-capability.md)
+* [Adicionar recursos de nuvem ao aplicativo Microsoft Teams](add-resource.md)

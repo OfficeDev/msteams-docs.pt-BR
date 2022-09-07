@@ -1,23 +1,31 @@
 ---
-title: Manifesto do aplicativo Teams no Kit de Ferramentas do Teams
+title: Personalizar o Manifesto do Aplicativo Teams no Kit de Ferramentas do Teams
 author: zyxiaoyuer
 description: Neste módulo, saiba como editar, visualizar e personalizar o Manifesto do Aplicativo teams em um ambiente diferente.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288140"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616671"
 ---
-# <a name="edit-teams-app-manifest-for-visual-studio"></a>Editar manifesto do aplicativo Teams para Visual Studio
+# <a name="customize-teams-app-manifest"></a>Personalizar o manifesto do aplicativo Teams
+
+O manifesto do aplicativo Teams descreve como seu aplicativo se integra ao produto Microsoft Teams. Para obter mais informações sobre Manifesto, consulte [o esquema de manifesto do aplicativo para o Teams](../resources/schema/manifest-schema.md). Esta seção cobre:
+
+* [Visualizar arquivo de manifesto no ambiente local](#preview-manifest-file-in-local-environment)
+* [Visualizar arquivo de manifesto no ambiente remoto](#preview-manifest-file-in-remote-environment)
+* [Sincronizar alterações locais no Portal de Desenvolvimento](#sync-local-changes-to-dev-portal)
+* [Personalizar o manifesto do aplicativo Teams](#customize-teams-app-manifest)
+* [Validar manifesto](#validate-manifest)
 
 O arquivo de modelo do manifesto `manifest.template.json` está disponível na pasta `templates/appPackage` após o scaffolding. O arquivo de modelo com espaços reservados e os valores reais são resolvidos pelo Kit de Ferramentas do Teams usando arquivos em `.fx/configs` e `.fx/states` para ambientes diferentes.
 
-**Para visualizar o manifesto com conteúdo real, o Kit de Ferramentas do Teams gera arquivos de manifesto de visualização na `build/appPackage` pasta**:
+Para visualizar o manifesto com conteúdo real, o Kit de Ferramentas do Teams gera arquivos de manifesto de visualização na `build/appPackage` pasta:
 
 ```text
 └───build
@@ -37,11 +45,36 @@ Você pode visualizar o arquivo de manifesto em ambientes locais e remotos.
 
 Para visualizar o arquivo de manifesto no ambiente local, você pode pressionar **F5** para executar a depuração local. Ele gera configurações locais padrão para você e o pacote do aplicativo e o manifesto de visualização são compilados na `build/appPackage` pasta.
 
-Você também pode visualizar o arquivo de manifesto local seguindo as etapas:
+Você também pode visualizar o arquivo de manifesto local por dois métodos
 
-1. Selecione **Visualizar** nos codelens do `manifest.template.json` arquivo e selecione **local**.
-2. Selecione **Visualizar arquivo de manifesto** na barra de menus do `manifest.template.json` arquivo.
-3. Selecione **o pacote de metadados do Zip Teams** no Treeview e selecione **local**.
+* Usando a opção de visualização no codelens
+* Usando a opção **de pacote de metadados do Zip Teams**
+
+As etapas a seguir ajudam a visualizar o arquivo de manifesto local usando a opção de visualização no codelens:
+
+1. Selecione **Visualizar** nos codelens do `manifest.template.json` arquivo.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Visualização":::
+
+1. Selecione **local**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Selecionar environment1":::
+
+As etapas a seguir ajudam a visualizar o arquivo de manifesto local usando a opção de pacote de **metadados do Zip Teams** :
+
+1. Selecione `manifest.template.json` o arquivo.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Selecione Manifesto":::
+
+1. Selecione o ícone do Kit de Ferramentas do :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: Teams na Visual Studio Code de ferramentas.
+
+1. Selecione o **pacote de metadados do Zip Teams** em **DEPLOYMENT**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Selecionar pacote de metadados do Teams":::
+
+1. Selecione **local**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Selecionar ambiente":::
 
 A visualização local é exibida conforme mostrado na imagem:
 
@@ -49,28 +82,63 @@ A visualização local é exibida conforme mostrado na imagem:
 
 ## <a name="preview-manifest-file-in-remote-environment"></a>Visualizar arquivo de manifesto no ambiente remoto
 
-**Para visualizar o arquivo de manifesto no ambiente remoto**
+Para visualizar o arquivo de manifesto usando Visual Studio Code:
 
-* Selecione **Provisionar na nuvem em** **DESENVOLVIMENTO na** extensão do Kit de Ferramentas do Teams ou
+* Selecione **Provisionar na nuvem em** **DESENVOLVIMENTO na** extensão kit de ferramentas do Teams
+  
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Provisionar recurso de nuvem":::
+
+Para visualizar o arquivo de manifesto usando o comando palatte:
+
 * Disparar **o Teams: provisionar na nuvem da** paleta de comandos.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Provisionar recurso de nuvem usando o paladar de comando":::
 
 Ele gera a configuração para o aplicativo Remoto do Teams e compila o pacote e o manifesto de visualização na `build/appPackage` pasta.
 
-Você também pode visualizar o arquivo de manifesto no ambiente remoto seguindo estas etapas:
+Você também pode visualizar o arquivo de manifesto por dois métodos no ambiente remoto
+
+* Usando a opção de visualização no codelens
+* Usando a opção **de pacote de metadados do Zip Teams**
+
+As etapas a seguir ajudam a visualizar o arquivo de manifesto usando a opção de visualização no codelens:
 
 1. Selecione **Visualizar** nos codelens do `manifest.template.json` arquivo.
-2. Selecione **Visualizar arquivo de manifesto** na barra de menus do `manifest.template.json` arquivo.
-3. Selecione **o pacote de metadados do Zip Teams** no Treeview.
-4. Selecione seu ambiente.
 
-> [!NOTE]
-> Se houver mais de um ambiente, você precisará selecionar o ambiente que você quer visualizar, conforme mostrado na imagem:
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Visualização":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Adicionar env":::
+1. Selecione seu ambiente.
+
+   > [!NOTE]
+   > Se houver mais de um ambiente, você precisará selecionar o ambiente que você quer visualizar, conforme mostrado na imagem:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Adicionar env":::
+
+As etapas a seguir ajudam a visualizar o arquivo de manifesto usando a opção de pacote de **metadados do Zip Teams** no ambiente remoto:
+
+1. Selecione `manifest.template.json` o arquivo.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Selecione Manifesto":::
+
+1. Selecione o ícone do Kit de Ferramentas do :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: Teams na Visual Studio Code de ferramentas.
+
+1. Selecione o **pacote de metadados do Zip Teams** em **DEPLOYMENT**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Selecionar pacote de metadados do Teams":::
+
+1. Selecione seu ambiente.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Adicionar env":::
+
+   > [!NOTE]
+   > Se houver mais de um ambiente, você precisará selecionar o ambiente que você quer visualizar, conforme mostrado na imagem:
 
 ## <a name="sync-local-changes-to-dev-portal"></a>Sincronizar alterações locais no Portal de Desenvolvimento
 
 Depois de visualizar o arquivo de manifesto, você pode sincronizar as alterações locais no Portal de Desenvolvimento das seguintes maneiras:
+
+> [!NOTE]
+> Para obter mais informações sobre o portal do desenvolvedor, consulte [o Portal do Desenvolvedor para Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 1. Implantar o manifesto do aplicativo Teams.
 
@@ -129,7 +197,7 @@ O Kit de Ferramentas do Teams consiste nos seguintes arquivos de modelo de manif
 
 Durante a depuração ou provisionamento local, o Kit de Ferramentas do Teams `manifest.template.json`carrega o manifesto de , `state.{env}.json`com as configurações de , `config.{env}.json`e cria o aplicativo Teams no [Portal de Desenvolvimento](https://dev.teams.microsoft.com/apps).
 
-## <a name="supported-placeholders-in-manifesttemplatejson"></a>Espaços reservados com suporte em manifest.template.json
+### <a name="supported-placeholders-in-manifesttemplatejson"></a>Espaços reservados com suporte em manifest.template.json
 
 A lista a seguir fornece espaços reservados com suporte em `manifest.template.json`:
 
@@ -169,7 +237,7 @@ Durante operações como o pacote de **metadados do Zip Teams**, o Kit de Ferram
 
 ---
 
-## Codelenses and hovers
+## To preview values for local and dev environment
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 

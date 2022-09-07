@@ -6,59 +6,51 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2d1889de8cc5c36cde708f4d4628f6f61768e3f4
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: fc58610802a51af19efc32e579566fbf5e36feca
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557873"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616507"
 ---
-# <a name="add-cloud-resources-to-teams-app"></a>Adicionar recursos de nuvem ao aplicativo Teams
+# <a name="add-cloud-resources-to-microsoft-teams-app"></a>Adicionar recursos de nuvem ao aplicativo Microsoft Teams
 
-O TeamsFx ajuda a provisionar os recursos de nuvem para sua hospedagem de aplicativo. Você pode adicionar os recursos de nuvem opcionalmente, que se ajustam às suas necessidades de desenvolvimento.
+O Kit de Ferramentas do Teams ajuda você a provisionar os recursos de nuvem para sua hospedagem de aplicativos. Você pode adicionar os recursos de nuvem opcionalmente, que se ajustam às suas necessidades de desenvolvimento. A vantagem de adicionar mais recursos de nuvem no TeamsFx é que você pode gerar automaticamente todos os arquivos de configuração e conectar-se ao aplicativo Teams usando o Kit de Ferramentas do Teams.
 
-## <a name="advantages"></a>Vantagens
-
-A lista a seguir oferece vantagens para adicionar mais recursos de nuvem no TeamsFx:
-
-* Fornece conveniência.
-* Gera automaticamente todos os arquivos de configuração e conecta-se ao aplicativo Teams usando o Kit de Ferramentas do Teams.
-
-## <a name="limitation"></a>Limitação
-
-Se você tiver criado um projeto de guia baseado em SPFx, não poderá adicionar recursos de nuvem do Azure.
+> [!NOTE]
+> Se você tiver criado um projeto de guia baseado em SPFx, não poderá adicionar recursos de nuvem do Azure.
 
 ## <a name="add-cloud-resources"></a>Adicionar recursos da nuvem
 
-**Você pode adicionar recursos de nuvem pelos seguintes métodos:**
+Você pode adicionar recursos de nuvem pelos seguintes métodos:
 
-* Para adicionar recursos de nuvem usando o Kit de Ferramentas do Teams Visual Studio Code.
-* Para adicionar recursos de nuvem usando a paleta de comandos.
+### <a name="to-add-cloud-resources-by-using-teams-toolkit-in-visual-studio-code"></a>Para adicionar recursos de nuvem usando o Kit de Ferramentas do Teams no Visual Studio Code
+
+   1. Abra o **Visual Studio Code**.
+   1. Selecione **o Kit de Ferramentas do Teams** na barra de atividades.
+   1. Selecione **Adicionar recursos em** **DESENVOLVIMENTO**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Adicionar recurso do Kit de Ferramentas do Teams":::
+
+### <a name="to-add-cloud-resources-by-using-command-palette"></a>Para adicionar recursos de nuvem usando a paleta de comandos
+
+   1. Selecione **Exibir** > **Paleta de Comandos...** ou **Ctrl+Shift+P**.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Adicionar recurso da paleta de comandos":::
+
+   1. Insira **o Teams: adicionar recursos**.
+   1. Pressione **Enter**.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features1.png" alt-text="Digite adicionar recurso e insira":::
+
+   1. No pop-up, selecione os recursos **de nuvem** a serem adicionados ao seu projeto.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
 
   > [!NOTE]
   > Você precisa provisionar para cada ambiente, depois de ter adicionado com êxito o recurso em seu aplicativo do Teams.
-  
-* **Para adicionar recursos de nuvem usando o Kit de Ferramentas do Teams Visual Studio Code:**
 
-   1. Abra o **Visual Studio Code**.
-   1. Selecione **o Kit de Ferramentas do Teams** no painel esquerdo.
-   1. Selecione **Adicionar recursos em** **DESENVOLVIMENTO**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="adicionar recurso":::
-
-* **Para adicionar recursos de nuvem usando a paleta de comandos:**
-
-   1. Abra **a paleta de comandos**.
-   1. Insira **Teams:Adicionar recursos**.
-   1. Pressione **Enter**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Nuvem":::
-
-   1. No pop-up, selecione os recursos de nuvem a serem adicionados ao seu projeto.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
-
-## <a name="add-cloud-resources-using-teamsfx-cli"></a>Adicionar recursos de nuvem usando a CLI do TeamsFx
+### <a name="add-cloud-resources-using-teamsfx-cli"></a>Adicionar recursos de nuvem usando a CLI do TeamsFx
 
 * Altere o diretório para seu **diretório de projeto**.
 * A tabela a seguir lista os recursos e os comandos necessários:
@@ -79,7 +71,7 @@ Nos cenários a seguir, o TeamsFx integra-se aos serviços do Azure:
 * Gerenciamento [de API do Azure](deploy.md): um gateway de API pode ser usado para administrar APIs criadas para aplicativos do Teams e publicá-las para consumir em outros aplicativos, como o Power Apps.
 * [Azure Key Vault](/azure/key-vault/general/overview): proteja chaves criptográficas e outros segredos usados ​​por aplicativos e serviços de nuvem.
 
-## <a name="add-cloud-resources"></a>Adicionar recursos de Nuvem
+## <a name="changes-after-adding-cloud-resources"></a>Alterações após a adição de recursos de nuvem
 
 As seguintes alterações aparecem após a adição de recursos em seu projeto:
 

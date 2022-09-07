@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382941"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616797"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -70,7 +70,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | Implantar | Um processo para carregar o código de back-end e front-end para o aplicativo. Na Implantação, o código do aplicativo é copiado para os recursos criados durante o provisionamento. <br>**Consulte também**: [Provisionamento](#p) |
 | [Funcionalidades de dispositivo](../concepts/device-capabilities/device-capabilities-overview.md) | Dispositivos internos, como câmera, microfone, scanner de código de barras, galeria de fotos, em um celular ou desktop. Você pode acessar os seguintes recursos de dispositivo em dispositivos móveis ou desktop por meio de APIs dedicadas disponíveis no SDK do cliente JavaScript do Microsoft Teams. <br>**Consulte também**: [Funcionalidade](#c); [Funcionalidade de mídia](#m); [Funcionalidade de localização](#l) |
 | [Permissão do aplicativo](../concepts/device-capabilities/browser-device-permissions.md) | Uma configuração de aplicativo do Teams que você pode definir em seu aplicativo. Use-o para solicitar permissão para seu aplicativo acessar e utilizar uma funcionalidade de dispositivo nativo. Você pode gerenciar permissões de dispositivo nas configurações do Teams. <br>**Consulte também**: [Permissões do aplicativo](#a) |
-| [Ambiente do desenvolvedor](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Um tipo de ambiente de desenvolvimento que o Kit de Ferramentas do Teams cria por padrão. Ele representa configurações de ambiente remoto ou de nuvem. Um projeto pode ter vários ambientes remotos. Você pode adicionar mais ambientes de desenvolvimento ao seu projeto usando o Kit de Ferramentas do Teams. <br>**Consulte também** [Ambiente](#e); [Ambiente local](#l) |
+| [Ambiente do desenvolvedor](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Um tipo de ambiente de desenvolvimento que o Kit de Ferramentas do Teams cria por padrão. Ele representa configurações de ambiente remoto ou de nuvem. Um projeto pode ter vários ambientes remotos. Você pode adicionar mais ambientes de desenvolvimento ao seu projeto usando o Kit de Ferramentas do Teams. <br>**Consulte também** [Ambiente](#e); [Ambiente local](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | As DevTools do navegador são usadas para exibir os logs do console, visualizar ou modificar solicitações runtime de redes, adicionar pontos de interrupção ao código (JavaScript) e executar a depuração interativa para um aplicativo do Teams. O recurso só estará disponível para clientes desktop e Android depois que a Visualização do Desenvolvedor tiver sido habilitada. |
 | [Pesquisa dinâmica](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | Um recurso de pesquisa para Cartões Adaptáveis que é útil para pesquisar e selecionar dados de grandes conjuntos de dados. Ele ajuda a filtrar as opções à medida que o usuário insere a cadeia de caracteres de pesquisa. <br>**Consulte também**: [Pesquisa estática](#s) |
 
@@ -111,7 +111,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | Termo | Definição |
 | --- | --- |
 | [Desenrolamento de link](../messaging-extensions/how-to/link-unfurling.md) | Um recurso usado com a extensão de mensagem e reunião para desdobrar links colados em uma área para redigir mensagens. Os links se expandem para mostrar informações adicionais sobre o link no Cartões Adaptáveis ou no modo de exibição do estágio da reunião. |
-| [Ambiente local](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Um ambiente de desenvolvimento padrão criado pelo Kit de Ferramentas do Teams.  <br>**Consulte tambérm**: [Ambiente](#e); [Ambiente de desenvolvimento](#d) |
+| [Ambiente local](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Um ambiente de desenvolvimento padrão criado pelo Kit de Ferramentas do Teams.  <br>**Consulte tambérm**: [Ambiente](#e); [Ambiente de desenvolvimento](#d) |
 | [Workbench local](../sbs-gs-spfx.yml) | A opção padrão para executar e depurar um aplicativo do Teams no Visual Studio Code criado usando SPFx. <br>**Consulte também**: [Workbench](#w); [Workbench do Teams](#t) |
 | [Funcionalidade de localização](../concepts/device-capabilities/location-capability.md) | Uma funcionalidade de dispositivo que você pode integrar ao seu aplicativo para saber a localização geográfica do usuário do aplicativo para obter uma experiência colaborativa aprimorada. Atualmente, esse recurso está disponível somente para clientes móveis do Teams.<br>**Consute também**: [Funcionalidade](#c); [Funcionalidade de mídia](#m); [Funcionalidade do dispositivo](#d); [Teams para dispositivos móveis](#t) |
 | [Aplicativos de baixa codificação](../samples/teams-low-code-solutions.md) | Um aplicativo personalizado do Teams criado do zero usando o Microsoft Power Platform que requer pouca ou nenhuma codificação e pode ser desenvolvido e implantado rapidamente. |
