@@ -1,18 +1,18 @@
 ---
-title: Instalar controles de colaboração
+title: Instalar os Controles de colaboração
 author: surbhigupta
 description: Neste módulo, saiba como instalar controles de colaboração com aplicativos de energia e Microsoft 365 E3 e como instalar soluções de controles de colaboração.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: aa4259855ba0c95906d7196ffd83c093bea89ea9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
+ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178716"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67617975"
 ---
-# <a name="install-collaboration-controls"></a>Instalar controles de colaboração
+# <a name="install-collaboration-controls"></a>Instalar os Controles de colaboração
 
 > [!NOTE]
 > Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
@@ -31,9 +31,10 @@ Para obter mais informações sobre privilégios de função, consulte [Configur
 
 ## <a name="install-the-collaboration-controls-solutions"></a>Instalar as soluções de controles de colaboração
 
-Você instalará os controles de Colaboração em seu ambiente do dataverse por meio de um link privado. Esse link não deve ser compartilhado com nenhuma outra pessoa dentro ou fora da sua organização.
+Você instalará os controles de colaboração em seu ambiente do dataverse por meio [do Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
 
-Você poderá configurar e usar os componentes em seu próprio aplicativo controlado por modelo somente depois de receber o link e instalar os controles de Colaboração em seu ambiente de dataverse.
+
+Você poderá configurar e usar os componentes em seu próprio aplicativo controlado por modelo somente depois de navegar até o [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  e instalar controles de Colaboração em seu ambiente de dataverse.
 
 Os Controles de Colaboração incluem as seguintes soluções:
 
@@ -57,7 +58,7 @@ Os Controles de Colaboração incluem as seguintes soluções:
 
 Antes da instalação, você deve estar em um ambiente do Power Platform ou em um locatário de administração. Você precisará de um ambiente de dataverse com um banco de dados. Se você não tiver um, [precisará criar um](/power-platform/admin/create-environment) novo para continuar com a instalação.
 
-Para instalar as soluções, comece navegando até [Microsoft AppSource] e conclua as seguintes etapas:
+Para instalar as soluções, navegue [até o Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) e conclua as seguintes etapas:
 
 1. Selecione **o botão Obter** agora.
 

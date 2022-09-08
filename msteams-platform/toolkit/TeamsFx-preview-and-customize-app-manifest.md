@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616671"
+ms.locfileid: "67617786"
 ---
 # <a name="customize-teams-app-manifest"></a>Personalizar o manifesto do aplicativo Teams
 
@@ -20,7 +20,7 @@ O manifesto do aplicativo Teams descreve como seu aplicativo se integra ao produ
 * [Visualizar arquivo de manifesto no ambiente local](#preview-manifest-file-in-local-environment)
 * [Visualizar arquivo de manifesto no ambiente remoto](#preview-manifest-file-in-remote-environment)
 * [Sincronizar alterações locais no Portal de Desenvolvimento](#sync-local-changes-to-dev-portal)
-* [Personalizar o manifesto do aplicativo Teams](#customize-teams-app-manifest)
+* [Personalizar o manifesto do aplicativo Teams](#customize-your-teams-app-manifest)
 * [Validar manifesto](#validate-manifest)
 
 O arquivo de modelo do manifesto `manifest.template.json` está disponível na pasta `templates/appPackage` após o scaffolding. O arquivo de modelo com espaços reservados e os valores reais são resolvidos pelo Kit de Ferramentas do Teams usando arquivos em `.fx/configs` e `.fx/states` para ambientes diferentes.
@@ -188,7 +188,7 @@ Se o arquivo de manifesto estiver desatualizado devido à alteração do arquivo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## <a name="customize-teams-app-manifest"></a>Personalizar o manifesto do aplicativo Teams
+## <a name="customize-your-teams-app-manifest"></a>Personalizar o manifesto do aplicativo Teams
 
 O Kit de Ferramentas do Teams consiste nos seguintes arquivos de modelo de manifesto na pasta `manifest.template.json` em ambientes locais e remotos:
 
