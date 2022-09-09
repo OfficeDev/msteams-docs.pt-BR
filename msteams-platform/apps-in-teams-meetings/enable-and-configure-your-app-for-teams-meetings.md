@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418847"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636158"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -227,7 +227,7 @@ Para compartilhar partes específicas do aplicativo para preparar, você deve in
 > [!NOTE]
 >
 > * Para compartilhar partes específicas do aplicativo para preparar, use a versão 1.12 ou posterior do manifesto do Teams.
-> * Atualmente, você pode compartilhar partes específicas do aplicativo para o estágio de reunião somente em clientes da área de trabalho do Teams.
+> * Você pode compartilhar partes específicas do aplicativo para o estágio de reunião somente em clientes da área de trabalho do Teams. Os usuários móveis podem compartilhar partes específicas do aplicativo para preparar usando o [compartilhamento para preparar a API](API-references.md#share-app-content-to-stage-api).
 
 ### <a name="after-a-meeting"></a>Após uma reunião
 
