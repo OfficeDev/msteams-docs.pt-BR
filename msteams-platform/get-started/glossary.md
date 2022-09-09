@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616797"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635319"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -102,7 +102,6 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Provedor de identidade](../concepts/authentication/configure-identity-provider.md) | Uma entidade que armazena e fornece credenciais para o usuário. Os usuários também podem se registrar com um provedor de identidade.  <br>**Consulte também**: [Autenticação](#a) |
 | [Webhook de entrada](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Ele permite que um aplicativo externo compartilhe conteúdo em canais do Teams. Esses webhooks são usados como ferramentas de acompanhamento e notificação. <br>**Consulte também**: [Webhook](#w); [Webhook de saída](#o) |
 | [Experiência de aplicativo na reunião](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Um estágio do ciclo de vida de reunião do Teams. Com a experiência do aplicativo na reunião, você pode envolver os participantes durante a reunião usando aplicativos e a caixa de diálogo na reunião.<br>**Consulte também**: [Ciclo de vida de reunião](#m) |
 

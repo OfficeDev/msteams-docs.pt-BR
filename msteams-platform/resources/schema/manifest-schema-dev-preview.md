@@ -4,12 +4,12 @@ description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058204"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635326"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -671,12 +671,12 @@ Você pode definir qualquer uma das seguintes propriedades:
 
 **Opcional** - matriz
 
-Habilita seu aplicativo em canais não padrão. Se seu aplicativo der suporte a um escopo de equipe e essa propriedade estiver definida, o Teams habilitará seu aplicativo em cada tipo de canal adequadamente. Atualmente, há suporte para os tipos de canal privado e compartilhado.
+Habilita seu aplicativo em canais não-padronizados. Se seu aplicativo der suporte a um escopo de equipe e esta propriedade for definida, o Teams habilita seu aplicativo em cada tipo de canal adequadamente. Atualmente, há suporte para os tipos de canais privados e compartilhados.
 
 > [!NOTE]
 >
-> * Se o aplicativo der suporte a um escopo de equipe, ele funcionará nos canais padrão, independentemente dos valores definidos nessa propriedade.
-> * Seu aplicativo pode levar em conta as propriedades exclusivas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar o contexto](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) em canais privados e [recuperar o contexto em canais compartilhados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Se seu aplicativo der suporte a um escopo de equipe, ele funciona nos canais padrão independentemente dos valores que são definidos nesta propriedade.
+> * Seu aplicativo pode levar em conta as propriedades únicas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar o contexto](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) em canais privados e [obter contexto em canais compartilhados](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -702,8 +702,8 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|string|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -724,7 +724,7 @@ Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 itens||Cenas suportadas da reunião.|
-|`supportsStreaming`|Booliano|||Um valor que indica se um aplicativo pode transmitir o conteúdo de áudio e vídeo da reunião para um ponto de extremidade RTMP (protocolo de reunião em tempo real). O valor padrão é **falso**.|
+|`supportsStreaming`|Booliano|||Um valor que indica se um aplicativo pode transmitir o conteúdo de áudio e vídeo da reunião para um ponto de extremidade de protocolo de reunião em tempo real (RTMP). O valor padrão é **falso**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

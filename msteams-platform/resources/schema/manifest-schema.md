@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605023"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635333"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -753,7 +753,7 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 |`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -786,7 +786,7 @@ Habilita seu aplicativo em canais não-padronizados. Se seu aplicativo der supor
 > [!NOTE]
 >
 > * Se seu aplicativo der suporte a um escopo de equipe, ele funciona nos canais padrão independentemente dos valores que são definidos nesta propriedade.
-> * Seu aplicativo pode levar em conta as propriedades únicas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar contexto em canais privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) e [recuperar contexto em canais compartilhados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Seu aplicativo pode levar em conta as propriedades únicas de cada um dos tipos de canal para funcionar corretamente. Para habilitar sua guia para canais privados e compartilhados, consulte [recuperar o contexto](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) em canais privados e [obter contexto em canais compartilhados](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
