@@ -5,12 +5,12 @@ description: Saiba como enviar, receber e manipular mensagens para um bot em um 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
+ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503603"
+ms.lasthandoff: 09/12/2022
+ms.locfileid: "67646136"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
@@ -23,14 +23,14 @@ Os bots em um grupo ou canal só recebem mensagens quando são mencionados @botn
 > [!NOTE]
 > No momento, esse recurso está disponível somente em [visualização pública do desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md).
 >
-> Usando o RSC (consentimento específico do recurso), os bots podem receber todas as mensagens de canal em equipes onde ele está instalado sem ser @mencionado. Para obter mais informações, confira [receber todas as mensagens de canal com o RSC](channel-messages-with-rsc.md).
+> Usando o RSC (consentimento específico do recurso), os bots podem receber todas as mensagens de canal nas equipes em que estão instalados sem serem @mentioned. Para obter mais informações, confira [receber todas as mensagens de canal com o RSC](channel-messages-with-rsc.md).
 >
 > No momento, não há suporte para postar uma mensagem ou um cartão adaptável em um canal privado.
 
 Confira o vídeo a seguir para saber mais sobre conversas de chat em grupo e canal com um bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## <a name="design-guidelines"></a>Diretrizes de design
@@ -41,7 +41,7 @@ Agora, você pode criar novas threads de conversa e gerenciar facilmente diferen
 
 ## <a name="create-new-conversation-threads"></a>Crie novas threads de conversa
 
-Quando o bot é instalado em uma equipe, você deve criar uma nova thread de conversa em vez de responder a uma existente. Às vezes, é difícil diferenciar entre duas conversas. Se a conversa estiver encadeada, será mais fácil organizar e gerenciar diferentes conversas nos canais. Essa é uma forma de [mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md).
+Quando o bot é instalado em uma equipe, você deve criar uma nova thread de conversa em vez de responder a uma existente. Às vezes, é difícil diferenciar entre duas conversas. Se a conversa estiver encadeada, será mais fácil organizar e gerenciar diferentes conversas em canais. Essa é uma forma de [mensagens proativas](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Em seguida, recupere as menções usando o objeto `entities` e adicione menções às suas mensagens usando o objeto `Mention`.
 
@@ -267,11 +267,14 @@ Agora você pode enviar uma mensagem de introdução quando o bot for instalado 
 
 Quando o bot é adicionado pela primeira vez ao grupo ou à equipe, uma mensagem de introdução deve ser enviada. A mensagem deve fornecer uma breve descrição dos recursos do bot e como usá-los. Você deve assinar o evento `conversationUpdate` com o eventType `teamMemberAdded`.  O evento é enviado quando qualquer novo membro da equipe for adicionado. Verifique se o novo membro adicionado é o bot. Para obter mais informações, confira [enviar uma mensagem de boas-vindas a um novo membro da equipe](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Envie uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, obtenha a lista de participantes da equipe e envie uma mensagem direta para cada usuário.
+Você pode enviar uma mensagem pessoal para cada membro da equipe quando o bot for adicionado. Para fazer isso, [busque a lista de participantes da equipe](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) e envie uma mensagem [direta a cada usuário](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+
+>[!NOTE]
+> Verifique se a mensagem enviada pelo bot é relevante e agrega valor à mensagem inicial e não faz spam para os usuários.
 
 Não envie uma mensagem nos seguintes casos:
 
-* A equipe é grande, por exemplo, mais de 100 membros. Seu bot pode ser visto como spam e a pessoa que o adicionou pode receber reclamações. Você deve comunicar claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.
+* Quando a equipe é grande, por exemplo, maior que 100 membros. Seu bot pode ser visto como spam e a pessoa que o adicionou pode receber reclamações. Você deve comunicar claramente a proposta de valor do bot para todos que veem a mensagem de boas-vindas.
 * Seu bot é mencionado primeiro em um grupo ou canal em vez de ser adicionado primeiramente a uma equipe.
 * Um grupo ou canal é renomeado.
 * Um membro da equipe é adicionado a um grupo ou canal.
@@ -292,4 +295,3 @@ Siga o [guia passo a passo](../../../sbs-teams-conversation-bot.yml), para criar
 * [Obter contexto do Teams](~/bots/how-to/get-teams-context.md)
 * [Criar um canal privado em nome do usuário](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Conectar um bot ao Webchat canal](/azure/bot-service/bot-service-channel-connect-webchat)
-
