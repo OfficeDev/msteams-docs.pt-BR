@@ -705,7 +705,6 @@
       items:
         - name: Visão Geral
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Esquema de manifesto de visualização do desenvolvedor público para o Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integrar com o Teams
