@@ -5,12 +5,12 @@ description: Neste artigo, você vai começar a integrar aplicativos Web e recur
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 19cf5b580c2d25e90eb90bd1fef9a78c75111092
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189777"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653178"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicativos Web
 
@@ -65,7 +65,7 @@ O Moodle é um LMS (Sistema de Gerenciamento de Aprendizagem) de software livre 
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Criar um botão Compartilhar no Teams para o seu site
 
-Sites de terceiros podem usar o script do inicializador para inserir botões Compartilhar no Teams em suas páginas da Web. Quando você seleciona o botão, ele inicia a experiência Compartilhar com o Teams em uma janela pop-up. Isso permite que você compartilhe um link diretamente com qualquer pessoa ou canal do Microsoft Teams sem alternar o contexto.
+Sites de terceiros podem usar o script do inicializador para inserir botões Compartilhar no Teams em suas páginas da Web. Quando você seleciona o botão, ele inicia a experiência Compartilhar com o Teams em uma janela pop-up. Ele permite que você compartilhe um link diretamente para qualquer pessoa ou canal do Microsoft Teams sem alternar o contexto.
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Adicionar uma guia do Microsoft Teams no SharePoint
 
@@ -106,4 +106,4 @@ Você também pode integrar a identidade do Microsoft 365 para criar aplicativos
 * [Adicionar uma guia do Teams ao SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Criar links detalhados](~/concepts/build-and-test/deep-links.md)
 * [Funcionalidades de dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [controle do seletor de pessoas](~/concepts/device-capabilities/people-picker-capability.md)
+* [Pessoas seletor](~/concepts/device-capabilities/people-picker-capability.md)

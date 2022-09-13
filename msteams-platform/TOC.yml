@@ -120,6 +120,8 @@
                   href: toolkit/add-resource.md
                 - name: Integrar APIs de terceiros existentes
                   href: toolkit/add-API-connection.md
+                - name: Adicionar o logon único ao aplicativo do Teams
+                  href: toolkit/add-single-sign-on.md
             - name: Personalizar manifesto
               items:
                 - name: Personalizar o manifesto do aplicativo Teams
@@ -146,6 +148,8 @@
               items:
                 - name: Integrar e colaborar
                   href: toolkit/TeamsFx-collaboration.md
+                - name: Configurar pipelines de CI/CD
+                  href: toolkit/use-CICD-template.md
                 - name: Fazer sideload e testar o aplicativo no ambiente do Teams
                   href: toolkit/sideload-and-test-app.md
                 - name: Testar o comportamento do aplicativo em um ambiente diferente

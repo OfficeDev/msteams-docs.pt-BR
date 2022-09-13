@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerações para a integração do Microsoft Teams
-ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 994747586610ac9301e1cc1a6d752ad77816af97
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178608"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653165"
 ---
 # <a name="considerations-for-teams-integration"></a>Considerações para a integração do Microsoft Teams
 
@@ -75,7 +75,7 @@ Se seu aplicativo for usado por várias organizações, considere a hospedagem m
 
 ***Cenários de integração**: aplicativos autônomos, aplicativos de colaboração*
 
-As APIs e estruturas de dados do aplicativo devem dar suporte ao aplicativo durante a integração com o Teams. Para estender o suporte, você deve aumentar as APIs e estruturas de dados com informações contextuais sobre o Teams para [mapeamento de identidade](../concepts/authentication/configure-identity-provider.md), [suporte a link profundo](../concepts/build-and-test/deep-links.md) e [incorporar o Microsoft Graph](/graph/teams-concept-overview).
+As APIs e estruturas de dados do aplicativo devem dar suporte ao aplicativo durante a integração com o Teams. Para estender o suporte, você deve aumentar as APIs e estruturas de dados com informações contextuais sobre o Teams para [mapeamento de identidade](../concepts/authentication/authentication.md), [suporte a link profundo](../concepts/build-and-test/deep-links.md) e [incorporar o Microsoft Graph](/graph/teams-concept-overview).
 
 Veja como obter contexto para a [guia](../tabs/how-to/access-teams-context.md) ou [bot](../bots/how-to/get-teams-context.md) do Teams.
 

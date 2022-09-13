@@ -5,12 +5,12 @@ description: Aprenda a criar guias, páginas da Web inseridas no Microsoft Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450391"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653186"
 ---
 # <a name="build-tabs-for-teams"></a>Compilar guias para o Teams
 
@@ -80,7 +80,7 @@ Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por apl
 
 ### <a name="tools-to-build-tabs"></a>Ferramentas para criar guias
 
-* [Kit de ferramentas do Teams para Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Kit de ferramentas do Teams para Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
 * [Kit de ferramentas do Teams para Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Próxima etapa

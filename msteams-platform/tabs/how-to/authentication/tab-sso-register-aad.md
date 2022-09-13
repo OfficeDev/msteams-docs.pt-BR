@@ -4,12 +4,12 @@ description: Configure o SSO (logon único) com o Azure AD configurando o URI da
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 'guias de autenticação do Teams escopo de locação de SSO (logon único) de token de acesso do Microsoft Azure Active Directory (Azure AD) '
-ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586795"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653193"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar o aplicativo de guia no Azure AD
 
@@ -21,7 +21,7 @@ Registrar seu aplicativo de guia no Azure AD e habilitá-lo para SSO requer a cr
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar o Azure AD para enviar o token de acesso ao aplicativo Cliente do Teams":::
 
-Crie um novo registro de aplicativo no Azure AD e exponha sua API (Web) usando escopos (permissões). Configure uma relação de confiança entre a API exposta no Azure AD e seu aplicativo. Isso permite que o Cliente do Teams obtenha um token de acesso em nome do seu aplicativo e do usuário conectado. Você pode adicionar IDs do cliente para os aplicativos móveis, da área de trabalho e da Web confiáveis que você deseja pré-autorizar.
+Crie um novo registro de aplicativo no Azure AD e exponha sua API (Web) usando escopos (permissões). Configure uma relação de confiança entre a API exposta no Azure AD e seu aplicativo. Ele permite que o Cliente do Teams obtenha um token de acesso em nome do seu aplicativo e do usuário conectado. Você pode adicionar IDs do cliente para os aplicativos móveis, da área de trabalho e da Web confiáveis que você deseja pré-autorizar.
 
 Talvez você também precise configurar detalhes adicionais, como a autenticação de usuários de aplicativos na plataforma ou no dispositivo em que você deseja direcionar seu aplicativo de guia.
 
@@ -36,7 +36,7 @@ A configuração do Azure AD habilita o SSO para seu aplicativo de guia no Teams
 
 É bom que você aprenda sobre a configuração para registrar seu aplicativo no Azure AD com antecedência. Verifique se você se preparou para configurar os seguintes detalhes antes de registrar seu aplicativo:
 
-- **Opções de locatário único ou multilocatário**: seu aplicativo será usado apenas no locatário do Microsoft 365 em que ele está registrado ou muitos locatários do Microsoft 365 o usarão? Aplicativos escritos para uma empresa normalmente são de locatário único. Aplicativos escritos por um fornecedor de software independente e usados por muitos clientes precisam ser multilocatário para que o locatário de cada cliente possa acessar o aplicativo.
+- **Opções de** locatário único ou multilocatário: seu aplicativo será usado apenas no locatário do Microsoft 365 em que ele está registrado ou muitos locatários do Microsoft 365 o usarão? Os aplicativos escritos para uma empresa normalmente são de locatário único. Os aplicativos escritos por um fornecedor de software independente e usados por muitos clientes precisam ser multilocatário para que o locatário de cada cliente possa acessar o aplicativo.
 - **URI de ID de aplicativo**: é um URI globalmente exclusivo que identifica a API Web que você expõe para o acesso do seu aplicativo por meio de escopos. Ele também é conhecido como URI de identificador. O URI da ID do aplicativo inclui a ID do aplicativo e o subdomínio em que seu aplicativo está hospedado. O nome de domínio do aplicativo e o nome de domínio que você registra para o aplicativo do Azure AD devem ser os mesmos. Atualmente, não há suporte para vários domínios por aplicativo.
 - **Escopo**: é a permissão que um usuário de aplicativo autorizado ou seu aplicativo pode receber para acessar um recurso exposto pela API.
 
@@ -84,7 +84,7 @@ Registre um novo aplicativo no Azure AD e configure a locação e a plataforma d
     | Opção | Selecione essa opção para... |
     | --- | --- |
     | Contas somente nesse diretório organizacional (Apenas Microsoft - Locatário único) | Crie um aplicativo para uso somente por usuários (ou convidados) em seu locatário. <br> Geralmente chamado de aplicativo LOB, ele é um aplicativo de locatário único na plataforma de identidade da Microsoft. |
-    | Contas em qualquer diretório organizacional (qualquer diretório do Azure AD - Multilocatário) | Permite que os usuários em qualquer locatário do Azure AD usem seu aplicativo. Essa opção será apropriada se, por exemplo, você estiver criando um aplicativo SaaS e pretende disponibilizá-lo para várias organizações. <br> Esse tipo de aplicativo é conhecido como aplicativo multilocatário na plataforma de identidade da Microsoft.|
+    | Contas em qualquer diretório organizacional (qualquer diretório do Azure AD - Multilocatário) | Permite que os usuários em qualquer locatário do Azure AD usem seu aplicativo. Essa opção é apropriada se, por exemplo, você estiver criando um aplicativo SaaS e pretende dispo-lo para várias organizações. <br> Esse tipo de aplicativo é conhecido como aplicativo multilocatário na plataforma de identidade da Microsoft.|
     | Contas em qualquer diretório organizacional (qualquer diretório do Azure AD – multilocatário) e contas pessoais da Microsoft | Destina-se ao conjunto mais amplo de clientes. <br> Ao selecionar essa opção, você está registrando um aplicativo multilocatário que pode dar suporte a usuários de aplicativos que também têm contas pessoais da Microsoft. |
     | Contas pessoais da Microsoft | Crie um aplicativo somente para usuários que têm contas pessoais da Microsoft. |
 
@@ -208,13 +208,13 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
 
     A página **Adicionar um aplicativo cliente** será exibida.
 
-1. Insira a ID do cliente apropriada do Cliente do Teams para os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo.
+1. Insira a ID de cliente apropriada do Microsoft 365 para o Cliente do Teams para os aplicativos que você deseja autorizar para o aplicativo Web do seu aplicativo.
 
     Selecione :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Adicionar um aplicativo cliente":::.
 
     > [!NOTE]
     >
-    > - As IDs do cliente para aplicativos Web, móveis e da área de trabalho do Teams são as IDs reais que você deve adicionar.
+    > - As IDs de cliente do Microsoft 365 para aplicativos móveis, da área de trabalho e da Web para o Teams, o Office e o Outlook são as IDs reais que você deve adicionar.
     > - Para um aplicativo de guia do Teams, você precisará da Web ou SPA, pois não pode haver um aplicativo cliente móvel ou de área de trabalho do Teams.
 
     1. Escolha uma das seguintes IDs de cliente:
@@ -223,6 +223,10 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Aplicativo da área de trabalho ou móvel do Teams. |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Aplicativo Web do Teams. |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Aplicativo Web do Office |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Aplicativo da área de trabalho do Office |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Área de trabalho do Outlook, aplicativo móvel |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Aplicativo Web do Outlook |
 
     1. Selecione o URI da ID do aplicativo que você criou para seu aplicativo em **Escopos autorizados** para adicionar o escopo à API Web que você expôs.
 
