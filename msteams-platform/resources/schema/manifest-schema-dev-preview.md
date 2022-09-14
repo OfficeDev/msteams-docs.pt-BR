@@ -4,12 +4,12 @@ description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: e7b74ab4c610e1cb3b71c8045c3cb93626f0efc9
+ms.sourcegitcommit: 3215a931285ae738c248d145c07fb98656dd42ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635326"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67675830"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -69,7 +69,8 @@ O manifesto do Microsoft Teams descreve como o aplicativo se integra à platafor
             "scopes": [
                 "team",
                 "groupchat"
-            ]"context": []
+            ],
+            "context": []
         }
     ],
     "staticTabs": [
