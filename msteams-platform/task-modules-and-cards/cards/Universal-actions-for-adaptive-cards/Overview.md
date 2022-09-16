@@ -3,18 +3,18 @@ title: Visão geral das Ações Universais para Cartões Adaptáveis
 description: Conheça as Ações Universais para Cartões Adaptáveis, como exibições específicas do usuário, suporte a fluxo de trabalho sequencial e muito mais para ambientes de área de trabalho e móveis
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142084"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786973"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Ações Universais para Cartões Adaptáveis
 
 As Ações Universais para Cartões Adaptáveis evoluíram dos comentários do desenvolvedor de que, embora o layout e a renderização para Cartões Adaptáveis fosse universal, a manipulação de ações não era. Mesmo que um desenvolvedor queira enviar o mesmo cartão para locais diferentes, ele precisa lidar com ações de maneira diferente.
 
-As Ações Universais para Cartões Adaptáveis trazem o bot como o back-end comum para lidar com ações e introduz um novo tipo de ação, `Action.Execute`que funciona em aplicativos, como Teams e Outlook.
+As Ações Universais para Cartões Adaptáveis trazem o bot como o back-end comum para lidar com ações e introduz um novo tipo de ação, `Action.Execute`que funciona em aplicativos, como o Teams e o Outlook.
 
 Este documento ajuda você a entender como você pode usar o modelo de Ações Universais para aprimorar a experiência do usuário de interagir com Cartões Adaptáveis em plataformas e aplicativos.
 
@@ -34,36 +34,36 @@ As Ações Universais para Cartões Adaptáveis aprimoram a experiência do usu�
 
 Antes das Ações Universais para Cartões Adaptáveis, hosts diferentes forneceram modelos de ação diferentes da seguinte maneira:
 
-* Teams ou bots usados`Action.Submit`, uma abordagem que adia o modelo de comunicação real para o canal subjacente.
-* Outlook para `Action.Http` se comunicar com o serviço de back-end especificado explicitamente no conteúdo do Cartão Adaptável.
+* Equipes ou bots usados `Action.Submit`, uma abordagem que adia o modelo de comunicação real para o canal subjacente.
+* O Outlook `Action.Http` usado para se comunicar com o serviço de back-end especificado explicitamente no conteúdo do Cartão Adaptável.
 
 A imagem a seguir mostra o modelo de ação inconsistente atual:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Modelo de ação inconsistente":::
 
-Com as Ações Universais para Cartões Adaptáveis, você pode usar `Action.Execute` para o tratamento de ações em diferentes plataformas. `Action.Execute`funciona entre hubs, incluindo Teams e Outlook. Além disso, um Cartão Adaptável pode ser retornado como resposta para uma `Action.Execute` solicitação de invocação disparada.
+Com as Ações Universais para Cartões Adaptáveis, você pode usar `Action.Execute` para o tratamento de ações em diferentes plataformas. `Action.Execute` funciona em hubs, incluindo o Teams e o Outlook. Além disso, um Cartão Adaptável pode ser retornado como resposta para uma `Action.Execute` solicitação de invocação disparada.
 
 A imagem a seguir mostra o novo modelo de Ação Universal:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Novas ações universais para cartões adaptáveis":::
 
-Agora você pode enviar o mesmo cartão para ambos, Teams e Outlook e mantê-los em sincronia entre si usando o bot subjacente. Qualquer ação executada em qualquer plataforma é refletida para a outra com esse build uma vez *, implante* em qualquer lugar (ações universais para cartões adaptáveis).
+Agora você pode enviar o mesmo cartão para o Teams e o Outlook e mantê-los em sincronia entre si usando o bot subjacente. Qualquer ação executada em qualquer plataforma é refletida para a outra com esse build uma vez *, implante* em qualquer lugar (ações universais para cartões adaptáveis).
 
-A imagem a seguir ilustra as Ações Universais para Cartões Adaptáveis para Teams e Outlook:
+A imagem a seguir ilustra as Ações Universais para Cartões Adaptáveis para o Teams e o Outlook:
 
 # <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
 
-:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Cartão mesmo móvel para Teams e Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Cartão do mesmo dispositivo móvel para o Teams e o Outlook":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Mesmo cartão para Teams e Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Mesmo cartão para o Teams e o Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>Exibições Específicas do Usuário
 
-Hoje, todos os usuários Teams chat ou canal veem exatamente a mesma exibição e ações de botão no Cartão Adaptável. No entanto, em determinados cenários, há um requisito para que determinados usuários atuem de forma diferente e tenham acesso a informações diferentes dentro do mesmo chat ou canal.
+Hoje, todos os usuários no chat ou canal do Teams veem exatamente a mesma exibição e ações de botão no Cartão Adaptável. No entanto, em determinados cenários, há um requisito para que determinados usuários atuem de forma diferente e tenham acesso a informações diferentes dentro do mesmo chat ou canal.
 
 Por exemplo, se você enviar um cartão de relatório de incidentes em um chat ou canal, somente o usuário atribuído ao incidente deverá ver um **botão** Resolver. Por outro lado, o criador do incidente deve ver um  botão Editar e todos os outros usuários só devem ser capazes de exibir detalhes do incidente. Isso é possível por exibições específicas do usuário que estão habilitadas pela `refresh` propriedade.
 
@@ -122,3 +122,4 @@ Você pode começar atualizando cenários usando o [guia de início rápido]. (W
 * [Visão geral dos Cartões Adaptáveis](~/task-modules-and-cards/what-are-cards.md)
 * [Cartões Adaptáveis @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Cartões Adaptáveis @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
+* [Ações universais para extensões de mensagens baseadas em pesquisa](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

@@ -357,6 +357,8 @@
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: Responder aos comandos de pesquisa
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Ações universais para extensões de mensagem baseadas em pesquisa
+          href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
           displayName: Handle tap actions
     - name: Adicionar desenrolamento de link
       href: messaging-extensions/how-to/link-unfurling.md

@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635298"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786966"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -36,6 +36,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 09/16/2022 | Os Cartões Adaptáveis em extensões de mensagem baseadas em pesquisa agora dão suporte a Ações Universais. | Criar extensões de mensagem > de pesquisa > definir comandos de pesquisa > [Ações Universais para extensões de mensagem baseadas em pesquisa](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` API para capturar vídeos usando a câmera | Integrar funcionalidades de dispositivo > [integrar recursos de mídia](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduzido o Kit de ferramentas do Teams para Visual Studio 2022 | Ferramentas e SDK > Kit de ferramentas do Teams para Visual Studio > [Visão geral do Kit de ferramentas do Teams para Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
@@ -288,7 +289,6 @@ Incentivamos os desenvolvedores do Teams a fazer perguntas, arquivos de bugs, en
 ## <a name="get-latest-updates"></a>Obter as atualizações mais recentes
 
 Você pode obter as atualizações mais recentes da plataforma Teams configurando o [RSS feed](https://aka.ms/TeamsPlatformUpdates).
-
 
 ### <a name="to-configure-rss-feed"></a>Para configurar RSS feed
 

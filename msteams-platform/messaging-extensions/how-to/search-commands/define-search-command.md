@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de pesquisa de extensão de mensagem
 author: surbhigupta
-description: Neste módulo, saiba mais sobre os comandos de pesquisa de extensão de mensagem para aplicativos do Teams, para criar um comando de pesquisa por meio do manifesto do aplicativo e manualmente.
+description: Neste módulo, saiba mais sobre locais de invocação de comando de pesquisa e como criar um comando de pesquisa para extensões de mensagens.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363470"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786959"
 ---
 # <a name="define-message-extension-search-commands"></a>Definir comandos de pesquisa de extensão de mensagem
 
@@ -34,11 +34,11 @@ O comando de pesquisa é invocado de qualquer um ou ambos os seguintes locais:
 * Área redigir mensagem: os botões na parte inferior da área de mensagem de redação.
 * Caixa de comando: @mentioning na caixa de comando.
 
-  Quando o comando de pesquisa é invocado da área de mensagem de composição, o usuário envia os resultados para a conversa. Quando ele é invocado na caixa de comando, o usuário interage com o cartão resultante ou o copia para uso em outro lugar.
+  Quando um comando de pesquisa é invocado da área de mensagem de composição, o usuário envia os resultados para a conversa. Quando ele é invocado na caixa de comando, o usuário interage com o cartão resultante ou o copia para uso em outro lugar.
 
 A imagem a seguir exibe os locais de invocação do comando de pesquisa:
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Locais de invocação de comando de pesquisa":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Captura de tela que mostra os locais de invocação de um comando de pesquisa em um canal do Teams.":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Adicionar o comando de pesquisa ao manifesto do aplicativo
 
@@ -54,7 +54,7 @@ O pré-requisito para criar um comando de pesquisa é que você já deve ter cri
 1. Depois de importar um pacote de aplicativos, selecione **Extensões de mensagem** em **Recursos do aplicativo**.
 1. Para criar uma extensão de mensagem, você precisa de um bot registrado pela Microsoft. Você pode usar um bot existente ou criar um novo bot. Selecione **Criar nova opção de bot** , dê um nome ao novo bot e, em seguida, **selecione Criar**.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="A captura de tela mostra como criar um bot no Portal do Desenvolvedor.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="A captura de tela mostra as opções para configurar um bot para um aplicativo no Portal do Desenvolvedor do Teams.":::
 
 1. Para usar um bot existente, selecione Selecionar um bot existente e escolha os **bots** existentes na lista suspensa ou insira uma **ID de bot** se você já tiver uma ID de bot criada.
 
@@ -63,19 +63,19 @@ O pré-requisito para criar um comando de pesquisa é que você já deve ter cri
 1. Selecione **Adicionar um comando** na seção **Comando** para incluir os comandos, que decidem o comportamento da extensão de mensagem.
 A imagem a seguir exibe a adição de comando para a extensão de mensagem:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="A captura de tela mostra como adicionar um comando para definir o comportamento da extensão da mensagem.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="A captura de tela mostra como adicionar um comando no Portal do Desenvolvedor do Teams para definir o comportamento da extensão da mensagem.":::
 
 1. Selecione **Pesquisar** e insira **a ID do Comando**, **o título do comando** e a **descrição do comando**.
 
 1. Insira todos os parâmetros e selecione o tipo de entrada na lista suspensa.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="A captura de tela mostra como adicionar um parâmetro para definir o comando para a extensão de mensagem.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="A captura de tela mostra como adicionar um parâmetro para definir seu comando no Portal do Desenvolvedor do Teams para uma extensão de mensagem.":::
 
 1. Selecione **Adicionar um domínio em** Links **de Visualização**.
 
 1. Insira um domínio válido e selecione **Adicionar**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="A captura de tela mostra como adicionar um domínio válido à extensão de mensagens para desfralhamentos de link.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="A captura de tela mostra como adicionar um domínio válido à extensão de mensagens para desfralização do link.":::
 
 1. Selecione **Salvar**.
 
@@ -85,7 +85,7 @@ A imagem a seguir exibe a adição de comando para a extensão de mensagem:
 
 1. Selecione elipse na seção comando e, em seguida, selecione **Editar parâmetro**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Capturas de tela mostram como adicionar parâmetros adicionais à extensão de mensagem.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Capturas de tela mostram como editar parâmetros para sua extensão de mensagem.":::
 
 1. Selecione **Adicionar parâmetros e** insira todos os parâmetros.
 
@@ -109,11 +109,11 @@ Você deve adicionar os detalhes do parâmetro de pesquisa que define o texto vi
 | Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
 | `parameters` | Essa propriedade define uma lista estática de parâmetros para o comando. | Não | 1.0 |
-| `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
+| `parameter.name` | Essa propriedade descreve o nome do parâmetro. Ele `parameter.name` é enviado para o serviço na solicitação do usuário. | Sim | 1.0 |
 | `parameter.description` | Essa propriedade descreve as finalidades do parâmetro ou o exemplo do valor que deve ser fornecido. Esse valor aparece na interface do usuário. | Sim | 1.0 |
 | `parameter.title` | Essa propriedade é um título ou rótulo curto de parâmetro amigável. | Sim | 1.0 |
 | `parameter.inputType` | Essa propriedade é definida como o tipo de entrada necessária. Os valores possíveis `text`incluem `textarea`, `number`, , `date`, `time`. `toggle` O padrão é definido como `text`. | Não | 1.4 |
-| `parameters.value` | Valor inicial para o parâmetro. Atualmente o valor não é suportado | Não | 1,5 |
+| `parameters.value` | Valor inicial para o parâmetro. Atualmente, não há suporte para o valor | Não | 1,5 |
 
 #### <a name="example"></a>Exemplo
 
@@ -142,6 +142,7 @@ A seção a seguir é um exemplo do manifesto do aplicativo simples do objeto `c
   ],
 ...
 }
+
 ```
 
 Para obter o manifesto completo do aplicativo, consulte [o esquema de manifesto do aplicativo](~/resources/schema/manifest-schema.md).

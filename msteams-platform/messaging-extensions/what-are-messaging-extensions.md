@@ -5,12 +5,12 @@ description: Neste módulo, aprenda extensões de mensagens e cenários em que a
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: af67eb36d89903f22a8479e04ed22134b7741c80
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: c93e55bbbbf9bc135afeef3c9b5787cbefe3ce80
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035167"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786952"
 ---
 # <a name="message-extensions"></a>Extensões de mensagens
 
@@ -238,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Extensão de mensagem com comandos baseados em ação | Este exemplo ilustra como criar uma extensão de mensagem baseada em ação. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extensão de mensagem com comandos baseados em pesquisa | Este exemplo ilustra como criar uma extensão de mensagem baseada em pesquisa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Ação de extensão de mensagem para agendamento de tarefas|Este exemplo ilustra como agendar uma tarefa do comando de ação de extensão de mensagem e obter um cartão de lembrete em uma data e hora agendadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Ação de extensão de mensagem para agendamento de tarefas|Este exemplo ilustra como agendar uma tarefa do comando de ação de extensão de mensagem e obter um cartão de lembrete em uma data e hora agendadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -249,3 +249,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [Defina o comando de extensão de mensagem de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Crie uma extensão de mensagem](../build-your-first-app/build-messaging-extension.md)
+* [Ações universais para extensões de mensagens baseadas em pesquisa](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
