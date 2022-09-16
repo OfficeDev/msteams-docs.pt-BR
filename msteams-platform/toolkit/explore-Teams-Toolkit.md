@@ -6,18 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 0ef95064a1715a64d8f719c54aced7cdc74ecb23
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617062"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781035"
 ---
 # <a name="explore-teams-toolkit"></a>Explorar o Kit de Ferramentas do Teams
 
-Neste documento, você pode entender diferentes elementos de interface do usuário, juntamente com a descrição e o uso básico no Kit de Ferramentas do Teams.
+Neste documento, você pode entender os diferentes elementos da interface do usuário, juntamente com a descrição e o uso básico no Kit de Ferramentas do Teams para Visual Studio Code e o Visual Studio.
 
-## <a name="teams-toolkit-basic-ui-elements"></a>Elementos básicos da interface do usuário do Kit de Ferramentas do Teams
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-for-visual-studio-code-basic-ui-elements"></a>Kit de ferramentas do Teams Visual Studio Code elementos básicos da interface do usuário
 
 Após a instalação do Kit de Ferramentas do Teams, você verá a interface do usuário do Kit de Ferramentas do Teams, conforme mostrado na imagem a seguir:
 
@@ -142,12 +145,63 @@ No painel de tarefas, você pode ver as seguintes seções:
    :::column-end:::
 :::row-end:::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="explore-teams-toolkit-for-visual-studio"></a>Explorar o Kit de Ferramentas do Teams para Visual Studio
+
+Depois de instalar o Kit de Ferramentas do Teams, você pode exibir as opções do Kit de Ferramentas do Teams em dois métodos diferentes:
+
+# <a name="project"></a>[Projeto](#tab/prj)
+
+Você pode acessar o Kit de Ferramentas do Teams no **Project**.
+
+1. Selecione **o Kit de****Ferramentas do Project** >  Teams.
+1. Agora você pode acessar diferentes opções do Kit de Ferramentas do Teams.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Menu de operações do kit de ferramentas do Teams":::
+
+# <a name="solution-explorer"></a>[Gerenciador de Soluções](#tab/solutionexplorer)
+
+   Você pode acessar o Kit de Ferramentas do Teams **em Gerenciador de Soluções**.
+
+1. Selecione **Exibir** >  **Gerenciador de Soluções** para exibir Gerenciador de Soluções painel.
+1. Clique com o botão direito do mouse em seu **Projeto**.
+1. Selecione **o Kit de Ferramentas do Teams** para acessar diferentes opções do Kit de Ferramentas do Teams.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Operações do kit de ferramentas do Teams do Project":::
+
+   > [!NOTE]
+   > Nesse cenário, o nome do projeto **é MyTeamsApp1**.
+
+---
+
+Depois de criar o Projeto do Teams, você pode executar as seguintes funções no Kit de Ferramentas do Teams para Visual Studio:
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Operações do kit de ferramentas do Teams no menu Projeto":::
+
+|Função  |Descrição  |
+|---------|---------|
+|Preparar dependências de aplicativos do Teams     |Antes de executar uma depuração local, essa etapa ajuda você a configurar as dependências de depuração local e registrar o aplicativo Teams na plataforma Teams. Você precisa de uma conta do Microsoft 365. Para obter mais informações, consulte [Depurar seu aplicativo teams localmente usando o Visual Studio](debug-teams-app-visual-studio.md)         |
+|Abrir Arquivo de Manifesto     |Para abrir o arquivo de manifesto do Teams, você pode passar o mouse sobre os parâmetros para visualizar os valores. Para obter mais informações, consulte [Editar manifesto do aplicativo Teams usando o Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)         |
+|Atualizar manifesto no Portal do Desenvolvedor do Teams     |Quando você atualiza o arquivo de manifesto, só pode reimplantar o arquivo de manifesto no Azure sem implantar todo o projeto novamente. Use este comando para atualizar suas alterações para remoto. Para obter mais informações, consulte [Editar manifesto do aplicativo Teams usando o Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)       |
+|Provisionar para a nuvem     |Essa opção ajuda você a criar recursos do Azure que hospedam seu aplicativo teams. Para obter mais informações, consulte [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)        |
+|Implantar na nuvem     |Essa opção ajuda você a copiar seu código para os recursos do Azure criados quando você fez "Provisionar para a nuvem". Para obter mais informações, [consulte Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)        |
+|Visualização no Teams     |Essa opção inicia o cliente Web do Teams e permite que você visualize o aplicativo Teams em seu navegador.         |
+|Pacote do Aplicativo Zip     |Essa opção gera um pacote de aplicativos do Teams na `Build` pasta no projeto. Você pode carregar o pacote no cliente do Teams e executar o aplicativo Teams.         |
+
+::: zone-end
+
 ## <a name="see-also"></a>Confira também
 
 * [Instalar o Kit de Ferramentas do Teams](install-Teams-Toolkit.md)
 * [Criar um novo aplicativo Teams usando o Kit de Ferramentas do Teams](create-new-project.md)
 * [Preparar-se para criar aplicativos usando o Kit de Ferramentas do Microsoft Teams](build-environments.md)
 * [Provisionar recursos de nuvem usando o Kit de Ferramentas do Teams](provision.md)
+* [Criar um novo aplicativo teams no Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)
+* [Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: Ferramentas e SDKs
   items:
-    - name: Kit de ferramentas do Teams para Visual Studio Code
+    - name: Kit de ferramentas do Teams
       items:
         - name: Visão geral do Kit de ferramentas do Microsoft Teams
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: Perguntas frequentes
           href: toolkit/faq.md
-    - name: Kit de ferramentas do Teams para Visual Studio
-      items:
-        - name: Visão geral do Kit de ferramentas do Microsoft Teams
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: Criar um novo aplicativo de Teams
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: Depurar seu aplicativo Teams
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: Provisionar recursos de nuvem
-          href: toolkit/provision-cloud-resources.md
-        - name: Implantar o aplicativo Teams na nuvem
-          href: toolkit/deploy-teams-app.md
-        - name: Editar manifesto do aplicativo Teams
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: CLI do Kit de Ferramentas do Teams
       href: toolkit/TeamsFx-CLI.md
     - name: Gerador Yeoman para o Teams (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: Criar uma conta de desenvolvedor do Partner Center
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: Preparar o envio da loja do Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

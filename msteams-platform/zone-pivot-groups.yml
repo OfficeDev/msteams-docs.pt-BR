@@ -1,8 +1,8 @@
 ### YamlMime:ZonePivotGroups
 groups:
 - id: teams-app-types
-  title: Teams app feature
-  prompt: Selecione o recurso Teams aplicativo que você deseja criar
+  title: Recurso de aplicativo do Teams
+  prompt: Selecione o recurso de aplicativo do Teams que você deseja criar
   pivots:
   - id: tab-app
     title: Tab
@@ -11,7 +11,7 @@ groups:
   - id: mex-app
     title: Extensão de Mensagens
 - id: teams-app-environment
-  title: Teams de aplicativos
+  title: Ambiente de aplicativo do Teams
   prompt: Antes de começar, selecione o ambiente no qual você deseja criar
   pivots:
   - id: node-java-script
@@ -20,10 +20,18 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: teams-app-platform
+  title: Plataforma de aplicativos do Teams
+  prompt: Antes de começar, selecione qualquer um dos aplicativos a seguir com base no ambiente no qual você deseja criar um aplicativo
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio
 metadata:
-  ms.openlocfilehash: 0e39f6718c6a378dc1f8d0e2b8e6159f4e87641c
-  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+  ms.openlocfilehash: 5abc8210d4988c0dc42ad02f3e5dae0b7dfc61d2
+  ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/31/2022
-  ms.locfileid: "64571226"
+  ms.lasthandoff: 09/16/2022
+  ms.locfileid: "67780839"

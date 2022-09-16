@@ -6,14 +6,21 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
-ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617793"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781126"
 ---
 # <a name="create-a-new-teams-project"></a>Criar um novo projeto do Teams
+
+Nesta seção, você pode aprender a criar um novo projeto do Teams usando o Visual Studio Code e o Visual Studio.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="create-a-new-teams-project-for-visual-studio-code"></a>Criar um novo projeto do Teams para Visual Studio Code
 
 Você pode criar um novo projeto do Teams selecionando **Criar um novo aplicativo do Teams** no Kit de Ferramentas do Teams. Você pode criar os seguintes tipos de aplicativo no Kit de Ferramentas do Teams:
 
@@ -71,7 +78,6 @@ As etapas para criar um novo aplicativo teams são semelhantes para todos os tip
    O aplicativo de guia do Teams é criado em alguns segundos.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Captura de tela mostrando o aplicativo criado.":::
-
 
 ### <a name="directory-structure-for-different-app-types"></a>Estrutura de diretório para diferentes tipos de aplicativo
 
@@ -163,9 +169,109 @@ A imagem a seguir mostra a estrutura de diretório do aplicativo guia com o recu
 
 </details>
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="create-new-teams-app-in-visual-studio"></a>Criar um novo aplicativo teams no Visual Studio
+
+O Kit de Ferramentas do Teams fornece modelos de aplicativo do Microsoft Teams no Visual Studio para criar o aplicativo Teams.  Você pode pesquisar e selecionar o modelo de aplicativo do Teams que você precisa ao criar um novo projeto. Você pode ter modelos de aplicativo do Teams para criar:
+
+* Aplicativo tab
+* Bot de comando
+* Bot de notificação
+* Aplicativo extensão de mensagem
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+| &nbsp; | Instalar | Para usar... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio versão 17.3 | Você pode instalar a edição enterprise do Visual Studio e instalar a carga de trabalho "ASP.NET" e as Ferramentas de Desenvolvimento do Microsoft Teams. |
+| &nbsp; | Kit de ferramentas do Teams | Uma extensão do Visual Studio que cria um scaffolding de projeto para seu aplicativo. Use a versão mais recente. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | O Microsoft Teams para colaborar com todos com quem você trabalha por meio de aplicativos para chats, reuniões, chamadas - tudo em um só lugar. |
+ | &nbsp; | [Preparar o locatário do Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Acesso à conta do Teams com as permissões apropriadas para instalar um aplicativo. |
+
+## <a name="create-a-new-teams-app"></a>Criar um novo aplicativo de Teams
+
+As etapas para criar um novo aplicativo teams são semelhantes para todos os tipos de aplicativo, exceto o bot de notificação. As etapas a seguir ajudam você a criar um novo aplicativo guia:
+
+1. Abra o Visual Studio.
+1. Crie um novo projeto usando uma das duas opções a seguir.
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="Criar novo projeto com código desde a introdução":::
+
+    * Selecione **Criar um novo projeto em** **Introdução ajuda** você a escolher o modelo de projeto com scaffolding de código.
+    * Selecione **Continuar sem Código** para criar o projeto sem scaffolding de código e selecione **Arquivo** > **Novo** > **Projeto** no Visual Studio.
+
+        :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="Criar novo projeto no menu arquivo":::
+
+   A **janela Criar um novo projeto** é exibida.  
+
+1. Insira as equipes na caixa de pesquisa e na lista, selecione **Aplicativo do Microsoft Teams** e, em seguida, **selecione Avançar**.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="Pesquisar e escolher o aplicativo Microsoft Teams":::
+
+   A **janela Configurar seu novo projeto** é exibida.
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="Nomear seu aplicativo":::
+
+    1. Insira um nome adequado para seu projeto.
+
+         > [!NOTE]
+         > O nome do projeto que você está inserindo é preenchido automaticamente no **nome da solução** também. Se desejar, você pode alterar o nome da solução sem afetar o nome do projeto.
+
+    1. Selecione o caminho da pasta em que você deseja criar o workspace do projeto.
+    1. Insira um nome de solução diferente, se desejar.
+    1. Marque a opção para salvar o projeto e a solução na mesma pasta, se desejar. Para este tutorial, você não precisa dessa opção.
+    1. Selecionar **Criar**.
+
+   A **janela Criar um novo Aplicativo do Teams** é exibida.
+
+1. Neste tutorial, Tab **é selecionado** para criar um novo aplicativo do Teams e selecionar **Criar**.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3.png" alt-text="Selecionar o tipo de aplicativo do Teams":::
+
+   > [!NOTE]
+   > Você pode selecionar o tipo necessário de aplicativo do Teams para seu projeto.
+
+   A **Introdução** com a **janela Bem-vindo ao Kit de Ferramentas do Teams** é exibida.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Selecione o kit de ferramentas Introdução equipes":::
+
+### <a name="directory-structure"></a>Estrutura de diretório
+
+O Kit de Ferramentas do Teams fornece todos os componentes para a criação de um aplicativo. Depois de criar o projeto, você pode exibir as pastas e os arquivos do projeto no Explorer.
+
+* **Estrutura de diretório para o aplicativo básico do Teams**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="Selecione a guia Gerenciador de Soluções ferramentas do Teams":::
+
+* **Estrutura de diretório para o aplicativo Teams baseado em cenário**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Selecione o kit de ferramentas Gerenciador de Soluções equipes":::
+
+## <a name="teams-app-templates-in-teams-toolkit-for-visual-studio"></a>Modelos de aplicativo do Teams no Kit de Ferramentas do Teams para Visual Studio
+
+Você pode ver os modelos de aplicativo do Teams já preenchidos no Kit de Ferramentas do Teams para vários tipos de aplicativos do Teams. A tabela a seguir lista todos os modelos disponíveis:
+
+|Modelo de aplicativo do Teams  |Descrição  |
+|---------|---------|
+|Bot de notificação     |O aplicativo bot de notificação pode enviar notificação ao cliente do Teams. Há várias maneiras de disparar a notificação. Por exemplo, dispare a notificação por solicitação HTTP ou por tempo. Você também pode selecionar a notificação disparada com base em seu cenário de negócios.         |
+|Bot de comando     |Os usuários podem digitar um comando para interagir com o bot usando o aplicativo Bot de Comando.         |
+|Tab     |O aplicativo Tab mostra uma página da Web dentro do Teams e permite o logon único usando a conta do Teams.         |
+|Extensão de Mensagem     |O aplicativo extensão de mensagem implementa recursos simples, como criar cartão adaptável, pesquisar pacotes DoCker, desfralização de links para o domínio "dev.botframework.com".         |
+
+> [!NOTE]
+> Depois que o projeto é criado, o Kit de Ferramentas do Teams abre automaticamente **a janela Introdução** . Agora você pode ver as **instruções na janela** Introdução e conferir os diferentes recursos no Kit de Ferramentas do Teams.
+
+::: zone-end
+
 ## <a name="see-also"></a>Confira também
 
 * [Criar um aplicativo do Teams com o Blazor](../sbs-gs-blazorupdate.yml)
 * [Criar um aplicativo Teams com C# ou .NET](../sbs-gs-csharp.yml)
 * [Pré-requisitos para todos os tipos de ambiente e criar seu aplicativo teams](tools-prerequisites.md)
 * [Preparar-se para criar aplicativos usando o Kit de Ferramentas do Microsoft Teams](build-environments.md)
+* [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)
+* [Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)

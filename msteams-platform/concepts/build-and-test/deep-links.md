@@ -3,12 +3,12 @@ title: Criar links detalhados
 description: Neste artigo, você aprenderá a criar links profundos e navegar por eles em seus aplicativos do Microsoft Teams usando guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
-ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67452357"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780881"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -392,7 +392,7 @@ Criar link profundos para o aplicativo depois que ele for listado na Teams store
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
 
-O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+O seguinte formato de link profundo pode ser usado em um bot, conector ou cartão de extensão de mensagens: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Quando um bot envia uma mensagem TextBlock com um link profundo, uma nova guia do navegador é aberta quando os usuários selecionam o link. Isso acontece no Chrome e no aplicativo da área de trabalho do Microsoft Teams em execução no Linux.

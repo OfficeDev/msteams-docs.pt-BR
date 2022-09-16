@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337233"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781191"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -46,7 +46,7 @@ Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma 
 
 Se você quiser usar o código de exemplo para concluir este tutorial, siga as etapas de configuração no [](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) Exemplo de Lista de Tarefas para criar um aplicativo de guia pessoal usando a extensão kit de ferramentas do Teams para Visual Studio Code e, em seguida, retorne a este artigo para atualizá-lo para o Microsoft 365.
 
-Como alternativa, você pode usar um aplicativo oláSign-On aplicativo hello *world* básico já habilitado para o Microsoft 365 na seção de início rápido a seguir e, em seguida, pular para Sideload de seu aplicativo [no Teams](#sideload-your-app-in-teams) .
+Como alternativa, você pode usar um aplicativo Hello *World* de logon único básico já habilitado para o Microsoft 365 na seção de início rápido a seguir e, em seguida, pular para [Sideload do aplicativo no Teams](#sideload-your-app-in-teams) .
 
 ### <a name="quickstart"></a>Início rápido
 
@@ -190,7 +190,7 @@ Para exibir seu aplicativo em execução no Outlook na área de trabalho do Wind
 Para exibir seu aplicativo no Outlook na Web:
 
 1. Navegue até [Outlook na Web](https://outlook.office.com) e entre usando sua conta de locatário de desenvolvimento.
-1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparece entre os aplicativos instalados.
+1. Na barra lateral, selecione  **Mais Aplicativos**. O título do aplicativo com sideload aparece entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar e visualizar seu aplicativo em execução Outlook na Web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do outlook.com para ver as guias pessoais instaladas":::
@@ -200,7 +200,7 @@ Para exibir seu aplicativo no Outlook na Web:
 Para exibir seu aplicativo em execução no Office na área de trabalho do Windows:
 
 1. Inicie o Office e entre usando sua conta de locatário de desenvolvimento.
-1. Selecione as reticências (**...**) na barra lateral. O título do aplicativo com sideload aparece entre os aplicativos instalados.
+1. Selecione o **ícone Aplicativos** na barra lateral. O título do aplicativo com sideload aparece entre os aplicativos instalados.
 1. Selecione o ícone do aplicativo para iniciar seu aplicativo no Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Clique na opção de reticências ('Mais aplicativos') na barra lateral do cliente da área de trabalho do Office para ver suas guias pessoais instaladas":::
@@ -233,7 +233,7 @@ No Kit de Ferramentas do Teams, você pode depurar (`F5`) seu aplicativo de guia
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Escolha entre os destinos de depuração do Teams, Outlook e Office no Kit de Ferramentas do Teams":::
 
-Na primeira execução da depuração local no Office ou no Outlook, você será solicitado a entrar em sua conta de locatário do Microsoft 365 e instalar um certificado de teste autoassinado. Você também será solicitado a instalar manualmente o Teams. Selecione **Instalar no Teams** para abrir uma janela do navegador e instalar manualmente seu aplicativo. Em seguida, **clique em Continuar** para continuar a depurar seu aplicativo no Office/Outlook.
+Na primeira execução da depuração local no Office ou no Outlook, você será solicitado a entrar em sua conta de locatário do Microsoft 365 e instalar um certificado de teste autoassinado. Você também será solicitado a instalar manualmente o Teams. Selecione **Instalar no Teams** para abrir uma janela do navegador e instalar manualmente seu aplicativo. Em seguida **, selecione** Continuar para continuar a depurar seu aplicativo no Office/Outlook.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Instalação da caixa de diálogo kit de ferramentas do Teams":::
 
@@ -246,7 +246,7 @@ Forneça comentários e relate quaisquer problemas com a experiência de depura�
 | Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista De Tarefas Pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Página de inicialização de exemplo (Microsoft 365) | Mostrar a autenticação de SSO e aproveitar os recursos do SDK do TeamsJS como disponíveis em hosts diferentes. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Página de inicialização de exemplo (Microsoft 365) | Demonstra a autenticação de SSO e os recursos do SDK do TeamsJS como disponíveis em hosts diferentes. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Próxima etapa
 

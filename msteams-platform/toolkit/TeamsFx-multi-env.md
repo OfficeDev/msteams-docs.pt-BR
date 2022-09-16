@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 4a4b67399b2ec7c78fa536b06ee7faa9bb352468
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616938"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780993"
 ---
 # <a name="manage-multiple-environments"></a>Gerenciar vários ambientes
 
@@ -118,7 +118,7 @@ Etapas para personalização:
 3. Você pode criar um novo ambiente e nomeá-lo `staging` se ele não existir.
 4. Abra o arquivo de configuração `.fx/configs/config.staging.json`.
 5. Atualize a mesma propriedade `myapp(staging)`.
-6. Agora você pode executar o comando provisionar e `dev` o `staging` ambiente para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com o Kit de Ferramentas do Teams, consulte [provisionar](provision.md#provision-using-teams-toolkit).
+6. Agora você pode executar o comando provisionar e `dev` o `staging` ambiente para atualizar o nome do aplicativo em ambientes remotos. Para executar o comando provisionar com o Kit de Ferramentas do Teams, consulte [provisionar](provision.md#provision-using-teams-toolkit-in-visual-studio-code).
 
 </details>
 

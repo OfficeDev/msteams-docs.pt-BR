@@ -5,12 +5,12 @@ description: Saiba como enviar, receber e manipular mensagens para um bot em um 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
-ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
+ms.openlocfilehash: 8db8858ff746ce466b8cfef1cfa210111662cbeb
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2022
-ms.locfileid: "67646136"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780930"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 
@@ -30,7 +30,7 @@ Os bots em um grupo ou canal só recebem mensagens quando são mencionados @botn
 Confira o vídeo a seguir para saber mais sobre conversas de chat em grupo e canal com um bot:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
 <br>
 
 ## <a name="design-guidelines"></a>Diretrizes de design

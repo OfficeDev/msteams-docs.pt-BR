@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Neste módulo, Conheça o SDK do cliente JavaScript do Microsoft Teams, que pode ajudar você a criar experiências de aplicativo hospedadas em um <iframe> no Teams, no Office e no Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503918"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781063"
 ---
 # <a name="teams-javascript-client-sdk"></a>SDK do cliente JavaScript do Teams
 
@@ -408,8 +408,7 @@ Você também pode visualizar as alterações examinando a função `transformLe
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
-| N/D | `app.Context.app.host.name`|
+| NA | `app.Context.app.host.name`|
 
 ## <a name="updating-to-the-teams-client-sdk-v200"></a>Como atualizar para a versão prévia do SDK do cliente do Teams v2.0.0
 

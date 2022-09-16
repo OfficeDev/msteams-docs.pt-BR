@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 1072d377393e6b3d3aecc3a7d3e3a89b9ec82192
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617032"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780677"
 ---
 # <a name="install-teams-toolkit"></a>Instalar o Kit de Ferramentas do Teams
 
-O Kit de Ferramentas do Teams é uma extensão Visual Studio Code. Neste documento, você pode aprender a instalar o Kit de Ferramentas do Teams. Antes de começar a instalação, você precisa ter o Visual Studio Code e o cliente do Teams instalados.
+O Kit de Ferramentas do Teams é uma extensão no Visual Studio e Visual Studio Code. Neste documento, você pode aprender a instalar o Kit de Ferramentas do Teams.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="install-teams-toolkit-for-visual-studio-code"></a>Instale o Kit de ferramentas do Teams para o Visual Studio Code
+
+Antes de começar a instalação, você precisa ter o Visual Studio Code e o cliente do Teams instalados.
 
 ## <a name="steps-to-install-teams-toolkit"></a>Etapas para instalar o Kit de Ferramentas do Teams
 
@@ -79,6 +86,35 @@ O Kit de Ferramentas do Teams é atualizado para a versão mais recente por padr
 * Na extensão do Kit de Ferramentas do Teams, selecione o :::image type="icon" source="../assets/images/teams-toolkit-v2/setting icon.PNG"::: ícone.
 * Selecione **Instalar Outra Versão** para atualizar para a versão mais recente do Kit de Ferramentas do Teams.
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="install-teams-toolkit-for-visual-studio"></a>Instalar o Kit de ferramentas do Teams para Visual Studio
+
+Antes de começar a instalação, você precisa instalar o Instalador do Visual Studio.
+
+Você pode baixar as informações mais Instalador do Visual Studio página de download do [Visual Studio](https://visualstudio.microsoft.com/vs/preview/).
+
+## <a name="steps-to-install-teams-toolkit"></a>Etapas para instalar o Kit de Ferramentas do Teams
+
+Depois de abrir o Instalador do Visual Studio, na janela pop-up Cargas de Trabalho:
+
+1. Selecione a carga de trabalho **ASP.NET e desenvolvimento web**.
+1. Selecione as ferramentas **de desenvolvimento do Microsoft Teams** no **painel detalhes da** instalação.
+1. Selecione **Instalar**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Instalação do Visual Studio":::
+
+1. Selecione **Iniciar** para abrir o Visual Studio.
+
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Iniciar o Visual Studio":::
+
+   > [!IMPORTANT]
+   > É recomendável baixar o Visual Studio 2022 versão 17.3.3, pois o Kit de Ferramentas do Teams para Visual Studio é GA nesta versão. Este artigo foi escrito para o Visual Studio 2022 versão 17.3.3. Kit de Ferramentas do Teams versão 17.3.* ou superior.
+
+::: zone-end
+
 ## <a name="see-also"></a>Confira também
 
 * [Explorar o Kit de Ferramentas do Teams](explore-Teams-Toolkit.md)
@@ -86,3 +122,6 @@ O Kit de Ferramentas do Teams é atualizado para a versão mais recente por padr
 * [Preparar-se para criar aplicativos usando o Kit de Ferramentas do Microsoft Teams](build-environments.md)
 * [Provisionar recursos de nuvem usando o Kit de Ferramentas do Teams](provision.md)
 * [Implantar o aplicativo Teams na nuvem](deploy.md)
+* [Criar um novo aplicativo teams no Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)
+* [Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)
