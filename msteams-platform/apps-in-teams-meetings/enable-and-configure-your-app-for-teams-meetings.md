@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636158"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833701"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -23,7 +23,7 @@ Com aplicativos para reuniões do Teams, você pode expandir os recursos de seus
 
 * Saiba como desenvolver aplicativos do Teams. Para obter mais informações sobre como desenvolver o aplicativo do Teams, consulte [Desenvolvimento de aplicativos do Teams](../overview.md).
 
-* Use seu aplicativo que dá suporte a guias configuráveis no `groupchat` escopo. Para obter mais informações, consulte [o escopo do chat em grupo](../resources/schema/manifest-schema.md#configurabletabs) e [crie uma guia de grupo](../build-your-first-app/build-channel-tab.md).
+* Use seu aplicativo que dá suporte a guias configuráveis no groupchat e/ou no escopo da equipe. Para obter mais informações, consulte [escopos](../resources/schema/manifest-schema.md#configurabletabs) e [crie seu primeiro aplicativo de guia](../build-your-first-app/build-channel-tab.md).
 
 * Siga as diretrizes gerais [Diretrizes de design de guia do Teams ](../tabs/design/tabs.md) para cenários pré e pós-reunião. Para experiências durante as reuniões, consulte as [diretrizes de design de guia na reunião ](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) e as [diretrizes de design de diálogo na reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -39,7 +39,8 @@ As funcionalidades do aplicativo de reuniões são declaradas no manifesto do ap
 
 > [!NOTE]
 >
-> * Os aplicativos em reuniões exigem `groupchat` escopo. O `team` escopo funciona apenas para guias em canais.
+> * Os aplicativos em reuniões exigem `groupchat` ou definem o `team` escopo. O `team` escopo funciona para guias em canais ou reuniões de canal.
+> * Para dar suporte à adição de guias em reuniões de canal agendadas **, especifique** o escopo da equipe na **seção de escopos** no manifesto do aplicativo. Sem **o escopo** da equipe, o aplicativo não aparecerá no submenu para reuniões de canal.
 > * Os aplicativos em reuniões podem utilizar os seguintes contextos: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`
 
 O trecho do código a seguir é um exemplo de guia configurável utilizada em um aplicativo para reuniões do Teams:
@@ -81,7 +82,7 @@ Suporte ao `groupchat` escopo para habilitar seu aplicativo em chats pré-reuni�
 | **meetingChatTab** | Uma guia no cabeçalho de um chat em grupo entre um conjunto de usuários para uma reunião agendada. Você pode especificar o **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingDetailsTab** | Uma guia no cabeçalho da exibição de detalhes da reunião do calendário. Você pode especificar o **meetingChatTab** ou **meetingDetailsTab** para garantir que os aplicativos funcionem em dispositivos móveis. |
 | **meetingSidePanel** | Um painel na reunião aberto por meio da barra unificada (U-bar). |
-| **meetingStage** | Um aplicativo do `meetingSidePanel` pode ser compartilhado no estágio da reunião. Você não pode usar esse aplicativo em clientes de sala do Teams. |
+| **meetingStage** | Um aplicativo do `meetingSidePanel` pode ser compartilhado no estágio da reunião. Você não pode usar este aplicativo em clientes móveis ou de sala do Teams. |
 
 Depois de habilitar seu aplicativo para reuniões do Teams, você deve configurar seu aplicativo antes de uma reunião, durante uma reunião e após uma reunião.
 
@@ -100,9 +101,9 @@ Antes de uma reunião, os usuários podem adicionar guias, bots e extensões de 
 Para adicionar uma guia a uma reunião:
 
 1. Em seu calendário, selecione uma reunião à qual você deseja adicionar uma guia.
-1. Selecione a **guia Detalhes** e selecione :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="A captura de"::: tela descreve como usar o ícone de botão de adição na guia detalhes para instalar o aplicativo como Tab..
+1. Selecione a guia **Detalhes** e selecione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="A captura de tela descreve como instalar o aplicativo como uma guia na guia pré-reunião na reunião do Teams.":::
+    <img src="../assets/images/apps-in-meetings/PreMeeting1.png" alt="Pre-meeting experience" width="900"/>
 
 1. Na galeria de guias exibida, selecione o aplicativo que você deseja adicionar e siga as etapas conforme necessário. O aplicativo é instalado como uma guia.
 
@@ -143,7 +144,7 @@ A notificação na reunião é usada para envolver os participantes durante a re
 
 A notificação na reunião não deve usar o módulo de tarefa. O módulo de tarefa não é invocado em um chat de reunião. Uma URL de recurso externo é usada para exibir a notificação na reunião. Você pode usar o `submitTask` método para enviar dados em um chat de reunião.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="A captura de tela é um exemplo que mostra como você pode usar uma caixa de diálogo na reunião.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="O exemplo mostra como você pode usar uma caixa de diálogo na reunião.":::
 
 Você também pode adicionar a imagem de exibição do Teams e o cartão de visita do usuário à notificação de reunião com base no `onBehalfOf` token com a MRI do usuário e o nome de exibição passado em conteúdo. A seguir um exemplo de conteúdo:
 
@@ -183,18 +184,7 @@ O estágio de reunião compartilhada permite que os participantes da reunião in
 
 Os participantes podem compartilhar todo o aplicativo para o estágio de reunião colaborativo usando o botão compartilhar para preparar no painel lateral do aplicativo.
 
-> [!NOTE]
-> Compartilhar todo o aplicativo para o estágio de reunião em dispositivos móveis está disponível atualmente apenas na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
-
-# <a name="desktop"></a>[Desktop](#tab/Desktop)
-
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="A captura de tela descreve como compartilhar todo o aplicativo para o estágio de reunião colaborativa na área de trabalho.":::
-
-# <a name="mobile"></a>[Dispositivo móvel](#tab/mobile)
-
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="A captura de tela descreve como compartilhar todo o aplicativo para o estágio de reunião colaborativa no celular.":::
-
----
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
 Para compartilhar todo o aplicativo no estágio, no manifesto do aplicativo, você deve configurar `meetingStage` e `meetingSidePanel` como contextos de quadro. Por exemplo:
 
@@ -220,7 +210,7 @@ Para obter mais informações, consulte o [manifesto do aplicativo](../resources
 
 Os participantes podem compartilhar partes específicas do aplicativo para o estágio de reunião colaborativa usando o compartilhamento para preparar APIs. As APIs estão disponíveis no SDK do cliente do Teams e são invocadas no painel lateral do aplicativo.
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="A captura de tela descreve como compartilhar parte específica do aplicativo para o estágio de reunião na reunião do Teams.":::
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Para compartilhar partes específicas do aplicativo para preparar, você deve invocar as APIs relacionadas na biblioteca SDK do cliente do Teams. Para obter mais informações, consulte a [referência da API](API-references.md).
 
@@ -244,7 +234,7 @@ As configurações de depois e [antes das reuniões](#before-a-meeting) são as 
 ## <a name="step-by-step-guides"></a>Guias passo a passo
 
 * Siga o [guia passo a passo](../sbs-meeting-token-generator.yml) para gerar o token de reunião em sua reunião do Teams.
-* Siga o [guia passo a passo para gerar](../sbs-meetings-sidepanel.yml) o SidePanel da reunião em sua reunião do Teams.
+* Siga o [guia passo a passo para](../sbs-meetings-sidepanel.yml) gerar o painel lateral da reunião em sua reunião do Teams.
 * Siga o [guia passo a passo](../sbs-meetings-stage-view.yml) para compartilhar o modo de exibição do estágio de reunião em sua reunião do Teams.
 * Siga o [guia passo a passo](../sbs-meeting-content-bubble.yml) para gerar a bolha de conteúdo de reunião em sua reunião do Teams.
 
