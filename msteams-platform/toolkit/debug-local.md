@@ -7,16 +7,17 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780853"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806749"
 ---
-# <a name="debug-your-microsoft-teams-app-locally"></a>Depurar seu aplicativo Microsoft Teams localmente
+# <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
 
-O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo Teams localmente. Durante o processo de depuração, o Kit de Ferramentas do Teams inicia automaticamente os serviços de aplicativos, inicia depuradores e carrega lateralmente o aplicativo Teams. Você pode visualizar o aplicativo Teams no cliente Web do Teams localmente após a depuração.
+
+O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo Microsoft Teams localmente. Durante o processo de depuração, o Kit de Ferramentas do Teams inicia automaticamente os serviços de aplicativos, inicia depuradores e carrega lateralmente o aplicativo Teams. Você pode visualizar o aplicativo Teams no cliente Web do Teams localmente após a depuração.
 
 ::: zone pivot="visual-studio-code"
 
@@ -151,7 +152,7 @@ A **configuração Anexar ao Front-end** ou **Iniciar Bot** inicia uma instânci
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Depurar seu aplicativo Microsoft Teams localmente usando o Visual Studio
+## <a name="debug-your-teams-app-locally-using-visual-studio"></a>Depurar seu aplicativo teams localmente usando o Visual Studio
 
 O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo Microsoft Teams localmente. O Visual Studio permite depurar a guia, o bot e a extensão de mensagem. Você pode depurar seu aplicativo localmente no Visual Studio usando o Kit de Ferramentas do Teams executando:
 
@@ -214,6 +215,3 @@ Execute as seguintes etapas usando o Kit de Ferramentas do Teams para depurar se
 * [Adicionar recursos aos aplicativos do Teams](add-capability.md)
 * [Implantar na nuvem](deploy.md)
 * [Gerenciar vários ambientes no Kit de Ferramentas do Teams](TeamsFx-multi-env.md)
-* [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)
-* [Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)
-* [Editar manifesto do aplicativo Teams usando o Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

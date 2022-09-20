@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792827"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806791"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Adicionar o logon único ao aplicativo do Teams
 
@@ -351,6 +351,6 @@ Para obter mais informações sobre o SDK do TeamsFx, consulte:
 * [Referência de API ou SDK do TeamsFx](TeamsFx-SDK.md) [](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Galeria de exemplos do Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## <a name="see-also"></a>Conferir também
+## <a name="see-also"></a>Confira também
 
-* [Preparar contas para criar o aplicativo Teams](accounts.md)
+* [Pré-requisitos para criar seu aplicativo teams](tools-prerequisites.md)

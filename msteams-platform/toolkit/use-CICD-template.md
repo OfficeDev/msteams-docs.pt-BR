@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 05f797afcf54cab2d23ee24aae2c4985f3d724f2
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485388"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806869"
 ---
 # <a name="set-up-cicd-pipelines"></a>Configurar pipelines de CI/CD
 
@@ -243,7 +243,7 @@ Execute as seguintes etapas para publicar o aplicativo :
 3. Selecione o aplicativo de destino na lista de aplicativos.
 4. Publique seu aplicativo, selecione `Publish -> Publish to your org`.
 
-### <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Confira também
 
 * [Início Rápido para Ações do GitHub](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Criar seu primeiro pipeline do Azure DevOps](/azure/devops/pipelines/create-first-pipeline)

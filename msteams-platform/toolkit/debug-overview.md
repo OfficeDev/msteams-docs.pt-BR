@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781007"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806919"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>Depurar seu aplicativo Microsoft Teams
+# <a name="debug-your-teams-app"></a>Depurar seu aplicativo Teams
 
-O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo do Teams. Depurar é o processo de verificação, detecção e correção de problemas ou bugs para garantir que o programa seja executado com êxito no Teams.
+
+O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo Microsoft Teams. Depurar é o processo de verificação, detecção e correção de problemas ou bugs para garantir que o programa seja executado com êxito no Teams.
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>Depurar seu aplicativo Teams para Visual Studio Code
+
+O Kit de Ferramentas do Teams no Microsoft Visual Studio Code automatiza o processo de depuração. Você pode detectar erros e corrigi-los, bem como visualizar o aplicativo teams. Você também pode personalizar as configurações de depuração para criar sua guia ou bot.
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Depurar seu aplicativo Microsoft Teams para Visual Studio Code
 
 O Kit de Ferramentas do Teams Visual Studio Code automatiza o processo de depuração. Você pode detectar erros e corrigi-los, bem como visualizar o aplicativo teams. Você também pode personalizar as configurações de depuração para criar sua guia ou bot.
+
 Durante o processo de depuração:
 
 * O Kit de Ferramentas do Teams inicia automaticamente os serviços de aplicativos, inicia depuradores e sideloads do aplicativo Teams.
@@ -203,7 +209,7 @@ O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visua
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Depurar seu aplicativo Microsoft Teams usando o Visual Studio
+## <a name="debug-your-teams-app-using-visual-studio"></a>Depurar seu aplicativo teams usando o Visual Studio
 
 O Kit de Ferramentas do Teams automatiza os serviços de inicialização de aplicativos, inicia a depuração e carrega o aplicativo do Teams. Após a depuração, você pode visualizar o aplicativo Teams no cliente Web do Teams. Você também pode personalizar as configurações de depuração para usar os pontos de extremidade do bot ou variáveis de ambiente para carregar o aplicativo configurado. O Visual Studio permite depurar a guia, o bot e a extensão de mensagem. Durante o processo de depuração, o Kit de Ferramentas do Teams dá suporte aos seguintes recursos de depuração:
 
@@ -312,6 +318,3 @@ Você pode iniciar o aplicativo Teams como um aplicativo Web em vez de ser execu
 * [Usar o Kit de Ferramentas do Teams para provisionar recursos de nuvem](provision.md)
 * [Implantar na nuvem](deploy.md)
 * [Visualizar e personalizar o manifesto do aplicativo Teams](TeamsFx-preview-and-customize-app-manifest.md)
-* [Provisionar recursos de nuvem usando o Visual Studio](provision-cloud-resources.md)
-* [Implantar o aplicativo Teams na nuvem usando o Visual Studio](deploy-teams-app.md)
-* [Editar manifesto do aplicativo Teams usando o Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

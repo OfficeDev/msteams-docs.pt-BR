@@ -6,14 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 88a1fba1213dce01ed48fccbc72ca02757859033
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617027"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806898"
 ---
-# <a name="faq-for-teams-toolkit-using-visual-studio-code"></a>Perguntas frequentes sobre o Kit de Ferramentas do Teams usando Visual Studio Code
+# <a name="faq-for-teams-toolkit"></a>Perguntas frequentes sobre o Kit de Ferramentas do Teams
 
 Você pode ver as perguntas frequentes sobre todas as seções do Kit de Ferramentas do Teams para Visual Studio Code.
 

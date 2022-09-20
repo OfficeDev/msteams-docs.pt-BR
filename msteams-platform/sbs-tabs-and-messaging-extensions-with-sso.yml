@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: Leia mais sobre a autenticação de SSO para guias.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 997eb20b08be800b8908694817c84575c733fbf3
-  ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+  ms.openlocfilehash: c0e9ff9397c2afd70ab7de1a03b4fb04727dcec3
+  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/13/2022
-  ms.locfileid: "67653207"
+  ms.lasthandoff: 09/19/2022
+  ms.locfileid: "67806861"
 items:
 - durationInMinutes: 1
   content: "O logon único do Azure Active Directory (Azure AD SSO) ajuda a autenticar usuários no Teams. \n\n**Principais aspectos do guia passo a passo do Azure AD SSO para guias e extensões de mensagem**:\n\n * Após a primeira entrada, o Azure AD SSO permite que o usuário entre automaticamente.\n * Permite que o usuário entre em outros dispositivos sem inserir credenciais de entrada novamente.\n * Obtém o token para o usuário conectado.   \n\nEste guia passo a passo ajuda você a criar guias e extensões de mensagem que habilitam a Azure AD SSO. Você verá a seguinte saída:\n\n  ![Imagem de congratulação](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"
 - title: Pré-requisitos
   durationInMinutes: 1
-  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [SDK do .NET Core](https://dotnet.microsoft.com/download) versão 3.1\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n* [Conta de desenvolvedor do Microsoft 365](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso à conta do Teams com as permissões apropriadas para instalar um aplicativo\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
+  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [SDK do .NET Core](https://dotnet.microsoft.com/download) versão 3.1\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n* [Conta de desenvolvedor do Microsoft 365](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso à conta do Teams com as permissões apropriadas para instalar um aplicativo\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
 - title: Configurar o ambiente local
   durationInMinutes: 1
   content: "Clone `Microsoft-Teams-Samples` o repositório para o GitHub local:  \n\n 1. Abra [exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n 1. Selecione **Código**.\n 1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n    ![Clonar repositório](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)\n\n 1. Selecione **Clonar**. \n"

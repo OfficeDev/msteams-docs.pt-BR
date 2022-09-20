@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Leia mais para habilitar e configurar aplicativos para reuniões
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8228a5b558845aa26a6ccea4c3e3a8b1212b5076
-  ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+  ms.openlocfilehash: 798023d6033a151035aa34c3e108edf812e19fe9
+  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/15/2022
-  ms.locfileid: "67338792"
+  ms.lasthandoff: 09/19/2022
+  ms.locfileid: "67806876"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,7 +36,7 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="modo de exibição de estágio de reuniões":::
 - title: Pré-requisitos
   durationInMinutes: 1
-  content: "\nInstale as seguintes ferramentas e configure seu ambiente de desenvolvimento:\n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [Versão mais recente do nodejs](https://nodejs.org/en/download/) \n* [Versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n\n Você deve ter conhecimento prático das seguintes tecnologias:\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [Versão mais recente do ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [Versão mais recente do React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
+  content: "\nInstale as seguintes ferramentas e configure seu ambiente de desenvolvimento:\n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [Versão mais recente do nodejs](https://nodejs.org/en/download/) \n* [Versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n\n Você deve ter conhecimento prático das seguintes tecnologias:\n\n* [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [Versão mais recente do ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) \n* [Versão mais recente do React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: Configurar o ambiente local
   durationInMinutes: 1
   content: "\n1. Abra [exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n1. Selecione **Código**.\n1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png\" alt-text=\"clonando o repositório\":::\n\n1. Selecione **Clonar**. \n\n   > [!NOTE]\n   > Se você encontrar o erro \"Nome do arquivo muito longo\", aplique o comando git 'git config --system core.longpaths true' no terminal de administrador de sua escolha.\n"
